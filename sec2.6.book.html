@@ -1,0 +1,295 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title></title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='combined.css' rel='stylesheet' type='text/css' /> 
+<meta content='Trench_DiffEQ_Book.tex' name='src' /> 
+<script>window.MathJax = {
+     tex: { packages: {'[+]': ['tagformat']}, tags: "ams", tagformat: { tag: (tag) => '(2.6.' + tag + ')'} }
+ }; </script> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
+</head><body>
+<p><a id='x1-1doc'></a>
+</p><!-- l. 2 --><p class='noindent'>Section 2.6 Exact Equations
+</p><!-- l. 6 --><p class='noindent'><span class='ptmb8t-'>2.6</span><span class='ptmb8t-x-x-90'>   INTEGRATING FACTORS</span>
+</p><!-- l. 9 --><p class='noindent'>In Section 2.5 we saw that if \(M\), \(N\), \(M_y\) and \(N_x\) are continuous and \(M_y=N_x\) on an open rectangle \(R\) then \begin {equation}  \label {eq:2.6.1} M(x,y)\,dx+N(x,y)\,dy=0  \end {equation}<a id='x1-2r1'></a> is exact on \(R\). Sometimes an
+equation that isn’t exact can be made exact by multiplying it by an appropriate function. For example, \begin {equation} \label {eq:2.6.2} (3x+2y^2)\,dx+2xy\,dy=0  \end {equation}<a id='x1-3r2'></a> is not
+exact, since \(M_y(x,y)=4y\ne N_x(x,y)=2y\) in (<a href='#x1-3r2'>2.6.2<!-- tex4ht:ref: eq:2.6.2  --></a>). However, multiplying (<a href='#x1-3r2'>2.6.2<!-- tex4ht:ref: eq:2.6.2  --></a>) by \(x\) yields \begin {equation} \label {eq:2.6.3} (3x^2+2xy^2)\,dx+2x^2y\,dy=0,  \end {equation}<a id='x1-4r3'></a> which is exact, since \(M_y(x,y)=N_x(x,y)=4xy\) in (<a href='#x1-4r3'>2.6.3<!-- tex4ht:ref: eq:2.6.3  --></a>). Solving (<a href='#x1-4r3'>2.6.3<!-- tex4ht:ref: eq:2.6.3  --></a>)
+by the procedure given in Section 2.5 yields the implicit solution
+                                        \[ x^3+x^2y^2=c. \]
+</p><!-- l. 34 --><p class='indent'>  A function \(\mu =\mu (x,y)\) is an <span class='ptmri8t-'>integrating factor</span> for (<a href='#x1-2r1'>2.6.1<!-- tex4ht:ref: eq:2.6.1  --></a>) if \begin {equation} \label {eq:2.6.4} \mu (x,y)M (x,y)\,dx+\mu (x,y)N (x,y)\,dy=0  \end {equation}<a id='x1-5r4'></a> is exact. If we know an integrating factor \(\mu \) for (<a href='#x1-2r1'>2.6.1<!-- tex4ht:ref: eq:2.6.1  --></a>), we can
+solve the exact equation (<a href='#x1-5r4'>2.6.4<!-- tex4ht:ref: eq:2.6.4  --></a>) by the method of Section 2.5. It would be nice if we could say that (<a href='#x1-2r1'>2.6.1<!-- tex4ht:ref: eq:2.6.1  --></a>) and
+(<a href='#x1-5r4'>2.6.4<!-- tex4ht:ref: eq:2.6.4  --></a>) always have the same solutions, but this isn’t so. For example, a solution \(y=y(x)\) of (<a href='#x1-5r4'>2.6.4<!-- tex4ht:ref: eq:2.6.4  --></a>) such that \(\mu (x,y(x))=0\) on some
+interval \(a&lt;x&lt;b\) could fail to be a solution of (<a href='#x1-2r1'>2.6.1<!-- tex4ht:ref: eq:2.6.1  --></a>) (Exercise <span class='ptmb8t-'>1</span>), while (<a href='#x1-2r1'>2.6.1<!-- tex4ht:ref: eq:2.6.1  --></a>) may have a solution \(y=y(x)\) such that \(\mu (x,y(x)) \) isn’t
+even defined (Exercise <span class='ptmb8t-'>2</span>). Similar comments apply if \(y\) is the independent variable and \(x\) is the dependent variable
+in (<a href='#x1-2r1'>2.6.1<!-- tex4ht:ref: eq:2.6.1  --></a>) and (<a href='#x1-5r4'>2.6.4<!-- tex4ht:ref: eq:2.6.4  --></a>). However, if \(\mu (x,y)\) is defined and nonzero for all \((x,y)\), (<a href='#x1-2r1'>2.6.1<!-- tex4ht:ref: eq:2.6.1  --></a>) and (<a href='#x1-5r4'>2.6.4<!-- tex4ht:ref: eq:2.6.4  --></a>) are equivalent; that is, they
+have the same solutions.
+</p><!-- l. 55 --><p class='noindent'><span id='textcolor1'>Finding Integrating Factors</span>
+</p><!-- l. 55 --><p class='indent'>
+</p><!-- l. 58 --><p class='noindent'>By applying Theorem <span class='ptmb8t-'>2.5.2</span> (with \(M\) and \(N\) replaced by \(\mu M\) and \(\mu N\)), we see that (<a href='#x1-5r4'>2.6.4<!-- tex4ht:ref: eq:2.6.4  --></a>) is exact on an open rectangle \(R\) if \(\mu M\), \(\mu N\), \((\mu M)_y\),
+and \((\mu N)_x\) are continuous and
+                                        \[ {\partial \over \partial y}(\mu M)={\partial \over \partial x} (\mu N) \mbox {\quad or, equivalently, \quad } \mu _yM+\mu M_y=\mu _xN+\mu N_x \]
+ on \(R\). It’s better to rewrite the last equation as \begin {equation}  \label {eq:2.6.5} \mu (M_y-N_x)=\mu _xN-\mu _yM,  \end {equation}<a id='x1-6r5'></a> which reduces to the known result for exact equations; that is, if \(M_y=N_x\)
+then (<a href='#x1-6r5'>2.6.5<!-- tex4ht:ref: eq:2.6.5  --></a>) holds with \(\mu =1\), so (<a href='#x1-2r1'>2.6.1<!-- tex4ht:ref: eq:2.6.1  --></a>) is exact.
+                                                                                
+
+                                                                                
+</p><!-- l. 76 --><p class='indent'>  You may think (<a href='#x1-6r5'>2.6.5<!-- tex4ht:ref: eq:2.6.5  --></a>) is of little value, since it involves <span class='ptmri8t-'>partial</span> derivatives of the unknown integrating factor \(\mu \),
+and we haven’t studied methods for solving such equations. However, we’ll now show that (<a href='#x1-6r5'>2.6.5<!-- tex4ht:ref: eq:2.6.5  --></a>) is useful if we
+restrict our search to integrating factors that are products of a function of \(x\) and a function of \(y\); that is, \(\mu (x,y)=P(x)Q(y)\).
+We’re not saying that <span class='ptmri8t-'>every</span> equation \(M\,dx+N\,dy=0\) has an integrating factor of this form; rather, we’re saying
+that <span class='ptmri8t-'>some</span> equations have such integrating factors.We’llnow develop a way to determine whether a
+given equation has such an integrating factor, and a method for finding the integrating factor in this
+case.
+</p><!-- l. 92 --><p class='indent'>  If \(\mu (x,y)=P(x)Q(y)\), then \(\mu _x(x,y)=P'(x)Q(y)\) and \(\mu _y(x,y)=P(x)Q'(y)\), so (<a href='#x1-6r5'>2.6.5<!-- tex4ht:ref: eq:2.6.5  --></a>) becomes \begin {equation}  \label {eq:2.6.6} P(x)Q(y)(M_y-N_x)=P'(x)Q(y)N-P(x)Q'(y)M,  \end {equation}<a id='x1-7r6'></a> or, after dividing through by \(P(x)Q(y)\), \begin {equation}  \label {eq:2.6.7} M_y-N_x={P'(x)\over P(x)}N-{Q'(y)\over Q(y)}M.  \end {equation}<a id='x1-8r7'></a> Now let
+                                        \[ p(x)={P'(x)\over P(x)} \mbox {\quad and \quad } q(y)={Q'(y)\over Q(y)}, \]
+ so (<a href='#x1-8r7'>2.6.7<!-- tex4ht:ref: eq:2.6.7  --></a>) becomes \begin {equation}  \label {eq:2.6.8} M_y-N_x=p(x)N-q(y)M.  \end {equation}<a id='x1-9r8'></a>
+</p><!-- l. 110 --><p class='indent'>  We obtained (<a href='#x1-9r8'>2.6.8<!-- tex4ht:ref: eq:2.6.8  --></a>) by <span class='ptmri8t-'>assuming</span> that \(M\,dx+N\,dy=0\) has an integrating factor \(\mu (x,y)=P(x)Q(y)\). However, we can now view (<a href='#x1-8r7'>2.6.7<!-- tex4ht:ref: eq:2.6.7  --></a>) differently:
+If there are functions \(p=p(x)\) and \(q=q(y)\) that satisfy (<a href='#x1-9r8'>2.6.8<!-- tex4ht:ref: eq:2.6.8  --></a>) and we define \begin {equation}  \label {eq:2.6.9} P(x)=\pm e^{\int p(x)\,dx}\mbox {\quad and \quad } Q(y)=\pm e^{\int q(y)\,dy},  \end {equation}<a id='x1-10r9'></a> then reversing the steps that led from (<a href='#x1-7r6'>2.6.6<!-- tex4ht:ref: eq:2.6.6  --></a>) to
+(<a href='#x1-9r8'>2.6.8<!-- tex4ht:ref: eq:2.6.8  --></a>) shows that \(\mu (x,y)=P(x)Q(y)\) is an integrating factor for \(M\,dx+N\,dy=0\). In using this result, we take the constants of integration
+in (<a href='#x1-10r9'>2.6.9<!-- tex4ht:ref: eq:2.6.9  --></a>) to be zero and choose the signs conveniently so the integrating factor has the simplest
+form.
+</p><!-- l. 124 --><p class='indent'>  There’s no simple general method for ascertaining whether functions \(p=p(x)\) and \(q=q(y)\) satisfying (<a href='#x1-9r8'>2.6.8<!-- tex4ht:ref: eq:2.6.8  --></a>) exist. However,
+the next theorem gives simple sufficient conditions for the given equation to have an integrating factor that
+depends on only one of the independent variables \(x\) and \(y\), and for finding an integrating factor in this
+case.
+</p>
+  <div class='newtheorem'>
+<!-- l. 131 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Theorem 2.6.1</span> </span><a id='x1-111'></a> <span class='ptmri8t-'>Let</span> \(M,\) \(N,\) \(M_y,\) <span class='ptmri8t-'>and</span> \(N_x\) <span class='ptmri8t-'>be continuous on an open rectangle</span> \(R.\) <span class='ptmri8t-'>Then</span>\(:\)
+    </p><dl class='list1'><dt class='list'>
+ <span class='ptmb8t-'>(a)</span>  </dt><dd class='list'>
+    <!-- l. 136 --><p class='noindent'><span class='ptmri8t-'>If</span> \((M_y-N_x)/N\) <span class='ptmri8t-'>is independent of</span> \(y\) <span class='ptmri8t-'>on</span> \(R\) <span class='ptmri8t-'>and we define</span>
+                                                                                
+
+                                                                                
+                                          \[ p(x)={M_y-N_x\over N} \]
+     <span class='ptmri8t-'>then </span>\begin {equation} \label {eq:2.6.10} \mu (x)=\pm e^{\int p(x)\,dx}  \end {equation}<a id='x1-13r10'></a> <span class='ptmri8t-'>is an integrating factor for </span>\begin {equation} \label {eq:2.6.11} M(x,y)\,dx+N(x,y)\,dy=0  \end {equation}<a id='x1-14r11'></a> <span class='ptmri8t-'>on</span> \(R.\)
+    </p></dd><dt class='list'>
+ <span class='ptmb8t-'>(b)</span>  </dt><dd class='list'>
+    <!-- l. 151 --><p class='noindent'><span class='ptmri8t-'>If</span> \((N_x-M_y)/M\) <span class='ptmri8t-'>is independent of</span> \(x\) <span class='ptmri8t-'>on</span> \(R\) <span class='ptmri8t-'>and we define</span>
+                                          \[ q(y)={N_x-M_y\over M}, \]
+     <span class='ptmri8t-'>then </span>\begin {equation} \label {eq:2.6.12} \mu (y)=\pm e^{\int q(y)\,dy}  \end {equation}<a id='x1-16r12'></a> <span class='ptmri8t-'>is an integrating factor for</span> (<a href='#x1-14r11'>2.6.11<!-- tex4ht:ref: eq:2.6.11  --></a>) <span class='ptmri8t-'>on</span> \(R.\)</p></dd></dl>
+</div>
+<!-- l. 162 --><p class='indent'>  
+</p><!-- l. 166 --><p class='noindent'><span class='ptmb8t-'>Proof    </span>(a) If \((M_y-N_x)/N\) is independent of \(y\), then (<a href='#x1-9r8'>2.6.8<!-- tex4ht:ref: eq:2.6.8  --></a>) holds with \(p=(M_y-N_x)/N\) and \(q\equiv 0\). Therefore
+                                        \[ P(x)=\pm e^{\int p(x)\,dx}\mbox {\quad and\quad }Q(y)=\pm e^{\int q(y)\,dy}=\pm e^0=\pm 1, \]
+ so (<a href='#x1-13r10'>2.6.10<!-- tex4ht:ref: eq:2.6.10  --></a>) is an integrating factor for (<a href='#x1-14r11'>2.6.11<!-- tex4ht:ref: eq:2.6.11  --></a>) on \(R\).
+</p><!-- l. 175 --><p class='indent'>  (b) If \((N_x-M_y)/M\) is independent of \(x\) then eqrefeq:2.6.8 holds with \(p\equiv 0\) and \(q=(N_x-M_y)/M\), and a similar argument shows that (<a href='#x1-16r12'>2.6.12<!-- tex4ht:ref: eq:2.6.12  --></a>) is an
+integrating factor for (<a href='#x1-14r11'>2.6.11<!-- tex4ht:ref: eq:2.6.11  --></a>) on \(R\).                                                                                                               __
+</p><!-- l. 179 --><p class='indent'>  The next two examples show how to apply Theorem <a href='#x1-111'>2.6.1<!-- tex4ht:ref: thmtype:2.6.1  --></a>.
+</p>
+  <div class='newtheorem'>
+<!-- l. 182 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Example 2.6.1</span> </span><a id='x1-171'></a> Find an integrating factor for the equation \begin {equation} \label {eq:2.6.13} (2xy^3-2x^3y^3-4xy^2+2x)\,dx+(3x^2y^2+4y)\,dy=0  \end {equation}<a id='x1-18r13'></a> and solve the equation.
+                                                                                
+
+                                                                                
+</p>
+  </div>
+<!-- l. 188 --><p class='indent'>
+</p><!-- l. 190 --><p class='noindent'><span class='ptmb8t-'>Solution </span> In (<a href='#x1-18r13'>2.6.13<!-- tex4ht:ref: eq:2.6.13  --></a>)
+                                        \[ M=2xy^3-2x^3y^3-4xy^2+2x,\ N=3x^2y^2+4y, \]
+ and
+                                        \[ M_y-N_x=(6xy^2-6x^3y^2-8xy)-6xy^2=-6x^3y^2-8xy, \]
+ so (<a href='#x1-18r13'>2.6.13<!-- tex4ht:ref: eq:2.6.13  --></a>) isn’t exact. However,
+                                        \[ {M_y-N_x\over N}=-{6x^3y^2+8xy\over 3x^2y^2+4y}=-2x \]
+ is independent of \(y\), so Theorem <a href='#x1-111'>2.6.1<!-- tex4ht:ref: thmtype:2.6.1  --></a><span class='ptmb8t-'>(a) </span>applies with \(p(x)=-2x\). Since
+                                                                                
+
+                                                                                
+                                        \[ \int p (x)\,dx=-\int 2x\,dx=-x^2, \]
+ \(\mu (x)=e^{-x^2}\) is an integrating factor. Multiplying (<a href='#x1-18r13'>2.6.13<!-- tex4ht:ref: eq:2.6.13  --></a>) by \(\mu \) yields the exact equation \begin {equation} \label {eq:2.6.14} e^{-x^2}(2xy^3-2x^3y^3-4xy^2+2x)\,dx+ e^{-x^2}(3x^2y^2+4y)\,dy=0.  \end {equation}<a id='x1-19r14'></a>
+</p><!-- l. 217 --><p class='indent'>  To solve this equation, we must find a function \(F\) such that \begin {equation} \label {eq:2.6.15} F_x(x,y)=e^{-x^2}(2xy^3-2x^3y^3-4xy^2+2x)  \end {equation}<a id='x1-20r15'></a> and \begin {equation} \label {eq:2.6.16} F_y(x,y)=e^{-x^2}(3x^2y^2+4y).  \end {equation}<a id='x1-21r16'></a> Integrating (<a href='#x1-21r16'>2.6.16<!-- tex4ht:ref: eq:2.6.16  --></a>) with respect to \(y\) yields \begin {equation} \label {eq:2.6.17} F(x,y)=e^{-x^2}(x^2y^3+2y^2)+\psi (x).  \end {equation}<a id='x1-22r17'></a>
+Differentiating this with respect to \(x\) yields
+                                        \[ F_x(x,y)=e^{-x^2}(2xy^3-2x^3y^3-4xy^2)+\psi '(x). \]
+ Comparing this with (<a href='#x1-20r15'>2.6.15<!-- tex4ht:ref: eq:2.6.15  --></a>) shows that \(\psi '(x)= 2xe^{-x^2}\); therefore, we can let \(\psi (x)=-e^{-x^2}\) in (<a href='#x1-22r17'>2.6.17<!-- tex4ht:ref: eq:2.6.17  --></a>) and conclude that
+                                        \[ e^{-x^2}\left (y^2(x^2y+2)-1\right )=c \]
+ is an implicit solution of (<a href='#x1-19r14'>2.6.14<!-- tex4ht:ref: eq:2.6.14  --></a>). It is also an implicit solution of (<a href='#x1-18r13'>2.6.13<!-- tex4ht:ref: eq:2.6.13  --></a>).
+</p><!-- l. 243 --><p class='indent'>  Figure <a href='#-a-direction-field-and-integral-curves-for-xyxyxyxdxxyydy-'>2.6.1<!-- tex4ht:ref: figure:2.6.1  --></a> shows a direction field and some integal curves for (<a href='#x1-18r13'>2.6.13<!-- tex4ht:ref: eq:2.6.13  --></a>)
+</p>
+  <figure class='figure'> 
+
+                                                                                
+
+                                                                                
+                                                                                
+
+                                                                                
+<!-- l. 248 --><p class='noindent' id='-a-direction-field-and-integral-curves-for-xyxyxyxdxxyydy-'><img alt='PIC' height='264' src='EPS//fig020601.png' width='409' /> <a id='x1-23r1'></a></p>
+<figcaption class='caption'><span class='id'>Figure 2.6.1 </span><span class='content'>A direction field and integral curves for \((2xy^3-2x^3y^3-4xy^2+2x)\,dx+(3x^2y^2+4y)\,dy=0\)                                       </span></figcaption><!-- tex4ht:label?: x1-23r1  -->
+                                                                                
+
+                                                                                
+  </figure>
+  <div class='newtheorem'>
+<!-- l. 257 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Example 2.6.2</span> </span><a id='x1-242'></a> Find an integrating factor for \begin {equation} \label {eq:2.6.18} 2xy^3\,dx+(3x^2y^2+x^2y^3+1)\,dy=0  \end {equation}<a id='x1-25r18'></a> and solve the equation.
+</p>
+  </div>
+<!-- l. 263 --><p class='indent'>
+</p><!-- l. 265 --><p class='noindent'><span class='ptmb8t-'>Solution </span> In (<a href='#x1-25r18'>2.6.18<!-- tex4ht:ref: eq:2.6.18  --></a>),
+                                        \[ M=2xy^3,\quad N=3x^2y^2+x^2y^3+1, \]
+ and
+                                        \[ M_y-N_x=6xy^2-(6xy^2+2xy^3)=-2xy^3, \]
+ so (<a href='#x1-25r18'>2.6.18<!-- tex4ht:ref: eq:2.6.18  --></a>) isn’t exact. Moreover,
+                                                                                
+
+                                                                                
+                                        \[ {M_y-N_x\over N}=-{2xy^3\over 3x^2y^2+x^2y^2+1} \]
+ is not independent of \(y\), so Theorem <a href='#x1-111'>2.6.1<!-- tex4ht:ref: thmtype:2.6.1  --></a>(a) does not apply. However, Theorem <a href='#x1-111'>2.6.1<!-- tex4ht:ref: thmtype:2.6.1  --></a>(b) does apply,
+since
+                                        \[ {N_x-M_y\over M}={2xy^3\over 2xy^3}=1 \]
+ is independent of \(x\), so we can take \(q(y)=1\). Since
+                                        \[ \int q(y)\,dy=\int \,dy=y, \]
+ \(\mu (y)=e^y\) is an integrating factor. Multiplying (<a href='#x1-25r18'>2.6.18<!-- tex4ht:ref: eq:2.6.18  --></a>) by \(\mu \) yields the exact equation \begin {equation} \label {eq:2.6.19} 2xy^3e^y\,dx+(3x^2y^2+x^2y^3+1)e^y\,dy=0.  \end {equation}<a id='x1-26r19'></a> To solve this equation, we must find a
+function \(F\) such that \begin {equation} \label {eq:2.6.20} F_x(x,y)=2xy^3e^y  \end {equation}<a id='x1-27r20'></a> and \begin {equation} \label {eq:2.6.21} F_y(x,y)=(3x^2y^2+x^2y^3+1)e^y.  \end {equation}<a id='x1-28r21'></a> Integrating (<a href='#x1-27r20'>2.6.20<!-- tex4ht:ref: eq:2.6.20  --></a>) with respect to \(x\) yields \begin {equation} \label {eq:2.6.22} F(x,y)=x^2y^3e^y+\phi (y).  \end {equation}<a id='x1-29r22'></a> Differentiating this with respect to \(y\)
+yields
+                                        \[ F_y=(3x^2y^2+x^2y^3)e^y+\phi '(y), \]
+ and comparing this with (<a href='#x1-28r21'>2.6.21<!-- tex4ht:ref: eq:2.6.21  --></a>) shows that \(\phi '(y)=e^y\). Therefore we set \(\phi (y)=e^y\) in (<a href='#x1-29r22'>2.6.22<!-- tex4ht:ref: eq:2.6.22  --></a>) and conclude that
+                                                                                
+
+                                                                                
+                                        \[ (x^2y^3+1)e^y=c \]
+ is an implicit solution of (<a href='#x1-26r19'>2.6.19<!-- tex4ht:ref: eq:2.6.19  --></a>). It is also an implicit solution of (<a href='#x1-25r18'>2.6.18<!-- tex4ht:ref: eq:2.6.18  --></a>). Figure <a href='#-a-direction-field-and-integral-curves-for-xyeydxxyxyeydy-'>2.6.2<!-- tex4ht:ref: figure:2.6.2  --></a> shows a direction field
+and some integral curves for (<a href='#x1-25r18'>2.6.18<!-- tex4ht:ref: eq:2.6.18  --></a>).                                                                                                         __
+</p>
+  <figure class='figure'> 
+
+                                                                                
+
+                                                                                
+                                                                                
+
+                                                                                
+<!-- l. 327 --><p class='noindent' id='-a-direction-field-and-integral-curves-for-xyeydxxyxyeydy-'><img alt='PIC' height='264' src='EPS//fig020602.png' width='409' /> <a id='x1-30r2'></a></p>
+<figcaption class='caption'><span class='id'>Figure 2.6.2 </span><span class='content'>A direction field and integral curves for \(2xy^3e^y\,dx+(3x^2y^2+x^2y^3+1)e^y\,dy=0\)                                       </span></figcaption><!-- tex4ht:label?: x1-30r2  -->
+                                                                                
+
+                                                                                
+  </figure>
+<!-- l. 336 --><p class='indent'>  Theorem <a href='#x1-111'>2.6.1<!-- tex4ht:ref: thmtype:2.6.1  --></a> does not apply in the next example, but the more general argument that led to Theorem <a href='#x1-111'>2.6.1<!-- tex4ht:ref: thmtype:2.6.1  --></a>
+provides an integrating factor.
+</p>
+  <div class='newtheorem'>
+<!-- l. 340 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Example 2.6.3</span> </span><a id='x1-313'></a> Find an integrating factor for \begin {equation} \label {eq:2.6.23} (3xy+6y^2)\,dx+(2x^2+9xy)\,dy=0  \end {equation}<a id='x1-32r23'></a> and solve the equation.
+</p>
+  </div>
+<!-- l. 344 --><p class='indent'>
+</p><!-- l. 346 --><p class='noindent'><span class='ptmb8t-'>Solution </span> In (<a href='#x1-32r23'>2.6.23<!-- tex4ht:ref: eq:2.6.23  --></a>)
+                                        \[ M=3xy+6y^2,\ N=2x^2+9xy, \]
+ and
+                                        \[ M_y-N_x=(3x+12y)-(4x+9y)=-x+3y. \]
+ Therefore
+                                                                                
+
+                                                                                
+                                        \[ {M_y-N_x\over M}={-x+3y\over 3xy+6y^2} \mbox {\quad and \quad } {N_x-M_y\over N}={x-3y\over 2x^2+9xy}, \]
+ so Theorem <a href='#x1-111'>2.6.1<!-- tex4ht:ref: thmtype:2.6.1  --></a> does not apply. Following the more general argument that led to Theorem <a href='#x1-111'>2.6.1<!-- tex4ht:ref: thmtype:2.6.1  --></a>, we look for
+functions \(p=p(x)\) and \(q=q(y)\) such that
+                                        \[ M_y-N_x=p(x)N-q(y)M; \]
+ that is,
+                                        \[ -x+3y=p(x)(2x^2+9xy)-q(y)(3xy+6y^2). \]
+ Since the left side contains only first degree terms in \(x\) and \(y\), we rewrite this equation as
+                                        \[ xp(x)(2x+9y)-yq(y)(3x+6y)=-x+3y. \]
+ This will be an identity if \begin {equation} \label {eq:2.6.24} xp(x)=A\mbox {\quad and\quad } yq(y)=B,  \end {equation}<a id='x1-33r24'></a> where \(A\) and \(B\) are constants such that
+                                                                                
+
+                                                                                
+                                        \[ -x+3y=A(2x+9y)-B(3x+6y), \]
+ or, equivalently,
+                                        \[ -x+3y=(2A-3B)x+(9A-6B)y. \]
+ Equating the coefficients of \(x\) and \(y\) on both sides shows that the last equation holds for all \((x,y)\) if </p><div class='eqnarray'>\begin {eqnarray*}  2A-3B &amp;=&amp;-1 \\ 9A-6B &amp;=&amp;\phantom {-}3,  \end {eqnarray*}</div>
+<!-- l. 390 --><p class='indent'>  which has the solution \(A=1\), \(B=1\). Therefore (<a href='#x1-33r24'>2.6.24<!-- tex4ht:ref: eq:2.6.24  --></a>) implies that
+                                        \[ p(x)={1\over x}\mbox {\quad and \quad } q(y)={1\over y}. \]
+ Since
+                                                                                
+
+                                                                                
+                                        \[ \int p(x)\,dx=\ln |x|\mbox {\quad and\quad }\int q(y)\,dy=\ln |y|, \]
+ we can let \(P(x)=x\) and \(Q(y)=y\); hence, \(\mu (x,y)=xy\) is an integrating factor. Multiplying (<a href='#x1-32r23'>2.6.23<!-- tex4ht:ref: eq:2.6.23  --></a>) by \(\mu \) yields the exact equation
+                                        \[ (3x^2y^2+6xy^3)\,dx+(2x^3y+9x^2y^2)\,dy=0. \]
+ We leave it to you to use the method of Section 2.5 to show that this equation has the implicit solution \begin {equation}  \label {eq:2.6.25} x^3y^2+3x^2y^3=c.  \end {equation}<a id='x1-34r25'></a> This is
+also an implicit solution of (<a href='#x1-32r23'>2.6.23<!-- tex4ht:ref: eq:2.6.23  --></a>). Since \(x\equiv 0\) and \(y\equiv 0\) satisfy (<a href='#x1-34r25'>2.6.25<!-- tex4ht:ref: eq:2.6.25  --></a>), you should check to see that \(x\equiv 0\) and \(y\equiv 0\) are also
+solutions of (<a href='#x1-32r23'>2.6.23<!-- tex4ht:ref: eq:2.6.23  --></a>). (Why is it necesary to check this?)
+</p><!-- l. 416 --><p class='indent'>  Figure <a href='#-a-direction-field-and-integral-curves-for-xyydxxxydy-'>2.6.3<!-- tex4ht:ref: figure:2.6.3  --></a> shows a direction field and integral curves for (<a href='#x1-32r23'>2.6.23<!-- tex4ht:ref: eq:2.6.23  --></a>).
+</p><!-- l. 420 --><p class='indent'>  See Exercise <span class='ptmb8t-'>28</span> for a general discussion of equations like (<a href='#x1-32r23'>2.6.23<!-- tex4ht:ref: eq:2.6.23  --></a>).
+</p>
+  <figure class='figure'> 
+
+                                                                                
+
+                                                                                
+                                                                                
+
+                                                                                
+<!-- l. 425 --><p class='noindent' id='-a-direction-field-and-integral-curves-for-xyydxxxydy-'><img alt='PIC' height='264' src='EPS//fig020603.png' width='409' /> <a id='x1-35r3'></a></p>
+<figcaption class='caption'><span class='id'>Figure 2.6.3 </span><span class='content'>A direction field and integral curves for \((3xy+6y^2)\,dx+(2x^2+9xy)\,dy=0\)                                       </span></figcaption><!-- tex4ht:label?: x1-35r3  -->
+                                                                                
+
+                                                                                
+  </figure>
+  <div class='newtheorem'>
+<!-- l. 440 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Example 2.6.4</span> </span><a id='x1-364'></a> The separable equation \begin {equation} \label {eq:2.6.26} -y\,dx+(x+x^6)\,dy=0  \end {equation}<a id='x1-37r26'></a> can be converted to the exact equation \begin {equation}  \label {eq:2.6.27} -{dx\over x+x^6}+{dy\over y}=0  \end {equation}<a id='x1-38r27'></a> by multiplying through by the
+integrating factor
+                                        \[ \mu (x,y)={1\over y(x+x^6)}. \]
+ However, to solve (<a href='#x1-38r27'>2.6.27<!-- tex4ht:ref: eq:2.6.27  --></a>) by the method of Section 2.5 we would have to evaluate the nasty integral
+                                        \[ \int {dx\over x+x^6}. \]
+ Instead, we solve (<a href='#x1-37r26'>2.6.26<!-- tex4ht:ref: eq:2.6.26  --></a>) explicitly for \(y\) by finding an integrating factor of the form \(\mu (x,y)=x^ay^b\).
+</p>
+  </div>
+<!-- l. 462 --><p class='indent'>
+</p>
+  <figure class='figure'> 
+
+                                                                                
+
+                                                                                
+                                                                                
+
+                                                                                
+<!-- l. 467 --><p class='noindent' id='-a-direction-field-and-integral-curves-for-ydxxxdy-'><img alt='PIC' height='264' src='EPS//fig020604.png' width='409' /> <a id='x1-39r4'></a></p>
+<figcaption class='caption'><span class='id'>Figure 2.6.4 </span><span class='content'>A direction field and integral curves for \(-y\,dx+(x+x^6)\,dy=0\)                                       </span></figcaption><!-- tex4ht:label?: x1-39r4  -->
+                                                                                
+
+                                                                                
+  </figure>
+<!-- l. 473 --><p class='noindent'><span class='ptmb8t-'>Solution </span> In (<a href='#x1-37r26'>2.6.26<!-- tex4ht:ref: eq:2.6.26  --></a>)
+                                        \[ M=-y,\ N=x+x^6, \]
+ and
+                                        \[ M_y-N_x=-1-(1+6x^5)=-2-6x^5. \]
+ We look for functions \(p=p(x)\) and \(q=q(y)\) such that
+                                        \[ M_y-N_x=p(x)N-q(y)M; \]
+ that is, \begin {equation} \label {eq:2.6.28} -2-6x^5=p(x)(x+x^6)+q(y)y.  \end {equation}<a id='x1-40r28'></a> The right side will contain the term \(-6x^5\) if \(p(x)=-6/x\). Then (<a href='#x1-40r28'>2.6.28<!-- tex4ht:ref: eq:2.6.28  --></a>) becomes
+                                                                                
+
+                                                                                
+                                        \[ -2-6x^5=-6-6x^5+q(y)y, \]
+ so \(q(y)=4/y\). Since
+                                        \[ \int p(x)\,dx=-\int {6\over x}\,dx=-6\ln |x|=\ln {1\over x^6}, \]
+ and
+                                        \[ \int q(y)\,dy=\int {4\over y}\,dy=4\ln |y|=\ln {y^4}, \]
+ we can take \(P(x)=x^{-6}\) and \(Q(y)=y^4\), which yields the integrating factor \(\mu (x,y)=x^{-6}y^4\). Multiplying (<a href='#x1-37r26'>2.6.26<!-- tex4ht:ref: eq:2.6.26  --></a>) by \(\mu \) yields the exact
+equation
+                                        \[ -{y^5\over x^6}\,dx+\left ({y^4\over x^5}+y^4\right ) \,dy=0. \]
+ We leave it to you to use the method of the Section 2.5 to show that this equation has the implicit
+solution
+                                                                                
+
+                                                                                
+                                        \[ \left ({y\over x}\right )^5+y^5=k. \]
+ Solving for \(y\) yields
+                                        \[ y=k^{1/5}x(1+x^5)^{-1/5}, \]
+ which we rewrite as
+                                        \[ y=cx(1+x^5)^{-1/5} \]
+ by renaming the arbitrary constant. This is also a solution of (<a href='#x1-37r26'>2.6.26<!-- tex4ht:ref: eq:2.6.26  --></a>).
+</p><!-- l. 527 --><p class='indent'>  Figure <a href='#-a-direction-field-and-integral-curves-for-ydxxxdy-'>2.6.4<!-- tex4ht:ref: figure:2.6.4  --></a> shows a direction field and some integral curves for (<a href='#x1-37r26'>2.6.26<!-- tex4ht:ref: eq:2.6.26  --></a>).
+</p>
+ <a class="back-to-ch" href="sec2.0.html">Back</a>
+   
+</body> 
+</html>

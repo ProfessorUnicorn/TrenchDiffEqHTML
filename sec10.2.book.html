@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title></title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link rel="stylesheet" type="text/css" href='combined.css' />
+<meta content='Trench_DiffEQ_Book.tex' name='src' /> 
+<script>window.MathJax = {
+     tex: { packages: {'[+]': ['tagformat']}, tags: "ams", tagformat: { tag: (tag) => '(10.2.' + tag + ')'} }
+ }; </script> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
+</head><body>
+\(
+\newcommand{\place}{\bigskip\hrule\bigskip\noindent}
+\newcommand{\threecol}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]}
+\newcommand{\threecolj}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]}
+\newcommand{\lims}[2]{\,\bigg|_{#1}^{#2}}
+\newcommand{\twocol}[2]{\left[\begin{array}{l}#1\\#2\end{array}\right]}
+\newcommand{\ctwocol}[2]{\left[\begin{array}{c}#1\\#2\end{array}\right]}
+\newcommand{\cthreecol}[3]{\left[\begin{array}{c}#1\\#2\\#3\end{array}\right]}
+\newcommand{\eqline}[1]{\centerline{\hfill$\displaystyle#1$\hfill}}
+\newcommand{\twochar}[4]{\left|\begin{array}{cc}
+#1-\lambda& #2\\#3& #4-\lambda\end{array}\right|}
+\newcommand{\twobytwo}[4]{\left[\begin{array}{rr}
+#1& #2\\#3& #4\end{array}\right]}
+\newcommand{\threechar}[9]{\left[\begin{array}{ccc}
+#1-\lambda& #2& #3\\#4& #5-\lambda& #6\\#7& #8& #9-\lambda\end{array}\right]}
+\newcommand{\threebythree}[9]{\left[\begin{array}{rrr}
+#1& #2& #3\\#4& #5& #6\\#7& #8& #9\end{array}\right]}
+\newcommand{\solutionpart}[1]{\vskip10pt\noindent\underbar{\color{blue}\sc
+Solution({\bf #1})\ }}
+\newcommand{\Cex}{\fbox{\textcolor{red}{C}}\, }
+\newcommand{\CGex}{\fbox{\textcolor{red}{C/G}}\, }
+\newcommand{\Lex}{\fbox{\textcolor{red}{L}}\, }
+
+\newcommand{\matfunc}[3]{\left[\begin{array}{cccc}#1_{11}(t)& #1_{12}(t)&\cdots
+& #1_{1#3}(t)\\#1_{21}(t)& #1_{22}(t)&\cdots& #1_{2#3}(t)\\\vdots&
+\vdots&\ddots&\vdots\\#1_{#21}(t)& #1_{#22}(t)&\cdots& #1_{#2#3}(t)
+\end{array}\right]}
+
+
+\newcommand{\col}[2]{\left[\begin{array}{c}#1_1\\#1_2\\\vdots\\#1_#2\end{array}\right]}
+\newcommand{\colfunc}[2]{\left[\begin{array}{c}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t)\end{array}\right]}
+
+\)
+<p><a id='x1-1doc'></a>
+</p><!-- l. 3 --><p class='noindent'>Section 10.2 Linear Systems of Differential Equations
+</p><!-- l. 8 --><p class='noindent'><span class='ptmb8t-'>10.2</span><span class='ptmb8t-x-x-90'>  LINEAR SYSTEMS OF DIFFERENTIAL EQUATIONS</span>
+</p><!-- l. 11 --><p class='noindent'>A first order system of differential equations that can be written in the form \begin {equation}  \label {eq:10.2.1} \begin {array}{ccl} y'_1&amp;=&amp;a_{11}(t)y_1+a_{12}(t)y_2+\cdots +a_{1n}(t)y_n+f_1(t)\\ y'_2&amp;=&amp;a_{21}(t)y_1+a_{22}(t)y_2+\cdots +a_{2n}(t)y_n+f_2(t)\\ &amp;\vdots \\ y'_n&amp; =&amp;a_{n1}(t)y_1+a_{n2}(t)y_2+\cdots +a_{nn}(t)y_n+f_n(t)\end {array}  \end {equation}<a id='x1-2r1'></a> is called a <span class='ptmri8t-'>linear system</span>.
+</p><!-- l. 24 --><p class='indent'>  The linear system (<a href='#x1-2r1'>10.2.1<!-- tex4ht:ref: eq:10.2.1  --></a>) can be written in matrix form as
+                                        \[ \col {y'}n=\matfunc ann\col yn+\colfunc fn, \]
+ or more briefly as \begin {equation}  \label {eq:10.2.2} {\bf y}'=A(t){\bf y}+{\bf f}(t),  \end {equation}<a id='x1-3r2'></a> where
+                                        \[ {\bf y}=\col yn,\quad A(t)=\matfunc ann,\mbox {\quad and \quad }{\bf f}(t)=\colfunc fn. \]
+ We call \(A\) the <span class='ptmri8t-'>coefficient matrix</span> of (<a href='#x1-3r2'>10.2.2<!-- tex4ht:ref: eq:10.2.2  --></a>) and \(\bf f\) the <span class='ptmri8t-'>forcing function</span>. We’ll say that \(A\) and \(\bf f\) are <span class='ptmri8t-'>continuous</span> if their
+entries are continuous. If \({\bf f}={\bf 0}\), then (<a href='#x1-3r2'>10.2.2<!-- tex4ht:ref: eq:10.2.2  --></a>) is <span class='ptmri8t-'>homogeneous</span>; otherwise, (<a href='#x1-3r2'>10.2.2<!-- tex4ht:ref: eq:10.2.2  --></a>) is <span class='ptmri8t-'>nonhomogeneous</span>.
+</p><!-- l. 44 --><p class='indent'>  An initial value problem for (<a href='#x1-3r2'>10.2.2<!-- tex4ht:ref: eq:10.2.2  --></a>) consists of finding a solution of (<a href='#x1-3r2'>10.2.2<!-- tex4ht:ref: eq:10.2.2  --></a>) that equals a given constant
+vector
+                                                                                
+
+                                                                                
+                                        \[ {\bf k} =\col kn. \]
+ at some initial point \(t_0\). We write this initial value problem as
+                                        \[ {\bf y}'=A(t){\bf y}+{\bf f}(t), \quad {\bf y}(t_0)={\bf k}. \]
+</p><!-- l. 55 --><p class='indent'>  The next theorem gives sufficient conditions for the existence of solutions of initial value problems for
+(<a href='#x1-3r2'>10.2.2<!-- tex4ht:ref: eq:10.2.2  --></a>). We omit the proof.
+</p>
+  <div class='newtheorem'>
+<!-- l. 59 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Theorem 10.2.1</span> </span><a id='x1-41'></a> <span class='ptmri8t-'>Suppose the coefficient matrix</span> \(A\) <span class='ptmri8t-'>and the forcing function</span> \(\bf f\) <span class='ptmri8t-'>are continuous on</span> \((a,b)\)<span class='ptmri8t-'>, let</span> \(t_0\) <span class='ptmri8t-'>be in</span>
+\((a,b)\)<span class='ptmri8t-'>, and let</span> \(\bf k\) <span class='ptmri8t-'>be an arbitrary constant</span> \(n\)<span class='ptmri8t-'>-vector. Then the initial value problem</span>
+                                        \[ {\bf y}'=A(t){\bf y}+{\bf f}(t), \quad {\bf y}(t_0)={\bf k} \]
+ <span class='ptmri8t-'>has a unique solution on</span> \((a,b)\)<span class='ptmri8t-'>.</span>
+</p>
+  </div>
+<!-- l. 68 --><p class='indent'>  
+</p>
+  <div class='newtheorem'>
+<!-- l. 70 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Example 10.2.1</span> </span><a id='x1-51'></a> <br class='newline' />
+                                                                                
+
+                                                                                
+    </p><dl class='list1'><dt class='list'>
+ <span class='ptmb8t-'>(a)</span>  </dt><dd class='list'>
+    <!-- l. 74 --><p class='noindent'>Write the system \begin {equation}  \label {eq:10.2.3} \begin {array}{rcl} y_1'&amp;=&amp;\phantom {2}y_1+2y_2+2e^{4t} \\ y_2'&amp;=&amp;2y_1+\phantom {2}y_2+\phantom {2}e^{4t} \end {array}  \end {equation}<a id='x1-7r3'></a> in matrix form and conclude from Theorem <a href='#x1-41'>10.2.1<!-- tex4ht:ref: thmtype:10.2.1  --></a> that every initial value problem for
+    (<a href='#x1-7r3'>10.2.3<!-- tex4ht:ref: eq:10.2.3  --></a>) has a unique solution on \((-\infty ,\infty )\).
+    </p></dd><dt class='list'>
+ <span class='ptmb8t-'>(b)</span>  </dt><dd class='list'>
+    <!-- l. 85 --><p class='noindent'>Verify that \begin {equation}  \label {eq:10.2.4} {\bf y}= {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t}  \end {equation}<a id='x1-9r4'></a> is a solution of (<a href='#x1-7r3'>10.2.3<!-- tex4ht:ref: eq:10.2.3  --></a>) for all values of the constants \(c_1\) and \(c_2\).
+    </p></dd><dt class='list'>
+ <span class='ptmb8t-'>(c)</span>  </dt><dd class='list'>
+    <!-- l. 93 --><p class='noindent'>Find the solution of the initial value problem \begin {equation}  \label {eq:10.2.5} {\bf y}'=\twobytwo 1221{\bf y}+\twocol 21e^{4t},\quad {\bf y}(0)={1\over 5}\twocol 3{22}.  \end {equation}<a id='x1-11r5'></a></p></dd></dl>
+</div>
+<!-- l. 99 --><p class='indent'>
+</p><!-- l. 101 --><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>a</span><span class='ptmrc8t-'>) </span></span> The system (<a href='#x1-7r3'>10.2.3<!-- tex4ht:ref: eq:10.2.3  --></a>) can be written in matrix form as
+                                        \[ {\bf y}'=\twobytwo 1221{\bf y}+\twocol 21e^{4t}. \]
+ An initial value problem for (<a href='#x1-7r3'>10.2.3<!-- tex4ht:ref: eq:10.2.3  --></a>) can be written as
+                                        \[ {\bf y}'=\twobytwo 1221{\bf y}+\twocol 21e^{4t}, \quad y(t_0)=\twocol {k_1}{k_2}. \]
+ Since the coefficient matrix and the forcing function are both continuous on \((-\infty ,\infty )\), Theorem <a href='#x1-41'>10.2.1<!-- tex4ht:ref: thmtype:10.2.1  --></a> implies that this
+problem has a unique solution on \((-\infty ,\infty )\).
+</p><!-- l. 115 --><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>b</span><span class='ptmrc8t-'>) </span></span> If \(\bf y\) is given by (<a href='#x1-9r4'>10.2.4<!-- tex4ht:ref: eq:10.2.4  --></a>), then </p><div class='eqnarray'>\begin {eqnarray*}  A{\bf y}+{\bf f}&amp;=&amp; {1\over 5}\twobytwo 1221\twocol 87e^{4t}+ c_1\twobytwo 1221\twocol 11e^{3t}\\ &amp;&amp;+c_2\twobytwo 1221\twocol 1{-1}e^{-t} +\twocol 21e^{4t}\\ &amp;=&amp;{1\over 5}\twocol {22}{23}e^{4t}+c_1\twocol 33e^{3t}+c_2\twocol {-1}1e^{-t} +\twocol 21e^{4t}\\ &amp;=&amp;{1\over 5}\twocol {32}{28}e^{4t}+3c_1\twocol 11e^{3t}-c_2\twocol 1{-1}e^{-t} ={\bf y}'.  \end {eqnarray*}</div>
+<!-- l. 129 --><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>c</span><span class='ptmrc8t-'>) </span></span> We must choose \(c_1\) and \(c_2\) in (<a href='#x1-9r4'>10.2.4<!-- tex4ht:ref: eq:10.2.4  --></a>) so that
+                                                                                
+
+                                                                                
+                                        \[ {1\over 5}\twocol 87+c_1\twocol 11+c_2\twocol 1{-1}={1\over 5}\twocol 3{22}, \]
+ which is equivalent to
+                                        \[ \twobytwo 111{-1}\twocol {c_1}{c_2}=\twocol {-1}3. \]
+ Solving this system yields \(c_1=1\), \(c_2=-2\), so
+                                        \[ {\bf y}={1\over 5}\twocol 87e^{4t}+\twocol 11e^{3t}-2\twocol 1{-1}e^{-t} \]
+ is the solution of (<a href='#x1-11r5'>10.2.5<!-- tex4ht:ref: eq:10.2.5  --></a>).
+</p><!-- l. 155 --><p class='noindent'><span class='ptmrc8t-'>R<span class='small-caps'>EMARK</span></span>: The theory of \(n\times n\) linear systems of differential equations is analogous to the theory of the
+scalar \(n\)-th order equation \begin {equation}  \label {eq:10.2.6} P_0(t)y^{(n)}+P_1(t)y^{(n-1)}+\cdots +P_n(t)y=F(t),  \end {equation}<a id='x1-12r6'></a> as developed in Sections 9.1. For example, by rewriting (<a href='#x1-12r6'>10.2.6<!-- tex4ht:ref: eq:10.2.6  --></a>) as an
+equivalent linear system it can be shown that Theorem <a href='#x1-41'>10.2.1<!-- tex4ht:ref: thmtype:10.2.1  --></a> implies Theorem <span class='ptmb8t-'>9.1.1</span> (Exercise <span class='ptmb8t-'>12</span>).
+</p><!-- l. 158 --><p class='indent'>
+                                                                                
+
+                                                                                
+</p>
+ <a class="back-to-ch" href="sec10.0.html">Back</a>
+   
+</body> 
+</html>

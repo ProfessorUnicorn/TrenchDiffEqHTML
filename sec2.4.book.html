@@ -1,0 +1,229 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title></title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='combined.css' rel='stylesheet' type='text/css' /> 
+<meta content='Trench_DiffEQ_Book.tex' name='src' /> 
+<script>window.MathJax = {
+     tex: { packages: {'[+]': ['tagformat']}, tags: "ams", tagformat: { tag: (tag) => '(2.4.' + tag + ')'} }
+ }; </script> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
+</head><body>
+<p><a id='x1-1doc'></a>
+</p><!-- l. 2 --><p class='noindent'>Section 2.4 Transformation of Nonlinear Equations into Separable Equations
+</p><!-- l. 6 --><p class='noindent'><span class='ptmb8t-'>2.4</span><span class='ptmb8t-x-x-90'>   TRANSFORMATION OF NONLINEAR EQUATIONS INTO SEPARABLE EQUATIONS</span>
+</p><!-- l. 10 --><p class='noindent'>In Section 2.1 we found that the solutions of a linear nonhomogeneous equation
+                                        \[ y'+p(x)y=f(x) \]
+ are of the form \(y=uy_1\), where \(y_1\) is a nontrivial solution of the complementary equation \begin {equation}  \label {eq:2.4.1} y'+p(x)y=0  \end {equation}<a id='x1-2r1'></a> and \(u\) is a solution
+of
+                                        \[ u'y_1(x)=f(x). \]
+ Note that this last equation is separable, since it can be rewritten as
+                                        \[ u'={f(x)\over y_1(x)}. \]
+ In this section we’ll consider nonlinear differential equations that are not separable to begin with, but can be
+solved in a similar fashion by writing their solutions in the form \(y=uy_1\), where \(y_1\) is a suitably chosen known function and \(u\)
+                                                                                
+
+                                                                                
+satisfies a separable equation. We’llsay in this case that we <span class='ptmri8t-'>transformed</span> the given equation into a separable
+equation.
+</p><!-- l. 37 --><p class='noindent'><span id='textcolor1'>Bernoulli Equations</span>
+</p><!-- l. 37 --><p class='indent'>
+</p><!-- l. 40 --><p class='noindent'>A <a href='http://www-history.mcs.st-and.ac.uk/Mathematicians/Bernoulli_Jacob.html'><span class='ptmri8t-'>Bernoulli equation</span></a> is an equation of the form \begin {equation}  \label {eq:2.4.2} y'+p(x)y=f(x)y^r,  \end {equation}<a id='x1-3r2'></a> where \(r\) can be any real number other than \(0\) or \(1\). (Note that (<a href='#x1-3r2'>2.4.2<!-- tex4ht:ref: eq:2.4.2  --></a>)
+is linear if and only if \(r=0\) or \(r=1\).) We can transform (<a href='#x1-3r2'>2.4.2<!-- tex4ht:ref: eq:2.4.2  --></a>) into a separable equation by variation of parameters: if \(y_1\) is a
+nontrivial solution of (<a href='#x1-2r1'>2.4.1<!-- tex4ht:ref: eq:2.4.1  --></a>), substituting \(y=uy_1\) into (<a href='#x1-3r2'>2.4.2<!-- tex4ht:ref: eq:2.4.2  --></a>) yields
+                                        \[ u'y_1+u(y_1'+p(x)y_1)=f(x)(uy_1)^r, \]
+ which is equivalent to the separable equation
+                                        \[ u'y_1(x)=f(x)\left (y_1(x)\right )^ru^r\mbox {\quad or \quad } {u'\over u^r}=f(x)\left (y_1(x)\right )^{r-1}, \]
+ since \(y_1'+p(x)y_1=0\).
+</p>
+  <div class='newtheorem'>
+<!-- l. 65 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Example 2.4.1</span> </span><a id='x1-41'></a> Solve the Bernoulli equation \begin {equation}  \label {eq:2.4.3} y'-y=xy^2.  \end {equation}<a id='x1-5r3'></a>
+</p>
+  </div>
+<!-- l. 70 --><p class='indent'>
+</p><!-- l. 72 --><p class='noindent'><span class='ptmb8t-'>Solution </span> Since \(y_1=e^x\) is a solution of \(y'-y=0\), we look for solutions of (<a href='#x1-5r3'>2.4.3<!-- tex4ht:ref: eq:2.4.3  --></a>) in the form \(y=ue^x\), where
+                                                                                
+
+                                                                                
+                                        \[ u'e^x=xu^2e^{2x}\mbox {\quad or, equivalently, \quad } u'=xu^2e^x. \]
+ Separating variables yields
+                                        \[ {u'\over u^2}=xe^x, \]
+ and integrating yields
+                                        \[ -{1\over u}=(x-1)e^x+c. \]
+ Hence,
+                                                                                
+
+                                                                                
+                                        \[ u=-{1\over (x-1)e^x+c} \]
+ and
+                                        \[ y=-{1\over x-1+ce^{-x}}. \]
+</p><!-- l. 96 --><p class='indent'>  Figure <a href='#x1-2r1'>2.4.1<!-- tex4ht:ref: eq:2.4.1  --></a> shows direction field and some integral curves of (<a href='#x1-5r3'>2.4.3<!-- tex4ht:ref: eq:2.4.3  --></a>).
+</p>
+  <figure class='figure'> 
+
+                                                                                
+
+                                                                                
+                                                                                
+
+                                                                                
+<!-- l. 102 --><p class='noindent' id='-a-direction-field-and-integral-curves-for-yyxy-'><img alt='PIC' height='264' src='EPS//fig020401.png' width='409' /> <a id='x1-6r1'></a></p>
+<figcaption class='caption'><span class='id'>Figure 2.4.1 </span><span class='content'>A direction field and integral curves for \(y'-y=xy^{2}\)                                       </span></figcaption><!-- tex4ht:label?: x1-6r1  -->
+                                                                                
+
+                                                                                
+  </figure>
+<!-- l. 110 --><p class='noindent'><span id='textcolor2'>Other Nonlinear Equations That Can be Transformed Into Separable Equations</span>
+</p><!-- l. 110 --><p class='indent'>
+</p><!-- l. 112 --><p class='noindent'>We’ve seen that the nonlinear Bernoulli equation can be transformed into a separable equation by the substitution \(y=uy_1\)
+if \(y_1\) is suitably chosen. Now let’s discover a sufficient condition for a nonlinear first order differential
+equation \begin {equation}  \label {eq:2.4.4} y'=f(x,y)  \end {equation}<a id='x1-7r4'></a> to be transformable into a separable equation in the same way. Substituting \(y=uy_1\) into (<a href='#x1-7r4'>2.4.4<!-- tex4ht:ref: eq:2.4.4  --></a>)
+yields
+                                        \[ u'y_1(x)+uy_1'(x)=f(x,uy_1(x)), \]
+ which is equivalent to \begin {equation}  \label {eq:2.4.5} u'y_1(x)=f(x,uy_1(x))-uy_1'(x).  \end {equation}<a id='x1-8r5'></a> If
+                                        \[ f(x,uy_1(x))=q(u)y_1'(x) \]
+ for some function \(q\), then (<a href='#x1-8r5'>2.4.5<!-- tex4ht:ref: eq:2.4.5  --></a>) becomes \begin {equation}  \label {eq:2.4.6} u'y_1(x)=(q(u)-u)y_1'(x),  \end {equation}<a id='x1-9r6'></a> which is separable. After checking for constant solutions \(u\equiv u_0\) such that \(q(u_0)=u_0\),
+we can separate variables to obtain
+                                        \[ {u'\over q(u)-u}={y_1'(x)\over y_1(x)}. \]
+</p><!-- l. 145 --><p class='noindent'><span id='textcolor3'>Homogeneous Nonlinear Equations</span>
+</p><!-- l. 145 --><p class='indent'>
+                                                                                
+
+                                                                                
+</p><!-- l. 148 --><p class='noindent'>In the text we’ll consider only the most widely studied class of equations for which the method of the preceding
+paragraph works. Other types of equations appear in Exercises <span class='ptmb8t-'>44</span>–<span class='ptmb8t-'>51</span>.
+</p><!-- l. 154 --><p class='indent'>  The differential equation (<a href='#x1-7r4'>2.4.4<!-- tex4ht:ref: eq:2.4.4  --></a>) is said to be <span class='ptmri8t-'>homogeneous</span> if \(x\) and \(y\) occur in \(f\) in such a way that \(f(x,y)\) depends
+only on the ratio \(y/x\); that is, (<a href='#x1-7r4'>2.4.4<!-- tex4ht:ref: eq:2.4.4  --></a>) can be written as \begin {equation}  \label {eq:2.4.7} y'=q(y/x),  \end {equation}<a id='x1-10r7'></a> where \(q=q(u)\) is a function of a single variable. For
+example,
+                                        \[ y'={y+xe^{-y/x}\over x}={y\over x}+e^{-y/x} \]
+ and
+                                        \[ y'={y^2+xy-x^2\over x^2}=\left (y\over x\right )^2+{y\over x} -1 \]
+ are of the form (<a href='#x1-10r7'>2.4.7<!-- tex4ht:ref: eq:2.4.7  --></a>), with
+                                        \[ q(u)=u+e^{-u}\mbox {\quad and \quad } q(u)=u^2+u-1, \]
+ respectively. The general method discussed above can be applied to (<a href='#x1-10r7'>2.4.7<!-- tex4ht:ref: eq:2.4.7  --></a>) with \(y_1=x\) (and therefore \(y_1'=1)\). Thus,
+substituting \(y=ux\) in (<a href='#x1-10r7'>2.4.7<!-- tex4ht:ref: eq:2.4.7  --></a>) yields
+                                                                                
+
+                                                                                
+                                        \[ u'x+u=q(u), \]
+ and separation of variables (after checking for constant solutions \(u\equiv u_0\) such that \(q(u_0)=u_0\)) yields
+                                        \[ {u'\over q(u)-u}={1\over x}. \]
+</p><!-- l. 188 --><p class='indent'>  Before turning to examples, we point out something that you may’ve have already noticed: the definition of
+<span class='ptmri8t-'>homogeneous equation</span> given here isn’t the same as the definition given in Section 2.1, where we said that a
+linear equation of the form
+                                        \[ y'+p(x)y=0 \]
+ is homogeneous. We make no apology for this inconsistency, since we didn’t create it historically,
+<span class='ptmri8t-'>homogeneous</span> has been used in these two inconsistent ways. The one having to do with linear equations
+is the most important. This is the only section of the book where the meaning defined here will
+apply.
+</p><!-- l. 203 --><p class='indent'>  Since \(y/x\) is in general undefined if \(x=0\), we’ll consider solutions of nonhomogeneous equations only on open intervals
+that do not contain the point \(x=0\).
+</p>
+  <div class='newtheorem'>
+<!-- l. 207 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Example 2.4.2</span> </span><a id='x1-112'></a>Solve \begin {equation}  \label {eq:2.4.8} y'={y+xe^{-y/x}\over x}.  \end {equation}<a id='x1-12r8'></a>
+                                                                                
+
+                                                                                
+</p>
+  </div>
+<!-- l. 212 --><p class='indent'>
+</p><!-- l. 214 --><p class='noindent'><span class='ptmb8t-'>Solution </span> Substituting \(y=ux\) into (<a href='#x1-12r8'>2.4.8<!-- tex4ht:ref: eq:2.4.8  --></a>) yields
+                                        \[ u'x+u = {ux+xe^{-ux/x}\over x} = u+e^{-u}. \]
+ Simplifying and separating variables yields
+                                        \[ e^uu'={1\over x}. \]
+ Integrating yields \(e^u=\ln |x|+c\). Therefore \(u=\ln (\ln |x|+c)\) and \(y=ux=x \ln (\ln |x|+c)\).
+</p><!-- l. 229 --><p class='indent'>  Figure <a href='#-a-direction-field-and-some-integral-curves-for-y-yxeyxx-'>2.4.2<!-- tex4ht:ref: figure:2.4.2  --></a> shows a direction field and integral curves for (<a href='#x1-12r8'>2.4.8<!-- tex4ht:ref: eq:2.4.8  --></a>).
+</p>
+  <figure class='figure'> 
+
+                                                                                
+
+                                                                                
+                                                                                
+
+                                                                                
+<!-- l. 235 --><p class='noindent' id='-a-direction-field-and-some-integral-curves-for-y-yxeyxx-'><img alt='PIC' height='264' src='EPS//fig020402.png' width='409' /> <a id='x1-13r2'></a></p>
+<figcaption class='caption'><span class='id'>Figure 2.4.2 </span><span class='content'>A direction field and some integral curves for \(y'=\displaystyle {\frac {y+xe^{-y/x}}{x}}\)                                  </span></figcaption><!-- tex4ht:label?: x1-13r2  -->
+                                                                                
+
+                                                                                
+  </figure>
+  <div class='newtheorem'>
+<!-- l. 243 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Example 2.4.3</span> </span><a id='x1-143'></a><br class='newline' />
+    </p><dl class='list1'><dt class='list'>
+ <span class='ptmb8t-'>(a)</span>  </dt><dd class='list'>
+    <!-- l. 246 --><p class='noindent'>Solve \begin {equation}  \label {eq:2.4.9} x^2y'=y^2+xy-x^2.  \end {equation}<a id='x1-16r9'></a>
+    </p></dd><dt class='list'>
+ <span class='ptmb8t-'>(b)</span>  </dt><dd class='list'>
+    <!-- l. 252 --><p class='noindent'>Solve the initial value problem \begin {equation}  \label {eq:2.4.10} x^2y'=y^2+xy-x^2, \quad y(1)=2.  \end {equation}<a id='x1-18r10'></a></p></dd></dl>
+</div>
+<!-- l. 257 --><p class='indent'>
+</p><!-- l. 259 --><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>a</span><span class='ptmrc8t-'>) </span></span> We first find solutions of (<a href='#x1-16r9'>2.4.9<!-- tex4ht:ref: eq:2.4.9  --></a>) on open intervals that don’t contain \(x=0\). We can rewrite (<a href='#x1-16r9'>2.4.9<!-- tex4ht:ref: eq:2.4.9  --></a>)
+as
+                                        \[ y'={y^2+xy-x^2\over x^2} \]
+ for \(x\) in any such interval. Substituting \(y=ux\) yields
+                                        \[ u'x+u ={ (ux)^2+x(ux)-x^2 \over x^2} = u^2+u-1, \]
+ so \begin {equation}  \label {eq:2.4.11} u'x=u^2-1.  \end {equation}<a id='x1-19r11'></a> By inspection this equation has the constant solutions \(u\equiv 1\) and \(u\equiv -1\). Therefore \(y=x\) and \(y=-x\) are solutions of (<a href='#x1-16r9'>2.4.9<!-- tex4ht:ref: eq:2.4.9  --></a>).
+If \(u\) is a solution of (<a href='#x1-19r11'>2.4.11<!-- tex4ht:ref: eq:2.4.11  --></a>) that doesn’t assume the values \(\pm 1\) on some interval, separating variables
+yields
+                                                                                
+
+                                                                                
+                                        \[ {u'\over u^2-1}={1\over x}, \]
+ or, after a partial fraction expansion,
+                                        \[ {1\over 2}\left [{1\over u-1}-{1\over u+1}\right ]u'= {1\over x}. \]
+ Multiplying by 2 and integrating yields
+                                        \[ \ln \left |u-1\over u+1\right | =2 \ln |x|+k, \]
+ or
+                                                                                
+
+                                                                                
+                                        \[ \left |{u-1\over u+1}\right |=e^kx^2, \]
+ which holds if \begin {equation}  \label {eq:2.4.12} {u-1\over u+1}=cx^2  \end {equation}<a id='x1-20r12'></a> where \(c\) is an arbitrary constant. Solving for \(u\) yields
+                                        \[ u ={1+cx^2\over 1-cx^2}. \]
+</p>
+  <figure class='figure'> 
+
+                                                                                
+
+                                                                                
+                                                                                
+
+                                                                                
+<div class='minipage'><!-- l. 311 --><p class='noindent' id='-a-direction-field-and-integral-curves-for-xyyxyx-'> <img alt='PIC' height='264' src='EPS//fig020403.png' width='409' /><a id='x1-21r3'></a></p>
+<figcaption class='caption'><span class='id'>Figure 2.4.3 </span><span class='content'>A direction field and integral curves
+for \(x^{2}y'=y^{2}+xy-x^{2}\)                                     </span></figcaption><!-- tex4ht:label?: x1-21r3  --></div>          <div class='minipage' id='-solutions-of-xyyxyx-y-'> <img alt='PIC' height='264' src='EPS//fig020404.png' width='409' /> <a id='x1-22r4'></a><figcaption class='caption'><span class='id'>Figure 2.4.4 </span><span class='content'>Solutions of \(x^{2}y'=y^{2}+xy-x^{2}\),  \(y(1)=2\)                                       </span></figcaption><!-- tex4ht:label?: x1-22r4  --></div>
+                                                                                
+
+                                                                                
+  </figure>
+<!-- l. 331 --><p class='noindent'>Therefore \begin {equation}  \label {eq:2.4.13} y=ux={x(1+cx^2)\over 1-cx^2}  \end {equation}<a id='x1-23r13'></a> is a solution of (<a href='#x1-18r10'>2.4.10<!-- tex4ht:ref: eq:2.4.10  --></a>) for any choice of the constant \(c\). Setting \(c=0\) in (<a href='#x1-23r13'>2.4.13<!-- tex4ht:ref: eq:2.4.13  --></a>) yields the solution \(y=x\).
+However, the solution \(y=-x\) can’t be obtained from (<a href='#x1-23r13'>2.4.13<!-- tex4ht:ref: eq:2.4.13  --></a>). Thus, the solutions of (<a href='#x1-16r9'>2.4.9<!-- tex4ht:ref: eq:2.4.9  --></a>) on intervals that don’t
+contain \(x=0\) are \(y=-x\) and functions of the form (<a href='#x1-23r13'>2.4.13<!-- tex4ht:ref: eq:2.4.13  --></a>).
+</p><!-- l. 342 --><p class='indent'>  The situation is more complicated if \(x=0\) is the open interval. First, note that \(y=-x\) satisfies (<a href='#x1-16r9'>2.4.9<!-- tex4ht:ref: eq:2.4.9  --></a>) on \((-\infty ,\infty )\). If \(c_1\) and \(c_2\) are
+arbitrary constants, the function \begin {equation}  \label {eq:2.4.14} y=\left \{\begin {array}{ll} \displaystyle {x(1+c_1x^2)\over 1-c_1x^2},&amp;a&lt;x&lt;0,\\ \displaystyle {x(1+c_2x^2)\over 1-c_2x^2},&amp;0\le x&lt;b, \end {array}\right .  \end {equation}<a id='x1-24r14'></a> is a solution of (<a href='#x1-16r9'>2.4.9<!-- tex4ht:ref: eq:2.4.9  --></a>) on \((a,b)\), where
+                                        \[ a=\left \{\begin {array}{cl}-\displaystyle {1\over \sqrt {c_1}}&amp;\mbox { if }c_1&gt;0,\\ -\infty&amp; \mbox { if }c_1\le 0, \end {array}\right . \mbox {\quad and \quad } b=\left \{\begin {array}{cl}\displaystyle {1\over \sqrt {c_2}}&amp;\mbox { if }c_2&gt;0,\\ \infty&amp; \mbox { if }c_2\le 0. \end {array}\right . \]
+ We leave it to you to verify this. To do so, note that if \(y\) is any function of the form (<a href='#x1-23r13'>2.4.13<!-- tex4ht:ref: eq:2.4.13  --></a>) then \(y(0)=0\) and
+\(y'(0)=1\).
+</p><!-- l. 364 --><p class='indent'>  Figure <a href='#-a-direction-field-and-integral-curves-for-xyyxyx-'>2.4.3<!-- tex4ht:ref: figure:2.4.3  --></a> shows a direction field and some integral curves for (<a href='#x1-16r9'>2.4.9<!-- tex4ht:ref: eq:2.4.9  --></a>).
+</p><!-- l. 369 --><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>b</span><span class='ptmrc8t-'>) </span></span> We could obtain \(c\) by imposing the initial condition \(y(1)=2\) in (<a href='#x1-23r13'>2.4.13<!-- tex4ht:ref: eq:2.4.13  --></a>), and then solving for \(c\). However,
+it’s easier to use (<a href='#x1-20r12'>2.4.12<!-- tex4ht:ref: eq:2.4.12  --></a>). Since \(u=y/x\), the initial condition \(y(1)=2\) implies that \(u(1)=2\). Substituting this into (<a href='#x1-20r12'>2.4.12<!-- tex4ht:ref: eq:2.4.12  --></a>) yields \(c=1/3\). Hence,
+the solution of (<a href='#x1-18r10'>2.4.10<!-- tex4ht:ref: eq:2.4.10  --></a>) is
+                                        \[ y={x(1+x^2/3)\over 1-x^2/3}. \]
+ The interval of validity of this solution is \((-\sqrt 3,\sqrt 3)\). However, the largest interval on which (<a href='#x1-18r10'>2.4.10<!-- tex4ht:ref: eq:2.4.10  --></a>) has a unique solution
+is \((0,\sqrt 3)\). To see this, note from (<a href='#x1-24r14'>2.4.14<!-- tex4ht:ref: eq:2.4.14  --></a>) that any function of the form \begin {equation}  \label {eq:2.4.15} y=\left \{\begin {array}{ll} \displaystyle {x(1+cx^2)\over 1-cx^2},&amp;a&lt;x\le 0,\\ \displaystyle {x(1+x^2/3)\over 1-x^2/3},&amp;0\le x&lt;\sqrt 3, \end {array}\right .  \end {equation}<a id='x1-25r15'></a> is a solution of (<a href='#x1-18r10'>2.4.10<!-- tex4ht:ref: eq:2.4.10  --></a>) on \((a,\sqrt 3)\), where \(a=-1/\sqrt c\) if \(c&gt;0\) or \(a=-\infty \) if \(c\le 0\).
+(Why doesn’t this contradict Theorem <span class='ptmb8t-'>2.3.1</span>?)
+</p><!-- l. 394 --><p class='indent'>  Figure <a href='#-solutions-of-xyyxyx-y-'>2.4.4<!-- tex4ht:ref: figure:2.4.4  --></a> shows several solutions of the initial value problem (<a href='#x1-18r10'>2.4.10<!-- tex4ht:ref: eq:2.4.10  --></a>). Note that these solutions coincide
+on \((0,\sqrt {3})\).
+</p><!-- l. 398 --><p class='indent'>  In the last two examples we were able to solve the given equations explicitly. However, this isn’t always
+possible, as you’ll see in the exercises.
+</p>
+ <a class="back-to-ch" href="sec2.0.html">Back</a>
+   
+</body> 
+</html>

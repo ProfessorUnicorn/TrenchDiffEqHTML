@@ -1,0 +1,455 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title></title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='combined.css' rel='stylesheet' type='text/css' /> 
+<meta content='Trench_DiffEQ_Book.tex' name='src' /> 
+<script>window.MathJax = {
+     tex: { packages: {'[+]': ['tagformat']}, tags: "ams", tagformat: { tag: (tag) => '(2.1.' + tag + ')'} }
+ }; </script> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
+</head><body>
+<!-- l. 1 --><p class='noindent'>Section 2.1 Linear First Order Equations   <span class='ptmb8t-'>2.1</span><span class='ptmb8t-x-x-90'>  LINEAR FIRST ORDER EQUATIONS</span>
+<a id='x1-1doc'></a>
+</p><!-- l. 10 --><p class='noindent'>A first order differential equation is said to be <span class='ptmri8t-'>linear</span> if it can be written as
+</p><!-- l. 16 --><p class='indent'>  \begin {equation} \label {eq:2.1.1} y'+p(x)y=f(x).  \end {equation}<a id='x1-2r1'></a> A first order differential equation that can’t be written like this is <span class='ptmri8t-'>nonlinear</span>. We say that (<a href='#x1-2r1'>2.1.1<!-- tex4ht:ref: eq:2.1.1  --></a>) is
+<span class='ptmri8t-'>homogeneous</span> if \(f\equiv 0\); otherwise it’s <span class='ptmri8t-'>nonhomogeneous</span>. Since \(y\equiv 0\) is obviously a solution of the homgeneous
+equation
+                                        \[ y'+p(x)y=0, \]
+ we call it the <span class='ptmri8t-'>trivial solution</span>. Any other solution is <span class='ptmri8t-'>nontrivial</span>.
+</p>
+  <div class='newtheorem'>
+<!-- l. 28 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Example 2.1.1</span> </span><a id='x1-31'></a>The first order equations </p><div class='eqnarray'>\begin {eqnarray*}  x^2y'+3y&amp;=&amp;x^2,\\ xy'-8x^2y&amp;=&amp;\sin x,\\ xy'+(\ln x)y&amp;=&amp;0,\\ y'&amp;=&amp;x^2y - 2,  \end {eqnarray*}</div>
+<!-- l. 36 --><p class='indent'>  are not in the form (<a href='#x1-2r1'>2.1.1<!-- tex4ht:ref: eq:2.1.1  --></a>), but they are linear, since they can be rewritten as </p><div class='eqnarray'>\begin {eqnarray*}  y'+{3\over x^2}y&amp;=&amp;1,\\ y'-8xy&amp;=&amp;{\sin x\over x},\\ y'+{\ln x\over x}y&amp;=&amp;0,\\ y'-x^2y&amp;=&amp;-2.  \end {eqnarray*}</div>
+  </div>
+<!-- l. 44 --><p class='indent'>
+</p>
+  <div class='newtheorem'>
+<!-- l. 47 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Example 2.1.2</span> </span><a id='x1-42'></a>Here are some nonlinear first order equations:
+                                        \[ \begin {array}{rcrc} xy'+3y^2 &amp; =&amp; 2x&amp;\qquad \mbox {(because $y$ is squared)},\\ yy'&amp; =&amp;3&amp;\qquad \mbox {(because of the product $yy'$)},\\ y'+xe^y &amp;=&amp;12&amp;\qquad \mbox {(because of $e^y$)}. \end {array} \]
+                                                                                
+
+                                                                                
+</p>
+  </div>
+<!-- l. 57 --><p class='indent'>
+</p><!-- l. 59 --><p class='noindent'><span id='textcolor1'>General Solution of a Linear First Order Equation</span>
+</p><!-- l. 59 --><p class='indent'>
+</p><!-- l. 62 --><p class='noindent'>To motivate a definition that we’ll need, consider the simple linear first order equation \begin {equation} \label {eq:2.1.2} y'={1\over x^2}.  \end {equation}<a id='x1-5r2'></a> From calculus we know
+that \(y\) satisfies this equation if and only if \begin {equation} \label {eq:2.1.3} y=-{1\over x}+c,  \end {equation}<a id='x1-6r3'></a> where \(c\) is an arbitrary constant. We call \(c\) a <span class='ptmri8t-'>parameter</span> and
+say that (<a href='#x1-6r3'>2.1.3<!-- tex4ht:ref: eq:2.1.3  --></a>) defines a <span class='ptmri8t-'>one–parameter family</span> of functions. For each real number \(c\), the function
+defined by (<a href='#x1-6r3'>2.1.3<!-- tex4ht:ref: eq:2.1.3  --></a>) is a solution of (<a href='#x1-5r2'>2.1.2<!-- tex4ht:ref: eq:2.1.2  --></a>) on \((-\infty ,0)\) and \((0,\infty )\); moreover, every solution of (<a href='#x1-5r2'>2.1.2<!-- tex4ht:ref: eq:2.1.2  --></a>) on either of
+these intervals is of the form (<a href='#x1-6r3'>2.1.3<!-- tex4ht:ref: eq:2.1.3  --></a>) for some choice of \(c\). We say that (<a href='#x1-6r3'>2.1.3<!-- tex4ht:ref: eq:2.1.3  --></a>) is <span class='ptmri8t-'>the general solution</span>
+of (<a href='#x1-5r2'>2.1.2<!-- tex4ht:ref: eq:2.1.2  --></a>).
+</p><!-- l. 83 --><p class='indent'>  We’ll see that a similar situation occurs in connection with any first order linear equation \begin {equation} \label {eq:2.1.4} y'+p(x)y=f(x);  \end {equation}<a id='x1-7r4'></a> that is, if \(p\) and \(f\) are
+continuous on some open interval \((a,b)\) then there’s a unique formula \(y=y(x,c)\) analogous to (<a href='#x1-6r3'>2.1.3<!-- tex4ht:ref: eq:2.1.3  --></a>) that involves \(x\) and a
+parameter \(c\) and has the these properties: </p>
+     <ul class='itemize1'>
+     <li class='itemize'>For each fixed value of \(c\), the resulting function of \(x\) is a solution of (<a href='#x1-7r4'>2.1.4<!-- tex4ht:ref: eq:2.1.4  --></a>) on \((a,b)\).
+     </li>
+     <li class='itemize'>If \(y\) is a solution of (<a href='#x1-7r4'>2.1.4<!-- tex4ht:ref: eq:2.1.4  --></a>) on \((a,b)\), then \(y\) can be obtained from the formula by choosing \(c\) appropriately.</li></ul>
+<!-- l. 100 --><p class='noindent'>We’ll call \(y=y(x,c)\) the <span class='ptmri8t-'>general solution</span> of (<a href='#x1-7r4'>2.1.4<!-- tex4ht:ref: eq:2.1.4  --></a>).
+</p><!-- l. 103 --><p class='indent'>  When this has been established, it will follow that an equation of the form \begin {equation} \label {eq:2.1.5} P_0(x)y'+P_1(x)y=F(x)  \end {equation}<a id='x1-8r5'></a> has a general solution on any open
+interval \((a,b)\) on which \(P_0\), \(P_1\), and \(F\) are all continuous and \(P_0\) has no zeros, since in this case we can rewrite (<a href='#x1-8r5'>2.1.5<!-- tex4ht:ref: eq:2.1.5  --></a>) in the form
+(<a href='#x1-7r4'>2.1.4<!-- tex4ht:ref: eq:2.1.4  --></a>) with \(p=P_1/P_0\) and \(f=F/P_0\), which are both continuous on \((a,b)\).
+</p><!-- l. 113 --><p class='indent'>  To avoid awkward wording in examples and exercises, we won’t specify the interval \((a,b)\) when we ask for the
+general solution of a specific linear first order equation. Let’s agree that this always means that we want the
+general solution on every open interval on which \(p\) and \(f\) are continuous if the equation is of the form (<a href='#x1-7r4'>2.1.4<!-- tex4ht:ref: eq:2.1.4  --></a>), or on
+which \(P_0\), \(P_1\), and \(F\) are continuous and \(P_0\) has no zeros, if the equation is of the form (<a href='#x1-8r5'>2.1.5<!-- tex4ht:ref: eq:2.1.5  --></a>). We leave it to you to identify
+these intervals in specific examples and exercises.
+</p><!-- l. 124 --><p class='indent'>  For completeness, we point out that if \(P_0\), \(P_1\), and \(F\) are all continuous on an open interval \((a,b)\), but \(P_0\) <span class='ptmri8t-'>does</span> have a zero in \((a,b)\),
+then (<a href='#x1-8r5'>2.1.5<!-- tex4ht:ref: eq:2.1.5  --></a>) may fail to have a general solution on \((a,b)\) in the sense just defined. Since this isn’t a major point
+that needs to be developed in depth, we won’t discuss it further; however, see Exercise <span class='ptmb8t-'>44</span> for an
+example.
+</p><!-- l. 132 --><p class='noindent'><span id='textcolor2'>Homogeneous Linear First Order Equations</span>
+</p><!-- l. 132 --><p class='indent'>
+</p><!-- l. 134 --><p class='noindent'>We begin with the problem of finding the general solution of a homogeneous linear first order equation. The next
+example recalls a familiar result from calculus.
+</p>
+  <div class='newtheorem'>
+<!-- l. 140 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Example 2.1.3</span> </span><a id='x1-93'></a> Let \(a\) be a constant.
+    </p><dl class='list1'><dt class='list'>
+ <span class='ptmb8t-'>(a)</span>  </dt><dd class='list'>
+    <!-- l. 144 --><p class='noindent'>Find the general solution of \begin {equation}  y'-ay=0.\label {eq:2.1.6}  \end {equation}<a id='x1-11r6'></a>
+                                                                                
+
+                                                                                
+    </p></dd><dt class='list'>
+ <span class='ptmb8t-'>(b)</span>  </dt><dd class='list'>
+    <!-- l. 150 --><p class='noindent'>Solve the initial value problem
+                                          \[ y'-ay=0,\quad y(x_0)=y_0. \]
+    </p></dd></dl>
+</div>
+<!-- l. 155 --><p class='indent'>
+</p><!-- l. 158 --><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>a</span><span class='ptmrc8t-'>) </span></span> You already know from calculus that if \(c\) is any constant, then \(y=ce^{ax}\) satisfies (<a href='#x1-11r6'>2.1.6<!-- tex4ht:ref: eq:2.1.6  --></a>). However, let’s
+pretend you’ve forgotten this, and use this problem to illustrate a general method for solving a homogeneous
+linear first order equation.
+</p><!-- l. 164 --><p class='indent'>  We know that (<a href='#x1-11r6'>2.1.6<!-- tex4ht:ref: eq:2.1.6  --></a>) has the trivial solution \(y\equiv 0\). Now suppose \(y\) is a nontrivial solution of (<a href='#x1-11r6'>2.1.6<!-- tex4ht:ref: eq:2.1.6  --></a>). Then, since a
+differentiable function must be continuous, there must be some open interval \(I\) on which \(y\) has no zeros. We rewrite
+(<a href='#x1-11r6'>2.1.6<!-- tex4ht:ref: eq:2.1.6  --></a>) as
+                                        \[ {y'\over y}=a \]
+ for \(x\) in \(I\). Integrating this shows that
+                                                                                
+
+                                                                                
+                                        \[ \ln |y|=ax+k,\mbox {\quad so \quad } |y|=e^ke^{ax}, \]
+ where \(k\) is an arbitrary constant. Since \(e^{ax}\) can never equal zero, \(y\) has no zeros, so \(y\) is either always positive or always
+negative. Therefore we can rewrite \(y\) as \begin {equation} \label {eq:2.1.7} y=ce^{ax}  \end {equation}<a id='x1-13r7'></a> where
+                                        \[ c=\left \{\begin {array}{cl}\phantom {-}e^k&amp;\mbox {if } y&gt;0, \\ -e^k&amp;\mbox {if } y&lt;0.\end {array}\right . \]
+ This shows that every nontrivial solution of (<a href='#x1-11r6'>2.1.6<!-- tex4ht:ref: eq:2.1.6  --></a>) is of the form \(y=ce^{ax}\) for some nonzero constant \(c\). Since setting \(c=0\)
+yields the trivial solution, <span class='ptmri8t-'>all</span> solutions of (<a href='#x1-11r6'>2.1.6<!-- tex4ht:ref: eq:2.1.6  --></a>) are of the form (<a href='#x1-13r7'>2.1.7<!-- tex4ht:ref: eq:2.1.7  --></a>). Conversely, (<a href='#x1-13r7'>2.1.7<!-- tex4ht:ref: eq:2.1.7  --></a>) is a solution of
+(<a href='#x1-11r6'>2.1.6<!-- tex4ht:ref: eq:2.1.6  --></a>) for every choice of \(c\), since differentiating (<a href='#x1-13r7'>2.1.7<!-- tex4ht:ref: eq:2.1.7  --></a>) yields \(y'=ace^{ax}=ay\).
+</p><!-- l. 193 --><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>b</span><span class='ptmrc8t-'>) </span></span> Imposing the initial condition \(y(x_0)=y_0\) yields \(y_0=ce^{ax_0}\), so \(c=y_0e^{-ax_0}\) and
+                                        \[ y=y_0e^{-ax_0}e^{ax}=y_0e^{a(x-x_0)}. \]
+ Figure <a href='#-solutions-of-yay-y-'>2.1.1<!-- tex4ht:ref: figure:2.1.1  --></a> show the graphs of this function with \(x_{0}=0\), \(y_{0}=1\), and various values of \(a\).
+</p>
+  <figure class='figure'> 
+
+                                                                                
+
+                                                                                
+                                                                                
+
+                                                                                
+<!-- l. 207 --><p class='noindent' id='-solutions-of-yay-y-'><img alt='PIC' height='264' src='EPS//fig020101.png' width='409' /> <a id='x1-14r1'></a></p>
+<figcaption class='caption'><span class='id'>Figure 2.1.1 </span><span class='content'>Solutions of \(y'-ay=0\), \(y(0)=1\)                                                           </span></figcaption><!-- tex4ht:label?: x1-14r1  -->
+                                                                                
+
+                                                                                
+  </figure>
+  <div class='newtheorem'>
+<!-- l. 214 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Example 2.1.4</span> </span><a id='x1-154'></a>
+    </p><dl class='list1'><dt class='list'>
+ <span class='ptmb8t-'>(a)</span>  </dt><dd class='list'>
+    <!-- l. 218 --><p class='noindent'>Find the general solution of \begin {equation}  xy'+y=0.\label {eq:2.1.8}  \end {equation}<a id='x1-17r8'></a>
+    </p></dd><dt class='list'>
+ <span class='ptmb8t-'>(b)</span>  </dt><dd class='list'>
+    <!-- l. 224 --><p class='noindent'>Solve the initial value problem \begin {equation}  xy'+y=0,\quad y(1)=3.\label {eq:2.1.9}  \end {equation}<a id='x1-19r9'></a></p></dd></dl>
+</div>
+<!-- l. 229 --><p class='indent'>
+</p><!-- l. 232 --><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>a</span><span class='ptmrc8t-'>) </span></span> We rewrite (<a href='#x1-17r8'>2.1.8<!-- tex4ht:ref: eq:2.1.8  --></a>) as \begin {equation} \label {eq:2.1.10} y'+{1\over x}y=0,  \end {equation}<a id='x1-20r10'></a> where \(x\) is restricted to either \((-\infty ,0)\) or \((0,\infty )\). If \(y\) is a nontrivial solution
+of (<a href='#x1-20r10'>2.1.10<!-- tex4ht:ref: eq:2.1.10  --></a>), there must be some open interval I on which \(y\) has no zeros. We can rewrite (<a href='#x1-20r10'>2.1.10<!-- tex4ht:ref: eq:2.1.10  --></a>)
+as
+                                        \[ {y'\over y}=-{1\over x} \]
+ for \(x\) in \(I\). Integrating shows that
+                                        \[ \ln |y|=-\ln |x|+k,\mbox {\quad so\quad }|y|={e^k\over |x|}. \]
+ Since a function that satisfies the last equation can’t change sign on either \((-\infty ,0)\) or \((0,\infty )\), we can rewrite this result more
+simply as \begin {equation} \label {eq:2.1.11} y={c\over x}  \end {equation}<a id='x1-21r11'></a> where
+                                                                                
+
+                                                                                
+                                        \[ c=\left \{\begin {array}{cl}\phantom {-}e^k&amp;\mbox {if } y&gt;0, \\ -e^k&amp;\mbox {if } y&lt;0.\end {array}\right . \]
+ We’ve now shown that every solution of (<a href='#x1-20r10'>2.1.10<!-- tex4ht:ref: eq:2.1.10  --></a>) is given by (<a href='#x1-21r11'>2.1.11<!-- tex4ht:ref: eq:2.1.11  --></a>) for some choice of \(c\). (Even though we
+assumed that \(y\) was nontrivial to derive (<a href='#x1-21r11'>2.1.11<!-- tex4ht:ref: eq:2.1.11  --></a>), we can get the trivial solution by setting \(c=0\) in (<a href='#x1-21r11'>2.1.11<!-- tex4ht:ref: eq:2.1.11  --></a>).)
+Conversely, any function of the form (<a href='#x1-21r11'>2.1.11<!-- tex4ht:ref: eq:2.1.11  --></a>) is a solution of (<a href='#x1-20r10'>2.1.10<!-- tex4ht:ref: eq:2.1.10  --></a>), since differentiating (<a href='#x1-21r11'>2.1.11<!-- tex4ht:ref: eq:2.1.11  --></a>)
+yields
+                                        \[ y'=-{c\over x^2}, \]
+ and substituting this and (<a href='#x1-21r11'>2.1.11<!-- tex4ht:ref: eq:2.1.11  --></a>) into (<a href='#x1-20r10'>2.1.10<!-- tex4ht:ref: eq:2.1.10  --></a>) yields </p><div class='eqnarray'>\begin {eqnarray*}  y'+{1\over x}y&amp;=&amp;-{c\over x^2}+{1\over x}{c\over x}\\ &amp;=&amp;-{c\over x^2}+{c\over x^2}=0.  \end {eqnarray*}</div>
+<!-- l. 274 --><p class='indent'>  Figure <a href='#-solutions-of-xyy-on-and-'>2.1.2<!-- tex4ht:ref: figure:2.1.2  --></a> shows the graphs of some solutions corresponding to various values of \(c\)
+</p><!-- l. 278 --><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>b</span><span class='ptmrc8t-'>) </span></span> Imposing the initial condition \(y(1)=3\) in (<a href='#x1-21r11'>2.1.11<!-- tex4ht:ref: eq:2.1.11  --></a>) yields \(c=3\). Therefore the solution of (<a href='#x1-19r9'>2.1.9<!-- tex4ht:ref: eq:2.1.9  --></a>)
+is
+                                        \[ y={3\over x}. \]
+ The interval of validity of this solution is \((0,\infty )\).
+</p>
+  <figure class='figure'> 
+
+                                                                                
+
+                                                                                
+                                                                                
+
+                                                                                
+<!-- l. 288 --><p class='noindent' id='-solutions-of-xyy-on-and-'><img alt='PIC' height='264' src='EPS//fig020102.png' width='409' /> <a id='x1-22r2'></a></p>
+<figcaption class='caption'><span class='id'>Figure 2.1.2 </span><span class='content'>Solutions of \(xy'+y=0\) on \((0,\infty )\) and \((-\infty ,0)\)                                                     </span></figcaption><!-- tex4ht:label?: x1-22r2  -->
+                                                                                
+
+                                                                                
+  </figure>
+<!-- l. 297 --><p class='indent'>  The results in Examples <a href='#x1-93'>2.1.3<!-- tex4ht:ref: example:2.1.3  --></a><span class='ptmb8t-'>(a) </span>and <a href='#x1-154'>2.1.4<!-- tex4ht:ref: example:2.1.4  --></a><span class='ptmb8t-'>(b) </span>are special cases of the next theorem.
+</p>
+  <div class='newtheorem'>
+<!-- l. 301 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Theorem 2.1.1</span> </span><a id='x1-231'></a> <span class='ptmri8t-'>If</span> \(p\) <span class='ptmri8t-'>is continuous on</span> \((a,b),\) <span class='ptmri8t-'>then the general solution of the homogeneous equation </span>\begin {equation} \label {eq:2.1.12} y'+p(x)y=0  \end {equation}<a id='x1-24r12'></a> <span class='ptmri8t-'>on</span> \((a,b)\)
+<span class='ptmri8t-'>is</span>
+                                        \[ y=ce^{-P(x)}, \]
+ <span class='ptmri8t-'>where </span>\begin {equation} \label {eq:2.1.13} P(x)=\int p(x)\,dx  \end {equation}<a id='x1-25r13'></a> <span class='ptmri8t-'>is any antiderivative of</span> \(p\) <span class='ptmri8t-'>on</span> \((a,b);\) <span class='ptmri8t-'>that is</span>\(,\) \begin {equation} \label {eq:2.1.14} P'(x)=p(x),\quad a&lt;x&lt;b.  \end {equation}<a id='x1-26r14'></a>
+</p>
+  </div>
+<!-- l. 319 --><p class='indent'>  
+</p><!-- l. 321 --><p class='noindent'><span class='ptmb8t-'>Proof    </span>If \(y=ce^{-P(x)}\), differentiating \(y\) and using (<a href='#x1-26r14'>2.1.14<!-- tex4ht:ref: eq:2.1.14  --></a>) shows that
+                                        \[ y'=-P'(x)ce^{-P(x)}=-p(x)ce^{-P(x)}=-p(x)y, \]
+ so \(y'+p(x)y=0\); that is, \(y\) is a solution of (<a href='#x1-24r12'>2.1.12<!-- tex4ht:ref: eq:2.1.12  --></a>), for any choice of \(c\).
+</p><!-- l. 330 --><p class='indent'>  Now we’ll show that any solution of (<a href='#x1-24r12'>2.1.12<!-- tex4ht:ref: eq:2.1.12  --></a>) can be written as \(y=ce^{-P(x)}\) for some constant \(c\). The trivial solution can be
+written this way, with \(c=0\). Now suppose \(y\) is a nontrivial solution. Then there’s an open subinterval \(I\) of \((a,b)\) on
+which \(y\) has no zeros. We can rewrite (<a href='#x1-24r12'>2.1.12<!-- tex4ht:ref: eq:2.1.12  --></a>) as \begin {equation} \label {eq:2.1.15} {y'\over y}=-p(x)  \end {equation}<a id='x1-27r15'></a> for \(x\) in \(I\). Integrating (<a href='#x1-27r15'>2.1.15<!-- tex4ht:ref: eq:2.1.15  --></a>) and recalling (<a href='#x1-25r13'>2.1.13<!-- tex4ht:ref: eq:2.1.13  --></a>)
+yields
+                                                                                
+
+                                                                                
+                                        \[ \ln |y|=-P(x) + k, \]
+ where \(k\) is a constant. This implies that
+                                        \[ |y|=e^ke^{-P(x)}. \]
+ Since \(P\) is defined for all \(x\) in \((a,b)\) and an exponential can never equal zero, we can take \(I=(a,b)\), so \(y\) has zeros on \((a,b)\) \((a,b)\), so we can
+rewrite the last equation as \(y=ce^{-P(x)}\), where
+                                        \[ c=\left \{\begin {array}{cl}\phantom {-}e^k&amp;\mbox {if } y&gt;0\mbox { on } (a,b),\\ -e^k&amp;\mbox {if } y&lt;0\mbox { on }(a,b).\end {array}\right . \]
+</p><!-- l. 362 --><p class='noindent'><span class='ptmrc8t-'>R<span class='small-caps'>EMARK</span></span>: Rewriting a first order differential equation so that one side depends only on \(y\) and \(y'\) and the
+other depends only on \(x\) is called <span class='ptmri8t-'>separation of variables</span>. We did this in Examples  <a href='#x1-93'>2.1.3<!-- tex4ht:ref: example:2.1.3  --></a> and <a href='#x1-154'>2.1.4<!-- tex4ht:ref: example:2.1.4  --></a>,
+and in rewriting (<a href='#x1-24r12'>2.1.12<!-- tex4ht:ref: eq:2.1.12  --></a>) as (<a href='#x1-27r15'>2.1.15<!-- tex4ht:ref: eq:2.1.15  --></a>).We’llapply this method to nonlinear equations in Section 2.2.
+</p><!-- l. 365 --><p class='noindent'><span id='textcolor3'>Linear Nonhomogeneous First Order Equations</span>
+</p><!-- l. 365 --><p class='indent'>
+</p><!-- l. 368 --><p class='noindent'>We’ll now solve the nonhomogeneous equation \begin {equation} \label {eq:2.1.16} y'+p(x)y=f(x).  \end {equation}<a id='x1-28r16'></a> When considering this equation we call
+                                                                                
+
+                                                                                
+                                        \[ y'+p(x)y=0 \]
+ the <span class='ptmri8t-'>complementary equation</span>.
+</p><!-- l. 379 --><p class='indent'>  We’ll find solutions of (<a href='#x1-28r16'>2.1.16<!-- tex4ht:ref: eq:2.1.16  --></a>) in the form \(y=uy_1\), where \(y_1\) is a nontrivial solution of the complementary equation and \(u\)
+is to be determined. This method of using a solution of the complementary equation to obtain solutions of a
+nonhomogeneous equation is a special case of a method called <span class='ptmri8t-'>variation of parameters</span>, which you’ll encounter
+several times in this book. (Obviously, \(u\) can’t be constant, since if it were, the left side of (<a href='#x1-28r16'>2.1.16<!-- tex4ht:ref: eq:2.1.16  --></a>) would be zero.
+Recognizing this, the early users of this method viewed \(u\) as a “parameter” that varies; hence, the name “variation
+of parameters.”)
+</p><!-- l. 390 --><p class='indent'>  If
+                                        \[ y=uy_1,\mbox {\quad then\quad } y'=u'y_1+uy_1'. \]
+ Substituting these expressions for \(y\) and \(y'\) into (<a href='#x1-28r16'>2.1.16<!-- tex4ht:ref: eq:2.1.16  --></a>) yields
+                                        \[ u'y_1+u(y_1'+p(x)y_1)=f(x), \]
+ which reduces to \begin {equation} \label {eq:2.1.17} u'y_1=f(x),  \end {equation}<a id='x1-29r17'></a> since \(y_1\) is a solution of the complementary equation; that is,
+                                                                                
+
+                                                                                
+                                        \[ y_1'+p(x)y_1=0. \]
+ In the proof of Theorem <span class='ptmb8t-'>2.2.1</span> we saw that \(y_1\) has no zeros on an interval where \(p\) is continuous. Therefore we can
+divide (<a href='#x1-29r17'>2.1.17<!-- tex4ht:ref: eq:2.1.17  --></a>) through by \(y_1\) to obtain
+                                        \[ u'=f(x)/y_1(x). \]
+ We can integrate this (introducing a constant of integration), and multiply the result by \(y_1\) to get the
+general solution of (<a href='#x1-28r16'>2.1.16<!-- tex4ht:ref: eq:2.1.16  --></a>). Before turning to the formal proof of this claim, let’s consider some
+examples.
+</p>
+  <div class='newtheorem'>
+<!-- l. 419 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Example 2.1.5</span> </span><a id='x1-305'></a>Find the general solution of \begin {equation} \label {eq:2.1.18} y'+2y=x^3e^{-2x}.  \end {equation}<a id='x1-31r18'></a>
+</p>
+  </div>
+<!-- l. 424 --><p class='indent'>
+</p><!-- l. 428 --><p class='indent'>  By applying <span class='ptmb8t-'>(a) </span>of Example  <a href='#x1-93'>2.1.3<!-- tex4ht:ref: example:2.1.3  --></a> with \(a=-2\), we see that \(y_1=e^{-2x}\) is a solution of the complementary equation \(y'+2y=0\). Therefore
+we seek solutions of (<a href='#x1-31r18'>2.1.18<!-- tex4ht:ref: eq:2.1.18  --></a>) in the form \(y=ue^{-2x}\), so that \begin {equation}  \label {eq:2.1.19} y'=u'e^{-2x}-2ue^{-2x}\mbox {\quad and \quad } y'+2y=u'e^{-2x}-2ue^{-2x}+2ue^{-2x}=u'e^{-2x}.  \end {equation}<a id='x1-32r19'></a> Therefore \(y\) is a solution of (<a href='#x1-31r18'>2.1.18<!-- tex4ht:ref: eq:2.1.18  --></a>) if and only
+if
+                                        \[ u'e^{-2x}=x^3e^{-2x}\mbox {\quad or, equivalently,\quad } u'=x^3. \]
+ Therefore
+                                                                                
+
+                                                                                
+                                        \[ u={x^4\over 4}+c, \]
+ and
+                                        \[ y=ue^{-2x}=e^{-2x}\left ({x^4\over 4}+c\right ) \]
+ is the general solution of (<a href='#x1-31r18'>2.1.18<!-- tex4ht:ref: eq:2.1.18  --></a>).
+</p><!-- l. 450 --><p class='indent'>  Figure <a href='#-a-direction-field-and-integral-curves-for-yyxex-'>2.1.3<!-- tex4ht:ref: figure:2.1.3  --></a> shows a direction field and some integral curves for (<a href='#x1-31r18'>2.1.18<!-- tex4ht:ref: eq:2.1.18  --></a>).
+</p>
+  <figure class='figure'> 
+
+                                                                                
+
+                                                                                
+                                                                                
+
+                                                                                
+<!-- l. 455 --><p class='noindent' id='-a-direction-field-and-integral-curves-for-yyxex-'><img alt='PIC' height='264' src='EPS//fig020103.png' width='409' /> <a id='x1-33r3'></a></p>
+<figcaption class='caption'><span class='id'>Figure 2.1.3 </span><span class='content'>A direction field and integral curves for \(y'+2y=x^{2}e^{-2x}\)                                       </span></figcaption><!-- tex4ht:label?: x1-33r3  -->
+                                                                                
+
+                                                                                
+  </figure>
+  <div class='newtheorem'>
+<!-- l. 465 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Example 2.1.6</span> </span><a id='x1-346'></a>
+    </p><dl class='list1'><dt class='list'>
+ <span class='ptmb8t-'>(a)</span>  </dt><dd class='list'>
+    <!-- l. 468 --><p class='noindent'>Find the general solution \begin {equation} \label {eq:2.1.20} y'+(\cot x)y=x\csc x.  \end {equation}<a id='x1-36r20'></a>
+    </p></dd><dt class='list'>
+ <span class='ptmb8t-'>(b)</span>  </dt><dd class='list'>
+    <!-- l. 473 --><p class='noindent'>Solve the initial value problem \begin {equation} \label {eq:2.1.21} y'+(\cot x)y=x\csc x,\quad y(\pi /2)=1.  \end {equation}<a id='x1-38r21'></a></p></dd></dl>
+</div>
+<!-- l. 478 --><p class='indent'>
+</p><!-- l. 482 --><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>a</span><span class='ptmrc8t-'>) </span></span> Here \(p(x)=\cot x\) and \(f(x)= x\csc x\) are both continuous except at the points \(x=r\pi \), where \(r\) is an integer. Therefore we seek
+solutions of (<a href='#x1-36r20'>2.1.20<!-- tex4ht:ref: eq:2.1.20  --></a>) on the intervals \(\left (r\pi , (r+1)\pi \right )\). We need a nontrival solution \(y_1\) of the complementary equation; thus, \(y_1\) must
+satisfy \(y_1'+(\cot x)y_1=0\), which we rewrite as \begin {equation} \label {eq:2.1.22} {y_1'\over y_1}=-\cot x=-{\cos x\over \sin x}.  \end {equation}<a id='x1-39r22'></a> Integrating this yields
+                                        \[ \ln |y_1|=-\ln |\sin x|, \]
+ where we take the constant of integration to be zero since we need only <span class='ptmri8t-'>one</span> function that satisfies (<a href='#x1-39r22'>2.1.22<!-- tex4ht:ref: eq:2.1.22  --></a>).
+Clearly \(y_1=1/\sin x\) is a suitable choice. Therefore we seek solutions of (<a href='#x1-36r20'>2.1.20<!-- tex4ht:ref: eq:2.1.20  --></a>) in the form
+                                        \[ y={u\over \sin x}, \]
+ so that \begin {equation}  \label {eq:2.1.23} y'={u'\over \sin x}-{u\cos x\over \sin ^2x}  \end {equation}<a id='x1-40r23'></a> and \begin {equation}  \label {eq:2.1.24} \begin {array}{rcl} y'+(\cot x)y&amp;=&amp; \displaystyle {u'\over \sin x}-\displaystyle {u\cos x\over \sin ^2x}+\displaystyle {u\cot x\over \sin x}\\ &amp;=&amp;\displaystyle {u'\over \sin x}-\displaystyle {u\cos x\over \sin ^2x}+\displaystyle {u\cos x\over \sin ^2 x}\\ &amp;=&amp;\displaystyle {u'\over \sin x}. \end {array}  \end {equation}<a id='x1-41r24'></a> Therefore \(y\) is a solution of (<a href='#x1-36r20'>2.1.20<!-- tex4ht:ref: eq:2.1.20  --></a>) if and only if
+                                                                                
+
+                                                                                
+                                        \[ u'/\sin x=x\csc x=x/\sin x\mbox {\quad or, equivalently, \quad } u'=x. \]
+ Integrating this yields \begin {equation} \label {eq:2.1.25} u={x^2\over 2}+c, \text {\quad and \quad } y={u\over \sin x}= {x^2\over 2\sin x}+ {c\over \sin x}.  \end {equation}<a id='x1-42r25'></a> is the general solution of (<a href='#x1-36r20'>2.1.20<!-- tex4ht:ref: eq:2.1.20  --></a>) on every interval \(\left (r\pi ,(r+1)\pi \right )\) (\(r=\)integer).
+</p><!-- l. 531 --><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>b</span><span class='ptmrc8t-'>) </span></span> Imposing the initial condition \(y(\pi /2)=1\) in (<a href='#x1-42r25'>2.1.25<!-- tex4ht:ref: eq:2.1.25  --></a>) yields
+                                        \[ 1={\pi ^2\over 8}+c\mbox {\quad or\quad } c=1-{\pi ^2\over 8}. \]
+ Thus,
+                                        \[ y={x^2\over 2\sin x}+{(1-\pi ^2/8)\over \sin x} \]
+ is a solution of (<a href='#x1-38r21'>2.1.21<!-- tex4ht:ref: eq:2.1.21  --></a>). The interval of validity of this solution is \((0,\pi )\); Figure <a href='#-solution-of-y-xyx-x-y-'>2.1.4<!-- tex4ht:ref: figure:2.1.4  --></a> shows its graph.
+</p>
+  <figure class='figure'> 
+
+                                                                                
+
+                                                                                
+                                                                                
+
+                                                                                
+<!-- l. 548 --><p class='noindent' id='-solution-of-y-xyx-x-y-'> <img alt='PIC' height='264' src='EPS//fig020104.png' width='409' /><a id='x1-43r4'></a></p>
+<figcaption class='caption'><span class='id'>Figure 2.1.4 </span><span class='content'>Solution of \(y'+(\cot x)y=x\csc x, y(\pi /2)=1\)                                                            </span></figcaption><!-- tex4ht:label?: x1-43r4  -->
+                                                                                
+
+                                                                                
+  </figure>
+<!-- l. 565 --><p class='noindent'><span class='ptmrc8t-'>R<span class='small-caps'>EMARK</span></span>: It wasn’t necessary to do the computations (<a href='#x1-40r23'>2.1.23<!-- tex4ht:ref: eq:2.1.23  --></a>) and (<a href='#x1-41r24'>2.1.24<!-- tex4ht:ref: eq:2.1.24  --></a>) in Example <a href='#x1-346'>2.1.6<!-- tex4ht:ref: example:2.1.6  --></a>, since we showed
+in the discussion preceding Example <a href='#x1-305'>2.1.5<!-- tex4ht:ref: example:2.1.5  --></a> that if \(y=uy_1\) where \(y_1'+p(x)y_1=0\), then \(y'+p(x)y=u'y_1\). We did these computations so you would see this
+happen in this specific example. We recommend that you include these “unnecesary” computations in
+doing exercises, until you’re confident that you really understand the method. After that, omit them.
+</p><!-- l. 571 --><p class='indent'>  We summarize the method of variation of parameters for solving
+</p><!-- l. 576 --><p class='indent'>  \begin {equation}  \label {eq:2.1.26} y'+p(x)y=f(x)  \end {equation}<a id='x1-44r26'></a> as follows:
+    </p><dl class='list1'><dt class='list'>
+ <span class='ptmb8t-'>(a)</span>  </dt><dd class='list'>
+    <!-- l. 583 --><p class='noindent'>Find a function \(y_1\) such that
+                                          \[ {y_1'\over y_1}=-p(x). \]
+     For convenience, take the constant of integration to be zero.
+    </p></dd><dt class='list'>
+ <span class='ptmb8t-'>(b)</span>  </dt><dd class='list'>
+    <!-- l. 589 --><p class='noindent'>Write \begin {equation}  \label {eq:2.1.27} y=uy_1  \end {equation}<a id='x1-47r27'></a> to remind yourself of what you’re doing.
+    </p></dd><dt class='list'>
+ <span class='ptmb8t-'>(c)</span>  </dt><dd class='list'>
+    <!-- l. 595 --><p class='noindent'>Write \(u'y_1=f\) and solve for \(u'\); thus, \(u'=f/y_1\).
+    </p></dd><dt class='list'>
+ <span class='ptmb8t-'>(d)</span>  </dt><dd class='list'>
+    <!-- l. 597 --><p class='noindent'>Integrate \(u'\) to obtain \(u\), with an arbitrary constant of integration.
+    </p></dd><dt class='list'>
+ <span class='ptmb8t-'>(e)</span>  </dt><dd class='list'>
+    <!-- l. 600 --><p class='noindent'>Substitute \(u\) into (<a href='#x1-47r27'>2.1.27<!-- tex4ht:ref: eq:2.1.27  --></a>) to obtain \(y\).</p></dd></dl>
+<!-- l. 605 --><p class='indent'>  To solve an equation written as
+                                                                                
+
+                                                                                
+                                        \[ P_0(x)y'+P_1(x)y=F(x), \]
+ we recommend that you divide through by \(P_0(x)\) to obtain an equation of the form (<a href='#x1-44r26'>2.1.26<!-- tex4ht:ref: eq:2.1.26  --></a>) and then follow this
+procedure.
+</p><!-- l. 613 --><p class='noindent'><span id='textcolor4'>Solutions in Integral Form</span>
+</p><!-- l. 613 --><p class='indent'>
+</p><!-- l. 616 --><p class='noindent'>Sometimes the integrals that arise in solving a linear first order equation can’t be evaluated in terms of elementary
+functions. In this case the solution must be left in terms of an integral.
+</p>
+  <div class='newtheorem'>
+<!-- l. 621 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Example 2.1.7</span> </span><a id='x1-517'></a><br class='newline' />
+    </p><dl class='list1'><dt class='list'>
+ <span class='ptmb8t-'>(a)</span>  </dt><dd class='list'>
+    <!-- l. 624 --><p class='noindent'>Find the general solution of
+                                          \[ y'-2xy=1. \]
+    </p></dd><dt class='list'>
+ <span class='ptmb8t-'>(b)</span>  </dt><dd class='list'>
+    <!-- l. 629 --><p class='noindent'>Solve the initial value problem \begin {equation} \label {eq:2.1.28} y'-2xy=1,\quad y(0)=y_0.  \end {equation}<a id='x1-54r28'></a></p></dd></dl>
+</div>
+<!-- l. 634 --><p class='indent'>
+</p><!-- l. 636 --><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>a</span><span class='ptmrc8t-'>) </span></span> To apply variation of parameters, we need a nontrivial solution \(y_1\) of the complementary equation;
+thus, \(y_1'-2xy_1=0\), which we rewrite as
+                                                                                
+
+                                                                                
+                                        \[ {y_1'\over y_1}=2x. \]
+ Integrating this and taking the constant of integration to be zero yields
+                                        \[ \ln |y_1|=x^2,\mbox {\quad so \quad }|y_1|=e^{x^2}. \]
+ We choose \(y_1=e^{x^2}\) and seek solutions of (<a href='#x1-54r28'>2.1.28<!-- tex4ht:ref: eq:2.1.28  --></a>) in the form \(y=ue^{x^2}\), where
+                                        \[ u'e^{x^2}=1,\mbox {\quad so \quad } u'=e^{-x^2}. \]
+ Therefore
+                                        \[ u=c+\int e^{-x^2}dx, \]
+ but we can’t simplify the integral on the right because there’s no elementary function with derivative equal to \(e^{-x^2}\).
+Therefore the best available form for the general solution of (<a href='#x1-54r28'>2.1.28<!-- tex4ht:ref: eq:2.1.28  --></a>) is \begin {equation} \label {eq:2.1.29} y=ue^{x^2}= e^{x^2}\left (c+\int e^{-x^2}dx\right ).  \end {equation}<a id='x1-55r29'></a>
+</p><!-- l. 664 --><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>b</span><span class='ptmrc8t-'>) </span></span> Since the initial condition in (<a href='#x1-54r28'>2.1.28<!-- tex4ht:ref: eq:2.1.28  --></a>) is imposed at \(x_0=0\), it is convenient to rewrite (<a href='#x1-55r29'>2.1.29<!-- tex4ht:ref: eq:2.1.29  --></a>)
+as
+                                                                                
+
+                                                                                
+                                        \[ y=e^{x^2}\left (c+\int ^x_0 e^{-t^2} dt\right ),\mbox {\quad since \quad } \int _0^0e^{-t^2}\,dt=0. \]
+ Setting \(x=0\) and \(y=y_0\) here shows that \(c=y_0\). Therefore the solution of the initial value problem is \begin {equation} \label {eq:2.1.30} y=e^{x^2}\left (y_0 +\int ^x_0 e^{-t^2}dt\right ).  \end {equation}<a id='x1-56r30'></a> For a given value of \(y_0\) and
+each fixed \(x\), the integral on the right can be evaluated by numerical methods. An alternate procedure is to apply
+the numerical integration procedures discussed in Chapter 3 directly to the initial value problem (<a href='#x1-54r28'>2.1.28<!-- tex4ht:ref: eq:2.1.28  --></a>).
+Figure <a href='#-solutions-of-yxy-yy-'>2.1.5<!-- tex4ht:ref: figure:2.1.5  --></a> shows graphs of of (<a href='#x1-56r30'>2.1.30<!-- tex4ht:ref: eq:2.1.30  --></a>) for several values of \(y_0\).
+</p>
+  <figure class='figure'> 
+
+                                                                                
+
+                                                                                
+                                                                                
+
+                                                                                
+<!-- l. 689 --><p class='noindent' id='-solutions-of-yxy-yy-'> <img alt='PIC' height='264' src='EPS//fig020105.png' width='409' /> <a id='x1-57r5'></a></p>
+<figcaption class='caption'><span class='id'>Figure 2.1.5 </span><span class='content'>Solutions of \(y'-2xy=1\), \(y(0)=y_{0}\)                                                           </span></figcaption><!-- tex4ht:label?: x1-57r5  -->
+                                                                                
+
+                                                                                
+  </figure>
+<!-- l. 695 --><p class='noindent'><span id='textcolor5'>An Existence and Uniqueness Theorem</span>
+</p><!-- l. 695 --><p class='indent'>
+</p><!-- l. 697 --><p class='noindent'>The method of variation of parameters leads to this theorem.
+</p>
+  <div class='newtheorem'>
+<!-- l. 700 --><p class='noindent'><span class='head'>
+<span class='ptmb8t-'>Theorem 2.1.2</span> </span><a id='x1-582'></a> <span class='ptmri8t-'>Suppose</span> \(p\) <span class='ptmri8t-'>and</span> \(f\) <span class='ptmri8t-'>are continuous on an open interval</span> \((a,b),\) <span class='ptmri8t-'>and let</span> \(y_1\) <span class='ptmri8t-'>be any nontrivial solution of
+the complementary equation</span>
+                                        \[ y'+p(x)y=0 \]
+ <span class='ptmri8t-'>on</span> \((a,b)\)<span class='ptmri8t-'>. Then</span>\(:\)
+    </p><dl class='list1'><dt class='list'>
+ <span class='ptmb8t-'>(a)</span>  </dt><dd class='list'>
+    <!-- l. 711 --><p class='noindent'><span class='ptmri8t-'>The general solution of the nonhomogeneous equation </span>\begin {equation} \label {eq:2.1.31} y'+p(x)y=f(x)  \end {equation}<a id='x1-60r31'></a> <span class='ptmri8t-'>on</span> \((a,b)\) <span class='ptmri8t-'>is </span>\begin {equation} \label {eq:2.1.32} y=y_1(x)\left (c +\int f(x)/y_1(x)\,dx\right ).  \end {equation}<a id='x1-61r32'></a>
+    </p></dd><dt class='list'>
+ <span class='ptmb8t-'>(b)</span>  </dt><dd class='list'>
+    <!-- l. 720 --><p class='noindent'><span class='ptmri8t-'>If</span> \(x_0\) <span class='ptmri8t-'>is an arbitrary point in</span> \((a,b)\) <span class='ptmri8t-'>and</span> \(y_0\) <span class='ptmri8t-'>is an arbitrary real number</span>\(,\) <span class='ptmri8t-'>then the initial value problem</span>
+                                          \[ y'+p(x)y=f(x),\quad y(x_0)=y_0 \]
+     <span class='ptmri8t-'>has the unique solution</span>
+                                                                                
+
+                                                                                
+                                          \[ y=y_1(x)\left ({y_0\over y_1(x_0)} +\int ^x_{x_0} {f(t)\over y_1(t)}\, dt\right ) \]
+     <span class='ptmri8t-'>on</span> \((a,b).\)</p></dd></dl>
+</div>
+<!-- l. 732 --><p class='indent'>  
+</p><!-- l. 734 --><p class='noindent'><span class='ptmb8t-'>Proof    (a) </span>To show that (<a href='#x1-61r32'>2.1.32<!-- tex4ht:ref: eq:2.1.32  --></a>) is the general solution of (<a href='#x1-60r31'>2.1.31<!-- tex4ht:ref: eq:2.1.31  --></a>) on \((a,b)\), we must prove that:
+      </p><dl class='list1'><dt class='list'>
+   <span class='ptmb8t-'>(i)</span>  </dt><dd class='list'>
+      <!-- l. 739 --><p class='noindent'>If \(c\) is any constant, the function \(y\) in (<a href='#x1-61r32'>2.1.32<!-- tex4ht:ref: eq:2.1.32  --></a>) is a solution of (<a href='#x1-60r31'>2.1.31<!-- tex4ht:ref: eq:2.1.31  --></a>) on \((a,b)\).
+      </p></dd><dt class='list'>
+  <span class='ptmb8t-'>(ii)</span>  </dt><dd class='list'>
+      <!-- l. 742 --><p class='noindent'>If \(y\) is a solution of (<a href='#x1-60r31'>2.1.31<!-- tex4ht:ref: eq:2.1.31  --></a>) on \((a,b)\) then \(y\) is of the form (<a href='#x1-61r32'>2.1.32<!-- tex4ht:ref: eq:2.1.32  --></a>) for some constant \(c\).</p></dd></dl>
+<!-- l. 746 --><p class='indent'>  To prove <span class='ptmb8t-'>(i)</span>, we first observe that any function of the form (<a href='#x1-61r32'>2.1.32<!-- tex4ht:ref: eq:2.1.32  --></a>) is defined on \((a,b)\), since \(p\) and \(f\) are continuous on
+\((a,b)\). Differentiating (<a href='#x1-61r32'>2.1.32<!-- tex4ht:ref: eq:2.1.32  --></a>) yields
+                                        \[ y'=y_1'(x)\left (c +\int f(x)/y_1(x)\, dx\right )+f(x). \]
+ Since \(y_1'=-p(x)y_1\), this and (<a href='#x1-61r32'>2.1.32<!-- tex4ht:ref: eq:2.1.32  --></a>) imply that </p><div class='eqnarray'>\begin {eqnarray*}  y'&amp;=&amp;-p(x)y_1(x)\left (c +\int f(x)/y_1(x)\, dx\right )+f(x)\\ &amp;=&amp;-p(x)y(x)+f(x),  \end {eqnarray*}</div>
+<!-- l. 758 --><p class='indent'>  which implies that \(y\) is a solution of (<a href='#x1-60r31'>2.1.31<!-- tex4ht:ref: eq:2.1.31  --></a>).
+</p><!-- l. 760 --><p class='indent'>  To prove <span class='ptmb8t-'>(ii)</span>, suppose \(y\) is a solution of (<a href='#x1-60r31'>2.1.31<!-- tex4ht:ref: eq:2.1.31  --></a>) on \((a,b)\). From the proof of Theorem <a href='#x1-231'>2.1.1<!-- tex4ht:ref: thmtype:2.1.1  --></a>, we know that \(y_1\) has no
+zeros on \((a,b)\), so the function \(u=y/y_1\) is defined on \((a,b)\). Moreover, since
+                                        \[ y'=-py+f\mbox {\quad and\quad }y_1'=-py_1, \]
+ </p><div class='eqnarray'>\begin {eqnarray*}  u'&amp;=&amp;{y_1y'-y_1'y\over y_1^2}\\ &amp;=&amp;{y_1(-py+f)-(-py_1)y\over y_1^2}={f\over y_1}.  \end {eqnarray*}</div>
+<!-- l. 771 --><p class='indent'>  Integrating \(u'=f/y_1\) yields
+                                                                                
+
+                                                                                
+                                        \[ u=\left (c +\int f(x)/y_1(x)\, dx\right ), \]
+ which implies (<a href='#x1-61r32'>2.1.32<!-- tex4ht:ref: eq:2.1.32  --></a>), since \(y=uy_1\).
+</p><!-- l. 777 --><p class='indent'>  <span class='ptmb8t-'>(b) </span>We’ve proved <span class='ptmb8t-'>(a)</span>, where \(\int f(x)/y_1(x)\,dx\) in (<a href='#x1-61r32'>2.1.32<!-- tex4ht:ref: eq:2.1.32  --></a>) is an arbitrary antiderivative of \(f/y_1\). Now it’s convenient to choose the
+antiderivative that equals zero when \(x=x_0\), and write the general solution of (<a href='#x1-60r31'>2.1.31<!-- tex4ht:ref: eq:2.1.31  --></a>) as
+                                        \[ y=y_1(x)\left (c +\int ^x_{x_0} {f(t)\over y_1(t)}\, dt\right ). \]
+ Since
+                                        \[ y(x_0)= y_1(x_0)\left (c +\int ^{x_0}_{x_0} {f(t)\over y_1(t)}\, dt\right )=cy_1(x_0), \]
+ we see that \(y(x_0)=y_0\) if and only if \(c=y_0/y_1(x_0)\).
+</p>
+ <a class="back-to-ch" href="sec2.0.html">Back</a>
+   
+</body> 
+</html>
