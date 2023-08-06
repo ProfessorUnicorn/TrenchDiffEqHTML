@@ -1,64 +1,62 @@
-<!DOCTYPE html> 
-<html lang='en-US' xml:lang='en-US'> 
-<head><title></title> 
-<meta charset='utf-8' /> 
-<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
-<meta content='width=device-width,initial-scale=1' name='viewport' /> 
-<link rel="stylesheet" type="text/css" href='combined.css' />
-<meta content='Trench_DiffEQ_Book.tex' name='src' /> 
+<!DOCTYPE html><html lang="en-US" xml:lang="en-US"><head><title></title> 
+<meta charset="utf-8"> 
+<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator"> 
+<meta content="width=device-width,initial-scale=1" name="viewport"> 
+<link rel="stylesheet" type="text/css" href="combined.css">
+<meta content="Trench_DiffEQ_Book.tex" name="src"> 
 <script>window.MathJax = {
      tex: { packages: {'[+]': ['tagformat']}, tags: "ams", tagformat: { tag: (tag) => '(7.1.' + tag + ')'} }
  }; </script> 
- <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
- <style type='text/css'>
+ <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>  
+ <style type="text/css">
   :root {
     --section-number: "7.1"
   }
 </style>
 </head><body>
-<p><a id='x1-1doc'></a>
-</p><p class='noindent'>Section 7.1 Review of Power Series
-</p><p class='noindent'><span class='ptmb8t-'>7.1</span><span class='ptmb8t-x-x-90'>  REVIEW OF POWER SERIES</span>
-</p><p class='noindent'>Many applications give rise to differential equations with solutions that can’t be expressed in terms of
+<p id="ffaac58b-ffa7-4760-b22f-e962f6c42fd5"><a id="x1-1doc"></a>
+</p><p class="noindent" id="61d68315-0351-4724-abc4-9a0a11a33fd3">Section 7.1 Review of Power Series
+</p><p class="noindent" id="e2a6613e-7f0d-42f6-8e33-282f1c4a9414"><span class="ptmb8t-">7.1</span><span class="ptmb8t-x-x-90">&nbsp; REVIEW OF POWER SERIES</span>
+</p><p class="noindent" id="ac1a40fb-0334-44b5-81ba-410bebc1ff68">Many applications give rise to differential equations with solutions that can’t be expressed in terms of
 elementary functions such as polynomials, rational functions, exponential and logarithmic functions, and
 trigonometric functions. The solutions of some of the most important of these equations can be
 expressed in terms of power series. We’ll study such equations in this chapter. In this section we review
 relevant properties of power series. We’ll omit proofs, which can be found in any standard calculus
 text.
-  </p><dl class='trivlist'><dt class='trivlist'>
-</dt><dd class='trivlist'>
-<p class='indent'>  <span class='ptmb8t-'>Definition</span> <a id='x1-2r1'></a><span class='ptmb8t-'>7.1.1</span>  An infinite series of the form \begin {equation}  \label {eq:7.1.1} \sum _{n=0}^\infty a_n(x-x_0)^n\end {equation}<a id='x1-3r1'></a> where \(x_0\) and \(a_0\), \(a_1,\) …, \(a_n,\) …are constants\(,\) is called a <span class='vocab'>power series in</span> \(x-x_0.\) We
-say that the power series (<a href='#x1-3r1'>7.1.1<!-- tex4ht:ref: eq:7.1.1  --></a>) <span class='vocab'>converges</span> for a given \(x\) if the limit
+  </p><dl class="trivlist" id="e0e1cc47-6f6e-4afc-9a73-8851284880da"><dt class="trivlist">
+</dt><dd class="trivlist">
+<p class="indent">  <span class="ptmb8t-">Definition</span> <a id="x1-2r1"></a><span class="ptmb8t-">7.1.1</span>&nbsp; An infinite series of the form \begin {equation}  \label {eq:7.1.1} \sum _{n=0}^\infty a_n(x-x_0)^n\end {equation}<a id="x1-3r1"></a> where \(x_0\) and \(a_0\), \(a_1,\) …, \(a_n,\) …are constants\(,\) is called a <span class="vocab">power series in</span> \(x-x_0.\) We
+say that the power series (<a href="#x1-3r1">7.1.1<!-- tex4ht:ref: eq:7.1.1  --></a>) <span class="vocab">converges</span> for a given \(x\) if the limit
                                         \[ \lim _{N\to \infty } \sum _{n=0}^Na_n(x-x_0)^n \]
- exists\(; \) otherwise, we say that the power series <span class='vocab'>diverges</span> for the given \(x.\)</p></dd></dl>
-<p class='indent'>  A power series in \(x-x_0\) must converge if \(x=x_0\), since the positive powers of \(x-x_0\) are all zero in this case. This may be
+ exists\(; \) otherwise, we say that the power series <span class="vocab">diverges</span> for the given \(x.\)</p></dd></dl>
+<p class="indent" id="05ec5f20-ea6e-4f9d-a503-c1e81ed53fbe">  A power series in \(x-x_0\) must converge if \(x=x_0\), since the positive powers of \(x-x_0\) are all zero in this case. This may be
 the only value of \(x\) for which the power series converges. However, the next theorem shows that if
 the power series converges for some \(x\ne x_0\) then the set of all values of \(x\) for which it converges forms an
 interval.
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 7.1.2</span> </span><a id='x1-42'></a> For any power series
+  <div class="newtheorem" id="ba4e1031-d30f-47b7-8fb4-b70e2aec932f">
+<p class="noindent"><span class="head">
+<span class="ptmb8t-">Theorem&nbsp;7.1.2</span> </span><a id="x1-42"></a> For any power series
 \[ \sum _{n=0}^\infty a_n(x-x_0)^n\]
  exactly one of the these statements is true:
-      </p><dl class='list1'><dt class='list'>
-   <span class='ptmb8t-'>(i)</span>  </dt><dd class='list'>
-      <p class='noindent'>The power series converges only for \(x=x_0.\)
-      </p></dd><dt class='list'>
-  <span class='ptmb8t-'>(ii)</span>  </dt><dd class='list'>
-      <p class='noindent'>The power series converges for all values of \(x.\)
-      </p></dd><dt class='list'>
-  <span class='ptmb8t-'>(iii)</span>  </dt><dd class='list'>
-      <p class='noindent'>There’s a positive number \(R\) such that the power series converges if \(|x-x_0|&lt;R\) and diverges if \(|x-x_0|&gt;R.\)</p></dd></dl>
+      </p><dl class="list1"><dt class="list">
+   <span class="ptmb8t-">(i)</span>  </dt><dd class="list">
+      <p class="noindent">The power series converges only for \(x=x_0.\)
+      </p></dd><dt class="list">
+  <span class="ptmb8t-">(ii)</span>  </dt><dd class="list">
+      <p class="noindent">The power series converges for all values of \(x.\)
+      </p></dd><dt class="list">
+  <span class="ptmb8t-">(iii)</span>  </dt><dd class="list">
+      <p class="noindent">There’s a positive number \(R\) such that the power series converges if \(|x-x_0|&lt;R\) and diverges if \(|x-x_0|&gt;R.\)</p></dd></dl>
 </div>
-<p class='indent'>  
-</p><p class='indent'>  In case (iii) we say that \(R\) is the <span class='vocab'>radius of convergence</span> of the power series. For convenience, we include the
-other two cases in this definition by defining \(R=0\) in case (i) and \(R=\infty \) in case (ii). We define the <span class='vocab'>open interval of
+<p class="indent" id="1af6f01a-d3f2-4fbe-9091-b16f7639a0d4">  
+</p><p class="indent" id="d9dc5306-e6aa-45ba-a054-5289421b663a">  In case&nbsp;(iii) we say that \(R\) is the <span class="vocab">radius of convergence</span> of the power series. For convenience, we include the
+other two cases in this definition by defining \(R=0\) in case&nbsp;(i) and \(R=\infty \) in case&nbsp;(ii). We define the <span class="vocab">open interval of
 convergence</span> of \(\sum _{n=0}^\infty a_n(x-x_0)^n\) to be
                                         \[ (x_0-R,x_0+R)\quad \mbox { if }\quad 0&lt;R&lt;\infty ,\quad \mbox { or }\quad (-\infty ,\infty ) \quad \mbox { if }\quad R=\infty \]
  If \(R\) is finite, no general statement can be made concerning convergence at the endpoints \(x=x_0\pm R\) of the open interval of
 convergence; the series may converge at one or both points, or diverge at both.
-</p><p class='indent'>  Recall from calculus that a series of constants \(\sum _{n=0}^\infty \alpha _n\) is said to <span class='vocab'>converge absolutely</span> if the series of absolute values \(\sum _{n=0}^\infty |\alpha _n|\)
+</p><p class="indent" id="016bdab8-988d-4a69-aab0-a211baadab43">  Recall from calculus that a series of constants \(\sum _{n=0}^\infty \alpha _n\) is said to <span class="vocab">converge absolutely</span> if the series of absolute values \(\sum _{n=0}^\infty |\alpha _n|\)
 converges. It can be shown that a power series \(\sum _{n=0}^\infty a_n(x-x_0)^n\) with a positive radius of convergence \(R\) converges absolutely in its
 open interval of convergence; that is, the series
                                                                                 
@@ -67,131 +65,131 @@ open interval of convergence; that is, the series
                                         \[ \sum _{n=0}^\infty |a_n||x-x_0|^n \]
  of absolute values converges if \(|x-x_0|&lt;R\). However, if \(R&lt;\infty \), the series may fail to converge absolutely at an endpoint \(x_0\pm R\), even if it
 converges there.
-</p><p class='indent'>  The next theorem provides a useful method for determining the radius of convergence of a power series. It’s
+</p><p class="indent" id="3ad6834e-53b8-4485-ae1c-00bc8f731358">  The next theorem provides a useful method for determining the radius of convergence of a power series. It’s
 derived in calculus by applying the ratio test to the corresponding series of absolute values. For related theorems
-see Exercises <span class='ptmb8t-'>2</span> and <span class='ptmb8t-'>4</span>.
+see Exercises&nbsp;<span class="ptmb8t-">2</span> and <span class="ptmb8t-">4</span>.
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 7.1.3</span> </span><a id='x1-83'></a> Suppose there’s an integer \(N\) such that \(a_n\ne 0\) if \(n\ge N\) and
+  <div class="newtheorem" id="f5a3749b-7365-41d0-883f-e3026cc8c1d5">
+<p class="noindent"><span class="head">
+<span class="ptmb8t-">Theorem&nbsp;7.1.3</span> </span><a id="x1-83"></a> Suppose there’s an integer \(N\) such that \(a_n\ne 0\) if \(n\ge N\) and
                                         \[ \lim _{n\to \infty }\left |a_{n+1}\over a_n\right |=L\]
  where \(0\le L\le \infty\). Then the radius of convergence of \(\sum _{n=0}^\infty a_n(x-x_0)^n\) is \(R=1/ L,\) which should be interpreted to mean that \(R=0\) if \(L=\infty\), or \(R=\infty \) if \(L=0\).
 </p>
   </div>
-<p class='indent'>  
+<p class="indent" id="6467deb6-960d-4b46-aacf-900e1f68aa43">  
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 7.1.1</span> </span><a id='x1-91'></a> Find the radius of convergence of the series:
+  <div class="newtheorem" id="1e209511-11a7-42bc-98d6-f09c352c4f23">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;7.1.1</span> </span><a id="x1-91"></a> Find the radius of convergence of the series:
                                         \[ \mbox {\bf (a)}\quad \sum _{n=0}^\infty n!x^n\quad \mbox {\bf (b) }\quad \sum _{n=10}^\infty (-1)^n {x^n\over n!}\quad \mbox {\bf (c) }\quad \sum _{n=0}^\infty 2^nn^2 (x-1)^n\]
                                                                                 
 
                                                                                 
 </p>
   </div>
-<p class='indent'>
-</p><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>a</span><span class='ptmrc8t-'>) </span></span> Here \(a_n=n!\), so
+<p class="indent" id="da622497-b966-44d8-89cd-0aaab7fc2388">
+</p><p class="noindent" id="fd61d8fb-12c1-44bd-871a-4ddc82d5f835"><span class="underline"><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">a</span><span class="ptmrc8t-">)&nbsp;</span></span> Here \(a_n=n!\), so
                                         \[ \lim _{n\to \infty }\left |a_{n+1}\over a_n\right |=\lim _{n\to \infty } {(n+1)!\over n!}=\lim _{n\to \infty }(n+1)=\infty \]
  Hence, \(R=0\).
-</p><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>b</span><span class='ptmrc8t-'>) </span></span> Here \(a_n=(1)^n/n!\) for \(n\ge N=10\), so
+</p><p class="noindent" id="67e5a26f-2c37-496f-a189-1f4dc4926510"><span class="underline"><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">b</span><span class="ptmrc8t-">)&nbsp;</span></span> Here \(a_n=(1)^n/n!\) for \(n\ge N=10\), so
                                         \[ \lim _{n\to \infty }\left |a_{n+1}\over a_n\right |=\lim _{n\to \infty } {n!\over (n+1)!}=\lim _{n\to \infty }{1\over n+1}=0\]
  Hence, \(R=\infty \).
-</p><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>c</span><span class='ptmrc8t-'>) </span></span> Here \(a_n=2^nn^2\), so
+</p><p class="noindent" id="442fc993-c105-4f70-a611-9d7b438a67a9"><span class="underline"><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">c</span><span class="ptmrc8t-">)&nbsp;</span></span> Here \(a_n=2^nn^2\), so
                                         \[ \lim _{n\to \infty }\left |a_{n+1}\over a_n\right |=\lim _{n\to \infty } {2^{n+1}(n+1)^2\over 2^nn^2}=2\lim _{n\to \infty }\left (1+{1\over n}\right )^2=2\]
  Hence, \(R=1/2\).
-</p><p class='noindent'><span id='textcolor1'>Taylor Series</span>
+</p><p class="noindent" id="57c55678-c998-4ebc-a793-c916c8a94a71"><span id="textcolor1">Taylor Series</span>
                                                                                 
 
                                                                                 
-</p><p class='indent'>
-</p><p class='noindent'>If a function \(f\) has derivatives of all orders at a point \(x=x_0\), then the <span class='vocab'>Taylor series</span> of \(f\) about \(x_0\) is defined by
+</p><p class="indent" id="284c971f-def2-41e2-a3e5-2130b1b57c9a">
+</p><p class="noindent" id="dc810944-0719-427c-8938-a482a2f7c568">If a function \(f\) has derivatives of all orders at a point \(x=x_0\), then the <span class="vocab">Taylor series</span> of \(f\) about \(x_0\) is defined by
                                         \[ \sum _{n=0}^\infty {f^{(n)}(x_0)\over n!}(x-x_0)^n\]
- In the special case where \(x_0=0\), this series is also called the <span class='vocab'>Maclaurin series</span> of  \(f\).
-</p><p class='indent'>  Taylor series for most of the common elementary functions converge to the functions on their open
+ In the special case where \(x_0=0\), this series is also called the <span class="vocab">Maclaurin series</span> of  \(f\).
+</p><p class="indent" id="034c0a8b-eba9-4f5c-963f-fa64a3ab481b">  Taylor series for most of the common elementary functions converge to the functions on their open
 intervals of convergence. For example, you are probably familiar with the following Maclaurin series:
-</p><div class='eqnarray'>\begin {eqnarray}  e^x&amp;=&amp;\sum _{n=0}^\infty {x^n\over n!},\quad -\infty &lt;x&lt;\infty ,\label {eq:7.1.2}\\ \sin x&amp;=&amp;\sum _{n=0}^\infty (-1)^n {x^{2n+1}\over (2n+1)!},\quad -\infty &lt;x&lt;\infty , \label {eq:7.1.3}\\ \cos x&amp;=&amp;\sum _{n=0}^\infty (-1)^n {x^{2n}\over (2n)!},\quad -\infty &lt;x&lt;\infty , \label {eq:7.1.4}\\ {1\over 1-x}&amp;=&amp;\sum _{n=0}^\infty x^n,\quad -1&lt;x&lt;1.\label {eq:7.1.5}  \end {eqnarray}</div>
-<p class='noindent'><span id='textcolor2'>Differentiation of Power Series</span>
-</p><p class='indent'>
-</p><p class='noindent'>A power series with a positive radius of convergence defines a function
+</p><div class="eqnarray" id="d89e3e2c-eeb5-4089-961c-a97dcca19885">\begin {eqnarray}  e^x&amp;=&amp;\sum _{n=0}^\infty {x^n\over n!},\quad -\infty &lt;x&lt;\infty ,\label {eq:7.1.2}\\ \sin x&amp;=&amp;\sum _{n=0}^\infty (-1)^n {x^{2n+1}\over (2n+1)!},\quad -\infty &lt;x&lt;\infty , \label {eq:7.1.3}\\ \cos x&amp;=&amp;\sum _{n=0}^\infty (-1)^n {x^{2n}\over (2n)!},\quad -\infty &lt;x&lt;\infty , \label {eq:7.1.4}\\ {1\over 1-x}&amp;=&amp;\sum _{n=0}^\infty x^n,\quad -1&lt;x&lt;1.\label {eq:7.1.5}  \end {eqnarray}</div>
+<p class="noindent" id="f7ce5d52-3c90-4d7b-9740-9c94b8860c4f"><span id="textcolor2">Differentiation of Power Series</span>
+</p><p class="indent" id="5f082f9e-d325-4c4f-acfd-450e64725339">
+</p><p class="noindent" id="6c383e12-bf4c-464d-8518-bee9f73faf5f">A power series with a positive radius of convergence defines a function
                                         \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \]
- on its open interval of convergence. We say that the series <span class='vocab'>represents</span> \(f\) on the open interval of convergence. A
-function \(f\) represented by a power series may be a familiar elementary function as in (<span class='ptmb8t-'>7.1.2</span>)–(<span class='ptmb8t-'>7.1.5</span>); however, it often
-happens that \(f\) isn’t a familiar function, so the series actually <span class='vocab'>defines</span> \(f\).
-</p><p class='indent'>  The next theorem shows that a function represented by a power series has derivatives of all orders on the
+ on its open interval of convergence. We say that the series <span class="vocab">represents</span> \(f\) on the open interval of convergence. A
+function \(f\) represented by a power series may be a familiar elementary function as in (<span class="ptmb8t-">7.1.2</span>)–(<span class="ptmb8t-">7.1.5</span>); however, it often
+happens that \(f\) isn’t a familiar function, so the series actually <span class="vocab">defines</span> \(f\).
+</p><p class="indent" id="12afc254-51f2-4866-a9e4-837416eb41a4">  The next theorem shows that a function represented by a power series has derivatives of all orders on the
 open interval of convergence of the power series, and provides power series representations of the
 derivatives.
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 7.1.4</span> </span><a id='x1-104'></a> A power series
+  <div class="newtheorem" id="a007f2ff-a195-4ee4-a6cf-dbdbfde34c37">
+<p class="noindent"><span class="head">
+<span class="ptmb8t-">Theorem&nbsp;7.1.4</span> </span><a id="x1-104"></a> A power series
 \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \]
  with positive radius of convergence \(R\) has derivatives of all orders in its open interval of convergence\(,\) and
-successive derivatives can be obtained by repeatedly differentiating term by term; that is, </p><div class='eqnarray'>\begin {eqnarray}  f'(x)&amp;=&amp;\displaystyle {\sum _{n=1}^\infty na_n(x-x_0)^{n-1}}\label {eq:7.1.6},\\[10pt] f''(x)&amp;=&amp;\displaystyle {\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}},\label {eq:7.1.7}\\ &amp;\vdots &amp;\nonumber \\ f^{(k)}(x)&amp;=&amp;\displaystyle {\sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k}}\label {eq:7.1.8}\end {eqnarray}</div>
-<p class='indent'>  Moreover, all of these series have the same radius of convergence \(R\).
+successive derivatives can be obtained by repeatedly differentiating term by term; that is, </p><div class="eqnarray">\begin {eqnarray}  f'(x)&amp;=&amp;\displaystyle {\sum _{n=1}^\infty na_n(x-x_0)^{n-1}}\label {eq:7.1.6},\\[10pt] f''(x)&amp;=&amp;\displaystyle {\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}},\label {eq:7.1.7}\\ &amp;\vdots &amp;\nonumber \\ f^{(k)}(x)&amp;=&amp;\displaystyle {\sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k}}\label {eq:7.1.8}\end {eqnarray}</div>
+<p class="indent">  Moreover, all of these series have the same radius of convergence \(R\).
 </p>
   </div>
-<p class='indent'>  
+<p class="indent" id="3c4c422e-919a-4ec4-99a6-9aa0ded00016">  
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 7.1.2</span> </span><a id='x1-112'></a> Let \(f(x)=\sin x\). From (<span class='ptmb8t-'>7.1.3</span>),
+  <div class="newtheorem" id="59336830-761b-4207-9b09-03690a6347be">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;7.1.2</span> </span><a id="x1-112"></a> Let \(f(x)=\sin x\). From (<span class="ptmb8t-">7.1.3</span>),
                                         \[ f(x)=\sum _{n=0}^\infty (-1)^n {x^{2n+1}\over (2n+1)!}\]
- From (<span class='ptmb8t-'>7.1.6</span>),
+ From (<span class="ptmb8t-">7.1.6</span>),
                                         \[ f'(x)=\sum _{n=0}^\infty (-1)^n{d\over dx}\left [x^{2n+1}\over (2n+1)!\right ]= \sum _{n=0}^\infty (-1)^n {x^{2n}\over (2n)!}\]
- which is the series (<span class='ptmb8t-'>7.1.4</span>) for \(\cos x\).
+ which is the series (<span class="ptmb8t-">7.1.4</span>) for \(\cos x\).
                                                                                 
 
                                                                                 
 </p>
   </div>
-<p class='indent'>
-</p><p class='noindent'><span id='textcolor3'>Uniqueness of Power Series</span>
-</p><p class='indent'>
-</p><p class='noindent'>The next theorem shows that if \(f\) is <span class='vocab'>defined</span> by a power series in \(x-x_0\) with a positive radius of convergence, then the
+<p class="indent" id="ec2f80b6-a2e9-48a3-b956-f4bd0a403660">
+</p><p class="noindent" id="e5bc08b2-0620-4420-a16d-74472fcbfc36"><span id="textcolor3">Uniqueness of Power Series</span>
+</p><p class="indent" id="bb731f8f-1f41-45f3-8fb4-3f48e24bbd11">
+</p><p class="noindent" id="04bc8abd-919f-4de0-b066-c88269f9c92a">The next theorem shows that if \(f\) is <span class="vocab">defined</span> by a power series in \(x-x_0\) with a positive radius of convergence, then the
 power series is the Taylor series of \(f\) about \(x_0\).
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 7.1.5</span> </span><a id='x1-125'></a> If the power series
+  <div class="newtheorem" id="e3c8f600-54d9-4954-bb70-210b63fbebb2">
+<p class="noindent"><span class="head">
+<span class="ptmb8t-">Theorem&nbsp;7.1.5</span> </span><a id="x1-125"></a> If the power series
 \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \]
- has a positive radius of convergence, then \begin {equation}  \label {eq:7.1.9} a_n={f^{(n)}(x_0)\over n!};  \end {equation}<a id='x1-13r2'></a> that is, \(\sum _{n=0}^\infty a_n(x-x_0)^n\) is the Taylor series of \(f\) about \(x_0\).
+ has a positive radius of convergence, then \begin {equation}  \label {eq:7.1.9} a_n={f^{(n)}(x_0)\over n!};  \end {equation}<a id="x1-13r2"></a> that is, \(\sum _{n=0}^\infty a_n(x-x_0)^n\) is the Taylor series of \(f\) about \(x_0\).
 </p>
   </div>
-<p class='indent'>  
-</p><p class='indent'>  This result can be obtained by setting \(x=x_0\) in (<span class='ptmb8t-'>7.1.8</span>), which yields
+<p class="indent" id="5f6bb14c-5adc-42c8-a349-5ec1b188a313">  
+</p><p class="indent" id="56a84d92-57f7-4881-8eb0-3ab52bfe2461">  This result can be obtained by setting \(x=x_0\) in (<span class="ptmb8t-">7.1.8</span>), which yields
                                         \[ f^{(k)}(x_0)=k(k-1)\cdots 1\cdot a_k=k!a_k\]
  This implies that
                                                                                 
 
                                                                                 
                                         \[ a_k={f^{(k)}(x_0)\over k!}\]
- Except for notation, this is the same as (<a href='#x1-13r2'>7.1.9<!-- tex4ht:ref: eq:7.1.9  --></a>).
-</p><p class='indent'>  The next theorem lists two important properties of power series that follow from Theorem <a href='#x1-125'>7.1.5<!-- tex4ht:ref: thmtype:7.1.5  --></a>.
+ Except for notation, this is the same as (<a href="#x1-13r2">7.1.9<!-- tex4ht:ref: eq:7.1.9  --></a>).
+</p><p class="indent" id="9cfefb4b-2ebf-4fff-85bd-aa1048ef8059">  The next theorem lists two important properties of power series that follow from Theorem&nbsp;<a href="#x1-125">7.1.5<!-- tex4ht:ref: thmtype:7.1.5  --></a>.
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 7.1.6</span> </span><a id='x1-146'></a><br class='newline' />
-    </p><dl class='list1'><dt class='list'>
- <span class='ptmb8t-'>(a)</span>  </dt><dd class='list'>
-    <p class='noindent'>If \[ \sum _{n=0}^\infty a_n(x-x_0)^n=\sum _{n=0}^\infty b_n(x-x_0)^n \]
+  <div class="newtheorem" id="d0d0bfa8-2b83-4d95-9141-636ffe41062e">
+<p class="noindent"><span class="head">
+<span class="ptmb8t-">Theorem&nbsp;7.1.6</span> </span><a id="x1-146"></a><br class="newline">
+    </p><dl class="list1"><dt class="list">
+ <span class="ptmb8t-">(a)</span>  </dt><dd class="list">
+    <p class="noindent">If \[ \sum _{n=0}^\infty a_n(x-x_0)^n=\sum _{n=0}^\infty b_n(x-x_0)^n \]
      for all \(x\) in an open interval that contains \(x_0,\) then \(a_n=b_n\) for \(n=0\), \(1\), \(2\), ….
-    </p></dd><dt class='list'>
- <span class='ptmb8t-'>(b)</span>  </dt><dd class='list'>
-    <p class='noindent'>If
+    </p></dd><dt class="list">
+ <span class="ptmb8t-">(b)</span>  </dt><dd class="list">
+    <p class="noindent">If
 \[ \sum _{n=0}^\infty a_n(x-x_0)^n=0 \]
      for all \(x\) in an open interval that contains \(x_0,\) then \(a_n=0\) for \(n=0\), \(1\), \(2\), ….</p></dd></dl>
 
 </div>
-<p class='indent'>  
-</p><p class='indent'>  To obtain <span class='ptmb8t-'>(a) </span>we observe that the two series represent the same function \(f\) on the open interval; hence,
-Theorem <a href='#x1-125'>7.1.5<!-- tex4ht:ref: thmtype:7.1.5  --></a> implies that
+<p class="indent" id="2c875765-a789-4530-9a5f-310a762d072e">  
+</p><p class="indent" id="86e7f0a5-1e3a-434b-8851-de6d07468790">  To obtain <span class="ptmb8t-">(a) </span>we observe that the two series represent the same function \(f\) on the open interval; hence,
+Theorem&nbsp;<a href="#x1-125">7.1.5<!-- tex4ht:ref: thmtype:7.1.5  --></a> implies that
                                         \[ a_n=b_n={f^{(n)}(x_0)\over n!},\quad n=0,1,2, \dots \]
- <span class='ptmb8t-'>(b) </span>can be obtained from <span class='ptmb8t-'>(a) </span>by taking \(b_n=0\) for \(n=0\), \(1\), \(2\), ….
-</p><p class='noindent'><span id='textcolor4'>Taylor Polynomials</span>
-</p><p class='indent'>
-</p><p class='noindent'>If \(f\) has \(N\) derivatives at a point \(x_0\), we say that
+ <span class="ptmb8t-">(b) </span>can be obtained from <span class="ptmb8t-">(a) </span>by taking \(b_n=0\) for \(n=0\), \(1\), \(2\), ….
+</p><p class="noindent" id="a1851a0c-d19d-42cc-ae7b-72269ca07013"><span id="textcolor4">Taylor Polynomials</span>
+</p><p class="indent" id="8b8bf289-f51b-496f-b68d-ea75059ecc63">
+</p><p class="noindent" id="2c3a3619-101f-47a2-a4cc-3f17f87f1b67">If \(f\) has \(N\) derivatives at a point \(x_0\), we say that
                                         \[ T_N(x)=\sum _{n=0}^N{f^{(n)}(x_0)\over n!}(x-x_0)^n \]
- is the \(N\)-th Taylor polynomial of \(f\) about \(x_0\)</a>. This definition and Theorem <a href='#x1-125'>7.1.5<!-- tex4ht:ref: thmtype:7.1.5  --></a> imply that if
+ is the \(N\)-th Taylor polynomial of \(f\) about \(x_0\). This definition and Theorem&nbsp;<a href="#x1-125">7.1.5<!-- tex4ht:ref: thmtype:7.1.5  --></a> imply that if
                                         \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n\]
  where the power series has a positive radius of convergence\(,\) then the Taylor polynomials of \(f\) about \(x_0\) are given
 by
@@ -200,14 +198,14 @@ by
                                                                                 
                                         \[ T_N(x)=\sum _{n=0}^N a_n(x-x_0)^n\]
  In numerical applications, we use the Taylor polynomials to approximate \(f\) on subintervals of the open
-interval of convergence of the power series. For example, (<span class='ptmb8t-'>7.1.2</span>) implies that the Taylor polynomial \(T_N\) of \(f(x)=e^x\)
+interval of convergence of the power series. For example, (<span class="ptmb8t-">7.1.2</span>) implies that the Taylor polynomial \(T_N\) of \(f(x)=e^x\)
 is
                                         \[ T_N(x)=\sum _{n=0}^N{x^n\over n!}\]
- The solid curve in Figure <a href='#-approximation-of-yex-by-taylor-polynomials-about-x-'>7.1.1<!-- tex4ht:ref: figure:7.1.1  --></a> is the graph of \(y=e^x\) on the interval \([0,5]\). The dotted curves in Figure <a href='#-approximation-of-yex-by-taylor-polynomials-about-x-'>7.1.1<!-- tex4ht:ref: figure:7.1.1  --></a> are the graphs
+ The solid curve in Figure&nbsp;<a href="#-approximation-of-yex-by-taylor-polynomials-about-x-">7.1.1<!-- tex4ht:ref: figure:7.1.1  --></a> is the graph of \(y=e^x\) on the interval \([0,5]\). The dotted curves in Figure&nbsp;<a href="#-approximation-of-yex-by-taylor-polynomials-about-x-">7.1.1<!-- tex4ht:ref: figure:7.1.1  --></a> are the graphs
 of the Taylor polynomials \(T_1\), …, \(T_6\) of \(y=e^x\) about \(x_0=0\). From this figure, we conclude that the accuracy of the approximation of \(y=e^x\)
 by its Taylor polynomial \(T_N\) improves as \(N\) increases.
 </p>
-  <figure class='figure'> 
+  <figure class="figure" id="4bcc49ad-8c85-4dcf-885b-771519f8bb52"> 
 
                                                                                 
 
@@ -215,44 +213,44 @@ by its Taylor polynomial \(T_N\) improves as \(N\) increases.
                                                                                 
 
                                                                                 
-<p class='noindent' id='-approximation-of-yex-by-taylor-polynomials-about-x-'><img height='264' src='EPS/fig070101.png' width='409' /> <a id='x1-17r1'></a></p>
-<figcaption class='caption'><span class='id'>Figure 7.1.1 </span><span class='content'>Approximation of \(y=e^x\) by Taylor polynomials about \(x=0\)                                </span></figcaption><!-- tex4ht:label?: x1-17r1  -->
+<p class="noindent" id="-approximation-of-yex-by-taylor-polynomials-about-x-"><img height="264" src="EPS/fig070101.png" width="409"> <a id="x1-17r1"></a></p>
+<figcaption class="caption"><span class="id">Figure&nbsp;7.1.1 </span><span class="content">Approximation of \(y=e^x\) by Taylor polynomials about \(x=0\)                                </span></figcaption><!-- tex4ht:label?: x1-17r1  -->
                                                                                 
 
                                                                                 
   </figure>
-<p class='noindent'><span id='textcolor5'>Shifting the Summation Index</span>
-</p><p class='indent'>
-</p><p class='noindent'>In Definition <a href='#x1-2r1'>7.1.1<!-- tex4ht:ref: thmtype:7.1.1  --></a> of a power series in \(x-x_0\), the \(n\)-th term is a constant multiple of \((x-x_0)^n\). This isn’t true in (<span class='ptmb8t-'>7.1.6</span>), (<span class='ptmb8t-'>7.1.7</span>), and
-(<span class='ptmb8t-'>7.1.8</span>), where the general terms are constant multiples of \((x-x_0)^{n-1}\), \((x-x_0)^{n-2}\), and \((x-x_0)^{n-k}\), respectively. However, these series
+<p class="noindent" id="4d06a841-f7f9-423a-a8b7-c57f6dfe2539"><span id="textcolor5">Shifting the Summation Index</span>
+</p><p class="indent" id="94631321-8986-4a45-98c8-4bf0f01632f2">
+</p><p class="noindent" id="d830b380-5b96-449e-950a-5bbe41ef7a1d">In Definition&nbsp;<a href="#x1-2r1">7.1.1<!-- tex4ht:ref: thmtype:7.1.1  --></a> of a power series in \(x-x_0\), the \(n\)-th term is a constant multiple of \((x-x_0)^n\). This isn’t true in (<span class="ptmb8t-">7.1.6</span>), (<span class="ptmb8t-">7.1.7</span>), and
+(<span class="ptmb8t-">7.1.8</span>), where the general terms are constant multiples of \((x-x_0)^{n-1}\), \((x-x_0)^{n-2}\), and \((x-x_0)^{n-k}\), respectively. However, these series
 can all be rewritten so that their \(n\)-th terms are constant multiples of \((x-x_0)^n\). For example, letting \(n=k+1\) in the
-series in (<span class='ptmb8t-'>7.1.6</span>) yields \begin {equation}  \label {eq:7.1.10} f'(x)=\sum _{k=0}^\infty (k+1)a_{k+1}(x-x_0)^k\end {equation}<a id='x1-18r3'></a> where we start the new summation index \(k\) from zero so that the first term in
-(<a href='#x1-18r3'>7.1.10<!-- tex4ht:ref: eq:7.1.10  --></a>) (obtained by setting \(k=0\)) is the same as the first term in (<span class='ptmb8t-'>7.1.10</span>) (obtained by setting \(n=1\)). However,
+series in (<span class="ptmb8t-">7.1.6</span>) yields \begin {equation}  \label {eq:7.1.10} f'(x)=\sum _{k=0}^\infty (k+1)a_{k+1}(x-x_0)^k\end {equation}<a id="x1-18r3"></a> where we start the new summation index \(k\) from zero so that the first term in
+(<a href="#x1-18r3">7.1.10<!-- tex4ht:ref: eq:7.1.10  --></a>) (obtained by setting \(k=0\)) is the same as the first term in (<span class="ptmb8t-">7.1.10</span>) (obtained by setting \(n=1\)). However,
 the sum of a series is independent of the symbol used to denote the summation index, just as the
 value of a definite integral is independent of the symbol used to denote the variable of integration.
-Therefore we can replace \(k\) by \(n\) in (<a href='#x1-18r3'>7.1.10<!-- tex4ht:ref: eq:7.1.10  --></a>) to obtain \begin {equation}  \label {eq:7.1.11} f'(x)=\sum _{n=0}^\infty (n+1)a_{n+1}(x-x_0)^n\end {equation}<a id='x1-19r4'></a> where the general term is a constant multiple of
+Therefore we can replace \(k\) by \(n\) in (<a href="#x1-18r3">7.1.10<!-- tex4ht:ref: eq:7.1.10  --></a>) to obtain \begin {equation}  \label {eq:7.1.11} f'(x)=\sum _{n=0}^\infty (n+1)a_{n+1}(x-x_0)^n\end {equation}<a id="x1-19r4"></a> where the general term is a constant multiple of
 \((x-x_0)^n\).
-</p><p class='indent'>  It isn’t really necessary to introduce the intermediate summation index \(k\). We can obtain (<a href='#x1-19r4'>7.1.11<!-- tex4ht:ref: eq:7.1.11  --></a>) directly from
-(<span class='ptmb8t-'>7.1.6</span>) by replacing \(n\) by \(n+1\) in the general term of (<span class='ptmb8t-'>7.1.6</span>) and subtracting \(1\) from the lower limit of (<span class='ptmb8t-'>7.1.6</span>). More generally, we
+</p><p class="indent" id="dd2fe79b-836c-43ba-be4c-a14ad022dc7d">  It isn’t really necessary to introduce the intermediate summation index \(k\). We can obtain (<a href="#x1-19r4">7.1.11<!-- tex4ht:ref: eq:7.1.11  --></a>) directly from
+(<span class="ptmb8t-">7.1.6</span>) by replacing \(n\) by \(n+1\) in the general term of (<span class="ptmb8t-">7.1.6</span>) and subtracting \(1\) from the lower limit of (<span class="ptmb8t-">7.1.6</span>). More generally, we
 use the following procedure for shifting indices.
                                                                                 
 
                                                                                 
 __
-  </p><p class='noindent'>  <br class='newline' /></p>
-  <div class='center'>
-  <p class='noindent'>
-  </p><p class='noindent'><span class='ptmb8t-'>Shifting the Summation Index in a Power Series</span></p></div>
-<p class='noindent'>For any integer \(k\), the power series
+  </p><p class="noindent" id="42380279-1029-46ce-a4ae-e5932eeed756">  <br class="newline"></p>
+  <div class="center" id="db233a52-bd97-499d-ad14-bc65693321a3">
+  <p class="noindent">
+  </p><p class="noindent"><span class="ptmb8t-">Shifting the Summation Index in a Power Series</span></p></div>
+<p class="noindent" id="d662ce33-a28d-4ff1-adc0-97b9b0dcc8f8">For any integer \(k\), the power series
                                                                                       \[ \sum _{n=n_0}^\infty b_n(x-x_0)^{n-k} \]
    can be rewritten as
                                                                                       \[ \sum _{n=n_0-k}^\infty b_{n+k}(x-x_0)^n\]
    that is, replacing \(n\) by \(n+k\) in the general term and subtracting \(k\) from the lower limit of summation leaves the series
-  unchanged.<br class='newline' />                                                                                                                                                                         
+  unchanged.<br class="newline">                                                                                                                                                                         
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 7.1.3</span> </span><a id='x1-203'></a> Rewrite the following power series from (<span class='ptmb8t-'>7.1.7</span>) and (<span class='ptmb8t-'>7.1.8</span>) so that the general term in each
+  <div class="newtheorem" id="e35d4065-aa7f-4701-8f50-5a0cf18f0468">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;7.1.3</span> </span><a id="x1-203"></a> Rewrite the following power series from (<span class="ptmb8t-">7.1.7</span>) and (<span class="ptmb8t-">7.1.8</span>) so that the general term in each
 is a constant multiple of \((x-x_0)^n\):
                                                                                 
 
@@ -260,26 +258,26 @@ is a constant multiple of \((x-x_0)^n\):
                                         \[ \mbox {\bf (a)}\; \sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}\quad \mbox {\bf (b)}\; \sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k}\]
 </p>
   </div>
-<p class='indent'>
-</p><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>a</span><span class='ptmrc8t-'>) </span></span> Replacing \(n\) by \(n+2\) in the general term and subtracting \(2\) from the lower limit of summation
+<p class="indent" id="4b474095-fad7-42c3-8836-eeb923047111">
+</p><p class="noindent" id="776a0bca-c501-4ea9-89de-2c845dc12cd7"><span class="underline"><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">a</span><span class="ptmrc8t-">)&nbsp;</span></span> Replacing \(n\) by \(n+2\) in the general term and subtracting \(2\) from the lower limit of summation
 yields
                                         \[ \sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}= \sum _{n=0}^\infty (n+2)(n+1)a_{n+2}(x-x_0)^n\]
-</p><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>b</span><span class='ptmrc8t-'>) </span></span> Replacing \(n\) by \(n+k\) in the general term and subtracting \(k\) from the lower limit of summation
+</p><p class="noindent" id="b9118dd4-c46e-489b-adf6-2965a776a1c3"><span class="underline"><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">b</span><span class="ptmrc8t-">)&nbsp;</span></span> Replacing \(n\) by \(n+k\) in the general term and subtracting \(k\) from the lower limit of summation
 yields
                                         \[ \sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k}= \sum _{n=0}^\infty (n+k)(n+k-1)\cdots (n+1)a_{n+k}(x-x_0)^n\]
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 7.1.4</span> </span><a id='x1-214'></a> Given that
+  <div class="newtheorem" id="47a210e2-9d55-4cd4-9331-81494b4e1f7b">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;7.1.4</span> </span><a id="x1-214"></a> Given that
                                                                                 
 
                                                                                 
                                         \[ f(x)=\sum _{n=0}^\infty a_nx^n\]
- write the function \(xf''\) as a power series in which the general term is a constant multiple of \(x^n\).
+ write the function \(xf''\) as a power series in which the general term is a constant multiple of&nbsp;\(x^n\).
 </p>
   </div>
-<p class='indent'>
-</p><p class='noindent'><span class='ptmb8t-'>Solution </span> From Theorem <a href='#x1-104'>7.1.4<!-- tex4ht:ref: thmtype:7.1.4  --></a> with \(x_0=0\),
+<p class="indent" id="59014729-3c4f-4ce4-a3c2-cb4944af4f8d">
+</p><p class="noindent" id="83dcf36b-1512-49d9-8701-e796c5de5108"><span class="ptmb8t-">Solution </span>&nbsp;From Theorem&nbsp;<a href="#x1-104">7.1.4<!-- tex4ht:ref: thmtype:7.1.4  --></a> with \(x_0=0\),
                                         \[ f''(x)=\sum _{n=2}^\infty n(n-1)a_nx^{n-2}\]
  Therefore
                                         \[ xf''(x)=\sum _{n=2}^\infty n(n-1)a_nx^{n-1}\]
@@ -292,9 +290,9 @@ yields
                                         \[ xf''(x)=\sum _{n=0}^\infty (n+1)na_{n+1}x^n\]
  since the first term in this last series is zero. (We’ll see later that sometimes it’s useful to include zero terms at the
 beginning of a series.)
-</p><p class='noindent'><span id='textcolor6'>Linear Combinations of Power Series</span>
-</p><p class='indent'>
-</p><p class='noindent'>If a power series is multiplied by a constant, then the constant can be placed inside the summation; that
+</p><p class="noindent" id="4f688639-7283-4d06-b8b1-59288c16e10b"><span id="textcolor6">Linear Combinations of Power Series</span>
+</p><p class="indent" id="a375c2cf-65ff-4beb-9502-3b7a8e066e20">
+</p><p class="noindent" id="4a8f3988-4a7a-4de2-be31-4165421bc12d">If a power series is multiplied by a constant, then the constant can be placed inside the summation; that
 is,
                                         \[ c\sum _{n=0}^\infty a_n(x-x_0)^n=\sum _{n=0}^\infty ca_n(x-x_0)^n\]
  Two power series
@@ -309,82 +307,82 @@ convergence; thus, if the first series converges for \(|x-x_0|&lt;R_1\) and the 
 term; for example,
                                         \[ c_1f(x)+c_2f(x)=\sum _{n=0}^\infty (c_1a_n+c_2b_n)(x-x_0)^n\]
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 7.1.5</span> </span><a id='x1-225'></a> Find the Maclaurin series for \(\cosh x\) as a linear combination of the Maclaurin series for \(e^x\) and \(e^{-x}\).
+  <div class="newtheorem" id="8ea17145-77d6-421a-abe6-4f16bbed4d08">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;7.1.5</span> </span><a id="x1-225"></a> Find the Maclaurin series for \(\cosh x\) as a linear combination of the Maclaurin series for \(e^x\) and \(e^{-x}\).
 </p>
   </div>
-<p class='indent'>
-</p><p class='noindent'><span class='ptmb8t-'>Solution </span> By definition,
+<p class="indent" id="fb09ca02-b6cd-4f85-a1e9-d95b041d05ae">
+</p><p class="noindent" id="37d766ab-5464-46ff-8b61-f01aba4a9b83"><span class="ptmb8t-">Solution </span>&nbsp;By definition,
                                         \[ \cosh x={1\over 2}e^x+{1\over 2}e^{-x}\]
  Since
                                                                                 
 
                                                                                 
                                         \[ e^x=\sum _{n=0}^\infty {x^n\over n!}\quad \mbox { and }\quad e^{-x}=\sum _{n=0}^\infty (-1)^n {x^n\over n!}\]
- it follows that \begin {equation}  \label {eq:7.1.12} \cosh x=\sum _{n=0}^\infty {1\over 2}[1+(-1)^n]{x^n\over n!}\end {equation}<a id='x1-23r5'></a> Since
+ it follows that \begin {equation}  \label {eq:7.1.12} \cosh x=\sum _{n=0}^\infty {1\over 2}[1+(-1)^n]{x^n\over n!}\end {equation}<a id="x1-23r5"></a> Since
                                         \[ {1\over 2}[1+(-1)^n]=\left \{\begin {array}{cl}1&amp;\mbox { if } n=2m,\mbox { an even integer},\\ 0&amp;\mbox { if }n=2m+1,\mbox { an odd integer}\end {array}\right. \]
- we can rewrite (<a href='#x1-23r5'>7.1.12<!-- tex4ht:ref: eq:7.1.12  --></a>) more simply as
+ we can rewrite (<a href="#x1-23r5">7.1.12<!-- tex4ht:ref: eq:7.1.12  --></a>) more simply as
                                         \[ \cosh x=\sum _{m=0}^\infty {x^{2m}\over (2m)!}\]
  This result is valid on \((-\infty ,\infty )\), since this is the open interval of convergence of the Maclaurin series for \(e^x\) and
 \(e^{-x}\).
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 7.1.6</span> </span><a id='x1-246'></a> Suppose
+  <div class="newtheorem" id="a61dcf47-902f-4c62-9fd7-d973cca864d8">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;7.1.6</span> </span><a id="x1-246"></a> Suppose
                                                                                 
 
                                                                                 
                                         \[ y=\sum _{n=0}^\infty a_n x^n \]
  on an open interval \(I\) that contains the origin.
-    </p><dl class='list1'><dt class='list'>
- <span class='ptmb8t-'>(a)</span>  </dt><dd class='list'>
-    <p class='noindent'>Express
+    </p><dl class="list1"><dt class="list">
+ <span class="ptmb8t-">(a)</span>  </dt><dd class="list">
+    <p class="noindent">Express
                                           \[ (2-x)y''+2y \]
      as a power series in \(x\) on \(I\).
-    </p></dd><dt class='list'>
- <span class='ptmb8t-'>(b)</span>  </dt><dd class='list'>
-    <p class='noindent'>Use the result of <span class='ptmb8t-'>(a) </span>to find necessary and sufficient conditions on the coefficients \(\{a_n\}\) for \(y\) to be a solution of
-    the homogeneous equation \begin {equation}  \label {eq:7.1.13} (2-x)y''+2y=0  \end {equation}<a id='x1-27r6'></a> on \(I\).</p></dd></dl>
+    </p></dd><dt class="list">
+ <span class="ptmb8t-">(b)</span>  </dt><dd class="list">
+    <p class="noindent">Use the result of <span class="ptmb8t-">(a) </span>to find necessary and sufficient conditions on the coefficients \(\{a_n\}\) for \(y\) to be a solution of
+    the homogeneous equation \begin {equation}  \label {eq:7.1.13} (2-x)y''+2y=0  \end {equation}<a id="x1-27r6"></a> on \(I\).</p></dd></dl>
 </div>
-<p class='indent'>
-</p><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>a</span><span class='ptmrc8t-'>) </span></span> From (<span class='ptmb8t-'>7.1.4</span>) with \(x_0=0\),
+<p class="indent" id="2718dce0-186c-4704-9f28-901b457152be">
+</p><p class="noindent" id="d725d782-d95a-4e76-960f-4b92133c2635"><span class="underline"><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">a</span><span class="ptmrc8t-">)&nbsp;</span></span> From (<span class="ptmb8t-">7.1.4</span>) with \(x_0=0\),
                                         \[ y''=\sum _{n=2}^\infty n(n-1)a_nx^{n-2}\]
- Therefore \begin {equation}  \label {eq:7.1.14} \begin {array}{rcl} (2-x)y''+2y&amp;=&amp;2y''-xy'+2y\\ &amp;=&amp;\displaystyle {\sum _{n=2}^\infty 2n(n-1)a_nx^{n-2} -\sum _{n=2}^\infty n(n-1)a_nx^{n-1} +\sum _{n=0}^\infty 2a_n x^n}\end {array}  \end {equation}<a id='x1-28r7'></a> To combine the three series we shift indices in the first two to make their general terms constant
-multiples of \(x^n\); thus, \begin {equation}  \label {eq:7.1.15} \sum _{n=2}^\infty 2n(n-1)a_nx^{n-2}=\sum _{n=0}^\infty 2(n+2)(n+1)a_{n+2}x^n  \end {equation}<a id='x1-29r8'></a> and \begin {equation}  \label {eq:7.1.16} \sum _{n=2}^\infty n(n-1)a_nx^{n-1}=\sum _{n=1}^\infty (n+1)na_{n+1}x^n =\sum _{n=0}^\infty (n+1)na_{n+1}x^n\end {equation}<a id='x1-30r9'></a> where we added a zero term in the last series so that when we substitute from (<a href='#x1-29r8'>7.1.15<!-- tex4ht:ref: eq:7.1.15  --></a>) and
-(<a href='#x1-30r9'>7.1.16<!-- tex4ht:ref: eq:7.1.16  --></a>) into (<a href='#x1-28r7'>7.1.14<!-- tex4ht:ref: eq:7.1.14  --></a>) all three series will start with \(n=0\); thus, \begin {equation}  \label {eq:7.1.17} (2-x)y''+2y=\sum _{n=0}^\infty [2(n+2)(n+1)a_{n+2}-(n+1)na_{n+1}+2a_n]x^n\end {equation}<a id='x1-31r10'></a>
-</p><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>b</span><span class='ptmrc8t-'>) </span></span> From (<a href='#x1-31r10'>7.1.17<!-- tex4ht:ref: eq:7.1.17  --></a>) we see that \(y\) satisfies (<a href='#x1-27r6'>7.1.13<!-- tex4ht:ref: eq:7.1.13  --></a>) on \(I\) if \begin {equation}  \label {eq:7.1.18} 2(n+2)(n+1)a_{n+2}-(n+1)na_{n+1}+2a_n=0,\quad n=0,1,2, \dots \end {equation}<a id='x1-32r11'></a> Conversely, Theorem <a href='#x1-146'>7.1.6<!-- tex4ht:ref: thmtype:7.1.6  --></a> <span class='ptmb8t-'>(b) </span>implies that if \(y=\sum _{n=0}^\infty a_nx^n\)
-satisfies (<a href='#x1-27r6'>7.1.13<!-- tex4ht:ref: eq:7.1.13  --></a>) on \(I\), then (<a href='#x1-32r11'>7.1.18<!-- tex4ht:ref: eq:7.1.18  --></a>) holds.
+ Therefore \begin {equation}  \label {eq:7.1.14} \begin {array}{rcl} (2-x)y''+2y&amp;=&amp;2y''-xy'+2y\\ &amp;=&amp;\displaystyle {\sum _{n=2}^\infty 2n(n-1)a_nx^{n-2} -\sum _{n=2}^\infty n(n-1)a_nx^{n-1} +\sum _{n=0}^\infty 2a_n x^n}\end {array}  \end {equation}<a id="x1-28r7"></a> To combine the three series we shift indices in the first two to make their general terms constant
+multiples of \(x^n\); thus, \begin {equation}  \label {eq:7.1.15} \sum _{n=2}^\infty 2n(n-1)a_nx^{n-2}=\sum _{n=0}^\infty 2(n+2)(n+1)a_{n+2}x^n  \end {equation}<a id="x1-29r8"></a> and \begin {equation}  \label {eq:7.1.16} \sum _{n=2}^\infty n(n-1)a_nx^{n-1}=\sum _{n=1}^\infty (n+1)na_{n+1}x^n =\sum _{n=0}^\infty (n+1)na_{n+1}x^n\end {equation}<a id="x1-30r9"></a> where we added a zero term in the last series so that when we substitute from (<a href="#x1-29r8">7.1.15<!-- tex4ht:ref: eq:7.1.15  --></a>) and
+(<a href="#x1-30r9">7.1.16<!-- tex4ht:ref: eq:7.1.16  --></a>) into (<a href="#x1-28r7">7.1.14<!-- tex4ht:ref: eq:7.1.14  --></a>) all three series will start with \(n=0\); thus, \begin {equation}  \label {eq:7.1.17} (2-x)y''+2y=\sum _{n=0}^\infty [2(n+2)(n+1)a_{n+2}-(n+1)na_{n+1}+2a_n]x^n\end {equation}<a id="x1-31r10"></a>
+</p><p class="noindent" id="ea84afd4-c954-48d0-b771-ea7211885a6c"><span class="underline"><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">b</span><span class="ptmrc8t-">)&nbsp;</span></span> From (<a href="#x1-31r10">7.1.17<!-- tex4ht:ref: eq:7.1.17  --></a>) we see that \(y\) satisfies (<a href="#x1-27r6">7.1.13<!-- tex4ht:ref: eq:7.1.13  --></a>) on \(I\) if \begin {equation}  \label {eq:7.1.18} 2(n+2)(n+1)a_{n+2}-(n+1)na_{n+1}+2a_n=0,\quad n=0,1,2, \dots \end {equation}<a id="x1-32r11"></a> Conversely, Theorem&nbsp;<a href="#x1-146">7.1.6<!-- tex4ht:ref: thmtype:7.1.6  --></a>&nbsp;<span class="ptmb8t-">(b) </span>implies that if \(y=\sum _{n=0}^\infty a_nx^n\)
+satisfies (<a href="#x1-27r6">7.1.13<!-- tex4ht:ref: eq:7.1.13  --></a>) on \(I\), then (<a href="#x1-32r11">7.1.18<!-- tex4ht:ref: eq:7.1.18  --></a>) holds.
 </p>
                                                                                 
 
                                                                                 
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 7.1.7</span> </span><a id='x1-337'></a> Suppose
+  <div class="newtheorem" id="09a4f7ba-a16e-49ac-9f1c-1ac2d1be2b66">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;7.1.7</span> </span><a id="x1-337"></a> Suppose
                                         \[ y=\sum _{n=0}^\infty a_n (x-1)^n \]
- on an open interval \(I\) that contains \(x_0=1\). Express the function \begin {equation}  \label {eq:7.1.19} (1+x)y''+2(x-1)^2y'+3y  \end {equation}<a id='x1-34r12'></a> as a power series in \(x-1\) on \(I\).
+ on an open interval \(I\) that contains \(x_0=1\). Express the function \begin {equation}  \label {eq:7.1.19} (1+x)y''+2(x-1)^2y'+3y  \end {equation}<a id="x1-34r12"></a> as a power series in \(x-1\) on \(I\).
 </p>
   </div>
-<p class='indent'>
-</p><p class='noindent'><span class='ptmb8t-'>Solution </span> Since we want a power series in \(x-1\), we rewrite the coefficient of \(y''\) in (<a href='#x1-34r12'>7.1.19<!-- tex4ht:ref: eq:7.1.19  --></a>) as \(1+x=2+(x-1)\), so (<a href='#x1-34r12'>7.1.19<!-- tex4ht:ref: eq:7.1.19  --></a>)
+<p class="indent" id="7c1f12d0-50c1-4659-9889-0e252f3c0123">
+</p><p class="noindent" id="de552217-a373-4d7c-bde4-115132cd7605"><span class="ptmb8t-">Solution </span>&nbsp;Since we want a power series in \(x-1\), we rewrite the coefficient of \(y''\) in (<a href="#x1-34r12">7.1.19<!-- tex4ht:ref: eq:7.1.19  --></a>) as \(1+x=2+(x-1)\), so (<a href="#x1-34r12">7.1.19<!-- tex4ht:ref: eq:7.1.19  --></a>)
 becomes
                                         \[ 2y''+(x-1)y''+2(x-1)^2y'+3y\]
- From (<span class='ptmb8t-'>7.1.6</span>) and (<span class='ptmb8t-'>7.1.7</span>) with \(x_0=1\),
+ From (<span class="ptmb8t-">7.1.6</span>) and (<span class="ptmb8t-">7.1.7</span>) with \(x_0=1\),
                                                                                 
 
                                                                                 
                                         \[ y'=\sum _{n=1}^\infty na_n(x-1)^{n-1}\quad \mbox { and }\quad y ''=\sum _{n=2}^\infty n(n-1)a_n(x-1)^{n-2}\]
- Therefore </p><div class='eqnarray'>\begin {eqnarray*}  2y ''&amp;=&amp;\sum _{n=2}^\infty 2n(n-1)a_n(x-1)^{n-2},\\ (x-1)y ''&amp;=&amp;\sum _{n=2}^\infty n(n-1)a_n(x-1)^{n-1},\\ 2(x-1)^2y'&amp;=&amp;\sum _{n=1}^\infty 2na_n(x-1)^{n+1},\\ 3y&amp;=&amp;\sum _{n=0}^\infty 3a_n (x-1)^n\end {eqnarray*}</div>
-<p class='indent'>  Before adding these four series we shift indices in the first three so that their general terms become constant
-multiples of \((x-1)^n\). This yields </p><div class='eqnarray'>\begin {eqnarray}  2y ''&amp;=&amp;\sum _{n=0}^\infty 2(n+2)(n+1)a_{n+2}(x-1)^n,\label {eq:7.1.20}\\ (x-1)y''&amp;=&amp;\sum _{n=0}^\infty (n+1)na_{n+1}(x-1)^n, \label {eq:7.1.21}\\ 2(x-1)^2y'&amp;=&amp;\sum _{n=1}^\infty 2(n-1)a_{n-1}(x-1)^n,\label {eq:7.1.22}\\ 3y&amp;=&amp;\sum _{n=0}^\infty 3a_n (x-1)^n, \label {eq:7.1.23}  \end {eqnarray}</div>
-<p class='indent'>  where we added initial zero terms to the series in (<span class='ptmb8t-'>7.1.21</span>) and (<span class='ptmb8t-'>7.1.22</span>). Adding (<span class='ptmb8t-'>7.1.20</span>)–(<span class='ptmb8t-'>7.1.23</span>) yields </p><div class='eqnarray'>\begin {eqnarray*}  (1+x)y''+2(x-1)^2y'+3y&amp;=&amp;2y''+(x-1)y''+2(x-1)^2y'+3y\\[5pt] &amp;=&amp;\sum _{n=0}^\infty b_n (x-1)^n\end {eqnarray*}</div>
-<p class='indent'>  where </p><div class='eqnarray'>\begin {eqnarray}  b_0&amp;=&amp;4a_2+3a_0, \label {eq:7.1.24}\\ b_n&amp;=&amp;2(n+2)(n+1)a_{n+2}+(n+1)na_{n+1}+2(n-1)a_{n-1}+3a_n,\, n\ge 1\label {eq:7.1.25}\end {eqnarray}</div>
-<p class='indent'>  The formula (<span class='ptmb8t-'>7.1.24</span>) for \(b_0\) can’t be obtained by setting \(n=0\) in (<span class='ptmb8t-'>7.1.25</span>), since the summation in (<span class='ptmb8t-'>7.1.22</span>) begins with \(n=1\), while
-those in (<span class='ptmb8t-'>7.1.20</span>), (<span class='ptmb8t-'>7.1.21</span>), and (<span class='ptmb8t-'>7.1.23</span>) begin with \(n=0\).
+ Therefore </p><div class="eqnarray" id="c099750b-308e-470b-93b1-30db2fe3a124">\begin {eqnarray*}  2y ''&amp;=&amp;\sum _{n=2}^\infty 2n(n-1)a_n(x-1)^{n-2},\\ (x-1)y ''&amp;=&amp;\sum _{n=2}^\infty n(n-1)a_n(x-1)^{n-1},\\ 2(x-1)^2y'&amp;=&amp;\sum _{n=1}^\infty 2na_n(x-1)^{n+1},\\ 3y&amp;=&amp;\sum _{n=0}^\infty 3a_n (x-1)^n\end {eqnarray*}</div>
+<p class="indent" id="35ab982f-b397-4428-9040-3d76735127db">  Before adding these four series we shift indices in the first three so that their general terms become constant
+multiples of \((x-1)^n\). This yields </p><div class="eqnarray" id="e4855057-6c72-46a9-8ef9-75da93fb2d65">\begin {eqnarray}  2y ''&amp;=&amp;\sum _{n=0}^\infty 2(n+2)(n+1)a_{n+2}(x-1)^n,\label {eq:7.1.20}\\ (x-1)y''&amp;=&amp;\sum _{n=0}^\infty (n+1)na_{n+1}(x-1)^n, \label {eq:7.1.21}\\ 2(x-1)^2y'&amp;=&amp;\sum _{n=1}^\infty 2(n-1)a_{n-1}(x-1)^n,\label {eq:7.1.22}\\ 3y&amp;=&amp;\sum _{n=0}^\infty 3a_n (x-1)^n, \label {eq:7.1.23}  \end {eqnarray}</div>
+<p class="indent" id="2330da2d-34c2-4daf-80af-692dbbd2e156">  where we added initial zero terms to the series in (<span class="ptmb8t-">7.1.21</span>) and (<span class="ptmb8t-">7.1.22</span>). Adding (<span class="ptmb8t-">7.1.20</span>)–(<span class="ptmb8t-">7.1.23</span>) yields </p><div class="eqnarray" id="4744401d-0996-40ea-bdfe-4d556e13fc1b">\begin {eqnarray*}  (1+x)y''+2(x-1)^2y'+3y&amp;=&amp;2y''+(x-1)y''+2(x-1)^2y'+3y\\[5pt] &amp;=&amp;\sum _{n=0}^\infty b_n (x-1)^n\end {eqnarray*}</div>
+<p class="indent" id="0c497483-a4d6-481f-9b4f-2563466ed104">  where </p><div class="eqnarray" id="6fe5536c-409c-4f60-9f5c-c9548bbebe6a">\begin {eqnarray}  b_0&amp;=&amp;4a_2+3a_0, \label {eq:7.1.24}\\ b_n&amp;=&amp;2(n+2)(n+1)a_{n+2}+(n+1)na_{n+1}+2(n-1)a_{n-1}+3a_n,\, n\ge 1\label {eq:7.1.25}\end {eqnarray}</div>
+<p class="indent" id="df7ab4d6-f336-42ff-ba49-0da9fae67e89">  The formula (<span class="ptmb8t-">7.1.24</span>) for \(b_0\) can’t be obtained by setting \(n=0\) in (<span class="ptmb8t-">7.1.25</span>), since the summation in (<span class="ptmb8t-">7.1.22</span>) begins with \(n=1\), while
+those in (<span class="ptmb8t-">7.1.20</span>), (<span class="ptmb8t-">7.1.21</span>), and (<span class="ptmb8t-">7.1.23</span>) begin with \(n=0\).
 </p>
 
-<div class="nav">
+<div class="nav" id="463fcd88-68f5-4e2e-a0fb-fabf06dd8386">
   <a>&nbsp;</a>
 
   <a href="sec7.0.html">Chapter 7</a>
@@ -392,5 +390,5 @@ those in (<span class='ptmb8t-'>7.1.20</span>), (<span class='ptmb8t-'>7.1.21</s
   <a href="sec7.2.book.html">Next (7.2)</a>
 </div>
 
-</body> 
-</html>
+ 
+</body></html>

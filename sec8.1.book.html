@@ -1,58 +1,56 @@
-<!DOCTYPE html> 
-<html lang='en-US' xml:lang='en-US'> 
-<head><title></title> 
-<meta charset='utf-8' /> 
-<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
-<meta content='width=device-width,initial-scale=1' name='viewport' /> 
-<link rel="stylesheet" type="text/css" href='combined.css' />
-<meta content='Trench_DiffEQ_Book.tex' name='src' /> 
+<!DOCTYPE html><html lang="en-US" xml:lang="en-US"><head><title></title> 
+<meta charset="utf-8"> 
+<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator"> 
+<meta content="width=device-width,initial-scale=1" name="viewport"> 
+<link rel="stylesheet" type="text/css" href="combined.css">
+<meta content="Trench_DiffEQ_Book.tex" name="src"> 
 <script>window.MathJax = {
      tex: { packages: {'[+]': ['tagformat']}, tags: "ams", tagformat: { tag: (tag) => '(8.1.' + tag + ')'} }
  }; </script> 
- <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
- <style type='text/css'>
+ <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>  
+ <style type="text/css">
   :root {
     --section-number: "8.1"
   }
 </style>
 </head><body>
-<p><a id='x1-1doc'></a>
-</p><p class='noindent'>Section 8.1 Introduction to the Laplace Transform
-</p><p class='noindent'><span class='ptmb8t-'>8.1</span><span class='ptmb8t-x-x-90'>  INTRODUCTION TO THE LAPLACE TRANSFORM    </span>
-</p><p class='noindent'><span id='textcolor1'>Definition of the Laplace Transform</span>
-</p><p class='indent'>
-</p><p class='noindent'>To define the Laplace transform, we first recall the definition of an improper integral. If \(g\) is integrable over the
-interval \([a,T]\) for every \(T&gt;a\), then the <span class='vocab'>improper integral of</span> \(g\) over \([a,\infty )\) is defined as \begin {equation}  \label {eq:8.1.1} \int ^\infty _a g(t)\,dt=\lim _{T\to \infty }\int ^T_a g(t)\,dt\end {equation}<a id='x1-2r1'></a> We say that the improper integral <span class='vocab'>converges</span>
-if the limit in (<a href='#x1-2r1'>8.1.1<!-- tex4ht:ref: eq:8.1.1  --></a>) exists; otherwise, we say that the improper integral <span class='vocab'>diverges</span> or <span class='vocab'>does not exist</span>. Here’s the
+<p id="4c65b68d-450d-45be-85f7-08e8960df914"><a id="x1-1doc"></a>
+</p><p class="noindent" id="ad2180b4-9b4e-4e9c-b6f4-2b92558e27f9">Section 8.1 Introduction to the Laplace Transform
+</p><p class="noindent" id="37123102-1be0-420b-86fd-f8f1277de47d"><span class="ptmb8t-">8.1</span><span class="ptmb8t-x-x-90">&nbsp; INTRODUCTION TO THE LAPLACE TRANSFORM    </span>
+</p><p class="noindent" id="39b0282b-256b-45a3-b4a7-9cb3868d97d8"><span id="textcolor1">Definition of the Laplace Transform</span>
+</p><p class="indent" id="0336300d-dfa0-41d8-830f-9805267db22c">
+</p><p class="noindent" id="39dfeadb-5c21-4a49-a5b8-c298c7e2d51f">To define the Laplace transform, we first recall the definition of an improper integral. If \(g\) is integrable over the
+interval \([a,T]\) for every \(T&gt;a\), then the <span class="vocab">improper integral of</span> \(g\) over \([a,\infty )\) is defined as \begin {equation}  \label {eq:8.1.1} \int ^\infty _a g(t)\,dt=\lim _{T\to \infty }\int ^T_a g(t)\,dt\end {equation}<a id="x1-2r1"></a> We say that the improper integral <span class="vocab">converges</span>
+if the limit in (<a href="#x1-2r1">8.1.1<!-- tex4ht:ref: eq:8.1.1  --></a>) exists; otherwise, we say that the improper integral <span class="vocab">diverges</span> or <span class="vocab">does not exist</span>. Here’s the
 definition of the Laplace transform of a function \(f\).
-  </p><dl class='trivlist'><dt class='trivlist'>
-</dt><dd class='trivlist'>
-<p class='indent'>  <span class='ptmb8t-'>Definition</span> <a id='x1-3r1'></a><span class='ptmb8t-'>8.1.1</span> Let \(f\) be defined for \(t\ge 0\) and let \(s\) be a real number\(.\) Then the <span class='vocab'>Laplace transform</span> of \(f\) is the function \(F\)
-defined by \begin {equation} \label {eq:8.1.2} F(s)=\int _0^\infty e^{-st} f(t)\,dt\end {equation}<a id='x1-4r2'></a> for those values of \(s\) for which the improper integral converges\(.\)</p></dd></dl>
-<p class='indent'>  It is important to keep in mind that the variable of integration in (<a href='#x1-4r2'>8.1.2<!-- tex4ht:ref: eq:8.1.2  --></a>) is \(t\), while \(s\) is a parameter independent of
+  </p><dl class="trivlist" id="4d029091-52ae-4490-85af-f0292d94a7ab"><dt class="trivlist">
+</dt><dd class="trivlist">
+<p class="indent">  <span class="ptmb8t-">Definition</span> <a id="x1-3r1"></a><span class="ptmb8t-">8.1.1</span>&nbsp;Let \(f\) be defined for \(t\ge 0\) and let \(s\) be a real number\(.\) Then the <span class="vocab">Laplace transform</span> of \(f\) is the function \(F\)
+defined by \begin {equation} \label {eq:8.1.2} F(s)=\int _0^\infty e^{-st} f(t)\,dt\end {equation}<a id="x1-4r2"></a> for those values of \(s\) for which the improper integral converges\(.\)</p></dd></dl>
+<p class="indent" id="b8229a41-0fb2-4739-b698-bff4c10a4188">  It is important to keep in mind that the variable of integration in (<a href="#x1-4r2">8.1.2<!-- tex4ht:ref: eq:8.1.2  --></a>) is \(t\), while \(s\) is a parameter independent of
 \(t\). We use \(t\) as the independent variable for \(f\) because in applications the Laplace transform is usually applied to
 functions of time.
-</p><p class='indent'>  The Laplace transform can be viewed as an operator \(\cal L\) that transforms the function \(f=f(t)\) into the function \(F=F(s)\). Thus,
-(<a href='#x1-4r2'>8.1.2<!-- tex4ht:ref: eq:8.1.2  --></a>) can be expressed as
+</p><p class="indent" id="8414c5ac-135f-4485-89b1-f7dd3372a9ec">  The Laplace transform can be viewed as an operator \(\cal L\) that transforms the function \(f=f(t)\) into the function \(F=F(s)\). Thus,
+(<a href="#x1-4r2">8.1.2<!-- tex4ht:ref: eq:8.1.2  --></a>) can be expressed as
                                         \[ F={\cal L}(f)\]
- The functions \(f\) and \(F\) form a <span class='vocab'>transform pair</span>, which we’ll sometimes denote by
+ The functions \(f\) and \(F\) form a <span class="vocab">transform pair</span>, which we’ll sometimes denote by
                                         \[ f(t)\leftrightarrow F(s)\]
- It can be shown that if \(F(s)\) is defined for \(s=s_0\) then it’s defined for all \(s&gt;s_0\) (Exercise <span class='ptmb8t-'>14(b)</span>).
+ It can be shown that if \(F(s)\) is defined for \(s=s_0\) then it’s defined for all \(s&gt;s_0\) (Exercise&nbsp;<span class="ptmb8t-">14(b)</span>).
                                                                                 
 
                                                                                 
-</p><p class='noindent'><span id='textcolor2'>Computation of Some Simple Laplace Transforms</span>
-</p><p class='indent'>
+</p><p class="noindent" id="73d31c71-9313-4003-894c-46a5169d15e3"><span id="textcolor2">Computation of Some Simple Laplace Transforms</span>
+</p><p class="indent" id="624c2baf-014b-4e9c-a31f-5eaaf6791689">
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 8.1.1</span> </span><a id='x1-51'></a>Find the Laplace transform of \(f(t)=1\).
+  <div class="newtheorem" id="06b35393-8280-4ad2-bf32-d511b4c39acf">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;8.1.1</span> </span><a id="x1-51"></a>Find the Laplace transform of \(f(t)=1\).
 </p>
   </div>
-<p class='indent'>
-</p><p class='noindent'><span class='ptmb8t-'>Solution </span> From (<a href='#x1-4r2'>8.1.2<!-- tex4ht:ref: eq:8.1.2  --></a>) with \(f(t)=1\),
+<p class="indent" id="0ab48416-ce11-4f6d-a69f-8bcf34ba8db0">
+</p><p class="noindent" id="58662bf0-78c9-4e9e-b506-72848950dc45"><span class="ptmb8t-">Solution </span>&nbsp;From (<a href="#x1-4r2">8.1.2<!-- tex4ht:ref: eq:8.1.2  --></a>) with \(f(t)=1\),
                                         \[ F(s)=\int _0^\infty e^{-st}\,dt=\lim _{T\to \infty }\int _0^T e^{-st}\, dt\]
- If \(s\ne 0\) then \begin {equation} \label {eq:8.1.3} \int _0^T e^{-st}dt=-{1\over s}e^{-st}\Big |_0^T={1-e^{-sT}\over s}\end {equation}<a id='x1-6r3'></a> Therefore \begin {equation} \label {eq:8.1.4} \lim _{T\to \infty }\int _0^T e^{-st}dt=\left \{\begin {array}{rr} \displaystyle {1\over s}, &amp; s&gt;0,\\ \infty , &amp; s&lt;0\end {array}\right. \end {equation}<a id='x1-7r4'></a> If \(s=0\) the integrand reduces to the constant \(1\), and
+ If \(s\ne 0\) then \begin {equation} \label {eq:8.1.3} \int _0^T e^{-st}dt=-{1\over s}e^{-st}\Big |_0^T={1-e^{-sT}\over s}\end {equation}<a id="x1-6r3"></a> Therefore \begin {equation} \label {eq:8.1.4} \lim _{T\to \infty }\int _0^T e^{-st}dt=\left \{\begin {array}{rr} \displaystyle {1\over s}, &amp; s&gt;0,\\ \infty , &amp; s&lt;0\end {array}\right. \end {equation}<a id="x1-7r4"></a> If \(s=0\) the integrand reduces to the constant \(1\), and
                                         \[ \lim _{T\to \infty }\int _0^T 1\,dt=\lim _{T\to \infty }\int _0^T 1\,dt= \lim _{T\to \infty }T=\infty \]
  Therefore \(F(0)\) is undefined, and
                                                                                 
@@ -63,22 +61,22 @@ functions of time.
                                         \[ {\cal L}(1)={1\over s},\quad s&gt;0\]
  or as the transform pair
                                         \[ 1\leftrightarrow {1\over s},\quad s&gt;0\]
-</p><p class='noindent'><span class='ptmrc8t-'>R<span class='small-caps'>EMARK</span></span>:  It is convenient to combine the steps of integrating from \(0\) to \(T\) and letting \(T\to \infty \). Therefore, instead of writing
-(<a href='#x1-6r3'>8.1.3<!-- tex4ht:ref: eq:8.1.3  --></a>) and (<a href='#x1-7r4'>8.1.4<!-- tex4ht:ref: eq:8.1.4  --></a>) as separate steps we write
+</p><p class="noindent" id="ca0b0362-8490-4ac1-89f4-5ef4aa001185"><span class="ptmrc8t-">R<span class="small-caps">EMARK</span></span>:&nbsp; It is convenient to combine the steps of integrating from \(0\) to \(T\) and letting \(T\to \infty \). Therefore, instead of writing
+(<a href="#x1-6r3">8.1.3<!-- tex4ht:ref: eq:8.1.3  --></a>) and (<a href="#x1-7r4">8.1.4<!-- tex4ht:ref: eq:8.1.4  --></a>) as separate steps we write
                                         \[ \int _0^\infty e^{-st}dt=- {1\over s} e^{-st}\Big |_0^\infty = \left \{\begin {array}{rr}\displaystyle {1\over s}, &amp; s&gt;0,\\\infty ,&amp;s&lt; 0.\end {array}\right. \]
  We’ll follow this practice throughout this chapter. 
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
+  <div class="newtheorem" id="d86425eb-d7b9-4ca5-8537-be288238eb99">
+<p class="noindent"><span class="head">
                                                                                 
 
                                                                                 
-<span class='ex-number'>Example 8.1.2</span> </span><a id='x1-82'></a>Find the Laplace transform of \(f(t)=t\).
+<span class="ex-number">Example&nbsp;8.1.2</span> </span><a id="x1-82"></a>Find the Laplace transform of \(f(t)=t\).
 </p>
   </div>
-<p class='indent'>
-</p><p class='noindent'><span class='ptmb8t-'>Solution </span> From (<a href='#x1-4r2'>8.1.2<!-- tex4ht:ref: eq:8.1.2  --></a>) with \(f(t)=t\), \begin {equation} \label {eq:8.1.5} F(s)=\int _0^\infty e^{-st}t\,dt\end {equation}<a id='x1-9r5'></a> If \(s\ne 0\), integrating by parts yields </p><div class='eqnarray'>\begin {eqnarray*}  \int _0^\infty e^{-st}t\,dt&amp;=&amp;-{te^{-st}\over s}\bigg |_0^\infty +{1\over s}\int _0^\infty e^{-st}\,dt =-\left [{t\over s}+{1\over s^2}\right ]e^{-st}\bigg |_0^\infty \\&amp;=&amp;\left \{\begin {array}{rr}\displaystyle {1\over s^2},\quad s&gt;0,\\ \infty ,\,s&lt;0.\end {array}\right. \end {eqnarray*}</div>
-<p class='indent'>  If \(s=0\), the integral in (<a href='#x1-9r5'>8.1.5<!-- tex4ht:ref: eq:8.1.5  --></a>) becomes
+<p class="indent" id="6116f038-d9fa-455e-b674-c9208916e2b9">
+</p><p class="noindent" id="b88bf4e8-0f5f-4630-8310-d27a7eecdacf"><span class="ptmb8t-">Solution </span>&nbsp;From (<a href="#x1-4r2">8.1.2<!-- tex4ht:ref: eq:8.1.2  --></a>) with \(f(t)=t\), \begin {equation} \label {eq:8.1.5} F(s)=\int _0^\infty e^{-st}t\,dt\end {equation}<a id="x1-9r5"></a> If \(s\ne 0\), integrating by parts yields </p><div class="eqnarray" id="358ec6d8-9c87-44d1-bc32-9d0edd2f64b4">\begin {eqnarray*}  \int _0^\infty e^{-st}t\,dt&amp;=&amp;-{te^{-st}\over s}\bigg |_0^\infty +{1\over s}\int _0^\infty e^{-st}\,dt =-\left [{t\over s}+{1\over s^2}\right ]e^{-st}\bigg |_0^\infty \\&amp;=&amp;\left \{\begin {array}{rr}\displaystyle {1\over s^2},\quad s&gt;0,\\ \infty ,\,s&lt;0.\end {array}\right. \end {eqnarray*}</div>
+<p class="indent" id="f9ef130c-3bdd-4f7a-bc98-332f0bc80a58">  If \(s=0\), the integral in (<a href="#x1-9r5">8.1.5<!-- tex4ht:ref: eq:8.1.5  --></a>) becomes
                                         \[ \int _0^\infty t\,dt={t^2\over 2}\bigg |_0^\infty =\infty \]
  Therefore \(F(0)\) is undefined and
                                         \[ F(s)={1\over s^2},\quad s&gt;0\]
@@ -90,17 +88,17 @@ functions of time.
                                                                                 
                                         \[ t\leftrightarrow {1\over s^2},\quad s&gt;0\]
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 8.1.3</span> </span><a id='x1-103'></a>Find the Laplace transform of \(f(t)=e^{at}\), where \(a\) is a constant.
+  <div class="newtheorem" id="65d11f7b-1e57-4b5d-976b-c510e6502edc">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;8.1.3</span> </span><a id="x1-103"></a>Find the Laplace transform of \(f(t)=e^{at}\), where \(a\) is a constant.
 </p>
   </div>
-<p class='indent'>
-</p><p class='noindent'><span class='ptmb8t-'>Solution </span> From (<a href='#x1-4r2'>8.1.2<!-- tex4ht:ref: eq:8.1.2  --></a>) with \(f(t)=e^{at}\),
+<p class="indent" id="be150bf0-8063-4d41-babe-87ebed0ceca4">
+</p><p class="noindent" id="070102a4-9c12-4605-bcf6-619594a1343e"><span class="ptmb8t-">Solution </span>&nbsp;From (<a href="#x1-4r2">8.1.2<!-- tex4ht:ref: eq:8.1.2  --></a>) with \(f(t)=e^{at}\),
                                         \[ F(s)=\int _0^\infty e^{-st}e^{at}\,dt\]
  Combining the exponentials yields
                                         \[ F(s)=\int _0^\infty e^{-(s-a)t}\,dt\]
- However, we know from Example <a href='#x1-51'>8.1.1<!-- tex4ht:ref: example:8.1.1  --></a> that
+ However, we know from Example&nbsp;<a href="#x1-51">8.1.1<!-- tex4ht:ref: example:8.1.1  --></a> that
                                                                                 
 
                                                                                 
@@ -110,125 +108,125 @@ functions of time.
  This can also be written as
                                         \[ {\cal L}(e^{at})={1\over s-a},\quad s&gt;a, \text {\; or \; } e^{at}\leftrightarrow {1\over s-a},\quad s&gt;a\]
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 8.1.4</span> </span><a id='x1-114'></a>Find the Laplace transforms of \(f(t)=\sin \omega t\) and \(g(t)=\cos \omega t\), where \(\omega \) is a constant.
+  <div class="newtheorem" id="50067122-34d8-4fb0-92cc-3a4d16aef706">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;8.1.4</span> </span><a id="x1-114"></a>Find the Laplace transforms of \(f(t)=\sin \omega t\) and \(g(t)=\cos \omega t\), where \(\omega \) is a constant.
 </p>
   </div>
-<p class='indent'>
-</p><p class='noindent'><span class='ptmb8t-'>Solution </span> Define \begin {equation} \label {eq:8.1.6} F(s)=\int _0^\infty e^{-st}\sin \omega t\,dt  \end {equation}<a id='x1-12r6'></a> and \begin {equation} \label {eq:8.1.7} G(s)=\int _0^\infty e^{-st}\cos \omega t\,dt\end {equation}<a id='x1-13r7'></a> If \(s&gt;0\), integrating (<a href='#x1-12r6'>8.1.6<!-- tex4ht:ref: eq:8.1.6  --></a>) by parts yields
+<p class="indent" id="b6bf3047-638f-43ee-a65b-ad9a59b16650">
+</p><p class="noindent" id="21297243-7dbd-411d-90fa-dea27a5196a3"><span class="ptmb8t-">Solution </span>&nbsp;Define \begin {equation} \label {eq:8.1.6} F(s)=\int _0^\infty e^{-st}\sin \omega t\,dt  \end {equation}<a id="x1-12r6"></a> and \begin {equation} \label {eq:8.1.7} G(s)=\int _0^\infty e^{-st}\cos \omega t\,dt\end {equation}<a id="x1-13r7"></a> If \(s&gt;0\), integrating (<a href="#x1-12r6">8.1.6<!-- tex4ht:ref: eq:8.1.6  --></a>) by parts yields
                                                                                 
 
                                                                                 
                                         \[ F(s)=-{e^{-st}\over s}\sin \omega t\Big |_0^\infty +{\omega \over s} \int _0^\infty e^{-st}\cos \omega t\,dt\]
- so \begin {equation} \label {eq:8.1.8} F(s)={\omega \over s}G(s)\end {equation}<a id='x1-14r8'></a> If \(s&gt;0\), integrating (<a href='#x1-13r7'>8.1.7<!-- tex4ht:ref: eq:8.1.7  --></a>) by parts yields
+ so \begin {equation} \label {eq:8.1.8} F(s)={\omega \over s}G(s)\end {equation}<a id="x1-14r8"></a> If \(s&gt;0\), integrating (<a href="#x1-13r7">8.1.7<!-- tex4ht:ref: eq:8.1.7  --></a>) by parts yields
                                         \[ G(s)=-{e^{-st}\cos \omega t\over s}\Big |_0^\infty - {\omega \over s} \int _0^\infty e^{-st}\sin \omega t\,dt\]
  so
                                         \[ G(s)={1\over s} - {\omega \over s} F(s)\]
- Now substitute from (<a href='#x1-14r8'>8.1.8<!-- tex4ht:ref: eq:8.1.8  --></a>) into this to obtain
+ Now substitute from (<a href="#x1-14r8">8.1.8<!-- tex4ht:ref: eq:8.1.8  --></a>) into this to obtain
                                                                                 
 
                                                                                 
                                         \[ G(s)={1\over s} - {\omega ^2\over s^2} G(s)\]
  Solving this for \(G(s)\) yields
                                         \[ G(s)={s\over s^2+\omega ^2},\quad s&gt;0\]
- This and (<a href='#x1-14r8'>8.1.8<!-- tex4ht:ref: eq:8.1.8  --></a>) imply that
+ This and (<a href="#x1-14r8">8.1.8<!-- tex4ht:ref: eq:8.1.8  --></a>) imply that
                                         \[ F(s)={\omega \over s^2+\omega ^2},\quad s&gt;0\]
-</p><p class='noindent'><span id='textcolor3'>Tables of Laplace transforms</span>
-</p><p class='indent'>
-</p><p class='noindent'>Extensive tables of Laplace transforms have been compiled and are commonly used in applications. The brief
+</p><p class="noindent" id="11af551f-e62e-46b3-aadf-dc85400ab00a"><span id="textcolor3">Tables of Laplace transforms</span>
+</p><p class="indent" id="5103d517-f746-4cc8-b934-44742977d8d9">
+</p><p class="noindent" id="565c357a-3c00-47db-a81b-7dda79f28da2">Extensive tables of Laplace transforms have been compiled and are commonly used in applications. The brief
 table of Laplace transforms in the Appendix will be adequate for our purposes.
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 8.1.5</span> </span><a id='x1-155'></a>Use the table of Laplace transforms to find \({\cal L}(t^3e^{4t})\).
+  <div class="newtheorem" id="98c5c52d-5b5c-4e49-9093-f6db15a5dbc8">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;8.1.5</span> </span><a id="x1-155"></a>Use the table of Laplace transforms to find \({\cal L}(t^3e^{4t})\).
 </p>
   </div>
-<p class='indent'>
-</p><p class='noindent'><span class='ptmb8t-'>Solution </span> The table includes the transform pair
+<p class="indent" id="69d5dcf9-c262-4347-abec-9c88a9ecedec">
+</p><p class="noindent" id="c2bbf7a9-ffea-4051-9e1b-ea0371f92072"><span class="ptmb8t-">Solution </span>&nbsp;The table includes the transform pair
                                                                                 
 
                                                                                 
                                         \[ t^ne^{at}\leftrightarrow {n!\over (s-a)^{n+1}}\]
  Setting \(n=3\) and \(a=4\) here yields
                                         \[ {\cal L}(t^3e^{4t})={3!\over (s-4)^4}={6\over (s-4)^4}\]
-</p><p class='indent'>  We’ll sometimes write Laplace transforms of specific functions without explicitly stating how they are
+</p><p class="indent" id="363b8d32-baf7-47da-a0df-3372656adaf7">  We’ll sometimes write Laplace transforms of specific functions without explicitly stating how they are
 obtained. In such cases you should refer to the table of Laplace transforms.
-</p><p class='noindent'><span id='textcolor4'>Linearity of the Laplace Transform</span>
-</p><p class='indent'>
-</p><p class='noindent'>The next theorem presents an important property of the Laplace transform.
+</p><p class="noindent" id="d3030324-3ffb-4042-bf1e-1d3d0466838d"><span id="textcolor4">Linearity of the Laplace Transform</span>
+</p><p class="indent" id="b325666d-7712-4e87-b5d6-437640e5470d">
+</p><p class="noindent" id="7ecdecd9-5aa2-4e43-93dd-6c0e5fcb9e38">The next theorem presents an important property of the Laplace transform.
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 8.1.2</span> </span>\([\)Linearity Property\(]\)<a id='x1-162'></a> Suppose \({\cal L}(f_i)\) is defined for \(s&gt;s_i,\) \(1\le i\le n).\) Let \(s_0\) be the largest of the numbers \(s_1\), \(s_{2},\) …,\(s_n,\) and
+  <div class="newtheorem" id="200107b5-90d5-4099-81a9-bd524086b072">
+<p class="noindent"><span class="head">
+<span class="ptmb8t-">Theorem&nbsp;8.1.2</span> </span>\([\)Linearity Property\(]\)<a id="x1-162"></a> Suppose \({\cal L}(f_i)\) is defined for \(s&gt;s_i,\) \(1\le i\le n).\) Let \(s_0\) be the largest of the numbers \(s_1\), \(s_{2},\) …,\(s_n,\) and
 let \(c_1\), \(c_2\),…, \(c_n\) be constants. Then
 \[ {\cal L}(c_1f_1+c_2f_2+\cdots +c_nf_n)=c_1{\cal L}(f_1)+c_2{\cal L}(f_2) +\cdots +c_n{\cal L}(f_n)\mbox { for } s&gt;s_0\]
 </p>
   </div>
-<p class='indent'>  
-</p><p class='noindent'><span class='ptmb8t-'>Proof    </span>We give the proof for the case where \(n=2\). If \(s&gt;s_0\) then </p><div class='eqnarray'>\begin {eqnarray*}  {\cal L}(c_1f_1+c_2f_2)&amp;=&amp; \int _0^\infty e^{-st}\left (c_1f_1(t)+c_2f_2(t))\right )\,dt\\ &amp;=&amp;c_1\int _0^\infty e^{-st}f_1(t)\,dt+c_2\int _0^\infty e^{-st}f_2(t)\,dt\\ &amp;=&amp;c_1{\cal L}(f_1)+c_2{\cal L}(f_2)\end {eqnarray*}</div>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 8.1.6</span> </span><a id='x1-176'></a>Use Theorem <a href='#x1-162'>8.1.2<!-- tex4ht:ref: thmtype:8.1.2  --></a> and the known Laplace transform
+<p class="indent" id="91552eea-e478-4d34-b85b-e9441fd0580a">  
+</p><p class="noindent" id="5fa120a3-f108-436a-9bb0-7aad35b2ffca"><span class="ptmb8t-">Proof    </span>We give the proof for the case where \(n=2\). If \(s&gt;s_0\) then </p><div class="eqnarray" id="3ba8a7d9-0955-49ac-890d-fb58f69eac39">\begin {eqnarray*}  {\cal L}(c_1f_1+c_2f_2)&amp;=&amp; \int _0^\infty e^{-st}\left (c_1f_1(t)+c_2f_2(t))\right )\,dt\\ &amp;=&amp;c_1\int _0^\infty e^{-st}f_1(t)\,dt+c_2\int _0^\infty e^{-st}f_2(t)\,dt\\ &amp;=&amp;c_1{\cal L}(f_1)+c_2{\cal L}(f_2)\end {eqnarray*}</div>
+  <div class="newtheorem" id="e7e30e8a-e4c3-42ab-871d-8b20df589a4f">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;8.1.6</span> </span><a id="x1-176"></a>Use Theorem&nbsp;<a href="#x1-162">8.1.2<!-- tex4ht:ref: thmtype:8.1.2  --></a> and the known Laplace transform
                                         \[ {\cal L}(e^{at})={1\over s-a} \]
  to find \({\cal L}(\cosh bt)\,(b\ne 0)\).
 </p>
   </div>
-<p class='indent'>
-</p><p class='noindent'><span class='ptmb8t-'>Solution </span> By definition,
+<p class="indent" id="bd2d6afe-c410-4987-b328-e19041b866f3">
+</p><p class="noindent" id="d8dd2bcb-c013-4c44-9ab8-b8d535e28331"><span class="ptmb8t-">Solution </span>&nbsp;By definition,
                                         \[ \cosh bt={e^{bt}+e^{-bt}\over 2}\]
- Therefore \begin {equation} \label {eq:8.1.9} \begin {array}{ccl} {\cal L}(\cosh bt)&amp;=&amp; {\cal L}\left (\displaystyle {1\over 2} e^{bt}+\displaystyle {1\over 2}e^{-bt}\right )\\ &amp;=&amp;\displaystyle {1\over 2} {\cal L}(e^{bt}) +\displaystyle {1\over 2} {\cal L}(e^{-bt}) \qquad \hbox {(linearity property)}\\ &amp;=&amp;\displaystyle {1\over 2}\,\displaystyle {1\over s-b} +\displaystyle {1\over 2}\,\displaystyle {1\over s+b}\end {array}  \end {equation}<a id='x1-18r9'></a> where the first transform on the right is defined for \(s&gt;b\) and the second for \(s&gt;-b\); hence, both are defined for \(s&gt;|b|\).
-Simplifying the last expression in (<a href='#x1-18r9'>8.1.9<!-- tex4ht:ref: eq:8.1.9  --></a>) yields
+ Therefore \begin {equation} \label {eq:8.1.9} \begin {array}{ccl} {\cal L}(\cosh bt)&amp;=&amp; {\cal L}\left (\displaystyle {1\over 2} e^{bt}+\displaystyle {1\over 2}e^{-bt}\right )\\ &amp;=&amp;\displaystyle {1\over 2} {\cal L}(e^{bt}) +\displaystyle {1\over 2} {\cal L}(e^{-bt}) \qquad \hbox {(linearity property)}\\ &amp;=&amp;\displaystyle {1\over 2}\,\displaystyle {1\over s-b} +\displaystyle {1\over 2}\,\displaystyle {1\over s+b}\end {array}  \end {equation}<a id="x1-18r9"></a> where the first transform on the right is defined for \(s&gt;b\) and the second for \(s&gt;-b\); hence, both are defined for \(s&gt;|b|\).
+Simplifying the last expression in (<a href="#x1-18r9">8.1.9<!-- tex4ht:ref: eq:8.1.9  --></a>) yields
                                                                                 
 
                                                                                 
                                         \[ {\cal L}(\cosh bt)={s\over s^2-b^2},\quad s&gt;|b|\]
-</p><p class='noindent'><span id='textcolor5'>The First Shifting Theorem</span>
-</p><p class='indent'>
-</p><p class='noindent'>The next theorem enables us to start with known transform pairs and derive others. (For other results of this kind,
-see Exercises <span class='ptmb8t-'>6</span> and <span class='ptmb8t-'>13</span>.)
+</p><p class="noindent" id="0b032a22-662e-43f3-8446-41def33b8ca6"><span id="textcolor5">The First Shifting Theorem</span>
+</p><p class="indent" id="76f785f9-1f4c-4d25-8b5f-7597d6fc969c">
+</p><p class="noindent" id="785eb18e-043c-4f56-9f44-05120cf6ff20">The next theorem enables us to start with known transform pairs and derive others. (For other results of this kind,
+see Exercises&nbsp;<span class="ptmb8t-">6</span> and <span class="ptmb8t-">13</span>.)
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 8.1.3</span> </span>\([\)<span class='vocab'>First Shifting Theorem</span>\(]\)<a id='x1-193'></a> If \begin {equation} \label {eq:8.1.10} F(s)=\int _0^\infty e^{-st} f(t)\,dt  \end {equation}<a id='x1-20r10'></a> is the Laplace transform of \(f(t)\) for \(s&gt;s_0\), then \(F(s-a)\) is the Laplace transform of \(e^{at}f(t)\) for
+  <div class="newtheorem" id="4978e2f4-5f99-44ac-a63d-58a064529a99">
+<p class="noindent"><span class="head">
+<span class="ptmb8t-">Theorem&nbsp;8.1.3</span> </span>\([\)<span class="vocab">First Shifting Theorem</span>\(]\)<a id="x1-193"></a> If \begin {equation} \label {eq:8.1.10} F(s)=\int _0^\infty e^{-st} f(t)\,dt  \end {equation}<a id="x1-20r10"></a> is the Laplace transform of \(f(t)\) for \(s&gt;s_0\), then \(F(s-a)\) is the Laplace transform of \(e^{at}f(t)\) for
 \(s &gt;s_0+a\).
 </p>
   </div>
-<p class='indent'>  
-</p><p class='indent'>  <span class='ptmrc8t-'>P<span class='small-caps'>ROOF</span>. </span>Replacing \(s\) by \(s-a\) in (<a href='#x1-20r10'>8.1.10<!-- tex4ht:ref: eq:8.1.10  --></a>) yields \begin {equation} \label {eq:8.1.11} F(s-a)=\int _0^\infty e^{-(s-a)t}f(t)\,dt  \end {equation}<a id='x1-21r11'></a> if \(s-a&gt;s_0\); that is, if \(s&gt;s_0+a\). However, (<a href='#x1-21r11'>8.1.11<!-- tex4ht:ref: eq:8.1.11  --></a>) can be rewritten as
+<p class="indent" id="2d1e2f3a-3305-464e-8f29-23cd09713ca5">  
+</p><p class="indent" id="ba44b030-cbbb-49c2-8581-2a4edeb3b7bb">  <span class="ptmrc8t-">P<span class="small-caps">ROOF</span>. </span>Replacing \(s\) by \(s-a\) in (<a href="#x1-20r10">8.1.10<!-- tex4ht:ref: eq:8.1.10  --></a>) yields \begin {equation} \label {eq:8.1.11} F(s-a)=\int _0^\infty e^{-(s-a)t}f(t)\,dt  \end {equation}<a id="x1-21r11"></a> if \(s-a&gt;s_0\); that is, if \(s&gt;s_0+a\). However, (<a href="#x1-21r11">8.1.11<!-- tex4ht:ref: eq:8.1.11  --></a>) can be rewritten as
                                         \[ F(s-a)=\int _0^\infty e^{-st}\left (e^{at}f(t)\right )\,dt\]
  which implies the conclusion.
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 8.1.7</span> </span><a id='x1-227'></a>Use Theorem <a href='#x1-193'>8.1.3<!-- tex4ht:ref: thmtype:8.1.3  --></a> and the known Laplace transforms of \(1\), \(t\), \(\cos \omega t\), and \(\sin \omega t\) to find
+  <div class="newtheorem" id="469d8ca2-3dfe-493a-ab12-44720f14412b">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;8.1.7</span> </span><a id="x1-227"></a>Use Theorem&nbsp;<a href="#x1-193">8.1.3<!-- tex4ht:ref: thmtype:8.1.3  --></a> and the known Laplace transforms of \(1\), \(t\), \(\cos \omega t\), and \(\sin \omega t\) to find
                                         \[ {\cal L}(e^{at}),\quad {\cal L}(te^{at}),\quad {\cal L}(e^{\lambda t}\sin \omega t),\mbox {and } {\cal L}(e^{\lambda t}\cos \omega t)\]
                                                                                 
 
                                                                                 
 </p>
   </div>
-<p class='indent'>
-</p><p class='noindent'><span class='ptmb8t-'>Solution </span> In the following table the known transform pairs are listed on the left and the required transform pairs
-listed on the right are obtained by applying Theorem <a href='#x1-193'>8.1.3<!-- tex4ht:ref: thmtype:8.1.3  --></a>.
+<p class="indent" id="45132c99-b76b-4242-acbd-c986ce41f295">
+</p><p class="noindent" id="5908c14f-b9df-455e-a118-1abb0db0206e"><span class="ptmb8t-">Solution </span>&nbsp;In the following table the known transform pairs are listed on the left and the required transform pairs
+listed on the right are obtained by applying Theorem&nbsp;<a href="#x1-193">8.1.3<!-- tex4ht:ref: thmtype:8.1.3  --></a>.
 </p>
-<div class='center'>
-<p class='noindent'>
+<div class="center" id="0db5db0d-db2f-4f5c-8e7d-19aa93e1da87">
+<p class="noindent">
 </p>
-<div class='tabular'> <table class='tabular' id='TBL-1'><colgroup id='TBL-1-1g'><col id='TBL-1-1' /></colgroup><colgroup id='TBL-1-2g'><col id='TBL-1-2' /></colgroup><tr class='hline' style='border-top:1px solid #000'><td></td><td></td></tr><tr id='TBL-1-1-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-1-1' style='white-space:nowrap; text-align:center;'> \(f(t)\leftrightarrow F(s)\) </td><td class='td11' id='TBL-1-1-2' style='white-space:nowrap; text-align:center;'> \(e^{at}f(t)\leftrightarrow F(s-a)\) </td></tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td></tr><tr id='TBL-1-2-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-2-1' style='white-space:nowrap; text-align:center;'> </td><td class='td11' id='TBL-1-2-2' style='white-space:nowrap; text-align:center;'></td>
-</tr><tr class='vspace' style='font-size:9.0pt'><td> </td><td> </td></tr><tr id='TBL-1-3-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-3-1' style='white-space:nowrap; text-align:center;'> \(1\leftrightarrow \displaystyle {1\over s},\quad s&gt;0\) </td><td class='td11' id='TBL-1-3-2' style='white-space:nowrap; text-align:center;'> \(e^{at}\leftrightarrow \displaystyle {1\over (s-a)},\quad s&gt;a\) </td>
-</tr><tr class='vspace' style='font-size:9.0pt'><td> </td><td> </td></tr><tr id='TBL-1-4-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-4-1' style='white-space:nowrap; text-align:center;'> \(t\leftrightarrow \displaystyle {{1\over s^2}},\quad s&gt;0\) </td><td class='td11' id='TBL-1-4-2' style='white-space:nowrap; text-align:center;'> \(te^{at}\leftrightarrow \displaystyle {{1\over (s-a)^2}},\quad s&gt;a\) </td>
-</tr><tr class='vspace' style='font-size:9.0pt'><td> </td><td> </td></tr><tr id='TBL-1-5-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-5-1' style='white-space:nowrap; text-align:center;'> \(\sin \omega t\leftrightarrow \displaystyle {{\omega \over s^2+\omega ^2}},\quad s&gt;0\) </td><td class='td11' id='TBL-1-5-2' style='white-space:nowrap; text-align:center;'> \(e^{\lambda t}\sin \omega t\leftrightarrow \displaystyle {{\omega \over (s-\lambda )^2+\omega ^2}},\,s&gt;\lambda \) </td>
-</tr><tr class='vspace' style='font-size:9.0pt'><td> </td><td> </td></tr><tr id='TBL-1-6-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-6-1' style='white-space:nowrap; text-align:center;'> \(\cos \omega t\leftrightarrow \displaystyle {{s\over s^2+\omega ^2}},\quad s&gt;0\) </td><td class='td11' id='TBL-1-6-2' style='white-space:nowrap; text-align:center;'> \(e^{\lambda t}\sin \omega t\leftrightarrow \displaystyle {{s-\lambda \over (s-\lambda )^2+\omega ^2}},\,s&gt;\lambda \) </td>
-</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td></tr><tr class='vspace' style='font-size:9.0pt'><td> </td><td> </td></tr></table>                                                                           </div></div>
-<p class='noindent'><span id='textcolor6'>Existence of Laplace Transforms</span>
-</p><p class='indent'>
-</p><p class='noindent'>Not every function has a Laplace transform. For example, it can be shown (Exercise <span class='ptmb8t-'>3</span>) that
+<div class="tabular"> <table class="tabular" id="TBL-1"><colgroup id="TBL-1-1g"><col id="TBL-1-1"></colgroup><colgroup id="TBL-1-2g"><col id="TBL-1-2"></colgroup><tbody><tr class="hline" style="border-top:1px solid #000"><td></td><td></td></tr><tr id="TBL-1-1-" style="vertical-align:baseline;"><td class="td11" id="TBL-1-1-1" style="white-space:nowrap; text-align:center;"> \(f(t)\leftrightarrow F(s)\) </td><td class="td11" id="TBL-1-1-2" style="white-space:nowrap; text-align:center;"> \(e^{at}f(t)\leftrightarrow F(s-a)\) </td></tr><tr class="hline" style="border-top:1px solid #000"><td></td><td></td></tr><tr id="TBL-1-2-" style="vertical-align:baseline;"><td class="td11" id="TBL-1-2-1" style="white-space:nowrap; text-align:center;"> </td><td class="td11" id="TBL-1-2-2" style="white-space:nowrap; text-align:center;"></td>
+</tr><tr class="vspace" style="font-size:9.0pt"><td>&nbsp;</td><td>&nbsp;</td></tr><tr id="TBL-1-3-" style="vertical-align:baseline;"><td class="td11" id="TBL-1-3-1" style="white-space:nowrap; text-align:center;"> \(1\leftrightarrow \displaystyle {1\over s},\quad s&gt;0\) </td><td class="td11" id="TBL-1-3-2" style="white-space:nowrap; text-align:center;"> \(e^{at}\leftrightarrow \displaystyle {1\over (s-a)},\quad s&gt;a\) </td>
+</tr><tr class="vspace" style="font-size:9.0pt"><td>&nbsp;</td><td>&nbsp;</td></tr><tr id="TBL-1-4-" style="vertical-align:baseline;"><td class="td11" id="TBL-1-4-1" style="white-space:nowrap; text-align:center;"> \(t\leftrightarrow \displaystyle {{1\over s^2}},\quad s&gt;0\) </td><td class="td11" id="TBL-1-4-2" style="white-space:nowrap; text-align:center;"> \(te^{at}\leftrightarrow \displaystyle {{1\over (s-a)^2}},\quad s&gt;a\) </td>
+</tr><tr class="vspace" style="font-size:9.0pt"><td>&nbsp;</td><td>&nbsp;</td></tr><tr id="TBL-1-5-" style="vertical-align:baseline;"><td class="td11" id="TBL-1-5-1" style="white-space:nowrap; text-align:center;"> \(\sin \omega t\leftrightarrow \displaystyle {{\omega \over s^2+\omega ^2}},\quad s&gt;0\) </td><td class="td11" id="TBL-1-5-2" style="white-space:nowrap; text-align:center;"> \(e^{\lambda t}\sin \omega t\leftrightarrow \displaystyle {{\omega \over (s-\lambda )^2+\omega ^2}},\,s&gt;\lambda \) </td>
+</tr><tr class="vspace" style="font-size:9.0pt"><td>&nbsp;</td><td>&nbsp;</td></tr><tr id="TBL-1-6-" style="vertical-align:baseline;"><td class="td11" id="TBL-1-6-1" style="white-space:nowrap; text-align:center;"> \(\cos \omega t\leftrightarrow \displaystyle {{s\over s^2+\omega ^2}},\quad s&gt;0\) </td><td class="td11" id="TBL-1-6-2" style="white-space:nowrap; text-align:center;"> \(e^{\lambda t}\sin \omega t\leftrightarrow \displaystyle {{s-\lambda \over (s-\lambda )^2+\omega ^2}},\,s&gt;\lambda \) </td>
+</tr><tr class="hline" style="border-top:1px solid #000"><td></td><td></td></tr><tr class="vspace" style="font-size:9.0pt"><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>                                                                           </div></div>
+<p class="noindent" id="8ed0829d-06dc-4300-8ed1-b819537d3eb4"><span id="textcolor6">Existence of Laplace Transforms</span>
+</p><p class="indent" id="60d38b41-19ae-4800-b836-1d1e21a1e857">
+</p><p class="noindent" id="24e157f1-ffca-400a-835c-39f7db6495b8">Not every function has a Laplace transform. For example, it can be shown (Exercise&nbsp;<span class="ptmb8t-">3</span>) that
                                         \[ \int _0^\infty e^{-st}e^{t^2} dt=\infty \]
  for every real number \(s\). Hence, the function \(f(t)=e^{t^2}\) does not have a Laplace transform.
-</p><p class='indent'>  Our next objective is to establish conditions that ensure the existence of the Laplace transform of a function.
+</p><p class="indent" id="a47678ff-249f-48cf-91c4-f9781098fcbb">  Our next objective is to establish conditions that ensure the existence of the Laplace transform of a function.
 We first review some relevant definitions from calculus.
-</p><p class='indent'>  Recall that a limit
+</p><p class="indent" id="60fbf7b3-6a9a-4769-bce2-11a20270140e">  Recall that a limit
                                         \[ \lim _{t\to t_0} f(t) \]
  exists if and only if the one-sided limits
                                                                                 
@@ -239,17 +237,17 @@ We first review some relevant definitions from calculus.
                                         \[ \lim _{t\to t_0}f(t)=\lim _{t\to t_0-}f(t)=\lim _{t\to t_0+}f(t) \]
  Recall also that \(f\) is continuous at a point \(t_0\) in an open interval \((a,b)\) if and only if
                                         \[ \lim _{t\to t_0}f(t)=f(t_0)\]
- which is equivalent to \begin {equation} \label {eq:8.1.12} \lim _{t\to t_0+}f(t)=\lim _{t\to t_0-}f(t)=f(t_0)\end {equation}<a id='x1-23r12'></a> For simplicity, we define
+ which is equivalent to \begin {equation} \label {eq:8.1.12} \lim _{t\to t_0+}f(t)=\lim _{t\to t_0-}f(t)=f(t_0)\end {equation}<a id="x1-23r12"></a> For simplicity, we define
                                                                                 
 
                                                                                 
                                         \[ f(t_0+)=\lim _{t\to t_0+}f(t)\quad \hbox {and }\quad f(t_0-)=\lim _{t\to t_0-}f(t)\]
- so (<a href='#x1-23r12'>8.1.12<!-- tex4ht:ref: eq:8.1.12  --></a>) can be expressed as
+ so (<a href="#x1-23r12">8.1.12<!-- tex4ht:ref: eq:8.1.12  --></a>) can be expressed as
                                         \[ f(t_0+)=f(t_0-)=f(t_0)\]
- If \(f(t_0+)\) and \(f(t_0-)\) have finite but distinct values, we say that \(f\) has a <span class='vocab'>jump discontinuity</span> at \(t_0\), and
+ If \(f(t_0+)\) and \(f(t_0-)\) have finite but distinct values, we say that \(f\) has a <span class="vocab">jump discontinuity</span> at \(t_0\), and
                                         \[ f(t_0+)-f(t_0-) \]
- is called the <span class='vocab'>jump</span> in \(f\) at \(t_0\) (Figure <a href='#-a-jump-discontinuity-'>8.1.1<!-- tex4ht:ref: figure:8.1.1  --></a>).
-</p><p class='indent'>   </p><figure class='figure'> 
+ is called the <span class="vocab">jump</span> in \(f\) at \(t_0\) (Figure&nbsp;<a href="#-a-jump-discontinuity-">8.1.1<!-- tex4ht:ref: figure:8.1.1  --></a>).
+</p><p class="indent" id="f6b65ff1-1d08-474b-ac15-04fac263d00d">  &nbsp;</p><figure class="figure" id="f463e61f-9c78-4827-a3a0-96643f5733da"> 
 
                                                                                 
 
@@ -257,19 +255,19 @@ We first review some relevant definitions from calculus.
                                                                                 
 
                                                                                 
-<p class='noindent' id='-a-jump-discontinuity-'><img height='264' src='EPS/fig080101.png' width='409' /> <a id='x1-24r1'></a></p>
-<figcaption class='caption'><span class='id'>Figure 8.1.1 </span><span class='content'>A jump discontinuity                                                     </span></figcaption><!-- tex4ht:label?: x1-24r1  -->
+<p class="noindent" id="-a-jump-discontinuity-"><img height="264" src="EPS/fig080101.png" width="409"> <a id="x1-24r1"></a></p>
+<figcaption class="caption"><span class="id">Figure&nbsp;8.1.1 </span><span class="content">A jump discontinuity                                                     </span></figcaption><!-- tex4ht:label?: x1-24r1  -->
                                                                                 
 
                                                                                 
   </figure>
-<p class='indent'>  If \(f(t_0+)\) and \(f(t_0-)\) are finite and equal, but either \(f\) isn’t defined at \(t_0\) or it’s defined but
+<p class="indent" id="1155e5d5-8cf5-4fdc-8e3f-4276575cde1f">  If \(f(t_0+)\) and \(f(t_0-)\) are finite and equal, but either \(f\) isn’t defined at \(t_0\) or it’s defined but
                                         \[ f(t_0)\ne f(t_0+)=f(t_0-)\]
- we say that \(f\) has a <span class='vocab'>removable discontinuity</span> at \(t_0\) (Figure <a href='#-'>8.1.2<!-- tex4ht:ref: figure:8.1.2  --></a>). This terminolgy is appropriate since a function \(f\)
+ we say that \(f\) has a <span class="vocab">removable discontinuity</span> at \(t_0\) (Figure&nbsp;<a href="#-">8.1.2<!-- tex4ht:ref: figure:8.1.2  --></a>). This terminolgy is appropriate since a function \(f\)
 with a removable discontinuity at \(t_0\) can be made continuous at \(t_0\) by defining (or redefining)
                                         \[ f(t_0)=f(t_0+)=f(t_0-)\]
 </p>
-  <figure class='figure'> 
+  <figure class="figure" id="2d80cf60-d9f9-411c-ba9c-f36ed3cbfdd4"> 
 
                                                                                 
 
@@ -277,92 +275,92 @@ with a removable discontinuity at \(t_0\) can be made continuous at \(t_0\) by d
                                                                                 
 
                                                                                 
-<div class='minipage'><p class='noindent' id='-'> <img height='264' src='EPS/fig080102.png' width='409' /><a id='x1-25r2'></a></p>
-<figcaption class='caption'><span class='id'>Figure 8.1.2 </span><span class='content'>                              </span></figcaption><!-- tex4ht:label?: x1-25r2  --></div> <div class='minipage' id='-a-piecewise-continuous-function-on-ab-'> <img height='264' src='EPS/fig080103.png' width='409' /> <a id='x1-26r3'></a><figcaption class='caption'><span class='id'>Figure 8.1.3 </span><span class='content'>A piecewise continuous function on \([a,b]\)    </span></figcaption><!-- tex4ht:label?: x1-26r3  --></div>
+<div class="minipage"><p class="noindent" id="-"> <img height="264" src="EPS/fig080102.png" width="409"><a id="x1-25r2"></a></p>
+<figcaption class="caption"><span class="id">Figure&nbsp;8.1.2 </span><span class="content">                              </span></figcaption><!-- tex4ht:label?: x1-25r2  --></div> <div class="minipage" id="-a-piecewise-continuous-function-on-ab-"> <img height="264" src="EPS/fig080103.png" width="409"> <a id="x1-26r3"></a><figcaption class="caption"><span class="id">Figure&nbsp;8.1.3 </span><span class="content">A piecewise continuous function on \([a,b]\)    </span></figcaption><!-- tex4ht:label?: x1-26r3  --></div>
                                                                                 
 
                                                                                 
   </figure>
-<p class='noindent'><span class='ptmrc8t-'>R<span class='small-caps'>EMARK</span></span>: We know from calculus that a definite integral isn’t affected by changing the values of its integrand at
+<p class="noindent" id="96b47850-cc11-4d65-8b58-f2a3a225be95"><span class="ptmrc8t-">R<span class="small-caps">EMARK</span></span>:&nbsp;We know from calculus that a definite integral isn’t affected by changing the values of its integrand at
 isolated points. Therefore, redefining a function \(f\) to make it continuous at removable discontinuities does not
 change \({\cal L}(f)\). 
-  </p><dl class='trivlist'><dt class='trivlist'>
-</dt><dd class='trivlist'>
-<p class='indent'>  <span class='ptmb8t-'>Definition</span> <a id='x1-27r4'></a><span class='ptmb8t-'>8.1.4</span> 
-      </p><dl class='list1'><dt class='list'>
-   <span class='ptmb8t-'>(i)</span>  </dt><dd class='list'>
-      <p class='noindent'>A function \(f\) is said to be <span class='vocab'>piecewise continuous</span> on a finite closed interval \([0,T]\) if \(f(0+)\) and \(f(T-)\) are finite and \(f\) is
+  </p><dl class="trivlist" id="4cc895fb-2c91-4b2f-bb2f-64084a2a25c4"><dt class="trivlist">
+</dt><dd class="trivlist">
+<p class="indent">  <span class="ptmb8t-">Definition</span> <a id="x1-27r4"></a><span class="ptmb8t-">8.1.4</span>&nbsp;
+      </p><dl class="list1"><dt class="list">
+   <span class="ptmb8t-">(i)</span>  </dt><dd class="list">
+      <p class="noindent">A function \(f\) is said to be <span class="vocab">piecewise continuous</span> on a finite closed interval \([0,T]\) if \(f(0+)\) and \(f(T-)\) are finite and \(f\) is
       continuous on the open interval \((0,T)\) except possibly at finitely many points, where \(f\) may have jump
       discontinuities or removable discontinuities.
-      </p></dd><dt class='list'>
-  <span class='ptmb8t-'>(ii)</span>  </dt><dd class='list'>
-      <p class='noindent'>A function \(f\) is said to be <span class='vocab'>piecewise continuous</span> on the infinite interval \([0,\infty )\) if it’s piecewise continuous
+      </p></dd><dt class="list">
+  <span class="ptmb8t-">(ii)</span>  </dt><dd class="list">
+      <p class="noindent">A function \(f\) is said to be <span class="vocab">piecewise continuous</span> on the infinite interval \([0,\infty )\) if it’s piecewise continuous
       on \([0,T]\) for every \(T&gt;0\).</p></dd></dl>
 </dd></dl>
-<p class='indent'>  Figure <a href='#-a-piecewise-continuous-function-on-ab-'>8.1.3<!-- tex4ht:ref: figure:8.1.3  --></a> shows the graph of a typical piecewise continuous function.
-</p><p class='indent'>  It is shown in calculus that if a function is piecewise continuous on a finite closed interval then it’s integrable
+<p class="indent" id="3a71ac1c-212e-4363-8944-2a346c56bc3a">  Figure&nbsp;<a href="#-a-piecewise-continuous-function-on-ab-">8.1.3<!-- tex4ht:ref: figure:8.1.3  --></a> shows the graph of a typical piecewise continuous function.
+</p><p class="indent" id="aa55aa0c-4972-44cc-b304-02af1aa5b6bc">  It is shown in calculus that if a function is piecewise continuous on a finite closed interval then it’s integrable
 on that interval. But if \(f\) is piecewise continuous on \([0,\infty )\), then so is \(e^{-st}f (t)\), and therefore
                                         \[ \int _0^T e^{-st}f(t)\,dt \]
- exists for every \(T&gt;0\). However, piecewise continuity alone does not guarantee that the improper integral \begin {equation} \label {eq:8.1.13} \int _0^\infty e^{-st}f(t)\,dt=\lim _{T\to \infty }\int _0^T e^{-st}f(t)\, dt  \end {equation}<a id='x1-30r13'></a>
-converges for \(s\) in some interval \((s_0,\infty )\). For example, we noted earlier that (<a href='#x1-30r13'>8.1.13<!-- tex4ht:ref: eq:8.1.13  --></a>) diverges for all \(s\) if \(f(t)=e^{t^2}\). Stated
+ exists for every \(T&gt;0\). However, piecewise continuity alone does not guarantee that the improper integral \begin {equation} \label {eq:8.1.13} \int _0^\infty e^{-st}f(t)\,dt=\lim _{T\to \infty }\int _0^T e^{-st}f(t)\, dt  \end {equation}<a id="x1-30r13"></a>
+converges for \(s\) in some interval \((s_0,\infty )\). For example, we noted earlier that (<a href="#x1-30r13">8.1.13<!-- tex4ht:ref: eq:8.1.13  --></a>) diverges for all \(s\) if \(f(t)=e^{t^2}\). Stated
 informally, this occurs because \(e^{t^2}\) increases too rapidly as \(t\to \infty \). The next definition provides a constraint on the
 growth of a function that guarantees convergence of its Laplace transform for \(s\) in some interval \((s_0,\infty )\)
 .
-  </p><dl class='trivlist'><dt class='trivlist'>
-</dt><dd class='trivlist'>
-<p class='indent'>  <span class='ptmb8t-'>Definition</span> <a id='x1-31r5'></a><span class='ptmb8t-'>8.1.5</span> A function \(f\) is said to be <span class='vocab'>of exponential order</span> \(s_0\) if there are constants \(M\) and \(t_0\) such
-that \begin {equation} \label {eq:8.1.14} |f(t)|\le Me^{s_0t},\quad t\ge t_0\end {equation}<a id='x1-32r14'></a> In situations where the specific value of \(s_0\) is irrelevant we say simply that \(f\) is <span class='vocab'>of exponential
+  </p><dl class="trivlist" id="e1db7f05-190e-4162-8295-68689d23f3b2"><dt class="trivlist">
+</dt><dd class="trivlist">
+<p class="indent">  <span class="ptmb8t-">Definition</span> <a id="x1-31r5"></a><span class="ptmb8t-">8.1.5</span>&nbsp;A function \(f\) is said to be <span class="vocab">of exponential order</span> \(s_0\) if there are constants \(M\) and \(t_0\) such
+that \begin {equation} \label {eq:8.1.14} |f(t)|\le Me^{s_0t},\quad t\ge t_0\end {equation}<a id="x1-32r14"></a> In situations where the specific value of \(s_0\) is irrelevant we say simply that \(f\) is <span class="vocab">of exponential
 order</span>.</p></dd></dl>
-<p class='indent'>  The next theorem gives useful sufficient conditions for a function \(f\) to have a Laplace transform. The proof is
-sketched in Exercise <span class='ptmb8t-'>10</span>.
+<p class="indent" id="905ff264-e796-4ba0-85d0-b604b86658b5">  The next theorem gives useful sufficient conditions for a function \(f\) to have a Laplace transform. The proof is
+sketched in Exercise&nbsp;<span class="ptmb8t-">10</span>.
 </p>
                                                                                 
 
                                                                                 
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 8.1.6</span> </span><a id='x1-336'></a> If \(f\) is piecewise continuous on \([0,\infty )\) and of exponential order \(s_0,\) then \({\cal L}(f)\) is defined for \(s&gt;s_0\).
+  <div class="newtheorem" id="ee5812d5-f9b4-4285-940a-5e4b1118d972">
+<p class="noindent"><span class="head">
+<span class="ptmb8t-">Theorem&nbsp;8.1.6</span> </span><a id="x1-336"></a> If \(f\) is piecewise continuous on \([0,\infty )\) and of exponential order \(s_0,\) then \({\cal L}(f)\) is defined for \(s&gt;s_0\).
 </p>
   </div>
-<p class='indent'>  
-</p><p class='noindent'><span class='ptmrc8t-'>R<span class='small-caps'>EMARK</span></span>:  We emphasize that the conditions of Theorem <a href='#x1-336'>8.1.6<!-- tex4ht:ref: thmtype:8.1.6  --></a> are sufficient, but <em>not necessary</em>, for \(f\) to have a
-  Laplace transform. For example, Exercise <span class='ptmb8t-'>14(c) </span>shows that \(f\) may have a Laplace transform even though \(f\) isn’t of
+<p class="indent" id="34016733-3098-4ea7-9bbb-5bd576fcde05">  
+</p><p class="noindent" id="cde1355f-116a-497c-8e17-645a5a5e5b2b"><span class="ptmrc8t-">R<span class="small-caps">EMARK</span></span>:&nbsp; We emphasize that the conditions of Theorem&nbsp;<a href="#x1-336">8.1.6<!-- tex4ht:ref: thmtype:8.1.6  --></a> are sufficient, but <em>not necessary</em>, for \(f\) to have a
+  Laplace transform. For example, Exercise&nbsp;<span class="ptmb8t-">14(c) </span>shows that \(f\) may have a Laplace transform even though \(f\) isn’t of
   exponential order. 
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 8.1.8</span> </span><a id='x1-348'></a>If \(f\) is bounded on some interval \([t_0,\infty )\), say
+  <div class="newtheorem" id="dc688307-be1a-400d-9b28-f079746c9c82">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;8.1.8</span> </span><a id="x1-348"></a>If \(f\) is bounded on some interval \([t_0,\infty )\), say
                                         \[ |f(t)|\le M,\quad t\ge t_0\]
- then (<a href='#x1-32r14'>8.1.14<!-- tex4ht:ref: eq:8.1.14  --></a>) holds with \(s_0=0\), so \(f\) is of exponential order zero. Thus, for example, \(\sin \omega t\) and \(\cos \omega t\) are of exponential
-order zero, and Theorem <a href='#x1-336'>8.1.6<!-- tex4ht:ref: thmtype:8.1.6  --></a> implies that \({\cal L}(\sin \omega t)\) and \({\cal L}(\cos \omega t)\) exist for \(s&gt;0\). This is consistent with the conclusion of
-Example <a href='#x1-114'>8.1.4<!-- tex4ht:ref: example:8.1.4  --></a>.
+ then (<a href="#x1-32r14">8.1.14<!-- tex4ht:ref: eq:8.1.14  --></a>) holds with \(s_0=0\), so \(f\) is of exponential order zero. Thus, for example, \(\sin \omega t\) and \(\cos \omega t\) are of exponential
+order zero, and Theorem&nbsp;<a href="#x1-336">8.1.6<!-- tex4ht:ref: thmtype:8.1.6  --></a> implies that \({\cal L}(\sin \omega t)\) and \({\cal L}(\cos \omega t)\) exist for \(s&gt;0\). This is consistent with the conclusion of
+Example&nbsp;<a href="#x1-114">8.1.4<!-- tex4ht:ref: example:8.1.4  --></a>.
 </p>
   </div>
-<p class='indent'>
+<p class="indent" id="b2a0976f-ede4-48c2-9134-82eb83b06ee9">
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 8.1.9</span> </span><a id='x1-359'></a>It can be shown that if \(\lim _{t\to \infty }e^{-s_0t}f(t)\) exists and is finite then \(f\) is of exponential order \(s_0\) (Exercise <span class='ptmb8t-'>9</span>). If
+  <div class="newtheorem" id="49901afe-c93e-4564-8b8a-f4d49b8f9b90">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;8.1.9</span> </span><a id="x1-359"></a>It can be shown that if \(\lim _{t\to \infty }e^{-s_0t}f(t)\) exists and is finite then \(f\) is of exponential order \(s_0\) (Exercise&nbsp;<span class="ptmb8t-">9</span>). If
 \(\alpha \) is any real number and \(s_0&gt;0\) then \(f(t)=t^\alpha \) is of exponential order \(s_0\), since
                                                                                 
 
                                                                                 
                                         \[ \lim _{t\to \infty }e^{-s_0t}t^\alpha =0\]
- by L’H?ital’s rule. If \(\alpha \ge 0\), \(f\) is also continuous on \([0,\infty )\). Therefore Exercise <span class='ptmb8t-'>9</span> and Theorem <a href='#x1-336'>8.1.6<!-- tex4ht:ref: thmtype:8.1.6  --></a> imply that \({\cal L}(t^\alpha )\)
+ by L’H?ital’s rule. If \(\alpha \ge 0\), \(f\) is also continuous on \([0,\infty )\). Therefore Exercise&nbsp;<span class="ptmb8t-">9</span> and Theorem&nbsp;<a href="#x1-336">8.1.6<!-- tex4ht:ref: thmtype:8.1.6  --></a> imply that \({\cal L}(t^\alpha )\)
 exists for \(s\ge s_0\). However, since \(s_0\) is an arbitrary positive number, this really implies that \({\cal L}(t^\alpha )\) exists for all \(s&gt;0\). This is
-consistent with the results of Example <a href='#x1-82'>8.1.2<!-- tex4ht:ref: example:8.1.2  --></a> and Exercises <span class='ptmb8t-'>6</span> and <span class='ptmb8t-'>8</span>.
+consistent with the results of Example&nbsp;<a href="#x1-82">8.1.2<!-- tex4ht:ref: example:8.1.2  --></a> and Exercises&nbsp;<span class="ptmb8t-">6</span> and <span class="ptmb8t-">8</span>.
 </p>
   </div>
-<p class='indent'>
+<p class="indent" id="aec587e7-af53-44bd-94d8-21f08be178be">
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 8.1.10</span> </span><a id='x1-3610'></a>Find the Laplace transform of the piecewise continuous function
+  <div class="newtheorem" id="cffe3ef5-c7eb-4c3d-9f9d-6a070efdf4eb">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;8.1.10</span> </span><a id="x1-3610"></a>Find the Laplace transform of the piecewise continuous function
                                         \[ f(t)=\left \{\begin {array}{cl} 1,&amp;0\le t&lt;1,\\ -3e^{-t},&amp;t\ge 1.\end {array}\right. \]
 </p>
   </div>
-<p class='indent'>
-</p><p class='noindent'><span class='ptmb8t-'>Solution </span> Since \(f\) is defined by different formulas on \([0,1)\) and \([1,\infty )\), we write
+<p class="indent" id="c50a93cf-c64c-4dcd-b409-d7ab6310b684">
+</p><p class="noindent" id="b87ff2b8-7a5b-4609-9d24-93405a2af545"><span class="ptmb8t-">Solution </span>&nbsp;Since \(f\) is defined by different formulas on \([0,1)\) and \([1,\infty )\), we write
                                         \[ F(s)=\int _0^\infty e^{-st} f(t)\,dt =\int _0^1e^{-st}(1)\,dt+\int _1^\infty e^{-st}(-3e^{-t})\,dt\]
  Since
                                                                                 
@@ -373,34 +371,34 @@ consistent with the results of Example <a href='#x1-82'>8.1.2<!-- tex4ht:ref: e
                                         \[ \int _1^\infty e^{-st}(-3e^{-t})\,dt=-3\int _1^\infty e^{-(s+1)t}\,dt=-{3e^{-(s+1)}\over s+1},\quad s&gt;-1\]
  it follows that
                                         \[ F(s)=\left \{\begin {array}{rl}\displaystyle {{1-e^{-s}\over s}-3{e^{-(s+1)}\over s+1}},&amp;s&gt;-1,\,s\ne 0,\\ \displaystyle {1-{3\over e}} ,&amp; s=0.\end {array}\right. \]
- This is consistent with Theorem <a href='#x1-336'>8.1.6<!-- tex4ht:ref: thmtype:8.1.6  --></a>, since
+ This is consistent with Theorem&nbsp;<a href="#x1-336">8.1.6<!-- tex4ht:ref: thmtype:8.1.6  --></a>, since
                                                                                 
 
                                                                                 
                                         \[ |f(t)|\le 3e^{-t},\quad t\ge 1\]
  and therefore \(f\) is of exponential order \(s_0=-1\).
-</p><p class='noindent'><span class='ptmrc8t-'>R<span class='small-caps'>EMARK</span></span>: In Section 8.4 we’ll develop a more efficient method for finding Laplace transforms of piecewise
+</p><p class="noindent" id="2b075114-60e6-48ab-a032-a540aa8f9b8c"><span class="ptmrc8t-">R<span class="small-caps">EMARK</span></span>:&nbsp;In Section&nbsp;8.4 we’ll develop a more efficient method for finding Laplace transforms of piecewise
 continuous functions. 
 </p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 8.1.11</span> </span><a id='x1-3711'></a>We stated earlier that
+  <div class="newtheorem" id="9e59dafb-9d5b-45e8-a2f3-b2784ef88bc6">
+<p class="noindent"><span class="head">
+<span class="ex-number">Example&nbsp;8.1.11</span> </span><a id="x1-3711"></a>We stated earlier that
                                         \[ \int _0^\infty e^{-st} e^{t^2} dt=\infty \]
- for all \(s\), so Theorem <a href='#x1-336'>8.1.6<!-- tex4ht:ref: thmtype:8.1.6  --></a> implies that \(f(t)=e^{t^2}\) is not of exponential order, since
+ for all \(s\), so Theorem&nbsp;<a href="#x1-336">8.1.6<!-- tex4ht:ref: thmtype:8.1.6  --></a> implies that \(f(t)=e^{t^2}\) is not of exponential order, since
                                         \[ \lim _{t\to \infty } {e^{t^2}\over Me^{s_0t}}=\lim _{t\to \infty } {1\over M} e^{t^2-s_0t}=\infty \]
  so
                                                                                 
 
                                                                                 
                                         \[ e^{t^2}&gt;Me^{s_0t} \]
- for sufficiently large values of \(t\), for any choice of \(M\) and \(s_{0}\) (Exercise <span class='ptmb8t-'>3</span>).
+ for sufficiently large values of \(t\), for any choice of \(M\) and \(s_{0}\) (Exercise&nbsp;<span class="ptmb8t-">3</span>).
 </p>
   </div>
-<p class='indent'>
+<p class="indent" id="1f6dafe1-65a5-4390-9f76-51755f9e5404">
 </p>
 
 
-<div class="nav">
+<div class="nav" id="247245e0-f1d6-46e0-bf71-065073e0b4c8">
   <a>&nbsp;</a>
 
   <a href="sec8.0.html">Chapter 8</a>
@@ -408,5 +406,5 @@ continuous functions.
   <a href="sec8.2.book.html">Next (8.2)</a>
 </div>
 
-</body> 
-</html>
+ 
+</body></html>
