@@ -35,55 +35,56 @@
   <details>
     <summary>Mathematical Models</summary>
 
-    <p class='noindent'>In order to apply mathematical methods to a physical or “real life” problem, we must formulate the
-      problem in mathematical terms; that is, we must construct a <span class='vocab'>mathematical model</span> for the problem.
-      Many physical problems concern relationships between changing quantities. Since <span class='vocab'>rates of change</span> are represented
-      mathematically by <span class='vocab'>derivatives</span>, mathematical models often involve equations relating an unknown function and one
-      or more of its derivatives. Such equations are <span class='vocab'>differential equations</span>. They are the
+    <p class='noindent'>
+      In order to apply mathematical methods to a physical or “real life” problem, we must formulate the problem in mathematical terms; that is, we must construct a <span class='vocab'>mathematical model</span> for the problem. Many physical problems concern relationships between changing quantities. Since <span class='vocab'>rates of change</span> are represented mathematically by <span class='vocab'>derivatives</span>, mathematical models often involve equations relating an unknown function and one or more of its derivatives. Such equations are <span class='vocab'>differential equations</span>. They are the
       subject of this book.
     </p>
-    <p class='indent'> Much of calculus is devoted to learning mathematical techniques that are applied in later courses
-      in
-      mathematics and the sciences; you wouldn’t have time to learn much calculus if you insisted on
+    <p class='indent'> 
+      Much of calculus is devoted to learning mathematical techniques that are applied in later courses
+      in mathematics and the sciences; you wouldn’t have time to learn much calculus if you insisted on
       seeing a specific application of every topic covered in the course. Similarly, much of this book is
       devoted to methods that can be applied in later courses. Only a relatively small part of the book is
       devoted to the derivation of specific differential equations from mathematical models, or relating the
       differential equations that we study to specific applications. In this section we mention a few such
       applications.
     </p>
-    <p class='indent'> The mathematical model for an applied problem is almost always simpler than the actual situation
-      being
-      studied, since simplifying assumptions are usually required to obtain a mathematical problem that can be solved.
-      For example, in modeling the motion of a falling object, we might neglect air resistance and the gravitational pull
-      of celestial bodies other than Earth, or in modeling population growth we might assume that the population grows
-      continuously rather than in discrete steps.
+    <p class='indent'> 
+      The mathematical model for an applied problem is almost always simpler than the actual situation
+      being studied, since simplifying assumptions are usually required to obtain a mathematical problem that can be solved. For example, in modeling the motion of a falling object, we might neglect air resistance and the gravitational pull of celestial bodies other than Earth, or in modeling population growth we might assume that the population grows continuously rather than in discrete steps.
     </p>
     <p class='indent'> A good mathematical model has two important properties:
     </p>
     <ul class='itemize1'>
-      <li class='itemize'>It’s sufficiently simple so that the mathematical problem can be solved.
+      <li class='itemize'>
+        It’s sufficiently simple so that the mathematical problem can be solved.
       </li>
-      <li class='itemize'>It represents the actual situation sufficiently well so that the solution to the mathematical
-        problem
-        predicts the outcome of the real problem to within a useful degree of accuracy. If results predicted
-        by the model don’t agree with physical observations, the underlying assumptions of the model must
-        be revised until satisfactory agreement is obtained.</li>
+      <li class='itemize'>
+        It represents the actual situation sufficiently well so that the solution to the mathematical
+        problem predicts the outcome of the real problem to within a useful degree of accuracy. If results predicted by the model don’t agree with physical observations, the underlying assumptions of the model must be revised until satisfactory agreement is obtained.</li>
     </ul>
     
-    <p class='indent'> We’ll now give examples of mathematical models involving differential equations. We’ll return to
-      these
-      problems at the appropriate times, as we learn how to solve the various types of differential equations that occur
-      in the models.
+    <p class='indent'> 
+      We’ll now give examples of mathematical models involving differential equations. We’ll return to
+      these problems at the appropriate times, as we learn how to solve the various types of differential equations that occur in the models.
     </p>
   </details>
 
   <details>
     <summary>Derivative Notation</summary>
-
-    <p class='indent'> All the examples in this section deal with functions of time, which we denote by \(t\). If \(y\) is
-      a function of \(t\), \(\dot{y}\) denotes
-      the derivative of \(y\) with respect to \(t\); thus,
-      \[ \dot{y}={dy\over dt} \]
+    <p class='indent'> 
+      <span class='vocab'>Leibniz notation</span> clearly identifies the variable we are differentiating with respect to and thus is the preferred and primary notation we will be using. First derivatives using <span class='vocab'>Leibniz notation</span>:
+      \[ {dy\over dx} \quad \text{or} \quad {dy\over dt} \quad \text{or} \quad {dy\over d\theta} \]
+      Second derivatives using <span class='vocab'>Leibniz notation</span>:
+      \[ {d^2y\over dx^2} \quad \text{or} \quad {d^2y\over dt^2} \quad \text{or} \quad {d^2y\over d\theta^2} \]
+    </p>    
+    <p class='indent'> 
+      <span class='vocab'>Prime notation</span><span class='vocab'>(Lagrange notation)</span> is often used but does not specify the variable we are differentiating with respect to so there is some ambiguity. For instance,
+      \[ y'={dy\over dx} \quad\text{  or  }\quad \displaystyle y'={dy\over dt} \quad\text{  or  }\quad \displaystyle y'={dy\over d\theta} \]
+      Remember <span class='vocab'>prime notation</span> is ambiguous, so the variable we intending to differentiate with respect to could be \(x\), \(t\), \(\theta\) or any other independent variable. Because of this ambiguity, we will restrict usage of this notation in this class to only cases where it is explicitly clear what the independent variable is and/or where it is extremely convenient for the computations.
+    </p>
+    <p class='indent'> 
+      As real-life applications frequently involve <span class='vocab'>derivatives</span> with respect to time \(t\), a short-hand called <span class='vocab'>dot notation</span> <span class='vocab'>(Newton notation)</span> is often used.
+      \[ \dot{y}={dy\over dt} \quad \text{or} \quad \ddot{y}={d^2y\over dt^2} \]
     </p>
   </details>
 
@@ -91,29 +92,26 @@
   <details>
     <summary>Population Growth and Decay</summary>
   
-    <p class='noindent'>Although the number of members of a population (people in a given country, bacteria in a
-      laboratory culture,
-      wildflowers in a forest, etc.) at any given time \(t\) is necessarily an integer, models that use differential
-      equations to
-      describe the growth and decay of populations usually rest on the simplifying assumption that the number of
-      members of the population can be regarded as a differentiable function \(P=P(t)\). In most models it is assumed that the differential equation takes the form \begin {equation} \label {eq:1.1.1} \dot{P}=a(P)P(t)\end {equation}<a
-        id='x1-2r1'></a> where \(a\) is a continuous function of \(P\) that represents the rate of
+    <p class='noindent'>
+      Although the number of members of a population (people in a given country, bacteria in a laboratory culture,
+      wildflowers in a forest, etc.) at any given time \(t\) is necessarily an integer, models that use differential equations to describe the growth and decay of populations usually rest on the simplifying assumption that the number of members of the population can be regarded as a differentiable function \(P=P(t)\). In most models it is assumed that the differential equation takes the form 
+      \begin {equation} \label {eq:1.1.1} 
+        \dot{P}=a(P)P(t)
+      \end {equation}
+      <a id='x1-2r1'></a> where \(a=a(P)\) is a continuous function of \(P\) that represents the rate of
       change of population per unit time per individual. In the <span class='vocab'>Malthusian model</span>, it
-      is assumed that \(a(P)\) is a
-      constant, so (<a href='#x1-2r1'>1.1.1<!-- tex4ht:ref: eq:1.1.1  --></a>) becomes \begin {equation} \label {eq:1.1.2}
-      \dot{P}=aP\end {equation}<a id='x1-3r2'></a> (When you see a name in blue italics, just click on it for information
-      about the person.) This model assumes that the numbers of births and deaths per unit time are both
-      proportional to the population. The constants of proportionality are the <span class='vocab'>birth rate</span>
-      (births per unit
-      time per individual) and the <span class='vocab'>death rate</span> (deaths per unit time per individual); \(a\)
-      is the birth rate minus
-      the death rate. From calculus, we know if \(c\) is any <span class='vocab'>arbitrary constant</span> then \begin {equation} \label {eq:1.1.3}
-      P=ce^{at} \end {equation}<a id='x1-4r3'></a> satisfies (<a href='#x1-3r2'>1.1.2<!-- tex4ht:ref: eq:1.1.2  --></a>),
-      so (<a href='#x1-3r2'>1.1.2<!-- tex4ht:ref: eq:1.1.2  --></a>) has
+      is assumed that \(a(P)\) is a constant, so (<a href='#x1-2r1'>1.1.1</a>) becomes 
+      \begin {equation} \label {eq:1.1.2}
+        \dot{P}=aP
+      \end {equation}<a id='x1-3r2'></a> 
+      This model assumes that the numbers of births and deaths per unit time are both proportional to the population. The constants of proportionality are the <span class='vocab'>birth rate</span>
+      (births per unit time per individual) and the <span class='vocab'>death rate</span> (deaths per unit time per individual); \(a\) is the birth rate minus the death rate. From calculus, we know if \(c\) is any <span class='vocab'>arbitrary constant</span> then \begin {equation} \label {eq:1.1.3}
+      P=ce^{at} \end {equation}<a id='x1-4r3'></a> satisfies (<a href='#x1-3r2'>1.1.2</a>),
+      so (<a href='#x1-3r2'>1.1.2</a>) has
       infinitely many solutions represented by different values for \(c\). We call this our <span class='vocab'>general solution</span>.
       To select the solution of the specific problem that we’re considering, we must
       know the population \(P_0\) at an initial time, say \(t=0\). Setting \(t=0\) in (<a
-        href='#x1-4r3'>1.1.3<!-- tex4ht:ref: eq:1.1.3  --></a>) yields \(c=P(0)=P_0\), so the applicable solution
+        href='#x1-4r3'>1.1.3</a>) yields \(c=P(0)=P_0\), so the applicable solution
       is \[ P(t)=P_0e^{at}\]
       This implies that
       \[ \lim _{t\to \infty }P(t)=\left \{\begin {array}{cl}\infty&amp; \mbox { if }a&gt;0\\ 0&amp;\mbox { if }a&lt;0
@@ -170,19 +168,21 @@
   <details>
     <summary>Newton’s Law of Cooling</summary>
 
-    <p class='noindent'>According to <span class='vocab'>Newton’s law of cooling</span>, the temperature of a body changes at a rate proportional to
-      the difference
-      between the temperature of the body and the temperature of the surrounding medium. Thus, if \(T_m\) is the
-      temperature
-      of the medium and \(T=T(t)\) is the temperature of the body at time \(t\), then \begin {equation} \label {eq:1.1.5}
-      \dot{T} = -k(T-T_m)\end {equation}<a id='x1-7r5'></a> where \(k\) is a positive constant and the minus sign
-      indicates; that the temperature of the body increases with time if it’s less than the temperature of the medium, or
-      decreases if it’s greater. We’ll see in Section 4.2 that if \(T_m\) is constant then the solution of (<a
+    <p class='noindent'>According to <span class='vocab'>Newton’s law of cooling</span>, the temperature of a body changes at a rate proportional to the difference between the temperature of the body and the temperature of the surroundings. Thus, if \(A=A(t)\) is the temperature
+      of the surroundings and \(T=T(t)\) is the temperature of the body at time \(t\), then \begin {equation} \label {eq:1.1.5}
+      \dot{T} = -k(T-A)\end {equation}<a id='x1-7r5'></a> where \(k\) is a positive constant and the minus sign
+      indicates; that the temperature of the body increases with time if it’s less than the temperature of the medium, or decreases if it’s greater. We’ll see in Section 4.2 that if \(A\) is constant then the solution of (<a
         href='#x1-7r5'>1.1.5<!-- tex4ht:ref: eq:1.1.5  --></a>) is \begin {equation} \label {eq:1.1.6}
-      T=T_m+(T_0-T_m)e^{-kt}\end {equation}<a id='x1-8r6'></a> where \(T_0\)
-      is the temperature of the body when \(t=0\). Therefore \(\lim _{t\to \infty }T(t)=T_m\), independent of \(T_0\).
-      (Common sense suggests this. Why?)
+      T=A+(T_0-A)e^{-kt}\end {equation}<a id='x1-8r6'></a> where \(T_0\)
+      is the temperature of the body when \(t=0\). Therefore \(\lim _{t\to \infty }T(t)=A\), independent of \(T_0\).
     </p>
+    <p class="reading-exercise">
+      Use the limit laws to show the \(\lim _{t\to \infty }T(t)= A \)
+    </p>
+    <p class="reading-exercise">
+      Describe in words what is physically happening in this limit and explain why it makes sense
+    </p>
+
     <p class='indent'> Figure <a
         href='#-temperature-according-to-newtons-law-of-cooling-'>1.1.2<!-- tex4ht:ref: figure:1.1.2  --></a> shows
       typical graphs of \(T\) versus \(t\) for various values of \(T_0\).
@@ -200,27 +200,27 @@
       difference between the two situations is that the heat lost by the coffee isn’t likely to raise the temperature of
       the
       room appreciably, but the heat lost by the cooling metal is. In this second situation we must use a model that
-      accounts for the heat exchanged between the object and the medium. Let \(T=T(t)\) and \(T_m=T_m(t)\) be the
+      accounts for the heat exchanged between the object and the medium. Let \(T=T(t)\) and \(A=A(t)\) be the
       temperatures of the object
-      and the medium respectively, and let \(T_0\) and \(T_{m0}\) be their initial values. Again, we assume that \(T\) and
-      \(T_m\) are related by
+      and the medium respectively, and let \(T_0\) and \(A_{0}\) be their initial values. Again, we assume that \(T\) and
+      \(A\) are related by
       (<a href='#x1-7r5'>1.1.5<!-- tex4ht:ref: eq:1.1.5  --></a>). We also assume that the change in heat of the object as
       its temperature changes from \(T_0\) to \(T\) is \(a(T-T_0)\) and the
-      change in heat of the medium as its temperature changes from \(T_{m0}\) to \(T_m\) is \(a_m(T_m-T_{m0})\), where
-      \(a\) and \(a_m\) are positive constants
+      change in heat of the medium as its temperature changes from \(A_{0}\) to \(A\) is \(b(A-A_{0})\), where
+      \(a\) and \(b\) are positive constants
       depending upon the masses and thermal properties of the object and medium respectively. If we assume that
       the total heat of the in the object and the medium remains constant (that is, energy is conserved),
       then
-      \[ a(T-T_0)+a_m(T_m-T_{m0})=0\]
-      Solving this for \(T_m\) and substituting the result into (<a
+      \[ a(T-T_0)+a_m(A-A_{0})=0\]
+      Solving this for \(A\) and substituting the result into (<a
         href='#x1-8r6'>1.1.6<!-- tex4ht:ref: eq:1.1.6  --></a>) yields the differential equation
-      \[ \dot{T}=-k\left (1+{a\over a_m}\right )T +k\left (T_{m0}+{a\over a_m}T_0\right ) \]
+      \[ \dot{T}=-k\left (1+{a\over b}\right )T +k\left (A_{0}+{a\over b}T_0\right ) \]
       for the temperature of the object. After learning to solve linear first order equations, you’ll be able to show
       (Exercise 4.2. <span class='ptmb8t-'>17</span>) that
 
 
 
-      \[ T={aT_0+a_mT_{m0}\over a+a_m}+{a_m(T_0-T_{m0})\over a+a_m}e^{-k(1+a/a_m)t}\]
+      \[ T={aT_0+bA_{0}\over a+b}+{b(T_0-A_{0})\over a+b}e^{-k(1+a/b)t}\]
     </p>
   </details>
 
