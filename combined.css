@@ -230,6 +230,7 @@ li.dst { line-height: 4rem; }
 
 .ex-number { font-weight: bold; }
 .example { margin-bottom: 2em; margin-top: 8em;}
+summary + .example { margin-top: 0; }
 .example > *:first-child:before { counter-reset: ex-number var(--ex-number); content: "Example " var(--section-number) "." counter(ex-number); font-weight: bold; }
 .example .solution summary:after { counter-reset: ex-number var(--ex-number); content: " " var(--section-number) "." counter(ex-number); }
 
