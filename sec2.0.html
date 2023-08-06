@@ -1,46 +1,85 @@
-<!DOCTYPE html><html lang="en-US" xml:lang="en-US"><head><title></title> 
-<meta charset="utf-8"> 
-<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator"> 
-<meta content="width=device-width,initial-scale=1" name="viewport"> 
-<link href="combined.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="niceties.js"></script> 
-<meta content="Trench_DiffEQ_Book.tex" name="src"> 
-<script>window.MathJax = { tex: { tags: "ams", }, }; </script> 
- <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>  
-</head><body>
-<div class="center" id="7f4d7dda-f6ce-43a8-b5f7-756de6a3eeb1">
-<p class="noindent">
-</p><p class="noindent"><span class="ptmb8t-x-x-248">CHAPTER&nbsp;2</span><br>
-<span class="ptmb8t-x-x-248">First Order Equations</span>
-<a id="x1-1doc"></a>
-</p>
-</div>
-<p class="noindent" id="2ba3ec7d-5004-44fe-8b76-100b4e97ebe3">IN THIS CHAPTER we study first order equations for which there are general methods of solution.
-</p><p class="noindent" id="a18592a5-73c9-4053-9416-242f14b05696"><a href="sec2.1.book.html">SECTION&nbsp;2.1</a> deals with linear equations, the simplest kind of first order equations. In this section we
-introduce the method of variation of parameters. The idea underlying this method will be a unifying
-theme for our approach to solving many different kinds of differential equations throughout the
-book.
-</p><p class="noindent" id="e9e791e1-2289-45a1-928a-dc14b8c4bdf8"><a href="sec2.2.book.html">SECTION&nbsp;2.2</a> deals with separable equations, the simplest nonlinear equations. In this section we introduce the
-idea of implicit and constant solutions of differential equations, and we point out some differences between the
-properties of linear and nonlinear equations.
-</p><p class="noindent" id="3e4a636a-4e45-421f-a6df-3bac41171186"><a href="sec2.3.book.html">SECTION&nbsp;2.3</a> discusses existence and uniqueness of solutions of nonlinear equations. Although it may seem
-logical to place this section before Section&nbsp;2.2, we presented Section&nbsp;2.2 first so we could have illustrative
-examples in Section&nbsp;2.3.
-</p><p class="noindent" id="d1595fca-6259-4ee8-a9ca-e11bd4ad032d"><a href="sec2.4.book.html">SECTION&nbsp;2.4</a> deals with nonlinear equations that are not separable, but can be transformed into separable
-equations by a procedure similar to variation of parameters.
-</p><p class="noindent" id="f1e90478-c12b-4351-b2d0-37b36155d570"><a href="sec2.5.book.html">SECTION&nbsp;2.5</a> covers exact differential equations, which are given this name because the method for solving
-them uses the idea of an exact differential from calculus.
-</p><p class="noindent" id="5d36755d-267e-4ccc-a58c-a92b0b730444"><a href="sec2.6.book.html">SECTION&nbsp;2.6</a> deals with equations that are not exact, but can made exact by multiplying them by a function
-known called <span class="vocab">integrating factor</span>.
-</p>
+<!doctype html>
+<html lang="en-US" xml:lang="en-US">
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator" />
+		<meta content="width=device-width,initial-scale=1" name="viewport" />
+		<link href="combined.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="niceties.js"></script>
+		<meta content="Trench_DiffEQ_Book.tex" name="src" />
+		<script>
+			window.MathJax = { tex: { tags: "ams" } };
+		</script>
+		<script
+			async="async"
+			id="MathJax-script"
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+			type="text/javascript"
+		></script>
+	</head>
+	<body>
+		<div class="center" id="7f4d7dda-f6ce-43a8-b5f7-756de6a3eeb1">
+			<p class="noindent"></p>
+			<p class="noindent">
+				<span class="ptmb8t-x-x-248">CHAPTER&nbsp;2</span>
+				<br />
+				<span class="ptmb8t-x-x-248">First Order Equations</span>
+				<a id="x1-1doc"></a>
+			</p>
+		</div>
+		<p class="noindent" id="2ba3ec7d-5004-44fe-8b76-100b4e97ebe3">
+			IN THIS CHAPTER we study first order equations for which there are general
+			methods of solution.
+		</p>
+		<p class="noindent" id="a18592a5-73c9-4053-9416-242f14b05696">
+			<a href="sec2.1.book.html">SECTION&nbsp;2.1</a>
+			deals with linear equations, the simplest kind of first order equations.
+			In this section we introduce the method of variation of parameters. The
+			idea underlying this method will be a unifying theme for our approach to
+			solving many different kinds of differential equations throughout the
+			book.
+		</p>
+		<p class="noindent" id="e9e791e1-2289-45a1-928a-dc14b8c4bdf8">
+			<a href="sec2.2.book.html">SECTION&nbsp;2.2</a>
+			deals with separable equations, the simplest nonlinear equations. In this
+			section we introduce the idea of implicit and constant solutions of
+			differential equations, and we point out some differences between the
+			properties of linear and nonlinear equations.
+		</p>
+		<p class="noindent" id="3e4a636a-4e45-421f-a6df-3bac41171186">
+			<a href="sec2.3.book.html">SECTION&nbsp;2.3</a>
+			discusses existence and uniqueness of solutions of nonlinear equations.
+			Although it may seem logical to place this section before
+			Section&nbsp;2.2, we presented Section&nbsp;2.2 first so we could have
+			illustrative examples in Section&nbsp;2.3.
+		</p>
+		<p class="noindent" id="d1595fca-6259-4ee8-a9ca-e11bd4ad032d">
+			<a href="sec2.4.book.html">SECTION&nbsp;2.4</a>
+			deals with nonlinear equations that are not separable, but can be
+			transformed into separable equations by a procedure similar to variation
+			of parameters.
+		</p>
+		<p class="noindent" id="f1e90478-c12b-4351-b2d0-37b36155d570">
+			<a href="sec2.5.book.html">SECTION&nbsp;2.5</a>
+			covers exact differential equations, which are given this name because the
+			method for solving them uses the idea of an exact differential from
+			calculus.
+		</p>
+		<p class="noindent" id="5d36755d-267e-4ccc-a58c-a92b0b730444">
+			<a href="sec2.6.book.html">SECTION&nbsp;2.6</a>
+			deals with equations that are not exact, but can made exact by multiplying
+			them by a function known called
+			<span class="vocab">integrating factor</span>
+			.
+		</p>
 
-<div class="nav" id="a3e06611-ee30-400a-bf82-87fc486a8783">
-	<a href="sec1.0.html">Chapter 1</a>
-  
-	<a href="toc.html">Contents</a>
-  
-	<a href="sec4.0.html">Chapter 4</a>
-</div>
+		<div class="nav" id="a3e06611-ee30-400a-bf82-87fc486a8783">
+			<a href="sec1.0.html">Chapter 1</a>
 
- 
-</body></html>
+			<a href="toc.html">Contents</a>
+
+			<a href="sec4.0.html">Chapter 4</a>
+		</div>
+	</body>
+</html>

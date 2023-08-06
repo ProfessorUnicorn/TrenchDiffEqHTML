@@ -1,755 +1,1145 @@
-<!DOCTYPE html><html lang="en-US" xml:lang="en-US"><head>
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="combined.css">
-    <meta name="src" content="Trench_DiffEQ_Book.tex">
-    <script>window.MathJax = {
-            tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(2.4.' + tag + ')' } }
-        }; </script>
-    <script type="text/javascript" async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
-    <style type="text/css">
-        :root {
-            --section-number: "2.4"
-        }
-    </style>
-</head>
+<!doctype html>
+<html lang="en-US" xml:lang="en-US">
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="combined.css" />
+		<meta name="src" content="Trench_DiffEQ_Book.tex" />
+		<script>
+			window.MathJax = {
+				tex: {
+					packages: { "[+]": ["tagformat"] },
+					tags: "ams",
+					tagformat: { tag: (tag) => "(2.4." + tag + ")" },
+				},
+			};
+		</script>
+		<script
+			type="text/javascript"
+			async="async"
+			id="MathJax-script"
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+		></script>
+		<style type="text/css">
+			:root {
+				--section-number: "2.4";
+			}
+		</style>
+	</head>
 
-<body>
-    <div class="centerline" id="8b05b2f2-d1f4-4f23-8d7b-d114134402dd"> <span class="ptmb8t-x-x-120">2.4</span><span class="ptmb8t-x-x-120">&nbsp;Exercises</span> </div>
-    <a id="x1-1doc"></a>
-    <!--l. 1-->
-    <p class="noindent" id="17ec767a-9b64-472d-8053-a1dde401bdee">In Exercises&nbsp;<a href="#x1-21">1<!--tex4ht:ref: exer:2.4.1 --></a>–<a href="#x1-54">4<!--tex4ht:ref: exer:2.4.4 --></a> solve the given Bernoulli equation.
-    </p>
-    <div class="tabular" id="2f254f98-e60e-4590-a604-ce8ee20616be">
-        <table id="TBL-1" class="tabular">
-            <colgroup id="TBL-1-1g">
-                <col id="TBL-1-1">
-                <col id="TBL-1-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-1-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-1-1-1" class="td00">
-                    <dl class="list1">
-                        <dt class="list">
-                            <span class="ptmb8t-">1.</span>
-                        </dt>
-                        <dd class="list">
-                            <!--l. 8-->
-                            <p class="noindent"><a id="x1-21"></a> \(y'+y=y^2\) </p>
-                </dd></dl></td>
-                <td style="white-space:normal; text-align:left;" id="TBL-1-1-2" class="td01">
-                    
-                    <dt class="list">
-                        <span class="ptmb8t-">2.</span>
-                    </dt>
-                    <dd class="list">
-                        <!--l. 9-->
-                        <p class="noindent"><a id="x1-32"></a> \(\displaystyle {7xy'-2y=-{x^2 \over y^6}}\) </p>
-                </dd></td>
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tabular" id="f46b87ac-e470-42d4-baeb-3d42fdb29596">
-        <table id="TBL-2" class="tabular">
-            <colgroup id="TBL-2-1g">
-                <col id="TBL-2-1">
-                <col id="TBL-2-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-2-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-2-1-1" class="td00">
-                    <span class="ptmb8t-">3.</span><a id="x1-43"></a> \(x^2y'+2y=2e^{1/x}y^{1/2}\)
-                </td>
-                <td style="white-space:normal; text-align:left;" id="TBL-2-1-2" class="td01">
-                    <span class="ptmb8t-">4.</span><a id="x1-54"></a> \(\displaystyle {(1+x^2)y'+2xy ={1 \over
-                    (1+x^2)y}}\)
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-    <!--l. 21-->
-    <p class="noindent" id="43e57ae9-e552-4898-aad4-67ce5d8f8142">In Exercises&nbsp;<a href="#x1-65">5<!--tex4ht:ref: exer:2.4.5 --></a> and <a href="#x1-76">6<!--tex4ht:ref: exer:2.4.6 --></a> find all solutions. Also, plot a
-            direction field and some <span class="vocab">integral curves</span> on the indicated
-        rectangular region.
-    </p>
-    <dl class="list1" id="646d986e-3c30-470a-91da-ac4b354203c8">
-        <dt class="list">
-            <span class="ptmb8t-">5.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 23-->
-            <p class="noindent"><a id="x1-65"></a> <span class="fbox"><span id="textcolor1">C/G</span></span>
-                \(y'-xy=x^3y^3; \quad \{-3\le x\le 3,\-2\le y\ge 2\}\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">6.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 26-->
-            <p class="noindent"><a id="x1-76"></a> <span class="fbox"><span id="textcolor2">C/G</span></span>
-                \(\displaystyle {y'-{1+x\over 3x}y=y^4}; \quad \{-2\le x\le 2,-2\le y \le 2\}\)
-            </p>
-        </dd>
-    </dl>
-    <!--l. 30-->
-    <p class="noindent" id="d93a4c19-4637-4c6a-95fa-3d9a161e11de">In Exercises&nbsp;<a href="#x1-87">7<!--tex4ht:ref: exer:2.4.7 --></a>–<a href="#x1-1211">11<!--tex4ht:ref: exer:2.4.11 --></a> solve the initial value
-            problem.
-    </p>
-    <dl class="list1" id="f39e407d-932c-4626-8948-00d21c8420d1">
-        <dt class="list">
-            <span class="ptmb8t-">7.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 32-->
-            <p class="noindent"><a id="x1-87"></a> \(y'-2y=xy^3,\quad y(0)=2\sqrt 2\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">8.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 34-->
-            <p class="noindent"><a id="x1-98"></a> \(y'-xy=xy^{3/2},\quad y(1)=4\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">9.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 35-->
-            <p class="noindent"><a id="x1-109"></a> \(xy'+y=x^4y^4,\quad y(1)=1/2\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">10.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 36-->
-            <p class="noindent"><a id="x1-1110"></a> \(y'-2y=2y^{1/2},\quad y(0)=1\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">11.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 37-->
-            <p class="noindent"><a id="x1-1211"></a> \(\displaystyle {y'-4y={48x\over y^2},\quad y(0)=1}\)
-            </p>
-        </dd>
-    </dl>
+	<body>
+		<div class="centerline" id="8b05b2f2-d1f4-4f23-8d7b-d114134402dd">
+			<span class="ptmb8t-x-x-120">2.4</span>
+			<span class="ptmb8t-x-x-120">&nbsp;Exercises</span>
+		</div>
+		<a id="x1-1doc"></a>
+		<!--l. 1-->
+		<p class="noindent" id="17ec767a-9b64-472d-8053-a1dde401bdee">
+			In Exercises&nbsp;
+			<a href="#x1-21">
+				1
+				<!--tex4ht:ref: exer:2.4.1 -->
+			</a>
+			–
+			<a href="#x1-54">
+				4
+				<!--tex4ht:ref: exer:2.4.4 -->
+			</a>
+			solve the given Bernoulli equation.
+		</p>
+		<div class="tabular" id="2f254f98-e60e-4590-a604-ce8ee20616be">
+			<table id="TBL-1" class="tabular">
+				<colgroup id="TBL-1-1g">
+					<col id="TBL-1-1" />
+					<col id="TBL-1-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-1-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-1-1-1"
+							class="td00"
+						>
+							<dl class="list1">
+								<dt class="list">
+									<span class="ptmb8t-">1.</span>
+								</dt>
+								<dd class="list">
+									<!--l. 8-->
+									<p class="noindent">
+										<a id="x1-21"></a>
+										\(y'+y=y^2\)
+									</p>
+								</dd>
+							</dl>
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-1-1-2"
+							class="td01"
+						>
+							<dt class="list">
+								<span class="ptmb8t-">2.</span>
+							</dt>
+							<dd class="list">
+								<!--l. 9-->
+								<p class="noindent">
+									<a id="x1-32"></a>
+									\(\displaystyle {7xy'-2y=-{x^2 \over y^6}}\)
+								</p>
+							</dd>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="tabular" id="f46b87ac-e470-42d4-baeb-3d42fdb29596">
+			<table id="TBL-2" class="tabular">
+				<colgroup id="TBL-2-1g">
+					<col id="TBL-2-1" />
+					<col id="TBL-2-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-2-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-2-1-1"
+							class="td00"
+						>
+							<span class="ptmb8t-">3.</span>
+							<a id="x1-43"></a>
+							\(x^2y'+2y=2e^{1/x}y^{1/2}\)
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-2-1-2"
+							class="td01"
+						>
+							<span class="ptmb8t-">4.</span>
+							<a id="x1-54"></a>
+							\(\displaystyle {(1+x^2)y'+2xy ={1 \over (1+x^2)y}}\)
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--l. 21-->
+		<p class="noindent" id="43e57ae9-e552-4898-aad4-67ce5d8f8142">
+			In Exercises&nbsp;
+			<a href="#x1-65">
+				5
+				<!--tex4ht:ref: exer:2.4.5 -->
+			</a>
+			and
+			<a href="#x1-76">
+				6
+				<!--tex4ht:ref: exer:2.4.6 -->
+			</a>
+			find all solutions. Also, plot a direction field and some
+			<span class="vocab">integral curves</span>
+			on the indicated rectangular region.
+		</p>
+		<dl class="list1" id="646d986e-3c30-470a-91da-ac4b354203c8">
+			<dt class="list">
+				<span class="ptmb8t-">5.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 23-->
+				<p class="noindent">
+					<a id="x1-65"></a>
+					<span class="fbox"><span id="textcolor1">C/G</span></span>
+					\(y'-xy=x^3y^3; \quad \{-3\le x\le 3,\-2\le y\ge 2\}\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">6.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 26-->
+				<p class="noindent">
+					<a id="x1-76"></a>
+					<span class="fbox"><span id="textcolor2">C/G</span></span>
+					\(\displaystyle {y'-{1+x\over 3x}y=y^4}; \quad \{-2\le x\le 2,-2\le y
+					\le 2\}\)
+				</p>
+			</dd>
+		</dl>
+		<!--l. 30-->
+		<p class="noindent" id="d93a4c19-4637-4c6a-95fa-3d9a161e11de">
+			In Exercises&nbsp;
+			<a href="#x1-87">
+				7
+				<!--tex4ht:ref: exer:2.4.7 -->
+			</a>
+			–
+			<a href="#x1-1211">
+				11
+				<!--tex4ht:ref: exer:2.4.11 -->
+			</a>
+			solve the initial value problem.
+		</p>
+		<dl class="list1" id="f39e407d-932c-4626-8948-00d21c8420d1">
+			<dt class="list">
+				<span class="ptmb8t-">7.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 32-->
+				<p class="noindent">
+					<a id="x1-87"></a>
+					\(y'-2y=xy^3,\quad y(0)=2\sqrt 2\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">8.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 34-->
+				<p class="noindent">
+					<a id="x1-98"></a>
+					\(y'-xy=xy^{3/2},\quad y(1)=4\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">9.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 35-->
+				<p class="noindent">
+					<a id="x1-109"></a>
+					\(xy'+y=x^4y^4,\quad y(1)=1/2\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">10.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 36-->
+				<p class="noindent">
+					<a id="x1-1110"></a>
+					\(y'-2y=2y^{1/2},\quad y(0)=1\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">11.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 37-->
+				<p class="noindent">
+					<a id="x1-1211"></a>
+					\(\displaystyle {y'-4y={48x\over y^2},\quad y(0)=1}\)
+				</p>
+			</dd>
+		</dl>
 
+		<!--l. 42-->
+		<p class="noindent" id="771da64f-6c15-4160-8eaf-9a8f91976d03">
+			In Exercises&nbsp;
+			<a href="#x1-1312">
+				12
+				<!--tex4ht:ref: exer:2.4.12 -->
+			</a>
+			and
+			<a href="#x1-1413">
+				13
+				<!--tex4ht:ref: exer:2.4.13 -->
+			</a>
+			solve the initial value problem and graph the solution.
+		</p>
+		<dl class="list1" id="8477c366-9452-4f75-aebe-9cbdaf2a053e">
+			<dt class="list">
+				<span class="ptmb8t-">12.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 44-->
+				<p class="noindent">
+					<a id="x1-1312"></a>
+					<span class="fbox"><span id="textcolor3">C/G</span></span>
+					\(x^2y'+2xy=y^3,\quad y(1)=1/\sqrt 2\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">13.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 45-->
+				<p class="noindent">
+					<a id="x1-1413"></a>
+					<span class="fbox"><span id="textcolor4">C/G</span></span>
+					\(y'-y=xy^{1/2},\quad y(0)=4\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">14.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 48-->
+				<p class="noindent">
+					<a id="x1-1514"></a>
+					You may have noticed that the logistic equation \[ P'=aP(1-\alpha P)
+					\] from Verhulst’s model for population growth can be written in
+					Bernoulli form as \[ P'-aP=-a\alpha P^2\] This isn’t particularly
+					interesting, since the logistic equation is separable, and therefore
+					solvable by the method studied in Section&nbsp;2.2. So let’s consider
+					a more complicated model, where \(a\) is a positive constant and
+					\(\alpha \) is a positive continuous function of \(t\) on \([0,\infty
+					)\). The equation for this model is \[ P'-aP=-a\alpha (t) P^2\] a
+					non-separable Bernoulli equation.
+				</p>
+				<dl class="list2">
+					<dt class="list">
+						<span class="ptmb8t-">(a)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 70-->
+						<p class="noindent">
+							Assuming that \(P(0)=P_0&gt;0\), find \(P\) for \(t&gt;0\).
+							<span class="hint">
+								Hint: Express your result in terms of the integral \(\int
+								_0^t\alpha (\tau )e^{a\tau }\,d\tau \).
+							</span>
+						</p>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(b)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 74-->
+						<p class="noindent">
+							Verify that your result reduces to the known results for the
+							Malthusian model where \(\alpha =0\), and the Verhulst model where
+							\(\alpha \) is a nonzero constant.
+						</p>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(c)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 78-->
+						<p class="noindent">
+							Assuming that \[ \lim _{t\to \infty }e^{-at}\int _0^t\alpha (\tau
+							)e^{a\tau }\,d\tau =L \] exists (finite or infinite), find \(\lim
+							_{t\to \infty }P(t)\).
+						</p>
+					</dd>
+				</dl>
+			</dd>
+		</dl>
+		<!--l. 86-->
+		<p class="noindent" id="cb477cce-4aca-4c44-8494-83734d5f8261">
+			In Exercises&nbsp;
+			<a href="#x1-1915">
+				15
+				<!--tex4ht:ref: exer:2.4.15 -->
+			</a>
+			–
+			<a href="#x1-2218">
+				18
+				<!--tex4ht:ref: exer:2.4.18 -->
+			</a>
+			solve the equation explicitly.
+		</p>
+		<div class="tabular" id="2f411107-5a39-472d-aaa7-44a057e74c23">
+			<table id="TBL-3" class="tabular">
+				<colgroup id="TBL-3-1g">
+					<col id="TBL-3-1" />
+					<col id="TBL-3-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-3-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-3-1-1"
+							class="td00"
+						>
+							<dl class="list1">
+								<dt class="list">
+									<span class="ptmb8t-">15.</span>
+								</dt>
+								<dd class="list">
+									<!--l. 89-->
+									<p class="noindent">
+										<a id="x1-1915"></a>
+										\(y'=\displaystyle {y+x\over x}\)
+									</p>
+								</dd>
+							</dl>
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-3-1-2"
+							class="td01"
+						>
+							<dt class="list">
+								<span class="ptmb8t-">16.</span>
+							</dt>
+							<dd class="list">
+								<!--l. 90-->
+								<p class="noindent">
+									<a id="x1-2016"></a>
+									\(y'=\displaystyle {y^2+2xy \over x^2}\)
+								</p>
+							</dd>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="tabular" id="54e5de38-de87-486c-b46f-53c31af9a0ae">
+			<table id="TBL-4" class="tabular">
+				<colgroup id="TBL-4-1g">
+					<col id="TBL-4-1" />
+					<col id="TBL-4-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-4-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-4-1-1"
+							class="td00"
+						>
+							<span class="ptmb8t-">17.</span>
+							<a id="x1-2117"></a>
+							\(xy^3y'=y^4+x^4\)
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-4-1-2"
+							class="td01"
+						>
+							<span class="ptmb8t-">18.</span>
+							<a id="x1-2218"></a>
+							\(y'=\displaystyle {y\over x}+\sec {y\over x}\)
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--l. 105-->
+		<p class="noindent" id="587df363-9532-45ac-b5a3-c8a8f585d3e3">
+			In Exercises&nbsp;
+			<a href="#x1-2319">
+				19
+				<!--tex4ht:ref: exer:2.4.19 -->
+			</a>
+			-
+			<a href="#x1-2521">
+				21
+				<!--tex4ht:ref: exer:2.4.21 -->
+			</a>
+			solve the equation explicitly. Also, plot a direction field and some
+			<span class="vocab">integral curves</span>
+			on the indicated rectangular region.
+		</p>
+		<dl class="list1" id="7d7cc011-72af-4614-975b-1f68047f9dff">
+			<dt class="list">
+				<span class="ptmb8t-">19.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 107-->
+				<p class="noindent">
+					<a id="x1-2319"></a>
+					<span class="fbox"><span id="textcolor5">C/G</span></span>
+					\(x^2y'=xy+x^2+y^2; \quad \{-8\le x\le 8,-8\le y\le 8\}\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">20.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 110-->
+				<p class="noindent">
+					<a id="x1-2420"></a>
+					<span class="fbox"><span id="textcolor6">C/G</span></span>
+					\(xyy'=x^2+2y^2; \quad \{-4\le x\le 4,-4\le y\le 4\}\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">21.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 114-->
+				<p class="noindent">
+					<a id="x1-2521"></a>
+					<span class="fbox"><span id="textcolor7">C/G</span></span>
+					\(y'=\displaystyle {2y^2+x^2e^{-(y/x)^2}\over 2xy}; \quad \{-8\le x\le
+					8,-8\le y\le 8\}\)
+				</p>
+			</dd>
+		</dl>
+		<!--l. 120-->
+		<p class="noindent" id="ccd4e5d7-81a6-4508-9e23-964c19289e03">
+			In Exercises&nbsp;
+			<a href="#x1-2622">
+				22
+				<!--tex4ht:ref: exer:2.4.22 -->
+			</a>
+			–
+			<a href="#x1-3127">
+				27
+				<!--tex4ht:ref: exer:2.4.27 -->
+			</a>
+			solve the initial value problem.
+		</p>
+		<dl class="list1" id="69636dea-2037-46cc-9687-386fc74229dd">
+			<dt class="list">
+				<span class="ptmb8t-">22.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 122-->
+				<p class="noindent">
+					<a id="x1-2622"></a>
+					\(y'=\displaystyle {xy+y^2\over x^2}, \quad y(-1)=2\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">23.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 125-->
+				<p class="noindent">
+					<a id="x1-2723"></a>
+					\(y'=\displaystyle {x^3+y^3\over xy^2}, \quad y(1)=3\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">24.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 128-->
+				<p class="noindent">
+					<a id="x1-2824"></a>
+					\(xyy'+x^2+y^2=0, \quad y(1)=2\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">25.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 131-->
+				<p class="noindent">
+					<a id="x1-2925"></a>
+					\(y'=\displaystyle {y^2-3xy-5x^2 \over x^2}, \quad y(1)=-1\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">26.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 134-->
+				<p class="noindent">
+					<a id="x1-3026"></a>
+					\(x^2y'=2x^2+y^2+4xy, \quad y(1)=1\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">27.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 137-->
+				<p class="noindent">
+					<a id="x1-3127"></a>
+					\(xyy'=3x^2+4y^2, \quad y(1)=\sqrt {3}\)
+				</p>
+			</dd>
+		</dl>
+		<!--l. 141-->
+		<p class="noindent" id="6a7be2ff-4dc6-473e-962c-b1f1d1386579">
+			In Exercises&nbsp;
+			<a href="#x1-3228">
+				28
+				<!--tex4ht:ref: exer:2.4.28 -->
+			</a>
+			–
+			<a href="#x1-3834">
+				34
+				<!--tex4ht:ref: exer:2.4.34 -->
+			</a>
+			solve the given homogeneous equation implicitly.
+		</p>
+		<div class="tabular" id="50727b54-96da-439e-9945-0bc199bbc094">
+			<table id="TBL-5" class="tabular">
+				<colgroup id="TBL-5-1g">
+					<col id="TBL-5-1" />
+					<col id="TBL-5-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-5-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-5-1-1"
+							class="td00"
+						>
+							<dl class="list1">
+								<dt class="list">
+									<span class="ptmb8t-">28.</span>
+								</dt>
+								<dd class="list">
+									<!--l. 144-->
+									<p class="noindent">
+										<a id="x1-3228"></a>
+										\(y'=\displaystyle {x+y \over x-y}\)
+									</p>
+								</dd>
+							</dl>
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-5-1-2"
+							class="td01"
+						>
+							<dt class="list">
+								<span class="ptmb8t-">29.</span>
+							</dt>
+							<dd class="list">
+								<!--l. 145-->
+								<p class="noindent">
+									<a id="x1-3329"></a>
+									\((y'x-y)(\ln |y|-\ln |x|)=x\)
+								</p>
+							</dd>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="tabular" id="c852bb25-2230-4121-a5e3-cf994b9ccb14">
+			<table id="TBL-6" class="tabular">
+				<colgroup id="TBL-6-1g">
+					<col id="TBL-6-1" />
+					<col id="TBL-6-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-6-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-6-1-1"
+							class="td00"
+						>
+							<span class="ptmb8t-">30.</span>
+							<a id="x1-3430"></a>
+							\(y'=\displaystyle {y^3+2xy^2+x^2y+x^3\over x(y+x)^2}\)
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-6-1-2"
+							class="td01"
+						>
+							<span class="ptmb8t-">31.</span>
+							<a id="x1-3531"></a>
+							\(y'=\displaystyle {x+2y \over 2x+y}\)
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="tabular" id="3e23657d-7708-46e7-9e67-a93849d1d34f">
+			<table id="TBL-7" class="tabular">
+				<colgroup id="TBL-7-1g">
+					<col id="TBL-7-1" />
+					<col id="TBL-7-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-7-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-7-1-1"
+							class="td00"
+						>
+							<span class="ptmb8t-">32.</span>
+							<a id="x1-3632"></a>
+							\(y'=\displaystyle {y \over y-2x}\)
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-7-1-2"
+							class="td01"
+						>
+							<span class="ptmb8t-">33.</span>
+							<a id="x1-3733"></a>
+							\(y'=\displaystyle {xy^2+2y^3\over x^3+x^2y+xy^2}\)
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<span class="ptmb8t-">34.</span>
+		<a id="x1-3834"></a>
+		\(y'=\displaystyle {x^3+x^2y+3y^3 \over x^3+3xy^2}\)
+		<span class="ptmb8t-">35.</span>
+		<a id="x1-3935"></a>
+		<span class="fbox"><span id="textcolor8">L</span></span>
 
+		<dl class="list2" id="8dfef2d7-9111-4bf2-8895-dcdc9108644c">
+			<dt class="list">
+				<span class="ptmb8t-">(a)</span>
+			</dt>
+			<dd class="list">
+				<!--l. 165-->
+				<p class="noindent">
+					Find a solution of the initial value problem \[ x^2y'=y^2+xy-4x^2,
+					\quad y(-1)=0 \, {\rm (A)} \] on the interval \((-\infty ,0)\). Verify
+					that this solution is actually valid on \((-\infty ,\infty )\).
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">(b)</span>
+			</dt>
+			<dd class="list">
+				<!--l. 173-->
+				<p class="noindent">
+					Use Theorem&nbsp;
+					<span class="ptmb8t-">2.3.1</span>
+					to show that (A) has a unique solution on \((-\infty ,0)\).
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">(c)</span>
+			</dt>
+			<dd class="list">
+				<!--l. 176-->
+				<p class="noindent">
+					Plot a direction field for the differential equation in (A) on a
+					square \[ \{-r\le x\le r, -r\le y\le r\}\] where \(r\) is any positive
+					number. Graph the solution you obtained in
+					<span class="ptmb8t-">(a)</span>
+					on this field.
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">(d)</span>
+			</dt>
+			<dd class="list">
+				<!--l. 185-->
+				<p class="noindent">
+					Graph other solutions of (A) that are defined on \((-\infty ,\infty
+					)\).
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">(e)</span>
+			</dt>
+			<dd class="list">
+				<!--l. 187-->
+				<p class="noindent">
+					Graph other solutions of (A) that are defined only on intervals of the
+					form \((-\infty ,a)\), where is a finite positive number.
+				</p>
+			</dd>
+		</dl>
+		<span class="ptmb8t-">36.</span>
+		<a id="x1-4536"></a>
+		<span class="fbox"><span id="textcolor9">L</span></span>
 
-    <!--l. 42-->
-    <p class="noindent" id="771da64f-6c15-4160-8eaf-9a8f91976d03">In Exercises&nbsp;<a href="#x1-1312">12<!--tex4ht:ref: exer:2.4.12 --></a> and <a href="#x1-1413">13<!--tex4ht:ref: exer:2.4.13 --></a> solve the initial value problem
-            and graph the solution.
-    </p>
-    <dl class="list1" id="8477c366-9452-4f75-aebe-9cbdaf2a053e">
-        <dt class="list">
-            <span class="ptmb8t-">12.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 44-->
-            <p class="noindent"><a id="x1-1312"></a> <span class="fbox"><span id="textcolor3">C/G</span></span>
-                \(x^2y'+2xy=y^3,\quad y(1)=1/\sqrt 2\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">13.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 45-->
-            <p class="noindent"><a id="x1-1413"></a> <span class="fbox"><span id="textcolor4">C/G</span></span>
-                \(y'-y=xy^{1/2},\quad y(0)=4\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">14.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 48-->
-            <p class="noindent"><a id="x1-1514"></a> You may have noticed that the logistic equation
-                \[ P'=aP(1-\alpha P) \]
-                from Verhulst’s model for population growth can be written in Bernoulli form as
-                \[ P'-aP=-a\alpha P^2\]
-                This isn’t particularly interesting, since the logistic equation is separable, and therefore
-                solvable
-                by the method studied in Section&nbsp;2.2. So let’s consider a more complicated model, where
-                \(a\) is a
-                positive constant and \(\alpha \) is a positive continuous function of \(t\) on \([0,\infty )\). The
-                equation for this model is
+		<dl class="list2" id="88887d56-b3c1-42ef-94e6-8904ddffd543">
+			<dt class="list">
+				<span class="ptmb8t-">(a)</span>
+			</dt>
+			<dd class="list">
+				<!--l. 196-->
+				<p class="noindent">
+					Solve the equation \[ xyy'=x^2-xy+y^2 \, {\rm (A)} \] implicitly.
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">(b)</span>
+			</dt>
+			<dd class="list">
+				<!--l. 203-->
+				<p class="noindent">
+					Plot a direction field for (A) on a square \[ \{0\le x\le r,0\le y\le
+					r\} \] where \(r\) is any positive number.
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">(c)</span>
+			</dt>
+			<dd class="list">
+				<!--l. 209-->
+				<p class="noindent">
+					Let \(K\) be a positive integer. (You may have to try several choices
+					for \(K\).) Graph solutions of the initial value problems \[
+					xyy'=x^2-xy+y^2,\quad y(r/2)={kr\over K}\] for \(k=1\), \(2\), …,
+					\(K\). Based on your observations, find conditions on the positive
+					numbers \(x_0\) and \(y_0\) such that the initial value problem \[
+					xyy'=x^2-xy+y^2,\quad y(x_0)=y_0, \, {\rm (B)} \] has a unique
+					solution (i) on \((0,\infty )\) or (ii) only on an interval
+					\((a,\infty )\), where \(a&gt;0\)?
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">(d)</span>
+			</dt>
+			<dd class="list">
+				<!--l. 225-->
+				<p class="noindent">
+					What can you say about the graph of the solution of (B) as \(x\to
+					\infty \)? (Again, assume that \(x_0&gt;0\) and \(y_0&gt;0\).)
+				</p>
+			</dd>
+		</dl>
+		<span class="ptmb8t-">37.</span>
+		<a id="x1-5037"></a>
+		<span class="fbox"><span id="textcolor10">L</span></span>
+		<dl class="list2" id="9b322df1-0da3-4b09-b933-b2f6af75b4d5">
+			<dt class="list">
+				<span class="ptmb8t-">(a)</span>
+			</dt>
+			<dd class="list">
+				<!--l. 233-->
+				<p class="noindent">
+					Solve the equation \[ y'={2y^2-xy+2x^2 \over xy+2x^2} \, {\rm (A)} \]
+					implicitly.
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">(b)</span>
+			</dt>
+			<dd class="list">
+				<!--l. 240-->
+				<p class="noindent">
+					Plot a direction field for (A) on a square \[ \{-r\le x\le r,-r\le
+					y\le r\} \] where \(r\) is any positive number. By graphing solutions
+					of (A), determine necessary and sufficient conditions on \((x_0,y_0)\)
+					such that (A) has a solution on (i) \((-\infty ,0)\) or (ii)
+					\((0,\infty )\) such that \(y(x_0)=y_0\).
+				</p>
+			</dd>
+		</dl>
+		<span class="ptmb8t-">38.</span>
+		<a id="x1-5338"></a>
+		<span class="fbox"><span id="textcolor11">L</span></span>
+		Follow the instructions of Exercise&nbsp;
+		<a href="#x1-5037" id="9ac01784-1287-4cc4-a0ac-64f52bfa7e3f">
+			37
+			<!--tex4ht:ref: exer:2.4.37 -->
+		</a>
+		for the equation \[ y'={xy+x^2+y^2 \over xy}\]
+		<span class="ptmb8t-">39.</span>
+		<a id="x1-5439"></a>
+		<span class="fbox"><span id="textcolor12">L</span></span>
+		Pick any nonlinear homogeneous equation \(y'=q(y/x)\) you like, and plot
+		direction fields on the square \(\{-r\le x\le r,\ -r\le y\le r\}\), where
+		\(r&gt;0\). What happens to the direction field as you vary \(r\)? Why?
+		<span class="ptmb8t-">40.</span>
+		<a id="x1-5540"></a>
+		Prove: If \(ad-bc\ne 0\), the equation \[ y'={ax+by+\alpha \over cx+dy+\beta
+		} \] can be transformed into the homogeneous nonlinear equation \[ {dY \over
+		dX}={aX+bY \over cX+dY} \] by the substitution \(x=X-X_0,\ y=Y-Y_0\), where
+		\(X_0\) and \(Y_0\) are suitably chosen constants.
+		<!--l. 277-->
+		<p class="noindent" id="2a8a6a39-7adc-4a23-969e-5943cf6a31ad">
+			In Exercises&nbsp;
+			<a href="#x1-5641">
+				41
+				<!--tex4ht:ref: exer:2.4.41 -->
+			</a>
+			-
+			<a href="#x1-5843">
+				43
+				<!--tex4ht:ref: exer:2.4.43 -->
+			</a>
+			use a method suggested by Exercise&nbsp;
+			<a href="#x1-5540">
+				40
+				<!--tex4ht:ref: exer:2.4.40 -->
+			</a>
+			to solve the given equation implicitly.
+		</p>
+		<div class="tabular" id="6b48a068-02c5-4a02-b0ad-5560414a013a">
+			<table id="TBL-8" class="tabular">
+				<colgroup id="TBL-8-1g">
+					<col id="TBL-8-1" />
+					<col id="TBL-8-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-8-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-8-1-1"
+							class="td00"
+						>
+							<dl class="list1">
+								<dt class="list">
+									<span class="ptmb8t-">41.</span>
+								</dt>
+								<dd class="list">
+									<!--l. 280-->
+									<p class="noindent">
+										<a id="x1-5641"></a>
+										\(y'=\displaystyle {-6x+y-3 \over 2x-y-1}\)
+									</p>
+								</dd>
+							</dl>
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-8-1-2"
+							class="td01"
+						>
+							<dt class="list">
+								<span class="ptmb8t-">42.</span>
+							</dt>
+							<dd class="list">
+								<!--l. 281-->
+								<p class="noindent">
+									<a id="x1-5742"></a>
+									\(y'=\displaystyle {2x+y+1 \over x+2y-4}\)
+								</p>
+							</dd>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<span class="ptmb8t-">43.</span>
+		<a id="x1-5843"></a>
+		\(y'=\displaystyle {-x+3y-14 \over x+y-2}\)
+		<!--l. 291-->
+		<p class="noindent" id="b9f293bb-1fcd-42f6-bfc5-d37d60b996e1">
+			In Exercises&nbsp;
+			<a href="#x1-5944">
+				44
+				<!--tex4ht:ref: exer:2.4.44 -->
+			</a>
+			–
+			<a href="#x1-6651">
+				51
+				<!--tex4ht:ref: exer:2.4.51 -->
+			</a>
+			find a function \(y_1\) such that the substitution \(y=uy_1\) transforms
+			the given equation into a separable equation of the form (
+			<span class="ptmb8t-">2.4.6</span>
+			). Then solve the given equation explicitly.
+		</p>
+		<div class="tabular" id="46340d56-b041-417b-a605-ac04fd039d84">
+			<table id="TBL-9" class="tabular">
+				<colgroup id="TBL-9-1g">
+					<col id="TBL-9-1" />
+					<col id="TBL-9-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-9-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-9-1-1"
+							class="td00"
+						>
+							<dl class="list1">
+								<dt class="list">
+									<span class="ptmb8t-">44.</span>
+								</dt>
+								<dd class="list">
+									<!--l. 294-->
+									<p class="noindent">
+										<a id="x1-5944"></a>
+										\(3xy^2y'=y^3+x\)
+									</p>
+								</dd>
+							</dl>
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-9-1-2"
+							class="td01"
+						>
+							<dt class="list">
+								<span class="ptmb8t-">45.</span>
+							</dt>
+							<dd class="list">
+								<!--l. 295-->
+								<p class="noindent">
+									<a id="x1-6045"></a>
+									\(xyy'=3x^6+6y^2\)
+								</p>
+							</dd>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="tabular" id="dd59a11b-b145-49c4-89cc-7557f4e8a614">
+			<table id="TBL-10" class="tabular">
+				<colgroup id="TBL-10-1g">
+					<col id="TBL-10-1" />
+					<col id="TBL-10-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-10-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-10-1-1"
+							class="td00"
+						>
+							<span class="ptmb8t-">46.</span>
+							<a id="x1-6146"></a>
+							\(x^3y'=2(y^2+x^2y-x^4)\)
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-10-1-2"
+							class="td01"
+						>
+							<span class="ptmb8t-">47.</span>
+							<a id="x1-6247"></a>
+							\(y'=y^2e^{-x}+4y+2e^x\)
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="tabular" id="745a8a86-9d66-4b7d-ba23-ea744f468442">
+			<table id="TBL-11" class="tabular">
+				<colgroup id="TBL-11-1g">
+					<col id="TBL-11-1" />
+					<col id="TBL-11-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-11-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-11-1-1"
+							class="td00"
+						>
+							<span class="ptmb8t-">48.</span>
+							<a id="x1-6348"></a>
+							\(y'=\displaystyle {y^2+y\tan x+\tan ^2 x\over \sin ^2x}\)
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-11-1-2"
+							class="td01"
+						>
+							<span class="ptmb8t-">49.</span>
+							<a id="x1-6449"></a>
+							\(x(\ln x)^2y'=-4(\ln x)^2+y\ln x+y^2\)
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="tabular" id="8a3249cf-6160-44dd-ae43-0edaf1285d01">
+			<table id="TBL-12" class="tabular">
+				<colgroup id="TBL-12-1g">
+					<col id="TBL-12-1" />
+					<col id="TBL-12-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-12-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-12-1-1"
+							class="td00"
+						>
+							<span class="ptmb8t-">50.</span>
+							<a id="x1-6550"></a>
+							\(2x(y+2\sqrt x)y'=(y+\sqrt x)^2\)
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-12-1-2"
+							class="td01"
+						>
+							<span class="ptmb8t-">51.</span>
+							<a id="x1-6651"></a>
+							\((y+e^{x^2})y'=2x(y^2+ye^{x^2}+e^{2x^2})\)
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<span class="ptmb8t-">52.</span>
+		<a id="x1-6752"></a>
+		Solve the initial value problem \[ y'+{2\over x}y={3x^2y^2+6xy+2\over
+		x^2(2xy+3)},\quad y(2)=2\]
 
-
-
-                \[ P'-aP=-a\alpha (t) P^2\]
-                a non-separable Bernoulli equation.
-            </p>
-            <dl class="list2">
-                <dt class="list">
-                    <span class="ptmb8t-">(a)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 70-->
-                    <p class="noindent">Assuming that \(P(0)=P_0&gt;0\), find \(P\) for \(t&gt;0\). <span class="hint">Hint: Express your result in
-                            terms of the integral \(\int _0^t\alpha (\tau )e^{a\tau }\,d\tau \).</span>
-                    </p>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(b)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 74-->
-                    <p class="noindent">Verify that your result reduces to the known results for the Malthusian model
-                        where \(\alpha =0\), and the
-                        Verhulst model where \(\alpha \) is a nonzero constant.
-                    </p>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(c)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 78-->
-                    <p class="noindent">Assuming that
-                        \[ \lim _{t\to \infty }e^{-at}\int _0^t\alpha (\tau )e^{a\tau }\,d\tau =L \]
-                        exists (finite or infinite), find \(\lim _{t\to \infty }P(t)\).</p>
-                </dd>
-            </dl>
-        </dd>
-    </dl>
-    <!--l. 86-->
-    <p class="noindent" id="cb477cce-4aca-4c44-8494-83734d5f8261">In Exercises&nbsp;<a href="#x1-1915">15<!--tex4ht:ref: exer:2.4.15 --></a>–<a href="#x1-2218">18<!--tex4ht:ref: exer:2.4.18 --></a> solve the equation
-            explicitly.
-    </p>
-    <div class="tabular" id="2f411107-5a39-472d-aaa7-44a057e74c23">
-        <table id="TBL-3" class="tabular">
-            <colgroup id="TBL-3-1g">
-                <col id="TBL-3-1">
-                <col id="TBL-3-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-3-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-3-1-1" class="td00">
-                    <dl class="list1">
-                        <dt class="list">
-                            <span class="ptmb8t-">15.</span>
-                        </dt>
-                        <dd class="list">
-                            <!--l. 89-->
-                            <p class="noindent"><a id="x1-1915"></a> \(y'=\displaystyle {y+x\over x}\) </p>
-                </dd></dl></td>
-                <td style="white-space:normal; text-align:left;" id="TBL-3-1-2" class="td01">
-                    
-                    <dt class="list">
-                        <span class="ptmb8t-">16.</span>
-                    </dt>
-                    <dd class="list">
-                        <!--l. 90-->
-                        <p class="noindent"><a id="x1-2016"></a> \(y'=\displaystyle {y^2+2xy \over x^2}\) </p>
-                </dd></td>
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tabular" id="54e5de38-de87-486c-b46f-53c31af9a0ae">
-        <table id="TBL-4" class="tabular">
-            <colgroup id="TBL-4-1g">
-                <col id="TBL-4-1">
-                <col id="TBL-4-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-4-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-4-1-1" class="td00">
-                    <span class="ptmb8t-">17.</span><a id="x1-2117"></a> \(xy^3y'=y^4+x^4\)
-                </td>
-                <td style="white-space:normal; text-align:left;" id="TBL-4-1-2" class="td01">
-                    <span class="ptmb8t-">18.</span><a id="x1-2218"></a> \(y'=\displaystyle {y\over x}+\sec {y\over x}\)
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-    <!--l. 105-->
-    <p class="noindent" id="587df363-9532-45ac-b5a3-c8a8f585d3e3">In Exercises&nbsp;<a href="#x1-2319">19<!--tex4ht:ref: exer:2.4.19 --></a>-<a href="#x1-2521">21<!--tex4ht:ref: exer:2.4.21 --></a> solve the equation explicitly.
-            Also, plot a direction field and some <span class="vocab">integral curves</span> on the
-        indicated rectangular region.
-    </p>
-    <dl class="list1" id="7d7cc011-72af-4614-975b-1f68047f9dff">
-        <dt class="list">
-            <span class="ptmb8t-">19.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 107-->
-            <p class="noindent"><a id="x1-2319"></a> <span class="fbox"><span id="textcolor5">C/G</span></span>
-                \(x^2y'=xy+x^2+y^2; \quad \{-8\le x\le 8,-8\le y\le 8\}\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">20.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 110-->
-            <p class="noindent"><a id="x1-2420"></a> <span class="fbox"><span id="textcolor6">C/G</span></span>
-                \(xyy'=x^2+2y^2; \quad \{-4\le x\le 4,-4\le y\le 4\}\)
-
-
-
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">21.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 114-->
-            <p class="noindent"><a id="x1-2521"></a> <span class="fbox"><span id="textcolor7">C/G</span></span>
-                \(y'=\displaystyle {2y^2+x^2e^{-(y/x)^2}\over 2xy}; \quad \{-8\le x\le 8,-8\le y\le 8\}\)
-            </p>
-        </dd>
-    </dl>
-    <!--l. 120-->
-    <p class="noindent" id="ccd4e5d7-81a6-4508-9e23-964c19289e03">In Exercises&nbsp;<a href="#x1-2622">22<!--tex4ht:ref: exer:2.4.22 --></a>–<a href="#x1-3127">27<!--tex4ht:ref: exer:2.4.27 --></a> solve the initial value
-            problem.
-    </p>
-    <dl class="list1" id="69636dea-2037-46cc-9687-386fc74229dd">
-        <dt class="list">
-            <span class="ptmb8t-">22.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 122-->
-            <p class="noindent"><a id="x1-2622"></a> \(y'=\displaystyle {xy+y^2\over x^2}, \quad y(-1)=2\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">23.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 125-->
-            <p class="noindent"><a id="x1-2723"></a> \(y'=\displaystyle {x^3+y^3\over xy^2}, \quad y(1)=3\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">24.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 128-->
-            <p class="noindent"><a id="x1-2824"></a> \(xyy'+x^2+y^2=0, \quad y(1)=2\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">25.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 131-->
-            <p class="noindent"><a id="x1-2925"></a> \(y'=\displaystyle {y^2-3xy-5x^2 \over x^2}, \quad y(1)=-1\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">26.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 134-->
-            <p class="noindent"><a id="x1-3026"></a> \(x^2y'=2x^2+y^2+4xy, \quad y(1)=1\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">27.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 137-->
-            <p class="noindent"><a id="x1-3127"></a> \(xyy'=3x^2+4y^2, \quad y(1)=\sqrt {3}\)
-            </p>
-        </dd>
-    </dl>
-    <!--l. 141-->
-    <p class="noindent" id="6a7be2ff-4dc6-473e-962c-b1f1d1386579">In Exercises&nbsp;<a href="#x1-3228">28<!--tex4ht:ref: exer:2.4.28 --></a>–<a href="#x1-3834">34<!--tex4ht:ref: exer:2.4.34 --></a> solve the given homogeneous
-            equation implicitly.
-    </p>
-    <div class="tabular" id="50727b54-96da-439e-9945-0bc199bbc094">
-        <table id="TBL-5" class="tabular">
-            <colgroup id="TBL-5-1g">
-                <col id="TBL-5-1">
-                <col id="TBL-5-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-5-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-5-1-1" class="td00">
-                    <dl class="list1">
-                        <dt class="list">
-                            <span class="ptmb8t-">28.</span>
-                        </dt>
-                        <dd class="list">
-                            <!--l. 144-->
-                            <p class="noindent"><a id="x1-3228"></a> \(y'=\displaystyle {x+y \over x-y}\) </p>
-                </dd></dl></td>
-                <td style="white-space:normal; text-align:left;" id="TBL-5-1-2" class="td01">
-                    
-                    <dt class="list">
-                        <span class="ptmb8t-">29.</span>
-                    </dt>
-                    <dd class="list">
-                        <!--l. 145-->
-                        <p class="noindent"><a id="x1-3329"></a> \((y'x-y)(\ln |y|-\ln |x|)=x\) </p>
-                </dd></td>
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tabular" id="c852bb25-2230-4121-a5e3-cf994b9ccb14">
-        <table id="TBL-6" class="tabular">
-            <colgroup id="TBL-6-1g">
-                <col id="TBL-6-1">
-                <col id="TBL-6-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-6-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-6-1-1" class="td00">
-                    <span class="ptmb8t-">30.</span><a id="x1-3430"></a> \(y'=\displaystyle {y^3+2xy^2+x^2y+x^3\over
-                    x(y+x)^2}\)
-                </td>
-                <td style="white-space:normal; text-align:left;" id="TBL-6-1-2" class="td01">
-                    <span class="ptmb8t-">31.</span><a id="x1-3531"></a> \(y'=\displaystyle {x+2y \over 2x+y}\)
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tabular" id="3e23657d-7708-46e7-9e67-a93849d1d34f">
-        <table id="TBL-7" class="tabular">
-            <colgroup id="TBL-7-1g">
-                <col id="TBL-7-1">
-                <col id="TBL-7-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-7-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-7-1-1" class="td00">
-                    <span class="ptmb8t-">32.</span><a id="x1-3632"></a> \(y'=\displaystyle {y \over y-2x}\)
-                </td>
-                <td style="white-space:normal; text-align:left;" id="TBL-7-1-2" class="td01">
-                    <span class="ptmb8t-">33.</span><a id="x1-3733"></a> \(y'=\displaystyle {xy^2+2y^3\over
-                    x^3+x^2y+xy^2}\)
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-    <span class="ptmb8t-">34.</span> <a id="x1-3834"></a> \(y'=\displaystyle {x^3+x^2y+3y^3 \over x^3+3xy^2}\)
-    <span class="ptmb8t-">35.</span> <a id="x1-3935"></a> <span class="fbox"><span id="textcolor8">L</span></span>
-
-
-
-    <dl class="list2" id="8dfef2d7-9111-4bf2-8895-dcdc9108644c">
-        <dt class="list">
-            <span class="ptmb8t-">(a)</span>
-        </dt>
-        <dd class="list">
-            <!--l. 165-->
-            <p class="noindent">Find a solution of the initial value problem
-                \[ x^2y'=y^2+xy-4x^2, \quad y(-1)=0 \, {\rm (A)} \]
-                on the interval \((-\infty ,0)\). Verify that this solution is actually valid on \((-\infty ,\infty )\).
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">(b)</span>
-        </dt>
-        <dd class="list">
-            <!--l. 173-->
-            <p class="noindent">Use Theorem&nbsp;<span class="ptmb8t-">2.3.1</span> to show that (A) has a unique
-                solution on \((-\infty ,0)\).
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">(c)</span>
-        </dt>
-        <dd class="list">
-            <!--l. 176-->
-            <p class="noindent">Plot a direction field for the differential equation in (A) on a square
-                \[ \{-r\le x\le r, -r\le y\le r\}\]
-                where \(r\) is any positive number. Graph the solution you obtained in <span class="ptmb8t-">(a)
-                </span>on this field.
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">(d)</span>
-        </dt>
-        <dd class="list">
-            <!--l. 185-->
-            <p class="noindent">Graph other solutions of (A) that are defined on \((-\infty ,\infty )\).
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">(e)</span>
-        </dt>
-        <dd class="list">
-            <!--l. 187-->
-            <p class="noindent">Graph other solutions of (A) that are defined only on intervals of the form \((-\infty
-                ,a)\), where is a finite
-                positive number.</p>
-        </dd>
-    </dl>
-    <span class="ptmb8t-">36.</span> <a id="x1-4536"></a> <span class="fbox"><span id="textcolor9">L</span></span>
-
-
-
-    <dl class="list2" id="88887d56-b3c1-42ef-94e6-8904ddffd543">
-        <dt class="list">
-            <span class="ptmb8t-">(a)</span>
-        </dt>
-        <dd class="list">
-            <!--l. 196-->
-            <p class="noindent">Solve the equation
-                \[ xyy'=x^2-xy+y^2 \, {\rm (A)} \]
-                implicitly.
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">(b)</span>
-        </dt>
-        <dd class="list">
-            <!--l. 203-->
-            <p class="noindent">Plot a direction field for (A) on a square
-                \[ \{0\le x\le r,0\le y\le r\} \]
-                where \(r\) is any positive number.
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">(c)</span>
-        </dt>
-        <dd class="list">
-            <!--l. 209-->
-            <p class="noindent">Let \(K\) be a positive integer. (You may have to try several choices for \(K\).) Graph
-                solutions of the
-                initial value problems
-
-
-
-                \[ xyy'=x^2-xy+y^2,\quad y(r/2)={kr\over K}\]
-                for \(k=1\), \(2\), …, \(K\). Based on your observations, find conditions on the positive numbers
-                \(x_0\) and \(y_0\) such
-                that the initial value problem
-                \[ xyy'=x^2-xy+y^2,\quad y(x_0)=y_0, \, {\rm (B)} \]
-                has a unique solution (i) on \((0,\infty )\) or (ii) only on an interval \((a,\infty )\), where
-                \(a&gt;0\)?
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">(d)</span>
-        </dt>
-        <dd class="list">
-            <!--l. 225-->
-            <p class="noindent">What can you say about the graph of the solution of (B) as \(x\to \infty \)? (Again,
-                assume that \(x_0&gt;0\) and \(y_0&gt;0\).)</p>
-        </dd>
-    </dl>
-    <span class="ptmb8t-">37.</span> <a id="x1-5037"></a> <span class="fbox"><span id="textcolor10">L</span></span>
-    <dl class="list2" id="9b322df1-0da3-4b09-b933-b2f6af75b4d5">
-        <dt class="list">
-            <span class="ptmb8t-">(a)</span>
-        </dt>
-        <dd class="list">
-            <!--l. 233-->
-            <p class="noindent">Solve the equation
-                \[ y'={2y^2-xy+2x^2 \over xy+2x^2} \, {\rm (A)} \]
-                implicitly.
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">(b)</span>
-        </dt>
-        <dd class="list">
-            <!--l. 240-->
-            <p class="noindent">Plot a direction field for (A) on a square
-
-
-
-                \[ \{-r\le x\le r,-r\le y\le r\} \]
-                where \(r\) is any positive number. By graphing solutions of (A), determine necessary and
-                sufficient conditions on \((x_0,y_0)\) such that (A) has a solution on (i) \((-\infty ,0)\) or (ii)
-                \((0,\infty )\) such that \(y(x_0)=y_0\).</p>
-        </dd>
-    </dl>
-    <span class="ptmb8t-">38.</span> <a id="x1-5338"></a> <span class="fbox"><span id="textcolor11">L</span></span>
-    Follow the instructions of Exercise&nbsp;<a href="#x1-5037" id="9ac01784-1287-4cc4-a0ac-64f52bfa7e3f">37<!--tex4ht:ref: exer:2.4.37 --></a> for the equation
-    \[ y'={xy+x^2+y^2 \over xy}\]
-    <span class="ptmb8t-">39.</span> <a id="x1-5439"></a> <span class="fbox"><span id="textcolor12">L</span></span> Pick
-    any nonlinear homogeneous equation \(y'=q(y/x)\) you like, and plot direction fields on the square \(\{-r\le x\le
-    r,\ -r\le y\le r\}\), where \(r&gt;0\).
-    What happens to the direction field as you vary \(r\)? Why?
-    <span class="ptmb8t-">40.</span> <a id="x1-5540"></a> Prove: If \(ad-bc\ne 0\), the equation
-    \[ y'={ax+by+\alpha \over cx+dy+\beta } \]
-    can be transformed into the homogeneous nonlinear equation
-
-
-
-    \[ {dY \over dX}={aX+bY \over cX+dY} \]
-    by the substitution \(x=X-X_0,\ y=Y-Y_0\), where \(X_0\) and \(Y_0\) are suitably chosen constants.
-    <!--l. 277-->
-    <p class="noindent" id="2a8a6a39-7adc-4a23-969e-5943cf6a31ad">In Exercises&nbsp;<a href="#x1-5641">41<!--tex4ht:ref: exer:2.4.41 --></a>-<a href="#x1-5843">43<!--tex4ht:ref: exer:2.4.43 --></a> use a method suggested by
-            Exercise&nbsp;<a href="#x1-5540">40<!--tex4ht:ref: exer:2.4.40 --></a> to solve the given equation
-            implicitly.
-    </p>
-    <div class="tabular" id="6b48a068-02c5-4a02-b0ad-5560414a013a">
-        <table id="TBL-8" class="tabular">
-            <colgroup id="TBL-8-1g">
-                <col id="TBL-8-1">
-                <col id="TBL-8-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-8-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-8-1-1" class="td00">
-                    <dl class="list1">
-                        <dt class="list">
-                            <span class="ptmb8t-">41.</span>
-                        </dt>
-                        <dd class="list">
-                            <!--l. 280-->
-                            <p class="noindent"><a id="x1-5641"></a> \(y'=\displaystyle {-6x+y-3 \over 2x-y-1}\) </p>
-                </dd></dl></td>
-                <td style="white-space:normal; text-align:left;" id="TBL-8-1-2" class="td01">
-                    
-                    <dt class="list">
-                        <span class="ptmb8t-">42.</span>
-                    </dt>
-                    <dd class="list">
-                        <!--l. 281-->
-                        <p class="noindent"><a id="x1-5742"></a> \(y'=\displaystyle {2x+y+1 \over x+2y-4}\) </p>
-                </dd></td>
-            </tr>
-        </tbody></table>
-    </div>
-    <span class="ptmb8t-">43.</span> <a id="x1-5843"></a> \(y'=\displaystyle {-x+3y-14 \over x+y-2}\)
-    <!--l. 291-->
-    <p class="noindent" id="b9f293bb-1fcd-42f6-bfc5-d37d60b996e1">In Exercises&nbsp;<a href="#x1-5944">44<!--tex4ht:ref: exer:2.4.44 --></a>–<a href="#x1-6651">51<!--tex4ht:ref: exer:2.4.51 --></a> find a function \(y_1\)
-        such that the substitution \(y=uy_1\) transforms the given
-            equation into a separable
-        equation of the form (<span class="ptmb8t-">2.4.6</span>).
-            Then solve the given equation explicitly.
-    </p>
-    <div class="tabular" id="46340d56-b041-417b-a605-ac04fd039d84">
-        <table id="TBL-9" class="tabular">
-            <colgroup id="TBL-9-1g">
-                <col id="TBL-9-1">
-                <col id="TBL-9-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-9-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-9-1-1" class="td00">
-                    <dl class="list1">
-                        <dt class="list">
-                            <span class="ptmb8t-">44.</span>
-                        </dt>
-                        <dd class="list">
-                            <!--l. 294-->
-                            <p class="noindent"><a id="x1-5944"></a> \(3xy^2y'=y^3+x\) </p>
-                </dd></dl></td>
-                <td style="white-space:normal; text-align:left;" id="TBL-9-1-2" class="td01">
-                    
-                    <dt class="list">
-                        <span class="ptmb8t-">45.</span>
-                    </dt>
-                    <dd class="list">
-                        <!--l. 295-->
-                        <p class="noindent"><a id="x1-6045"></a> \(xyy'=3x^6+6y^2\) </p>
-                </dd></td>
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tabular" id="dd59a11b-b145-49c4-89cc-7557f4e8a614">
-        <table id="TBL-10" class="tabular">
-            <colgroup id="TBL-10-1g">
-                <col id="TBL-10-1">
-                <col id="TBL-10-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-10-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-10-1-1" class="td00">
-                    <span class="ptmb8t-">46.</span><a id="x1-6146"></a> \(x^3y'=2(y^2+x^2y-x^4)\)
-                </td>
-                <td style="white-space:normal; text-align:left;" id="TBL-10-1-2" class="td01">
-                    <span class="ptmb8t-">47.</span><a id="x1-6247"></a> \(y'=y^2e^{-x}+4y+2e^x\)
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tabular" id="745a8a86-9d66-4b7d-ba23-ea744f468442">
-        <table id="TBL-11" class="tabular">
-            <colgroup id="TBL-11-1g">
-                <col id="TBL-11-1">
-                <col id="TBL-11-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-11-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-11-1-1" class="td00">
-                    <span class="ptmb8t-">48.</span><a id="x1-6348"></a> \(y'=\displaystyle {y^2+y\tan x+\tan ^2 x\over
-                    \sin ^2x}\)
-                </td>
-                <td style="white-space:normal; text-align:left;" id="TBL-11-1-2" class="td01">
-                    <span class="ptmb8t-">49.</span><a id="x1-6449"></a> \(x(\ln x)^2y'=-4(\ln x)^2+y\ln x+y^2\)
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tabular" id="8a3249cf-6160-44dd-ae43-0edaf1285d01">
-        <table id="TBL-12" class="tabular">
-            <colgroup id="TBL-12-1g">
-                <col id="TBL-12-1">
-                <col id="TBL-12-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-12-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-12-1-1" class="td00">
-                    <span class="ptmb8t-">50.</span><a id="x1-6550"></a> \(2x(y+2\sqrt x)y'=(y+\sqrt x)^2\)
-                </td>
-                <td style="white-space:normal; text-align:left;" id="TBL-12-1-2" class="td01">
-                    <span class="ptmb8t-">51.</span><a id="x1-6651"></a> \((y+e^{x^2})y'=2x(y^2+ye^{x^2}+e^{2x^2})\)
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-    <span class="ptmb8t-">52.</span> <a id="x1-6752"></a> Solve the initial value problem
-    \[ y'+{2\over x}y={3x^2y^2+6xy+2\over x^2(2xy+3)},\quad y(2)=2\]
-
-
-
-    <span class="ptmb8t-">53.</span> <a id="x1-6853"></a> Solve the initial value problem
-    \[ y'+{3\over x}y={3x^4y^2+10x^2y+6\over x^3(2x^2y+5)},\quad y(1)=1\]
-    <span class="ptmb8t-">54.</span> <a id="x1-6954"></a> Prove: If \(y\) is a solution of a homogeneous nonlinear
-    equation \(y'=q(y/x)\), so is \(y_1=y(ax)/a\), where \(a\) is any nonzero
-    constant.
-    <span class="ptmb8t-">55.</span> <a id="x1-7055"></a> A generalized <span class="vocab">Riccati
-        equation</span> is of the form
-    \[ y'=P(x)+Q(x)y+R(x)y^2. \, {\rm (A)} \]
-    (If \(R\equiv -1\), (A) is a <span class="vocab">Riccati equation</span>.) Let \(y_1\) be a known solution and \(y\)
-    an arbitrary solution of (A). Let \(z=y-y_1\). Show that \(z\)
-    is a solution of a Bernoulli equation with \(n=2\).
-    <!--l. 350-->
-    <p class="noindent" id="c8619aea-95ef-4a31-9bd1-2fa9f8cb6440">In Exercises&nbsp;<a href="#x1-7156">56<!--tex4ht:ref: exer:2.4.56 --></a>–<a href="#x1-7459">59<!--tex4ht:ref: exer:2.4.59 --></a>, given that \(y_1\)
-        is a solution of the given equation, use the method suggested by Exercise <a href="#x1-7055">55<!--tex4ht:ref: exer:2.4.55 --></a> to find
-        other solutions.
-    </p>
-    <dl class="list1" id="c18315ac-89b1-42a7-b2a0-778eacd70a8b">
-        <dt class="list">
-            <span class="ptmb8t-">56.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 352-->
-            <p class="noindent"><a id="x1-7156"></a> \(y'=1+x - (1+2x)y+xy^2\); \(y_1=1\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">57.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 354-->
-            <p class="noindent"><a id="x1-7257"></a> \(y'=e^{2x}+(1-2e^x)y+y^2\); \(y_1=e^x\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">58.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 356-->
-            <p class="noindent"><a id="x1-7358"></a> \(xy'=2-x+(2x-2)y-xy^2\); \(y_1=1\)
-
-
-
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">59.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 358-->
-            <p class="noindent"><a id="x1-7459"></a> \(xy'=x^3+(1-2x^2)y+xy^2\); \(y_1=x\)
-            </p>
-        </dd>
-    </dl>
-    <a class="back-to-ch" href="sec2.0.html" id="e9d91c07-13ac-47d3-8885-3b77d97cd85d">Back</a>
-
-
-
-</body></html>
+		<span class="ptmb8t-">53.</span>
+		<a id="x1-6853"></a>
+		Solve the initial value problem \[ y'+{3\over x}y={3x^4y^2+10x^2y+6\over
+		x^3(2x^2y+5)},\quad y(1)=1\]
+		<span class="ptmb8t-">54.</span>
+		<a id="x1-6954"></a>
+		Prove: If \(y\) is a solution of a homogeneous nonlinear equation
+		\(y'=q(y/x)\), so is \(y_1=y(ax)/a\), where \(a\) is any nonzero constant.
+		<span class="ptmb8t-">55.</span>
+		<a id="x1-7055"></a>
+		A generalized
+		<span class="vocab">Riccati equation</span>
+		is of the form \[ y'=P(x)+Q(x)y+R(x)y^2. \, {\rm (A)} \] (If \(R\equiv -1\),
+		(A) is a
+		<span class="vocab">Riccati equation</span>
+		.) Let \(y_1\) be a known solution and \(y\) an arbitrary solution of (A).
+		Let \(z=y-y_1\). Show that \(z\) is a solution of a Bernoulli equation with
+		\(n=2\).
+		<!--l. 350-->
+		<p class="noindent" id="c8619aea-95ef-4a31-9bd1-2fa9f8cb6440">
+			In Exercises&nbsp;
+			<a href="#x1-7156">
+				56
+				<!--tex4ht:ref: exer:2.4.56 -->
+			</a>
+			–
+			<a href="#x1-7459">
+				59
+				<!--tex4ht:ref: exer:2.4.59 -->
+			</a>
+			, given that \(y_1\) is a solution of the given equation, use the method
+			suggested by Exercise
+			<a href="#x1-7055">
+				55
+				<!--tex4ht:ref: exer:2.4.55 -->
+			</a>
+			to find other solutions.
+		</p>
+		<dl class="list1" id="c18315ac-89b1-42a7-b2a0-778eacd70a8b">
+			<dt class="list">
+				<span class="ptmb8t-">56.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 352-->
+				<p class="noindent">
+					<a id="x1-7156"></a>
+					\(y'=1+x - (1+2x)y+xy^2\); \(y_1=1\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">57.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 354-->
+				<p class="noindent">
+					<a id="x1-7257"></a>
+					\(y'=e^{2x}+(1-2e^x)y+y^2\); \(y_1=e^x\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">58.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 356-->
+				<p class="noindent">
+					<a id="x1-7358"></a>
+					\(xy'=2-x+(2x-2)y-xy^2\); \(y_1=1\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">59.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 358-->
+				<p class="noindent">
+					<a id="x1-7459"></a>
+					\(xy'=x^3+(1-2x^2)y+xy^2\); \(y_1=x\)
+				</p>
+			</dd>
+		</dl>
+		<a
+			class="back-to-ch"
+			href="sec2.0.html"
+			id="e9d91c07-13ac-47d3-8885-3b77d97cd85d"
+		>
+			Back
+		</a>
+	</body>
+</html>

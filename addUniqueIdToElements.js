@@ -9,7 +9,7 @@ const addUniqueIdToElements = async (dirPath) => {
     const files = await fs.promises.readdir(dirPath);
 
     for (const file of files) {
-      if (!file.startsWith('.') && file.endsWith('.html')) {
+      if (!file.startsWith('.') && file.endsWith('.html') && !file.startsWith("sec0") && !file.startsWith("sec1")) {
         const filePath = path.join(dirPath, file);
         const fileContent = await fs.promises.readFile(filePath, 'utf-8');
         const modifiedContent = await addUniqueIdToElementsInHtml(fileContent);
@@ -40,8 +40,8 @@ const addUniqueIdToElementsInHtml = async (htmlContent) => {
     }
   });
 
-  return $.html();
-  // return await prettier.format($.html(), { htmlWhitespaceSensitivity: 'ignore', parser: 'html', useTabs: true, quoteProps: 'consistent' });
+  // return $.html();
+  return await prettier.format($.html(), { htmlWhitespaceSensitivity: 'ignore', parser: 'html', useTabs: true, quoteProps: 'consistent' });
 };
 
 // Replace 'your_directory_path' with the path to your HTML files directory.

@@ -1,58 +1,99 @@
-<!DOCTYPE html><html lang="en-US" xml:lang="en-US"><head><title></title> 
-<meta charset="utf-8"> 
-<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator"> 
-<meta content="width=device-width,initial-scale=1" name="viewport"> 
-<link rel="stylesheet" type="text/css" href="combined.css">
-<meta content="Trench_DiffEQ_Book.tex" name="src"> 
-<script>window.MathJax = { tex: { tags: "ams", }, }; </script> 
- <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>  
-</head><body>
-<div class="center" id="1b2f8c29-907f-4ff0-9a72-4a0596344c14">
-<p class="noindent">
-</p><p class="noindent"><span class="ptmb8t-x-x-248">CHAPTER&nbsp;5</span><br>
-<span class="ptmb8t-x-x-248">Linear Second Order Equations</span>
-<a id="x1-1doc"></a>
-</p>
-</div>
-<p class="noindent" id="56f5fe50-f851-45ec-893b-494fd8b32cf6">IN THIS CHAPTER we study a particularly important class of second order equations. Because of their many
-applications in science and engineering, second order differential equation have historically been the most
-thoroughly studied class of differential equations. Research on the theory of second order differential equations
-continues to the present day. This chapter is devoted to second order equations that can be written in the
-form
-                                        \[ P_0(x)y''+P_1(x)y'+P_2(x)y=F(x)\]
- Such equations are said to be <span class="vocab">linear</span>. As in the case of first order linear equations, (A) is said to be <span class="vocab">homogeneous</span>
-if \(F\equiv 0\), or <span class="vocab">nonhomogeneous</span> if \(F\not \equiv 0\).
-</p><p class="noindent" id="d7cf6f97-88fb-41ae-afac-ce3429f5face"><a href="sec5.1.book.html">SECTION&nbsp;5.1</a> is devoted to the theory of homogeneous linear equations.
-</p><p class="noindent" id="4584795d-577e-4b91-8f01-e131d15ffc8a"><a href="sec5.2.book.html">SECTION&nbsp;5.2</a> deals with homogeneous equations of the special form
-                                                                                
+<!doctype html>
+<html lang="en-US" xml:lang="en-US">
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator" />
+		<meta content="width=device-width,initial-scale=1" name="viewport" />
+		<link rel="stylesheet" type="text/css" href="combined.css" />
+		<meta content="Trench_DiffEQ_Book.tex" name="src" />
+		<script>
+			window.MathJax = { tex: { tags: "ams" } };
+		</script>
+		<script
+			async="async"
+			id="MathJax-script"
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+			type="text/javascript"
+		></script>
+	</head>
+	<body>
+		<div class="center" id="1b2f8c29-907f-4ff0-9a72-4a0596344c14">
+			<p class="noindent"></p>
+			<p class="noindent">
+				<span class="ptmb8t-x-x-248">CHAPTER&nbsp;5</span>
+				<br />
+				<span class="ptmb8t-x-x-248">Linear Second Order Equations</span>
+				<a id="x1-1doc"></a>
+			</p>
+		</div>
+		<p class="noindent" id="56f5fe50-f851-45ec-893b-494fd8b32cf6">
+			IN THIS CHAPTER we study a particularly important class of second order
+			equations. Because of their many applications in science and engineering,
+			second order differential equation have historically been the most
+			thoroughly studied class of differential equations. Research on the theory
+			of second order differential equations continues to the present day. This
+			chapter is devoted to second order equations that can be written in the
+			form \[ P_0(x)y''+P_1(x)y'+P_2(x)y=F(x)\] Such equations are said to be
+			<span class="vocab">linear</span>
+			. As in the case of first order linear equations, (A) is said to be
+			<span class="vocab">homogeneous</span>
+			if \(F\equiv 0\), or
+			<span class="vocab">nonhomogeneous</span>
+			if \(F\not \equiv 0\).
+		</p>
+		<p class="noindent" id="d7cf6f97-88fb-41ae-afac-ce3429f5face">
+			<a href="sec5.1.book.html">SECTION&nbsp;5.1</a>
+			is devoted to the theory of homogeneous linear equations.
+		</p>
+		<p class="noindent" id="4584795d-577e-4b91-8f01-e131d15ffc8a">
+			<a href="sec5.2.book.html">SECTION&nbsp;5.2</a>
+			deals with homogeneous equations of the special form \[ ay''+by'+cy=0\]
+			where \(a\), \(b\), and \(c\) are constant (\(a\ne 0\)). When you’ve
+			completed this section you’ll know everything there is to know about
+			solving such equations.
+		</p>
+		<p class="noindent" id="6cf7d066-5ec3-46dc-86f8-6bff415a0ff5">
+			<a href="sec5.3.book.html">SECTION&nbsp;5.3</a>
+			presents the theory of nonhomogeneous linear equations.
+		</p>
+		<p class="noindent" id="8e2f2174-5ba3-4cf1-8804-bccfda100d04">
+			SECTIONS&nbsp;
+			<a href="sec5.4.book.html">5.4</a>
+			AND
+			<a href="sec5.5.book.html">5.5</a>
+			present the
+			<span class="vocab">method of undetermined coefficients</span>
+			, which can be used to solve nonhomogeneous equations of the form \[
+			ay''+by'+cy=F(x)\] where \(a\), \(b\), and \(c\) are constants and \(F\)
+			has a special form that is still sufficiently general to occur in many
+			applications. In this section we make extensive use of the idea of
+			variation of parameters introduced in Chapter&nbsp;2.
+		</p>
+		<p class="noindent" id="634f319e-c17d-4798-9cef-70e5c612d49b">
+			<a href="sec5.6.book.html">SECTION&nbsp;5.6</a>
+			deals with
+			<span class="vocab">reduction of order</span>
+			, a technique based on the idea of variation of parameters, which enables
+			us to find the general solution of a nonhomogeneous linear second order
+			equation provided that we know one nontrivial (not identically zero)
+			solution of the associated homogeneous equation.
+		</p>
+		<p class="noindent" id="9b851c97-7f58-4223-baad-be2d4bc09bfb">
+			<a href="sec5.6.book.html">SECTION&nbsp;5.6</a>
+			deals with the method traditionally called
+			<span class="vocab">variation of parameters</span>
+			, which enables us to find the general solution of a nonhomogeneous linear
+			second order equation provided that we know two nontrivial solutions (with
+			nonconstant ratio) of the associated homogeneous equation.
+		</p>
 
-                                                                                
-                                        \[ ay''+by'+cy=0\]
- where \(a\), \(b\), and \(c\) are constant (\(a\ne 0\)). When you’ve completed this section you’ll know everything there is to know about
-solving such equations.
-</p><p class="noindent" id="6cf7d066-5ec3-46dc-86f8-6bff415a0ff5"><a href="sec5.3.book.html">SECTION&nbsp;5.3</a> presents the theory of nonhomogeneous linear equations.
-</p><p class="noindent" id="8e2f2174-5ba3-4cf1-8804-bccfda100d04">SECTIONS&nbsp;<a href="sec5.4.book.html">5.4</a> AND <a href="sec5.5.book.html">5.5</a> present the <span class="vocab">method of undetermined coefficients</span>, which can be used to solve
-nonhomogeneous equations of the form
-                                        \[ ay''+by'+cy=F(x)\]
- where \(a\), \(b\), and \(c\) are constants and \(F\) has a special form that is still sufficiently general to occur in many
-applications. In this section we make extensive use of the idea of variation of parameters introduced in
-Chapter&nbsp;2.
-</p><p class="noindent" id="634f319e-c17d-4798-9cef-70e5c612d49b"><a href="sec5.6.book.html">SECTION&nbsp;5.6</a> deals with <span class="vocab">reduction of order</span>, a technique based on the idea of variation of parameters,
-which enables us to find the general solution of a nonhomogeneous linear second order equation
-provided that we know one nontrivial (not identically zero) solution of the associated homogeneous
-equation.
-</p><p class="noindent" id="9b851c97-7f58-4223-baad-be2d4bc09bfb"><a href="sec5.6.book.html">SECTION&nbsp;5.6</a> deals with the method traditionally called <span class="vocab">variation of parameters</span>, which enables us to find the
-general solution of a nonhomogeneous linear second order equation provided that we know two nontrivial
-solutions (with nonconstant ratio) of the associated homogeneous equation.
-</p>
-                                                                                
-<div class="nav" id="f6680c27-1bef-42e3-904e-f1c2c46b1527">
-	<a href="sec4.0.html">Chapter 4</a>
-  
-	<a href="toc.html">Contents</a>
-  
-	<a href="sec6.0.html">Chapter 6</a>
-</div>
-   
- 
-</body></html>
+		<div class="nav" id="f6680c27-1bef-42e3-904e-f1c2c46b1527">
+			<a href="sec4.0.html">Chapter 4</a>
+
+			<a href="toc.html">Contents</a>
+
+			<a href="sec6.0.html">Chapter 6</a>
+		</div>
+	</body>
+</html>

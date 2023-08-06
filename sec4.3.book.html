@@ -1,354 +1,811 @@
-<!DOCTYPE html><html lang="en-US" xml:lang="en-US"><head><title></title> 
-<meta charset="utf-8"> 
-<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator"> 
-<meta content="width=device-width,initial-scale=1" name="viewport"> 
-<link href="combined.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="niceties.js"></script> 
-<meta content="Trench_DiffEQ_Book.tex" name="src"> 
-<script>window.MathJax = {
-     tex: { packages: {'[+]': ['tagformat']}, tags: "ams", tagformat: { tag: (tag) => '(4.3.' + tag + ')'} }
- }; </script> 
- <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>  
- <style type="text/css">
-  :root {
-    --section-number: "4.3"
-  }
-</style>
-</head><body>
-<p id="323d57cc-b0a5-4da4-9432-0d4591b0556f"><a id="x1-1doc"></a>
-</p><p class="noindent" id="04a945fb-8d69-4722-8ceb-7387c9f64d0f">Section 4.3 Elementary Mechanics
-</p><p class="noindent" id="a86512a0-3a77-4b2b-9c17-cbf84b9887d1"><span class="ptmb8t-">4.3</span><span class="ptmb8t-x-x-90">&nbsp;  ELEMENTARY MECHANICS</span>
-</p><p class="noindent" id="c536c296-711e-4376-af9c-bccde65f6c04"><span id="textcolor1">Newton’s Second Law of Motion</span>
-</p><p class="indent" id="6b6154d6-6316-4f67-969b-6067c5d8336a">
-</p><p class="noindent" id="bd59eb0d-9dc6-4d66-8f3f-70d7e684584b">In this section we consider an object with constant mass \(m\) moving along a line under a force \(F\). Let \(y=y(t)\) be the
-displacement of the object from a reference point on the line at time \(t\), and let \(v=v(t)\) and \(a=a(t)\) be the velocity and
-acceleration of the object at time \(t\). Thus, \(v=y'\) and \(a=v'=y''\), where the prime denotes differentiation with respect to \(t\).
-Newton’s second law of motion asserts that the force \(F\) and the acceleration \(a\) are related by the equation
-\begin {equation}  \label {eq:4.3.1} F=ma\end {equation}<a id="x1-2r1"></a>
-</p><p class="noindent" id="19648842-61dc-4126-930c-d2bdb1a24915"><span id="textcolor2">Units</span>
-</p><p class="indent" id="6ea8146b-bef6-4b6c-94f3-ecaeb8cc40f9">
-</p><p class="noindent" id="f161fcca-5716-4d5d-924f-3d739e079288">In applications there are three main sets of units in use for length, mass, force, and time: the cgs, mks, and British
-systems. All three use the second as the unit of time. Table&nbsp;1 shows the other units. Consistent with (<a href="#x1-2r1">4.3.1<!-- tex4ht:ref: eq:4.3.1  --></a>), the
-unit of force in each system is defined to be the force required to impart an acceleration of (one unit of length)\(/s^2\) to
-one unit of mass.
-</p>
-<div class="center" id="82f79696-13b6-453c-a7cc-bdb9016c56e2">
-<p class="noindent">
-</p>
-<div class="tabular"> <table class="tabular" id="TBL-1"><colgroup id="TBL-1-1g"><col id="TBL-1-1"></colgroup><colgroup id="TBL-1-2g"><col id="TBL-1-2"></colgroup><colgroup id="TBL-1-3g"><col id="TBL-1-3"></colgroup><colgroup id="TBL-1-4g"><col id="TBL-1-4"></colgroup><tbody><tr class="hline" style="border-top:1px solid #000"><td></td><td></td><td></td><td></td></tr><tr id="TBL-1-1-" style="vertical-align:baseline;"><td class="td11" id="TBL-1-1-1" style="white-space:nowrap; text-align:center;">       </td><td class="td11" id="TBL-1-1-2" style="white-space:nowrap; text-align:center;">    <span class="ptmb8t-">Length         </span></td><td class="td11" id="TBL-1-1-3" style="white-space:nowrap; text-align:center;">   <span class="ptmb8t-">Force       </span></td><td class="td11" id="TBL-1-1-4" style="white-space:nowrap; text-align:center;">    <span class="ptmb8t-">Mass         </span></td>
-</tr><tr class="hline" style="border-top:1px solid #000"><td></td><td></td><td></td><td></td></tr><tr id="TBL-1-2-" style="vertical-align:baseline;"><td class="td11" id="TBL-1-2-1" style="white-space:nowrap; text-align:center;">  cgs     </td><td class="td11" id="TBL-1-2-2" style="white-space:nowrap; text-align:center;"> centimeter (cm)  </td><td class="td11" id="TBL-1-2-3" style="white-space:nowrap; text-align:center;">  dyne (d)     </td><td class="td11" id="TBL-1-2-4" style="white-space:nowrap; text-align:center;">   gram (g)       </td>
-</tr><tr class="hline" style="border-top:1px solid #000"><td></td><td></td><td></td><td></td></tr><tr id="TBL-1-3-" style="vertical-align:baseline;"><td class="td11" id="TBL-1-3-1" style="white-space:nowrap; text-align:center;">  mks     </td><td class="td11" id="TBL-1-3-2" style="white-space:nowrap; text-align:center;">   meter (m)       </td><td class="td11" id="TBL-1-3-3" style="white-space:nowrap; text-align:center;"> newton (N)  </td><td class="td11" id="TBL-1-3-4" style="white-space:nowrap; text-align:center;"> kilogram (kg)  </td>
-</tr><tr class="hline" style="border-top:1px solid #000"><td></td><td></td><td></td><td></td></tr><tr id="TBL-1-4-" style="vertical-align:baseline;"><td class="td11" id="TBL-1-4-1" style="white-space:nowrap; text-align:center;"> British  </td><td class="td11" id="TBL-1-4-2" style="white-space:nowrap; text-align:center;">    foot (ft)         </td><td class="td11" id="TBL-1-4-3" style="white-space:nowrap; text-align:center;"> pound (lb)   </td><td class="td11" id="TBL-1-4-4" style="white-space:nowrap; text-align:center;">   slug (sl)       </td>
-</tr><tr class="hline" style="border-top:1px solid #000"><td></td><td></td><td></td><td></td></tr></tbody></table>                                                                      </div>
-<p class="noindent">Table 1.</p></div>
-<p class="indent" id="cb2fc5d8-5b4b-4135-bb4d-fe810e42aedb">  If we assume that Earth is a perfect sphere with constant mass density, Newton’s law of gravitation (discussed
-later in this section) asserts that the force exerted on an object by Earth’s gravitational field is proportional to the
-mass of the object and inversely proportional to the square of its distance from the center of Earth. However, if
-the object remains sufficiently close to Earth’s surface, we may assume that the gravitational force is constant and
-equal to its value at the surface. The magnitude of this force is \(mg\), where \(g\) is called the <span class="vocab">acceleration due to
-gravity</span>. (To be completely accurate, \(g\) should be called the <span class="vocab">magnitude of the acceleration due to gravity
-at Earth’s surface</span>.)&nbsp;This quantity has been determined experimentally. Approximate values of \(g\)
-are
-                                                                                
+<!doctype html>
+<html lang="en-US" xml:lang="en-US">
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator" />
+		<meta content="width=device-width,initial-scale=1" name="viewport" />
+		<link href="combined.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="niceties.js"></script>
+		<meta content="Trench_DiffEQ_Book.tex" name="src" />
+		<script>
+			window.MathJax = {
+				tex: {
+					packages: { "[+]": ["tagformat"] },
+					tags: "ams",
+					tagformat: { tag: (tag) => "(4.3." + tag + ")" },
+				},
+			};
+		</script>
+		<script
+			async="async"
+			id="MathJax-script"
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+			type="text/javascript"
+		></script>
+		<style type="text/css">
+			:root {
+				--section-number: "4.3";
+			}
+		</style>
+	</head>
+	<body>
+		<p id="323d57cc-b0a5-4da4-9432-0d4591b0556f"><a id="x1-1doc"></a></p>
+		<p class="noindent" id="04a945fb-8d69-4722-8ceb-7387c9f64d0f">
+			Section 4.3 Elementary Mechanics
+		</p>
+		<p class="noindent" id="a86512a0-3a77-4b2b-9c17-cbf84b9887d1">
+			<span class="ptmb8t-">4.3</span>
+			<span class="ptmb8t-x-x-90">&nbsp; ELEMENTARY MECHANICS</span>
+		</p>
+		<p class="noindent" id="c536c296-711e-4376-af9c-bccde65f6c04">
+			<span id="textcolor1">Newton’s Second Law of Motion</span>
+		</p>
+		<p class="indent" id="6b6154d6-6316-4f67-969b-6067c5d8336a"></p>
+		<p class="noindent" id="bd59eb0d-9dc6-4d66-8f3f-70d7e684584b">
+			In this section we consider an object with constant mass \(m\) moving
+			along a line under a force \(F\). Let \(y=y(t)\) be the displacement of
+			the object from a reference point on the line at time \(t\), and let
+			\(v=v(t)\) and \(a=a(t)\) be the velocity and acceleration of the object
+			at time \(t\). Thus, \(v=y'\) and \(a=v'=y''\), where the prime denotes
+			differentiation with respect to \(t\). Newton’s second law of motion
+			asserts that the force \(F\) and the acceleration \(a\) are related by the
+			equation \begin {equation} \label {eq:4.3.1} F=ma\end {equation}
+			<a id="x1-2r1"></a>
+		</p>
+		<p class="noindent" id="19648842-61dc-4126-930c-d2bdb1a24915">
+			<span id="textcolor2">Units</span>
+		</p>
+		<p class="indent" id="6ea8146b-bef6-4b6c-94f3-ecaeb8cc40f9"></p>
+		<p class="noindent" id="f161fcca-5716-4d5d-924f-3d739e079288">
+			In applications there are three main sets of units in use for length,
+			mass, force, and time: the cgs, mks, and British systems. All three use
+			the second as the unit of time. Table&nbsp;1 shows the other units.
+			Consistent with (
+			<a href="#x1-2r1">
+				4.3.1
+				<!-- tex4ht:ref: eq:4.3.1  -->
+			</a>
+			), the unit of force in each system is defined to be the force required to
+			impart an acceleration of (one unit of length)\(/s^2\) to one unit of
+			mass.
+		</p>
+		<div class="center" id="82f79696-13b6-453c-a7cc-bdb9016c56e2">
+			<p class="noindent"></p>
+			<div class="tabular">
+				<table class="tabular" id="TBL-1">
+					<colgroup id="TBL-1-1g"><col id="TBL-1-1" /></colgroup>
+					<colgroup id="TBL-1-2g"><col id="TBL-1-2" /></colgroup>
+					<colgroup id="TBL-1-3g"><col id="TBL-1-3" /></colgroup>
+					<colgroup id="TBL-1-4g"><col id="TBL-1-4" /></colgroup>
+					<tbody>
+						<tr class="hline" style="border-top: 1px solid #000">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr id="TBL-1-1-" style="vertical-align: baseline">
+							<td
+								class="td11"
+								id="TBL-1-1-1"
+								style="white-space: nowrap; text-align: center"
+							></td>
+							<td
+								class="td11"
+								id="TBL-1-1-2"
+								style="white-space: nowrap; text-align: center"
+							>
+								<span class="ptmb8t-">Length</span>
+							</td>
+							<td
+								class="td11"
+								id="TBL-1-1-3"
+								style="white-space: nowrap; text-align: center"
+							>
+								<span class="ptmb8t-">Force</span>
+							</td>
+							<td
+								class="td11"
+								id="TBL-1-1-4"
+								style="white-space: nowrap; text-align: center"
+							>
+								<span class="ptmb8t-">Mass</span>
+							</td>
+						</tr>
+						<tr class="hline" style="border-top: 1px solid #000">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr id="TBL-1-2-" style="vertical-align: baseline">
+							<td
+								class="td11"
+								id="TBL-1-2-1"
+								style="white-space: nowrap; text-align: center"
+							>
+								cgs
+							</td>
+							<td
+								class="td11"
+								id="TBL-1-2-2"
+								style="white-space: nowrap; text-align: center"
+							>
+								centimeter (cm)
+							</td>
+							<td
+								class="td11"
+								id="TBL-1-2-3"
+								style="white-space: nowrap; text-align: center"
+							>
+								dyne (d)
+							</td>
+							<td
+								class="td11"
+								id="TBL-1-2-4"
+								style="white-space: nowrap; text-align: center"
+							>
+								gram (g)
+							</td>
+						</tr>
+						<tr class="hline" style="border-top: 1px solid #000">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr id="TBL-1-3-" style="vertical-align: baseline">
+							<td
+								class="td11"
+								id="TBL-1-3-1"
+								style="white-space: nowrap; text-align: center"
+							>
+								mks
+							</td>
+							<td
+								class="td11"
+								id="TBL-1-3-2"
+								style="white-space: nowrap; text-align: center"
+							>
+								meter (m)
+							</td>
+							<td
+								class="td11"
+								id="TBL-1-3-3"
+								style="white-space: nowrap; text-align: center"
+							>
+								newton (N)
+							</td>
+							<td
+								class="td11"
+								id="TBL-1-3-4"
+								style="white-space: nowrap; text-align: center"
+							>
+								kilogram (kg)
+							</td>
+						</tr>
+						<tr class="hline" style="border-top: 1px solid #000">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr id="TBL-1-4-" style="vertical-align: baseline">
+							<td
+								class="td11"
+								id="TBL-1-4-1"
+								style="white-space: nowrap; text-align: center"
+							>
+								British
+							</td>
+							<td
+								class="td11"
+								id="TBL-1-4-2"
+								style="white-space: nowrap; text-align: center"
+							>
+								foot (ft)
+							</td>
+							<td
+								class="td11"
+								id="TBL-1-4-3"
+								style="white-space: nowrap; text-align: center"
+							>
+								pound (lb)
+							</td>
+							<td
+								class="td11"
+								id="TBL-1-4-4"
+								style="white-space: nowrap; text-align: center"
+							>
+								slug (sl)
+							</td>
+						</tr>
+						<tr class="hline" style="border-top: 1px solid #000">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<p class="noindent">Table 1.</p>
+		</div>
+		<p class="indent" id="cb2fc5d8-5b4b-4135-bb4d-fe810e42aedb">
+			If we assume that Earth is a perfect sphere with constant mass density,
+			Newton’s law of gravitation (discussed later in this section) asserts that
+			the force exerted on an object by Earth’s gravitational field is
+			proportional to the mass of the object and inversely proportional to the
+			square of its distance from the center of Earth. However, if the object
+			remains sufficiently close to Earth’s surface, we may assume that the
+			gravitational force is constant and equal to its value at the surface. The
+			magnitude of this force is \(mg\), where \(g\) is called the
+			<span class="vocab">acceleration due to gravity</span>
+			. (To be completely accurate, \(g\) should be called the
+			<span class="vocab">
+				magnitude of the acceleration due to gravity at Earth’s surface
+			</span>
+			.)&nbsp;This quantity has been determined experimentally. Approximate
+			values of \(g\) are \[\begin {array}{rl} g &amp;=980\ \mbox {cm/s}^2
+			\hskip 40pt \mbox {(cgs)} \\ g &amp;=9.8\ \mbox {m/s}^2 \hskip 48pt \mbox
+			{(mks)} \\ g &amp;=32\ \mbox {ft/s}^2 \hskip 52pt \mbox {(British)}\end
+			{array}\]
+		</p>
+		<p class="indent" id="5681983c-e062-4eb4-b2b0-df8495a987f7">
+			In general, the force \(F\) in (
+			<a href="#x1-2r1">
+				4.3.1
+				<!-- tex4ht:ref: eq:4.3.1  -->
+			</a>
+			) may depend upon \(t\), \(y\), and \(y'\). Since \(a=y''\), (
+			<a href="#x1-2r1">
+				4.3.1
+				<!-- tex4ht:ref: eq:4.3.1  -->
+			</a>
+			) can be written in the form \begin {equation} \label {eq:4.3.2}
+			my''=F(t,y,y')\end {equation}
+			<a id="x1-3r2"></a>
+			which is a second order equation. We’ll consider this equation with
+			restrictions on \(F\) later; however, since Chapter&nbsp;2 dealt only with
+			first order equations, we consider here only problems in which (
+			<a href="#x1-3r2">
+				4.3.2
+				<!-- tex4ht:ref: eq:4.3.2  -->
+			</a>
+			) can be recast as a first order equation. This is possible if \(F\) does
+			not depend on \(y\), so (
+			<a href="#x1-3r2">
+				4.3.2
+				<!-- tex4ht:ref: eq:4.3.2  -->
+			</a>
+			) is of the form \[ my''=F(t,y')\] Letting \(v=y'\) and \(v'=y''\) yields
+			a first order equation for \(v\): \begin {equation} \label {eq:4.3.3}
+			mv'=F(t,v)\end {equation}
+			<a id="x1-4r3"></a>
+			Solving this equation yields \(v\) as a function of \(t\). If we know
+			\(y(t_0)\) for some time \(t_0\), we can integrate \(v\) to obtain \(y\)
+			as a function of \(t\).
+		</p>
+		<p class="indent" id="0f48c910-2a7d-4f00-8a6b-39fb5340ed2e">
+			Equations of the form (
+			<a href="#x1-4r3">
+				4.3.3
+				<!-- tex4ht:ref: eq:4.3.3  -->
+			</a>
+			) occur in problems involving motion through a resisting medium.
+		</p>
+		<p class="noindent" id="431de923-58e8-4cb2-a274-48bd35b57dfa">
+			<span id="textcolor3">
+				Motion Through a Resisting Medium Under Constant Gravitational Force
+			</span>
+		</p>
+		<p class="indent" id="0db4f5d6-20ee-4f04-9352-b2e3ef18b58e"></p>
+		<p class="noindent" id="00a5bf14-4ddf-4f0b-b598-eb56645cacd1">
+			Now we consider an object moving vertically in some medium. We assume that
+			the only forces acting on the object are gravity and resistance from the
+			medium. We also assume that the motion takes place close to Earth’s
+			surface and take the upward direction to be positive, so the gravitational
+			force can be assumed to have the constant value \(-mg\). We’ll see that,
+			under reasonable assumptions on the resisting force, the velocity
+			approaches a limit as \(t\to \infty \). We call this limit the
+			<span class="vocab">terminal velocity</span>
+			.
+		</p>
+		<div class="newtheorem" id="793acce0-e736-46bd-bd07-9cdb913d16d7">
+			<p class="noindent">
+				<span class="head">
+					<span class="ex-number">Example&nbsp;4.3.1</span>
+				</span>
+				<a id="x1-51"></a>
+				An object with mass \(m\) moves under constant gravitational force
+				through a medium that exerts a resistance with magnitude proportional to
+				the speed of the object. (Recall that the speed of an object is \(|v|\),
+				the absolute value of its velocity \(v\).) Find the velocity of the
+				object as a function of \(t\), and find the terminal velocity. Assume
+				that the initial velocity is \(v_0\).
+			</p>
+		</div>
+		<p class="indent" id="153f5c50-5f9f-4395-8ca8-3e84129b9018"></p>
+		<p class="noindent" id="70d2d64b-8020-42ac-8f64-c8282c8c9121">
+			<span class="ptmb8t-">Solution</span>
+			&nbsp;The total force acting on the object is \begin {equation} \label
+			{eq:4.3.4} F=-mg+F_1\end {equation}
+			<a id="x1-6r4"></a>
+			where \(-mg\) is the force due to gravity and \(F_1\) is the resisting
+			force of the medium, which has magnitude \(k|v|\), where \(k\) is a
+			positive constant. If the object is moving downward (\(v\le 0\)), the
+			resisting force is upward (Figure&nbsp;
+			<a href="#-resistive-forces-">
+				4.3.1
+				<!-- tex4ht:ref: figure:4.3.1  -->
+			</a>
+			<span class="ptmb8t-">(a)</span>
+			), so \[ F_1=k|v|=k(-v)=-kv\] On the other hand, if the object is moving
+			upward (\(v\ge 0\)), the resisting force is downward (Figure&nbsp;
+			<a href="#-resistive-forces-">
+				4.3.1
+				<!-- tex4ht:ref: figure:4.3.1  -->
+			</a>
+			<span class="ptmb8t-">(b)</span>
+			), so \[ F_1=-k|v|=-kv\] Thus, (
+			<a href="#x1-6r4">
+				4.3.4
+				<!-- tex4ht:ref: eq:4.3.4  -->
+			</a>
+			) can be written as \begin {equation} \label {eq:4.3.5} F=-mg-kv\end
+			{equation}
+			<a id="x1-7r5"></a>
+			regardless of the sign of the velocity.
+		</p>
+		<figure class="figure" id="e6962ad1-d291-42ca-8fe3-5a726eb6f6e3">
+			<p class="noindent" id="-resistive-forces-">
+				<img height="264" src="EPS/fig040301.png" width="409" />
+				<a id="x1-8r1"></a>
+			</p>
+			<figcaption class="caption">
+				<span class="id">Figure&nbsp;4.3.1</span>
+				<span class="content">Resistive forces</span>
+			</figcaption>
+			<!-- tex4ht:label?: x1-8r1  -->
+		</figure>
+		<p class="indent" id="0ac24362-8ecf-4359-93e5-cdf145f8702d">
+			From Newton’s second law of motion, \[ F=ma=mv'\] so (
+			<a href="#x1-7r5">
+				4.3.5
+				<!-- tex4ht:ref: eq:4.3.5  -->
+			</a>
+			) yields \[ mv'=-mg-kv\] or \begin {equation} \label {eq:4.3.6} v'+{k\over
+			m}v=-g\end {equation}
+			<a id="x1-9r6"></a>
+			Since \(e^{-kt/m}\) is a solution of the complementary equation, the
+			solutions of (
+			<a href="#x1-9r6">
+				4.3.6
+				<!-- tex4ht:ref: eq:4.3.6  -->
+			</a>
+			) are of the form \(v=ue^{-kt/m}\), where \(u'e^{-kt/m}=-g\), so
+			\(u'=-ge^{kt/m}\). Hence, \[ u=-{mg\over k} e^{kt/m}+c\] so \begin
+			{equation} \label {eq:4.3.7} v=ue^{-kt/m}=-{mg\over k}+ce^{-kt/m}\end
+			{equation}
+			<a id="x1-10r7"></a>
+			Since \(v(0)=v_0\), \[ v_0=-{mg\over k}+c\] so \[ c=v_0+{mg\over k} \] and
+			(
+			<a href="#x1-10r7">
+				4.3.7
+				<!-- tex4ht:ref: eq:4.3.7  -->
+			</a>
+			) becomes \[ v=-{mg\over k}+\left (v_0+{mg\over k}\right ) e^{-kt/m}\]
+			Letting \(t\to \infty \) here shows that the terminal velocity is \[ \lim
+			_{t\to \infty } v(t)=-{mg\over k}\] which is independent of the initial
+			velocity \(v_0\) (Figure&nbsp;
+			<a href="#-solutions-of-mvmgkv-">
+				4.3.2
+				<!-- tex4ht:ref: figure:4.3.2  -->
+			</a>
+			).
+		</p>
+		<figure class="figure" id="4ef31ce9-3f6e-4507-925c-ccac1549c232">
+			<p class="noindent" id="-solutions-of-mvmgkv-">
+				<img height="264" src="EPS/fig040302.png" width="409" />
+				<a id="x1-11r2"></a>
+			</p>
+			<figcaption class="caption">
+				<span class="id">Figure&nbsp;4.3.2</span>
+				<span class="content">Solutions of \(mv'=-mg-kv\)</span>
+			</figcaption>
+			<!-- tex4ht:label?: x1-11r2  -->
+		</figure>
+		<div class="newtheorem" id="c2e433b2-7f4f-4336-b668-d1a3b0517724">
+			<p class="noindent">
+				<span class="head">
+					<span class="ex-number">Example&nbsp;4.3.2</span>
+				</span>
+				<a id="x1-122"></a>
+				A 960-lb object is given an initial upward velocity of 60 ft/s near the
+				surface of Earth. The atmosphere resists the motion with a force of 3 lb
+				for each ft/s of speed. Assuming that the only other force acting on the
+				object is constant gravity, find its velocity \(v\) as a function of
+				\(t\), and find its terminal velocity.
+			</p>
+		</div>
+		<p class="indent" id="0d7a4be3-5456-498d-b91e-7bd4f0f58087"></p>
+		<p class="noindent" id="379acb16-3a6e-495e-8fb1-ce8e19316165">
+			<span class="ptmb8t-">Solution</span>
+			&nbsp;Since \(mg=960\) and \(g=32\), \(m=960/32=30\). The atmospheric
+			resistance is \(-3v\) lb if \(v\) is expressed in feet per second.
+			Therefore \[ 30v'=-960-3v\] which we rewrite as \[ v'+{1\over 10}v=-32\]
+			Since \(e^{-t/10}\) is a solution of the complementary equation, the
+			solutions of this equation are of the form \(v=ue^{-t/10}\), where
+			\(u'e^{-t/10}=-32\), so \(u'=-32e^{t/10}\). Hence, \[ u=-320 e^{t/10}+c\]
+			so \begin {equation} \label {eq:4.3.8} v=ue^{-t/10}=-320+ce^{-t/10}\end
+			{equation}
+			<a id="x1-13r8"></a>
+			The initial velocity is 60 ft/s in the upward (positive) direction; hence,
+			\(v_0=60\). Substituting \(t=0\) and \(v=60\) in (
+			<a href="#x1-13r8">
+				4.3.8
+				<!-- tex4ht:ref: eq:4.3.8  -->
+			</a>
+			) yields \[ 60=-320+c\] so \(c=380\), and (
+			<a href="#x1-13r8">
+				4.3.8
+				<!-- tex4ht:ref: eq:4.3.8  -->
+			</a>
+			) becomes \[ v=-320+380e^{-t/10}\ \mbox {ft/s} \] The terminal velocity is
+			\[ \lim _{t\to \infty }v(t)=-320\mbox { ft/s.} \]
+		</p>
+		<div class="newtheorem" id="6c9cd0db-dbbf-4e30-8d00-1e50d53c9642">
+			<p class="noindent">
+				<span class="head">
+					<span class="ex-number">Example&nbsp;4.3.3</span>
+				</span>
+				<a id="x1-143"></a>
+				A 10 kg mass is given an initial velocity \(v_0\le 0\) near Earth’s
+				surface. The only forces acting on it are gravity and atmospheric
+				resistance proportional to the square of the speed. Assuming that the
+				resistance is 8 N if the speed is 2 m/s, find the velocity of the object
+				as a function of \(t\), and find the terminal velocity.
+			</p>
+		</div>
+		<p class="indent" id="edfcdf46-8791-4adf-b5e5-0ea210a4210e"></p>
+		<p class="noindent" id="6af98992-3deb-409f-9998-3072459c1579">
+			<span class="ptmb8t-">Solution</span>
+			&nbsp;Since the object is falling, the resistance is in the upward
+			(positive) direction. Hence, \begin {equation} \label {eq:4.3.9}
+			mv'=-mg+kv^2\end {equation}
+			<a id="x1-15r9"></a>
+			where \(k\) is a constant. Since the magnitude of the resistance is 8 N
+			when \(v=2\) m/s, \[ k(2^2)=8\] so \(k=2\ \mbox {N-s}^2/\mbox {m}^2\).
+			Since \(m=10\) and \(g=9.8\), (
+			<a href="#x1-15r9">
+				4.3.9
+				<!-- tex4ht:ref: eq:4.3.9  -->
+			</a>
+			) becomes \begin {equation} \label {eq:4.3.10} 10v'=-98+2v^2=2(v^2-49)\end
+			{equation}
+			<a id="x1-16r10"></a>
+			If \(v_0=-7\), then \(v\equiv -7\) for all \(t\ge 0\). If \(v_0\ne -7\),
+			we separate variables to obtain \begin {equation} \label {eq:4.3.11}
+			{1\over v^2-49}v'={1\over 5}\end {equation}
+			<a id="x1-17r11"></a>
+			which is convenient for the required partial fraction expansion \begin
+			{equation} \label {eq:4.3.12} \frac {1}{v^2-49} =\frac {1}{(v-7)(v+7)}
+			={1\over 14}\left [{1\over v-7} -{1\over v+7}\right ]\end {equation}
+			<a id="x1-18r12"></a>
+			Substituting (
+			<a href="#x1-18r12">
+				4.3.12
+				<!-- tex4ht:ref: eq:4.3.12  -->
+			</a>
+			) into (
+			<a href="#x1-17r11">
+				4.3.11
+				<!-- tex4ht:ref: eq:4.3.11  -->
+			</a>
+			) yields \[ {1\over 14}\left [{1\over v-7}-{1\over v+7}\right ]v'={1\over
+			5}\] so \[ \left [{1\over v-7}-{1\over v+7}\right ]v'={14\over 5}\]
+			Integrating this yields \[ \ln |v-7|-\ln |v+7|=14t/5+k\] Therefore \[
+			\left |{v-7\over v+7}\right |=e^ke^{14t/5}\] Since Theorem&nbsp;
+			<span class="ptmb8t-">2.3.1</span>
+			implies that \((v-7)/(v+7)\) can’t change sign (why?), we can rewrite the
+			last equation as \begin {equation} \label {eq:4.3.13} {v-7\over
+			v+7}=ce^{14t/5}\end {equation}
+			<a id="x1-19r13"></a>
+			which is an implicit solution of (
+			<a href="#x1-16r10">
+				4.3.10
+				<!-- tex4ht:ref: eq:4.3.10  -->
+			</a>
+			). Solving this for \(v\) yields \begin {equation} \label {eq:4.3.14}
+			v=-7{c+e^{-14t/5}\over c-e^{-14t/5}}\end {equation}
+			<a id="x1-20r14"></a>
+			Since \(v(0)=v_0\), it (
+			<a href="#x1-19r13">
+				4.3.13
+				<!-- tex4ht:ref: eq:4.3.13  -->
+			</a>
+			) implies that \[ c={v_0-7\over v_0+7}\] Substituting this into (
+			<a href="#x1-20r14">
+				4.3.14
+				<!-- tex4ht:ref: eq:4.3.14  -->
+			</a>
+			) and simplifying yields \[ v=-7{v_0(1+e^{-14t/5})-7(1-e^{-14t/5})\over
+			v_0(1-e^{-14t/5})-7(1+e^{-14t/5}}\] Since \(v_0\le 0\), \(v\) is defined
+			and negative for all \(t&gt;0\). The terminal velocity is \[ \lim _{t\to
+			\infty } v(t)=-7\ \mbox {m/s}\] independent of \(v_0\). More generally, it
+			can be shown (Exercise&nbsp;
+			<span class="ptmb8t-">11</span>
+			) that if \(v\) is any solution of (
+			<a href="#x1-15r9">
+				4.3.9
+				<!-- tex4ht:ref: eq:4.3.9  -->
+			</a>
+			) such that \(v_0\le 0\) then \[ \lim _{t\to \infty }v(t)=-\sqrt {mg\over
+			k} \] (Figure&nbsp;
+			<a href="#-solutions-of-mvmgkv-vv-">
+				4.3.3
+				<!-- tex4ht:ref: figure:4.3.3  -->
+			</a>
+			).
+		</p>
+		<figure class="figure" id="2ea68077-a943-413f-bb2f-e66dcb7110e9">
+			<p class="noindent" id="-solutions-of-mvmgkv-vv-">
+				<img height="264" src="EPS/fig040303.png" width="409" />
+				<a id="x1-21r3"></a>
+			</p>
+			<figcaption class="caption">
+				<span class="id">Figure&nbsp;4.3.3</span>
+				<span class="content">
+					Solutions of \(mv'=-mg+kv^2,\ v(0)=v_0\le 0\)
+				</span>
+			</figcaption>
+			<!-- tex4ht:label?: x1-21r3  -->
+		</figure>
+		<div class="newtheorem" id="50219969-3c7d-4d46-94d9-65fd4a0e86ec">
+			<p class="noindent">
+				<span class="head">
+					<span class="ex-number">Example&nbsp;4.3.4</span>
+				</span>
+				<a id="x1-224"></a>
+				A 10-kg mass is launched vertically upward from Earth’s surface with an
+				initial velocity of \(v_0\) m/s. The only forces acting on the mass are
+				gravity and atmospheric resistance proportional to the square of the
+				speed. Assuming that the atmospheric resistance is 8 N if the speed is 2
+				m/s, find the time \(T\) required for the mass to reach maximum
+				altitude.
+			</p>
+		</div>
+		<p class="indent" id="0f879f80-4d32-44c3-8350-0590c1b61ac2"></p>
+		<p class="noindent" id="b7cf6bad-5a3c-42f7-9029-69ab701fb2b2">
+			<span class="ptmb8t-">Solution</span>
+			&nbsp;The mass will climb while \(v&gt;0 \) and reach its maximum altitude
+			when \(v=0\). Therefore \(v&gt;0\) for \(0\le t&lt;T\) and \(v(T)=0\).
+			Although the mass of the object and our assumptions concerning the forces
+			acting on it are the same as those in Example 3, (
+			<a href="#x1-16r10">
+				4.3.10
+				<!-- tex4ht:ref: eq:4.3.10  -->
+			</a>
+			) does not apply here, since the resisting force is negative if
+			\(v&gt;0\); therefore, we replace (
+			<a href="#x1-16r10">
+				4.3.10
+				<!-- tex4ht:ref: eq:4.3.10  -->
+			</a>
+			) by \begin {equation} \label {eq:4.3.15} 10v'=-98-2v^2\end {equation}
+			<a id="x1-23r15"></a>
+		</p>
+		<p class="indent" id="16e8864a-73eb-4234-af0b-73a5d12c258e">
+			Separating variables yields \[ {5\over v^2+49}v'=-1\] and integrating this
+			yields \[ {5\over 7}\tan ^{-1}{v\over 7}=-t+c\] (Recall that \(\tan
+			^{-1}u\) is the number \(\theta \) such that \(-\pi /2 &lt; \theta &lt;
+			\pi /2\) and \(\tan \theta =u\).) Since \(v(0)=v_0\), \[ c={5\over 7}\tan
+			^{-1}{v_0\over 7}\] so \(v\) is defined implicitly by \begin {equation}
+			\label {eq:4.3.16} {5\over 7} \tan ^{-1}{v\over 7}=-t+{5\over 7} \tan
+			^{-1}{v_0\over 7}, \quad 0\le t\le T\end {equation}
+			<a id="x1-24r16"></a>
+			Solving this for \(v\) yields \begin {equation} \label {eq:4.3.17} v=7\tan
+			\left (-{7t\over 5}+\tan ^{-1}{v_0\over 7}\right )\end {equation}
+			<a id="x1-25r17"></a>
+			Using the identity \[ \tan (A-B)={\tan A-\tan B\over 1+\tan A\tan B} \]
+			with \(A=\tan ^{-1}(v_0/7)\) and \(B=7t/5\), and noting that \(\tan (\tan
+			^{-1}\theta )=\theta \), we can simplify (
+			<a href="#x1-25r17">
+				4.3.17
+				<!-- tex4ht:ref: eq:4.3.17  -->
+			</a>
+			) to \[ v=7{v_0-7\tan (7t/5)\over 7+v_0\tan (7t/5)}\]
+		</p>
+		<p class="indent" id="236eb6f4-d296-45a5-ba74-5f3f6ada14e9">
+			Since \(v(T)=0\) and \(\tan ^{-1}(0)=0\), (
+			<a href="#x1-24r16">
+				4.3.16
+				<!-- tex4ht:ref: eq:4.3.16  -->
+			</a>
+			) implies that \[ -T+{5\over 7} \tan ^{-1}{v_0\over 7}=0\] Therefore \[
+			T={5\over 7} \tan ^{-1}{v_0\over 7}\] Since \(\tan ^{-1}(v_0/7)&lt;\pi
+			/2\) for all \(v_0\), the time required for the mass to reach its maximum
+			altitude is less than \[ {5\pi \over 14} \approx 1.122\ \mbox {s} \]
+			regardless of the initial velocity. Figure&nbsp;
+			<a href="#-solutions-of-ref-eq-for-various-v-">
+				4.3.4
+				<!-- tex4ht:ref: figure:4.3.4  -->
+			</a>
+			shows graphs of \(v\) over \([0,T]\) for various values of \(v_0\).
+		</p>
+		<figure class="figure" id="2f2bd851-a345-4a8e-a729-92a7eccb084c">
+			<p class="noindent" id="-solutions-of-ref-eq-for-various-v-">
+				<img height="264" src="EPS/fig040304.png" width="409" />
+				<a id="x1-26r4"></a>
+			</p>
+			<figcaption class="caption">
+				<span class="id">Figure&nbsp;4.3.4</span>
+				<span class="content">
+					Solutions of (
+					<a href="#x1-23r15">
+						4.3.15
+						<!-- tex4ht:ref: eq:4.3.15  -->
+					</a>
+					) for various \(v_0&gt;0\)
+				</span>
+			</figcaption>
+			<!-- tex4ht:label?: x1-26r4  -->
+		</figure>
+		<p class="indent" id="52e32cb7-9db1-48ae-a906-fe646f1a0332"></p>
+		<p class="noindent" id="24488886-5e1f-4e89-951d-417939e716b8">
+			<span id="textcolor4">Escape Velocity</span>
+		</p>
+		<p class="indent" id="c8ecac5b-e493-47c3-9c7d-90e6acdc4a04"></p>
+		<p class="noindent" id="5144e53a-dadb-4738-bea3-f85601fee1ca">
+			Suppose a space vehicle is launched vertically and its fuel is exhausted
+			when the vehicle reaches an altitude \(h\) above Earth, where \(h\) is
+			sufficiently large so that resistance due to Earth’s atmosphere can be
+			neglected. Let \(t=0\) be the time when burnout occurs. Assuming that the
+			gravitational forces of all other celestial bodies can be neglected, the
+			motion of the vehicle for \(t &gt; 0\) is that of an object with constant
+			mass \(m\) under the influence of Earth’s gravitational force, which we
+			now assume to vary inversely with the square of the distance from Earth’s
+			center; thus, if we take the upward direction to be positive then
+			gravitational force on the vehicle at an altitude \(y\) above Earth is
+			\begin {equation} \label {eq:4.3.18} F=-{K\over (y+R)^2}\end {equation}
+			<a id="x1-27r18"></a>
+			where \(R\) is Earth’s radius (Figure&nbsp;
+			<a href="#-escape-velocity-">
+				4.3.5
+				<!-- tex4ht:ref: figure:4.3.5  -->
+			</a>
+			).
+		</p>
+		<figure class="figure" id="bdcb394b-c9d9-4d6d-b316-b6f08c864a78">
+			<p class="noindent" id="-escape-velocity-">
+				<img height="264" src="EPS/fig040305.png" width="409" />
+				<a id="x1-28r5"></a>
+			</p>
+			<figcaption class="caption">
+				<span class="id">Figure&nbsp;4.3.5</span>
+				<span class="content">Escape velocity</span>
+			</figcaption>
+			<!-- tex4ht:label?: x1-28r5  -->
+		</figure>
+		<p class="indent" id="9df710e5-4172-4566-acea-a77a70cc6abc">
+			Since \(F=-mg\) when \(y=0\), setting \(y=0\) in (
+			<a href="#x1-27r18">
+				4.3.18
+				<!-- tex4ht:ref: eq:4.3.18  -->
+			</a>
+			) yields \[ -mg=-{K\over R^2}\] therefore \(K=mgR^2\) and (
+			<a href="#x1-27r18">
+				4.3.18
+				<!-- tex4ht:ref: eq:4.3.18  -->
+			</a>
+			) can be written more specifically as \begin {equation} \label {eq:4.3.19}
+			F=-{mgR^2\over (y+R)^2}\end {equation}
+			<a id="x1-29r19"></a>
+		</p>
+		<p class="indent" id="3f00cb68-5975-4088-a4d1-3d7729d90b9b">
+			From Newton’s second law of motion, \[ F=m{d^2y\over dt^2}\] so (
+			<a href="#x1-29r19">
+				4.3.19
+				<!-- tex4ht:ref: eq:4.3.19  -->
+			</a>
+			) implies that \begin {equation} \label {eq:4.3.20} {d^2y\over
+			dt^2}=-{gR^2\over (y+R)^2}\end {equation}
+			<a id="x1-30r20"></a>
+		</p>
+		<p class="indent" id="eb294c68-3c90-4953-b60a-04eec342e5cf">
+			We’ll show that there’s a number \(v_e\), called the
+			<span class="vocab">escape velocity</span>
+			, with these properties:
+		</p>
+		<ol id="f12f2e5b-bc53-4247-af59-6a64916cb8c5">
+			<li id="x1-32x1">
+				If \(v_0\ge v_e\) then \(v(t)&gt;0\) for all \(t&gt;0\), and the vehicle
+				continues to climb for all \(t&gt;0\); that is, it “escapes” Earth. (Is
+				it really so obvious that \(\lim _{t\to \infty }y(t)=\infty \) in this
+				case? For a proof, see Exercise&nbsp;
+				<span class="ptmb8t-">20</span>
+				.)
+			</li>
+			<li id="x1-34x2">
+				If \(v_0&lt;v_e\) then \(v(t)\) decreases to zero and becomes negative.
+				Therefore the vehicle attains a maximum altitude \(y_m\) and falls back
+				to Earth.
+			</li>
+		</ol>
+		<p class="indent" id="67372874-0573-4991-81e4-6f272c2b0519">
+			Since (
+			<a href="#x1-30r20">
+				4.3.20
+				<!-- tex4ht:ref: eq:4.3.20  -->
+			</a>
+			) is second order, we can’t solve it by methods discussed so far. However,
+			we’re concerned with \(v\) rather than \(y\), and \(v\) is easier to find.
+			Since \(v=y'\) the chain rule implies that \[ {d^2y\over dt^2}={dv\over
+			dt}={dv\over dy}{dy\over dt}=v{dv\over dy}\] Substituting this into (
+			<a href="#x1-30r20">
+				4.3.20
+				<!-- tex4ht:ref: eq:4.3.20  -->
+			</a>
+			) yields the first order separable equation \begin {equation} \label
+			{eq:4.3.21} v{dv\over dy}=-{gR^2\over (y+R)^2}\end {equation}
+			<a id="x1-35r21"></a>
+			When \(t=0\), the velocity is \(v_0\) and the altitude is \(h\). Therefore
+			we can obtain \(v\) as a function of \(y\) by solving the initial value
+			problem \[ v{dv\over dy}=-{gR^2\over (y+R)^2},\quad v(h)=v_0\]
+		</p>
+		<p class="indent" id="9ceae6cd-96ce-4e36-9fbf-df0cd6cc2154">
+			Integrating (
+			<a href="#x1-35r21">
+				4.3.21
+				<!-- tex4ht:ref: eq:4.3.21  -->
+			</a>
+			) with respect to \(y\) yields \begin {equation} \label {eq:4.3.22}
+			{v^2\over 2}={gR^2\over y+R}+c\end {equation}
+			<a id="x1-36r22"></a>
+			Since \(v(h)=v_0\), \[ c={v_0^2\over 2}-{gR^2\over h+R}\] so (
+			<a href="#x1-36r22">
+				4.3.22
+				<!-- tex4ht:ref: eq:4.3.22  -->
+			</a>
+			) becomes \begin {equation} \label {eq:4.3.23} {v^2\over 2}={gR^2\over
+			y+R}+\left ({v_0^2\over 2}- {gR^2\over h+R}\right )\end {equation}
+			<a id="x1-37r23"></a>
+			If \[ v_0 \ge \left ({2gR^2\over h+R}\right )^{1/2}\] the parenthetical
+			expression in (
+			<a href="#x1-37r23">
+				4.3.23
+				<!-- tex4ht:ref: eq:4.3.23  -->
+			</a>
+			) is nonnegative, so \(v(y)&gt;0\) for \(y&gt;h\). This proves that
+			there’s an escape velocity \(v_e\). We’ll now prove that \[ v_e=\left
+			({2gR^2\over h+R}\right )^{1/2} \] by showing that the vehicle falls back
+			to Earth if \begin {equation} \label {eq:4.3.24} v_0 &lt;\left
+			({2gR^2\over h+R}\right )^{1/2}\end {equation}
+			<a id="x1-38r24"></a>
+			If (
+			<a href="#x1-38r24">
+				4.3.24
+				<!-- tex4ht:ref: eq:4.3.24  -->
+			</a>
+			) holds then the parenthetical expression in (
+			<a href="#x1-37r23">
+				4.3.23
+				<!-- tex4ht:ref: eq:4.3.23  -->
+			</a>
+			) is negative and the vehicle will attain a maximum altitude \(y_m&gt;h\)
+			that satisfies the equation \[ 0={gR^2\over y_m+R}+\left ({v_0^2\over 2}-
+			{gR^2\over h+R}\right )\] The velocity will be zero at the maximum
+			altitude, and the object will then fall to Earth under the influence of
+			gravity.
+		</p>
 
-                                                                                
-                                        \[\begin {array}{rl} g &amp;=980\ \mbox {cm/s}^2 \hskip 40pt \mbox {(cgs)} \\ g &amp;=9.8\ \mbox {m/s}^2 \hskip 48pt \mbox {(mks)} \\ g &amp;=32\ \mbox {ft/s}^2 \hskip 52pt \mbox {(British)}\end {array}\]
-</p><p class="indent" id="5681983c-e062-4eb4-b2b0-df8495a987f7">  In general, the force \(F\) in (<a href="#x1-2r1">4.3.1<!-- tex4ht:ref: eq:4.3.1  --></a>) may depend upon \(t\), \(y\), and \(y'\). Since \(a=y''\), (<a href="#x1-2r1">4.3.1<!-- tex4ht:ref: eq:4.3.1  --></a>) can be written in the form \begin {equation}  \label {eq:4.3.2} my''=F(t,y,y')\end {equation}<a id="x1-3r2"></a> which is
-a second order equation. We’ll consider this equation with restrictions on \(F\) later; however, since
-Chapter&nbsp;2 dealt only with first order equations, we consider here only problems in which (<a href="#x1-3r2">4.3.2<!-- tex4ht:ref: eq:4.3.2  --></a>)
-can be recast as a first order equation. This is possible if \(F\) does not depend on \(y\), so (<a href="#x1-3r2">4.3.2<!-- tex4ht:ref: eq:4.3.2  --></a>) is of the
-form
-                                        \[ my''=F(t,y')\]
- Letting \(v=y'\) and \(v'=y''\) yields a first order equation for \(v\): \begin {equation}  \label {eq:4.3.3} mv'=F(t,v)\end {equation}<a id="x1-4r3"></a> Solving this equation yields \(v\) as a function of \(t\). If we know \(y(t_0)\) for
-some time \(t_0\), we can integrate \(v\) to obtain \(y\) as a function of \(t\).
-</p><p class="indent" id="0f48c910-2a7d-4f00-8a6b-39fb5340ed2e">  Equations of the form (<a href="#x1-4r3">4.3.3<!-- tex4ht:ref: eq:4.3.3  --></a>) occur in problems involving motion through a resisting medium.
-</p><p class="noindent" id="431de923-58e8-4cb2-a274-48bd35b57dfa"><span id="textcolor3">Motion Through a Resisting Medium Under Constant Gravitational Force</span>
-</p><p class="indent" id="0db4f5d6-20ee-4f04-9352-b2e3ef18b58e">
-</p><p class="noindent" id="00a5bf14-4ddf-4f0b-b598-eb56645cacd1">Now we consider an object moving vertically in some medium. We assume that the only forces acting on the
-object are gravity and resistance from the medium. We also assume that the motion takes place close to Earth’s
-surface and take the upward direction to be positive, so the gravitational force can be assumed to have the
-constant value \(-mg\). We’ll see that, under reasonable assumptions on the resisting force, the velocity approaches a
-limit as \(t\to \infty \). We call this limit the <span class="vocab">terminal velocity</span>.
-</p>
-  <div class="newtheorem" id="793acce0-e736-46bd-bd07-9cdb913d16d7">
-<p class="noindent"><span class="head">
-<span class="ex-number">Example&nbsp;4.3.1</span> </span><a id="x1-51"></a> An object with mass \(m\) moves under constant gravitational force through a medium that
-exerts a resistance with magnitude proportional to the speed of the object. (Recall that the speed of an
-object is \(|v|\), the absolute value of its velocity \(v\).) Find the velocity of the object as a function of \(t\), and find the
-terminal velocity. Assume that the initial velocity is \(v_0\).
-</p>
-  </div>
-<p class="indent" id="153f5c50-5f9f-4395-8ca8-3e84129b9018">
-</p><p class="noindent" id="70d2d64b-8020-42ac-8f64-c8282c8c9121"><span class="ptmb8t-">Solution </span>&nbsp;The total force acting on the object is \begin {equation}  \label {eq:4.3.4} F=-mg+F_1\end {equation}<a id="x1-6r4"></a> where \(-mg\) is the force due to gravity and \(F_1\) is the resisting force of
-the medium, which has magnitude \(k|v|\), where \(k\) is a positive constant. If the object is moving downward (\(v\le 0\)), the
-resisting force is upward (Figure&nbsp;<a href="#-resistive-forces-">4.3.1<!-- tex4ht:ref: figure:4.3.1  --></a><span class="ptmb8t-">(a)</span>), so
-                                                                                
+		<div class="nav" id="03adf196-399d-4ac4-b8f8-bb2c04b3fa2d">
+			<a href="sec4.2.book.html">Back (4.2)</a>
 
-                                                                                
-                                        \[ F_1=k|v|=k(-v)=-kv\]
- On the other hand, if the object is moving upward (\(v\ge 0\)), the resisting force is downward (Figure&nbsp;<a href="#-resistive-forces-">4.3.1<!-- tex4ht:ref: figure:4.3.1  --></a><span class="ptmb8t-">(b)</span>),
-so
-                                        \[ F_1=-k|v|=-kv\]
- Thus, (<a href="#x1-6r4">4.3.4<!-- tex4ht:ref: eq:4.3.4  --></a>) can be written as \begin {equation}  \label {eq:4.3.5} F=-mg-kv\end {equation}<a id="x1-7r5"></a> regardless of the sign of the velocity.
-</p>
-  <figure class="figure" id="e6962ad1-d291-42ca-8fe3-5a726eb6f6e3"> 
+			<a href="sec4.0.html">Chapter 4</a>
 
-                                                                                
-
-                                                                                
-                                                                                
-
-                                                                                
-<p class="noindent" id="-resistive-forces-"><img height="264" src="EPS/fig040301.png" width="409"> <a id="x1-8r1"></a></p>
-<figcaption class="caption"><span class="id">Figure&nbsp;4.3.1 </span><span class="content">Resistive forces                                                         </span></figcaption><!-- tex4ht:label?: x1-8r1  -->
-                                                                                
-
-                                                                                
-  </figure>
-<p class="indent" id="0ac24362-8ecf-4359-93e5-cdf145f8702d">  From Newton’s second law of motion,
-                                        \[ F=ma=mv'\]
- so (<a href="#x1-7r5">4.3.5<!-- tex4ht:ref: eq:4.3.5  --></a>) yields
-                                        \[ mv'=-mg-kv\]
- or \begin {equation}  \label {eq:4.3.6} v'+{k\over m}v=-g\end {equation}<a id="x1-9r6"></a> Since \(e^{-kt/m}\) is a solution of the complementary equation, the solutions of (<a href="#x1-9r6">4.3.6<!-- tex4ht:ref: eq:4.3.6  --></a>) are of the form \(v=ue^{-kt/m}\), where \(u'e^{-kt/m}=-g\), so \(u'=-ge^{kt/m}\).
-Hence,
-                                        \[ u=-{mg\over k} e^{kt/m}+c\]
- so \begin {equation}  \label {eq:4.3.7} v=ue^{-kt/m}=-{mg\over k}+ce^{-kt/m}\end {equation}<a id="x1-10r7"></a> Since \(v(0)=v_0\),
-                                                                                
-
-                                                                                
-                                        \[ v_0=-{mg\over k}+c\]
- so
-                                        \[ c=v_0+{mg\over k} \]
- and (<a href="#x1-10r7">4.3.7<!-- tex4ht:ref: eq:4.3.7  --></a>) becomes
-                                        \[ v=-{mg\over k}+\left (v_0+{mg\over k}\right ) e^{-kt/m}\]
- Letting \(t\to \infty \) here shows that the terminal velocity is
-                                        \[ \lim _{t\to \infty } v(t)=-{mg\over k}\]
- which is independent of the initial velocity \(v_0\) (Figure&nbsp;<a href="#-solutions-of-mvmgkv-">4.3.2<!-- tex4ht:ref: figure:4.3.2  --></a>).
-</p>
-  <figure class="figure" id="4ef31ce9-3f6e-4507-925c-ccac1549c232"> 
-
-                                                                                
-
-                                                                                
-                                                                                
-
-                                                                                
-<p class="noindent" id="-solutions-of-mvmgkv-"><img height="264" src="EPS/fig040302.png" width="409"> <a id="x1-11r2"></a></p>
-<figcaption class="caption"><span class="id">Figure&nbsp;4.3.2 </span><span class="content">Solutions of \(mv'=-mg-kv\)                                                            </span></figcaption><!-- tex4ht:label?: x1-11r2  -->
-                                                                                
-
-                                                                                
-  </figure>
-  <div class="newtheorem" id="c2e433b2-7f4f-4336-b668-d1a3b0517724">
-<p class="noindent"><span class="head">
-<span class="ex-number">Example&nbsp;4.3.2</span> </span><a id="x1-122"></a> A 960-lb object is given an initial upward velocity of 60 ft/s near the surface of Earth.
-The atmosphere resists the motion with a force of 3 lb for each ft/s of speed. Assuming that the only
-other force acting on the object is constant gravity, find its velocity \(v\) as a function of \(t\), and find its terminal
-velocity.
-</p>
-  </div>
-<p class="indent" id="0d7a4be3-5456-498d-b91e-7bd4f0f58087">
-</p><p class="noindent" id="379acb16-3a6e-495e-8fb1-ce8e19316165"><span class="ptmb8t-">Solution </span>&nbsp;Since \(mg=960\) and \(g=32\), \(m=960/32=30\). The atmospheric resistance is \(-3v\) lb if \(v\) is expressed in feet per second. Therefore
-                                        \[ 30v'=-960-3v\]
- which we rewrite as
-                                        \[ v'+{1\over 10}v=-32\]
- Since \(e^{-t/10}\) is a solution of the complementary equation, the solutions of this equation are of the form \(v=ue^{-t/10}\), where \(u'e^{-t/10}=-32\), so \(u'=-32e^{t/10}\).
-Hence,
-                                                                                
-
-                                                                                
-                                        \[ u=-320 e^{t/10}+c\]
- so \begin {equation}  \label {eq:4.3.8} v=ue^{-t/10}=-320+ce^{-t/10}\end {equation}<a id="x1-13r8"></a> The initial velocity is 60 ft/s in the upward (positive) direction; hence, \(v_0=60\). Substituting \(t=0\) and \(v=60\) in (<a href="#x1-13r8">4.3.8<!-- tex4ht:ref: eq:4.3.8  --></a>)
-yields
-                                        \[ 60=-320+c\]
- so \(c=380\), and (<a href="#x1-13r8">4.3.8<!-- tex4ht:ref: eq:4.3.8  --></a>) becomes
-                                        \[ v=-320+380e^{-t/10}\ \mbox {ft/s} \]
- The terminal velocity is
-                                        \[ \lim _{t\to \infty }v(t)=-320\mbox { ft/s.} \]
-</p>
-  <div class="newtheorem" id="6c9cd0db-dbbf-4e30-8d00-1e50d53c9642">
-<p class="noindent"><span class="head">
-                                                                                
-
-                                                                                
-<span class="ex-number">Example&nbsp;4.3.3</span> </span><a id="x1-143"></a> A 10 kg mass is given an initial velocity \(v_0\le 0\) near Earth’s surface. The only forces acting
-on it are gravity and atmospheric resistance proportional to the square of the speed. Assuming that the
-resistance is 8 N if the speed is 2 m/s, find the velocity of the object as a function of \(t\), and find the terminal
-velocity.
-</p>
-  </div>
-<p class="indent" id="edfcdf46-8791-4adf-b5e5-0ea210a4210e">
-</p><p class="noindent" id="6af98992-3deb-409f-9998-3072459c1579"><span class="ptmb8t-">Solution </span>&nbsp;Since the object is falling, the resistance is in the upward (positive) direction. Hence, \begin {equation}  \label {eq:4.3.9} mv'=-mg+kv^2\end {equation}<a id="x1-15r9"></a> where \(k\) is a
-constant. Since the magnitude of the resistance is 8 N when \(v=2\) m/s,
-                                        \[ k(2^2)=8\]
- so \(k=2\ \mbox {N-s}^2/\mbox {m}^2\). Since \(m=10\) and \(g=9.8\), (<a href="#x1-15r9">4.3.9<!-- tex4ht:ref: eq:4.3.9  --></a>) becomes \begin {equation}  \label {eq:4.3.10} 10v'=-98+2v^2=2(v^2-49)\end {equation}<a id="x1-16r10"></a> If \(v_0=-7\), then \(v\equiv -7\) for all \(t\ge 0\). If \(v_0\ne -7\), we separate variables to obtain \begin {equation}  \label {eq:4.3.11} {1\over v^2-49}v'={1\over 5}\end {equation}<a id="x1-17r11"></a> which is convenient for the
-required partial fraction expansion \begin {equation}  \label {eq:4.3.12} \frac {1}{v^2-49} =\frac {1}{(v-7)(v+7)} ={1\over 14}\left [{1\over v-7} -{1\over v+7}\right ]\end {equation}<a id="x1-18r12"></a> Substituting (<a href="#x1-18r12">4.3.12<!-- tex4ht:ref: eq:4.3.12  --></a>) into (<a href="#x1-17r11">4.3.11<!-- tex4ht:ref: eq:4.3.11  --></a>) yields
-                                        \[ {1\over 14}\left [{1\over v-7}-{1\over v+7}\right ]v'={1\over 5}\]
- so
-                                                                                
-
-                                                                                
-                                        \[ \left [{1\over v-7}-{1\over v+7}\right ]v'={14\over 5}\]
- Integrating this yields
-                                        \[ \ln |v-7|-\ln |v+7|=14t/5+k\]
- Therefore
-                                        \[ \left |{v-7\over v+7}\right |=e^ke^{14t/5}\]
- Since Theorem&nbsp;<span class="ptmb8t-">2.3.1</span> implies that \((v-7)/(v+7)\) can’t change sign (why?), we can rewrite the last equation as \begin {equation}  \label {eq:4.3.13} {v-7\over v+7}=ce^{14t/5}\end {equation}<a id="x1-19r13"></a> which is an
-implicit solution of (<a href="#x1-16r10">4.3.10<!-- tex4ht:ref: eq:4.3.10  --></a>). Solving this for \(v\) yields \begin {equation}  \label {eq:4.3.14} v=-7{c+e^{-14t/5}\over c-e^{-14t/5}}\end {equation}<a id="x1-20r14"></a> Since \(v(0)=v_0\), it (<a href="#x1-19r13">4.3.13<!-- tex4ht:ref: eq:4.3.13  --></a>) implies that
-                                        \[ c={v_0-7\over v_0+7}\]
- Substituting this into (<a href="#x1-20r14">4.3.14<!-- tex4ht:ref: eq:4.3.14  --></a>) and simplifying yields
-                                                                                
-
-                                                                                
-                                        \[ v=-7{v_0(1+e^{-14t/5})-7(1-e^{-14t/5})\over v_0(1-e^{-14t/5})-7(1+e^{-14t/5}}\]
- Since \(v_0\le 0\), \(v\) is defined and negative for all \(t&gt;0\). The terminal velocity is
-                                        \[ \lim _{t\to \infty } v(t)=-7\ \mbox {m/s}\]
- independent of \(v_0\). More generally, it can be shown (Exercise&nbsp;<span class="ptmb8t-">11</span>) that if \(v\) is any solution of (<a href="#x1-15r9">4.3.9<!-- tex4ht:ref: eq:4.3.9  --></a>) such that \(v_0\le 0\)
-then
-                                        \[ \lim _{t\to \infty }v(t)=-\sqrt {mg\over k} \]
- (Figure&nbsp;<a href="#-solutions-of-mvmgkv-vv-">4.3.3<!-- tex4ht:ref: figure:4.3.3  --></a>).
-</p>
-  <figure class="figure" id="2ea68077-a943-413f-bb2f-e66dcb7110e9"> 
-
-                                                                                
-
-                                                                                
-                                                                                
-
-                                                                                
-<p class="noindent" id="-solutions-of-mvmgkv-vv-"><img height="264" src="EPS/fig040303.png" width="409"> <a id="x1-21r3"></a></p>
-<figcaption class="caption"><span class="id">Figure&nbsp;4.3.3 </span><span class="content">Solutions of \(mv'=-mg+kv^2,\ v(0)=v_0\le 0\)                                                            </span></figcaption><!-- tex4ht:label?: x1-21r3  -->
-                                                                                
-
-                                                                                
-  </figure>
-  <div class="newtheorem" id="50219969-3c7d-4d46-94d9-65fd4a0e86ec">
-<p class="noindent"><span class="head">
-<span class="ex-number">Example&nbsp;4.3.4</span> </span><a id="x1-224"></a> A 10-kg mass is launched vertically upward from Earth’s surface with an initial velocity
-of \(v_0\) m/s. The only forces acting on the mass are gravity and atmospheric resistance proportional to the
-square of the speed. Assuming that the atmospheric resistance is 8 N if the speed is 2 m/s, find the time \(T\)
-required for the mass to reach maximum altitude.
-</p>
-  </div>
-<p class="indent" id="0f879f80-4d32-44c3-8350-0590c1b61ac2">
-</p><p class="noindent" id="b7cf6bad-5a3c-42f7-9029-69ab701fb2b2"><span class="ptmb8t-">Solution </span>&nbsp;The mass will climb while \(v&gt;0 \) and reach its maximum altitude when \(v=0\). Therefore \(v&gt;0\) for \(0\le t&lt;T\) and \(v(T)=0\). Although the
-mass of the object and our assumptions concerning the forces acting on it are the same as those in Example 3,
-(<a href="#x1-16r10">4.3.10<!-- tex4ht:ref: eq:4.3.10  --></a>) does not apply here, since the resisting force is negative if \(v&gt;0\); therefore, we replace (<a href="#x1-16r10">4.3.10<!-- tex4ht:ref: eq:4.3.10  --></a>) by
-\begin {equation}  \label {eq:4.3.15} 10v'=-98-2v^2\end {equation}<a id="x1-23r15"></a>
-</p><p class="indent" id="16e8864a-73eb-4234-af0b-73a5d12c258e">  Separating variables yields
-                                        \[ {5\over v^2+49}v'=-1\]
- and integrating this yields
-                                        \[ {5\over 7}\tan ^{-1}{v\over 7}=-t+c\]
- (Recall that \(\tan ^{-1}u\) is the number \(\theta \) such that \(-\pi /2 &lt; \theta &lt; \pi /2\) and \(\tan \theta =u\).) Since \(v(0)=v_0\),
-                                                                                
-
-                                                                                
-                                        \[ c={5\over 7}\tan ^{-1}{v_0\over 7}\]
- so \(v\) is defined implicitly by \begin {equation}  \label {eq:4.3.16} {5\over 7} \tan ^{-1}{v\over 7}=-t+{5\over 7} \tan ^{-1}{v_0\over 7}, \quad 0\le t\le T\end {equation}<a id="x1-24r16"></a> Solving this for \(v\) yields \begin {equation}  \label {eq:4.3.17} v=7\tan \left (-{7t\over 5}+\tan ^{-1}{v_0\over 7}\right )\end {equation}<a id="x1-25r17"></a> Using the identity
-                                        \[ \tan (A-B)={\tan A-\tan B\over 1+\tan A\tan B} \]
- with \(A=\tan ^{-1}(v_0/7)\) and \(B=7t/5\), and noting that \(\tan (\tan ^{-1}\theta )=\theta \), we can simplify (<a href="#x1-25r17">4.3.17<!-- tex4ht:ref: eq:4.3.17  --></a>) to
-                                        \[ v=7{v_0-7\tan (7t/5)\over 7+v_0\tan (7t/5)}\]
-</p><p class="indent" id="236eb6f4-d296-45a5-ba74-5f3f6ada14e9">  Since \(v(T)=0\) and \(\tan ^{-1}(0)=0\), (<a href="#x1-24r16">4.3.16<!-- tex4ht:ref: eq:4.3.16  --></a>) implies that
-                                                                                
-
-                                                                                
-                                        \[ -T+{5\over 7} \tan ^{-1}{v_0\over 7}=0\]
- Therefore
-                                        \[ T={5\over 7} \tan ^{-1}{v_0\over 7}\]
- Since \(\tan ^{-1}(v_0/7)&lt;\pi /2\) for all \(v_0\), the time required for the mass to reach its maximum altitude is less than
-                                        \[ {5\pi \over 14} \approx 1.122\ \mbox {s} \]
- regardless of the initial velocity. Figure&nbsp;<a href="#-solutions-of-ref-eq-for-various-v-">4.3.4<!-- tex4ht:ref: figure:4.3.4  --></a> shows graphs of \(v\) over \([0,T]\) for various values of \(v_0\).
-</p>
-  <figure class="figure" id="2f2bd851-a345-4a8e-a729-92a7eccb084c"> 
-
-                                                                                
-
-                                                                                
-                                                                                
-
-                                                                                
-<p class="noindent" id="-solutions-of-ref-eq-for-various-v-"><img height="264" src="EPS/fig040304.png" width="409"> <a id="x1-26r4"></a></p>
-<figcaption class="caption"><span class="id">Figure&nbsp;4.3.4 </span><span class="content">Solutions of (<a href="#x1-23r15">4.3.15<!-- tex4ht:ref: eq:4.3.15  --></a>) for various \(v_0&gt;0\)                                            </span></figcaption><!-- tex4ht:label?: x1-26r4  -->
-                                                                                
-
-                                                                                
-  </figure>
-<p class="indent" id="52e32cb7-9db1-48ae-a906-fe646f1a0332">
-                                                                                
-
-                                                                                
-</p><p class="noindent" id="24488886-5e1f-4e89-951d-417939e716b8"><span id="textcolor4">Escape Velocity</span>
-</p><p class="indent" id="c8ecac5b-e493-47c3-9c7d-90e6acdc4a04">
-</p><p class="noindent" id="5144e53a-dadb-4738-bea3-f85601fee1ca">Suppose a space vehicle is launched vertically and its fuel is exhausted when the vehicle reaches
-an altitude \(h\) above Earth, where \(h\) is sufficiently large so that resistance due to Earth’s atmosphere
-can be neglected. Let \(t=0\) be the time when burnout occurs. Assuming that the gravitational forces of
-all other celestial bodies can be neglected, the motion of the vehicle for \(t &gt; 0\) is that of an object with
-constant mass \(m\) under the influence of Earth’s gravitational force, which we now assume to vary
-inversely with the square of the distance from Earth’s center; thus, if we take the upward direction to be
-positive then gravitational force on the vehicle at an altitude \(y\) above Earth is \begin {equation}  \label {eq:4.3.18} F=-{K\over (y+R)^2}\end {equation}<a id="x1-27r18"></a> where \(R\) is Earth’s radius
-(Figure&nbsp;<a href="#-escape-velocity-">4.3.5<!-- tex4ht:ref: figure:4.3.5  --></a>).
-</p>
-  <figure class="figure" id="bdcb394b-c9d9-4d6d-b316-b6f08c864a78"> 
-
-                                                                                
-
-                                                                                
-                                                                                
-
-                                                                                
-<p class="noindent" id="-escape-velocity-"><img height="264" src="EPS/fig040305.png" width="409"> <a id="x1-28r5"></a></p>
-<figcaption class="caption"><span class="id">Figure&nbsp;4.3.5 </span><span class="content">Escape velocity                                                         </span></figcaption><!-- tex4ht:label?: x1-28r5  -->
-                                                                                
-
-                                                                                
-  </figure>
-<p class="indent" id="9df710e5-4172-4566-acea-a77a70cc6abc">  Since \(F=-mg\) when \(y=0\), setting \(y=0\) in (<a href="#x1-27r18">4.3.18<!-- tex4ht:ref: eq:4.3.18  --></a>) yields
-                                        \[ -mg=-{K\over R^2}\]
- therefore \(K=mgR^2\) and (<a href="#x1-27r18">4.3.18<!-- tex4ht:ref: eq:4.3.18  --></a>) can be written more specifically as \begin {equation}  \label {eq:4.3.19} F=-{mgR^2\over (y+R)^2}\end {equation}<a id="x1-29r19"></a>
-</p><p class="indent" id="3f00cb68-5975-4088-a4d1-3d7729d90b9b">  From Newton’s second law of motion,
-                                        \[ F=m{d^2y\over dt^2}\]
- so (<a href="#x1-29r19">4.3.19<!-- tex4ht:ref: eq:4.3.19  --></a>) implies that \begin {equation}  \label {eq:4.3.20} {d^2y\over dt^2}=-{gR^2\over (y+R)^2}\end {equation}<a id="x1-30r20"></a>
-</p><p class="indent" id="eb294c68-3c90-4953-b60a-04eec342e5cf">  We’ll show that there’s a number \(v_e\), called the <span class="vocab">escape velocity</span>, with these properties:
-     </p><ol id="f12f2e5b-bc53-4247-af59-6a64916cb8c5">
-<li id="x1-32x1">If \(v_0\ge v_e\) then \(v(t)&gt;0\) for all \(t&gt;0\), and the vehicle continues to climb for all \(t&gt;0\); that is, it “escapes” Earth. (Is it really
-     so obvious that \(\lim _{t\to \infty }y(t)=\infty \) in this case? For a proof, see Exercise&nbsp;<span class="ptmb8t-">20</span>.)
-     </li>
-<li id="x1-34x2">If \(v_0&lt;v_e\) then \(v(t)\) decreases to zero and becomes negative. Therefore the vehicle attains a maximum altitude
-     \(y_m\) and falls back to Earth.</li></ol>
-<p class="indent" id="67372874-0573-4991-81e4-6f272c2b0519">  Since (<a href="#x1-30r20">4.3.20<!-- tex4ht:ref: eq:4.3.20  --></a>) is second order, we can’t solve it by methods discussed so far. However, we’re concerned with \(v\)
-rather than \(y\), and \(v\) is easier to find. Since \(v=y'\) the chain rule implies that
-                                                                                
-
-                                                                                
-                                        \[ {d^2y\over dt^2}={dv\over dt}={dv\over dy}{dy\over dt}=v{dv\over dy}\]
- Substituting this into (<a href="#x1-30r20">4.3.20<!-- tex4ht:ref: eq:4.3.20  --></a>) yields the first order separable equation \begin {equation}  \label {eq:4.3.21} v{dv\over dy}=-{gR^2\over (y+R)^2}\end {equation}<a id="x1-35r21"></a> When \(t=0\), the velocity is \(v_0\) and the altitude is \(h\).
-Therefore we can obtain \(v\) as a function of \(y\) by solving the initial value problem
-                                        \[ v{dv\over dy}=-{gR^2\over (y+R)^2},\quad v(h)=v_0\]
-</p><p class="indent" id="9ceae6cd-96ce-4e36-9fbf-df0cd6cc2154">  Integrating (<a href="#x1-35r21">4.3.21<!-- tex4ht:ref: eq:4.3.21  --></a>) with respect to \(y\) yields \begin {equation}  \label {eq:4.3.22} {v^2\over 2}={gR^2\over y+R}+c\end {equation}<a id="x1-36r22"></a> Since \(v(h)=v_0\),
-                                        \[ c={v_0^2\over 2}-{gR^2\over h+R}\]
- so (<a href="#x1-36r22">4.3.22<!-- tex4ht:ref: eq:4.3.22  --></a>) becomes \begin {equation}  \label {eq:4.3.23} {v^2\over 2}={gR^2\over y+R}+\left ({v_0^2\over 2}- {gR^2\over h+R}\right )\end {equation}<a id="x1-37r23"></a> If
-                                                                                
-
-                                                                                
-                                        \[ v_0 \ge \left ({2gR^2\over h+R}\right )^{1/2}\]
- the parenthetical expression in (<a href="#x1-37r23">4.3.23<!-- tex4ht:ref: eq:4.3.23  --></a>) is nonnegative, so \(v(y)&gt;0\) for \(y&gt;h\). This proves that there’s an escape velocity \(v_e\). We’ll
-now prove that
-                                        \[ v_e=\left ({2gR^2\over h+R}\right )^{1/2} \]
- by showing that the vehicle falls back to Earth if \begin {equation}  \label {eq:4.3.24} v_0 &lt;\left ({2gR^2\over h+R}\right )^{1/2}\end {equation}<a id="x1-38r24"></a> If (<a href="#x1-38r24">4.3.24<!-- tex4ht:ref: eq:4.3.24  --></a>) holds then the parenthetical expression in (<a href="#x1-37r23">4.3.23<!-- tex4ht:ref: eq:4.3.23  --></a>) is
-negative and the vehicle will attain a maximum altitude \(y_m&gt;h\) that satisfies the equation
-                                        \[ 0={gR^2\over y_m+R}+\left ({v_0^2\over 2}- {gR^2\over h+R}\right )\]
- The velocity will be zero at the maximum altitude, and the object will then fall to Earth under the influence of
-gravity.
-</p>
-
-
-<div class="nav" id="03adf196-399d-4ac4-b8f8-bb2c04b3fa2d">
-  <a href="sec4.2.book.html">Back (4.2)</a>
-
-  <a href="sec4.0.html">Chapter 4</a>
-
-  <a>&nbsp;</a>
-</div>
-
- 
-</body></html>
+			<a>&nbsp;</a>
+		</div>
+	</body>
+</html>

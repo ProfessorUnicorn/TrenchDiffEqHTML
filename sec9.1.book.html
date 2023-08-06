@@ -1,431 +1,741 @@
-<!DOCTYPE html><html lang="en-US" xml:lang="en-US"><head>
-  <title></title>
-  <meta charset="utf-8">
-  <meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <link rel="stylesheet" type="text/css" href="combined.css">
-  <meta content="Trench_DiffEQ_Book.tex" name="src">
-  <script>window.MathJax = {
-      tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(9.1.' + tag + ')' } }
-    }; </script>
-  <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-  <style type="text/css">
-    :root {
-      --section-number: "9.1"
-    }
-  </style>
-</head>
+<!doctype html>
+<html lang="en-US" xml:lang="en-US">
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator" />
+		<meta content="width=device-width,initial-scale=1" name="viewport" />
+		<link rel="stylesheet" type="text/css" href="combined.css" />
+		<meta content="Trench_DiffEQ_Book.tex" name="src" />
+		<script>
+			window.MathJax = {
+				tex: {
+					packages: { "[+]": ["tagformat"] },
+					tags: "ams",
+					tagformat: { tag: (tag) => "(9.1." + tag + ")" },
+				},
+			};
+		</script>
+		<script
+			async="async"
+			id="MathJax-script"
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+			type="text/javascript"
+		></script>
+		<style type="text/css">
+			:root {
+				--section-number: "9.1";
+			}
+		</style>
+	</head>
 
-<body>
-  <p id="ac555378-7d8f-4502-91ed-80aead5fc213"><a id="x1-1doc"></a>
-  </p>
-  <p class="noindent" id="b68c0b84-5470-45c8-9491-793d3394e260">Section 9.1 Introduction to Linear Higher Order Equations
-  </p>
-  <p class="noindent" id="4bfb12d4-48f4-4f6d-93a7-22d522f75bc6"><span class="ptmb8t-">9.1</span><span class="ptmb8t-x-x-90">&nbsp; INTRODUCTION TO LINEAR HIGHER ORDER
-      EQUATIONS </span>
-  </p>
-  <p class="noindent" id="91b12a3c-181f-40b2-9bd7-69b99ac33de3">An \(n\)th order differential equation is said to be <span class="vocab">linear</span> if it
-    can be written in the form \begin {equation} \label {eq:9.1.1} y^{(n)}+p_1(x)y^{(n-1)}+\cdots +p_n(x)y=f(x)\end
-    {equation}<a id="x1-2r1"></a> We considered equations
-    of this form with \(n=1\) in Section&nbsp;2.1 and with \(n=2\) in Chapter&nbsp;5. In this chapter \(n\) is an arbitrary
-    positive
-    integer.
-  </p>
-  <p class="indent" id="78cbf65b-e4f9-4228-bc15-734bd32b2661"> In this section we sketch the general theory of linear \(n\)th order equations. Since this theory
-    has already been
-    discussed for \(n=2\) in Sections&nbsp;5.1 and 5.3, we’ll omit proofs.
-  </p>
-  <p class="indent" id="a87ec1c9-1fd3-4678-ab28-790a6a125231"> For convenience, we consider linear differential equations written as \begin {equation} \label
-    {eq:9.1.2} P_0(x)y^{(n)}+P_1(x)y^{(n-1)}+\cdots +P_n(x)y=F(x)\end {equation}<a id="x1-3r2"></a> which can be
-    rewritten as (<a href="#x1-2r1">9.1.1<!-- tex4ht:ref: eq:9.1.1  --></a>) on any
-    interval on which \(P_0\) has no zeros, with \(p_1=P_1/P_0\), …, \(p_n=P_n/P_0\) and \(f=F/P_0\). For simplicity,
-    throughout this chapter we’ll abbreviate the left
-    side of (<a href="#x1-3r2">9.1.2<!-- tex4ht:ref: eq:9.1.2  --></a>) by \(Ly\); that is,
-    \[ Ly=P_0y^{(n)}+P_1y^{(n-1)}+\cdots +P_ny\]
-    We say that the equation \(Ly=F\) is <span class="vocab">normal</span> on \((a,b)\) if \(P_0\), \(P_1\), …,
-    \(P_n\) and \(F\) are continuous on \((a,b)\) and \(P_0\) has no zeros on \((a,b)\). If this is so then \(Ly=F\)
-    can be written as (<a href="#x1-2r1">9.1.1<!-- tex4ht:ref: eq:9.1.1  --></a>) with \(p_1\), …, \(p_n\) and \(f\)
-    continuous on \((a,b)\).
-  </p>
-  <p class="indent" id="3b5a60fc-b7e6-4478-a450-c0fa3f0d8394"> The next theorem is analogous to Theorem&nbsp;<span class="ptmb8t-">5.1.3</span>.
-  </p>
-  <div class="newtheorem" id="36644dd6-c8ff-40df-a4bc-127515e28082">
-    <p class="noindent"><span class="head">
-        <span class="ptmb8t-">Theorem&nbsp;9.1.1</span> </span><a id="x1-41"></a> Suppose
-      \(Ly=F\) is normal on \((a,b)\), let \(x_0\)
-        be a point in \((a,b),\) and let \(k_0\)
-        , \(k_1\), …, \(k_{n-1}\) be
-        arbitrary real numbers. Then
-        the initial value problem
-      \[ Ly=F, \quad y(x_0)=k_0,\quad y'(x_0)=k_1,\dots ,\quad y^{(n-1)}(x_0)=k_{n-1} \]
-      has a unique solution on \((a,b).\)
+	<body>
+		<p id="ac555378-7d8f-4502-91ed-80aead5fc213"><a id="x1-1doc"></a></p>
+		<p class="noindent" id="b68c0b84-5470-45c8-9491-793d3394e260">
+			Section 9.1 Introduction to Linear Higher Order Equations
+		</p>
+		<p class="noindent" id="4bfb12d4-48f4-4f6d-93a7-22d522f75bc6">
+			<span class="ptmb8t-">9.1</span>
+			<span class="ptmb8t-x-x-90">
+				&nbsp; INTRODUCTION TO LINEAR HIGHER ORDER EQUATIONS
+			</span>
+		</p>
+		<p class="noindent" id="91b12a3c-181f-40b2-9bd7-69b99ac33de3">
+			An \(n\)th order differential equation is said to be
+			<span class="vocab">linear</span>
+			if it can be written in the form \begin {equation} \label {eq:9.1.1}
+			y^{(n)}+p_1(x)y^{(n-1)}+\cdots +p_n(x)y=f(x)\end {equation}
+			<a id="x1-2r1"></a>
+			We considered equations of this form with \(n=1\) in Section&nbsp;2.1 and
+			with \(n=2\) in Chapter&nbsp;5. In this chapter \(n\) is an arbitrary
+			positive integer.
+		</p>
+		<p class="indent" id="78cbf65b-e4f9-4228-bc15-734bd32b2661">
+			In this section we sketch the general theory of linear \(n\)th order
+			equations. Since this theory has already been discussed for \(n=2\) in
+			Sections&nbsp;5.1 and 5.3, we’ll omit proofs.
+		</p>
+		<p class="indent" id="a87ec1c9-1fd3-4678-ab28-790a6a125231">
+			For convenience, we consider linear differential equations written as
+			\begin {equation} \label {eq:9.1.2} P_0(x)y^{(n)}+P_1(x)y^{(n-1)}+\cdots
+			+P_n(x)y=F(x)\end {equation}
+			<a id="x1-3r2"></a>
+			which can be rewritten as (
+			<a href="#x1-2r1">
+				9.1.1
+				<!-- tex4ht:ref: eq:9.1.1  -->
+			</a>
+			) on any interval on which \(P_0\) has no zeros, with \(p_1=P_1/P_0\), …,
+			\(p_n=P_n/P_0\) and \(f=F/P_0\). For simplicity, throughout this chapter
+			we’ll abbreviate the left side of (
+			<a href="#x1-3r2">
+				9.1.2
+				<!-- tex4ht:ref: eq:9.1.2  -->
+			</a>
+			) by \(Ly\); that is, \[ Ly=P_0y^{(n)}+P_1y^{(n-1)}+\cdots +P_ny\] We say
+			that the equation \(Ly=F\) is
+			<span class="vocab">normal</span>
+			on \((a,b)\) if \(P_0\), \(P_1\), …, \(P_n\) and \(F\) are continuous on
+			\((a,b)\) and \(P_0\) has no zeros on \((a,b)\). If this is so then
+			\(Ly=F\) can be written as (
+			<a href="#x1-2r1">
+				9.1.1
+				<!-- tex4ht:ref: eq:9.1.1  -->
+			</a>
+			) with \(p_1\), …, \(p_n\) and \(f\) continuous on \((a,b)\).
+		</p>
+		<p class="indent" id="3b5a60fc-b7e6-4478-a450-c0fa3f0d8394">
+			The next theorem is analogous to Theorem&nbsp;
+			<span class="ptmb8t-">5.1.3</span>
+			.
+		</p>
+		<div class="newtheorem" id="36644dd6-c8ff-40df-a4bc-127515e28082">
+			<p class="noindent">
+				<span class="head">
+					<span class="ptmb8t-">Theorem&nbsp;9.1.1</span>
+				</span>
+				<a id="x1-41"></a>
+				Suppose \(Ly=F\) is normal on \((a,b)\), let \(x_0\) be a point in
+				\((a,b),\) and let \(k_0\) , \(k_1\), …, \(k_{n-1}\) be arbitrary real
+				numbers. Then the initial value problem \[ Ly=F, \quad y(x_0)=k_0,\quad
+				y'(x_0)=k_1,\dots ,\quad y^{(n-1)}(x_0)=k_{n-1} \] has a unique solution
+				on \((a,b).\)
+			</p>
+		</div>
+		<p class="indent" id="8976b74f-c604-4327-b088-d9085f854b33"></p>
+		<p class="noindent" id="9b08dc60-cc58-48dd-ab27-22d78846f50f">
+			<span id="textcolor1">Homogeneous Equations</span>
+		</p>
+		<p class="indent" id="4c2efb7d-389a-4f67-8f96-2b2a5196e3e7"></p>
+		<p class="noindent" id="5151ea7a-7948-4595-af96-0766b546b153">
+			Eqn.&nbsp;(
+			<a href="#x1-3r2">
+				9.1.2
+				<!-- tex4ht:ref: eq:9.1.2  -->
+			</a>
+			) is said to be
+			<span class="vocab">homogeneous</span>
+			if \(F\equiv 0\) and
+			<span class="vocab">nonhomogeneous</span>
+			otherwise. Since \(y\equiv 0\) is obviously a solution of \(Ly=0\), we
+			call it the
+			<span class="vocab">trivial</span>
+			solution. Any other solution is
+			<span class="vocab">nontrivial</span>
+			.
+		</p>
+		<p class="indent" id="e9b1d181-f3f2-4f08-aea8-de26a22e96f7">
+			If \(y_1\), \(y_2\), …, \(y_n\) are defined on \((a,b)\) and \(c_1\),
+			\(c_2\), …, \(c_n\) are constants, then \begin {equation} \label
+			{eq:9.1.3} y=c_1y_1+c_2y_2+\cdots +c_ny_n \end {equation}
+			<a id="x1-5r3"></a>
+			is a
+			<span class="vocab">linear combination</span>
+			of \(\{y_1,y_2\dots ,y_n\}\). It’s easy to show that if \(y_1\), \(y_2\),
+			…, \(y_n\) are solutions of \(Ly=0\) on \((a,b)\), then so is any linear
+			combination of \(\{y_1,y_2,\dots ,y_n\}\). (See the proof of Theorem&nbsp;
+			<span class="ptmb8t-">5.1.2</span>
+			.) We say that \(\{y_1,y_2,\dots ,y_n\}\) is a
+			<span class="vocab">fundamental set of solutions</span>
+			of \(Ly=0\) on \((a,b)\) if every solution of \(Ly=0\) on \((a,b)\) can be
+			written as a linear combination of \(\{y_1,y_2,\dots ,y_n\}\), as in (
+			<a href="#x1-5r3">
+				9.1.3
+				<!-- tex4ht:ref: eq:9.1.3  -->
+			</a>
+			). In this case we say that (
+			<a href="#x1-5r3">
+				9.1.3
+				<!-- tex4ht:ref: eq:9.1.3  -->
+			</a>
+			) is the
+			<span class="vocab">general solution</span>
+			of \(Ly=0\) on \((a,b)\).
+		</p>
+		<p class="indent" id="1de8e280-0b01-46f7-9495-37d75dbb4e8e">
+			It can be shown (Exercises&nbsp;
+			<span class="ptmb8t-">14</span>
+			and
+			<span class="ptmb8t-">15</span>
+			) that if the equation \(Ly=0\) is normal on \((a,b)\) then it has
+			infinitely many fundamental sets of solutions on \((a,b)\). The next
+			definition will help to identify fundamental sets of solutions of
+			\(Ly=0\).
+		</p>
+		<p class="indent" id="7516a340-7fd6-4c01-bf46-fce70aac97f7">
+			We say that \(\{y_1,y_2,\dots ,y_n\}\) is
+			<span class="vocab">linearly independent</span>
+			on \((a,b)\) if the only constants \(c_1\), \(c_2\), …, \(c_n\) such that
+			\begin {equation} \label {eq:9.1.4} c_1y_1(x)+c_2y_2(x)+\cdots
+			+c_ny_n(x)=0,\quad a&lt;x&lt;b\end {equation}
+			<a id="x1-6r4"></a>
+			are \(c_1=c_2=\cdots =c_n=0\). If (
+			<a href="#x1-6r4">
+				9.1.4
+				<!-- tex4ht:ref: eq:9.1.4  -->
+			</a>
+			) holds for some set of constants \(c_1\), \(c_2\), …, \(c_n\) that are
+			not all zero, then \(\{y_1,y_2,\dots ,y_n\}\) is
+			<span class="vocab">linearly dependent</span>
+			on \((a,b)\)
+		</p>
+		<p class="indent" id="810e8e47-2ffe-4c5e-a14a-58db8843e744">
+			The next theorem is analogous to Theorem&nbsp;
+			<span class="ptmb8t-">5.13</span>
+			.
+		</p>
+		<div class="newtheorem" id="3b46ef57-432c-4d4c-a8e2-43fe2eb4f456">
+			<p class="noindent">
+				<span class="head">
+					<span class="ptmb8t-">Theorem&nbsp;9.1.2</span>
+				</span>
+				<a id="x1-72"></a>
+				If \(Ly=0\) is normal on \((a,b)\), then a set \(\{y_1,y_2,\dots
+				,y_n\}\) of \(n\) solutions of \(Ly=0\) on \((a,b)\) is a fundamental
+				set if and only if it’s linearly independent on \((a,b)\).
+			</p>
+		</div>
+		<p class="indent" id="85cfe940-a5e9-4638-8cb5-e96cc8720a09"></p>
+		<div class="newtheorem" id="778570d9-5ec2-454e-b8cd-41bcbc3adbf5">
+			<p class="noindent">
+				<span class="head">
+					<span class="ex-number">Example&nbsp;9.1.1</span>
+				</span>
+				<a id="x1-81"></a>
+				The equation \begin {equation} \label {eq:9.1.5}
+				x^3y'''-x^2y''-2xy'+6y=0 \end {equation}
+				<a id="x1-9r5"></a>
+				is normal and has the solutions \(y_1=x^2\), \(y_2=x^3\), and
+				\(y_3=1/x\) on \((-\infty ,0)\) and \((0,\infty )\). Show that
+				\(\{y_1,y_2,y_3\}\) is linearly independent on \((-\infty , 0)\) and
+				\((0,\infty )\). Then find the general solution of (
+				<a href="#x1-9r5">
+					9.1.5
+					<!-- tex4ht:ref: eq:9.1.5  -->
+				</a>
+				) on \((-\infty , 0)\) and \((0,\infty )\).
+			</p>
+		</div>
+		<p class="indent" id="8b44ea5f-e816-4d81-a1f9-755042cc25e1"></p>
+		<p class="noindent" id="848532fe-b4d2-4a51-a4de-656ce2f622c3">
+			<span class="ptmb8t-">Solution</span>
+			&nbsp;Suppose \begin {equation} \label {eq:9.1.6} c_1x^2+c_2x^3+{c_3\over
+			x}=0 \end {equation}
+			<a id="x1-10r6"></a>
+			on \((0,\infty )\). We must show that \(c_1=c_2=c_3=0\). Differentiating (
+			<a href="#x1-10r6">
+				9.1.6
+				<!-- tex4ht:ref: eq:9.1.6  -->
+			</a>
+			) twice yields the system \begin {equation} \label {eq:9.1.7} \begin
+			{array}{rcl} c_1x^2+c_2x^3+\displaystyle {c_3\over x}&amp;=&amp;0\\
+			2c_1x+3c_2x^2-\displaystyle {c_3\over x^2}&amp;=&amp;0\\
+			2c_1+6c_2x+\displaystyle {2c_3\over x^3}&amp;=&amp;0\end {array} \end
+			{equation}
+			<a id="x1-11r7"></a>
+			If (
+			<a href="#x1-11r7">
+				9.1.7
+				<!-- tex4ht:ref: eq:9.1.7  -->
+			</a>
+			) holds for all \(x\) in \((0,\infty )\), then it certainly holds at
+			\(x=1\); therefore, \begin {equation} \label {eq:9.1.8} \begin
+			{array}{rcl} \phantom {2}c_1+\phantom {3}c_2+\phantom {2}c_3&amp;=&amp;0\\
+			2c_1+3c_2-\phantom {2}c_3&amp;=&amp;0\\ 2c_1+6c_2+2c_3&amp;=&amp;0\end
+			{array} \end {equation}
+			<a id="x1-12r8"></a>
+			By solving this system directly, you can verify that it has only the
+			trivial solution \(c_1=c_2=c_3=0\); however, for our purposes it’s more
+			useful to recall from linear algebra that a homogeneous linear system of
+			\(n\) equations in \(n\) unknowns has only the trivial solution if its
+			determinant is nonzero. Since the determinant of (
+			<a href="#x1-12r8">
+				9.1.8
+				<!-- tex4ht:ref: eq:9.1.8  -->
+			</a>
+			) is \[ \left |\begin
+			{array}{rrr}1&amp;1&amp;1\\2&amp;3&amp;-1\\2&amp;6&amp;2\end {array}\right
+			|= \left |\begin
+			{array}{rrr}1&amp;0&amp;0\\2&amp;1&amp;-3\\2&amp;4&amp;0\end {array}\right
+			|=12\] it follows that (
+			<a href="#x1-12r8">
+				9.1.8
+				<!-- tex4ht:ref: eq:9.1.8  -->
+			</a>
+			) has only the trivial solution, so \(\{y_1,y_2,y_3\}\) is linearly
+			independent on \((0,\infty )\). Now Theorem&nbsp;
+			<a href="#x1-72">
+				9.1.2
+				<!-- tex4ht:ref: thmtype:9.1.2  -->
+			</a>
+			implies that \[ y=c_1x^2+c_2x^3+{c_3\over x} \] is the general solution of
+			(
+			<a href="#x1-9r5">
+				9.1.5
+				<!-- tex4ht:ref: eq:9.1.5  -->
+			</a>
+			) on \((0,\infty )\). To see that this is also true on \((-\infty ,0)\),
+			assume that (
+			<a href="#x1-10r6">
+				9.1.6
+				<!-- tex4ht:ref: eq:9.1.6  -->
+			</a>
+			) holds on \((-\infty ,0)\). Setting \(x=-1\) in (
+			<a href="#x1-11r7">
+				9.1.7
+				<!-- tex4ht:ref: eq:9.1.7  -->
+			</a>
+			) yields
+		</p>
+		<div class="eqnarray" id="646d035a-1cfd-4794-977e-9ed5f94c5210">
+			\begin {eqnarray*} \phantom {-2}c_1-\phantom {3}c_2-\phantom
+			{2}c_3&amp;=&amp;0\\ -2c_1+3c_2-\phantom {2}c_3&amp;=&amp;0\\ \phantom
+			{-}2c_1-6c_2-2c_3&amp;=&amp;0\end {eqnarray*}
+		</div>
+		<p class="indent" id="2edc6b23-5c68-462e-8636-cd75b02fc81f">
+			Since the determinant of this system is \[ \left |\begin
+			{array}{rrr}1&amp;-1&amp;-1\\-2&amp;3&amp;-1\\2&amp;-6&amp;-2\end
+			{array}\right |= \left |\begin
+			{array}{rrr}1&amp;0&amp;0\\-2&amp;1&amp;-3\\2&amp;-4&amp;0\end
+			{array}\right |=-12\] it follows that \(c_1=c_2=c_3=0\); that is,
+			\(\{y_1,y_2,y_3\}\) is linearly independent on \((-\infty ,0)\).
+		</p>
+		<div class="newtheorem" id="12f606e3-9b1f-4a1b-a71a-fc07330b4740">
+			<p class="noindent">
+				<span class="head">
+					<span class="ex-number">Example&nbsp;9.1.2</span>
+				</span>
+				<a id="x1-132"></a>
+				The equation \begin {equation} \label {eq:9.1.9}
+				y^{(4)}+y'''-7y''-y'+6y=0 \end {equation}
+				<a id="x1-14r9"></a>
+				is normal and has the solutions \(y_1=e^x\), \(y_2=e^{-x}\),
+				\(y_3=e^{2x}\), and \(y_4=e^{-3x}\) on \((-\infty ,\infty )\). (Verify.)
+				Show that \(\{y_1,y_2,y_3,y_4\}\) is linearly independent on \((-\infty
+				,\infty )\). Then find the general solution of (
+				<a href="#x1-14r9">
+					9.1.9
+					<!-- tex4ht:ref: eq:9.1.9  -->
+				</a>
+				).
+			</p>
+		</div>
+		<p class="indent" id="1b115980-46ff-42ef-b9dc-b19351d26286"></p>
+		<p class="noindent" id="1016d1a8-5272-49e9-b3c5-45da8645b927">
+			<span class="ptmb8t-">Solution</span>
+			&nbsp;Suppose \(c_1\), \(c_2\), \(c_3\), and \(c_4\) are constants such
+			that \begin {equation} \label {eq:9.1.10}
+			c_1e^x+c_2e^{-x}+c_3e^{2x}+c_4e^{-3x}=0 \end {equation}
+			<a id="x1-15r10"></a>
+			for all \(x\). We must show that \(c_1=c_2=c_3=c_4=0\). Differentiating (
+			<a href="#x1-15r10">
+				9.1.10
+				<!-- tex4ht:ref: eq:9.1.10  -->
+			</a>
+			) three times yields the system \begin {equation} \label {eq:9.1.11}
+			\begin {array}{rcl} c_1e^x+c_2e^{-x}+\phantom {2}c_3e^{2x}+\phantom
+			{27}c_4e^{-3x}&amp;=&amp;0\\ c_1e^x-c_2e^{-x}+2c_3e^{2x}-\phantom
+			{2}3c_4e^{-3x}&amp;=&amp;0\\ c_1e^x+c_2e^{-x}+4c_3e^{2x}+\phantom
+			{2}9c_4e^{-3x}&amp;=&amp;0\\
+			c_1e^x-c_2e^{-x}+8c_3e^{2x}-27c_4e^{-3x}&amp;=&amp;0\end {array} \end
+			{equation}
+			<a id="x1-16r11"></a>
+			If (
+			<a href="#x1-16r11">
+				9.1.11
+				<!-- tex4ht:ref: eq:9.1.11  -->
+			</a>
+			) holds for all \(x\), then it certainly holds for \(x=0\). Therefore \[
+			\begin {array}{rcl} c_1+c_2+\phantom {2}c_3+\phantom {27}c_4&amp;=&amp;0\\
+			c_1-c_2+2c_3-\phantom {2}3c_4&amp;=&amp;0\\ c_1+c_2+4c_3+\phantom
+			{2}9c_4&amp;=&amp;0\\ c_1-c_2+8c_3-27c_4&amp;=&amp;0\end {array} \] The
+			determinant of this system is \begin {equation} \label {eq:9.1.12} \begin
+			{array}{rcl} \left |\begin
+			{array}{rrrr}1&amp;1&amp;1&amp;1\\1&amp;-1&amp;2&amp;-3\\1&amp;1&amp;4&amp;9\\
+			1&amp;-1&amp;8&amp;-27\end {array}\right |&amp;=&amp; \left |\begin
+			{array}{rrrr}1&amp;1&amp;1&amp;1\\0&amp;-2&amp;1&amp;-4\\0&amp;0&amp;3&amp;8\\
+			0&amp;-2&amp;7&amp;-28\end {array}\right | =\left |\begin
+			{array}{rrr}-2&amp;1&amp;-4\\0&amp;3&amp;8\\ -2&amp;7&amp;-28\end
+			{array}\right |\\&amp;=&amp; \left |\begin
+			{array}{rrr}-2&amp;1&amp;-4\\0&amp;3&amp;8 \\0&amp;6&amp;-24\end
+			{array}\right |= -2\left |\begin {array}{rr}3&amp;8\\6&amp;-24\end
+			{array}\right |=240\end {array} \end {equation}
+			<a id="x1-17r12"></a>
+			so the system has only the trivial solution \(c_1=c_2=c_3=c_4=0\). Now
+			Theorem&nbsp;
+			<a href="#x1-72">
+				9.1.2
+				<!-- tex4ht:ref: thmtype:9.1.2  -->
+			</a>
+			implies that \[ y=c_1e^x+c_2e^{-x}+c_3e^{2x}+c_4e^{-3x} \] is the general
+			solution of (
+			<a href="#x1-14r9">
+				9.1.9
+				<!-- tex4ht:ref: eq:9.1.9  -->
+			</a>
+			).
+		</p>
+		<p class="noindent" id="c6eee7a5-efd3-48b9-94b9-7b35c731f54a">
+			<span id="textcolor2">The Wronskian</span>
+		</p>
+		<p class="indent" id="3f59268a-cfc7-4253-b329-c9907bbaf366"></p>
+		<p class="noindent" id="956ce517-6164-4c8d-9a4b-5b955d0c19b8">
+			We can use the method used in Examples&nbsp;
+			<a href="#x1-81">
+				9.1.1
+				<!-- tex4ht:ref: example:9.1.1  -->
+			</a>
+			and
+			<a href="#x1-132">
+				9.1.2
+				<!-- tex4ht:ref: example:9.1.2  -->
+			</a>
+			to test \(n\) solutions \(\{y_1,y_2,\dots ,y_n\}\) of any \(n\)th order
+			equation \(Ly=0\) for linear independence on an interval \((a,b)\) on
+			which the equation is normal. Thus, if \(c_1\), \(c_2\) ,…, \(c_n\) are
+			constants such that \[ c_1y_1+c_2y_2+\cdots +c_ny_n=0,\quad a&lt;x&lt;b\]
+			then differentiating \(n-1\) times leads to the \(n\times n\) system of
+			equations \begin {equation} \label {eq:9.1.13} \begin {array}{rcl}
+			c_1y_1(x)+c_2y_2(x)+&amp;\cdots &amp;+c_ny_n(x)=0\\
+			c_1y_1'(x)+c_2y_2'(x)+&amp;\cdots &amp;+c_ny_n'(x)=0\\ \phantom
+			{c_1y_1^{(n)}(x)+c_2y_2^{(n-1)}(x)}&amp;\vdots &amp; \phantom {\cdots
+			+c_ny_n^{(n-1)(x)}=q}\\ c_1y_1^{(n-1)}(x)+c_2y_2^{(n-1)}(x)+&amp;\cdots
+			&amp;+c_ny_n^{(n-1)}(x) =0 \end {array} \end {equation}
+			<a id="x1-18r13"></a>
+			for \(c_1\), \(c_2\), …, \(c_n\). For a fixed \(x\), the determinant of
+			this system is \[ W(x)=\left |\begin {array}{cccc}
+			y_1(x)&amp;y_2(x)&amp;\cdots&amp;y _n(x)\\
+			y'_1(x)&amp;y'_2(x)&amp;\cdots&amp;y _n'(x)\\ \vdots&amp; \vdots&amp;
+			\ddots&amp; \vdots \\ y_1^{(n-1)}(x)&amp;y_2^{(n-1)}(x)&amp;\cdots&amp;y
+			_n^{(n-1)}(x) \end {array}\right |\] We call this determinant the
+			<span class="vocab">vocab</span>
+			of \(\{y_1,y_2,\dots ,y_n\}\). If \(W(x)\ne 0\) for some \(x\) in
+			\((a,b)\) then the system (
+			<a href="#x1-18r13">
+				9.1.13
+				<!-- tex4ht:ref: eq:9.1.13  -->
+			</a>
+			) has only the trivial solution \(c_1=c_2=\cdots =c_n=0\), and
+			Theorem&nbsp;
+			<a href="#x1-72">
+				9.1.2
+				<!-- tex4ht:ref: thmtype:9.1.2  -->
+			</a>
+			implies that \[ y=c_1y_1+c_2y_2+\cdots +c_ny_n \] is the general solution
+			of \(Ly=0\) on \((a,b)\).
+		</p>
+		<p class="indent" id="c8be882e-b9ae-4e64-941f-85e4f23e19bf">
+			The next theorem generalizes Theorem&nbsp;
+			<span class="ptmb8t-">5.1.14</span>
+			. The proof is sketched in (Exercises&nbsp;
+			<span class="ptmb8t-">17</span>
+			–
+			<span class="ptmb8t-">20</span>
+			).
+		</p>
+		<div class="newtheorem" id="eac1172e-b65d-44de-bab0-f5f9d2f6ed10">
+			<p class="noindent">
+				<span class="head">
+					<span class="ptmb8t-">Theorem&nbsp;9.1.3</span>
+				</span>
+				<a id="x1-193"></a>
+				Suppose the homogeneous linear \(n\)th order equation \begin {equation}
+				\label {eq:9.1.14} P_0(x)y^{(n)}+P_1(x)y^{n-1}+\cdots +P_n(x)y=0 \end
+				{equation}
+				<a id="x1-20r14"></a>
+				is normal on \((a,b),\) let \(y_1,\) \(y_2,\)…, \(y_n\) be solutions of
+				(
+				<a href="#x1-20r14">9.1.14</a>
+				) on \((a,b),\) and let \(x_0\) be in \((a,b)\). Then the Wronskian of
+				\(\{y_1,y_2,\dots ,y_n\}\) is given by \begin {equation} \label
+				{eq:9.1.15} W(x)=W(x_0)\exp \left \{-\int ^x_{x_0}{P_1(t)\over P_0(t)}\,
+				dt\right \},\quad a&lt;x&lt;b\end {equation}
+				<a id="x1-21r15"></a>
+				Therefore, either \(W\) has no zeros in \((a,b)\) or \(W\equiv 0\) on
+				\((a,b).\)
+			</p>
+		</div>
+		<p class="indent" id="5e0ae79a-4c07-4aa4-a00f-ab4801890858"></p>
+		<p class="indent" id="bb31ca2a-c02b-4566-b6dd-5392defc1af9">
+			Formula (
+			<a href="#x1-21r15">
+				9.1.15
+				<!-- tex4ht:ref: eq:9.1.15  -->
+			</a>
+			) is
+			<span class="vocab">Abel’s formula</span>
+			.
+		</p>
+		<p class="indent" id="ec924659-a7bf-4426-a211-1ce58a2c9c2f">
+			The next theorem is analogous to Theorem&nbsp;
+			<span class="ptmb8t-">5.1.6</span>
+			.
+		</p>
+		<div class="newtheorem" id="ba07d7d4-fa97-4b45-a83f-39b1e02fd8f9">
+			<p class="noindent">
+				<span class="head">
+					<span class="ptmb8t-">Theorem&nbsp;9.1.4</span>
+				</span>
+				<a id="x1-224"></a>
+				Suppose \(Ly=0\) is normal on \((a,b)\) and let \(y_1\), \(y_2\), …,
+				\(y_n\) be \(n\) solutions of \(Ly=0\) on \((a,b)\). Then the following
+				statements are equivalent; that is, they are either all true or all
+				false:
+			</p>
+			<dl class="list1">
+				<dt class="list">
+					<span class="ptmb8t-">(a)</span>
+				</dt>
+				<dd class="list">
+					<p class="noindent">
+						The general solution of \(Ly=0\) on \((a,b)\) is
+						\(y=c_1y_1+c_2y_2+\cdots +c_ny_n.\)
+					</p>
+				</dd>
+				<dt class="list">
+					<span class="ptmb8t-">(b)</span>
+				</dt>
+				<dd class="list">
+					<p class="noindent">
+						\(\{y_1,y_2,\dots ,y_n\}\) is a fundamental set of solutions of
+						\(Ly=0\) on \((a,b).\)
+					</p>
+				</dd>
+				<dt class="list">
+					<span class="ptmb8t-">(c)</span>
+				</dt>
+				<dd class="list">
+					<p class="noindent">
+						\(\{y_1,y_2,\dots ,y_n\}\) is linearly independent on \((a,b).\)
+					</p>
+				</dd>
+				<dt class="list">
+					<span class="ptmb8t-">(d)</span>
+				</dt>
+				<dd class="list">
+					<p class="noindent">
+						The
+						<span class="vocab">Wronskian</span>
+						of \(\{y_1,y_2,\dots ,y_n\}\) is nonzero at some point in \((a,b)\).
+					</p>
+				</dd>
+				<dt class="list">
+					<span class="ptmb8t-">(e)</span>
+				</dt>
+				<dd class="list">
+					<p class="noindent">
+						The
+						<span class="vocab">Wronskian</span>
+						of \(\{y_1,y_2,\dots ,y_n\}\) is nonzero at all points in \((a,b)\).
+					</p>
+				</dd>
+			</dl>
+		</div>
+		<p class="indent" id="7b270398-6427-4612-8a39-b75cf08f8c8b"></p>
+		<div class="newtheorem" id="15f9a176-2b2d-49b8-955c-7a574a0d66c6">
+			<p class="noindent">
+				<span class="head">
+					<span class="ex-number">Example&nbsp;9.1.3</span>
+				</span>
+				<a id="x1-283"></a>
+				In Example&nbsp;
+				<a href="#x1-81">
+					9.1.1
+					<!-- tex4ht:ref: example:9.1.1  -->
+				</a>
+				we saw that the solutions \(y_1=x^2\), \(y_2=x^3\), and \(y_3=1/x\) of
+				\[ x^3y'''-x^2y''-2xy'+6y=0 \] are linearly independent on \((-\infty
+				,0)\) and \((0,\infty )\). Calculate the Wronskian of
+				\(\{y_1,y_2,y_3\}\).
+			</p>
+		</div>
+		<p class="indent" id="702ad79c-a837-4a8c-84f4-636e1a1071be"></p>
+		<p class="noindent" id="7fe92640-8065-41f3-9930-9970e76d45d1">
+			<span class="ptmb8t-">Solution</span>
+			&nbsp;If \(x\ne 0\), then \[ W(x)=\left |\begin {array}{ccc}
+			x^2&amp;\phantom {2}x^3&amp;\phantom {-}\displaystyle {1\over x}\\
+			2x&amp;3x^2\phantom {^2}&amp;\displaystyle -\displaystyle {1\over x^2}\\
+			2&amp;6x\phantom {x^2}&amp;\phantom {-}\displaystyle {2\over x^3}\end
+			{array} \right | =2x^3\left |\begin {array}{ccc} 1&amp;\phantom
+			{3}x&amp;\phantom {-}\displaystyle {1\over
+			x^3}\\2&amp;3x&amp;-\displaystyle {1\over x^3} \\1&amp;3x&amp;\phantom
+			{-}\displaystyle {1\over x^3}\end {array}\right |\] where we factored
+			\(x^2\), \(x\), and \(2\) out of the first, second, and third rows of
+			\(W(x)\), respectively. Adding the second row of the last determinant to
+			the first and third rows yields \[ W(x)=2x^3\left |\begin {array}{ccc}
+			3&amp;4x&amp;\phantom {-}0\\2&amp;3x&amp;-\displaystyle {1\over x^3}
+			\\3&amp;6x&amp;\phantom {-}0\end {array}\right | =2x^3\left (1\over
+			x^3\right )\left |\begin {array}{cc}3&amp;4x\\3&amp;6x \end {array}\right
+			|=12x\] Therefore \(W(x)\ne 0\) on \((-\infty ,0)\) and \((0,\infty )\).
+		</p>
+		<div class="newtheorem" id="86b7fe59-d495-44cd-b64a-55c5d2873f5a">
+			<p class="noindent">
+				<span class="head">
+					<span class="ex-number">Example&nbsp;9.1.4</span>
+				</span>
+				<a id="x1-294"></a>
+				In Example&nbsp;
+				<a href="#x1-132">
+					9.1.2
+					<!-- tex4ht:ref: example:9.1.2  -->
+				</a>
+				we saw that the solutions \(y_1=e^x\), \(y_2=e^{-x}\), \(y_3=e^{2x}\),
+				and \(y_4=e^{-3x}\) of \[ y^{(4)}+y'''-7y''-y'+6y=0 \] are linearly
+				independent on every open interval. Calculate the Wronskian of
+				\(\{y_1,y_2,y_3,y_4\}\).
+			</p>
+		</div>
+		<p class="indent" id="611634e4-baf7-4299-8e4d-2a4cc98625bc"></p>
+		<p class="noindent" id="fbb0bcca-92e6-4119-99ef-f18c1a95bb77">
+			<span class="ptmb8t-">Solution</span>
+			&nbsp;For all \(x\), \[ W(x)=\left |\begin {array}{rrrr}
+			e^x&amp;e^{-x}&amp;e^{2x}&amp;e^{-3x}\\
+			e^x&amp;-e^{-x}&amp;2e^{2x}&amp;-3e^{-3x}\\
+			e^x&amp;e^{-x}&amp;4e^{2x}&amp;9e^{-3x}\\
+			e^x&amp;-e^{-x}&amp;8e^{2x}&amp;-27e^{-3x} \end {array}\right |\]
+			Factoring the exponential common factor from each row yields \[
+			W(x)=e^{-x}\left |\begin
+			{array}{rrrr}1&amp;1&amp;1&amp;1\\1&amp;-1&amp;2&amp;-3\\1&amp;1&amp;4&amp;9\\
+			1&amp;-1&amp;8&amp;-27\end {array}\right |=240e^{-x}\] from (
+			<a href="#x1-17r12">
+				9.1.12
+				<!-- tex4ht:ref: eq:9.1.12  -->
+			</a>
+			).
+		</p>
+		<p class="noindent" id="d812fadd-b0d3-4931-9cb9-d21f0b1be65d">
+			<span class="ptmrc8t-">
+				R
+				<span class="small-caps">EMARK</span>
+			</span>
+			:&nbsp;Under the assumptions of Theorem&nbsp;
+			<a href="#x1-224">
+				9.1.4
+				<!-- tex4ht:ref: thmtype:9.1.4  -->
+			</a>
+			, it isn’t necessary to obtain a formula for \(W(x)\). Just evaluate
+			\(W(x)\) at a convenient point in \((a,b)\), as we did in Examples&nbsp;
+			<a href="#x1-81">
+				9.1.1
+				<!-- tex4ht:ref: example:9.1.1  -->
+			</a>
+			and
+			<a href="#x1-132">
+				9.1.2
+				<!-- tex4ht:ref: example:9.1.2  -->
+			</a>
+			.
+		</p>
+		<div class="newtheorem" id="30749127-fce4-42f2-83c2-bcca383b2acc">
+			<p class="noindent">
+				<span class="head">
+					<span class="ptmb8t-">Theorem&nbsp;9.1.5</span>
+				</span>
+				<a id="x1-305"></a>
+				Suppose \(c\) is in \((a,b)\) and \(\alpha _{1},\) \(\alpha _{2},\)
+				…\(,\) are real numbers, not all zero. Under the assumptions of
+				Theorem&nbsp;
+				<span class="ptmb8t-">10.3.3</span>
+				, suppose \(y_{1}\) &gt;and \(y_{2}\) are solutions of (
+				<span class="ptmb8t-">5.1.35</span>
+				) such that \begin {equation} \label {eq:9.1.16} \alpha y_{i}(c)+
+				y_{i}'(c)+\cdots +y_{i}^{(n-1)}(c)=0,\quad 1\le i\le n\end {equation}
+				<a id="x1-31r16"></a>
+				Then \(\{y_{1},y_{2},\dots y_{n}\}\) isn’t linearly independent on
+				\((a,b)\).
+			</p>
+		</div>
+		<p class="indent" id="93a60b83-e875-415b-8adb-59e9b9910ebc"></p>
+		<p class="noindent" id="dca861c3-c804-41af-80a0-c30c4747fb1f">
+			<span class="ptmb8t-">Proof</span>
+			Since \(\alpha _{1}\), \(\alpha _{2}\), …, \(\alpha _{n}\) are not all
+			zero, (
+			<a href="#x1-20r14">
+				9.1.14
+				<!-- tex4ht:ref: eq:9.1.14  -->
+			</a>
+			) implies that \[ \left |\begin {array}{ccccccc}
+			y_{1}(c)&amp;y_{1}'(c)&amp;\cdots&amp;y _{1}^{(n-1)}(c)\\
+			y_{2}(c)&amp;y_{2}'(c)&amp;\cdots&amp;y _{2}^{(n-1)}(c)\\ \vdots&amp;
+			\vdots&amp; \ddots&amp; \vdots \\ y_{n}(c)&amp;y_{n}'(c)&amp;\cdots&amp;y
+			_{n}^{(n-1)}(c)\\ \end {array}\right |=0\] so \[ \left |\begin
+			{array}{cccccc} y_{1}(c)&amp;y_{2}(c)&amp;\cdots&amp; y_{n}(c)\\
+			y_{1}'(c)&amp;y_{2}'(c)&amp;\cdots&amp; y_{n}'(c)\\ \vdots&amp;
+			\vdots&amp; \ddots&amp; \vdots \\
+			y_{1}^{(n-1)}(c)&amp;y_{2}^{(n-1)}(c)(c)&amp;\cdots&amp;
+			y_{n}^{(n-1)}(c)(c)\\ \end {array}\right |=0 \] and Theorem&nbsp;
+			<a href="#x1-224">
+				9.1.4
+				<!-- tex4ht:ref: thmtype:9.1.4  -->
+			</a>
+			implies the stated conclusion.
+		</p>
+		<p class="noindent" id="53bb2b2a-9159-42f2-bf4f-5b2af9f24d27">
+			<span id="textcolor3">General Solution of a Nonhomogeneous Equation</span>
+		</p>
+		<p class="indent" id="d99e4fbb-38c6-40f9-a3e7-1ec264a3d58e"></p>
+		<p class="noindent" id="8a5e5383-4c89-44ab-b301-7b1462fe9f99">
+			The next theorem is analogous to Theorem&nbsp;
+			<span class="ptmb8t-">5.3.2</span>
+			. It shows how to find the general solution of \(Ly=F\) if we know a
+			particular solution of \(Ly=F\) and a fundamental set of solutions of the
+			<span class="vocab">complementary equation</span>
+			\(Ly=0\).
+		</p>
+		<div class="newtheorem" id="f6495837-6309-40bc-95cd-aa42372fb528">
+			<p class="noindent">
+				<span class="head">
+					<span class="ptmb8t-">Theorem&nbsp;9.1.6</span>
+				</span>
+				<a id="x1-326"></a>
+				Suppose \(Ly=F\) is normal on \((a,b).\) Let \(y_p\) be a particular
+				solution of \(Ly=F\) on \((a,b),\) and let \(\{y_1,y_2,\dots ,y_n\}\) be
+				a fundamental set of solutions of the complementary equation \(Ly=0\) on
+				\((a,b)\). Then \(y\) is a solution of \(Ly=F\) on \((a,b)\) if and only
+				if \[ y=y_p+c_1y_1+c_2y_2+\cdots +c_ny_n\] where \(c_1,c_2,\dots ,c_n\)
+				are constants.
+			</p>
+		</div>
+		<p class="indent" id="3f081b57-17cd-4c1e-82cd-f14b0549eab6"></p>
+		<p class="indent" id="1a5a53d5-1b48-4222-b46a-77f620bccbf0">
+			The next theorem is analogous to Theorem&nbsp;
+			<span class="ptmb8t-">5.3.2</span>
+			.
+		</p>
+		<div class="newtheorem" id="e0b886fd-897f-4819-9c9a-e02a13315827">
+			<p class="noindent">
+				<span class="head">
+					<span class="ptmb8t-">Theorem&nbsp;9.1.7</span>
+				</span>
+				\([\)The Principle of Superposition\(]\)
+				<a id="x1-337"></a>
+				Suppose for each \(i=1,\) \(2,\) …, \(r\), the function \(y_{p_i}\) is a
+				particular solution of \(Ly=F_i\) on \((a,b).\) Then \[
+				y_p=y_{p_1}+y_{p_2}+\cdots +y_{p_r} \] is a particular solution of \[
+				Ly=F_1(x)+F_2(x)+\cdots +F_r(x) \] on \((a,b)\).
+			</p>
+		</div>
+		<p class="indent" id="20d79a78-7e9c-45a8-b59c-f46e909deed7"></p>
+		<p class="indent" id="f6be20cd-b46c-441e-af56-d090f566e656">
+			We’ll apply Theorems&nbsp;
+			<a href="#x1-326">
+				9.1.6
+				<!-- tex4ht:ref: thmtype:9.1.6  -->
+			</a>
+			and
+			<a href="#x1-337">
+				9.1.7
+				<!-- tex4ht:ref: thmtype:9.1.7  -->
+			</a>
+			throughout the rest of this chapter.
+		</p>
 
+		<div class="nav" id="f0e43ea5-cdbb-4f74-a9e3-759170cc8266">
+			<a>&nbsp;</a>
 
+			<a href="sec9.0.html">Chapter 9</a>
 
-    </p>
-  </div>
-  <p class="indent" id="8976b74f-c604-4327-b088-d9085f854b33">
-  </p>
-  <p class="noindent" id="9b08dc60-cc58-48dd-ab27-22d78846f50f"><span id="textcolor1">Homogeneous Equations</span>
-  </p>
-  <p class="indent" id="4c2efb7d-389a-4f67-8f96-2b2a5196e3e7">
-  </p>
-  <p class="noindent" id="5151ea7a-7948-4595-af96-0766b546b153">Eqn.&nbsp;(<a href="#x1-3r2">9.1.2<!-- tex4ht:ref: eq:9.1.2  --></a>) is said to be <span class="vocab">homogeneous</span> if \(F\equiv 0\) and <span class="vocab">nonhomogeneous</span> otherwise.
-    Since \(y\equiv 0\) is obviously a solution of \(Ly=0\), we
-    call it the <span class="vocab">trivial</span> solution. Any other solution is <span class="vocab">nontrivial</span>.
-  </p>
-  <p class="indent" id="e9b1d181-f3f2-4f08-aea8-de26a22e96f7"> If \(y_1\), \(y_2\), …, \(y_n\) are defined on \((a,b)\) and \(c_1\), \(c_2\), …, \(c_n\) are
-    constants, then \begin {equation} \label {eq:9.1.3} y=c_1y_1+c_2y_2+\cdots +c_ny_n \end {equation}<a id="x1-5r3"></a> is a <span class="vocab">linear combination</span> of \(\{y_1,y_2\dots ,y_n\}\). It’s easy to
-    show that if \(y_1\),
-    \(y_2\), …, \(y_n\) are solutions of \(Ly=0\) on \((a,b)\), then so is any linear combination of \(\{y_1,y_2,\dots
-    ,y_n\}\). (See the proof of Theorem&nbsp;<span class="ptmb8t-">5.1.2</span>.)
-    We say that \(\{y_1,y_2,\dots ,y_n\}\) is a <span class="vocab">fundamental set of solutions</span> of \(Ly=0\)
-    on \((a,b)\) if every solution of \(Ly=0\) on \((a,b)\) can be written as a
-    linear combination of \(\{y_1,y_2,\dots ,y_n\}\), as in (<a href="#x1-5r3">9.1.3<!-- tex4ht:ref: eq:9.1.3  --></a>).
-    In this case we say that (<a href="#x1-5r3">9.1.3<!-- tex4ht:ref: eq:9.1.3  --></a>) is the <span class="vocab">general solution</span> of \(Ly=0\) on
-    \((a,b)\).
-  </p>
-  <p class="indent" id="1de8e280-0b01-46f7-9495-37d75dbb4e8e"> It can be shown (Exercises&nbsp;<span class="ptmb8t-">14</span> and <span class="ptmb8t-">15</span>)
-    that if the equation \(Ly=0\) is normal on \((a,b)\) then it has infinitely many
-    fundamental sets of solutions on \((a,b)\). The next definition will help to identify fundamental sets of solutions
-    of
-    \(Ly=0\).
-  </p>
-  <p class="indent" id="7516a340-7fd6-4c01-bf46-fce70aac97f7"> We say that \(\{y_1,y_2,\dots ,y_n\}\) is <span class="vocab">linearly independent</span> on
-    \((a,b)\) if the only constants \(c_1\), \(c_2\), …, \(c_n\) such that \begin {equation} \label {eq:9.1.4}
-    c_1y_1(x)+c_2y_2(x)+\cdots +c_ny_n(x)=0,\quad a&lt;x&lt;b\end {equation}<a id="x1-6r4"></a> are \(c_1=c_2=\cdots
-    =c_n=0\). If (<a href="#x1-6r4">9.1.4<!-- tex4ht:ref: eq:9.1.4  --></a>) holds for some set
-    of constants \(c_1\), \(c_2\), …, \(c_n\) that are not all zero, then \(\{y_1,y_2,\dots ,y_n\}\) is <span class="vocab">linearly dependent</span> on \((a,b)\)
-  </p>
-  <p class="indent" id="810e8e47-2ffe-4c5e-a14a-58db8843e744"> The next theorem is analogous to Theorem&nbsp;<span class="ptmb8t-">5.13</span>.
-  </p>
-  <div class="newtheorem" id="3b46ef57-432c-4d4c-a8e2-43fe2eb4f456">
-    <p class="noindent"><span class="head">
-        <span class="ptmb8t-">Theorem&nbsp;9.1.2</span> </span><a id="x1-72"></a> If \(Ly=0\)
-      is normal on \((a,b)\), then a set \(\{y_1,y_2,\dots
-      ,y_n\}\) of \(n\) solutions of \(Ly=0\) on \((a,b)\) is a fundamental set if and only if it’s
-        linearly independent on \((a,b)\).
-    </p>
-  </div>
-  <p class="indent" id="85cfe940-a5e9-4638-8cb5-e96cc8720a09">
-  </p>
-  <div class="newtheorem" id="778570d9-5ec2-454e-b8cd-41bcbc3adbf5">
-    <p class="noindent"><span class="head">
-        <span class="ex-number">Example&nbsp;9.1.1</span> </span><a id="x1-81"></a>The equation \begin {equation} \label
-      {eq:9.1.5} x^3y'''-x^2y''-2xy'+6y=0 \end {equation}<a id="x1-9r5"></a> is normal and has the solutions
-      \(y_1=x^2\), \(y_2=x^3\), and \(y_3=1/x\) on \((-\infty ,0)\) and \((0,\infty )\). Show that \(\{y_1,y_2,y_3\}\)
-      is linearly independent
-      on \((-\infty , 0)\) and \((0,\infty )\). Then find the general solution of (<a href="#x1-9r5">9.1.5<!-- tex4ht:ref: eq:9.1.5  --></a>) on \((-\infty , 0)\) and \((0,\infty )\).
-    </p>
-  </div>
-  <p class="indent" id="8b44ea5f-e816-4d81-a1f9-755042cc25e1">
-  </p>
-  <p class="noindent" id="848532fe-b4d2-4a51-a4de-656ce2f622c3"><span class="ptmb8t-">Solution </span>&nbsp;Suppose \begin {equation} \label {eq:9.1.6}
-    c_1x^2+c_2x^3+{c_3\over x}=0 \end {equation}<a id="x1-10r6"></a> on \((0,\infty )\). We must show that
-    \(c_1=c_2=c_3=0\). Differentiating (<a href="#x1-10r6">9.1.6<!-- tex4ht:ref: eq:9.1.6  --></a>) twice yields the
-    system \begin {equation} \label {eq:9.1.7} \begin {array}{rcl} c_1x^2+c_2x^3+\displaystyle {c_3\over
-    x}&amp;=&amp;0\\ 2c_1x+3c_2x^2-\displaystyle {c_3\over x^2}&amp;=&amp;0\\ 2c_1+6c_2x+\displaystyle {2c_3\over
-    x^3}&amp;=&amp;0\end {array} \end {equation}<a id="x1-11r7"></a> If (<a href="#x1-11r7">9.1.7<!-- tex4ht:ref: eq:9.1.7  --></a>) holds for
-    all \(x\) in \((0,\infty )\), then it certainly holds at \(x=1\); therefore, \begin {equation} \label {eq:9.1.8}
-    \begin {array}{rcl} \phantom {2}c_1+\phantom {3}c_2+\phantom {2}c_3&amp;=&amp;0\\ 2c_1+3c_2-\phantom
-    {2}c_3&amp;=&amp;0\\ 2c_1+6c_2+2c_3&amp;=&amp;0\end {array} \end {equation}<a id="x1-12r8"></a> By solving this
-    system directly, you can verify that it has only the
-    trivial solution \(c_1=c_2=c_3=0\); however, for our purposes it’s more useful to recall from linear algebra that a
-    homogeneous
-    linear system of \(n\) equations in \(n\) unknowns has only the trivial solution if its determinant is nonzero.
-    Since the
-    determinant of (<a href="#x1-12r8">9.1.8<!-- tex4ht:ref: eq:9.1.8  --></a>) is
-
-
-
-    \[ \left |\begin {array}{rrr}1&amp;1&amp;1\\2&amp;3&amp;-1\\2&amp;6&amp;2\end {array}\right |= \left |\begin
-    {array}{rrr}1&amp;0&amp;0\\2&amp;1&amp;-3\\2&amp;4&amp;0\end {array}\right |=12\]
-    it follows that (<a href="#x1-12r8">9.1.8<!-- tex4ht:ref: eq:9.1.8  --></a>) has only the trivial solution, so
-    \(\{y_1,y_2,y_3\}\) is linearly independent on \((0,\infty )\). Now Theorem&nbsp;<a href="#x1-72">9.1.2<!-- tex4ht:ref: thmtype:9.1.2  --></a> implies
-    that
-    \[ y=c_1x^2+c_2x^3+{c_3\over x} \]
-    is the general solution of (<a href="#x1-9r5">9.1.5<!-- tex4ht:ref: eq:9.1.5  --></a>) on \((0,\infty )\). To see
-    that this is also true on \((-\infty ,0)\), assume that (<a href="#x1-10r6">9.1.6<!-- tex4ht:ref: eq:9.1.6  --></a>)
-    holds on \((-\infty ,0)\). Setting \(x=-1\) in
-    (<a href="#x1-11r7">9.1.7<!-- tex4ht:ref: eq:9.1.7  --></a>) yields </p>
-  <div class="eqnarray" id="646d035a-1cfd-4794-977e-9ed5f94c5210">\begin {eqnarray*} \phantom {-2}c_1-\phantom {3}c_2-\phantom {2}c_3&amp;=&amp;0\\
-    -2c_1+3c_2-\phantom {2}c_3&amp;=&amp;0\\ \phantom {-}2c_1-6c_2-2c_3&amp;=&amp;0\end {eqnarray*}</div>
-  <p class="indent" id="2edc6b23-5c68-462e-8636-cd75b02fc81f"> Since the determinant of this system is
-    \[ \left |\begin {array}{rrr}1&amp;-1&amp;-1\\-2&amp;3&amp;-1\\2&amp;-6&amp;-2\end {array}\right |= \left |\begin
-    {array}{rrr}1&amp;0&amp;0\\-2&amp;1&amp;-3\\2&amp;-4&amp;0\end {array}\right |=-12\]
-    it follows that \(c_1=c_2=c_3=0\); that is, \(\{y_1,y_2,y_3\}\) is linearly independent on \((-\infty ,0)\).
-  </p>
-  <div class="newtheorem" id="12f606e3-9b1f-4a1b-a71a-fc07330b4740">
-    <p class="noindent"><span class="head">
-        <span class="ex-number">Example&nbsp;9.1.2</span> </span><a id="x1-132"></a>The equation \begin {equation} \label
-      {eq:9.1.9} y^{(4)}+y'''-7y''-y'+6y=0 \end {equation}<a id="x1-14r9"></a> is normal and has the solutions
-      \(y_1=e^x\), \(y_2=e^{-x}\), \(y_3=e^{2x}\), and \(y_4=e^{-3x}\) on \((-\infty ,\infty )\). (Verify.) Show that
-      \(\{y_1,y_2,y_3,y_4\}\) is linearly
-      independent on \((-\infty ,\infty )\). Then find the general solution of (<a href="#x1-14r9">9.1.9<!-- tex4ht:ref: eq:9.1.9  --></a>).
-    </p>
-  </div>
-  <p class="indent" id="1b115980-46ff-42ef-b9dc-b19351d26286">
-  </p>
-  <p class="noindent" id="1016d1a8-5272-49e9-b3c5-45da8645b927"><span class="ptmb8t-">Solution </span>&nbsp;Suppose \(c_1\), \(c_2\), \(c_3\), and \(c_4\) are
-    constants such that \begin {equation} \label {eq:9.1.10} c_1e^x+c_2e^{-x}+c_3e^{2x}+c_4e^{-3x}=0 \end {equation}<a id="x1-15r10"></a> for all \(x\). We must show that \(c_1=c_2=c_3=c_4=0\). Differentiating (<a href="#x1-15r10">9.1.10<!-- tex4ht:ref: eq:9.1.10  --></a>) three
-    times yields the system \begin {equation} \label {eq:9.1.11} \begin {array}{rcl} c_1e^x+c_2e^{-x}+\phantom
-    {2}c_3e^{2x}+\phantom {27}c_4e^{-3x}&amp;=&amp;0\\ c_1e^x-c_2e^{-x}+2c_3e^{2x}-\phantom {2}3c_4e^{-3x}&amp;=&amp;0\\
-    c_1e^x+c_2e^{-x}+4c_3e^{2x}+\phantom {2}9c_4e^{-3x}&amp;=&amp;0\\
-    c_1e^x-c_2e^{-x}+8c_3e^{2x}-27c_4e^{-3x}&amp;=&amp;0\end {array} \end {equation}<a id="x1-16r11"></a> If (<a href="#x1-16r11">9.1.11<!-- tex4ht:ref: eq:9.1.11  --></a>) holds for all \(x\), then it certainly holds for
-    \(x=0\). Therefore
-
-
-
-    \[ \begin {array}{rcl} c_1+c_2+\phantom {2}c_3+\phantom {27}c_4&amp;=&amp;0\\ c_1-c_2+2c_3-\phantom
-    {2}3c_4&amp;=&amp;0\\ c_1+c_2+4c_3+\phantom {2}9c_4&amp;=&amp;0\\ c_1-c_2+8c_3-27c_4&amp;=&amp;0\end {array} \]
-    The determinant of this system is \begin {equation} \label {eq:9.1.12} \begin {array}{rcl} \left |\begin
-    {array}{rrrr}1&amp;1&amp;1&amp;1\\1&amp;-1&amp;2&amp;-3\\1&amp;1&amp;4&amp;9\\ 1&amp;-1&amp;8&amp;-27\end
-    {array}\right |&amp;=&amp; \left |\begin
-    {array}{rrrr}1&amp;1&amp;1&amp;1\\0&amp;-2&amp;1&amp;-4\\0&amp;0&amp;3&amp;8\\ 0&amp;-2&amp;7&amp;-28\end
-    {array}\right | =\left |\begin {array}{rrr}-2&amp;1&amp;-4\\0&amp;3&amp;8\\ -2&amp;7&amp;-28\end {array}\right
-    |\\&amp;=&amp; \left |\begin {array}{rrr}-2&amp;1&amp;-4\\0&amp;3&amp;8 \\0&amp;6&amp;-24\end {array}\right |=
-    -2\left |\begin {array}{rr}3&amp;8\\6&amp;-24\end {array}\right |=240\end {array} \end {equation}<a id="x1-17r12"></a> so the system has only the trivial solution \(c_1=c_2=c_3=c_4=0\). Now Theorem&nbsp;<a href="#x1-72">9.1.2<!-- tex4ht:ref: thmtype:9.1.2  --></a> implies
-    that
-    \[ y=c_1e^x+c_2e^{-x}+c_3e^{2x}+c_4e^{-3x} \]
-    is the general solution of (<a href="#x1-14r9">9.1.9<!-- tex4ht:ref: eq:9.1.9  --></a>).
-  </p>
-  <p class="noindent" id="c6eee7a5-efd3-48b9-94b9-7b35c731f54a"><span id="textcolor2">The Wronskian</span>
-  </p>
-  <p class="indent" id="3f59268a-cfc7-4253-b329-c9907bbaf366">
-  </p>
-  <p class="noindent" id="956ce517-6164-4c8d-9a4b-5b955d0c19b8">We can use the method used in Examples&nbsp;<a href="#x1-81">9.1.1<!-- tex4ht:ref: example:9.1.1  --></a> and <a href="#x1-132">9.1.2<!-- tex4ht:ref: example:9.1.2  --></a> to test \(n\) solutions \(\{y_1,y_2,\dots ,y_n\}\) of
-    any \(n\)th order equation \(Ly=0\) for linear
-    independence on an interval \((a,b)\) on which the equation is normal. Thus, if \(c_1\), \(c_2\) ,…, \(c_n\) are
-    constants such
-    that
-    \[ c_1y_1+c_2y_2+\cdots +c_ny_n=0,\quad a&lt;x&lt;b\]
-    then differentiating \(n-1\) times leads to the \(n\times n\) system of equations \begin {equation} \label
-    {eq:9.1.13} \begin {array}{rcl} c_1y_1(x)+c_2y_2(x)+&amp;\cdots &amp;+c_ny_n(x)=0\\
-    c_1y_1'(x)+c_2y_2'(x)+&amp;\cdots &amp;+c_ny_n'(x)=0\\ \phantom {c_1y_1^{(n)}(x)+c_2y_2^{(n-1)}(x)}&amp;\vdots &amp;
-    \phantom {\cdots +c_ny_n^{(n-1)(x)}=q}\\ c_1y_1^{(n-1)}(x)+c_2y_2^{(n-1)}(x)+&amp;\cdots &amp;+c_ny_n^{(n-1)}(x) =0
-    \end {array} \end {equation}<a id="x1-18r13"></a> for \(c_1\), \(c_2\), …, \(c_n\). For a fixed \(x\), the
-    determinant of this system
-    is
-
-
-
-    \[ W(x)=\left |\begin {array}{cccc} y_1(x)&amp;y_2(x)&amp;\cdots&amp;y _n(x)\\ y'_1(x)&amp;y'_2(x)&amp;\cdots&amp;y
-    _n'(x)\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ y_1^{(n-1)}(x)&amp;y_2^{(n-1)}(x)&amp;\cdots&amp;y
-    _n^{(n-1)}(x) \end {array}\right |\]
-    We call this determinant the <span class="vocab">vocab</span> of \(\{y_1,y_2,\dots ,y_n\}\). If \(W(x)\ne 0\) for
-    some \(x\) in \((a,b)\) then the system (<a href="#x1-18r13">9.1.13<!-- tex4ht:ref: eq:9.1.13  --></a>) has only the
-    trivial solution \(c_1=c_2=\cdots =c_n=0\),
-    and Theorem&nbsp;<a href="#x1-72">9.1.2<!-- tex4ht:ref: thmtype:9.1.2  --></a> implies that
-    \[ y=c_1y_1+c_2y_2+\cdots +c_ny_n \]
-    is the general solution of \(Ly=0\) on \((a,b)\).
-  </p>
-  <p class="indent" id="c8be882e-b9ae-4e64-941f-85e4f23e19bf"> The next theorem generalizes Theorem&nbsp;<span class="ptmb8t-">5.1.14</span>. The proof is sketched in
-    (Exercises&nbsp;<span class="ptmb8t-">17</span>–<span class="ptmb8t-">20</span>).
-  </p>
-  <div class="newtheorem" id="eac1172e-b65d-44de-bab0-f5f9d2f6ed10">
-    <p class="noindent"><span class="head">
-        <span class="ptmb8t-">Theorem&nbsp;9.1.3</span> </span><a id="x1-193"></a> Suppose the
-        homogeneous linear \(n\)th order equation \begin {equation} \label
-      {eq:9.1.14} P_0(x)y^{(n)}+P_1(x)y^{n-1}+\cdots +P_n(x)y=0 \end {equation}<a id="x1-20r14"></a> is normal on \((a,b),\) let \(y_1,\) \(y_2,\)…, \(y_n\) be solutions of
-      (<a href="#x1-20r14">9.1.14</a>) on \((a,b),\) and let \(x_0\) be in \((a,b)\).
-        Then the Wronskian of \(\{y_1,y_2,\dots ,y_n\}\) is given by \begin
-      {equation} \label {eq:9.1.15} W(x)=W(x_0)\exp \left \{-\int ^x_{x_0}{P_1(t)\over P_0(t)}\, dt\right \},\quad
-      a&lt;x&lt;b\end {equation}<a id="x1-21r15"></a> Therefore,
-        either \(W\) has no zeros in \((a,b)\) or \(W\equiv 0\) on
-      \((a,b).\)
-    </p>
-  </div>
-  <p class="indent" id="5e0ae79a-4c07-4aa4-a00f-ab4801890858">
-  </p>
-  <p class="indent" id="bb31ca2a-c02b-4566-b6dd-5392defc1af9"> Formula (<a href="#x1-21r15">9.1.15<!-- tex4ht:ref: eq:9.1.15  --></a>) is <span class="vocab">Abel’s formula</span>.
-  </p>
-  <p class="indent" id="ec924659-a7bf-4426-a211-1ce58a2c9c2f"> The next theorem is analogous to Theorem&nbsp;<span class="ptmb8t-">5.1.6</span>.
-  </p>
-  <div class="newtheorem" id="ba07d7d4-fa97-4b45-a83f-39b1e02fd8f9">
-    <p class="noindent"><span class="head">
-        <span class="ptmb8t-">Theorem&nbsp;9.1.4</span> </span><a id="x1-224"></a> Suppose
-      \(Ly=0\) is normal on \((a,b)\) and let \(y_1\), \(y_2\), …, \(y_n\) be
-      \(n\) solutions of \(Ly=0\) on \((a,b)\). Then the following statements are
-        equivalent; that is, they are either all
-        true or all false:
-    </p>
-    <dl class="list1">
-      <dt class="list">
-        <span class="ptmb8t-">(a)</span>
-      </dt>
-      <dd class="list">
-        <p class="noindent">The general solution of \(Ly=0\) on \((a,b)\) is \(y=c_1y_1+c_2y_2+\cdots +c_ny_n.\)
-        </p>
-      </dd>
-      <dt class="list">
-        <span class="ptmb8t-">(b)</span>
-      </dt>
-      <dd class="list">
-        <p class="noindent">\(\{y_1,y_2,\dots ,y_n\}\) is a fundamental set of solutions
-            of \(Ly=0\) on \((a,b).\)
-        </p>
-      </dd>
-      <dt class="list">
-        <span class="ptmb8t-">(c)</span>
-      </dt>
-      <dd class="list">
-        <p class="noindent">\(\{y_1,y_2,\dots ,y_n\}\) is linearly independent on
-          \((a,b).\)
-        </p>
-      </dd>
-      <dt class="list">
-        <span class="ptmb8t-">(d)</span>
-      </dt>
-      <dd class="list">
-        <p class="noindent">The <span class="vocab">Wronskian</span> of \(\{y_1,y_2,\dots ,y_n\}\) is nonzero at some point in \((a,b)\).
-        </p>
-      </dd>
-      <dt class="list">
-        <span class="ptmb8t-">(e)</span>
-      </dt>
-      <dd class="list">
-        <p class="noindent">The <span class="vocab">Wronskian</span> of \(\{y_1,y_2,\dots ,y_n\}\) is nonzero at all points in \((a,b)\).</p>
-      </dd>
-    </dl>
-  </div>
-  <p class="indent" id="7b270398-6427-4612-8a39-b75cf08f8c8b">
-  </p>
-  <div class="newtheorem" id="15f9a176-2b2d-49b8-955c-7a574a0d66c6">
-    <p class="noindent"><span class="head">
-        <span class="ex-number">Example&nbsp;9.1.3</span> </span><a id="x1-283"></a> In Example&nbsp;<a href="#x1-81">9.1.1<!-- tex4ht:ref: example:9.1.1  --></a> we saw that the solutions \(y_1=x^2\), \(y_2=x^3\),
-      and \(y_3=1/x\) of
-      \[ x^3y'''-x^2y''-2xy'+6y=0 \]
-      are linearly independent on \((-\infty ,0)\) and \((0,\infty )\). Calculate the Wronskian of \(\{y_1,y_2,y_3\}\).
-    </p>
-  </div>
-  <p class="indent" id="702ad79c-a837-4a8c-84f4-636e1a1071be">
-  </p>
-  <p class="noindent" id="7fe92640-8065-41f3-9930-9970e76d45d1"><span class="ptmb8t-">Solution </span>&nbsp;If \(x\ne 0\), then
-    \[ W(x)=\left |\begin {array}{ccc} x^2&amp;\phantom {2}x^3&amp;\phantom {-}\displaystyle {1\over x}\\
-    2x&amp;3x^2\phantom {^2}&amp;\displaystyle -\displaystyle {1\over x^2}\\ 2&amp;6x\phantom {x^2}&amp;\phantom
-    {-}\displaystyle {2\over x^3}\end {array} \right | =2x^3\left |\begin {array}{ccc} 1&amp;\phantom {3}x&amp;\phantom
-    {-}\displaystyle {1\over x^3}\\2&amp;3x&amp;-\displaystyle {1\over x^3} \\1&amp;3x&amp;\phantom {-}\displaystyle
-    {1\over x^3}\end {array}\right |\]
-    where we factored \(x^2\), \(x\), and \(2\) out of the first, second, and third rows of \(W(x)\), respectively.
-    Adding the second row of the
-    last determinant to the first and third rows yields
-
-
-
-    \[ W(x)=2x^3\left |\begin {array}{ccc} 3&amp;4x&amp;\phantom {-}0\\2&amp;3x&amp;-\displaystyle {1\over x^3}
-    \\3&amp;6x&amp;\phantom {-}0\end {array}\right | =2x^3\left (1\over x^3\right )\left |\begin
-    {array}{cc}3&amp;4x\\3&amp;6x \end {array}\right |=12x\]
-    Therefore \(W(x)\ne 0\) on \((-\infty ,0)\) and \((0,\infty )\).
-  </p>
-  <div class="newtheorem" id="86b7fe59-d495-44cd-b64a-55c5d2873f5a">
-    <p class="noindent"><span class="head">
-        <span class="ex-number">Example&nbsp;9.1.4</span> </span><a id="x1-294"></a> In Example&nbsp;<a href="#x1-132">9.1.2<!-- tex4ht:ref: example:9.1.2  --></a> we saw that the solutions \(y_1=e^x\),
-      \(y_2=e^{-x}\), \(y_3=e^{2x}\), and \(y_4=e^{-3x}\) of
-      \[ y^{(4)}+y'''-7y''-y'+6y=0 \]
-      are linearly independent on every open interval. Calculate the Wronskian of \(\{y_1,y_2,y_3,y_4\}\).
-    </p>
-  </div>
-  <p class="indent" id="611634e4-baf7-4299-8e4d-2a4cc98625bc">
-  </p>
-  <p class="noindent" id="fbb0bcca-92e6-4119-99ef-f18c1a95bb77"><span class="ptmb8t-">Solution </span>&nbsp;For all \(x\),
-    \[ W(x)=\left |\begin {array}{rrrr} e^x&amp;e^{-x}&amp;e^{2x}&amp;e^{-3x}\\
-    e^x&amp;-e^{-x}&amp;2e^{2x}&amp;-3e^{-3x}\\ e^x&amp;e^{-x}&amp;4e^{2x}&amp;9e^{-3x}\\
-    e^x&amp;-e^{-x}&amp;8e^{2x}&amp;-27e^{-3x} \end {array}\right |\]
-    Factoring the exponential common factor from each row yields
-
-
-
-    \[ W(x)=e^{-x}\left |\begin {array}{rrrr}1&amp;1&amp;1&amp;1\\1&amp;-1&amp;2&amp;-3\\1&amp;1&amp;4&amp;9\\
-    1&amp;-1&amp;8&amp;-27\end {array}\right |=240e^{-x}\]
-    from (<a href="#x1-17r12">9.1.12<!-- tex4ht:ref: eq:9.1.12  --></a>).
-  </p>
-  <p class="noindent" id="d812fadd-b0d3-4931-9cb9-d21f0b1be65d"><span class="ptmrc8t-">R<span class="small-caps">EMARK</span></span>:&nbsp;Under the assumptions of
-    Theorem&nbsp;<a href="#x1-224">9.1.4<!-- tex4ht:ref: thmtype:9.1.4  --></a>, it isn’t necessary to obtain a formula for
-    \(W(x)\). Just evaluate \(W(x)\) at a
-    convenient point in \((a,b)\), as we did in Examples&nbsp;<a href="#x1-81">9.1.1<!-- tex4ht:ref: example:9.1.1  --></a>
-    and <a href="#x1-132">9.1.2<!-- tex4ht:ref: example:9.1.2  --></a>.
-  </p>
-  <div class="newtheorem" id="30749127-fce4-42f2-83c2-bcca383b2acc">
-    <p class="noindent"><span class="head">
-        <span class="ptmb8t-">Theorem&nbsp;9.1.5</span> </span><a id="x1-305"></a> Suppose
-      \(c\) is in \((a,b)\) and \(\alpha _{1},\) \(\alpha
-      _{2},\) …\(,\) are real numbers, not all zero. Under the
-        assumptions of
-        Theorem&nbsp;<span class="ptmb8t-">10.3.3</span>, suppose \(y_{1}\) &gt;and \(y_{2}\) are solutions of (<span class="ptmb8t-">5.1.35</span>) such that \begin {equation} \label {eq:9.1.16}
-      \alpha y_{i}(c)+ y_{i}'(c)+\cdots +y_{i}^{(n-1)}(c)=0,\quad 1\le i\le n\end {equation}<a id="x1-31r16"></a> Then \(\{y_{1},y_{2},\dots y_{n}\}\) isn’t linearly independent
-        on \((a,b)\).
-    </p>
-  </div>
-  <p class="indent" id="93a60b83-e875-415b-8adb-59e9b9910ebc">
-  </p>
-  <p class="noindent" id="dca861c3-c804-41af-80a0-c30c4747fb1f"><span class="ptmb8t-">Proof </span>Since \(\alpha _{1}\), \(\alpha _{2}\), …, \(\alpha _{n}\) are
-    not all zero, (<a href="#x1-20r14">9.1.14<!-- tex4ht:ref: eq:9.1.14  --></a>) implies that
-    \[ \left |\begin {array}{ccccccc} y_{1}(c)&amp;y_{1}'(c)&amp;\cdots&amp;y _{1}^{(n-1)}(c)\\
-    y_{2}(c)&amp;y_{2}'(c)&amp;\cdots&amp;y _{2}^{(n-1)}(c)\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\
-    y_{n}(c)&amp;y_{n}'(c)&amp;\cdots&amp;y _{n}^{(n-1)}(c)\\ \end {array}\right |=0\]
-    so
-
-
-
-    \[ \left |\begin {array}{cccccc} y_{1}(c)&amp;y_{2}(c)&amp;\cdots&amp; y_{n}(c)\\
-    y_{1}'(c)&amp;y_{2}'(c)&amp;\cdots&amp; y_{n}'(c)\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\
-    y_{1}^{(n-1)}(c)&amp;y_{2}^{(n-1)}(c)(c)&amp;\cdots&amp; y_{n}^{(n-1)}(c)(c)\\ \end {array}\right |=0 \]
-    and Theorem&nbsp;<a href="#x1-224">9.1.4<!-- tex4ht:ref: thmtype:9.1.4  --></a> implies the stated conclusion.
-
-
-
-  </p>
-  <p class="noindent" id="53bb2b2a-9159-42f2-bf4f-5b2af9f24d27"><span id="textcolor3">General Solution of a Nonhomogeneous Equation</span>
-  </p>
-  <p class="indent" id="d99e4fbb-38c6-40f9-a3e7-1ec264a3d58e">
-  </p>
-  <p class="noindent" id="8a5e5383-4c89-44ab-b301-7b1462fe9f99">The next theorem is analogous to Theorem&nbsp;<span class="ptmb8t-">5.3.2</span>. It shows how to find
-    the general solution of \(Ly=F\) if we
-    know a particular solution of \(Ly=F\) and a fundamental set of solutions of the <span class="vocab">complementary equation</span>
-    \(Ly=0\).
-  </p>
-  <div class="newtheorem" id="f6495837-6309-40bc-95cd-aa42372fb528">
-    <p class="noindent"><span class="head">
-        <span class="ptmb8t-">Theorem&nbsp;9.1.6</span> </span><a id="x1-326"></a> Suppose
-      \(Ly=F\) is normal on \((a,b).\) Let \(y_p\)
-      be a particular solution of \(Ly=F\) on \((a,b),\)
-        and let \(\{y_1,y_2,\dots ,y_n\}\) be a fundamental
-        set of solutions of the complementary equation \(Ly=0\) on \((a,b)\).
-        Then \(y\) is a solution of \(Ly=F\)
-        on \((a,b)\) if and only if
-      \[ y=y_p+c_1y_1+c_2y_2+\cdots +c_ny_n\]
-      where \(c_1,c_2,\dots ,c_n\) are constants.
-    </p>
-  </div>
-  <p class="indent" id="3f081b57-17cd-4c1e-82cd-f14b0549eab6">
-  </p>
-  <p class="indent" id="1a5a53d5-1b48-4222-b46a-77f620bccbf0"> The next theorem is analogous to Theorem&nbsp;<span class="ptmb8t-">5.3.2</span>.
-  </p>
-  <div class="newtheorem" id="e0b886fd-897f-4819-9c9a-e02a13315827">
-    <p class="noindent"><span class="head">
-        <span class="ptmb8t-">Theorem&nbsp;9.1.7</span> </span>\([\)The Principle of
-        Superposition\(]\)<a id="x1-337"></a> Suppose for each \(i=1,\) \(2,\)
-      …, \(r\), the function \(y_{p_i}\) is a particular
-        solution of \(Ly=F_i\) on \((a,b).\) Then
-      \[ y_p=y_{p_1}+y_{p_2}+\cdots +y_{p_r} \]
-      is a particular solution of
-      \[ Ly=F_1(x)+F_2(x)+\cdots +F_r(x) \]
-      on \((a,b)\).
-    </p>
-  </div>
-  <p class="indent" id="20d79a78-7e9c-45a8-b59c-f46e909deed7">
-  </p>
-  <p class="indent" id="f6be20cd-b46c-441e-af56-d090f566e656"> We’ll apply Theorems&nbsp;<a href="#x1-326">9.1.6<!-- tex4ht:ref: thmtype:9.1.6  --></a> and <a href="#x1-337">9.1.7<!-- tex4ht:ref: thmtype:9.1.7  --></a> throughout the rest of this chapter.
-  </p>
-
-  <div class="nav" id="f0e43ea5-cdbb-4f74-a9e3-759170cc8266">
-    <a>&nbsp;</a>
-
-    <a href="sec9.0.html">Chapter 9</a>
-
-    <a href="sec9.2.book.html">Next (9.2)</a>
-  </div>
-
-
-
-</body></html>
+			<a href="sec9.2.book.html">Next (9.2)</a>
+		</div>
+	</body>
+</html>

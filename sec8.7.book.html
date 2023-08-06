@@ -1,345 +1,555 @@
-<!DOCTYPE html><html lang="en-US" xml:lang="en-US"><head>
-  <title></title>
-  <meta charset="utf-8">
-  <meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <link rel="stylesheet" type="text/css" href="combined.css">
-  <meta content="Trench_DiffEQ_Book.tex" name="src">
-  <script>window.MathJax = {
-      tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(8.7.' + tag + ')' } }
-    }; </script>
+<!doctype html>
+<html lang="en-US" xml:lang="en-US">
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator" />
+		<meta content="width=device-width,initial-scale=1" name="viewport" />
+		<link rel="stylesheet" type="text/css" href="combined.css" />
+		<meta content="Trench_DiffEQ_Book.tex" name="src" />
+		<script>
+			window.MathJax = {
+				tex: {
+					packages: { "[+]": ["tagformat"] },
+					tags: "ams",
+					tagformat: { tag: (tag) => "(8.7." + tag + ")" },
+				},
+			};
+		</script>
 
-  <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-  <style type="text/css">
-    :root {
-      --section-number: "8.7"
-    }
-  </style>
-</head>
+		<script
+			async="async"
+			id="MathJax-script"
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+			type="text/javascript"
+		></script>
+		<style type="text/css">
+			:root {
+				--section-number: "8.7";
+			}
+		</style>
+	</head>
 
-<body>
-  <p id="67592b33-24d8-4fa2-92fb-7406acc23a96"><a id="x1-1doc"></a>
-  </p>
-  <p class="noindent" id="b5370e1a-fa3b-433d-b987-2b358dee99c1">Section 8.7 Constant Coefficient Equations with Impulses
-  </p>
-  <p class="noindent" id="2abf6b58-b01a-45f4-89ed-0c7e09879ff8"><span class="ptmb8t-">8.7</span><span class="ptmb8t-x-x-90">&nbsp; CONSTANT COEFFICIENT EQUATIONS WITH
-      IMPULSES</span>
-  </p>
-  <p class="noindent" id="93c749d6-ab7f-41d1-a4cb-aca6a1f2b78d">So far in this chapter, we’ve considered initial value problems for the constant coefficient
-    equation
-    \[ ay''+by'+cy=f(t)\]
-    where \(f\) is continuous or piecewise continuous on \([0,\infty )\). In this section we consider initial value
-    problems where \(f\)
-    represents a force that’s very large for a short time and zero otherwise. We say that such forces are <span class="vocab">impulsive</span>.
-    Impulsive forces occur, for example, when two objects collide. Since it isn’t feasible to represent such forces as
-    continuous or piecewise continuous functions, we must construct a different mathematical model to deal with
-    them.
-  </p>
-  <p class="indent" id="531de205-8f66-4597-b8d9-8eee799578ba"> If \(f\) is an integrable function and \(f(t)=0\) for \(t\) outside of the interval
-    \([t_0,t_0+h]\), then \(\int _{t_0}^{t_0+h} f(t)\,dt\) is called the <span class="vocab">total impulse</span> of
-    \(f\). We’re
-    interested in the idealized situation where \(h\) is so small that the total impulse can be assumed to be applied
-    instantaneously at \(t=t_0\). We say in this case that \(f\) is an <span class="vocab">impulse function</span>.
-    In particular, we denote by \(\delta (t-t_0)\) the impulse
-    function with total impulse equal to one, applied at \(t=t_0\). (The impulse function \(\delta (t)\) obtained by
-    setting \(t_0=0\) is the <span class="vocab">Dirac\(\delta \) function</span>.) It must be understood, however, that
-    \(\delta (t-t_0)\) isn’t a function in the standard sense, since our “definition”
-    implies that \(\delta (t-t_0)=0\) if \(t\ne t_0\), while
-    \[ \int _{t_0}^{t_0} \delta (t-t_0)\,dt=1\]
-    From calculus we know that no function can have these properties; nevertheless, there’s a branch of
-    mathematics known as the <span class="vocab">theory of distributions</span> where the definition can be made
-    rigorous. Since the
-    theory of distributions is beyond the scope of this book, we’ll take an intuitive approach to impulse
-    functions.
-  </p>
-  <p class="indent" id="09068da2-ca7d-4221-9345-acaf80842cf7"> Our first task is to define what we mean by the solution of the initial value problem
+	<body>
+		<p id="67592b33-24d8-4fa2-92fb-7406acc23a96"><a id="x1-1doc"></a></p>
+		<p class="noindent" id="b5370e1a-fa3b-433d-b987-2b358dee99c1">
+			Section 8.7 Constant Coefficient Equations with Impulses
+		</p>
+		<p class="noindent" id="2abf6b58-b01a-45f4-89ed-0c7e09879ff8">
+			<span class="ptmb8t-">8.7</span>
+			<span class="ptmb8t-x-x-90">
+				&nbsp; CONSTANT COEFFICIENT EQUATIONS WITH IMPULSES
+			</span>
+		</p>
+		<p class="noindent" id="93c749d6-ab7f-41d1-a4cb-aca6a1f2b78d">
+			So far in this chapter, we’ve considered initial value problems for the
+			constant coefficient equation \[ ay''+by'+cy=f(t)\] where \(f\) is
+			continuous or piecewise continuous on \([0,\infty )\). In this section we
+			consider initial value problems where \(f\) represents a force that’s very
+			large for a short time and zero otherwise. We say that such forces are
+			<span class="vocab">impulsive</span>
+			. Impulsive forces occur, for example, when two objects collide. Since it
+			isn’t feasible to represent such forces as continuous or piecewise
+			continuous functions, we must construct a different mathematical model to
+			deal with them.
+		</p>
+		<p class="indent" id="531de205-8f66-4597-b8d9-8eee799578ba">
+			If \(f\) is an integrable function and \(f(t)=0\) for \(t\) outside of the
+			interval \([t_0,t_0+h]\), then \(\int _{t_0}^{t_0+h} f(t)\,dt\) is called
+			the
+			<span class="vocab">total impulse</span>
+			of \(f\). We’re interested in the idealized situation where \(h\) is so
+			small that the total impulse can be assumed to be applied instantaneously
+			at \(t=t_0\). We say in this case that \(f\) is an
+			<span class="vocab">impulse function</span>
+			. In particular, we denote by \(\delta (t-t_0)\) the impulse function with
+			total impulse equal to one, applied at \(t=t_0\). (The impulse function
+			\(\delta (t)\) obtained by setting \(t_0=0\) is the
+			<span class="vocab">Dirac\(\delta \) function</span>
+			.) It must be understood, however, that \(\delta (t-t_0)\) isn’t a
+			function in the standard sense, since our “definition” implies that
+			\(\delta (t-t_0)=0\) if \(t\ne t_0\), while \[ \int _{t_0}^{t_0} \delta
+			(t-t_0)\,dt=1\] From calculus we know that no function can have these
+			properties; nevertheless, there’s a branch of mathematics known as the
+			<span class="vocab">theory of distributions</span>
+			where the definition can be made rigorous. Since the theory of
+			distributions is beyond the scope of this book, we’ll take an intuitive
+			approach to impulse functions.
+		</p>
+		<p class="indent" id="09068da2-ca7d-4221-9345-acaf80842cf7">
+			Our first task is to define what we mean by the solution of the initial
+			value problem \[ ay''+by'+cy=\delta (t-t_0), \quad y(0)=0,\quad y'(0)=0\]
+			where \(t_0\) is a fixed nonnegative number. The next theorem will
+			motivate our definition.
+		</p>
+		<div class="newtheorem" id="bb20d454-07f1-427d-8fbd-4644dab4e2b5">
+			<p class="noindent">
+				<span class="head">
+					<span class="ptmb8t-">Theorem&nbsp;8.7.1</span>
+				</span>
+				<a id="x1-21"></a>
+				Suppose \(t_0\ge 0.\) For each positive number \(h\), let \(y_h\) be the
+				solution of the initial value problem \begin {equation} \label
+				{eq:8.7.1} ay_h''+by_h'+cy_h=f_h(t), \quad y_h(0)=0,\quad y_h'(0)=0\end
+				{equation}
+				<a id="x1-3r1"></a>
+				where \begin {equation} \label {eq:8.7.2} f_h(t)=\left \{\begin
+				{array}{cl} 0,&amp;0\le t&lt;t_0,\\ 1/h,&amp;t_0\le t&lt; t_0+h,\\
+				0,&amp;t\ge t_0+h,\end {array}\right. \end {equation}
+				<a id="x1-4r2"></a>
+				so \(f_h\) has unit total impulse equal to the area of the shaded
+				rectangle in Figure 8.7.1. Then \begin {equation} \label {eq:8.7.3} \lim
+				_{h\to 0+}y_h(t)=u(t-t_0)w(t-t_0)\end {equation}
+				<a id="x1-5r3"></a>
+				where \[ w={\cal L}^{-1}\left (1\over as^2+bs+c\right )\]
+			</p>
+		</div>
+		<p class="indent" id="af3f025f-127e-48d9-8290-b311b2f1cde3"></p>
+		<figure class="figure" id="e0339b55-5aaa-4a2b-8f0d-d2c68a11695f">
+			<p class="noindent" id="-yfht-">
+				<img height="264" src="EPS/fig080701.png" width="409" />
+				<a id="x1-6r1"></a>
+			</p>
+			<figcaption class="caption">
+				<span class="id">Figure&nbsp;8.7.1</span>
+				<span class="content">\(y=f_h(t)\)</span>
+			</figcaption>
+			<!-- tex4ht:label?: x1-6r1  -->
+		</figure>
+		<p class="noindent" id="eabf9cbc-3703-45e9-8132-1974069f2b59">
+			<span class="ptmb8t-">Proof</span>
+			Taking Laplace transforms in (
+			<a href="#x1-3r1">
+				8.7.1
+				<!-- tex4ht:ref: eq:8.7.1  -->
+			</a>
+			) yields \[ (as^2+bs+c)Y_h(s)=F_h(s)\] so \[ Y_h(s)={F_h(s)\over
+			as^2+bs+c}\] The convolution theorem implies that \[ y_h(t)=\int _0^t
+			w(t-\tau )f_h(\tau )\,d\tau \] Therefore, (
+			<a href="#x1-4r2">
+				8.7.2
+				<!-- tex4ht:ref: eq:8.7.2  -->
+			</a>
+			) implies that \begin {equation} \label {eq:8.7.4} y_h(t)=\left \{\begin
+			{array}{cl} 0,&amp;0\le t&lt;t_0,\\ \displaystyle {{1\over h}\int
+			_{t_0}^tw(t-\tau )\,d\tau },&amp;t_0\le t\le t_0+h,\\ \displaystyle
+			{{1\over h }\int _{t_0}^{t_0+h}w(t-\tau )\,d\tau },&amp;t&gt;t_0+h.\end
+			{array}\right. \end {equation}
+			<a id="x1-7r4"></a>
+			Since \(y_h(t)=0\) for all \(h\) if \(0\le t\le t_0\), it follows that
+			\begin {equation} \label {eq:8.7.5} \lim _{h\to 0+}y_h(t)=0\mbox {\quad if
+			\quad }0\le t\le t_0\end {equation}
+			<a id="x1-8r5"></a>
+			We’ll now show that \begin {equation} \label {eq:8.7.6} \lim _{h\to
+			0+}y_h(t)=w(t-t_0)\mbox {\quad if \quad }t&gt;t_0\end {equation}
+			<a id="x1-9r6"></a>
+		</p>
+		<p class="indent" id="2aa9f3c5-aa63-4143-8b29-7a10abd509b5">
+			Suppose \(t\) is fixed and \(t&gt;t_0\). From (
+			<a href="#x1-7r4">
+				8.7.4
+				<!-- tex4ht:ref: eq:8.7.4  -->
+			</a>
+			), \begin {equation} \label {eq:8.7.7} y_h(t)={1\over h}\int
+			_{t_0}^{t_0+h}w(t-\tau )d\tau \mbox {\quad if \quad } h&lt;t-t_0\end
+			{equation}
+			<a id="x1-10r7"></a>
+			Since \begin {equation} \label {eq:8.7.8} {1\over h}\int
+			_{t_0}^{t_0+h}d\tau =1\end {equation}
+			<a id="x1-11r8"></a>
+			we can write \[ w(t-t_0)={1\over h}w(t-t_0)\int _{t_0}^{t_0+h}\,d\tau =
+			{1\over h}\int _{t_0}^{t_0+h}w(t-t_0)\,d\tau \] From this and (
+			<a href="#x1-10r7">
+				8.7.7
+				<!-- tex4ht:ref: eq:8.7.7  -->
+			</a>
+			), \[ y_h(t)-w(t-t_0)= {1\over h}\int _{t_0}^{t_0+h}\left (w(t-\tau
+			)-w(t-t_0)\right )\,d\tau \] Therefore \begin {equation} \label {eq:8.7.9}
+			|y_h(t)-w(t-t_0)|\le {1\over h}\int _{t_0}^{t_0+h}|w(t-\tau
+			)-w(t-t_0)|\,d\tau \end {equation}
+			<a id="x1-12r9"></a>
+			Now let \(M_h\) be the maximum value of \(|w(t-\tau )-w(t-t_0)|\) as
+			\(\tau \) varies over the interval \([t_0,t_0+h]\). (Remember that \(t\)
+			and \(t_0\) are fixed.) Then (
+			<a href="#x1-11r8">
+				8.7.8
+				<!-- tex4ht:ref: eq:8.7.8  -->
+			</a>
+			) and (
+			<a href="#x1-12r9">
+				8.7.9
+				<!-- tex4ht:ref: eq:8.7.9  -->
+			</a>
+			) imply that \begin {equation} \label {eq:8.7.10} |y_h(t)-w(t-t_0)|\le
+			{1\over h}M_h\int _{t_0}^{t_0+h}\,d\tau =M_h\end {equation}
+			<a id="x1-13r10"></a>
+			But \(\lim _{h\to 0+}M_h=0\), since \(w\) is continuous. Therefore (
+			<a href="#x1-13r10">
+				8.7.10
+				<!-- tex4ht:ref: eq:8.7.10  -->
+			</a>
+			) implies (
+			<a href="#x1-9r6">
+				8.7.6
+				<!-- tex4ht:ref: eq:8.7.6  -->
+			</a>
+			). This and (
+			<a href="#x1-8r5">
+				8.7.5
+				<!-- tex4ht:ref: eq:8.7.5  -->
+			</a>
+			) imply (
+			<a href="#x1-5r3">
+				8.7.3
+				<!-- tex4ht:ref: eq:8.7.3  -->
+			</a>
+			). __
+		</p>
+		<p class="indent" id="c815f7c0-bd12-4c83-b9c1-ce7e9a98c18b">
+			Theorem&nbsp;
+			<a href="#x1-21">
+				8.7.1
+				<!-- tex4ht:ref: thmtype:8.7.1  -->
+			</a>
+			motivates the next definition.
+		</p>
+		<dl class="trivlist" id="47e24976-2ba7-450d-a447-93a7a11054b1">
+			<dt class="trivlist"></dt>
+			<dd class="trivlist">
+				<p class="indent">
+					<span class="ptmb8t-">Definition</span>
+					<a id="x1-14r2"></a>
+					<span class="ptmb8t-">8.7.2</span>
+					&nbsp; If \(t_0&gt;0\), then the solution of the initial value problem
+					\begin {equation} \label {eq:8.7.11} ay''+by'+cy=\delta (t-t_0), \quad
+					y(0)=0,\quad y'(0)=0\end {equation}
+					<a id="x1-15r11"></a>
+					is defined to be \[ y=u(t-t_0)w(t-t_0)\] where \[ w={\cal L}^{-1}\left
+					(1\over as^2+bs+c\right )\]
+				</p>
+			</dd>
+		</dl>
+		<p class="indent" id="0befc3c6-bd3c-4491-af49-79659b5fafe0">
+			In physical applications where the input \(f\) and the output \(y\) of a
+			device are related by the differential equation \[ ay''+by'+cy=f(t)\]
+			\(w\) is called the
+			<span class="vocab">impulse response</span>
+			of the device. Note that \(w\) is the solution of the initial value
+			problem \begin {equation} \label {eq:8.7.12} aw''+bw'+cw=0, \quad
+			w(0)=0,\quad w'(0)=1/a\end {equation}
+			<a id="x1-16r12"></a>
+			as can be seen by using the Laplace transform to solve this problem.
+			(Verify.) On the other hand, we can solve (
+			<a href="#x1-16r12">
+				8.7.12
+				<!-- tex4ht:ref: eq:8.7.12  -->
+			</a>
+			) by the methods of Section&nbsp;5.2 and show that \(w\) is defined on
+			\((-\infty ,\infty )\) by \begin {equation} \label {eq:8.7.13}
+			w={e^{r_2t}-e^{r_1t}\over a(r_2-r_1)},\quad w={1\over a}te^{r_1t}, \mbox
+			{\quad or \quad } w={1\over a\omega }e^{\lambda t}\sin \omega t\end
+			{equation}
+			<a id="x1-17r13"></a>
+			depending upon whether the polynomial \(p(r)=ar^2+br+c\) has distinct real
+			zeros \(r_1\) and \(r_2\), a repeated zero \(r_1\), or complex conjugate
+			zeros \(\lambda \pm i\omega \). (In most physical applications, the zeros
+			of the characteristic polynomial have negative real parts, so \(\lim
+			_{t\to \infty }w(t)=0\).) This means that \(y=u(t-t_0)w(t-t_0)\) is
+			defined on \((-\infty ,\infty )\) and has the following properties: \[
+			y(t)=0,\quad t&lt;t_0\] \[ ay''+by'+cy=0\mbox {\quad on \quad } (-\infty
+			,t_0)\mbox {\quad and \quad }(t_0,\infty )\] and \begin {equation} \label
+			{eq:8.7.14} y'_-(t_0)=0, \quad y'_+(t_0)=1/a \end {equation}
+			<a id="x1-18r14"></a>
+			(remember that \(y'_-(t_0)\) and \(y'_+(t_0)\) are derivatives from the
+			right and left, respectively) and \(y'(t_0)\) does not exist. Thus, even
+			though we defined \(y=u(t-t_0)w(t-t_0)\) to be the solution of (
+			<a href="#x1-15r11">
+				8.7.11
+				<!-- tex4ht:ref: eq:8.7.11  -->
+			</a>
+			), this function
+			<em>doesn’t satisfy</em>
+			the differential equation in (
+			<a href="#x1-15r11">
+				8.7.11
+				<!-- tex4ht:ref: eq:8.7.11  -->
+			</a>
+			) at \(t_0\), since it isn’t differentiable there; in fact (
+			<a href="#x1-18r14">
+				8.7.14
+				<!-- tex4ht:ref: eq:8.7.14  -->
+			</a>
+			) indicates that an impulse causes a jump discontinuity in velocity. (To
+			see that this is reasonable, think of what happens when you hit a ball
+			with a bat.) This means that the initial value problem (
+			<a href="#x1-15r11">
+				8.7.11
+				<!-- tex4ht:ref: eq:8.7.11  -->
+			</a>
+			) doesn’t make sense if \(t_0=0\), since \(y'(0)\) doesn’t exist in this
+			case. However \(y=u(t)w(t)\) can be defined to be the solution of the
+			modified initial value problem \[ ay''+by'+cy=\delta (t), \quad
+			y(0)=0,\quad y'_-(0)=0\] where the condition on the derivative at \(t=0\)
+			has been replaced by a condition on the derivative from the left.
+		</p>
+		<p class="indent" id="4d0a00fe-2396-434e-8e22-e93f36791afb">
+			Figure&nbsp;
+			<a href="#-an-illustration-of-theorem-ref-thmtype-">
+				8.7.2
+				<!-- tex4ht:ref: figure:8.7.2  -->
+			</a>
+			illustrates Theorem&nbsp;
+			<a href="#x1-21">
+				8.7.1
+				<!-- tex4ht:ref: thmtype:8.7.1  -->
+			</a>
+			for the case where the impulse response \(w\) is the first expression in (
+			<a href="#x1-17r13">
+				8.7.13
+				<!-- tex4ht:ref: eq:8.7.13  -->
+			</a>
+			) and \(r_1\) and \(r_2\) are distinct and both negative. The solid curve
+			in the figure is the graph of \(w\). The dashed curves are solutions of (
+			<a href="#x1-3r1">
+				8.7.1
+				<!-- tex4ht:ref: eq:8.7.1  -->
+			</a>
+			) for various values of \(h\). As \(h\) decreases the graph of \(y_h\)
+			moves to the left toward the graph of \(w\).
+		</p>
+		<figure class="figure" id="8a9a4fed-8c7e-41db-82f4-32077948d97f">
+			<p class="noindent" id="-an-illustration-of-theorem-ref-thmtype-">
+				<img height="264" src="EPS/fig080702.png" width="409" />
+				<a id="x1-19r2"></a>
+			</p>
+			<figcaption class="caption">
+				<span class="id">Figure&nbsp;8.7.2</span>
+				<span class="content">
+					An illustration of Theorem&nbsp;
+					<a href="#x1-21">
+						8.7.1
+						<!-- tex4ht:ref: thmtype:8.7.1  -->
+					</a>
+				</span>
+			</figcaption>
+			<!-- tex4ht:label?: x1-19r2  -->
+		</figure>
+		<div class="newtheorem" id="965ecc79-c880-4134-856e-4639169783cd">
+			<p class="noindent">
+				<span class="head">
+					<span class="ex-number">Example&nbsp;8.7.1</span>
+				</span>
+				<a id="x1-201"></a>
+				Find the solution of the initial value problem \begin {equation} \label
+				{eq:8.7.15} y''-2y'+y=\delta (t-t_0), \quad y(0)=0,\quad y'(0)=0\end
+				{equation}
+				<a id="x1-21r15"></a>
+				where \(t_0&gt;0\). Then interpret the solution for the case where
+				\(t_0=0\).
+			</p>
+		</div>
+		<p class="indent" id="ea093b44-518e-49b7-a64a-0fa849d7b318"></p>
+		<p class="noindent" id="c0f4a5ae-1882-459d-afc9-9787371fb8ba">
+			<span class="ptmb8t-">Solution</span>
+			&nbsp;Here \[ w={\cal L}^{-1}\left (1\over s^2-2s+1\right )={\cal
+			L}^{-1}\left ( 1\over (s-1)^2\right )=te^{-t}\] so Definition&nbsp;
+			<a href="#x1-14r2">
+				8.7.2
+				<!-- tex4ht:ref: thmtype:8.7.2  -->
+			</a>
+			yields \[ y=u(t-t_0)(t-t_0)e^{-(t-t_0)} \] as the solution of (
+			<a href="#x1-21r15">
+				8.7.15
+				<!-- tex4ht:ref: eq:8.7.15  -->
+			</a>
+			) if \(t_0&gt;0\). If \(t_0=0\), then (
+			<a href="#x1-21r15">
+				8.7.15
+				<!-- tex4ht:ref: eq:8.7.15  -->
+			</a>
+			) doesn’t have a solution; however, \(y=u(t)te^{-t}\) (which we would
+			usually write simply as \(y=te^{-t}\)) is the solution of the modified
+			initial value problem \[ y''-2y'+y=\delta (t), \quad y(0)=0,\quad
+			y_-'(0)=0\]
+		</p>
+		<p class="indent" id="3f16853b-b2f9-4d17-ad4f-0e87e51bd9b5">
+			The graph of \(y=u(t-t_0)(t-t_0)e^{-(t-t_0)}\) is shown in Figure&nbsp;
+			<a href="#-yuttttett-">
+				8.7.3
+				<!-- tex4ht:ref: figure:8.7.3  -->
+			</a>
+			__
+		</p>
+		<figure class="figure" id="d39377b4-f580-4304-97b2-df50c4a0695d">
+			<p class="noindent" id="-yuttttett-">
+				<img height="264" src="EPS/fig080703.png" width="409" />
+				<a id="x1-22r3"></a>
+			</p>
+			<figcaption class="caption">
+				<span class="id">Figure&nbsp;8.7.3</span>
+				<span class="content">\(y=u(t-t_0)(t-t_0)e^{-(t-t_0)}\)</span>
+			</figcaption>
+			<!-- tex4ht:label?: x1-22r3  -->
+		</figure>
+		<p class="indent" id="bc88feb3-aed6-4bc4-9137-af1478f8ee78">
+			Definition&nbsp;
+			<a href="#x1-14r2">
+				8.7.2
+				<!-- tex4ht:ref: thmtype:8.7.2  -->
+			</a>
+			and the principle of superposition motivate the next definition.
+		</p>
+		<dl class="trivlist" id="1448faaf-4f85-43bb-b7be-2e098857f18e">
+			<dt class="trivlist"></dt>
+			<dd class="trivlist">
+				<p class="indent">
+					<span class="ptmb8t-">Definition</span>
+					<a id="x1-23r3"></a>
+					<span class="ptmb8t-">8.7.3</span>
+					&nbsp; Suppose \(\alpha \) is a nonzero constant and \(f\) is
+					piecewise continuous on \([0,\infty )\). If \(t_0&gt;0\), then the
+					solution of the initial value problem \[ ay''+by'+cy=f(t)+\alpha
+					\delta (t-t_0), \quad y(0)=k_0,\quad y'(0)=k_1 \] is defined to be \[
+					y(t)=\hat y(t)+\alpha u(t-t_0)w(t-t_0)\] where \(\hat y\) is the
+					solution of \[ ay''+by'+cy=f(t), \quad y(0)=k_0,\quad y'(0)=k_1\] This
+					definition also applies if \(t_0=0\), provided that the initial
+					condition \(y'(0)=k_1\) is replaced by \(y_-'(0)=k_1\).
+				</p>
+			</dd>
+		</dl>
+		<div class="newtheorem" id="0c30e00b-b425-4be9-acbc-149589b330c2">
+			<p class="noindent">
+				<span class="head">
+					<span class="ex-number">Example&nbsp;8.7.2</span>
+				</span>
+				<a id="x1-242"></a>
+				Solve the initial value problem \begin {equation} \label {eq:8.7.16}
+				y''+6y'+5y=3e^{-2t}+2\delta (t-1),\quad y(0)=-3,\quad y'(0)=2\end
+				{equation}
+				<a id="x1-25r16"></a>
+			</p>
+		</div>
+		<p class="indent" id="a5cc50eb-d606-412d-9969-a1faf4fe550d"></p>
+		<p class="noindent" id="f1bb4673-192c-4cc2-819d-0f5fb43676a5">
+			<span class="ptmb8t-">Solution</span>
+			&nbsp;We leave it to you to show that the solution of \[
+			y''+6y'+5y=3e^{-2t}, \quad y(0)=-3,\; y'(0)=2 \] is \[ \hat
+			y=-e^{-2t}+{1\over 2}e^{-5t}-{5\over 2}e^{-t}\] Since \[ \begin
+			{array}{ccccl} w(t)&amp;=&amp;{\cal L}^{-1}\left (\displaystyle {1\over
+			s^2+6s+5}\right )&amp;=&amp; {\cal L}^{-1}\left (\displaystyle {1\over
+			(s+1)(s+5)}\right )\\ &amp;=&amp;\displaystyle {{1\over 4}{\cal
+			L}^{-1}\left ({1\over s+1}-{1\over s+5}\right )} &amp;=&amp;\displaystyle
+			{e^{-t}-e^{-5t}\over 4}\end {array} \] the solution of (
+			<a href="#x1-25r16">
+				8.7.16
+				<!-- tex4ht:ref: eq:8.7.16  -->
+			</a>
+			) is \begin {equation} \label {eq:8.7.17} y=-e^{-2t}+{1\over
+			2}e^{-5t}-{5\over 2}e^{-t} +u(t-1){e^{-(t-1)}-e^{-5(t-1)}\over 2} \end
+			{equation}
+			<a id="x1-26r17"></a>
+			(Figure&nbsp;
+			<a href="#-graph-of-eq-">
+				8.7.4
+				<!-- tex4ht:ref: figure:8.7.4  -->
+			</a>
+			) __.
+		</p>
+		<figure class="figure" id="499b1319-f131-463f-8da0-b762f798fd2f">
+			<div class="minipage">
+				<p class="noindent" id="-graph-of-eq-">
+					<img height="264" src="EPS/fig080704.png" width="409" />
+					<a id="x1-27r4"></a>
+				</p>
+				<figcaption class="caption">
+					<span class="id">Figure&nbsp;8.7.4</span>
+					<span class="content">
+						Graph of (
+						<a href="#x1-26r17">
+							8.7.17
+							<!-- tex4ht:ref: eq:8.7.17  -->
+						</a>
+						)
+					</span>
+				</figcaption>
+				<!-- tex4ht:label?: x1-27r4  -->
+			</div>
+			<div class="minipage" id="-graph-of-eq-1">
+				<img height="264" src="EPS/fig080705.png" width="409" />
+				<a id="x1-28r5"></a>
+				<figcaption class="caption">
+					<span class="id">Figure&nbsp;8.7.5</span>
+					<span class="content">
+						Graph of (
+						<a href="#x1-31r19">
+							8.7.19
+							<!-- tex4ht:ref: eq:8.7.19  -->
+						</a>
+						)
+					</span>
+				</figcaption>
+				<!-- tex4ht:label?: x1-28r5  -->
+			</div>
+		</figure>
+		<p class="indent" id="cb1d654f-9058-46ce-b820-823e6dc4166c">
+			Definition&nbsp;
+			<a href="#x1-23r3">
+				8.7.3
+				<!-- tex4ht:ref: thmtype:8.7.3  -->
+			</a>
+			can be extended in the obvious way to cover the case where the forcing
+			function contains more than one impulse.
+		</p>
+		<div class="newtheorem" id="7e7c0951-a87e-42db-8c87-18d276913075">
+			<p class="noindent">
+				<span class="head">
+					<span class="ex-number">Example&nbsp;8.7.3</span>
+				</span>
+				<a id="x1-293"></a>
+				Solve the initial value problem \begin {equation} \label {eq:8.7.18}
+				y''+y=1+2\delta (t-\pi )-3\delta (t-2\pi ), \quad y(0)=-1,\; y'(0)=2\end
+				{equation}
+				<a id="x1-30r18"></a>
+			</p>
+		</div>
+		<p class="indent" id="6e6f930f-ef00-40d4-9fa3-71a4820a3dc5"></p>
+		<p class="noindent" id="912f8842-69e6-408a-a068-4637700d91bb">
+			<span class="ptmb8t-">Solution</span>
+			&nbsp;We leave it to you to show that \[ \hat y= 1-2\cos t+2\sin t \] is
+			the solution of \[ y''+y=1, \quad y(0)=-1,\quad y'(0)=2\] Since \[ w={\cal
+			L}^{-1}\left (1\over s^2+1\right )=\sin t\] the solution of (
+			<a href="#x1-30r18">
+				8.7.18
+				<!-- tex4ht:ref: eq:8.7.18  -->
+			</a>
+			) is
+		</p>
+		<div class="eqnarray" id="9a43970d-f672-4ed1-8a0a-966f3da46161">
+			\begin {eqnarray*} y&amp;=&amp;1-2\cos t+2\sin t+2u(t-\pi )\sin (t-\pi
+			)-3u(t-2\pi )\sin (t-2\pi )\\ &amp;=&amp;1-2\cos t+2\sin t-2u(t-\pi )\sin
+			t-3u(t-2\pi )\sin t\end {eqnarray*}
+		</div>
+		<p class="indent" id="eec1431d-f1ab-4f45-8193-d8f619620164">
+			or \begin {equation} \label {eq:8.7.19} y=\left \{\begin {array}{cl}
+			1-2\cos t+2\sin t,&amp;0\le t&lt;\pi ,\\[5pt] 1-2\cos t,&amp;\pi \le
+			t&lt;2\pi ,\\[5pt] 1-2\cos t-3\sin t,&amp;t\ge 2\pi \end {array}\right.
+			\end {equation}
+			<a id="x1-31r19"></a>
+			(Figure&nbsp;
+			<a href="#-graph-of-eq-1">
+				8.7.5
+				<!-- tex4ht:ref: figure:8.7.5  -->
+			</a>
+			).
+		</p>
+		<p class="indent" id="2f3fbe5e-591a-45eb-a9c5-23bef0c25681"></p>
 
+		<div class="nav" id="ec56685e-bc01-4b7a-b175-1aec7f65c7bd">
+			<a href="sec8.6.book.html">Back (8.6)</a>
 
+			<a href="sec8.0.html">Chapter 8</a>
 
-    \[ ay''+by'+cy=\delta (t-t_0), \quad y(0)=0,\quad y'(0)=0\]
-    where \(t_0\) is a fixed nonnegative number. The next theorem will motivate our definition.
-  </p>
-  <div class="newtheorem" id="bb20d454-07f1-427d-8fbd-4644dab4e2b5">
-    <p class="noindent"><span class="head">
-        <span class="ptmb8t-">Theorem&nbsp;8.7.1</span> </span><a id="x1-21"></a> Suppose
-      \(t_0\ge 0.\) For each positive number \(h\), let
-      \(y_h\) be the solution of the initial value problem \begin {equation} \label
-      {eq:8.7.1} ay_h''+by_h'+cy_h=f_h(t), \quad y_h(0)=0,\quad y_h'(0)=0\end {equation}<a id="x1-3r1"></a> 
-        where \begin {equation} \label {eq:8.7.2} f_h(t)=\left \{\begin {array}{cl} 0,&amp;0\le
-      t&lt;t_0,\\ 1/h,&amp;t_0\le t&lt; t_0+h,\\ 0,&amp;t\ge t_0+h,\end {array}\right. \end {equation}<a id="x1-4r2"></a>
-      so \(f_h\)
-      has unit total impulse equal to the area of the shaded rectangle in
-        Figure 8.7.1. Then \begin {equation} \label {eq:8.7.3} \lim _{h\to
-      0+}y_h(t)=u(t-t_0)w(t-t_0)\end {equation}<a id="x1-5r3"></a> where
-      \[ w={\cal L}^{-1}\left (1\over as^2+bs+c\right )\]
-    </p>
-  </div>
-  <p class="indent" id="af3f025f-127e-48d9-8290-b311b2f1cde3">
-  </p>
-  <figure class="figure" id="e0339b55-5aaa-4a2b-8f0d-d2c68a11695f">
-
-
-
-
-
-
-
-    <p class="noindent" id="-yfht-"><img height="264" src="EPS/fig080701.png" width="409"> <a id="x1-6r1"></a></p>
-    <figcaption class="caption"><span class="id">Figure&nbsp;8.7.1 </span><span class="content">\(y=f_h(t)\) </span>
-    </figcaption><!-- tex4ht:label?: x1-6r1  -->
-
-
-
-  </figure>
-  <p class="noindent" id="eabf9cbc-3703-45e9-8132-1974069f2b59"><span class="ptmb8t-">Proof </span>Taking Laplace transforms in (<a href="#x1-3r1">8.7.1<!-- tex4ht:ref: eq:8.7.1  --></a>) yields
-    \[ (as^2+bs+c)Y_h(s)=F_h(s)\]
-    so
-    \[ Y_h(s)={F_h(s)\over as^2+bs+c}\]
-    The convolution theorem implies that
-    \[ y_h(t)=\int _0^t w(t-\tau )f_h(\tau )\,d\tau \]
-    Therefore, (<a href="#x1-4r2">8.7.2<!-- tex4ht:ref: eq:8.7.2  --></a>) implies that \begin {equation} \label
-    {eq:8.7.4} y_h(t)=\left \{\begin {array}{cl} 0,&amp;0\le t&lt;t_0,\\ \displaystyle {{1\over h}\int _{t_0}^tw(t-\tau
-    )\,d\tau },&amp;t_0\le t\le t_0+h,\\ \displaystyle {{1\over h }\int _{t_0}^{t_0+h}w(t-\tau )\,d\tau
-    },&amp;t&gt;t_0+h.\end {array}\right. \end {equation}<a id="x1-7r4"></a> Since \(y_h(t)=0\) for all \(h\) if \(0\le
-    t\le t_0\), it follows that \begin {equation} \label {eq:8.7.5} \lim _{h\to 0+}y_h(t)=0\mbox {\quad if \quad }0\le
-    t\le t_0\end {equation}<a id="x1-8r5"></a> We’ll now show that \begin {equation} \label {eq:8.7.6} \lim _{h\to
-    0+}y_h(t)=w(t-t_0)\mbox {\quad if \quad }t&gt;t_0\end {equation}<a id="x1-9r6"></a>
-  </p>
-  <p class="indent" id="2aa9f3c5-aa63-4143-8b29-7a10abd509b5"> Suppose \(t\) is fixed and \(t&gt;t_0\). From (<a href="#x1-7r4">8.7.4<!-- tex4ht:ref: eq:8.7.4  --></a>), \begin {equation} \label {eq:8.7.7} y_h(t)={1\over h}\int
-    _{t_0}^{t_0+h}w(t-\tau )d\tau \mbox {\quad if \quad } h&lt;t-t_0\end {equation}<a id="x1-10r7"></a> Since \begin
-    {equation} \label {eq:8.7.8} {1\over h}\int _{t_0}^{t_0+h}d\tau =1\end {equation}<a id="x1-11r8"></a> we can write
-
-
-
-    \[ w(t-t_0)={1\over h}w(t-t_0)\int _{t_0}^{t_0+h}\,d\tau = {1\over h}\int _{t_0}^{t_0+h}w(t-t_0)\,d\tau \]
-    From this and (<a href="#x1-10r7">8.7.7<!-- tex4ht:ref: eq:8.7.7  --></a>),
-    \[ y_h(t)-w(t-t_0)= {1\over h}\int _{t_0}^{t_0+h}\left (w(t-\tau )-w(t-t_0)\right )\,d\tau \]
-    Therefore \begin {equation} \label {eq:8.7.9} |y_h(t)-w(t-t_0)|\le {1\over h}\int _{t_0}^{t_0+h}|w(t-\tau
-    )-w(t-t_0)|\,d\tau \end {equation}<a id="x1-12r9"></a> Now let \(M_h\) be the maximum value of \(|w(t-\tau
-    )-w(t-t_0)|\) as \(\tau \) varies over the interval \([t_0,t_0+h]\). (Remember that \(t\) and \(t_0\) are fixed.)
-    Then
-    (<a href="#x1-11r8">8.7.8<!-- tex4ht:ref: eq:8.7.8  --></a>) and (<a href="#x1-12r9">8.7.9<!-- tex4ht:ref: eq:8.7.9  --></a>) imply that \begin {equation} \label {eq:8.7.10}
-    |y_h(t)-w(t-t_0)|\le {1\over h}M_h\int _{t_0}^{t_0+h}\,d\tau =M_h\end {equation}<a id="x1-13r10"></a> But \(\lim
-    _{h\to 0+}M_h=0\), since \(w\) is continuous. Therefore (<a href="#x1-13r10">8.7.10<!-- tex4ht:ref: eq:8.7.10  --></a>) implies (<a href="#x1-9r6">8.7.6<!-- tex4ht:ref: eq:8.7.6  --></a>). This and (<a href="#x1-8r5">8.7.5<!-- tex4ht:ref: eq:8.7.5  --></a>) imply
-    (<a href="#x1-5r3">8.7.3<!-- tex4ht:ref: eq:8.7.3  --></a>). __
-  </p>
-  <p class="indent" id="c815f7c0-bd12-4c83-b9c1-ce7e9a98c18b"> Theorem&nbsp;<a href="#x1-21">8.7.1<!-- tex4ht:ref: thmtype:8.7.1  --></a> motivates the next
-    definition.
-  </p>
-  <dl class="trivlist" id="47e24976-2ba7-450d-a447-93a7a11054b1">
-    <dt class="trivlist">
-    </dt>
-    <dd class="trivlist">
-      <p class="indent"> <span class="ptmb8t-">Definition</span> <a id="x1-14r2"></a><span class="ptmb8t-">8.7.2</span>&nbsp;
-        If \(t_0&gt;0\), then the solution of the initial value problem \begin {equation} \label {eq:8.7.11}
-        ay''+by'+cy=\delta (t-t_0), \quad y(0)=0,\quad y'(0)=0\end {equation}<a id="x1-15r11"></a> is defined to be
-        \[ y=u(t-t_0)w(t-t_0)\]
-        where
-
-
-
-        \[ w={\cal L}^{-1}\left (1\over as^2+bs+c\right )\]
-      </p>
-    </dd>
-  </dl>
-  <p class="indent" id="0befc3c6-bd3c-4491-af49-79659b5fafe0"> In physical applications where the input \(f\) and the output \(y\) of a device are related by the
-    differential
-    equation
-    \[ ay''+by'+cy=f(t)\]
-    \(w\) is called the <span class="vocab">impulse response</span> of the device. Note that \(w\) is the solution of
-    the initial value problem \begin {equation} \label {eq:8.7.12} aw''+bw'+cw=0, \quad w(0)=0,\quad w'(0)=1/a\end
-    {equation}<a id="x1-16r12"></a> as can be seen
-    by using the Laplace transform to solve this problem. (Verify.) On the other hand, we can solve (<a href="#x1-16r12">8.7.12<!-- tex4ht:ref: eq:8.7.12  --></a>) by the
-    methods of Section&nbsp;5.2 and show that \(w\) is defined on \((-\infty ,\infty )\) by \begin {equation} \label
-    {eq:8.7.13} w={e^{r_2t}-e^{r_1t}\over a(r_2-r_1)},\quad w={1\over a}te^{r_1t}, \mbox {\quad or \quad } w={1\over
-    a\omega }e^{\lambda t}\sin \omega t\end {equation}<a id="x1-17r13"></a> depending upon whether the polynomial
-    \(p(r)=ar^2+br+c\) has distinct
-    real zeros \(r_1\) and \(r_2\), a repeated zero \(r_1\), or complex conjugate zeros \(\lambda \pm i\omega \). (In
-    most physical applications, the zeros of the
-    characteristic polynomial have negative real parts, so \(\lim _{t\to \infty }w(t)=0\).) This means that
-    \(y=u(t-t_0)w(t-t_0)\) is defined on \((-\infty ,\infty )\) and has the following
-    properties:
-    \[ y(t)=0,\quad t&lt;t_0\]
-
-
-
-    \[ ay''+by'+cy=0\mbox {\quad on \quad } (-\infty ,t_0)\mbox {\quad and \quad }(t_0,\infty )\]
-    and \begin {equation} \label {eq:8.7.14} y'_-(t_0)=0, \quad y'_+(t_0)=1/a \end {equation}<a id="x1-18r14"></a>
-    (remember that \(y'_-(t_0)\) and \(y'_+(t_0)\) are derivatives from the right and left, respectively) and
-    \(y'(t_0)\) does not exist. Thus, even
-    though we defined \(y=u(t-t_0)w(t-t_0)\) to be the solution of (<a href="#x1-15r11">8.7.11<!-- tex4ht:ref: eq:8.7.11  --></a>), this function <em>doesn’t
-      satisfy</em> the differential equation in
-    (<a href="#x1-15r11">8.7.11<!-- tex4ht:ref: eq:8.7.11  --></a>) at \(t_0\), since it
-    isn’t differentiable there; in fact (<a href="#x1-18r14">8.7.14<!-- tex4ht:ref: eq:8.7.14  --></a>) indicates that
-    an impulse causes a
-    jump discontinuity in velocity. (To see that this is reasonable, think of what happens when you hit a
-    ball with a bat.) This means that the initial value problem (<a href="#x1-15r11">8.7.11<!-- tex4ht:ref: eq:8.7.11  --></a>) doesn’t make sense if \(t_0=0\), since \(y'(0)\)
-    doesn’t exist in this case. However \(y=u(t)w(t)\) can be defined to be the solution of the modified initial value
-    problem
-    \[ ay''+by'+cy=\delta (t), \quad y(0)=0,\quad y'_-(0)=0\]
-    where the condition on the derivative at \(t=0\) has been replaced by a condition on the derivative from the
-    left.
-  </p>
-  <p class="indent" id="4d0a00fe-2396-434e-8e22-e93f36791afb"> Figure&nbsp;<a href="#-an-illustration-of-theorem-ref-thmtype-">8.7.2<!-- tex4ht:ref: figure:8.7.2  --></a> illustrates
-    Theorem&nbsp;<a href="#x1-21">8.7.1<!-- tex4ht:ref: thmtype:8.7.1  --></a> for the case where the impulse response \(w\)
-    is the first expression in
-    (<a href="#x1-17r13">8.7.13<!-- tex4ht:ref: eq:8.7.13  --></a>) and \(r_1\) and \(r_2\) are distinct and both
-    negative. The solid curve in the figure is the graph of \(w\). The dashed curves
-    are solutions of (<a href="#x1-3r1">8.7.1<!-- tex4ht:ref: eq:8.7.1  --></a>) for various values of \(h\). As \(h\)
-    decreases the graph of \(y_h\) moves to the left toward the graph of
-    \(w\).
-  </p>
-  <figure class="figure" id="8a9a4fed-8c7e-41db-82f4-32077948d97f">
-
-
-
-
-
-
-
-    <p class="noindent" id="-an-illustration-of-theorem-ref-thmtype-"><img height="264" src="EPS/fig080702.png" width="409"> <a id="x1-19r2"></a></p>
-    <figcaption class="caption"><span class="id">Figure&nbsp;8.7.2 </span><span class="content">An illustration of Theorem&nbsp;<a href="#x1-21">8.7.1<!-- tex4ht:ref: thmtype:8.7.1  --></a> </span></figcaption>
-    <!-- tex4ht:label?: x1-19r2  -->
-
-
-
-  </figure>
-  <div class="newtheorem" id="965ecc79-c880-4134-856e-4639169783cd">
-    <p class="noindent"><span class="head">
-        <span class="ex-number">Example&nbsp;8.7.1</span> </span><a id="x1-201"></a> Find the solution of the initial value
-      problem \begin {equation} \label {eq:8.7.15} y''-2y'+y=\delta (t-t_0), \quad y(0)=0,\quad y'(0)=0\end {equation}<a id="x1-21r15"></a> where \(t_0&gt;0\). Then interpret the solution for the case
-      where \(t_0=0\).
-    </p>
-  </div>
-  <p class="indent" id="ea093b44-518e-49b7-a64a-0fa849d7b318">
-  </p>
-  <p class="noindent" id="c0f4a5ae-1882-459d-afc9-9787371fb8ba"><span class="ptmb8t-">Solution </span>&nbsp;Here
-    \[ w={\cal L}^{-1}\left (1\over s^2-2s+1\right )={\cal L}^{-1}\left ( 1\over (s-1)^2\right )=te^{-t}\]
-    so Definition&nbsp;<a href="#x1-14r2">8.7.2<!-- tex4ht:ref: thmtype:8.7.2  --></a> yields
-    \[ y=u(t-t_0)(t-t_0)e^{-(t-t_0)} \]
-    as the solution of (<a href="#x1-21r15">8.7.15<!-- tex4ht:ref: eq:8.7.15  --></a>) if \(t_0&gt;0\). If \(t_0=0\),
-    then (<a href="#x1-21r15">8.7.15<!-- tex4ht:ref: eq:8.7.15  --></a>) doesn’t have a solution; however,
-    \(y=u(t)te^{-t}\) (which we would usually write
-    simply as \(y=te^{-t}\)) is the solution of the modified initial value problem
-
-
-
-    \[ y''-2y'+y=\delta (t), \quad y(0)=0,\quad y_-'(0)=0\]
-  </p>
-  <p class="indent" id="3f16853b-b2f9-4d17-ad4f-0e87e51bd9b5"> The graph of \(y=u(t-t_0)(t-t_0)e^{-(t-t_0)}\) is shown in Figure&nbsp;<a href="#-yuttttett-">8.7.3<!-- tex4ht:ref: figure:8.7.3  --></a> __
-  </p>
-  <figure class="figure" id="d39377b4-f580-4304-97b2-df50c4a0695d">
-
-
-
-
-
-
-
-    <p class="noindent" id="-yuttttett-"><img height="264" src="EPS/fig080703.png" width="409"> <a id="x1-22r3"></a>
-    </p>
-    <figcaption class="caption"><span class="id">Figure&nbsp;8.7.3 </span><span class="content">\(y=u(t-t_0)(t-t_0)e^{-(t-t_0)}\) </span></figcaption><!-- tex4ht:label?: x1-22r3  -->
-
-
-
-  </figure>
-  <p class="indent" id="bc88feb3-aed6-4bc4-9137-af1478f8ee78"> Definition&nbsp;<a href="#x1-14r2">8.7.2<!-- tex4ht:ref: thmtype:8.7.2  --></a> and the principle of
-    superposition motivate the next definition.
-  </p>
-  <dl class="trivlist" id="1448faaf-4f85-43bb-b7be-2e098857f18e">
-    <dt class="trivlist">
-    </dt>
-    <dd class="trivlist">
-      <p class="indent"> <span class="ptmb8t-">Definition</span> <a id="x1-23r3"></a><span class="ptmb8t-">8.7.3</span>&nbsp;
-        Suppose \(\alpha \) is a nonzero constant and \(f\) is piecewise continuous on \([0,\infty )\). If \(t_0&gt;0\),
-        then the solution
-        of the initial value problem
-        \[ ay''+by'+cy=f(t)+\alpha \delta (t-t_0), \quad y(0)=k_0,\quad y'(0)=k_1 \]
-        is defined to be
-        \[ y(t)=\hat y(t)+\alpha u(t-t_0)w(t-t_0)\]
-        where \(\hat y\) is the solution of
-        \[ ay''+by'+cy=f(t), \quad y(0)=k_0,\quad y'(0)=k_1\]
-        This definition also applies if \(t_0=0\), provided that the initial condition \(y'(0)=k_1\) is replaced by
-        \(y_-'(0)=k_1\).</p>
-    </dd>
-  </dl>
-  <div class="newtheorem" id="0c30e00b-b425-4be9-acbc-149589b330c2">
-    <p class="noindent"><span class="head">
-
-
-
-        <span class="ex-number">Example&nbsp;8.7.2</span> </span><a id="x1-242"></a> Solve the initial value problem \begin
-      {equation} \label {eq:8.7.16} y''+6y'+5y=3e^{-2t}+2\delta (t-1),\quad y(0)=-3,\quad y'(0)=2\end {equation}<a id="x1-25r16"></a>
-    </p>
-  </div>
-  <p class="indent" id="a5cc50eb-d606-412d-9969-a1faf4fe550d">
-  </p>
-  <p class="noindent" id="f1bb4673-192c-4cc2-819d-0f5fb43676a5"><span class="ptmb8t-">Solution </span>&nbsp;We leave it to you to show that the solution of
-    \[ y''+6y'+5y=3e^{-2t}, \quad y(0)=-3,\; y'(0)=2 \]
-    is
-    \[ \hat y=-e^{-2t}+{1\over 2}e^{-5t}-{5\over 2}e^{-t}\]
-    Since
-    \[ \begin {array}{ccccl} w(t)&amp;=&amp;{\cal L}^{-1}\left (\displaystyle {1\over s^2+6s+5}\right )&amp;=&amp; {\cal
-    L}^{-1}\left (\displaystyle {1\over (s+1)(s+5)}\right )\\ &amp;=&amp;\displaystyle {{1\over 4}{\cal L}^{-1}\left
-    ({1\over s+1}-{1\over s+5}\right )} &amp;=&amp;\displaystyle {e^{-t}-e^{-5t}\over 4}\end {array} \]
-    the solution of (<a href="#x1-25r16">8.7.16<!-- tex4ht:ref: eq:8.7.16  --></a>) is \begin {equation} \label
-    {eq:8.7.17} y=-e^{-2t}+{1\over 2}e^{-5t}-{5\over 2}e^{-t} +u(t-1){e^{-(t-1)}-e^{-5(t-1)}\over 2} \end {equation}<a id="x1-26r17"></a> (Figure&nbsp;<a href="#-graph-of-eq-">8.7.4<!-- tex4ht:ref: figure:8.7.4  --></a>) __.
-  </p>
-  <figure class="figure" id="499b1319-f131-463f-8da0-b762f798fd2f">
-
-
-
-
-
-
-
-    <div class="minipage">
-      <p class="noindent" id="-graph-of-eq-"> <img height="264" src="EPS/fig080704.png" width="409"><a id="x1-27r4"></a></p>
-      <figcaption class="caption"><span class="id">Figure&nbsp;8.7.4 </span><span class="content">Graph of (<a href="#x1-26r17">8.7.17<!-- tex4ht:ref: eq:8.7.17  --></a>) </span></figcaption>
-      <!-- tex4ht:label?: x1-27r4  -->
-    </div>
-    <div class="minipage" id="-graph-of-eq-1"> <img height="264" src="EPS/fig080705.png" width="409"> <a id="x1-28r5"></a>
-      <figcaption class="caption"><span class="id">Figure&nbsp;8.7.5 </span><span class="content">Graph of (<a href="#x1-31r19">8.7.19<!-- tex4ht:ref: eq:8.7.19  --></a>) </span></figcaption>
-      <!-- tex4ht:label?: x1-28r5  -->
-    </div>
-  </figure>
-  <p class="indent" id="cb1d654f-9058-46ce-b820-823e6dc4166c"> Definition&nbsp;<a href="#x1-23r3">8.7.3<!-- tex4ht:ref: thmtype:8.7.3  --></a> can be extended in the
-    obvious way to cover the case where the forcing function contains
-    more than one impulse. </p>
-  <div class="newtheorem" id="7e7c0951-a87e-42db-8c87-18d276913075">
-    <p class="noindent"><span class="head">
-        <span class="ex-number">Example&nbsp;8.7.3</span> </span><a id="x1-293"></a> Solve the initial value problem \begin
-      {equation} \label {eq:8.7.18} y''+y=1+2\delta (t-\pi )-3\delta (t-2\pi ), \quad y(0)=-1,\; y'(0)=2\end
-      {equation}<a id="x1-30r18"></a>
-    </p>
-  </div>
-  <p class="indent" id="6e6f930f-ef00-40d4-9fa3-71a4820a3dc5">
-  </p>
-  <p class="noindent" id="912f8842-69e6-408a-a068-4637700d91bb"><span class="ptmb8t-">Solution </span>&nbsp;We leave it to you to show that
-    \[ \hat y= 1-2\cos t+2\sin t \]
-    is the solution of
-    \[ y''+y=1, \quad y(0)=-1,\quad y'(0)=2\]
-    Since
-    \[ w={\cal L}^{-1}\left (1\over s^2+1\right )=\sin t\]
-    the solution of (<a href="#x1-30r18">8.7.18<!-- tex4ht:ref: eq:8.7.18  --></a>) is </p>
-  <div class="eqnarray" id="9a43970d-f672-4ed1-8a0a-966f3da46161">\begin {eqnarray*} y&amp;=&amp;1-2\cos t+2\sin t+2u(t-\pi )\sin (t-\pi )-3u(t-2\pi )\sin (t-2\pi
-    )\\ &amp;=&amp;1-2\cos t+2\sin t-2u(t-\pi )\sin t-3u(t-2\pi )\sin t\end {eqnarray*}</div>
-  <p class="indent" id="eec1431d-f1ab-4f45-8193-d8f619620164"> or \begin {equation} \label {eq:8.7.19} y=\left \{\begin {array}{cl} 1-2\cos t+2\sin t,&amp;0\le
-    t&lt;\pi ,\\[5pt] 1-2\cos t,&amp;\pi \le t&lt;2\pi ,\\[5pt] 1-2\cos t-3\sin t,&amp;t\ge 2\pi \end {array}\right. \end
-    {equation}<a id="x1-31r19"></a> (Figure&nbsp;<a href="#-graph-of-eq-1">8.7.5<!-- tex4ht:ref: figure:8.7.5  --></a>).
-  </p>
-  <p class="indent" id="2f3fbe5e-591a-45eb-a9c5-23bef0c25681">
-  </p>
-
-
-  <div class="nav" id="ec56685e-bc01-4b7a-b175-1aec7f65c7bd">
-    <a href="sec8.6.book.html">Back (8.6)</a>
-  
-    <a href="sec8.0.html">Chapter 8</a>
-  
-    <a>&nbsp;</a>
-  </div>
-
-
-
-</body></html>
+			<a>&nbsp;</a>
+		</div>
+	</body>
+</html>

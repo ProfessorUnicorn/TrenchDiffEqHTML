@@ -1,793 +1,1156 @@
-<!DOCTYPE html><html lang="en-US" xml:lang="en-US"><head>
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="combined.css">
-    <meta name="src" content="Trench_DiffEQ_Book.tex">
-    <script>window.MathJax = {
-            tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(9.2.' + tag + ')' } }
-        }; </script>
-    <script type="text/javascript" async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
-    <style type="text/css">
-        :root {
-            --section-number: "9.2"
-        }
-    </style>
-</head>
+<!doctype html>
+<html lang="en-US" xml:lang="en-US">
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="combined.css" />
+		<meta name="src" content="Trench_DiffEQ_Book.tex" />
+		<script>
+			window.MathJax = {
+				tex: {
+					packages: { "[+]": ["tagformat"] },
+					tags: "ams",
+					tagformat: { tag: (tag) => "(9.2." + tag + ")" },
+				},
+			};
+		</script>
+		<script
+			type="text/javascript"
+			async="async"
+			id="MathJax-script"
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+		></script>
+		<style type="text/css">
+			:root {
+				--section-number: "9.2";
+			}
+		</style>
+	</head>
 
-<body>
-    <div class="centerline" id="42fb8b85-83ba-4b68-8ee0-5f0b38f67d0e"> <span class="ptmb8t-x-x-120">9.2</span><span class="ptmb8t-x-x-120">&nbsp;Exercises</span> </div>
-    <a id="x1-1doc"></a>
-    <!--l. 1-->
-    <p class="noindent" id="f01587d3-ad83-43c1-8ad8-d6b27c93ad68">In Exercises&nbsp;<a href="#x1-21">1<!--tex4ht:ref: exer:9.2.1 --></a>–<a href="#x1-1514">14<!--tex4ht:ref: exer:9.2.14 --></a> find the general solution.
-    </p>
-    <div class="tabular" id="7780ddd2-79e8-4e74-b4f3-5aa4eb90ec8c">
-        <table id="TBL-1" class="tabular">
-            <colgroup id="TBL-1-1g">
-                <col id="TBL-1-1">
-                <col id="TBL-1-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-1-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-1-1-1" class="td00">
-                    <dl class="list1">
-                        <dt class="list">
-                            <span class="ptmb8t-">1.</span>
-                        </dt>
-                        <dd class="list">
-                            <!--l. 8-->
-                            <p class="noindent"><a id="x1-21"></a> \(y'''-3y''+3y'-y=0\) </p>
-                </dd></dl></td>
-                <td style="white-space:normal; text-align:left;" id="TBL-1-1-2" class="td01">
-                    
-                    <dt class="list">
-                        <span class="ptmb8t-">2.</span>
-                    </dt>
-                    <dd class="list">
-                        <!--l. 9-->
-                        <p class="noindent"><a id="x1-32"></a> \(y^{(4)}+8y''-9y=0\) </p>
-                </dd></td>
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tabular" id="53d74bef-4926-4d41-a19c-7319ab10b835">
-        <table id="TBL-2" class="tabular">
-            <colgroup id="TBL-2-1g">
-                <col id="TBL-2-1">
-                <col id="TBL-2-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-2-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-2-1-1" class="td00">
-                    <span class="ptmb8t-">3.</span><a id="x1-43"></a> \(y'''-y''+16y'-16y=0\)
-                </td>
-                <td style="white-space:normal; text-align:left;" id="TBL-2-1-2" class="td01">
-                    <span class="ptmb8t-">4.</span><a id="x1-54"></a> \(2y'''+3y''-2y'-3y=0\)
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tabular" id="11705a20-fdaf-4e8d-9ca0-1be5c1bd09a5">
-        <table id="TBL-3" class="tabular">
-            <colgroup id="TBL-3-1g">
-                <col id="TBL-3-1">
-                <col id="TBL-3-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-3-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-3-1-1" class="td00">
-                    <span class="ptmb8t-">5.</span><a id="x1-65"></a> \(y'''+5y''+9y'+5y=0\)
-                </td>
-                <td style="white-space:normal; text-align:left;" id="TBL-3-1-2" class="td01">
-                    <span class="ptmb8t-">6.</span><a id="x1-76"></a> \(4y'''-8y''+5y'-y=0\)
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tabular" id="57c23f4e-8f79-4401-ba78-3ea0aa958d88">
-        <table id="TBL-4" class="tabular">
-            <colgroup id="TBL-4-1g">
-                <col id="TBL-4-1">
-                <col id="TBL-4-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-4-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-4-1-1" class="td00">
-                    <span class="ptmb8t-">7.</span><a id="x1-87"></a> \(27y'''+27y''+9y'+y=0\)
-                </td>
-                <td style="white-space:normal; text-align:left;" id="TBL-4-1-2" class="td01">
-                    <span class="ptmb8t-">8.</span><a id="x1-98"></a> \(y^{(4)}+y''=0\)
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tabular" id="e2737ee8-ff48-4104-aa26-fe398e7980a7">
-        <table id="TBL-5" class="tabular">
-            <colgroup id="TBL-5-1g">
-                <col id="TBL-5-1">
-                <col id="TBL-5-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-5-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-5-1-1" class="td00">
-                    <span class="ptmb8t-">9.</span><a id="x1-109"></a> \(y^{(4)}-16y=0\)
-                </td>
-                <td style="white-space:normal; text-align:left;" id="TBL-5-1-2" class="td01">
-                    <span class="ptmb8t-">10.</span><a id="x1-1110"></a> \(y^{(4)}+12y''+36y=0\)
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tabular" id="2932182f-5113-4a7c-937f-8f84361aa7eb">
-        <table id="TBL-6" class="tabular">
-            <colgroup id="TBL-6-1g">
-                <col id="TBL-6-1">
-                <col id="TBL-6-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-6-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-6-1-1" class="td00">
-                    <span class="ptmb8t-">11.</span><a id="x1-1211"></a> \(16y^{(4)}-72y''+81y=0\)
-                </td>
-                <td style="white-space:normal; text-align:left;" id="TBL-6-1-2" class="td01">
-                    <span class="ptmb8t-">12.</span><a id="x1-1312"></a> \(6y^{(4)}+5y'''+7y''+5y'+y=0\)
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-    <span class="ptmb8t-">13.</span> <a id="x1-1413"></a> \(4y^{(4)}+12y'''+3y''-13y'-6y=0\)
-    <span class="ptmb8t-">14.</span> <a id="x1-1514"></a> \(y^{(4)}-4y'''+7y''-6y'+2y=0\)
-    <!--l. 44-->
-    <p class="noindent" id="c3e51f3b-3b62-475e-9d6c-6c9ee04f36c3">In Exercises&nbsp;<a href="#x1-1615">15<!--tex4ht:ref: exer:9.2.15 --></a>–<a href="#x1-2827">27<!--tex4ht:ref: exer:9.2.27 --></a> solve the initial value
-            problem. Where indicated by <span class="fbox"><span id="textcolor1">C/G</span></span>, graph the solution.
-    </p>
-    <dl class="list1" id="e3701be8-41d5-497e-9b4f-634649b70521">
-        <dt class="list">
-            <span class="ptmb8t-">15.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 46-->
-            <p class="noindent"><a id="x1-1615"></a> \(y'''-2y''+4y'-8y=0, \quad y(0)=2,\quad y'(0)=-2,\; y''(0)=0\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">16.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 49-->
-            <p class="noindent"><a id="x1-1716"></a> \(y'''+3y''-y'-3y=0, \quad y(0)=0,\quad y'(0)=14,\quad y''(0)=-40\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">17.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 52-->
-            <p class="noindent"><a id="x1-1817"></a> <span class="fbox"><span id="textcolor2">C/G</span></span>
-                \(y'''-y''-y'+y=0, \quad y(0)=-2,\quad y'(0)=9,\quad y''(0)=4\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">18.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 55-->
-            <p class="noindent"><a id="x1-1918"></a> <span class="fbox"><span id="textcolor3">C/G</span></span>
-                \(y'''-2y'-4y=0, \quad y(0)=6,\quad y'(0)=3,\quad y''(0)=22\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">19.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 58-->
-            <p class="noindent"><a id="x1-2019"></a> <span class="fbox"><span id="textcolor4">C/G</span></span>
-            </p><!--l. 60-->
-            <p class="noindent">\(3y'''-y''-7y'+5y=0, \quad y(0)=\displaystyle {14\over 5},\quad y'(0)=0,\quad
-                y''(0)=10\)
-
-
-
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">20.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 62-->
-            <p class="noindent"><a id="x1-2120"></a> \(y'''-6y''+12y'-8y=0, \quad y(0)=1,\quad y'(0)=-1,\quad
-                y''(0)=-4\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">21.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 65-->
-            <p class="noindent"><a id="x1-2221"></a> \(2y'''-11y''+12y'+9y=0, \quad y(0)=6,\quad y'(0)=3,\quad
-                y''(0)=13\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">22.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 68-->
-            <p class="noindent"><a id="x1-2322"></a> \(8y'''-4y''-2y'+y=0, \quad y(0)=4,\quad y'(0)=-3,\quad y''(0)=-1\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">23.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 71-->
-            <p class="noindent"><a id="x1-2423"></a> \(y^{(4)}-16y=0, \quad y(0)=2,\; y'(0)=2,\; y''(0)=-2,\;
-                y'''(0)=0\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">24.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 74-->
-            <p class="noindent"><a id="x1-2524"></a> \(y^{(4)}-6y'''+7y''+6y'-8y=0, \quad y(0)=-2,\quad y'(0)=-8,\quad
-                y''(0)=-14\),
-            </p><!--l. 77-->
-            <p class="noindent">\(y'''(0)=-62\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">25.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 79-->
-            <p class="noindent"><a id="x1-2625"></a> \(4y^{(4)}-13y''+9y=0, \quad y(0)=1,\quad y'(0)=3,\quad
-                y''(0)=1,\quad y'''(0)=3\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">26.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 82-->
-            <p class="noindent"><a id="x1-2726"></a> \(y^{(4)}+2y'''-2y''-8y'-8y=0, \quad y(0)=5,\quad y'(0)=-2,\quad
-                y''(0)=6,\quad y'''(0)=8\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">27.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 85-->
-            <p class="noindent"><a id="x1-2827"></a> <span class="fbox"><span id="textcolor5">C/G</span></span>
-                \(4y^{(4)}+8y'''+19y''+32y'+12y=0, \quad y(0)=3,\quad y'(0)=-3,\quad y''(0)= -\displaystyle {7\over
-                2}\), \(y'''(0)=\displaystyle {31\over 4}\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">28.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 90-->
-            <p class="noindent"><a id="x1-2928"></a> Find a fundamental set of solutions of the given equation, and
-                verify that it’s a fundamental set by
-                evaluating its Wronskian at \(x=0\).
-            </p>
-            <div class="tabular">
-                <table id="TBL-7" class="tabular">
-                    <colgroup id="TBL-7-1g">
-                        <col id="TBL-7-1">
-                        <col id="TBL-7-2">
-                    </colgroup>
-                    <tbody><tr style="vertical-align:baseline;" id="TBL-7-1-">
-                        <td style="white-space:normal; text-align:left;" id="TBL-7-1-1" class="td00"><!--l. 96-->
-                            <p class="noindent"><span class="ptmb8t-">(a)</span> \((D-1)^2(D-2)y=0\) </p>
-                        </td>
-                        <td style="white-space:normal; text-align:left;" id="TBL-7-1-2" class="td01"><!--l. 97-->
-                            <p class="noindent"><span class="ptmb8t-">(b)</span> \((D^2+4)(D-3)y=0\) </p>
-                        </td>
-                    </tr>
-                </tbody></table>
-            </div>
-            <div class="tabular">
-                <table id="TBL-8" class="tabular">
-                    <colgroup id="TBL-8-1g">
-                        <col id="TBL-8-1">
-                        <col id="TBL-8-2">
-                    </colgroup>
-                    <tbody><tr style="vertical-align:baseline;" id="TBL-8-1-">
-                        <td style="white-space:normal; text-align:left;" id="TBL-8-1-1" class="td00"><!--l. 101-->
-                            <p class="noindent"><span class="ptmb8t-">(c)</span> \((D^2+2D+2)(D-1)y=0\) </p>
-                        </td>
-                        <td style="white-space:normal; text-align:left;" id="TBL-8-1-2" class="td01"><!--l. 102-->
-                            <p class="noindent"><span class="ptmb8t-">(d)</span> \(D^3(D-1)y=0\) </p>
-                        </td>
-                    </tr>
-                </tbody></table>
-            </div>
-            <div class="tabular">
-                <table id="TBL-9" class="tabular">
-                    <colgroup id="TBL-9-1g">
-                        <col id="TBL-9-1">
-                        <col id="TBL-9-2">
-                    </colgroup>
-                    <tbody><tr style="vertical-align:baseline;" id="TBL-9-1-">
-                        <td style="white-space:normal; text-align:left;" id="TBL-9-1-1" class="td00"><!--l. 106-->
-                            <p class="noindent"><span class="ptmb8t-">(e)</span> \((D^2-1)(D^2+1)y=0\) </p>
-                        </td>
-                        <td style="white-space:normal; text-align:left;" id="TBL-9-1-2" class="td01"><!--l. 107-->
-                            <p class="noindent"><span class="ptmb8t-">(f)</span> \((D^2-2D+2)(D^2+1)y=0\) </p>
-                        </td>
-                    </tr>
-                </tbody></table>
-            </div>
-        </dd>
-    </dl>
-    <!--l. 111-->
-    <p class="noindent" id="f6afd28b-b79e-4587-b97c-a7ad1412429b">In Exercises&nbsp;<a href="#x1-3029">29<!--tex4ht:ref: exer:9.2.29 --></a>–<a href="#x1-3938">38<!--tex4ht:ref: exer:9.2.38 --></a> find a fundamental set of
-            solutions.
-    </p>
-    <dl class="list1" id="c00524b3-717d-465d-9297-60a0ff1980d0">
-        <dt class="list">
-            <span class="ptmb8t-">29.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 113-->
-            <p class="noindent"><a id="x1-3029"></a> \((D^2+6D+13)(D-2)^2D^3y=0\)
-
-
-
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">30.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 116-->
-            <p class="noindent"><a id="x1-3130"></a> \((D-1)^2(2D-1)^3(D^2+1)y=0\)
-            </p>
-            <div class="tabular">
-                <table id="TBL-10" class="tabular">
-                    <colgroup id="TBL-10-1g">
-                        <col id="TBL-10-1">
-                        <col id="TBL-10-2">
-                    </colgroup>
-                    <tbody><tr style="vertical-align:baseline;" id="TBL-10-1-">
-                        <td style="white-space:normal; text-align:left;" id="TBL-10-1-1" class="td00">
-                            <span class="ptmb8t-">31.</span><a id="x1-3231"></a> \((D^2+9)^3D^2y=0\)
-                        </td>
-                        <td style="white-space:normal; text-align:left;" id="TBL-10-1-2" class="td01">
-                            <span class="ptmb8t-">32.</span><a id="x1-3332"></a> \((D-2)^3(D+1)^2Dy=0\)
-                        </td>
-                    </tr>
-                </tbody></table>
-            </div>
-            <div class="tabular">
-                <table id="TBL-11" class="tabular">
-                    <colgroup id="TBL-11-1g">
-                        <col id="TBL-11-1">
-                        <col id="TBL-11-2">
-                    </colgroup>
-                    <tbody><tr style="vertical-align:baseline;" id="TBL-11-1-">
-                        <td style="white-space:normal; text-align:left;" id="TBL-11-1-1" class="td00">
-                            <span class="ptmb8t-">33.</span><a id="x1-3433"></a> \((D^2+1)(D^2+9)^2(D-2)y=0\)
-                        </td>
-                        <td style="white-space:normal; text-align:left;" id="TBL-11-1-2" class="td01">
-                            <span class="ptmb8t-">34.</span><a id="x1-3534"></a> \((D^4-16)^2y=0\)
-                        </td>
-                    </tr>
-                </tbody></table>
-            </div>
-            <div class="tabular">
-                <table id="TBL-12" class="tabular">
-                    <colgroup id="TBL-12-1g">
-                        <col id="TBL-12-1">
-                        <col id="TBL-12-2">
-                    </colgroup>
-                    <tbody><tr style="vertical-align:baseline;" id="TBL-12-1-">
-                        <td style="white-space:normal; text-align:left;" id="TBL-12-1-1" class="td00">
-                            <span class="ptmb8t-">35.</span><a id="x1-3635"></a> \((4D^2+4D+9)^3y=0\)
-                        </td>
-                        <td style="white-space:normal; text-align:left;" id="TBL-12-1-2" class="td01">
-                            <span class="ptmb8t-">36.</span><a id="x1-3736"></a> \(D^3(D-2)^2(D^2+4)^2y=0\)
-                        </td>
-                    </tr>
-                </tbody></table>
-            </div>
-            <div class="tabular">
-                <table id="TBL-13" class="tabular">
-                    <colgroup id="TBL-13-1g">
-                        <col id="TBL-13-1">
-                        <col id="TBL-13-2">
-                    </colgroup>
-                    <tbody><tr style="vertical-align:baseline;" id="TBL-13-1-">
-                        <td style="white-space:normal; text-align:left;" id="TBL-13-1-1" class="td00">
-                            <span class="ptmb8t-">37.</span><a id="x1-3837"></a> \((4D^2+1)^2(9D^2+4)^3y=0\)
-                        </td>
-                        <td style="white-space:normal; text-align:left;" id="TBL-13-1-2" class="td01">
-                            <span class="ptmb8t-">38.</span><a id="x1-3938"></a> \(\left [(D-1)^4-16\right ]y=0\)
-                        </td>
-                    </tr>
-                </tbody></table>
-            </div>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">39.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 139-->
-            <p class="noindent"><a id="x1-4039"></a> It can be shown that
-                \[ \left |\begin {array}{cccc} 1&amp;1&amp;\cdots&amp; 1\\ a_1&amp;a_2&amp;\cdots&amp;a _n\\
-                a^2_1&amp;a^2_2&amp;\cdots&amp;a ^2_n\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\
-                a^{n-1}_1&amp;a^{n-1}_2&amp;\cdots&amp;a ^{n-1}_n\end {array}\right |= \prod _{1\le i&lt;j\le
-                n}(a_j-a_i), \, {\rm (A)} \]
-                where the left side is the <span class="vocab">Vandermonde determinant</span> and the right side is the
-                product of all factors of the
-                form \((a_j-a_i)\) with \(i\) and \(j\) between \(1\) and \(n\) and \(i&lt;j\).
-            </p>
-            <dl class="list2">
-                <dt class="list">
-                    <span class="ptmb8t-">(a)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 160-->
-                    <p class="noindent">Verify (A) for \(n=2\) and \(n=3\).
-                    </p>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(b)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 163-->
-                    <p class="noindent">Find the Wronskian of \(\{e^{{a_1}x}, \quad e^{{a_2}x},\dots , e^{{a_n}x}\}\).
-                    </p>
-                </dd>
-            </dl>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">40.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 166-->
-            <p class="noindent"><a id="x1-4340"></a> A theorem from algebra says that if \(P_1\) and \(P_2\) are
-                polynomials with no common factors then there are
-                polynomials \(Q_1\) and \(Q_2\) such that
-
-
-
-                \[ Q_1P_1+Q_2P_2=1\]
-                This implies that
-                \[ Q_1(D)P_1(D)y+Q_2(D)P_2(D)y=y \]
-                for every function \(y\) with enough derivatives for the left side to be defined.
-            </p>
-            <dl class="list2">
-                <dt class="list">
-                    <span class="ptmb8t-">(a)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 182-->
-                    <p class="noindent">Use this to show that if \(P_1\) and \(P_2\) have no common factors and
-                        \[ P_1(D)y=P_2(D)y=0 \]
-                        then \(y=0\).
-                    </p>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(b)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 189-->
-                    <p class="noindent">Suppose \(P_1\) and \(P_2\) are polynomials with no common factors. Let \(u_1\),
-                        …, \(u_r\) be linearly independent
-                        solutions of \(P_1(D)y=0\) and let \(v_1\), …, \(v_s\) be linearly independent solutions
-                        of \(P_2(D)y=0\). Use <span class="ptmb8t-">(a) </span>to show that \(\{u_1,\dots ,u_r,
-                        v_1,\dots ,v_s\}\) is a
-                        linearly independent set.
-                    </p>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(c)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 196-->
-                    <p class="noindent">Suppose the characteristic polynomial of the constant coefficient equation
-
-
-
-                        \[ a_0y^{(n)}+a_1y^{(n-1)}+\cdots +a_ny=0 \, {\rm (A)} \]
-                        has the factorization
-                        \[ p(r)=a_0p_1(r)p_2(r)\cdots p_k(r)\]
-                        where each \(p_j\) is of the form
-                        \[ p_j(r)=(r-r_j)^{n_j} \mbox { or } p_j(r)=[(r-\lambda _j)^2+w^2_j]^{m_j}\quad (\omega _j&gt;0)
-                        \]
-                        and no two of the polynomials \(p_1\), \(p_2\), …, \(p_k\) have a common factor. Show
-                        that we can find a
-                        fundamental set of solutions \(\{y_1,y_2,\dots ,y_n\}\) of (A) by finding a fundamental set of
-                        solutions of each of the
-                        equations
-                        \[ p_j(D)y=0,\quad 1\le j\le k\]
-                        and taking \(\{y_1,y_2,\dots ,y_n\}\) to be the set of all functions in these separate
-                        fundamental sets.</p>
-                </dd>
-            </dl>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">41.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 222-->
-            <p class="noindent"><a id="x1-4741"></a>
-
-
-
-            </p>
-            <dl class="list2">
-                <dt class="list">
-                    <span class="ptmb8t-">(a)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 225-->
-                    <p class="noindent">Show that if
-                        \[ z=p(x)\cos \omega x+q(x)\sin \omega x, \, {\rm (A)} \]
-                        where \(p\) and \(q\) are polynomials of degree \(\le k\), then
-                        \[ (D^2+\omega ^2)z=p_1(x)\cos \omega x+q_1(x)\sin \omega x\]
-                        where \(p_1\) and \(q_1\) are polynomials of degree \(\le k-1\).
-                    </p>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(b)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 237-->
-                    <p class="noindent">Apply <span class="ptmb8t-">(a)</span> \(m\) times to show that if \(z\) is of
-                        the form (A) where \(p\) and \(q\) are polynomial of degree \(\le m-1\),
-                        then
-                        \[ (D^2+\omega ^2)^mz=0. \, {\rm (B)} \]
-
-
-
-                    </p>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(c)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 246-->
-                    <p class="noindent">Use Eqn.&nbsp;(<span class="ptmb8t-">9.2.17</span>) to show that if
-                        \(y=e^{\lambda x}z\) then
-                        \[ [(D-\lambda )^2+\omega ^2]^my=e^{\lambda x}(D^2+\omega ^2)^mz\]
-                    </p>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(d)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 253-->
-                    <p class="noindent">Conclude from <span class="ptmb8t-">(b) </span>and <span class="ptmb8t-">(c)
-                        </span>that if \(p\) and \(q\) are arbitrary polynomials of degree \(\le m-1\) then
-                        \[ y=e^{\lambda x}(p(x)\cos \omega x+q(x)\sin \omega x) \]
-                        is a solution of
-                        \[ [(D-\lambda )^2+\omega ^2]^my=0. \, {\rm (C)} \]
-                    </p>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(e)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 265-->
-                    <p class="noindent">Conclude from <span class="ptmb8t-">(d) </span>that the functions
-
-
-
-                        \[ \begin {array}{rl} e^{\lambda x}\cos \omega x, xe^{\lambda x}\cos \omega x, &amp;\dots ,
-                        x^{m-1}e^{\lambda x}\cos \omega x,\\ e^{\lambda x}\sin \omega x, xe^{\lambda x}\sin \omega
-                        x,&amp; \dots , x^{m-1}e^{\lambda x}\sin \omega x \end {array} \, {\rm (D)} \]
-                        are all solutions of (C).
-                    </p>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(f)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 278-->
-                    <p class="noindent">Complete the proof of Theorem&nbsp;<span class="ptmb8t-">9.2.2</span> by
-                        showing that the functions in (D) are linearly
-                        independent.</p>
-                </dd>
-            </dl>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">42.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 282-->
-            <p class="noindent"><a id="x1-5442"></a>
-            </p>
-            <dl class="list2">
-                <dt class="list">
-                    <span class="ptmb8t-">(a)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 285-->
-                    <p class="noindent">Use the trigonometric identities </p>
-                    <div class="eqnarray">\begin {eqnarray*} \cos (A+B)&amp;=&amp;\cos A\cos B-\sin A\sin B\\ \sin
-                        (A+B)&amp;=&amp;\cos A\sin B+\sin A\cos B \end {eqnarray*}</div>
-                    <!--l. 290-->
-                    <p class="noindent">to show that
-                        \[ (\cos A+i\sin A)(\cos B+i\sin B)=\cos (A+B)+i\sin (A+B)\]
-                    </p>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(b)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 295-->
-                    <p class="noindent">Apply <span class="ptmb8t-">(a) </span>repeatedly to show that if \(n\) is a
-                        positive integer then
-                        \[ \prod _{k=1}^n(\cos A_k+i\sin A_k)=\cos (A_1+A_2+\cdots +A_n) +i\sin (A_1+A_2+\cdots +A_n)\]
-
-
-
-                    </p>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(c)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 302-->
-                    <p class="noindent">Infer from <span class="ptmb8t-">(b) </span>that if \(n\) is a positive integer
-                        then
-                        \[ (\cos \theta +i\sin \theta )^n=\cos n\theta +i\sin n\theta . \, {\rm (A)} \]
-                    </p>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(d)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 308-->
-                    <p class="noindent">Show that (A) also holds if \(n=0\) or a negative integer. <span class="hint">Hint: Verify by direct calculation
-                        that
-                        \[ (\cos \theta +i\sin \theta )^{-1}=(\cos \theta -i\sin \theta )\]
-                        Then replace \(\theta \) by
-                        \(-\theta \) in (A).</span>
-                    </p>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(e)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 315-->
-                    <p class="noindent">Now suppose \(n\) is a positive integer. Infer from (A) that if
-                        \[ z_k=\cos \left (2k\pi \over n\right )+i\sin \left (2k\pi \over n\right ) ,\quad k=0,1,\dots
-                        ,n-1\]
-                        and
-
-
-
-                        \[ \zeta _k=\cos \left ((2k+1)\pi \over n\right )+i\sin \left ((2k+1)\pi \over n\right ) ,\quad
-                        k=0,1,\dots ,n-1\]
-                        then
-                        \[ z_k^n=1\quad \mbox { and }\quad \zeta _k^n=-1,\quad k=0,1,\dots ,n-1\]
-                        (Why don’t we also consider other integer values for \(k\)?)
-                    </p>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(f)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 334-->
-                    <p class="noindent">Let \(\rho \) be a positive number. Use <span class="ptmb8t-">(e) </span>to show
-                        that
-                        \[ z^n-\rho =(z-\rho ^{1/n} z_0)(z-\rho ^{1/n}z_1)\cdots (z-\rho ^{1/n} z_{n-1}) \]
-                        and
-
-
-
-                        \[ z^n+\rho =(z-\rho ^{1/n} \zeta _0)(z-\rho ^{1/n} \zeta _1)\cdots (z-\rho ^{1/n} \zeta
-                        _{n-1})\]
-                    </p>
-                </dd>
-            </dl>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">43.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 345-->
-            <p class="noindent"><a id="x1-6143"></a> Use <span class="ptmb8t-">(e) </span>of Exercise&nbsp;<a href="#x1-5442">42<!--tex4ht:ref: exer:9.2.42 --></a> to find a fundamental set of solutions of the
-                given equation.
-            </p>
-            <div class="tabular">
-                <table id="TBL-14" class="tabular">
-                    <colgroup id="TBL-14-1g">
-                        <col id="TBL-14-1">
-                        <col id="TBL-14-2">
-                    </colgroup>
-                    <tbody><tr style="vertical-align:baseline;" id="TBL-14-1-">
-                        <td style="white-space:normal; text-align:left;" id="TBL-14-1-1" class="td00"><!--l. 350-->
-                            <p class="noindent"><span class="ptmb8t-">(a)</span> \(y'''-y=0\) </p>
-                        </td>
-                        <td style="white-space:normal; text-align:left;" id="TBL-14-1-2" class="td01"><!--l. 350-->
-                            <p class="noindent"><span class="ptmb8t-">(b)</span> \(y'''+y=0\) </p>
-                        </td>
-                    </tr>
-                </tbody></table>
-            </div>
-            <div class="tabular">
-                <table id="TBL-15" class="tabular">
-                    <colgroup id="TBL-15-1g">
-                        <col id="TBL-15-1">
-                        <col id="TBL-15-2">
-                    </colgroup>
-                    <tbody><tr style="vertical-align:baseline;" id="TBL-15-1-">
-                        <td style="white-space:normal; text-align:left;" id="TBL-15-1-1" class="td00"><!--l. 354-->
-                            <p class="noindent"><span class="ptmb8t-">(c)</span> \(y^{(4)}+64y=0\) </p>
-                        </td>
-                        <td style="white-space:normal; text-align:left;" id="TBL-15-1-2" class="td01"><!--l. 354-->
-                            <p class="noindent"><span class="ptmb8t-">(d)</span> \(y^{(6)}-y=0\) </p>
-                        </td>
-                    </tr>
-                </tbody></table>
-            </div>
-            <div class="tabular">
-                <table id="TBL-16" class="tabular">
-                    <colgroup id="TBL-16-1g">
-                        <col id="TBL-16-1">
-                        <col id="TBL-16-2">
-                    </colgroup>
-                    <tbody><tr style="vertical-align:baseline;" id="TBL-16-1-">
-                        <td style="white-space:normal; text-align:left;" id="TBL-16-1-1" class="td00"><!--l. 358-->
-                            <p class="noindent"><span class="ptmb8t-">(e)</span> \(y^{(6)}+64y=0\) </p>
-                        </td>
-                        <td style="white-space:normal; text-align:left;" id="TBL-16-1-2" class="td01"><!--l. 358-->
-                            <p class="noindent"><span class="ptmb8t-">(f)</span> \(\left [(D-1)^6-1\right ]y=0\) </p>
-                        </td>
-                    </tr>
-                </tbody></table>
-            </div>
-            <!--l. 361-->
-            <p class="noindent"><span class="ptmb8t-">(g)</span> \(y^{(5)}+y^{(4)}+y'''+y''+y'+y=0\)
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">44.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 363-->
-            <p class="noindent"><a id="x1-6244"></a> An equation of the form
-                \[ a_0x^ny^{(n)}+a_1x^{n-1}y^{(n-1)}+\cdots +a_{n-1}xy'+a_ny=0,\quad x&gt;0, \, {\rm (A)} \]
-                where \(a_0\), \(a_1\), …, \(a_n\) are constants, is an <span class="vocab">Euler</span> or
-                <span class="vocab">equidimensional</span> equation.
-            </p><!--l. 373-->
-            <p class="noindent">Show that if
-                \[ x=e^t \quad \mbox { and } \quad Y(t)=y(x(t)), \, {\rm (B)} \]
-                then </p>
-            <div class="eqnarray">\begin {eqnarray*} \displaystyle x {dy\over dx}&amp;=&amp;\displaystyle {dY\over dt}\\
-                \displaystyle x^2{d^2y\over dx^2}&amp;=&amp;\displaystyle {d^2Y\over dt^2}-{dY\over dt}\\ \displaystyle
-                x^3{d^3y\over dx^3}&amp;=&amp;\displaystyle {d^3Y\over dt^3}-3{d^2Y\over dt^2}+2{dY\over dt}\end
-                {eqnarray*}</div>
-            <!--l. 384-->
-            <p class="noindent">In general, it can be shown that if \(r\) is any integer \(\ge 2\) then
-
-
-
-                \[ x^r {d^ry\over dx^r}={d^rY\over dt^r}+ A_{1r}{d^{r-1}Y\over dt^{r-1}}+\cdots +A_{r-1,r} {dY\over dt}
-                \]
-                where \(A_{1r}\), …, \(A_{r-1,r}\) are integers. Use these results to show that the substitution
-                (B) transforms (A) into a constant
-                coefficient equation for \(Y\) as a function of \(t\).
-            </p>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">45.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 395-->
-            <p class="noindent"><a id="x1-6345"></a> Use Exercise&nbsp;<a href="#x1-6244">44<!--tex4ht:ref: exer:9.2.44 --></a> to show that a function \(y=y(x)\) satisfies
-                the equation
-                \[ a_0x^3y'''+a_1x^2y''+a_2xy'+a_3y=0, \, {\rm (A)} \]
-                on \((0,\infty )\) if and only if the function \(Y(t)=y(e^t)\) satisfies
-                \[ a_0{d^3Y\over dt^3}+(a_1-3a_0) {d^2Y\over dt^2}+(a_2-a_1+2a_0) {dY\over dt}+a_3Y=0\]
-                Assuming that \(a_0\), \(a_1\), \(a_2\), \(a_3\) are real and \(a_0 \ne 0\), find the possible forms for
-                the general solution of (A).</p>
-        </dd>
-    </dl>
-    <a class="back-to-ch" href="sec9.0.html" id="b01440b5-28d3-43b0-aa8d-e7d3e39160c7">Back</a>
-
-
-
-</body></html>
+	<body>
+		<div class="centerline" id="42fb8b85-83ba-4b68-8ee0-5f0b38f67d0e">
+			<span class="ptmb8t-x-x-120">9.2</span>
+			<span class="ptmb8t-x-x-120">&nbsp;Exercises</span>
+		</div>
+		<a id="x1-1doc"></a>
+		<!--l. 1-->
+		<p class="noindent" id="f01587d3-ad83-43c1-8ad8-d6b27c93ad68">
+			In Exercises&nbsp;
+			<a href="#x1-21">
+				1
+				<!--tex4ht:ref: exer:9.2.1 -->
+			</a>
+			–
+			<a href="#x1-1514">
+				14
+				<!--tex4ht:ref: exer:9.2.14 -->
+			</a>
+			find the general solution.
+		</p>
+		<div class="tabular" id="7780ddd2-79e8-4e74-b4f3-5aa4eb90ec8c">
+			<table id="TBL-1" class="tabular">
+				<colgroup id="TBL-1-1g">
+					<col id="TBL-1-1" />
+					<col id="TBL-1-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-1-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-1-1-1"
+							class="td00"
+						>
+							<dl class="list1">
+								<dt class="list">
+									<span class="ptmb8t-">1.</span>
+								</dt>
+								<dd class="list">
+									<!--l. 8-->
+									<p class="noindent">
+										<a id="x1-21"></a>
+										\(y'''-3y''+3y'-y=0\)
+									</p>
+								</dd>
+							</dl>
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-1-1-2"
+							class="td01"
+						>
+							<dt class="list">
+								<span class="ptmb8t-">2.</span>
+							</dt>
+							<dd class="list">
+								<!--l. 9-->
+								<p class="noindent">
+									<a id="x1-32"></a>
+									\(y^{(4)}+8y''-9y=0\)
+								</p>
+							</dd>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="tabular" id="53d74bef-4926-4d41-a19c-7319ab10b835">
+			<table id="TBL-2" class="tabular">
+				<colgroup id="TBL-2-1g">
+					<col id="TBL-2-1" />
+					<col id="TBL-2-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-2-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-2-1-1"
+							class="td00"
+						>
+							<span class="ptmb8t-">3.</span>
+							<a id="x1-43"></a>
+							\(y'''-y''+16y'-16y=0\)
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-2-1-2"
+							class="td01"
+						>
+							<span class="ptmb8t-">4.</span>
+							<a id="x1-54"></a>
+							\(2y'''+3y''-2y'-3y=0\)
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="tabular" id="11705a20-fdaf-4e8d-9ca0-1be5c1bd09a5">
+			<table id="TBL-3" class="tabular">
+				<colgroup id="TBL-3-1g">
+					<col id="TBL-3-1" />
+					<col id="TBL-3-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-3-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-3-1-1"
+							class="td00"
+						>
+							<span class="ptmb8t-">5.</span>
+							<a id="x1-65"></a>
+							\(y'''+5y''+9y'+5y=0\)
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-3-1-2"
+							class="td01"
+						>
+							<span class="ptmb8t-">6.</span>
+							<a id="x1-76"></a>
+							\(4y'''-8y''+5y'-y=0\)
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="tabular" id="57c23f4e-8f79-4401-ba78-3ea0aa958d88">
+			<table id="TBL-4" class="tabular">
+				<colgroup id="TBL-4-1g">
+					<col id="TBL-4-1" />
+					<col id="TBL-4-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-4-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-4-1-1"
+							class="td00"
+						>
+							<span class="ptmb8t-">7.</span>
+							<a id="x1-87"></a>
+							\(27y'''+27y''+9y'+y=0\)
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-4-1-2"
+							class="td01"
+						>
+							<span class="ptmb8t-">8.</span>
+							<a id="x1-98"></a>
+							\(y^{(4)}+y''=0\)
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="tabular" id="e2737ee8-ff48-4104-aa26-fe398e7980a7">
+			<table id="TBL-5" class="tabular">
+				<colgroup id="TBL-5-1g">
+					<col id="TBL-5-1" />
+					<col id="TBL-5-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-5-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-5-1-1"
+							class="td00"
+						>
+							<span class="ptmb8t-">9.</span>
+							<a id="x1-109"></a>
+							\(y^{(4)}-16y=0\)
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-5-1-2"
+							class="td01"
+						>
+							<span class="ptmb8t-">10.</span>
+							<a id="x1-1110"></a>
+							\(y^{(4)}+12y''+36y=0\)
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="tabular" id="2932182f-5113-4a7c-937f-8f84361aa7eb">
+			<table id="TBL-6" class="tabular">
+				<colgroup id="TBL-6-1g">
+					<col id="TBL-6-1" />
+					<col id="TBL-6-2" />
+				</colgroup>
+				<tbody>
+					<tr style="vertical-align: baseline" id="TBL-6-1-">
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-6-1-1"
+							class="td00"
+						>
+							<span class="ptmb8t-">11.</span>
+							<a id="x1-1211"></a>
+							\(16y^{(4)}-72y''+81y=0\)
+						</td>
+						<td
+							style="white-space: normal; text-align: left"
+							id="TBL-6-1-2"
+							class="td01"
+						>
+							<span class="ptmb8t-">12.</span>
+							<a id="x1-1312"></a>
+							\(6y^{(4)}+5y'''+7y''+5y'+y=0\)
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<span class="ptmb8t-">13.</span>
+		<a id="x1-1413"></a>
+		\(4y^{(4)}+12y'''+3y''-13y'-6y=0\)
+		<span class="ptmb8t-">14.</span>
+		<a id="x1-1514"></a>
+		\(y^{(4)}-4y'''+7y''-6y'+2y=0\)
+		<!--l. 44-->
+		<p class="noindent" id="c3e51f3b-3b62-475e-9d6c-6c9ee04f36c3">
+			In Exercises&nbsp;
+			<a href="#x1-1615">
+				15
+				<!--tex4ht:ref: exer:9.2.15 -->
+			</a>
+			–
+			<a href="#x1-2827">
+				27
+				<!--tex4ht:ref: exer:9.2.27 -->
+			</a>
+			solve the initial value problem. Where indicated by
+			<span class="fbox"><span id="textcolor1">C/G</span></span>
+			, graph the solution.
+		</p>
+		<dl class="list1" id="e3701be8-41d5-497e-9b4f-634649b70521">
+			<dt class="list">
+				<span class="ptmb8t-">15.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 46-->
+				<p class="noindent">
+					<a id="x1-1615"></a>
+					\(y'''-2y''+4y'-8y=0, \quad y(0)=2,\quad y'(0)=-2,\; y''(0)=0\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">16.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 49-->
+				<p class="noindent">
+					<a id="x1-1716"></a>
+					\(y'''+3y''-y'-3y=0, \quad y(0)=0,\quad y'(0)=14,\quad y''(0)=-40\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">17.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 52-->
+				<p class="noindent">
+					<a id="x1-1817"></a>
+					<span class="fbox"><span id="textcolor2">C/G</span></span>
+					\(y'''-y''-y'+y=0, \quad y(0)=-2,\quad y'(0)=9,\quad y''(0)=4\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">18.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 55-->
+				<p class="noindent">
+					<a id="x1-1918"></a>
+					<span class="fbox"><span id="textcolor3">C/G</span></span>
+					\(y'''-2y'-4y=0, \quad y(0)=6,\quad y'(0)=3,\quad y''(0)=22\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">19.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 58-->
+				<p class="noindent">
+					<a id="x1-2019"></a>
+					<span class="fbox"><span id="textcolor4">C/G</span></span>
+				</p>
+				<!--l. 60-->
+				<p class="noindent">
+					\(3y'''-y''-7y'+5y=0, \quad y(0)=\displaystyle {14\over 5},\quad
+					y'(0)=0,\quad y''(0)=10\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">20.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 62-->
+				<p class="noindent">
+					<a id="x1-2120"></a>
+					\(y'''-6y''+12y'-8y=0, \quad y(0)=1,\quad y'(0)=-1,\quad y''(0)=-4\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">21.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 65-->
+				<p class="noindent">
+					<a id="x1-2221"></a>
+					\(2y'''-11y''+12y'+9y=0, \quad y(0)=6,\quad y'(0)=3,\quad y''(0)=13\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">22.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 68-->
+				<p class="noindent">
+					<a id="x1-2322"></a>
+					\(8y'''-4y''-2y'+y=0, \quad y(0)=4,\quad y'(0)=-3,\quad y''(0)=-1\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">23.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 71-->
+				<p class="noindent">
+					<a id="x1-2423"></a>
+					\(y^{(4)}-16y=0, \quad y(0)=2,\; y'(0)=2,\; y''(0)=-2,\; y'''(0)=0\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">24.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 74-->
+				<p class="noindent">
+					<a id="x1-2524"></a>
+					\(y^{(4)}-6y'''+7y''+6y'-8y=0, \quad y(0)=-2,\quad y'(0)=-8,\quad
+					y''(0)=-14\),
+				</p>
+				<!--l. 77-->
+				<p class="noindent">\(y'''(0)=-62\)</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">25.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 79-->
+				<p class="noindent">
+					<a id="x1-2625"></a>
+					\(4y^{(4)}-13y''+9y=0, \quad y(0)=1,\quad y'(0)=3,\quad y''(0)=1,\quad
+					y'''(0)=3\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">26.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 82-->
+				<p class="noindent">
+					<a id="x1-2726"></a>
+					\(y^{(4)}+2y'''-2y''-8y'-8y=0, \quad y(0)=5,\quad y'(0)=-2,\quad
+					y''(0)=6,\quad y'''(0)=8\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">27.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 85-->
+				<p class="noindent">
+					<a id="x1-2827"></a>
+					<span class="fbox"><span id="textcolor5">C/G</span></span>
+					\(4y^{(4)}+8y'''+19y''+32y'+12y=0, \quad y(0)=3,\quad y'(0)=-3,\quad
+					y''(0)= -\displaystyle {7\over 2}\), \(y'''(0)=\displaystyle {31\over
+					4}\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">28.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 90-->
+				<p class="noindent">
+					<a id="x1-2928"></a>
+					Find a fundamental set of solutions of the given equation, and verify
+					that it’s a fundamental set by evaluating its Wronskian at \(x=0\).
+				</p>
+				<div class="tabular">
+					<table id="TBL-7" class="tabular">
+						<colgroup id="TBL-7-1g">
+							<col id="TBL-7-1" />
+							<col id="TBL-7-2" />
+						</colgroup>
+						<tbody>
+							<tr style="vertical-align: baseline" id="TBL-7-1-">
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-7-1-1"
+									class="td00"
+								>
+									<!--l. 96-->
+									<p class="noindent">
+										<span class="ptmb8t-">(a)</span>
+										\((D-1)^2(D-2)y=0\)
+									</p>
+								</td>
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-7-1-2"
+									class="td01"
+								>
+									<!--l. 97-->
+									<p class="noindent">
+										<span class="ptmb8t-">(b)</span>
+										\((D^2+4)(D-3)y=0\)
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tabular">
+					<table id="TBL-8" class="tabular">
+						<colgroup id="TBL-8-1g">
+							<col id="TBL-8-1" />
+							<col id="TBL-8-2" />
+						</colgroup>
+						<tbody>
+							<tr style="vertical-align: baseline" id="TBL-8-1-">
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-8-1-1"
+									class="td00"
+								>
+									<!--l. 101-->
+									<p class="noindent">
+										<span class="ptmb8t-">(c)</span>
+										\((D^2+2D+2)(D-1)y=0\)
+									</p>
+								</td>
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-8-1-2"
+									class="td01"
+								>
+									<!--l. 102-->
+									<p class="noindent">
+										<span class="ptmb8t-">(d)</span>
+										\(D^3(D-1)y=0\)
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tabular">
+					<table id="TBL-9" class="tabular">
+						<colgroup id="TBL-9-1g">
+							<col id="TBL-9-1" />
+							<col id="TBL-9-2" />
+						</colgroup>
+						<tbody>
+							<tr style="vertical-align: baseline" id="TBL-9-1-">
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-9-1-1"
+									class="td00"
+								>
+									<!--l. 106-->
+									<p class="noindent">
+										<span class="ptmb8t-">(e)</span>
+										\((D^2-1)(D^2+1)y=0\)
+									</p>
+								</td>
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-9-1-2"
+									class="td01"
+								>
+									<!--l. 107-->
+									<p class="noindent">
+										<span class="ptmb8t-">(f)</span>
+										\((D^2-2D+2)(D^2+1)y=0\)
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</dd>
+		</dl>
+		<!--l. 111-->
+		<p class="noindent" id="f6afd28b-b79e-4587-b97c-a7ad1412429b">
+			In Exercises&nbsp;
+			<a href="#x1-3029">
+				29
+				<!--tex4ht:ref: exer:9.2.29 -->
+			</a>
+			–
+			<a href="#x1-3938">
+				38
+				<!--tex4ht:ref: exer:9.2.38 -->
+			</a>
+			find a fundamental set of solutions.
+		</p>
+		<dl class="list1" id="c00524b3-717d-465d-9297-60a0ff1980d0">
+			<dt class="list">
+				<span class="ptmb8t-">29.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 113-->
+				<p class="noindent">
+					<a id="x1-3029"></a>
+					\((D^2+6D+13)(D-2)^2D^3y=0\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">30.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 116-->
+				<p class="noindent">
+					<a id="x1-3130"></a>
+					\((D-1)^2(2D-1)^3(D^2+1)y=0\)
+				</p>
+				<div class="tabular">
+					<table id="TBL-10" class="tabular">
+						<colgroup id="TBL-10-1g">
+							<col id="TBL-10-1" />
+							<col id="TBL-10-2" />
+						</colgroup>
+						<tbody>
+							<tr style="vertical-align: baseline" id="TBL-10-1-">
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-10-1-1"
+									class="td00"
+								>
+									<span class="ptmb8t-">31.</span>
+									<a id="x1-3231"></a>
+									\((D^2+9)^3D^2y=0\)
+								</td>
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-10-1-2"
+									class="td01"
+								>
+									<span class="ptmb8t-">32.</span>
+									<a id="x1-3332"></a>
+									\((D-2)^3(D+1)^2Dy=0\)
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tabular">
+					<table id="TBL-11" class="tabular">
+						<colgroup id="TBL-11-1g">
+							<col id="TBL-11-1" />
+							<col id="TBL-11-2" />
+						</colgroup>
+						<tbody>
+							<tr style="vertical-align: baseline" id="TBL-11-1-">
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-11-1-1"
+									class="td00"
+								>
+									<span class="ptmb8t-">33.</span>
+									<a id="x1-3433"></a>
+									\((D^2+1)(D^2+9)^2(D-2)y=0\)
+								</td>
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-11-1-2"
+									class="td01"
+								>
+									<span class="ptmb8t-">34.</span>
+									<a id="x1-3534"></a>
+									\((D^4-16)^2y=0\)
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tabular">
+					<table id="TBL-12" class="tabular">
+						<colgroup id="TBL-12-1g">
+							<col id="TBL-12-1" />
+							<col id="TBL-12-2" />
+						</colgroup>
+						<tbody>
+							<tr style="vertical-align: baseline" id="TBL-12-1-">
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-12-1-1"
+									class="td00"
+								>
+									<span class="ptmb8t-">35.</span>
+									<a id="x1-3635"></a>
+									\((4D^2+4D+9)^3y=0\)
+								</td>
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-12-1-2"
+									class="td01"
+								>
+									<span class="ptmb8t-">36.</span>
+									<a id="x1-3736"></a>
+									\(D^3(D-2)^2(D^2+4)^2y=0\)
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tabular">
+					<table id="TBL-13" class="tabular">
+						<colgroup id="TBL-13-1g">
+							<col id="TBL-13-1" />
+							<col id="TBL-13-2" />
+						</colgroup>
+						<tbody>
+							<tr style="vertical-align: baseline" id="TBL-13-1-">
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-13-1-1"
+									class="td00"
+								>
+									<span class="ptmb8t-">37.</span>
+									<a id="x1-3837"></a>
+									\((4D^2+1)^2(9D^2+4)^3y=0\)
+								</td>
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-13-1-2"
+									class="td01"
+								>
+									<span class="ptmb8t-">38.</span>
+									<a id="x1-3938"></a>
+									\(\left [(D-1)^4-16\right ]y=0\)
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">39.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 139-->
+				<p class="noindent">
+					<a id="x1-4039"></a>
+					It can be shown that \[ \left |\begin {array}{cccc}
+					1&amp;1&amp;\cdots&amp; 1\\ a_1&amp;a_2&amp;\cdots&amp;a _n\\
+					a^2_1&amp;a^2_2&amp;\cdots&amp;a ^2_n\\ \vdots&amp; \vdots&amp;
+					\ddots&amp; \vdots \\ a^{n-1}_1&amp;a^{n-1}_2&amp;\cdots&amp;a
+					^{n-1}_n\end {array}\right |= \prod _{1\le i&lt;j\le n}(a_j-a_i), \,
+					{\rm (A)} \] where the left side is the
+					<span class="vocab">Vandermonde determinant</span>
+					and the right side is the product of all factors of the form
+					\((a_j-a_i)\) with \(i\) and \(j\) between \(1\) and \(n\) and
+					\(i&lt;j\).
+				</p>
+				<dl class="list2">
+					<dt class="list">
+						<span class="ptmb8t-">(a)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 160-->
+						<p class="noindent">Verify (A) for \(n=2\) and \(n=3\).</p>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(b)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 163-->
+						<p class="noindent">
+							Find the Wronskian of \(\{e^{{a_1}x}, \quad e^{{a_2}x},\dots ,
+							e^{{a_n}x}\}\).
+						</p>
+					</dd>
+				</dl>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">40.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 166-->
+				<p class="noindent">
+					<a id="x1-4340"></a>
+					A theorem from algebra says that if \(P_1\) and \(P_2\) are
+					polynomials with no common factors then there are polynomials \(Q_1\)
+					and \(Q_2\) such that \[ Q_1P_1+Q_2P_2=1\] This implies that \[
+					Q_1(D)P_1(D)y+Q_2(D)P_2(D)y=y \] for every function \(y\) with enough
+					derivatives for the left side to be defined.
+				</p>
+				<dl class="list2">
+					<dt class="list">
+						<span class="ptmb8t-">(a)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 182-->
+						<p class="noindent">
+							Use this to show that if \(P_1\) and \(P_2\) have no common
+							factors and \[ P_1(D)y=P_2(D)y=0 \] then \(y=0\).
+						</p>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(b)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 189-->
+						<p class="noindent">
+							Suppose \(P_1\) and \(P_2\) are polynomials with no common
+							factors. Let \(u_1\), …, \(u_r\) be linearly independent solutions
+							of \(P_1(D)y=0\) and let \(v_1\), …, \(v_s\) be linearly
+							independent solutions of \(P_2(D)y=0\). Use
+							<span class="ptmb8t-">(a)</span>
+							to show that \(\{u_1,\dots ,u_r, v_1,\dots ,v_s\}\) is a linearly
+							independent set.
+						</p>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(c)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 196-->
+						<p class="noindent">
+							Suppose the characteristic polynomial of the constant coefficient
+							equation \[ a_0y^{(n)}+a_1y^{(n-1)}+\cdots +a_ny=0 \, {\rm (A)} \]
+							has the factorization \[ p(r)=a_0p_1(r)p_2(r)\cdots p_k(r)\] where
+							each \(p_j\) is of the form \[ p_j(r)=(r-r_j)^{n_j} \mbox { or }
+							p_j(r)=[(r-\lambda _j)^2+w^2_j]^{m_j}\quad (\omega _j&gt;0) \] and
+							no two of the polynomials \(p_1\), \(p_2\), …, \(p_k\) have a
+							common factor. Show that we can find a fundamental set of
+							solutions \(\{y_1,y_2,\dots ,y_n\}\) of (A) by finding a
+							fundamental set of solutions of each of the equations \[
+							p_j(D)y=0,\quad 1\le j\le k\] and taking \(\{y_1,y_2,\dots
+							,y_n\}\) to be the set of all functions in these separate
+							fundamental sets.
+						</p>
+					</dd>
+				</dl>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">41.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 222-->
+				<p class="noindent"><a id="x1-4741"></a></p>
+				<dl class="list2">
+					<dt class="list">
+						<span class="ptmb8t-">(a)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 225-->
+						<p class="noindent">
+							Show that if \[ z=p(x)\cos \omega x+q(x)\sin \omega x, \, {\rm
+							(A)} \] where \(p\) and \(q\) are polynomials of degree \(\le k\),
+							then \[ (D^2+\omega ^2)z=p_1(x)\cos \omega x+q_1(x)\sin \omega x\]
+							where \(p_1\) and \(q_1\) are polynomials of degree \(\le k-1\).
+						</p>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(b)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 237-->
+						<p class="noindent">
+							Apply
+							<span class="ptmb8t-">(a)</span>
+							\(m\) times to show that if \(z\) is of the form (A) where \(p\)
+							and \(q\) are polynomial of degree \(\le m-1\), then \[
+							(D^2+\omega ^2)^mz=0. \, {\rm (B)} \]
+						</p>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(c)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 246-->
+						<p class="noindent">
+							Use Eqn.&nbsp;(
+							<span class="ptmb8t-">9.2.17</span>
+							) to show that if \(y=e^{\lambda x}z\) then \[ [(D-\lambda
+							)^2+\omega ^2]^my=e^{\lambda x}(D^2+\omega ^2)^mz\]
+						</p>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(d)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 253-->
+						<p class="noindent">
+							Conclude from
+							<span class="ptmb8t-">(b)</span>
+							and
+							<span class="ptmb8t-">(c)</span>
+							that if \(p\) and \(q\) are arbitrary polynomials of degree \(\le
+							m-1\) then \[ y=e^{\lambda x}(p(x)\cos \omega x+q(x)\sin \omega x)
+							\] is a solution of \[ [(D-\lambda )^2+\omega ^2]^my=0. \, {\rm
+							(C)} \]
+						</p>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(e)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 265-->
+						<p class="noindent">
+							Conclude from
+							<span class="ptmb8t-">(d)</span>
+							that the functions \[ \begin {array}{rl} e^{\lambda x}\cos \omega
+							x, xe^{\lambda x}\cos \omega x, &amp;\dots , x^{m-1}e^{\lambda
+							x}\cos \omega x,\\ e^{\lambda x}\sin \omega x, xe^{\lambda x}\sin
+							\omega x,&amp; \dots , x^{m-1}e^{\lambda x}\sin \omega x \end
+							{array} \, {\rm (D)} \] are all solutions of (C).
+						</p>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(f)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 278-->
+						<p class="noindent">
+							Complete the proof of Theorem&nbsp;
+							<span class="ptmb8t-">9.2.2</span>
+							by showing that the functions in (D) are linearly independent.
+						</p>
+					</dd>
+				</dl>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">42.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 282-->
+				<p class="noindent"><a id="x1-5442"></a></p>
+				<dl class="list2">
+					<dt class="list">
+						<span class="ptmb8t-">(a)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 285-->
+						<p class="noindent">Use the trigonometric identities</p>
+						<div class="eqnarray">
+							\begin {eqnarray*} \cos (A+B)&amp;=&amp;\cos A\cos B-\sin A\sin
+							B\\ \sin (A+B)&amp;=&amp;\cos A\sin B+\sin A\cos B \end
+							{eqnarray*}
+						</div>
+						<!--l. 290-->
+						<p class="noindent">
+							to show that \[ (\cos A+i\sin A)(\cos B+i\sin B)=\cos (A+B)+i\sin
+							(A+B)\]
+						</p>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(b)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 295-->
+						<p class="noindent">
+							Apply
+							<span class="ptmb8t-">(a)</span>
+							repeatedly to show that if \(n\) is a positive integer then \[
+							\prod _{k=1}^n(\cos A_k+i\sin A_k)=\cos (A_1+A_2+\cdots +A_n)
+							+i\sin (A_1+A_2+\cdots +A_n)\]
+						</p>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(c)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 302-->
+						<p class="noindent">
+							Infer from
+							<span class="ptmb8t-">(b)</span>
+							that if \(n\) is a positive integer then \[ (\cos \theta +i\sin
+							\theta )^n=\cos n\theta +i\sin n\theta . \, {\rm (A)} \]
+						</p>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(d)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 308-->
+						<p class="noindent">
+							Show that (A) also holds if \(n=0\) or a negative integer.
+							<span class="hint">
+								Hint: Verify by direct calculation that \[ (\cos \theta +i\sin
+								\theta )^{-1}=(\cos \theta -i\sin \theta )\] Then replace
+								\(\theta \) by \(-\theta \) in (A).
+							</span>
+						</p>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(e)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 315-->
+						<p class="noindent">
+							Now suppose \(n\) is a positive integer. Infer from (A) that if \[
+							z_k=\cos \left (2k\pi \over n\right )+i\sin \left (2k\pi \over
+							n\right ) ,\quad k=0,1,\dots ,n-1\] and \[ \zeta _k=\cos \left
+							((2k+1)\pi \over n\right )+i\sin \left ((2k+1)\pi \over n\right )
+							,\quad k=0,1,\dots ,n-1\] then \[ z_k^n=1\quad \mbox { and }\quad
+							\zeta _k^n=-1,\quad k=0,1,\dots ,n-1\] (Why don’t we also consider
+							other integer values for \(k\)?)
+						</p>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(f)</span>
+					</dt>
+					<dd class="list">
+						<!--l. 334-->
+						<p class="noindent">
+							Let \(\rho \) be a positive number. Use
+							<span class="ptmb8t-">(e)</span>
+							to show that \[ z^n-\rho =(z-\rho ^{1/n} z_0)(z-\rho
+							^{1/n}z_1)\cdots (z-\rho ^{1/n} z_{n-1}) \] and \[ z^n+\rho
+							=(z-\rho ^{1/n} \zeta _0)(z-\rho ^{1/n} \zeta _1)\cdots (z-\rho
+							^{1/n} \zeta _{n-1})\]
+						</p>
+					</dd>
+				</dl>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">43.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 345-->
+				<p class="noindent">
+					<a id="x1-6143"></a>
+					Use
+					<span class="ptmb8t-">(e)</span>
+					of Exercise&nbsp;
+					<a href="#x1-5442">
+						42
+						<!--tex4ht:ref: exer:9.2.42 -->
+					</a>
+					to find a fundamental set of solutions of the given equation.
+				</p>
+				<div class="tabular">
+					<table id="TBL-14" class="tabular">
+						<colgroup id="TBL-14-1g">
+							<col id="TBL-14-1" />
+							<col id="TBL-14-2" />
+						</colgroup>
+						<tbody>
+							<tr style="vertical-align: baseline" id="TBL-14-1-">
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-14-1-1"
+									class="td00"
+								>
+									<!--l. 350-->
+									<p class="noindent">
+										<span class="ptmb8t-">(a)</span>
+										\(y'''-y=0\)
+									</p>
+								</td>
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-14-1-2"
+									class="td01"
+								>
+									<!--l. 350-->
+									<p class="noindent">
+										<span class="ptmb8t-">(b)</span>
+										\(y'''+y=0\)
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tabular">
+					<table id="TBL-15" class="tabular">
+						<colgroup id="TBL-15-1g">
+							<col id="TBL-15-1" />
+							<col id="TBL-15-2" />
+						</colgroup>
+						<tbody>
+							<tr style="vertical-align: baseline" id="TBL-15-1-">
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-15-1-1"
+									class="td00"
+								>
+									<!--l. 354-->
+									<p class="noindent">
+										<span class="ptmb8t-">(c)</span>
+										\(y^{(4)}+64y=0\)
+									</p>
+								</td>
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-15-1-2"
+									class="td01"
+								>
+									<!--l. 354-->
+									<p class="noindent">
+										<span class="ptmb8t-">(d)</span>
+										\(y^{(6)}-y=0\)
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tabular">
+					<table id="TBL-16" class="tabular">
+						<colgroup id="TBL-16-1g">
+							<col id="TBL-16-1" />
+							<col id="TBL-16-2" />
+						</colgroup>
+						<tbody>
+							<tr style="vertical-align: baseline" id="TBL-16-1-">
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-16-1-1"
+									class="td00"
+								>
+									<!--l. 358-->
+									<p class="noindent">
+										<span class="ptmb8t-">(e)</span>
+										\(y^{(6)}+64y=0\)
+									</p>
+								</td>
+								<td
+									style="white-space: normal; text-align: left"
+									id="TBL-16-1-2"
+									class="td01"
+								>
+									<!--l. 358-->
+									<p class="noindent">
+										<span class="ptmb8t-">(f)</span>
+										\(\left [(D-1)^6-1\right ]y=0\)
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--l. 361-->
+				<p class="noindent">
+					<span class="ptmb8t-">(g)</span>
+					\(y^{(5)}+y^{(4)}+y'''+y''+y'+y=0\)
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">44.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 363-->
+				<p class="noindent">
+					<a id="x1-6244"></a>
+					An equation of the form \[ a_0x^ny^{(n)}+a_1x^{n-1}y^{(n-1)}+\cdots
+					+a_{n-1}xy'+a_ny=0,\quad x&gt;0, \, {\rm (A)} \] where \(a_0\),
+					\(a_1\), …, \(a_n\) are constants, is an
+					<span class="vocab">Euler</span>
+					or
+					<span class="vocab">equidimensional</span>
+					equation.
+				</p>
+				<!--l. 373-->
+				<p class="noindent">
+					Show that if \[ x=e^t \quad \mbox { and } \quad Y(t)=y(x(t)), \, {\rm
+					(B)} \] then
+				</p>
+				<div class="eqnarray">
+					\begin {eqnarray*} \displaystyle x {dy\over
+					dx}&amp;=&amp;\displaystyle {dY\over dt}\\ \displaystyle x^2{d^2y\over
+					dx^2}&amp;=&amp;\displaystyle {d^2Y\over dt^2}-{dY\over dt}\\
+					\displaystyle x^3{d^3y\over dx^3}&amp;=&amp;\displaystyle {d^3Y\over
+					dt^3}-3{d^2Y\over dt^2}+2{dY\over dt}\end {eqnarray*}
+				</div>
+				<!--l. 384-->
+				<p class="noindent">
+					In general, it can be shown that if \(r\) is any integer \(\ge 2\)
+					then \[ x^r {d^ry\over dx^r}={d^rY\over dt^r}+ A_{1r}{d^{r-1}Y\over
+					dt^{r-1}}+\cdots +A_{r-1,r} {dY\over dt} \] where \(A_{1r}\), …,
+					\(A_{r-1,r}\) are integers. Use these results to show that the
+					substitution (B) transforms (A) into a constant coefficient equation
+					for \(Y\) as a function of \(t\).
+				</p>
+			</dd>
+			<dt class="list">
+				<span class="ptmb8t-">45.</span>
+			</dt>
+			<dd class="list">
+				<!--l. 395-->
+				<p class="noindent">
+					<a id="x1-6345"></a>
+					Use Exercise&nbsp;
+					<a href="#x1-6244">
+						44
+						<!--tex4ht:ref: exer:9.2.44 -->
+					</a>
+					to show that a function \(y=y(x)\) satisfies the equation \[
+					a_0x^3y'''+a_1x^2y''+a_2xy'+a_3y=0, \, {\rm (A)} \] on \((0,\infty )\)
+					if and only if the function \(Y(t)=y(e^t)\) satisfies \[ a_0{d^3Y\over
+					dt^3}+(a_1-3a_0) {d^2Y\over dt^2}+(a_2-a_1+2a_0) {dY\over dt}+a_3Y=0\]
+					Assuming that \(a_0\), \(a_1\), \(a_2\), \(a_3\) are real and \(a_0
+					\ne 0\), find the possible forms for the general solution of (A).
+				</p>
+			</dd>
+		</dl>
+		<a
+			class="back-to-ch"
+			href="sec9.0.html"
+			id="b01440b5-28d3-43b0-aa8d-e7d3e39160c7"
+		>
+			Back
+		</a>
+	</body>
+</html>

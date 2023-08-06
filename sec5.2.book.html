@@ -1,298 +1,857 @@
-<!DOCTYPE html><html lang="en-US" xml:lang="en-US"><head><title></title> 
-<meta charset="utf-8"> 
-<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator"> 
-<meta content="width=device-width,initial-scale=1" name="viewport"> 
-<link rel="stylesheet" type="text/css" href="combined.css">
-<meta content="Trench_DiffEQ_Book.tex" name="src"> 
-<script>window.MathJax = {
-     tex: { packages: {'[+]': ['tagformat']}, tags: "ams", tagformat: { tag: (tag) => '(5.2.' + tag + ')'} }
- }; </script> 
- <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>  
- <style type="text/css">
-   :root {
-     --section-number: "5.2"
-   }
- </style>
-</head><body>
-<p id="fe8cd11f-db26-4387-b855-954198c1febd"><a id="x1-1doc"></a>
-</p><p class="noindent" id="64fac090-a6d5-4ffd-8c07-b07582a0a94a">Section 5.2 Constant Coefficient Homogeneous Equations
-</p><p class="noindent" id="d4a7a2b9-b490-47ba-a2f4-3b2f9e51f6e0"><span class="ptmb8t-">5.2</span><span class="ptmb8t-x-x-90">&nbsp;  CONSTANT COEFFICIENT HOMOGENEOUS EQUATIONS</span>
-</p><p class="noindent" id="c67fb16a-3b72-4762-9c9a-b25db4da4406">If \(a,b\), and \(c\) are real constants and \(a\ne 0\), then
-                                        \[ ay''+by'+cy=F(x) \]
- is said to be a <span class="vocab">constant coefficient equation</span>. In this section we consider the homogeneous constant coefficient
-equation \begin {equation}  \label {eq:5.2.1} ay''+by'+cy=0\end {equation}<a id="x1-2r1"></a> As we’ll see, all solutions of (<a href="#x1-2r1">5.2.1<!-- tex4ht:ref: eq:5.2.1  --></a>) are defined on \((-\infty ,\infty )\). This being the case, we’ll omit references to the
-interval on which solutions are defined, or on which a given set of solutions is a fundamental set, etc., since the
-interval will always be \((-\infty ,\infty )\).
-</p><p class="indent" id="27f3b082-3d4d-4dbc-a106-73fe7488798f">  The key to solving (<a href="#x1-2r1">5.2.1<!-- tex4ht:ref: eq:5.2.1  --></a>) is that if \(y=e^{rx}\) where \(r\) is a constant then the left side of (<a href="#x1-2r1">5.2.1<!-- tex4ht:ref: eq:5.2.1  --></a>) is a multiple of \(e^{rx}\); thus, if \(y=e^{rx}\)
-then \(y'=re^{rx}\) and \(y''=r^2e^{rx}\), so \begin {equation}  \label {eq:5.2.2} ay''+by'+cy=ar^2e^{rx}+bre^{rx}+ce^{rx}=(ar^2+br+c)e^{rx}\end {equation}<a id="x1-3r2"></a> The quadratic polynomial
-                                        \[ p(r)=ar^2+br+c \]
- is the <span class="vocab">characteristic polynomial</span> of (<a href="#x1-2r1">5.2.1<!-- tex4ht:ref: eq:5.2.1  --></a>), and \(p(r)=0\) is the <span class="vocab">characteristic equation</span>. From (<a href="#x1-3r2">5.2.2<!-- tex4ht:ref: eq:5.2.2  --></a>) we can see that \(y=e^{rx}\) is a
-solution of (<a href="#x1-2r1">5.2.1<!-- tex4ht:ref: eq:5.2.1  --></a>) if and only if \(p(r)=0\).
-</p><p class="indent" id="009e8204-9655-4015-bfd6-47e91c57953c">  The roots of the characteristic equation are given by the quadratic formula \begin {equation}  \label {eq:5.2.3} r={-b\pm \sqrt {b^2-4ac}\over 2a}\end {equation}<a id="x1-4r3"></a> We consider three
-cases:
-     </p><dl class="description" id="4f6fe2a6-39d7-4164-9480-d837038852b9"><dt class="description">
-     <p class="noindent">
- </p></dt><dd class="description">
-     <p class="noindent"><span class="ptmrc8t-">C<span class="small-caps">ASE</span> 1.</span> \(b^2-4ac&gt;0\), so the characteristic equation has two distinct real roots.
-                                                                                
+<!doctype html>
+<html lang="en-US" xml:lang="en-US">
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator" />
+		<meta content="width=device-width,initial-scale=1" name="viewport" />
+		<link rel="stylesheet" type="text/css" href="combined.css" />
+		<meta content="Trench_DiffEQ_Book.tex" name="src" />
+		<script>
+			window.MathJax = {
+				tex: {
+					packages: { "[+]": ["tagformat"] },
+					tags: "ams",
+					tagformat: { tag: (tag) => "(5.2." + tag + ")" },
+				},
+			};
+		</script>
+		<script
+			async="async"
+			id="MathJax-script"
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+			type="text/javascript"
+		></script>
+		<style type="text/css">
+			:root {
+				--section-number: "5.2";
+			}
+		</style>
+	</head>
+	<body>
+		<p id="fe8cd11f-db26-4387-b855-954198c1febd"><a id="x1-1doc"></a></p>
+		<p class="noindent" id="64fac090-a6d5-4ffd-8c07-b07582a0a94a">
+			Section 5.2 Constant Coefficient Homogeneous Equations
+		</p>
+		<p class="noindent" id="d4a7a2b9-b490-47ba-a2f4-3b2f9e51f6e0">
+			<span class="ptmb8t-">5.2</span>
+			<span class="ptmb8t-x-x-90">
+				&nbsp; CONSTANT COEFFICIENT HOMOGENEOUS EQUATIONS
+			</span>
+		</p>
+		<p class="noindent" id="c67fb16a-3b72-4762-9c9a-b25db4da4406">
+			If \(a,b\), and \(c\) are real constants and \(a\ne 0\), then \[
+			ay''+by'+cy=F(x) \] is said to be a
+			<span class="vocab">constant coefficient equation</span>
+			. In this section we consider the homogeneous constant coefficient
+			equation \begin {equation} \label {eq:5.2.1} ay''+by'+cy=0\end {equation}
+			<a id="x1-2r1"></a>
+			As we’ll see, all solutions of (
+			<a href="#x1-2r1">
+				5.2.1
+				<!-- tex4ht:ref: eq:5.2.1  -->
+			</a>
+			) are defined on \((-\infty ,\infty )\). This being the case, we’ll omit
+			references to the interval on which solutions are defined, or on which a
+			given set of solutions is a fundamental set, etc., since the interval will
+			always be \((-\infty ,\infty )\).
+		</p>
+		<p class="indent" id="27f3b082-3d4d-4dbc-a106-73fe7488798f">
+			The key to solving (
+			<a href="#x1-2r1">
+				5.2.1
+				<!-- tex4ht:ref: eq:5.2.1  -->
+			</a>
+			) is that if \(y=e^{rx}\) where \(r\) is a constant then the left side of
+			(
+			<a href="#x1-2r1">
+				5.2.1
+				<!-- tex4ht:ref: eq:5.2.1  -->
+			</a>
+			) is a multiple of \(e^{rx}\); thus, if \(y=e^{rx}\) then \(y'=re^{rx}\)
+			and \(y''=r^2e^{rx}\), so \begin {equation} \label {eq:5.2.2}
+			ay''+by'+cy=ar^2e^{rx}+bre^{rx}+ce^{rx}=(ar^2+br+c)e^{rx}\end {equation}
+			<a id="x1-3r2"></a>
+			The quadratic polynomial \[ p(r)=ar^2+br+c \] is the
+			<span class="vocab">characteristic polynomial</span>
+			of (
+			<a href="#x1-2r1">
+				5.2.1
+				<!-- tex4ht:ref: eq:5.2.1  -->
+			</a>
+			), and \(p(r)=0\) is the
+			<span class="vocab">characteristic equation</span>
+			. From (
+			<a href="#x1-3r2">
+				5.2.2
+				<!-- tex4ht:ref: eq:5.2.2  -->
+			</a>
+			) we can see that \(y=e^{rx}\) is a solution of (
+			<a href="#x1-2r1">
+				5.2.1
+				<!-- tex4ht:ref: eq:5.2.1  -->
+			</a>
+			) if and only if \(p(r)=0\).
+		</p>
+		<p class="indent" id="009e8204-9655-4015-bfd6-47e91c57953c">
+			The roots of the characteristic equation are given by the quadratic
+			formula \begin {equation} \label {eq:5.2.3} r={-b\pm \sqrt {b^2-4ac}\over
+			2a}\end {equation}
+			<a id="x1-4r3"></a>
+			We consider three cases:
+		</p>
+		<dl class="description" id="4f6fe2a6-39d7-4164-9480-d837038852b9">
+			<dt class="description">
+				<p class="noindent"></p>
+			</dt>
+			<dd class="description">
+				<p class="noindent">
+					<span class="ptmrc8t-">
+						C
+						<span class="small-caps">ASE</span>
+						1.
+					</span>
+					\(b^2-4ac&gt;0\), so the characteristic equation has two distinct real
+					roots.
+				</p>
+			</dd>
+			<dt class="description">
+				<p class="noindent"></p>
+			</dt>
+			<dd class="description">
+				<p class="noindent">
+					<span class="ptmrc8t-">
+						C
+						<span class="small-caps">ASE</span>
+						2.
+					</span>
+					\(b^2-4ac=0\), so the characteristic equation has a repeated real
+					root.
+				</p>
+			</dd>
+			<dt class="description">
+				<p class="noindent"></p>
+			</dt>
+			<dd class="description">
+				<p class="noindent">
+					<span class="ptmrc8t-">
+						C
+						<span class="small-caps">ASE</span>
+						3.
+					</span>
+					\(b^2-4ac&lt;0\), so the characteristic equation has complex roots.
+				</p>
+			</dd>
+		</dl>
+		<p class="noindent" id="72d0e0ae-841e-4982-9453-5a0471c17160">
+			In each case we’ll start with an example.
+		</p>
+		<p class="noindent" id="34a2d8af-9a8a-4b9c-8925-375a71c6a366">
+			<span id="textcolor1">Case 1: Distinct Real Roots</span>
+		</p>
+		<p class="indent" id="34d344e9-66b1-41e3-b1c0-8fde094f0d08"></p>
+		<p class="noindent" id="ded9a4c9-c1cf-4d1e-ada6-bf4ea8b136ce"></p>
+		<div class="newtheorem" id="93995001-6f9d-4be4-8c9e-f3a4abbc3dc9">
+			<p class="noindent">
+				<span class="head">
+					<span class="ex-number">Example&nbsp;5.2.1</span>
+				</span>
+				<a id="x1-51"></a>
+				<br class="newline" />
+			</p>
+			<dl class="list1">
+				<dt class="list">
+					<span class="ptmb8t-">(a)</span>
+				</dt>
+				<dd class="list">
+					<p class="noindent">
+						Find the general solution of \begin {equation} \label {eq:5.2.4}
+						y''+6y'+5y=0\end {equation}
+						<a id="x1-7r4"></a>
+					</p>
+				</dd>
+				<dt class="list">
+					<span class="ptmb8t-">(b)</span>
+				</dt>
+				<dd class="list">
+					<p class="noindent">
+						Solve the initial value problem \begin {equation} \label {eq:5.2.5}
+						y''+6y'+5y=0, \quad y(0)=3,\; y'(0)=-1\end {equation}
+						<a id="x1-9r5"></a>
+					</p>
+				</dd>
+			</dl>
+		</div>
+		<p class="indent" id="92cec152-66a7-46c8-a303-65e36f936c77"></p>
+		<p class="noindent" id="a14dfcfb-a33d-4854-a67e-23569f79e489">
+			<span class="underline">
+				<span class="ptmrc8t-">
+					S
+					<span class="small-caps">OLUTION</span>
+					(
+				</span>
+				<span class="ptmb8t-">a</span>
+				<span class="ptmrc8t-">)&nbsp;</span>
+			</span>
+			The characteristic polynomial of (
+			<a href="#x1-7r4">
+				5.2.4
+				<!-- tex4ht:ref: eq:5.2.4  -->
+			</a>
+			) is \[ p(r)=r^2+6r+5=(r+1)(r+5)\] Since \(p(-1)=p(-5)=0\), \(y_1=e^{-x}\)
+			and \(y_2=e^{-5x}\) are solutions of (
+			<a href="#x1-7r4">
+				5.2.4
+				<!-- tex4ht:ref: eq:5.2.4  -->
+			</a>
+			). Since \(y_2/y_1=e^{-4x}\) is nonconstant,
+			<span class="ptmb8t-">5.1.6</span>
+			implies that the general solution of (
+			<a href="#x1-7r4">
+				5.2.4
+				<!-- tex4ht:ref: eq:5.2.4  -->
+			</a>
+			) is \begin {equation} \label {eq:5.2.6} y=c_1e^{-x}+c_2e^{-5x}\end
+			{equation}
+			<a id="x1-10r6"></a>
+		</p>
+		<p class="noindent" id="4ded62fc-33b5-4f00-947f-736c0aea140d">
+			<span class="underline">
+				<span class="ptmrc8t-">
+					S
+					<span class="small-caps">OLUTION</span>
+					(
+				</span>
+				<span class="ptmb8t-">b</span>
+				<span class="ptmrc8t-">)&nbsp;</span>
+			</span>
+			We must determine \(c_1\) and \(c_2\) in (
+			<a href="#x1-10r6">
+				5.2.6
+				<!-- tex4ht:ref: eq:5.2.6  -->
+			</a>
+			) so that \(y\) satisfies the initial conditions in (
+			<a href="#x1-9r5">
+				5.2.5
+				<!-- tex4ht:ref: eq:5.2.5  -->
+			</a>
+			). Differentiating (
+			<a href="#x1-10r6">
+				5.2.6
+				<!-- tex4ht:ref: eq:5.2.6  -->
+			</a>
+			) yields \begin {equation} \label {eq:5.2.7} y'=-c_1e^{-x}-5c_2e^{-5x}\end
+			{equation}
+			<a id="x1-11r7"></a>
+			Imposing the initial conditions \(y(0)=3,\, y'(0)=-1\) in (
+			<a href="#x1-10r6">
+				5.2.6
+				<!-- tex4ht:ref: eq:5.2.6  -->
+			</a>
+			) and (
+			<a href="#x1-11r7">
+				5.2.7
+				<!-- tex4ht:ref: eq:5.2.7  -->
+			</a>
+			) yields \[\begin {array}{rcr} \phantom {-}c_1+\phantom {5}c_2 &amp; =
+			&amp; 3\phantom {.}\\ -c_1-5c_2 &amp; = &amp; -1\end {array}\] The
+			solution of this system is \(c_1=7/2,c_2=-1/2\). Therefore the solution of
+			(
+			<a href="#x1-9r5">
+				5.2.5
+				<!-- tex4ht:ref: eq:5.2.5  -->
+			</a>
+			) is \[ y={7\over 2}e^{-x}-{1\over 2}e^{-5x}\] Figure&nbsp;
+			<a href="#-y-overex-overex-">
+				5.2.1
+				<!-- tex4ht:ref: figure:5.2.1  -->
+			</a>
+			is a graph of this solution.
+		</p>
+		<figure class="figure" id="4794e6f0-5adc-4afb-ba96-2e13d32c2929">
+			<p class="noindent" id="-y-overex-overex-">
+				<img height="264" src="EPS/fig050201.png" width="409" />
+				<a id="x1-12r1"></a>
+			</p>
+			<figcaption class="caption">
+				<span class="id">Figure&nbsp;5.2.1</span>
+				<span class="content">
+					\(y=\displaystyle {{7\over 2}e^{-x}-{1\over 2}e^{-5x}}\)
+				</span>
+			</figcaption>
+			<!-- tex4ht:label?: x1-12r1  -->
+		</figure>
+		<p class="indent" id="d9223d07-8504-4e81-98f6-534abc1ef366">
+			If the characteristic equation has arbitrary distinct real roots \(r_1\)
+			and \(r_2\), then \(y_1=e^{r_1x}\) and \(y_2=e^{r_2x}\) are solutions of
+			\(ay''+by'+cy=0\). Since \(y_2/y_1=e^{(r_2-r_1)x}\) is nonconstant,
+			Theorem&nbsp;
+			<span class="ptmb8t-">5.1.6</span>
+			implies that \(\{y_1,y_2\}\) is a fundamental set of solutions of
+			\(ay''+by'+cy=0\).
+		</p>
+		<p class="indent" id="224e25a7-55f2-4c29-952f-9ed8be7813d9"></p>
+		<p class="noindent" id="4f172aa0-7085-48e8-81d7-60e1ea461723">
+			<span id="textcolor2">Case 2: A Repeated Real Root</span>
+		</p>
+		<p class="indent" id="a9a6c083-c91a-4820-b5eb-dfe3707dab43"></p>
+		<p class="noindent" id="5269097e-61b5-44ce-8bfd-e488d4e4ecdc"></p>
+		<div class="newtheorem" id="4c14512f-b2bb-4e3a-a42d-364f1da38d9c">
+			<p class="noindent">
+				<span class="head">
+					<span class="ex-number">Example&nbsp;5.2.2</span>
+				</span>
+				<a id="x1-132"></a>
+				<br class="newline" />
+			</p>
+			<dl class="list1">
+				<dt class="list">
+					<span class="ptmb8t-">(a)</span>
+				</dt>
+				<dd class="list">
+					<p class="noindent">
+						Find the general solution of \begin {equation} \label {eq:5.2.8}
+						y''+6y'+9y=0\end {equation}
+						<a id="x1-15r8"></a>
+					</p>
+				</dd>
+				<dt class="list">
+					<span class="ptmb8t-">(b)</span>
+				</dt>
+				<dd class="list">
+					<p class="noindent">
+						Solve the initial value problem \begin {equation} \label {eq:5.2.9}
+						y''+6y'+9y=0, \quad y(0)=3,\; y'(0)=-1\end {equation}
+						<a id="x1-17r9"></a>
+					</p>
+				</dd>
+			</dl>
+		</div>
+		<p class="indent" id="b4033545-e374-4cd0-bad7-4a473ab66652"></p>
+		<p class="noindent" id="637e17f1-7f67-4e07-98c9-19ec427d475e">
+			<span class="underline">
+				<span class="ptmrc8t-">
+					S
+					<span class="small-caps">OLUTION</span>
+					(
+				</span>
+				<span class="ptmb8t-">a</span>
+				<span class="ptmrc8t-">)&nbsp;</span>
+			</span>
+			The characteristic polynomial of (
+			<a href="#x1-15r8">
+				5.2.8
+				<!-- tex4ht:ref: eq:5.2.8  -->
+			</a>
+			) is \[ p(r)=r^2+6r+9=(r+3)^2\] so the characteristic equation has the
+			repeated real root \(r_1=-3\). Therefore \(y_1=e^{-3x}\) is a solution of
+			(
+			<a href="#x1-15r8">
+				5.2.8
+				<!-- tex4ht:ref: eq:5.2.8  -->
+			</a>
+			). Since the characteristic equation has no other roots, (
+			<a href="#x1-15r8">
+				5.2.8
+				<!-- tex4ht:ref: eq:5.2.8  -->
+			</a>
+			) has no other solutions of the form \(e^{rx}\). We look for solutions of
+			the form \(y=uy_1=ue^{-3x}\), where \(u\) is a function that we’ll now
+			determine. (This should remind you of the method of variation of
+			parameters used in Section&nbsp;2.1 to solve the nonhomogeneous equation
+			\(y'+p(x)y=f(x)\), given a solution \(y_1\) of the complementary equation
+			\(y'+p(x)y=0\). It’s also a special case of a method called
+			<span class="vocab">reduction of order</span>
+			that we’ll study in Section&nbsp;5.6. For other ways to obtain a second
+			solution of (
+			<a href="#x1-15r8">
+				5.2.8
+				<!-- tex4ht:ref: eq:5.2.8  -->
+			</a>
+			) that’s not a multiple of \(e^{-3x}\), see Exercises&nbsp;5.1.&nbsp;
+			<span class="ptmb8t-">9</span>
+			, 5.1.&nbsp;
+			<span class="ptmb8t-">12</span>
+			, and
+			<span class="ptmb8t-">33</span>
+			.
+		</p>
+		<p class="indent" id="b2806216-a3de-4e10-9f9d-70625580b076">
+			If \(y=ue^{-3x}\), then \[ y'=u'e^{-3x}-3ue^{-3x}\mbox {\quad and \quad }
+			y''=u''e^{-3x}-6u'e^{-3x}+9ue^{-3x}\] so
+		</p>
+		<div class="eqnarray" id="e12dbac2-949c-4359-94d3-c3be1f165e96">
+			\begin {eqnarray*} y''+6y'+9y&amp;=&amp;e^{-3x}\left
+			[(u''-6u'+9u)+6(u'-3u)+9u\right ]\\ &amp;=&amp;e^{-3x}\left
+			[u''-(6-6)u'+(9-18+9)u\right ]=u''e^{-3x}\end {eqnarray*}
+		</div>
+		<p class="indent" id="a8440e22-b4cf-4511-a196-4edc72ec07e5">
+			Therefore \(y=ue^{-3x}\) is a solution of (
+			<a href="#x1-15r8">
+				5.2.8
+				<!-- tex4ht:ref: eq:5.2.8  -->
+			</a>
+			) if and only if \(u''=0\), which is equivalent to \(u=c_1+c_2x\), where
+			\(c_1\) and \(c_2\) are constants. Therefore any function of the form
+			\begin {equation} \label {eq:5.2.10} y=e^{-3x}(c_1+c_2x) \end {equation}
+			<a id="x1-18r10"></a>
+			is a solution of (
+			<a href="#x1-15r8">
+				5.2.8
+				<!-- tex4ht:ref: eq:5.2.8  -->
+			</a>
+			). Letting \(c_1=1\) and \(c_2=0\) yields the solution \(y_1=e^{-3x}\)
+			that we already knew. Letting \(c_1=0\) and \(c_2=1\) yields the second
+			solution \(y_2=xe^{-3x}\). Since \(y_2/y_1=x\) is nonconstant,
+			<span class="ptmb8t-">5.1.6</span>
+			implies that \(\{y_1,y_2\}\) is fundamental set of solutions of (
+			<a href="#x1-15r8">
+				5.2.8
+				<!-- tex4ht:ref: eq:5.2.8  -->
+			</a>
+			), and (
+			<a href="#x1-18r10">
+				5.2.10
+				<!-- tex4ht:ref: eq:5.2.10  -->
+			</a>
+			) is the general solution.
+		</p>
+		<p class="noindent" id="70a17e24-045d-4e0f-b15f-bfc2daeca187">
+			<span class="underline">
+				<span class="ptmrc8t-">
+					S
+					<span class="small-caps">OLUTION</span>
+					(
+				</span>
+				<span class="ptmb8t-">b</span>
+				<span class="ptmrc8t-">)&nbsp;</span>
+			</span>
+			Differentiating (
+			<a href="#x1-18r10">
+				5.2.10
+				<!-- tex4ht:ref: eq:5.2.10  -->
+			</a>
+			) yields \begin {equation} \label {eq:5.2.11}
+			y'=-3e^{-3x}(c_1+c_2x)+c_2e^{-3x}\end {equation}
+			<a id="x1-19r11"></a>
+			Imposing the initial conditions \(y(0)=3,\, y'(0)=-1\) in (
+			<a href="#x1-18r10">
+				5.2.10
+				<!-- tex4ht:ref: eq:5.2.10  -->
+			</a>
+			) and (
+			<a href="#x1-19r11">
+				5.2.11
+				<!-- tex4ht:ref: eq:5.2.11  -->
+			</a>
+			) yields \(c_1=3\) and \(-3c_1+c_2=-1\), so \(c_2=8\). Therefore the
+			solution of (
+			<a href="#x1-17r9">
+				5.2.9
+				<!-- tex4ht:ref: eq:5.2.9  -->
+			</a>
+			) is \[ y=e^{-3x}(3+8x)\] Figure&nbsp;
+			<a href="#-yexx-">
+				5.2.2
+				<!-- tex4ht:ref: figure:5.2.2  -->
+			</a>
+			is a graph of this solution.
+		</p>
+		<figure class="figure" id="a2954315-67be-4704-91a5-5704745a9193">
+			<p class="noindent" id="-yexx-">
+				<img height="264" src="EPS/fig050202.png" width="409" />
+				<a id="x1-20r2"></a>
+			</p>
+			<figcaption class="caption">
+				<span class="id">Figure&nbsp;5.2.2</span>
+				<span class="content">\(y=e^{-3x}(3+8x)\)</span>
+			</figcaption>
+			<!-- tex4ht:label?: x1-20r2  -->
+		</figure>
+		<p class="indent" id="b12ee283-6189-4b10-a5a1-2545e260cd39"></p>
+		<p class="indent" id="f44d53b4-390d-407f-b356-95e04b6ae718">
+			If the characteristic equation of \(ay''+by'+cy=0\) has an arbitrary
+			repeated root \(r_1\), the characteristic polynomial must be \[
+			p(r)=a(r-r_1)^2=a(r^2-2r_1r+r_1^2)\] Therefore \[
+			ar^2+br+c=ar^2-(2ar_1)r+ar_1^2\] which implies that \(b=-2ar_1\) and
+			\(c=ar_1^2\). Therefore \(ay''+by'+cy=0\) can be written as
+			\(a(y''-2r_1y'+r_1^2y)=0\). Since \(a\ne 0\) this equation has the same
+			solutions as \begin {equation} \label {eq:5.2.12} y''-2r_1y'+r_1^2y=0\end
+			{equation}
+			<a id="x1-21r12"></a>
+		</p>
+		<p class="indent" id="84483a87-0e23-446f-a064-28dd665adf12">
+			Since \(p(r_1)=0\), t \(y_1=e^{r_1x}\) is a solution of \(ay''+by'+cy=0\),
+			and therefore of (
+			<a href="#x1-21r12">
+				5.2.12
+				<!-- tex4ht:ref: eq:5.2.12  -->
+			</a>
+			). Proceeding as in Example&nbsp;
+			<a href="#x1-132">
+				5.2.2
+				<!-- tex4ht:ref: example:5.2.2  -->
+			</a>
+			, we look for other solutions of (
+			<a href="#x1-21r12">
+				5.2.12
+				<!-- tex4ht:ref: eq:5.2.12  -->
+			</a>
+			) of the form \(y=ue^{r_1x}\); then \[ y'=u'e^{r_1x}+rue^{r_1x}\mbox
+			{\quad and \quad } y''=u''e^{r_1x}+2r_1u'e^{r_1x}+r_1^2ue^{r_1x}\] so
+		</p>
+		<div class="eqnarray" id="e8afc7c4-6d30-4a2d-97ca-42e52485b2ca">
+			\begin {eqnarray*} y''-2r_1y'+r_1^2y&amp;=&amp;e^{rx}\left
+			[(u''+2r_1u'+r_1^2u)- 2r_1(u'+r_1u)+r_1^2u\right ]\\
+			&amp;=&amp;e^{r_1x}\left [u''+(2r_1-2r_1)u'+(r_1^2-2r_1^2+r_1^2)u\right
+			]=u''e^{r_1x}\end {eqnarray*}
+		</div>
+		<p class="indent" id="1253df40-3275-4030-ae40-9276915122bf">
+			Therefore \(y=ue^{r_1x}\) is a solution of (
+			<a href="#x1-21r12">
+				5.2.12
+				<!-- tex4ht:ref: eq:5.2.12  -->
+			</a>
+			) if and only if \(u''=0\), which is equivalent to \(u=c_1+c_2x\), where
+			\(c_1\) and \(c_2\) are constants. Hence, any function of the form \begin
+			{equation} \label {eq:5.2.13} y=e^{r_1x}(c_1+c_2x) \end {equation}
+			<a id="x1-22r13"></a>
+			is a solution of (
+			<a href="#x1-21r12">
+				5.2.12
+				<!-- tex4ht:ref: eq:5.2.12  -->
+			</a>
+			). Letting \(c_1=1\) and \(c_2=0\) here yields the solution
+			\(y_1=e^{r_1x}\) that we already knew. Letting \(c_1=0\) and \(c_2=1\)
+			yields the second solution \(y_2=xe^{r_1x}\). Since \(y_2/y_1=x\) is
+			nonconstant,
+			<span class="ptmb8t-">5.1.6</span>
+			implies that \(\{y_1,y_2\}\) is a fundamental set of solutions of (
+			<a href="#x1-21r12">
+				5.2.12
+				<!-- tex4ht:ref: eq:5.2.12  -->
+			</a>
+			), and (
+			<a href="#x1-22r13">
+				5.2.13
+				<!-- tex4ht:ref: eq:5.2.13  -->
+			</a>
+			) is the general solution.
+		</p>
+		<p class="noindent" id="4a7f0b84-e462-44a6-a3fe-258a5e2974d6">
+			<span id="textcolor3">Case 3: Complex Conjugate Roots</span>
+		</p>
+		<p class="indent" id="a9c76ffd-c97e-41d5-9bbf-970f6ce4a515"></p>
+		<p class="noindent" id="0869faa0-7967-45a0-9f12-d9fd78ee4ad6"></p>
+		<div class="newtheorem" id="f9d98280-c16a-43a0-8148-c855a77da467">
+			<p class="noindent">
+				<span class="head">
+					<span class="ex-number">Example&nbsp;5.2.3</span>
+				</span>
+				<a id="x1-233"></a>
+				<br class="newline" />
+			</p>
+			<dl class="list1">
+				<dt class="list">
+					<span class="ptmb8t-">(a)</span>
+				</dt>
+				<dd class="list">
+					<p class="noindent">
+						Find the general solution of \begin {equation} \label {eq:5.2.14}
+						y''+4y'+13y=0\end {equation}
+						<a id="x1-25r14"></a>
+					</p>
+				</dd>
+				<dt class="list">
+					<span class="ptmb8t-">(b)</span>
+				</dt>
+				<dd class="list">
+					<p class="noindent">
+						Solve the initial value problem \begin {equation} \label {eq:5.2.15}
+						y''+4y'+13y=0, \quad y(0)=2,\; y'(0)=-3\end {equation}
+						<a id="x1-27r15"></a>
+					</p>
+				</dd>
+			</dl>
+		</div>
+		<p class="indent" id="968e102f-fde4-4060-b824-9e9a36eb240b"></p>
+		<p class="noindent" id="7536f34b-d7ad-4bf5-881e-e858aa290c49">
+			<span class="underline">
+				<span class="ptmrc8t-">
+					S
+					<span class="small-caps">OLUTION</span>
+					(
+				</span>
+				<span class="ptmb8t-">a</span>
+				<span class="ptmrc8t-">)&nbsp;</span>
+			</span>
+			The characteristic polynomial of (
+			<a href="#x1-25r14">
+				5.2.14
+				<!-- tex4ht:ref: eq:5.2.14  -->
+			</a>
+			) is \[ p(r)=r^2+4r+13=r^2+4r+4+9=(r+2)^2+9\] The roots of the
+			characteristic equation are \(r_1=-2+3i\) and \(r_2=-2-3i\). By analogy
+			with Case&nbsp;1, it’s reasonable to expect that \(e^{(-2+3i)x}\) and
+			\(e^{(-2-3i)x}\) are solutions of (
+			<a href="#x1-25r14">
+				5.2.14
+				<!-- tex4ht:ref: eq:5.2.14  -->
+			</a>
+			). This is true (see Exercise&nbsp;
+			<span class="ptmb8t-">34</span>
+			); however, there are difficulties here, since you are probably not
+			familiar with exponential functions with complex arguments, and even if
+			you are, it’s inconvenient to work with them, since they are
+			complex–valued. We’ll take a simpler approach, which we motivate as
+			follows: the exponential notation suggests that \[
+			e^{(-2+3i)x}=e^{-2x}e^{3ix}\mbox {\quad and \quad }
+			e^{(-2-3i)x}=e^{-2x}e^{-3ix}\] so even though we haven’t defined
+			\(e^{3ix}\) and \(e^{-3ix}\), it’s reasonable to expect that every linear
+			combination of \(e^{(-2+3i)x}\) and \(e^{(-2-3i)x}\) can be written as
+			\(y=ue^{-2x}\), where \(u\) depends upon \(x\). To determine \(u\), we
+			note that if \(y=ue^{-2x}\) then \[ y'=u'e^{-2x}-2ue^{-2x}\mbox {\quad and
+			\quad } y''=u''e^{-2x}-4u'e^{-2x}+4ue^{-2x}\] so
+		</p>
+		<div class="eqnarray" id="1c463357-999c-497a-8f3b-f709a0e17e4c">
+			\begin {eqnarray*} y''+4y'+13y&amp;=&amp;e^{-2x}\left
+			[(u''-4u'+4u)+4(u'-2u)+13u\right ]\\ &amp;=&amp;e^{-2x}\left
+			[u''-(4-4)u'+(4-8+13)u\right ]=e^{-2x}(u''+9u)\end {eqnarray*}
+		</div>
+		<p class="indent" id="67f7670c-04f3-4e7e-b52b-c23d52580a96">
+			Therefore \(y=ue^{-2x}\) is a solution of (
+			<a href="#x1-25r14">
+				5.2.14
+				<!-- tex4ht:ref: eq:5.2.14  -->
+			</a>
+			) if and only if \[ u''+9u=0\] From Example&nbsp;
+			<span class="ptmb8t-">5.1.2</span>
+			, the general solution of this equation is \[ u=c_1\cos 3x +c_2\sin 3x\]
+			Therefore any function of the form \begin {equation} \label {eq:5.2.16}
+			y=e^{-2x}(c_1\cos 3x+c_2\sin 3x) \end {equation}
+			<a id="x1-28r16"></a>
+			is a solution of (
+			<a href="#x1-25r14">
+				5.2.14
+				<!-- tex4ht:ref: eq:5.2.14  -->
+			</a>
+			). Letting \(c_1=1\) and \(c_2=0\) yields the solution \(y_1=e^{-2x}\cos
+			3x\). Letting \(c_1=0\) and \(c_2=1\) yields the second solution
+			\(y_2=e^{-2x}\sin 3x\). Since \(y_2/y_1=\tan 3x\) is nonconstant,
+			<span class="ptmb8t-">5.1.6</span>
+			implies that \(\{y_1,y_2\}\) is a fundamental set of solutions of (
+			<a href="#x1-25r14">
+				5.2.14
+				<!-- tex4ht:ref: eq:5.2.14  -->
+			</a>
+			), and (
+			<a href="#x1-28r16">
+				5.2.16
+				<!-- tex4ht:ref: eq:5.2.16  -->
+			</a>
+			) is the general solution.
+		</p>
+		<p class="noindent" id="fb89496a-26cd-484c-9c8e-a3b22c0bfc46">
+			<span class="underline">
+				<span class="ptmrc8t-">
+					S
+					<span class="small-caps">OLUTION</span>
+					(
+				</span>
+				<span class="ptmb8t-">b</span>
+				<span class="ptmrc8t-">)&nbsp;</span>
+			</span>
+			Imposing the condition \(y(0)=2\) in (
+			<a href="#x1-28r16">
+				5.2.16
+				<!-- tex4ht:ref: eq:5.2.16  -->
+			</a>
+			) shows that \(c_1=2\). Differentiating (
+			<a href="#x1-28r16">
+				5.2.16
+				<!-- tex4ht:ref: eq:5.2.16  -->
+			</a>
+			) yields \[ y'=-2e^{-2x}(c_1\cos 3x+c_2\sin 3x) +3e^{-2x}(-c_1\sin 3x
+			+c_2\cos 3x)\] and imposing the initial condition \(y'(0)=-3\) here yields
+			\(-3=-2c_1+3c_2=-4+3c_2\), so \(c_2=1/3\). Therefore the solution of (
+			<a href="#x1-27r15">
+				5.2.15
+				<!-- tex4ht:ref: eq:5.2.15  -->
+			</a>
+			) is \[ y=e^{-2x}(2\cos 3x+ {1\over 3}\sin 3x)\] Figure&nbsp;
+			<a href="#-yex-x-over-x-">
+				5.2.3
+				<!-- tex4ht:ref: figure:5.2.3  -->
+			</a>
+			is a graph of this function. __
+		</p>
+		<figure class="figure" id="01736408-4e8e-4a15-8463-9e1ff6f4b84b">
+			<p class="noindent" id="-yex-x-over-x-">
+				<img height="264" src="EPS/fig050203.png" width="409" />
+				<a id="x1-29r3"></a>
+			</p>
+			<figcaption class="caption">
+				<span class="id">Figure&nbsp;5.2.3</span>
+				<span class="content">
+					\(\displaystyle {y=e^{-2x}(2\cos 3x+ {1\over 3}\sin 3x)}\)
+				</span>
+			</figcaption>
+			<!-- tex4ht:label?: x1-29r3  -->
+		</figure>
+		<p class="indent" id="97e7a155-1f98-4eb3-8b1c-540198ae4fa7">
+			Now suppose the characteristic equation of \(ay''+by'+cy=0\) has arbitrary
+			complex roots; thus, \(b^2-4ac&lt;0\) and, from (
+			<a href="#x1-4r3">
+				5.2.3
+				<!-- tex4ht:ref: eq:5.2.3  -->
+			</a>
+			), the roots are \[ r_1 = {-b+i\sqrt {4ac-b^2}\over 2a},\quad r_2 =
+			{-b-i\sqrt {4ac-b^2}\over 2a}\] which we rewrite as \begin {equation}
+			\label {eq:5.2.17} r_1=\lambda +i \omega ,\quad r_2 = \lambda - i \omega
+			\end {equation}
+			<a id="x1-30r17"></a>
+			with \[ \lambda = -{b\over 2a},\quad \omega = {\sqrt {4ac-b^2}\over 2a}\]
+			Don’t memorize these formulas. Just remember that \(r_1\) and \(r_2\) are
+			of the form (
+			<a href="#x1-30r17">
+				5.2.17
+				<!-- tex4ht:ref: eq:5.2.17  -->
+			</a>
+			), where \(\lambda \) is an arbitrary real number and \(\omega \) is
+			positive; \(\lambda \) and \(\omega \) are the
+			<span class="vocab">real</span>
+			and
+			<span class="vocab">imaginary parts</span>
+			, respectively, of \(r_1\). Similarly, \(\lambda \) and \(-\omega \) are
+			the real and imaginary parts of \(r_2\). We say that \(r_1\) and \(r_2\)
+			are
+			<span class="vocab">complex conjugates</span>
+			, which means that they have the same real part and their imaginary parts
+			have the same absolute values, but opposite signs.
+		</p>
+		<p class="indent" id="978b4808-6fff-44b4-80b7-69699aaaeed6">
+			As in Example&nbsp;
+			<a href="#x1-233">
+				5.2.3
+				<!-- tex4ht:ref: example:5.2.3  -->
+			</a>
+			, it’s reasonable to to expect that the solutions of \(ay''+by'+cy=0\) are
+			linear combinations of \(e^{(\lambda +i\omega )x}\) and \(e^{(\lambda
+			-i\omega )x}\). Again, the exponential notation suggests that \[
+			e^{(\lambda +i\omega )x}=e^{\lambda x}e^{i\omega x}\mbox {\quad and \quad
+			} e^{(\lambda -i\omega )x}=e^{\lambda x}e^{-i\omega x}\] so even though we
+			haven’t defined \(e^{i\omega x}\) and \(e^{-i\omega x}\), it’s reasonable
+			to expect that every linear combination of \(e^{(\lambda +i\omega )x}\)
+			and \(e^{(\lambda -i\omega )x}\) can be written as \(y=ue^{\lambda x}\),
+			where \(u\) depends upon \(x\). To determine \(u\) we first observe that
+			since \(r_1=\lambda +i\omega \) and \(r_2=\lambda -i\omega \) are the
+			roots of the characteristic equation, \(p\) must be of the form \[ \begin
+			{array}{ccl} p(r)&amp;=&amp;a(r-r_1)(r-r_2)\\ &amp;=&amp;a(r-\lambda
+			-i\omega )(r-\lambda +i\omega )\\ &amp;=&amp; a \left [(r-\lambda
+			)^2+\omega ^2\right ]\\ &amp;=&amp;a(r^2-2\lambda r +\lambda ^2+\omega
+			^2)\end {array} \] Therefore \(ay''+by'+cy=0\) can be written as \[ a\left
+			[y''-2\lambda y'+(\lambda ^2+\omega ^2)y\right ]=0\] Since \(a\ne 0\) this
+			equation has the same solutions as \begin {equation} \label {eq:5.2.18}
+			y''-2\lambda y'+(\lambda ^2+\omega ^2)y=0\end {equation}
+			<a id="x1-31r18"></a>
+			To determine \(u\) we note that if \(y=ue^{\lambda x}\) then \[
+			y'=u'e^{\lambda x}+\lambda ue^{\lambda x}\mbox {\quad and \quad }
+			y''=u''e^{\lambda x}+2\lambda u'e^{\lambda x}+\lambda ^2ue^{\lambda x}\]
+			Substituting these expressions into (
+			<a href="#x1-31r18">
+				5.2.18
+				<!-- tex4ht:ref: eq:5.2.18  -->
+			</a>
+			) and dropping the common factor \(e^{\lambda x}\) yields \[ (u''+2\lambda
+			u'+\lambda ^2 u)-2\lambda (u'+\lambda u) +(\lambda ^2+\omega ^2)u=0\]
+			which simplifies to \[ u''+\omega ^2 u=0\] From Example&nbsp;
+			<span class="ptmb8t-">5.1.2</span>
+			, the general solution of this equation is \[ u=c_1\cos \omega x +c_2\sin
+			\omega x\] Therefore any function of the form \begin {equation} \label
+			{eq:5.2.19} y=e^{\lambda x}(c_1\cos \omega x+c_2\sin \omega x) \end
+			{equation}
+			<a id="x1-32r19"></a>
+			is a solution of (
+			<a href="#x1-31r18">
+				5.2.18
+				<!-- tex4ht:ref: eq:5.2.18  -->
+			</a>
+			). Letting \(c_1=1\) and \(c_2=0\) here yields the solution
+			\(y_1=e^{\lambda x}\cos \omega x\). Letting \(c_1=0\) and \(c_2=1\) yields
+			a second solution \(y_2=e^{\lambda x}\sin \omega x\). Since \(y_2/y_1=\tan
+			\omega x\) is nonconstant, so Theorem&nbsp;
+			<span class="ptmb8t-">5.1.6</span>
+			implies that \(\{y_1,y_2\}\) is a fundamental set of solutions of (
+			<a href="#x1-31r18">
+				5.2.18
+				<!-- tex4ht:ref: eq:5.2.18  -->
+			</a>
+			), and (
+			<a href="#x1-32r19">
+				5.2.19
+				<!-- tex4ht:ref: eq:5.2.19  -->
+			</a>
+			) is the general solution.
+		</p>
+		<p class="noindent" id="a42072eb-83b8-497a-8446-25479dd9fef2">
+			<span id="textcolor4">Summary</span>
+		</p>
+		<p class="indent" id="49ebebcc-e733-45ec-8950-95067ea6c13c"></p>
+		<p class="noindent" id="8e36019a-c7ed-4de7-b3bf-f42c0fe0323e">
+			The next theorem summarizes the results of this section.
+		</p>
+		<div class="newtheorem" id="ee180b91-0191-4daa-8e10-dd43bc5bdddf">
+			<p class="noindent">
+				<span class="head">
+					<span class="ptmb8t-">Theorem&nbsp;5.2.1</span>
+				</span>
+				<a id="x1-331"></a>
+				Let \(p(r)=ar^2+br+c\) be the characteristic polynomial of \begin
+				{equation} \label {eq:5.2.20} ay''+by'+cy=0\end {equation}
+				<a id="x1-34r20"></a>
+				Then:
+			</p>
+			<dl class="list1">
+				<dt class="list">
+					<span class="ptmb8t-">(a)</span>
+				</dt>
+				<dd class="list">
+					<p class="noindent">
+						If \(p(r)=0\) has distinct real roots \(r_1\) and \(r_2,\) then the
+						general solution of \(\eqref {eq:5.2.20}\) is \[
+						y=c_1e^{r_1x}+c_2e^{r_2x}\]
+					</p>
+				</dd>
+				<dt class="list">
+					<span class="ptmb8t-">(b)</span>
+				</dt>
+				<dd class="list">
+					<p class="noindent">
+						If \(p(r)=0\) has a repeated root \(r_1,\) then the general solution
+						of \(\eqref {eq:5.2.20}\) is \[ y=e^{r_1x}(c_1+c_2x)\]
+					</p>
+				</dd>
+				<dt class="list">
+					<span class="ptmb8t-">(c)</span>
+				</dt>
+				<dd class="list">
+					<p class="noindent">
+						If \(p(r)=0\) has complex conjugate roots \(r_1=\lambda +i\omega \)
+						and \(r_2=\lambda -i\omega \) \((\)where \(\omega &gt;0),\) then the
+						general solution of \(\eqref {eq:5.2.20}\) is \[ y=e^{\lambda
+						x}(c_1\cos \omega x+c_2\sin \omega x)\]
+					</p>
+				</dd>
+			</dl>
+		</div>
+		<p class="indent" id="afdb219d-6c47-4425-bd6c-207f09472564"></p>
 
-                                                                                
-     </p></dd><dt class="description">
-     <p class="noindent">
- </p></dt><dd class="description">
-     <p class="noindent"><span class="ptmrc8t-">C<span class="small-caps">ASE</span> 2.</span> \(b^2-4ac=0\), so the characteristic equation has a repeated real root.
-     </p></dd><dt class="description">
-     <p class="noindent">
- </p></dt><dd class="description">
-     <p class="noindent"><span class="ptmrc8t-">C<span class="small-caps">ASE</span> 3.</span> \(b^2-4ac&lt;0\), so the characteristic equation has complex roots.</p></dd></dl>
-<p class="noindent" id="72d0e0ae-841e-4982-9453-5a0471c17160">In each case we’ll start with an example.
-</p><p class="noindent" id="34a2d8af-9a8a-4b9c-8925-375a71c6a366"><span id="textcolor1">Case 1: Distinct Real Roots</span>
-</p><p class="indent" id="34d344e9-66b1-41e3-b1c0-8fde094f0d08">
-</p><p class="noindent" id="ded9a4c9-c1cf-4d1e-ada6-bf4ea8b136ce"></p><div class="newtheorem" id="93995001-6f9d-4be4-8c9e-f3a4abbc3dc9">
-<p class="noindent"><span class="head">
-<span class="ex-number">Example&nbsp;5.2.1</span> </span><a id="x1-51"></a> <br class="newline">
-    </p><dl class="list1"><dt class="list">
- <span class="ptmb8t-">(a)</span>  </dt><dd class="list">
-    <p class="noindent">Find the general solution of \begin {equation}  \label {eq:5.2.4} y''+6y'+5y=0\end {equation}<a id="x1-7r4"></a>
-    </p></dd><dt class="list">
- <span class="ptmb8t-">(b)</span>  </dt><dd class="list">
-    <p class="noindent">Solve the initial value problem \begin {equation}  \label {eq:5.2.5} y''+6y'+5y=0, \quad y(0)=3,\; y'(0)=-1\end {equation}<a id="x1-9r5"></a></p></dd></dl>
-</div>
-<p class="indent" id="92cec152-66a7-46c8-a303-65e36f936c77">
-</p><p class="noindent" id="a14dfcfb-a33d-4854-a67e-23569f79e489"><span class="underline"><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">a</span><span class="ptmrc8t-">)&nbsp;</span></span> The characteristic polynomial of (<a href="#x1-7r4">5.2.4<!-- tex4ht:ref: eq:5.2.4  --></a>) is
-                                        \[ p(r)=r^2+6r+5=(r+1)(r+5)\]
- Since \(p(-1)=p(-5)=0\), \(y_1=e^{-x}\) and \(y_2=e^{-5x}\) are solutions of (<a href="#x1-7r4">5.2.4<!-- tex4ht:ref: eq:5.2.4  --></a>). Since \(y_2/y_1=e^{-4x}\) is nonconstant, <span class="ptmb8t-">5.1.6</span> implies that the general solution of (<a href="#x1-7r4">5.2.4<!-- tex4ht:ref: eq:5.2.4  --></a>) is
-\begin {equation}  \label {eq:5.2.6} y=c_1e^{-x}+c_2e^{-5x}\end {equation}<a id="x1-10r6"></a>
-</p><p class="noindent" id="4ded62fc-33b5-4f00-947f-736c0aea140d"><span class="underline"><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">b</span><span class="ptmrc8t-">)&nbsp;</span></span> We must determine \(c_1\) and \(c_2\) in (<a href="#x1-10r6">5.2.6<!-- tex4ht:ref: eq:5.2.6  --></a>) so that \(y\) satisfies the initial conditions in (<a href="#x1-9r5">5.2.5<!-- tex4ht:ref: eq:5.2.5  --></a>).
-Differentiating (<a href="#x1-10r6">5.2.6<!-- tex4ht:ref: eq:5.2.6  --></a>) yields \begin {equation}  \label {eq:5.2.7} y'=-c_1e^{-x}-5c_2e^{-5x}\end {equation}<a id="x1-11r7"></a> Imposing the initial conditions \(y(0)=3,\, y'(0)=-1\) in (<a href="#x1-10r6">5.2.6<!-- tex4ht:ref: eq:5.2.6  --></a>) and (<a href="#x1-11r7">5.2.7<!-- tex4ht:ref: eq:5.2.7  --></a>) yields
-                                                                                
+		<div class="nav" id="49369957-39fe-40c0-a0d0-0957e53507d1">
+			<a href="sec5.1.book.html">Back (5.1)</a>
 
-                                                                                
-                                        \[\begin {array}{rcr} \phantom {-}c_1+\phantom {5}c_2 &amp; = &amp; 3\phantom {.}\\ -c_1-5c_2 &amp; = &amp; -1\end {array}\]
- The solution of this system is \(c_1=7/2,c_2=-1/2\). Therefore the solution of (<a href="#x1-9r5">5.2.5<!-- tex4ht:ref: eq:5.2.5  --></a>) is
-                                        \[ y={7\over 2}e^{-x}-{1\over 2}e^{-5x}\]
- Figure&nbsp;<a href="#-y-overex-overex-">5.2.1<!-- tex4ht:ref: figure:5.2.1  --></a> is a graph of this solution.
-</p>
-  <figure class="figure" id="4794e6f0-5adc-4afb-ba96-2e13d32c2929"> 
+			<a href="sec5.0.html">Chapter 5</a>
 
-                                                                                
-
-                                                                                
-                                                                                
-
-                                                                                
-<p class="noindent" id="-y-overex-overex-"><img height="264" src="EPS/fig050201.png" width="409"> <a id="x1-12r1"></a></p>
-<figcaption class="caption"><span class="id">Figure&nbsp;5.2.1 </span><span class="content">\(y=\displaystyle {{7\over 2}e^{-x}-{1\over 2}e^{-5x}}\)                                                                     </span></figcaption><!-- tex4ht:label?: x1-12r1  -->
-                                                                                
-
-                                                                                
-  </figure>
-<p class="indent" id="d9223d07-8504-4e81-98f6-534abc1ef366">  If the characteristic equation has arbitrary distinct real roots \(r_1\) and \(r_2\), then \(y_1=e^{r_1x}\) and \(y_2=e^{r_2x}\) are solutions of \(ay''+by'+cy=0\). Since \(y_2/y_1=e^{(r_2-r_1)x}\) is
-nonconstant, Theorem&nbsp;<span class="ptmb8t-">5.1.6</span> implies that \(\{y_1,y_2\}\) is a fundamental set of solutions of \(ay''+by'+cy=0\).
-</p><p class="indent" id="224e25a7-55f2-4c29-952f-9ed8be7813d9">
-                                                                                
-
-                                                                                
-</p><p class="noindent" id="4f172aa0-7085-48e8-81d7-60e1ea461723"><span id="textcolor2">Case 2: A Repeated Real Root</span>
-</p><p class="indent" id="a9a6c083-c91a-4820-b5eb-dfe3707dab43">
-</p><p class="noindent" id="5269097e-61b5-44ce-8bfd-e488d4e4ecdc"></p><div class="newtheorem" id="4c14512f-b2bb-4e3a-a42d-364f1da38d9c">
-<p class="noindent"><span class="head">
-<span class="ex-number">Example&nbsp;5.2.2</span> </span><a id="x1-132"></a><br class="newline">
-    </p><dl class="list1"><dt class="list">
- <span class="ptmb8t-">(a)</span>  </dt><dd class="list">
-    <p class="noindent">Find the general solution of \begin {equation}  \label {eq:5.2.8} y''+6y'+9y=0\end {equation}<a id="x1-15r8"></a>
-    </p></dd><dt class="list">
- <span class="ptmb8t-">(b)</span>  </dt><dd class="list">
-    <p class="noindent">Solve the initial value problem \begin {equation}  \label {eq:5.2.9} y''+6y'+9y=0, \quad y(0)=3,\; y'(0)=-1\end {equation}<a id="x1-17r9"></a></p></dd></dl>
-</div>
-<p class="indent" id="b4033545-e374-4cd0-bad7-4a473ab66652">
-</p><p class="noindent" id="637e17f1-7f67-4e07-98c9-19ec427d475e"><span class="underline"><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">a</span><span class="ptmrc8t-">)&nbsp;</span></span> The characteristic polynomial of (<a href="#x1-15r8">5.2.8<!-- tex4ht:ref: eq:5.2.8  --></a>) is
-                                        \[ p(r)=r^2+6r+9=(r+3)^2\]
- so the characteristic equation has the repeated real root \(r_1=-3\). Therefore \(y_1=e^{-3x}\) is a solution of (<a href="#x1-15r8">5.2.8<!-- tex4ht:ref: eq:5.2.8  --></a>). Since the
-characteristic equation has no other roots, (<a href="#x1-15r8">5.2.8<!-- tex4ht:ref: eq:5.2.8  --></a>) has no other solutions of the form \(e^{rx}\). We look for solutions of the
-form \(y=uy_1=ue^{-3x}\), where \(u\) is a function that we’ll now determine. (This should remind you of the method of variation of
-parameters used in Section&nbsp;2.1 to solve the nonhomogeneous equation \(y'+p(x)y=f(x)\), given a solution \(y_1\) of the complementary
-equation \(y'+p(x)y=0\). It’s also a special case of a method called <span class="vocab">reduction of order</span> that we’ll study in Section&nbsp;5.6. For other
-ways to obtain a second solution of (<a href="#x1-15r8">5.2.8<!-- tex4ht:ref: eq:5.2.8  --></a>) that’s not a multiple of \(e^{-3x}\), see Exercises&nbsp;5.1.&nbsp;<span class="ptmb8t-">9</span>, 5.1.&nbsp;<span class="ptmb8t-">12</span>, and
-<span class="ptmb8t-">33</span>.
-</p><p class="indent" id="b2806216-a3de-4e10-9f9d-70625580b076">  If \(y=ue^{-3x}\), then
-                                                                                
-
-                                                                                
-                                        \[ y'=u'e^{-3x}-3ue^{-3x}\mbox {\quad and \quad } y''=u''e^{-3x}-6u'e^{-3x}+9ue^{-3x}\]
- so </p><div class="eqnarray" id="e12dbac2-949c-4359-94d3-c3be1f165e96">\begin {eqnarray*}  y''+6y'+9y&amp;=&amp;e^{-3x}\left [(u''-6u'+9u)+6(u'-3u)+9u\right ]\\ &amp;=&amp;e^{-3x}\left [u''-(6-6)u'+(9-18+9)u\right ]=u''e^{-3x}\end {eqnarray*}</div>
-<p class="indent" id="a8440e22-b4cf-4511-a196-4edc72ec07e5">  Therefore \(y=ue^{-3x}\) is a solution of (<a href="#x1-15r8">5.2.8<!-- tex4ht:ref: eq:5.2.8  --></a>) if and only if \(u''=0\), which is equivalent to \(u=c_1+c_2x\), where \(c_1\) and \(c_2\) are constants. Therefore
-any function of the form \begin {equation}  \label {eq:5.2.10} y=e^{-3x}(c_1+c_2x)  \end {equation}<a id="x1-18r10"></a> is a solution of (<a href="#x1-15r8">5.2.8<!-- tex4ht:ref: eq:5.2.8  --></a>). Letting \(c_1=1\) and \(c_2=0\) yields the solution \(y_1=e^{-3x}\) that we already knew. Letting \(c_1=0\)
-and \(c_2=1\) yields the second solution \(y_2=xe^{-3x}\). Since \(y_2/y_1=x\) is nonconstant, <span class="ptmb8t-">5.1.6</span> implies that \(\{y_1,y_2\}\) is fundamental set of solutions of (<a href="#x1-15r8">5.2.8<!-- tex4ht:ref: eq:5.2.8  --></a>),
-and (<a href="#x1-18r10">5.2.10<!-- tex4ht:ref: eq:5.2.10  --></a>) is the general solution.
-</p><p class="noindent" id="70a17e24-045d-4e0f-b15f-bfc2daeca187"><span class="underline"><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">b</span><span class="ptmrc8t-">)&nbsp;</span></span> Differentiating (<a href="#x1-18r10">5.2.10<!-- tex4ht:ref: eq:5.2.10  --></a>) yields \begin {equation}  \label {eq:5.2.11} y'=-3e^{-3x}(c_1+c_2x)+c_2e^{-3x}\end {equation}<a id="x1-19r11"></a> Imposing the initial conditions \(y(0)=3,\, y'(0)=-1\) in (<a href="#x1-18r10">5.2.10<!-- tex4ht:ref: eq:5.2.10  --></a>) and (<a href="#x1-19r11">5.2.11<!-- tex4ht:ref: eq:5.2.11  --></a>) yields \(c_1=3\)
-and \(-3c_1+c_2=-1\), so \(c_2=8\). Therefore the solution of (<a href="#x1-17r9">5.2.9<!-- tex4ht:ref: eq:5.2.9  --></a>) is
-                                        \[ y=e^{-3x}(3+8x)\]
- Figure&nbsp;<a href="#-yexx-">5.2.2<!-- tex4ht:ref: figure:5.2.2  --></a> is a graph of this solution.
-</p>
-  <figure class="figure" id="a2954315-67be-4704-91a5-5704745a9193"> 
-
-                                                                                
-
-                                                                                
-                                                                                
-
-                                                                                
-<p class="noindent" id="-yexx-"><img height="264" src="EPS/fig050202.png" width="409">  <a id="x1-20r2"></a></p>
-<figcaption class="caption"><span class="id">Figure&nbsp;5.2.2 </span><span class="content">\(y=e^{-3x}(3+8x)\)                                                                     </span></figcaption><!-- tex4ht:label?: x1-20r2  -->
-                                                                                
-
-                                                                                
-  </figure>
-<p class="indent" id="b12ee283-6189-4b10-a5a1-2545e260cd39">
-                                                                                
-
-                                                                                
-</p><p class="indent" id="f44d53b4-390d-407f-b356-95e04b6ae718">  If the characteristic equation of \(ay''+by'+cy=0\) has an arbitrary repeated root \(r_1\), the characteristic polynomial must
-be
-                                        \[ p(r)=a(r-r_1)^2=a(r^2-2r_1r+r_1^2)\]
- Therefore
-                                        \[ ar^2+br+c=ar^2-(2ar_1)r+ar_1^2\]
- which implies that \(b=-2ar_1\) and \(c=ar_1^2\). Therefore \(ay''+by'+cy=0\) can be written as \(a(y''-2r_1y'+r_1^2y)=0\). Since \(a\ne 0\) this equation has the same solutions as
-\begin {equation}  \label {eq:5.2.12} y''-2r_1y'+r_1^2y=0\end {equation}<a id="x1-21r12"></a>
-</p><p class="indent" id="84483a87-0e23-446f-a064-28dd665adf12">  Since \(p(r_1)=0\), t \(y_1=e^{r_1x}\) is a solution of \(ay''+by'+cy=0\), and therefore of (<a href="#x1-21r12">5.2.12<!-- tex4ht:ref: eq:5.2.12  --></a>). Proceeding as in Example&nbsp;<a href="#x1-132">5.2.2<!-- tex4ht:ref: example:5.2.2  --></a>, we look for other
-solutions of (<a href="#x1-21r12">5.2.12<!-- tex4ht:ref: eq:5.2.12  --></a>) of the form \(y=ue^{r_1x}\); then
-                                        \[ y'=u'e^{r_1x}+rue^{r_1x}\mbox {\quad and \quad } y''=u''e^{r_1x}+2r_1u'e^{r_1x}+r_1^2ue^{r_1x}\]
- so </p><div class="eqnarray" id="e8afc7c4-6d30-4a2d-97ca-42e52485b2ca">\begin {eqnarray*}  y''-2r_1y'+r_1^2y&amp;=&amp;e^{rx}\left [(u''+2r_1u'+r_1^2u)- 2r_1(u'+r_1u)+r_1^2u\right ]\\ &amp;=&amp;e^{r_1x}\left [u''+(2r_1-2r_1)u'+(r_1^2-2r_1^2+r_1^2)u\right ]=u''e^{r_1x}\end {eqnarray*}</div>
-<p class="indent" id="1253df40-3275-4030-ae40-9276915122bf">  Therefore \(y=ue^{r_1x}\) is a solution of (<a href="#x1-21r12">5.2.12<!-- tex4ht:ref: eq:5.2.12  --></a>) if and only if \(u''=0\), which is equivalent to \(u=c_1+c_2x\), where \(c_1\) and \(c_2\) are constants. Hence, any
-function of the form \begin {equation}  \label {eq:5.2.13} y=e^{r_1x}(c_1+c_2x)  \end {equation}<a id="x1-22r13"></a> is a solution of (<a href="#x1-21r12">5.2.12<!-- tex4ht:ref: eq:5.2.12  --></a>). Letting \(c_1=1\) and \(c_2=0\) here yields the solution \(y_1=e^{r_1x}\) that we already knew. Letting \(c_1=0\)
-and \(c_2=1\) yields the second solution \(y_2=xe^{r_1x}\). Since \(y_2/y_1=x\) is nonconstant, <span class="ptmb8t-">5.1.6</span> implies that \(\{y_1,y_2\}\) is a fundamental set of solutions of
-(<a href="#x1-21r12">5.2.12<!-- tex4ht:ref: eq:5.2.12  --></a>), and (<a href="#x1-22r13">5.2.13<!-- tex4ht:ref: eq:5.2.13  --></a>) is the general solution.
-</p><p class="noindent" id="4a7f0b84-e462-44a6-a3fe-258a5e2974d6"><span id="textcolor3">Case 3: Complex Conjugate Roots</span>
-</p><p class="indent" id="a9c76ffd-c97e-41d5-9bbf-970f6ce4a515"></p><p class="noindent" id="0869faa0-7967-45a0-9f12-d9fd78ee4ad6"></p><div class="newtheorem" id="f9d98280-c16a-43a0-8148-c855a77da467">
-                                                                                
-
-                                                                                
-<p class="noindent"><span class="head">
-<span class="ex-number">Example&nbsp;5.2.3</span> </span><a id="x1-233"></a><br class="newline">
-    </p><dl class="list1"><dt class="list">
- <span class="ptmb8t-">(a)</span>  </dt><dd class="list">
-    <p class="noindent">Find the general solution of \begin {equation}  \label {eq:5.2.14} y''+4y'+13y=0\end {equation}<a id="x1-25r14"></a>
-    </p></dd><dt class="list">
- <span class="ptmb8t-">(b)</span>  </dt><dd class="list">
-    <p class="noindent">Solve the initial value problem \begin {equation}  \label {eq:5.2.15} y''+4y'+13y=0, \quad y(0)=2,\; y'(0)=-3\end {equation}<a id="x1-27r15"></a></p></dd></dl>
-</div>
-<p class="indent" id="968e102f-fde4-4060-b824-9e9a36eb240b">
-</p><p class="noindent" id="7536f34b-d7ad-4bf5-881e-e858aa290c49"><span class="underline"><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">a</span><span class="ptmrc8t-">)&nbsp;</span></span> The characteristic polynomial of (<a href="#x1-25r14">5.2.14<!-- tex4ht:ref: eq:5.2.14  --></a>) is
-                                        \[ p(r)=r^2+4r+13=r^2+4r+4+9=(r+2)^2+9\]
- The roots of the characteristic equation are \(r_1=-2+3i\) and \(r_2=-2-3i\). By analogy with Case&nbsp;1, it’s reasonable to expect that \(e^{(-2+3i)x}\) and \(e^{(-2-3i)x}\) are
-solutions of (<a href="#x1-25r14">5.2.14<!-- tex4ht:ref: eq:5.2.14  --></a>). This is true (see Exercise&nbsp;<span class="ptmb8t-">34</span>); however, there are difficulties here, since you are probably
-not familiar with exponential functions with complex arguments, and even if you are, it’s inconvenient to work
-with them, since they are complex–valued. We’ll take a simpler approach, which we motivate as follows: the
-exponential notation suggests that
-                                        \[ e^{(-2+3i)x}=e^{-2x}e^{3ix}\mbox {\quad and \quad } e^{(-2-3i)x}=e^{-2x}e^{-3ix}\]
- so even though we haven’t defined \(e^{3ix}\) and \(e^{-3ix}\), it’s reasonable to expect that every linear combination of \(e^{(-2+3i)x}\) and \(e^{(-2-3i)x}\) can be
-written as \(y=ue^{-2x}\), where \(u\) depends upon \(x\). To determine \(u\), we note that if \(y=ue^{-2x}\) then
-                                                                                
-
-                                                                                
-                                        \[ y'=u'e^{-2x}-2ue^{-2x}\mbox {\quad and \quad } y''=u''e^{-2x}-4u'e^{-2x}+4ue^{-2x}\]
- so </p><div class="eqnarray" id="1c463357-999c-497a-8f3b-f709a0e17e4c">\begin {eqnarray*}  y''+4y'+13y&amp;=&amp;e^{-2x}\left [(u''-4u'+4u)+4(u'-2u)+13u\right ]\\ &amp;=&amp;e^{-2x}\left [u''-(4-4)u'+(4-8+13)u\right ]=e^{-2x}(u''+9u)\end {eqnarray*}</div>
-<p class="indent" id="67f7670c-04f3-4e7e-b52b-c23d52580a96">  Therefore \(y=ue^{-2x}\) is a solution of (<a href="#x1-25r14">5.2.14<!-- tex4ht:ref: eq:5.2.14  --></a>) if and only if
-                                        \[ u''+9u=0\]
- From Example&nbsp;<span class="ptmb8t-">5.1.2</span>, the general solution of this equation is
-                                        \[ u=c_1\cos 3x +c_2\sin 3x\]
- Therefore any function of the form \begin {equation}  \label {eq:5.2.16} y=e^{-2x}(c_1\cos 3x+c_2\sin 3x)  \end {equation}<a id="x1-28r16"></a> is a solution of (<a href="#x1-25r14">5.2.14<!-- tex4ht:ref: eq:5.2.14  --></a>). Letting \(c_1=1\) and \(c_2=0\) yields the solution \(y_1=e^{-2x}\cos 3x\). Letting \(c_1=0\) and \(c_2=1\)
-yields the second solution \(y_2=e^{-2x}\sin 3x\). Since \(y_2/y_1=\tan 3x\) is nonconstant, <span class="ptmb8t-">5.1.6</span> implies that \(\{y_1,y_2\}\) is a fundamental set of solutions of (<a href="#x1-25r14">5.2.14<!-- tex4ht:ref: eq:5.2.14  --></a>),
-and (<a href="#x1-28r16">5.2.16<!-- tex4ht:ref: eq:5.2.16  --></a>) is the general solution.
-</p><p class="noindent" id="fb89496a-26cd-484c-9c8e-a3b22c0bfc46"><span class="underline"><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">b</span><span class="ptmrc8t-">)&nbsp;</span></span> Imposing the condition \(y(0)=2\) in (<a href="#x1-28r16">5.2.16<!-- tex4ht:ref: eq:5.2.16  --></a>) shows that \(c_1=2\). Differentiating (<a href="#x1-28r16">5.2.16<!-- tex4ht:ref: eq:5.2.16  --></a>) yields
-                                                                                
-
-                                                                                
-                                        \[ y'=-2e^{-2x}(c_1\cos 3x+c_2\sin 3x) +3e^{-2x}(-c_1\sin 3x +c_2\cos 3x)\]
- and imposing the initial condition \(y'(0)=-3\) here yields \(-3=-2c_1+3c_2=-4+3c_2\), so \(c_2=1/3\). Therefore the solution of (<a href="#x1-27r15">5.2.15<!-- tex4ht:ref: eq:5.2.15  --></a>) is
-                                        \[ y=e^{-2x}(2\cos 3x+ {1\over 3}\sin 3x)\]
- Figure&nbsp;<a href="#-yex-x-over-x-">5.2.3<!-- tex4ht:ref: figure:5.2.3  --></a> is a graph of this function.                                                                                                    __
-</p>
-  <figure class="figure" id="01736408-4e8e-4a15-8463-9e1ff6f4b84b"> 
-
-                                                                                
-
-                                                                                
-                                                                                
-
-                                                                                
-<p class="noindent" id="-yex-x-over-x-"><img height="264" src="EPS/fig050203.png" width="409"> <a id="x1-29r3"></a></p>
-<figcaption class="caption"><span class="id">Figure&nbsp;5.2.3 </span><span class="content">\(\displaystyle {y=e^{-2x}(2\cos 3x+ {1\over 3}\sin 3x)}\)                                                                     </span></figcaption><!-- tex4ht:label?: x1-29r3  -->
-                                                                                
-
-                                                                                
-  </figure>
-<p class="indent" id="97e7a155-1f98-4eb3-8b1c-540198ae4fa7">  Now suppose the characteristic equation of \(ay''+by'+cy=0\) has arbitrary complex roots; thus, \(b^2-4ac&lt;0\) and, from (<a href="#x1-4r3">5.2.3<!-- tex4ht:ref: eq:5.2.3  --></a>), the roots
-are
-                                        \[ r_1 = {-b+i\sqrt {4ac-b^2}\over 2a},\quad r_2 = {-b-i\sqrt {4ac-b^2}\over 2a}\]
- which we rewrite as \begin {equation}  \label {eq:5.2.17} r_1=\lambda +i \omega ,\quad r_2 = \lambda - i \omega \end {equation}<a id="x1-30r17"></a> with
-                                        \[ \lambda = -{b\over 2a},\quad \omega = {\sqrt {4ac-b^2}\over 2a}\]
- Don’t memorize these formulas. Just remember that \(r_1\) and \(r_2\) are of the form (<a href="#x1-30r17">5.2.17<!-- tex4ht:ref: eq:5.2.17  --></a>), where \(\lambda \) is an arbitrary real
-number and \(\omega \) is positive; \(\lambda \) and \(\omega \) are the <span class="vocab">real</span> and <span class="vocab">imaginary parts</span>, respectively, of \(r_1\). Similarly, \(\lambda \) and \(-\omega \)
-are the real and imaginary parts of \(r_2\). We say that \(r_1\) and \(r_2\) are <span class="vocab">complex conjugates</span>, which means that
-they have the same real part and their imaginary parts have the same absolute values, but opposite
-signs.
-</p><p class="indent" id="978b4808-6fff-44b4-80b7-69699aaaeed6">  As in Example&nbsp;<a href="#x1-233">5.2.3<!-- tex4ht:ref: example:5.2.3  --></a>, it’s reasonable to to expect that the solutions of \(ay''+by'+cy=0\) are linear combinations of \(e^{(\lambda +i\omega )x}\) and \(e^{(\lambda -i\omega )x}\). Again,
-the exponential notation suggests that
-                                        \[ e^{(\lambda +i\omega )x}=e^{\lambda x}e^{i\omega x}\mbox {\quad and \quad } e^{(\lambda -i\omega )x}=e^{\lambda x}e^{-i\omega x}\]
- so even though we haven’t defined \(e^{i\omega x}\) and \(e^{-i\omega x}\), it’s reasonable to expect that every linear combination of \(e^{(\lambda +i\omega )x}\) and \(e^{(\lambda -i\omega )x}\) can be
-written as \(y=ue^{\lambda x}\), where \(u\) depends upon \(x\). To determine \(u\) we first observe that since \(r_1=\lambda +i\omega \) and \(r_2=\lambda -i\omega \) are the roots of the characteristic
-                                                                                
-
-                                                                                
-equation, \(p\) must be of the form
-                                        \[ \begin {array}{ccl} p(r)&amp;=&amp;a(r-r_1)(r-r_2)\\ &amp;=&amp;a(r-\lambda -i\omega )(r-\lambda +i\omega )\\ &amp;=&amp; a \left [(r-\lambda )^2+\omega ^2\right ]\\ &amp;=&amp;a(r^2-2\lambda r +\lambda ^2+\omega ^2)\end {array} \]
- Therefore \(ay''+by'+cy=0\) can be written as
-                                        \[ a\left [y''-2\lambda y'+(\lambda ^2+\omega ^2)y\right ]=0\]
- Since \(a\ne 0\) this equation has the same solutions as \begin {equation}  \label {eq:5.2.18} y''-2\lambda y'+(\lambda ^2+\omega ^2)y=0\end {equation}<a id="x1-31r18"></a> To determine \(u\) we note that if \(y=ue^{\lambda x}\) then
-                                        \[ y'=u'e^{\lambda x}+\lambda ue^{\lambda x}\mbox {\quad and \quad } y''=u''e^{\lambda x}+2\lambda u'e^{\lambda x}+\lambda ^2ue^{\lambda x}\]
- Substituting these expressions into (<a href="#x1-31r18">5.2.18<!-- tex4ht:ref: eq:5.2.18  --></a>) and dropping the common factor \(e^{\lambda x}\) yields
-                                                                                
-
-                                                                                
-                                        \[ (u''+2\lambda u'+\lambda ^2 u)-2\lambda (u'+\lambda u) +(\lambda ^2+\omega ^2)u=0\]
- which simplifies to
-                                        \[ u''+\omega ^2 u=0\]
- From Example&nbsp;<span class="ptmb8t-">5.1.2</span>, the general solution of this equation is
-                                        \[ u=c_1\cos \omega x +c_2\sin \omega x\]
- Therefore any function of the form \begin {equation}  \label {eq:5.2.19} y=e^{\lambda x}(c_1\cos \omega x+c_2\sin \omega x)  \end {equation}<a id="x1-32r19"></a> is a solution of (<a href="#x1-31r18">5.2.18<!-- tex4ht:ref: eq:5.2.18  --></a>). Letting \(c_1=1\) and \(c_2=0\) here yields the solution \(y_1=e^{\lambda x}\cos \omega x\). Letting \(c_1=0\) and \(c_2=1\)
-yields a second solution \(y_2=e^{\lambda x}\sin \omega x\). Since \(y_2/y_1=\tan \omega x\) is nonconstant, so Theorem&nbsp;<span class="ptmb8t-">5.1.6</span> implies that \(\{y_1,y_2\}\) is a fundamental set of solutions of
-(<a href="#x1-31r18">5.2.18<!-- tex4ht:ref: eq:5.2.18  --></a>), and (<a href="#x1-32r19">5.2.19<!-- tex4ht:ref: eq:5.2.19  --></a>) is the general solution.
-</p><p class="noindent" id="a42072eb-83b8-497a-8446-25479dd9fef2"><span id="textcolor4">Summary</span>
-</p><p class="indent" id="49ebebcc-e733-45ec-8950-95067ea6c13c">
-</p><p class="noindent" id="8e36019a-c7ed-4de7-b3bf-f42c0fe0323e">The next theorem summarizes the results of this section.
-</p>
-  <div class="newtheorem" id="ee180b91-0191-4daa-8e10-dd43bc5bdddf">
-<p class="noindent"><span class="head">
-<span class="ptmb8t-">Theorem&nbsp;5.2.1</span> </span><a id="x1-331"></a> Let \(p(r)=ar^2+br+c\) be the characteristic polynomial of \begin {equation}  \label {eq:5.2.20} ay''+by'+cy=0\end {equation}<a id="x1-34r20"></a> Then:
-    </p><dl class="list1"><dt class="list">
- <span class="ptmb8t-">(a)</span>  </dt><dd class="list">
-    <p class="noindent">If \(p(r)=0\) has distinct real roots \(r_1\) and \(r_2,\) then the general solution of \(\eqref {eq:5.2.20}\) is
-                                                                                
-
-                                                                                
-                                          \[ y=c_1e^{r_1x}+c_2e^{r_2x}\]
-    </p></dd><dt class="list">
- <span class="ptmb8t-">(b)</span>  </dt><dd class="list">
-    <p class="noindent">If \(p(r)=0\) has a repeated root \(r_1,\) then the general solution of \(\eqref {eq:5.2.20}\) is
-                                          \[ y=e^{r_1x}(c_1+c_2x)\]
-    </p></dd><dt class="list">
- <span class="ptmb8t-">(c)</span>  </dt><dd class="list">
-    <p class="noindent">If \(p(r)=0\) has complex conjugate roots \(r_1=\lambda +i\omega \) and \(r_2=\lambda -i\omega \) \((\)where \(\omega &gt;0),\) then the general solution of \(\eqref {eq:5.2.20}\) is
-                                          \[ y=e^{\lambda x}(c_1\cos \omega x+c_2\sin \omega x)\]
-    </p></dd></dl>
-</div>
-<p class="indent" id="afdb219d-6c47-4425-bd6c-207f09472564">  
-</p>
-
-<div class="nav" id="49369957-39fe-40c0-a0d0-0957e53507d1">
-  <a href="sec5.1.book.html">Back (5.1)</a>
-
-  <a href="sec5.0.html">Chapter 5</a>
-
-  <a href="sec5.3.book.html">Next (5.3)</a>
-</div>
-
- 
-</body></html>
+			<a href="sec5.3.book.html">Next (5.3)</a>
+		</div>
+	</body>
+</html>
