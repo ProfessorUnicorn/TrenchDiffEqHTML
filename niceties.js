@@ -2,7 +2,7 @@ _private = {};
 
 function getSectionNumber() {
 	if (!_private.sectionNumber) {
-		_private.sectionNumber = getComputedStyle(document.documentElement).getPropertyValue('--section-number');
+		_private.sectionNumber = getComputedStyle(document.documentElement)?.getPropertyValue('--section-number')?.trim()?.replace(/"/g, '');
 	}
 
 	return _private.sectionNumber;
@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		detailsItem.addEventListener('toggle', onToggleDetails);
 	}
 
-
-
+	let readingExercises = document.querySelectorAll('.reading-exercise');
+	for (let i = 0; i < readingExercises.length; ++i) {
+		readingExercises[i].style.setProperty('--reading-exercise-number', `" ${sectionNumber}.${i + 1}"`);
+	}
 });
