@@ -119,144 +119,99 @@
 			  </p>   			
 			We call \(c\) a
 			<span class = "vocab">parameter</span>
-			and say that (
+			and say that
 			<a href = "#x1-6r3">
-				2.1.3
-				<!-- tex4ht:ref: eq:2.1.3  -->
-			</a>
-			) defines a
+				(2.1.3)
+			</a>defines a
 			<span class = "vocab">one–parameter family</span>
-			of functions. For each real number \(c\), the function defined by (
+			of functions. For each real number \(c\), the function defined by
 			<a href = "#x1-6r3">
-				2.1.3
-				<!-- tex4ht:ref: eq:2.1.3  -->
-			</a>
-			) is a solution of (
+				(2.1.3)
+			</a> is a solution of
 			<a href = "#x1-5r2">
-				2.1.2
-				<!-- tex4ht:ref: eq:2.1.2  -->
-			</a>
-			) on \((-\infty ,0)\) and \((0,\infty )\); moreover, every solution of (
+				(2.1.2)
+			</a>with <span class="vocab">intervals of validity</span> \((-\infty ,0)\) and \((0,\infty) \); moreover, every solution of
 			<a href = "#x1-5r2">
-				2.1.2
-				<!-- tex4ht:ref: eq:2.1.2  -->
-			</a>
-			) on either of these intervals is of the form (
+				(2.1.2)
+			</a>on either of these intervals is of the form
 			<a href = "#x1-6r3">
-				2.1.3
+				(2.1.3)
 				<!-- tex4ht:ref: eq:2.1.3  -->
-			</a>
-			) for some choice of \(c\). We say that (
+			</a>for some choice of \(c\). We say that
 			<a href = "#x1-6r3">
-				2.1.3
+				(2.1.3)
 				<!-- tex4ht:ref: eq:2.1.3  -->
-			</a>
-			) is
+			</a>is
 			<span class = "vocab">the general solution</span>
-			of&nbsp;(
+			of&nbsp;
 			<a href = "#x1-5r2">
-				2.1.2
+				(2.1.2)
 				<!-- tex4ht:ref: eq:2.1.2  -->
 			</a>
-			).
 		</p>
 		<p class = "indent" id = "9db45e43-ce09-49a4-b9ec-7ccfb32983e9">
-			We’ll see that a similar situation occurs in connection with any first
-			order linear equation \begin {equation} \label {eq:2.1.4}  \frac{dy}{dx}  + p(x)y = f(x);
-			\end {equation}
+			Although the linear 1st order equation we considered was simple and directly 
+			<span class = "vocab">integrable</span>, the same vocabulary summary applies for all 1st order linear differential equations:
 			<a id = "x1-7r4"></a>
-			that is, if \(p\) and \(f\) are continuous on some open interval \((a,b)\)
-			then there’s a unique formula \(y = y(x,c)\) analogous to (
+			\begin {equation} \label {eq:2.1.4}  
+				\frac{dy}{dx}  + p(x)y = f(x)
+			\end {equation}
+			
+			That is, if \(p(x)\) and \(f(x)\) are continuous on some open interval \((a,b)\)
+			then there’s a unique formula \(y = y(x,c)\) analogous to
 			<a href = "#x1-6r3">
-				2.1.3
+				(2.1.3)
 				<!-- tex4ht:ref: eq:2.1.3  -->
-			</a>
-			) that involves \(x\) and a parameter \(c\) and has the these properties:
+			</a>that involves \(x\) and a <span class = "vocab">parameter</span> \(c\) and has the these properties:
 		</p>
 		<ul class = "itemize1" id = "51f7c875-688d-4c65-ab77-10e640a71ae7">
 			<li class = "itemize">
-				For each fixed value of \(c\), the resulting function of \(x\) is a
-				solution of (
+				For each value of \(c\), the resulting function \( y=y(x) \) of is a solution of 
+				solution of
 				<a href = "#x1-7r4">
-					2.1.4
-					<!-- tex4ht:ref: eq:2.1.4  -->
-				</a>
-				) on \((a,b)\).
+					(2.1.4)
+				</a>on <span class = "vocab">interval of validity</span> \((a,b)\)
 			</li>
-			<li class = "itemize">
-				If \(y\) is a solution of (
-				<a href = "#x1-7r4">
-					2.1.4
-					<!-- tex4ht:ref: eq:2.1.4  -->
-				</a>
-				) on \((a,b)\), then \(y\) can be obtained from the formula by choosing
-				\(c\) appropriately.
+			<li>
+				If \( y \) is a solution of <a href = "#x1-7r4">
+					(2.1.4)
+				</a>on \((a,b)\), then \( y \) can be obtained from the equation representing the <span class = "vocab">one-parameter family</span> by choosing \( c \) appropriately
 			</li>
+			<li>
+				We call \( y = y(x,c) \) the <span class = "vocab">general solution</span> and for a specific value of \( c \), we call \( y=y(x) \) a <span class = "vocab">particular solution</span> of<a href = "#x1-7r4">
+					(2.1.4)
+				</a>
+			</li>			
 		</ul>
-		<p class = "noindent" id = "8990d6ec-a4ee-47d8-8e9d-ec1be0bcae65">
-			We’ll call \(y = y(x,c)\) the
-			<span class = "vocab">general solution</span>
-			of (
-			<a href = "#x1-7r4">
-				2.1.4
-				<!-- tex4ht:ref: eq:2.1.4  -->
-			</a>
-			).
-		</p>
 		<p class = "indent" id = "ca24c9f8-c9e5-413c-824e-e2623c0a27a8">
-			When this has been established, it will follow that an equation of the
-			form \begin {equation} \label {eq:2.1.5} P_0(x) \frac{dy}{dx}  + P_1(x)y = F(x) \end
-			{equation}
+			So far we have only considered 1st order linear differential equations in the form:
+
+			\begin{equation*}
+				\frac{dy}{dx} + p(x)y = f(x)
+			\end{equation*}
+
+			However, 1st order linear differential equations could be of the form:
 			<a id = "x1-8r5"></a>
-			has a general solution on any open interval \((a,b)\) on which \(P_0\),
-			\(P_1\), and \(F\) are all continuous and \(P_0\) has no zeros, since in
-			this case we can rewrite (
+			\begin {equation} \label {eq:2.1.5} 
+			P_0(x) \frac{dy}{dx}  + P_1(x)y = F(x) 
+			\end{equation}
+			
+			has a general solution provided \(P_0(x)\),
+			\(P_1(x)\), and \(F(x)\) are all continuous on an open interval \((a,b)\) on which
+			and \(P_0\) has no zeros, since in this case we can rewrite
 			<a href = "#x1-8r5">
-				2.1.5
-				<!-- tex4ht:ref: eq:2.1.5  -->
-			</a>
-			) in the form (
+				(2.1.5)
+			</a>in the form
 			<a href = "#x1-7r4">
-				2.1.4
-				<!-- tex4ht:ref: eq:2.1.4  -->
-			</a>
-			) with \(p = P_1/P_0\) and \(f = F/P_0\), which are both continuous on
-			\((a,b)\).
+				(2.1.4)
+			</a>by dividing by \( P_0(x) \):
+			\begin {equation*} 
+				 \frac{dy}{dx}  + \underset{p(x)}{\underbrace{\frac{P_1(x)}{P_0(x)}}}y = \underset{f(x)}{\underbrace{\frac{F(x)}{P_0(x)}}} 
+			\end{equation*}
+			However, take note of the fact that the <span class = "vocab">intervals of validity</span> might change when we divide by \( P_0(x) \) if \( P_0(x) \) <em>does</em> have any zeros on an interval we are considering. (Exercise 44 for an example.) When we find a <span class = "vocab">general solution</span>, we should include every open <span class = "vocab">interval of validity</span> for which the solution is defined.
+
 		</p>
-		<p class = "indent" id = "69fed566-8f79-4757-9ab6-a54919c6998f">
-			To avoid awkward wording in examples and exercises, we won’t specify the
-			interval \((a,b)\) when we ask for the general solution of a specific
-			linear first order equation. Let’s agree that this always means that we
-			want the general solution on every open interval on which \(p\) and \(f\)
-			are continuous if the equation is of the form (
-			<a href = "#x1-7r4">
-				2.1.4
-				<!-- tex4ht:ref: eq:2.1.4  -->
-			</a>
-			), or on which \(P_0\), \(P_1\), and \(F\) are continuous and \(P_0\) has
-			no zeros, if the equation is of the form (
-			<a href = "#x1-8r5">
-				2.1.5
-				<!-- tex4ht:ref: eq:2.1.5  -->
-			</a>
-			). We leave it to you to identify these intervals in specific examples and
-			exercises.
-		</p>
-		<p class = "indent" id = "3b0c1b4a-1612-4838-bc62-fc875e555193">
-			For completeness, we point out that if \(P_0\), \(P_1\), and \(F\) are all
-			continuous on an open interval \((a,b)\), but \(P_0\)
-			<em>does</em>
-			have a zero in \((a,b)\), then (
-			<a href = "#x1-8r5">
-				2.1.5
-				<!-- tex4ht:ref: eq:2.1.5  -->
-			</a>
-			) may fail to have a general solution on \((a,b)\) in the sense just
-			defined. Since this isn’t a major point that needs to be developed in
-			depth, we won’t discuss it further; however, see Exercise&nbsp;
-			<span class = "ptmb8t-">44</span>
-			for an example.
-		</p>
+
 		<p class = "noindent" id = "b76bd2be-798f-4cc6-a59f-5532755b112f">
 			<span id = "textcolor2">Homogeneous Linear First Order Equations</span>
 		</p>
@@ -309,18 +264,7 @@
 				</p>
 
 				<p class = "indent" id = "ce719b94-df58-478e-a922-50605943faa4">
-					We know that (
-					<a href = "#x1-11r6">
-						2.1.6
-						<!-- tex4ht:ref: eq:2.1.6  -->
-					</a>
-					) has the trivial solution \(y\equiv 0\). Now suppose \(y\) is a
-					nontrivial solution of (
-					<a href = "#x1-11r6">
-						2.1.6
-						<!-- tex4ht:ref: eq:2.1.6  -->
-					</a>
-					). Then, since a differentiable function must be continuous, there must be
+					We know that <a href = "#x1-11r6">(2.1.6)</a> has the trivial solution \(y\equiv 0\). Now suppose \(y\) is a nontrivial solution of <a href = "#x1-11r6">(2.1.6)</a>. Then, since a differentiable function must be continuous, there must be
 					some open interval \(I\) on which \(y\) has no zeros. We rewrite (
 					<a href = "#x1-11r6">
 						2.1.6
