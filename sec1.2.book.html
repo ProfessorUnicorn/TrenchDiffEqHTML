@@ -167,8 +167,8 @@
     </p>
     <div class="newtheorem" id="384c0002-4802-4ef1-aa5f-054a8858e931">
       <p class="noindent">
-        <span class="ex-number">Example&nbsp;1.2.2</span> 
-        <a id="x1-72"></a> Verify that <a href="#x1-8r5">(1.2.5)</a> is a solution of <a href="#x1-9r6">(1.2.6)</a> on \((0,\infty )\) and on \((-\infty ,0)\).
+        <span id="x1-72" class="ex-number">Example&nbsp;1.2.2</span> 
+        Verify that <a href="#x1-8r5">(1.2.5)</a> is a solution of <a href="#x1-9r6">(1.2.6)</a> on \((0,\infty )\) and on \((-\infty ,0)\).
         <a id="x1-8r5"></a>
         \begin {equation} \label {eq:1.2.5} 
           y={x^2\over 3}+{1\over x} 
@@ -178,26 +178,30 @@
           x\frac{dy}{dx}+y=x^2 
         \end {equation} 
       </p>
+
+      <p class="reading-exercise" id="0cbb2d89-5852-44e6-805b-3e7bc167cbd6">
+        Calculate \( \displaystyle \frac{dy}{dx} \) for \( \displaystyle y={x^2\over 3}+{1\over x} \) using the <span class="vocab">power rule</span>
+      </p>
+
+      <details class='solution' id="92d0e10e-4281-4c49-b003-371bf5f868f4">
+        <summary>Solution</summary>
+
+        <p class='noindent' id="fb89956d-f5da-4f7c-95c2-c2b4d0390aae">
+          Substituting \( y \) (<a href="#x1-8r5">1.2.5</a>) and \( \displaystyle \frac{dy}{dx}={2x\over 3} - {1\over x^2} \) into (<a href="#x1-9r6">1.2.6</a>) yields
+          \[ x\left.\frac{dy}{dx}\right|_x+y(x)=x \left ({2x\over 3} - {1\over x^2}\right )+ \left ({x^2\over 3}+{1\over x}\right )=x^2 \]
+          Note that \( y \) is undefined at \( x = 0 \) so therefore \(y\) is a solution of (<a href="#x1-9r6">1.2.6</a>) on \((-\infty ,0)\) and \((0,\infty )\). However, \(y\) isn’t a solution of the differential equation on any open interval that contains \(x=0\), since \(y\) is not defined at \(x=0\).
+        </p>
+
+        <p class="indent" id="6a07830c-c4db-4f84-86ca-d594db684c47"> 
+          Figure&nbsp;<a href="#-y-x-x-">1.2.1</a> shows the graph of the <span class="vocab">integral curve</span> (<a href="#x1-8r5">1.2.5</a>). The segment of the graph of (<a href="#x1-8r5">1.2.5</a>) on \((0,\infty )\) is a <span class="vocab">solution  curve</span> of (<a href="#x1-9r6">1.2.6</a>), as is the segment of the graph on \((-\infty ,0)\).
+        </p>
+        <figure class="figure" id="a22c3ee7-00b9-4646-a119-454b1af7f964">
+          <p class="noindent" id="-y-x-x-"><img height="264" src="EPS/fig010201.png" width="409"> <a id="x1-13r1"></a></p>
+          <figcaption class="caption"><span class="id">Figure&nbsp;1.2.1 </span><span class="content">\(y=\displaystyle {\frac
+              {x^{2}}{3}+\frac {1}{x}}\) </span></figcaption><!-- tex4ht:label?: x1-13r1  -->
+        </figure>
+      </details>
     </div>
-    <p class="reading-exercise" id="0cbb2d89-5852-44e6-805b-3e7bc167cbd6">
-      Calculate \( \displaystyle \frac{dy}{dx} \) for \( \displaystyle y={x^2\over 3}+{1\over x} \) using the <span class="vocab">power rule</span>
-    </p>       
-    <p class="indent" id="c3307a0e-b660-4281-9229-2bf9ae558dad">
-    </p>
-    <p class="noindent" id="92d0e10e-4281-4c49-b003-371bf5f868f4">
-      <span class="ptmb8t-">Solution </span>&nbsp;
-      Substituting \( y \) (<a href="#x1-8r5">1.2.5</a>) and \( \displaystyle \frac{dy}{dx}={2x\over 3} - {1\over x^2} \) into (<a href="#x1-9r6">1.2.6</a>) yields
-      \[ x\left.\frac{dy}{dx}\right|_x+y(x)=x \left ({2x\over 3} - {1\over x^2}\right )+ \left ({x^2\over 3}+{1\over x}\right )=x^2 \]
-      Note that \( y \) is undefined at \( x = 0 \) so therefore \(y\) is a solution of (<a href="#x1-9r6">1.2.6</a>) on \((-\infty ,0)\) and \((0,\infty )\). However, \(y\) isn’t a solution of the differential equation on any open interval that contains \(x=0\), since \(y\) is not defined at \(x=0\).
-    </p>
-    <p class="indent" id="6a07830c-c4db-4f84-86ca-d594db684c47"> 
-      Figure&nbsp;<a href="#-y-x-x-">1.2.1</a> shows the graph of the <span class="vocab">integral curve</span> (<a href="#x1-8r5">1.2.5</a>). The segment of the graph of (<a href="#x1-8r5">1.2.5</a>) on \((0,\infty )\) is a <span class="vocab">solution  curve</span> of (<a href="#x1-9r6">1.2.6</a>), as is the segment of the graph on \((-\infty ,0)\).
-    </p>
-    <figure class="figure" id="a22c3ee7-00b9-4646-a119-454b1af7f964">
-      <p class="noindent" id="-y-x-x-"><img height="264" src="EPS/fig010201.png" width="409"> <a id="x1-13r1"></a></p>
-      <figcaption class="caption"><span class="id">Figure&nbsp;1.2.1 </span><span class="content">\(y=\displaystyle {\frac
-          {x^{2}}{3}+\frac {1}{x}}\) </span></figcaption><!-- tex4ht:label?: x1-13r1  -->
-    </figure>    
 
     <div class="newtheorem" id="bfe278b0-8ed3-4798-832b-f62f7c27ce0c">
       <p class="noindent">
@@ -212,102 +216,108 @@
           \frac{d^2y}{dx^2} + 2 \frac{dy}{dx} + y = 2x 
         \end {equation} 
       </p>
+
+      <p class="reading-exercise" id="085c43af-5ff5-411c-af11-1e18d97c10e6">
+        Calculate \( \displaystyle \frac{dy}{dx} \) and \( \displaystyle \frac{d^2y}{dx^2} \)  for \( \displaystyle y=(c_1+c_2x)e^{-x}+2x-4 \) using the <span class="vocab">product rule</span>
+      </p>
+
+      <details class='solution' id="51a3ed66-986e-46bd-9d2b-7649deda5708">
+        <summary>Solution</summary>
+
+        <p class="noindent" id="bee02374-32a1-4c97-99df-ff23db4fe4e7">
+          Differentiating (<a href="#x1-11r7">1.2.7</a>) twice yields 
+          \[ 
+            \frac{dy}{dx} = 2 + (-c_1 + c_2 -c_2x) e^{-x}
+            \quad
+            \text{and}
+            \quad
+            \frac{d^2y}{dx^2} = (c_1 - 2c_2 + c_2x) e^{-x} 
+          \] 
+          Substituting in to <a href="#x1-12r8">(1.2.8)</a>
+          \begin{align*}
+            \begin{array}{rlllllrll}
+              \displaystyle \frac{d^2y}{dx^2}    = &amp;    &amp;   &amp;    &amp;    &amp; (   &amp; c_1   &amp; - &amp; 2c_2 &amp; + &amp; c_2 x  &amp; )e^{-x} \\
+              2 \displaystyle \frac{dy}{dx}      = &amp;    &amp;   &amp; 4  &amp; +  &amp; (   &amp; -2c_1 &amp; + &amp; 2c_2 &amp; - &amp; 2c_2 x &amp; )e^{-x} \\
+              + \quad \quad \quad \quad \quad y  = &amp; 2x &amp; - &amp; 4  &amp; +  &amp; (   &amp; c_1   &amp;   &amp;      &amp; + &amp; c_2 x  &amp; )e^{-x} \\
+              \hline \\
+              \displaystyle \frac{d^2y}{dx^2} 
+                + 2 \displaystyle\frac{dy}{dx} 
+                  + y                            = &amp; 2x &amp;   &amp;    &amp; +  &amp; (  
+                                                                            &amp; \overset{1-2+1}{\overbrace{0}}c_1   &amp; + 
+                                                                            &amp; \overset{-2+2}{\overbrace{0}}c_2 &amp; + 
+                                                                            &amp; \overset{1-2+1}{\overbrace{0}} c_2x &amp; )e^{-x} \\ \\
+              \displaystyle \frac{d^2y}{dx^2} 
+              + 2 \displaystyle\frac{dy}{dx} 
+                + y                            \overset{\checkmark}{=} &amp; 2x &amp; &amp; &amp; &amp; &amp; &amp; &amp; &amp; &amp; &amp; \\                
+            \end{array}
+          \end{align*}      
+          \[ \]
+          for all values of \(x\). Therefore (<a href="#x1-11r7">1.2.7</a>) is a solution of (<a href="#x1-12r8">1.2.8</a>) on \((-\infty ,\infty )\)
+        </p>
+      </details>
     </div>
-    <p class="indent" id="34f17e00-6943-4c6c-959c-3d108ef44b8b">
-    </p>
-    <p class="reading-exercise" id="085c43af-5ff5-411c-af11-1e18d97c10e6">
-      Calculate \( \displaystyle \frac{dy}{dx} \) and \( \displaystyle \frac{d^2y}{dx^2} \)  for \( \displaystyle y=(c_1+c_2x)e^{-x}+2x-4 \) using the <span class="vocab">product rule</span>
-    </p>       
-    <p class="noindent" id="bee02374-32a1-4c97-99df-ff23db4fe4e7">
-      <span class="ptmb8t-">Solution </span>&nbsp;
-      Differentiating (<a href="#x1-11r7">1.2.7</a>) twice yields 
-      \[ 
-        \frac{dy}{dx} = 2 + (-c_1 + c_2 -c_2x) e^{-x}
-        \quad
-        \text{and}
-        \quad
-        \frac{d^2y}{dx^2} = (c_1 - 2c_2 + c_2x) e^{-x} 
-      \] 
-      Substituting in to <a href="#x1-12r8">(1.2.8)</a>
-      \begin{align*}
-        \begin{array}{rlllllrll}
-          \displaystyle \frac{d^2y}{dx^2}    = &amp;    &amp;   &amp;    &amp;    &amp; (   &amp; c_1   &amp; - &amp; 2c_2 &amp; + &amp; c_2 x  &amp; )e^{-x} \\
-          2 \displaystyle \frac{dy}{dx}      = &amp;    &amp;   &amp; 4  &amp; +  &amp; (   &amp; -2c_1 &amp; + &amp; 2c_2 &amp; - &amp; 2c_2 x &amp; )e^{-x} \\
-          + \quad \quad \quad \quad \quad y  = &amp; 2x &amp; - &amp; 4  &amp; +  &amp; (   &amp; c_1   &amp;   &amp;      &amp; + &amp; c_2 x  &amp; )e^{-x} \\
-          \hline \\
-          \displaystyle \frac{d^2y}{dx^2} 
-            + 2 \displaystyle\frac{dy}{dx} 
-              + y                            = &amp; 2x &amp;   &amp;    &amp; +  &amp; (  
-                                                                        &amp; \overset{1-2+1}{\overbrace{0}}c_1   &amp; + 
-                                                                        &amp; \overset{-2+2}{\overbrace{0}}c_2 &amp; + 
-                                                                        &amp; \overset{1-2+1}{\overbrace{0}} c_2x &amp; )e^{-x} \\ \\
-          \displaystyle \frac{d^2y}{dx^2} 
-          + 2 \displaystyle\frac{dy}{dx} 
-            + y                            \overset{\checkmark}{=} &amp; 2x &amp; &amp; &amp; &amp; &amp; &amp; &amp; &amp; &amp; &amp; \\                
-        \end{array}
-      \end{align*}      
-      \[ \]
-      for all values of \(x\). Therefore (<a href="#x1-11r7">1.2.7</a>) is a solution of (<a href="#x1-12r8">1.2.8</a>) on \((-\infty ,\infty )\)
-    </p>
+
     <div class="newtheorem" id="f3d78399-944a-492b-994f-0f5502f9cb93">
       <p class="noindent">
         <span class="ex-number">Example&nbsp;1.2.4</span>
         <a id="x1-144"></a> Find all solutions of \begin {equation}
         \label {eq:1.2.9} \frac{d^ny}{dx^n}=e^{2x}\end {equation}<a id="x1-15r9"></a>
       </p>
+
+      <details class='solution' id="51a3ed66-986e-46bd-9d2b-7649deda5708">
+        <summary>Solution</summary>
+        <p class="noindent" id="a98fd397-0f08-4e0e-8681-f3da5846a0ec"><span class="ptmb8t-">Solution </span>&nbsp;
+          Antidifferentiating repeatedly (<a href="#x1-15r9">1.2.9</a>) yields
+          \begin{align*}
+            \frac{d^{n-1}y}{dx^{n-1}} = &amp; \frac{1}{2} e^{2x} + k_1 \\ \\
+            \frac{d^{n-2}y}{dx^{n-2}} = &amp; \frac{1}{4} e^{2x} + k_1x + k_2 \\ \\
+            \frac{d^{n-3}y}{dx^{n-3}} = &amp; \frac{1}{8} e^{2x} + \frac{1}{2}k_1x^2 + k_2x + k_3 \\ \\
+            \frac{d^{n-4}y}{dx^{n-4}} = &amp; \frac{1}{16} e^{2x} + \frac{1}{6}k_1x^3 + \frac{1}{2}k_2x^2 + k_3x + k_4 \\ \\
+            \frac{d^{n-5}y}{dx^{n-5}} = &amp; \frac{1}{32} e^{2x} + \frac{1}{24}k_1x^4 + \frac{1}{6}k_2x^3 + \frac{1}{2}k_3x^2 + k_4x + k_5 \\ \\
+          \end{align*}  
+        </p>
+        <p class="reading-exercise" id="449253c8-1685-4bc6-863d-6f087cd0c3ec">
+          Show all the work for calculating the first five antiderivatives
+        </p>
+        <p id="36fd2164-0be3-4855-8697-1987456edd02">
+          Notice the pattern on the \( e^{2x} \) terms; the \( n^{th} \) derivative has a factor of \( \displaystyle \frac{1}{2^n} \):
+          \[ \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \frac{1}{32}, \dots \]
+        </p>
+        <p id="767b7dac-f608-4635-8b6f-cf2c4f79a189">  
+          Notice the pattern on the rest of the terms; the coefficients are factorials: 
+          \[ 	\underset{0!}{\underbrace{1}}, 
+              \underset{1!}{\underbrace{1}}, 
+              \underset{2!}{\underbrace{2}}, 
+              \underset{3!}{\underbrace{6}}, 
+              \underset{4!}{\underbrace{24}}, 
+              \dots
+          \]
+        </p>
+        <p id="5a96357c-5ad0-4ba5-9ab1-20709a2646fe"> 
+          Incorporating these patterns, flipping the order of the polynomial terms, and renaming the arbitrary constants, we can rewrite the fifth antiderivative more simply:
+          \begin{align*}
+            \frac{d^{n-5}y}{dx^{n-5}} 
+            = &amp; \frac{1}{32} e^{2x} + \frac{1}{24}k_1x^4 + \frac{1}{6}k_2x^3 + \frac{1}{2}k_3x^2 + k_4x + k_5 \\
+            = &amp; \frac{1}{2^5} e^{2x} + \frac{1}{4!}k_1x^4 + \frac{1}{3!}k_2x^3 + \frac{1}{2!}k_3x^2 + \frac{1}{1!}k_4x + \frac{1}{0!}k_5 \\
+            = &amp; \frac{1}{2^5} e^{2x} + \frac{1}{0!}K_0 + \frac{1}{1!} K_1 x + \frac{1}{2!} K_2 x^2 + \frac{1}{3!} K_3 x^3 + \frac{1}{4!} K_4 x^4 \\
+            = &amp; \frac{1}{2^5} e^{2x} + \underbrace{ c_0 + c_1 x + c_2 x^2 + c_3 x^3 + c_4 x^4 } \\        
+            = &amp; \frac{1}{2^5} e^{2x} + \sum_{n=0}^{4} { c_n x^n } 
+          \end{align*}
+        </p>
+        <p id="d309171c-c81d-438a-ac37-e8497fa22131">
+          Therefore all solutions of (<a href="#x1-15r9">1.2.9</a>) can be written as
+          <a id="x1-16r10"></a> 
+          \begin {equation} \label {eq:1.2.10} 
+            y = \frac{1}{2^n} e^{2x} + c_0 + c_1 x + c_2 x^2 + \cdots +c_n x^n = \frac{1}{2^n} e^{2x} + \sum_{n=0}^{n} { c_n x^n } 
+          \end {equation}
+          where we renamed the arbitrary constants to make the formula as simple as possible. As a general rule, arbitrary
+          constants appearing in solutions of differential equations should be simplified whenever possible.
+        </p>
+        <p class="reading-exercise" id="ed9090d6-3e9a-48bd-a460-09f943ba4560">
+          Reewrite the first five antiderivatives above using sigma notation
+        </p>
+      </details>
     </div>
-    <p class="indent" id="ab3982ee-f725-45a9-81cb-b9eacf658788">
-    </p>
-    <p class="noindent" id="a98fd397-0f08-4e0e-8681-f3da5846a0ec"><span class="ptmb8t-">Solution </span>&nbsp;
-      Antidifferentiating repeatedly (<a href="#x1-15r9">1.2.9</a>) yields
-      \begin{align*}
-        \frac{d^{n-1}y}{dx^{n-1}} = &amp; \frac{1}{2} e^{2x} + k_1 \\ \\
-        \frac{d^{n-2}y}{dx^{n-2}} = &amp; \frac{1}{4} e^{2x} + k_1x + k_2 \\ \\
-        \frac{d^{n-3}y}{dx^{n-3}} = &amp; \frac{1}{8} e^{2x} + \frac{1}{2}k_1x^2 + k_2x + k_3 \\ \\
-        \frac{d^{n-4}y}{dx^{n-4}} = &amp; \frac{1}{16} e^{2x} + \frac{1}{6}k_1x^3 + \frac{1}{2}k_2x^2 + k_3x + k_4 \\ \\
-        \frac{d^{n-5}y}{dx^{n-5}} = &amp; \frac{1}{32} e^{2x} + \frac{1}{24}k_1x^4 + \frac{1}{6}k_2x^3 + \frac{1}{2}k_3x^2 + k_4x + k_5 \\ \\
-      \end{align*}  
-    </p>
-    <p class="reading-exercise" id="449253c8-1685-4bc6-863d-6f087cd0c3ec">
-      Show all the work for calculating the first five antiderivatives
-    </p>     
-    <p id="36fd2164-0be3-4855-8697-1987456edd02">
-      Notice the pattern on the \( e^{2x} \) terms; the \( n^{th} \) derivative has a factor of \( \displaystyle \frac{1}{2^n} \):
-      \[ \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \frac{1}{32}, \dots \]
-    </p>
-    <p id="767b7dac-f608-4635-8b6f-cf2c4f79a189">  
-      Notice the pattern on the rest of the terms; the coefficients are factorials: 
-      \[ 	\underset{0!}{\underbrace{1}}, 
-          \underset{1!}{\underbrace{1}}, 
-          \underset{2!}{\underbrace{2}}, 
-          \underset{3!}{\underbrace{6}}, 
-          \underset{4!}{\underbrace{24}}, 
-          \dots
-      \]
-    </p>
-    <p id="5a96357c-5ad0-4ba5-9ab1-20709a2646fe"> 
-      Incorporating these patterns, flipping the order of the polynomial terms, and renaming the arbitrary constants, we can rewrite the fifth antiderivative more simply:
-      \begin{align*}
-        \frac{d^{n-5}y}{dx^{n-5}} 
-        = &amp; \frac{1}{32} e^{2x} + \frac{1}{24}k_1x^4 + \frac{1}{6}k_2x^3 + \frac{1}{2}k_3x^2 + k_4x + k_5 \\
-        = &amp; \frac{1}{2^5} e^{2x} + \frac{1}{4!}k_1x^4 + \frac{1}{3!}k_2x^3 + \frac{1}{2!}k_3x^2 + \frac{1}{1!}k_4x + \frac{1}{0!}k_5 \\
-        = &amp; \frac{1}{2^5} e^{2x} + \frac{1}{0!}K_0 + \frac{1}{1!} K_1 x + \frac{1}{2!} K_2 x^2 + \frac{1}{3!} K_3 x^3 + \frac{1}{4!} K_4 x^4 \\
-        = &amp; \frac{1}{2^5} e^{2x} + \underbrace{ c_0 + c_1 x + c_2 x^2 + c_3 x^3 + c_4 x^4 } \\        
-        = &amp; \frac{1}{2^5} e^{2x} + \sum_{n=0}^{4} { c_n x^n } 
-      \end{align*}
-    </p>
-    <p id="d309171c-c81d-438a-ac37-e8497fa22131">
-      Therefore all solutions of (<a href="#x1-15r9">1.2.9</a>) can be written as
-      <a id="x1-16r10"></a> 
-      \begin {equation} \label {eq:1.2.10} 
-        y = \frac{1}{2^n} e^{2x} + c_0 + c_1 x + c_2 x^2 + \cdots +c_n x^n = \frac{1}{2^n} e^{2x} + \sum_{n=0}^{n} { c_n x^n } 
-      \end {equation}
-      where we renamed the arbitrary constants to make the formula as simple as possible. As a general rule, arbitrary
-      constants appearing in solutions of differential equations should be simplified whenever possible.
-    </p>
-    <p class="reading-exercise" id="ed9090d6-3e9a-48bd-a460-09f943ba4560">
-      Reewrite the first five antiderivatives above using sigma notation
-    </p>       
   </details>
 
   <details id="5eaac97d-d99e-4a64-9a9d-f956ef96c666">
@@ -322,30 +332,33 @@
         <a id="x1-175"></a> Find a solution of the differential equation such that \(y(1)=2\)
         \[ \frac{dy}{dx}=x^3 \]
       </p>
-    </div>
-    <p class="indent" id="cfd92c84-bb9c-41e2-b248-c15c1e1855b6">
-    </p>
-    <p class="noindent" id="b224947b-14a0-4b2e-8e5d-4c34ca2330d0"><span class="ptmb8t-">Solution </span>&nbsp;
-      At the beginning of this section we found the <span class="vocab">general solution</span> of this equation:
-      \[ y = \frac{1}{4} x^4 + c \]
-      We can determine a value of \(c\) that satisfies the <span class="vocab">initial condition</span> \(y(1)=2\), by simply evaluating the solution at \( x=2 \):
-      \begin{align*}
-        y(x) = &amp; \frac{1}{4}x^{4} + c \\ \\
-        \underset{2}{\underbrace{y(1)}} = &amp; \frac{1}{4}\left(1\right)^{4} + c \\
-        2 = &amp; \frac{1}{4}+ c \Longrightarrow c = \frac{7}{4}  \\
-      \end{align*} 
-      Substituting in \( c = \frac{7}{4} \), we obtain the <span class="vocab">particular solution</span>:
-      \[ y(x) = \frac{1}{4}x^{4} +  \frac{7}{4} = \frac{1}{4}\left(x^2 + 7\right) \]
-    </p>
-    <p class="indent" id="3d8bc9e5-87ab-4705-8841-d47471e3c750"> Figure&nbsp;<a href="#-y-x-">1.2.2<!-- tex4ht:ref: figure:1.2.2  --></a> shows the graph of this
-      solution. Note that imposing the condition \(y(1)=2\) is equivalent to requiring the
-      graph of \(y\) to pass through the point \((1,2)\).
-    </p>
 
-    <figure class="figure" id="3c7ea326-644b-42e3-a901-49bf3657b772">
-      <p class="noindent" id="-y-x-"><img height="264" src="EPS/fig010202.png" width="409"> <a id="x1-19r2"></a></p>
-      <figcaption class="caption"><span class="id">Figure&nbsp;1.2.2 </span><span class="content">\(y=\displaystyle \frac{1}{4}\left(x^2 + 7\right) \) </span></figcaption><!-- tex4ht:label?: x1-19r2  -->
-    </figure>
+      <details class='solution' id="66f647c4-7d0f-4284-9ccf-5a904d890f42">
+        <summary>Solution</summary>
+
+        <p class="noindent" id="b224947b-14a0-4b2e-8e5d-4c34ca2330d0">
+          At the beginning of this section we found the <span class="vocab">general solution</span> of this equation:
+          \[ y = \frac{1}{4} x^4 + c \]
+          We can determine a value of \(c\) that satisfies the <span class="vocab">initial condition</span> \(y(1)=2\), by simply evaluating the solution at \( x=2 \):
+          \begin{align*}
+            y(x) = &amp; \frac{1}{4}x^{4} + c \\ \\
+            \underset{2}{\underbrace{y(1)}} = &amp; \frac{1}{4}\left(1\right)^{4} + c \\
+            2 = &amp; \frac{1}{4}+ c \Longrightarrow c = \frac{7}{4}  \\
+          \end{align*} 
+          Substituting in \( c = \frac{7}{4} \), we obtain the <span class="vocab">particular solution</span>:
+          \[ y(x) = \frac{1}{4}x^{4} +  \frac{7}{4} = \frac{1}{4}\left(x^2 + 7\right) \]
+        </p>
+        <p class="indent" id="3d8bc9e5-87ab-4705-8841-d47471e3c750"> Figure&nbsp;<a href="#-y-x-">1.2.2<!-- tex4ht:ref: figure:1.2.2  --></a> shows the graph of this
+          solution. Note that imposing the condition \(y(1)=2\) is equivalent to requiring the
+          graph of \(y\) to pass through the point \((1,2)\).
+        </p>
+
+        <figure class="figure" id="3c7ea326-644b-42e3-a901-49bf3657b772">
+          <p class="noindent" id="-y-x-"><img height="264" src="EPS/fig010202.png" width="409"> <a id="x1-19r2"></a></p>
+          <figcaption class="caption"><span class="id">Figure&nbsp;1.2.2 </span><span class="content">\(y=\displaystyle \frac{1}{4}\left(x^2 + 7\right) \) </span></figcaption><!-- tex4ht:label?: x1-19r2  -->
+        </figure>
+      </details>
+    </div>
 
     <p class="indent" id="bc8bf255-8b4d-4e48-8209-21496b18ce9b"> 
       We can rewrite the problem considered in Example&nbsp;<a href="#x1-175">1.2.5</a> more briefly as
@@ -381,6 +394,7 @@
       (<a href="#x1-20r12">1.2.12</a>). 
       The largest open interval that contains \(x_0\) on which \(y\) is defined and satisfies the differential equation is called the <span class="vocab">interval of validity</span> of \(y\).
     </p>
+
     <div class="newtheorem" id="d7a209d3-eeb2-4a3a-bb8f-eb0c34ef4f3d">
       <p class="noindent">
         <span class="ex-number">Example&nbsp;1.2.6</span> 
@@ -395,8 +409,7 @@
         the <span class="vocab">interval of validity</span> of this solution is \((-\infty ,\infty ) \)
       </p>
     </div>
-    <p class="indent" id="e96a4a1d-eda3-440f-8bb3-713d50789f90">
-    </p>
+
     <div class="newtheorem" id="edb43e47-478e-4dc5-b0cb-90c8849ed938">
       <p class="noindent">
         <span class="ex-number">Example&nbsp;1.2.7</span> 
@@ -428,6 +441,7 @@
       </p>
     </div>
   </details>
+
   <details id="4091eae1-6353-4522-a340-062694d0b9e6">
     <summary>Free Fall Under Constant Gravity</summary>
 
@@ -435,6 +449,7 @@
       the independent variable is \(t\) (representing
       elapsed time), and the initial conditions are the <span class="vocab">position</span> and <span class="vocab">velocity</span> of an object at the initial time of an experiment.
     </p>
+
     <div class="newtheorem" id="b0000e3d-a425-4cf9-817d-4a66480dbb92">
       <p class="noindent">
         <span class="ex-number">Example&nbsp;1.2.8</span>
@@ -442,46 +457,46 @@
         An object falls under the influence of <span class="vocab">gravity</span> near Earth’s surface, where it can be assumed that the magnitude of the acceleration due to gravity is a constant \(g\).
         Using <span class="vocab">Newton's 2nd law of motion</span>, construct a mathematical model for the motion of the object in the form of an initial value problem for a second order differential equation, assuming that the height and velocity of the object at time \(t=0\) are known. Assume that gravity is the only force acting on the object. Solve the initial value problem to obtain the height as a function of time
       </p>
-    </div> 
-    <p class="indent" id="6d749057-a362-42fa-97dc-86f605f4e0d4">
-    </p>
 
-    <p class="noindent" id="2d14e395-4019-419f-b53b-142267b56647"><span class="ptmb8t-">Solution </span>&nbsp;
-      Recall <span class="vocab">Newton's 2nd law of motion</span>, \( F = ma \), the force \( F \) acting on the object is equal to the mass \( m \) of the object times the acceleration \( a \) of the object. Acceleration is the derivative of velocity and velocity is the derivative of position so position is the second derivative of acceleration and can be written as  \( a = \ddot{y} \) where \(y(t)\) represent the position (height) of the object at time \(t\). The only force acting on the object is <span class="vocab">gravity</span> and the acceleration due to gravity is in the downward (negative) direction, so the total force \( F \) is given by \( -mg \). Thus <span class="vocab">Newton's 2nd law of motion</span> can be rewritten to represent a second order differential equation modeling this situation:
-      \begin{equation*}
-        F = ma \Longrightarrow
-        -mg = m \ddot{y} \Longrightarrow
-        -g = \ddot{y}
-      \end{equation*}
-      where the dot notation indicates differentiation with respect to \(t\). If \(y_0 \) denotes the initial height and \(v_0\) denotes the initial velocity when \(t=0\), then \(y\) is a solution of the initial value problem 
-      <a id="x1-30r17"></a>
-      \begin {equation} \label {eq:1.2.17} 
-        \ddot{y}=-g \quad
-        y(0)=y_0 \quad 
-        \dot{y}(0)=v_0
-      \end {equation}
-      Which can be solved by antidifferentiating twice:
-      \begin {align*}
-        \ddot{y} = &amp; -g \\
-        \Longrightarrow
-        \dot{y} = &amp; -gt + c_1 \\
-        \Longrightarrow
-        y = &amp; -\frac{1}{2}gt^2 + c_1 t + c_2 \\
-      \end {align*}      
-    </p>
-    <p class="reading-exercise" id="7dc52b16-d26c-4b27-8258-b80f323fa9ba">
-      Show all the work for calculating the two antiderivatives
-    </p> 
-    <p id="b2e3d010-438a-44f3-9e3b-2324218add95">
-      Imposing the initial conditions \(y(0)=y_0\) and \( \dot{y}(0)=v_0 \) in these two equations shows that
-      \(c_1=v_0\) and \(c_2=y_0\). Therefore the solution of the initial value problem <a href="#x1-30r17">(1.2.17)</a> is
-      \[ y = - \frac{1}{2} gt^2 + v_0 t + y_0 \]
-    </p>    
-    <p class="reading-exercise" id="7358d49e-bf70-4116-a730-b9c960212a8b">
-      Show all the work for applying the initial conditions
-    </p>     
-    <p class="indent" id="44d71d83-4b75-4e2b-80ff-85a3bf12c7b5"> 
-    </p>
+      <details class="solution" id="6d749057-a362-42fa-97dc-86f605f4e0d4">
+        <summary>Solution</summary>
+
+          <p class="noindent" id="2d14e395-4019-419f-b53b-142267b56647">
+            Recall <span class="vocab">Newton's 2nd law of motion</span>, \( F = ma \), the force \( F \) acting on the object is equal to the mass \( m \) of the object times the acceleration \( a \) of the object. Acceleration is the derivative of velocity and velocity is the derivative of position so position is the second derivative of acceleration and can be written as  \( a = \ddot{y} \) where \(y(t)\) represent the position (height) of the object at time \(t\). The only force acting on the object is <span class="vocab">gravity</span> and the acceleration due to gravity is in the downward (negative) direction, so the total force \( F \) is given by \( -mg \). Thus <span class="vocab">Newton's 2nd law of motion</span> can be rewritten to represent a second order differential equation modeling this situation:
+            \begin{equation*}
+              F = ma \Longrightarrow
+              -mg = m \ddot{y} \Longrightarrow
+              -g = \ddot{y}
+            \end{equation*}
+            where the dot notation indicates differentiation with respect to \(t\). If \(y_0 \) denotes the initial height and \(v_0\) denotes the initial velocity when \(t=0\), then \(y\) is a solution of the initial value problem 
+            <a id="x1-30r17"></a>
+            \begin {equation} \label {eq:1.2.17} 
+              \ddot{y}=-g \quad
+              y(0)=y_0 \quad 
+              \dot{y}(0)=v_0
+            \end {equation}
+            Which can be solved by antidifferentiating twice:
+            \begin {align*}
+              \ddot{y} = &amp; -g \\
+              \Longrightarrow
+              \dot{y} = &amp; -gt + c_1 \\
+              \Longrightarrow
+              y = &amp; -\frac{1}{2}gt^2 + c_1 t + c_2 \\
+            \end {align*}      
+          </p>
+          <p class="reading-exercise" id="7dc52b16-d26c-4b27-8258-b80f323fa9ba">
+            Show all the work for calculating the two antiderivatives
+          </p> 
+          <p id="b2e3d010-438a-44f3-9e3b-2324218add95">
+            Imposing the initial conditions \(y(0)=y_0\) and \( \dot{y}(0)=v_0 \) in these two equations shows that
+            \(c_1=v_0\) and \(c_2=y_0\). Therefore the solution of the initial value problem <a href="#x1-30r17">(1.2.17)</a> is
+            \[ y = - \frac{1}{2} gt^2 + v_0 t + y_0 \]
+          </p>    
+          <p class="reading-exercise" id="7358d49e-bf70-4116-a730-b9c960212a8b">
+            Show all the work for applying the initial conditions
+          </p>
+      </details>
+    </div> 
   </details>
 
   <div class="nav" id="80f5120d-196a-4759-9fd5-d71bfde88487">

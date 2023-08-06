@@ -8,14 +8,27 @@ function getSectionNumber() {
 	return _private.sectionNumber;
 }
 
-function onToggleDetails(event) {
-	let detailsItem = event.target;
+function getDetailsKey(detailsItem) {
+	if (detailsItem.hasAttribute('id')) {
+		return `${getSectionNumber()}-${detailsItem.getAttribute('id')}`;
+	}
+
 	let summary = detailsItem.querySelector('summary');
 	if (!summary) {
+		return null;
+	}
+
+	return `${getSectionNumber()}-${summary.textContent}`;
+}
+
+function onToggleDetails(event) {
+	let detailsItem = event.target;
+
+	let key = getDetailsKey(detailsItem);
+	if (!key) {
 		return;
 	}
 
-	let key = `${getSectionNumber()}-${summary.textContent}`;
 	if (detailsItem.hasAttribute('open')) {
 		localStorage[key] = true;
 	} else {
@@ -28,12 +41,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	let detailsList = document.querySelectorAll('details');
 	for (let detailsItem of detailsList) {
-		let summary = detailsItem.querySelector('summary');
-		if (!summary) {
+		let key = getDetailsKey(detailsItem);
+		if (!key) {
 			continue;
 		}
-
-		let key = `${sectionNumber}-${summary.textContent}`;
+		
 		if (localStorage[key]) {
 			detailsItem.setAttribute('open', 'open');
 		}
