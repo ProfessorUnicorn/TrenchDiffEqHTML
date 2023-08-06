@@ -95,29 +95,43 @@
     <p class='noindent'>
       Although the number of members of a population (people in a given country, bacteria in a laboratory culture,
       wildflowers in a forest, etc.) at any given time \(t\) is necessarily an integer, models that use differential equations to describe the growth and decay of populations usually rest on the simplifying assumption that the number of members of the population can be regarded as a differentiable function \(P=P(t)\). In most models it is assumed that the differential equation takes the form 
+      <a id='x1-2r1'></a>
       \begin {equation} \label {eq:1.1.1} 
         \dot{P}=a(P)P(t)
       \end {equation}
-      <a id='x1-2r1'></a> where \(a=a(P)\) is a continuous function of \(P\) that represents the rate of
+      where \(a=a(P)\) is a continuous function of \(P\) that represents the rate of
       change of population per unit time per individual. In the <span class='vocab'>Malthusian model</span>, it
       is assumed that \(a(P)\) is a constant, so (<a href='#x1-2r1'>1.1.1</a>) becomes 
+      <a id='x1-3r2'></a> 
       \begin {equation} \label {eq:1.1.2}
         \dot{P}=aP
-      \end {equation}<a id='x1-3r2'></a> 
+      \end {equation}
       This model assumes that the numbers of births and deaths per unit time are both proportional to the population. The constants of proportionality are the <span class='vocab'>birth rate</span>
-      (births per unit time per individual) and the <span class='vocab'>death rate</span> (deaths per unit time per individual); \(a\) is the birth rate minus the death rate. From calculus, we know if \(c\) is any <span class='vocab'>arbitrary constant</span> then \begin {equation} \label {eq:1.1.3}
-      P=ce^{at} \end {equation}<a id='x1-4r3'></a> satisfies (<a href='#x1-3r2'>1.1.2</a>),
-      so (<a href='#x1-3r2'>1.1.2</a>) has
-      infinitely many solutions represented by different values for \(c\). We call this our <span class='vocab'>general solution</span>.
-      To select the solution of the specific problem that we’re considering, we must
-      know the population \(P_0\) at an initial time, say \(t=0\). Setting \(t=0\) in (<a
-        href='#x1-4r3'>1.1.3</a>) yields \(c=P(0)=P_0\), so the applicable solution
-      is \[ P(t)=P_0e^{at}\]
-      This implies that
+      (births per unit time per individual) and the <span class='vocab'>death rate</span> (deaths per unit time per individual); \(a\) is the birth rate minus the death rate. 
+    </p> 
+    <p class='noindent'> 
+      From calculus, recall a function whose derivative is proportional to the original function as in <a href='#x1-3r2'>(1.1.2)</a>. Ignoring the constant or proportionality, what function is actually equal to its derivative?
+      \[\dot{P} = P\]
+      Of course, exponential functions! \(\displaystyle \frac{d}{dt} \left( e^t \right) = e^t\) and accounting for the constant \(a\), the function \(P = e^{at}\) satisfies <a href='#x1-3r2'>(1.1.2)</a>. In fact, including any <span class='vocab'>arbitrary constant</span> factor still satisfies (<a href='#x1-3r2'>1.1.2</a>):
+      <a id='x1-4r3'></a> 
+      \begin {equation} \label {eq:1.1.3}
+        P=ce^{at}
+      \end {equation} 
+    </p>
+    <p class="reading-exercise">
+      Verify \(P=ce^{at}\) is a solution to \(\dot{P} = aP\)
+    </p>    
+    <p class='noindent'>   
+      We call Equation (<a href='#x1-4r3'>1.1.3</a>) the <span class='vocab'>general solution</span> as the <span class='vocab'>arbitrary constant</span> \(c\) represents infinitely many possible solutions. To select a specific solution, we must know some <span class='vocab'>initial condition</span> such as the initial population \(P_0\) at an initial time, say \(t=0\). Setting \(t=0\) in (<a
+        href='#x1-4r3'>1.1.3</a>) yields \(c=P(0)=P_0\), so the <span class='vocab'>particular solution</span>
+      is 
+      \[ P(t)=P_0e^{at}\]
+    </p>    
+    <p class='noindent'>      
+      However, this is only a mathematical model and it can not model a real-life situation perfectly forever. For positive \(a\) values, this equation grows exponentially forever and for negative \(a\) values, approaches zero:  
       \[ \lim _{t\to \infty }P(t)=\left \{\begin {array}{cl}\infty&amp; \mbox { if }a&gt;0\\ 0&amp;\mbox { if }a&lt;0
       \end {array}\right. \]
-      that is, the population approaches infinity if the birth rate exceeds the death rate, or zero if the death rate
-      exceeds the birth rate.
+      That is, the model indicates that the population approaches infinity if the birth rate exceeds the death rate, or zero if the death rate exceeds the birth rate. Remember this is only a model and it can only model the population growth accurately for range of time when the resources of the resources needed to reproduce (food, water, air, shelter, etc.) are effectively infinite.
     </p>
     <p class="reading-exercise">
       For \(a &lt; 0\), use the limit laws to show the \(\lim _{t\to \infty }P(t)= 0 \)
@@ -125,29 +139,21 @@
     <p class="reading-exercise">
       For \(a &gt; 0\), use the limit laws to show the \(\lim _{t\to \infty }P(t)= \infty \)
     </p>
-    <p class='indent'> To see the limitations of the Malthusian model, suppose we’re modeling the population of a country,
-      starting from a time \(t=0\) when the birth rate exceeds the death rate (so \(a&gt;0\)), and the country’s resources in terms
-      of space, food supply, and other necessities of life can support the existing population. Then the prediction \(P=P_0e^{at}\) may
-      be reasonably accurate as long as it remains within limits that the country’s resources can support. However, the model must
-      inevitably lose validity when the prediction exceeds these limits. (If nothing else, eventually there won’t be
-      enough space for the predicted population!)
+    <p class='indent'> 
+      In general populations do not have infinite resources. To understand the limitations of the Malthusian model, suppose we’re modeling the population of a country, starting from a time \(t=0\) when the birth rate exceeds the death rate (so \(a&gt;0\)), and the country’s resources in terms of space, food supply, and other necessities of life can support the existing population. Then the prediction \(P=P_0e^{at}\) may
+      be reasonably accurate as long as it remains within limits that the country’s resources can support. However, the model must inevitably lose validity when the prediction exceeds these limits. (If nothing else, eventually there won’t be enough space for the predicted population!)
     </p>
-    <p class='indent'> This flaw in the Malthusian model suggests the need for a model that accounts for limitations of
-      space and
-      resources that tend to oppose the rate of population growth as the population increases. Perhaps the most famous
-      model of this kind is the <span
-          class='vocab'>Verhulst model</span>, where (<a href='#x1-3r2'>1.1.2<!-- tex4ht:ref: eq:1.1.2  --></a>) is
-      replaced by \begin {equation} \label {eq:1.1.4} \dot{P}=aP(1-\alpha P)\end {equation}<a id='x1-5r4'></a> where \(\alpha
-      \) is a positive constant.
-      As long as \(P\) is small compared to \(1/\alpha \), the ratio \(\dot{P}/P\) is approximately equal to \(a\). Therefore
-      the growth is
-      approximately exponential; however, as \(P\) increases, the ratio \(\dot{P}/P\) decreases as opposing factors become
-      significant.
+    <p class='indent'> 
+      This flaw in the Malthusian model suggests the need for a model that accounts for limitations of
+      space and resources that tend to oppose the rate of population growth as the population increases. Perhaps the most famous model of this kind is the <span class='vocab'>Verhulst model</span>, where (<a href='#x1-3r2'>1.1.2</a>) is replaced by 
+      <a id='x1-5r4'></a>
+      \begin {equation} \label {eq:1.1.4} 
+        \dot{P}=aP(1-\alpha P)
+      \end {equation} 
+      where \(\alpha\) is a positive constant. As long as \(P\) is small compared to \( 1 / \alpha \), then the ratio \(\dot{P}/P\) is approximately equal to \(a\). Therefore the growth is approximately exponential; however, as \(P\) increases, the ratio \(\dot{P}/P\) decreases as opposing factors become significant.
     </p>
-    <p class='indent'> Equation (<a href='#x1-5r4'>1.1.4<!-- tex4ht:ref: eq:1.1.4  --></a>) is the <span
-        class='vocab'>logistic equation</span>. You will learn how to solve it in Section 1.2. (See Exercise 2.2.<span
-        class='ptmb8t-'>28</span>.)
-      The solution is
+    <p class='indent'> 
+      Equation (<a href='#x1-5r4'>1.1.4</a>) is the <span class='vocab'>logistic equation</span>. You will learn how to solve it in Section 2.2. (Exercise 2.2.<span class='ptmb8t-'>28</span>.) The solution is
       \[ P={P_0\over \alpha P_0+(1-\alpha P_0)e^{-at}}\]
       where \(P_0=P(0)&gt;0\). Therefore \(\lim _{t\to \infty }P(t)=1/\alpha \), independent of \(P_0\).
     </p>
@@ -168,13 +174,17 @@
   <details>
     <summary>Newton’s Law of Cooling</summary>
 
-    <p class='noindent'>According to <span class='vocab'>Newton’s law of cooling</span>, the temperature of a body changes at a rate proportional to the difference between the temperature of the body and the temperature of the surroundings. Thus, if \(A=A(t)\) is the temperature
-      of the surroundings and \(T=T(t)\) is the temperature of the body at time \(t\), then \begin {equation} \label {eq:1.1.5}
-      \dot{T} = -k(T-A)\end {equation}<a id='x1-7r5'></a> where \(k\) is a positive constant and the minus sign
-      indicates; that the temperature of the body increases with time if it’s less than the temperature of the medium, or decreases if it’s greater. We’ll see in Section 4.2 that if \(A\) is constant then the solution of (<a
-        href='#x1-7r5'>1.1.5<!-- tex4ht:ref: eq:1.1.5  --></a>) is \begin {equation} \label {eq:1.1.6}
-      T=A+(T_0-A)e^{-kt}\end {equation}<a id='x1-8r6'></a> where \(T_0\)
-      is the temperature of the body when \(t=0\). Therefore \(\lim _{t\to \infty }T(t)=A\), independent of \(T_0\).
+    <p class='noindent'>
+      According to <span class='vocab'>Newton’s law of cooling</span>, the temperature of an object changes at a rate proportional to the difference between the temperature of the object and the temperature of the surroundings. Thus, if \(A=A(t)\) is the temperature of the surroundings and \(T=T(t)\) is the temperature of the object at time \(t\), then 
+      <a id='x1-7r5'></a>
+      \begin {equation} \label {eq:1.1.5}
+        \dot{T} = -k(T-A)
+      \end {equation} where \(k\) is a positive constant and the minus sign indicates; that the temperature of the object increases with time if it’s less than the temperature of the surroundings, or decreases if it’s greater. We’ll discover in Section 4.2 that if \(A\) is constant then the solution of (<a href='#x1-7r5'>1.1.5</a>) is 
+      <a id='x1-8r6'></a>
+      \begin {equation} \label {eq:1.1.6}
+        T=A+(T_0-A)e^{-kt}
+      \end {equation}
+      where \(T_0\) is the initial temperature of the object at time \(t=0\). Therefore \(\lim _{t\to \infty }T(t)=A\), which is independent of the initial temperature \(T_0\).
     </p>
     <p class="reading-exercise">
       Use the limit laws to show the \(\lim _{t\to \infty }T(t)= A \)
@@ -194,34 +204,24 @@
           Newton’s Law of Cooling </span></figcaption><!-- tex4ht:label?: x1-9r2  -->
     </figure>
     
-    <p class='indent'> Assuming that the medium remains at constant temperature seems reasonable if we’re considering a
-      cup of
-      coffee cooling in a room, but not if we’re cooling a huge cauldron of molten metal in the same room. The
-      difference between the two situations is that the heat lost by the coffee isn’t likely to raise the temperature of
-      the
-      room appreciably, but the heat lost by the cooling metal is. In this second situation we must use a model that
-      accounts for the heat exchanged between the object and the medium. Let \(T=T(t)\) and \(A=A(t)\) be the
-      temperatures of the object
-      and the medium respectively, and let \(T_0\) and \(A_{0}\) be their initial values. Again, we assume that \(T\) and
-      \(A\) are related by
-      (<a href='#x1-7r5'>1.1.5<!-- tex4ht:ref: eq:1.1.5  --></a>). We also assume that the change in heat of the object as
-      its temperature changes from \(T_0\) to \(T\) is \(a(T-T_0)\) and the
-      change in heat of the medium as its temperature changes from \(A_{0}\) to \(A\) is \(b(A-A_{0})\), where
-      \(a\) and \(b\) are positive constants
-      depending upon the masses and thermal properties of the object and medium respectively. If we assume that
-      the total heat of the in the object and the medium remains constant (that is, energy is conserved),
-      then
-      \[ a(T-T_0)+a_m(A-A_{0})=0\]
-      Solving this for \(A\) and substituting the result into (<a
-        href='#x1-8r6'>1.1.6<!-- tex4ht:ref: eq:1.1.6  --></a>) yields the differential equation
+    <p class='indent'> 
+      Assuming that the surroundings remains at constant temperature seems reasonable if we’re considering a
+      cup of coffee cooling in a room, but not if we’re cooling a huge cauldron of molten metal in the same room. The difference between the two situations is that the heat lost by the coffee isn’t likely to raise the temperature of the room appreciably, but the heat lost by the cooling metal is. In this second situation we must use a model that accounts for the heat exchanged between the object and the surroundings. Let \(T=T(t)\) and \(A=A(t)\) be the temperatures of the object and the surroundings respectively, and let \(T_0\) and \(A_0\) be their initial values. Again, we assume that \(T\) and \(A\) are related by
+      (<a href='#x1-7r5'>1.1.5</a>). We also assume that the change in heat of the object as its temperature changes from \(T_0\) to \(T\) is \(a(T-T_0)\) and the change in heat of the surroundings as its temperature changes from \(A_{0}\) to \(A\) is \(b(A-A_{0})\), where \(a\) and \(b\) are positive constants
+      depending upon the masses and thermal properties of the object and surroundings respectively. If we assume that the total heat of the in the object and the surroundings remains constant (that is, energy is conserved), then
+      \[ a(T-T_0)+b(A-A_{0})=0\]
+      Solving this for \(A\) and substituting the result into (<a href='#x1-8r6'>1.1.6</a>) yields the differential equation
       \[ \dot{T}=-k\left (1+{a\over b}\right )T +k\left (A_{0}+{a\over b}T_0\right ) \]
       for the temperature of the object. After learning to solve linear first order equations, you’ll be able to show
       (Exercise 4.2. <span class='ptmb8t-'>17</span>) that
-
-
-
-      \[ T={aT_0+bA_{0}\over a+b}+{b(T_0-A_{0})\over a+b}e^{-k(1+a/b)t}\]
+      \[ T(t) ={aT_0+bA_{0}\over a+b}+{b(T_0-A_{0})\over a+b}e^{-k(1+a/b)t}\]
     </p>
+    <p class="reading-exercise">
+      Solve \( a(T-T_0)+b(A-A_{0})=0 \) for \(A\) and substitute the result into (<a href='#x1-7r5'>1.1.5</a>) to show that the result is the differential equation \( \dot{T}=-k\left (1+{a\over b}\right )T +k\left (A_{0}+{a\over b}T_0\right ) \)
+    </p>  
+    <p class="reading-exercise">
+      Use the limit laws to find the \(\lim _{t\to \infty }T(t)\)
+    </p>            
   </details>
 
   <details class="removed">
@@ -278,58 +278,34 @@
 
   <details>
     <summary>Newton’s Second Law of Motion</summary>
-    <p class='indent'> According to <span class='vocab'>Newton’s second law of motion</span>, the instantaneous acceleration \(a\) of an object
-      with constant mass \(m\)
-      is related to the force \(F\) acting on the object by the equation \(F=ma\). For simplicity, let’s assume that
-      \(m=1\) and the motion of
-      the object is along a vertical line. Let \(y\) be the displacement of the object from some reference point on
-      Earth’s
+    <p class='indent'> 
+      According to <span class='vocab'>Newton’s second law of motion</span>, the instantaneous acceleration \(a\) of an object with constant mass \(m\) is related to the force \(F\) acting on the object by the equation 
+      \[F=ma\] 
+      Recall that acceleration is the first derivative of velocity and the second derivative of position, so Newton’s 2nd law could be written as a 1st order differential equation in velocity \( v \) or as a 2nd order differential equation in position \( y \):
+      \[F=m \dot{v} \quad \text{or} \quad F = m \ddot{y} \] 
+    </p>  
+    <p class='indent'>   
+      For simplicity, we'll assume that the mass is one, \(m=1\), and the motion of the object is along a vertical line. Let \(y\) be the displacement of the object from some reference point on Earth’s
       surface, measured positive upward. In many applications, there are three kinds of forces that may act on the
       object:
     </p>
-    <dl class='list1'>
-      <dt class='list'>
-        <span class='ptmb8t-'>(a)</span>
-      </dt>
-      <dd class='list'>
-        
-        <p class='noindent'>A force such as gravity that depends only on the position \(y\), which we write as \(-p(y)\),
-          where \(p(y)&gt;0\) if \(y\ge 0\).
-        </p>
-      </dd>
-      <dt class='list'>
-        <span class='ptmb8t-'>(b)</span>
-      </dt>
-      <dd class='list'>
-        
-        <p class='noindent'>A force such as atmospheric resistance that depends on the position and velocity of the
-          object, which
-          we write as \(-q(y,\dot{y})\dot{y}\), where \(q\) is a nonnegative function and we’ve put \(\dot{y}\) “outside” to indicate
-          that the resistive
-          force is always in the direction opposite to the velocity.
-        </p>
-      </dd>
-      <dt class='list'>
-        <span class='ptmb8t-'>(c)</span>
-      </dt>
-      <dd class='list'>
-        
-        <p class='noindent'>A force \(f=f(t)\), exerted from an external source (such as a towline from a helicopter) that
-          depends only on
-          \(t\).</p>
-      </dd>
-    </dl>
+    <ol>
+      <li>
+        A force such as <span class='vocab'>gravity</span> that depends only on the position \(y\), which we write as \(-p(y)\), where \(p(y)&gt;0\) if \(y\ge 0\)
+      </li>  
+      <li> 
+        A force such as <span class='vocab'>air resistance</span> that depends on the position and velocity of the
+        object, which we write as \(-q(y,\dot{y})\dot{y}\), where \(q\) is a nonnegative function and we’ve put \(\dot{y}\) “outside” to indicate that the resistive force is always in the direction opposite to the velocity
+      </li>  
+      <li> 
+        Any <span class='vocab'>external force</span> \(f=f(t)\) that is separate from the object (such as a towline from a helicopter) that depends only on time \(t\)
+      </li>  
+    </ol>  
 
-
-
-    
     <p class='indent'> In this case, Newton’s second law implies that
       \[ \ddot{y}=-q(y,\dot{y})\dot{y}-p(y)+f(t)\]
       which is usually rewritten as
       \[ \ddot{y}+q(y,\dot{y})\dot{y}+p(y)=f(t)\]
-      Since the second (and no higher) order derivative of \(y\) occurs in this equation, we say that it is a <span
-        class='vocab'>second order
-        differential equation</span>.
     </p>
   </details>
 
