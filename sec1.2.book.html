@@ -32,40 +32,57 @@
   <details>
     <summary>Basic Concepts</summary>
 
-    <p class='noindent'>A <span class='vocab'>differential equation</span> is an equation that contains one or more
-      derivatives of an unknown function. The <span class='vocab'>order</span> of
-      a differential equation is the order of the highest derivative that it contains. A differential equation
-      is an <span class='vocab'>ordinary differential equation</span> if it involves an unknown function of only one
-      variable, or a
-      <span class='vocab'>partial differential equation</span> if it involves partial derivatives of a function of more
-      than one variable.
-      For now we’ll consider only ordinary differential equations, and we’ll just call them <span
-        class='vocab'>differential
-        equations.</span>
+    <p class='noindent'>
+      A <span class='vocab'>differential equation</span> is an equation that contains one or more
+      derivatives of an unknown function. The <span class='vocab'>order</span> of a differential equation is the order of the highest derivative that it contains. A differential equation is an <span class='vocab'>ordinary differential equation</span> if it involves an unknown function of only one
+      variable, or a <span class='vocab'>partial differential equation</span> if it involves partial derivatives of a function of more than one variable. For now we’ll consider only ordinary differential equations, and we’ll just call them <span class='vocab'>differential equations</span>.
     </p>
-    <p class='indent'> Throughout this text, all variables and constants are real unless it’s stated otherwise. We’ll
-      usually use \(x\) for the
-      independent variable unless the independent variable is time; then we’ll use \(t\).
+    <p class='indent'> 
+      Throughout this text, all variables and constants are real unless stated otherwise. We’ll
+      usually use \(x\) for the <span class='vocab'>independent variable</span> unless the independent variable is time; then we’ll use \(t\).
     </p>
-    <p class='indent'> The simplest differential equations are first order equations of the form
+    <p class='indent'> 
+      The simplest differential equations are first order equations of the form
       \[ {dy\over dx}=f(x) \]
-      where \(f\) is a known function of \(x\). We already know from calculus how to find functions that satisfy this
-      kind of
-      equation. For example, if
+      where \(f=f(x)\) is a known function of \(x\). We already know from calculus how to find functions that satisfy this kind of equation by finding the antiderivative. For example, if
       \[ \frac{dy}{dx}=x^3\]
       then
-      \[ y=\int x^3\, dx={x^4\over 4}+c\]
-      where \(c\) is an <span class="vocab">arbitrary constant</span>. If \(n&gt;1\) we can find functions \(y\) that
-      satisfy equations of the form \begin {equation} \label {eq:1.2.1} \frac{d^ny}{dx^n}=f(x) \end {equation}<a id='x1-2r1'></a>
-      by repeated
-      integration. Again, this is a calculus problem.
-    </p>
-    <p class='indent'> Except for illustrative purposes in this section, there’s no need to consider differential
-      equations like
-      (<a href='#x1-2r1'>1.2.1<!-- tex4ht:ref: eq:1.2.1  --></a>).We’ll usually consider differential equations that can
-      be written as \begin {equation} \label {eq:1.2.2} \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right) \end {equation}<a
-        id='x1-3r2'></a> where at least one of the functions \(y\), \(\displaystyle  \frac{dy}{dx}\), …,
-      \(\displaystyle  \frac{d^{n-1}y}{dx^{n-1}}\) actually appears on the right. Here are some examples:
+      \[ y=\int x^3 dx=\frac{1}{4} x^4 + c \]
+      where \(c\) is an <span class="vocab">arbitrary constant</span>.
+      We can even solve second order differential equations of this form  
+      \[ {d^2y\over dx^2}=x^3 \]
+      Again we solve by finding the antiderivative:  
+      \[ \frac{dy}{dx} = \int \Bigg({d^2y\over dx^2} \Bigg) dx = \int x^3 dx = \frac{1}{4} x^4 + c \]
+      Again we solve by finding the antiderivative again:
+      \[ y = \int \Bigg( \frac{dy}{dx} \Bigg) dx = \int \Big( \frac{1}{4} x^4 + c_1 \Big) dx 
+      = \frac{1}{20} x^5 + c_1x + c_2 \]    
+      Again we can solve any other simple higher order differential equations by repeated antidifferentiation from calculus. 
+      <a id='x1-2r1'></a>
+      \begin {equation} \label {eq:1.2.1} 
+        \frac{d^ny}{dx^n}=f(x) 
+      \end {equation}  
+    </p>   
+    <p class="reading-exercise">
+      Solve the differential equation \( \displaystyle \frac{dy}{dx} = \sqrt[5]{x} \)
+    </p>      
+    <p class="reading-exercise">
+      Solve the differential equation \( \displaystyle \frac{d^2y}{dx^2} = \frac{1}{x^8} \)
+    </p>        
+    <p class="reading-exercise">
+      Solve the differential equation \( \displaystyle \frac{d^3y}{dx^3} = \cos x \)
+    </p>      
+    <p class="reading-exercise">
+      Solve the differential equation \( \displaystyle \frac{d^4y}{dx4} = e^x \)
+    </p>          
+    <p class='indent'>      
+      Except for illustrative purposes in this section, there’s no need to consider differential equations like (<a href='#x1-2r1'>1.2.1</a>) and we’ll usually consider differential equations that can be written as 
+      <a id='x1-3r2'></a>
+      \begin {equation} \label {eq:1.2.2} 
+        \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right) 
+      \end {equation} 
+      where either the function itself, \(y\), or one of its derivatives \(\displaystyle \frac{dy}{dx}\), …,
+      \(\displaystyle  \frac{d^{n-1}y}{dx^{n-1}}\) actually appears on the right. 
+      Here are some examples:
       \[
         \begin {array}{rcll}
           \displaystyle {dy\over dx}-x^2&amp;=&amp;0&amp;\mbox { (first order)}\\ \\
@@ -92,24 +109,20 @@
   <details>
     <summary>Solutions of Differential Equations</summary>
 
-    <p class='noindent'>A <span class='vocab'>solution</span> of a differential equation is a function that satisfies
-      the differential equation on some <span class='vocab'>open interval</span>;
-      thus, \(y\) is a solution of (<a href='#x1-3r2'>1.2.2<!-- tex4ht:ref: eq:1.2.2  --></a>) if \(y\) is \(n\) times
-      differentiable and
+    <p class='noindent'>
+      A <span class='vocab'>solution</span> of a differential equation is a function that satisfies
+      the differential equation on some <span class='vocab'>open interval</span>; thus, \(y\) is a solution of (<a href='#x1-3r2'>1.2.2</a>) if \(y\) is \(n\) times differentiable and
       \[ \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right) \]
-      for all \(x\) in some open interval \((a,b)\). In this case, we also say that \(y\) is a solution of \(\eqref
-      {eq:1.2.2}\) on \((a,b)\). Functions that satisfy a
-      differential equation at isolated points are not interesting. For example, \(y=x^2\) satisfies
-      \[ x\frac{dy}{dx}+x^2=3x \]
-      if and only if \(x=0\) or \(x=1\), but it’s not a solution of this differential equation because it does not
-      satisfy the equation on an
-      open interval.
+      for all \(x\) in some open interval \((a,b)\). 
+      In this case, we also say that \(y\) is a solution of \(\eqref{eq:1.2.2}\) on \((a,b)\). Functions that satisfy a differential equation at isolated points are not interesting. For example, \(y=x^2\) satisfies
+      \[ x\frac{dy}{dx}+x^2=3x \] if and only if \(x=0\) or \(x=1\), but it’s not a solution of this differential equation because it does not satisfy the equation on an open interval.
     </p>
+    <p class="reading-exercise">
+      Show that \( y = x^2 \) satisfies the \( x\frac{dy}{dx}+x^2=3x \) if and only if \(x=0\) or \(x=1\)
+    </p>        
     <p class='indent'> The graph of a solution of a differential equation is a <span class='vocab'>solution
         curve</span>. More generally, a curve \(C\) is said to be an
-      <span class='vocab'>integral curve</span> of a differential equation if every function \(y=y(x)\) whose graph is a
-      segment of \(C\) is a solution of the
-      differential equation. Thus, any <span class='vocab'>solution curve</span> of a differential equation is an <span
+      <span class='vocab'>integral curve</span> of a differential equation if every function \(y=y(x)\) whose graph is a segment of \(C\) is a solution of the differential equation. Thus, any <span class='vocab'>solution curve</span> of a differential equation is an <span
         class='vocab'>integral curve</span>, but an <span class='vocab'>integral curve</span>
       need not be a <span class='vocab'>solution curve</span>.
     </p>
@@ -125,25 +138,24 @@
         <iframe src="https://www.desmos.com/calculator/ff8hsr3idy?embed" width="400" height="250" frameborder=0></iframe>
       </div>
       <p class='noindent'>
-        To see this, note that the only
-        functions whose graphs are segments of (<a href='#x1-5r3'>1.2.3<!-- tex4ht:ref: eq:1.2.3  --></a>) are
-        \[ y_1=\sqrt {9-x^2}\mbox {\quad and \quad } y_2=-\sqrt {9-x^2}\]
+        Note that the only functions whose graphs are segments of (<a href='#x1-5r3'>1.2.3<!-- tex4ht:ref: eq:1.2.3  --></a>) are \[ y_1=\sqrt {9-x^2}\mbox {\quad and \quad } y_2=-\sqrt {9-x^2}\]
       </p>
+      <p class="reading-exercise">
+        Solve \( x^2+y^2=9 \) explicitly for \( y \) and show you get \( y_1 \) and \( y_2 \) 
+      </p>        
       <div style="display: flex; gap: 2em; justify-content: center;">
         <iframe src="https://www.desmos.com/calculator/sunm3bnr1t?embed" width="400" height="250" frameborder=0></iframe>
         <iframe src="https://www.desmos.com/calculator/qa0d5qmmka?embed" width="400" height="250" frameborder=0></iframe>
       </div>
 
       <p class='noindent'>
-        We leave it to you to verify that these functions both satisfy (<a
-          href='#x1-6r4'>1.2.4<!-- tex4ht:ref: eq:1.2.4  --></a>) on the open interval \((-3, 3)\). However, (<a
-          href='#x1-5r3'>1.2.3<!-- tex4ht:ref: eq:1.2.3  --></a>) is not
+        While the circle is an <span class='vocab'>integral curve</span> of the differential equation, it is not
         a <span class='vocab'>solution curve</span> of (<a href='#x1-6r4'>1.2.4<!-- tex4ht:ref: eq:1.2.4  --></a>),
         since it’s not the graph of a function.
-
-
-
       </p>
+      <p class="reading-exercise">
+        Show that \( y_1 \) and \( y_2 \) satisfies \( \displaystyle \frac{dy}{dx}=-{x\over y}\) on the open interval \((-3, 3)\)
+      </p>        
     </div>
     <p class='indent'>
     </p>
