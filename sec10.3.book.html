@@ -1,218 +1,418 @@
-<!DOCTYPE html> 
-<html lang='en-US' xml:lang='en-US'> 
-<head><title></title> 
-<meta charset='utf-8' /> 
-<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
-<meta content='width=device-width,initial-scale=1' name='viewport' /> 
-<link rel="stylesheet" type="text/css" href='combined.css' />
-<meta content='Trench_DiffEQ_Book.tex' name='src' /> 
-<script>window.MathJax = {
-     tex: { packages: {'[+]': ['tagformat']}, tags: "ams", tagformat: { tag: (tag) => '(10.3.' + tag + ')'} }
- }; </script> 
- <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
- <style type='text/css'>
-   :root {
-     --section-number: "10.3"
-   }
- </style>
-</head><body>
+<!DOCTYPE html>
+<html lang='en-US' xml:lang='en-US'>
+
+<head>
+   <title></title>
+   <meta charset='utf-8' />
+   <meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' />
+   <meta content='width=device-width,initial-scale=1' name='viewport' />
+   <link rel="stylesheet" type="text/css" href='combined.css' />
+   <meta content='Trench_DiffEQ_Book.tex' name='src' />
+   <script>window.MathJax = {
+         tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(10.3.' + tag + ')' } }
+      }; </script>
+   <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js'
+      type='text/javascript'></script>
+   <style type='text/css'>
+      :root {
+         --section-number: "10.3"
+      }
+   </style>
+</head>
+
+<body>
    <div style="display: none;">
-  \(
-\newcommand{\place}{\bigskip\hrule\bigskip\noindent}
-\newcommand{\threecol}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]}
-\newcommand{\threecolj}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]}
-\newcommand{\lims}[2]{\,\bigg|_{#1}^{#2}}
-\newcommand{\twocol}[2]{\left[\begin{array}{l}#1\\#2\end{array}\right]}
-\newcommand{\ctwocol}[2]{\left[\begin{array}{c}#1\\#2\end{array}\right]}
-\newcommand{\cthreecol}[3]{\left[\begin{array}{c}#1\\#2\\#3\end{array}\right]}
-\newcommand{\eqline}[1]{\centerline{\hfill$\displaystyle#1$\hfill}}
-\newcommand{\twochar}[4]{\left|\begin{array}{cc}
-#1-\lambda& #2\\#3& #4-\lambda\end{array}\right|}
-\newcommand{\twobytwo}[4]{\left[\begin{array}{rr}
-#1& #2\\#3& #4\end{array}\right]}
-\newcommand{\threechar}[9]{\left[\begin{array}{ccc}
-#1-\lambda& #2& #3\\#4& #5-\lambda& #6\\#7& #8& #9-\lambda\end{array}\right]}
-\newcommand{\threebythree}[9]{\left[\begin{array}{rrr}
-#1& #2& #3\\#4& #5& #6\\#7& #8& #9\end{array}\right]}
-\newcommand{\solutionpart}[1]{\vskip10pt\noindent\underbar{\color{blue}\sc
-Solution({\bf #1})\ }}
-\newcommand{\Cex}{\fbox{\textcolor{red}{C}}\, }
-\newcommand{\CGex}{\fbox{\textcolor{red}{C/G}}\, }
-\newcommand{\Lex}{\fbox{\textcolor{red}{L}}\, }
+      \(
+      \newcommand{\place}{\bigskip\hrule\bigskip\noindent}
+      \newcommand{\threecol}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]}
+      \newcommand{\threecolj}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]}
+      \newcommand{\lims}[2]{\,\bigg|_{#1}^{#2}}
+      \newcommand{\twocol}[2]{\left[\begin{array}{l}#1\\#2\end{array}\right]}
+      \newcommand{\ctwocol}[2]{\left[\begin{array}{c}#1\\#2\end{array}\right]}
+      \newcommand{\cthreecol}[3]{\left[\begin{array}{c}#1\\#2\\#3\end{array}\right]}
+      \newcommand{\eqline}[1]{\centerline{\hfill$\displaystyle#1$\hfill}}
+      \newcommand{\twochar}[4]{\left|\begin{array}{cc}
+      #1-\lambda& #2\\#3& #4-\lambda\end{array}\right|}
+      \newcommand{\twobytwo}[4]{\left[\begin{array}{rr}
+      #1& #2\\#3& #4\end{array}\right]}
+      \newcommand{\threechar}[9]{\left[\begin{array}{ccc}
+      #1-\lambda& #2& #3\\#4& #5-\lambda& #6\\#7& #8& #9-\lambda\end{array}\right]}
+      \newcommand{\threebythree}[9]{\left[\begin{array}{rrr}
+      #1& #2& #3\\#4& #5& #6\\#7& #8& #9\end{array}\right]}
+      \newcommand{\solutionpart}[1]{\vskip10pt\noindent\underbar{\color{blue}\sc
+      Solution({\bf #1})\ }}
+      \newcommand{\Cex}{\fbox{\textcolor{red}{C}}\, }
+      \newcommand{\CGex}{\fbox{\textcolor{red}{C/G}}\, }
+      \newcommand{\Lex}{\fbox{\textcolor{red}{L}}\, }
 
-\newcommand{\matfunc}[3]{\left[\begin{array}{cccc}#1_{11}(t)& #1_{12}(t)&\cdots
-& #1_{1#3}(t)\\#1_{21}(t)& #1_{22}(t)&\cdots& #1_{2#3}(t)\\\vdots&
-\vdots&\ddots&\vdots\\#1_{#21}(t)& #1_{#22}(t)&\cdots& #1_{#2#3}(t)
-\end{array}\right]}
+      \newcommand{\matfunc}[3]{\left[\begin{array}{cccc}#1_{11}(t)& #1_{12}(t)&\cdots
+      & #1_{1#3}(t)\\#1_{21}(t)& #1_{22}(t)&\cdots& #1_{2#3}(t)\\\vdots&
+      \vdots&\ddots&\vdots\\#1_{#21}(t)& #1_{#22}(t)&\cdots& #1_{#2#3}(t)
+      \end{array}\right]}
 
 
-\newcommand{\col}[2]{\left[\begin{array}{c}#1_1\\#1_2\\\vdots\\#1_#2\end{array}\right]}
-\newcommand{\colfunc}[2]{\left[\begin{array}{c}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t)\end{array}\right]}
+      \newcommand{\col}[2]{\left[\begin{array}{c}#1_1\\#1_2\\\vdots\\#1_#2\end{array}\right]}
+      \newcommand{\colfunc}[2]{\left[\begin{array}{c}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t)\end{array}\right]}
 
-\newcommand{\cthreebythree}[9]{\left[\begin{array}{ccc}
-#1& #2& #3\\#4& #5& #6\\#7& #8& #9\end{array}\right]}
+      \newcommand{\cthreebythree}[9]{\left[\begin{array}{ccc}
+      #1& #2& #3\\#4& #5& #6\\#7& #8& #9\end{array}\right]}
 
-\)
+      \)
    </div>
-<p><a id='x1-1doc'></a>
-</p><p class='noindent'>Section 10.3 Basic Theory of Homogeneous Linear System
-</p><p class='noindent'><span class='ptmb8t-'>10.3</span><span class='ptmb8t-x-x-90'>      BASIC THEORY OF HOMOGENEOUS LINEAR SYSTEMS</span>
-</p><p class='noindent'>In this section we consider homogeneous linear systems \({\bf y}'= A(t){\bf y}\), where \(A=A(t)\) is a continuous \(n\times n\) matrix function on an interval \((a,b)\).
-The theory of linear homogeneous systems has much in common with the theory of linear homogeneous scalar
-equations, which we considered in Sections 2.1, 5.1, and 9.1.
-</p><p class='indent'>  Whenever we refer to solutions of \({\bf y}'=A(t){\bf y}\) we’ll mean solutions on \((a,b)\). Since \({\bf y}\equiv {\bf 0}\) is obviously a solution of \({\bf y}'=A(t){\bf y}\), we call it the
-<span class='ptmri8t-'>trivial</span> solution. Any other solution is <span class='ptmri8t-'>nontrivial</span>.
-</p><p class='indent'>  If \({\bf y}_1\), \({\bf y}_2\), …, \({\bf y}_n\) are vector functions defined on an interval \((a,b)\) and \(c_1\), \(c_2\), …, \(c_n\) are constants, then \begin {equation}  \label {eq:10.3.1} {\bf y}=c_1{\bf y}_1+c_2{\bf y}_2+\cdots +c_n{\bf y}_n  \end {equation}<a id='x1-2r1'></a> is a <span class='ptmri8t-'>linear combination of </span> \({\bf y}_1\), \({\bf y}_2\),
-…,\({\bf y}_n\). It’s easy show that if \({\bf y}_1\), \({\bf y}_2\), …,\({\bf y}_n\) are solutions of \({\bf y}'=A(t){\bf y}\) on \((a,b)\), then so is any linear combination of \({\bf y}_1\), \({\bf y}_2\), …, \({\bf y}_n\) (Exercise <span class='ptmb8t-'>1</span>). We
-say that \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) is a <span class='ptmri8t-'>fundamental set of solutions of</span> \({\bf y}'=A(t){\bf y}\) <span class='ptmri8t-'>on</span> \((a,b)\) on if every solution of \({\bf y}'=A(t){\bf y}\) on \((a,b)\) can be written as a linear
-combination of \({\bf y}_1\), \({\bf y}_2\), …, \({\bf y}_n\), as in (<a href='#x1-2r1'>10.3.1<!-- tex4ht:ref: eq:10.3.1  --></a>). In this case we say that (<a href='#x1-2r1'>10.3.1<!-- tex4ht:ref: eq:10.3.1  --></a>) is the <span class='ptmri8t-'>general solution of</span> \({\bf y}'=A(t){\bf y}\) <span class='ptmri8t-'>on</span>
-\((a,b)\).
-</p><p class='indent'>  It can be shown that if \(A\) is continuous on \((a,b)\) then \({\bf y}'=A(t){\bf y}\) has infinitely many fundamental sets of solutions on \((a,b)\)
-(Exercises <span class='ptmb8t-'>15</span> and <span class='ptmb8t-'>16</span>). The next definition will help to characterize fundamental sets of solutions of
-\({\bf y}'=A(t){\bf y}\).
-</p><p class='indent'>  We say that a set \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) of \(n\)-vector functions is <span class='ptmri8t-'>linearly independent</span> on \((a,b)\) if the only constants \(c_1\), \(c_2\), …, \(c_n\) such that \begin {equation}  \label {eq:10.3.2} c_1{\bf y}_1(t)+c_2{\bf y}_2(t)+\cdots +c_n{\bf y}_n(t)=0,\quad a&lt;t&lt;b\end {equation}<a id='x1-3r2'></a> are \(c_1=c_2=\cdots =c_n=0\). If
-(<a href='#x1-3r2'>10.3.2<!-- tex4ht:ref: eq:10.3.2  --></a>) holds for some set of constants \(c_1\), \(c_2\), …, \(c_n\) that are not all zero, then \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) is <span class='ptmri8t-'>linearly dependent</span> on
-\((a,b)\)
-</p><p class='indent'>  The next theorem is analogous to Theorems <span class='ptmb8t-'>5.1.3</span> and <span class='ptmb8t-'>9.1.2</span>.
-</p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 10.3.1</span> </span><a id='x1-41'></a> <span class='ptmri8t-'>Suppose the</span> \(n\times n\) <span class='ptmri8t-'>matrix</span> \(A=A(t)\) <span class='ptmri8t-'>is continuous on</span> \((a,b)\)<span class='ptmri8t-'>. Then a set</span> \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) <span class='ptmri8t-'>of</span> \(n\) <span class='ptmri8t-'>solutions of</span> \({\bf y}'=A(t){\bf y}\) <span class='ptmri8t-'>on</span> \((a,b)\) <span class='ptmri8t-'>is a fundamental
-set if and only if it’s linearly independent on</span> \((a,b)\)<span class='ptmri8t-'>.</span>
-</p>
-  </div>
-<p class='indent'>  
-</p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 10.3.1</span> </span><a id='x1-51'></a> Show that the vector functions
-                                                                                
+   <p><a id='x1-1doc'></a>
+   </p>
+   <p class='noindent'>Section 10.3 Basic Theory of Homogeneous Linear System
+   </p>
+   <p class='noindent'><span class='ptmb8t-'>10.3</span><span class='ptmb8t-x-x-90'>  BASIC THEORY OF HOMOGENEOUS LINEAR
+         SYSTEMS</span>
+   </p>
+   <p class='noindent'>In this section we consider homogeneous linear systems \({\bf y}'= A(t){\bf y}\), where
+      \(A=A(t)\) is a continuous \(n\times n\) matrix function on an interval \((a,b)\).
+      The theory of linear homogeneous systems has much in common with the theory of linear homogeneous scalar
+      equations, which we considered in Sections 2.1, 5.1, and 9.1.
+   </p>
+   <p class='indent'> Whenever we refer to solutions of \({\bf y}'=A(t){\bf y}\) we’ll mean solutions on \((a,b)\).
+      Since \({\bf y}\equiv {\bf 0}\) is obviously a solution of \({\bf y}'=A(t){\bf y}\), we call it the
+      <span class='ptmri8t-'>trivial</span> solution. Any other solution is <span class='ptmri8t-'>nontrivial</span>.
+   </p>
+   <p class='indent'> If \({\bf y}_1\), \({\bf y}_2\), …, \({\bf y}_n\) are vector functions defined on an interval
+      \((a,b)\) and \(c_1\), \(c_2\), …, \(c_n\) are constants, then \begin {equation} \label {eq:10.3.1} {\bf
+      y}=c_1{\bf y}_1+c_2{\bf y}_2+\cdots +c_n{\bf y}_n \end {equation}<a id='x1-2r1'></a> is a <span
+         class='ptmri8t-'>linear combination of </span> \({\bf y}_1\), \({\bf y}_2\),
+      …,\({\bf y}_n\). It’s easy show that if \({\bf y}_1\), \({\bf y}_2\), …,\({\bf y}_n\) are solutions of \({\bf
+      y}'=A(t){\bf y}\) on \((a,b)\), then so is any linear combination of \({\bf y}_1\), \({\bf y}_2\), …, \({\bf
+      y}_n\) (Exercise <span class='ptmb8t-'>1</span>). We
+      say that \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) is a <span class='ptmri8t-'>fundamental set of solutions
+         of</span> \({\bf y}'=A(t){\bf y}\) <span class='ptmri8t-'>on</span> \((a,b)\) on if every solution of \({\bf
+      y}'=A(t){\bf y}\) on \((a,b)\) can be written as a linear
+      combination of \({\bf y}_1\), \({\bf y}_2\), …, \({\bf y}_n\), as in (<a
+         href='#x1-2r1'>10.3.1<!-- tex4ht:ref: eq:10.3.1  --></a>). In this case we say that (<a
+         href='#x1-2r1'>10.3.1<!-- tex4ht:ref: eq:10.3.1  --></a>) is the <span class='ptmri8t-'>general solution
+         of</span> \({\bf y}'=A(t){\bf y}\) <span class='ptmri8t-'>on</span>
+      \((a,b)\).
+   </p>
+   <p class='indent'> It can be shown that if \(A\) is continuous on \((a,b)\) then \({\bf y}'=A(t){\bf y}\) has
+      infinitely many fundamental sets of solutions on \((a,b)\)
+      (Exercises <span class='ptmb8t-'>15</span> and <span class='ptmb8t-'>16</span>). The next definition will help to
+      characterize fundamental sets of solutions of
+      \({\bf y}'=A(t){\bf y}\).
+   </p>
+   <p class='indent'> We say that a set \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) of \(n\)-vector functions is <span
+         class='ptmri8t-'>linearly independent</span> on \((a,b)\) if the only constants \(c_1\), \(c_2\), …, \(c_n\)
+      such that \begin {equation} \label {eq:10.3.2} c_1{\bf y}_1(t)+c_2{\bf y}_2(t)+\cdots +c_n{\bf y}_n(t)=0,\quad
+      a&lt;t&lt;b\end {equation}<a id='x1-3r2'></a> are \(c_1=c_2=\cdots =c_n=0\). If
+      (<a href='#x1-3r2'>10.3.2<!-- tex4ht:ref: eq:10.3.2  --></a>) holds for some set of constants \(c_1\), \(c_2\), …,
+      \(c_n\) that are not all zero, then \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) is <span
+         class='ptmri8t-'>linearly dependent</span> on
+      \((a,b)\)
+   </p>
+   <p class='indent'> The next theorem is analogous to Theorems <span class='ptmb8t-'>5.1.3</span> and <span
+         class='ptmb8t-'>9.1.2</span>.
+   </p>
+   <div class='newtheorem'>
+      <p class='noindent'><span class='head'>
+            <span class='ptmb8t-'>Theorem 10.3.1</span> </span><a id='x1-41'></a> <span class='ptmri8t-'>Suppose
+            the</span> \(n\times n\) <span class='ptmri8t-'>matrix</span> \(A=A(t)\) <span class='ptmri8t-'>is
+            continuous on</span> \((a,b)\)<span class='ptmri8t-'>. Then a set</span> \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf
+         y}_n\}\) <span class='ptmri8t-'>of</span> \(n\) <span class='ptmri8t-'>solutions of</span> \({\bf y}'=A(t){\bf
+         y}\) <span class='ptmri8t-'>on</span> \((a,b)\) <span class='ptmri8t-'>is a fundamental
+            set if and only if it’s linearly independent on</span> \((a,b)\)<span class='ptmri8t-'>.</span>
+      </p>
+   </div>
+   <p class='indent'>
+   </p>
+   <div class='newtheorem'>
+      <p class='noindent'><span class='head'>
+            <span class='ex-number'>Example 10.3.1</span> </span><a id='x1-51'></a> Show that the vector functions
 
-                                                                                
-                                        \[ {\bf y}_1=\left [\begin {array}{c}e^t\\0\\e^{-t}\end {array}\right ],\quad {\bf y}_2=\left [\begin {array}{c}0\\e^{3t}\\1\end {array}\right ], \mbox {\quad and \quad }{\bf y}_3=\left [\begin {array}{c}e^{2t}\\e^{3t}\\0\end {array}\right ] \]
- are linearly independent on every interval \((a,b)\).
-</p>
-  </div>
-<p class='indent'>
-</p><p class='noindent'><span class='ptmb8t-'>Solution </span> Suppose
-                                        \[ c_1\left [\begin {array}{c}e^t\\0\\e^{-t}\end {array}\right ]+ c_2\left [\begin {array}{c}0\\e^{3t}\\1\end {array}\right ]+c_3 \left [\begin {array}{c}e^{2t}\\e^{3t}\\0\end {array}\right ]= \left [\begin {array}{c}0\\0\\0\end {array}\right ],\quad a&lt;t&lt;b\]
- We must show that \(c_1=c_2=c_3=0\). Rewriting this equation in matrix form yields
-                                        \[ \left [\begin {array}{ccc}e^t&amp;0&amp;e^{2t}\\0&amp;e^{3t}&amp;e^{3t}\\e^{-t}&amp;1&amp;0 \end {array}\right ] \left [\begin {array}{c}c_1\\c_2\\c_3\end {array}\right ]= \left [\begin {array}{c}0\\0\\0\end {array}\right ],\quad a&lt;t&lt;b\]
- Expanding the determinant of this system in cofactors of the entries of the first row yields </p><div class='eqnarray'>\begin {eqnarray*}  \left |\begin {array}{ccc}e^t&amp;0&amp;e^{2t}\\0&amp;e^{3t}&amp;e^{3t}\\e^{-t}&amp;1&amp;0 \end {array}\right |&amp;=&amp;e^t \left |\begin {array}{cc}e^{3t}&amp;e^{3t}\\1&amp;0\end {array}\right |-0 \left |\begin {array}{cc}0&amp;e^{3t}\\e^{-t}&amp;0\end {array}\right | +e^{2t}\left |\begin {array}{cc}0&amp;e^{3t}\\e^{-t}&amp;1\end {array}\right | \\ &amp;=&amp;e^t(-e^{3t})+e^{2t}(-e^{2t})=-2e^{4t}\end {eqnarray*}</div>
-<p class='indent'>  Since this determinant is never zero, \(c_1=c_2=c_3=0\).                                                                                                     __
-</p><p class='indent'>  We can use the method in Example <a href='#x1-51'>10.3.1<!-- tex4ht:ref: example:10.3.1  --></a> to test \(n\) solutions \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) of any \(n\times n\) system \({\bf y}'=A(t){\bf y}\) for linear independence on an
-interval \((a,b)\) on which \(A\) is continuous. To explain this (and for other purposes later), it’s useful to write a linear
-combination of \({\bf y}_1\), \({\bf y}_2\), …, \({\bf y}_n\) in a different way. We first write the vector functions in terms of their components
-as
-                                                                                
 
-                                                                                
-                                        \[ {\bf y}_1=\left [\begin {array}{c} y_{11}\\y_{21}\\ \vdots \\ y_{n1}\end {array}\right ],\quad {\bf y}_2=\left [\begin {array}{c} y_{12}\\y_{22}\\ \vdots \\ y_{n2}\end {array}\right ],\dots ,\quad {\bf y}_n=\left [\begin {array}{c} y_{1n}\\y_{2n}\\ \vdots \\ y_{nn}\end {array}\right ]\]
- If
-                                        \[ {\bf y}=c_1{\bf y}_1+c_2{\bf y}_2+\cdots +c_n{\bf y}_n \]
- then </p><div class='eqnarray'>\begin {eqnarray*}  {\bf y}&amp;=&amp; c_1\left [\begin {array}{c} y_{11}\\y_{21}\\ \vdots \\ y_{n1}\end {array}\right ]+ c_2\left [\begin {array}{c} y_{12}\\y_{22}\\ \vdots \\ y_{n2}\end {array}\right ]+\cdots +c_n\left [\begin {array}{c} y_{1n}\\y_{2n}\\ \vdots \\ y_{nn}\end {array}\right ]\\ &amp;=&amp;\left [\begin {array}{cccc} y_{11}&amp;y_{12}&amp;\cdots &amp;y_{1n} \\ y_{21}&amp;y_{22}&amp;\cdots &amp;y_{2n}\\ \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ y_{n1}&amp;y_{n2}&amp;\cdots &amp;y_{nn} \\ \end {array}\right ]\col cn\end {eqnarray*}</div>
-<p class='indent'>  This shows that \begin {equation}  \label {eq:10.3.3} c_1{\bf y}_1+c_2{\bf y}_2+\cdots +c_n{\bf y}_n=Y{\bf c}\end {equation}<a id='x1-6r3'></a> where
-                                        \[ {\bf c}=\col cn \]
- and \begin {equation}  \label {eq:10.3.4} Y=[{\bf y}_1\; {\bf y}_2\; \cdots \; {\bf y}_n]= \left [\begin {array}{cccc} y_{11}&amp;y_{12}&amp;\cdots &amp;y_{1n} \\ y_{21}&amp;y_{22}&amp;\cdots &amp;y_{2n}\\ \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ y_{n1}&amp;y_{n2}&amp;\cdots &amp;y_{nn} \\ \end {array}\right ];  \end {equation}<a id='x1-7r4'></a> that is, the columns of \(Y\) are the vector functions \({\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\).
-</p><p class='indent'>  For reference below, note that </p><div class='eqnarray'>\begin {eqnarray*}  Y'&amp;=&amp;[{\bf y}_1'\; {\bf y}_2'\; \cdots \; {\bf y}_n']\\ &amp;=&amp;[A{\bf y}_1\; A{\bf y}_2\; \cdots \; A{\bf y}_n]\\ &amp;=&amp;A[{\bf y}_1\; {\bf y}_2\; \cdots \; {\bf y}_n]=AY;  \end {eqnarray*}</div>
-<p class='indent'>  that is, \(Y\) satisfies the matrix differential equation
-</p><p class='indent'>
-                                        \[ Y'=AY\]
-</p><p class='indent'>  The determinant of \(Y\), \begin {equation}  \label {eq:10.3.5} W=\left |\begin {array}{cccc} y_{11}&amp;y_{12}&amp;\cdots &amp;y_{1n} \\ y_{21}&amp;y_{22}&amp;\cdots &amp;y_{2n}\\ \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ y_{n1}&amp;y_{n2}&amp;\cdots &amp;y_{nn} \\ \end {array}\right |  \end {equation}<a id='x1-8r5'></a> is called the <span class='vocab'>Wronskian</span> of \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\). It can be shown (Exercises <span class='ptmb8t-'>2</span> and <span class='ptmb8t-'>3</span>) that this definition is
-analogous to definitions of the Wronskian of scalar functions given in Sections 5.1 and 9.1. The next theorem is
-analogous to Theorems <span class='ptmb8t-'>5.1.4</span> and <span class='ptmb8t-'>9.1.3</span>. The proof is sketched in Exercise <span class='ptmb8t-'>4</span> for \(n=2\) and in Exercise <span class='ptmb8t-'>5</span> for
-general \(n\).
-                                                                                
 
-                                                                                
-</p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 10.3.2</span> </span>\([\)<span class='ptmri8t-'>Abel’s Formula</span>\(]\) <a id='x1-92'></a><span class='ptmri8t-'>Suppose the</span> \(n\times n\) <span class='ptmri8t-'>matrix</span> \(A=A(t)\) <span class='ptmri8t-'>is continuous on</span> \((a,b),\) <span class='ptmri8t-'>let</span> \({\bf y}_1\)<span class='ptmri8t-'>,</span> \({\bf y}_2\)<span class='ptmri8t-'>, …,</span> \({\bf y}_n\) <span class='ptmri8t-'>be solutions of</span> \({\bf y}'=A(t){\bf y}\)
-<span class='ptmri8t-'>on</span> \((a,b),\) <span class='ptmri8t-'>and let</span> \(t_0\) <span class='ptmri8t-'>be in</span> \((a,b)\)<span class='ptmri8t-'>. Then the Wronskian of</span> \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) <span class='ptmri8t-'>is given by </span>\begin {equation}  \label {eq:10.3.6} W(t)=W(t_0)\exp \left ( \int ^t_{t_0}\big [a_{11}(s)+a_{22}(s)+\cdots +a_{nn}(s)]\, ds\right ), \quad a &lt; t &lt; b\end {equation}<a id='x1-10r6'></a> <span class='ptmri8t-'>Therefore</span>\(,\) <span class='ptmri8t-'>either</span> \(W\) <span class='ptmri8t-'>has no zeros in</span> \((a,b)\) <span class='ptmri8t-'>or</span> \(W\equiv 0\) <span class='ptmri8t-'>on</span>
-\((a,b).\)
-</p>
-  </div>
-<p class='indent'>  
-</p><p class='noindent'><span class='ptmrc8t-'>R<span class='small-caps'>EMARK</span></span>:  The sum of the diagonal entries of a square matrix \(A\) is called the <span class='ptmri8t-'>trace</span> of \(A\), denoted by tr\((A)\). Thus, for an \(n\times n\)
-matrix \(A\),
-                                        \[ \mbox {tr}(A)=a_{11}+a_{22}+\cdots +a_{nn}\]
- and (<a href='#x1-10r6'>10.3.6<!-- tex4ht:ref: eq:10.3.6  --></a>) can be written as
-                                        \[ W(t)=W(t_0)\exp \left ( \int ^t_{t_0}\mbox {tr}(A(s))\, ds\right ), \quad a &lt; t &lt; b\]
- 
-</p><p class='indent'>  The next theorem is analogous to Theorems <span class='ptmb8t-'>5.1.6</span> and <span class='ptmb8t-'>9.1.4</span>.
-</p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 10.3.3</span> </span><a id='x1-113'></a> <span class='ptmri8t-'>Suppose the</span> \(n\times n\) <span class='ptmri8t-'>matrix</span> \(A=A(t)\) <span class='ptmri8t-'>is continuous on</span> \((a,b)\) <span class='ptmri8t-'>and let</span> \({\bf y}_1\)<span class='ptmri8t-'>,</span> \({\bf y}_2\)<span class='ptmri8t-'>, …</span>\(,\)\({\bf y}_n\) <span class='ptmri8t-'>be solutions of</span> \({\bf y}'=A(t){\bf y}\) <span class='ptmri8t-'>on</span> \((a,b)\)<span class='ptmri8t-'>. Then the following
-statements are equivalent; that is, they are either all true or all false:</span>
-                                                                                
+         \[ {\bf y}_1=\left [\begin {array}{c}e^t\\0\\e^{-t}\end {array}\right ],\quad {\bf y}_2=\left [\begin
+         {array}{c}0\\e^{3t}\\1\end {array}\right ], \mbox {\quad and \quad }{\bf y}_3=\left [\begin
+         {array}{c}e^{2t}\\e^{3t}\\0\end {array}\right ] \]
+         are linearly independent on every interval \((a,b)\).
+      </p>
+   </div>
+   <p class='indent'>
+   </p>
+   <p class='noindent'><span class='ptmb8t-'>Solution </span> Suppose
+      \[ c_1\left [\begin {array}{c}e^t\\0\\e^{-t}\end {array}\right ]+ c_2\left [\begin {array}{c}0\\e^{3t}\\1\end
+      {array}\right ]+c_3 \left [\begin {array}{c}e^{2t}\\e^{3t}\\0\end {array}\right ]= \left [\begin
+      {array}{c}0\\0\\0\end {array}\right ],\quad a&lt;t&lt;b\]
+      We must show that \(c_1=c_2=c_3=0\). Rewriting this equation in matrix form yields
+      \[ \left [\begin {array}{ccc}e^t&amp;0&amp;e^{2t}\\0&amp;e^{3t}&amp;e^{3t}\\e^{-t}&amp;1&amp;0 \end {array}\right
+      ] \left [\begin {array}{c}c_1\\c_2\\c_3\end {array}\right ]= \left [\begin {array}{c}0\\0\\0\end {array}\right
+      ],\quad a&lt;t&lt;b\]
+      Expanding the determinant of this system in cofactors of the entries of the first row yields </p>
+   <div class='eqnarray'>\begin {eqnarray*} \left |\begin
+      {array}{ccc}e^t&amp;0&amp;e^{2t}\\0&amp;e^{3t}&amp;e^{3t}\\e^{-t}&amp;1&amp;0 \end {array}\right |&amp;=&amp;e^t
+      \left |\begin {array}{cc}e^{3t}&amp;e^{3t}\\1&amp;0\end {array}\right |-0 \left |\begin
+      {array}{cc}0&amp;e^{3t}\\e^{-t}&amp;0\end {array}\right | +e^{2t}\left |\begin
+      {array}{cc}0&amp;e^{3t}\\e^{-t}&amp;1\end {array}\right | \\ &amp;=&amp;e^t(-e^{3t})+e^{2t}(-e^{2t})=-2e^{4t}\end
+      {eqnarray*}</div>
+   <p class='indent'> Since this determinant is never zero, \(c_1=c_2=c_3=0\). __
+   </p>
+   <p class='indent'> We can use the method in Example <a href='#x1-51'>10.3.1<!-- tex4ht:ref: example:10.3.1  --></a>
+      to test \(n\) solutions \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) of any \(n\times n\) system \({\bf
+      y}'=A(t){\bf y}\) for linear independence on an
+      interval \((a,b)\) on which \(A\) is continuous. To explain this (and for other purposes later), it’s useful to
+      write a linear
+      combination of \({\bf y}_1\), \({\bf y}_2\), …, \({\bf y}_n\) in a different way. We first write the vector
+      functions in terms of their components
+      as
 
-                                                                                
-    </p><dl class='list1'><dt class='list'>
- <span class='ptmb8t-'>(a)</span>  </dt><dd class='list'>
-    <p class='noindent'><span class='ptmri8t-'>The general solution of</span> \({\bf y}'=A(t){\bf y}\) <span class='ptmri8t-'>on</span> \((a,b)\) <span class='ptmri8t-'>is</span> \({\bf y}=c_1{\bf y}_1+c_2{\bf y}_2+\cdots +c_n{\bf y}_n\)<span class='ptmri8t-'>, where</span> \(c_1\)<span class='ptmri8t-'>,</span> \(c_2\)<span class='ptmri8t-'>, …,</span> \(c_n\) <span class='ptmri8t-'>are arbitrary constants.</span>
-    </p></dd><dt class='list'>
- <span class='ptmb8t-'>(b)</span>  </dt><dd class='list'>
-    <p class='noindent'>\(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) <span class='ptmri8t-'>is a fundamental set of solutions of</span> \({\bf y}'=A(t){\bf y}\) <span class='ptmri8t-'>on</span> \((a,b)\)<span class='ptmri8t-'>.</span>
-    </p></dd><dt class='list'>
- <span class='ptmb8t-'>(c)</span>  </dt><dd class='list'>
-    <p class='noindent'>\(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) <span class='ptmri8t-'>is linearly independent on</span> \((a,b)\)<span class='ptmri8t-'>.</span>
-    </p></dd><dt class='list'>
- <span class='ptmb8t-'>(d)</span>  </dt><dd class='list'>
-    <p class='noindent'><span class='ptmri8t-'>The Wronskian of</span> \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) <span class='ptmri8t-'>is nonzero at some point in</span> \((a,b)\)<span class='ptmri8t-'>.</span>
-    </p></dd><dt class='list'>
- <span class='ptmb8t-'>(e)</span>  </dt><dd class='list'>
-    <p class='noindent'><span class='ptmri8t-'>The Wronskian of</span> \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) <span class='ptmri8t-'>is nonzero at all points in</span> \((a,b)\)<span class='ptmri8t-'>.</span></p></dd></dl>
-</div>
-<p class='indent'>  
-</p><p class='indent'>  We say that \(Y\) in (<a href='#x1-7r4'>10.3.4<!-- tex4ht:ref: eq:10.3.4  --></a>) is a <span class='ptmri8t-'>fundamental matrix</span> for \({\bf y}'=A(t){\bf y}\) if any (and therefore all) of the statements (<span class='ptmb8t-'>a</span>)-(<span class='ptmb8t-'>e</span>) of
-Theorem <a href='#x1-92'>10.3.2<!-- tex4ht:ref: thmtype:10.3.2  --></a> are true for the columns of \(Y\). In this case, (<a href='#x1-6r3'>10.3.3<!-- tex4ht:ref: eq:10.3.3  --></a>) implies that the general solution of \({\bf y}'=A(t){\bf y}\) can be
-written as \({\bf y}=Y{\bf c}\), where \(\bf c\) is an arbitrary constant \(n\)-vector.
-</p>
-  <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 10.3.2</span> </span><a id='x1-172'></a> The vector functions
-                                        \[ {\bf y}_1=\twocol {-e^{2t}}{2e^{2t}}\mbox {\quad and \quad } {\bf y}_2=\twocol {-e^{-t}}{\phantom {-}e^{-t}} \]
- are solutions of the constant coefficient system \begin {equation}  \label {eq:10.3.7} {\bf y}'=\twobytwo {-4}{-3} 65 {\bf y}  \end {equation}<a id='x1-18r7'></a> on \((-\infty ,\infty )\). (Verify.)
-    </p><dl class='list1'><dt class='list'>
- <span class='ptmb8t-'>(a)</span>  </dt><dd class='list'>
-    <p class='noindent'>Compute the Wronskian of \(\{{\bf y}_1,{\bf y}_2\}\) directly from the definition (<a href='#x1-8r5'>10.3.5<!-- tex4ht:ref: eq:10.3.5  --></a>)
-    </p></dd><dt class='list'>
- <span class='ptmb8t-'>(b)</span>  </dt><dd class='list'>
-    <p class='noindent'>Verify Abel’s formula (<a href='#x1-10r6'>10.3.6<!-- tex4ht:ref: eq:10.3.6  --></a>) for the Wronskian of \(\{{\bf y}_1,{\bf y}_2\}\).
-                                                                                
 
-                                                                                
-    </p></dd><dt class='list'>
- <span class='ptmb8t-'>(c)</span>  </dt><dd class='list'>
-    <p class='noindent'>Find the general solution of (<a href='#x1-18r7'>10.3.7<!-- tex4ht:ref: eq:10.3.7  --></a>).
-    </p></dd><dt class='list'>
- <span class='ptmb8t-'>(d)</span>  </dt><dd class='list'>
-    <p class='noindent'>Solve the initial value problem \begin {equation}  \label {eq:10.3.8} {\bf y}'=\twobytwo {-4}{-3}65 {\bf y}, \quad {\bf y}(0)= \left [\begin {array}{r} 4 \\-5\end {array}\right ]\end {equation}<a id='x1-23r8'></a></p></dd></dl>
-</div>
-<p class='indent'>
-</p><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>a</span><span class='ptmrc8t-'>) </span></span> From (<a href='#x1-8r5'>10.3.5<!-- tex4ht:ref: eq:10.3.5  --></a>) \begin {equation}  \label {eq:10.3.9} W(t)=\left |\begin {array}{cc}-e^{2t}&amp;-e^{-t}\\2e^{2t}&amp; e^{-t}\end {array}\right |= e^{2t}e^{-t} \twobytwo {-1}{-1}21=e^t\end {equation}<a id='x1-24r9'></a>
-</p><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>b</span><span class='ptmrc8t-'>) </span></span> Here
-                                        \[ A=\twobytwo {-4}{-3} 65\]
- so tr\((A)=-4+5=1\). If \(t_0\) is an arbitrary real number then (<a href='#x1-10r6'>10.3.6<!-- tex4ht:ref: eq:10.3.6  --></a>) implies that
-                                        \[ W(t)=W(t_0)\exp {\left (\int _{t_0}^t1\,ds\right )}= \left |\begin {array}{cc} -e^{2t_0}&amp;-e^{-t_0}\\2e^{2t_0}&amp;e^{-t_0}\end {array}\right |e^{(t-t_0)} =e^{t_0}e^{t-t_0}=e^t\]
- which is consistent with (<a href='#x1-24r9'>10.3.9<!-- tex4ht:ref: eq:10.3.9  --></a>).
-</p><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>c</span><span class='ptmrc8t-'>) </span></span> Since \(W(t)\ne 0\), Theorem <a href='#x1-113'>10.3.3<!-- tex4ht:ref: thmtype:10.3.3  --></a> implies that \(\{{\bf y}_1,{\bf y}_2\}\) is a fundamental set of solutions of (<a href='#x1-18r7'>10.3.7<!-- tex4ht:ref: eq:10.3.7  --></a>)
-and
-                                                                                
 
-                                                                                
-                                        \[ Y=\left [\begin {array}{cc}-e^{2t}&amp;-e^{-t}\\2e^{2t}&amp; e^{-t}\end {array}\right ] \]
- is a fundamental matrix for (<a href='#x1-18r7'>10.3.7<!-- tex4ht:ref: eq:10.3.7  --></a>). Therefore the general solution of (<a href='#x1-18r7'>10.3.7<!-- tex4ht:ref: eq:10.3.7  --></a>) is \begin {equation}  \label {eq:10.3.10} {\bf y}=c_1{\bf y}_1+c_2{\bf y}_2= c_1\twocol {-e^{2t}}{2e^{2t}}+c_2\twocol {-e^{-t}}{e^{-t}} =\left [\begin {array}{cc}-e^{2t}&amp;-e^{-t}\\2e^{2t}&amp; e^{-t}\end {array}\right ] \left [\begin {array}{c}c_1\\c_2\end {array}\right ]\end {equation}<a id='x1-25r10'></a>
-</p><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>d</span><span class='ptmrc8t-'>) </span></span> Setting \(t=0\) in (<a href='#x1-25r10'>10.3.10<!-- tex4ht:ref: eq:10.3.10  --></a>) and imposing the initial condition in (<a href='#x1-23r8'>10.3.8<!-- tex4ht:ref: eq:10.3.8  --></a>) yields
-                                        \[ c_1\left [\begin {array}{r}-1 \\2\end {array}\right ]+c_2 \left [\begin {array}{r}-1 \\1\end {array}\right ]= \left [\begin {array}{r} 4 \\-5\end {array}\right ]\]
- Thus, </p><div class='eqnarray'>\begin {eqnarray*}  -c_1-c_2&amp;=&amp;\phantom {-}4 \\ 2c_1+c_2&amp;=&amp;-5\end {eqnarray*}</div>
-<p class='indent'>  The solution of this system is \(c_1=-1\), \(c_2=-3\). Substituting these values into (<a href='#x1-25r10'>10.3.10<!-- tex4ht:ref: eq:10.3.10  --></a>) yields
-                                        \[ {\bf y}=-\left [\begin {array}{c}-e^{2t} \\ 2e^{2t}\end {array} \right ]-3 \left [\begin {array}{c}-e^{-t} \\ e^{-t}\end {array}\right ]= \left [ \begin {array}{c} e^{2t}+3e^{-t} \\-2e^{2t}-3e^{-t} \end {array}\right ] \]
- as the solution of (<a href='#x1-23r8'>10.3.8<!-- tex4ht:ref: eq:10.3.8  --></a>).
-</p>
- <a class="back-to-ch" href="sec10.0.html">Back</a>
-   
-</body> 
+      \[ {\bf y}_1=\left [\begin {array}{c} y_{11}\\y_{21}\\ \vdots \\ y_{n1}\end {array}\right ],\quad {\bf y}_2=\left
+      [\begin {array}{c} y_{12}\\y_{22}\\ \vdots \\ y_{n2}\end {array}\right ],\dots ,\quad {\bf y}_n=\left [\begin
+      {array}{c} y_{1n}\\y_{2n}\\ \vdots \\ y_{nn}\end {array}\right ]\]
+      If
+      \[ {\bf y}=c_1{\bf y}_1+c_2{\bf y}_2+\cdots +c_n{\bf y}_n \]
+      then </p>
+   <div class='eqnarray'>\begin {eqnarray*} {\bf y}&amp;=&amp; c_1\left [\begin {array}{c} y_{11}\\y_{21}\\ \vdots \\
+      y_{n1}\end {array}\right ]+ c_2\left [\begin {array}{c} y_{12}\\y_{22}\\ \vdots \\ y_{n2}\end {array}\right
+      ]+\cdots +c_n\left [\begin {array}{c} y_{1n}\\y_{2n}\\ \vdots \\ y_{nn}\end {array}\right ]\\ &amp;=&amp;\left
+      [\begin {array}{cccc} y_{11}&amp;y_{12}&amp;\cdots &amp;y_{1n} \\ y_{21}&amp;y_{22}&amp;\cdots &amp;y_{2n}\\
+      \vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ y_{n1}&amp;y_{n2}&amp;\cdots &amp;y_{nn} \\ \end {array}\right ]\col
+      cn\end {eqnarray*}</div>
+   <p class='indent'> This shows that \begin {equation} \label {eq:10.3.3} c_1{\bf y}_1+c_2{\bf y}_2+\cdots +c_n{\bf
+      y}_n=Y{\bf c}\end {equation}<a id='x1-6r3'></a> where
+      \[ {\bf c}=\col cn \]
+      and \begin {equation} \label {eq:10.3.4} Y=[{\bf y}_1\; {\bf y}_2\; \cdots \; {\bf y}_n]= \left [\begin
+      {array}{cccc} y_{11}&amp;y_{12}&amp;\cdots &amp;y_{1n} \\ y_{21}&amp;y_{22}&amp;\cdots &amp;y_{2n}\\ \vdots
+      &amp;\vdots &amp;\ddots &amp;\vdots \\ y_{n1}&amp;y_{n2}&amp;\cdots &amp;y_{nn} \\ \end {array}\right ]; \end
+      {equation}<a id='x1-7r4'></a> that is, the columns of \(Y\) are the vector functions \({\bf y}_1,{\bf y}_2,\dots
+      ,{\bf y}_n\).
+   </p>
+   <p class='indent'> For reference below, note that </p>
+   <div class='eqnarray'>\begin {eqnarray*} Y'&amp;=&amp;[{\bf y}_1'\; {\bf y}_2'\; \cdots \; {\bf y}_n']\\
+      &amp;=&amp;[A{\bf y}_1\; A{\bf y}_2\; \cdots \; A{\bf y}_n]\\ &amp;=&amp;A[{\bf y}_1\; {\bf y}_2\; \cdots \; {\bf
+      y}_n]=AY; \end {eqnarray*}</div>
+   <p class='indent'> that is, \(Y\) satisfies the matrix differential equation
+   </p>
+   <p class='indent'>
+      \[ Y'=AY\]
+   </p>
+   <p class='indent'> The determinant of \(Y\), \begin {equation} \label {eq:10.3.5} W=\left |\begin {array}{cccc}
+      y_{11}&amp;y_{12}&amp;\cdots &amp;y_{1n} \\ y_{21}&amp;y_{22}&amp;\cdots &amp;y_{2n}\\ \vdots &amp;\vdots
+      &amp;\ddots &amp;\vdots \\ y_{n1}&amp;y_{n2}&amp;\cdots &amp;y_{nn} \\ \end {array}\right | \end {equation}<a
+         id='x1-8r5'></a> is called the <span class='vocab'>Wronskian</span> of \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf
+      y}_n\}\). It can be shown (Exercises <span class='ptmb8t-'>2</span> and <span class='ptmb8t-'>3</span>) that this
+      definition is
+      analogous to definitions of the Wronskian of scalar functions given in Sections 5.1 and 9.1. The next theorem is
+      analogous to Theorems <span class='ptmb8t-'>5.1.4</span> and <span class='ptmb8t-'>9.1.3</span>. The proof is
+      sketched in Exercise <span class='ptmb8t-'>4</span> for \(n=2\) and in Exercise <span class='ptmb8t-'>5</span> for
+      general \(n\).
+
+
+
+   </p>
+   <div class='newtheorem'>
+      <p class='noindent'><span class='head'>
+            <span class='ptmb8t-'>Theorem 10.3.2</span> </span>\([\)<span class='ptmri8t-'>Abel’s Formula</span>\(]\) <a
+            id='x1-92'></a><span class='ptmri8t-'>Suppose the</span> \(n\times n\) <span class='ptmri8t-'>matrix</span>
+         \(A=A(t)\) <span class='ptmri8t-'>is continuous on</span> \((a,b),\) <span class='ptmri8t-'>let</span> \({\bf
+         y}_1\)<span class='ptmri8t-'>,</span> \({\bf y}_2\)<span class='ptmri8t-'>, …,</span> \({\bf y}_n\) <span
+            class='ptmri8t-'>be solutions of</span> \({\bf y}'=A(t){\bf y}\)
+         <span class='ptmri8t-'>on</span> \((a,b),\) <span class='ptmri8t-'>and let</span> \(t_0\) <span
+            class='ptmri8t-'>be in</span> \((a,b)\)<span class='ptmri8t-'>. Then the Wronskian of</span> \(\{{\bf
+         y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) <span class='ptmri8t-'>is given by </span>\begin {equation} \label
+         {eq:10.3.6} W(t)=W(t_0)\exp \left ( \int ^t_{t_0}\big [a_{11}(s)+a_{22}(s)+\cdots +a_{nn}(s)]\, ds\right ),
+         \quad a &lt; t &lt; b\end {equation}<a id='x1-10r6'></a> <span class='ptmri8t-'>Therefore</span>\(,\) <span
+            class='ptmri8t-'>either</span> \(W\) <span class='ptmri8t-'>has no zeros in</span> \((a,b)\) <span
+            class='ptmri8t-'>or</span> \(W\equiv 0\) <span class='ptmri8t-'>on</span>
+         \((a,b).\)
+      </p>
+   </div>
+   <p class='indent'>
+   </p>
+   <p class='noindent'><span class='ptmrc8t-'>R<span class='small-caps'>EMARK</span></span>:  The sum of the diagonal
+      entries of a square matrix \(A\) is called the <span class='ptmri8t-'>trace</span> of \(A\), denoted by tr\((A)\).
+      Thus, for an \(n\times n\)
+      matrix \(A\),
+      \[ \mbox {tr}(A)=a_{11}+a_{22}+\cdots +a_{nn}\]
+      and (<a href='#x1-10r6'>10.3.6<!-- tex4ht:ref: eq:10.3.6  --></a>) can be written as
+      \[ W(t)=W(t_0)\exp \left ( \int ^t_{t_0}\mbox {tr}(A(s))\, ds\right ), \quad a &lt; t &lt; b\]
+
+   </p>
+   <p class='indent'> The next theorem is analogous to Theorems <span class='ptmb8t-'>5.1.6</span> and <span
+         class='ptmb8t-'>9.1.4</span>.
+   </p>
+   <div class='newtheorem'>
+      <p class='noindent'><span class='head'>
+            <span class='ptmb8t-'>Theorem 10.3.3</span> </span><a id='x1-113'></a> <span class='ptmri8t-'>Suppose
+            the</span> \(n\times n\) <span class='ptmri8t-'>matrix</span> \(A=A(t)\) <span class='ptmri8t-'>is
+            continuous on</span> \((a,b)\) <span class='ptmri8t-'>and let</span> \({\bf y}_1\)<span
+            class='ptmri8t-'>,</span> \({\bf y}_2\)<span class='ptmri8t-'>, …</span>\(,\)\({\bf y}_n\) <span
+            class='ptmri8t-'>be solutions of</span> \({\bf y}'=A(t){\bf y}\) <span class='ptmri8t-'>on</span>
+         \((a,b)\)<span class='ptmri8t-'>. Then the following
+            statements are equivalent; that is, they are either all true or all false:</span>
+
+
+
+      </p>
+      <dl class='list1'>
+         <dt class='list'>
+            <span class='ptmb8t-'>(a)</span>
+         </dt>
+         <dd class='list'>
+            <p class='noindent'><span class='ptmri8t-'>The general solution of</span> \({\bf y}'=A(t){\bf y}\) <span
+                  class='ptmri8t-'>on</span> \((a,b)\) <span class='ptmri8t-'>is</span> \({\bf y}=c_1{\bf y}_1+c_2{\bf
+               y}_2+\cdots +c_n{\bf y}_n\)<span class='ptmri8t-'>, where</span> \(c_1\)<span class='ptmri8t-'>,</span>
+               \(c_2\)<span class='ptmri8t-'>, …,</span> \(c_n\) <span class='ptmri8t-'>are arbitrary constants.</span>
+            </p>
+         </dd>
+         <dt class='list'>
+            <span class='ptmb8t-'>(b)</span>
+         </dt>
+         <dd class='list'>
+            <p class='noindent'>\(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) <span class='ptmri8t-'>is a fundamental set
+                  of solutions of</span> \({\bf y}'=A(t){\bf y}\) <span class='ptmri8t-'>on</span> \((a,b)\)<span
+                  class='ptmri8t-'>.</span>
+            </p>
+         </dd>
+         <dt class='list'>
+            <span class='ptmb8t-'>(c)</span>
+         </dt>
+         <dd class='list'>
+            <p class='noindent'>\(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) <span class='ptmri8t-'>is linearly
+                  independent on</span> \((a,b)\)<span class='ptmri8t-'>.</span>
+            </p>
+         </dd>
+         <dt class='list'>
+            <span class='ptmb8t-'>(d)</span>
+         </dt>
+         <dd class='list'>
+            <p class='noindent'><span class='ptmri8t-'>The Wronskian of</span> \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf
+               y}_n\}\) <span class='ptmri8t-'>is nonzero at some point in</span> \((a,b)\)<span
+                  class='ptmri8t-'>.</span>
+            </p>
+         </dd>
+         <dt class='list'>
+            <span class='ptmb8t-'>(e)</span>
+         </dt>
+         <dd class='list'>
+            <p class='noindent'><span class='ptmri8t-'>The Wronskian of</span> \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf
+               y}_n\}\) <span class='ptmri8t-'>is nonzero at all points in</span> \((a,b)\)<span
+                  class='ptmri8t-'>.</span></p>
+         </dd>
+      </dl>
+   </div>
+   <p class='indent'>
+   </p>
+   <p class='indent'> We say that \(Y\) in (<a href='#x1-7r4'>10.3.4<!-- tex4ht:ref: eq:10.3.4  --></a>) is a <span
+         class='ptmri8t-'>fundamental matrix</span> for \({\bf y}'=A(t){\bf y}\) if any (and therefore all) of the
+      statements (<span class='ptmb8t-'>a</span>)-(<span class='ptmb8t-'>e</span>) of
+      Theorem <a href='#x1-92'>10.3.2<!-- tex4ht:ref: thmtype:10.3.2  --></a> are true for the columns of \(Y\). In this
+      case, (<a href='#x1-6r3'>10.3.3<!-- tex4ht:ref: eq:10.3.3  --></a>) implies that the general solution of \({\bf
+      y}'=A(t){\bf y}\) can be
+      written as \({\bf y}=Y{\bf c}\), where \(\bf c\) is an arbitrary constant \(n\)-vector.
+   </p>
+   <div class='newtheorem'>
+      <p class='noindent'><span class='head'>
+            <span class='ex-number'>Example 10.3.2</span> </span><a id='x1-172'></a> The vector functions
+         \[ {\bf y}_1=\twocol {-e^{2t}}{2e^{2t}}\mbox {\quad and \quad } {\bf y}_2=\twocol {-e^{-t}}{\phantom {-}e^{-t}}
+         \]
+         are solutions of the constant coefficient system \begin {equation} \label {eq:10.3.7} {\bf y}'=\twobytwo
+         {-4}{-3} 65 {\bf y} \end {equation}<a id='x1-18r7'></a> on \((-\infty ,\infty )\). (Verify.)
+      </p>
+      <dl class='list1'>
+         <dt class='list'>
+            <span class='ptmb8t-'>(a)</span>
+         </dt>
+         <dd class='list'>
+            <p class='noindent'>Compute the Wronskian of \(\{{\bf y}_1,{\bf y}_2\}\) directly from the definition (<a
+                  href='#x1-8r5'>10.3.5<!-- tex4ht:ref: eq:10.3.5  --></a>)
+            </p>
+         </dd>
+         <dt class='list'>
+            <span class='ptmb8t-'>(b)</span>
+         </dt>
+         <dd class='list'>
+            <p class='noindent'>Verify Abel’s formula (<a href='#x1-10r6'>10.3.6<!-- tex4ht:ref: eq:10.3.6  --></a>) for
+               the Wronskian of \(\{{\bf y}_1,{\bf y}_2\}\).
+
+
+
+            </p>
+         </dd>
+         <dt class='list'>
+            <span class='ptmb8t-'>(c)</span>
+         </dt>
+         <dd class='list'>
+            <p class='noindent'>Find the general solution of (<a
+                  href='#x1-18r7'>10.3.7<!-- tex4ht:ref: eq:10.3.7  --></a>).
+            </p>
+         </dd>
+         <dt class='list'>
+            <span class='ptmb8t-'>(d)</span>
+         </dt>
+         <dd class='list'>
+            <p class='noindent'>Solve the initial value problem \begin {equation} \label {eq:10.3.8} {\bf y}'=\twobytwo
+               {-4}{-3}65 {\bf y}, \quad {\bf y}(0)= \left [\begin {array}{r} 4 \\-5\end {array}\right ]\end
+               {equation}<a id='x1-23r8'></a></p>
+         </dd>
+      </dl>
+   </div>
+   <p class='indent'>
+   </p>
+   <p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span
+               class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>a</span><span
+            class='ptmrc8t-'>) </span></span> From (<a href='#x1-8r5'>10.3.5<!-- tex4ht:ref: eq:10.3.5  --></a>) \begin
+      {equation} \label {eq:10.3.9} W(t)=\left |\begin {array}{cc}-e^{2t}&amp;-e^{-t}\\2e^{2t}&amp; e^{-t}\end
+      {array}\right |= e^{2t}e^{-t} \twobytwo {-1}{-1}21=e^t\end {equation}<a id='x1-24r9'></a>
+   </p>
+   <p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span
+               class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>b</span><span
+            class='ptmrc8t-'>) </span></span> Here
+      \[ A=\twobytwo {-4}{-3} 65\]
+      so tr\((A)=-4+5=1\). If \(t_0\) is an arbitrary real number then (<a
+         href='#x1-10r6'>10.3.6<!-- tex4ht:ref: eq:10.3.6  --></a>) implies that
+      \[ W(t)=W(t_0)\exp {\left (\int _{t_0}^t1\,ds\right )}= \left |\begin {array}{cc}
+      -e^{2t_0}&amp;-e^{-t_0}\\2e^{2t_0}&amp;e^{-t_0}\end {array}\right |e^{(t-t_0)} =e^{t_0}e^{t-t_0}=e^t\]
+      which is consistent with (<a href='#x1-24r9'>10.3.9<!-- tex4ht:ref: eq:10.3.9  --></a>).
+   </p>
+   <p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span
+               class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>c</span><span
+            class='ptmrc8t-'>) </span></span> Since \(W(t)\ne 0\), Theorem <a
+         href='#x1-113'>10.3.3<!-- tex4ht:ref: thmtype:10.3.3  --></a> implies that \(\{{\bf y}_1,{\bf y}_2\}\) is a
+      fundamental set of solutions of (<a href='#x1-18r7'>10.3.7<!-- tex4ht:ref: eq:10.3.7  --></a>)
+      and
+
+
+
+      \[ Y=\left [\begin {array}{cc}-e^{2t}&amp;-e^{-t}\\2e^{2t}&amp; e^{-t}\end {array}\right ] \]
+      is a fundamental matrix for (<a href='#x1-18r7'>10.3.7<!-- tex4ht:ref: eq:10.3.7  --></a>). Therefore the general
+      solution of (<a href='#x1-18r7'>10.3.7<!-- tex4ht:ref: eq:10.3.7  --></a>) is \begin {equation} \label
+      {eq:10.3.10} {\bf y}=c_1{\bf y}_1+c_2{\bf y}_2= c_1\twocol {-e^{2t}}{2e^{2t}}+c_2\twocol {-e^{-t}}{e^{-t}} =\left
+      [\begin {array}{cc}-e^{2t}&amp;-e^{-t}\\2e^{2t}&amp; e^{-t}\end {array}\right ] \left [\begin
+      {array}{c}c_1\\c_2\end {array}\right ]\end {equation}<a id='x1-25r10'></a>
+   </p>
+   <p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span
+               class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>d</span><span
+            class='ptmrc8t-'>) </span></span> Setting \(t=0\) in (<a
+         href='#x1-25r10'>10.3.10<!-- tex4ht:ref: eq:10.3.10  --></a>) and imposing the initial condition in (<a
+         href='#x1-23r8'>10.3.8<!-- tex4ht:ref: eq:10.3.8  --></a>) yields
+      \[ c_1\left [\begin {array}{r}-1 \\2\end {array}\right ]+c_2 \left [\begin {array}{r}-1 \\1\end {array}\right ]=
+      \left [\begin {array}{r} 4 \\-5\end {array}\right ]\]
+      Thus, </p>
+   <div class='eqnarray'>\begin {eqnarray*} -c_1-c_2&amp;=&amp;\phantom {-}4 \\ 2c_1+c_2&amp;=&amp;-5\end {eqnarray*}
+   </div>
+   <p class='indent'> The solution of this system is \(c_1=-1\), \(c_2=-3\). Substituting these values into (<a
+         href='#x1-25r10'>10.3.10<!-- tex4ht:ref: eq:10.3.10  --></a>) yields
+      \[ {\bf y}=-\left [\begin {array}{c}-e^{2t} \\ 2e^{2t}\end {array} \right ]-3 \left [\begin {array}{c}-e^{-t} \\
+      e^{-t}\end {array}\right ]= \left [ \begin {array}{c} e^{2t}+3e^{-t} \\-2e^{2t}-3e^{-t} \end {array}\right ] \]
+      as the solution of (<a href='#x1-23r8'>10.3.8<!-- tex4ht:ref: eq:10.3.8  --></a>).
+   </p>
+
+
+   <div class="nav">
+      <a href="sec10.2.book.html">Back (10.2)</a>
+  
+      <a href="sec10.0.html">Chapter 10</a>
+  
+      <a href="sec10.4.book.html">Next (10.4)</a>
+    </div>
+</body>
+
 </html>

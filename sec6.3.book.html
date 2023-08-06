@@ -1,218 +1,526 @@
-<!DOCTYPE html> 
-<html lang='en-US' xml:lang='en-US'> 
-<head><title></title> 
-<meta charset='utf-8' /> 
-<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
-<meta content='width=device-width,initial-scale=1' name='viewport' /> 
-<link rel="stylesheet" type="text/css" href='combined.css' />
-<meta content='Trench_DiffEQ_Book.tex' name='src' /> 
-<script>window.MathJax = {
-     tex: { packages: {'[+]': ['tagformat']}, tags: "ams", tagformat: { tag: (tag) => '(6.3.' + tag + ')'} }
- }; </script> 
- <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
- <style type='text/css'>
-  :root {
-    --section-number: "6.3"
-  }
-</style>
-</head><body>
-<p><a id='x1-1doc'></a>
-</p><p class='noindent'>Section 6.3 The \(RLC\) Circuit
-</p><p class='noindent'><span class='ptmb8t-'>6.3</span><span class='ptmb8t-x-x-90'>  THE</span> \(RLC\) <span class='ptmb8t-x-x-90'>CIRCUIT</span>
-</p><p class='noindent'>In this section we consider the \(RLC\) <span class='ptmri8t-'>circuit</span>, shown schematically in Figure <a href='#-an-rlc-circuit-'>6.3.1<!-- tex4ht:ref: figure:6.3.1  --></a>. As we’ll see, the \(RLC\) circuit is an
-electrical analog of a spring-mass system with damping.
-</p><p class='indent'>  Nothing happens while the switch is open (dashed line). When the switch is closed (solid line) we say that the
-<span class='ptmri8t-'>circuit is closed</span>. Differences in electrical potential in a closed circuit cause current to flow in the
-circuit. The battery or generator in Figure <a href='#-an-rlc-circuit-'>6.3.1<!-- tex4ht:ref: figure:6.3.1  --></a> creates a difference in electrical potential \(E=E(t)\) between
-its two terminals, which we’ve marked arbitrarily as positive and negative. (We could just as well
-interchange the markings.) We’ll say that \(E(t)&gt;0\) if the potential at the positive terminal is greater than the
-potential at the negative terminal, \(E(t)&lt;0\) if the potential at the positive terminal is less than the potential at
-the negative terminal, and \(E(t)=0\) if the potential is the same at the two terminals. We call \(E\) the <span class='ptmri8t-'>impressed
-voltage</span>.
-</p>
-  <figure class='figure'> 
+<!DOCTYPE html>
+<html lang='en-US' xml:lang='en-US'>
 
-                                                                                
+<head>
+  <title></title>
+  <meta charset='utf-8' />
+  <meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' />
+  <meta content='width=device-width,initial-scale=1' name='viewport' />
+  <link rel="stylesheet" type="text/css" href='combined.css' />
+  <meta content='Trench_DiffEQ_Book.tex' name='src' />
+  <script>window.MathJax = {
+      tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(6.3.' + tag + ')' } }
+    }; </script>
+  <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js'
+    type='text/javascript'></script>
+  <style type='text/css'>
+    :root {
+      --section-number: "6.3"
+    }
+  </style>
+</head>
 
-                                                                                
-                                                                                
+<body>
+  <p><a id='x1-1doc'></a>
+  </p>
+  <p class='noindent'>Section 6.3 The \(RLC\) Circuit
+  </p>
+  <p class='noindent'><span class='ptmb8t-'>6.3</span><span class='ptmb8t-x-x-90'>  THE</span> \(RLC\) <span
+      class='ptmb8t-x-x-90'>CIRCUIT</span>
+  </p>
+  <p class='noindent'>In this section we consider the \(RLC\) <span class='ptmri8t-'>circuit</span>, shown schematically
+    in Figure <a href='#-an-rlc-circuit-'>6.3.1<!-- tex4ht:ref: figure:6.3.1  --></a>. As we’ll see, the \(RLC\) circuit
+    is an
+    electrical analog of a spring-mass system with damping.
+  </p>
+  <p class='indent'> Nothing happens while the switch is open (dashed line). When the switch is closed (solid line) we
+    say that the
+    <span class='ptmri8t-'>circuit is closed</span>. Differences in electrical potential in a closed circuit cause
+    current to flow in the
+    circuit. The battery or generator in Figure <a href='#-an-rlc-circuit-'>6.3.1<!-- tex4ht:ref: figure:6.3.1  --></a>
+    creates a difference in electrical potential \(E=E(t)\) between
+    its two terminals, which we’ve marked arbitrarily as positive and negative. (We could just as well
+    interchange the markings.) We’ll say that \(E(t)&gt;0\) if the potential at the positive terminal is greater than
+    the
+    potential at the negative terminal, \(E(t)&lt;0\) if the potential at the positive terminal is less than the
+    potential at
+    the negative terminal, and \(E(t)=0\) if the potential is the same at the two terminals. We call \(E\) the <span
+      class='ptmri8t-'>impressed
+      voltage</span>.
+  </p>
+  <figure class='figure'>
 
-                                                                                
-<p class='noindent' id='-an-rlc-circuit-'><img height='264' src='EPS/fig060301.png' width='409' /> <a id='x1-2r1'></a></p>
-<figcaption class='caption'><span class='id'>Figure 6.3.1 </span><span class='content'>An \(RLC\) circuit                                                             </span></figcaption><!-- tex4ht:label?: x1-2r1  -->
-                                                                                
 
-                                                                                
+
+
+
+
+
+    <p class='noindent' id='-an-rlc-circuit-'><img height='264' src='EPS/fig060301.png' width='409' /> <a
+        id='x1-2r1'></a></p>
+    <figcaption class='caption'><span class='id'>Figure 6.3.1 </span><span class='content'>An \(RLC\) circuit </span>
+    </figcaption><!-- tex4ht:label?: x1-2r1  -->
+
+
+
   </figure>
-<p class='indent'>  At any time \(t\), the same current flows in all points of the circuit. We denote current by \(I=I(t)\). We say that \(I(t)&gt;0\) if the
-direction of flow is around the circuit from the positive terminal of the battery or generator back to the negative
-terminal, as indicated by the arrows in Figure <a href='#-an-rlc-circuit-'>6.3.1<!-- tex4ht:ref: figure:6.3.1  --></a> \(I(t)&lt;0\) if the flow is in the opposite direction, and \(I(t)=0\) if no current
-flows at time \(t\).
-</p><p class='indent'>  Differences in potential occur at the resistor, induction coil, and capacitor in Figure <a href='#-an-rlc-circuit-'>6.3.1<!-- tex4ht:ref: figure:6.3.1  --></a>. Note that the two
-sides of each of these components are also identified as positive and negative. The <span class='ptmri8t-'>voltage drop across</span> each
-component is defined to be the potential on the positive side of the component minus the potential on the
-negative side. This terminology is somewhat misleading, since “drop” suggests a decrease even
-though changes in potential are signed quantities and therefore may be increases. Nevertheless,
-we’ll go along with tradition and call them voltage drops. The voltage drop across the resistor in
-Figure <a href='#-an-rlc-circuit-'>6.3.1<!-- tex4ht:ref: figure:6.3.1  --></a> is given by \begin {equation}  \label {eq:6.3.1} V_R=IR\end {equation}<a id='x1-3r1'></a> where \(I\) is current and \(R\) is a positive constant, the <span class='ptmri8t-'>resistance</span> of the resistor. The
-voltage drop across the induction coil is given by \begin {equation}  \label {eq:6.3.2} V_I=L{dI\over dt}=LI'\end {equation}<a id='x1-4r2'></a> where \(L\) is a positive constant, the <span class='ptmri8t-'>inductance</span> of the
-coil.
-</p><p class='indent'>  A capacitor stores electrical charge \(Q=Q(t)\), which is related to the current in the circuit by the equation \begin {equation}  \label {eq:6.3.3} Q(t)=Q_0+\int _0^tI(\tau )\,d\tau \end {equation}<a id='x1-5r3'></a> where \(Q_0\) is the
-charge on the capacitor at \(t=0\). The voltage drop across a capacitor is given by \begin {equation}  \label {eq:6.3.4} V_C={Q\over C}\end {equation}<a id='x1-6r4'></a> where \(C\) is a positive constant, the
-<span class='ptmri8t-'>capacitance</span> of the capacitor.
-</p><p class='indent'>  Table <a href='#x1-7r1'>6.3.1<!-- tex4ht:ref: table:6.3.1  --></a> names the units for the quantities that we’ve discussed. The units are defined so that
-</p><div class='eqnarray'>\begin {eqnarray*}  1\mbox {\,volt}&amp;=&amp;1\mbox {\,ampere}\cdot 1\mbox {\,ohm}\\ &amp;=&amp;1\mbox {\,henry}\cdot 1\,\mbox {ampere}/\mbox {second}\\ &amp;=&amp;1\mbox {\,coulomb}/\mbox {\,farad}\\ \text {and}\\ 1\mbox {\,ampere}&amp;=&amp;1\mbox {\,coulomb}/\mbox {second}\end {eqnarray*}</div>
-     <blockquote class='quote'>
-     <p class='noindent'>Table <a id='x1-7r1'></a>6.3.1. Electrical Units </p>
-     <div class='center'>
-<p class='noindent'>
-</p>
-<div class='tabular'> <table class='tabular' id='TBL-1'><colgroup id='TBL-1-1g'><col id='TBL-1-1' /></colgroup><colgroup id='TBL-1-2g'><col id='TBL-1-2' /></colgroup><colgroup id='TBL-1-3g'><col id='TBL-1-3' /></colgroup><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td></tr><tr id='TBL-1-1-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-1-1' style='white-space:nowrap; text-align:center;'> <span class='ptmb8t-'>Symbol  </span></td><td class='td11' id='TBL-1-1-2' style='white-space:nowrap; text-align:center;'>      <span class='ptmb8t-'>Name            </span></td><td class='td11' id='TBL-1-1-3' style='white-space:nowrap; text-align:center;'>   <span class='ptmb8t-'>Unit      </span></td>
-</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td></tr><tr id='TBL-1-2-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-2-1' style='white-space:nowrap; text-align:center;'>    \(E\)    </td><td class='td11' id='TBL-1-2-2' style='white-space:nowrap; text-align:center;'> Impressed Voltage  </td><td class='td11' id='TBL-1-2-3' style='white-space:nowrap; text-align:center;'>   volt      </td>
-</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td></tr><tr id='TBL-1-3-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-3-1' style='white-space:nowrap; text-align:center;'>    \(I\)    </td><td class='td11' id='TBL-1-3-2' style='white-space:nowrap; text-align:center;'>     Current           </td><td class='td11' id='TBL-1-3-3' style='white-space:nowrap; text-align:center;'>  ampere    </td>
-</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td></tr><tr id='TBL-1-4-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-4-1' style='white-space:nowrap; text-align:center;'>    \(Q\)    </td><td class='td11' id='TBL-1-4-2' style='white-space:nowrap; text-align:center;'>     Charge           </td><td class='td11' id='TBL-1-4-3' style='white-space:nowrap; text-align:center;'> coulomb  </td>
-</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td></tr><tr id='TBL-1-5-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-5-1' style='white-space:nowrap; text-align:center;'>    \(R\)    </td><td class='td11' id='TBL-1-5-2' style='white-space:nowrap; text-align:center;'>    Resistance         </td><td class='td11' id='TBL-1-5-3' style='white-space:nowrap; text-align:center;'>   ohm      </td>
-</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td></tr><tr id='TBL-1-6-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-6-1' style='white-space:nowrap; text-align:center;'>    \(L\)    </td><td class='td11' id='TBL-1-6-2' style='white-space:nowrap; text-align:center;'>    Inductance        </td><td class='td11' id='TBL-1-6-3' style='white-space:nowrap; text-align:center;'>  henry     </td>
-</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td></tr><tr id='TBL-1-7-' style='vertical-align:baseline;'><td class='td11' id='TBL-1-7-1' style='white-space:nowrap; text-align:center;'>    \(C\)    </td><td class='td11' id='TBL-1-7-2' style='white-space:nowrap; text-align:center;'>    Capacitance       </td><td class='td11' id='TBL-1-7-3' style='white-space:nowrap; text-align:center;'>   farad     </td>
-</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td></tr></table>                                                                                </div></div>
-     </blockquote>
-<p class='indent'>  According to <span class='vocab'>Kirchoff’s law</span>, the sum of the voltage drops in a closed \(RLC\) circuit equals the impressed voltage.
-Therefore, from (<a href='#x1-3r1'>6.3.1<!-- tex4ht:ref: eq:6.3.1  --></a>), (<a href='#x1-4r2'>6.3.2<!-- tex4ht:ref: eq:6.3.2  --></a>), and (<a href='#x1-6r4'>6.3.4<!-- tex4ht:ref: eq:6.3.4  --></a>), \begin {equation}  \label {eq:6.3.5} LI'+RI+{1\over C}Q=E(t)\end {equation}<a id='x1-8r5'></a> This equation contains two unknowns, the current \(I\) in the circuit and
-the charge \(Q\) on the capacitor. However, (<a href='#x1-5r3'>6.3.3<!-- tex4ht:ref: eq:6.3.3  --></a>) implies that \(Q'=I\), so (<a href='#x1-8r5'>6.3.5<!-- tex4ht:ref: eq:6.3.5  --></a>) can be converted into the second order
-equation \begin {equation}  \label {eq:6.3.6} LQ''+RQ'+{1\over C}Q=E(t)  \end {equation}<a id='x1-9r6'></a> in \(Q\). To find the current flowing in an \(RLC\) circuit, we solve (<a href='#x1-9r6'>6.3.6<!-- tex4ht:ref: eq:6.3.6  --></a>) for \(Q\) and then differentiate the solution to
-obtain \(I\).
-</p><p class='indent'>  In Sections 6.1 and 6.2 we encountered the equation \begin {equation}  \label {eq:6.3.7} my''+cy'+ky=F(t)  \end {equation}<a id='x1-10r7'></a> in connection with spring-mass systems. Except for
-notation this equation is the same as (<a href='#x1-9r6'>6.3.6<!-- tex4ht:ref: eq:6.3.6  --></a>). The correspondence between electrical and mechanical quantities
-connected with (<a href='#x1-9r6'>6.3.6<!-- tex4ht:ref: eq:6.3.6  --></a>) and (<a href='#x1-10r7'>6.3.7<!-- tex4ht:ref: eq:6.3.7  --></a>) is shown in Table <a href='#x1-11r2'>6.3.2<!-- tex4ht:ref: table:6.3.2  --></a>.
-                                                                                
+  <p class='indent'> At any time \(t\), the same current flows in all points of the circuit. We denote current by
+    \(I=I(t)\). We say that \(I(t)&gt;0\) if the
+    direction of flow is around the circuit from the positive terminal of the battery or generator back to the negative
+    terminal, as indicated by the arrows in Figure <a
+      href='#-an-rlc-circuit-'>6.3.1<!-- tex4ht:ref: figure:6.3.1  --></a> \(I(t)&lt;0\) if the flow is in the opposite
+    direction, and \(I(t)=0\) if no current
+    flows at time \(t\).
+  </p>
+  <p class='indent'> Differences in potential occur at the resistor, induction coil, and capacitor in Figure <a
+      href='#-an-rlc-circuit-'>6.3.1<!-- tex4ht:ref: figure:6.3.1  --></a>. Note that the two
+    sides of each of these components are also identified as positive and negative. The <span class='ptmri8t-'>voltage
+      drop across</span> each
+    component is defined to be the potential on the positive side of the component minus the potential on the
+    negative side. This terminology is somewhat misleading, since “drop” suggests a decrease even
+    though changes in potential are signed quantities and therefore may be increases. Nevertheless,
+    we’ll go along with tradition and call them voltage drops. The voltage drop across the resistor in
+    Figure <a href='#-an-rlc-circuit-'>6.3.1<!-- tex4ht:ref: figure:6.3.1  --></a> is given by \begin {equation} \label
+    {eq:6.3.1} V_R=IR\end {equation}<a id='x1-3r1'></a> where \(I\) is current and \(R\) is a positive constant, the
+    <span class='ptmri8t-'>resistance</span> of the resistor. The
+    voltage drop across the induction coil is given by \begin {equation} \label {eq:6.3.2} V_I=L{dI\over dt}=LI'\end
+    {equation}<a id='x1-4r2'></a> where \(L\) is a positive constant, the <span class='ptmri8t-'>inductance</span> of
+    the
+    coil.
+  </p>
+  <p class='indent'> A capacitor stores electrical charge \(Q=Q(t)\), which is related to the current in the circuit by
+    the equation \begin {equation} \label {eq:6.3.3} Q(t)=Q_0+\int _0^tI(\tau )\,d\tau \end {equation}<a
+      id='x1-5r3'></a> where \(Q_0\) is the
+    charge on the capacitor at \(t=0\). The voltage drop across a capacitor is given by \begin {equation} \label
+    {eq:6.3.4} V_C={Q\over C}\end {equation}<a id='x1-6r4'></a> where \(C\) is a positive constant, the
+    <span class='ptmri8t-'>capacitance</span> of the capacitor.
+  </p>
+  <p class='indent'> Table <a href='#x1-7r1'>6.3.1<!-- tex4ht:ref: table:6.3.1  --></a> names the units for the
+    quantities that we’ve discussed. The units are defined so that
+  </p>
+  <div class='eqnarray'>\begin {eqnarray*} 1\mbox {\,volt}&amp;=&amp;1\mbox {\,ampere}\cdot 1\mbox {\,ohm}\\
+    &amp;=&amp;1\mbox {\,henry}\cdot 1\,\mbox {ampere}/\mbox {second}\\ &amp;=&amp;1\mbox {\,coulomb}/\mbox {\,farad}\\
+    \text {and}\\ 1\mbox {\,ampere}&amp;=&amp;1\mbox {\,coulomb}/\mbox {second}\end {eqnarray*}</div>
+  <blockquote class='quote'>
+    <p class='noindent'>Table <a id='x1-7r1'></a>6.3.1. Electrical Units </p>
+    <div class='center'>
+      <p class='noindent'>
+      </p>
+      <div class='tabular'>
+        <table class='tabular' id='TBL-1'>
+          <colgroup id='TBL-1-1g'>
+            <col id='TBL-1-1' />
+          </colgroup>
+          <colgroup id='TBL-1-2g'>
+            <col id='TBL-1-2' />
+          </colgroup>
+          <colgroup id='TBL-1-3g'>
+            <col id='TBL-1-3' />
+          </colgroup>
+          <tr class='hline' style='border-top:1px solid #000'>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id='TBL-1-1-' style='vertical-align:baseline;'>
+            <td class='td11' id='TBL-1-1-1' style='white-space:nowrap; text-align:center;'> <span class='ptmb8t-'>Symbol
+              </span></td>
+            <td class='td11' id='TBL-1-1-2' style='white-space:nowrap; text-align:center;'> <span class='ptmb8t-'>Name
+              </span></td>
+            <td class='td11' id='TBL-1-1-3' style='white-space:nowrap; text-align:center;'> <span class='ptmb8t-'>Unit
+              </span></td>
+          </tr>
+          <tr class='hline' style='border-top:1px solid #000'>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id='TBL-1-2-' style='vertical-align:baseline;'>
+            <td class='td11' id='TBL-1-2-1' style='white-space:nowrap; text-align:center;'> \(E\) </td>
+            <td class='td11' id='TBL-1-2-2' style='white-space:nowrap; text-align:center;'> Impressed Voltage </td>
+            <td class='td11' id='TBL-1-2-3' style='white-space:nowrap; text-align:center;'> volt </td>
+          </tr>
+          <tr class='hline' style='border-top:1px solid #000'>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id='TBL-1-3-' style='vertical-align:baseline;'>
+            <td class='td11' id='TBL-1-3-1' style='white-space:nowrap; text-align:center;'> \(I\) </td>
+            <td class='td11' id='TBL-1-3-2' style='white-space:nowrap; text-align:center;'> Current </td>
+            <td class='td11' id='TBL-1-3-3' style='white-space:nowrap; text-align:center;'> ampere </td>
+          </tr>
+          <tr class='hline' style='border-top:1px solid #000'>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id='TBL-1-4-' style='vertical-align:baseline;'>
+            <td class='td11' id='TBL-1-4-1' style='white-space:nowrap; text-align:center;'> \(Q\) </td>
+            <td class='td11' id='TBL-1-4-2' style='white-space:nowrap; text-align:center;'> Charge </td>
+            <td class='td11' id='TBL-1-4-3' style='white-space:nowrap; text-align:center;'> coulomb </td>
+          </tr>
+          <tr class='hline' style='border-top:1px solid #000'>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id='TBL-1-5-' style='vertical-align:baseline;'>
+            <td class='td11' id='TBL-1-5-1' style='white-space:nowrap; text-align:center;'> \(R\) </td>
+            <td class='td11' id='TBL-1-5-2' style='white-space:nowrap; text-align:center;'> Resistance </td>
+            <td class='td11' id='TBL-1-5-3' style='white-space:nowrap; text-align:center;'> ohm </td>
+          </tr>
+          <tr class='hline' style='border-top:1px solid #000'>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id='TBL-1-6-' style='vertical-align:baseline;'>
+            <td class='td11' id='TBL-1-6-1' style='white-space:nowrap; text-align:center;'> \(L\) </td>
+            <td class='td11' id='TBL-1-6-2' style='white-space:nowrap; text-align:center;'> Inductance </td>
+            <td class='td11' id='TBL-1-6-3' style='white-space:nowrap; text-align:center;'> henry </td>
+          </tr>
+          <tr class='hline' style='border-top:1px solid #000'>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id='TBL-1-7-' style='vertical-align:baseline;'>
+            <td class='td11' id='TBL-1-7-1' style='white-space:nowrap; text-align:center;'> \(C\) </td>
+            <td class='td11' id='TBL-1-7-2' style='white-space:nowrap; text-align:center;'> Capacitance </td>
+            <td class='td11' id='TBL-1-7-3' style='white-space:nowrap; text-align:center;'> farad </td>
+          </tr>
+          <tr class='hline' style='border-top:1px solid #000'>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </blockquote>
+  <p class='indent'> According to <span class='vocab'>Kirchoff’s law</span>, the sum of the voltage drops in a closed
+    \(RLC\) circuit equals the impressed voltage.
+    Therefore, from (<a href='#x1-3r1'>6.3.1<!-- tex4ht:ref: eq:6.3.1  --></a>), (<a
+      href='#x1-4r2'>6.3.2<!-- tex4ht:ref: eq:6.3.2  --></a>), and (<a
+      href='#x1-6r4'>6.3.4<!-- tex4ht:ref: eq:6.3.4  --></a>), \begin {equation} \label {eq:6.3.5} LI'+RI+{1\over
+    C}Q=E(t)\end {equation}<a id='x1-8r5'></a> This equation contains two unknowns, the current \(I\) in the circuit and
+    the charge \(Q\) on the capacitor. However, (<a href='#x1-5r3'>6.3.3<!-- tex4ht:ref: eq:6.3.3  --></a>) implies that
+    \(Q'=I\), so (<a href='#x1-8r5'>6.3.5<!-- tex4ht:ref: eq:6.3.5  --></a>) can be converted into the second order
+    equation \begin {equation} \label {eq:6.3.6} LQ''+RQ'+{1\over C}Q=E(t) \end {equation}<a id='x1-9r6'></a> in \(Q\).
+    To find the current flowing in an \(RLC\) circuit, we solve (<a
+      href='#x1-9r6'>6.3.6<!-- tex4ht:ref: eq:6.3.6  --></a>) for \(Q\) and then differentiate the solution to
+    obtain \(I\).
+  </p>
+  <p class='indent'> In Sections 6.1 and 6.2 we encountered the equation \begin {equation} \label {eq:6.3.7}
+    my''+cy'+ky=F(t) \end {equation}<a id='x1-10r7'></a> in connection with spring-mass systems. Except for
+    notation this equation is the same as (<a href='#x1-9r6'>6.3.6<!-- tex4ht:ref: eq:6.3.6  --></a>). The
+    correspondence between electrical and mechanical quantities
+    connected with (<a href='#x1-9r6'>6.3.6<!-- tex4ht:ref: eq:6.3.6  --></a>) and (<a
+      href='#x1-10r7'>6.3.7<!-- tex4ht:ref: eq:6.3.7  --></a>) is shown in Table <a
+      href='#x1-11r2'>6.3.2<!-- tex4ht:ref: table:6.3.2  --></a>.
 
-                                                                                
- </p><p class='noindent'>
-      </p><blockquote class='quote'>
-      <p class='noindent'>Table <a id='x1-11r2'></a>6.3.2. Electrical and Mechanical Units </p>
-      <div class='center'>
- <p class='noindent'>
- </p>
- <div class='tabular'> <table class='tabular' id='TBL-2'><colgroup id='TBL-2-1g'><col id='TBL-2-1' /><col id='TBL-2-2' /></colgroup><colgroup id='TBL-2-3g'><col id='TBL-2-3' /><col id='TBL-2-4' /></colgroup><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-1-' style='vertical-align:baseline;'><td class='td11' colspan='2' id='TBL-2-1-1' style='white-space:nowrap; text-align:center;'>      <div class='multicolumn' style='white-space:nowrap; text-align:center;'><span class='ptmb8t-'>Electrical</span></div>             </td><td class='td11' colspan='2' id='TBL-2-1-3' style='white-space:nowrap; text-align:center;'>    <div class='multicolumn' style='white-space:nowrap; text-align:center;'><span class='ptmb8t-'>Mechanical</span></div>         </td></tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-2-' style='vertical-align:baseline;'><td class='td11' id='TBL-2-2-1' style='white-space:nowrap; text-align:left;'> charge </td> <td class='td11' id='TBL-2-2-2' style='white-space:nowrap; text-align:center;'>  \(Q\) </td> <td class='td11' id='TBL-2-2-3' style='white-space:nowrap; text-align:left;'> displacement </td> <td class='td11' id='TBL-2-2-4' style='white-space:nowrap; text-align:center;'>  \(y\)</td>
-</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-3-' style='vertical-align:baseline;'><td class='td11' id='TBL-2-3-1' style='white-space:nowrap; text-align:left;'> curent                     </td><td class='td11' id='TBL-2-3-2' style='white-space:nowrap; text-align:center;'> \(I\) </td><td class='td11' id='TBL-2-3-3' style='white-space:nowrap; text-align:left;'> velocity              </td><td class='td11' id='TBL-2-3-4' style='white-space:nowrap; text-align:center;'> \(y'\) </td>
-</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-4-' style='vertical-align:baseline;'><td class='td11' id='TBL-2-4-1' style='white-space:nowrap; text-align:left;'> impressed voltage  </td><td class='td11' id='TBL-2-4-2' style='white-space:nowrap; text-align:center;'> \(E(t)\) </td><td class='td11' id='TBL-2-4-3' style='white-space:nowrap; text-align:left;'> external force     </td><td class='td11' id='TBL-2-4-4' style='white-space:nowrap; text-align:center;'> \(F(t)\) </td>
-</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-5-' style='vertical-align:baseline;'><td class='td11' id='TBL-2-5-1' style='white-space:nowrap; text-align:left;'> inductance              </td><td class='td11' id='TBL-2-5-2' style='white-space:nowrap; text-align:center;'> \(L\) </td><td class='td11' id='TBL-2-5-3' style='white-space:nowrap; text-align:left;'> Mass                   </td><td class='td11' id='TBL-2-5-4' style='white-space:nowrap; text-align:center;'> \(m\) </td></tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-6-' style='vertical-align:baseline;'><td class='td11' id='TBL-2-6-1' style='white-space:nowrap; text-align:left;'> resistance </td> <td class='td11' id='TBL-2-6-2' style='white-space:nowrap; text-align:center;'>  \(R\) </td> <td class='td11' id='TBL-2-6-3' style='white-space:nowrap; text-align:left;'> damping </td> <td class='td11' id='TBL-2-6-4' style='white-space:nowrap; text-align:center;'>  \(c\)</td>
-</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr><tr id='TBL-2-7-' style='vertical-align:baseline;'><td class='td11' id='TBL-2-7-1' style='white-space:nowrap; text-align:left;'> 1/capacitance          </td><td class='td11' id='TBL-2-7-2' style='white-space:nowrap; text-align:center;'> \(1/C\) </td><td class='td11' id='TBL-2-7-3' style='white-space:nowrap; text-align:left;'> cpring constant  </td><td class='td11' id='TBL-2-7-4' style='white-space:nowrap; text-align:center;'> \(k\) </td>
-</tr><tr class='hline' style='border-top:1px solid #000'><td></td><td></td><td></td><td></td></tr></table>                                                              </div></div>
-      </blockquote>
-<p class='noindent'>
-</p><p class='indent'>  The equivalence between (<a href='#x1-9r6'>6.3.6<!-- tex4ht:ref: eq:6.3.6  --></a>) and (<a href='#x1-10r7'>6.3.7<!-- tex4ht:ref: eq:6.3.7  --></a>) is an example of how mathematics unifies fundamental
-similarities in diverse physical phenomena. Since we’ve already studied the properties of solutions of (<a href='#x1-10r7'>6.3.7<!-- tex4ht:ref: eq:6.3.7  --></a>) in
-Sections 6.1 and 6.2, we can obtain results concerning solutions of (<a href='#x1-9r6'>6.3.6<!-- tex4ht:ref: eq:6.3.6  --></a>) by simpling changing notation,
-according to Table <a href='#x1-7r1'>6.3.1<!-- tex4ht:ref: table:6.3.1  --></a>.
-</p><p class='noindent'><span id='textcolor1'>Free Oscillations</span>
-</p><p class='indent'>
-</p><p class='noindent'>We say that an \(RLC\) circuit is in <span class='ptmri8t-'>free oscillation</span> if \(E(t)=0\) for \(t&gt;0\), so that (<a href='#x1-9r6'>6.3.6<!-- tex4ht:ref: eq:6.3.6  --></a>) becomes \begin {equation}  \label {eq:6.3.8} LQ''+RQ'+{1\over C}Q=0\end {equation}<a id='x1-12r8'></a> The characteristic equation of (<a href='#x1-12r8'>6.3.8<!-- tex4ht:ref: eq:6.3.8  --></a>)
-is
-                                        \[ Lr^2+Rr+{1\over C}=0\]
- with roots \begin {equation} \label {eq:6.3.9} r_1={-R-\sqrt {R^2-4L/C}\over 2L}\mbox {\quad and \quad } r_2= {-R+\sqrt {R^2-4L/C}\over 2L}\end {equation}<a id='x1-13r9'></a> There are three cases to consider, all analogous to the cases considered in Section 6.2 for free
-vibrations of a damped spring-mass system.
-</p><p class='indent'>  <span class='ptmrc8t-'>C<span class='small-caps'>ASE</span> 1. </span>The oscillation is <span class='ptmri8t-'>underdamped</span> if \(R&lt;\sqrt {4L/C}\). In this case, \(r_1\) and \(r_2\) in (<a href='#x1-13r9'>6.3.9<!-- tex4ht:ref: eq:6.3.9  --></a>) are complex conjugates, which we
-write as
-                                                                                
 
-                                                                                
-                                        \[ r_1=-{R\over 2L}+i\omega _1\mbox {\quad and \quad } r_2=-{R\over 2L}-i\omega _1\]
- where
-                                        \[ \omega _1={\sqrt {4L/C-R^2}\over 2L}\]
- The general solution of (<a href='#x1-12r8'>6.3.8<!-- tex4ht:ref: eq:6.3.8  --></a>) is
-                                        \[ Q=e^{-Rt/2L}(c_1\cos \omega _1 t+c_2\sin \omega _1 t)\]
- which we can write as \begin {equation} \label {eq:6.3.10} Q=Ae^{-Rt/2L}\cos (\omega _1 t-\phi )\end {equation}<a id='x1-14r10'></a> where
-                                        \[ A=\sqrt {c_1^2+c_2^2},\quad A\cos \phi =c_1,\mbox {\quad and \quad } A\sin \phi =c_2\]
- In the idealized case where \(R=0\), the solution (<a href='#x1-14r10'>6.3.10<!-- tex4ht:ref: eq:6.3.10  --></a>) reduces to
-                                                                                
 
-                                                                                
-                                        \[ Q=A\cos \left ({t\over \sqrt {LC}}-\phi \right )\]
- which is analogous to the simple harmonic motion of an undamped spring-mass system in free
-vibration.
-</p><p class='indent'>  Actual \(RLC\) circuits are usually underdamped, so the case we’ve just considered is the most important. However,
-for completeness we’ll consider the other two possibilities.
-</p><p class='indent'>  <span class='ptmrc8t-'>C<span class='small-caps'>ASE</span> 2. </span>The oscillation is <span class='ptmri8t-'>overdamped</span> if \(R&gt;\sqrt {4L/C}\). In this case, the zeros \(r_1\) and \(r_2\) of the characteristic polynomial are real,
-with \(r_1&lt;r_2&lt;0\) (see (<a href='#x1-13r9'>6.3.9<!-- tex4ht:ref: eq:6.3.9  --></a>)), and the general solution of (<a href='#x1-12r8'>6.3.8<!-- tex4ht:ref: eq:6.3.8  --></a>) is \begin {equation} \label {eq:6.3.11} Q=c_1e^{r_1t}+c_2e^{r_2t}\end {equation}<a id='x1-15r11'></a>
-</p><p class='indent'>  <span class='ptmrc8t-'>C<span class='small-caps'>ASE</span> 3. </span>The oscillation is <span class='ptmri8t-'>critically damped</span> if \(R=\sqrt {4L/C}\). In this case, \(r_1=r_2=-R/2L\) and the general solution of (<a href='#x1-12r8'>6.3.8<!-- tex4ht:ref: eq:6.3.8  --></a>) is
-\begin {equation} \label {eq:6.3.12} Q=e^{-Rt/2L}(c_1+c_2t)\end {equation}<a id='x1-16r12'></a>
-</p><p class='indent'>  If \(R\ne 0\), the exponentials in (<a href='#x1-14r10'>6.3.10<!-- tex4ht:ref: eq:6.3.10  --></a>), (<a href='#x1-15r11'>6.3.11<!-- tex4ht:ref: eq:6.3.11  --></a>), and (<a href='#x1-16r12'>6.3.12<!-- tex4ht:ref: eq:6.3.12  --></a>) are negative, so the solution of any homogeneous initial
-value problem
-                                        \[ LQ''+RQ'+{1\over C}Q=0,\quad Q(0)=Q_0,\quad Q'(0)=I_0\]
- approaches zero exponentially as \(t\to \infty \). Thus, all such solutions are <span class='ptmri8t-'>transient</span>, in the sense defined Section 6.2 in the
-discussion of forced vibrations of a spring-mass system with damping.
-</p>
+  </p>
+  <p class='noindent'>
+  </p>
+  <blockquote class='quote'>
+    <p class='noindent'>Table <a id='x1-11r2'></a>6.3.2. Electrical and Mechanical Units </p>
+    <div class='center'>
+      <p class='noindent'>
+      </p>
+      <div class='tabular'>
+        <table class='tabular' id='TBL-2'>
+          <colgroup id='TBL-2-1g'>
+            <col id='TBL-2-1' />
+            <col id='TBL-2-2' />
+          </colgroup>
+          <colgroup id='TBL-2-3g'>
+            <col id='TBL-2-3' />
+            <col id='TBL-2-4' />
+          </colgroup>
+          <tr class='hline' style='border-top:1px solid #000'>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id='TBL-2-1-' style='vertical-align:baseline;'>
+            <td class='td11' colspan='2' id='TBL-2-1-1' style='white-space:nowrap; text-align:center;'>
+              <div class='multicolumn' style='white-space:nowrap; text-align:center;'><span
+                  class='ptmb8t-'>Electrical</span></div>
+            </td>
+            <td class='td11' colspan='2' id='TBL-2-1-3' style='white-space:nowrap; text-align:center;'>
+              <div class='multicolumn' style='white-space:nowrap; text-align:center;'><span
+                  class='ptmb8t-'>Mechanical</span></div>
+            </td>
+          </tr>
+          <tr class='hline' style='border-top:1px solid #000'>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id='TBL-2-2-' style='vertical-align:baseline;'>
+            <td class='td11' id='TBL-2-2-1' style='white-space:nowrap; text-align:left;'> charge </td>
+            <td class='td11' id='TBL-2-2-2' style='white-space:nowrap; text-align:center;'> \(Q\) </td>
+            <td class='td11' id='TBL-2-2-3' style='white-space:nowrap; text-align:left;'> displacement </td>
+            <td class='td11' id='TBL-2-2-4' style='white-space:nowrap; text-align:center;'> \(y\)</td>
+          </tr>
+          <tr class='hline' style='border-top:1px solid #000'>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id='TBL-2-3-' style='vertical-align:baseline;'>
+            <td class='td11' id='TBL-2-3-1' style='white-space:nowrap; text-align:left;'> curent </td>
+            <td class='td11' id='TBL-2-3-2' style='white-space:nowrap; text-align:center;'> \(I\) </td>
+            <td class='td11' id='TBL-2-3-3' style='white-space:nowrap; text-align:left;'> velocity </td>
+            <td class='td11' id='TBL-2-3-4' style='white-space:nowrap; text-align:center;'> \(y'\) </td>
+          </tr>
+          <tr class='hline' style='border-top:1px solid #000'>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id='TBL-2-4-' style='vertical-align:baseline;'>
+            <td class='td11' id='TBL-2-4-1' style='white-space:nowrap; text-align:left;'> impressed voltage </td>
+            <td class='td11' id='TBL-2-4-2' style='white-space:nowrap; text-align:center;'> \(E(t)\) </td>
+            <td class='td11' id='TBL-2-4-3' style='white-space:nowrap; text-align:left;'> external force </td>
+            <td class='td11' id='TBL-2-4-4' style='white-space:nowrap; text-align:center;'> \(F(t)\) </td>
+          </tr>
+          <tr class='hline' style='border-top:1px solid #000'>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id='TBL-2-5-' style='vertical-align:baseline;'>
+            <td class='td11' id='TBL-2-5-1' style='white-space:nowrap; text-align:left;'> inductance </td>
+            <td class='td11' id='TBL-2-5-2' style='white-space:nowrap; text-align:center;'> \(L\) </td>
+            <td class='td11' id='TBL-2-5-3' style='white-space:nowrap; text-align:left;'> Mass </td>
+            <td class='td11' id='TBL-2-5-4' style='white-space:nowrap; text-align:center;'> \(m\) </td>
+          </tr>
+          <tr class='hline' style='border-top:1px solid #000'>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id='TBL-2-6-' style='vertical-align:baseline;'>
+            <td class='td11' id='TBL-2-6-1' style='white-space:nowrap; text-align:left;'> resistance </td>
+            <td class='td11' id='TBL-2-6-2' style='white-space:nowrap; text-align:center;'> \(R\) </td>
+            <td class='td11' id='TBL-2-6-3' style='white-space:nowrap; text-align:left;'> damping </td>
+            <td class='td11' id='TBL-2-6-4' style='white-space:nowrap; text-align:center;'> \(c\)</td>
+          </tr>
+          <tr class='hline' style='border-top:1px solid #000'>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id='TBL-2-7-' style='vertical-align:baseline;'>
+            <td class='td11' id='TBL-2-7-1' style='white-space:nowrap; text-align:left;'> 1/capacitance </td>
+            <td class='td11' id='TBL-2-7-2' style='white-space:nowrap; text-align:center;'> \(1/C\) </td>
+            <td class='td11' id='TBL-2-7-3' style='white-space:nowrap; text-align:left;'> cpring constant </td>
+            <td class='td11' id='TBL-2-7-4' style='white-space:nowrap; text-align:center;'> \(k\) </td>
+          </tr>
+          <tr class='hline' style='border-top:1px solid #000'>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </blockquote>
+  <p class='noindent'>
+  </p>
+  <p class='indent'> The equivalence between (<a href='#x1-9r6'>6.3.6<!-- tex4ht:ref: eq:6.3.6  --></a>) and (<a
+      href='#x1-10r7'>6.3.7<!-- tex4ht:ref: eq:6.3.7  --></a>) is an example of how mathematics unifies fundamental
+    similarities in diverse physical phenomena. Since we’ve already studied the properties of solutions of (<a
+      href='#x1-10r7'>6.3.7<!-- tex4ht:ref: eq:6.3.7  --></a>) in
+    Sections 6.1 and 6.2, we can obtain results concerning solutions of (<a
+      href='#x1-9r6'>6.3.6<!-- tex4ht:ref: eq:6.3.6  --></a>) by simpling changing notation,
+    according to Table <a href='#x1-7r1'>6.3.1<!-- tex4ht:ref: table:6.3.1  --></a>.
+  </p>
+  <p class='noindent'><span id='textcolor1'>Free Oscillations</span>
+  </p>
+  <p class='indent'>
+  </p>
+  <p class='noindent'>We say that an \(RLC\) circuit is in <span class='ptmri8t-'>free oscillation</span> if \(E(t)=0\)
+    for \(t&gt;0\), so that (<a href='#x1-9r6'>6.3.6<!-- tex4ht:ref: eq:6.3.6  --></a>) becomes \begin {equation} \label
+    {eq:6.3.8} LQ''+RQ'+{1\over C}Q=0\end {equation}<a id='x1-12r8'></a> The characteristic equation of (<a
+      href='#x1-12r8'>6.3.8<!-- tex4ht:ref: eq:6.3.8  --></a>)
+    is
+    \[ Lr^2+Rr+{1\over C}=0\]
+    with roots \begin {equation} \label {eq:6.3.9} r_1={-R-\sqrt {R^2-4L/C}\over 2L}\mbox {\quad and \quad } r_2=
+    {-R+\sqrt {R^2-4L/C}\over 2L}\end {equation}<a id='x1-13r9'></a> There are three cases to consider, all analogous to
+    the cases considered in Section 6.2 for free
+    vibrations of a damped spring-mass system.
+  </p>
+  <p class='indent'> <span class='ptmrc8t-'>C<span class='small-caps'>ASE</span> 1. </span>The oscillation is <span
+      class='ptmri8t-'>underdamped</span> if \(R&lt;\sqrt {4L/C}\). In this case, \(r_1\) and \(r_2\) in (<a
+      href='#x1-13r9'>6.3.9<!-- tex4ht:ref: eq:6.3.9  --></a>) are complex conjugates, which we
+    write as
+
+
+
+    \[ r_1=-{R\over 2L}+i\omega _1\mbox {\quad and \quad } r_2=-{R\over 2L}-i\omega _1\]
+    where
+    \[ \omega _1={\sqrt {4L/C-R^2}\over 2L}\]
+    The general solution of (<a href='#x1-12r8'>6.3.8<!-- tex4ht:ref: eq:6.3.8  --></a>) is
+    \[ Q=e^{-Rt/2L}(c_1\cos \omega _1 t+c_2\sin \omega _1 t)\]
+    which we can write as \begin {equation} \label {eq:6.3.10} Q=Ae^{-Rt/2L}\cos (\omega _1 t-\phi )\end {equation}<a
+      id='x1-14r10'></a> where
+    \[ A=\sqrt {c_1^2+c_2^2},\quad A\cos \phi =c_1,\mbox {\quad and \quad } A\sin \phi =c_2\]
+    In the idealized case where \(R=0\), the solution (<a href='#x1-14r10'>6.3.10<!-- tex4ht:ref: eq:6.3.10  --></a>)
+    reduces to
+
+
+
+    \[ Q=A\cos \left ({t\over \sqrt {LC}}-\phi \right )\]
+    which is analogous to the simple harmonic motion of an undamped spring-mass system in free
+    vibration.
+  </p>
+  <p class='indent'> Actual \(RLC\) circuits are usually underdamped, so the case we’ve just considered is the most
+    important. However,
+    for completeness we’ll consider the other two possibilities.
+  </p>
+  <p class='indent'> <span class='ptmrc8t-'>C<span class='small-caps'>ASE</span> 2. </span>The oscillation is <span
+      class='ptmri8t-'>overdamped</span> if \(R&gt;\sqrt {4L/C}\). In this case, the zeros \(r_1\) and \(r_2\) of the
+    characteristic polynomial are real,
+    with \(r_1&lt;r_2&lt;0\) (see (<a href='#x1-13r9'>6.3.9<!-- tex4ht:ref: eq:6.3.9  --></a>)), and the general
+    solution of (<a href='#x1-12r8'>6.3.8<!-- tex4ht:ref: eq:6.3.8  --></a>) is \begin {equation} \label {eq:6.3.11}
+    Q=c_1e^{r_1t}+c_2e^{r_2t}\end {equation}<a id='x1-15r11'></a>
+  </p>
+  <p class='indent'> <span class='ptmrc8t-'>C<span class='small-caps'>ASE</span> 3. </span>The oscillation is <span
+      class='ptmri8t-'>critically damped</span> if \(R=\sqrt {4L/C}\). In this case, \(r_1=r_2=-R/2L\) and the general
+    solution of (<a href='#x1-12r8'>6.3.8<!-- tex4ht:ref: eq:6.3.8  --></a>) is
+    \begin {equation} \label {eq:6.3.12} Q=e^{-Rt/2L}(c_1+c_2t)\end {equation}<a id='x1-16r12'></a>
+  </p>
+  <p class='indent'> If \(R\ne 0\), the exponentials in (<a href='#x1-14r10'>6.3.10<!-- tex4ht:ref: eq:6.3.10  --></a>),
+    (<a href='#x1-15r11'>6.3.11<!-- tex4ht:ref: eq:6.3.11  --></a>), and (<a
+      href='#x1-16r12'>6.3.12<!-- tex4ht:ref: eq:6.3.12  --></a>) are negative, so the solution of any homogeneous
+    initial
+    value problem
+    \[ LQ''+RQ'+{1\over C}Q=0,\quad Q(0)=Q_0,\quad Q'(0)=I_0\]
+    approaches zero exponentially as \(t\to \infty \). Thus, all such solutions are <span
+      class='ptmri8t-'>transient</span>, in the sense defined Section 6.2 in the
+    discussion of forced vibrations of a spring-mass system with damping.
+  </p>
   <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 6.3.1</span> </span><a id='x1-171'></a> At \(t=0\) a current of 2 amperes flows in an \(RLC\) circuit with resistance \(R=40\) ohms, inductance \(L=.2\) henrys,
-and capacitance \(C=10^{-5}\) farads. Find the current flowing in the circuit at \(t&gt;0\) if the initial charge on the capacitor is
-1 coulomb. Assume that \(E(t)=0\) for \(t&gt;0\).
-</p>
+    <p class='noindent'><span class='head'>
+        <span class='ex-number'>Example 6.3.1</span> </span><a id='x1-171'></a> At \(t=0\) a current of 2 amperes flows
+      in an \(RLC\) circuit with resistance \(R=40\) ohms, inductance \(L=.2\) henrys,
+      and capacitance \(C=10^{-5}\) farads. Find the current flowing in the circuit at \(t&gt;0\) if the initial charge
+      on the capacitor is
+      1 coulomb. Assume that \(E(t)=0\) for \(t&gt;0\).
+    </p>
   </div>
-<p class='indent'>
-</p><p class='noindent'><span class='ptmb8t-'>Solution </span> The equation for the charge \(Q\) is
-                                                                                
+  <p class='indent'>
+  </p>
+  <p class='noindent'><span class='ptmb8t-'>Solution </span> The equation for the charge \(Q\) is
 
-                                                                                
-                                        \[ {1\over 5}Q''+40Q'+10000Q=0\]
- or \begin {equation}  \label {eq:6.3.13} Q''+200Q'+50000Q=0\end {equation}<a id='x1-18r13'></a> Therefore we must solve the initial value problem \begin {equation}  \label {eq:6.3.14} Q''+200Q'+50000Q=0,\quad Q(0)=1,\quad Q'(0)=2\end {equation}<a id='x1-19r14'></a> The desired current is the derivative of the solution of this
-initial value problem.
-</p><p class='indent'>  The characteristic equation of (<a href='#x1-18r13'>6.3.13<!-- tex4ht:ref: eq:6.3.13  --></a>) is
-                                        \[ r^2+200r+50000=0\]
- which has complex zeros \(r=-100\pm 200i\). Therefore the general solution of (<a href='#x1-18r13'>6.3.13<!-- tex4ht:ref: eq:6.3.13  --></a>) is \begin {equation}  \label {eq:6.3.15} Q=e^{-100t}(c_1\cos 200t+c_2\sin 200t)\end {equation}<a id='x1-20r15'></a> Differentiating this and collecting like
-terms yields \begin {equation}  \label {eq:6.3.16} Q'=-e^{-100t}\left [(100c_1-200c_2)\cos 200t+ (100c_2+200c_1)\sin 200t\right ]\end {equation}<a id='x1-21r16'></a> To find the solution of the initial value problem (<a href='#x1-19r14'>6.3.14<!-- tex4ht:ref: eq:6.3.14  --></a>), we set \(t=0\) in (<a href='#x1-20r15'>6.3.15<!-- tex4ht:ref: eq:6.3.15  --></a>) and (<a href='#x1-21r16'>6.3.16<!-- tex4ht:ref: eq:6.3.16  --></a>) to
-obtain
-                                        \[ c_1=Q(0)=1\mbox {\quad and \quad } -100c_1+200c_2=Q'(0)=2\]
- therefore, \(c_1=1\) and \(c_2=51/100\), so
-                                                                                
 
-                                                                                
-                                        \[ Q=e^{-100t}\left (\cos 200t+{51\over 100}\sin 200t\right ) \]
- is the solution of (<a href='#x1-19r14'>6.3.14<!-- tex4ht:ref: eq:6.3.14  --></a>). Differentiating this yields
-                                        \[ I=e^{-100t}(2\cos 200t-251\sin 200t)\]
-</p><p class='noindent'><span id='textcolor2'>Forced Oscillations With Damping</span>
-</p><p class='indent'>
-</p><p class='noindent'>An initial value problem for (<a href='#x1-9r6'>6.3.6<!-- tex4ht:ref: eq:6.3.6  --></a>) has the form \begin {equation}  \label {eq:6.3.17} LQ''+RQ'+{1\over C}Q=E(t),\quad Q(0)=Q_0,\quad Q'(0)=I_0\end {equation}<a id='x1-22r17'></a> where \(Q_0\) is the initial charge on the capacitor and \(I_0\) is the initial
-current in the circuit. We’ve already seen that if \(E\equiv 0\) then all solutions of (<a href='#x1-22r17'>6.3.17<!-- tex4ht:ref: eq:6.3.17  --></a>) are transient. If \(E\not \equiv 0\), we know that the
-solution of (<a href='#x1-22r17'>6.3.17<!-- tex4ht:ref: eq:6.3.17  --></a>) has the form \(Q=Q_c+Q_p\), where \(Q_c\) satisfies the complementary equation, and approaches zero
-exponentially as \(t\to \infty \) for any initial conditions , while \(Q_p\) depends only on \(E\) and is independent of the initial conditions.
-As in the case of forced oscillations of a spring-mass system with damping, we call \(Q_p\) the <span class='ptmri8t-'>steady state</span> charge on the
-capacitor of the \(RLC\) circuit. Since \(I=Q'=Q_c'+Q_p'\) and \(Q_c'\) also tends to zero exponentially as \(t\to \infty \), we say that \(I_c=Q'_c\) is the <span class='ptmri8t-'>transient</span> current and \(I_p=Q_p'\)
-is the <span class='ptmri8t-'>steady state</span> current. In most applications we’re interested only in the steady state charge and
-current.
-</p>
+
+    \[ {1\over 5}Q''+40Q'+10000Q=0\]
+    or \begin {equation} \label {eq:6.3.13} Q''+200Q'+50000Q=0\end {equation}<a id='x1-18r13'></a> Therefore we must
+    solve the initial value problem \begin {equation} \label {eq:6.3.14} Q''+200Q'+50000Q=0,\quad Q(0)=1,\quad
+    Q'(0)=2\end {equation}<a id='x1-19r14'></a> The desired current is the derivative of the solution of this
+    initial value problem.
+  </p>
+  <p class='indent'> The characteristic equation of (<a href='#x1-18r13'>6.3.13<!-- tex4ht:ref: eq:6.3.13  --></a>) is
+    \[ r^2+200r+50000=0\]
+    which has complex zeros \(r=-100\pm 200i\). Therefore the general solution of (<a
+      href='#x1-18r13'>6.3.13<!-- tex4ht:ref: eq:6.3.13  --></a>) is \begin {equation} \label {eq:6.3.15}
+    Q=e^{-100t}(c_1\cos 200t+c_2\sin 200t)\end {equation}<a id='x1-20r15'></a> Differentiating this and collecting like
+    terms yields \begin {equation} \label {eq:6.3.16} Q'=-e^{-100t}\left [(100c_1-200c_2)\cos 200t+ (100c_2+200c_1)\sin
+    200t\right ]\end {equation}<a id='x1-21r16'></a> To find the solution of the initial value problem (<a
+      href='#x1-19r14'>6.3.14<!-- tex4ht:ref: eq:6.3.14  --></a>), we set \(t=0\) in (<a
+      href='#x1-20r15'>6.3.15<!-- tex4ht:ref: eq:6.3.15  --></a>) and (<a
+      href='#x1-21r16'>6.3.16<!-- tex4ht:ref: eq:6.3.16  --></a>) to
+    obtain
+    \[ c_1=Q(0)=1\mbox {\quad and \quad } -100c_1+200c_2=Q'(0)=2\]
+    therefore, \(c_1=1\) and \(c_2=51/100\), so
+
+
+
+    \[ Q=e^{-100t}\left (\cos 200t+{51\over 100}\sin 200t\right ) \]
+    is the solution of (<a href='#x1-19r14'>6.3.14<!-- tex4ht:ref: eq:6.3.14  --></a>). Differentiating this yields
+    \[ I=e^{-100t}(2\cos 200t-251\sin 200t)\]
+  </p>
+  <p class='noindent'><span id='textcolor2'>Forced Oscillations With Damping</span>
+  </p>
+  <p class='indent'>
+  </p>
+  <p class='noindent'>An initial value problem for (<a href='#x1-9r6'>6.3.6<!-- tex4ht:ref: eq:6.3.6  --></a>) has the
+    form \begin {equation} \label {eq:6.3.17} LQ''+RQ'+{1\over C}Q=E(t),\quad Q(0)=Q_0,\quad Q'(0)=I_0\end {equation}<a
+      id='x1-22r17'></a> where \(Q_0\) is the initial charge on the capacitor and \(I_0\) is the initial
+    current in the circuit. We’ve already seen that if \(E\equiv 0\) then all solutions of (<a
+      href='#x1-22r17'>6.3.17<!-- tex4ht:ref: eq:6.3.17  --></a>) are transient. If \(E\not \equiv 0\), we know that the
+    solution of (<a href='#x1-22r17'>6.3.17<!-- tex4ht:ref: eq:6.3.17  --></a>) has the form \(Q=Q_c+Q_p\), where
+    \(Q_c\) satisfies the complementary equation, and approaches zero
+    exponentially as \(t\to \infty \) for any initial conditions , while \(Q_p\) depends only on \(E\) and is
+    independent of the initial conditions.
+    As in the case of forced oscillations of a spring-mass system with damping, we call \(Q_p\) the <span
+      class='ptmri8t-'>steady state</span> charge on the
+    capacitor of the \(RLC\) circuit. Since \(I=Q'=Q_c'+Q_p'\) and \(Q_c'\) also tends to zero exponentially as \(t\to
+    \infty \), we say that \(I_c=Q'_c\) is the <span class='ptmri8t-'>transient</span> current and \(I_p=Q_p'\)
+    is the <span class='ptmri8t-'>steady state</span> current. In most applications we’re interested only in the steady
+    state charge and
+    current.
+  </p>
   <div class='newtheorem'>
-<p class='noindent'><span class='head'>
-<span class='ex-number'>Example 6.3.2</span> </span><a id='x1-232'></a> Find the amplitude-phase form of the steady state current in the \(RLC\) circuit in Figure <a href='#-an-rlc-circuit-'>6.3.1<!-- tex4ht:ref: figure:6.3.1  --></a>
-if the impressed voltage, provided by an alternating current generator, is \(E(t)=E_0\cos \omega t\).
-</p>
+    <p class='noindent'><span class='head'>
+        <span class='ex-number'>Example 6.3.2</span> </span><a id='x1-232'></a> Find the amplitude-phase form of the
+      steady state current in the \(RLC\) circuit in Figure <a
+        href='#-an-rlc-circuit-'>6.3.1<!-- tex4ht:ref: figure:6.3.1  --></a>
+      if the impressed voltage, provided by an alternating current generator, is \(E(t)=E_0\cos \omega t\).
+    </p>
   </div>
-<p class='indent'>
-</p><p class='noindent'><span class='ptmb8t-'>Solution </span> We’ll first find the steady state charge on the capacitor as a particular solution of
-                                                                                
+  <p class='indent'>
+  </p>
+  <p class='noindent'><span class='ptmb8t-'>Solution </span> We’ll first find the steady state charge on the capacitor
+    as a particular solution of
 
-                                                                                
-                                        \[ LQ''+RQ'+{1\over C}Q=E_0\cos \omega t\]
- To do, this we’ll simply reinterpret a result obtained in Section 6.2, where we found that the steady state solution
-of
-                                        \[ my''+cy'+ky=F_0\cos \omega t \]
- is
-                                        \[ y_p={F_0\over \sqrt {(k-m\omega ^2)^2+c^2\omega ^2}} \cos (\omega t-\phi )\]
- where
-                                        \[ \cos \phi ={k-m\omega ^2\over \sqrt {(k-m\omega ^2)^2+c^2\omega ^2}}\mbox {\quad and \quad } \sin \phi ={c\omega \over \sqrt {(k-m\omega ^2)^2+c^2\omega ^2}}\]
- (See Equations (<span class='ptmb8t-'>6.2.14</span>) and (<span class='ptmb8t-'>6.2.15</span>).) By making the appropriate changes in the symbols (according to Table 2) yields
-the steady state charge
-                                                                                
 
-                                                                                
-                                        \[ Q_p={E_0\over \sqrt {(1/C-L\omega ^2)^2+R^2\omega ^2}}\cos (\omega t-\phi )\]
- where
-                                        \[ \cos \phi ={1/C-L\omega ^2\over \sqrt {(1/C-L\omega ^2)^2+R^2\omega ^2}} \mbox {\quad and \quad } \sin \phi ={R\omega \over \sqrt {(1/C-L\omega ^2)^2+R^2\omega ^2}}\]
- Therefore the steady state current in the circuit is
-                                        \[ I_p=Q_p'= -{\omega E_0\over \sqrt {(1/C-L\omega ^2)^2+R^2\omega ^2}}\sin (\omega t-\phi )\]
-</p>
- <a class="back-to-ch" href="sec6.0.html">Back</a>
-   
-</body> 
+
+    \[ LQ''+RQ'+{1\over C}Q=E_0\cos \omega t\]
+    To do, this we’ll simply reinterpret a result obtained in Section 6.2, where we found that the steady state solution
+    of
+    \[ my''+cy'+ky=F_0\cos \omega t \]
+    is
+    \[ y_p={F_0\over \sqrt {(k-m\omega ^2)^2+c^2\omega ^2}} \cos (\omega t-\phi )\]
+    where
+    \[ \cos \phi ={k-m\omega ^2\over \sqrt {(k-m\omega ^2)^2+c^2\omega ^2}}\mbox {\quad and \quad } \sin \phi ={c\omega
+    \over \sqrt {(k-m\omega ^2)^2+c^2\omega ^2}}\]
+    (See Equations (<span class='ptmb8t-'>6.2.14</span>) and (<span class='ptmb8t-'>6.2.15</span>).) By making the
+    appropriate changes in the symbols (according to Table 2) yields
+    the steady state charge
+
+
+
+    \[ Q_p={E_0\over \sqrt {(1/C-L\omega ^2)^2+R^2\omega ^2}}\cos (\omega t-\phi )\]
+    where
+    \[ \cos \phi ={1/C-L\omega ^2\over \sqrt {(1/C-L\omega ^2)^2+R^2\omega ^2}} \mbox {\quad and \quad } \sin \phi
+    ={R\omega \over \sqrt {(1/C-L\omega ^2)^2+R^2\omega ^2}}\]
+    Therefore the steady state current in the circuit is
+    \[ I_p=Q_p'= -{\omega E_0\over \sqrt {(1/C-L\omega ^2)^2+R^2\omega ^2}}\sin (\omega t-\phi )\]
+  </p>
+
+  <div class="nav">
+    <a href="sec6.2.book.html">Back (6.2)</a>
+  
+    <a href="sec6.0.html">Chapter 6</a>
+  
+    <a>&nbsp;</a>
+  </div>
+
+</body>
+
 </html>
