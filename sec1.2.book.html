@@ -1,265 +1,411 @@
-<!DOCTYPE html> 
-<html lang='en-US' xml:lang='en-US'> 
-<head><title></title> 
-<meta charset='utf-8' /> 
-<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
-<meta content='width=device-width,initial-scale=1' name='viewport' /> 
-<link href='combined.css' rel='stylesheet' type='text/css' /> 
-<meta content='Trench_DiffEQ_Book.tex' name='src' /> 
-<script>window.MathJax = {
-     tex: { packages: {'[+]': ['tagformat']}, tags: "ams", tagformat: { tag: (tag) => '(1.2.' + tag + ')'} }
- }; </script>
- <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
-</head><body>
-<p><a id='x1-1doc'></a>
-</p><!-- l. 2 --><p class='noindent'>Section 1.2 Basic Concepts
-</p><!-- l. 5 --><p class='noindent'><span class='ptmb8t-'>1.2</span><span class='ptmb8t-x-x-90'>   BASIC CONCEPTS</span>
-</p><!-- l. 7 --><p class='noindent'>A <span class='ptmri8t-'>differential equation</span> is an equation that contains one or more derivatives of an unknown function. The <span class='ptmri8t-'>order</span> of
-a differential equation is the order of the highest derivative that it contains. A differential equation
-is an <span class='ptmri8t-'>ordinary differential equation</span> if it involves an unknown function of only one variable, or a
-<span class='ptmri8t-'>partial differential equation</span> if it involves partial derivatives of a function of more than one variable.
-For now we’ll consider only ordinary differential equations, and we’ll just call them <span class='ptmri8t-'>differential
-equations.</span>
-</p><!-- l. 18 --><p class='indent'>  Throughout this text, all variables and constants are real unless it’s stated otherwise. We’ll usually use \(x\) for the
-independent variable unless the independent variable is time; then we’ll use \(t\).
-</p><!-- l. 22 --><p class='indent'>  The simplest differential equations are first order equations of the form
-                                        \[ {dy\over dx}=f(x) \mbox {\quad or, equivalently, \quad }y'=f(x), \]
- where \(f\) is a known function of \(x\). We already know from calculus how to find functions that satisfy this kind of
-equation. For example, if
-                                        \[ y'=x^3, \]
- then
-                                                                                
+<!DOCTYPE html>
+<html lang='en-US' xml:lang='en-US'>
 
-                                                                                
-                                        \[ y=\int x^3\, dx={x^4\over 4}+c, \]
- where \(c\) is an arbitrary constant. If \(n&gt;1\) we can find functions \(y\) that satisfy equations of the form \begin {equation}  \label {eq:1.2.1} y^{(n)}=f(x)  \end {equation}<a id='x1-2r1'></a> by repeated
-integration. Again, this is a calculus problem.
-</p><!-- l. 45 --><p class='indent'>  Except for illustrative purposes in this section, there’s no need to consider differential equations like
-(<a href='#x1-2r1'>1.2.1<!-- tex4ht:ref: eq:1.2.1  --></a>).We’ll usually consider differential equations that can be written as \begin {equation}  \label {eq:1.2.2} y^{(n)}=f(x,y,y', \dots ,y^{(n-1)}),  \end {equation}<a id='x1-3r2'></a> where at least one of the functions \(y\), \(y'\), …,
-\(y^{(n-1)}\) actually appears on the right. Here are some examples:
-                                        \[ \begin {array}{rcll} \displaystyle {dy\over dx}-x^2&amp;=&amp;0&amp;\mbox { (first order)},\\  \displaystyle {dy\over dx}+2xy^2&amp;=&amp;-2&amp;\mbox { (first order)},  \\ \displaystyle {d^2y\over dx^2}+2\displaystyle {dy\over dx}+y&amp;=&amp;2x&amp;\mbox { (second order)}, \\  xy'''+y^2&amp;=&amp;\sin x &amp;\mbox { (third order)}, \\ y^{(n)}+xy'+3y&amp;=&amp;x&amp;\mbox { ($n$-th order)}. \end {array} \]
- Although none of these equations is written as in (<a href='#x1-3r2'>1.2.2<!-- tex4ht:ref: eq:1.2.2  --></a>), all of them <span class='ptmri8t-'>can</span> be written in this form:
-                                        \[ \begin {array}{rcl} y'&amp;=&amp;x^2, \\ y'&amp;=&amp;-2-2xy^2, \\ y''&amp;=&amp;2x-2y'-y, \\ y'''&amp;=&amp;\displaystyle {\sin x-y^2\over x},  y^{(n)}&amp;=&amp;x-xy'-3y. \end {array} \]
-</p><!-- l. 75 --><p class='noindent'><span id='textcolor1'>Solutions of Differential Equations</span>
-</p><!-- l. 75 --><p class='indent'>
-</p><!-- l. 77 --><p class='noindent'>A <span class='ptmri8t-'>solution</span> of a differential equation is a function that satisfies the differential equation on some open interval;
-thus, \(y\) is a solution of (<a href='#x1-3r2'>1.2.2<!-- tex4ht:ref: eq:1.2.2  --></a>) if \(y\) is \(n\) times differentiable and
-                                                                                
+<head>
+  <title></title>
+  <meta charset='utf-8' />
+  <meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' />
+  <meta content='width=device-width,initial-scale=1' name='viewport' />
+  <link href='combined.css' rel='stylesheet' type='text/css' />
+  <meta content='Trench_DiffEQ_Book.tex' name='src' />
+  <script>window.MathJax = {
+      tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(1.2.' + tag + ')' } }
+    }; </script>
+  <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js'
+    type='text/javascript'></script>
+</head>
 
-                                                                                
-                                        \[ y^{(n)}(x)=f(x,y(x),y'(x), \dots ,y^{(n-1)}(x)) \]
- for all \(x\) in some open interval \((a,b)\). In this case, we also say that \(y\) <span class='ptmri8t-'>is a solution of</span> \(\eqref {eq:1.2.2}\) <span class='ptmri8t-'>on</span> \((a,b)\). Functions that satisfy a
-differential equation at isolated points are not interesting. For example, \(y=x^2\) satisfies
-                                        \[ xy'+x^2=3x \]
- if and only if \(x=0\) or \(x=1\), but it’s not a solution of this differential equation because it does not satisfy the equation on an
-open interval.
-</p><!-- l. 95 --><p class='indent'>  The graph of a solution of a differential equation is a <span class='ptmri8t-'>solution curve</span>. More generally, a curve \(C\) is said to be an
-<span class='ptmri8t-'>integral curve</span> of a differential equation if every function \(y=y(x)\) whose graph is a segment of \(C\) is a solution of the
-differential equation. Thus, any solution curve of a differential equation is an integral curve, but an integral curve
-need not be a solution curve.
-</p>
-  <div class='newtheorem'>
-<!-- l. 103 --><p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Example 1.2.1</span> </span><a id='x1-41'></a> If \(a\) is any positive constant, the circle \begin {equation}  \label {eq:1.2.3} x^2+y^2=a^2  \end {equation}<a id='x1-5r3'></a> is an integral curve of \begin {equation}  \label {eq:1.2.4} y'=-{x\over y}.  \end {equation}<a id='x1-6r4'></a> To see this, note that the only
-functions whose graphs are segments of (<a href='#x1-5r3'>1.2.3<!-- tex4ht:ref: eq:1.2.3  --></a>) are
-                                        \[ y_1=\sqrt {a^2-x^2}\mbox {\quad and \quad } y_2=-\sqrt {a^2-x^2}. \]
- We leave it to you to verify that these functions both satisfy (<a href='#x1-6r4'>1.2.4<!-- tex4ht:ref: eq:1.2.4  --></a>) on the open interval \((-a,a)\). However, (<a href='#x1-5r3'>1.2.3<!-- tex4ht:ref: eq:1.2.3  --></a>) is not
-a solution curve of (<a href='#x1-6r4'>1.2.4<!-- tex4ht:ref: eq:1.2.4  --></a>), since it’s not the graph of a function.
-                                                                                
+<body>
+  <p><a id='x1-1doc'></a>
+  </p>
+  <p class='noindent'>Section 1.2 Basic Concepts</p>
 
-                                                                                
-</p>
-  </div>
-<!-- l. 122 --><p class='indent'>
-</p>
-  <div class='newtheorem'>
-<!-- l. 124 --><p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Example 1.2.2</span> </span><a id='x1-72'></a> Verify that \begin {equation}  \label {eq:1.2.5} y={x^2\over 3}+{1\over x}  \end {equation}<a id='x1-8r5'></a> is a solution of \begin {equation}  \label {eq:1.2.6} xy'+y=x^2  \end {equation}<a id='x1-9r6'></a> on \((0,\infty )\) and on \((-\infty ,0)\).
-</p>
-  </div>
-<!-- l. 134 --><p class='indent'>
-</p><!-- l. 136 --><p class='noindent'><span class='ptmb8t-'>Solution </span> Substituting (<a href='#x1-8r5'>1.2.5<!-- tex4ht:ref: eq:1.2.5  --></a>) and
-                                        \[ y'={2x\over 3} - {1\over x^2} \]
- into (<a href='#x1-9r6'>1.2.6<!-- tex4ht:ref: eq:1.2.6  --></a>) yields
-                                        \[ xy'(x)+y(x)=x \left ({2x\over 3} - {1\over x^2}\right )+ \left ({x^2\over 3}+{1\over x}\right )=x^2 \]
- for all \(x\ne 0\). Therefore \(y\) is a solution of (<a href='#x1-9r6'>1.2.6<!-- tex4ht:ref: eq:1.2.6  --></a>) on \((-\infty ,0)\) and \((0,\infty )\). However, \(y\) isn’t a solution of the differential equation on any
-open interval that contains \(x=0\), since \(y\) is not defined at \(x=0\).
-</p><!-- l. 152 --><p class='indent'>  Figure <a href='#-y-x-x-'>1.2.1<!-- tex4ht:ref: figure:1.2.1  --></a> shows the graph of (<a href='#x1-8r5'>1.2.5<!-- tex4ht:ref: eq:1.2.5  --></a>). The part of the graph of (<a href='#x1-8r5'>1.2.5<!-- tex4ht:ref: eq:1.2.5  --></a>) on \((0,\infty )\) is a solution curve of (<a href='#x1-9r6'>1.2.6<!-- tex4ht:ref: eq:1.2.6  --></a>), as is
-the part of the graph on \((-\infty ,0)\).
-</p>
-  <div class='newtheorem'>
-<!-- l. 158 --><p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Example 1.2.3</span> </span><a id='x1-103'></a> Show that if \(c_1\) and \(c_2\) are constants then \begin {equation}  \label {eq:1.2.7} y=(c_1+c_2x)e^{-x}+2x-4  \end {equation}<a id='x1-11r7'></a> is a solution of \begin {equation}  \label {eq:1.2.8} y''+2y'+y=2x  \end {equation}<a id='x1-12r8'></a> on \((-\infty ,\infty )\).
-                                                                                
+  <p class='noindent'><span class='ptmb8t-'>1.2</span><span class='ptmb8t-x-x-90'>  BASIC CONCEPTS</span>
+  </p>
 
-                                                                                
-</p>
-  </div>
-<!-- l. 168 --><p class='indent'>
-</p>
-  <figure class='figure'> 
+  <details>
+    <summary>Basic Concepts</summary>
 
-                                                                                
+    <p class='noindent'>A <span class='vocab'>differential equation</span> is an equation that contains one or more
+      derivatives of an unknown function. The <span class='vocab'>order</span> of
+      a differential equation is the order of the highest derivative that it contains. A differential equation
+      is an <span class='vocab'>ordinary differential equation</span> if it involves an unknown function of only one
+      variable, or a
+      <span class='vocab'>partial differential equation</span> if it involves partial derivatives of a function of more
+      than one variable.
+      For now we’ll consider only ordinary differential equations, and we’ll just call them <span
+        class='vocab'>differential
+        equations.</span>
+    </p>
+    <p class='indent'> Throughout this text, all variables and constants are real unless it’s stated otherwise. We’ll
+      usually use \(x\) for the
+      independent variable unless the independent variable is time; then we’ll use \(t\).
+    </p>
+    <p class='indent'> The simplest differential equations are first order equations of the form
+      \[ {dy\over dx}=f(x) \]
+      where \(f\) is a known function of \(x\). We already know from calculus how to find functions that satisfy this
+      kind of
+      equation. For example, if
+      \[ \frac{dy}{dx}=x^3\]
+      then
+      \[ y=\int x^3\, dx={x^4\over 4}+c\]
+      where \(c\) is an <span class="vocab">arbitrary constant</span>. If \(n&gt;1\) we can find functions \(y\) that
+      satisfy equations of the form \begin {equation} \label {eq:1.2.1} \frac{d^ny}{dx^n}=f(x) \end {equation}<a id='x1-2r1'></a>
+      by repeated
+      integration. Again, this is a calculus problem.
+    </p>
+    <p class='indent'> Except for illustrative purposes in this section, there’s no need to consider differential
+      equations like
+      (<a href='#x1-2r1'>1.2.1<!-- tex4ht:ref: eq:1.2.1  --></a>).We’ll usually consider differential equations that can
+      be written as \begin {equation} \label {eq:1.2.2} \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right) \end {equation}<a
+        id='x1-3r2'></a> where at least one of the functions \(y\), \(\displaystyle  \frac{dy}{dx}\), …,
+      \(\displaystyle  \frac{d^{n-1}y}{dx^{n-1}}\) actually appears on the right. Here are some examples:
+      \[
+        \begin {array}{rcll}
+          \displaystyle {dy\over dx}-x^2&amp;=&amp;0&amp;\mbox { (first order)}\\ \\
+          \displaystyle {dy\over dx}+2xy^2&amp;=&amp;-2&amp;\mbox { (first order)}\\ \\
+          \displaystyle {d^2y\over dx^2}+2\displaystyle {dy\over dx}+y&amp;=&amp;2x&amp;\mbox { (second order)}\\ \\
+          \displaystyle  x\frac{d^3y}{dx^3}+y^2&amp;=&amp;\sin x &amp;\mbox { (third order)}\\ \\
+          \displaystyle  \frac{d^ny}{dx^n}+x\frac{dy}{dx}+3y&amp;=&amp;x&amp;\mbox { ($n$-th order)}
+        \end {array}
+      \]
+      Although none of these equations is written as in (<a href='#x1-3r2'>1.2.2<!-- tex4ht:ref: eq:1.2.2  --></a>), all
+      of them <em>can</em> be written in this form:
+      \[
+        \begin {array}{rcl}
+          \displaystyle \frac{dy}{dx}&amp;=&amp;x^2\\ \\ 
+          \displaystyle \frac{dy}{dx}&amp;=&amp;-2-2xy^2\\ \\
+          \displaystyle \frac{d^2y}{dx^2}&amp;=&amp;2x-2\frac{dy}{dx}-y\\ \\
+          \displaystyle \frac{d^3y}{dx^3}&amp;=&amp;\displaystyle {\sin x-y^2\over x}\\ \\
+          \displaystyle \frac{d^ny}{dx^n}&amp;=&amp;x - x \displaystyle \frac{dy}{dx}-3y
+        \end {array} 
+      \]
+    </p>
+  </details>
 
-                                                                                
-                                                                                
+  <details>
+    <summary>Solutions of Differential Equations</summary>
 
-                                                                                
-<!-- l. 172 --><p class='noindent' id='-y-x-x-'><img alt='PIC' height='264' src='EPS//fig010201.png' width='409' /> <a id='x1-13r1'></a></p>
-<figcaption class='caption'><span class='id'>Figure 1.2.1 </span><span class='content'>\(y=\displaystyle {\frac {x^{2}}{3}+\frac {1}{x}}\)                                                                     </span></figcaption><!-- tex4ht:label?: x1-13r1  -->
-                                                                                
+    <p class='noindent'>A <span class='vocab'>solution</span> of a differential equation is a function that satisfies
+      the differential equation on some <span class='vocab'>open interval</span>;
+      thus, \(y\) is a solution of (<a href='#x1-3r2'>1.2.2<!-- tex4ht:ref: eq:1.2.2  --></a>) if \(y\) is \(n\) times
+      differentiable and
+      \[ \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right) \]
+      for all \(x\) in some open interval \((a,b)\). In this case, we also say that \(y\) is a solution of \(\eqref
+      {eq:1.2.2}\) on \((a,b)\). Functions that satisfy a
+      differential equation at isolated points are not interesting. For example, \(y=x^2\) satisfies
+      \[ x\frac{dy}{dx}+x^2=3x \]
+      if and only if \(x=0\) or \(x=1\), but it’s not a solution of this differential equation because it does not
+      satisfy the equation on an
+      open interval.
+    </p>
+    <p class='indent'> The graph of a solution of a differential equation is a <span class='vocab'>solution
+        curve</span>. More generally, a curve \(C\) is said to be an
+      <span class='vocab'>integral curve</span> of a differential equation if every function \(y=y(x)\) whose graph is a
+      segment of \(C\) is a solution of the
+      differential equation. Thus, any <span class='vocab'>solution curve</span> of a differential equation is an <span
+        class='vocab'>integral curve</span>, but an <span class='vocab'>integral curve</span>
+      need not be a <span class='vocab'>solution curve</span>.
+    </p>
+    <div class='newtheorem'>
+      <p class='noindent'>
+        <span class='ex-number'>Example 1.2.1</span> 
+        <a id='x1-41'></a> The
+        circle \begin {equation} \label {eq:1.2.3} x^2+y^2=9 \end {equation}<a id='x1-5r3'></a> is an <span
+          class='vocab'>integral curve</span> of \begin {equation} \label {eq:1.2.4} \frac{dy}{dx}=-{x\over y}\end {equation}<a
+          id='x1-6r4'></a>
+      </p>
+      <div style="text-align: center;">
+        <iframe src="https://www.desmos.com/calculator/ff8hsr3idy?embed" width="400" height="250" frameborder=0></iframe>
+      </div>
+      <p class='noindent'>
+        To see this, note that the only
+        functions whose graphs are segments of (<a href='#x1-5r3'>1.2.3<!-- tex4ht:ref: eq:1.2.3  --></a>) are
+        \[ y_1=\sqrt {9-x^2}\mbox {\quad and \quad } y_2=-\sqrt {9-x^2}\]
+      </p>
+      <div style="display: flex; gap: 2em; justify-content: center;">
+        <iframe src="https://www.desmos.com/calculator/sunm3bnr1t?embed" width="400" height="250" frameborder=0></iframe>
+        <iframe src="https://www.desmos.com/calculator/qa0d5qmmka?embed" width="400" height="250" frameborder=0></iframe>
+      </div>
 
-                                                                                
-  </figure>
-<!-- l. 178 --><p class='noindent'><span class='ptmb8t-'>Solution </span> Differentiating (<a href='#x1-11r7'>1.2.7<!-- tex4ht:ref: eq:1.2.7  --></a>) twice yields
-                                        \[ y'=-(c_1+c_2x)e^{-x}+c_2e^{-x}+2 \]
- and
-                                        \[ y''=(c_1+c_2x)e^{-x}-2c_2e^{-x}, \]
- so </p><div class='eqnarray'>\begin {eqnarray*}  y''+2y'+y&amp;=&amp;(c_1+c_2x)e^{-x}-2c_2e^{-x}\\ &amp;&amp;+2\left [-(c_1+c_2x)e^{-x}+c_2e^{-x}+2\right ]\\ &amp;&amp;+(c_1+c_2x)e^{-x}+2x-4\\ &amp;=&amp;(1-2+1)(c_1+c_2x)e^{-x}+(-2+2)c_2e^{-x}\\ &amp;&amp;+4+2x-4=2x  \end {eqnarray*}</div>
-<!-- l. 193 --><p class='indent'>  for all values of \(x\). Therefore \(y\) is a solution of (<a href='#x1-12r8'>1.2.8<!-- tex4ht:ref: eq:1.2.8  --></a>) on \((-\infty ,\infty )\).
-</p>
-  <div class='newtheorem'>
-<!-- l. 196 --><p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Example 1.2.4</span> </span><a id='x1-144'></a> Find all solutions of \begin {equation}  \label {eq:1.2.9} y^{(n)}=e^{2x}.  \end {equation}<a id='x1-15r9'></a>
-</p>
-  </div>
-<!-- l. 201 --><p class='indent'>
-</p><!-- l. 203 --><p class='noindent'><span class='ptmb8t-'>Solution </span> Integrating (<a href='#x1-15r9'>1.2.9<!-- tex4ht:ref: eq:1.2.9  --></a>) yields
-                                                                                
+      <p class='noindent'>
+        We leave it to you to verify that these functions both satisfy (<a
+          href='#x1-6r4'>1.2.4<!-- tex4ht:ref: eq:1.2.4  --></a>) on the open interval \((-3, 3)\). However, (<a
+          href='#x1-5r3'>1.2.3<!-- tex4ht:ref: eq:1.2.3  --></a>) is not
+        a <span class='vocab'>solution curve</span> of (<a href='#x1-6r4'>1.2.4<!-- tex4ht:ref: eq:1.2.4  --></a>),
+        since it’s not the graph of a function.
 
-                                                                                
-                                        \[ y^{(n-1)}={e^{2x}\over 2}+k_1, \]
- where \(k_1\) is a constant. If \(n\ge 2\), integrating again yields
-                                        \[ y^{(n-2)}={e^{2x}\over 4}+k_1x+k_2. \]
- If \(n\ge 3\), repeatedly integrating yields \begin {equation}  \label {eq:1.2.10} y={e^{2x}\over 2^n}+k_1{x^{n-1}\over (n-1)!}+k_2{x^{n-2}\over (n-2)!}+\cdots +k_n,  \end {equation}<a id='x1-16r10'></a> where \(k_1\), \(k_2\), …, \(k_n\) are constants. This shows that every solution of (<a href='#x1-15r9'>1.2.9<!-- tex4ht:ref: eq:1.2.9  --></a>) has the form
-(<a href='#x1-16r10'>1.2.10<!-- tex4ht:ref: eq:1.2.10  --></a>) for some choice of the constants \(k_1\), \(k_2\), …, \(k_n\). On the other hand, differentiating (<a href='#x1-16r10'>1.2.10<!-- tex4ht:ref: eq:1.2.10  --></a>) \(n\) times shows that if \(k_1\), \(k_2\),
-…, \(k_n\) are arbitrary constants, then the function \(y\) in (<a href='#x1-16r10'>1.2.10<!-- tex4ht:ref: eq:1.2.10  --></a>) satisfies (<a href='#x1-15r9'>1.2.9<!-- tex4ht:ref: eq:1.2.9  --></a>).
-</p><!-- l. 227 --><p class='indent'>  Since the constants \(k_1\), \(k_2\), …, \(k_n\) in (<a href='#x1-16r10'>1.2.10<!-- tex4ht:ref: eq:1.2.10  --></a>) are arbitrary, so are the constants
-                                        \[{k_1\over (n-1)!},\, {k_2\over (n-2)!},\, \cdots , \, k_n.\]
- Therefore Example <a href='#x1-144'>1.2.4<!-- tex4ht:ref: example:1.2.4  --></a> actually shows that all solutions of (<a href='#x1-15r9'>1.2.9<!-- tex4ht:ref: eq:1.2.9  --></a>) can be written as
-                                        \[ y={e^{2x}\over 2^n}+c_1+c_2x+\cdots +c_nx^{n-1}, \]
- where we renamed the arbitrary constants in (<a href='#x1-16r10'>1.2.10<!-- tex4ht:ref: eq:1.2.10  --></a>) to obtain a simpler formula. As a general rule, arbitrary
-constants appearing in solutions of differential equations should be simplified if possible. You’ll see examples of
-this throughout the text.
-                                                                                
 
-                                                                                
-</p><!-- l. 241 --><p class='noindent'><span id='textcolor2'>Initial Value Problems</span>
-</p><!-- l. 241 --><p class='indent'>
-</p><!-- l. 243 --><p class='noindent'>In Example <a href='#x1-144'>1.2.4<!-- tex4ht:ref: example:1.2.4  --></a> we saw that the differential equation \(y^{(n)}=e^{2x}\) has an infinite family of solutions that depend upon the \(n\)
-arbitrary constants \(c_1\), \(c_2\), …, \(c_n\). In the absence of additional conditions, there’s no reason to prefer one solution
-of a differential equation over another. However, we’ll often be interested in finding a solution of
-a differential equation that satisfies one or more specific conditions. The next example illustrates
-this.
-</p>
-  <div class='newtheorem'>
-<!-- l. 253 --><p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Example 1.2.5</span> </span><a id='x1-175'></a> Find a solution of
-                                        \[ y'=x^3 \]
- such that \(y(1)=2\).
-</p>
-  </div>
-<!-- l. 259 --><p class='indent'>
-</p><!-- l. 261 --><p class='noindent'><span class='ptmb8t-'>Solution </span> At the beginning of this section we saw that the solutions of \(y'=x^3\) are
-                                        \[ y={x^4\over 4}+c. \]
- To determine a value of \(c\) such that \(y(1)=2\), we set \(x=1\) and \(y=2\) here to obtain
-                                                                                
 
-                                                                                
-                                        \[ 2=y(1)={1\over 4}+c,\mbox {\quad so \quad }c={7\over 4}. \]
- Therefore the required solution is
-                                        \[ y={x^4+7\over 4}. \]
-</p><!-- l. 276 --><p class='indent'>  Figure <a href='#-y-x-'>1.2.2<!-- tex4ht:ref: figure:1.2.2  --></a> shows the graph of this solution. Note that imposing the condition \(y(1)=2\) is equivalent to requiring the
-graph of \(y\) to pass through the point \((1,2)\).
-</p><!-- l. 281 --><p class='indent'>  We can rewrite the problem considered in Example <a href='#x1-175'>1.2.5<!-- tex4ht:ref: example:1.2.5  --></a> more briefly as
-                                        \[ y'=x^3,\quad y(1)=2. \]
- We call this an <span class='ptmri8t-'>initial value problem</span>. The requirement \(y(1)=2\) is an <span class='ptmri8t-'>initial condition</span>. Initial value problems can also be
-posed for higher order differential equations. For example, \begin {equation}  \label {eq:1.2.11} y'' - 2y'+3y=e^x, \quad y(0)=1, \quad y'(0)=2  \end {equation}<a id='x1-18r11'></a> is an initial value problem for a second order
-differential equation where \(y\) and \(y'\) are required to have specified values at \(x=0\). In general, an initial value problem for
-an \(n\)-th order differential equation requires \(y\) and its first \(n-1\) derivatives to have specified values at some point \(x_0\). These
-requirements are the <span class='ptmri8t-'>initial conditions</span>.
-</p>
-  <figure class='figure'> 
+      </p>
+    </div>
+    <p class='indent'>
+    </p>
+    <div class='newtheorem'>
+      <p class='noindent'>
+        <span class='ex-number'>Example 1.2.2</span> 
+        <a id='x1-72'></a> Verify that \begin {equation} \label
+        {eq:1.2.5} y={x^2\over 3}+{1\over x} \end {equation}<a id='x1-8r5'></a> is a solution of \begin {equation}
+        \label {eq:1.2.6} x\frac{dy}{dx}+y=x^2 \end {equation}<a id='x1-9r6'></a> on \((0,\infty )\) and on \((-\infty ,0)\).
+      </p>
+    </div>
+    <p class='indent'>
+    </p>
+    <p class='noindent'><span class='ptmb8t-'>Solution </span> Substituting (<a
+        href='#x1-8r5'>1.2.5<!-- tex4ht:ref: eq:1.2.5  --></a>) and
+      \[ \frac{dy}{dx}={2x\over 3} - {1\over x^2} \]
+      into (<a href='#x1-9r6'>1.2.6<!-- tex4ht:ref: eq:1.2.6  --></a>) yields
+      \[ x\left.\frac{dy}{dx}\right|_x+y(x)=x \left ({2x\over 3} - {1\over x^2}\right )+ \left ({x^2\over 3}+{1\over x}\right )=x^2 \]
+      for all \(x\ne 0\). Therefore \(y\) is a solution of (<a href='#x1-9r6'>1.2.6<!-- tex4ht:ref: eq:1.2.6  --></a>)
+      on \((-\infty ,0)\) and \((0,\infty )\). However, \(y\) isn’t a solution of the differential equation on any
+      open interval that contains \(x=0\), since \(y\) is not defined at \(x=0\).
+    </p>
+    <p class='indent'> Figure <a href='#-y-x-x-'>1.2.1<!-- tex4ht:ref: figure:1.2.1  --></a> shows the graph of (<a
+        href='#x1-8r5'>1.2.5<!-- tex4ht:ref: eq:1.2.5  --></a>). The part of the graph of (<a
+        href='#x1-8r5'>1.2.5<!-- tex4ht:ref: eq:1.2.5  --></a>) on \((0,\infty )\) is a <span class='vocab'>solution
+        curve</span> of (<a href='#x1-9r6'>1.2.6<!-- tex4ht:ref: eq:1.2.6  --></a>), as is
+      the part of the graph on \((-\infty ,0)\).
+    </p>
+    <div class='newtheorem'>
+      <p class='noindent'>
+        <span class='ex-number'>Example 1.2.3</span>
+        <a id='x1-103'></a> Show that if \(c_1\) and \(c_2\) are
+        constants then \begin {equation} \label {eq:1.2.7} y=(c_1+c_2x)e^{-x}+2x-4 \end {equation}<a id='x1-11r7'></a>
+        is a solution of \begin {equation} \label {eq:1.2.8} \frac{d^2y}{dx^2}+2\frac{dy}{dx}+y=2x \end {equation}<a id='x1-12r8'></a> on
+        \((-\infty ,\infty )\).
+      </p>
+    </div>
+    <p class='indent'>
+    </p>
+    <figure class='figure'>
+      <p class='noindent' id='-y-x-x-'><img height='264' src='EPS/fig010201.png' width='409' /> <a id='x1-13r1'></a></p>
+      <figcaption class='caption'><span class='id'>Figure 1.2.1 </span><span class='content'>\(y=\displaystyle {\frac
+          {x^{2}}{3}+\frac {1}{x}}\) </span></figcaption><!-- tex4ht:label?: x1-13r1  -->
+    </figure>
+    <p class='noindent'><span class='ptmb8t-'>Solution </span> Differentiating (<a
+        href='#x1-11r7'>1.2.7<!-- tex4ht:ref: eq:1.2.7  --></a>) twice yields
+      \[ \frac{dy}{dx}=-(c_1+c_2x)e^{-x}+c_2e^{-x}+2 \]
+      and
+      \[ \frac{d^2y}{dx^2}=(c_1+c_2x)e^{-x}-2c_2e^{-x}\]
+      so </p>
+    <div class='eqnarra\frac{dy}{dx}>\begin {eqnarray*} \frac{d^2y}{dx^2}+2\frac{dy}{dx}+y&amp;=&amp;(c_1+c_2x)e^{-x}-2c_2e^{-x}\\ &amp;&amp;+2\left
+      [-(c_1+c_2x)e^{-x}+c_2e^{-x}+2\right ]\\ &amp;&amp;+(c_1+c_2x)e^{-x}+2x-4\\
+      &amp;=&amp;(1-2+1)(c_1+c_2x)e^{-x}+(-2+2)c_2e^{-x}\\ &amp;&amp;+4+2x-4=2x \end {eqnarray*}</div>
+    <p class='indent'> for all values of \(x\). Therefore \(y\) is a solution of (<a
+        href='#x1-12r8'>1.2.8<!-- tex4ht:ref: eq:1.2.8  --></a>) on \((-\infty ,\infty )\).
+    </p>
+    <div class='newtheorem'>
+      <p class='noindent'>
+        <span class='ex-number'>Example 1.2.4</span>
+        <a id='x1-144'></a> Find all solutions of \begin {equation}
+        \label {eq:1.2.9} \frac{d^ny}{dx^n}=e^{2x}\end {equation}<a id='x1-15r9'></a>
+      </p>
+    </div>
+    <p class='indent'>
+    </p>
+    <p class='noindent'><span class='ptmb8t-'>Solution </span> Integrating (<a
+        href='#x1-15r9'>1.2.9<!-- tex4ht:ref: eq:1.2.9  --></a>) yields
+      \[ \frac{d^{n-1}y}{dx^{n-1}}={e^{2x}\over 2}+k_1\]
+      where \(k_1\) is a constant. If \(n\ge 2\), integrating again yields
+      \[ \frac{d^{n-2}y}{dx^{n-2}}={e^{2x}\over 4}+k_1x+k_2\]
+      If \(n\ge 3\), repeatedly integrating yields \begin {equation} \label {eq:1.2.10} y={e^{2x}\over
+      2^n}+k_1{x^{n-1}\over (n-1)!}+k_2{x^{n-2}\over (n-2)!}+\cdots +k_n\end {equation}<a id='x1-16r10'></a> where
+      \(k_1\), \(k_2\), …, \(k_n\) are constants. This shows that every solution of (<a
+        href='#x1-15r9'>1.2.9<!-- tex4ht:ref: eq:1.2.9  --></a>) has the form
+      (<a href='#x1-16r10'>1.2.10<!-- tex4ht:ref: eq:1.2.10  --></a>) for some choice of the constants \(k_1\), \(k_2\),
+      …, \(k_n\). On the other hand, differentiating (<a href='#x1-16r10'>1.2.10<!-- tex4ht:ref: eq:1.2.10  --></a>)
+      \(n\) times shows that if \(k_1\), \(k_2\),
+      …, \(k_n\) are arbitrary constants, then the function \(y\) in (<a
+        href='#x1-16r10'>1.2.10<!-- tex4ht:ref: eq:1.2.10  --></a>) satisfies (<a
+        href='#x1-15r9'>1.2.9<!-- tex4ht:ref: eq:1.2.9  --></a>).
+    </p>
+    <p class='indent'> Since the constants \(k_1\), \(k_2\), …, \(k_n\) in (<a
+        href='#x1-16r10'>1.2.10<!-- tex4ht:ref: eq:1.2.10  --></a>) are arbitrary, so are the constants
+      \[{k_1\over (n-1)!},\, {k_2\over (n-2)!},\, \cdots , \, k_n.\]
+      Therefore Example <a href='#x1-144'>1.2.4<!-- tex4ht:ref: example:1.2.4  --></a> actually shows that all solutions
+      of (<a href='#x1-15r9'>1.2.9<!-- tex4ht:ref: eq:1.2.9  --></a>) can be written as
+      \[ y={e^{2x}\over 2^n}+c_1+c_2x+\cdots +c_nx^{n-1}\]
+      where we renamed the arbitrary constants in (<a href='#x1-16r10'>1.2.10<!-- tex4ht:ref: eq:1.2.10  --></a>) to
+      obtain a simpler formula. As a general rule, arbitrary
+      constants appearing in solutions of differential equations should be simplified if possible. You’ll see examples
+      of
+      this throughout the text.
+    </p>
+  </details>
 
-                                                                                
+  <details>
+    <summary>Initial Value Problems</summary>
 
-                                                                                
-                                                                                
+    <p class='noindent'>In Example <a href='#x1-144'>1.2.4<!-- tex4ht:ref: example:1.2.4  --></a> we saw that the
+      differential equation \( \displaystyle \frac{d^ny}{dx^n}=e^{2x}\) has an infinite family of solutions that depend upon the \(n\)
+      arbitrary constants \(c_1\), \(c_2\), …, \(c_n\). In the absence of additional conditions, there’s no reason to
+      prefer one solution
+      of a differential equation over another. However, we’ll often be interested in finding a solution of
+      a differential equation that satisfies one or more specific conditions. The next example illustrates
+      this.
+    </p>
+    <div class='newtheorem'>
+      <p class='noindent'>
+        <span class='ex-number'>Example 1.2.5</span>
+        <a id='x1-175'></a> Find a solution of
+        \[ \frac{dy}{dx}=x^3 \]
+        such that \(y(1)=2\).
+      </p>
+    </div>
+    <p class='indent'>
+    </p>
+    <p class='noindent'><span class='ptmb8t-'>Solution </span> At the beginning of this section we saw that the
+      solutions of \(\displaystyle \frac{dy}{dx}=x^3\) are
+      \[ y={x^4\over 4}+c\]
+      To determine a value of \(c\) such that \(y(1)=2\), we set \(x=1\) and \(y=2\) here to obtain
 
-                                                                                
-<!-- l. 302 --><p class='noindent' id='-y-x-'><img alt='PIC' height='264' src='EPS//fig010202.png' width='409' /> <a id='x1-19r2'></a></p>
-<figcaption class='caption'><span class='id'>Figure 1.2.2 </span><span class='content'>\(y=\displaystyle {\frac {x^{2}+7}{4}}\)                                                                     </span></figcaption><!-- tex4ht:label?: x1-19r2  -->
-                                                                                
 
-                                                                                
-  </figure>
-<!-- l. 308 --><p class='indent'>  We’ll denote an initial value problem for a differential equation by writing the initial conditions after the
-equation, as in (<a href='#x1-18r11'>1.2.11<!-- tex4ht:ref: eq:1.2.11  --></a>). For example, we would write an initial value problem for (<a href='#x1-3r2'>1.2.2<!-- tex4ht:ref: eq:1.2.2  --></a>) as \begin {equation}  \label {eq:1.2.12} y^{(n)}=f(x,y,y', \dots ,y^{(n-1)}),\, y(x_0)=k_0,\, y'(x_0)=k_1,\, \dots ,\, y^{(n-1)}=k_{n-1}.  \end {equation}<a id='x1-20r12'></a> Consistent with our
-earlier definition of a solution of the differential equation in (<a href='#x1-20r12'>1.2.12<!-- tex4ht:ref: eq:1.2.12  --></a>), we say that \(y\) is a solution of the initial value
-problem (<a href='#x1-20r12'>1.2.12<!-- tex4ht:ref: eq:1.2.12  --></a>) if \(y\) is \(n\) times differentiable and
-                                        \[ y^{(n)}(x)=f(x,y(x),y'(x), \dots ,y^{(n-1)}(x)) \]
- for all \(x\) in some open interval \((a,b)\) that contains \(x_0\), and \(y\) satisfies the initial conditions in (<a href='#x1-20r12'>1.2.12<!-- tex4ht:ref: eq:1.2.12  --></a>). The largest open
-interval that contains \(x_0\) on which \(y\) is defined and satisfies the differential equation is the <span class='ptmri8t-'>interval of validity</span> of
-\(y\).
-</p>
-  <div class='newtheorem'>
-<!-- l. 329 --><p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Example 1.2.6</span> </span><a id='x1-216'></a> In Example <a href='#x1-175'>1.2.5<!-- tex4ht:ref: example:1.2.5  --></a> we saw that \begin {equation}  \label {eq:1.2.13} y={x^4+7\over 4}  \end {equation}<a id='x1-22r13'></a> is a solution of the initial value problem
-                                        \[ y'=x^3,\quad y(1)=2. \]
- Since the function in (<a href='#x1-22r13'>1.2.13<!-- tex4ht:ref: eq:1.2.13  --></a>) is defined for all \(x\), the interval of validity of this solution is \((-\infty ,\infty )\).
-</p>
-  </div>
-<!-- l. 340 --><p class='indent'>
-</p>
-  <div class='newtheorem'>
-<!-- l. 342 --><p class='noindent'><span class='head'>
-                                                                                
 
-                                                                                
-<span class='ptmb8t-'>Example 1.2.7</span> </span><a id='x1-237'></a> In Example <a href='#x1-72'>1.2.2<!-- tex4ht:ref: example:1.2.2  --></a> we verified that \begin {equation}  \label {eq:1.2.14} y={x^2\over 3}+{1\over x}  \end {equation}<a id='x1-24r14'></a> is a solution of
-                                        \[ xy'+y=x^2 \]
- on \((0,\infty )\) and on \((-\infty ,0)\). By evaluating (<a href='#x1-24r14'>1.2.14<!-- tex4ht:ref: eq:1.2.14  --></a>) at \(x=\pm 1\), you can see that (<a href='#x1-24r14'>1.2.14<!-- tex4ht:ref: eq:1.2.14  --></a>) is a solution of the initial value problems \begin {equation}  \label {eq:1.2.15} xy'+y=x^2,\quad y(1)={4\over 3}  \end {equation}<a id='x1-25r15'></a> and \begin {equation}  \label {eq:1.2.16} xy'+y=x^2,\quad y(-1)=-{2\over 3}.  \end {equation}<a id='x1-26r16'></a>
-The interval of validity of (<a href='#x1-24r14'>1.2.14<!-- tex4ht:ref: eq:1.2.14  --></a>) as a solution of (<a href='#x1-25r15'>1.2.15<!-- tex4ht:ref: eq:1.2.15  --></a>) is \((0,\infty )\), since this is the largest interval that contains \(x_0=1\) on
-which (<a href='#x1-24r14'>1.2.14<!-- tex4ht:ref: eq:1.2.14  --></a>) is defined. Similarly, the interval of validity of (<a href='#x1-24r14'>1.2.14<!-- tex4ht:ref: eq:1.2.14  --></a>) as a solution of (<a href='#x1-26r16'>1.2.16<!-- tex4ht:ref: eq:1.2.16  --></a>) is \((-\infty ,0)\), since this is the
-largest interval that contains \(x_0=-1\) on which (<a href='#x1-24r14'>1.2.14<!-- tex4ht:ref: eq:1.2.14  --></a>) is defined.
-</p>
-  </div>
-<!-- l. 367 --><p class='indent'>
-</p><!-- l. 369 --><p class='noindent'><span id='textcolor3'>Free Fall Under Constant Gravity</span>
-</p><!-- l. 369 --><p class='indent'>
-</p><!-- l. 371 --><p class='noindent'>The term <span class='ptmri8t-'>initial value problem</span> originated in problems of motion where the independent variable is \(t\) (representing
-elapsed time), and the initial conditions are the position and velocity of an object at the initial (starting) time of an
-experiment.
-</p>
-  <div class='newtheorem'>
-<!-- l. 378 --><p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Example 1.2.8</span> </span><a id='x1-278'></a> An object falls under the influence of gravity near Earth’s surface, where it can be assumed that
-the magnitude of the acceleration due to gravity is a constant \(g\).
-    </p><dl class='list1'><dt class='list'>
- <span class='ptmb8t-'>(a)</span>  </dt><dd class='list'>
-    <!-- l. 384 --><p class='noindent'>Construct a mathematical model for the motion of the object in the form of an initial value problem
-    for a second order differential equation, assuming that the altitude and velocity of the object at time
-    \(t=0\) are known. Assume that gravity is the only force acting on the object.
-    </p></dd><dt class='list'>
- <span class='ptmb8t-'>(b)</span>  </dt><dd class='list'>
-    <!-- l. 390 --><p class='noindent'>Solve the initial value problem derived in <span class='ptmb8t-'>(a) </span>to obtain the altitude as a function of time.</p></dd></dl>
-</div>
-<!-- l. 393 --><p class='indent'>
-</p><!-- l. 395 --><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>a</span><span class='ptmrc8t-'>) </span></span> Let \(y(t)\) be the altitude of the object at time \(t\). Since the acceleration of the object has constant
-magnitude \(g\) and is in the downward (negative) direction, \(y\) satisfies the second order equation
-                                                                                
+      \[ 2=y(1)={1\over 4}+c \mbox {\quad so \quad }c={7\over 4}\]
+      Therefore the required solution is
+      \[ y={x^4+7\over 4}\]
+    </p>
+    <p class='indent'> Figure <a href='#-y-x-'>1.2.2<!-- tex4ht:ref: figure:1.2.2  --></a> shows the graph of this
+      solution. Note that imposing the condition \(y(1)=2\) is equivalent to requiring the
+      graph of \(y\) to pass through the point \((1,2)\).
+    </p>
+    <p class='indent'> We can rewrite the problem considered in Example <a
+        href='#x1-175'>1.2.5<!-- tex4ht:ref: example:1.2.5  --></a> more briefly as
+      \[ \frac{dy}{dx}=x^3 \quad y(1)=2\]
+      We call this an <span class='vocab'>initial value problem</span>. The requirement \(y(1)=2\) is an <span
+        class='vocab'>initial condition</span>. Initial value problems can also be
+      posed for higher order differential equations. For example, \begin {equation} \label {eq:1.2.11} \frac{d^2y}{dx^2} - 2\frac{dy}{dx}+3y=e^x
+      \quad y(0)=1 \quad \left.\frac{dy}{dx}\right|_0=2 \end {equation}<a id='x1-18r11'></a> is an initial value problem for a second order
+      differential equation where \(y\) and \(\displaystyle \frac{dy}{dx}\) are required to have specified values at \(x=0\). In general, an
+      initial value problem for
+      an \(n\)-th order differential equation requires \(y\) and its first \(n-1\) derivatives to have specified values
+      at some point \(x_0\). These
+      requirements are the <span class='vocab'>initial conditions</span>.
+    </p>
+    <figure class='figure'>
+      <p class='noindent' id='-y-x-'><img height='264' src='EPS/fig010202.png' width='409' /> <a id='x1-19r2'></a></p>
+      <figcaption class='caption'><span class='id'>Figure 1.2.2 </span><span class='content'>\(y=\displaystyle {\frac
+          {x^{2}+7}{4}}\) </span></figcaption><!-- tex4ht:label?: x1-19r2  -->
+    </figure>
+    <p class='indent'> We’ll denote an initial value problem for a differential equation by writing the initial
+      conditions after the
+      equation, as in (<a href='#x1-18r11'>1.2.11<!-- tex4ht:ref: eq:1.2.11  --></a>).
+      For example, we would write an initial value problem for (
+      <a href='#x1-3r2'>1.2.2<!-- tex4ht:ref: eq:1.2.2  --></a>
+      ) as
+      \begin {equation}
+      \label {eq:1.2.12}
+      \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right),\, y(x_0)=k_0,\, \left.\frac{dy}{dx}\right|_{x_0}=k_1,\, \dots ,\, \frac{d^{n-1}y}{dx^{n-1}}=k_{n-1}
+      \end {equation}<a id='x1-20r12'></a>
+      Consistent with our earlier definition of a solution of the differential equation in
+      (<a href='#x1-20r12'>1.2.12<!-- tex4ht:ref: eq:1.2.12  --></a>), we say that \(y\) is a solution
+      of the initial value problem (<a href='#x1-20r12'>1.2.12<!-- tex4ht:ref: eq:1.2.12  --></a>) if \(y\)
+      is \(n\) times differentiable and \[ \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right) \]
+      for all \(x\) in some open interval \((a,b)\) that contains \(x_0\), and \(y\) satisfies the initial conditions in
+      (<a href='#x1-20r12'>1.2.12<!-- tex4ht:ref: eq:1.2.12  --></a>). The largest open
+      interval that contains \(x_0\) on which \(y\) is defined and satisfies the differential equation is
+      the <span class='vocab'>interval of validity</span> of \(y\).
+    </p>
+    <div class='newtheorem'>
+      <p class='noindent'>
+        <span class='ex-number'>Example 1.2.6</span> 
+        <a id='x1-216'></a> In Example <a
+          href='#x1-175'>1.2.5<!-- tex4ht:ref: example:1.2.5  --></a> we saw that \begin {equation} \label {eq:1.2.13}
+        y={x^4+7\over 4} \end {equation}<a id='x1-22r13'></a> is a solution of the initial value problem
+        \[ \frac{dy}{dx}=x^3 \quad y(1)=2\]
+        Since the function in (<a href='#x1-22r13'>1.2.13<!-- tex4ht:ref: eq:1.2.13  --></a>) is defined for all \(x\),
+        the <span class='vocab'>interval of validity</span> of this solution is \((-\infty ,\infty )\).
+      </p>
+    </div>
+    <p class='indent'>
+    </p>
+    <div class='newtheorem'>
+      <p class='noindent'>
+        <span class='ex-number'>Example 1.2.7</span> 
+        <a id='x1-237'></a> In Example <a
+          href='#x1-72'>1.2.2<!-- tex4ht:ref: example:1.2.2  --></a> we verified that \begin {equation} \label
+        {eq:1.2.14} y={x^2\over 3}+{1\over x} \end {equation}<a id='x1-24r14'></a> is a solution of
+        \[ x\frac{dy}{dx}+y=x^2 \]
+        on \((0,\infty )\) and on \((-\infty ,0)\). By evaluating (<a
+          href='#x1-24r14'>1.2.14<!-- tex4ht:ref: eq:1.2.14  --></a>) at \(x=\pm 1\), you can see that (<a
+          href='#x1-24r14'>1.2.14<!-- tex4ht:ref: eq:1.2.14  --></a>) is a solution of the initial value problems \begin
+        {equation} \label {eq:1.2.15} x\frac{dy}{dx}+y=x^2 \quad y(1)={4\over 3} \end {equation}<a id='x1-25r15'></a> and \begin
+        {equation} \label {eq:1.2.16} x\frac{dy}{dx}+y=x^2 \quad y(-1)=-{2\over 3}\end {equation}<a id='x1-26r16'></a>
+        The <span class='vocab'>interval of validity</span> of (<a href='#x1-24r14'>1.2.14<!-- tex4ht:ref: eq:1.2.14  --></a>) as a solution of (<a
+          href='#x1-25r15'>1.2.15<!-- tex4ht:ref: eq:1.2.15  --></a>) is \((0,\infty )\), since this is the largest
+        interval that contains \(x_0=1\) on
+        which (<a href='#x1-24r14'>1.2.14<!-- tex4ht:ref: eq:1.2.14  --></a>) is defined. Similarly, the interval of
+        validity of (<a href='#x1-24r14'>1.2.14<!-- tex4ht:ref: eq:1.2.14  --></a>) as a solution of (<a
+          href='#x1-26r16'>1.2.16<!-- tex4ht:ref: eq:1.2.16  --></a>) is \((-\infty ,0)\), since this is the
+        largest interval that contains \(x_0=-1\) on which (<a
+          href='#x1-24r14'>1.2.14<!-- tex4ht:ref: eq:1.2.14  --></a>) is defined.
+      </p>
+    </div>
+  </details>
+  <details>
+    <summary>Free Fall Under Constant Gravity</summary>
 
-                                                                                
-                                        \[ y''=-g, \]
- where the prime now indicates differentiation with respect to \(t\). If \(y_0\) and \(v_0\) denote the altitude and velocity when \(t=0\),
-then \(y\) is a solution of the initial value problem \begin {equation}  \label {eq:1.2.17} y''=-g,\quad y(0)=y_0,\quad y'(0)=v_0.  \end {equation}<a id='x1-30r17'></a>
-</p><!-- l. 409 --><p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>b</span><span class='ptmrc8t-'>) </span></span> Integrating (<a href='#x1-30r17'>1.2.17<!-- tex4ht:ref: eq:1.2.17  --></a>) twice yields </p><div class='eqnarray'>\begin {eqnarray*}  y'&amp;=&amp;-gt+c_1, \\ y&amp;=&amp;-{gt^2\over 2}+c_1t+c_2.  \end {eqnarray*}</div>
-<!-- l. 415 --><p class='indent'>  Imposing the initial conditions \(y(0)=y_0\) and \(y'(0)=v_0\) in these two equations shows that \(c_1=v_0\) and \(c_2=y_0\). Therefore the solution of the
-initial value problem (<a href='#x1-30r17'>1.2.17<!-- tex4ht:ref: eq:1.2.17  --></a>) is
-                                        \[ y=- {gt^2\over 2}+v_0t+y_0. \]
-</p>
-   
- <a class="back-to-ch" href="sec1.0.html">Back</a>
-   
-</body> 
+    <p class='noindent'>The term <span class='vocab'>initial value problem</span> originated in problems of motion where
+      the independent variable is \(t\) (representing
+      elapsed time), and the initial conditions are the position and velocity of an object at the initial (starting)
+      time of an
+      experiment.
+    </p>
+    <div class='newtheorem'>
+      <p class='noindent'>
+        <span class='ex-number'>Example 1.2.8</span>
+        <a id='x1-278'></a> An object falls under the influence of
+        gravity near Earth’s surface, where it can be assumed that
+        the magnitude of the acceleration due to gravity is a constant \(g\).
+      </p>
+      <dl class='list1'>
+        <dt class='list'>
+          <span class='ptmb8t-'>(a)</span>
+        </dt>
+        <dd class='list'>
+          <p class='noindent'>Construct a mathematical model for the motion of the object in the form of an initial
+            value problem
+            for a second order differential equation, assuming that the altitude and velocity of the object at time
+            \(t=0\) are known. Assume that gravity is the only force acting on the object.
+          </p>
+        </dd>
+        <dt class='list'>
+          <span class='ptmb8t-'>(b)</span>
+        </dt>
+        <dd class='list'>
+          <p class='noindent'>Solve the initial value problem derived in <span class='ptmb8t-'>(a) </span>to obtain the
+            altitude as a function of time.</p>
+        </dd>
+      </dl>
+    </div>
+    <p class='indent'>
+    </p>
+    <p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span
+            class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>a</span><span
+          class='ptmrc8t-'>) </span></span> Let \(y(t)\) be the altitude of the object at time \(t\). Since the
+      acceleration of the object has constant
+      magnitude \(g\) and is in the downward (negative) direction, \(y\) satisfies the second order equation
+      \[ \frac{d^2y}{dx^2}=-g\]
+      where the prime now indicates differentiation with respect to \(t\). If \(y_0\) and \(v_0\) denote the altitude
+      and velocity when \(t=0\),
+      then \(y\) is a solution of the initial value problem \begin {equation} \label {eq:1.2.17} \frac{d^2y}{dx^2}=-g \quad
+      y(0)=y_0 \quad \left.\frac{dy}{dx}\right|_0=v_0\end {equation}<a id='x1-30r17'></a>
+    </p>
+    <p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span
+            class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>b</span><span
+          class='ptmrc8t-'>) </span></span> Integrating (<a href='#x1-30r17'>1.2.17<!-- tex4ht:ref: eq:1.2.17  --></a>)
+      twice yields </p>
+    <div class='eqnarra\frac{dy}{dx}>\begin {eqnarray*} \frac{dy}{dx}&amp;=&amp;-gt+c_1 \\ y&amp;=&amp;-{gt^2\over 2}+c_1t+c_2\end {eqnarray*}
+    </div>
+    <p class='indent'> Imposing the initial conditions \(y(0)=y_0\) and \(\left.\frac{dy}{dx}\right|_0=v_0\) in these two equations shows that
+      \(c_1=v_0\) and \(c_2=y_0\). Therefore the solution of the
+      initial value problem (<a href='#x1-30r17'>1.2.17<!-- tex4ht:ref: eq:1.2.17  --></a>) is
+      \[ y=- {gt^2\over 2}+v_0t+y_0\]
+    </p>
+  </details>
+
+  <a class="back-to-ch" href="sec1.0.html">Back</a>
+
+</body>
+
 </html>

@@ -8,6 +8,7 @@
  @media (prefers-color-scheme: dark) { img[src^="Trench_DiffEQ_Book"]{filter: invert(1); } } 
  math mstyle[mathvariant="bold"] { font-weight: bold; font-style: normal; } 
  math mstyle[mathvariant="normal"] { font-weight: normal; font-style: normal; } 
+.comp{color:#F00}
 #textcolor10{color:#FF0000}
 #textcolor11{color:#FF0000}
 #textcolor12{color:#FF0000}
@@ -77,10 +78,11 @@
 .paragraphToc, .likeparagraphToc {margin-left:8em;}
 .partHead, likepartHead { font-size: 2em; }
 .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
-.ptmb8t-x-x-120{  font-weight: bold;}
+.ptmb8t-x-x-120{font-weight: bold;}
 .ptmb8t-x-x-120{font-size:120%;  font-weight: bold;}
-.ptmb8t-x-x-207{  font-weight: bold;}
-.ptmb8t-x-x-207{font-size:207%;  font-weight: bold;}
+.author{font-weight: bold;}
+.license{font-size: 80%;}
+.license a{text-decoration: none;}
 .ptmb8t-x-x-248{  font-weight: bold;}
 .ptmb8t-x-x-248{font-size:248%;  font-weight: bold;}
 .ptmb8t-x-x-90{  font-weight: bold;}
@@ -107,7 +109,7 @@
 @media print{ body{ max-width:none } }
 a img { border-top: 0; border-left: 0; border-right: 0; }
 a { overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }
-body{ margin:1em auto; max-width:80ch; padding:0 .62em; }
+body{ margin:1em auto; max-width:120ch; padding:0 .62em; }
 center { margin-top:1em; margin-bottom:1em; }
 div + p, pre + p {margin-top:1em;}
 div.array {text-align:center;}
@@ -132,7 +134,7 @@ div.maketitle{ margin-bottom: 2em; }
 div.math-display, div.par-math-display{text-align:center;}
 div.minipage{width:100%;}
 div.newtheorem .head{font-weight: bold;}
-div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+div.newtheorem { margin-bottom: 2em; margin-top: 8em;}
 div.obeylines-v p { margin-top:0; margin-bottom:0; }
 div.par-math-display, div.math-display{text-align:center;}
 div.pmatrix {text-align:center;}
@@ -258,3 +260,19 @@ td.td11{ padding-left:5pt; padding-right:5pt; width: 50% }
 tr.hline td hr{display:none}
 .back-to-ch { text-align: center; display: block; font-size: small; }
 .back-to-toc { text-align: center; display: block; font-size: small; }
+.vocab { font-weight: bold; }
+a { text-decoration: none; }
+.removed { display: none; }
+.ex-number { font-weight: bold; }
+details { border: 1px solid #DEDEDE; margin: 1em; border-radius: 0.25em; padding: 1em;}
+details summary { color: #00F; cursor: pointer; position: relative; }
+details summary::marker { display: none; color: rgba(0,0,0,0) }
+details[open] > summary:before { transform: rotate(90deg); }
+details[open] > summary { margin-bottom: 1rem;}
+details summary:before { content: ''; border-width: .4rem; border-style: solid; border-color: transparent transparent transparent #000; position: absolute; top: 3px; left: 0; transform: rotate(0); transform-origin: .2rem 50%; transition: .25s transform ease; }
+.exercise { display: flex; gap: 1rem; }
+.exercise .ex-number { flex: 0; font-weight: bold; }
+.exercise .ex-body { flex: 1; }
+body { counter-reset: reading-exercise 0 }
+.reading-exercise { background-image: url("data:image/svg+xml;utf8,<svg height='36' width='36' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path stroke='darkgreen' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M12 10.4V20M12 10.4C12 8.15979 12 7.03969 11.564 6.18404C11.1805 5.43139 10.5686 4.81947 9.81596 4.43597C8.96031 4 7.84021 4 5.6 4H4.6C4.03995 4 3.75992 4 3.54601 4.10899C3.35785 4.20487 3.20487 4.35785 3.10899 4.54601C3 4.75992 3 5.03995 3 5.6V16.4C3 16.9601 3 17.2401 3.10899 17.454C3.20487 17.6422 3.35785 17.7951 3.54601 17.891C3.75992 18 4.03995 18 4.6 18H7.54668C8.08687 18 8.35696 18 8.61814 18.0466C8.84995 18.0879 9.0761 18.1563 9.29191 18.2506C9.53504 18.3567 9.75977 18.5065 10.2092 18.8062L12 20M12 10.4C12 8.15979 12 7.03969 12.436 6.18404C12.8195 5.43139 13.4314 4.81947 14.184 4.43597C15.0397 4 16.1598 4 18.4 4H19.4C19.9601 4 20.2401 4 20.454 4.10899C20.6422 4.20487 20.7951 4.35785 20.891 4.54601C21 4.75992 21 5.03995 21 5.6V16.4C21 16.9601 21 17.2401 20.891 17.454C20.7951 17.6422 20.6422 17.7951 20.454 17.891C20.2401 18 19.9601 18 19.4 18H16.4533C15.9131 18 15.643 18 15.3819 18.0466C15.15 18.0879 14.9239 18.1563 14.7081 18.2506C14.465 18.3567 14.2402 18.5065 13.7908 18.8062L12 20'/></svg>"); background-repeat: no-repeat; padding-left: 38px; line-height: 36px; }
+.reading-exercise::before { font-size: 110%; color: darkgreen; counter-increment: reading-exercise 1; content: "Reading Exercise " var(--section-number) "." counter(reading-exercise) ": " }
