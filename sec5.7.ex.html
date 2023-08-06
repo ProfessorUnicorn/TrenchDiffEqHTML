@@ -1,415 +1,522 @@
-<!DOCTYPE html> 
-<html lang="en-US" xml:lang="en-US" > 
-<head><title></title> 
-<meta  charset="utf-8" /> 
-<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" /> 
-<meta name="viewport" content="width=device-width,initial-scale=1" /> 
-<link rel="stylesheet" type="text/css" href='combined.css' /> 
-<meta name="src" content="Trench_DiffEQ_Book.tex" /> 
-<script>window.MathJax = {
-     tex: { packages: {'[+]': ['tagformat']}, tags: "ams", tagformat: { tag: (tag) => '(5.7.' + tag + ')'} }
- }; </script> 
- <script type="text/javascript" async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>  
- <style type='text/css'>
-    :root {
-      --section-number: "5.7"
-    }
-  </style>
-</head><body 
->
-  <div  
-class="centerline">                                                                      <span 
-class="ptmb8t-x-x-120">5.7</span><span 
-class="ptmb8t-x-x-120">&#x00A0;Exercises</span>                                                          </div>
-<a 
- id="x1-1doc"></a>
-<!--l. 1--><p class="noindent" >In Exercises&#x00A0;<a 
-href="#x1-21">1<!--tex4ht:ref: exer:5.7.1 --></a>&#8211;<a 
-href="#x1-76">6<!--tex4ht:ref: exer:5.7.6 --></a> use variation of parameters to find a particular solution.
-</p>
-     <div class="tabular"> <table id="TBL-1" class="tabular" 
- 
-><colgroup id="TBL-1-1g"><col 
-id="TBL-1-1" /><col 
-id="TBL-1-2" /></colgroup><tr  
- style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:normal; text-align:left;" id="TBL-1-1-1"  
-class="td00">
-<dl class="list1"><dt class="list">
-<span 
-class="ptmb8t-">1.</span></dt><dd 
-class="list">
-<!--l. 8--><p class="noindent" ><a 
- id="x1-21"></a> \(y''+9y=\tan 3x\)                                                                  </p></td><td  style="white-space:normal; text-align:left;" id="TBL-1-1-2"  
-class="td01">
-</dd><dt class="list">
-<span 
-class="ptmb8t-">2.</span></dt><dd 
-class="list">
-<!--l. 9--><p class="noindent" ><a 
- id="x1-32"></a> \(y''+4y=\sin 2x\sec ^2 2x\)                                                                     </p></td>
-</tr></table>                                                                                                                                                                       </div>
-     <div class="tabular"> <table id="TBL-2" class="tabular" 
- 
-><colgroup id="TBL-2-1g"><col 
-id="TBL-2-1" /><col 
-id="TBL-2-2" /></colgroup><tr  
- style="vertical-align:baseline;" id="TBL-2-1-"><td  style="white-space:normal; text-align:left;" id="TBL-2-1-1"  
-class="td00">
-<span 
-class="ptmb8t-">3.</span><a 
- id="x1-43"></a> \(y''-3y'+2y=\displaystyle {4\over 1+e^{-x}}\)                                                                  </td><td  style="white-space:normal; text-align:left;" id="TBL-2-1-2"  
-class="td01">
-<span 
-class="ptmb8t-">4.</span><a 
- id="x1-54"></a> \(y''-2y'+2y=3e^x \sec x\)                                                                     </td>
-</tr></table>                                                                                                                                                                       </div>
-     <div class="tabular"> <table id="TBL-3" class="tabular" 
- 
-><colgroup id="TBL-3-1g"><col 
-id="TBL-3-1" /><col 
-id="TBL-3-2" /></colgroup><tr  
- style="vertical-align:baseline;" id="TBL-3-1-"><td  style="white-space:normal; text-align:left;" id="TBL-3-1-1"  
-class="td00">
-<span 
-class="ptmb8t-">5.</span><a 
- id="x1-65"></a> \(y''-2y'+y=14x^{3/2}e^x\)                                                                  </td><td  style="white-space:normal; text-align:left;" id="TBL-3-1-2"  
-class="td01"><span 
-class="ptmb8t-">6.</span><a 
- id="x1-76"></a> \(y''-y=\displaystyle {4e^{-x}\over 1-e^{-2x}}\)                                                                     </td>
-</tr></table>                                                                                                                                                                       </div>
-                                                                                
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
 
-                                                                                
-<!--l. 27--><p class="noindent" ><span 
-class="ptmri8t-">In Exercises </span><a 
-href="#x1-87">7<!--tex4ht:ref: exer:5.7.7 --></a><span 
-class="ptmri8t-">&#8211;</span><a 
-href="#x1-3029">29<!--tex4ht:ref: exer:5.7.29 --></a> <span 
-class="ptmri8t-">use variation of parameters to find a particular solution, given the solutions</span> \(y_1\)<span 
-class="ptmri8t-">,</span> \(y_2\) <span 
-class="ptmri8t-">of the</span>
-<span 
-class="ptmri8t-">complementary equation.</span>
-     </p><dl class="list1"><dt class="list">
-  <span 
-class="ptmb8t-">7.</span>  </dt><dd 
-class="list">
-     <!--l. 29--><p class="noindent" ><a 
- id="x1-87"></a> \(x^2y''+xy'- y=2x^2+2; \quad y_1=x, \quad y_2=\displaystyle {1\over x}\)
-     </p></dd><dt class="list">
-  <span 
-class="ptmb8t-">8.</span>  </dt><dd 
-class="list">
-     <!--l. 33--><p class="noindent" ><a 
- id="x1-98"></a> \(\displaystyle {xy''+(2-2x)y'+(x-2)y=e^{2x}; \quad y_1=e^x, \quad y_2={e^x\over x}}\)
-     </p></dd><dt class="list">
-  <span 
-class="ptmb8t-">9.</span>  </dt><dd 
-class="list">
-     <!--l. 37--><p class="noindent" ><a 
- id="x1-109"></a> \(4x^2y''+(4x-8x^2)y'+(4x^2-4x-1)y=4x^{1/2}e^x, \quad x &gt; 0\); <br 
-class="newline" />\(y_1=x^{1/2} e^x,\; y_2=x^{-1/2}e^x\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">10.</span>  </dt><dd 
-class="list">
-     <!--l. 41--><p class="noindent" ><a 
- id="x1-1110"></a> \(y''+4xy'+(4x^2+2)y=4e^{-x(x+2)};\quad y_1=e^{-x^2}, \quad y_2=xe^{-x^2}\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">11.</span>  </dt><dd 
-class="list">
-     <!--l. 45--><p class="noindent" ><a 
- id="x1-1211"></a> \(x^2y''-4xy'+6y=x^{5/2},\, x &gt; 0;\quad y_1=x^2,\; y_2=x^3\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">12.</span>  </dt><dd 
-class="list">
-     <!--l. 48--><p class="noindent" ><a 
- id="x1-1312"></a> \(x^2y''-3xy'+3y=2x^4\sin x; \quad y_1=x,\; y_2=x^3\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">13.</span>  </dt><dd 
-class="list">
-     <!--l. 51--><p class="noindent" ><a 
- id="x1-1413"></a> \((2x+1)y''-2y'-(2x+3)y=(2x+1)^2e^{-x}; \quad y_1=e^{-x}, \quad y_2=xe^x\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">14.</span>  </dt><dd 
-class="list">
-     <!--l. 55--><p class="noindent" ><a 
- id="x1-1514"></a> \(4xy''+2y'+y=\sin \sqrt x; \quad y_1=\cos \sqrt x, \quad y_2=\sin \sqrt x\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">15.</span>  </dt><dd 
-class="list">
-     <!--l. 59--><p class="noindent" ><a 
- id="x1-1615"></a> \(xy''-(2x+2)y'+(x+2)y=6x^3e^x;\quad y_1=e^x,\quad y_2=x^3e^x\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">16.</span>  </dt><dd 
-class="list">
-     <!--l. 62--><p class="noindent" ><a 
- id="x1-1716"></a> \(x^2y''-(2a-1)xy'+a^2y=x^{a+1}; \quad y_1=x^a, \quad y_2=x^a \ln x\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">17.</span>  </dt><dd 
-class="list">
-     <!--l. 66--><p class="noindent" ><a 
- id="x1-1817"></a> \(x^2y''-2xy'+(x^2+2)y=x^3\cos x; \quad y_1=x\cos x, \quad y_2=x\sin x\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">18.</span>  </dt><dd 
-class="list">
-     <!--l. 70--><p class="noindent" ><a 
- id="x1-1918"></a> \(xy''-y'-4x^3y=8x^5;\quad y_1=e^{x^2},\; y_2=e^{-x^2}\)
-                                                                                
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href='combined.css' />
+    <meta name="src" content="Trench_DiffEQ_Book.tex" />
+    <script>window.MathJax = {
+            tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(5.7.' + tag + ')' } }
+        }; </script>
+    <script type="text/javascript" async="async" id="MathJax-script"
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+    <style type='text/css'>
+        :root {
+            --section-number: "5.7"
+        }
+    </style>
+</head>
 
-                                                                                
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">19.</span>  </dt><dd 
-class="list">
-     <!--l. 73--><p class="noindent" ><a 
- id="x1-2019"></a> \((\sin x)y''+(2\sin x-\cos x)y'+(\sin x-\cos x)y=e^{-x}; \quad y_1=e^{-x},\quad y_2=e^{-x}\cos x\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">20.</span>  </dt><dd 
-class="list">
-     <!--l. 77--><p class="noindent" ><a 
- id="x1-2120"></a> \(4x^2y''-4xy'+(3-16x^2)y=8x^{5/2}; \quad y_1=\sqrt xe^{2x},\; y_2=\sqrt xe^{-2x}\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">21.</span>  </dt><dd 
-class="list">
-     <!--l. 81--><p class="noindent" ><a 
- id="x1-2221"></a> \( 4x^2y''-4xy'+(4x^2+3)y=x^{7/2}; \quad y_1=\sqrt x\sin x,\; y_2=\sqrt x\cos x\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">22.</span>  </dt><dd 
-class="list">
-     <!--l. 85--><p class="noindent" ><a 
- id="x1-2322"></a> \(x^2y''-2xy'-(x^2-2)y=3x^4;\quad y_1=xe^x,\; y_2=xe^{-x}\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">23.</span>  </dt><dd 
-class="list">
-     <!--l. 88--><p class="noindent" ><a 
- id="x1-2423"></a> \(x^2y''-2x(x+1)y' +(x^2+2x+2)y=x^3e^x; \quad y_1=xe^x, \quad y_2=x^2e^x\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">24.</span>  </dt><dd 
-class="list">
-     <!--l. 91--><p class="noindent" ><a 
- id="x1-2524"></a> \(x^2y''-xy'-3y=x^{3/2}; \quad y_1=1/x, \quad y_2=x^3\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">25.</span>  </dt><dd 
-class="list">
-     <!--l. 94--><p class="noindent" ><a 
- id="x1-2625"></a> \(x^2y''-x(x+4)y'+2(x+3)y=x^4e^x; \quad y_1=x^2, \quad y_2=x^2e^x\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">26.</span>  </dt><dd 
-class="list">
-     <!--l. 97--><p class="noindent" ><a 
- id="x1-2726"></a> \(x^2y''-2x(x+2)y'+(x^2+4x+6)y=2xe^x; \quad y_1=x^2e^x, \quad y_2=x^3e^x\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">27.</span>  </dt><dd 
-class="list">
-     <!--l. 100--><p class="noindent" ><a 
- id="x1-2827"></a> \(x^2y''-4xy'+(x^2+6)y=x^4; \quad y_1=x^2\cos x, \quad y_2=x^2\sin x\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">28.</span>  </dt><dd 
-class="list">
-     <!--l. 103--><p class="noindent" ><a 
- id="x1-2928"></a> \((x-1)y''-xy'+y=2(x-1)^2e^x; \quad y_1=x, \quad y_2=e^x\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">29.</span>  </dt><dd 
-class="list">
-     <!--l. 106--><p class="noindent" ><a 
- id="x1-3029"></a> \(4x^2y''-4x(x+1)y'+(2x+3)y=x^{5/2}e^x; \quad y_1=\sqrt x, \quad y_2=\sqrt xe^x\)
-</p>
-     </dd></dl>
-<!--l. 112--><p class="noindent" ><span 
-class="ptmri8t-">In Exercises </span><a 
-href="#x1-3130">30<!--tex4ht:ref: exer:5.7.30 --></a><span 
-class="ptmri8t-">&#8211;</span><a 
-href="#x1-3332">32<!--tex4ht:ref: exer:5.7.32 --></a> <span 
-class="ptmri8t-">use variation of parameters to solve the initial value problem, given</span> \(y_1,y_2\) <span 
-class="ptmri8t-">are solutions of the</span>
-<span 
-class="ptmri8t-">complementary equation.</span>
-     </p><dl class="list1"><dt class="list">
- <span 
-class="ptmb8t-">30.</span>  </dt><dd 
-class="list">
-     <!--l. 115--><p class="noindent" ><a 
- id="x1-3130"></a> \((3x-1)y''-(3x+2)y'-(6x-8)y=(3x-1)^2e^{2x}, \quad y(0)=1,\; y'(0)=2\);
-     </p><!--l. 119--><p class="noindent" >\(y_1=e^{2x},\; y_2=xe^{-x}\)
-                                                                                
+<body>
+    <div class="centerline"> <span class="ptmb8t-x-x-120">5.7</span><span
+            class="ptmb8t-x-x-120">&#x00A0;Exercises</span> </div>
+    <a id="x1-1doc"></a>
+    <!--l. 1-->
+    <p class="noindent">In Exercises&#x00A0;<a href="#x1-21">1<!--tex4ht:ref: exer:5.7.1 --></a>&#8211;<a
+            href="#x1-76">6<!--tex4ht:ref: exer:5.7.6 --></a> use variation of parameters to find a particular solution.
+    </p>
+    <div class="tabular">
+        <table id="TBL-1" class="tabular">
+            <colgroup id="TBL-1-1g">
+                <col id="TBL-1-1" />
+                <col id="TBL-1-2" />
+            </colgroup>
+            <tr style="vertical-align:baseline;" id="TBL-1-1-">
+                <td style="white-space:normal; text-align:left;" id="TBL-1-1-1" class="td00">
+                    <dl class="list1">
+                        <dt class="list">
+                            <span class="ptmb8t-">1.</span>
+                        </dt>
+                        <dd class="list">
+                            <!--l. 8-->
+                            <p class="noindent"><a id="x1-21"></a> \(y''+9y=\tan 3x\) </p>
+                </td>
+                <td style="white-space:normal; text-align:left;" id="TBL-1-1-2" class="td01">
+                    </dd>
+                    <dt class="list">
+                        <span class="ptmb8t-">2.</span>
+                    </dt>
+                    <dd class="list">
+                        <!--l. 9-->
+                        <p class="noindent"><a id="x1-32"></a> \(y''+4y=\sin 2x\sec ^2 2x\) </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tabular">
+        <table id="TBL-2" class="tabular">
+            <colgroup id="TBL-2-1g">
+                <col id="TBL-2-1" />
+                <col id="TBL-2-2" />
+            </colgroup>
+            <tr style="vertical-align:baseline;" id="TBL-2-1-">
+                <td style="white-space:normal; text-align:left;" id="TBL-2-1-1" class="td00">
+                    <span class="ptmb8t-">3.</span><a id="x1-43"></a> \(y''-3y'+2y=\displaystyle {4\over 1+e^{-x}}\)
+                </td>
+                <td style="white-space:normal; text-align:left;" id="TBL-2-1-2" class="td01">
+                    <span class="ptmb8t-">4.</span><a id="x1-54"></a> \(y''-2y'+2y=3e^x \sec x\)
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tabular">
+        <table id="TBL-3" class="tabular">
+            <colgroup id="TBL-3-1g">
+                <col id="TBL-3-1" />
+                <col id="TBL-3-2" />
+            </colgroup>
+            <tr style="vertical-align:baseline;" id="TBL-3-1-">
+                <td style="white-space:normal; text-align:left;" id="TBL-3-1-1" class="td00">
+                    <span class="ptmb8t-">5.</span><a id="x1-65"></a> \(y''-2y'+y=14x^{3/2}e^x\)
+                </td>
+                <td style="white-space:normal; text-align:left;" id="TBL-3-1-2" class="td01"><span
+                        class="ptmb8t-">6.</span><a id="x1-76"></a> \(y''-y=\displaystyle {4e^{-x}\over 1-e^{-2x}}\)
+                </td>
+            </tr>
+        </table>
+    </div>
 
-                                                                                
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">31.</span>  </dt><dd 
-class="list">
-     <!--l. 121--><p class="noindent" ><a 
- id="x1-3231"></a> \((x-1)^2y''-2(x-1)y'+2y=(x-1)^2, \quad y(0)=3,\quad y'(0)=-6\);
-     </p><!--l. 124--><p class="noindent" >\(y_1=x-1\),  \(y_2=x^2-1\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">32.</span>  </dt><dd 
-class="list">
-     <!--l. 127--><p class="noindent" ><a 
- id="x1-3332"></a> \((x-1)^2y''-(x^2-1)y'+(x+1)y=(x-1)^3e^x, \quad y(0)=4,\quad y'(0)=-6\);
-     </p><!--l. 130--><p class="noindent" >\(y_1=(x-1)e^x,\quad y_2=x-1\)
-     </p><!--l. 132--><p class="noindent" >
-                                                                                
 
-                                                                                
-</p>
-     </dd></dl>
-<!--l. 137--><p class="noindent" ><span 
-class="ptmri8t-">In Exercises </span><a 
-href="#x1-3433">33<!--tex4ht:ref: exer:5.7.33 --></a><span 
-class="ptmri8t-">&#8211;</span><a 
-href="#x1-3635">35<!--tex4ht:ref: exer:5.7.35 --></a> <span 
-class="ptmri8t-">use variation of parameters to solve the initial value problem and graph the solution, given that</span> \(y_1,y_2\)
-<span 
-class="ptmri8t-">are solutions of the complementary equation.</span>
-     </p><dl class="list1"><dt class="list">
- <span 
-class="ptmb8t-">33.</span>  </dt><dd 
-class="list">
-     <!--l. 140--><p class="noindent" ><a 
- id="x1-3433"></a> <span class="fbox"><span id="textcolor1">C/G</span></span>  \(\displaystyle {(x^2-1)y''+4xy'+2y=2x, \quad y(0)=0,\; y'(0) =-2; \quad y_1={1\over x-1},\; y_2={1\over x+1}}\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">34.</span>  </dt><dd 
-class="list">
-     <!--l. 144--><p class="noindent" ><a 
- id="x1-3534"></a> <span class="fbox"><span id="textcolor2">C/G</span></span>  \(\displaystyle {x^2y''+2xy'-2y=-2x^2, \quad y(1)=1,\; y'(1)= -1; \quad y_1=x,\; y_2={1\over x^2}}\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">35.</span>  </dt><dd 
-class="list">
-     <!--l. 148--><p class="noindent" ><a 
- id="x1-3635"></a> <span class="fbox"><span id="textcolor3">C/G</span></span>  \((x+1)(2x+3)y''+2(x+2)y'-2y=(2x+3)^2, \quad y(0)=0,\quad y'(0)=0\); <br 
-class="newline" />\(y_1=x+2,\quad y_2=\displaystyle {1\over x+1}\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">36.</span>  </dt><dd 
-class="list">
-     <!--l. 152--><p class="noindent" ><a 
- id="x1-3736"></a> Suppose
-                                           \[ y_p=\overline y+a_1y_1+a_2y_2 \]
-      is a particular solution of
-                                           \[ P_0(x)y''+P_1(x)y'+P_2(x)y=F(x), \,  {\rm (A)} \]
-      where \(y_1\) and \(y_2\) are solutions of the complementary equation
-                                                                                
 
-                                                                                
-                                           \[ P_0(x)y''+P_1(x)y'+P_2(x)y=0\]
-      Show that \(\overline y\) is also a solution of (A).
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">37.</span>  </dt><dd 
-class="list">
-     <!--l. 168--><p class="noindent" ><a 
- id="x1-3837"></a> Suppose \(p\), \(q\), and \(f\) are continuous on \((a,b)\) and let \(x_0\) be in \((a,b)\). Let \(y_1\) and \(y_2\) be the solutions of
-                                           \[ y''+p(x)y'+q(x)y=0 \]
-      such that
-                                           \[ y_1(x_0)=1, \quad y_1'(x_0)=0, \quad y_2(x_0)=0, \quad y_2'(x_0)=1\]
-      Use variation of parameters to show that the solution of the initial value problem
-                                                                                
+    <!--l. 27-->
+    <p class="noindent">In Exercises <a
+            href="#x1-87">7<!--tex4ht:ref: exer:5.7.7 --></a>&#8211;<a
+            href="#x1-3029">29<!--tex4ht:ref: exer:5.7.29 --></a> use variation of parameters to
+            find a particular solution, given the solutions \(y_1\), \(y_2\)
+            of the
+        complementary equation.
+    </p>
+    <dl class="list1">
+        <dt class="list">
+            <span class="ptmb8t-">7.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 29-->
+            <p class="noindent"><a id="x1-87"></a> \(x^2y''+xy'- y=2x^2+2; \quad y_1=x, \quad y_2=\displaystyle {1\over
+                x}\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">8.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 33-->
+            <p class="noindent"><a id="x1-98"></a> \(\displaystyle {xy''+(2-2x)y'+(x-2)y=e^{2x}; \quad y_1=e^x, \quad
+                y_2={e^x\over x}}\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">9.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 37-->
+            <p class="noindent"><a id="x1-109"></a> \(4x^2y''+(4x-8x^2)y'+(4x^2-4x-1)y=4x^{1/2}e^x, \quad x &gt; 0\);
+                <br class="newline" />\(y_1=x^{1/2} e^x,\; y_2=x^{-1/2}e^x\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">10.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 41-->
+            <p class="noindent"><a id="x1-1110"></a> \(y''+4xy'+(4x^2+2)y=4e^{-x(x+2)};\quad y_1=e^{-x^2}, \quad
+                y_2=xe^{-x^2}\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">11.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 45-->
+            <p class="noindent"><a id="x1-1211"></a> \(x^2y''-4xy'+6y=x^{5/2},\, x &gt; 0;\quad y_1=x^2,\; y_2=x^3\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">12.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 48-->
+            <p class="noindent"><a id="x1-1312"></a> \(x^2y''-3xy'+3y=2x^4\sin x; \quad y_1=x,\; y_2=x^3\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">13.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 51-->
+            <p class="noindent"><a id="x1-1413"></a> \((2x+1)y''-2y'-(2x+3)y=(2x+1)^2e^{-x}; \quad y_1=e^{-x}, \quad
+                y_2=xe^x\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">14.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 55-->
+            <p class="noindent"><a id="x1-1514"></a> \(4xy''+2y'+y=\sin \sqrt x; \quad y_1=\cos \sqrt x, \quad y_2=\sin
+                \sqrt x\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">15.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 59-->
+            <p class="noindent"><a id="x1-1615"></a> \(xy''-(2x+2)y'+(x+2)y=6x^3e^x;\quad y_1=e^x,\quad y_2=x^3e^x\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">16.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 62-->
+            <p class="noindent"><a id="x1-1716"></a> \(x^2y''-(2a-1)xy'+a^2y=x^{a+1}; \quad y_1=x^a, \quad y_2=x^a \ln
+                x\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">17.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 66-->
+            <p class="noindent"><a id="x1-1817"></a> \(x^2y''-2xy'+(x^2+2)y=x^3\cos x; \quad y_1=x\cos x, \quad
+                y_2=x\sin x\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">18.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 70-->
+            <p class="noindent"><a id="x1-1918"></a> \(xy''-y'-4x^3y=8x^5;\quad y_1=e^{x^2},\; y_2=e^{-x^2}\)
 
-                                                                                
-                                           \[ y''+p(x)y'+q(x)y=f(x), \quad y(x_0)=k_0,\; y'(x_0)=k_1\]
-      is
-                                           \[ \begin {array}{rcl} y(x) &amp;=&amp; k_0y_1(x)+k_1y_2(x) \\ &amp; &amp; \displaystyle \qquad +\int ^x_{x_0}\left (y_1(t)y_2(x)- y_1(x)y_2(t)\right ) f(t)\exp \left (\int ^t_{x_0}p(s)\,ds\right )\,dt\end {array} \]
-      <span 
-class="ptmrc8t-">H<span 
-class="small-caps">I</span><span 
-class="small-caps">N</span><span 
-class="small-caps">T</span></span>:&#x00A0;<span 
-class="ptmri8t-">Use Abel&#8217;s formula for the Wronskian of</span> \(\{y_1,y_2\}\)<span 
-class="ptmri8t-">, and integrate</span> \(u_1'\) <span 
-class="ptmri8t-">and</span> \(u_2'\) <span 
-class="ptmri8t-">from</span> \(x_0\) <span 
-class="ptmri8t-">to</span> \(x\)<span 
-class="ptmri8t-">. </span>Show also that
-                                           \[ \begin {array}{rcl} y'(x) &amp;=&amp; k_0y_1'(x)+k_1y_2'(x) \\ &amp; &amp; \displaystyle \qquad +\int ^x_{x_0}\left (y_1(t)y_2'(x)-y_1'(x)y_2(t) \right )f(t)\exp \left (\int ^t_{x_0}p(s)\,ds\right )\,dt\end {array} \]
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">38.</span>  </dt><dd 
-class="list">
-     <!--l. 204--><p class="noindent" ><a 
- id="x1-3938"></a> Suppose \(f\) is continuous on an open interval that contains \(x_0=0\). Use variation of parameters to find a
-     formula for the solution of the initial value problem
-                                           \[ y''-y=f(x), \quad y(0)=k_0,\quad y'(0)=k_1\]
-                                                                                
 
-                                                                                
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">39.</span>  </dt><dd 
-class="list">
-     <!--l. 213--><p class="noindent" ><a 
- id="x1-4039"></a> Suppose \(f\) is continuous on \((a,\infty )\), where \(a&lt;0\), so \(x_0=0\) is in \((a,\infty )\).
-          </p><dl class="list2"><dt class="list">
-      <span 
-class="ptmb8t-">(a)</span>  </dt><dd 
-class="list">
-          <!--l. 219--><p class="noindent" >Use variation of parameters to find a formula for the solution of the initial value problem
-                                             \[ y''+y=f(x), \quad y(0)=k_0,\quad y'(0)=k_1\]
-          <span 
-class="ptmrc8t-">H<span 
-class="small-caps">I</span><span 
-class="small-caps">N</span><span 
-class="small-caps">T</span></span>:&#x00A0;<span 
-class="ptmri8t-">You will need the addition formulas for the sine and cosine:</span> </p><div class="eqnarray">\begin {eqnarray*}  \sin (A+B)&amp;=&amp;\sin A\cos B+\cos A\sin B\\ \cos (A+B)&amp;=&amp;\cos A\cos B-\sin A\sin B\end {eqnarray*}</div>
-          </dd></dl>
-     <!--l. 231--><p class="noindent" >For the rest of this exercise assume that the improper integral \(\int _{0}^\infty f(t)\,dt\) is absolutely convergent.
-          </p><dl class="list2"><dt class="list">
-      <span 
-class="ptmb8t-">(b)</span>  </dt><dd 
-class="list">
-          <!--l. 238--><p class="noindent" >Show that if \(y\) is a solution of
-                                             \[ y''+y=f(x) \,  {\rm (A)} \]
-          on \((a,\infty )\), then
-                                                                                
 
-                                                                                
-                                             \[ \lim _{x \to \infty }\left (y(x)-A_0\cos x-A_1\sin x\right )=0 \,  {\rm (B)} \]
-          and
-                                             \[ \lim _{x\to \infty }\left (y'(x)+A_0\sin x-A_1\cos x\right )=0, \,  {\rm (C)} \]
-          where
-                                             \[ A_0=k_0-\int _0^\infty f(t)\sin t\,dt\mbox {\quad and \quad } A_1=k_1+\int _0^\infty f(t)\cos t\,dt\]
-          <span 
-class="ptmrc8t-">H<span 
-class="small-caps">I</span><span 
-class="small-caps">N</span><span 
-class="small-caps">T</span></span>:&#x00A0;<span 
-class="ptmri8t-">Recall from calculus that if</span> \(\int _0^\infty f(t)\,dt\) <span 
-class="ptmri8t-">converges absolutely, then</span> \(\lim _{x\to \infty }\int _x^\infty |f(t)|\,dt~=~0\)<span 
-class="ptmri8t-">.</span>
-          </p></dd><dt class="list">
-      <span 
-class="ptmb8t-">(c)</span>  </dt><dd 
-class="list">
-          <!--l. 263--><p class="noindent" >Show that if \(A_0\) and \(A_1\) are arbitrary constants, then there&#8217;s a unique solution of \(y''+y=f(x)\) on \((a,\infty )\) that satisfies
-          (B) and (C).</p></dd></dl>
-     </dd></dl>
-<!--l. 272--><p class="indent" >
-                                                                                
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">19.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 73-->
+            <p class="noindent"><a id="x1-2019"></a> \((\sin x)y''+(2\sin x-\cos x)y'+(\sin x-\cos x)y=e^{-x}; \quad
+                y_1=e^{-x},\quad y_2=e^{-x}\cos x\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">20.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 77-->
+            <p class="noindent"><a id="x1-2120"></a> \(4x^2y''-4xy'+(3-16x^2)y=8x^{5/2}; \quad y_1=\sqrt xe^{2x},\;
+                y_2=\sqrt xe^{-2x}\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">21.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 81-->
+            <p class="noindent"><a id="x1-2221"></a> \( 4x^2y''-4xy'+(4x^2+3)y=x^{7/2}; \quad y_1=\sqrt x\sin x,\;
+                y_2=\sqrt x\cos x\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">22.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 85-->
+            <p class="noindent"><a id="x1-2322"></a> \(x^2y''-2xy'-(x^2-2)y=3x^4;\quad y_1=xe^x,\; y_2=xe^{-x}\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">23.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 88-->
+            <p class="noindent"><a id="x1-2423"></a> \(x^2y''-2x(x+1)y' +(x^2+2x+2)y=x^3e^x; \quad y_1=xe^x, \quad
+                y_2=x^2e^x\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">24.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 91-->
+            <p class="noindent"><a id="x1-2524"></a> \(x^2y''-xy'-3y=x^{3/2}; \quad y_1=1/x, \quad y_2=x^3\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">25.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 94-->
+            <p class="noindent"><a id="x1-2625"></a> \(x^2y''-x(x+4)y'+2(x+3)y=x^4e^x; \quad y_1=x^2, \quad y_2=x^2e^x\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">26.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 97-->
+            <p class="noindent"><a id="x1-2726"></a> \(x^2y''-2x(x+2)y'+(x^2+4x+6)y=2xe^x; \quad y_1=x^2e^x, \quad
+                y_2=x^3e^x\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">27.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 100-->
+            <p class="noindent"><a id="x1-2827"></a> \(x^2y''-4xy'+(x^2+6)y=x^4; \quad y_1=x^2\cos x, \quad y_2=x^2\sin
+                x\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">28.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 103-->
+            <p class="noindent"><a id="x1-2928"></a> \((x-1)y''-xy'+y=2(x-1)^2e^x; \quad y_1=x, \quad y_2=e^x\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">29.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 106-->
+            <p class="noindent"><a id="x1-3029"></a> \(4x^2y''-4x(x+1)y'+(2x+3)y=x^{5/2}e^x; \quad y_1=\sqrt x, \quad
+                y_2=\sqrt xe^x\)
+            </p>
+        </dd>
+    </dl>
+    <!--l. 112-->
+    <p class="noindent">In Exercises <a
+            href="#x1-3130">30<!--tex4ht:ref: exer:5.7.30 --></a>&#8211;<a
+            href="#x1-3332">32<!--tex4ht:ref: exer:5.7.32 --></a> use variation of parameters to
+            solve the initial value problem, given \(y_1,y_2\) are solutions of the
+        complementary equation.
+    </p>
+    <dl class="list1">
+        <dt class="list">
+            <span class="ptmb8t-">30.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 115-->
+            <p class="noindent"><a id="x1-3130"></a> \((3x-1)y''-(3x+2)y'-(6x-8)y=(3x-1)^2e^{2x}, \quad y(0)=1,\;
+                y'(0)=2\);
+            </p><!--l. 119-->
+            <p class="noindent">\(y_1=e^{2x},\; y_2=xe^{-x}\)
 
-                                                                                
-</p>
- <a class="back-to-ch" href="sec5.0.html">Back</a>
-   
-</body> 
+
+
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">31.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 121-->
+            <p class="noindent"><a id="x1-3231"></a> \((x-1)^2y''-2(x-1)y'+2y=(x-1)^2, \quad y(0)=3,\quad y'(0)=-6\);
+            </p><!--l. 124-->
+            <p class="noindent">\(y_1=x-1\), \(y_2=x^2-1\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">32.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 127-->
+            <p class="noindent"><a id="x1-3332"></a> \((x-1)^2y''-(x^2-1)y'+(x+1)y=(x-1)^3e^x, \quad y(0)=4,\quad
+                y'(0)=-6\);
+            </p><!--l. 130-->
+            <p class="noindent">\(y_1=(x-1)e^x,\quad y_2=x-1\)
+            </p><!--l. 132-->
+            <p class="noindent">
+
+
+
+            </p>
+        </dd>
+    </dl>
+    <!--l. 137-->
+    <p class="noindent">In Exercises <a
+            href="#x1-3433">33<!--tex4ht:ref: exer:5.7.33 --></a>&#8211;<a
+            href="#x1-3635">35<!--tex4ht:ref: exer:5.7.35 --></a> use variation of parameters to
+            solve the initial value problem and graph the solution, given that \(y_1,y_2\)
+            are solutions of the complementary equation.
+    </p>
+    <dl class="list1">
+        <dt class="list">
+            <span class="ptmb8t-">33.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 140-->
+            <p class="noindent"><a id="x1-3433"></a> <span class="fbox"><span id="textcolor1">C/G</span></span>
+                \(\displaystyle {(x^2-1)y''+4xy'+2y=2x, \quad y(0)=0,\; y'(0) =-2; \quad y_1={1\over x-1},\; y_2={1\over
+                x+1}}\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">34.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 144-->
+            <p class="noindent"><a id="x1-3534"></a> <span class="fbox"><span id="textcolor2">C/G</span></span>
+                \(\displaystyle {x^2y''+2xy'-2y=-2x^2, \quad y(1)=1,\; y'(1)= -1; \quad y_1=x,\; y_2={1\over x^2}}\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">35.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 148-->
+            <p class="noindent"><a id="x1-3635"></a> <span class="fbox"><span id="textcolor3">C/G</span></span>
+                \((x+1)(2x+3)y''+2(x+2)y'-2y=(2x+3)^2, \quad y(0)=0,\quad y'(0)=0\); <br
+                    class="newline" />\(y_1=x+2,\quad y_2=\displaystyle {1\over x+1}\)
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">36.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 152-->
+            <p class="noindent"><a id="x1-3736"></a> Suppose
+                \[ y_p=\overline y+a_1y_1+a_2y_2 \]
+                is a particular solution of
+                \[ P_0(x)y''+P_1(x)y'+P_2(x)y=F(x), \, {\rm (A)} \]
+                where \(y_1\) and \(y_2\) are solutions of the complementary equation
+
+
+
+                \[ P_0(x)y''+P_1(x)y'+P_2(x)y=0\]
+                Show that \(\overline y\) is also a solution of (A).
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">37.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 168-->
+            <p class="noindent"><a id="x1-3837"></a> Suppose \(p\), \(q\), and \(f\) are continuous on \((a,b)\) and let
+                \(x_0\) be in \((a,b)\). Let \(y_1\) and \(y_2\) be the solutions of
+                \[ y''+p(x)y'+q(x)y=0 \]
+                such that
+                \[ y_1(x_0)=1, \quad y_1'(x_0)=0, \quad y_2(x_0)=0, \quad y_2'(x_0)=1\]
+                Use variation of parameters to show that the solution of the initial value problem
+
+
+
+                \[ y''+p(x)y'+q(x)y=f(x), \quad y(x_0)=k_0,\; y'(x_0)=k_1\]
+                is
+                \[ \begin {array}{rcl} y(x) &amp;=&amp; k_0y_1(x)+k_1y_2(x) \\ &amp; &amp; \displaystyle \qquad +\int
+                ^x_{x_0}\left (y_1(t)y_2(x)- y_1(x)y_2(t)\right ) f(t)\exp \left (\int ^t_{x_0}p(s)\,ds\right )\,dt\end
+                {array} \]
+                <span class="hint">Hint: Use Abel&#8217;s formula for
+                    the Wronskian of \(\{y_1,y_2\}\), and integrate \(u_1'\) and \(u_2'\) from \(x_0\) to \(x\). Show also that
+                \[ \begin {array}{rcl} y'(x) &amp;=&amp; k_0y_1'(x)+k_1y_2'(x) \\ &amp; &amp; \displaystyle \qquad +\int
+                ^x_{x_0}\left (y_1(t)y_2'(x)-y_1'(x)y_2(t) \right )f(t)\exp \left (\int ^t_{x_0}p(s)\,ds\right )\,dt\end
+                {array} \]
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">38.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 204-->
+            <p class="noindent"><a id="x1-3938"></a> Suppose \(f\) is continuous on an open interval that contains
+                \(x_0=0\). Use variation of parameters to find a
+                formula for the solution of the initial value problem
+                \[ y''-y=f(x), \quad y(0)=k_0,\quad y'(0)=k_1\]
+
+
+
+            </p>
+        </dd>
+        <dt class="list">
+            <span class="ptmb8t-">39.</span>
+        </dt>
+        <dd class="list">
+            <!--l. 213-->
+            <p class="noindent"><a id="x1-4039"></a> Suppose \(f\) is continuous on \((a,\infty )\), where \(a&lt;0\),
+                so \(x_0=0\) is in \((a,\infty )\).
+            </p>
+            <dl class="list2">
+                <dt class="list">
+                    <span class="ptmb8t-">(a)</span>
+                </dt>
+                <dd class="list">
+                    <!--l. 219-->
+                    <p class="noindent">Use variation of parameters to find a formula for the solution of the initial
+                        value problem
+                        \[ y''+y=f(x), \quad y(0)=k_0,\quad y'(0)=k_1\]
+                        <span class="hint">Hint: You will need the
+                            addition formulas for the sine and cosine:</span>
+                    </p>
+                    <div class="eqnarray">\begin {eqnarray*} \sin (A+B)&amp;=&amp;\sin A\cos B+\cos A\sin B\\ \cos
+                        (A+B)&amp;=&amp;\cos A\cos B-\sin A\sin B\end {eqnarray*}</div>
+                </dd>
+            </dl>
+            <!--l. 231-->
+            <p class="noindent">For the rest of this exercise assume that the improper integral \(\int _{0}^\infty
+                f(t)\,dt\) is absolutely convergent.
+            </p>
+            <dl class="list2">
+                <dt class="list">
+                    <span class="ptmb8t-">(b)</span>
+                </dt>
+                <dd class="list">
+                    <!--l. 238-->
+                    <p class="noindent">Show that if \(y\) is a solution of
+                        \[ y''+y=f(x) \, {\rm (A)} \]
+                        on \((a,\infty )\), then
+
+
+
+                        \[ \lim _{x \to \infty }\left (y(x)-A_0\cos x-A_1\sin x\right )=0 \, {\rm (B)} \]
+                        and
+                        \[ \lim _{x\to \infty }\left (y'(x)+A_0\sin x-A_1\cos x\right )=0, \, {\rm (C)} \]
+                        where
+                        \[ A_0=k_0-\int _0^\infty f(t)\sin t\,dt\mbox {\quad and \quad } A_1=k_1+\int _0^\infty f(t)\cos
+                        t\,dt\]
+                        <span class="hint">Hint: Recall from calculus
+                            that if \(\int _0^\infty f(t)\,dt\) converges absolutely,
+                            then \(\lim _{x\to \infty }\int _x^\infty |f(t)|\,dt~=~0\).</span>
+                    </p>
+                </dd>
+                <dt class="list">
+                    <span class="ptmb8t-">(c)</span>
+                </dt>
+                <dd class="list">
+                    <!--l. 263-->
+                    <p class="noindent">Show that if \(A_0\) and \(A_1\) are arbitrary constants, then there&#8217;s a
+                        unique solution of \(y''+y=f(x)\) on \((a,\infty )\) that satisfies
+                        (B) and (C).</p>
+                </dd>
+            </dl>
+        </dd>
+    </dl>
+    <!--l. 272-->
+    <p class="indent">
+
+
+
+    </p>
+    <a class="back-to-ch" href="sec5.0.html">Back</a>
+
+</body>
+
 </html>

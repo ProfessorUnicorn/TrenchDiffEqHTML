@@ -1,375 +1,459 @@
-<!DOCTYPE html> 
-<html lang="en-US" xml:lang="en-US" > 
-<head><title></title> 
-<meta  charset="utf-8" /> 
-<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" /> 
-<meta name="viewport" content="width=device-width,initial-scale=1" /> 
-<link rel="stylesheet" type="text/css" href='combined.css' /> 
-<meta name="src" content="Trench_DiffEQ_Book.tex" /> 
-<script>window.MathJax = {
-     tex: { packages: {'[+]': ['tagformat']}, tags: "ams", tagformat: { tag: (tag) => '(7.1.' + tag + ')'} }
- }; </script> 
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
 
- <script type="text/javascript" async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>  
- <style type='text/css'>
-     :root {
-       --section-number: "7.1"
-     }
-   </style>
-</head><body 
->
-  <div  
-class="centerline">                                                                      <span 
-class="ptmb8t-x-x-120">7.1</span><span 
-class="ptmb8t-x-x-120">&#x00A0;Exercises</span>                                                          </div>
-<a 
- id="x1-1doc"></a>
-<!--l. 1--><p class="noindent" >
-     </p><dl class="list1"><dt class="list">
-  <span 
-class="ptmb8t-">1.</span>  </dt><dd 
-class="list">
-     <!--l. 4--><p class="noindent" ><a 
- id="x1-21"></a> For each power series use Theorem&#x00A0;<span 
-class="ptmb8t-">7.1.3</span> to find the radius of convergence \(R\). If \(R&gt;0\), find the open interval
-     of convergence.
-</p>
-     <div class="tabular"> <table id="TBL-1" class="tabular" 
- 
-><colgroup id="TBL-1-1g"><col 
-id="TBL-1-1" /><col 
-id="TBL-1-2" /></colgroup><tr  
- style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:normal; text-align:left;" id="TBL-1-1-1"  
-class="td00"><!--l. 9--><p class="noindent" ><span 
-class="ptmb8t-">(a)</span> \(\displaystyle {\sum _{n=0}^\infty {(-1)^n\over 2^nn}(x-1)^n}\)                                                              </p></td><td  style="white-space:normal; text-align:left;" id="TBL-1-1-2"  
-class="td01"><!--l. 10--><p class="noindent" ><span 
-class="ptmb8t-">(b)</span> \(\displaystyle {\sum _{n=0}^\infty 2^nn(x-2)^n}\)                                                                </p></td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-1-2-"><td  style="white-space:normal; text-align:left;" id="TBL-1-2-1"  
-class="td00"><!--l. 11--><p class="noindent" ><span 
-class="ptmb8t-">(c)</span> \(\displaystyle {\sum _{n=0}^\infty {n!\over 9^n}x^n}\)                                                               </p></td><td  style="white-space:normal; text-align:left;" id="TBL-1-2-2"  
-class="td01"><!--l. 12--><p class="noindent" ><span 
-class="ptmb8t-">(d)</span> \(\displaystyle {\sum _{n=0}^\infty {n(n+1)\over 16^n}(x-2)^n}\)                                                                </p></td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-1-3-"><td  style="white-space:normal; text-align:left;" id="TBL-1-3-1"  
-class="td00"><!--l. 13--><p class="noindent" ><span 
-class="ptmb8t-">(e)</span> \(\displaystyle {\sum _{n=0}^\infty (-1)^n{7^n\over n!}x^n}\)                                                               </p></td><td  style="white-space:normal; text-align:left;" id="TBL-1-3-2"  
-class="td01"><!--l. 14--><p class="noindent" ><span 
-class="ptmb8t-">(f)</span> \(\displaystyle {\sum _{n=0}^\infty {3^n\over 4^{n+1}(n+1)^2}(x+7)^n}\)                                                                 </p></td></tr></table>                     </div>
-     </dd><dt class="list">
-  <span 
-class="ptmb8t-">2.</span>  </dt><dd 
-class="list">
-     <!--l. 17--><p class="noindent" ><a 
- id="x1-32"></a> Suppose there&#8217;s an integer \(M\) such that \(b_m\ne 0\) for \(m\ge M\), and
-                                           \[ \lim _{m\to \infty }\left |b_{m+1}\over b_m\right |=L\]
-      where \(0\le L\le \infty \). Show that the radius of convergence of
-                                           \[ \sum _{m=0}^\infty b_m(x-x_0)^{2m} \]
-      is \(R=1/\sqrt L\), which is interpreted to mean that \(R=0\) if \(L=\infty \) or \(R=\infty \) if \(L=0\). <span 
-class="ptmrc8t-">H<span 
-class="small-caps">I</span><span 
-class="small-caps">N</span><span 
-class="small-caps">T</span></span>:&#x00A0;<span 
-class="ptmri8t-">Apply Theorem</span><span 
-class="ptmri8t-">&#x00A0;</span>7.1.3 <span 
-class="ptmri8t-">to the series</span> \(\sum _{m=0}^\infty b_mz^m\) <span 
-class="ptmri8t-">and then let</span>
-     \(z=(x-x_0)^2\)<span 
-class="ptmri8t-">.</span>
-                                                                                
+<head>
+     <title></title>
+     <meta charset="utf-8" />
+     <meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" />
+     <meta name="viewport" content="width=device-width,initial-scale=1" />
+     <link rel="stylesheet" type="text/css" href='combined.css' />
+     <meta name="src" content="Trench_DiffEQ_Book.tex" />
+     <script>window.MathJax = {
+               tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(7.1.' + tag + ')' } }
+          }; </script>
 
-                                                                                
-     </p></dd><dt class="list">
-  <span 
-class="ptmb8t-">3.</span>  </dt><dd 
-class="list">
-     <!--l. 33--><p class="noindent" ><a 
- id="x1-43"></a> For each power series, use the result of Exercise&#x00A0;<a 
-href="#x1-32">2<!--tex4ht:ref: exer:7.1.2 --></a> to find the radius of convergence \(R\). If \(R&gt;0\), find the open
-     interval of convergence.
-</p>
-     <div class="tabular"> <table id="TBL-2" class="tabular" 
- 
-><colgroup id="TBL-2-1g"><col 
-id="TBL-2-1" /><col 
-id="TBL-2-2" /></colgroup><tr  
- style="vertical-align:baseline;" id="TBL-2-1-"><td  style="white-space:normal; text-align:left;" id="TBL-2-1-1"  
-class="td00"><!--l. 39--><p class="noindent" ><span 
-class="ptmb8t-">(a)</span> \(\displaystyle {\sum _{m=0}^\infty (-1)^m(3m+1)(x-1)^{2m+1}}\)                                                              </p></td><td  style="white-space:normal; text-align:left;" id="TBL-2-1-2"  
-class="td01"><!--l. 40--><p class="noindent" ><span 
-class="ptmb8t-">(b)</span> \(\displaystyle {\sum _{m=0}^\infty (-1)^m{m(2m+1)\over 2^m}(x+2)^{2m}}\)                                                                </p></td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-2-2-"><td  style="white-space:normal; text-align:left;" id="TBL-2-2-1"  
-class="td00"><!--l. 42--><p class="noindent" ><span 
-class="ptmb8t-">(c)</span> \(\displaystyle {\sum _{m=0}^\infty {m!\over (2m)!}(x-1)^{2m}}\)                                                               </p></td><td  style="white-space:normal; text-align:left;" id="TBL-2-2-2"  
-class="td01"><!--l. 43--><p class="noindent" ><span 
-class="ptmb8t-">(d)</span> \(\displaystyle {\sum _{m=0}^\infty (-1)^m{m!\over 9^m}(x+8)^{2m}}\)                                                                </p></td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-2-3-"><td  style="white-space:normal; text-align:left;" id="TBL-2-3-1"  
-class="td00"><!--l. 44--><p class="noindent" ><span 
-class="ptmb8t-">(e)</span> \(\displaystyle {\sum _{m=0}^\infty (-1)^m{(2m-1)\over 3^m}x^{2m+1}}\)                                                               </p></td><td  style="white-space:normal; text-align:left;" id="TBL-2-3-2"  
-class="td01"><!--l. 45--><p class="noindent" ><span 
-class="ptmb8t-">(f)</span> \(\displaystyle {\sum _{m=0}^\infty (x-1)^{2m}}\)                                                                 </p></td></tr></table>                     </div>
-     </dd><dt class="list">
-  <span 
-class="ptmb8t-">4.</span>  </dt><dd 
-class="list">
-     <!--l. 48--><p class="noindent" ><a 
- id="x1-54"></a> Suppose there&#8217;s an integer \(M\) such that \(b_m\ne 0\) for \(m\ge M\), and
-                                           \[ \lim _{m\to \infty }\left |b_{m+1}\over b_m\right |=L\]
-      where \(0\le L\le \infty \). Let \(k\) be a positive integer. Show that the radius of convergence of
-                                           \[ \sum _{m=0}^\infty b_m(x-x_0)^{km} \]
-      is \(R=1/\sqrt [k]L\), which is interpreted to mean that \(R=0\) if \(L=\infty \) or \(R=\infty \) if \(L=0\). <span 
-class="ptmrc8t-">H<span 
-class="small-caps">I</span><span 
-class="small-caps">N</span><span 
-class="small-caps">T</span></span>:&#x00A0;<span 
-class="ptmri8t-">Apply Theorem</span><span 
-class="ptmri8t-">&#x00A0;</span>7.1.3 <span 
-class="ptmri8t-">to the series</span> \(\sum _{m=0}^\infty b_mz^m\) <span 
-class="ptmri8t-">and then let</span>
-     \(z=(x-x_0)^k\)<span 
-class="ptmri8t-">.</span>
-     </p></dd><dt class="list">
-  <span 
-class="ptmb8t-">5.</span>  </dt><dd 
-class="list">
-     <!--l. 64--><p class="noindent" ><a 
- id="x1-65"></a> For each power series use the result of Exercise&#x00A0;<a 
-href="#x1-54">4<!--tex4ht:ref: exer:7.1.4 --></a> to find the radius of convergence \(R\). If \(R&gt;0\), find the open
-     interval of convergence.
-</p>
-     <div class="tabular"> <table id="TBL-3" class="tabular" 
- 
-><colgroup id="TBL-3-1g"><col 
-id="TBL-3-1" /><col 
-id="TBL-3-2" /></colgroup><tr  
- style="vertical-align:baseline;" id="TBL-3-1-"><td  style="white-space:normal; text-align:left;" id="TBL-3-1-1"  
-class="td00"><!--l. 70--><p class="noindent" ><span 
-class="ptmb8t-">(a)</span> \(\displaystyle {\sum _{m=0}^\infty {(-1)^m\over (27)^m}(x-3)^{3m+2}}\)                                                              </p></td><td  style="white-space:normal; text-align:left;" id="TBL-3-1-2"  
-class="td01"><!--l. 71--><p class="noindent" ><span 
-class="ptmb8t-">(b)</span> \(\displaystyle {\sum _{m=0}^\infty {x^{7m+6}\over m}}\)                                                                </p></td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-3-2-"><td  style="white-space:normal; text-align:left;" id="TBL-3-2-1"  
-class="td00"><!--l. 72--><p class="noindent" ><span 
-class="ptmb8t-">(c)</span> \(\displaystyle {\sum _{m=0}^\infty {9^m(m+1)\over (m+2)}(x-3)^{4m+2}}\)                                                               </p></td><td  style="white-space:normal; text-align:left;" id="TBL-3-2-2"  
-class="td01"><!--l. 73--><p class="noindent" ><span 
-class="ptmb8t-">(d)</span> \(\displaystyle {\sum _{m=0}^\infty (-1)^m{2^m\over m!}x^{4m+3}}\)                                                                </p></td>
-</tr><tr  
- style="vertical-align:baseline;" id="TBL-3-3-"><td  style="white-space:normal; text-align:left;" id="TBL-3-3-1"  
-class="td00"><!--l. 74--><p class="noindent" ><span 
-class="ptmb8t-">(e)</span> \(\displaystyle {\sum _{m=0}^\infty {m!\over (26)^m}(x+1)^{4m+3}}\)                                                               </p></td><td  style="white-space:normal; text-align:left;" id="TBL-3-3-2"  
-class="td01"><!--l. 75--><p class="noindent" ><span 
-class="ptmb8t-">(f)</span> \(\displaystyle {\sum _{m=0}^\infty {(-1)^m\over 8^mm(m+1)}(x-1)^{3m+1}}\)                                                                 </p></td></tr></table>                     </div>
-                                                                                
+     <script type="text/javascript" async="async" id="MathJax-script"
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+     <style type='text/css'>
+          :root {
+               --section-number: "7.1"
+          }
+     </style>
+</head>
 
-                                                                                
-     </dd><dt class="list">
-  <span 
-class="ptmb8t-">6.</span>  </dt><dd 
-class="list">
-     <!--l. 81--><p class="noindent" ><a 
- id="x1-76"></a> <span class="fbox"><span id="textcolor1">L</span></span>  Graph \(y=\sin x\) and the Taylor polynomial
-                                           \[ T_{2M+1}(x)=\sum _{n=0}^M{(-1)^nx^{2n+1}\over (2n+1)!} \]
-      on the interval \((-2\pi ,2\pi )\) for \(M=1\), \(2\), \(3\), &#x2026;, until you find a value of \(M\) for which there&#8217;s no perceptible difference between the
-     two graphs.
-     </p></dd><dt class="list">
-  <span 
-class="ptmb8t-">7.</span>  </dt><dd 
-class="list">
-     <!--l. 91--><p class="noindent" ><a 
- id="x1-87"></a> <span class="fbox"><span id="textcolor2">L</span></span>  Graph \(y=\cos x\) and the Taylor polynomial
-                                           \[ T_{2M}(x)=\sum _{n=0}^M{(-1)^nx^{2n}\over (2n)!} \]
-      on the interval \((-2\pi ,2\pi )\) for \(M=1\), \(2\), \(3\), &#x2026;, until you find a value of \(M\) for which there&#8217;s no perceptible difference between the
-     two graphs.
-     </p></dd><dt class="list">
-  <span 
-class="ptmb8t-">8.</span>  </dt><dd 
-class="list">
-     <!--l. 100--><p class="noindent" ><a 
- id="x1-98"></a> <span class="fbox"><span id="textcolor3">L</span></span>  Graph \(y=1/(1-x)\) and the Taylor polynomial
-                                                                                
+<body>
+     <div class="centerline"> <span class="ptmb8t-x-x-120">7.1</span><span
+               class="ptmb8t-x-x-120">&#x00A0;Exercises</span> </div>
+     <a id="x1-1doc"></a>
+     <!--l. 1-->
+     <p class="noindent">
+     </p>
+     <dl class="list1">
+          <dt class="list">
+               <span class="ptmb8t-">1.</span>
+          </dt>
+          <dd class="list">
+               <!--l. 4-->
+               <p class="noindent"><a id="x1-21"></a> For each power series use Theorem&#x00A0;<span
+                         class="ptmb8t-">7.1.3</span> to find the radius of convergence \(R\). If \(R&gt;0\), find the
+                    open interval
+                    of convergence.
+               </p>
+               <div class="tabular">
+                    <table id="TBL-1" class="tabular">
+                         <colgroup id="TBL-1-1g">
+                              <col id="TBL-1-1" />
+                              <col id="TBL-1-2" />
+                         </colgroup>
+                         <tr style="vertical-align:baseline;" id="TBL-1-1-">
+                              <td style="white-space:normal; text-align:left;" id="TBL-1-1-1" class="td00"><!--l. 9-->
+                                   <p class="noindent"><span class="ptmb8t-">(a)</span> \(\displaystyle {\sum
+                                        _{n=0}^\infty {(-1)^n\over 2^nn}(x-1)^n}\) </p>
+                              </td>
+                              <td style="white-space:normal; text-align:left;" id="TBL-1-1-2" class="td01"><!--l. 10-->
+                                   <p class="noindent"><span class="ptmb8t-">(b)</span> \(\displaystyle {\sum
+                                        _{n=0}^\infty 2^nn(x-2)^n}\) </p>
+                              </td>
+                         </tr>
+                         <tr style="vertical-align:baseline;" id="TBL-1-2-">
+                              <td style="white-space:normal; text-align:left;" id="TBL-1-2-1" class="td00"><!--l. 11-->
+                                   <p class="noindent"><span class="ptmb8t-">(c)</span> \(\displaystyle {\sum
+                                        _{n=0}^\infty {n!\over 9^n}x^n}\) </p>
+                              </td>
+                              <td style="white-space:normal; text-align:left;" id="TBL-1-2-2" class="td01"><!--l. 12-->
+                                   <p class="noindent"><span class="ptmb8t-">(d)</span> \(\displaystyle {\sum
+                                        _{n=0}^\infty {n(n+1)\over 16^n}(x-2)^n}\) </p>
+                              </td>
+                         </tr>
+                         <tr style="vertical-align:baseline;" id="TBL-1-3-">
+                              <td style="white-space:normal; text-align:left;" id="TBL-1-3-1" class="td00"><!--l. 13-->
+                                   <p class="noindent"><span class="ptmb8t-">(e)</span> \(\displaystyle {\sum
+                                        _{n=0}^\infty (-1)^n{7^n\over n!}x^n}\) </p>
+                              </td>
+                              <td style="white-space:normal; text-align:left;" id="TBL-1-3-2" class="td01"><!--l. 14-->
+                                   <p class="noindent"><span class="ptmb8t-">(f)</span> \(\displaystyle {\sum
+                                        _{n=0}^\infty {3^n\over 4^{n+1}(n+1)^2}(x+7)^n}\) </p>
+                              </td>
+                         </tr>
+                    </table>
+               </div>
+          </dd>
+          <dt class="list">
+               <span class="ptmb8t-">2.</span>
+          </dt>
+          <dd class="list">
+               <!--l. 17-->
+               <p class="noindent"><a id="x1-32"></a> Suppose there&#8217;s an integer \(M\) such that \(b_m\ne 0\) for
+                    \(m\ge M\), and
+                    \[ \lim _{m\to \infty }\left |b_{m+1}\over b_m\right |=L\]
+                    where \(0\le L\le \infty \). Show that the radius of convergence of
+                    \[ \sum _{m=0}^\infty b_m(x-x_0)^{2m} \]
+                    is \(R=1/\sqrt L\), which is interpreted to mean that \(R=0\) if \(L=\infty \) or \(R=\infty \) if
+                    \(L=0\). <span class="hint">Hint: Apply Theorem&#x00A0;7.1.3 to the series
+                    \(\sum _{m=0}^\infty b_mz^m\) and then let
+                    \(z=(x-x_0)^2\).
+               </p>
+          </dd>
+          <dt class="list">
+               <span class="ptmb8t-">3.</span>
+          </dt>
+          <dd class="list">
+               <!--l. 33-->
+               <p class="noindent"><a id="x1-43"></a> For each power series, use the result of Exercise&#x00A0;<a
+                         href="#x1-32">2<!--tex4ht:ref: exer:7.1.2 --></a> to find the radius of convergence \(R\). If
+                    \(R&gt;0\), find the open
+                    interval of convergence.
+               </p>
+               <div class="tabular">
+                    <table id="TBL-2" class="tabular">
+                         <colgroup id="TBL-2-1g">
+                              <col id="TBL-2-1" />
+                              <col id="TBL-2-2" />
+                         </colgroup>
+                         <tr style="vertical-align:baseline;" id="TBL-2-1-">
+                              <td style="white-space:normal; text-align:left;" id="TBL-2-1-1" class="td00"><!--l. 39-->
+                                   <p class="noindent"><span class="ptmb8t-">(a)</span> \(\displaystyle {\sum
+                                        _{m=0}^\infty (-1)^m(3m+1)(x-1)^{2m+1}}\) </p>
+                              </td>
+                              <td style="white-space:normal; text-align:left;" id="TBL-2-1-2" class="td01"><!--l. 40-->
+                                   <p class="noindent"><span class="ptmb8t-">(b)</span> \(\displaystyle {\sum
+                                        _{m=0}^\infty (-1)^m{m(2m+1)\over 2^m}(x+2)^{2m}}\) </p>
+                              </td>
+                         </tr>
+                         <tr style="vertical-align:baseline;" id="TBL-2-2-">
+                              <td style="white-space:normal; text-align:left;" id="TBL-2-2-1" class="td00"><!--l. 42-->
+                                   <p class="noindent"><span class="ptmb8t-">(c)</span> \(\displaystyle {\sum
+                                        _{m=0}^\infty {m!\over (2m)!}(x-1)^{2m}}\) </p>
+                              </td>
+                              <td style="white-space:normal; text-align:left;" id="TBL-2-2-2" class="td01"><!--l. 43-->
+                                   <p class="noindent"><span class="ptmb8t-">(d)</span> \(\displaystyle {\sum
+                                        _{m=0}^\infty (-1)^m{m!\over 9^m}(x+8)^{2m}}\) </p>
+                              </td>
+                         </tr>
+                         <tr style="vertical-align:baseline;" id="TBL-2-3-">
+                              <td style="white-space:normal; text-align:left;" id="TBL-2-3-1" class="td00"><!--l. 44-->
+                                   <p class="noindent"><span class="ptmb8t-">(e)</span> \(\displaystyle {\sum
+                                        _{m=0}^\infty (-1)^m{(2m-1)\over 3^m}x^{2m+1}}\) </p>
+                              </td>
+                              <td style="white-space:normal; text-align:left;" id="TBL-2-3-2" class="td01"><!--l. 45-->
+                                   <p class="noindent"><span class="ptmb8t-">(f)</span> \(\displaystyle {\sum
+                                        _{m=0}^\infty (x-1)^{2m}}\) </p>
+                              </td>
+                         </tr>
+                    </table>
+               </div>
+          </dd>
+          <dt class="list">
+               <span class="ptmb8t-">4.</span>
+          </dt>
+          <dd class="list">
+               <!--l. 48-->
+               <p class="noindent"><a id="x1-54"></a> Suppose there&#8217;s an integer \(M\) such that \(b_m\ne 0\) for
+                    \(m\ge M\), and
+                    \[ \lim _{m\to \infty }\left |b_{m+1}\over b_m\right |=L\]
+                    where \(0\le L\le \infty \). Let \(k\) be a positive integer. Show that the radius of convergence of
+                    \[ \sum _{m=0}^\infty b_m(x-x_0)^{km} \]
+                    is \(R=1/\sqrt [k]L\), which is interpreted to mean that \(R=0\) if \(L=\infty \) or \(R=\infty \)
+                    if \(L=0\). <span class="hint">Hint: Apply Theorem&#x00A0;7.1.3 to the series
+                         \(\sum _{m=0}^\infty b_mz^m\) and then let \(z=(x-x_0)^k\).
+               </p>
+          </dd>
+          <dt class="list">
+               <span class="ptmb8t-">5.</span>
+          </dt>
+          <dd class="list">
+               <!--l. 64-->
+               <p class="noindent"><a id="x1-65"></a> For each power series use the result of Exercise&#x00A0;<a
+                         href="#x1-54">4<!--tex4ht:ref: exer:7.1.4 --></a> to find the radius of convergence \(R\). If
+                    \(R&gt;0\), find the open
+                    interval of convergence.
+               </p>
+               <div class="tabular">
+                    <table id="TBL-3" class="tabular">
+                         <colgroup id="TBL-3-1g">
+                              <col id="TBL-3-1" />
+                              <col id="TBL-3-2" />
+                         </colgroup>
+                         <tr style="vertical-align:baseline;" id="TBL-3-1-">
+                              <td style="white-space:normal; text-align:left;" id="TBL-3-1-1" class="td00"><!--l. 70-->
+                                   <p class="noindent"><span class="ptmb8t-">(a)</span> \(\displaystyle {\sum
+                                        _{m=0}^\infty {(-1)^m\over (27)^m}(x-3)^{3m+2}}\) </p>
+                              </td>
+                              <td style="white-space:normal; text-align:left;" id="TBL-3-1-2" class="td01"><!--l. 71-->
+                                   <p class="noindent"><span class="ptmb8t-">(b)</span> \(\displaystyle {\sum
+                                        _{m=0}^\infty {x^{7m+6}\over m}}\) </p>
+                              </td>
+                         </tr>
+                         <tr style="vertical-align:baseline;" id="TBL-3-2-">
+                              <td style="white-space:normal; text-align:left;" id="TBL-3-2-1" class="td00"><!--l. 72-->
+                                   <p class="noindent"><span class="ptmb8t-">(c)</span> \(\displaystyle {\sum
+                                        _{m=0}^\infty {9^m(m+1)\over (m+2)}(x-3)^{4m+2}}\) </p>
+                              </td>
+                              <td style="white-space:normal; text-align:left;" id="TBL-3-2-2" class="td01"><!--l. 73-->
+                                   <p class="noindent"><span class="ptmb8t-">(d)</span> \(\displaystyle {\sum
+                                        _{m=0}^\infty (-1)^m{2^m\over m!}x^{4m+3}}\) </p>
+                              </td>
+                         </tr>
+                         <tr style="vertical-align:baseline;" id="TBL-3-3-">
+                              <td style="white-space:normal; text-align:left;" id="TBL-3-3-1" class="td00"><!--l. 74-->
+                                   <p class="noindent"><span class="ptmb8t-">(e)</span> \(\displaystyle {\sum
+                                        _{m=0}^\infty {m!\over (26)^m}(x+1)^{4m+3}}\) </p>
+                              </td>
+                              <td style="white-space:normal; text-align:left;" id="TBL-3-3-2" class="td01"><!--l. 75-->
+                                   <p class="noindent"><span class="ptmb8t-">(f)</span> \(\displaystyle {\sum
+                                        _{m=0}^\infty {(-1)^m\over 8^mm(m+1)}(x-1)^{3m+1}}\) </p>
+                              </td>
+                         </tr>
+                    </table>
+               </div>
 
-                                                                                
-                                           \[ T_N(x)=\sum _{n=0}^Nx^n \]
-      on the interval \([0,.95]\) for \(N=1\), \(2\), \(3\), &#x2026;, until you find a value of \(N\) for which there&#8217;s no perceptible difference between the
-     two graphs. Choose the scale on the \(y\)-axis so that \(0\le y\le 20\).
-     </p></dd><dt class="list">
-  <span 
-class="ptmb8t-">9.</span>  </dt><dd 
-class="list">
-     <!--l. 109--><p class="noindent" ><a 
- id="x1-109"></a> <span class="fbox"><span id="textcolor4">L</span></span>  Graph \(y=\cosh x\) and the Taylor polynomial
-                                           \[ T_{2M}(x)=\sum _{n=0}^M{x^{2n}\over (2n)!} \]
-      on the interval \((-5,5)\) for \(M=1\), \(2\), \(3\), &#x2026;, until you find a value of \(M\) for which there&#8217;s no perceptible difference between the
-     two graphs. Choose the scale on the \(y\)-axis so that \(0\le y\le 75\).
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">10.</span>  </dt><dd 
-class="list">
-     <!--l. 119--><p class="noindent" ><a 
- id="x1-1110"></a> <span class="fbox"><span id="textcolor5">L</span></span>  Graph \(y=\sinh x\) and the Taylor polynomial
-                                           \[ T_{2M+1}(x)=\sum _{n=0}^M{x^{2n+1}\over (2n+1)!} \]
-      on the interval \((-5,5)\) for \(M=0\), \(1\), \(2\), &#x2026;, until you find a value of \(M\) for which there&#8217;s no perceptible difference between the
-     two graphs. Choose the scale on the \(y\)-axis so that&#x00A0;\(-75~\le ~y\le ~75\).
-</p>
-     </dd></dl>
-                                                                                
 
-                                                                                
-<!--l. 131--><p class="noindent" ><span 
-class="ptmri8t-">In Exercises</span><span 
-class="ptmri8t-">&#x00A0;</span><a 
-href="#x1-1211">11<!--tex4ht:ref: exer:7.1.11 --></a><span 
-class="ptmri8t-">&#8211;</span><a 
-href="#x1-1615">15<!--tex4ht:ref: exer:7.1.15 --></a> <span 
-class="ptmri8t-">find a power series solution</span> \(y(x)=\sum _{n=0}^\infty a_nx^n\)<span 
-class="ptmri8t-">.</span>
-</p>
-     <div class="tabular"> <table id="TBL-4" class="tabular" 
- 
-><colgroup id="TBL-4-1g"><col 
-id="TBL-4-1" /><col 
-id="TBL-4-2" /></colgroup><tr  
- style="vertical-align:baseline;" id="TBL-4-1-"><td  style="white-space:normal; text-align:left;" id="TBL-4-1-1"  
-class="td00">
-<dl class="list1"><dt class="list">
-<span 
-class="ptmb8t-">11.</span></dt><dd 
-class="list">
-<!--l. 134--><p class="noindent" ><a 
- id="x1-1211"></a> \((2+x)y''+xy'+3y\)                                                                  </p></td><td  style="white-space:normal; text-align:left;" id="TBL-4-1-2"  
-class="td01"></dd><dt class="list">
-<span 
-class="ptmb8t-">12.</span></dt><dd 
-class="list">
-<!--l. 136--><p class="noindent" ><a 
- id="x1-1312"></a> \((1+3x^2)y''+3x^2y'-2y\)                                                                     </p></td>
-</tr></table>                                                                                                                                                                       </div>
-     <div class="tabular"> <table id="TBL-5" class="tabular" 
- 
-><colgroup id="TBL-5-1g"><col 
-id="TBL-5-1" /><col 
-id="TBL-5-2" /></colgroup><tr  
- style="vertical-align:baseline;" id="TBL-5-1-"><td  style="white-space:normal; text-align:left;" id="TBL-5-1-1"  
-class="td00">
-<span 
-class="ptmb8t-">13.</span><a 
- id="x1-1413"></a> \((1+2x^2)y''+(2-3x)y'+4y\)                                                                  </td><td  style="white-space:normal; text-align:left;" id="TBL-5-1-2"  
-class="td01">
-<span 
-class="ptmb8t-">14.</span><a 
- id="x1-1514"></a> \((1+x^2)y''+(2-x)y'+3y\)                                                                     </td>
-</tr></table>                                                                                                                                                                       </div>
- <span 
-class="ptmb8t-">15.</span>  <a 
- id="x1-1615"></a> \((1+3x^2)y''-2xy'+4y\)
- <span 
-class="ptmb8t-">16.</span>  <a 
- id="x1-1716"></a> Suppose \(y(x)=\sum _{n=0}^\infty a_n(x+1)^n\) on an open interval that contains \(x_0~=~-1\). Find a power series in \(x+1\) for
-                                           \[ xy''+(4+2x)y'+(2+x)y\]
- <span 
-class="ptmb8t-">17.</span>  <a 
- id="x1-1817"></a> Suppose \(y(x)=\sum _{n=0}^\infty a_n(x-2)^n\) on an open interval that contains \(x_0~=~2\). Find a power series in \(x-2\) for
-                                           \[ x^2y''+2xy'-3xy\]
- <span 
-class="ptmb8t-">18.</span>  <a 
- id="x1-1918"></a> <span class="fbox"><span id="textcolor6">L</span></span>  Do the following experiment for various choices of real numbers \(a_0\) and \(a_1\).
-          <dl class="list2"><dt class="list">
-      <span 
-class="ptmb8t-">(a)</span>  </dt><dd 
-class="list">
-          <!--l. 168--><p class="noindent" >Use differential equations software to solve the initial value problem
-                                                                                
 
-                                                                                
-                                             \[ (2-x)y''+2y=0,\quad y(0)=a_0,\quad y'(0)=a_1\]
-          numerically on \((-1.95,1.95)\). Choose the most accurate method your software package provides. (See
-          Section&#x00A0;10.1 for a brief discussion of one such method.)
-          </p></dd><dt class="list">
-      <span 
-class="ptmb8t-">(b)</span>  </dt><dd 
-class="list">
-          <!--l. 178--><p class="noindent" >For \(N=2\), \(3\), \(4\), &#x2026;, compute \(a_2\), &#x2026;, \(a_N\) from Eqn.(<span 
-class="ptmb8t-">7.1.18</span>) and graph
-                                             \[ T_N(x)=\sum _{n=0}^N a_nx^n \]
-          and the solution obtained in <span 
-class="ptmb8t-">(a) </span>on the same axes. Continue increasing \(N\) until it&#8217;s obvious that
-          there&#8217;s no point in continuing. (This sounds vague, but you&#8217;ll know when to stop.)</p></dd></dl>
- <span 
-class="ptmb8t-">19.</span>  <a 
- id="x1-2219"></a> <span class="fbox"><span id="textcolor7">L</span></span>  Follow the directions of Exercise&#x00A0;<a 
-href="#x1-1918">18<!--tex4ht:ref: exer:7.1.18 --></a> for the initial value problem
-                                           \[ (1+x)y''+2(x-1)^2y'+3y=0,\quad y(1)=a_0,\quad y'(1)=a_1\]
-      on the interval \((0,2)\). Use Eqns.&#x00A0;(<span 
-class="ptmb8t-">7.1.24</span>) and (<span 
-class="ptmb8t-">7.1.25</span>) to compute \(\{a_n\}\).
-                                                                                
+          </dd>
+          <dt class="list">
+               <span class="ptmb8t-">6.</span>
+          </dt>
+          <dd class="list">
+               <!--l. 81-->
+               <p class="noindent"><a id="x1-76"></a> <span class="fbox"><span id="textcolor1">L</span></span> Graph
+                    \(y=\sin x\) and the Taylor polynomial
+                    \[ T_{2M+1}(x)=\sum _{n=0}^M{(-1)^nx^{2n+1}\over (2n+1)!} \]
+                    on the interval \((-2\pi ,2\pi )\) for \(M=1\), \(2\), \(3\), &#x2026;, until you find a value of
+                    \(M\) for which there&#8217;s no perceptible difference between the
+                    two graphs.
+               </p>
+          </dd>
+          <dt class="list">
+               <span class="ptmb8t-">7.</span>
+          </dt>
+          <dd class="list">
+               <!--l. 91-->
+               <p class="noindent"><a id="x1-87"></a> <span class="fbox"><span id="textcolor2">L</span></span> Graph
+                    \(y=\cos x\) and the Taylor polynomial
+                    \[ T_{2M}(x)=\sum _{n=0}^M{(-1)^nx^{2n}\over (2n)!} \]
+                    on the interval \((-2\pi ,2\pi )\) for \(M=1\), \(2\), \(3\), &#x2026;, until you find a value of
+                    \(M\) for which there&#8217;s no perceptible difference between the
+                    two graphs.
+               </p>
+          </dd>
+          <dt class="list">
+               <span class="ptmb8t-">8.</span>
+          </dt>
+          <dd class="list">
+               <!--l. 100-->
+               <p class="noindent"><a id="x1-98"></a> <span class="fbox"><span id="textcolor3">L</span></span> Graph
+                    \(y=1/(1-x)\) and the Taylor polynomial
 
-                                                                                
- <span 
-class="ptmb8t-">20.</span>  <a 
- id="x1-2320"></a> Suppose the series \(\sum _{n=0}^\infty a_nx^n\) converges on an open interval \((-R,R)\), let \(r\) be an arbitrary real number, and
+
+
+                    \[ T_N(x)=\sum _{n=0}^Nx^n \]
+                    on the interval \([0,.95]\) for \(N=1\), \(2\), \(3\), &#x2026;, until you find a value of \(N\) for
+                    which there&#8217;s no perceptible difference between the
+                    two graphs. Choose the scale on the \(y\)-axis so that \(0\le y\le 20\).
+               </p>
+          </dd>
+          <dt class="list">
+               <span class="ptmb8t-">9.</span>
+          </dt>
+          <dd class="list">
+               <!--l. 109-->
+               <p class="noindent"><a id="x1-109"></a> <span class="fbox"><span id="textcolor4">L</span></span> Graph
+                    \(y=\cosh x\) and the Taylor polynomial
+                    \[ T_{2M}(x)=\sum _{n=0}^M{x^{2n}\over (2n)!} \]
+                    on the interval \((-5,5)\) for \(M=1\), \(2\), \(3\), &#x2026;, until you find a value of \(M\) for
+                    which there&#8217;s no perceptible difference between the
+                    two graphs. Choose the scale on the \(y\)-axis so that \(0\le y\le 75\).
+               </p>
+          </dd>
+          <dt class="list">
+               <span class="ptmb8t-">10.</span>
+          </dt>
+          <dd class="list">
+               <!--l. 119-->
+               <p class="noindent"><a id="x1-1110"></a> <span class="fbox"><span id="textcolor5">L</span></span> Graph
+                    \(y=\sinh x\) and the Taylor polynomial
+                    \[ T_{2M+1}(x)=\sum _{n=0}^M{x^{2n+1}\over (2n+1)!} \]
+                    on the interval \((-5,5)\) for \(M=0\), \(1\), \(2\), &#x2026;, until you find a value of \(M\) for
+                    which there&#8217;s no perceptible difference between the
+                    two graphs. Choose the scale on the \(y\)-axis so that&#x00A0;\(-75~\le ~y\le ~75\).
+               </p>
+          </dd>
+     </dl>
+
+
+
+     <!--l. 131-->
+     <p class="noindent">In Exercises&#x00A0;<a
+               href="#x1-1211">11<!--tex4ht:ref: exer:7.1.11 --></a>&#8211;<a
+               href="#x1-1615">15<!--tex4ht:ref: exer:7.1.15 --></a> find a power series
+               solution \(y(x)=\sum _{n=0}^\infty a_nx^n\).
+     </p>
+     <div class="tabular">
+          <table id="TBL-4" class="tabular">
+               <colgroup id="TBL-4-1g">
+                    <col id="TBL-4-1" />
+                    <col id="TBL-4-2" />
+               </colgroup>
+               <tr style="vertical-align:baseline;" id="TBL-4-1-">
+                    <td style="white-space:normal; text-align:left;" id="TBL-4-1-1" class="td00">
+                         <dl class="list1">
+                              <dt class="list">
+                                   <span class="ptmb8t-">11.</span>
+                              </dt>
+                              <dd class="list">
+                                   <!--l. 134-->
+                                   <p class="noindent"><a id="x1-1211"></a> \((2+x)y''+xy'+3y\) </p>
+                    </td>
+                    <td style="white-space:normal; text-align:left;" id="TBL-4-1-2" class="td01">
+                         </dd>
+                         <dt class="list">
+                              <span class="ptmb8t-">12.</span>
+                         </dt>
+                         <dd class="list">
+                              <!--l. 136-->
+                              <p class="noindent"><a id="x1-1312"></a> \((1+3x^2)y''+3x^2y'-2y\) </p>
+                    </td>
+               </tr>
+          </table>
+     </div>
+     <div class="tabular">
+          <table id="TBL-5" class="tabular">
+               <colgroup id="TBL-5-1g">
+                    <col id="TBL-5-1" />
+                    <col id="TBL-5-2" />
+               </colgroup>
+               <tr style="vertical-align:baseline;" id="TBL-5-1-">
+                    <td style="white-space:normal; text-align:left;" id="TBL-5-1-1" class="td00">
+                         <span class="ptmb8t-">13.</span><a id="x1-1413"></a> \((1+2x^2)y''+(2-3x)y'+4y\)
+                    </td>
+                    <td style="white-space:normal; text-align:left;" id="TBL-5-1-2" class="td01">
+                         <span class="ptmb8t-">14.</span><a id="x1-1514"></a> \((1+x^2)y''+(2-x)y'+3y\)
+                    </td>
+               </tr>
+          </table>
+     </div>
+     <span class="ptmb8t-">15.</span> <a id="x1-1615"></a> \((1+3x^2)y''-2xy'+4y\)
+     <span class="ptmb8t-">16.</span> <a id="x1-1716"></a> Suppose \(y(x)=\sum _{n=0}^\infty a_n(x+1)^n\) on an open
+     interval that contains \(x_0~=~-1\). Find a power series in \(x+1\) for
+     \[ xy''+(4+2x)y'+(2+x)y\]
+     <span class="ptmb8t-">17.</span> <a id="x1-1817"></a> Suppose \(y(x)=\sum _{n=0}^\infty a_n(x-2)^n\) on an open
+     interval that contains \(x_0~=~2\). Find a power series in \(x-2\) for
+     \[ x^2y''+2xy'-3xy\]
+     <span class="ptmb8t-">18.</span> <a id="x1-1918"></a> <span class="fbox"><span id="textcolor6">L</span></span> Do
+     the following experiment for various choices of real numbers \(a_0\) and \(a_1\).
+     <dl class="list2">
+          <dt class="list">
+               <span class="ptmb8t-">(a)</span>
+          </dt>
+          <dd class="list">
+               <!--l. 168-->
+               <p class="noindent">Use differential equations software to solve the initial value problem
+
+
+
+                    \[ (2-x)y''+2y=0,\quad y(0)=a_0,\quad y'(0)=a_1\]
+                    numerically on \((-1.95,1.95)\). Choose the most accurate method your software package provides.
+                    (See
+                    Section&#x00A0;10.1 for a brief discussion of one such method.)
+               </p>
+          </dd>
+          <dt class="list">
+               <span class="ptmb8t-">(b)</span>
+          </dt>
+          <dd class="list">
+               <!--l. 178-->
+               <p class="noindent">For \(N=2\), \(3\), \(4\), &#x2026;, compute \(a_2\), &#x2026;, \(a_N\) from
+                    Eqn.(<span class="ptmb8t-">7.1.18</span>) and graph
+                    \[ T_N(x)=\sum _{n=0}^N a_nx^n \]
+                    and the solution obtained in <span class="ptmb8t-">(a) </span>on the same axes. Continue increasing
+                    \(N\) until it&#8217;s obvious that
+                    there&#8217;s no point in continuing. (This sounds vague, but you&#8217;ll know when to stop.)</p>
+          </dd>
+     </dl>
+     <span class="ptmb8t-">19.</span> <a id="x1-2219"></a> <span class="fbox"><span id="textcolor7">L</span></span>
+     Follow the directions of Exercise&#x00A0;<a href="#x1-1918">18<!--tex4ht:ref: exer:7.1.18 --></a> for the initial
+     value problem
+     \[ (1+x)y''+2(x-1)^2y'+3y=0,\quad y(1)=a_0,\quad y'(1)=a_1\]
+     on the interval \((0,2)\). Use Eqns.&#x00A0;(<span class="ptmb8t-">7.1.24</span>) and (<span
+          class="ptmb8t-">7.1.25</span>) to compute \(\{a_n\}\).
+
+
+
+     <span class="ptmb8t-">20.</span> <a id="x1-2320"></a> Suppose the series \(\sum _{n=0}^\infty a_nx^n\) converges on
+     an open interval \((-R,R)\), let \(r\) be an arbitrary real number, and
      define
-                                           \[ y(x)=x^r\sum _{n=0}^\infty a_nx^n=\sum _{n=0}^\infty a_nx^{n+r} \]
-      on \((0,R)\). Use Theorem&#x00A0;<span 
-class="ptmb8t-">7.1.4</span> and the rule for differentiating the product of two functions to show that
-     <div class="eqnarray">\begin {eqnarray*}  y'(x)&amp;=&amp;\displaystyle {\sum _{n=0}^\infty (n+r)a_nx^{n+r-1}},\\[10pt] y''(x)&amp;=&amp;\displaystyle {\sum _{n=0}^\infty (n+r)(n+r-1)a_nx^{n+r-2}},\\ &amp;\vdots &amp;\\ y^{(k)}(x)&amp;=&amp;\displaystyle {\sum _{n=0}^\infty (n+r)(n+r-1)\cdots (n+r-k)a_nx^{n+r-k}}  \end {eqnarray*}</div>
-     <!--l. 214--><p class="noindent" >on \((0,R)\)
-                                                                                
+     \[ y(x)=x^r\sum _{n=0}^\infty a_nx^n=\sum _{n=0}^\infty a_nx^{n+r} \]
+     on \((0,R)\). Use Theorem&#x00A0;<span class="ptmb8t-">7.1.4</span> and the rule for differentiating the product of
+     two functions to show that
+     <div class="eqnarray">\begin {eqnarray*} y'(x)&amp;=&amp;\displaystyle {\sum _{n=0}^\infty
+          (n+r)a_nx^{n+r-1}},\\[10pt] y''(x)&amp;=&amp;\displaystyle {\sum _{n=0}^\infty (n+r)(n+r-1)a_nx^{n+r-2}},\\
+          &amp;\vdots &amp;\\ y^{(k)}(x)&amp;=&amp;\displaystyle {\sum _{n=0}^\infty (n+r)(n+r-1)\cdots
+          (n+r-k)a_nx^{n+r-k}} \end {eqnarray*}</div>
+     <!--l. 214-->
+     <p class="noindent">on \((0,R)\)
 
-                                                                                
-</p><!--l. 219--><p class="noindent" ><span 
-class="ptmri8t-">In Exercises</span><span 
-class="ptmri8t-">&#x00A0;</span><a 
-href="#x1-2421">21<!--tex4ht:ref: exer:7.1.21 --></a><span 
-class="ptmri8t-">&#8211;</span><a 
-href="#x1-2926">26<!--tex4ht:ref: exer:7.1.26 --></a> <span 
-class="ptmri8t-">let</span> \(y\) <span 
-class="ptmri8t-">be as defined in Exercise</span><span 
-class="ptmri8t-">&#x00A0;</span><a 
-href="#x1-2320">20<!--tex4ht:ref: exer:7.1.20 --></a><span 
-class="ptmri8t-">, and write the given expression in the form</span> \(x^r\sum _{n=0}^\infty b_nx^n\)<span 
-class="ptmri8t-">.</span>
-     </p><dl class="list1"><dt class="list">
- <span 
-class="ptmb8t-">21.</span>  </dt><dd 
-class="list">
-     <!--l. 221--><p class="noindent" ><a 
- id="x1-2421"></a> \(x^2(1-x)y''+x(4+x)y'+(2-x)y\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">22.</span>  </dt><dd 
-class="list">
-     <!--l. 224--><p class="noindent" ><a 
- id="x1-2522"></a> \(x^2(1+x)y''+x(1+2x)y'-(4+6x)y\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">23.</span>  </dt><dd 
-class="list">
-     <!--l. 227--><p class="noindent" ><a 
- id="x1-2623"></a> \(x^2(1+x)y''-x(1-6x-x^2)y'+(1+6x+x^2)y\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">24.</span>  </dt><dd 
-class="list">
-     <!--l. 230--><p class="noindent" ><a 
- id="x1-2724"></a> \(x^2(1+3x)y''+x(2+12x+x^2)y'+2x(3+x)y\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">25.</span>  </dt><dd 
-class="list">
-     <!--l. 233--><p class="noindent" ><a 
- id="x1-2825"></a> \(x^2(1+2x^2)y''+x(4+2x^2)y'+2(1-x^2)y\)
-     </p></dd><dt class="list">
- <span 
-class="ptmb8t-">26.</span>  </dt><dd 
-class="list">
-     <!--l. 236--><p class="noindent" ><a 
- id="x1-2926"></a> \(x^2(2+x^2)y''+2x(5+x^2)y'+2(3-x^2)y\)
-</p>
-     </dd></dl>
- <a class="back-to-ch" href="sec7.0.html">Back</a>
-   
-</body> 
+
+
+     </p><!--l. 219-->
+     <p class="noindent">In Exercises&#x00A0;<a
+               href="#x1-2421">21<!--tex4ht:ref: exer:7.1.21 --></a>&#8211;<a
+               href="#x1-2926">26<!--tex4ht:ref: exer:7.1.26 --></a> let \(y\)
+               be as defined in Exercise&#x00A0;<a
+               href="#x1-2320">20<!--tex4ht:ref: exer:7.1.20 --></a>, and write the given
+               expression in the form \(x^r\sum _{n=0}^\infty b_nx^n\).
+     </p>
+     <dl class="list1">
+          <dt class="list">
+               <span class="ptmb8t-">21.</span>
+          </dt>
+          <dd class="list">
+               <!--l. 221-->
+               <p class="noindent"><a id="x1-2421"></a> \(x^2(1-x)y''+x(4+x)y'+(2-x)y\)
+               </p>
+          </dd>
+          <dt class="list">
+               <span class="ptmb8t-">22.</span>
+          </dt>
+          <dd class="list">
+               <!--l. 224-->
+               <p class="noindent"><a id="x1-2522"></a> \(x^2(1+x)y''+x(1+2x)y'-(4+6x)y\)
+               </p>
+          </dd>
+          <dt class="list">
+               <span class="ptmb8t-">23.</span>
+          </dt>
+          <dd class="list">
+               <!--l. 227-->
+               <p class="noindent"><a id="x1-2623"></a> \(x^2(1+x)y''-x(1-6x-x^2)y'+(1+6x+x^2)y\)
+               </p>
+          </dd>
+          <dt class="list">
+               <span class="ptmb8t-">24.</span>
+          </dt>
+          <dd class="list">
+               <!--l. 230-->
+               <p class="noindent"><a id="x1-2724"></a> \(x^2(1+3x)y''+x(2+12x+x^2)y'+2x(3+x)y\)
+               </p>
+          </dd>
+          <dt class="list">
+               <span class="ptmb8t-">25.</span>
+          </dt>
+          <dd class="list">
+               <!--l. 233-->
+               <p class="noindent"><a id="x1-2825"></a> \(x^2(1+2x^2)y''+x(4+2x^2)y'+2(1-x^2)y\)
+               </p>
+          </dd>
+          <dt class="list">
+               <span class="ptmb8t-">26.</span>
+          </dt>
+          <dd class="list">
+               <!--l. 236-->
+               <p class="noindent"><a id="x1-2926"></a> \(x^2(2+x^2)y''+2x(5+x^2)y'+2(3-x^2)y\)
+               </p>
+          </dd>
+     </dl>
+     <a class="back-to-ch" href="sec7.0.html">Back</a>
+
+</body>
+
 </html>
