@@ -27,10 +27,10 @@ relevant properties of power series. We’ll omit proofs, which can be found in 
 text.
   </p><dl class='trivlist'><dt class='trivlist'>
 </dt><dd class='trivlist'>
-<p class='indent'>  <span class='ptmb8t-'>Definition</span> <a id='x1-2r1'></a><span class='ptmb8t-'>7.1.1</span>  An infinite series of the form \begin {equation}  \label {eq:7.1.1} \sum _{n=0}^\infty a_n(x-x_0)^n\end {equation}<a id='x1-3r1'></a> where \(x_0\) and \(a_0\), \(a_1,\) …, \(a_n,\) …are constants\(,\) is called a <span class='ptmri8t-'>power series in</span> \(x-x_0.\) We
-say that the power series (<a href='#x1-3r1'>7.1.1<!-- tex4ht:ref: eq:7.1.1  --></a>) <span class='ptmri8t-'>converges</span> for a given \(x\) if the limit
+<p class='indent'>  <span class='ptmb8t-'>Definition</span> <a id='x1-2r1'></a><span class='ptmb8t-'>7.1.1</span>  An infinite series of the form \begin {equation}  \label {eq:7.1.1} \sum _{n=0}^\infty a_n(x-x_0)^n\end {equation}<a id='x1-3r1'></a> where \(x_0\) and \(a_0\), \(a_1,\) …, \(a_n,\) …are constants\(,\) is called a <span class='vocab'>power series in</span> \(x-x_0.\) We
+say that the power series (<a href='#x1-3r1'>7.1.1<!-- tex4ht:ref: eq:7.1.1  --></a>) <span class='vocab'>converges</span> for a given \(x\) if the limit
                                         \[ \lim _{N\to \infty } \sum _{n=0}^Na_n(x-x_0)^n \]
- exists\(; \) otherwise, we say that the power series <span class='ptmri8t-'>diverges</span> for the given \(x.\)</p></dd></dl>
+ exists\(; \) otherwise, we say that the power series <span class='vocab'>diverges</span> for the given \(x.\)</p></dd></dl>
 <p class='indent'>  A power series in \(x-x_0\) must converge if \(x=x_0\), since the positive powers of \(x-x_0\) are all zero in this case. This may be
 the only value of \(x\) for which the power series converges. However, the next theorem shows that if
 the power series converges for some \(x\ne x_0\) then the set of all values of \(x\) for which it converges forms an
@@ -38,30 +38,27 @@ interval.
 </p>
   <div class='newtheorem'>
 <p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 7.1.2</span> </span><a id='x1-42'></a> <span class='ptmri8t-'>For any power series</span>
-                                                                                
-
-                                                                                
-                                        \[ \sum _{n=0}^\infty a_n(x-x_0)^n\]
- <span class='ptmri8t-'>exactly one of the these statements is true</span>\(:\)
+<span class='ptmb8t-'>Theorem 7.1.2</span> </span><a id='x1-42'></a> For any power series
+\[ \sum _{n=0}^\infty a_n(x-x_0)^n\]
+ exactly one of the these statements is true:
       </p><dl class='list1'><dt class='list'>
    <span class='ptmb8t-'>(i)</span>  </dt><dd class='list'>
-      <p class='noindent'><span class='ptmri8t-'>The power series converges only for</span> \(x=x_0.\)
+      <p class='noindent'>The power series converges only for \(x=x_0.\)
       </p></dd><dt class='list'>
   <span class='ptmb8t-'>(ii)</span>  </dt><dd class='list'>
-      <p class='noindent'><span class='ptmri8t-'>The power series converges for all values of</span> \(x.\)
+      <p class='noindent'>The power series converges for all values of \(x.\)
       </p></dd><dt class='list'>
   <span class='ptmb8t-'>(iii)</span>  </dt><dd class='list'>
-      <p class='noindent'><span class='ptmri8t-'>There’s a positive number</span> \(R\) <span class='ptmri8t-'>such that the power series converges if</span> \(|x-x_0|&lt;R\) <span class='ptmri8t-'>and diverges if</span> \(|x-x_0|&gt;R.\)</p></dd></dl>
+      <p class='noindent'>There’s a positive number \(R\) such that the power series converges if \(|x-x_0|&lt;R\) and diverges if \(|x-x_0|&gt;R.\)</p></dd></dl>
 </div>
 <p class='indent'>  
-</p><p class='indent'>  In case (iii) we say that \(R\) is the <span class='ptmri8t-'>radius of convergence</span> of the power series. For convenience, we include the
-other two cases in this definition by defining \(R=0\) in case (i) and \(R=\infty \) in case (ii). We define the <span class='ptmri8t-'>open interval of
+</p><p class='indent'>  In case (iii) we say that \(R\) is the <span class='vocab'>radius of convergence</span> of the power series. For convenience, we include the
+other two cases in this definition by defining \(R=0\) in case (i) and \(R=\infty \) in case (ii). We define the <span class='vocab'>open interval of
 convergence</span> of \(\sum _{n=0}^\infty a_n(x-x_0)^n\) to be
                                         \[ (x_0-R,x_0+R)\quad \mbox { if }\quad 0&lt;R&lt;\infty ,\quad \mbox { or }\quad (-\infty ,\infty ) \quad \mbox { if }\quad R=\infty \]
  If \(R\) is finite, no general statement can be made concerning convergence at the endpoints \(x=x_0\pm R\) of the open interval of
 convergence; the series may converge at one or both points, or diverge at both.
-</p><p class='indent'>  Recall from calculus that a series of constants \(\sum _{n=0}^\infty \alpha _n\) is said to <span class='ptmri8t-'>converge absolutely</span> if the series of absolute values \(\sum _{n=0}^\infty |\alpha _n|\)
+</p><p class='indent'>  Recall from calculus that a series of constants \(\sum _{n=0}^\infty \alpha _n\) is said to <span class='vocab'>converge absolutely</span> if the series of absolute values \(\sum _{n=0}^\infty |\alpha _n|\)
 converges. It can be shown that a power series \(\sum _{n=0}^\infty a_n(x-x_0)^n\) with a positive radius of convergence \(R\) converges absolutely in its
 open interval of convergence; that is, the series
                                                                                 
@@ -76,9 +73,9 @@ see Exercises <span class='ptmb8t-'>2</span> and <span class='ptmb8t-'>4</span>
 </p>
   <div class='newtheorem'>
 <p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 7.1.3</span> </span><a id='x1-83'></a> <span class='ptmri8t-'>Suppose there’s an integer</span> \(N\) <span class='ptmri8t-'>such that</span> \(a_n\ne 0\) <span class='ptmri8t-'>if</span> \(n\ge N\) <span class='ptmri8t-'>and</span>
+<span class='ptmb8t-'>Theorem 7.1.3</span> </span><a id='x1-83'></a> Suppose there’s an integer \(N\) such that \(a_n\ne 0\) if \(n\ge N\) and
                                         \[ \lim _{n\to \infty }\left |a_{n+1}\over a_n\right |=L\]
- <span class='ptmri8t-'>where</span> \(0\le L\le \infty .\) <span class='ptmri8t-'>Then the radius of convergence of</span> \(\sum _{n=0}^\infty a_n(x-x_0)^n\) <span class='ptmri8t-'>is</span> \(R=1/ L,\) <span class='ptmri8t-'>which should be interpreted to mean that</span> \(R=0\) <span class='ptmri8t-'>if</span> \(L=\infty ,\) <span class='ptmri8t-'>or</span> \(R=\infty \) <span class='ptmri8t-'>if</span> \(L=0.\)
+ where \(0\le L\le \infty\). Then the radius of convergence of \(\sum _{n=0}^\infty a_n(x-x_0)^n\) is \(R=1/ L,\) which should be interpreted to mean that \(R=0\) if \(L=\infty\), or \(R=\infty \) if \(L=0\).
 </p>
   </div>
 <p class='indent'>  
@@ -117,23 +114,20 @@ intervals of convergence. For example, you are probably familiar with the follow
 </p><p class='indent'>
 </p><p class='noindent'>A power series with a positive radius of convergence defines a function
                                         \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \]
- on its open interval of convergence. We say that the series <span class='ptmri8t-'>represents</span> \(f\) on the open interval of convergence. A
+ on its open interval of convergence. We say that the series <span class='vocab'>represents</span> \(f\) on the open interval of convergence. A
 function \(f\) represented by a power series may be a familiar elementary function as in (<span class='ptmb8t-'>7.1.2</span>)–(<span class='ptmb8t-'>7.1.5</span>); however, it often
-happens that \(f\) isn’t a familiar function, so the series actually <span class='ptmri8t-'>defines</span> \(f\).
+happens that \(f\) isn’t a familiar function, so the series actually <span class='vocab'>defines</span> \(f\).
 </p><p class='indent'>  The next theorem shows that a function represented by a power series has derivatives of all orders on the
 open interval of convergence of the power series, and provides power series representations of the
 derivatives.
 </p>
   <div class='newtheorem'>
 <p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 7.1.4</span> </span><a id='x1-104'></a> <span class='ptmri8t-'>A power series</span>
-                                                                                
-
-                                                                                
-                                        \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \]
- <span class='ptmri8t-'>with positive radius of convergence</span> \(R\) <span class='ptmri8t-'>has derivatives of all orders in its open interval of convergence</span>\(,\) <span class='ptmri8t-'>and
-successive derivatives can be obtained by repeatedly differentiating term by term</span>\(;\) <span class='ptmri8t-'>that is,</span> </p><div class='eqnarray'>\begin {eqnarray}  f'(x)&amp;=&amp;\displaystyle {\sum _{n=1}^\infty na_n(x-x_0)^{n-1}}\label {eq:7.1.6},\\[10pt] f''(x)&amp;=&amp;\displaystyle {\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}},\label {eq:7.1.7}\\ &amp;\vdots &amp;\nonumber \\ f^{(k)}(x)&amp;=&amp;\displaystyle {\sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k}}\label {eq:7.1.8}\end {eqnarray}</div>
-<p class='indent'>  <span class='ptmri8t-'>Moreover</span>\(,\) <span class='ptmri8t-'>all of these series have the same radius of convergence</span> \(R.\)
+<span class='ptmb8t-'>Theorem 7.1.4</span> </span><a id='x1-104'></a> A power series
+\[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \]
+ with positive radius of convergence \(R\) has derivatives of all orders in its open interval of convergence\(,\) and
+successive derivatives can be obtained by repeatedly differentiating term by term; that is, </p><div class='eqnarray'>\begin {eqnarray}  f'(x)&amp;=&amp;\displaystyle {\sum _{n=1}^\infty na_n(x-x_0)^{n-1}}\label {eq:7.1.6},\\[10pt] f''(x)&amp;=&amp;\displaystyle {\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}},\label {eq:7.1.7}\\ &amp;\vdots &amp;\nonumber \\ f^{(k)}(x)&amp;=&amp;\displaystyle {\sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k}}\label {eq:7.1.8}\end {eqnarray}</div>
+<p class='indent'>  Moreover, all of these series have the same radius of convergence \(R\).
 </p>
   </div>
 <p class='indent'>  
@@ -153,14 +147,14 @@ successive derivatives can be obtained by repeatedly differentiating term by ter
 <p class='indent'>
 </p><p class='noindent'><span id='textcolor3'>Uniqueness of Power Series</span>
 </p><p class='indent'>
-</p><p class='noindent'>The next theorem shows that if \(f\) is <span class='ptmri8t-'>defined</span> by a power series in \(x-x_0\) with a positive radius of convergence, then the
+</p><p class='noindent'>The next theorem shows that if \(f\) is <span class='vocab'>defined</span> by a power series in \(x-x_0\) with a positive radius of convergence, then the
 power series is the Taylor series of \(f\) about \(x_0\).
 </p>
   <div class='newtheorem'>
 <p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 7.1.5</span> </span><a id='x1-125'></a> <span class='ptmri8t-'>If the power series</span>
-                                        \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \]
- <span class='ptmri8t-'>has a positive radius of convergence, then </span>\begin {equation}  \label {eq:7.1.9} a_n={f^{(n)}(x_0)\over n!};  \end {equation}<a id='x1-13r2'></a> <span class='ptmri8t-'>that is,</span> \(\sum _{n=0}^\infty a_n(x-x_0)^n\) <span class='ptmri8t-'>is the Taylor series of</span> \(f\) <span class='ptmri8t-'>about</span> \(x_0\)<span class='ptmri8t-'>.</span>
+<span class='ptmb8t-'>Theorem 7.1.5</span> </span><a id='x1-125'></a> If the power series
+\[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \]
+ has a positive radius of convergence, then \begin {equation}  \label {eq:7.1.9} a_n={f^{(n)}(x_0)\over n!};  \end {equation}<a id='x1-13r2'></a> that is, \(\sum _{n=0}^\infty a_n(x-x_0)^n\) is the Taylor series of \(f\) about \(x_0\).
 </p>
   </div>
 <p class='indent'>  
@@ -179,17 +173,14 @@ power series is the Taylor series of \(f\) about \(x_0\).
 <span class='ptmb8t-'>Theorem 7.1.6</span> </span><a id='x1-146'></a><br class='newline' />
     </p><dl class='list1'><dt class='list'>
  <span class='ptmb8t-'>(a)</span>  </dt><dd class='list'>
-    <p class='noindent'><span class='ptmri8t-'>If</span>
-                                          \[ \sum _{n=0}^\infty a_n(x-x_0)^n=\sum _{n=0}^\infty b_n(x-x_0)^n \]
-     <span class='ptmri8t-'>for all</span> \(x\) <span class='ptmri8t-'>in an open interval that contains</span> \(x_0,\) <span class='ptmri8t-'>then</span> \(a_n=b_n\) <span class='ptmri8t-'>for</span> \(n=0\)<span class='ptmri8t-'>,</span> \(1\)<span class='ptmri8t-'>,</span> \(2\)<span class='ptmri8t-'>, ….</span>
+    <p class='noindent'>If \[ \sum _{n=0}^\infty a_n(x-x_0)^n=\sum _{n=0}^\infty b_n(x-x_0)^n \]
+     for all \(x\) in an open interval that contains \(x_0,\) then \(a_n=b_n\) for \(n=0\), \(1\), \(2\), ….
     </p></dd><dt class='list'>
  <span class='ptmb8t-'>(b)</span>  </dt><dd class='list'>
-    <p class='noindent'><span class='ptmri8t-'>If</span>
-                                          \[ \sum _{n=0}^\infty a_n(x-x_0)^n=0 \]
-     <span class='ptmri8t-'>for all</span> \(x\) <span class='ptmri8t-'>in an open interval that contains</span> \(x_0,\) <span class='ptmri8t-'>then</span> \(a_n=0\) <span class='ptmri8t-'>for</span> \(n=0\)<span class='ptmri8t-'>,</span> \(1\)<span class='ptmri8t-'>,</span> \(2\)<span class='ptmri8t-'>, ….</span></p></dd></dl>
-                                                                                
+    <p class='noindent'>If
+\[ \sum _{n=0}^\infty a_n(x-x_0)^n=0 \]
+     for all \(x\) in an open interval that contains \(x_0,\) then \(a_n=0\) for \(n=0\), \(1\), \(2\), ….</p></dd></dl>
 
-                                                                                
 </div>
 <p class='indent'>  
 </p><p class='indent'>  To obtain <span class='ptmb8t-'>(a) </span>we observe that the two series represent the same function \(f\) on the open interval; hence,

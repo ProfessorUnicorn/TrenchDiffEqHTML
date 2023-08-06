@@ -103,7 +103,7 @@
   <p class='noindent'>We’ll now develop the method of Example <a
       href='#x1-21'>8.4.1<!-- tex4ht:ref: example:8.4.1  --></a> into a systematic way to find the Laplace transform of
     a
-    piecewise continuous function. It is convenient to introduce the <span class='ptmri8t-'>unit step function</span>,
+    piecewise continuous function. It is convenient to introduce the <span class='vocab'>unit step function</span>,
     defined as \begin {equation} \label {eq:8.4.4} u(t)=\left \{\begin {array}{rl} 0,&amp;t&lt;0\\ 1,&amp;t\ge 0\end
     {array}\right. \end {equation}<a id='x1-8r4'></a> Thus, \(u(t)\) “steps” from
     the constant value \(0\) to the constant value \(1\) at \(t=0\). If we replace \(t\) by \(t-\tau \) in (<a
@@ -133,11 +133,11 @@
   </p>
   <div class='newtheorem'>
     <p class='noindent'><span class='head'>
-        <span class='ptmb8t-'>Theorem 8.4.1</span> </span><a id='x1-111'></a> <span class='ptmri8t-'>Let</span> \(g\)
-      <span class='ptmri8t-'>be defined on</span> \([0,\infty ).\) <span class='ptmri8t-'>Suppose</span> \(\tau \ge 0\)
-      <span class='ptmri8t-'>and</span> \({\cal L}\left (g(t+\tau )\right )\) <span class='ptmri8t-'>exists for</span>
-      \(s&gt;s_0.\) <span class='ptmri8t-'>Then</span> \({\cal L}\left (u(t-\tau )g(t)\right )\) <span
-        class='ptmri8t-'>exists for</span> \(s&gt;s_0\)<span class='ptmri8t-'>, and</span>
+        <span class='ptmb8t-'>Theorem 8.4.1</span> </span><a id='x1-111'></a> Let \(g\)
+      be defined on \([0,\infty ).\) Suppose \(\tau \ge 0\)
+      and \({\cal L}\left (g(t+\tau )\right )\) exists for
+      \(s&gt;s_0.\) Then \({\cal L}\left (u(t-\tau )g(t)\right )\) 
+      exists for</span> \(s&gt;s_0\), and
       \[ {\cal L}(u(t-\tau )g(t))=e^{-s\tau }{\cal L}\left (g(t+\tau )\right )\]
     </p>
   </div>
@@ -309,13 +309,13 @@
 
 
 
-        <span class='ptmb8t-'>Theorem 8.4.2</span> </span>\([\)<span class='ptmri8t-'>Second Shifting
-        Theorem</span>\(]\)<a id='x1-212'></a> <span class='ptmri8t-'>If</span> \(\tau \ge 0\) <span
-        class='ptmri8t-'>and</span> \({\cal L}(g)\) <span class='ptmri8t-'>exists for</span> \(s&gt;s_0\) <span
-        class='ptmri8t-'>then</span> \({\cal L}\left (u(t-\tau )g(t-\tau )\right )\) <span class='ptmri8t-'>exists
-        for</span> \(s&gt;s_0\) <span class='ptmri8t-'>and</span>
+        <span class='ptmb8t-'>Theorem 8.4.2</span> </span>\([\)Second Shifting
+        Theorem\(]\)<a id='x1-212'></a> If \(\tau \ge 0\) 
+        and \({\cal L}(g)\) exists for \(s&gt;s_0\) 
+        then \({\cal L}\left (u(t-\tau )g(t-\tau )\right )\) exists
+        for \(s&gt;s_0\) and
       \[ {\cal L}(u(t-\tau )g(t-\tau ))=e^{-s\tau }{\cal L}(g(t))\]
-      <span class='ptmri8t-'>or, equivalently, </span>\begin {equation} \label {eq:8.4.12} \mbox {if }
+      or, equivalently, \begin {equation} \label {eq:8.4.12} \mbox {if }
       g(t)\leftrightarrow G(s),\mbox { then }u(t-\tau )g(t-\tau )\leftrightarrow e^{-s\tau }G(s)\end {equation}<a
         id='x1-22r10'></a>
     </p>

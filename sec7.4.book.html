@@ -35,8 +35,8 @@ discussed in the next three sections. Fortunately, many equations arising in app
 requirements.
   </p><dl class='trivlist'><dt class='trivlist'>
 </dt><dd class='trivlist'>
-<p class='indent'>  <span class='ptmb8t-'>Definition</span> <a id='x1-3r1'></a><span class='ptmb8t-'>7.4.1</span> Let \(P_0\), \(P_1\), and \(P_2\) be polynomials with no common factor and suppose \(P_0(x_0)=0\). Then \(x_0\) is a <span class='ptmri8t-'>regular singular
-point</span> of the equation \begin {equation}  \label {eq:7.4.2} P_0(x)y''+P_1(x)y'+P_2(x)y=0  \end {equation}<a id='x1-4r2'></a> if \(\eqref {eq:7.4.2}\) can be written as \begin {equation}  \label {eq:7.4.3} (x-x_0)^2A(x)y''+(x-x_0)B(x)y'+C(x)y=0  \end {equation}<a id='x1-5r3'></a> where \(A\), \(B\), and \(C\) are polynomials and \(A(x_0)\ne 0\); otherwise, \(x_0\) is an <span class='ptmri8t-'>irregular</span> singular
+<p class='indent'>  <span class='ptmb8t-'>Definition</span> <a id='x1-3r1'></a><span class='ptmb8t-'>7.4.1</span> Let \(P_0\), \(P_1\), and \(P_2\) be polynomials with no common factor and suppose \(P_0(x_0)=0\). Then \(x_0\) is a <span class='vocab'>regular singular
+point</span> of the equation \begin {equation}  \label {eq:7.4.2} P_0(x)y''+P_1(x)y'+P_2(x)y=0  \end {equation}<a id='x1-4r2'></a> if \(\eqref {eq:7.4.2}\) can be written as \begin {equation}  \label {eq:7.4.3} (x-x_0)^2A(x)y''+(x-x_0)B(x)y'+C(x)y=0  \end {equation}<a id='x1-5r3'></a> where \(A\), \(B\), and \(C\) are polynomials and \(A(x_0)\ne 0\); otherwise, \(x_0\) is an <span class='vocab'>irregular</span> singular
 point of (<a href='#x1-4r2'>7.4.2<!-- tex4ht:ref: eq:7.4.2  --></a>).</p></dd></dl>
   <div class='newtheorem'>
 <p class='noindent'><span class='head'>
@@ -92,7 +92,7 @@ as
 key to finding solutions on \((0,\infty )\) is that if \(x&gt;0\) then \(x^r\) is defined as a real-valued function on \((0,\infty )\) for all values of \(r\), and
 substituting \(y=x^r\) into (<a href='#x1-12r6'>7.4.6<!-- tex4ht:ref: eq:7.4.6  --></a>) produces \begin {equation}  \label {eq:7.4.7} \begin {array}{lcl} ax^2(x^r)''+bx(x^r)'+cx^r&amp;=&amp;ax^2r(r-1)x^{r-2}+bxrx^{r-1}+cx^r\\ &amp;=&amp;[ar(r-1)+br+c]x^r\end {array}  \end {equation}<a id='x1-13r7'></a> The polynomial
                                         \[ p(r)=ar(r-1)+br+c \]
- is called the <span class='ptmri8t-'>indicial polynomial</span> of (<a href='#x1-12r6'>7.4.6<!-- tex4ht:ref: eq:7.4.6  --></a>), and \(p(r)=0\) is its <span class='ptmri8t-'>indicial equation</span>. From (<a href='#x1-13r7'>7.4.7<!-- tex4ht:ref: eq:7.4.7  --></a>) we can see that \(y=x^r\) is
+ is called the <span class='vocab'>indicial polynomial</span> of (<a href='#x1-12r6'>7.4.6<!-- tex4ht:ref: eq:7.4.6  --></a>), and \(p(r)=0\) is its <span class='vocab'>indicial equation</span>. From (<a href='#x1-13r7'>7.4.7<!-- tex4ht:ref: eq:7.4.7  --></a>) we can see that \(y=x^r\) is
 a solution of (<a href='#x1-12r6'>7.4.6<!-- tex4ht:ref: eq:7.4.6  --></a>) on \((0,\infty )\) if and only if \(p(r)=0\). Therefore, if the indicial equation has distinct real roots
 \(r_1\) and \(r_2\) then \(y_1=x^{r_1}\) and \(y_2=x^{r_2}\) form a fundamental set of solutions of (<a href='#x1-12r6'>7.4.6<!-- tex4ht:ref: eq:7.4.6  --></a>) on \((0,\infty )\), since \(y_2/y_1=x^{r_2-r_1}\) is nonconstant. In this
 case
@@ -133,8 +133,8 @@ case.
 </p>
   <div class='newtheorem'>
 <p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 7.4.3</span> </span><a id='x1-193'></a> <span class='ptmri8t-'>Suppose the roots of the indicial equation </span>\begin {equation}  \label {eq:7.4.11} ar(r-1)+br+c=0  \end {equation}<a id='x1-20r11'></a> <span class='ptmri8t-'>are</span> \(r_1\) <span class='ptmri8t-'>and</span> \(r_2\)<span class='ptmri8t-'>. Then the general solution of the Euler
-equation </span>\begin {equation}  \label {eq:7.4.12} ax^2y''+bxy'+cy=0  \end {equation}<a id='x1-21r12'></a> <span class='ptmri8t-'>on</span> \((0,\infty )\) <span class='ptmri8t-'>is</span> </p><div class='eqnarray'>\begin {eqnarray*}  y&amp;=&amp;c_1x^{r_1}+c_2x^{r_2}\mbox { if $r_1$ and $r_2$ are distinct real numbers }; \\ y&amp;=&amp;x^{r_1}(c_1+c_2\ln x)\mbox { if $r_1=r_2$ }; \\ y&amp;=&amp;x^{\lambda }\left [c_1\cos \left (\omega \ln x\right )+ c_2\sin \left (\omega \ln x \right )\right ]\mbox { if $r_1,r_2=\lambda \pm i\omega $ with $\omega &gt;0$}\end {eqnarray*}</div>
+<span class='ptmb8t-'>Theorem 7.4.3</span> </span><a id='x1-193'></a> Suppose the roots of the indicial equation \begin {equation}  \label {eq:7.4.11} ar(r-1)+br+c=0  \end {equation}<a id='x1-20r11'></a> are \(r_1\) and \(r_2\). Then the general solution of the Euler
+equation \begin {equation}  \label {eq:7.4.12} ax^2y''+bxy'+cy=0  \end {equation}<a id='x1-21r12'></a> on \((0,\infty )\) is </p><div class='eqnarray'>\begin {eqnarray*}  y&amp;=&amp;c_1x^{r_1}+c_2x^{r_2}\mbox { if $r_1$ and $r_2$ are distinct real numbers }; \\ y&amp;=&amp;x^{r_1}(c_1+c_2\ln x)\mbox { if $r_1=r_2$ }; \\ y&amp;=&amp;x^{\lambda }\left [c_1\cos \left (\omega \ln x\right )+ c_2\sin \left (\omega \ln x \right )\right ]\mbox { if $r_1,r_2=\lambda \pm i\omega $ with $\omega &gt;0$}\end {eqnarray*}</div>
   </div>
 <p class='indent'>  
 </p><p class='noindent'><span class='ptmb8t-'>Proof    </span>We first show that \(y=y(x)\) satisfies (<a href='#x1-21r12'>7.4.12<!-- tex4ht:ref: eq:7.4.12  --></a>) on \((0,\infty )\) if and only if \(Y(t)=y(e^t)\) satisfies the constant coefficient equation \begin {equation}  \label {eq:7.4.13} a{d^2Y\over dt^2}+(b-a){dY\over dt}+cY=0  \end {equation}<a id='x1-22r13'></a> on \((-\infty ,\infty )\). To

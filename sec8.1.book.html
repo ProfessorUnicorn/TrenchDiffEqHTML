@@ -22,8 +22,8 @@
 </p><p class='noindent'><span id='textcolor1'>Definition of the Laplace Transform</span>
 </p><p class='indent'>
 </p><p class='noindent'>To define the Laplace transform, we first recall the definition of an improper integral. If \(g\) is integrable over the
-interval \([a,T]\) for every \(T&gt;a\), then the <span class='ptmri8t-'>improper integral of</span> \(g\) <span class='ptmri8t-'>over</span> \([a,\infty )\) is defined as \begin {equation}  \label {eq:8.1.1} \int ^\infty _a g(t)\,dt=\lim _{T\to \infty }\int ^T_a g(t)\,dt\end {equation}<a id='x1-2r1'></a> We say that the improper integral <span class='ptmri8t-'>converges</span>
-if the limit in (<a href='#x1-2r1'>8.1.1<!-- tex4ht:ref: eq:8.1.1  --></a>) exists; otherwise, we say that the improper integral <span class='ptmri8t-'>diverges</span> or <span class='ptmri8t-'>does not exist</span>. Here’s the
+interval \([a,T]\) for every \(T&gt;a\), then the <span class='vocab'>improper integral of</span> \(g\) over \([a,\infty )\) is defined as \begin {equation}  \label {eq:8.1.1} \int ^\infty _a g(t)\,dt=\lim _{T\to \infty }\int ^T_a g(t)\,dt\end {equation}<a id='x1-2r1'></a> We say that the improper integral <span class='vocab'>converges</span>
+if the limit in (<a href='#x1-2r1'>8.1.1<!-- tex4ht:ref: eq:8.1.1  --></a>) exists; otherwise, we say that the improper integral <span class='vocab'>diverges</span> or <span class='vocab'>does not exist</span>. Here’s the
 definition of the Laplace transform of a function \(f\).
   </p><dl class='trivlist'><dt class='trivlist'>
 </dt><dd class='trivlist'>
@@ -35,7 +35,7 @@ functions of time.
 </p><p class='indent'>  The Laplace transform can be viewed as an operator \(\cal L\) that transforms the function \(f=f(t)\) into the function \(F=F(s)\). Thus,
 (<a href='#x1-4r2'>8.1.2<!-- tex4ht:ref: eq:8.1.2  --></a>) can be expressed as
                                         \[ F={\cal L}(f)\]
- The functions \(f\) and \(F\) form a <span class='ptmri8t-'>transform pair</span>, which we’ll sometimes denote by
+ The functions \(f\) and \(F\) form a <span class='vocab'>transform pair</span>, which we’ll sometimes denote by
                                         \[ f(t)\leftrightarrow F(s)\]
  It can be shown that if \(F(s)\) is defined for \(s=s_0\) then it’s defined for all \(s&gt;s_0\) (Exercise <span class='ptmb8t-'>14(b)</span>).
                                                                                 
@@ -160,12 +160,9 @@ obtained. In such cases you should refer to the table of Laplace transforms.
 </p>
   <div class='newtheorem'>
 <p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 8.1.2</span> </span>\([\)<span class='ptmri8t-'>Linearity Property</span>\(]\)<a id='x1-162'></a> <span class='ptmri8t-'>Suppose</span> \({\cal L}(f_i)\) <span class='ptmri8t-'>is defined for</span> \(s&gt;s_i,\) \(1\le i\le n).\) <span class='ptmri8t-'>Let</span> \(s_0\) <span class='ptmri8t-'>be the largest of the numbers</span> \(s_1\)<span class='ptmri8t-'>,</span> \(s_{2},\) <span class='ptmri8t-'>…,</span>\(s_n,\) <span class='ptmri8t-'>and
-let</span> \(c_1\)<span class='ptmri8t-'>,</span> \(c_2\)<span class='ptmri8t-'>,…,</span> \(c_n\) <span class='ptmri8t-'>be constants</span>\(.\) <span class='ptmri8t-'>Then</span>
-                                        \[ {\cal L}(c_1f_1+c_2f_2+\cdots +c_nf_n)=c_1{\cal L}(f_1)+c_2{\cal L}(f_2) +\cdots +c_n{\cal L}(f_n)\mbox { for } s&gt;s_0\]
-                                                                                
-
-                                                                                
+<span class='ptmb8t-'>Theorem 8.1.2</span> </span>\([\)Linearity Property\(]\)<a id='x1-162'></a> Suppose \({\cal L}(f_i)\) is defined for \(s&gt;s_i,\) \(1\le i\le n).\) Let \(s_0\) be the largest of the numbers \(s_1\), \(s_{2},\) …,\(s_n,\) and
+let \(c_1\), \(c_2\),…, \(c_n\) be constants. Then
+\[ {\cal L}(c_1f_1+c_2f_2+\cdots +c_nf_n)=c_1{\cal L}(f_1)+c_2{\cal L}(f_2) +\cdots +c_n{\cal L}(f_n)\mbox { for } s&gt;s_0\]
 </p>
   </div>
 <p class='indent'>  
@@ -193,8 +190,8 @@ see Exercises <span class='ptmb8t-'>6</span> and <span class='ptmb8t-'>13</span
 </p>
   <div class='newtheorem'>
 <p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 8.1.3</span> </span>\([\)<span class='ptmri8t-'>First Shifting Theorem</span>\(]\)<a id='x1-193'></a> <span class='ptmri8t-'>If </span>\begin {equation} \label {eq:8.1.10} F(s)=\int _0^\infty e^{-st} f(t)\,dt  \end {equation}<a id='x1-20r10'></a> <span class='ptmri8t-'>is the Laplace transform of</span> \(f(t)\) <span class='ptmri8t-'>for</span> \(s&gt;s_0\)<span class='ptmri8t-'>, then</span> \(F(s-a)\) <span class='ptmri8t-'>is the Laplace transform of</span> \(e^{at}f(t)\) <span class='ptmri8t-'>for</span>
-\(s &gt;s_0+a\)<span class='ptmri8t-'>.</span>
+<span class='ptmb8t-'>Theorem 8.1.3</span> </span>\([\)<span class='vocab'>First Shifting Theorem</span>\(]\)<a id='x1-193'></a> If \begin {equation} \label {eq:8.1.10} F(s)=\int _0^\infty e^{-st} f(t)\,dt  \end {equation}<a id='x1-20r10'></a> is the Laplace transform of \(f(t)\) for \(s&gt;s_0\), then \(F(s-a)\) is the Laplace transform of \(e^{at}f(t)\) for
+\(s &gt;s_0+a\).
 </p>
   </div>
 <p class='indent'>  
@@ -249,9 +246,9 @@ We first review some relevant definitions from calculus.
                                         \[ f(t_0+)=\lim _{t\to t_0+}f(t)\quad \hbox {and }\quad f(t_0-)=\lim _{t\to t_0-}f(t)\]
  so (<a href='#x1-23r12'>8.1.12<!-- tex4ht:ref: eq:8.1.12  --></a>) can be expressed as
                                         \[ f(t_0+)=f(t_0-)=f(t_0)\]
- If \(f(t_0+)\) and \(f(t_0-)\) have finite but distinct values, we say that \(f\) has a <span class='ptmri8t-'>jump discontinuity</span> at \(t_0\), and
+ If \(f(t_0+)\) and \(f(t_0-)\) have finite but distinct values, we say that \(f\) has a <span class='vocab'>jump discontinuity</span> at \(t_0\), and
                                         \[ f(t_0+)-f(t_0-) \]
- is called the <span class='ptmri8t-'>jump</span> in \(f\) at \(t_0\) (Figure <a href='#-a-jump-discontinuity-'>8.1.1<!-- tex4ht:ref: figure:8.1.1  --></a>).
+ is called the <span class='vocab'>jump</span> in \(f\) at \(t_0\) (Figure <a href='#-a-jump-discontinuity-'>8.1.1<!-- tex4ht:ref: figure:8.1.1  --></a>).
 </p><p class='indent'>   </p><figure class='figure'> 
 
                                                                                 
@@ -268,7 +265,7 @@ We first review some relevant definitions from calculus.
   </figure>
 <p class='indent'>  If \(f(t_0+)\) and \(f(t_0-)\) are finite and equal, but either \(f\) isn’t defined at \(t_0\) or it’s defined but
                                         \[ f(t_0)\ne f(t_0+)=f(t_0-)\]
- we say that \(f\) has a <span class='ptmri8t-'>removable discontinuity</span> at \(t_0\) (Figure <a href='#-'>8.1.2<!-- tex4ht:ref: figure:8.1.2  --></a>). This terminolgy is appropriate since a function \(f\)
+ we say that \(f\) has a <span class='vocab'>removable discontinuity</span> at \(t_0\) (Figure <a href='#-'>8.1.2<!-- tex4ht:ref: figure:8.1.2  --></a>). This terminolgy is appropriate since a function \(f\)
 with a removable discontinuity at \(t_0\) can be made continuous at \(t_0\) by defining (or redefining)
                                         \[ f(t_0)=f(t_0+)=f(t_0-)\]
 </p>
@@ -294,12 +291,12 @@ change \({\cal L}(f)\).
 <p class='indent'>  <span class='ptmb8t-'>Definition</span> <a id='x1-27r4'></a><span class='ptmb8t-'>8.1.4</span> 
       </p><dl class='list1'><dt class='list'>
    <span class='ptmb8t-'>(i)</span>  </dt><dd class='list'>
-      <p class='noindent'>A function \(f\) is said to be <span class='ptmri8t-'>piecewise continuous</span> on a finite closed interval \([0,T]\) if \(f(0+)\) and \(f(T-)\) are finite and \(f\) is
+      <p class='noindent'>A function \(f\) is said to be <span class='vocab'>piecewise continuous</span> on a finite closed interval \([0,T]\) if \(f(0+)\) and \(f(T-)\) are finite and \(f\) is
       continuous on the open interval \((0,T)\) except possibly at finitely many points, where \(f\) may have jump
       discontinuities or removable discontinuities.
       </p></dd><dt class='list'>
   <span class='ptmb8t-'>(ii)</span>  </dt><dd class='list'>
-      <p class='noindent'>A function \(f\) is said to be <span class='ptmri8t-'>piecewise continuous</span> on the infinite interval \([0,\infty )\) if it’s piecewise continuous
+      <p class='noindent'>A function \(f\) is said to be <span class='vocab'>piecewise continuous</span> on the infinite interval \([0,\infty )\) if it’s piecewise continuous
       on \([0,T]\) for every \(T&gt;0\).</p></dd></dl>
 </dd></dl>
 <p class='indent'>  Figure <a href='#-a-piecewise-continuous-function-on-ab-'>8.1.3<!-- tex4ht:ref: figure:8.1.3  --></a> shows the graph of a typical piecewise continuous function.
@@ -313,8 +310,8 @@ growth of a function that guarantees convergence of its Laplace transform for \(
 .
   </p><dl class='trivlist'><dt class='trivlist'>
 </dt><dd class='trivlist'>
-<p class='indent'>  <span class='ptmb8t-'>Definition</span> <a id='x1-31r5'></a><span class='ptmb8t-'>8.1.5</span> A function \(f\) is said to be <span class='ptmri8t-'>of exponential order</span> \(s_0\) if there are constants \(M\) and \(t_0\) such
-that \begin {equation} \label {eq:8.1.14} |f(t)|\le Me^{s_0t},\quad t\ge t_0\end {equation}<a id='x1-32r14'></a> In situations where the specific value of \(s_0\) is irrelevant we say simply that \(f\) is <span class='ptmri8t-'>of exponential
+<p class='indent'>  <span class='ptmb8t-'>Definition</span> <a id='x1-31r5'></a><span class='ptmb8t-'>8.1.5</span> A function \(f\) is said to be <span class='vocab'>of exponential order</span> \(s_0\) if there are constants \(M\) and \(t_0\) such
+that \begin {equation} \label {eq:8.1.14} |f(t)|\le Me^{s_0t},\quad t\ge t_0\end {equation}<a id='x1-32r14'></a> In situations where the specific value of \(s_0\) is irrelevant we say simply that \(f\) is <span class='vocab'>of exponential
 order</span>.</p></dd></dl>
 <p class='indent'>  The next theorem gives useful sufficient conditions for a function \(f\) to have a Laplace transform. The proof is
 sketched in Exercise <span class='ptmb8t-'>10</span>.
@@ -324,13 +321,13 @@ sketched in Exercise <span class='ptmb8t-'>10</span>.
                                                                                 
   <div class='newtheorem'>
 <p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 8.1.6</span> </span><a id='x1-336'></a> <span class='ptmri8t-'>If</span> \(f\) <span class='ptmri8t-'>is piecewise continuous on</span> \([0,\infty )\) <span class='ptmri8t-'>and of exponential order</span> \(s_0,\) <span class='ptmri8t-'>then</span> \({\cal L}(f)\) <span class='ptmri8t-'>is defined for</span> \(s&gt;s_0\)<span class='ptmri8t-'>.</span>
+<span class='ptmb8t-'>Theorem 8.1.6</span> </span><a id='x1-336'></a> If \(f\) is piecewise continuous on \([0,\infty )\) and of exponential order \(s_0,\) then \({\cal L}(f)\) is defined for \(s&gt;s_0\).
 </p>
   </div>
 <p class='indent'>  
-</p><p class='noindent'><span class='ptmrc8t-'>R<span class='small-caps'>EMARK</span></span>:  We emphasize that the conditions of Theorem <a href='#x1-336'>8.1.6<!-- tex4ht:ref: thmtype:8.1.6  --></a> are sufficient, but <span class='ptmri8t-'>not necessary</span>, for \(f\) to have a
-Laplace transform. For example, Exercise <span class='ptmb8t-'>14(c) </span>shows that \(f\) may have a Laplace transform even though \(f\) isn’t of
-exponential order. 
+</p><p class='noindent'><span class='ptmrc8t-'>R<span class='small-caps'>EMARK</span></span>:  We emphasize that the conditions of Theorem <a href='#x1-336'>8.1.6<!-- tex4ht:ref: thmtype:8.1.6  --></a> are sufficient, but <em>not necessary</em>, for \(f\) to have a
+  Laplace transform. For example, Exercise <span class='ptmb8t-'>14(c) </span>shows that \(f\) may have a Laplace transform even though \(f\) isn’t of
+  exponential order. 
 </p>
   <div class='newtheorem'>
 <p class='noindent'><span class='head'>

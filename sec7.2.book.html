@@ -24,8 +24,8 @@
 where \(P_0\), \(P_1\), and \(P_2\) are polynomials. Usually the solutions of these equations can’t be expressed in terms of familiar
 elementary functions. Therefore we’ll consider the problem of representing solutions of (<a href='#x1-2r1'>7.2.1<!-- tex4ht:ref: eq:7.2.1  --></a>) with
 series.
-</p><p class='indent'>  We assume throughout that \(P_0\), \(P_1\) and \(P_2\) have no common factors. Then we say that \(x_0\) is an <span class='ptmri8t-'>ordinary point</span> of (<a href='#x1-2r1'>7.2.1<!-- tex4ht:ref: eq:7.2.1  --></a>) if
-\(P_0(x_0)\ne 0\), or a <span class='ptmri8t-'>singular point</span> if \(P_0(x_0)=0\). For Legendre’s equation, \begin {equation} \label {eq:7.2.2} (1-x^2)y''-2xy'+\alpha (\alpha +1)y=0\end {equation}<a id='x1-3r2'></a> \(x_0=1\) and \(x_0=-1\) are singular points and all other points are ordinary points.
+</p><p class='indent'>  We assume throughout that \(P_0\), \(P_1\) and \(P_2\) have no common factors. Then we say that \(x_0\) is an <span class='vocab'>ordinary point</span> of (<a href='#x1-2r1'>7.2.1<!-- tex4ht:ref: eq:7.2.1  --></a>) if
+\(P_0(x_0)\ne 0\), or a <span class='vocab'>singular point</span> if \(P_0(x_0)=0\). For Legendre’s equation, \begin {equation} \label {eq:7.2.2} (1-x^2)y''-2xy'+\alpha (\alpha +1)y=0\end {equation}<a id='x1-3r2'></a> \(x_0=1\) and \(x_0=-1\) are singular points and all other points are ordinary points.
 For Bessel’s  equation,
                                         \[ x^2y''+xy'+(x^2-\nu ^2)y=0\]
  \(x_0=0\) is a singular point and all other points are ordinary points. If \(P_0\) is a nonzero constant as in Airy’s equation, \begin {equation} \label {eq:7.2.3} y''-xy=0\end {equation}<a id='x1-4r3'></a> then
@@ -44,15 +44,15 @@ of (<a href='#x1-2r1'>7.2.1<!-- tex4ht:ref: eq:7.2.1  --></a>) by power series t
 
                                                                                 
 <p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 7.2.1</span> </span><a id='x1-61'></a> <span class='ptmri8t-'>Suppose</span> \(P_0\)<span class='ptmri8t-'>,</span> \(P_1\)<span class='ptmri8t-'>, and</span> \(P_2\) <span class='ptmri8t-'>are polynomials with no common factor and</span> \(P_0\) <span class='ptmri8t-'>isn’t identically zero</span>\(.\) <span class='ptmri8t-'>Let</span> \(x_0\) <span class='ptmri8t-'>be a
-point such that</span> \(P_0(x_0)\ne 0,\) <span class='ptmri8t-'>and let</span> \(\rho \) <span class='ptmri8t-'>be the distance from</span> \(x_0\) <span class='ptmri8t-'>to the nearest zero of</span> \(P_0\) <span class='ptmri8t-'>in the complex plane.</span> \((\)<span class='ptmri8t-'>If</span> \(P_0\) <span class='ptmri8t-'>is constant, then</span> \(\rho =\infty \)<span class='ptmri8t-'>.</span>\()\)
-<span class='ptmri8t-'>Then every solution of </span>\begin {equation} \label {eq:7.2.5} P_0(x)y''+P_1(x)y'+P_2(x)y=0  \end {equation}<a id='x1-7r5'></a> <span class='ptmri8t-'>can be represented by a power series </span>\begin {equation} \label {eq:7.2.6} y=\sum _{n=0}^\infty a_n(x-x_0)^n  \end {equation}<a id='x1-8r6'></a> <span class='ptmri8t-'>that converges at least on the open interval</span> \((x_0-\rho ,x_0+\rho )\)<span class='ptmri8t-'>.</span> \((\) <span class='ptmri8t-'>If</span> \(P_0\) <span class='ptmri8t-'>is
-nonconstant</span>\(,\) <span class='ptmri8t-'>so that</span> \(\rho \) <span class='ptmri8t-'>is necessarily finite</span>\(,\) <span class='ptmri8t-'>then the open interval of convergence of</span> \(\eqref {eq:7.2.6}\) <span class='ptmri8t-'>may be larger than</span> \((x_0-\rho ,x_0+\rho ).\) <span class='ptmri8t-'>If</span> \(P_0\) <span class='ptmri8t-'>is
-constant then</span> \(\rho =\infty \) <span class='ptmri8t-'>and</span> \((x_0-\rho ,x_0+\rho )=(-\infty ,\infty )\)<span class='ptmri8t-'>.</span>\()\)
+<span class='ptmb8t-'>Theorem 7.2.1</span> </span><a id='x1-61'></a> Suppose \(P_0\), \(P_1\), and \(P_2\) are polynomials with no common factor and \(P_0\) isn’t identically zero. Let \(x_0\) be a
+point such that \(P_0(x_0)\ne 0,\) and let \(\rho \) be the distance from \(x_0\) to the nearest zero of \(P_0\) in the complex plane. \((\)If \(P_0\) is constant, then \(\rho =\infty \).\()\)
+Then every solution of \begin {equation} \label {eq:7.2.5} P_0(x)y''+P_1(x)y'+P_2(x)y=0  \end {equation}<a id='x1-7r5'></a> can be represented by a power series \begin {equation} \label {eq:7.2.6} y=\sum _{n=0}^\infty a_n(x-x_0)^n  \end {equation}<a id='x1-8r6'></a> that converges at least on the open interval \((x_0-\rho ,x_0+\rho )\). \((\) If \(P_0\) is
+nonconstant, so that \(\rho \) is necessarily finite, then the open interval of convergence of \(\eqref {eq:7.2.6}\) may be larger than \((x_0-\rho ,x_0+\rho )\). If \(P_0\) is
+constant then \(\rho =\infty \) and \((x_0-\rho ,x_0+\rho )=(-\infty ,\infty )\).\()\)
 </p>
   </div>
 <p class='indent'>  
-</p><p class='indent'>  We call (<a href='#x1-8r6'>7.2.6<!-- tex4ht:ref: eq:7.2.6  --></a>) a <span class='ptmri8t-'>power series solution in</span> \(x-x_0\) of (<a href='#x1-7r5'>7.2.5<!-- tex4ht:ref: eq:7.2.5  --></a>). We’ll now develop a method for finding power series
+</p><p class='indent'>  We call (<a href='#x1-8r6'>7.2.6<!-- tex4ht:ref: eq:7.2.6  --></a>) a <span class='vocab'>power series solution in</span> \(x-x_0\) of (<a href='#x1-7r5'>7.2.5<!-- tex4ht:ref: eq:7.2.5  --></a>). We’ll now develop a method for finding power series
 solutions of (<a href='#x1-7r5'>7.2.5<!-- tex4ht:ref: eq:7.2.5  --></a>). For this purpose we write (<a href='#x1-7r5'>7.2.5<!-- tex4ht:ref: eq:7.2.5  --></a>) as \(Ly=0\), where \begin {equation} \label {eq:7.2.7} Ly=P_0y''+P_1y'+P_2y\end {equation}<a id='x1-9r7'></a>
 </p><p class='indent'>  Theorem <a href='#x1-61'>7.2.1<!-- tex4ht:ref: thmtype:7.2.1  --></a> implies that every solution of \(Ly=0\) on \((x_0-\rho ,x_0+\rho )\) can be written as
                                         \[ y=\sum _{n=0}^\infty a_n(x-x_0)^n\]
@@ -70,8 +70,8 @@ chosen arbitrarily, and \(a_2\), \(a_3\), …are uniquely determined by them.
  into (<a href='#x1-9r7'>7.2.7<!-- tex4ht:ref: eq:7.2.7  --></a>), and collect the coefficients of like powers of \(x-x_0\). This yields \begin {equation} \label {eq:7.2.8} Ly=\sum ^\infty _{n=0}b_n(x-x_0)^n\end {equation}<a id='x1-10r8'></a> where \(\{b_0, b_1, \dots , b_n, \dots \}\) are expressed in terms of \(\{a_0, a_1, \dots ,a_n, \dots \}\) and the
 coefficients of \(P_0\), \(P_1\), and \(P_2\), written in powers of \(x-x_0\). Since (<a href='#x1-10r8'>7.2.8<!-- tex4ht:ref: eq:7.2.8  --></a>) and <span class='ptmb8t-'>(a) </span>of Theorem <span class='ptmb8t-'>7.1.6</span> imply that \(Ly=0\) if and only if \(b_n=0\) for \(n\ge 0\),
 all power series solutions in \(x-x_0\) of \(Ly=0\) can be obtained by choosing \(a_0\) and \(a_1\) arbitrarily and computing \(a_2\), \(a_3\), …,
-successively so that \(b_n=0\) for \(n\ge 0\). For simplicity, we call the power series obtained this way <span class='ptmri8t-'>the power series in</span> \(x-x_0\)
-<span class='ptmri8t-'>for the general solution</span> of \(Ly=0\), without explicitly identifying the open interval of convergence of the
+successively so that \(b_n=0\) for \(n\ge 0\). For simplicity, we call the power series obtained this way <span class='vocab'>the power series in</span> \(x-x_0\)
+<span class='vocab'>for the general solution</span> of \(Ly=0\), without explicitly identifying the open interval of convergence of the
 series.
 </p>
   <div class='newtheorem'>
@@ -114,8 +114,8 @@ by two, we write (<a href='#x1-13r10'>7.2.10<!-- tex4ht:ref: eq:7.2.10  --></a>)
                                         \[ y=a_0\cos (x-x_0)+a_1\sin (x-x_0)\]
  which should look familiar.                                                                                                                        __
 </p><p class='indent'>  Equations like (<a href='#x1-13r10'>7.2.10<!-- tex4ht:ref: eq:7.2.10  --></a>), (<span class='ptmb8t-'>7.2.11</span>), and (<span class='ptmb8t-'>7.2.12</span>), which define a given coefficient in the sequence \(\{a_n\}\) in terms of one or
-more coefficients with lesser indices are called <span class='ptmri8t-'>recurrence relations</span>. When we use a recurrence relation to
-compute terms of a sequence we’re computing <span class='ptmri8t-'>recursively</span>.
+more coefficients with lesser indices are called <span class='vocab'>recurrence relations</span>. When we use a recurrence relation to
+compute terms of a sequence we’re computing <span class='vocab'>recursively</span>.
 </p><p class='indent'>  In the remainder of this section we consider the problem of finding power series solutions in \(x-x_0\) for equations of
 the form \begin {equation} \label {eq:7.2.16} \left (1+\alpha (x-x_0)^2\right )y''+\beta (x-x_0) y'+\gamma y=0\end {equation}<a id='x1-17r14'></a> Many important equations that arise in applications are of this form with \(x_0=0\), including Legendre’s
 equation (<a href='#x1-3r2'>7.2.2<!-- tex4ht:ref: eq:7.2.2  --></a>), Airy’s equation (<a href='#x1-4r3'>7.2.3<!-- tex4ht:ref: eq:7.2.3  --></a>), <span class='vocab'>Chebyshev’s equation</span>,
@@ -183,12 +183,9 @@ converges in \((-1/\sqrt 2,1/\sqrt 2)\) for any choice of \(a_0\) and \(a_1\).
 </p>
   <div class='newtheorem'>
 <p class='noindent'><span class='head'>
-<span class='ptmb8t-'>Theorem 7.2.2</span> </span><a id='x1-232'></a> <span class='ptmri8t-'>The coefficients</span> \(\{a_n\}\) <span class='ptmri8t-'>in any solution</span> \(y=\sum _{n=0}^\infty a_n(x-x_0)^n\) <span class='ptmri8t-'>of </span>\begin {equation} \label {eq:7.2.23} \left (1+\alpha (x-x_0)^2\right )y''+\beta (x-x_0) y'+\gamma y=0  \end {equation}<a id='x1-24r19'></a> <span class='ptmri8t-'>satisfy the recurrence relation </span>\begin {equation} \label {eq:7.2.24} a_{n+2}=-{p(n) \over (n+2)(n+1)}a_n,\quad n\ge 0\end {equation}<a id='x1-25r20'></a> <span class='ptmri8t-'>where </span>\begin {equation} \label {eq:7.2.25} p(n)=\alpha n(n-1) +\beta n+\gamma \end {equation}<a id='x1-26r21'></a> <span class='ptmri8t-'>Moreover</span>\(,\) <span class='ptmri8t-'>the
-coefficients of the even and odd powers of</span> \(x-x_0\) <span class='ptmri8t-'>can be computed separately as</span> </p><div class='eqnarray'>\begin {eqnarray}  a_{2m+2}&amp;=&amp;-{p(2m)\over (2m+2)(2m+1)}a_{2m},\quad m\ge 0\label {eq:7.2.26}\\  {\mbox {and}}\nonumber \\ a_{2m+3}&amp;=&amp;-{p(2m+1)\over (2m+3)(2m+2)}a_{2m+1},\quad m\ge 0, \label {eq:7.2.27}  \end {eqnarray}</div>
-<p class='indent'>  <span class='ptmri8t-'>where</span> \(a_0\) <span class='ptmri8t-'>and</span> \(a_1\) <span class='ptmri8t-'>are arbitrary.</span>
-                                                                                
-
-                                                                                
+<span class='ptmb8t-'>Theorem 7.2.2</span> </span><a id='x1-232'></a> The coefficients \(\{a_n\}\) in any solution \(y=\sum _{n=0}^\infty a_n(x-x_0)^n\) of \begin {equation} \label {eq:7.2.23} \left (1+\alpha (x-x_0)^2\right )y''+\beta (x-x_0) y'+\gamma y=0  \end {equation}<a id='x1-24r19'></a> satisfy the recurrence relation \begin {equation} \label {eq:7.2.24} a_{n+2}=-{p(n) \over (n+2)(n+1)}a_n,\quad n\ge 0\end {equation}<a id='x1-25r20'></a> where \begin {equation} \label {eq:7.2.25} p(n)=\alpha n(n-1) +\beta n+\gamma \end {equation}<a id='x1-26r21'></a> Moreover, the
+coefficients of the even and odd powers of \(x-x_0\) can be computed separately as </p><div class='eqnarray'>\begin {eqnarray}  a_{2m+2}&amp;=&amp;-{p(2m)\over (2m+2)(2m+1)}a_{2m},\quad m\ge 0\label {eq:7.2.26}\\  {\mbox {and}}\nonumber \\ a_{2m+3}&amp;=&amp;-{p(2m+1)\over (2m+3)(2m+2)}a_{2m+1},\quad m\ge 0, \label {eq:7.2.27}  \end {eqnarray}</div>
+<p class='indent'>  where \(a_0\) and \(a_1\) are arbitrary.
 </p>
   </div>
 <p class='indent'>  
