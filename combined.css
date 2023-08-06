@@ -225,9 +225,13 @@ li.dst { line-height: 4rem; }
 .nav :nth-child(1) { justify-self: flex-start; }
 .nav :nth-child(2) { justify-self: center; }
 .nav :nth-child(3) { justify-self: flex-end; }
-.newtheorem { margin-bottom: 2em; margin-top: 8em;}
 .newtheorem .head { font-weight: bold; }
+.newtheorem { margin-bottom: 2em; margin-top: 8em;}
+
 .ex-number { font-weight: bold; }
+.example { margin-bottom: 2em; margin-top: 8em;}
+.example > *:first-child:before { counter-reset: ex-number var(--ex-number); content: "Example " var(--section-number) "." counter(ex-number); font-weight: bold; }
+.example .solution summary:after { counter-reset: ex-number var(--ex-number); content: " " var(--section-number) "." counter(ex-number); }
 
 .exercise { display: flex; gap: 1rem; }
 .exercise .ex-number { flex: 0; }
