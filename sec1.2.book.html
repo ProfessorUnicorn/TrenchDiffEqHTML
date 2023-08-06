@@ -452,24 +452,40 @@
     </p>
 
     <p class='noindent'><span class='ptmb8t-'>Solution </span> 
-      Recall <span class='vocab'>Newton's 2nd law of motion</span>, \( F = ma \) can be written as a first order differential equation in terms of velocity \( F = m \dot{v} \) since acceleration is the derivative of velocity, and it an be written as a second order differential equation in terms of position \( F = m \ddot{y} \) since acceleration is the second derivative of position.
-      Letting \(y(t)\) represent the position (height) of the object at time \(t\) and since the acceleration of the object has constant magnitude \(g\) and is in the downward (negative) direction, \(y\) satisfies the second order equation
-      \[ \ddot{y}=-mg\]
-      where the prime now indicates differentiation with respect to \(t\). If \(y_0\) and \(v_0\) denote the altitude
-      and velocity when \(t=0\),
-      then \(y\) is a solution of the initial value problem \begin {equation} \label {eq:1.2.17} \frac{d^2y}{dx^2}=-g \quad
-      y(0)=y_0 \quad \left.\frac{dy}{dx}\right|_0=v_0\end {equation}<a id='x1-30r17'></a>
+      Recall <span class='vocab'>Newton's 2nd law of motion</span>, \( F = ma \), the force \( F \) acting on the object is equal to the mass \( m \) of the object times the acceleration \( a \) of the object. Acceleration is the derivative of velocity and velocity is the derivative of position so position is the second derivative of acceleration and can be written as  \( a = \ddot{y} \) where \(y(t)\) represent the position (height) of the object at time \(t\). The only force acting on the object is <span class='vocab'>gravity</span> and the acceleration due to gravity is in the downward (negative) direction, so the total force \( F \) is given by \( -mg \). Thus <span class='vocab'>Newton's 2nd law of motion</span> can be rewritten to represent a second order differential equation modeling this situation:
+      \begin{equation*}
+        F = ma \Longrightarrow
+        -mg = m \ddot{y} \Longrightarrow
+        -g = \ddot{y}
+      \end{equation*}
+      where the dot notation indicates differentiation with respect to \(t\). If \(y_0 \) denotes the initial height and \(v_0\) denotes the initial velocity when \(t=0\), then \(y\) is a solution of the initial value problem 
+      <a id='x1-30r17'></a>
+      \begin {equation} \label {eq:1.2.17} 
+        \ddot{y}=-g \quad
+        y(0)=y_0 \quad 
+        \dot{y}(0)=v_0
+      \end {equation}
+      Which can be solved by antidifferentiating twice:
+      \begin {align*}
+        \ddot{y} = & -g \\
+        \Longrightarrow
+        \dot{y} = & -gt + c_1 \\
+        \Longrightarrow
+        y = & -\frac{1}{2}gt^2 + c_1 t + c_2 \\
+      \end {align*}      
     </p>
-    <p class='noindent'><span class='underline'><span class='ptmrc8t-'>S<span
-            class='small-caps'>OLUTION</span>(</span><span class='ptmb8t-'>b</span><span
-          class='ptmrc8t-'>) </span></span> Integrating (<a href='#x1-30r17'>1.2.17<!-- tex4ht:ref: eq:1.2.17  --></a>)
-      twice yields </p>
-    <div class='eqnarray'>\begin {eqnarray*} \frac{dy}{dx}&amp;=&amp;-gt+c_1 \\ y&amp;=&amp;-{gt^2\over 2}+c_1t+c_2\end {eqnarray*}
-    </div>
-    <p class='indent'> Imposing the initial conditions \(y(0)=y_0\) and \(\left.\frac{dy}{dx}\right|_0=v_0\) in these two equations shows that
-      \(c_1=v_0\) and \(c_2=y_0\). Therefore the solution of the
-      initial value problem (<a href='#x1-30r17'>1.2.17<!-- tex4ht:ref: eq:1.2.17  --></a>) is
-      \[ y=- {gt^2\over 2}+v_0t+y_0\]
+    <p class="reading-exercise">
+      Show all the work for calculating the two antiderivatives
+    </p> 
+    <p>
+      Imposing the initial conditions \(y(0)=y_0\) and \( \dot{y}(0)=v_0 \) in these two equations shows that
+      \(c_1=v_0\) and \(c_2=y_0\). Therefore the solution of the initial value problem <a href='#x1-30r17'>(1.2.17)</a> is
+      \[ y = - \frac{1}{2} gt^2 + v_0 t + y_0 \]
+    </p>    
+    <p class="reading-exercise">
+      Show all the work for applying the initial conditions
+    </p>     
+    <p class='indent'> 
     </p>
   </details>
 
