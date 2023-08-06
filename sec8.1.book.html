@@ -54,12 +54,7 @@
 			<a id="x1-2r1"></a>
 			We say that the improper integral
 			<span class="vocab">converges</span>
-			if the limit in (
-			<a href="#x1-2r1">
-				8.1.1
-				<!-- tex4ht:ref: eq:8.1.1  -->
-			</a>
-			) exists; otherwise, we say that the improper integral
+			if the limit in  exists; otherwise, we say that the improper integral
 			<span class="vocab">diverges</span>
 			or
 			<span class="vocab">does not exist</span>
@@ -84,23 +79,13 @@
 			</dd>
 		</dl>
 		<p class="indent" id="b8229a41-0fb2-4739-b698-bff4c10a4188">
-			It is important to keep in mind that the variable of integration in (
-			<a href="#x1-4r2">
-				8.1.2
-				<!-- tex4ht:ref: eq:8.1.2  -->
-			</a>
-			) is \(t\), while \(s\) is a parameter independent of \(t\). We use \(t\)
+			It is important to keep in mind that the variable of integration in  is \(t\), while \(s\) is a parameter independent of \(t\). We use \(t\)
 			as the independent variable for \(f\) because in applications the Laplace
 			transform is usually applied to functions of time.
 		</p>
 		<p class="indent" id="8414c5ac-135f-4485-89b1-f7dd3372a9ec">
 			The Laplace transform can be viewed as an operator \(\cal L\) that
-			transforms the function \(f=f(t)\) into the function \(F=F(s)\). Thus, (
-			<a href="#x1-4r2">
-				8.1.2
-				<!-- tex4ht:ref: eq:8.1.2  -->
-			</a>
-			) can be expressed as \[ F={\cal L}(f)\] The functions \(f\) and \(F\)
+			transforms the function \(f=f(t)\) into the function \(F=F(s)\). Thus,  can be expressed as \[ F={\cal L}(f)\] The functions \(f\) and \(F\)
 			form a
 			<span class="vocab">transform pair</span>
 			, which we’ll sometimes denote by \[ f(t)\leftrightarrow F(s)\] It can be
@@ -125,12 +110,7 @@
 		<p class="indent" id="0ab48416-ce11-4f6d-a69f-8bcf34ba8db0"></p>
 		<p class="noindent" id="58662bf0-78c9-4e9e-b506-72848950dc45">
 			<span class="ptmb8t-">Solution</span>
-			&nbsp;From (
-			<a href="#x1-4r2">
-				8.1.2
-				<!-- tex4ht:ref: eq:8.1.2  -->
-			</a>
-			) with \(f(t)=1\), \[ F(s)=\int _0^\infty e^{-st}\,dt=\lim _{T\to \infty
+			&nbsp;From  with \(f(t)=1\), \[ F(s)=\int _0^\infty e^{-st}\,dt=\lim _{T\to \infty
 			}\int _0^T e^{-st}\, dt\] If \(s\ne 0\) then \begin {equation} \label
 			{eq:8.1.3} \int _0^T e^{-st}dt=-{1\over s}e^{-st}\Big
 			|_0^T={1-e^{-sT}\over s}\end {equation}
@@ -152,17 +132,7 @@
 				<span class="small-caps">EMARK</span>
 			</span>
 			:&nbsp; It is convenient to combine the steps of integrating from \(0\) to
-			\(T\) and letting \(T\to \infty \). Therefore, instead of writing (
-			<a href="#x1-6r3">
-				8.1.3
-				<!-- tex4ht:ref: eq:8.1.3  -->
-			</a>
-			) and (
-			<a href="#x1-7r4">
-				8.1.4
-				<!-- tex4ht:ref: eq:8.1.4  -->
-			</a>
-			) as separate steps we write \[ \int _0^\infty e^{-st}dt=- {1\over s}
+			\(T\) and letting \(T\to \infty \). Therefore, instead of writing  and  as separate steps we write \[ \int _0^\infty e^{-st}dt=- {1\over s}
 			e^{-st}\Big |_0^\infty = \left \{\begin {array}{rr}\displaystyle {1\over
 			s}, &amp; s&gt;0,\\\infty ,&amp;s&lt; 0.\end {array}\right. \] We’ll
 			follow this practice throughout this chapter.
@@ -179,12 +149,7 @@
 		<p class="indent" id="6116f038-d9fa-455e-b674-c9208916e2b9"></p>
 		<p class="noindent" id="b88bf4e8-0f5f-4630-8310-d27a7eecdacf">
 			<span class="ptmb8t-">Solution</span>
-			&nbsp;From (
-			<a href="#x1-4r2">
-				8.1.2
-				<!-- tex4ht:ref: eq:8.1.2  -->
-			</a>
-			) with \(f(t)=t\), \begin {equation} \label {eq:8.1.5} F(s)=\int _0^\infty
+			&nbsp;From  with \(f(t)=t\), \begin {equation} \label {eq:8.1.5} F(s)=\int _0^\infty
 			e^{-st}t\,dt\end {equation}
 			<a id="x1-9r5"></a>
 			If \(s\ne 0\), integrating by parts yields
@@ -197,12 +162,7 @@
 			,\,s&lt;0.\end {array}\right. \end {eqnarray*}
 		</div>
 		<p class="indent" id="f9ef130c-3bdd-4f7a-bc98-332f0bc80a58">
-			If \(s=0\), the integral in (
-			<a href="#x1-9r5">
-				8.1.5
-				<!-- tex4ht:ref: eq:8.1.5  -->
-			</a>
-			) becomes \[ \int _0^\infty t\,dt={t^2\over 2}\bigg |_0^\infty =\infty \]
+			If \(s=0\), the integral in  becomes \[ \int _0^\infty t\,dt={t^2\over 2}\bigg |_0^\infty =\infty \]
 			Therefore \(F(0)\) is undefined and \[ F(s)={1\over s^2},\quad s&gt;0\]
 			This result can also be written as \[ {\cal L}(t)={1\over s^2},\quad
 			s&gt;0\] or as the transform pair \[ t\leftrightarrow {1\over s^2},\quad
@@ -221,12 +181,7 @@
 		<p class="indent" id="be150bf0-8063-4d41-babe-87ebed0ceca4"></p>
 		<p class="noindent" id="070102a4-9c12-4605-bcf6-619594a1343e">
 			<span class="ptmb8t-">Solution</span>
-			&nbsp;From (
-			<a href="#x1-4r2">
-				8.1.2
-				<!-- tex4ht:ref: eq:8.1.2  -->
-			</a>
-			) with \(f(t)=e^{at}\), \[ F(s)=\int _0^\infty e^{-st}e^{at}\,dt\]
+			&nbsp;From  with \(f(t)=e^{at}\), \[ F(s)=\int _0^\infty e^{-st}e^{at}\,dt\]
 			Combining the exponentials yields \[ F(s)=\int _0^\infty e^{-(s-a)t}\,dt\]
 			However, we know from Example&nbsp;
 			<a href="#x1-51">
@@ -257,35 +212,15 @@
 			and \begin {equation} \label {eq:8.1.7} G(s)=\int _0^\infty e^{-st}\cos
 			\omega t\,dt\end {equation}
 			<a id="x1-13r7"></a>
-			If \(s&gt;0\), integrating (
-			<a href="#x1-12r6">
-				8.1.6
-				<!-- tex4ht:ref: eq:8.1.6  -->
-			</a>
-			) by parts yields \[ F(s)=-{e^{-st}\over s}\sin \omega t\Big |_0^\infty
+			If \(s&gt;0\), integrating  by parts yields \[ F(s)=-{e^{-st}\over s}\sin \omega t\Big |_0^\infty
 			+{\omega \over s} \int _0^\infty e^{-st}\cos \omega t\,dt\] so \begin
 			{equation} \label {eq:8.1.8} F(s)={\omega \over s}G(s)\end {equation}
 			<a id="x1-14r8"></a>
-			If \(s&gt;0\), integrating (
-			<a href="#x1-13r7">
-				8.1.7
-				<!-- tex4ht:ref: eq:8.1.7  -->
-			</a>
-			) by parts yields \[ G(s)=-{e^{-st}\cos \omega t\over s}\Big |_0^\infty -
+			If \(s&gt;0\), integrating  by parts yields \[ G(s)=-{e^{-st}\cos \omega t\over s}\Big |_0^\infty -
 			{\omega \over s} \int _0^\infty e^{-st}\sin \omega t\,dt\] so \[
-			G(s)={1\over s} - {\omega \over s} F(s)\] Now substitute from (
-			<a href="#x1-14r8">
-				8.1.8
-				<!-- tex4ht:ref: eq:8.1.8  -->
-			</a>
-			) into this to obtain \[ G(s)={1\over s} - {\omega ^2\over s^2} G(s)\]
+			G(s)={1\over s} - {\omega \over s} F(s)\] Now substitute from  into this to obtain \[ G(s)={1\over s} - {\omega ^2\over s^2} G(s)\]
 			Solving this for \(G(s)\) yields \[ G(s)={s\over s^2+\omega ^2},\quad
-			s&gt;0\] This and (
-			<a href="#x1-14r8">
-				8.1.8
-				<!-- tex4ht:ref: eq:8.1.8  -->
-			</a>
-			) imply that \[ F(s)={\omega \over s^2+\omega ^2},\quad s&gt;0\]
+			s&gt;0\] This and  imply that \[ F(s)={\omega \over s^2+\omega ^2},\quad s&gt;0\]
 		</p>
 		<p class="noindent" id="11af551f-e62e-46b3-aadf-dc85400ab00a">
 			<span id="textcolor3">Tables of Laplace transforms</span>
@@ -378,12 +313,7 @@
 			<a id="x1-18r9"></a>
 			where the first transform on the right is defined for \(s&gt;b\) and the
 			second for \(s&gt;-b\); hence, both are defined for \(s&gt;|b|\).
-			Simplifying the last expression in (
-			<a href="#x1-18r9">
-				8.1.9
-				<!-- tex4ht:ref: eq:8.1.9  -->
-			</a>
-			) yields \[ {\cal L}(\cosh bt)={s\over s^2-b^2},\quad s&gt;|b|\]
+			Simplifying the last expression in  yields \[ {\cal L}(\cosh bt)={s\over s^2-b^2},\quad s&gt;|b|\]
 		</p>
 		<p class="noindent" id="0b032a22-662e-43f3-8446-41def33b8ca6">
 			<span id="textcolor5">The First Shifting Theorem</span>
@@ -420,20 +350,10 @@
 				<span class="small-caps">ROOF</span>
 				.
 			</span>
-			Replacing \(s\) by \(s-a\) in (
-			<a href="#x1-20r10">
-				8.1.10
-				<!-- tex4ht:ref: eq:8.1.10  -->
-			</a>
-			) yields \begin {equation} \label {eq:8.1.11} F(s-a)=\int _0^\infty
+			Replacing \(s\) by \(s-a\) in  yields \begin {equation} \label {eq:8.1.11} F(s-a)=\int _0^\infty
 			e^{-(s-a)t}f(t)\,dt \end {equation}
 			<a id="x1-21r11"></a>
-			if \(s-a&gt;s_0\); that is, if \(s&gt;s_0+a\). However, (
-			<a href="#x1-21r11">
-				8.1.11
-				<!-- tex4ht:ref: eq:8.1.11  -->
-			</a>
-			) can be rewritten as \[ F(s-a)=\int _0^\infty e^{-st}\left
+			if \(s-a&gt;s_0\); that is, if \(s&gt;s_0+a\). However,  can be rewritten as \[ F(s-a)=\int _0^\infty e^{-st}\left
 			(e^{at}f(t)\right )\,dt\] which implies the conclusion.
 		</p>
 		<div class="newtheorem" id="469d8ca2-3dfe-493a-ab12-44720f14412b">
@@ -634,12 +554,7 @@
 			t_0-}f(t)=f(t_0)\end {equation}
 			<a id="x1-23r12"></a>
 			For simplicity, we define \[ f(t_0+)=\lim _{t\to t_0+}f(t)\quad \hbox {and
-			}\quad f(t_0-)=\lim _{t\to t_0-}f(t)\] so (
-			<a href="#x1-23r12">
-				8.1.12
-				<!-- tex4ht:ref: eq:8.1.12  -->
-			</a>
-			) can be expressed as \[ f(t_0+)=f(t_0-)=f(t_0)\] If \(f(t_0+)\) and
+			}\quad f(t_0-)=\lim _{t\to t_0-}f(t)\] so  can be expressed as \[ f(t_0+)=f(t_0-)=f(t_0)\] If \(f(t_0+)\) and
 			\(f(t_0-)\) have finite but distinct values, we say that \(f\) has a
 			<span class="vocab">jump discontinuity</span>
 			at \(t_0\), and \[ f(t_0+)-f(t_0-) \] is called the
@@ -767,12 +682,7 @@
 			{equation}
 			<a id="x1-30r13"></a>
 			converges for \(s\) in some interval \((s_0,\infty )\). For example, we
-			noted earlier that (
-			<a href="#x1-30r13">
-				8.1.13
-				<!-- tex4ht:ref: eq:8.1.13  -->
-			</a>
-			) diverges for all \(s\) if \(f(t)=e^{t^2}\). Stated informally, this
+			noted earlier that  diverges for all \(s\) if \(f(t)=e^{t^2}\). Stated informally, this
 			occurs because \(e^{t^2}\) increases too rapidly as \(t\to \infty \). The
 			next definition provides a constraint on the growth of a function that
 			guarantees convergence of its Laplace transform for \(s\) in some interval
@@ -840,12 +750,7 @@
 				</span>
 				<a id="x1-348"></a>
 				If \(f\) is bounded on some interval \([t_0,\infty )\), say \[ |f(t)|\le
-				M,\quad t\ge t_0\] then (
-				<a href="#x1-32r14">
-					8.1.14
-					<!-- tex4ht:ref: eq:8.1.14  -->
-				</a>
-				) holds with \(s_0=0\), so \(f\) is of exponential order zero. Thus, for
+				M,\quad t\ge t_0\] then  holds with \(s_0=0\), so \(f\) is of exponential order zero. Thus, for
 				example, \(\sin \omega t\) and \(\cos \omega t\) are of exponential
 				order zero, and Theorem&nbsp;
 				<a href="#x1-336">
