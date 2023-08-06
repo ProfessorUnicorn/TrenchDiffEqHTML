@@ -76,7 +76,12 @@
 			e^{-st}(3t)\,dt\end {array} \end {equation}
 			<a id="x1-4r2"></a>
 			To relate the first term to a Laplace transform, we add and subtract \[
-			\int _2^\infty e^{-st}(2t+1)\,dt \] in  to obtain \begin {equation} \label {eq:8.4.3} \begin {array}{ccl} {\cal
+			\int _2^\infty e^{-st}(2t+1)\,dt \] in (
+			<a href="#x1-4r2">
+				8.4.2
+				<!-- tex4ht:ref: eq:8.4.2  -->
+			</a>
+			) to obtain \begin {equation} \label {eq:8.4.3} \begin {array}{ccl} {\cal
 			L}(f)&amp;=&amp;\displaystyle \int _0^\infty e^{-st}(2t+1)\,dt+ \int
 			_2^\infty e^{-st}(3t-2t-1)\,dt\\ &amp;=&amp;\displaystyle \int _0^\infty
 			e^{-st}(2t+1)\,dt+ \int _2^\infty e^{-st}(t-1)\,dt\\
@@ -96,7 +101,12 @@
 			Since the symbol used for the variable of integration has no effect on the
 			value of a definite integral, we can now replace \(x\) by the more
 			standard \(t\) and write \[ \int _2^\infty e^{-st}(t-1)\,dt =e^{-2s}\int
-			_0^\infty e^{-st}(t+1)\,dt=e^{-2s}{\cal L}(t+1)\] This and  imply that \[ {\cal L}(f)={\cal L}(2t+1)+e^{-2s}{\cal L} (t+1)\] Now we
+			_0^\infty e^{-st}(t+1)\,dt=e^{-2s}{\cal L}(t+1)\] This and (
+			<a href="#x1-5r3">
+				8.4.3
+				<!-- tex4ht:ref: eq:8.4.3  -->
+			</a>
+			) imply that \[ {\cal L}(f)={\cal L}(2t+1)+e^{-2s}{\cal L} (t+1)\] Now we
 			can use the table of Laplace transforms to find that \[ {\cal
 			L}(f)={2\over s^2}+{1\over s} +e^{-2s}\left ({1\over s^2}+{1\over s}\right
 			)\]
@@ -110,7 +120,12 @@
 				<figcaption class="caption">
 					<span class="id">Figure&nbsp;8.4.1</span>
 					<span class="content">
-						The piecewise continuous function 
+						The piecewise continuous function (
+						<a href="#x1-3r1">
+							8.4.1
+							<!-- tex4ht:ref: eq:8.4.1  -->
+						</a>
+						)
 					</span>
 				</figcaption>
 				<!-- tex4ht:label?: x1-6r1  -->
@@ -145,7 +160,12 @@
 			{equation}
 			<a id="x1-8r4"></a>
 			Thus, \(u(t)\) “steps” from the constant value \(0\) to the constant value
-			\(1\) at \(t=0\). If we replace \(t\) by \(t-\tau \) in , then \[ u(t-\tau )=\left \{\begin {array}{rl} 0,&amp;t&lt;\tau ,\\
+			\(1\) at \(t=0\). If we replace \(t\) by \(t-\tau \) in (
+			<a href="#x1-8r4">
+				8.4.4
+				<!-- tex4ht:ref: eq:8.4.4  -->
+			</a>
+			), then \[ u(t-\tau )=\left \{\begin {array}{rl} 0,&amp;t&lt;\tau ,\\
 			1,&amp;t\ge \tau \end {array}\right .\] that is, the step now occurs at
 			\(t=\tau \) (Figure&nbsp;
 			<a href="#-yut-">
@@ -162,14 +182,34 @@
 			<a id="x1-9r5"></a>
 			where we assume that \(f_0\) and \(f_1\) are defined on \([0,\infty )\),
 			even though they equal \(f\) only on the indicated intervals. This
-			assumption enables us to rewrite  as \begin {equation} \label {eq:8.4.6} f(t)=f_0(t)+u(t-t_1)\left
+			assumption enables us to rewrite (
+			<a href="#x1-9r5">
+				8.4.5
+				<!-- tex4ht:ref: eq:8.4.5  -->
+			</a>
+			) as \begin {equation} \label {eq:8.4.6} f(t)=f_0(t)+u(t-t_1)\left
 			(f_1(t)-f_0(t)\right )\end {equation}
 			<a id="x1-10r6"></a>
-			To verify this, note that if \(t&lt;t_1\) then \(u(t-t_1)=0\) and  becomes \[ f(t)=f_0(t)+(0)\left (f_1(t)-f_0(t)\right )=f_0(t)\] If
-			\(t\ge t_1\) then \(u(t-t_1)=1\) and  becomes \[ f(t)=f_0(t)+(1)\left (f_1(t)-f_0(t)\right )=f_1(t)\]
+			To verify this, note that if \(t&lt;t_1\) then \(u(t-t_1)=0\) and (
+			<a href="#x1-10r6">
+				8.4.6
+				<!-- tex4ht:ref: eq:8.4.6  -->
+			</a>
+			) becomes \[ f(t)=f_0(t)+(0)\left (f_1(t)-f_0(t)\right )=f_0(t)\] If
+			\(t\ge t_1\) then \(u(t-t_1)=1\) and (
+			<a href="#x1-10r6">
+				8.4.6
+				<!-- tex4ht:ref: eq:8.4.6  -->
+			</a>
+			) becomes \[ f(t)=f_0(t)+(1)\left (f_1(t)-f_0(t)\right )=f_1(t)\]
 		</p>
 		<p class="indent" id="83fb7e2a-150c-4f7a-b848-875bd9c64076">
-			We need the next theorem to show how  can be used to find \({\cal L}(f)\).
+			We need the next theorem to show how (
+			<a href="#x1-10r6">
+				8.4.6
+				<!-- tex4ht:ref: eq:8.4.6  -->
+			</a>
+			) can be used to find \({\cal L}(f)\).
 		</p>
 		<div class="newtheorem" id="7215c63b-81ef-4737-8220-5d269c2186e7">
 			<p class="noindent">
@@ -245,7 +285,12 @@
 		<p class="indent" id="ad23a0f1-5a24-48f1-be62-70593a4a8a0a"></p>
 		<p class="noindent" id="815f3dd9-5f54-4618-a826-74b314bdf546">
 			<span class="ptmb8t-">Solution</span>
-			&nbsp;We first write \(f\) in the form  as \[ f(t)=2t+1+u(t-2)(t-1)\] Therefore
+			&nbsp;We first write \(f\) in the form (
+			<a href="#x1-10r6">
+				8.4.6
+				<!-- tex4ht:ref: eq:8.4.6  -->
+			</a>
+			) as \[ f(t)=2t+1+u(t-2)(t-1)\] Therefore
 		</p>
 		<div class="eqnarray" id="b23377ce-3f8c-49e8-a126-3ea8e2a5a418">
 			\begin {eqnarray*} {\cal L}(f)&amp;=&amp;{\cal L}(2t+1) +{\cal L}\left
@@ -263,7 +308,12 @@
 			. __
 		</p>
 		<p class="indent" id="77dbcdb9-f245-40e3-8d38-408e58764355">
-			Formula  can be extended to more general piecewise continuous functions. For
+			Formula (
+			<a href="#x1-10r6">
+				8.4.6
+				<!-- tex4ht:ref: eq:8.4.6  -->
+			</a>
+			) can be extended to more general piecewise continuous functions. For
 			example, we can write \[ f(t)=\left \{\begin {array}{rl} f_0(t),&amp;0\le
 			t&lt;t_1,\\ f_1(t),&amp;t_1\le t&lt;t_2,\\ f_2(t),&amp;t\ge t_2\end
 			{array}\right. \] as \[ f(t)=f_0(t)+u(t-t_1)\left (f_1(t)-f_0(t)\right )+
@@ -298,7 +348,12 @@
 			<figcaption class="caption">
 				<span class="id">Figure&nbsp;8.4.3</span>
 				<span class="content">
-					The piecewise contnuous function 
+					The piecewise contnuous function (
+					<a href="#x1-15r7">
+						8.4.7
+						<!-- tex4ht:ref: eq:8.4.7  -->
+					</a>
+					)
 				</span>
 			</figcaption>
 			<!-- tex4ht:label?: x1-16r3  -->
@@ -368,7 +423,12 @@
 			<figcaption class="caption">
 				<span class="id">Figure&nbsp;8.4.4</span>
 				<span class="content">
-					The piecewise continuous function 
+					The piecewise continuous function (
+					<a href="#x1-18r8">
+						8.4.10
+						<!-- tex4ht:ref: eq:8.4.10  -->
+					</a>
+					)
 				</span>
 			</figcaption>
 			<!-- tex4ht:label?: x1-19r4  -->
@@ -389,7 +449,12 @@
 			<a id="x1-20r9"></a>
 			Since \[ \cos \left (t+{\pi \over 2}\right )-4\sin \left (t+{\pi \over
 			2}\right )=-\sin t-4\cos t \] and \[ 2\cos (t+\pi )+3\sin (t+\pi )=-2\cos
-			t-3\sin t\] we see from  that
+			t-3\sin t\] we see from (
+			<a href="#x1-20r9">
+				8.4.11
+				<!-- tex4ht:ref: eq:8.4.11  -->
+			</a>
+			) that
 		</p>
 		<div class="eqnarray" id="557b654c-0842-4379-b175-85941ae3d608">
 			\begin {eqnarray*} {\cal L}(f)&amp;=&amp;{\cal L}(\sin t)-e^{-\pi
@@ -449,13 +514,28 @@
 					<span class="ex-number">Example&nbsp;8.4.6</span>
 				</span>
 				<a id="x1-236"></a>
-				Use  to find \[ {\cal L}^{-1}\left (e^{-2s}\over s^2\right )\]
+				Use (
+				<a href="#x1-22r10">
+					8.4.12
+					<!-- tex4ht:ref: eq:8.4.12  -->
+				</a>
+				) to find \[ {\cal L}^{-1}\left (e^{-2s}\over s^2\right )\]
 			</p>
 		</div>
 		<p class="indent" id="91ea1c41-85f6-4179-9915-635b16409335"></p>
 		<p class="noindent" id="106a3b42-af9d-435c-bf5c-b71d66a176b9">
 			<span class="ptmb8t-">Solution</span>
-			&nbsp;To apply  we let \(\tau =2\) and \(G(s)=1/s^2\). Then \(g(t)=t\) and  implies that \[ {\cal L}^{-1}\left (e^{-2s}\over s^2\right
+			&nbsp;To apply (
+			<a href="#x1-22r10">
+				8.4.12
+				<!-- tex4ht:ref: eq:8.4.12  -->
+			</a>
+			) we let \(\tau =2\) and \(G(s)=1/s^2\). Then \(g(t)=t\) and (
+			<a href="#x1-22r10">
+				8.4.12
+				<!-- tex4ht:ref: eq:8.4.12  -->
+			</a>
+			) implies that \[ {\cal L}^{-1}\left (e^{-2s}\over s^2\right
 			)=u(t-2)(t-2)\]
 		</p>
 		<div class="newtheorem" id="faa0b0c2-dca4-47e6-a733-4e1e99622d65">
@@ -475,7 +555,12 @@
 			<span class="ptmb8t-">Solution</span>
 			&nbsp;Let \[ G_0(s)={1\over s^2},\quad G_1(s)={1\over s^2}+{2\over
 			s},\quad G_2(s)={4\over s^3}+{1\over s}\] Then \[ g_0(t)=t,\;
-			g_1(t)=t+2,\; g_2(t)=2t^2+1\] Hence,  and the linearity of \({\cal L}^{-1}\) imply that
+			g_1(t)=t+2,\; g_2(t)=2t^2+1\] Hence, (
+			<a href="#x1-22r10">
+				8.4.12
+				<!-- tex4ht:ref: eq:8.4.12  -->
+			</a>
+			) and the linearity of \({\cal L}^{-1}\) imply that
 		</p>
 		<div class="eqnarray" id="d3454087-a7d6-466c-a5d9-7f48eb525286">
 			\begin {eqnarray*} h(t)&amp;=&amp;{\cal L}^{-1}\left (G_0(s)\right )-{\cal
@@ -505,7 +590,12 @@
 			&nbsp;Let \[ G_0(s)={2s\over s^2+4},\quad G_1(s)=-{(3s+1)\over s^2+9}\]
 			and \[ G_2(s)={s+1\over s^2+6s+10}={(s+3)-2\over (s+3)^2+1}\] Then \[
 			g_0(t)=2\cos 2t,\quad g_1(t)=-3\cos 3t-{1\over 3}\sin 3t\] and \[
-			g_2(t)=e^{-3t}(\cos t-2\sin t)\] Therefore  and the linearity of \({\cal L}^{-1}\) imply that
+			g_2(t)=e^{-3t}(\cos t-2\sin t)\] Therefore (
+			<a href="#x1-22r10">
+				8.4.12
+				<!-- tex4ht:ref: eq:8.4.12  -->
+			</a>
+			) and the linearity of \({\cal L}^{-1}\) imply that
 		</p>
 		<div class="eqnarray" id="ff63f489-d5ad-419d-9138-6eae07c24b27">
 			\begin {eqnarray*} h(t)&amp;=&amp;2\cos 2t-u(t-\pi /2)\left [3\cos 3(t-\pi
@@ -538,7 +628,12 @@
 			<figcaption class="caption">
 				<span class="id">Figure&nbsp;8.4.5</span>
 				<span class="content">
-					The piecewise continouous function 
+					The piecewise continouous function (
+					<a href="#x1-26r11">
+						8.4.13
+						<!-- tex4ht:ref: eq:8.4.13  -->
+					</a>
+					)
 				</span>
 			</figcaption>
 			<!-- tex4ht:label?: x1-27r5  -->

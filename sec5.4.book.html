@@ -48,7 +48,17 @@
 		<p class="indent" id="44308b03-ca02-420a-8a1e-5d57d042c407">
 			From Theorem&nbsp;
 			<span class="ptmb8t-">5.3.2</span>
-			, the general solution of  is \(y=y_p+c_1y_1+c_2y_2\), where \(y_p\) is a particular solution of  and \(\{y_1,y_2\}\) is a fundamental set of solutions of the
+			, the general solution of (
+			<a href="#x1-2r1">
+				5.4.1
+				<!-- tex4ht:ref: eq:5.4.1  -->
+			</a>
+			) is \(y=y_p+c_1y_1+c_2y_2\), where \(y_p\) is a particular solution of (
+			<a href="#x1-2r1">
+				5.4.1
+				<!-- tex4ht:ref: eq:5.4.1  -->
+			</a>
+			) and \(\{y_1,y_2\}\) is a fundamental set of solutions of the
 			complementary equation \[ ay''+by'+cy=0\] In Section&nbsp;5.2 we showed
 			how to find \(\{y_1,y_2\}\). In this section we’ll show how to find
 			\(y_p\). The procedure that we’ll use is called
@@ -77,15 +87,45 @@
 		<p class="indent" id="3b927b2f-b2d8-4705-9bae-e5efa33ebe57"></p>
 		<p class="noindent" id="ab5d026a-e248-42ad-a6be-b672f6df1bca">
 			<span class="ptmb8t-">Solution</span>
-			&nbsp;Substituting \(y_p=Ae^{2x}\) for \(y\) in  will produce a constant multiple of \(Ae^{2x}\) on the left side of , so it may be possible to choose \(A\) so that \(y_p\) is a solution of
-			. Let’s try it; if \(y_p=Ae^{2x}\) then \[
+			&nbsp;Substituting \(y_p=Ae^{2x}\) for \(y\) in (
+			<a href="#x1-4r2">
+				5.4.2
+				<!-- tex4ht:ref: eq:5.4.2  -->
+			</a>
+			) will produce a constant multiple of \(Ae^{2x}\) on the left side of (
+			<a href="#x1-4r2">
+				5.4.2
+				<!-- tex4ht:ref: eq:5.4.2  -->
+			</a>
+			), so it may be possible to choose \(A\) so that \(y_p\) is a solution of
+			(
+			<a href="#x1-4r2">
+				5.4.2
+				<!-- tex4ht:ref: eq:5.4.2  -->
+			</a>
+			). Let’s try it; if \(y_p=Ae^{2x}\) then \[
 			y_p''-7y_p'+12y_p=4Ae^{2x}-14Ae^{2x}+12Ae^{2x}=2Ae^{2x}=4e^{2x} \] if
-			\(A=2\). Therefore \(y_p=2e^{2x}\) is a particular solution of . To find the general solution, we note that the characteristic
+			\(A=2\). Therefore \(y_p=2e^{2x}\) is a particular solution of (
+			<a href="#x1-4r2">
+				5.4.2
+				<!-- tex4ht:ref: eq:5.4.2  -->
+			</a>
+			). To find the general solution, we note that the characteristic
 			polynomial of the complementary equation \begin {equation} \label
 			{eq:5.4.3} y''-7y'+12y=0 \end {equation}
 			<a id="x1-5r3"></a>
 			is \(p(r)=r^2-7r+12=(r-3)(r-4)\), so \(\{e^{3x},e^{4x}\}\) is a
-			fundamental set of solutions of . Therefore the general solution of  is \[ y=2e^{2x}+c_1e^{3x}+c_2e^{4x}\]
+			fundamental set of solutions of (
+			<a href="#x1-5r3">
+				5.4.3
+				<!-- tex4ht:ref: eq:5.4.3  -->
+			</a>
+			). Therefore the general solution of (
+			<a href="#x1-4r2">
+				5.4.2
+				<!-- tex4ht:ref: eq:5.4.2  -->
+			</a>
+			) is \[ y=2e^{2x}+c_1e^{3x}+c_2e^{4x}\]
 		</p>
 		<div class="newtheorem" id="d8a02f61-b006-4fb1-8ef6-954618e67791">
 			<p class="noindent">
@@ -102,25 +142,65 @@
 		<p class="indent" id="a8e591dc-f8c1-44c0-995a-8632f98bb7fc"></p>
 		<p class="noindent" id="01e91a0c-392a-4f6d-b4a6-04989acd8b60">
 			<span class="ptmb8t-">Solution</span>
-			&nbsp;Fresh from our success in finding a particular solution of  — where we chose \(y_p=Ae^{2x}\) because the right side of  is a constant multiple of \(e^{2x}\) — it may seem reasonable to try
-			\(y_p=Ae^{4x}\) as a particular solution of . However, this won’t work, since we saw in Example&nbsp;
+			&nbsp;Fresh from our success in finding a particular solution of (
+			<a href="#x1-4r2">
+				5.4.2
+				<!-- tex4ht:ref: eq:5.4.2  -->
+			</a>
+			) — where we chose \(y_p=Ae^{2x}\) because the right side of (
+			<a href="#x1-4r2">
+				5.4.2
+				<!-- tex4ht:ref: eq:5.4.2  -->
+			</a>
+			) is a constant multiple of \(e^{2x}\) — it may seem reasonable to try
+			\(y_p=Ae^{4x}\) as a particular solution of (
+			<a href="#x1-7r4">
+				5.4.4
+				<!-- tex4ht:ref: eq:5.4.4  -->
+			</a>
+			). However, this won’t work, since we saw in Example&nbsp;
 			<a href="#x1-31">
 				5.4.1
 				<!-- tex4ht:ref: example:5.4.1  -->
 			</a>
-			that \(e^{4x}\) is a solution of the complementary equation , so substituting \(y_p=Ae^{4x}\) into the left side of  produces zero on the left, no matter how we choose\(A\). To discover a
+			that \(e^{4x}\) is a solution of the complementary equation (
+			<a href="#x1-5r3">
+				5.4.3
+				<!-- tex4ht:ref: eq:5.4.3  -->
+			</a>
+			), so substituting \(y_p=Ae^{4x}\) into the left side of (
+			<a href="#x1-7r4">
+				5.4.4
+				<!-- tex4ht:ref: eq:5.4.4  -->
+			</a>
+			) produces zero on the left, no matter how we choose\(A\). To discover a
 			suitable form for \(y_p\), we use the same approach that we used in
 			Section&nbsp;5.2 to find a second solution of \[ ay''+by'+cy=0 \] in the
 			case where the characteristic equation has a repeated real root: we look
-			for solutions of  in the form \(y=ue^{4x}\), where \(u\) is a function to be determined.
+			for solutions of (
+			<a href="#x1-7r4">
+				5.4.4
+				<!-- tex4ht:ref: eq:5.4.4  -->
+			</a>
+			) in the form \(y=ue^{4x}\), where \(u\) is a function to be determined.
 			Substituting \begin {equation} \label {eq:5.4.5} y=ue^{4x},\quad
 			y'=u'e^{4x}+4ue^{4x},\mbox {\quad and \quad }
 			y''=u''e^{4x}+8u'e^{4x}+16ue^{4x} \end {equation}
 			<a id="x1-8r5"></a>
-			into  and canceling the common factor \(e^{4x}\) yields \[
+			into (
+			<a href="#x1-7r4">
+				5.4.4
+				<!-- tex4ht:ref: eq:5.4.4  -->
+			</a>
+			) and canceling the common factor \(e^{4x}\) yields \[
 			(u''+8u'+16u)-7(u'+4u)+12u=5\] or \[ u''+u'=5\] By inspection we see that
 			\(u_p=5x\) is a particular solution of this equation, so \(y_p=5xe^{4x}\)
-			is a particular solution of . Therefore \[ y=5xe^{4x}+c_1e^{3x}+c_2e^{4x} \] is the general solution.
+			is a particular solution of (
+			<a href="#x1-7r4">
+				5.4.4
+				<!-- tex4ht:ref: eq:5.4.4  -->
+			</a>
+			). Therefore \[ y=5xe^{4x}+c_1e^{3x}+c_2e^{4x} \] is the general solution.
 		</p>
 		<div class="newtheorem" id="19fc468c-75dd-427a-bbe8-13708e2ef76b">
 			<p class="noindent">
@@ -140,18 +220,48 @@
 			\begin {equation} \label {eq:5.4.7} y''-8y'+16y=0 \end {equation}
 			<a id="x1-11r7"></a>
 			is \(p(r)=r^2-8r+16=(r-4)^2\), both \(y_1=e^{4x}\) and \(y_2=xe^{4x}\) are
-			solutions of . Therefore  does not have a solution of the form \(y_p=Ae^{4x}\) or
+			solutions of (
+			<a href="#x1-11r7">
+				5.4.7
+				<!-- tex4ht:ref: eq:5.4.7  -->
+			</a>
+			). Therefore (
+			<a href="#x1-10r6">
+				5.4.6
+				<!-- tex4ht:ref: eq:5.4.6  -->
+			</a>
+			) does not have a solution of the form \(y_p=Ae^{4x}\) or
 			\(y_p=Axe^{4x}\). As in Example&nbsp;
 			<a href="#x1-62">
 				5.4.2
 				<!-- tex4ht:ref: example:5.4.2  -->
 			</a>
-			, we look for solutions of  in the form \(y=ue^{4x}\), where \(u\) is a function to be determined.
-			Substituting from  into  and canceling the common factor \(e^{4x}\) yields \[
+			, we look for solutions of (
+			<a href="#x1-10r6">
+				5.4.6
+				<!-- tex4ht:ref: eq:5.4.6  -->
+			</a>
+			) in the form \(y=ue^{4x}\), where \(u\) is a function to be determined.
+			Substituting from (
+			<a href="#x1-8r5">
+				5.4.5
+				<!-- tex4ht:ref: eq:5.4.5  -->
+			</a>
+			) into (
+			<a href="#x1-10r6">
+				5.4.6
+				<!-- tex4ht:ref: eq:5.4.6  -->
+			</a>
+			) and canceling the common factor \(e^{4x}\) yields \[
 			(u''+8u'+16u)-8(u'+4u)+16u=2\] or \[ u''=2\] Integrating twice and taking
 			the constants of integration to be zero shows that \(u_p=x^2\) is a
 			particular solution of this equation, so \(y_p=x^2e^{4x}\) is a particular
-			solution of . Therefore \[ y=e^{4x}(x^2+c_1+c_2x) \] is the general solution. __
+			solution of (
+			<a href="#x1-7r4">
+				5.4.4
+				<!-- tex4ht:ref: eq:5.4.4  -->
+			</a>
+			). Therefore \[ y=e^{4x}(x^2+c_1+c_2x) \] is the general solution. __
 		</p>
 		<p class="indent" id="787f4d9e-ffca-435f-92f8-b0bf48647305">
 			The preceding examples illustrate the following facts concerning the form
@@ -181,7 +291,12 @@
 			</dt>
 			<dd class="list">
 				<p class="noindent">
-					If \(e^{\alpha x}\) is a solution of  but \(xe^{\alpha x}\) is not, then \(y_p=Axe^{\alpha x}\), where
+					If \(e^{\alpha x}\) is a solution of (
+					<a href="#x1-13r8">
+						5.4.8
+						<!-- tex4ht:ref: eq:5.4.8  -->
+					</a>
+					) but \(xe^{\alpha x}\) is not, then \(y_p=Axe^{\alpha x}\), where
 					\(A\) is a constant. (See Example&nbsp;
 					<a href="#x1-62">
 						5.4.2
@@ -195,7 +310,12 @@
 			</dt>
 			<dd class="list">
 				<p class="noindent">
-					If both \(e^{\alpha x}\) and \(xe^{\alpha x}\) are solutions of , then \(y_p=Ax^2e^{\alpha x}\), where \(A\) is a constant. (See
+					If both \(e^{\alpha x}\) and \(xe^{\alpha x}\) are solutions of (
+					<a href="#x1-13r8">
+						5.4.8
+						<!-- tex4ht:ref: eq:5.4.8  -->
+					</a>
+					), then \(y_p=Ax^2e^{\alpha x}\), where \(A\) is a constant. (See
 					Example&nbsp;
 					<a href="#x1-93">
 						5.4.3
@@ -243,10 +363,20 @@
 			); however, you shouldn’t memorize this since it’s easy to derive the
 			equation for \(u\) in any particular case. Note, however, that if
 			\(e^{\alpha x}\) is a solution of the complementary equation then
-			\(p(\alpha )=0\), so  reduces to \[ au''+p'(\alpha )u'=G(x)\] while if both \(e^{\alpha x}\)
+			\(p(\alpha )=0\), so (
+			<a href="#x1-16r9">
+				5.4.9
+				<!-- tex4ht:ref: eq:5.4.9  -->
+			</a>
+			) reduces to \[ au''+p'(\alpha )u'=G(x)\] while if both \(e^{\alpha x}\)
 			and \(xe^{\alpha x}\) are solutions of the complementary equation then
 			\(p(r)=a(r-\alpha )^2\) and \(p'(r)=2a(r-\alpha )\), so \(p(\alpha
-			)=p'(\alpha )=0\) and  reduces to \[ au''=G(x)\]
+			)=p'(\alpha )=0\) and (
+			<a href="#x1-16r9">
+				5.4.9
+				<!-- tex4ht:ref: eq:5.4.9  -->
+			</a>
+			) reduces to \[ au''=G(x)\]
 		</p>
 		<div class="newtheorem" id="7993a5ff-c948-427e-81a5-dec92d1fb61f">
 			<p class="noindent">
@@ -263,17 +393,37 @@
 		<p class="noindent" id="a875def2-47e3-4a9a-a9ad-2958ddb82015">
 			<span class="ptmb8t-">Solution</span>
 			&nbsp;Substituting \[ y=ue^{3x},\quad y'=u'e^{3x}+3ue^{3x},\mbox {\quad
-			and } y''=u''e^{3x}+6u'e^{3x}+9ue^{3x} \] into  and canceling \(e^{3x}\) yields \[ (u''+6u'+9u)-3(u'+3u)+2u=-1+2x+x^2\]
+			and } y''=u''e^{3x}+6u'e^{3x}+9ue^{3x} \] into (
+			<a href="#x1-18r10">
+				5.4.10
+				<!-- tex4ht:ref: eq:5.4.10  -->
+			</a>
+			) and canceling \(e^{3x}\) yields \[ (u''+6u'+9u)-3(u'+3u)+2u=-1+2x+x^2\]
 			or \begin {equation} \label {eq:5.4.11} u''+3u'+2u=-1+2x+x^2\end
 			{equation}
 			<a id="x1-19r11"></a>
 			As in Exercise&nbsp;
 			<span class="ptmb8t-">2</span>
-			, in order to guess a form for a particular solution of , we note that substituting a second degree polynomial \(u_p=A+Bx+Cx^2\)
-			for \(u\) in the left side of  produces another second degree polynomial with coefficients that depend
+			, in order to guess a form for a particular solution of (
+			<a href="#x1-19r11">
+				5.4.11
+				<!-- tex4ht:ref: eq:5.4.11  -->
+			</a>
+			), we note that substituting a second degree polynomial \(u_p=A+Bx+Cx^2\)
+			for \(u\) in the left side of (
+			<a href="#x1-19r11">
+				5.4.11
+				<!-- tex4ht:ref: eq:5.4.11  -->
+			</a>
+			) produces another second degree polynomial with coefficients that depend
 			upon \(A\), \(B\), and \(C\); thus, \[ \mbox { if \quad
 			}u_p=A+Bx+Cx^2\mbox {\quad then \quad } u_p'=B+2Cx\mbox {\quad and \quad }
-			u_p''=2C\] If \(u_p\) is to satisfy , we must have
+			u_p''=2C\] If \(u_p\) is to satisfy (
+			<a href="#x1-19r11">
+				5.4.11
+				<!-- tex4ht:ref: eq:5.4.11  -->
+			</a>
+			), we must have
 		</p>
 		<div class="eqnarray" id="33a26359-5e3c-45e3-8c63-f60e98ee266a">
 			\begin {eqnarray*} u_p''+3u_p'+2u_p&amp;=&amp;2C+3(B+2Cx)+2(A+Bx+Cx^2)\\
@@ -285,8 +435,18 @@
 			2B+6C&amp;=&amp;2\phantom {.}\\ 2A+3B+2C&amp;=&amp; -1\end {array} \]
 			Solving these equations for \(C\), \(B\), and \(A\) (in that order) yields
 			\(C=1/2,B=-1/2,A=-1/4\). Therefore \[ u_p=-{1\over 4}(1+2x-2x^2) \] is a
-			particular solution of , and \[ y_p=u_pe^{3x}=-{e^{3x}\over 4}(1+2x-2x^2) \] is a particular
-			solution of .
+			particular solution of (
+			<a href="#x1-19r11">
+				5.4.11
+				<!-- tex4ht:ref: eq:5.4.11  -->
+			</a>
+			), and \[ y_p=u_pe^{3x}=-{e^{3x}\over 4}(1+2x-2x^2) \] is a particular
+			solution of (
+			<a href="#x1-18r10">
+				5.4.10
+				<!-- tex4ht:ref: eq:5.4.10  -->
+			</a>
+			).
 		</p>
 		<div class="newtheorem" id="fd84e4d4-c1bd-45a6-8440-8cbb81dcad20">
 			<p class="noindent">
@@ -303,30 +463,75 @@
 		<p class="noindent" id="77f778df-e73f-4964-a3a1-3e98ee6e6548">
 			<span class="ptmb8t-">Solution</span>
 			&nbsp;Substituting \[ y=ue^{3x},\quad y'=u'e^{3x}+3ue^{3x},\mbox {\quad
-			and } y''=u''e^{3x}+6u'e^{3x}+9ue^{3x} \] into  and canceling \(e^{3x}\) yields \[ (u''+6u'+9u)-4(u'+3u)+3u=6+8x+12x^2\]
+			and } y''=u''e^{3x}+6u'e^{3x}+9ue^{3x} \] into (
+			<a href="#x1-21r12">
+				5.4.12
+				<!-- tex4ht:ref: eq:5.4.12  -->
+			</a>
+			) and canceling \(e^{3x}\) yields \[ (u''+6u'+9u)-4(u'+3u)+3u=6+8x+12x^2\]
 			or \begin {equation} \label {eq:5.4.13} u''+2u'=6+8x+12x^2\end {equation}
 			<a id="x1-22r13"></a>
 			There’s no \(u\) term in this equation, since \(e^{3x}\) is a solution of
-			the complementary equation for . (See Exercise&nbsp;
+			the complementary equation for (
+			<a href="#x1-21r12">
+				5.4.12
+				<!-- tex4ht:ref: eq:5.4.12  -->
+			</a>
+			). (See Exercise&nbsp;
 			<span class="ptmb8t-">30</span>
-			.) Therefore  does not have a particular solution of the form \(u_p=A+Bx+Cx^2\) that
+			.) Therefore (
+			<a href="#x1-22r13">
+				5.4.13
+				<!-- tex4ht:ref: eq:5.4.13  -->
+			</a>
+			) does not have a particular solution of the form \(u_p=A+Bx+Cx^2\) that
 			we used successfully in Example&nbsp;
 			<a href="#x1-174">
 				5.4.4
 				<!-- tex4ht:ref: example:5.4.4  -->
 			</a>
 			, since with this choice of \(u_p\), \[ u_p''+2u_p'=2C+(B+2Cx) \] can’t
-			contain the last term (\(12x^2\)) on the right side of . Instead, let’s try \(u_p=Ax+Bx^2+Cx^3\) on the grounds that \[
+			contain the last term (\(12x^2\)) on the right side of (
+			<a href="#x1-22r13">
+				5.4.13
+				<!-- tex4ht:ref: eq:5.4.13  -->
+			</a>
+			). Instead, let’s try \(u_p=Ax+Bx^2+Cx^3\) on the grounds that \[
 			u_p'=A+2Bx+3Cx^2\mbox {\quad and \quad } u_p''=2B+6Cx \] together contain
-			all the powers of \(x\) that appear on the right side of .
+			all the powers of \(x\) that appear on the right side of (
+			<a href="#x1-22r13">
+				5.4.13
+				<!-- tex4ht:ref: eq:5.4.13  -->
+			</a>
+			).
 		</p>
 		<p class="indent" id="7a44a2b7-d57e-4eca-aa63-4d6686d9ec0d">
-			Substituting these expressions in place of \(u'\) and \(u''\) in  yields \[ (2B+6Cx)+2(A+2Bx+3Cx^2)=(2B+2A)+(6C+4B)x+6Cx^2=6+8x+12x^2\]
+			Substituting these expressions in place of \(u'\) and \(u''\) in (
+			<a href="#x1-22r13">
+				5.4.13
+				<!-- tex4ht:ref: eq:5.4.13  -->
+			</a>
+			) yields \[ (2B+6Cx)+2(A+2Bx+3Cx^2)=(2B+2A)+(6C+4B)x+6Cx^2=6+8x+12x^2\]
 			Comparing coefficients of like powers of \(x\) on the two sides of the
-			last equality shows that \(u_p\) satisfies  if \[ \begin {array}{rcr} 6C&amp;=&amp;12\phantom {.}\\
+			last equality shows that \(u_p\) satisfies (
+			<a href="#x1-22r13">
+				5.4.13
+				<!-- tex4ht:ref: eq:5.4.13  -->
+			</a>
+			) if \[ \begin {array}{rcr} 6C&amp;=&amp;12\phantom {.}\\
 			4B+6C&amp;=&amp;8\phantom {.}\\ 2A+2B\phantom {+6u_2}&amp;=&amp;6\end
 			{array} \] Solving these equations successively yields \(C=2\), \(B=-1\),
-			and \(A=4\). Therefore \[ u_p=x(4-x+2x^2) \] is a particular solution of , and \[ y_p=u_pe^{3x}=xe^{3x}(4-x+2x^2) \] is a particular solution of .
+			and \(A=4\). Therefore \[ u_p=x(4-x+2x^2) \] is a particular solution of (
+			<a href="#x1-22r13">
+				5.4.13
+				<!-- tex4ht:ref: eq:5.4.13  -->
+			</a>
+			), and \[ y_p=u_pe^{3x}=xe^{3x}(4-x+2x^2) \] is a particular solution of (
+			<a href="#x1-21r12">
+				5.4.12
+				<!-- tex4ht:ref: eq:5.4.12  -->
+			</a>
+			).
 		</p>
 		<div class="newtheorem" id="a784493a-1a13-4bba-85a4-6788c6180b51">
 			<p class="noindent">
@@ -344,7 +549,12 @@
 			<span class="ptmb8t-">Solution</span>
 			&nbsp;Substituting \[ y=ue^{-x/2},\quad y'=u'e^{-x/2}-{1\over
 			2}ue^{-x/2},\mbox {\quad and \quad } y''=u''e^{-x/2}-u'e^{-x/2}+{1\over
-			4}ue^{-x/2} \] into  and canceling \(e^{-x/2}\) yields \[ 4\left (u''-u'+{u\over 4}\right
+			4}ue^{-x/2} \] into (
+			<a href="#x1-24r14">
+				5.4.14
+				<!-- tex4ht:ref: eq:5.4.14  -->
+			</a>
+			) and canceling \(e^{-x/2}\) yields \[ 4\left (u''-u'+{u\over 4}\right
 			)+4\left (u'-{u\over 2}\right )+u=4u''=-8+48x+144x^2\] or \begin
 			{equation} \label {eq:5.4.15} u''=-2+12x+36x^2\end {equation}
 			<a id="x1-25r15"></a>
@@ -352,10 +562,20 @@
 			\(xe^{-x/2}\) are both solutions of the complementary equation. (See
 			Exercise&nbsp;
 			<span class="ptmb8t-">30</span>
-			.) To obtain a particular solution of  we integrate twice, taking the constants of integration to be zero;
+			.) To obtain a particular solution of (
+			<a href="#x1-25r15">
+				5.4.15
+				<!-- tex4ht:ref: eq:5.4.15  -->
+			</a>
+			) we integrate twice, taking the constants of integration to be zero;
 			thus, \[ u_p'=-2x+6x^2+12x^3\mbox {\quad and \quad }
 			u_p=-x^2+2x^3+3x^4=x^2(-1+2x+3x^2)\] Therefore \[
-			y_p=u_pe^{-x/2}=x^2e^{-x/2}(-1+2x+3x^2) \] is a particular solution of .
+			y_p=u_pe^{-x/2}=x^2e^{-x/2}(-1+2x+3x^2) \] is a particular solution of (
+			<a href="#x1-24r14">
+				5.4.14
+				<!-- tex4ht:ref: eq:5.4.14  -->
+			</a>
+			).
 		</p>
 		<p class="noindent" id="9da4a7c1-35c7-4b12-b306-5e7c93fc3727">
 			<span id="textcolor1">Summary</span>
@@ -392,7 +612,12 @@
 			</dt>
 			<dd class="list">
 				<p class="noindent">
-					If \(e^{\alpha x}\) is a solution of  but \(xe^{\alpha x}\) is not, then \(y_p=xe^{\alpha x}Q(x)\), where
+					If \(e^{\alpha x}\) is a solution of (
+					<a href="#x1-27r16">
+						5.4.16
+						<!-- tex4ht:ref: eq:5.4.16  -->
+					</a>
+					) but \(xe^{\alpha x}\) is not, then \(y_p=xe^{\alpha x}Q(x)\), where
 					\(Q\) is a polynomial of the same degree as \(G\). (See Example&nbsp;
 					<a href="#x1-205">
 						5.4.5
@@ -406,7 +631,12 @@
 			</dt>
 			<dd class="list">
 				<p class="noindent">
-					If both \(e^{\alpha x}\) and \(xe^{\alpha x}\) are solutions of , then \(y_p=x^2e^{\alpha x}Q(x)\), where \(Q\) is a polynomial of
+					If both \(e^{\alpha x}\) and \(xe^{\alpha x}\) are solutions of (
+					<a href="#x1-27r16">
+						5.4.16
+						<!-- tex4ht:ref: eq:5.4.16  -->
+					</a>
+					), then \(y_p=x^2e^{\alpha x}Q(x)\), where \(Q\) is a polynomial of
 					the same degree as \(G\). (See Example&nbsp;
 					<a href="#x1-236">
 						5.4.6
@@ -497,7 +727,12 @@
 			</a>
 			we found that \(y_{p_2}=5xe^{4x}\) is a particular solution of \[
 			y''-7y'+12y=5e^{4x}\] Therefore the principle of superposition implies
-			that \(y_p=2e^{2x}+5xe^{4x}\) is a particular solution of .
+			that \(y_p=2e^{2x}+5xe^{4x}\) is a particular solution of (
+			<a href="#x1-31r17">
+				5.4.17
+				<!-- tex4ht:ref: eq:5.4.17  -->
+			</a>
+			).
 		</p>
 
 		<div class="nav" id="10e25643-0dc6-473c-a0e0-d9208a6993e6">
