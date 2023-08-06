@@ -48,41 +48,16 @@
 			P_0(x)y''+P_1(x)y'+P_2(x)y=0\end {equation}
 			<a id="x1-3r2"></a>
 			Having found a particular solution \(y_p\) by this method, we can write
-			the general solution of (
-			<a href="#x1-2r1">
-				5.7.1
-				<!-- tex4ht:ref: eq:5.7.1  -->
-			</a>
-			) as \[ y=y_p+c_1y_1+c_2y_2\]
+			the general solution of <a href="#x1-2r1">(5.7.1)</a> as \[ y=y_p+c_1y_1+c_2y_2\]
 		</p>
 		<p class="indent" id="d43e059b-5a75-4813-a4b4-2977b05d4d5c">
-			Since we need only one nontrivial solution of (
-			<a href="#x1-3r2">
-				5.7.2
-				<!-- tex4ht:ref: eq:5.7.2  -->
-			</a>
-			) to find the general solution of (
-			<a href="#x1-2r1">
-				5.7.1
-				<!-- tex4ht:ref: eq:5.7.1  -->
-			</a>
-			) by reduction of order, it’s natural to ask why we’re interested in
+			Since we need only one nontrivial solution of <a href="#x1-3r2">(5.7.2)</a> to find the general solution of <a href="#x1-2r1">(5.7.1)</a> by reduction of order, it’s natural to ask why we’re interested in
 			variation of parameters, which requires two linearly independent solutions
-			of (
-			<a href="#x1-3r2">
-				5.7.2
-				<!-- tex4ht:ref: eq:5.7.2  -->
-			</a>
-			) to achieve the same goal. Here’s the answer:
+			of <a href="#x1-3r2">(5.7.2)</a> to achieve the same goal. Here’s the answer:
 		</p>
 		<ul class="itemize1" id="6b1c9c7d-710a-49c1-9bb7-4abb0d1535a5">
 			<li class="itemize">
-				If we already know two linearly independent solutions of (
-				<a href="#x1-3r2">
-					5.7.2
-					<!-- tex4ht:ref: eq:5.7.2  -->
-				</a>
-				) then variation of parameters will probably be simpler than reduction
+				If we already know two linearly independent solutions of <a href="#x1-3r2">(5.7.2)</a> then variation of parameters will probably be simpler than reduction
 				of order.
 			</li>
 			<li class="itemize">
@@ -103,109 +78,34 @@
 			</li>
 		</ul>
 		<p class="indent" id="1e16af64-c704-4a16-ae26-ffbb12334935">
-			We’ll now derive the method. As usual, we consider solutions of (
-			<a href="#x1-2r1">
-				5.7.1
-				<!-- tex4ht:ref: eq:5.7.1  -->
-			</a>
-			) and (
-			<a href="#x1-3r2">
-				5.7.2
-				<!-- tex4ht:ref: eq:5.7.2  -->
-			</a>
-			) on an interval \((a,b)\) where \(P_0\), \(P_1\), \(P_2\), and \(F\) are
+			We’ll now derive the method. As usual, we consider solutions of <a href="#x1-2r1">(5.7.1)</a> and <a href="#x1-3r2">(5.7.2)</a> on an interval \((a,b)\) where \(P_0\), \(P_1\), \(P_2\), and \(F\) are
 			continuous and \(P_0\) has no zeros. Suppose that \(\{y_1,y_2\}\) is a
-			fundamental set of solutions of the complementary equation (
-			<a href="#x1-3r2">
-				5.7.2
-				<!-- tex4ht:ref: eq:5.7.2  -->
-			</a>
-			). We look for a particular solution of (
-			<a href="#x1-2r1">
-				5.7.1
-				<!-- tex4ht:ref: eq:5.7.1  -->
-			</a>
-			) in the form \begin {equation} \label {eq:5.7.3} y_p=u_1y_1+u_2y_2 \end
+			fundamental set of solutions of the complementary equation <a href="#x1-3r2">(5.7.2)</a>. We look for a particular solution of <a href="#x1-2r1">(5.7.1)</a> in the form \begin {equation} \label {eq:5.7.3} y_p=u_1y_1+u_2y_2 \end
 			{equation}
 			<a id="x1-4r3"></a>
 			where \(u_1\) and \(u_2\) are functions to be determined so that \(y_p\)
-			satisfies (
-			<a href="#x1-2r1">
-				5.7.1
-				<!-- tex4ht:ref: eq:5.7.1  -->
-			</a>
-			). You may not think this is a good idea, since there are now two unknown
+			satisfies <a href="#x1-2r1">(5.7.1)</a>. You may not think this is a good idea, since there are now two unknown
 			functions to be determined, rather than one. However, since \(u_1\) and
 			\(u_2\) have to satisfy only one condition (that \(y_p\) is a solution of
-			(
-			<a href="#x1-2r1">
-				5.7.1
-				<!-- tex4ht:ref: eq:5.7.1  -->
-			</a>
-			)), we can impose a second condition that produces a convenient
+			<a href="#x1-2r1">(5.7.1)</a>), we can impose a second condition that produces a convenient
 			simplification, as follows.
 		</p>
 		<p class="indent" id="7153d893-f22e-41af-a6c8-6f6517dd011f">
-			Differentiating (
-			<a href="#x1-4r3">
-				5.7.3
-				<!-- tex4ht:ref: eq:5.7.3  -->
-			</a>
-			) yields \begin {equation} \label {eq:5.7.4}
+			Differentiating <a href="#x1-4r3">(5.7.3)</a> yields \begin {equation} \label {eq:5.7.4}
 			y_p'=u_1y_1'+u_2y_2'+u_1'y_1+u_2'y_2\end {equation}
 			<a id="x1-5r4"></a>
 			As our second condition on \(u_1\) and \(u_2\) we require that \begin
 			{equation} \label {eq:5.7.5} u_1'y_1+u_2'y_2=0\end {equation}
 			<a id="x1-6r5"></a>
-			Then (
-			<a href="#x1-5r4">
-				5.7.4
-				<!-- tex4ht:ref: eq:5.7.4  -->
-			</a>
-			) becomes \begin {equation} y_p'=u_1y_1'+u_2y_2'; \label {eq:5.7.6} \end
+			Then <a href="#x1-5r4">(5.7.4)</a> becomes \begin {equation} y_p'=u_1y_1'+u_2y_2'; \label {eq:5.7.6} \end
 			{equation}
 			<a id="x1-7r6"></a>
-			that is, (
-			<a href="#x1-6r5">
-				5.7.5
-				<!-- tex4ht:ref: eq:5.7.5  -->
-			</a>
-			) permits us to differentiate \(y_p\) (once!) as if \(u_1\) and \(u_2\)
-			are constants. Differentiating (
-			<a href="#x1-5r4">
-				5.7.4
-				<!-- tex4ht:ref: eq:5.7.4  -->
-			</a>
-			) yields \begin {equation} \label {eq:5.7.7}
+			that is, <a href="#x1-6r5">(5.7.5)</a> permits us to differentiate \(y_p\) (once!) as if \(u_1\) and \(u_2\)
+			are constants. Differentiating <a href="#x1-5r4">(5.7.4)</a> yields \begin {equation} \label {eq:5.7.7}
 			y_p''=u_1y''_1+u_2y''_2+u_1'y_1'+u_2'y_2'\end {equation}
 			<a id="x1-8r7"></a>
 			(There are no terms involving \(u_1''\) and \(u_2''\) here, as there would
-			be if we hadn’t required (
-			<a href="#x1-6r5">
-				5.7.5
-				<!-- tex4ht:ref: eq:5.7.5  -->
-			</a>
-			).) Substituting (
-			<a href="#x1-4r3">
-				5.7.3
-				<!-- tex4ht:ref: eq:5.7.3  -->
-			</a>
-			), (
-			<a href="#x1-7r6">
-				5.7.6
-				<!-- tex4ht:ref: eq:5.7.6  -->
-			</a>
-			), and (
-			<a href="#x1-8r7">
-				5.7.7
-				<!-- tex4ht:ref: eq:5.7.7  -->
-			</a>
-			) into (
-			<a href="#x1-2r1">
-				5.7.1
-				<!-- tex4ht:ref: eq:5.7.1  -->
-			</a>
-			) and collecting the coefficients of \(u_1\) and \(u_2\) yields \[
+			be if we hadn’t required <a href="#x1-6r5">(5.7.5)</a>.) Substituting <a href="#x1-4r3">(5.7.3)</a>, <a href="#x1-7r6">(5.7.6)</a>, and <a href="#x1-8r7">(5.7.7)</a> into <a href="#x1-2r1">(5.7.1)</a> and collecting the coefficients of \(u_1\) and \(u_2\) yields \[
 			u_1(P_0y''_1+P_1y_1'+P_2y_1)+u_2(P_0y''_2+P_1y_2'+P_2y_2)
 			+P_0(u_1'y_1'+u_2'y_2')=F\] As in the derivation of the method of
 			reduction of order, the coefficients of \(u_1\) and \(u_2\) here are both
@@ -213,46 +113,16 @@
 			Hence, we can rewrite the last equation as \begin {equation} \label
 			{eq:5.7.8} P_0(u_1'y_1'+u_2'y_2')=F\end {equation}
 			<a id="x1-9r8"></a>
-			Therefore \(y_p\) in (
-			<a href="#x1-4r3">
-				5.7.3
-				<!-- tex4ht:ref: eq:5.7.3  -->
-			</a>
-			) satisfies (
-			<a href="#x1-2r1">
-				5.7.1
-				<!-- tex4ht:ref: eq:5.7.1  -->
-			</a>
-			) if \begin {equation} \label {eq:5.7.9} \begin {array}{rcl}
+			Therefore \(y_p\) in <a href="#x1-4r3">(5.7.3)</a> satisfies <a href="#x1-2r1">(5.7.1)</a> if \begin {equation} \label {eq:5.7.9} \begin {array}{rcl}
 			u_1'y_1+u_2'y_2 &amp;=&amp; 0 \\ u_1'y_1'+u_2'y_2' &amp;=&amp;
 			\displaystyle {F\over P_0}\end {array} \end {equation}
 			<a id="x1-10r9"></a>
-			where the first equation is the same as (
-			<a href="#x1-6r5">
-				5.7.5
-				<!-- tex4ht:ref: eq:5.7.5  -->
-			</a>
-			) and the second is from (
-			<a href="#x1-9r8">
-				5.7.8
-				<!-- tex4ht:ref: eq:5.7.8  -->
-			</a>
-			).
+			where the first equation is the same as <a href="#x1-6r5">(5.7.5)</a> and the second is from <a href="#x1-9r8">(5.7.8)</a>.
 		</p>
 		<p class="indent" id="425d2c02-6f12-4eb2-8173-ba26af01e209">
-			We’ll now show that you can always solve (
-			<a href="#x1-10r9">
-				5.7.9
-				<!-- tex4ht:ref: eq:5.7.9  -->
-			</a>
-			) for \(u_1'\) and \(u_2'\). (The method that we use here will always
+			We’ll now show that you can always solve <a href="#x1-10r9">(5.7.9)</a> for \(u_1'\) and \(u_2'\). (The method that we use here will always
 			work, but simpler methods usually work when you’re dealing with specific
-			equations.) To obtain \(u_1'\), multiply the first equation in (
-			<a href="#x1-10r9">
-				5.7.9
-				<!-- tex4ht:ref: eq:5.7.9  -->
-			</a>
-			) by \(y_2'\) and the second equation by \(y_2\). This yields
+			equations.) To obtain \(u_1'\), multiply the first equation in <a href="#x1-10r9">(5.7.9)</a> by \(y_2'\) and the second equation by \(y_2\). This yields
 		</p>
 		<div class="eqnarray" id="efc7ed99-4d62-4536-bf3f-b7b71af536e2">
 			\begin {eqnarray*} u_1'y_1y_2'+u_2'y_2y_2'&amp;=&amp; 0 \\
@@ -262,53 +132,23 @@
 			Subtracting the second equation from the first yields \begin {equation}
 			\label {eq:5.7.10} u_1'(y_1y_2'-y_1'y_2)=-{Fy_2\over P_0}\end {equation}
 			<a id="x1-11r10"></a>
-			Since \(\{y_1,y_2\}\) is a fundamental set of solutions of (
-			<a href="#x1-3r2">
-				5.7.2
-				<!-- tex4ht:ref: eq:5.7.2  -->
-			</a>
-			) on \((a,b)\), Theorem&nbsp;
+			Since \(\{y_1,y_2\}\) is a fundamental set of solutions of <a href="#x1-3r2">(5.7.2)</a> on \((a,b)\), Theorem&nbsp;
 			<span class="ptmb8t-">5.1.6</span>
 			implies that the Wronskian \(y_1y_2'-y_1'y_2\) has no zeros on \((a,b)\).
-			Therefore we can solve (
-			<a href="#x1-11r10">
-				5.7.10
-				<!-- tex4ht:ref: eq:5.7.10  -->
-			</a>
-			) for \(u_1'\), to obtain \begin {equation} \label {eq:5.7.11}
+			Therefore we can solve <a href="#x1-11r10">(5.7.10)</a> for \(u_1'\), to obtain \begin {equation} \label {eq:5.7.11}
 			u_1'=-{Fy_2\over P_0(y_1y_2'-y_1'y_2)}\end {equation}
 			<a id="x1-12r11"></a>
-			We leave it to you to start from (
-			<a href="#x1-10r9">
-				5.7.9
-				<!-- tex4ht:ref: eq:5.7.9  -->
-			</a>
-			) and show by a similar argument that \begin {equation} \label {eq:5.7.12}
+			We leave it to you to start from <a href="#x1-10r9">(5.7.9)</a> and show by a similar argument that \begin {equation} \label {eq:5.7.12}
 			u_2'={Fy_1\over P_0(y_1y_2'-y_1'y_2)}\end {equation}
 			<a id="x1-13r12"></a>
 		</p>
 		<p class="indent" id="21637ec6-f255-4e2f-bfda-56f4c758fea9">
 			We can now obtain \(u_1\) and \(u_2\) by integrating \(u_1'\) and
 			\(u_2'\). The constants of integration can be taken to be zero, since any
-			choice of \(u_1\) and \(u_2\) in (
-			<a href="#x1-4r3">
-				5.7.3
-				<!-- tex4ht:ref: eq:5.7.3  -->
-			</a>
-			) will suffice.
+			choice of \(u_1\) and \(u_2\) in <a href="#x1-4r3">(5.7.3)</a> will suffice.
 		</p>
 		<p class="indent" id="837cda37-4b72-4613-8b1c-86f383c36589">
-			You should not memorize (
-			<a href="#x1-12r11">
-				5.7.11
-				<!-- tex4ht:ref: eq:5.7.11  -->
-			</a>
-			) and (
-			<a href="#x1-13r12">
-				5.7.12
-				<!-- tex4ht:ref: eq:5.7.12  -->
-			</a>
-			). On the other hand, you don’t want to rederive the whole procedure for
+			You should not memorize <a href="#x1-12r11">(5.7.11)</a> and <a href="#x1-13r12">(5.7.12)</a>. On the other hand, you don’t want to rederive the whole procedure for
 			every specific problem. We recommend the a compromise:
 		</p>
 		<dl class="list1" id="61e16f66-0159-462b-84ad-ab052aacf841">
@@ -340,12 +180,7 @@
 			</dt>
 			<dd class="list">
 				<p class="noindent">
-					Solve (
-					<a href="#x1-17r14">
-						5.7.14
-						<!-- tex4ht:ref: eq:5.7.14  -->
-					</a>
-					) for \(u_1'\) and \(u_2'\) by any convenient method.
+					Solve <a href="#x1-17r14">(5.7.14)</a> for \(u_1'\) and \(u_2'\) by any convenient method.
 				</p>
 			</dd>
 			<dt class="list">
@@ -362,12 +197,7 @@
 			</dt>
 			<dd class="list">
 				<p class="noindent">
-					Substitute \(u_1\) and \(u_2\) into (
-					<a href="#x1-15r13">
-						5.7.13
-						<!-- tex4ht:ref: eq:5.7.13  -->
-					</a>
-					) to obtain \(y_p\).
+					Substitute \(u_1\) and \(u_2\) into <a href="#x1-15r13">(5.7.13)</a> to obtain \(y_p\).
 				</p>
 			</dd>
 		</dl>
@@ -381,12 +211,7 @@
 				{eq:5.7.15} x^2y''-2xy'+2y=x^{9/2}\end {equation}
 				<a id="x1-22r15"></a>
 				given that \(y_1=x\) and \(y_2=x^2\) are solutions of the complementary
-				equation \[ x^2y''-2xy'+2y=0\] Then find the general solution of (
-				<a href="#x1-22r15">
-					5.7.15
-					<!-- tex4ht:ref: eq:5.7.15  -->
-				</a>
-				).
+				equation \[ x^2y''-2xy'+2y=0\] Then find the general solution of <a href="#x1-22r15">(5.7.15)</a>.
 			</p>
 		</div>
 		<p class="indent" id="86042194-a229-4af8-bd5d-d85c4127985b"></p>
@@ -406,12 +231,7 @@
 			of integration to be zero yields \[ u_1=-{2\over 7}x^{7/2}\mbox {\quad and
 			\quad }u_2={2\over 5}x^{5/2}\] Therefore \[ y_p=u_1x+u_2x^2 =-{2\over
 			7}x^{7/2}x+{2\over 5}x^{5/2}x^2={4\over 35}x^{9/2}\] and the general
-			solution of (
-			<a href="#x1-22r15">
-				5.7.15
-				<!-- tex4ht:ref: eq:5.7.15  -->
-			</a>
-			) is \[ y={4\over 35}x^{9/2}+c_1x+c_2x^2\]
+			solution of <a href="#x1-22r15">(5.7.15)</a> is \[ y={4\over 35}x^{9/2}+c_1x+c_2x^2\]
 		</p>
 		<div class="newtheorem" id="f7076fcf-7637-4f7b-b5c7-625ea0ebda9f">
 			<p class="noindent">
@@ -423,12 +243,7 @@
 				{eq:5.7.16} (x-1)y''-xy'+y=(x-1)^2\end {equation}
 				<a id="x1-24r16"></a>
 				given that \(y_1=x\) and \(y_2=e^x\) are solutions of the complementary
-				equation \[ (x-1)y''-xy'+y=0\] Then find the general solution of (
-				<a href="#x1-24r16">
-					5.7.16
-					<!-- tex4ht:ref: eq:5.7.16  -->
-				</a>
-				).
+				equation \[ (x-1)y''-xy'+y=0\] Then find the general solution of <a href="#x1-24r16">(5.7.16)</a>.
 			</p>
 		</div>
 		<p class="indent" id="e8918ee1-2f3c-48a4-9127-e302ac620436"></p>
@@ -446,12 +261,7 @@
 			\(u_2'=-xe^{-x}u_1'=xe^{-x}\). Integrating and taking the constants of
 			integration to be zero yields \[ u_1=-x \mbox {\quad and \quad }
 			u_2=-(x+1)e^{-x}\] Therefore \[ y_p=u_1x+u_2e^x
-			=(-x)x+(-(x+1)e^{-x})e^x=-x^2-x-1\] so the general solution of (
-			<a href="#x1-24r16">
-				5.7.16
-				<!-- tex4ht:ref: eq:5.7.16  -->
-			</a>
-			) is \begin {equation} \label {eq:5.7.17}
+			=(-x)x+(-(x+1)e^{-x})e^x=-x^2-x-1\] so the general solution of <a href="#x1-24r16">(5.7.16)</a> is \begin {equation} \label {eq:5.7.17}
 			y=y_p+c_1x+c_2e^x=-x^2-x-1+c_1x+c_2e^x = -x^2-1+(c_1-1)x+c_2e^x\end
 			{equation}
 			<a id="x1-25r17"></a>
@@ -464,46 +274,11 @@
 		<p class="indent" id="482bb298-6e77-4ed1-9207-cbb5750ea00a">
 			There’s nothing
 			<em>wrong</em>
-			with leaving the general solution of (
-			<a href="#x1-24r16">
-				5.7.16
-				<!-- tex4ht:ref: eq:5.7.16  -->
-			</a>
-			) in the form (
-			<a href="#x1-25r17">
-				5.7.17
-				<!-- tex4ht:ref: eq:5.7.17  -->
-			</a>
-			); however, we think you’ll agree that (
-			<a href="#x1-26r18">
-				5.7.18
-				<!-- tex4ht:ref: eq:5.7.18  -->
-			</a>
-			) is preferable. We can also view the transition from (
-			<a href="#x1-25r17">
-				5.7.17
-				<!-- tex4ht:ref: eq:5.7.17  -->
-			</a>
-			) to (
-			<a href="#x1-26r18">
-				5.7.18
-				<!-- tex4ht:ref: eq:5.7.18  -->
-			</a>
-			) differently. In this example the particular solution \(y_p=-x^2-x-1\)
+			with leaving the general solution of <a href="#x1-24r16">(5.7.16)</a> in the form <a href="#x1-25r17">(5.7.17)</a>; however, we think you’ll agree that <a href="#x1-26r18">(5.7.18)</a> is preferable. We can also view the transition from <a href="#x1-25r17">(5.7.17)</a> to <a href="#x1-26r18">(5.7.18)</a> differently. In this example the particular solution \(y_p=-x^2-x-1\)
 			contained the term \(-x\), which satisfies the complementary equation. We
 			can drop this term and redefine \(y_p=-x^2-1\), since \(-x^2-x-1\) is a
-			solution of (
-			<a href="#x1-24r16">
-				5.7.16
-				<!-- tex4ht:ref: eq:5.7.16  -->
-			</a>
-			) and \(x\) is a solution of the complementary equation; hence,
-			\(-x^2-1=(-x^2-x-1)+x\) is also a solution of (
-			<a href="#x1-24r16">
-				5.7.16
-				<!-- tex4ht:ref: eq:5.7.16  -->
-			</a>
-			). In general, it’s always legitimate to drop linear combinations of
+			solution of <a href="#x1-24r16">(5.7.16)</a> and \(x\) is a solution of the complementary equation; hence,
+			\(-x^2-1=(-x^2-x-1)+x\) is also a solution of <a href="#x1-24r16">(5.7.16)</a>. In general, it’s always legitimate to drop linear combinations of
 			\(\{y_1,y_2\}\) from particular solutions obtained by variation of
 			parameters. (See Exercise&nbsp;
 			<span class="ptmb8t-">36</span>
@@ -534,17 +309,7 @@
 			{equation} \label {eq:5.7.20} y''+3y'+2y=0 \end {equation}
 			<a id="x1-29r20"></a>
 			is \(p(r)=r^2+3r+2=(r+1)(r+2)\), so \(y_1=e^{-x}\) and \(y_2=e^{-2x}\)
-			form a fundamental set of solutions of (
-			<a href="#x1-29r20">
-				5.7.20
-				<!-- tex4ht:ref: eq:5.7.20  -->
-			</a>
-			). We look for a particular solution of (
-			<a href="#x1-28r19">
-				5.7.19
-				<!-- tex4ht:ref: eq:5.7.19  -->
-			</a>
-			) in the form \[ y_p=u_1e^{-x}+u_2e^{-2x}\] where
+			form a fundamental set of solutions of <a href="#x1-29r20">(5.7.20)</a>. We look for a particular solution of <a href="#x1-28r19">(5.7.19)</a> in the form \[ y_p=u_1e^{-x}+u_2e^{-2x}\] where
 		</p>
 		<div class="eqnarray" id="647bc9ca-27b5-45a5-b281-56b40acf20b9">
 			\begin {eqnarray*} \phantom {-}u_1'e^{-x}+\phantom
@@ -573,12 +338,7 @@
 			so \[ y_p=\left (e^{-x}+e^{-2x}\right )\ln (1+e^x)-e^{-x}\] Since the last
 			term on the right satisfies the complementary equation, we drop it and
 			redefine \[ y_p=\left (e^{-x}+e^{-2x}\right )\ln (1+e^x)\] The general
-			solution of (
-			<a href="#x1-28r19">
-				5.7.19
-				<!-- tex4ht:ref: eq:5.7.19  -->
-			</a>
-			) is \[ y=y_p+c_1e^{-x}+c_2e^{-2x}=\left (e^{-x}+e^{-2x}\right )\ln
+			solution of <a href="#x1-28r19">(5.7.19)</a> is \[ y=y_p+c_1e^{-x}+c_2e^{-2x}=\left (e^{-x}+e^{-2x}\right )\ln
 			(1+e^x) +c_1e^{-x}+c_2e^{-2x}\]
 		</p>
 		<div class="newtheorem" id="fa0ea0d4-74d2-4961-a757-61fbddc4f534">
@@ -614,12 +374,7 @@
 			x^2-1}-{1\over (x+1)^2}\right ]u_2'={2\over (x+1)(x^2-1)}\end {equation}
 			<a id="x1-32r22"></a>
 			Since \[ \left [{1\over x^2-1}-{1\over (x+1)^2}\right ]={(x+1)-(x-1)\over
-			(x+1)(x^2-1)} ={2\over (x+1)(x^2-1)}\] (
-			<a href="#x1-32r22">
-				5.7.23
-				<!-- tex4ht:ref: eq:5.7.23  -->
-			</a>
-			) implies that \(u_2'=1\). From (
+			(x+1)(x^2-1)} ={2\over (x+1)(x^2-1)}\] <a href="#x1-32r22">(5.7.23)</a> implies that \(u_2'=1\). From (
 			<span class="ptmb8t-">5.7.22</span>
 			), \[ u_1'=-{x-1\over x+1}u_2'=-{x-1\over x+1}\] Integrating and taking
 			the constants of integration to be zero yields
@@ -641,12 +396,7 @@
 		<p class="indent" id="1cf02c0e-3cc2-4d52-b1aa-03bde3ab4a98">
 			However, since \[ {2x\over (x+1)(x-1)}=\left [{1\over x+1}+{1\over
 			x-1}\right ] \] is a solution of the complementary equation, we redefine
-			\[ y_p={2\ln (x+1)\over x-1}\] Therefore the general solution of (
-			<a href="#x1-33r23">
-				5.7.24
-				<!-- tex4ht:ref: eq:5.7.24  -->
-			</a>
-			) is \begin {equation} \label {eq:5.7.24} y={2\ln (x+1)\over
+			\[ y_p={2\ln (x+1)\over x-1}\] Therefore the general solution of <a href="#x1-33r23">(5.7.24)</a> is \begin {equation} \label {eq:5.7.24} y={2\ln (x+1)\over
 			x-1}+{c_1\over x-1}+{c_2\over x+1}\end {equation}
 			<a id="x1-33r23"></a>
 			Differentiating this yields \[ y'={2\over x^2-1}-{2\ln (x+1)\over
@@ -660,24 +410,14 @@
 		</div>
 		<p class="indent" id="46238ac7-93ba-4207-94cd-aff0967f2310">
 			The solution of this system is \(c_1=2,\,c_2=1\). Substituting these into
-			(
-			<a href="#x1-33r23">
-				5.7.24
-				<!-- tex4ht:ref: eq:5.7.24  -->
-			</a>
-			) yields
+			<a href="#x1-33r23">(5.7.24)</a> yields
 		</p>
 		<div class="eqnarray" id="88ddd0ad-310e-47d9-ba5f-27b1674004cc">
 			\begin {eqnarray*} y&amp;=&amp;{2\ln (x+1)\over x-1}+{2\over x-1}+{1\over
 			x+1}\\ &amp;=&amp;{2\ln (x+1)\over x-1}+{3x+1\over x^2-1} \end {eqnarray*}
 		</div>
 		<p class="indent" id="6542255a-9915-4950-b193-be5bfe02ac56">
-			as the solution of (
-			<a href="#x1-31r21">
-				5.7.21
-				<!-- tex4ht:ref: eq:5.7.21  -->
-			</a>
-			). Figure&nbsp;
+			as the solution of <a href="#x1-31r21">(5.7.21)</a>. Figure&nbsp;
 			<a href="#-y-x-overxx-overx-">
 				5.7.1
 				<!-- tex4ht:ref: figure:5.7.1  -->
