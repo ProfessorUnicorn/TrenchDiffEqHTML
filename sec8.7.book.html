@@ -35,16 +35,16 @@
     where \(f\) is continuous or piecewise continuous on \([0,\infty )\). In this section we consider initial value
     problems where \(f\)
     represents a force that’s very large for a short time and zero otherwise. We say that such forces are <span
-      class='ptmri8t-'>impulsive</span>.
+      class='vocab'>impulsive</span>.
     Impulsive forces occur, for example, when two objects collide. Since it isn’t feasible to represent such forces as
     continuous or piecewise continuous functions, we must construct a different mathematical model to deal with
     them.
   </p>
   <p class='indent'> If \(f\) is an integrable function and \(f(t)=0\) for \(t\) outside of the interval
-    \([t_0,t_0+h]\), then \(\int _{t_0}^{t_0+h} f(t)\,dt\) is called the <span class='ptmri8t-'>total impulse</span> of
+    \([t_0,t_0+h]\), then \(\int _{t_0}^{t_0+h} f(t)\,dt\) is called the <span class='vocab'>total impulse</span> of
     \(f\). We’re
     interested in the idealized situation where \(h\) is so small that the total impulse can be assumed to be applied
-    instantaneously at \(t=t_0\). We say in this case that \(f\) is an <span class='ptmri8t-'>impulse function</span>.
+    instantaneously at \(t=t_0\). We say in this case that \(f\) is an <span class='vocab'>impulse function</span>.
     In particular, we denote by \(\delta (t-t_0)\) the impulse
     function with total impulse equal to one, applied at \(t=t_0\). (The impulse function \(\delta (t)\) obtained by
     setting \(t_0=0\) is the <span class='vocab'>Dirac\(\delta \) function</span>.) It must be understood, however, that
@@ -52,7 +52,7 @@
     implies that \(\delta (t-t_0)=0\) if \(t\ne t_0\), while
     \[ \int _{t_0}^{t_0} \delta (t-t_0)\,dt=1\]
     From calculus we know that no function can have these properties; nevertheless, there’s a branch of
-    mathematics known as the <span class='ptmri8t-'>theory of distributions</span> where the definition can be made
+    mathematics known as the <span class='vocab'>theory of distributions</span> where the definition can be made
     rigorous. Since the
     theory of distributions is beyond the scope of this book, we’ll take an intuitive approach to impulse
     functions.
@@ -66,16 +66,16 @@
   </p>
   <div class='newtheorem'>
     <p class='noindent'><span class='head'>
-        <span class='ptmb8t-'>Theorem 8.7.1</span> </span><a id='x1-21'></a> <span class='ptmri8t-'>Suppose</span>
-      \(t_0\ge 0.\) <span class='ptmri8t-'>For each positive number</span> \(h,\) <span class='ptmri8t-'>let</span>
-      \(y_h\) <span class='ptmri8t-'>be the solution of the initial value problem </span>\begin {equation} \label
-      {eq:8.7.1} ay_h''+by_h'+cy_h=f_h(t), \quad y_h(0)=0,\quad y_h'(0)=0\end {equation}<a id='x1-3r1'></a> <span
-        class='ptmri8t-'>where </span>\begin {equation} \label {eq:8.7.2} f_h(t)=\left \{\begin {array}{cl} 0,&amp;0\le
+        <span class='ptmb8t-'>Theorem 8.7.1</span> </span><a id='x1-21'></a> Suppose
+      \(t_0\ge 0.\) For each positive number \(h\), let
+      \(y_h\) be the solution of the initial value problem \begin {equation} \label
+      {eq:8.7.1} ay_h''+by_h'+cy_h=f_h(t), \quad y_h(0)=0,\quad y_h'(0)=0\end {equation}<a id='x1-3r1'></a> 
+        where \begin {equation} \label {eq:8.7.2} f_h(t)=\left \{\begin {array}{cl} 0,&amp;0\le
       t&lt;t_0,\\ 1/h,&amp;t_0\le t&lt; t_0+h,\\ 0,&amp;t\ge t_0+h,\end {array}\right. \end {equation}<a id='x1-4r2'></a>
-      <span class='ptmri8t-'>so</span> \(f_h\)
-      <span class='ptmri8t-'>has unit total impulse equal to the area of the shaded rectangle in
-        Figure </span>8.7.1<span class='ptmri8t-'>. Then </span>\begin {equation} \label {eq:8.7.3} \lim _{h\to
-      0+}y_h(t)=u(t-t_0)w(t-t_0)\end {equation}<a id='x1-5r3'></a> <span class='ptmri8t-'>where</span>
+      so \(f_h\)
+      has unit total impulse equal to the area of the shaded rectangle in
+        Figure 8.7.1. Then \begin {equation} \label {eq:8.7.3} \lim _{h\to
+      0+}y_h(t)=u(t-t_0)w(t-t_0)\end {equation}<a id='x1-5r3'></a> where
       \[ w={\cal L}^{-1}\left (1\over as^2+bs+c\right )\]
     </p>
   </div>
@@ -157,7 +157,7 @@
     differential
     equation
     \[ ay''+by'+cy=f(t)\]
-    \(w\) is called the <span class='ptmri8t-'>impulse response</span> of the device. Note that \(w\) is the solution of
+    \(w\) is called the <span class='vocab'>impulse response</span> of the device. Note that \(w\) is the solution of
     the initial value problem \begin {equation} \label {eq:8.7.12} aw''+bw'+cw=0, \quad w(0)=0,\quad w'(0)=1/a\end
     {equation}<a id='x1-16r12'></a> as can be seen
     by using the Laplace transform to solve this problem. (Verify.) On the other hand, we can solve (<a
@@ -180,9 +180,9 @@
     (remember that \(y'_-(t_0)\) and \(y'_+(t_0)\) are derivatives from the right and left, respectively) and
     \(y'(t_0)\) does not exist. Thus, even
     though we defined \(y=u(t-t_0)w(t-t_0)\) to be the solution of (<a
-      href='#x1-15r11'>8.7.11<!-- tex4ht:ref: eq:8.7.11  --></a>), this function <span class='ptmri8t-'>doesn’t
-      satisfy</span> the differential equation in
-    (<a href='#x1-15r11'>8.7.11<!-- tex4ht:ref: eq:8.7.11  --></a>) <span class='ptmri8t-'>at</span> \(t_0\), since it
+      href='#x1-15r11'>8.7.11<!-- tex4ht:ref: eq:8.7.11  --></a>), this function <em>doesn’t
+      satisfy</em> the differential equation in
+    (<a href='#x1-15r11'>8.7.11<!-- tex4ht:ref: eq:8.7.11  --></a>) at \(t_0\), since it
     isn’t differentiable there; in fact (<a href='#x1-18r14'>8.7.14<!-- tex4ht:ref: eq:8.7.14  --></a>) indicates that
     an impulse causes a
     jump discontinuity in velocity. (To see that this is reasonable, think of what happens when you hit a

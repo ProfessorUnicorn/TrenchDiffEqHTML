@@ -46,8 +46,7 @@
 
     equations with specific forcing functions. Hence, we could simply do the indicated multiplication in (<a
       href='#x1-2r1'>8.6.1<!-- tex4ht:ref: eq:8.6.1  --></a>) and
-    use the table of Laplace transforms to find \(y={\cal L}^{-1}(Y)\). However, this isn’t possible if we want a <span
-      class='ptmri8t-'>formula</span> for \(y\) in terms of \(f\),
+    use the table of Laplace transforms to find \(y={\cal L}^{-1}(Y)\). However, this isn’t possible if we want a <em>formula</em> for \(y\) in terms of \(f\),
     which may be unspecified.
   </p>
   <p class='indent'> To motivate the formula for \({\cal L}^{-1}(FG)\), consider the initial value problem \begin
@@ -92,7 +91,7 @@
     </dt>
     <dd class='trivlist'>
       <p class='indent'> <span class='ptmb8t-'>Definition</span> <a id='x1-7r1'></a><span class='ptmb8t-'>8.6.1</span> 
-        The <span class='ptmri8t-'>convolution</span> \(f*g\) of two functions \(f\) and \(g\) is defined by
+        The <span class='vocab'>convolution</span> \(f*g\) of two functions \(f\) and \(g\) is defined by
         \[ (f*g)(t)=\int _0^t f(\tau )g(t-\tau )\,d\tau \]
       </p>
     </dd>
@@ -106,9 +105,9 @@
   </p>
   <div class='newtheorem'>
     <p class='noindent'><span class='head'>
-        <span class='ptmb8t-'>Theorem 8.6.2</span> </span>\([\)<span class='ptmri8t-'>The Convolution
-        Theorem</span>\(]\)<a id='x1-82'></a> <span class='ptmri8t-'>If</span> \({\cal L}(f)=F\) <span
-        class='ptmri8t-'>and</span> \({\cal L}(g)=G,\) <span class='ptmri8t-'>then</span>
+        <span class='ptmb8t-'>Theorem 8.6.2</span> </span>\([\)The Convolution
+        Theorem\(]\)<a id='x1-82'></a> If \({\cal L}(f)=F\) 
+        and \({\cal L}(g)=G,\) then
 
 
 
@@ -271,7 +270,7 @@
   <p class='indent'>
   </p>
   <p class='noindent'>We’ll say that an integral of the form \(\int _0^t u(\tau )v(t-\tau )\,d\tau \) is a <span
-      class='ptmri8t-'>convolution integral</span>. The convolution theorem provides a convenient
+      class='vocab'>convolution integral</span>. The convolution theorem provides a convenient
     way to evaluate convolution integrals.
 
 
@@ -375,17 +374,17 @@
   </p>
   <div class='newtheorem'>
     <p class='noindent'><span class='head'>
-        <span class='ptmb8t-'>Theorem 8.6.3</span> </span><a id='x1-243'></a> <span class='ptmri8t-'>Suppose</span>
-      \(f\) <span class='ptmri8t-'>is continuous on</span> \([0,\infty )\) <span class='ptmri8t-'>and has a Laplace
-        transform</span>\(.\) <span class='ptmri8t-'>Then the solution of the initial value
-        problem </span>\begin {equation} \label {eq:8.6.13} ay''+by'+cy=f(t),\quad y(0)=k_0,\quad y'(0)=k_1\end
-      {equation}<a id='x1-25r13'></a> <span class='ptmri8t-'>is </span>\begin {equation} \label {eq:8.6.14}
-      y(t)=k_0y_1(t)+k_1y_2(t)+\int _0^tw(\tau )f(t-\tau )\,d\tau \end {equation}<a id='x1-26r14'></a> <span
-        class='ptmri8t-'>where</span> \(y_1\) <span class='ptmri8t-'>and</span> \(y_2\) <span class='ptmri8t-'>satisfy
-      </span>\begin {equation} \label {eq:8.6.15} ay_1''+by_1'+cy_1=0,\quad y_1(0)=1,\quad y_1'(0)=0\end {equation}<a
-        id='x1-27r15'></a> <span class='ptmri8t-'>and </span>\begin {equation} \label {eq:8.6.16}
-      ay_2''+by_2'+cy_2=0,\quad y_2(0)=0,\quad y_2'(0)=1\end {equation}<a id='x1-28r16'></a> <span class='ptmri8t-'>and
-      </span>\begin {equation} \label {eq:8.6.17} w(t)={1\over a}y_2(t)\end {equation}<a id='x1-29r17'></a>
+        <span class='ptmb8t-'>Theorem 8.6.3</span> </span><a id='x1-243'></a> Suppose
+      \(f\) is continuous on \([0,\infty )\) and has a Laplace
+        transform. Then the solution of the initial value
+        problem \begin {equation} \label {eq:8.6.13} ay''+by'+cy=f(t),\quad y(0)=k_0,\quad y'(0)=k_1\end
+      {equation}<a id='x1-25r13'></a> is \begin {equation} \label {eq:8.6.14}
+      y(t)=k_0y_1(t)+k_1y_2(t)+\int _0^tw(\tau )f(t-\tau )\,d\tau \end {equation}<a id='x1-26r14'></a>
+      where \(y_1\) and \(y_2\) satisfy
+      \begin {equation} \label {eq:8.6.15} ay_1''+by_1'+cy_1=0,\quad y_1(0)=1,\quad y_1'(0)=0\end {equation}<a
+        id='x1-27r15'></a> and \begin {equation} \label {eq:8.6.16}
+      ay_2''+by_2'+cy_2=0,\quad y_2(0)=0,\quad y_2'(0)=1\end {equation}<a id='x1-28r16'></a> and
+      \begin {equation} \label {eq:8.6.17} w(t)={1\over a}y_2(t)\end {equation}<a id='x1-29r17'></a>
     </p>
   </div>
   <p class='indent'>
@@ -438,7 +437,7 @@
     \), so \(\lim _{t\to \infty }v(t)=0\) for any choice of
     initial conditions. Moreover, the value of \(h(t)\) is essentially independent of the values of \(f(t-\tau )\) for
     large \(\tau \), since \(\lim _{\tau \to \infty }w(\tau )=0\). In this
-    case we say that \(v\) and \(h\) are <span class='ptmri8t-'>transient</span> and <span class='ptmri8t-'>steady state
+    case we say that \(v\) and \(h\) are <span class='vocab'>transient</span> and <span class='vocab'>steady state
       components</span>, respectively, of the solution \(y\) of
     (<a href='#x1-25r13'>8.6.13<!-- tex4ht:ref: eq:8.6.13  --></a>). These definitions apply to the initial value
     problem of Example <a href='#x1-164'>8.6.4<!-- tex4ht:ref: example:8.6.4  --></a>, where the zeros
@@ -463,7 +462,7 @@
   <p class='indent'> In physical applications where the input \(f\) and the output \(y\) of a device are related by (<a
       href='#x1-25r13'>8.6.13<!-- tex4ht:ref: eq:8.6.13  --></a>), the zeros of the
     characteristic polynomial usually do have negative real parts. Then \(W={\cal L}(w)\) is called the <span
-      class='ptmri8t-'>transfer function </span> of the device.
+      class='vocab'>transfer function </span> of the device.
     Since
     \[ H(s)=W(s)F(s)\]
     we see that
@@ -472,9 +471,9 @@
   </p>
   <p class='indent'> Because of the form of
     \[ h(t)=\int _0^tw(\tau )f(t-\tau )\,d\tau \]
-    \(w\) is sometimes called the <span class='ptmri8t-'>weighting function</span> of the device, since it assigns
+    \(w\) is sometimes called the <span class='vocab'>weighting function</span> of the device, since it assigns
     weights to past values
-    of the input \(f\). It is also called the <span class='ptmri8t-'>impulse response</span> of the device, for reasons
+    of the input \(f\). It is also called the <span class='vocab'>impulse response</span> of the device, for reasons
     discussed in the next
     section.
   </p>
