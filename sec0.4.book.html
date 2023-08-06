@@ -28,16 +28,83 @@
   </p>
 
   <details>
-    <summary>Box 1</summary>
+    <summary>Limits</summary>
 
     <p class='noindent'>
-      Text for Box 1
-    </p>
+      Basic Limits
+      \begin{align*}
+        \lim_{x \to a} c = & c \\
+        \lim_{x \to a} x = & a \\
+      \end{align*}
+      
+      Limit Laws
+      \begin{align*}
+        \lim_{x \to a} \Big( c \cdot f(x) \Big) = & c \cdot \lim_{x \to a} f(x) \\
+        \lim_{x \to a} \Big( f(x) + g(x) \Big) = & \lim_{x \to a} f(x) + \lim_{x \to a} g(x) \\
+        \lim_{x \to a} \Big( f(x) \cdot g(x) \Big) = & \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x) \\
+        \lim_{x \to a} \left( \frac{ f(x) } { g(x) } \right) = & \frac{ \displaystyle \lim_{x \to a} f(x) }{ \displaystyle \lim_{x \to a} g(x) } \\
+        \lim_{x \to a} \Big( f^n(x) \Big) = & \Big( \lim_{x \to a} f(x) \Big)^n \\
+      \end{align*}
+      
+      Special Limits
+      \begin{align*}
+        \lim_{x \to 0} \frac{\sin x}{x} = & 1 \\
+        \lim_{x \to 0} \frac{1-\cos x}{x} = & 0 \\
+      \end{align*}  
 
-    <p class="reading-exercise">
-      Did you read box 1?
+      Infinite Limits
+      \begin{align*}
+        \lim_{x \to \infty} \frac{1}{x} = & 0 \\
+        \lim_{x \to 0^+} \frac{1}{x} = & \infty \\
+        \lim_{x \to 0^-} \frac{1}{x} = & -\infty \\  
+        \lim_{x \to \infty} e^x = & \infty \\
+        \lim_{x \to -\infty} e^x = & 0 \\              
+      \end{align*}            
     </p>
   </details>
+
+  <details>
+    <summary>Derivatives</summary>
+
+    <p class='noindent'>
+      Limit Definition
+      \begin{equation*}
+        f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} 
+      \end{equation*}
+      
+      Basic Derivative Rules
+      \begin{align*}
+        \frac{d}{dx} \Big( c \Big) = & 0 \\
+        \frac{d}{dx} \Big( x \Big) = & 1 \\
+        \frac{d}{dx} \Big( c \cdot f(x) \Big) = & c \cdot f'(x) \\
+        \frac{d}{dx} \Big( f(x) + g(x) \Big) = & f'(x) + g'(x) \\
+      \end{align*}      
+
+      Advanced Derivative Rules
+      \begin{align*}
+        \frac{d}{dx} \Big( x^n \Big) = & nx^{n-1} \\
+        \frac{d}{dx} \Big( f(x) \cdot g(x) \Big) = & f(x) \cdot g'(x) + g(x) \cdot f'(x) \\
+        \frac{d}{dx} \left( \frac{f(x)}{g(x)} \right) = & \frac{g(x) \cdot f'(x) - f(x) \cdot g'(x)}{ g^2(x) } \\
+        \frac{d}{dx} \bigg( f \Big( g(x) \Big) \bigg) = & f' \Big( g(x) \Big) \cdot g'(x) \\
+      \end{align*}  
+
+      <p class="reading-exercise">
+        Use the limit definition of the derivative to prove the derivative rules
+      </p>
+
+      Trig Derivatives
+      \begin{align*}
+        \frac{d}{dx} \Big( \sin x \Big) = & \cos x \\
+        \frac{d}{dx} \Big( \cos x \Big) = & -\sin x \\
+        \frac{d}{dx} \Big( \tan x \Big) = & \frac{d}{dx} \left( \frac{\sin x}{ \cos x} \right)  \\
+      \end{align*}  
+    </p>  
+
+    <p class="reading-exercise">
+      Use the limit definition of the derivative to prove the derivative rules
+    </p>
+  </details>
+
 
   <details>
     <summary>Box 2</summary>
@@ -50,6 +117,7 @@
       Did you read box 2?
     </p>
   </details>
+
 
   <div class="nav">
     <a href="sec0.3.book.html">Back (0.3)</a>
