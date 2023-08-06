@@ -195,148 +195,144 @@
 			</a>
 			.
 		</p>
-		<div class="newtheorem" id="4a0c555e-fcf8-4d79-b4c0-81824043c865">
+		<div class="example" id="x1-171" style="--ex-number: 1">
 			<p class="noindent">
-				<span class="head">
-					<span class="ex-number">Example&nbsp;2.6.1</span>
-				</span>
-				<a id="x1-171"></a>
+				<a id="x1-18r13"></a>
 				Find an integrating factor for the equation \begin {equation} \label
 				{eq:2.6.13} (2xy^3-2x^3y^3-4xy^2+2x)\,dx+(3x^2y^2+4y)\,dy=0 \end
-				{equation}
-				<a id="x1-18r13"></a>
-				and solve the equation.
+				{equation} and solve the equation.
 			</p>
+		
+			<details class="solution" id="94f35dcb-854c-4d25-ad1b-4857fd93f98c">
+				<summary>Solution</summary>
+				<p class="noindent" id="28585730-0c05-423b-8c85-707acf0a7124">
+					In  \[ M=2xy^3-2x^3y^3-4xy^2+2x,\ N=3x^2y^2+4y\] and \[
+					M_y-N_x=(6xy^2-6x^3y^2-8xy)-6xy^2=-6x^3y^2-8xy\] so  isn’t exact. However, \[ {M_y-N_x\over N}=-{6x^3y^2+8xy\over
+					3x^2y^2+4y}=-2x \] is independent of \(y\), so Theorem&nbsp;
+					<a href="#x1-111">
+						2.6.1
+						<!-- tex4ht:ref: thmtype:2.6.1  -->
+					</a>
+					<span class="ptmb8t-">(a)</span>
+					applies with \(p(x)=-2x\). Since \[ \int p (x)\,dx=-\int 2x\,dx=-x^2\]
+					\(\mu (x)=e^{-x^2}\) is an integrating factor. Multiplying  by \(\mu \) yields the exact equation \begin {equation} \label
+					{eq:2.6.14} e^{-x^2}(2xy^3-2x^3y^3-4xy^2+2x)\,dx+
+					e^{-x^2}(3x^2y^2+4y)\,dy=0\end {equation}
+					<a id="x1-19r14"></a>
+				</p>
+				<p class="indent" id="938d7d5f-2fa1-47db-80ac-fba2d24882e2">
+					To solve this equation, we must find a function \(F\) such that \begin
+					{equation} \label {eq:2.6.15} F_x(x,y)=e^{-x^2}(2xy^3-2x^3y^3-4xy^2+2x)
+					\end {equation}
+					<a id="x1-20r15"></a>
+					and \begin {equation} \label {eq:2.6.16} F_y(x,y)=e^{-x^2}(3x^2y^2+4y)\end
+					{equation}
+					<a id="x1-21r16"></a>
+					Integrating  with respect to \(y\) yields \begin {equation} \label {eq:2.6.17}
+					F(x,y)=e^{-x^2}(x^2y^3+2y^2)+\psi (x)\end {equation}
+					<a id="x1-22r17"></a>
+					Differentiating this with respect to \(x\) yields \[
+					F_x(x,y)=e^{-x^2}(2xy^3-2x^3y^3-4xy^2)+\psi '(x)\] Comparing this with  shows that \(\psi '(x)= 2xe^{-x^2}\); therefore, we can let \(\psi
+					(x)=-e^{-x^2}\) in  and conclude that \[ e^{-x^2}\left (y^2(x^2y+2)-1\right )=c \] is an
+					implicit solution of . It is also an implicit solution of .
+				</p>
+				<p class="indent" id="ff8dad0f-bff0-4963-bee2-015302e1e61e">
+					Figure&nbsp;
+					<a href="#-a-direction-field-and-integral-curves-for-xyxyxyxdxxyydy-">
+						2.6.1
+						<!-- tex4ht:ref: figure:2.6.1  -->
+					</a>
+					shows a direction field and some integal curves for 
+				</p>
+				<figure class="figure" id="fbe67842-2eb9-47a7-b8fe-b5c0a3570309">
+					<p
+						class="noindent"
+						id="-a-direction-field-and-integral-curves-for-xyxyxyxdxxyydy-"
+					>
+						<img height="264" src="EPS/fig020601.png" width="409" />
+						<a id="x1-23r1"></a>
+					</p>
+					<figcaption class="caption">
+						<span class="id">Figure&nbsp;2.6.1</span>
+						<span class="content">
+							A direction field and
+							<span class="vocab">integral curves</span>
+							for \((2xy^3-2x^3y^3-4xy^2+2x)\,dx+(3x^2y^2+4y)\,dy=0\)
+						</span>
+					</figcaption>
+					<!-- tex4ht:label?: x1-23r1  -->
+				</figure>
+			</details>
 		</div>
-		<p class="indent" id="94f35dcb-854c-4d25-ad1b-4857fd93f98c"></p>
-		<p class="noindent" id="28585730-0c05-423b-8c85-707acf0a7124">
-			<span class="ptmb8t-">Solution</span>
-			&nbsp;In  \[ M=2xy^3-2x^3y^3-4xy^2+2x,\ N=3x^2y^2+4y\] and \[
-			M_y-N_x=(6xy^2-6x^3y^2-8xy)-6xy^2=-6x^3y^2-8xy\] so  isn’t exact. However, \[ {M_y-N_x\over N}=-{6x^3y^2+8xy\over
-			3x^2y^2+4y}=-2x \] is independent of \(y\), so Theorem&nbsp;
-			<a href="#x1-111">
-				2.6.1
-				<!-- tex4ht:ref: thmtype:2.6.1  -->
-			</a>
-			<span class="ptmb8t-">(a)</span>
-			applies with \(p(x)=-2x\). Since \[ \int p (x)\,dx=-\int 2x\,dx=-x^2\]
-			\(\mu (x)=e^{-x^2}\) is an integrating factor. Multiplying  by \(\mu \) yields the exact equation \begin {equation} \label
-			{eq:2.6.14} e^{-x^2}(2xy^3-2x^3y^3-4xy^2+2x)\,dx+
-			e^{-x^2}(3x^2y^2+4y)\,dy=0\end {equation}
-			<a id="x1-19r14"></a>
-		</p>
-		<p class="indent" id="938d7d5f-2fa1-47db-80ac-fba2d24882e2">
-			To solve this equation, we must find a function \(F\) such that \begin
-			{equation} \label {eq:2.6.15} F_x(x,y)=e^{-x^2}(2xy^3-2x^3y^3-4xy^2+2x)
-			\end {equation}
-			<a id="x1-20r15"></a>
-			and \begin {equation} \label {eq:2.6.16} F_y(x,y)=e^{-x^2}(3x^2y^2+4y)\end
-			{equation}
-			<a id="x1-21r16"></a>
-			Integrating  with respect to \(y\) yields \begin {equation} \label {eq:2.6.17}
-			F(x,y)=e^{-x^2}(x^2y^3+2y^2)+\psi (x)\end {equation}
-			<a id="x1-22r17"></a>
-			Differentiating this with respect to \(x\) yields \[
-			F_x(x,y)=e^{-x^2}(2xy^3-2x^3y^3-4xy^2)+\psi '(x)\] Comparing this with  shows that \(\psi '(x)= 2xe^{-x^2}\); therefore, we can let \(\psi
-			(x)=-e^{-x^2}\) in  and conclude that \[ e^{-x^2}\left (y^2(x^2y+2)-1\right )=c \] is an
-			implicit solution of . It is also an implicit solution of .
-		</p>
-		<p class="indent" id="ff8dad0f-bff0-4963-bee2-015302e1e61e">
-			Figure&nbsp;
-			<a href="#-a-direction-field-and-integral-curves-for-xyxyxyxdxxyydy-">
-				2.6.1
-				<!-- tex4ht:ref: figure:2.6.1  -->
-			</a>
-			shows a direction field and some integal curves for 
-		</p>
-		<figure class="figure" id="fbe67842-2eb9-47a7-b8fe-b5c0a3570309">
-			<p
-				class="noindent"
-				id="-a-direction-field-and-integral-curves-for-xyxyxyxdxxyydy-"
-			>
-				<img height="264" src="EPS/fig020601.png" width="409" />
-				<a id="x1-23r1"></a>
-			</p>
-			<figcaption class="caption">
-				<span class="id">Figure&nbsp;2.6.1</span>
-				<span class="content">
-					A direction field and
-					<span class="vocab">integral curves</span>
-					for \((2xy^3-2x^3y^3-4xy^2+2x)\,dx+(3x^2y^2+4y)\,dy=0\)
-				</span>
-			</figcaption>
-			<!-- tex4ht:label?: x1-23r1  -->
-		</figure>
-		<div class="newtheorem" id="cfbfaedf-9fc2-48e5-bf1c-fbdb957b73e3">
+		<div class="example" id="x1-242" style="--ex-number: 2">
 			<p class="noindent">
-				<span class="head">
-					<span class="ex-number">Example&nbsp;2.6.2</span>
-				</span>
-				<a id="x1-242"></a>
+				<a id="x1-25r18"></a>
 				Find an integrating factor for \begin {equation} \label {eq:2.6.18}
 				2xy^3\,dx+(3x^2y^2+x^2y^3+1)\,dy=0 \end {equation}
-				<a id="x1-25r18"></a>
 				and solve the equation.
 			</p>
-		</div>
-		<p class="indent" id="2a5dd480-db26-4c8f-9be1-6d6f3370303a"></p>
-		<p class="noindent" id="f64a0235-53be-4410-8ccf-89198e516274">
-			<span class="ptmb8t-">Solution</span>
-			&nbsp;In , \[ M=2xy^3,\quad N=3x^2y^2+x^2y^3+1\] and \[
-			M_y-N_x=6xy^2-(6xy^2+2xy^3)=-2xy^3\] so  isn’t exact. Moreover, \[ {M_y-N_x\over N}=-{2xy^3\over
-			3x^2y^2+x^2y^2+1} \] is not independent of \(y\), so Theorem&nbsp;
-			<a href="#x1-111">
-				2.6.1
-				<!-- tex4ht:ref: thmtype:2.6.1  -->
-			</a>
-			(a) does not apply. However, Theorem&nbsp;
-			<a href="#x1-111">
-				2.6.1
-				<!-- tex4ht:ref: thmtype:2.6.1  -->
-			</a>
-			(b) does apply, since \[ {N_x-M_y\over M}={2xy^3\over 2xy^3}=1 \] is
-			independent of \(x\), so we can take \(q(y)=1\). Since \[ \int
-			q(y)\,dy=\int \,dy=y\] \(\mu (y)=e^y\) is an integrating factor.
-			Multiplying  by \(\mu \) yields the exact equation \begin {equation} \label
-			{eq:2.6.19} 2xy^3e^y\,dx+(3x^2y^2+x^2y^3+1)e^y\,dy=0\end {equation}
-			<a id="x1-26r19"></a>
-			To solve this equation, we must find a function \(F\) such that \begin
-			{equation} \label {eq:2.6.20} F_x(x,y)=2xy^3e^y \end {equation}
-			<a id="x1-27r20"></a>
-			and \begin {equation} \label {eq:2.6.21}
-			F_y(x,y)=(3x^2y^2+x^2y^3+1)e^y\end {equation}
-			<a id="x1-28r21"></a>
-			Integrating  with respect to \(x\) yields \begin {equation} \label {eq:2.6.22}
-			F(x,y)=x^2y^3e^y+\phi (y)\end {equation}
-			<a id="x1-29r22"></a>
-			Differentiating this with respect to \(y\) yields \[
-			F_y=(3x^2y^2+x^2y^3)e^y+\phi '(y)\] and comparing this with  shows that \(\phi '(y)=e^y\). Therefore we set \(\phi (y)=e^y\) in  and conclude that \[ (x^2y^3+1)e^y=c \] is an implicit solution of . It is also an implicit solution of . Figure&nbsp;
-			<a href="#-a-direction-field-and-integral-curves-for-xyeydxxyxyeydy-">
-				2.6.2
-				<!-- tex4ht:ref: figure:2.6.2  -->
-			</a>
-			shows a direction field and some
-			<span class="vocab">integral curves</span>
-			for . __
-		</p>
-		<figure class="figure" id="ef4f7c3a-6d0b-40e0-b282-0fcf9ea2b848">
-			<p
-				class="noindent"
-				id="-a-direction-field-and-integral-curves-for-xyeydxxyxyeydy-"
-			>
-				<img height="264" src="EPS/fig020602.png" width="409" />
-				<a id="x1-30r2"></a>
-			</p>
-			<figcaption class="caption">
-				<span class="id">Figure&nbsp;2.6.2</span>
-				<span class="content">
-					A direction field and
+
+			<details class="solution" id="2a5dd480-db26-4c8f-9be1-6d6f3370303a">
+				<summary>Solution</summary>
+				<p class="noindent" id="f64a0235-53be-4410-8ccf-89198e516274">
+					In , \[ M=2xy^3,\quad N=3x^2y^2+x^2y^3+1\] and \[
+					M_y-N_x=6xy^2-(6xy^2+2xy^3)=-2xy^3\] so  isn’t exact. Moreover, \[ {M_y-N_x\over N}=-{2xy^3\over
+					3x^2y^2+x^2y^2+1} \] is not independent of \(y\), so Theorem&nbsp;
+					<a href="#x1-111">
+						2.6.1
+						<!-- tex4ht:ref: thmtype:2.6.1  -->
+					</a>
+					(a) does not apply. However, Theorem&nbsp;
+					<a href="#x1-111">
+						2.6.1
+						<!-- tex4ht:ref: thmtype:2.6.1  -->
+					</a>
+					(b) does apply, since \[ {N_x-M_y\over M}={2xy^3\over 2xy^3}=1 \] is
+					independent of \(x\), so we can take \(q(y)=1\). Since \[ \int
+					q(y)\,dy=\int \,dy=y\] \(\mu (y)=e^y\) is an integrating factor.
+					Multiplying  by \(\mu \) yields the exact equation \begin {equation} \label
+					{eq:2.6.19} 2xy^3e^y\,dx+(3x^2y^2+x^2y^3+1)e^y\,dy=0\end {equation}
+					<a id="x1-26r19"></a>
+					To solve this equation, we must find a function \(F\) such that \begin
+					{equation} \label {eq:2.6.20} F_x(x,y)=2xy^3e^y \end {equation}
+					<a id="x1-27r20"></a>
+					and \begin {equation} \label {eq:2.6.21}
+					F_y(x,y)=(3x^2y^2+x^2y^3+1)e^y\end {equation}
+					<a id="x1-28r21"></a>
+					Integrating  with respect to \(x\) yields \begin {equation} \label {eq:2.6.22}
+					F(x,y)=x^2y^3e^y+\phi (y)\end {equation}
+					<a id="x1-29r22"></a>
+					Differentiating this with respect to \(y\) yields \[
+					F_y=(3x^2y^2+x^2y^3)e^y+\phi '(y)\] and comparing this with  shows that \(\phi '(y)=e^y\). Therefore we set \(\phi (y)=e^y\) in  and conclude that \[ (x^2y^3+1)e^y=c \] is an implicit solution of . It is also an implicit solution of . Figure&nbsp;
+					<a href="#-a-direction-field-and-integral-curves-for-xyeydxxyxyeydy-">
+						2.6.2
+						<!-- tex4ht:ref: figure:2.6.2  -->
+					</a>
+					shows a direction field and some
 					<span class="vocab">integral curves</span>
-					for \(2xy^3e^y\,dx+(3x^2y^2+x^2y^3+1)e^y\,dy=0\)
-				</span>
-			</figcaption>
-			<!-- tex4ht:label?: x1-30r2  -->
-		</figure>
+					for . __
+				</p>
+				<figure class="figure" id="ef4f7c3a-6d0b-40e0-b282-0fcf9ea2b848">
+					<p
+						class="noindent"
+						id="-a-direction-field-and-integral-curves-for-xyeydxxyxyeydy-"
+					>
+						<img height="264" src="EPS/fig020602.png" width="409" />
+						<a id="x1-30r2"></a>
+					</p>
+					<figcaption class="caption">
+						<span class="id">Figure&nbsp;2.6.2</span>
+						<span class="content">
+							A direction field and
+							<span class="vocab">integral curves</span>
+							for \(2xy^3e^y\,dx+(3x^2y^2+x^2y^3+1)e^y\,dy=0\)
+						</span>
+					</figcaption>
+					<!-- tex4ht:label?: x1-30r2  -->
+				</figure>
+			</details>
+		</div>
+
 		<p class="indent" id="d55be1fe-d212-4b91-8a98-103649f4bf64">
 			Theorem&nbsp;
 			<a href="#x1-111">
@@ -351,161 +347,161 @@
 			</a>
 			provides an integrating factor.
 		</p>
-		<div class="newtheorem" id="0f7db6fe-7c86-475c-8d75-78e9c54ad473">
+		<div class="example" id="x1-313" style="--ex-number: 3">
 			<p class="noindent">
-				<span class="head">
-					<span class="ex-number">Example&nbsp;2.6.3</span>
-				</span>
-				<a id="x1-313"></a>
+				<a id="x1-32r23"></a>
 				Find an integrating factor for \begin {equation} \label {eq:2.6.23}
 				(3xy+6y^2)\,dx+(2x^2+9xy)\,dy=0 \end {equation}
-				<a id="x1-32r23"></a>
 				and solve the equation.
 			</p>
-		</div>
-		<p class="indent" id="52fd5863-54f0-4d36-9d45-1225a0d6b4e2"></p>
-		<p class="noindent" id="572fc289-d7ce-460c-aecd-c1bf7c184787">
-			<span class="ptmb8t-">Solution</span>
-			&nbsp;In  \[ M=3xy+6y^2,\ N=2x^2+9xy\] and \[ M_y-N_x=(3x+12y)-(4x+9y)=-x+3y\]
-			Therefore \[ {M_y-N_x\over M}={-x+3y\over 3xy+6y^2} \mbox {\quad and \quad
-			} {N_x-M_y\over N}={x-3y\over 2x^2+9xy}\] so Theorem&nbsp;
-			<a href="#x1-111">
-				2.6.1
-				<!-- tex4ht:ref: thmtype:2.6.1  -->
-			</a>
-			does not apply. Following the more general argument that led to
-			Theorem&nbsp;
-			<a href="#x1-111">
-				2.6.1
-				<!-- tex4ht:ref: thmtype:2.6.1  -->
-			</a>
-			, we look for functions \(p=p(x)\) and \(q=q(y)\) such that \[
-			M_y-N_x=p(x)N-q(y)M\] that is, \[ -x+3y=p(x)(2x^2+9xy)-q(y)(3xy+6y^2)\]
-			Since the left side contains only first degree terms in \(x\) and \(y\),
-			we rewrite this equation as \[ xp(x)(2x+9y)-yq(y)(3x+6y)=-x+3y\] This will
-			be an identity if \begin {equation} \label {eq:2.6.24} xp(x)=A\mbox {\quad
-			and\quad } yq(y)=B\end {equation}
-			<a id="x1-33r24"></a>
-			where \(A\) and \(B\) are constants such that \[ -x+3y=A(2x+9y)-B(3x+6y)\]
-			or, equivalently, \[ -x+3y=(2A-3B)x+(9A-6B)y\] Equating the coefficients
-			of \(x\) and \(y\) on both sides shows that the last equation holds for
-			all \((x,y)\) if
-		</p>
-		<div class="eqnarray" id="a996a92a-4e43-4d91-a26d-e2a38606c274">
-			\begin {eqnarray*} 2A-3B &amp;=&amp;-1 \\ 9A-6B &amp;=&amp;\phantom
-			{-}3\end {eqnarray*}
-		</div>
-		<p class="indent" id="ea329c9b-cbf8-433c-9476-bf68bd159999">
-			which has the solution \(A=1\), \(B=1\). Therefore  implies that \[ p(x)={1\over x}\mbox {\quad and \quad } q(y)={1\over
-			y}\] Since \[ \int p(x)\,dx=\ln |x|\mbox {\quad and\quad }\int
-			q(y)\,dy=\ln |y|\] we can let \(P(x)=x\) and \(Q(y)=y\); hence, \(\mu
-			(x,y)=xy\) is an integrating factor. Multiplying  by \(\mu \) yields the exact equation \[
-			(3x^2y^2+6xy^3)\,dx+(2x^3y+9x^2y^2)\,dy=0\] We leave it to you to use the
-			method of Section&nbsp;2.5 to show that this equation has the implicit
-			solution \begin {equation} \label {eq:2.6.25} x^3y^2+3x^2y^3=c\end
-			{equation}
-			<a id="x1-34r25"></a>
-			This is also an implicit solution of . Since \(x\equiv 0\) and \(y\equiv 0\) satisfy , you should check to see that \(x\equiv 0\) and \(y\equiv 0\) are also
-			solutions of . (Why is it necesary to check this?)
-		</p>
-		<p class="indent" id="76067fac-b5d4-4087-a863-327ae9d438ad">
-			Figure&nbsp;
-			<a href="#-a-direction-field-and-integral-curves-for-xyydxxxydy-">
-				2.6.3
-				<!-- tex4ht:ref: figure:2.6.3  -->
-			</a>
-			shows a direction field and
-			<span class="vocab">integral curves</span>
-			for .
-		</p>
-		<p class="indent" id="b39b6025-5797-4e77-8739-52723da2e761">
-			See Exercise&nbsp;
-			<span class="ptmb8t-">28</span>
-			for a general discussion of equations like .
-		</p>
-		<figure class="figure" id="32d02986-2fe7-4f5e-8008-762e054e066f">
-			<p
-				class="noindent"
-				id="-a-direction-field-and-integral-curves-for-xyydxxxydy-"
-			>
-				<img height="264" src="EPS/fig020603.png" width="409" />
-				<a id="x1-35r3"></a>
-			</p>
-			<figcaption class="caption">
-				<span class="id">Figure&nbsp;2.6.3</span>
-				<span class="content">
-					A direction field and
+
+			<details class="solution" id="52fd5863-54f0-4d36-9d45-1225a0d6b4e2">
+				<summary>Solution</summary>
+		
+				<p class="noindent" id="572fc289-d7ce-460c-aecd-c1bf7c184787">
+					In  \[ M=3xy+6y^2,\ N=2x^2+9xy\] and \[ M_y-N_x=(3x+12y)-(4x+9y)=-x+3y\]
+					Therefore \[ {M_y-N_x\over M}={-x+3y\over 3xy+6y^2} \mbox {\quad and \quad
+					} {N_x-M_y\over N}={x-3y\over 2x^2+9xy}\] so Theorem&nbsp;
+					<a href="#x1-111">
+						2.6.1
+						<!-- tex4ht:ref: thmtype:2.6.1  -->
+					</a>
+					does not apply. Following the more general argument that led to
+					Theorem&nbsp;
+					<a href="#x1-111">
+						2.6.1
+						<!-- tex4ht:ref: thmtype:2.6.1  -->
+					</a>
+					, we look for functions \(p=p(x)\) and \(q=q(y)\) such that \[
+					M_y-N_x=p(x)N-q(y)M\] that is, \[ -x+3y=p(x)(2x^2+9xy)-q(y)(3xy+6y^2)\]
+					Since the left side contains only first degree terms in \(x\) and \(y\),
+					we rewrite this equation as \[ xp(x)(2x+9y)-yq(y)(3x+6y)=-x+3y\] This will
+					be an identity if \begin {equation} \label {eq:2.6.24} xp(x)=A\mbox {\quad
+					and\quad } yq(y)=B\end {equation}
+					<a id="x1-33r24"></a>
+					where \(A\) and \(B\) are constants such that \[ -x+3y=A(2x+9y)-B(3x+6y)\]
+					or, equivalently, \[ -x+3y=(2A-3B)x+(9A-6B)y\] Equating the coefficients
+					of \(x\) and \(y\) on both sides shows that the last equation holds for
+					all \((x,y)\) if
+				</p>
+				<div class="eqnarray" id="a996a92a-4e43-4d91-a26d-e2a38606c274">
+					\begin {eqnarray*} 2A-3B &amp;=&amp;-1 \\ 9A-6B &amp;=&amp;\phantom
+					{-}3\end {eqnarray*}
+				</div>
+				<p class="indent" id="ea329c9b-cbf8-433c-9476-bf68bd159999">
+					which has the solution \(A=1\), \(B=1\). Therefore  implies that \[ p(x)={1\over x}\mbox {\quad and \quad } q(y)={1\over
+					y}\] Since \[ \int p(x)\,dx=\ln |x|\mbox {\quad and\quad }\int
+					q(y)\,dy=\ln |y|\] we can let \(P(x)=x\) and \(Q(y)=y\); hence, \(\mu
+					(x,y)=xy\) is an integrating factor. Multiplying  by \(\mu \) yields the exact equation \[
+					(3x^2y^2+6xy^3)\,dx+(2x^3y+9x^2y^2)\,dy=0\] We leave it to you to use the
+					method of Section&nbsp;2.5 to show that this equation has the implicit
+					solution \begin {equation} \label {eq:2.6.25} x^3y^2+3x^2y^3=c\end
+					{equation}
+					<a id="x1-34r25"></a>
+					This is also an implicit solution of . Since \(x\equiv 0\) and \(y\equiv 0\) satisfy , you should check to see that \(x\equiv 0\) and \(y\equiv 0\) are also
+					solutions of . (Why is it necesary to check this?)
+				</p>
+				<p class="indent" id="76067fac-b5d4-4087-a863-327ae9d438ad">
+					Figure&nbsp;
+					<a href="#-a-direction-field-and-integral-curves-for-xyydxxxydy-">
+						2.6.3
+						<!-- tex4ht:ref: figure:2.6.3  -->
+					</a>
+					shows a direction field and
 					<span class="vocab">integral curves</span>
-					for \((3xy+6y^2)\,dx+(2x^2+9xy)\,dy=0\)
-				</span>
-			</figcaption>
-			<!-- tex4ht:label?: x1-35r3  -->
-		</figure>
-		<div class="newtheorem" id="dd9f7250-d595-4ab9-8b85-fd1a725049dc">
+					for .
+				</p>
+				<p class="indent" id="b39b6025-5797-4e77-8739-52723da2e761">
+					See Exercise&nbsp;
+					<span class="ptmb8t-">28</span>
+					for a general discussion of equations like .
+				</p>
+				<figure class="figure" id="32d02986-2fe7-4f5e-8008-762e054e066f">
+					<p
+						class="noindent"
+						id="-a-direction-field-and-integral-curves-for-xyydxxxydy-"
+					>
+						<img height="264" src="EPS/fig020603.png" width="409" />
+						<a id="x1-35r3"></a>
+					</p>
+					<figcaption class="caption">
+						<span class="id">Figure&nbsp;2.6.3</span>
+						<span class="content">
+							A direction field and
+							<span class="vocab">integral curves</span>
+							for \((3xy+6y^2)\,dx+(2x^2+9xy)\,dy=0\)
+						</span>
+					</figcaption>
+					<!-- tex4ht:label?: x1-35r3  -->
+				</figure>
+			</details>
+		</div>
+
+		<div class="example" id="x1-364" style="--ex-number: 4">
 			<p class="noindent">
-				<span class="head">
-					<span class="ex-number">Example&nbsp;2.6.4</span>
-				</span>
-				<a id="x1-364"></a>
+				<a id="x1-37r26"></a>
 				The separable equation \begin {equation} \label {eq:2.6.26}
 				-y\,dx+(x+x^6)\,dy=0 \end {equation}
-				<a id="x1-37r26"></a>
+				<a id="x1-38r27"></a>
 				can be converted to the exact equation \begin {equation} \label
 				{eq:2.6.27} -{dx\over x+x^6}+{dy\over y}=0 \end {equation}
-				<a id="x1-38r27"></a>
 				by multiplying through by the integrating factor \[ \mu (x,y)={1\over
-				y(x+x^6)}\] However, to solve  by the method of Section&nbsp;2.5 we would have to evaluate the nasty
+				y(x+x^6)}\] However, to solve by the method of <a href='sec2.5.book.html'>Section&nbsp;2.5</a> we would have to evaluate the nasty
 				integral \[ \int {dx\over x+x^6}\] Instead, we solve  explicitly for \(y\) by finding an integrating factor of the form
 				\(\mu (x,y)=x^ay^b\).
 			</p>
-		</div>
-		<p class="indent" id="5d10f2ad-fb16-4c14-ac80-16b65545c785"></p>
-		<figure class="figure" id="d1972be2-3ff9-4461-aa10-112ed8c4fba4">
-			<p
-				class="noindent"
-				id="-a-direction-field-and-integral-curves-for-ydxxxdy-"
-			>
-				<img height="264" src="EPS/fig020604.png" width="409" />
-				<a id="x1-39r4"></a>
-			</p>
-			<figcaption class="caption">
-				<span class="id">Figure&nbsp;2.6.4</span>
-				<span class="content">
-					A direction field and
+
+			<details class="solution" id="5d10f2ad-fb16-4c14-ac80-16b65545c785">
+				<summary>Solution</summary>
+
+				<figure class="figure" id="d1972be2-3ff9-4461-aa10-112ed8c4fba4">
+					<p
+						class="noindent"
+						id="-a-direction-field-and-integral-curves-for-ydxxxdy-"
+					>
+						<img height="264" src="EPS/fig020604.png" width="409" />
+						<a id="x1-39r4"></a>
+					</p>
+					<figcaption class="caption">
+						<span class="id">Figure&nbsp;2.6.4</span>
+						<span class="content">
+							A direction field and
+							<span class="vocab">integral curves</span>
+							for \(-y\,dx+(x+x^6)\,dy=0\)
+						</span>
+					</figcaption>
+					<!-- tex4ht:label?: x1-39r4  -->
+				</figure>
+				<p class="noindent" id="1d383358-da6e-458e-904f-3f37b393e0ea">
+					<span class="ptmb8t-">Solution</span>
+					&nbsp;In  \[ M=-y,\ N=x+x^6\] and \[ M_y-N_x=-1-(1+6x^5)=-2-6x^5\] We look for
+					functions \(p=p(x)\) and \(q=q(y)\) such that \[ M_y-N_x=p(x)N-q(y)M\]
+					that is, \begin {equation} \label {eq:2.6.28}
+					-2-6x^5=p(x)(x+x^6)+q(y)y\end {equation}
+					<a id="x1-40r28"></a>
+					The right side will contain the term \(-6x^5\) if \(p(x)=-6/x\). Then  becomes \[ -2-6x^5=-6-6x^5+q(y)y\] so \(q(y)=4/y\). Since \[ \int
+					p(x)\,dx=-\int {6\over x}\,dx=-6\ln |x|=\ln {1\over x^6}\] and \[ \int
+					q(y)\,dy=\int {4\over y}\,dy=4\ln |y|=\ln {y^4}\] we can take
+					\(P(x)=x^{-6}\) and \(Q(y)=y^4\), which yields the integrating factor
+					\(\mu (x,y)=x^{-6}y^4\). Multiplying  by \(\mu \) yields the exact equation \[ -{y^5\over x^6}\,dx+\left
+					({y^4\over x^5}+y^4\right ) \,dy=0\] We leave it to you to use the method
+					of the Section&nbsp;2.5 to show that this equation has the implicit
+					solution \[ \left ({y\over x}\right )^5+y^5=k\] Solving for \(y\) yields
+					\[ y=k^{1/5}x(1+x^5)^{-1/5}\] which we rewrite as \[ y=cx(1+x^5)^{-1/5} \]
+					by renaming the arbitrary constant. This is also a solution of .
+				</p>
+				<p class="indent" id="5f84f450-2a24-4408-9148-dee070eabe0a">
+					Figure&nbsp;
+					<a href="#-a-direction-field-and-integral-curves-for-ydxxxdy-">
+						2.6.4
+						<!-- tex4ht:ref: figure:2.6.4  -->
+					</a>
+					shows a direction field and some
 					<span class="vocab">integral curves</span>
-					for \(-y\,dx+(x+x^6)\,dy=0\)
-				</span>
-			</figcaption>
-			<!-- tex4ht:label?: x1-39r4  -->
-		</figure>
-		<p class="noindent" id="1d383358-da6e-458e-904f-3f37b393e0ea">
-			<span class="ptmb8t-">Solution</span>
-			&nbsp;In  \[ M=-y,\ N=x+x^6\] and \[ M_y-N_x=-1-(1+6x^5)=-2-6x^5\] We look for
-			functions \(p=p(x)\) and \(q=q(y)\) such that \[ M_y-N_x=p(x)N-q(y)M\]
-			that is, \begin {equation} \label {eq:2.6.28}
-			-2-6x^5=p(x)(x+x^6)+q(y)y\end {equation}
-			<a id="x1-40r28"></a>
-			The right side will contain the term \(-6x^5\) if \(p(x)=-6/x\). Then  becomes \[ -2-6x^5=-6-6x^5+q(y)y\] so \(q(y)=4/y\). Since \[ \int
-			p(x)\,dx=-\int {6\over x}\,dx=-6\ln |x|=\ln {1\over x^6}\] and \[ \int
-			q(y)\,dy=\int {4\over y}\,dy=4\ln |y|=\ln {y^4}\] we can take
-			\(P(x)=x^{-6}\) and \(Q(y)=y^4\), which yields the integrating factor
-			\(\mu (x,y)=x^{-6}y^4\). Multiplying  by \(\mu \) yields the exact equation \[ -{y^5\over x^6}\,dx+\left
-			({y^4\over x^5}+y^4\right ) \,dy=0\] We leave it to you to use the method
-			of the Section&nbsp;2.5 to show that this equation has the implicit
-			solution \[ \left ({y\over x}\right )^5+y^5=k\] Solving for \(y\) yields
-			\[ y=k^{1/5}x(1+x^5)^{-1/5}\] which we rewrite as \[ y=cx(1+x^5)^{-1/5} \]
-			by renaming the arbitrary constant. This is also a solution of .
-		</p>
-		<p class="indent" id="5f84f450-2a24-4408-9148-dee070eabe0a">
-			Figure&nbsp;
-			<a href="#-a-direction-field-and-integral-curves-for-ydxxxdy-">
-				2.6.4
-				<!-- tex4ht:ref: figure:2.6.4  -->
-			</a>
-			shows a direction field and some
-			<span class="vocab">integral curves</span>
-			for .
-		</p>
+					for .
+				</p>
+			</details>
+		</div>
 
 		<div class="nav" id="33d3d8ec-1064-4a0e-9b8a-ae246073ccdc">
 			<a href="sec2.5.book.html">Back (2.5)</a>
