@@ -31,15 +31,15 @@
 	</head>
 
 	<body>
-		<p id="27530f70-1b70-42bc-80e9-e8eb7c11a55e"><a id="x1-1doc"></a></p>
-		<p class="noindent" id="a84a2388-726b-4dd7-bfeb-5cafb2aa1f64">
+		<div id="27530f70-1b70-42bc-80e9-e8eb7c11a55e"><a id="x1-1doc"></a></div>
+		<div class="noindent" id="a84a2388-726b-4dd7-bfeb-5cafb2aa1f64">
 			Section 8.6 Convolution
-		</p>
-		<p class="noindent" id="0df98874-eb94-48ef-b292-241d30fc8718">
+		</div>
+		<div class="noindent" id="0df98874-eb94-48ef-b292-241d30fc8718">
 			<span class="ptmb8t-">8.6</span>
 			<span class="ptmb8t-x-x-90">&nbsp; CONVOLUTION</span>
-		</p>
-		<p class="noindent" id="62ef2ffa-ddbc-421b-81d4-b515a2a22aaa">
+		</div>
+		<div class="noindent" id="62ef2ffa-ddbc-421b-81d4-b515a2a22aaa">
 			In this section we consider the problem of finding the inverse Laplace
 			transform of a product \(H(s)=F(s)G(s)\), where \(F\) and \(G\) are the
 			Laplace transforms of known functions \(f\) and \(g\). To motivate our
@@ -49,15 +49,15 @@
 			Y(s)=F(s)G(s)\end {equation}
 			<a id="x1-2r1"></a>
 			where \[ G(s)={1\over as^2+bs+c}\]
-		</p>
-		<p class="indent" id="4854fc42-758e-4955-ada0-97bb5f77ceca">
+		</div>
+		<div class="indent" id="4854fc42-758e-4955-ada0-97bb5f77ceca">
 			Until now wen’t been interested in the factorization indicated in <a href="#x1-2r1">(8.6.1)</a>, since we dealt only with differential equations with specific forcing
 			functions. Hence, we could simply do the indicated multiplication in <a href="#x1-2r1">(8.6.1)</a> and use the table of Laplace transforms to find \(y={\cal L}^{-1}(Y)\).
 			However, this isn’t possible if we want a
 			<em>formula</em>
 			for \(y\) in terms of \(f\), which may be unspecified.
-		</p>
-		<p class="indent" id="36f98d18-01ff-4efc-ad59-91e7f5722f11">
+		</div>
+		<div class="indent" id="36f98d18-01ff-4efc-ad59-91e7f5722f11">
 			To motivate the formula for \({\cal L}^{-1}(FG)\), consider the initial
 			value problem \begin {equation} \label {eq:8.6.2} y'-ay=f(t),\quad
 			y(0)=0\end {equation}
@@ -69,8 +69,8 @@
 			{equation} \label {eq:8.6.3} y(t)=e^{at}\int _0^t e^{-a\tau }f(\tau
 			)\,d\tau =\int _0^t e^{a(t-\tau )}f(\tau )\,d\tau \end {equation}
 			<a id="x1-4r3"></a>
-		</p>
-		<p class="indent" id="653c1c14-9e15-44d7-85cf-81005b067bd3">
+		</div>
+		<div class="indent" id="653c1c14-9e15-44d7-85cf-81005b067bd3">
 			Now we’ll use the Laplace transform to solve <a href="#x1-3r2">(8.6.2)</a> and compare the result to <a href="#x1-4r3">(8.6.3)</a>. Taking Laplace transforms in <a href="#x1-3r2">(8.6.2)</a> yields \[ (s-a)Y(s)=F(s)\] so \[ Y(s)=F(s) {1\over s-a}\] which implies
 			that \begin {equation} \label {eq:8.6.4} y(t)= {\cal L}^{-1}\left
 			(F(s){1\over s-a}\right )\end {equation}
@@ -81,14 +81,14 @@
 			{equation}
 			<a id="x1-6r5"></a>
 			in this case.
-		</p>
-		<p class="indent" id="98a78efa-fe42-4370-99f2-18386d59e951">
+		</div>
+		<div class="indent" id="98a78efa-fe42-4370-99f2-18386d59e951">
 			This motivates the next definition.
-		</p>
+		</div>
 		<dl class="trivlist" id="049bdd46-07fc-4884-9d48-2d651cdfdf91">
 			<dt class="trivlist"></dt>
 			<dd class="trivlist">
-				<p class="indent">
+				<div class="indent">
 					<span class="ptmb8t-">Definition</span>
 					<a id="x1-7r1"></a>
 					<span class="ptmb8t-">8.6.1</span>
@@ -96,31 +96,31 @@
 					<span class="vocab">convolution</span>
 					\(f*g\) of two functions \(f\) and \(g\) is defined by \[
 					(f*g)(t)=\int _0^t f(\tau )g(t-\tau )\,d\tau \]
-				</p>
+				</div>
 			</dd>
 		</dl>
-		<p class="indent" id="c34252d9-3055-4e7e-8433-916e28d0dae4">
+		<div class="indent" id="c34252d9-3055-4e7e-8433-916e28d0dae4">
 			It can be shown (Exercise&nbsp;
 			<span class="ptmb8t-">6</span>
 			) that \(f\ast g=g\ast f\); that is, \[ \int _0^tf(t-\tau )g(\tau )\,d\tau
 			=\int _0^tf(\tau )g(t-\tau )\,d\tau \]
-		</p>
-		<p class="indent" id="4cf12cde-b8a3-4953-b86d-15402bafb977">
+		</div>
+		<div class="indent" id="4cf12cde-b8a3-4953-b86d-15402bafb977">
 			Eqn.&nbsp;<a href="#x1-6r5">(8.6.5)</a> shows that \({\cal L}^{-1}(FG)=f*g\) in the special case where
 			\(g(t)=e^{at}\). This next theorem states that this is true in general.
-		</p>
+		</div>
 		<div class="newtheorem" id="2f42856a-a13f-46fd-a1b5-d7bf45cef117">
-			<p class="noindent">
+			<div class="noindent">
 				<span class="head">
 					<span class="ptmb8t-">Theorem&nbsp;8.6.2</span>
 				</span>
 				\([\)The Convolution Theorem\(]\)
 				<a id="x1-82"></a>
 				If \({\cal L}(f)=F\) and \({\cal L}(g)=G,\) then \[ {\cal L}(f*g)=FG\]
-			</p>
+			</div>
 		</div>
-		<p class="indent" id="ddd038fc-7748-4208-82e9-46cb085d41fa"></p>
-		<p class="indent" id="5af47ebe-8aa2-4141-a279-0abb47c36617">
+		<div class="indent" id="ddd038fc-7748-4208-82e9-46cb085d41fa"></div>
+		<div class="indent" id="5af47ebe-8aa2-4141-a279-0abb47c36617">
 			A complete proof of the convolution theorem is beyond the scope of this
 			book. However, we’ll assume that \(f\ast g\) has a Laplace transform and
 			verify the conclusion of the theorem in a purely computational way. By the
@@ -137,26 +137,26 @@
 			e^{-st}g(t-\tau )\, dt \,d\tau \end {equation}
 			<a id="x1-9r6"></a>
 			However, the substitution \(x=t-\tau \) shows that
-		</p>
+		</div>
 		<div class="eqnarray" id="4e963926-b82b-46eb-976d-c080c4f45417">
 			\begin {eqnarray*} \int ^\infty _\tau e^{-st}g(t-\tau )\,dt&amp;=&amp;\int
 			_0^\infty e^{-s(x+\tau )}g(x)\,dx\\ &amp;=&amp;e^{-s\tau }\int _0^\infty
 			e^{-sx}g(x)\,dx=e^{-s\tau }G(s)\end {eqnarray*}
 		</div>
-		<p class="indent" id="a09aee03-5334-409f-8bc2-008cef222a3a">
+		<div class="indent" id="a09aee03-5334-409f-8bc2-008cef222a3a">
 			Substituting this into <a href="#x1-9r6">(8.6.6)</a> and noting that \(G(s)\) is independent of \(\tau \) yields
-		</p>
+		</div>
 		<div class="eqnarray" id="4090a3f8-168e-447c-82fb-ef9dfd4718a2">
 			\begin {eqnarray*} {\cal L}(f\ast g)&amp;=&amp;\int _0^\infty e^{-s\tau }
 			f(\tau )G(s)\,d\tau \\ &amp;=&amp;G(s)\int _0^\infty e^{-st}f(\tau
 			)\,d\tau =F(s)G(s)\end {eqnarray*}
 		</div>
-		<p class="indent" id="98ad8152-9db1-4c52-8ac2-ea6c865f283c">&nbsp;</p>
+		<div class="indent" id="98ad8152-9db1-4c52-8ac2-ea6c865f283c">&nbsp;</div>
 		<figure class="figure" id="89e43eb8-120c-4c9f-8ad4-abe6242dc208">
-			<p class="noindent" id="-">
+			<div class="noindent" id="-">
 				<img height="264" src="EPS/fig080601.png" width="409" />
 				<a id="x1-10r1"></a>
-			</p>
+			</div>
 			<figcaption class="caption">
 				<span class="id">Figure&nbsp;8.6.1</span>
 				<span class="content"></span>
@@ -164,7 +164,7 @@
 			<!-- tex4ht:label?: x1-10r1  -->
 		</figure>
 		<div class="newtheorem" id="313eff73-874e-4592-9847-6341302d83e5">
-			<p class="noindent">
+			<div class="noindent">
 				<span class="head">
 					<span class="ex-number">Example&nbsp;8.6.1</span>
 				</span>
@@ -172,10 +172,10 @@
 				Let \[ f(t)=e^{at}\mbox {\quad and \quad } g(t)=e^{bt}\qquad (a\ne b)\]
 				Verify that \({\cal L}(f\ast g)={\cal L}(f){\cal L}(g)\), as implied by
 				the convolution theorem.
-			</p>
+			</div>
 		</div>
-		<p class="indent" id="5b1c5906-535a-4f28-8af9-ae484fc45640"></p>
-		<p class="noindent" id="5b17da5e-0b23-4b48-a7a5-fc21046c23a4">
+		<div class="indent" id="5b1c5906-535a-4f28-8af9-ae484fc45640"></div>
+		<div class="noindent" id="5b17da5e-0b23-4b48-a7a5-fc21046c23a4">
 			<span class="ptmb8t-">Solution</span>
 			&nbsp;We first compute \[ \begin {array}{ccccc} (f\ast
 			g)(t)&amp;=&amp;\displaystyle \int _0^t e^{a\tau }e^{b(t-\tau )}\,d\tau
@@ -185,26 +185,26 @@
 			a-b}\\ &amp;=&amp;\displaystyle {e^{at}-e^{bt}\over a-b}\end {array} \]
 			Since \[ e^{at}\leftrightarrow {1\over s-a}\quad \mbox { and }\quad
 			e^{bt}\leftrightarrow {1\over s-b}\] it follows that
-		</p>
+		</div>
 		<div class="eqnarray" id="d1c5764e-1640-4389-aa2c-ff5e7ea660d0">
 			\begin {eqnarray*} {\cal L}(f\ast g)&amp;=&amp;{1\over a-b}\left [{1\over
 			s-a}-{1\over s-b}\right ]\\[10pt ] &amp;=&amp;{1\over (s-a)(s-b)}\\
 			&amp;=&amp;{\cal L}(e^{at}){\cal L}(e^{bt})={\cal L}(f){\cal L}(g)\end
 			{eqnarray*}
 		</div>
-		<p class="noindent" id="3d25216d-3d51-4dd5-b3e9-0c0b1cb6cbe3">
+		<div class="noindent" id="3d25216d-3d51-4dd5-b3e9-0c0b1cb6cbe3">
 			<span id="textcolor1">
 				A Formula for the Solution of an Initial Value Problem
 			</span>
-		</p>
-		<p class="indent" id="5b0d542a-5b88-48d1-ae16-2dfa8ed6cd91"></p>
-		<p class="noindent" id="ba99e7b9-467b-4a43-b723-1a2ab7027b3f">
+		</div>
+		<div class="indent" id="5b0d542a-5b88-48d1-ae16-2dfa8ed6cd91"></div>
+		<div class="noindent" id="ba99e7b9-467b-4a43-b723-1a2ab7027b3f">
 			The convolution theorem provides a formula for the solution of an initial
 			value problem for a linear constant coefficient second order equation with
 			an unspecified. The next three examples illustrate this.
-		</p>
+		</div>
 		<div class="newtheorem" id="2a4d5c7a-8f47-4b98-b9bc-427712488834">
-			<p class="noindent">
+			<div class="noindent">
 				<span class="head">
 					<span class="ex-number">Example&nbsp;8.6.2</span>
 				</span>
@@ -213,19 +213,19 @@
 				{equation} \label {eq:8.6.7} y''-2y'+y=f(t),\quad y(0)=k_0,\quad
 				y'(0)=k_1\end {equation}
 				<a id="x1-13r7"></a>
-			</p>
+			</div>
 		</div>
-		<p class="indent" id="0b0fdaef-16cd-4052-a457-2fbd52145404"></p>
-		<p class="noindent" id="e4b381ae-cc48-409c-a176-bdf0d605b520">
+		<div class="indent" id="0b0fdaef-16cd-4052-a457-2fbd52145404"></div>
+		<div class="noindent" id="e4b381ae-cc48-409c-a176-bdf0d605b520">
 			<span class="ptmb8t-">Solution</span>
 			&nbsp;Taking Laplace transforms in <a href="#x1-13r7">(8.6.7)</a> yields \[ (s^2-2s+1)Y(s)=F(s)+(k_1+k_0s)-2k_0\] Therefore
-		</p>
+		</div>
 		<div class="eqnarray" id="083c7991-9f61-4510-85c7-c5d5856f0317">
 			\begin {eqnarray*} Y(s)&amp;=&amp;{1\over (s-1)^2}F(s)+{k_1+k_0s-2k_0\over
 			(s-1)^2}\\ &amp;=&amp;{1\over (s-1)^2}F(s)+{k_0\over s-1}+{k_1-k_0\over
 			(s-1)^2}\end {eqnarray*}
 		</div>
-		<p class="indent" id="f42735d1-0382-4365-ab65-ad2e0f0ce65f">
+		<div class="indent" id="f42735d1-0382-4365-ab65-ad2e0f0ce65f">
 			From the table of Laplace transforms, \[ {\cal L}^{-1}\left ({k_0\over
 			s-1}+{k_1-k_0\over (s-1)^2}\right ) =e^t\left (k_0+(k_1-k_0)t\right )\]
 			Since \[ {1\over (s-1)^2}\leftrightarrow te^t\mbox {\quad and \quad } F(s)
@@ -233,9 +233,9 @@
 			L}^{-1} \left ({1\over (s-1)^2}F(s)\right )= \int _0^t\tau e^\tau f(t-\tau
 			)\,d\tau \] Therefore the solution of <a href="#x1-13r7">(8.6.7)</a> is \[ y(t)=e^t\left (k_0+(k_1-k_0)t\right )+\int _0^t\tau e^\tau
 			f(t-\tau )\, d\tau \]
-		</p>
+		</div>
 		<div class="newtheorem" id="6e7935d4-83a8-4be3-aa81-af1cc86ddb97">
-			<p class="noindent">
+			<div class="noindent">
 				<span class="head">
 					<span class="ex-number">Example&nbsp;8.6.3</span>
 				</span>
@@ -244,10 +244,10 @@
 				{equation} \label {eq:8.6.8} y''+4y=f(t),\quad y(0)=k_0,\quad
 				y'(0)=k_1\end {equation}
 				<a id="x1-15r8"></a>
-			</p>
+			</div>
 		</div>
-		<p class="indent" id="603ae34c-edca-454a-8df7-2bdc93c6084d"></p>
-		<p class="noindent" id="979753fd-3ddc-4d94-8f4a-e1034d420ea4">
+		<div class="indent" id="603ae34c-edca-454a-8df7-2bdc93c6084d"></div>
+		<div class="noindent" id="979753fd-3ddc-4d94-8f4a-e1034d420ea4">
 			<span class="ptmb8t-">Solution</span>
 			&nbsp;Taking Laplace transforms in <a href="#x1-15r8">(8.6.8)</a> yields \[ (s^2+4)Y(s) =F(s)+k_1+k_0s\] Therefore \[ Y(s) ={1\over
 			(s^2+4)}F(s)+{k_1+k_0s\over s^2+4}\] From the table of Laplace transforms,
@@ -258,9 +258,9 @@
 			{1\over 2}\int _0^t f(t-\tau )\sin 2\tau \, d\tau \] Therefore the
 			solution of <a href="#x1-15r8">(8.6.8)</a> is \[ y(t)=k_0\cos 2t+{k_1\over 2}\sin 2t+{1\over 2}\int _0^tf(t-\tau
 			)\sin 2\tau \,d\tau \]
-		</p>
+		</div>
 		<div class="newtheorem" id="91ff6c61-ef33-48a4-b22c-9b99c3a4135c">
-			<p class="noindent">
+			<div class="noindent">
 				<span class="head">
 					<span class="ex-number">Example&nbsp;8.6.4</span>
 				</span>
@@ -269,19 +269,19 @@
 				{equation} \label {eq:8.6.9} y''+2y'+2y=f(t),\quad y(0)=k_0,\quad
 				y'(0)=k_1\end {equation}
 				<a id="x1-17r9"></a>
-			</p>
+			</div>
 		</div>
-		<p class="indent" id="5005c4e7-b90c-4a65-b0bf-f454e10c4d39"></p>
-		<p class="noindent" id="d0feea48-c95a-4dc7-8219-0a2f727bbe57">
+		<div class="indent" id="5005c4e7-b90c-4a65-b0bf-f454e10c4d39"></div>
+		<div class="noindent" id="d0feea48-c95a-4dc7-8219-0a2f727bbe57">
 			<span class="ptmb8t-">Solution</span>
 			&nbsp;Taking Laplace transforms in <a href="#x1-17r9">(8.6.9)</a> yields \[ (s^2+2s+2)Y(s)=F(s)+k_1+k_0s+2k_0\] Therefore
-		</p>
+		</div>
 		<div class="eqnarray" id="a6064ff3-5ece-4f76-a4da-fd71bb5e05c4">
 			\begin {eqnarray*} Y(s)&amp;=&amp;{1\over
 			(s+1)^2+1}F(s)+{k_1+k_0s+2k_0\over (s+1)^2+1}\\ &amp;=&amp;{1\over
 			(s+1)^2+1}F(s)+{(k_1+k_0)+k_0(s+1)\over (s+1)^2+1}\end {eqnarray*}
 		</div>
-		<p class="indent" id="b613bff3-57f3-4d12-83e0-041bb03f00fd">
+		<div class="indent" id="b613bff3-57f3-4d12-83e0-041bb03f00fd">
 			From the table of Laplace transforms, \[ {\cal L}^{-1}\left
 			((k_1+k_0)+k_0(s+1)\over (s+1)^2+1\right )= e^{-t}\left ((k_1+k_0)\sin
 			t+k_0\cos t\right )\] Since \[ {1\over (s+1)^2+1}\leftrightarrow
@@ -292,30 +292,30 @@
 			t+k_0\cos t\right )+\int _0^tf(t-\tau )e^{-\tau }\sin \tau \,d\tau \end
 			{equation}
 			<a id="x1-18r10"></a>
-		</p>
-		<p class="noindent" id="73bd9659-437f-4a86-917e-825557a2024d">
+		</div>
+		<div class="noindent" id="73bd9659-437f-4a86-917e-825557a2024d">
 			<span id="textcolor2">Evaluating Convolution Integrals</span>
-		</p>
-		<p class="indent" id="9acf9910-9937-4d9a-8341-6fc4da460201"></p>
-		<p class="noindent" id="f926830e-0eab-4beb-8789-76f78af0b930">
+		</div>
+		<div class="indent" id="9acf9910-9937-4d9a-8341-6fc4da460201"></div>
+		<div class="noindent" id="f926830e-0eab-4beb-8789-76f78af0b930">
 			We’ll say that an integral of the form \(\int _0^t u(\tau )v(t-\tau
 			)\,d\tau \) is a
 			<span class="vocab">convolution integral</span>
 			. The convolution theorem provides a convenient way to evaluate
 			convolution integrals.
-		</p>
+		</div>
 		<div class="newtheorem" id="209063b3-83b1-4b53-9fd0-d7d8d899d4c9">
-			<p class="noindent">
+			<div class="noindent">
 				<span class="head">
 					<span class="ex-number">Example&nbsp;8.6.5</span>
 				</span>
 				<a id="x1-195"></a>
 				Evaluate the convolution integral \[ h(t)=\int _0^t(t-\tau )^5\tau ^7
 				d\tau \]
-			</p>
+			</div>
 		</div>
-		<p class="indent" id="3046edd2-4fcc-4edc-bdf2-94d5795a8fc8"></p>
-		<p class="noindent" id="ecd7517e-1c4e-4656-81c5-bfc980b0d96e">
+		<div class="indent" id="3046edd2-4fcc-4edc-bdf2-94d5795a8fc8"></div>
+		<div class="noindent" id="ecd7517e-1c4e-4656-81c5-bfc980b0d96e">
 			<span class="ptmb8t-">Solution</span>
 			&nbsp;We could evaluate this integral by expanding \((t-\tau )^5\) in
 			powers of \(\tau \) and then integrating. However, the convolution theorem
@@ -326,9 +326,9 @@
 			{13! \over s^{14}}\] where we have written the second equality because \[
 			{13!\over s^{14}}\leftrightarrow t^{13}\] Hence, \[ h(t)={5!7!\over 13!}\,
 			t^{13}\]
-		</p>
+		</div>
 		<div class="newtheorem" id="299b485c-d1f6-47d1-9b89-9d0f45f99d3d">
-			<p class="noindent">
+			<div class="noindent">
 				<span class="head">
 					<span class="ex-number">Example&nbsp;8.6.6</span>
 				</span>
@@ -336,10 +336,10 @@
 				Use the convolution theorem and a partial fraction expansion to evaluate
 				the convolution integral \[ h(t)=\int _0^t\sin a(t-\tau )\cos b\tau
 				\,d\tau \quad (|a|\ne |b|)\]
-			</p>
+			</div>
 		</div>
-		<p class="indent" id="a69e8cc1-6521-42fc-82d2-f84a0711e3fb"></p>
-		<p class="noindent" id="e7176e6e-4a28-488b-ba38-4bf99fef3e22">
+		<div class="indent" id="a69e8cc1-6521-42fc-82d2-f84a0711e3fb"></div>
+		<div class="noindent" id="e7176e6e-4a28-488b-ba38-4bf99fef3e22">
 			<span class="ptmb8t-">Solution</span>
 			&nbsp;Since \[ \sin at\leftrightarrow {a\over s^2+a^2}\quad \mbox
 			{and}\quad \cos bt\leftrightarrow {s\over s^2+b^2}\] the convolution
@@ -347,12 +347,12 @@
 			this in a partial fraction expansion yields \[ H(s)={a\over b^2-a^2}\left
 			[{s\over s^2+a^2}-{s\over s^2+b^2}\right ]\] Therefore \[ h(t)={a\over
 			b^2-a^2}\left (\cos at-\cos bt\right )\]
-		</p>
-		<p class="noindent" id="083d3e66-4ff2-4b3d-a0b1-e432fb075d1e">
+		</div>
+		<div class="noindent" id="083d3e66-4ff2-4b3d-a0b1-e432fb075d1e">
 			<span id="textcolor3">Volterra Integral Equations</span>
-		</p>
-		<p class="indent" id="63bd4edb-a7b9-4f16-ab3f-38077fb4a18f"></p>
-		<p class="noindent" id="81626068-2e18-4616-8f92-16cefacc2dd5">
+		</div>
+		<div class="indent" id="63bd4edb-a7b9-4f16-ab3f-38077fb4a18f"></div>
+		<div class="noindent" id="81626068-2e18-4616-8f92-16cefacc2dd5">
 			An equation of the form \begin {equation} \label {eq:8.6.11}
 			y(t)=f(t)+\int _0^t k(t-\tau ) y(\tau )\,d\tau \end {equation}
 			<a id="x1-21r11"></a>
@@ -362,9 +362,9 @@
 			integral on the right is a convolution integral, the convolution theorem
 			provides a convenient formula for solving <a href="#x1-21r11">(8.6.11)</a>. Taking Laplace transforms in <a href="#x1-21r11">(8.6.11)</a> yields \[ Y(s)=F(s)+K(s) Y(s)\] and solving this for \(Y(s)\) yields \[
 			Y(s)={F(s)\over 1-K(s)}\] We then obtain the solution of <a href="#x1-21r11">(8.6.11)</a> as \(y={\cal L}^{-1}(Y)\).
-		</p>
+		</div>
 		<div class="newtheorem" id="3e911fa4-88ac-4269-b11b-fe7c0362aa7f">
-			<p class="noindent">
+			<div class="noindent">
 				<span class="head">
 					<span class="ex-number">Example&nbsp;8.6.7</span>
 				</span>
@@ -372,19 +372,19 @@
 				Solve the integral equation \begin {equation} \label {eq:8.6.12}
 				y(t)=1+2\int _0^t e^{-2(t-\tau )} y(\tau )\,d\tau \end {equation}
 				<a id="x1-23r12"></a>
-			</p>
+			</div>
 		</div>
-		<p class="indent" id="54de917c-6011-4892-949c-8e86acb2ed05"></p>
-		<p class="noindent" id="a432ab79-5a1b-4016-a91c-d415c6f86ea9">
+		<div class="indent" id="54de917c-6011-4892-949c-8e86acb2ed05"></div>
+		<div class="noindent" id="a432ab79-5a1b-4016-a91c-d415c6f86ea9">
 			<span class="ptmb8t-">Solution</span>
 			&nbsp;Taking Laplace transforms in <a href="#x1-23r12">(8.6.12)</a> yields \[ Y(s)={1\over s}+{2\over s+2} Y(s)\] and solving this for
 			\(Y(s)\) yields \[ Y(s)={1\over s}+{2\over s^2}\] Hence, \[ y(t)=1+2t\]
-		</p>
-		<p class="noindent" id="69d078d1-96f4-4461-a3f8-73830c2ac1d3">
+		</div>
+		<div class="noindent" id="69d078d1-96f4-4461-a3f8-73830c2ac1d3">
 			<span id="textcolor4">Transfer Functions</span>
-		</p>
-		<p class="indent" id="887b28cf-1729-48a6-b5df-0d96a88b633c"></p>
-		<p class="noindent" id="52d623af-7e10-4a2d-b84b-bf74327202e4">
+		</div>
+		<div class="indent" id="887b28cf-1729-48a6-b5df-0d96a88b633c"></div>
+		<div class="noindent" id="52d623af-7e10-4a2d-b84b-bf74327202e4">
 			The next theorem presents a formula for the solution of the general
 			initial value problem \[ ay''+by'+cy=f(t),\quad y(0)=k_0,\quad y'(0)=k_1\]
 			where we assume for simplicity that \(f\) is continuous on \([0,\infty )\)
@@ -394,9 +394,9 @@
 			<span class="ptmb8t-">14</span>
 			it’s shown that the formula is valid under much weaker conditions on
 			\(f\).
-		</p>
+		</div>
 		<div class="newtheorem" id="29f6200b-9b01-46a5-b17c-d2ea2904fa53">
-			<p class="noindent">
+			<div class="noindent">
 				<span class="head">
 					<span class="ptmb8t-">Theorem&nbsp;8.6.3</span>
 				</span>
@@ -418,10 +418,10 @@
 				and \begin {equation} \label {eq:8.6.17} w(t)={1\over a}y_2(t)\end
 				{equation}
 				<a id="x1-29r17"></a>
-			</p>
+			</div>
 		</div>
-		<p class="indent" id="8743ece1-0a7d-43d5-9a92-ebad30955c3c"></p>
-		<p class="noindent" id="4df0abaf-638f-4945-90e1-45c40b185eaa">
+		<div class="indent" id="8743ece1-0a7d-43d5-9a92-ebad30955c3c"></div>
+		<div class="noindent" id="4df0abaf-638f-4945-90e1-45c40b185eaa">
 			<span class="ptmb8t-">Proof</span>
 			Taking Laplace transforms in <a href="#x1-25r13">(8.6.13)</a> yields \[ p(s)Y(s)=F(s)+a(k_1+k_0s)+bk_0\] where \[ p(s)=as^2+bs+c\]
 			Hence, \begin {equation} \label {eq:8.6.18} Y(s)=W(s)F(s)+V(s) \end
@@ -433,8 +433,8 @@
 			and \begin {equation} \label {eq:8.6.20} V(s)={a(k_1+k_0s)+bk_0\over
 			p(s)}\end {equation}
 			<a id="x1-32r20"></a>
-		</p>
-		<p class="indent" id="2dc1439f-4c66-4286-b3ac-8804176f2cda">
+		</div>
+		<div class="indent" id="2dc1439f-4c66-4286-b3ac-8804176f2cda">
 			Taking Laplace transforms in <a href="#x1-27r15">(8.6.15)</a> and <a href="#x1-28r16">(8.6.16)</a> shows that \[ p(s)Y_1(s)=as+b\quad \mbox {and}\quad p(s)Y_2(s)=a\]
 			Therefore \[ Y_1(s)={as+b\over p(s)} \] and \begin {equation} \label
 			{eq:8.6.21} Y_2(s)={a\over p(s)}\end {equation}
@@ -442,8 +442,8 @@
 			Hence, <a href="#x1-32r20">(8.6.20)</a> can be rewritten as \[ V(s)=k_0Y_1(s)+k_1Y_2(s)\] Substituting this into
 			<a href="#x1-30r18">(8.6.18)</a> yields \[ Y(s)=k_0Y_1(s)+k_1Y_2(s)+{1\over a}Y_2(s)F(s)\] Taking inverse
 			transforms and invoking the convolution theorem yields <a href="#x1-26r14">(8.6.14)</a>. Finally, <a href="#x1-31r19">(8.6.19)</a> and <a href="#x1-33r21">(8.6.21)</a> imply <a href="#x1-29r17">(8.6.17)</a>. __
-		</p>
-		<p class="indent" id="cf9407c0-2222-4a73-abdb-451404620b6a">
+		</div>
+		<div class="indent" id="cf9407c0-2222-4a73-abdb-451404620b6a">
 			It is useful to note from <a href="#x1-26r14">(8.6.14)</a> that \(y\) is of the form \[ y=v+h\] where \[ v(t)=k_0y_1(t)+k_1y_2(t)
 			\] depends on the initial conditions and is independent of the forcing
 			function, while \[ h(t)=\int _0^tw(\tau )f(t-\tau )\, d\tau \] depends on
@@ -485,8 +485,8 @@
 			</a>
 			, since the zeros of the characteristic polynomials in these two examples
 			don’t have negative real parts.
-		</p>
-		<p class="indent" id="6df9897e-7f6f-4e21-9cb6-640c69e92bd8">
+		</div>
+		<div class="indent" id="6df9897e-7f6f-4e21-9cb6-640c69e92bd8">
 			In physical applications where the input \(f\) and the output \(y\) of a
 			device are related by <a href="#x1-25r13">(8.6.13)</a>, the zeros of the characteristic polynomial usually do have negative
 			real parts. Then \(W={\cal L}(w)\) is called the
@@ -494,8 +494,8 @@
 			of the device. Since \[ H(s)=W(s)F(s)\] we see that \[ W(s)={H(s)\over
 			F(s)} \] is the ratio of the transform of the steady state output to the
 			transform of the input.
-		</p>
-		<p class="indent" id="3e59e81e-6ed9-48c4-818f-22059aa79f04">
+		</div>
+		<div class="indent" id="3e59e81e-6ed9-48c4-818f-22059aa79f04">
 			Because of the form of \[ h(t)=\int _0^tw(\tau )f(t-\tau )\,d\tau \] \(w\)
 			is sometimes called the
 			<span class="vocab">weighting function</span>
@@ -503,15 +503,15 @@
 			It is also called the
 			<span class="vocab">impulse response</span>
 			of the device, for reasons discussed in the next section.
-		</p>
-		<p class="indent" id="7aff5516-6a9e-4166-b17b-1031b04c3e0e">
+		</div>
+		<div class="indent" id="7aff5516-6a9e-4166-b17b-1031b04c3e0e">
 			Formula <a href="#x1-26r14">(8.6.14)</a> is given in more detail in Exercises&nbsp;
 			<span class="ptmb8t-">8</span>
 			–
 			<span class="ptmb8t-">10</span>
 			for the three possible cases where the zeros of \(p(s)\) are real and
 			distinct, real and repeated, or complex conjugates, respectively.
-		</p>
+		</div>
 
 		<div class="nav" id="a475b80e-82a5-4e3f-9627-38ebaec4b61e">
 			<a href="sec8.5.book.html">Back (8.5)</a>

@@ -31,28 +31,28 @@
 	</head>
 
 	<body>
-		<p id="5e13284c-3b7a-4f13-93a9-52f3102f9f20"><a id="x1-1doc"></a></p>
-		<p class="noindent" id="f7b8dbe3-fc72-4d78-b56e-6a9d0b7a43b7">
+		<div id="5e13284c-3b7a-4f13-93a9-52f3102f9f20"><a id="x1-1doc"></a></div>
+		<div class="noindent" id="f7b8dbe3-fc72-4d78-b56e-6a9d0b7a43b7">
 			Section 8.3 Solution of Initial Value Problems
-		</p>
-		<p class="noindent" id="8e1e242d-7afb-4cdf-bc3f-d0f7b5332163">
+		</div>
+		<div class="noindent" id="8e1e242d-7afb-4cdf-bc3f-d0f7b5332163">
 			<span class="ptmb8t-">8.3</span>
 			<span class="ptmb8t-x-x-90">
 				&nbsp; SOLUTION OF INITIAL VALUE PROBLEMS
 			</span>
-		</p>
-		<p class="noindent" id="129cf29a-6c10-44b2-884d-59fe9d658329">
+		</div>
+		<div class="noindent" id="129cf29a-6c10-44b2-884d-59fe9d658329">
 			<span id="textcolor1">Laplace Transforms of Derivatives</span>
-		</p>
-		<p class="indent" id="00c238ec-49f5-49b5-9c26-7f3b250d3709"></p>
-		<p class="noindent" id="d4c8e4f7-d205-4017-836c-88144e33e046">
+		</div>
+		<div class="indent" id="00c238ec-49f5-49b5-9c26-7f3b250d3709"></div>
+		<div class="noindent" id="d4c8e4f7-d205-4017-836c-88144e33e046">
 			In the rest of this chapter we’ll use the Laplace transform to solve
 			initial value problems for constant coefficient second order equations. To
 			do this, we must know how the Laplace transform of \(f'\) is related to
 			the Laplace transform of \(f\). The next theorem answers this question.
-		</p>
+		</div>
 		<div class="newtheorem" id="00691091-a94e-4361-bfb5-7ee7657162c8">
-			<p class="noindent">
+			<div class="noindent">
 				<span class="head">
 					<span class="ptmb8t-">Theorem&nbsp;8.3.1</span>
 				</span>
@@ -63,13 +63,13 @@
 				{equation} \label {eq:8.3.1} {\cal L}(f')=s {\cal L}(f)-f(0)\end
 				{equation}
 				<a id="x1-3r1"></a>
-			</p>
+			</div>
 		</div>
-		<p class="indent" id="33756ebf-b9f2-403b-a12c-ece1efee9288"></p>
-		<p class="noindent" id="61064941-e82a-4715-8727-1fd5156f9603">
+		<div class="indent" id="33756ebf-b9f2-403b-a12c-ece1efee9288"></div>
+		<div class="noindent" id="61064941-e82a-4715-8727-1fd5156f9603">
 			<span class="ptmb8t-">Proof</span>
-		</p>
-		<p class="indent" id="9828719d-f618-42b2-b23f-7850481256fc">
+		</div>
+		<div class="indent" id="9828719d-f618-42b2-b23f-7850481256fc">
 			We know from Theorem&nbsp;8.1.6 that \({\cal L}(f)\) is defined for
 			\(s&gt;s_0\). We first consider the case where \(f'\) is continuous on
 			\([0,\infty )\). Integration by parts yields \begin {equation} \label
@@ -80,32 +80,32 @@
 			<a id="x1-4r2"></a>
 			for any \(T&gt;0\). Since \(f\) is of exponential order \(s_0\), \(\lim
 			_{T\to \infty }e^{-sT}f(T)=0\) and the last integral in <a href="#x1-4r2">(8.3.2)</a> converges as \(T\to \infty \) if \(s&gt; s_0\). Therefore
-		</p>
+		</div>
 		<div class="eqnarray" id="27bd6a28-809c-4937-a86f-f4c2099be3a0">
 			\begin {eqnarray*} \int ^\infty _0 e^{-st}f'(t)\,dt&amp;=&amp;-f(0)+s\int
 			^\infty _0 e^{-st}f(t)\,dt\\ &amp;=&amp;-f(0)+s{\cal L}(f)\end {eqnarray*}
 		</div>
-		<p class="indent" id="5dba0d05-ca5a-49ec-baa0-da5841ceae77">
+		<div class="indent" id="5dba0d05-ca5a-49ec-baa0-da5841ceae77">
 			which proves <a href="#x1-3r1">(8.3.1)</a>. Now suppose \(T&gt;0\) and \(f'\) is only piecewise continuous on
 			\([0,T]\), with discontinuities at \(t_1 &lt; t_2 &lt;\cdots &lt;
 			t_{n-1}\). For convenience, let \(t_0=0\) and \(t_n=T\). Integrating by
 			parts yields
-		</p>
+		</div>
 		<div class="eqnarray" id="32ee8f3b-6234-40a4-bbcf-68eab84f8bab">
 			\begin {eqnarray*} \int ^{t_i}_{t_{i-1}}e^{-st}f'(t)\,dt &amp;=&amp;
 			e^{-st}f(t)\Big |^{t_i}_{t_{i-1}}+s\int ^{t_i}_{t_{i-1}}e^{-st}f(t)\,dt\\
 			&amp;=&amp; e^{-st_i} f(t_i)- e^{-st_{i-1}}f(t_{i-1})+s\int
 			^{t_i}_{t_{i-1}}e^{-st}f(t)\,dt\end {eqnarray*}
 		</div>
-		<p class="indent" id="a5d37ab3-a1ee-44e6-9c96-88d11079f3b0">
+		<div class="indent" id="a5d37ab3-a1ee-44e6-9c96-88d11079f3b0">
 			Summing both sides of this equation from \(i=1\) to \(n\) and noting that
 			\[ \left (e^{-st_1}f(t_1)-e^{-st_0}f(t_0)\right )+\left (e^{-st_2}
 			f(t_2)-e^{-st_1}f(t_1)\right ) +\cdots +\left
 			(e^{-st_N}f(t_N)-e^{-st_{N-1}}f(t_{N-1})\right ) \] \[
 			=e^{-st_N}f(t_N)-e^{-st_0}f(t_0)=e^{-sT}f(T)-f(0) \] yields <a href="#x1-4r2">(8.3.2)</a>, so <a href="#x1-3r1">(8.3.1)</a> follows as before.
-		</p>
+		</div>
 		<div class="newtheorem" id="110f9972-48ce-42ce-b9c3-1a05024e6d90">
-			<p class="noindent">
+			<div class="noindent">
 				<span class="head">
 					<span class="ex-number">Example&nbsp;8.3.1</span>
 				</span>
@@ -119,18 +119,18 @@
 				which agrees with the corresponding result obtained in
 				<span class="ptmb8t-">8.1.4</span>
 				. __
-			</p>
+			</div>
 		</div>
-		<p class="indent" id="0db2c30b-8367-4846-8661-01be7846fc92"></p>
-		<p class="indent" id="e0c755da-7e25-47db-87bc-3cd5022be2a2">
+		<div class="indent" id="0db2c30b-8367-4846-8661-01be7846fc92"></div>
+		<div class="indent" id="e0c755da-7e25-47db-87bc-3cd5022be2a2">
 			In Section&nbsp;2.1 we showed that the solution of the initial value
 			problem \begin {equation} \label {eq:8.3.3} y'=ay, \quad y(0)=y_0\end
 			{equation}
 			<a id="x1-6r3"></a>
 			is \(y=y_0e^{at}\). We’ll now obtain this result by using the Laplace
 			transform.
-		</p>
-		<p class="indent" id="a726ea5e-66e0-4398-bd36-e396f447bf4c">
+		</div>
+		<div class="indent" id="a726ea5e-66e0-4398-bd36-e396f447bf4c">
 			Let \(Y(s)={\cal L}(y)\) be the Laplace transform of the unknown solution
 			of <a href="#x1-6r3">(8.3.3)</a>. Taking Laplace transforms of both sides of <a href="#x1-6r3">(8.3.3)</a> yields \[ {\cal L}(y')={\cal L}(ay)\] which, by Theorem&nbsp;
 			<a href="#x1-21">
@@ -142,13 +142,13 @@
 			\[ y={\cal L}^{-1}(Y(s))={\cal L}^{-1}\left ({y_0\over s-a}\right
 			)=y_0{\cal L}^{-1}\left ({1\over s-a}\right )=y_0e^{at}\] which agrees
 			with the known result.
-		</p>
-		<p class="indent" id="faf12a25-86a0-4169-ad1f-f5433110bf2c">
+		</div>
+		<div class="indent" id="faf12a25-86a0-4169-ad1f-f5433110bf2c">
 			We need the next theorem to solve second order differential equations
 			using the Laplace transform.
-		</p>
+		</div>
 		<div class="newtheorem" id="ee578926-cb9e-404a-a0b1-38e5fe2043aa">
-			<p class="noindent">
+			<div class="noindent">
 				<span class="head">
 					<span class="ptmb8t-">Theorem&nbsp;8.3.2</span>
 				</span>
@@ -162,10 +162,10 @@
 				and \begin {equation} \label {eq:8.3.5} {\cal L}(f'')=s^2{\cal
 				L}(f)-f'(0)-sf(0)\end {equation}
 				<a id="x1-9r5"></a>
-			</p>
+			</div>
 		</div>
-		<p class="indent" id="6ca388c9-2204-49a3-a600-4c1bc5fccbbe"></p>
-		<p class="noindent" id="00447519-6518-4c23-8ec6-dde9b13b7f2b">
+		<div class="indent" id="6ca388c9-2204-49a3-a600-4c1bc5fccbbe"></div>
+		<div class="noindent" id="00447519-6518-4c23-8ec6-dde9b13b7f2b">
 			<span class="ptmb8t-">Proof</span>
 			Theorem&nbsp;
 			<a href="#x1-21">
@@ -186,19 +186,19 @@
 			L}(g')=s{\cal L}(g)-g(0) \] for \(s&gt;s_0\). However, since \(g'=f''\),
 			this can be rewritten as \[ {\cal L}(f'')=s{\cal L}(f')-f'(0)\]
 			Substituting <a href="#x1-8r4">(8.3.4)</a> into this yields <a href="#x1-9r5">(8.3.5)</a>.
-		</p>
-		<p class="noindent" id="b7c8be31-90f5-4d9d-a039-537cd862d5ee">
+		</div>
+		<div class="noindent" id="b7c8be31-90f5-4d9d-a039-537cd862d5ee">
 			<span id="textcolor2">
 				Solving Second Order Equations with the Laplace Transform
 			</span>
-		</p>
-		<p class="indent" id="32255389-d76a-4047-89df-baa76daedb76"></p>
-		<p class="noindent" id="453865ad-eff1-4a57-be4d-ef181ee88e0a">
+		</div>
+		<div class="indent" id="32255389-d76a-4047-89df-baa76daedb76"></div>
+		<div class="noindent" id="453865ad-eff1-4a57-be4d-ef181ee88e0a">
 			We’ll now use the Laplace transform to solve initial value problems for
 			second order equations.
-		</p>
+		</div>
 		<div class="newtheorem" id="67e68de0-db4b-4ecd-8174-c4ded8966dc4">
-			<p class="noindent">
+			<div class="noindent">
 				<span class="head">
 					<span class="ex-number">Example&nbsp;8.3.2</span>
 				</span>
@@ -207,10 +207,10 @@
 				{equation} \label {eq:8.3.6} y''-6y'+5y=3e^{2t},\quad y(0)=2, \quad
 				y'(0)=3\end {equation}
 				<a id="x1-11r6"></a>
-			</p>
+			</div>
 		</div>
-		<p class="indent" id="10a2c19c-8ba1-40d0-9e53-7d026156cc69"></p>
-		<p class="noindent" id="6d964c77-3ab2-4487-aa10-ac157ba0156f">
+		<div class="indent" id="10a2c19c-8ba1-40d0-9e53-7d026156cc69"></div>
+		<div class="noindent" id="6d964c77-3ab2-4487-aa10-ac157ba0156f">
 			<span class="ptmb8t-">Solution</span>
 			&nbsp;Taking Laplace transforms of both sides of the differential equation
 			in <a href="#x1-11r6">(8.3.6)</a> yields \[ {\cal L}(y''-6y'+5y)={\cal L}\left (3e^{2t}\right )={3\over
@@ -233,8 +233,8 @@
 			partial fraction expansion \[ Y(s)=-{1\over s-2}+{1\over 2}{1\over
 			s-5}+{5\over 2}{1\over s-1}\] and taking the inverse transform of this
 			yields \[ y=-e^{2t}+{1\over 2}e^{5t}+{5\over 2}e^t \] as the solution of <a href="#x1-11r6">(8.3.6)</a>. __
-		</p>
-		<p class="indent" id="99899b68-7764-4281-a0b0-def469535074">
+		</div>
+		<div class="indent" id="99899b68-7764-4281-a0b0-def469535074">
 			It isn’t necessary to write all the steps that we used to obtain <a href="#x1-13r8">(8.3.8)</a>. To see how to avoid this, let’s apply the method of Example&nbsp;
 			<a href="#x1-102">
 				8.3.2
@@ -243,8 +243,8 @@
 			to the general initial value problem \begin {equation} \label {eq:8.3.9}
 			ay''+by'+cy=f(t), \quad y(0)=k_0,\quad y'(0)=k_1\end {equation}
 			<a id="x1-14r9"></a>
-		</p>
-		<p class="indent" id="16679d13-6093-4765-b9db-3f1644e7d190">
+		</div>
+		<div class="indent" id="16679d13-6093-4765-b9db-3f1644e7d190">
 			Taking Laplace transforms of both sides of the differential equation in <a href="#x1-14r9">(8.3.9)</a> yields \begin {equation} \label {eq:8.3.10} a{\cal L}(y'')+b{\cal
 			L}(y')+c{\cal L}(y)=F(s)\end {equation}
 			<a id="x1-15r10"></a>
@@ -273,9 +273,9 @@
 			You may find it easier to remember <a href="#x1-17r12">(8.3.12)</a> rewritten as \begin {equation} \label {eq:8.3.13} p(s)Y(s)=F(s)+a\left
 			(y'(0)+sy(0)\right )+by(0)\end {equation}
 			<a id="x1-18r13"></a>
-		</p>
+		</div>
 		<div class="newtheorem" id="cd4a2e4f-6362-4050-8b2d-68ce2712727a">
-			<p class="noindent">
+			<div class="noindent">
 				<span class="head">
 					<span class="ex-number">Example&nbsp;8.3.3</span>
 				</span>
@@ -284,10 +284,10 @@
 				{equation} \label {eq:8.3.14} 2y''+3y'+y=8e^{-2t}, \quad y(0)=-4,\;
 				y'(0)=2\end {equation}
 				<a id="x1-20r14"></a>
-			</p>
+			</div>
 		</div>
-		<p class="indent" id="fa5fdc6e-5275-49ac-bfbf-c64c343ad9c5"></p>
-		<p class="noindent" id="8b782a95-8a86-46d9-a0b1-4da7c1c3baed">
+		<div class="indent" id="fa5fdc6e-5275-49ac-bfbf-c64c343ad9c5"></div>
+		<div class="noindent" id="8b782a95-8a86-46d9-a0b1-4da7c1c3baed">
 			<span class="ptmb8t-">Solution</span>
 			&nbsp;The characteristic polynomial is \[ p(s)=2s^2+3s+1=(2s+1)(s+1) \]
 			and \[ F(s)={\cal L}(8e^{-2t})={8\over s+2}\] so <a href="#x1-18r13">(8.3.13)</a> becomes \[ (2s+1)(s+1)Y(s)={8\over s+2}+2(2-4s)+3(-4)\] Solving for
@@ -301,13 +301,13 @@
 				<!-- tex4ht:ref: figure:8.3.1  -->
 			</a>
 			).
-		</p>
+		</div>
 		<figure class="figure" id="0d233712-8ece-4c4c-87d6-8c959b9399aa">
 			<div class="minipage">
-				<p class="noindent" id="-y-overetet-overet-">
+				<div class="noindent" id="-y-overetet-overet-">
 					<img height="264" src="EPS/fig080301.png" width="409" />
 					<a id="x1-21r1"></a>
-				</p>
+				</div>
 				<figcaption class="caption">
 					<span class="id">Figure&nbsp;8.3.1</span>
 					<span class="content">
@@ -330,7 +330,7 @@
 			</div>
 		</figure>
 		<div class="newtheorem" id="32f2bfba-7f41-406f-84c8-2e8a99f8e90b">
-			<p class="noindent">
+			<div class="noindent">
 				<span class="head">
 					<span class="ex-number">Example&nbsp;8.3.4</span>
 				</span>
@@ -338,10 +338,10 @@
 				Solve the initial value problem \begin {equation} \label {eq:8.3.15}
 				y''+2y'+2y=1, \quad y(0)=-3,\; y'(0)=1\end {equation}
 				<a id="x1-24r15"></a>
-			</p>
+			</div>
 		</div>
-		<p class="indent" id="cf2a3dce-d626-4ada-ae68-8de0effbef3d"></p>
-		<p class="noindent" id="eb16a867-f172-4cd7-ad7c-4ecc21da56c1">
+		<div class="indent" id="cf2a3dce-d626-4ada-ae68-8de0effbef3d"></div>
+		<div class="noindent" id="eb16a867-f172-4cd7-ad7c-4ecc21da56c1">
 			<span class="ptmb8t-">Solution</span>
 			&nbsp;The characteristic polynomial is \[ p(s)=s^2+2s+2=(s+1)^2+1 \] and
 			\[ F(s)={\cal L}(1)={1\over s}\] so <a href="#x1-18r13">(8.3.13)</a> becomes \[ \left [(s+1)^2+1\right ] Y(s)={1\over s}+1\cdot
@@ -355,8 +355,8 @@
 				<!-- tex4ht:ref: figure:8.3.2  -->
 			</a>
 			), which is therefore the solution of <a href="#x1-24r15">(8.3.15)</a>.
-		</p>
-		<p class="noindent" id="ba6c3a52-dead-48ac-9941-3b8bfadd4d79">
+		</div>
+		<div class="noindent" id="ba6c3a52-dead-48ac-9941-3b8bfadd4d79">
 			<span class="ptmrc8t-">
 				R
 				<span class="small-caps">EMARK</span>
@@ -377,7 +377,7 @@
 			about the validity of the method for solving a given equation can be
 			resolved by verifying that the resulting function \(y\) is the solution of
 			the given problem.
-		</p>
+		</div>
 
 		<div class="nav" id="f5f56ab7-220e-4a3a-90c5-5631abd9caa0">
 			<a href="sec8.2.book.html">Back (8.2)</a>
