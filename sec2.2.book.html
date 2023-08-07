@@ -91,95 +91,75 @@
 			</div>
 
 			<div class="example" id="x1-62" style="--ex-number: 2">
-				<dl class="list1">
-					<dt class="list">
-						<span class="ptmb8t-">(a)</span>
-					</dt>
-					<dd class="list">
-						<div>
-							Solve the equation \begin {equation} \label {eq:2.2.4} y'=-{x\over
-							y}\end {equation}
-							<a id="x1-8r4"></a>
-						</div>
-					</dd>
-					<dt class="list">
-						<span class="ptmb8t-">(b)</span>
-					</dt>
-					<dd class="list">
-						<div>
-							Solve the initial value problem \begin {equation} \label {eq:2.2.5}
-							y'=-{x\over y}, \quad y(1)=1\end {equation}
-							<a id="x1-10r5"></a>
-						</div>
-					</dd>
-					<dt class="list">
-						<span class="ptmb8t-">(c)</span>
-					</dt>
-					<dd class="list">
-						<div>
-							Solve the initial value problem \begin {equation} \label {eq:2.2.6}
-							y'=-{x\over y}, \quad y(1)=-2\end {equation}
-							<a id="x1-12r6"></a>
-						</div>
-					</dd>
-				</dl>
+				<ol>
+					<li>
+						<a id="x1-8r4"></a>
+						Solve the equation \begin {equation} \label {eq:2.2.4} y'=-{x\over
+						y}\end {equation}
+					</li>
+					<li>
+						<a id="x1-10r5"></a>
+						Solve the initial value problem \begin {equation} \label {eq:2.2.5}
+						y'=-{x\over y}, \quad y(1)=1\end {equation}
+					</li>
+					<li>
+						<a id="x1-12r6"></a>
+						Solve the initial value problem \begin {equation} \label {eq:2.2.6}
+						y'=-{x\over y}, \quad y(1)=-2\end {equation}
+					</li>
+				</ol>
 		
-			<details class="solution" id="70f27fdd-43c6-453f-a716-0be8a5ca0aec">
-				<summary>Solution</summary>
+				<details class="solution" id="70f27fdd-43c6-453f-a716-0be8a5ca0aec">
+					<summary>Solution</summary>
 
-				<div id="05865aa7-3ca5-4888-962d-7f55b45e7db5">
-					<span class="ptmb8t-">(a)</span>
-					Separating variables in <a href="#x1-8r4">(2.2.4)</a> yields \[ yy'=-x\] Integrating yields \[ {y^2\over 2}=-{x^2\over
-					2}+c,\quad \mbox { or,\, equivalently, } \quad x^2+y^2=2c\] The last
-					equation shows that \(c\) must be positive if \(y\) is to be a solution of
-					<a href="#x1-8r4">(2.2.4)</a> on an open interval. Therefore we let \(2c=a^2\) (with \(a &gt; 0\)) and
-					rewrite the last equation as \begin {equation} \label {eq:2.2.7}
-					x^2+y^2=a^2\end {equation}
-					<a id="x1-13r7"></a>
-					This equation has two differentiable solutions for \(y\) in terms of
-					\(x\): \begin {equation} \label {eq:2.2.8} y=\phantom {-} \sqrt {a^2-x^2},
-					\quad -a &lt; x &lt; a\end {equation}
-					<a id="x1-14r8"></a>
-					and \begin {equation} \label {eq:2.2.9} y= - \sqrt {a^2-x^2}, \quad -a
-					&lt; x &lt; a\end {equation}
-					<a id="x1-15r9"></a>
-					The
-					<span class="vocab">solution curves</span>
-					defined by <a href="#x1-14r8">(2.2.8)</a> are semicircles above the \(x\)-axis and those defined by <a href="#x1-15r9">(2.2.9)</a> are semicircles below the \(x\)-axis (Figure&nbsp;
-					<a href="#-a-y-x-x-b-y-x-x-">
-						2.2.1
-						<!-- tex4ht:ref: figure:2.2.1  -->
-					</a>
-					).
-				</div>
-				<div id="6d05030f-07a5-41c7-a3be-102884935bea">
-					<span class="ptmb8t-">(b)</span>
-					The solution of <a href="#x1-10r5">(2.2.5)</a> is positive when \(x=1\); hence, it is of the form <a href="#x1-14r8">(2.2.8)</a>. Substituting \(x=1\) and \(y=1\) into <a href="#x1-13r7">(2.2.7)</a> to satisfy the initial condition yields \(a^2=2\); hence, the solution
-					of <a href="#x1-10r5">(2.2.5)</a> is \[ y=\sqrt {2-x^2}, \quad - \sqrt {2}&lt; x &lt; \sqrt {2}\]
-				</div>
-				<div id="5ba04b2f-b368-42d9-b55d-cfdbc56aa532">
-						<span class="ptmb8t-">(c)</span>
-					The solution of <a href="#x1-12r6">(2.2.6)</a> is negative when \(x=1\) and is therefore of the form <a href="#x1-15r9">(2.2.9)</a>. Substituting \(x=1\) and \(y=-2\) into <a href="#x1-13r7">(2.2.7)</a> to satisfy the initial condition yields \(a^2=5\). Hence, the solution
-					of <a href="#x1-12r6">(2.2.6)</a> is \[ y=- \sqrt {5-x^2}, \quad -\sqrt {5} &lt; x &lt; \sqrt {5}\]
-				</div>
-				<figure class="figure" id="c9edc349-8741-4bba-9fe9-df39338ffcd6">
-					<div id="-a-y-x-x-b-y-x-x-">
-						<img height="264" src="EPS/fig020201.png" width="409" />
-						<a id="x1-16r1"></a>
-					</div>
-					<figcaption class="caption">
-						<span class="id">Figure&nbsp;2.2.1</span>
-						<span class="content">
-							<span class="ptmb8t-">(a)</span>
-							\(y=\sqrt {2-x^{2}}\), \(-\sqrt {2}&lt;x&lt;\sqrt {2}\);
-							<span class="ptmb8t-">(b)</span>
-							\(y=-\sqrt {5-x^{2}}\), \(-\sqrt {5}&lt;x&lt;\sqrt {5}\)
-						</span>
-					</figcaption>
-					<!-- tex4ht:label?: x1-16r1  -->
-				</figure>
-			</details>
-		</div>
+					<ol>
+						<li>
+							Separating variables in <a href="#x1-8r4">(2.2.4)</a> yields \[ yy'=-x\] Integrating yields \[ {y^2\over 2}=-{x^2\over
+							2}+c,\quad \mbox { or,\, equivalently, } \quad x^2+y^2=2c\] The last
+							equation shows that \(c\) must be positive if \(y\) is to be a solution of
+							<a href="#x1-8r4">(2.2.4)</a> on an open interval. Therefore we let \(2c=a^2\) (with \(a &gt; 0\)) and
+							rewrite the last equation as <a id="x1-13r7"></a> \begin {equation} \label {eq:2.2.7}
+							x^2+y^2=a^2\end {equation}
+							This equation has two differentiable solutions for \(y\) in terms of \(x\):
+							<a id="x1-14r8"></a> \begin {equation} \label {eq:2.2.8} y=\phantom {-} \sqrt {a^2-x^2},
+							\quad -a &lt; x &lt; a\end {equation}
+							and <a id="x1-15r9"></a> \begin {equation} \label {eq:2.2.9} y= - \sqrt {a^2-x^2}, \quad -a
+							&lt; x &lt; a\end {equation}
+							The <span class="vocab">solution curves</span> defined by <a href="#x1-14r8">(2.2.8)</a> are semicircles
+							above the \(x\)-axis and those defined by <a href="#x1-15r9">(2.2.9)</a> are semicircles below
+							the \(x\)-axis (Figure&nbsp;<a href="#-a-y-x-x-b-y-x-x-">2.2.1</a>).
+						</li>
+						<li>
+							The solution of <a href="#x1-10r5">(2.2.5)</a> is positive when \(x=1\); hence, it is of the
+							form <a href="#x1-14r8">(2.2.8)</a>. Substituting \(x=1\) and \(y=1\) into <a href="#x1-13r7">(2.2.7)</a> to satisfy the
+							initial condition yields \(a^2=2\); hence, the solution
+							of <a href="#x1-10r5">(2.2.5)</a> is \[ y=\sqrt {2-x^2}, \quad - \sqrt {2}&lt; x &lt; \sqrt {2}\]
+						</li>
+						<li>
+							The solution of <a href="#x1-12r6">(2.2.6)</a> is negative when \(x=1\) and is therefore of the
+							form <a href="#x1-15r9">(2.2.9)</a>. Substituting \(x=1\) and \(y=-2\) into <a href="#x1-13r7">(2.2.7)</a> to satisfy the
+							initial condition yields \(a^2=5\). Hence, the solution of <a href="#x1-12r6">(2.2.6)</a> is
+							\[ y=- \sqrt {5-x^2}, \quad -\sqrt {5} &lt; x &lt; \sqrt {5}\]
+						</li>
+					</ol>
+
+					<figure class="figure" id="c9edc349-8741-4bba-9fe9-df39338ffcd6">
+						<div id="-a-y-x-x-b-y-x-x-">
+							<img height="264" src="EPS/fig020201.png" width="409" />
+							<a id="x1-16r1"></a>
+						</div>
+						<figcaption class="caption">
+							<span class="id">Figure&nbsp;2.2.1</span>
+							<span class="content">
+								<span class="ptmb8t-">(a)</span>
+								\(y=\sqrt {2-x^{2}}\), \(-\sqrt {2}&lt;x&lt;\sqrt {2}\);
+								<span class="ptmb8t-">(b)</span>
+								\(y=-\sqrt {5-x^{2}}\), \(-\sqrt {5}&lt;x&lt;\sqrt {5}\)
+							</span>
+						</figcaption>
+					</figure>
+				</details>
+			</div>
 		</details>
 
 		<details id="ee913fc6-2aa0-4076-99ea-c0b9fa886c57">
