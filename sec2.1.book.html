@@ -616,151 +616,87 @@
 			</div>
 
 			<div class = "example" id = "x1-346" style = "--ex-number: 6">
-				<dl class = "list1">
-					<dt class = "list">
-						<span class = "ptmb8t-">(a)</span>
-					</dt>
-					<dd class = "list">
-						<div class = "noindent">
-							Find the general solution \begin {equation} \label {eq:2.1.20}
-							\frac{dy}{dx}  + (\cot x)y = x\csc x\end {equation}
-							<a id = "x1-36r20"></a>
-						</div>
-					</dd>
-					<dt class = "list">
-						<span class = "ptmb8t-">(b)</span>
-					</dt>
-					<dd class = "list">
-						<div class = "noindent">
-							Solve the initial value problem \begin {equation} \label {eq:2.1.21}
-							\frac{dy}{dx}  + (\cot x)y = x\csc x,\quad y(\pi /2) = 1\end {equation}
-							<a id = "x1-38r21"></a>
-						</div>
-					</dd>
-				</dl>
+				<ol>
+					<li>
+						<a id = "x1-36r20"></a>
+						Find the general solution \begin {equation} \label {eq:2.1.20}
+						\frac{dy}{dx}  + (\cot x)y = x\csc x\end {equation}
+					</li>
+					<li>
+						<a id = "x1-38r21"></a>
+						Solve the initial value problem \begin {equation} \label {eq:2.1.21}
+						\frac{dy}{dx}  + (\cot x)y = x\csc x,\quad y(\pi /2) = 1\end {equation}
+					</li>
+				</ol>
 
 				<details class = "solution" id = "2495665c-1d66-4955-b579-333ab13fae0d">
 					<summary>Solution</summary>
 
-					<div class = "noindent" id = "8e54a1c9-5cfe-4e3c-9b7f-e58b584871be">
-						<span class = "ptmb8t-">(a)</span>
-						Here \(p(x) = \cot x\) and \(f(x) =  x\csc x\) are both continuous except at
-						the points \(x = r\pi \), where \(r\) is an integer. Therefore we seek
-						solutions of (
-						<a href = "#x1-36r20">
-							2.1.20
-						</a>
-						) on the intervals \(\left (r\pi , (r + 1)\pi \right )\). We need a
-						nontrival solution \(y_1\) of the complementary equation; thus, \(y_1\)
-						must satisfy \(y_1' + (\cot x)y_1 = 0\), which we rewrite as \begin {equation}
-						\label {eq:2.1.22} {y_1'\over y_1} = -\cot x = -{\cos x\over \sin x}\end
-						{equation}
-						<a id = "x1-39r22"></a>
-						Integrating this yields \[ \ln |y_1| = -\ln |\sin x|\] where we take the
-						constant of integration to be zero since we need only
-						<em>one</em>
-						function that satisfies (
-						<a href = "#x1-39r22">
-							2.1.22
-							<!-- tex4ht:ref: eq:2.1.22  -->
-						</a>
-						). Clearly \(y_1 = 1/\sin x\) is a suitable choice. Therefore we seek
-						solutions of (
-						<a href = "#x1-36r20">
-							2.1.20
-							<!-- tex4ht:ref: eq:2.1.20  -->
-						</a>
-						) in the form \[ y = {u\over \sin x}\] so that \begin {equation} \label
-						{eq:2.1.23}  \frac{dy}{dx}  = {u'\over \sin x}-{u\cos x\over \sin ^2x} \end {equation}
-						<a id = "x1-40r23"></a>
-						and \begin {equation} \label {eq:2.1.24} \begin {array}{rcl}  \frac{dy}{dx}  + (\cot
-						x)y&amp; = &amp; \displaystyle {u'\over \sin x}-\displaystyle {u\cos x\over
-						\sin ^2x} + \displaystyle {u\cot x\over \sin x}\\ &amp; = &amp;\displaystyle
-						{u'\over \sin x}-\displaystyle {u\cos x\over \sin ^2x} + \displaystyle
-						{u\cos x\over \sin ^2 x}\\ &amp; = &amp;\displaystyle {u'\over \sin x}\end
-						{array} \end {equation}
-						<a id = "x1-41r24"></a>
-						Therefore \(y\) is a solution of (
-						<a href = "#x1-36r20">
-							2.1.20
-							<!-- tex4ht:ref: eq:2.1.20  -->
-						</a>
-						) if and only if \[ u'/\sin x = x\csc x = x/\sin x \quad \mbox {or,
-						equivalently, } \quad u' = x\] Integrating this yields \begin {equation}
-						\label {eq:2.1.25} u = {x^2\over 2} + c, \text {\quad and \quad } y = {u\over
-						\sin x} =  {x^2\over 2\sin x} +  {c\over \sin x}\end {equation}
-						<a id = "x1-42r25"></a>
-						is the general solution of (
-						<a href = "#x1-36r20">
-							2.1.20
-							<!-- tex4ht:ref: eq:2.1.20  -->
-						</a>
-						) on every interval \(\left (r\pi ,(r + 1)\pi \right )\) (\(r = \)integer).
-					</div>
-					<div class = "noindent" id = "a92f0672-a4d4-4530-a73c-b9045e6c9f6f">
-						<span class = "ptmb8t-">(b)</span>
-						Imposing the initial condition \(y(\pi /2) = 1\) in (
-						<a href = "#x1-42r25">
-							2.1.25
-							<!-- tex4ht:ref: eq:2.1.25  -->
-						</a>
-						) yields \[ 1 = {\pi ^2\over 8} + c \quad \mbox { or } \quad c = 1-{\pi ^2\over
-						8}\] Thus, \[ y = {x^2\over 2\sin x} + {(1-\pi ^2/8)\over \sin x} \] is a
-						solution of (
-						<a href = "#x1-38r21">
-							2.1.21
-							<!-- tex4ht:ref: eq:2.1.21  -->
-						</a>
-						). The
-						<span class = "vocab">interval of validity</span>
-						of this solution is \((0,\pi )\); Figure&nbsp;
-						<a href = "#-solution-of-y-xyx-x-y-">
-							2.1.4
-							<!-- tex4ht:ref: figure:2.1.4  -->
-						</a>
-						shows its graph.
-					</div>
-					<figure class = "figure" id = "bef523b6-be8b-4c2a-b1e8-166ad929c0c4">
-						<div class = "noindent" id = "-solution-of-y-xyx-x-y-">
-							<img height = "264" src = "EPS/fig020104.png" width = "409" />
-							<a id = "x1-43r4"></a>
-						</div>
-						<figcaption class = "caption">
-							<span class = "id">Figure&nbsp;2.1.4</span>
-							<span class = "content">
-								Solution of \( \frac{dy}{dx}  + (\cot x)y = x\csc x, y(\pi /2) = 1\)
-							</span>
-						</figcaption>
-						<!-- tex4ht:label?: x1-43r4  -->
-					</figure>
+					<ol>
+						<li>
+							Here \(p(x) = \cot x\) and \(f(x) =  x\csc x\) are both continuous except at
+							the points \(x = r\pi \), where \(r\) is an integer. Therefore we seek
+							solutions of <a href = "#x1-36r20">(2.1.20)</a> on the intervals
+							\(\left (r\pi , (r + 1)\pi \right )\). We need a
+							nontrival solution \(y_1\) of the complementary equation; thus, \(y_1\)
+							must satisfy \(y_1' + (\cot x)y_1 = 0\), which we rewrite
+							as <a id = "x1-39r22"></a> \begin {equation}
+							\label {eq:2.1.22} {y_1'\over y_1} = -\cot x = -{\cos x\over \sin x}\end
+							{equation}
+							Integrating this yields \[ \ln |y_1| = -\ln |\sin x|\] where we take the
+							constant of integration to be zero since we need only
+							<em>one</em> function that satisfies <a href = "#x1-39r22">(2.1.22)</a>.
+							Clearly \(y_1 = 1/\sin x\) is a suitable choice. Therefore we seek
+							solutions of <a href = "#x1-36r20">(2.1.20)</a> in the form
+							<a id = "x1-40r23"></a>
+							\[ y = {u\over \sin x}\] so that \begin {equation} \label
+							{eq:2.1.23}  \frac{dy}{dx}  = {u'\over \sin x}-{u\cos x\over \sin ^2x} \end {equation}
+							and <a id = "x1-41r24"></a> \begin {equation} \label {eq:2.1.24} \begin {array}{rcl}  \frac{dy}{dx}  + (\cot
+							x)y&amp; = &amp; \displaystyle {u'\over \sin x}-\displaystyle {u\cos x\over
+							\sin ^2x} + \displaystyle {u\cot x\over \sin x}\\ &amp; = &amp;\displaystyle
+							{u'\over \sin x}-\displaystyle {u\cos x\over \sin ^2x} + \displaystyle
+							{u\cos x\over \sin ^2 x}\\ &amp; = &amp;\displaystyle {u'\over \sin x}\end
+							{array} \end {equation}
+							Therefore \(y\) is a solution of <a href = "#x1-36r20">(2.1.20)</a> if
+							and only if \[ u'/\sin x = x\csc x = x/\sin x \quad \mbox {or,
+							equivalently, } \quad u' = x\] Integrating this yields <a id = "x1-42r25"></a> \begin {equation}
+							\label {eq:2.1.25} u = {x^2\over 2} + c, \text {\quad and \quad } y = {u\over
+							\sin x} =  {x^2\over 2\sin x} +  {c\over \sin x}\end {equation}
+							is the general solution of <a href = "#x1-36r20">(2.1.20)</a> on every
+							interval \(\left (r\pi ,(r + 1)\pi \right )\) (\(r = \)integer).
+						</li>
+						<li>
+							Imposing the initial condition \(y(\pi /2) = 1\) in <a href = "#x1-42r25">(2.1.25)</a>
+							yields \[ 1 = {\pi ^2\over 8} + c \quad \mbox { or } \quad c = 1-{\pi ^2\over
+							8}\] Thus, \[ y = {x^2\over 2\sin x} + {(1-\pi ^2/8)\over \sin x} \] is a
+							solution of <a href = "#x1-38r21">(2.1.21)</a>.
+							The <span class = "vocab">interval of validity</span>
+							of this solution is \((0,\pi )\); Figure&nbsp;<a href = "#-solution-of-y-xyx-x-y-">2.1.4</a>
+							shows its graph.
+
+							<figure class = "figure" id = "bef523b6-be8b-4c2a-b1e8-166ad929c0c4">
+								<div class = "noindent" id = "-solution-of-y-xyx-x-y-">
+									<img height = "264" src = "EPS/fig020104.png" width = "409" />
+									<a id = "x1-43r4"></a>
+								</div>
+								<figcaption class = "caption">
+									<span class = "id">Figure&nbsp;2.1.4</span>
+									<span class = "content">
+										Solution of \( \frac{dy}{dx}  + (\cot x)y = x\csc x, y(\pi /2) = 1\)
+									</span>
+								</figcaption>
+							</figure>
+						</li>
+					</ol>
+
 				</details>
 			</div>
 			<div class = "noindent" id = "18a8db9a-b544-4b22-bf6c-3bd8e6a24f36">
-				<span class = "ptmrc8t-">
-					R
-					<span class = "small-caps">EMARK</span>
-				</span>
-				:&nbsp;It wasn’t necessary to do the computations (
-				<a href = "#x1-40r23">
-					2.1.23
-					<!-- tex4ht:ref: eq:2.1.23  -->
-				</a>
-				) and (
-				<a href = "#x1-41r24">
-					2.1.24
-					<!-- tex4ht:ref: eq:2.1.24  -->
-				</a>
-				) in Example&nbsp;
-				<a href = "#x1-346">
-					2.1.6
-					<!-- tex4ht:ref: example:2.1.6  -->
-				</a>
-				, since we showed in the discussion preceding Example&nbsp;
-				<a href = "#x1-305">
-					2.1.5
-					<!-- tex4ht:ref: example:2.1.5  -->
-				</a>
-				that if \(y = uy_1\) where \(y_1' + p(x)y_1 = 0\), then \( \frac{dy}{dx}  + p(x)y = u'y_1\). We
+				<span class = "ptmrc8t-">Remark</span>:
+				It wasn’t necessary to do the computations <a href = "#x1-40r23">(2.1.23)</a> and
+				<a href = "#x1-41r24">(2.1.24)</a> in Example&nbsp;<a href = "#x1-346">2.1.6</a>, since
+				we showed in the discussion preceding Example&nbsp;<a href = "#x1-305">2.1.5</a> that
+				if \(y = uy_1\) where \(y_1' + p(x)y_1 = 0\), then \( \frac{dy}{dx}  + p(x)y = u'y_1\). We
 				did these computations so you would see this happen in this specific
 				example. We recommend that you include these “unnecesary” computations in
 				doing exercises, until you’re confident that you really understand the
@@ -768,71 +704,35 @@
 			</div>
 			<div class = "indent" id = "def4d167-1758-49e5-b147-dfd39480dee9">
 				We summarize the method of variation of parameters for solving
-			</div>
-			<div class = "indent" id = "e865c05c-fb1a-4bf3-9b85-10a7ea033780">
-				\begin {equation} \label {eq:2.1.26}  \frac{dy}{dx}  + p(x)y = f(x) \end {equation}
 				<a id = "x1-44r26"></a>
+				\begin {equation} \label {eq:2.1.26}  \frac{dy}{dx}  + p(x)y = f(x) \end {equation}
 				as follows:
 			</div>
-			<dl class = "list1" id = "7da64dbd-9d25-4dd5-b09e-e94dddf22d24">
-				<dt class = "list">
-					<span class = "ptmb8t-">(a)</span>
-				</dt>
-				<dd class = "list">
-					<div class = "noindent">
-						Find a function \(y_1\) such that \[ {y_1'\over y_1} = -p(x)\] For
-						convenience, take the constant of integration to be zero.
-					</div>
-				</dd>
-				<dt class = "list">
-					<span class = "ptmb8t-">(b)</span>
-				</dt>
-				<dd class = "list">
-					<div class = "noindent">
-						Write \begin {equation} \label {eq:2.1.27} y = uy_1 \end {equation}
-						<a id = "x1-47r27"></a>
-						to remind yourself of what you’re doing.
-					</div>
-				</dd>
-				<dt class = "list">
-					<span class = "ptmb8t-">(c)</span>
-				</dt>
-				<dd class = "list">
-					<div class = "noindent">
-						Write \(u'y_1 = f\) and solve for \(u'\); thus, \(u' = f/y_1\).
-					</div>
-				</dd>
-				<dt class = "list">
-					<span class = "ptmb8t-">(d)</span>
-				</dt>
-				<dd class = "list">
-					<div class = "noindent">
-						Integrate \(u'\) to obtain \(u\), with an arbitrary constant of
-						integration.
-					</div>
-				</dd>
-				<dt class = "list">
-					<span class = "ptmb8t-">(e)</span>
-				</dt>
-				<dd class = "list">
-					<div class = "noindent">
-						Substitute \(u\) into (
-						<a href = "#x1-47r27">
-							2.1.27
-							<!-- tex4ht:ref: eq:2.1.27  -->
-						</a>
-						) to obtain \(y\).
-					</div>
-				</dd>
-			</dl>
+			<ol id = "41ebacda-6bb3-475a-9647-b8c82204dc5b">
+				<li>
+					Find a function \(y_1\) such that \[ {y_1'\over y_1} = -p(x)\] For
+					convenience, take the constant of integration to be zero.
+				</li>
+				<li>
+					<a id = "x1-47r27"></a>
+					Write \begin {equation} \label {eq:2.1.27} y = uy_1 \end {equation}
+					to remind yourself of what you’re doing.
+				</li>
+				<li>
+					Write \(u'y_1 = f\) and solve for \(u'\); thus, \(u' = f/y_1\).
+				</li>
+				<li>
+					Integrate \(u'\) to obtain \(u\), with an arbitrary constant of
+					integration.
+				</li>
+				<li>
+					Substitute \(u\) into <a href = "#x1-47r27">(2.1.27)</a> to obtain \(y\).
+				</li>
+			</ol>
 			<div class = "indent" id = "22ef0a2e-5015-4def-9290-03ddac1513d7">
 				To solve an equation written as \[ P_0(x) \frac{dy}{dx}  + P_1(x)y = F(x)\] we recommend
-				that you divide through by \(P_0(x)\) to obtain an equation of the form (
-				<a href = "#x1-44r26">
-					2.1.26
-					<!-- tex4ht:ref: eq:2.1.26  -->
-				</a>
-				) and then follow this procedure.
+				that you divide through by \(P_0(x)\) to obtain an equation of the
+				form <a href = "#x1-44r26">(2.1.26)</a> and then follow this procedure.
 			</div>
 		</details>
 
@@ -845,101 +745,65 @@
 				the solution must be left in terms of an integral.
 			</div>
 			<div class = "example" id = "x1-517" style = "--ex-number: 7">
-				<dl class = "list1">
-					<dt class = "list">
-						<span class = "ptmb8t-">(a)</span>
-					</dt>
-					<dd class = "list">
-						<div class = "noindent">Find the general solution of \[  \frac{dy}{dx} -2xy = 1\]</div>
-					</dd>
-					<dt class = "list">
-						<span class = "ptmb8t-">(b)</span>
-					</dt>
-					<dd class = "list">
-						<div class = "noindent">
-							Solve the initial value problem \begin {equation} \label {eq:2.1.28}
-							\frac{dy}{dx} -2xy = 1,\quad y(0) = y_0\end {equation}
-							<a id = "x1-54r28"></a>
-						</div>
-					</dd>
-				</dl>
+				<ol>
+					<li>
+						Find the general solution of \[  \frac{dy}{dx} -2xy = 1\]
+					</li>
+					<li>
+						<a id = "x1-54r28"></a>
+						Solve the initial value problem \begin {equation} \label {eq:2.1.28}
+						\frac{dy}{dx} -2xy = 1,\quad y(0) = y_0\end {equation}
+					</li>
+				</ol>
 			
 				<details class = "solution" id = "f5886c88-8865-4046-9ea4-b32dc6d5bab6">
 					<summary>Solution</summary>
 
-					<div class = "noindent" id = "08e781ca-7083-4fe9-b7f0-c4cb9e13b816">
-						<span class = "ptmb8t-">(a)</span>
-						To apply variation of parameters, we need a nontrivial solution \(y_1\) of
-						the complementary equation; thus, \(y_1'-2xy_1 = 0\), which we rewrite as \[
-						{y_1'\over y_1} = 2x\] Integrating this and taking the constant of
-						integration to be zero yields \[ \ln |y_1| = x^2, \quad \mbox { so
-						} \quad |y_1| = e^{x^2}\] We choose \(y_1 = e^{x^2}\) and seek solutions of (
-						<a href = "#x1-54r28">
-							2.1.28
-							<!-- tex4ht:ref: eq:2.1.28  -->
-						</a>
-						) in the form \(y = ue^{x^2}\), where \[ u'e^{x^2} = 1,\quad \mbox { so } \quad
-						u' = e^{-x^2}\] Therefore \[ u = c + \int e^{-x^2}dx\] but we can’t simplify the
-						integral on the right because there’s no elementary function with
-						derivative equal to \(e^{-x^2}\). Therefore the best available form for
-						the general solution of (
-						<a href = "#x1-54r28">
-							2.1.28
-							<!-- tex4ht:ref: eq:2.1.28  -->
-						</a>
-						) is \begin {equation} \label {eq:2.1.29} y = ue^{x^2} =  e^{x^2}\left (c + \int
-						e^{-x^2}dx\right )\end {equation}
-						<a id = "x1-55r29"></a>
-					</div>
-					<div class = "noindent" id = "d3c1e90b-9113-44c9-b82b-263b16aed693">
-						<span class = "ptmb8t-">(b)</span>
-						Since the initial condition in (
-						<a href = "#x1-54r28">
-							2.1.28
-							<!-- tex4ht:ref: eq:2.1.28  -->
-						</a>
-						) is imposed at \(x_0 = 0\), it is convenient to rewrite (
-						<a href = "#x1-55r29">
-							2.1.29
-							<!-- tex4ht:ref: eq:2.1.29  -->
-						</a>
-						) as \[ y = e^{x^2}\left (c + \int ^x_0 e^{-t^2} dt\right ),\quad \mbox { since
-						} \quad \int _0^0e^{-t^2}\,dt = 0\] Setting \(x = 0\) and \(y = y_0\) here shows
-						that \(c = y_0\). Therefore the solution of the initial value problem is
-						\begin {equation} \label {eq:2.1.30} y = e^{x^2}\left (y_0  + \int ^x_0
-						e^{-t^2}dt\right )\end {equation}
-						<a id = "x1-56r30"></a>
-						For a given value of \(y_0\) and each fixed \(x\), the integral on the
-						right can be evaluated by numerical methods. An alternate procedure is to
-						apply the numerical integration procedures discussed in Chapter&nbsp;3
-						directly to the initial value problem (
-						<a href = "#x1-54r28">
-							2.1.28
-							<!-- tex4ht:ref: eq:2.1.28  -->
-						</a>
-						). Figure&nbsp;
-						<a href = "#-solutions-of-yxy-yy-">
-							2.1.5
-							<!-- tex4ht:ref: figure:2.1.5  -->
-						</a>
-						shows graphs of of (
-						<a href = "#x1-56r30">
-							2.1.30
-							<!-- tex4ht:ref: eq:2.1.30  -->
-						</a>
-						) for several values of \(y_0\).
-					</div>
-					<figure class = "figure" id = "17e761ef-cbb7-4e1c-8011-25ced4d4ad98">
-						<div class = "noindent" id = "-solutions-of-yxy-yy-">
-							<img height = "264" src = "EPS/fig020105.png" width = "409" />
-							<a id = "x1-57r5"></a>
-						</div>
-						<figcaption class = "caption">
-							<span class = "id">Figure&nbsp;2.1.5</span>
-							<span class = "content">Solutions of \( \frac{dy}{dx} -2xy = 1\), \(y(0) = y_{0}\)</span>
-						</figcaption>
-						<!-- tex4ht:label?: x1-57r5  -->
-					</figure>
+					<ol>
+						<li>
+							To apply variation of parameters, we need a nontrivial solution \(y_1\) of
+							the complementary equation; thus, \(y_1'-2xy_1 = 0\), which we rewrite as \[
+							{y_1'\over y_1} = 2x\] Integrating this and taking the constant of
+							integration to be zero yields \[ \ln |y_1| = x^2, \quad \mbox { so
+							} \quad |y_1| = e^{x^2}\] We choose \(y_1 = e^{x^2}\) and seek solutions
+							of <a href = "#x1-54r28">(2.1.28)</a> in the form \(y = ue^{x^2}\),
+							where \[ u'e^{x^2} = 1,\quad \mbox { so } \quad
+							u' = e^{-x^2}\] Therefore \[ u = c + \int e^{-x^2}dx\] but we can’t simplify the
+							integral on the right because there’s no elementary function with
+							derivative equal to \(e^{-x^2}\). Therefore the best available form for
+							the general solution of <a href = "#x1-54r28">(2.1.28)</a> is
+							<a id = "x1-55r29"></a>
+							\begin {equation} \label {eq:2.1.29} y = ue^{x^2} =  e^{x^2}\left (c + \int
+							e^{-x^2}dx\right )\end {equation}
+						</li>
+						<li>
+							Since the initial condition in <a href = "#x1-54r28">(2.1.28)</a> is
+							imposed at \(x_0 = 0\), it is convenient to rewrite <a href = "#x1-55r29">(2.1.29)</a> as
+							\[ y = e^{x^2}\left (c + \int ^x_0 e^{-t^2} dt\right ),\quad \mbox { since
+							} \quad \int _0^0e^{-t^2}\,dt = 0\] Setting \(x = 0\) and \(y = y_0\) here shows
+							that \(c = y_0\). Therefore the solution of the initial value problem is
+							<a id = "x1-56r30"></a>
+							\begin {equation} \label {eq:2.1.30} y = e^{x^2}\left (y_0  + \int ^x_0
+							e^{-t^2}dt\right )\end {equation}
+							For a given value of \(y_0\) and each fixed \(x\), the integral on the
+							right can be evaluated by numerical methods. An alternate procedure is to
+							apply the numerical integration procedures discussed in Chapter&nbsp;3
+							directly to the initial value problem <a href = "#x1-54r28">(2.1.28)</a>.
+							Figure&nbsp;<a href = "#-solutions-of-yxy-yy-">2.1.5</a> shows graphs
+							of <a href = "#x1-56r30">(2.1.30)</a> for several values of \(y_0\).
+
+							<figure class = "figure" id = "17e761ef-cbb7-4e1c-8011-25ced4d4ad98">
+								<div class = "noindent" id = "-solutions-of-yxy-yy-">
+									<a id = "x1-57r5"></a>
+									<img height = "264" src = "EPS/fig020105.png" width = "409" />
+								</div>
+								<figcaption class = "caption">
+									<span class = "id">Figure&nbsp;2.1.5</span>
+									<span class = "content">Solutions of \( \frac{dy}{dx} -2xy = 1\), \(y(0) = y_{0}\)</span>
+								</figcaption>
+							</figure>		
+						</li>
+					</ol>
 				</details>
 			</div>
 		</details>
