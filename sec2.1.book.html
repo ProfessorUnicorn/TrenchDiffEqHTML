@@ -161,8 +161,7 @@
 			</div>
 			<div class = "indent" id = "9db45e43-ce09-49a4-b9ec-7ccfb32983e9">
 				<div>
-					Although the linear first order equation we considered was simple and directly 
-					<span class = "vocab">integrable</span>, the same vocabulary summary applies for all 1st order linear differential equations:
+					Although <a href = "#x1-5r2">(2.1.2)</a> was simple and <span class = "vocab">integrable</span>, the same vocabulary summary applies for all 1st order linear differential equations:
 					<a id = "x1-7r4"></a>
 					\begin {equation} \label {eq:2.1.4}  
 						\frac{dy}{dx}  + p(x)y = f(x)
@@ -170,48 +169,41 @@
 				
 					That is, if \(p(x)\) and \(f(x)\) are continuous on some open interval \((a,b)\)
 					then there’s a unique formula \(y = y(x,c)\) analogous to <a href = "#x1-6r3">(2.1.3)</a> that
-					involves \(x\) and a <span class = "vocab">parameter</span> \(c\) and has the these properties:
+					involves \(x\) and a <span class = "vocab">parameter</span> \(c\) that has the these properties:
 				</div>
 			</div>
 			<ul class = "itemize1" id = "51f7c875-688d-4c65-ab77-10e640a71ae7">
 				<li class = "itemize">
-					For each value of \(c\), the resulting function \( y=y(x) \) is a solution of <a href = "#x1-7r4">(2.1.4)</a>on <span class = "vocab">interval of validity</span> \((a,b)\)
+					For each value of \(c\), the resulting function \( y=y(x) \) is a solution of <a href = "#x1-7r4">(2.1.4)</a> on an <span class = "vocab">interval of validity</span> \((a,b)\)
 				</li>
 				<li>
-					If \( y \) is a solution of <a href = "#x1-7r4">
-						(2.1.4)
-					</a>on \((a,b)\), then \( y \) can be obtained from the equation representing the <span class = "vocab">one-parameter family</span> by choosing \( c \) appropriately
+					A solution of <a href = "#x1-7r4">(2.1.4)</a> can be obtained from the equation representing the <span class = "vocab">one-parameter family</span> by choosing \( c \) appropriately
 				</li>
 				<li>
-					We call \( y = y(x,c) \) the <span class = "vocab">general solution</span> and for a specific value of \( c \), we call \( y=y(x) \) a <span class = "vocab">particular solution</span>
+					We call \( y = y(x,c) \) the <span class = "vocab">general solution</span> and for a particular value of \( c \) then \( y=y(x) \) is a <span class = "vocab">particular solution</span>
 				</li>			
 			</ul>
 			<div class = "indent" id = "ca24c9f8-c9e5-413c-824e-e2623c0a27a8">
-				So far we have only considered 1st order linear differential equations in the form:
+				So far we have only considered first order linear differential equations in the form:
 
 				\begin{equation*}
 					\frac{dy}{dx} + p(x)y = f(x)
 				\end{equation*}
 
-				However, 1st order linear differential equations could be of the form:
+				However, first order linear differential equations could also be of the form:
 				<a id = "x1-8r5"></a>
 				\begin {equation} \label {eq:2.1.5} 
 				P_0(x) \frac{dy}{dx}  + P_1(x)y = F(x) 
 				\end{equation}
 				
-				has a general solution provided \(P_0(x)\),
+				which has a general solution provided \(P_0(x)\),
 				\(P_1(x)\), and \(F(x)\) are all continuous on an open interval \((a,b)\) on which
-				and \(P_0\) has no zeros, since in this case we can rewrite
-				<a href = "#x1-8r5">
-					(2.1.5)
-				</a>in the form
-				<a href = "#x1-7r4">
-					(2.1.4)
-				</a>by dividing by \( P_0(x) \):
+				and \(P_0(x) \) has no zeros, since in this case we can rewrite it in the form of <a href = "#x1-7r4">(2.1.4)</a> by dividing by \( P_0(x) \):
+			
 				\begin {equation*} 
 					\frac{dy}{dx}  + \underset{p(x)}{\underbrace{\frac{P_1(x)}{P_0(x)}}}y = \underset{f(x)}{\underbrace{\frac{F(x)}{P_0(x)}}} 
 				\end{equation*}
-				However, take note of the fact that the <span class = "vocab">intervals of validity</span> might change when we divide by \( P_0(x) \) if \( P_0(x) \) <em>does</em> have any zeros on an interval we are considering. (Exercise 44 for an example.) When we find a <span class = "vocab">general solution</span>, we should include every open <span class = "vocab">interval of validity</span> for which the solution is defined.
+				However, take note of the fact that the <span class = "vocab">intervals of validity</span> might change when dividing by \( P_0(x) \) if \( P_0(x) \) has any zero on an interval we are considering (Exercise 44 for an example of this), and whenever we find a solution, we should include every open <span class = "vocab">interval of validity</span> for which the solution is defined.
 
 			</div>
 		</details>
@@ -488,7 +480,7 @@
 			</div>
 
 			<div class="reading-exercise">
-				Prove by differentiating \( y \) using <a href = "#x1-26r14">(2.1.14)</a>, rewriting it as <a href = "#x1-24r12">(2.1.12)</a>, and then solving  
+				Prove by differentiating \( y = ce^{-P(x)} \) using <a href = "#x1-26r14">(2.1.14)</a>, rewriting in the form of <a href = "#x1-24r12">(2.1.12)</a> and then solving  
 			</div>   
 		</details>
 
@@ -977,38 +969,34 @@
 				</div>
 				<ol>
 					<li>
-						<div>
-							The general solution of the nonhomogeneous equation <a href = "#x1-60r31">(2.1.31)</a> on \((a,b)\) is given by <a href = "#x1-61r32">(2.1.32)</a>
-							<a id = "x1-60r31"></a>
-							\begin {equation} \label {eq:2.1.31}  
-								\frac{dy}{dx}  + p(x)y = f(x) 
-							\end {equation}
-							
-							<a id = "x1-61r32"></a>
-							\begin {equation} \label {eq:2.1.32} 
-								y = y_1 \left (c  + \int \frac{f(x)}{y_1(x)} dx \right )
-							\end {equation}
-						</div>
+						The general solution of the nonhomogeneous equation <a href = "#x1-60r31">(2.1.31)</a> on \((a,b)\) is given by <a href = "#x1-61r32">(2.1.32)</a>
+						<a id = "x1-60r31"></a>
+						\begin {equation} \label {eq:2.1.31}  
+							\frac{dy}{dx}  + p(x)y = f(x) 
+						\end {equation}
+						
+						<a id = "x1-61r32"></a>
+						\begin {equation} \label {eq:2.1.32} 
+							y = y_1 \left (c  + \int \frac{f(x)}{y_1(x)} dx \right )
+						\end {equation}
 					</li>
 					<li>
-						<div>
-							If \(x_0\) is an arbitrary point in \((a,b)\) and \(y_0\) is an
-							arbitrary real number, then the initial value problem <a href = "#x1-61r33">(2.1.33)</a> has the unique solution <a href = "#x1-61r34">(2.1.34)</a> on \((a,b)\) 
+						If \(x_0\) is an arbitrary point in \((a,b)\) and \(y_0\) is an
+						arbitrary real number, then the initial value problem <a href = "#x1-61r33">(2.1.33)</a> has the unique solution <a href = "#x1-61r34">(2.1.34)</a> on \((a,b)\) 
+						
+						<a id = "x1-61r33"></a>
+						\begin {equation} \label {eq:2.1.33}  
+							\frac{dy}{dx}  + p(x)y = f(x) 
+							\quad 
+							y(x_0) = y_0 
+						\end {equation}
 							
-							<a id = "x1-61r33"></a>
-							\begin {equation} \label {eq:2.1.33}  
-								\frac{dy}{dx}  + p(x)y = f(x) 
-								\quad 
-								y(x_0) = y_0 
-							\end {equation}
-							 
-							<a id = "x1-61r34"></a>
-							\begin {equation} \label {eq:2.1.34}  
-								y = y_1 \left( 
-									{y_0\over y_1(x_0)} + \int^x_{x_0} {f(t)\over{y_1(t)}} dt
-								\right) 
-							\end {equation}
-						</div>
+						<a id = "x1-61r34"></a>
+						\begin {equation} \label {eq:2.1.34}  
+							y = y_1 \left( 
+								{y_0\over y_1(x_0)} + \int^x_{x_0} {f(t)\over{y_1(t)}} dt
+							\right) 
+						\end {equation}
 					</li>
 				</ol>	
 			</div>
