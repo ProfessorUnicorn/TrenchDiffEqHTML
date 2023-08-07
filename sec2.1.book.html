@@ -191,8 +191,6 @@
 				from calculus.
 			</div>
 			<div class = "example" id = "x1-93" style = "--ex-number: 3">
-				<div class = "noindent">
-				</div>
 				<ol>
 					<li>
 						Let \(a\) be a constant. Find the general solution: 
@@ -209,104 +207,107 @@
 				<details class = "solution" id = "d4316a0e-59fa-4298-bab2-332c0adbd62a">
 					<summary>Solution</summary>
 
-					<div class = "noindent" id = "49041906-b291-46f5-bd97-daaf2ba9e787">
-						<span class = "ptmb8t-">(Part 1)</span>
-						<div>
-							First notice <a href = "#x1-11r6">(2.1.6)</a> has a <span class = "vocab">trivial solution</span> \( y(x) \equiv 0 \) which we can verify by substitution:
-							\begin{align*} 	
-								\frac{dy}{dx} - ay = & 0 \\
-								\frac{d}{dx} \Big( 0 \Big) - a \Big( 0 \Big) = & 0 \quad \checkmark \\
-							\end{align*}
-						</div>
-						<div>
-							Now we seek nontrivial solution where \( y \ne 0 \) by rearranging the equation:
-							\begin{align*} 	
-								\frac{dy}{dx} - ay = & 0 \\
-								\frac{dy}{dx} = & ay \\
-								\frac{1}{y}\frac{dy}{dx} = & a \\
-								\int \Bigg( \frac{1}{y}\frac{dy}{dx} \Bigg) dx = & \int \Big( a \Big) dx \\
-								\int \frac{1}{y} dy = & a\int dx \\
-							\end{align*}							
-						</div>
-						<div>	
-							Notice how the equation has the variables separated so that the left side has only \( y \) and the right side has only \( x \). This strategy is called <span class = "vocab">separation of variables</span>. Now find the antiderivative on both sides. Technically each side has an <span class = "vocab">arbitrary constant</span> but we combine them into one constant \( k \).
-							\begin{align*} 	
-								\int \frac{1}{y} dy = & a\int dx \\
-								\ln \left| y \right| = & ax + k 
-							\end{align*}
-						</div>
-						<div>	
-							Solving for \( y \) requires exponeniating both sides resulting in \( e^l \) in the expression, which is just another arbitrary constant so we can simplify it to just \( K \)
-							\begin{align*} 	
-								\ln \left| y \right| = & ax + k \\
-								e^{\ln \left| y \right|} = & e^{ax + k} \\
-								\left| y \right| = & e^{ax} \underset{K}{\underbrace{e^{k}}} \\ 
-								\left| y \right| = & Ke^{ax} \\ 
-								y = Ke^{ax}  \quad & \text{or} \quad y = -Ke^{ax}
-							\end{align*}
-							Since the function \( e^{ax} \) never equals zero so it is either always positive or always negative and with \( K \) and\( -K \) representing arbitrary constants, we can further simplify
-							<a id = "x1-13r7"></a>
-							\begin {equation} \label {eq:2.1.7} 
-								y(x) = ce^{ax} 
-							\end{equation}
-						</div>
-					</div>
+					<ol class='parts'>
+						<li>
+							<div class = "noindent" id = "49041906-b291-46f5-bd97-daaf2ba9e787">
+								<span class = "ptmb8t-">(Part 1)</span>
+								<div>
+									First notice <a href = "#x1-11r6">(2.1.6)</a> has a <span class = "vocab">trivial solution</span> \( y(x) \equiv 0 \) which we can verify by substitution:
+									\begin{align*} 	
+										\frac{dy}{dx} - ay = & 0 \\
+										\frac{d}{dx} \Big( 0 \Big) - a \Big( 0 \Big) = & 0 \quad \checkmark \\
+									\end{align*}
+								</div>
+								<div>
+									Now we seek nontrivial solution where \( y \ne 0 \) by rearranging the equation:
+									\begin{align*} 	
+										\frac{dy}{dx} - ay = & 0 \\
+										\frac{dy}{dx} = & ay \\
+										\frac{1}{y}\frac{dy}{dx} = & a \\
+										\int \Bigg( \frac{1}{y}\frac{dy}{dx} \Bigg) dx = & \int \Big( a \Big) dx \\
+										\int \frac{1}{y} dy = & a\int dx \\
+									\end{align*}							
+								</div>
+								<div>	
+									Notice how the equation has the variables separated so that the left side has only \( y \) and the right side has only \( x \). This strategy is called <span class = "vocab">separation of variables</span>. Now find the antiderivative on both sides. Technically each side has an <span class = "vocab">arbitrary constant</span> but we combine them into one constant \( k \).
+									\begin{align*} 	
+										\int \frac{1}{y} dy = & a\int dx \\
+										\ln \left| y \right| = & ax + k 
+									\end{align*}
+								</div>
+								<div>	
+									Solving for \( y \) requires exponeniating both sides resulting in \( e^l \) in the expression, which is just another arbitrary constant so we can simplify it to just \( K \)
+									\begin{align*} 	
+										\ln \left| y \right| = & ax + k \\
+										e^{\ln \left| y \right|} = & e^{ax + k} \\
+										\left| y \right| = & e^{ax} \underset{K}{\underbrace{e^{k}}} \\ 
+										\left| y \right| = & Ke^{ax} \\ 
+										y = Ke^{ax}  \quad & \text{or} \quad y = -Ke^{ax}
+									\end{align*}
+									Since the function \( e^{ax} \) never equals zero so it is either always positive or always negative and with \( K \) and\( -K \) representing arbitrary constants, we can further simplify
+									<a id = "x1-13r7"></a>
+									\begin {equation} \label {eq:2.1.7} 
+										y(x) = ce^{ax} 
+									\end{equation}
+								</div>
+							</div>
 
-					<div class = "indent" id = "ce719b94-df58-478e-a922-50605943faa4">
-						This shows that every nontrivial solution of <a href = "#x1-11r6">(2.1.6)</a> is of the form \(y = ce^{ax}\) for some nonzero constant \(c\). Since the trivial solution is also represented by this formula if we set \(c = 0\), then <em>all</em> solutions of <a href = "#x1-11r6">(2.1.6)</a>, both trivial and nontrivial, are of the form of <a href = "#x1-13r7">(2.1.7)</a>. 
-					</div>
-					<div>	
-						Additionally, we can check our answer simplfy by differentiating and rewriting it in terms of <a href = "#x1-11r6">(2.1.6)</a>: 
-						\begin{align*} 	
-							y = ce^{ax} \Longrightarrow 
-							\frac{dy}{dx} = & \frac{d}{dx} \Big(ce^{ax} \Big) \\	
-							\frac{dy}{dx} = & ce^{ax} \underset{a}{\underbrace{\frac{d}{dx}\left({ax}\right)}} \\	
-							\frac{dy}{dx} = & a \cdot \underset{y}{\underbrace{ce^{ax}}} \\	
-							\frac{dy}{dx} = & a y 
-							\Longrightarrow 		
-							\frac{dy}{dx} -ay = 0 \quad \checkmark		
-						\end{align*}
-					</div>
-					<div>		
-					</div>
+							<div class = "indent" id = "ce719b94-df58-478e-a922-50605943faa4">
+								This shows that every nontrivial solution of <a href = "#x1-11r6">(2.1.6)</a> is of the form \(y = ce^{ax}\) for some nonzero constant \(c\). Since the trivial solution is also represented by this formula if we set \(c = 0\), then <em>all</em> solutions of <a href = "#x1-11r6">(2.1.6)</a>, both trivial and nontrivial, are of the form of <a href = "#x1-13r7">(2.1.7)</a>. 
+							</div>
+							<div>	
+								Additionally, we can check our answer simplfy by differentiating and rewriting it in terms of <a href = "#x1-11r6">(2.1.6)</a>: 
+								\begin{align*} 	
+									y = ce^{ax} \Longrightarrow 
+									\frac{dy}{dx} = & \frac{d}{dx} \Big(ce^{ax} \Big) \\	
+									\frac{dy}{dx} = & ce^{ax} \underset{a}{\underbrace{\frac{d}{dx}\left({ax}\right)}} \\	
+									\frac{dy}{dx} = & a \cdot \underset{y}{\underbrace{ce^{ax}}} \\	
+									\frac{dy}{dx} = & a y 
+									\Longrightarrow 		
+									\frac{dy}{dx} -ay = 0 \quad \checkmark		
+								\end{align*}
+							</div>
+						</li>
+						<li>
+							<div class = "noindent" id = "6561841f-1e77-47bb-9641-0d34c79be2bc">
+								<span class = "ptmb8t-">(Part 2)</span>
+								We already have the general solution <a href = "#x1-13r7">(2.1.7)</a> and we evaluate it at our  initial condition \(y(x_0) = y_0\) to solve for the constant \( c \):
+								\begin{align*} 	
+									y(x) = & ce^{ax}  \\
+									\underset{y_0}{\underbrace{y(x_0)}} = & ce^{ax_0} \\
+									y_0 = & ce^{ax_0} \\
+									c = & \frac{y_0}{e^{ax_0}} = y_0 e^{-ax_0}  \\
+								\end{align*}
 
-					<div class = "noindent" id = "6561841f-1e77-47bb-9641-0d34c79be2bc">
-						<span class = "ptmb8t-">(Part 2)</span>
-						We already have the general solution <a href = "#x1-13r7">(2.1.7)</a> and we evaluate it at our  initial condition \(y(x_0) = y_0\) to solve for the constant \( c \):
-						\begin{align*} 	
-							y(x) = & ce^{ax}  \\
-							\underset{y_0}{\underbrace{y(x_0)}} = & ce^{ax_0} \\
-							y_0 = & ce^{ax_0} \\
-							c = & \frac{y_0}{e^{ax_0}} = y_0 e^{-ax_0}  \\
-						\end{align*}
-
-						Substituting \( c = y_0 e^{-ax_0} \) yields the <span class = "vocab">particular solution</span> of our IVP:
-						\begin{align*} 	
-							y(x) = ce^{ax}  \Longrightarrow y(x) = & y_0 e^{-ax_0} e^{ax}  \\
-							y(x) = & y_0 e^{-ax_0+ax} \\
-							y(x) = & y_0 e^{a\left(x-x_0\right)} \\
-						\end{align*}
-					</div>
-					<div>	
-						Figure&nbsp;
-						<a href = "#-solutions-of-yay-y-">
-							2.1.1
-							<!-- tex4ht:ref: figure:2.1.1  -->
-						</a>
-						show the graphs of this function with \(x_{0} = 0\), \(y_{0} = 1\), and
-						various values of \(a\).
-					</div>
-					<figure class = "figure" id = "ae823a2c-c7db-4457-b8b6-22c611ae0715">
-						<div class = "noindent" id = "-solutions-of-yay-y-">
-							<img height = "264" src = "EPS/fig020101.png" width = "409" />
-							<a id = "x1-14r1"></a>
-						</div>
-						<figcaption class = "caption">
-							<span class = "id">Figure&nbsp;2.1.1</span>
-							<span class = "content">Solutions of \( \displaystyle \frac{dy}{dx} -ay = 0 \quad y(0) = 1\)</span>
-						</figcaption>
-						<!-- tex4ht:label?: x1-14r1  -->
-					</figure>
+								Substituting \( c = y_0 e^{-ax_0} \) yields the <span class = "vocab">particular solution</span> of our IVP:
+								\begin{align*} 	
+									y(x) = ce^{ax}  \Longrightarrow y(x) = & y_0 e^{-ax_0} e^{ax}  \\
+									y(x) = & y_0 e^{-ax_0+ax} \\
+									y(x) = & y_0 e^{a\left(x-x_0\right)} \\
+								\end{align*}
+							</div>
+							<div>	
+								Figure&nbsp;
+								<a href = "#-solutions-of-yay-y-">
+									2.1.1
+									<!-- tex4ht:ref: figure:2.1.1  -->
+								</a>
+								show the graphs of this function with \(x_{0} = 0\), \(y_{0} = 1\), and
+								various values of \(a\).
+							</div>
+							<figure class = "figure" id = "ae823a2c-c7db-4457-b8b6-22c611ae0715">
+								<div class = "noindent" id = "-solutions-of-yay-y-">
+									<img height = "264" src = "EPS/fig020101.png" width = "409" />
+									<a id = "x1-14r1"></a>
+								</div>
+								<figcaption class = "caption">
+									<span class = "id">Figure&nbsp;2.1.1</span>
+									<span class = "content">Solutions of \( \displaystyle \frac{dy}{dx} -ay = 0 \quad y(0) = 1\)</span>
+								</figcaption>
+								<!-- tex4ht:label?: x1-14r1  -->
+							</figure>
+						</li>
+					</ol>
 				</details>
 			</div>
 
