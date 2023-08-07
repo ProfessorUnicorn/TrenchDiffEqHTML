@@ -868,7 +868,7 @@
 								\end{align*}
 	
 	
-								where \( x_0 \) is the initial \(x-\)value. Of course this always
+								where \( x_0 \) is an arbitrary \(x-\)value. Of course this always
 								introduces a <span class = "vocab">constant of integration</span> so be sure to include that. 
 							</div>
 							<div class="reading-exercise">
@@ -879,52 +879,42 @@
 								
 								<a id = "x1-55r29"></a>
 								\begin{align}	\label {eq:2.1.29}
-									y = ue^{x^2} = & e^{x^2}\left( c + \int_{0}^x e^{-t^2} dt \right) \\	
+									y = ue^{x^2} = & e^{x^2}\left( c + \int_{x_0}^x e^{-t^2} dt \right) \\	
 								\end{align}
 							</div>
 							<div class="reading-exercise">
-								Verify \( y  = e^{x^2}\left( c + \int_{0}^x e^{-t^2} dt \right) \) is a solution of <a href = "#x1-54r27">(2.1.27)</a> by differentiating and substituting
+								Verify \( y  = e^{x^2}\left( c + \int_{x_0}^x e^{-t^2} dt \right) \) is a solution of <a href = "#x1-54r27">(2.1.27)</a> by differentiating and substituting
 							</div> 
+							<div>
+								HELLO
+							</div>	
 						</li>
 						<li>
-							<div id = "6561841f-1e77-47bb-9641-0d34c79be2bc">
-								We already have the general solution <a href = "#x1-54r29">(2.1.29)</a> and we evaluate it at our  initial condition \( y(0) = y_0 \) to solve for the constant \( c \):
-								\begin{align*} 	
-									y(x) = & e^{x^2}\left( c + \int_{0}^x e^{-t^2} dt \right)  \\
-									\underset{y_0}{\underbrace{y(0)}} = & e^{0^2}\left( c + \int_{0}^0 e^{-t^2} dt \right) \\
-									y_0 = & 1 \left( c + 0 \right) \\
-									c = & y_0
-								\end{align*}
+							Since the initial condition in <a href = "#x1-54r28">(2.1.28)</a> is
+							imposed at \(x_0 = 0\), it is convenient to rewrite <a href = "#x1-55r29">(2.1.29)</a> as
+							\[ y = e^{x^2}\left (c + \int ^x_0 e^{-t^2} dt\right ),\quad \mbox { since
+							} \quad \int _0^0e^{-t^2}\,dt = 0\] Setting \(x = 0\) and \(y = y_0\) here shows
+							that \(c = y_0\). Therefore the solution of the initial value problem is
+							<a id = "x1-56r30"></a>
+							\begin {equation} \label {eq:2.1.30} y = e^{x^2}\left (y_0  + \int ^x_0
+							e^{-t^2}dt\right )\end {equation}
+							For a given value of \(y_0\) and each fixed \(x\), the integral on the
+							right can be evaluated by numerical methods. An alternate procedure is to
+							apply the numerical integration procedures discussed in Chapter&nbsp;3
+							directly to the initial value problem <a href = "#x1-54r28">(2.1.28)</a>.
+							Figure&nbsp;<a href = "#-solutions-of-yxy-yy-">2.1.5</a> shows graphs
+							of <a href = "#x1-56r30">(2.1.30)</a> for several values of \(y_0\).
 
-								Substituting \( c = y_0 \) yields the <span class = "vocab">particular solution</span> of our IVP:
-
-								<a id = "x1-56r30"></a>
-								\begin{align} \label {eq:2.1.30}
-									y(x) = e^{x^2}\left( c + \int_{0}^x e^{-t^2} dt \right)   
-									\Longrightarrow y(x) = & e^{x^2}\left( y_0 + \int_{0}^x e^{-t^2} dt \right)
-								\end{align}
-							</div>
-							<div>
-								Figure&nbsp;<a href = "#-solutions-of-yxy-yy-">2.1.5</a> shows graphs
-								of <a href = "#x1-56r30">(2.1.30)</a> for several values of \(y_0\).
-
-								<figure class = "figure" id = "17e761ef-cbb7-4e1c-8011-25ced4d4ad98">
-									<div id = "-solutions-of-yxy-yy-">
-										<a id = "x1-57r5"></a>
-										<img height = "264" src = "EPS/fig020105.png" width = "409" />
-									</div>
-									<figcaption class = "caption">
-										<span class = "id">Figure&nbsp;2.1.5</span>
-										<span class = "content">Solutions of \( \displaystyle \frac{dy}{dx} -2xy = 1 \quad y(0) = y_{0}\)</span>
-									</figcaption>
-								</figure>
-							</div>
-							<div>
-								A note about solutions in the form of an integral. Comparing to our experience in calculus, a general solution in the form of an integral <a href = "#x1-56r30">(2.1.30)</a> may seem incomplete, almost like we still have more steps to do; while this may be true in calculus class, it is important to realize that a solution in the form or a definite integral is perfectly valid and can be easily analyzed using numerical methods. For instance, remember that for any specific value of \( x \), this definite integral will evaluate to a number, so we could always use a calculator to make a table of \( \big( x, y(x) \big) \) pairs and simply plot the points of the solution. While we won't be studying numerical methods in this class, hopefully you could imagine someone doing so and can be okay with sometimes having answers in the form of an integral.
-							</div>
-							<div class="reading-exercise">
-								Using a calculator generate a table of 20 ordered pairs for <a href = "#x1-56r30">(2.1.30)</a>, plot them on a graph, and connect them with a curve
-							</div> 				
+							<figure class = "figure" id = "17e761ef-cbb7-4e1c-8011-25ced4d4ad98">
+								<div id = "-solutions-of-yxy-yy-">
+									<a id = "x1-57r5"></a>
+									<img height = "264" src = "EPS/fig020105.png" width = "409" />
+								</div>
+								<figcaption class = "caption">
+									<span class = "id">Figure&nbsp;2.1.5</span>
+									<span class = "content">Solutions of \( \frac{dy}{dx} -2xy = 1\), \(y(0) = y_{0}\)</span>
+								</figcaption>
+							</figure>		
 						</li>
 					</ol>
 				</details>
@@ -932,64 +922,187 @@
 		</details>
 
 		<details id = "4454b728-c934-46b0-b7ef-ca7e5afcc726">
-			<summary>Existence and Uniqueness</summary>
-
+			<summary>An Existence and Uniqueness Theorem</summary>
+		
+			<div id = "95b9c713-3202-4d94-8aa9-1f8ad8b6e444">
+				The method of variation of parameters leads to this theorem.
+			</div>
 			<div class = "newtheorem" id = "afc64397-4ef9-442d-8578-9debaa2943eb">
 				<div>
 					<span class = "head">
 						<span class = "ptmb8t-">Theorem&nbsp;2.1.2</span>
 					</span>
 					<a id = "x1-582"></a>
-					Suppose \(p(x)\) and \(f(x)\) are continuous on an open interval \((a,b),\)
-					and let \(y_1 = y_1(x) \) be any nontrivial solution of the complementary equation
-					\(  \displaystyle \frac{dy}{dx}  + p(x)y = 0 \) on \((a,b)\). Then:
+					Suppose \(p\) and \(f\) are continuous on an open interval \((a,b),\)
+					and let \(y_1\) be any nontrivial solution of the complementary equation
+					\[  \frac{dy}{dx}  + p(x)y = 0 \] on \((a,b)\). Then:
 				</div>
-				<ol>
-					<li>
+				<dl class = "list1">
+					<dt class = "list">
+						<span class = "ptmb8t-">(a)</span>
+					</dt>
+					<dd class = "list">
 						<div>
-							The general solution of the nonhomogeneous equation <a href = "#x1-60r31">(2.1.31)</a> on \((a,b)\) is given by <a href = "#x1-61r32">(2.1.32)</a>
+							The general solution of the nonhomogeneous equation \begin
+							{equation} \label {eq:2.1.31}  \frac{dy}{dx}  + p(x)y = f(x) \end {equation}
 							<a id = "x1-60r31"></a>
-							\begin {equation} \label {eq:2.1.31}  
-								\frac{dy}{dx}  + p(x)y = f(x) 
-							\end {equation}
-							
+							on \((a,b)\) is \begin {equation} \label {eq:2.1.32} y = y_1(x)\left
+							(c  + \int f(x)/y_1(x)\,dx\right )\end {equation}
 							<a id = "x1-61r32"></a>
-							\begin {equation} \label {eq:2.1.32} 
-								y = y_1 \left (c  + \int \frac{f(x)}{y_1(x)} dx \right )
-							\end {equation}
 						</div>
-					</li>
-					<li>
+					</dd>
+					<dt class = "list">
+						<span class = "ptmb8t-">(b)</span>
+					</dt>
+					<dd class = "list">
 						<div>
 							If \(x_0\) is an arbitrary point in \((a,b)\) and \(y_0\) is an
-							arbitrary real number, then the initial value problem <a href = "#x1-61r33">(2.1.33)</a> has the unique solution <a href = "#x1-61r34">(2.1.34)</a> on \((a,b)\) 
-							
-							<a id = "x1-61r33"></a>
-							\begin {equation} \label {eq:2.1.33}  
-								\frac{dy}{dx}  + p(x)y = f(x) 
-								\quad 
-								y(x_0) = y_0 
-							\end {equation}
-							 
-							<a id = "x1-61r34"></a>
-							\begin {equation} \label {eq:2.1.34}  
-								y = y_1 \left( 
-									{y_0\over y_1(x_0)} + \int^x_{x_0} {f(t)\over{y_1(t)}} dt
-								\right) 
-							\end {equation}
+							arbitrary real number, then the initial value problem \[
+							\frac{dy}{dx}  + p(x)y = f(x),\quad y(x_0) = y_0 \] has the unique solution \[
+							y = y_1(x)\left ({y_0\over y_1(x_0)}  + \int ^x_{x_0} {f(t)\over
+							y_1(t)}\, dt\right ) \] on \((a,b).\)
 						</div>
-					</li>
-				</ol>	
+					</dd>
+				</dl>
 			</div>
-			<div class="reading-exercise">
-				Use the <span class = "vocab">Fundamental Theorem of Calculus</span> to differentiate <a href = "#x1-61r32">(2.1.32)</a> and use the solution to the complementary equation \( y_1 \) to substitute and show that <a href = "#x1-61r32">(2.1.32)</a> is a solution of <a href = "#x1-60r31">(2.1.31)</a>
-			</div> 
-			<div class="reading-exercise">
-				Differentiate \( u = \frac{y}{y_1} \) using the quotient rule and use the solution to the complementary equation \( y_1 \) and <a href = "#x1-60r31">(2.1.31)</a> to substitute to show that \( \frac{du}{dx} = \frac{f(x)}{y_1(x)} \)
-			</div> 
-			<div class="reading-exercise">
-				Evaluate <a href = "#x1-61r34">(2.1.34)</a> at \( x = x_0 \) to verify \( y( x_0 ) = y_0 \). Next evaluate <a href = "#x1-61r32">(2.1.32)</a> at \( x = x_0 \) and solve for \( c \) to show that \( c = \frac{y(x_0)}{y_1(x_0)} \)
-			</div> 
+			<div class = "indent" id = "d2e3077d-6253-4661-bab7-1f70d8299f78"></div>
+			<div id = "3b0bf5c6-1613-41d9-9ab1-d2d03c4adb8b">
+				<span class = "ptmb8t-">Proof (a)</span>
+				To show that (
+				<a href = "#x1-61r32">
+					2.1.32
+					<!-- tex4ht:ref: eq:2.1.32  -->
+				</a>
+				) is the general solution of (
+				<a href = "#x1-60r31">
+					2.1.31
+					<!-- tex4ht:ref: eq:2.1.31  -->
+				</a>
+				) on \((a,b)\), we must prove that:
+			</div>
+			<dl class = "list1" id = "b24d635f-af11-4bb1-a674-ffee2a8902aa">
+				<dt class = "list">
+					<span class = "ptmb8t-">(i)</span>
+				</dt>
+				<dd class = "list">
+					<div>
+						If \(c\) is any constant, the function \(y\) in (
+						<a href = "#x1-61r32">
+							2.1.32
+							<!-- tex4ht:ref: eq:2.1.32  -->
+						</a>
+						) is a solution of (
+						<a href = "#x1-60r31">
+							2.1.31
+							<!-- tex4ht:ref: eq:2.1.31  -->
+						</a>
+						) on \((a,b)\).
+					</div>
+				</dd>
+				<dt class = "list">
+					<span class = "ptmb8t-">(ii)</span>
+				</dt>
+				<dd class = "list">
+					<div>
+						If \(y\) is a solution of (
+						<a href = "#x1-60r31">
+							2.1.31
+							<!-- tex4ht:ref: eq:2.1.31  -->
+						</a>
+						) on \((a,b)\) then \(y\) is of the form (
+						<a href = "#x1-61r32">
+							2.1.32
+							<!-- tex4ht:ref: eq:2.1.32  -->
+						</a>
+						) for some constant&nbsp;\(c\).
+					</div>
+				</dd>
+			</dl>
+			<div class = "indent" id = "1e46ac36-56ec-43eb-80b9-bed75733c30f">
+				To prove
+				<span class = "ptmb8t-">(i)</span>
+				, we first observe that any function of the form (
+				<a href = "#x1-61r32">
+					2.1.32
+					<!-- tex4ht:ref: eq:2.1.32  -->
+				</a>
+				) is defined on \((a,b)\), since \(p\) and \(f\) are continuous on
+				\((a,b)\). Differentiating (
+				<a href = "#x1-61r32">
+					2.1.32
+					<!-- tex4ht:ref: eq:2.1.32  -->
+				</a>
+				) yields \[  \frac{dy}{dx}  = y_1'(x)\left (c  + \int f(x)/y_1(x)\, dx\right ) + f(x)\] Since
+				\(y_1' = -p(x)y_1\), this and (
+				<a href = "#x1-61r32">
+					2.1.32
+					<!-- tex4ht:ref: eq:2.1.32  -->
+				</a>
+				) imply that
+			</div>
+			<div class = "eqnarray" id = "45340afb-531a-401b-bb36-715779f30a6a">
+				\begin {eqnarray*}  \frac{dy}{dx} &amp; = &amp;-p(x)y_1(x)\left (c  + \int f(x)/y_1(x)\,
+				dx\right ) + f(x)\\ &amp; = &amp;-p(x)y(x) + f(x)\end {eqnarray*}
+			</div>
+			<div class = "indent" id = "5ad7768a-b4a8-4e23-beda-84e9eddf0209">
+				which implies that \(y\) is a solution of (
+				<a href = "#x1-60r31">
+					2.1.31
+					<!-- tex4ht:ref: eq:2.1.31  -->
+				</a>
+				).
+			</div>
+			<div class = "indent" id = "822eb6a8-09c5-4836-aab0-330017ec5023">
+				To prove
+				<span class = "ptmb8t-">(ii)</span>
+				, suppose \(y\) is a solution of (
+				<a href = "#x1-60r31">
+					2.1.31
+					<!-- tex4ht:ref: eq:2.1.31  -->
+				</a>
+				) on \((a,b)\). From the proof of Theorem&nbsp;
+				<a href = "#x1-231">
+					2.1.1
+					<!-- tex4ht:ref: thmtype:2.1.1  -->
+				</a>
+				, we know that \(y_1\) has no zeros on \((a,b)\), so the function
+				\(u = y/y_1\) is defined on \((a,b)\). Moreover, since \[  \frac{dy}{dx}  = -py + f\mbox
+				\quad { and } \quad y_1' = -py_1\]
+			</div>
+			<div class = "eqnarray" id = "690f3071-ce7b-4dcc-9a8a-cc96a99c8efb">
+				\begin {eqnarray*} u'&amp; = &amp;{y_1 \frac{dy}{dx} -y_1'y\over y_1^2}\\
+				&amp; = &amp;{y_1(-py + f)-(-py_1)y\over y_1^2} = {f\over y_1}\end {eqnarray*}
+			</div>
+			<div class = "indent" id = "bb6dacc5-bb12-4c13-91ac-c1e4b561bc60">
+				Integrating \(u' = f/y_1\) yields \[ u = \left (c  + \int f(x)/y_1(x)\, dx\right
+				)\] which implies (
+				<a href = "#x1-61r32">
+					2.1.32
+					<!-- tex4ht:ref: eq:2.1.32  -->
+				</a>
+				), since \(y = uy_1\).
+			</div>
+			<div class = "indent" id = "05adaab0-cd1f-48cf-bc9f-9b78d2c2acc6">
+				<span class = "ptmb8t-">(b)</span>
+				We’ve proved
+				<span class = "ptmb8t-">(a)</span>
+				, where \(\int f(x)/y_1(x)\,dx\) in (
+				<a href = "#x1-61r32">
+					2.1.32
+					<!-- tex4ht:ref: eq:2.1.32  -->
+				</a>
+				) is an arbitrary antiderivative of \(f/y_1\). Now it’s convenient to
+				choose the antiderivative that equals zero when \(x = x_0\), and write the
+				general solution of (
+				<a href = "#x1-60r31">
+					2.1.31
+					<!-- tex4ht:ref: eq:2.1.31  -->
+				</a>
+				) as \[ y = y_1(x)\left (c  + \int ^x_{x_0} {f(t)\over y_1(t)}\, dt\right )\]
+				Since \[ y(x_0) =  y_1(x_0)\left (c  + \int ^{x_0}_{x_0} {f(t)\over y_1(t)}\,
+				dt\right ) = cy_1(x_0)\] we see that \(y(x_0) = y_0\) if and only if
+				\(c = y_0/y_1(x_0)\).
+			</div>
 		</details>
 
 		<div class = "nav" id = "4e4afadf-b95f-49b8-a5ae-ef4390caf033">
