@@ -33,14 +33,26 @@
       derivatives of an unknown function. The <span class="vocab">order</span> of a differential equation is the order of the highest derivative that it contains. A differential equation is an <span class="vocab">ordinary differential equation</span> if it involves an unknown function of only one
       variable, or a <span class="vocab">partial differential equation</span> if it involves partial derivatives of a function of more than one variable. For now we’ll consider only ordinary differential equations, and we’ll just call them <span class="vocab">differential equations</span>.
     </div>
-    <div class="indent" id="d823b5ae-b68c-40b8-a444-e87ad4eac022"> 
+    <div id="d823b5ae-b68c-40b8-a444-e87ad4eac022"> 
       Throughout this text, all variables and constants are real unless stated otherwise. We’ll
       usually use \(x\) for the <span class="vocab">independent variable</span> unless the independent variable is time; then we’ll use \(t\).
     </div>
-    <div class="indent" id="5fe84c8f-d326-4411-b31b-b8d6a6c8c6b6"> 
+    <div id="5fe84c8f-d326-4411-b31b-b8d6a6c8c6b6"> 
       The simplest differential equations are first order equations of the form
       \[ {dy\over dx}=f(x) \]
-      where \(f=f(x)\) is a known function of \(x\). We already know from calculus from the <span class="vocab">power rule</span> how to find functions that satisfy this kind of equation by finding the antiderivative. For example, if
+      where \(f=f(x)\) is a known function of \(x\).
+    </div>
+
+    <div id="0987da28-1362-4634-b02a-3ad4863c0932">
+      When a linear differential equation only has the derivative of the dependent variable present and not the dependent variable itself \( \big( \)i.e. when \( p(x)=0 \)\( \big) \), we will call the equation <span class = "vocab">integrable</span> since we can immediately find the antiderivative using integration.
+      \begin {align*}  
+        \frac{dy}{dx} = & f(x) \Longrightarrow
+        y = c + \int f(x) dx
+      \end {align*}
+    </div>
+      
+    <div id="89236804-b01b-47b4-bd20-19dec0afa7ee">
+      We already know from calculus from the <span class="vocab">power rule</span> how to find functions that satisfy this kind of equation by finding the antiderivative. For example, if
       \[ \frac{dy}{dx}=x^3\]
       then
       \[ y=\int x^3 dx=\frac{1}{4} x^4 + c \]
@@ -56,8 +68,10 @@
       <a id="x1-2r1"></a>
       \begin {equation} \label {eq:1.2.1} 
         \frac{d^ny}{dx^n}=f(x) 
-      \end {equation}  
+      \end {equation}
     </div>   
+
+
     <div class="reading-exercise" id="9935aa3f-259c-4b3b-bc3a-4f5f9f03a813">
       Solve the differential equation \( \displaystyle \frac{dy}{dx} = \sqrt[5]{x} \)
     </div>      
@@ -70,7 +84,7 @@
     <div class="reading-exercise" id="df218857-0727-4e2c-b840-51360fa3a5f9">
       Solve the differential equation \( \displaystyle \frac{d^4y}{dx4} = e^x \)
     </div>          
-    <div class="indent" id="d7e317be-e6c0-43fa-80fb-4d0ed80ab700">      
+    <div id="d7e317be-e6c0-43fa-80fb-4d0ed80ab700">      
       Except for illustrative purposes in this section, there’s no need to consider differential equations like (<a href="#x1-2r1">1.2.1</a>) and we’ll usually consider differential equations that can be written as 
       <a id="x1-3r2"></a>
       \begin {equation} \label {eq:1.2.2} 
@@ -119,7 +133,7 @@
     <div class="reading-exercise" id="a2fdbd8e-c0ff-4656-a729-0fda488c21ca">
       Show that \( y = x^2 \) satisfies the \( x\frac{dy}{dx}+x^2=3x \) if and only if \(x=0\) or \(x=1\)
     </div>        
-    <div class="indent" id="7df658f9-e2c8-42fb-a390-c33316c01962"> The graph of a solution of a differential equation is a <span class="vocab">solution
+    <div id="7df658f9-e2c8-42fb-a390-c33316c01962"> The graph of a solution of a differential equation is a <span class="vocab">solution
         curve</span>. More generally, a curve \(C\) is said to be an
       <span class="vocab">integral curve</span> of a differential equation if every function \(y=y(x)\) whose graph is a segment of \(C\) is a solution of the differential equation. Thus, any <span class="vocab">solution curve</span> of a differential equation is an <span class="vocab">integral curve</span>, but an <span class="vocab">integral curve</span>
       need not be a <span class="vocab">solution curve</span>.
@@ -162,7 +176,7 @@
         Note that all the segments of the circle that are functions (i.e. the semi-circles \( y_1 \) and \( y_2 \) ) are solutions to the differential equation (<a href="#x1-6r4">1.2.4</a>) and thus called <span class="vocab">solution curves</span>. Since all of the segments of the circle are solutions, the circle itself is an <span class="vocab">integral curve</span> of the equation, but it is not a <span class="vocab">solution curve</span> since the circle itself is not the graph of a function and is not itself a solution. 
       </div>      
     </div>
-    <div class="indent" id="85e3c0d8-e1f8-46cc-a5e8-d04f0dbb1547">
+    <div id="85e3c0d8-e1f8-46cc-a5e8-d04f0dbb1547">
     </div>
     <div class="example" id="x1-72" style="--ex-number: 2">
       <div>
@@ -190,7 +204,7 @@
           Note that \( y \) is undefined at \( x = 0 \) so therefore \(y\) is a solution of (<a href="#x1-9r6">1.2.6</a>) on \((-\infty ,0)\) and \((0,\infty )\). However, \(y\) isn’t a solution of the differential equation on any open interval that contains \(x=0\), since \(y\) is not defined at \(x=0\).
         </div>
 
-        <div class="indent" id="6a07830c-c4db-4f84-86ca-d594db684c47"> 
+        <div id="6a07830c-c4db-4f84-86ca-d594db684c47"> 
           Figure&nbsp;<a href="#-y-x-x-">1.2.1</a> shows the graph of the <span class="vocab">integral curve</span> (<a href="#x1-8r5">1.2.5</a>). The segment of the graph of (<a href="#x1-8r5">1.2.5</a>) on \((0,\infty )\) is a <span class="vocab">solution  curve</span> of (<a href="#x1-9r6">1.2.6</a>), as is the segment of the graph on \((-\infty ,0)\).
         </div>
         <figure class="figure" id="a22c3ee7-00b9-4646-a119-454b1af7f964">
@@ -343,7 +357,7 @@
           Substituting in \( c = \frac{7}{4} \), we obtain the <span class="vocab">particular solution</span>:
           \[ y(x) = \frac{1}{4}x^{4} +  \frac{7}{4} = \frac{1}{4}\left(x^2 + 7\right) \]
         </div>
-        <div class="indent" id="3d8bc9e5-87ab-4705-8841-d47471e3c750"> Figure&nbsp;<a href="#-y-x-">1.2.2<!-- tex4ht:ref: figure:1.2.2  --></a> shows the graph of this
+        <div id="3d8bc9e5-87ab-4705-8841-d47471e3c750"> Figure&nbsp;<a href="#-y-x-">1.2.2<!-- tex4ht:ref: figure:1.2.2  --></a> shows the graph of this
           solution. Note that imposing the condition \(y(1)=2\) is equivalent to requiring the
           graph of \(y\) to pass through the point \((1,2)\).
         </div>
@@ -355,7 +369,7 @@
       </details>
     </div>
 
-    <div class="indent" id="bc8bf255-8b4d-4e48-8209-21496b18ce9b"> 
+    <div id="bc8bf255-8b4d-4e48-8209-21496b18ce9b"> 
       We can rewrite the problem considered in Example&nbsp;<a href="#x1-175">1.2.5</a> more briefly as
       \[ \frac{dy}{dx}=x^3 \quad y(1)=2\]
       We call this an <span class="vocab">initial value problem</span> and the requirement \(y(1)=2\) is an 
@@ -368,7 +382,7 @@
       is an initial value problem for a second order differential equation where \(y\) and \(\displaystyle \frac{dy}{dx}\) are required to have specified values at \(x=0\). In general, an initial value problem for
       an \(n^{th}\) order differential equation requires \(n \) <span class="vocab">initial conditions</span> specified on \(y\) and its first \(n-1\) derivatives at some initial point \(x_0\).
     </div>
-    <div class="indent" id="c097647d-3b57-42de-a586-4a535095725c"> 
+    <div id="c097647d-3b57-42de-a586-4a535095725c"> 
       We’ll denote an initial value problem for a differential equation by writing the initial
       conditions after the differential equation, as in (<a href="#x1-18r11">1.2.11</a>).
       For example, we would write an initial value problem for (<a href="#x1-3r2">1.2.2</a>) as
