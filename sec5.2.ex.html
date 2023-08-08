@@ -10,9 +10,7 @@
 		<script>
 			window.MathJax = {
 				tex: {
-					packages: { "[+]": ["tagformat"] },
 					tags: "ams",
-					tagformat: { tag: (tag) => "(5.2." + tag + ")" },
 				},
 			};
 		</script>
@@ -346,7 +344,7 @@
 						<!--l. 79-->
 						<div>
 							Suppose \(y\) is a solution of the constant coefficient
-							homogeneous equation \[ ay''+by'+cy=0. \, {\rm (A)} \] Let
+							homogeneous equation \[ ay''+by'+cy=0. {\tag A} \] Let
 							\(z(x)=y(x-x_0)\), where \(x_0\) is an arbitrary real number. Show
 							that \[ az''+bz'+cz=0\]
 						</div>
@@ -375,7 +373,7 @@
 							ay''+by'+cy=0, \quad y(0)=k_0,\quad y'(0)=k_1\] where the initial
 							conditions are imposed at \(x_0=0\). However, if the initial value
 							problem is \[ ay''+by'+cy=0, \quad y(x_0)=k_0,\quad y'(x_0)=k_1,
-							\, {\rm (B)} \] where \(x_0\ne 0\), then determining the constants
+							{\tag B} \] where \(x_0\ne 0\), then determining the constants
 							in \[ y=c_1e^{r_1x}+c_2e^{r_2x}, \quad y=e^{r_1x}(c_1+c_2x),\mbox
 							{ or } y=e^{\lambda x}(c_1\cos \omega x+c_2\sin \omega x) \]
 							(whichever is applicable) is more complicated. Use
@@ -475,7 +473,7 @@
 				<!--l. 145-->
 				<div>
 					<a id="x1-3329"></a>
-					Prove: If the characteristic equation of \[ ay''+by'+cy=0 \, {\rm (A)}
+					Prove: If the characteristic equation of \[ ay''+by'+cy=0 {\tag A}
 					\] has a repeated negative root or two roots with negative real parts,
 					then every solution of (A) approaches zero as \(x\to \infty \).
 				</div>
@@ -540,7 +538,7 @@
 				<!--l. 179-->
 				<div>
 					<a id="x1-3733"></a>
-					Suppose the characteristic equation of \[ ay''+by'+cy=0 \, {\rm (A)}
+					Suppose the characteristic equation of \[ ay''+by'+cy=0 {\tag A}
 					\] has a repeated real root \(r_1\). Temporarily, think of \(e^{rx}\)
 					as a function of two real variables \(x\) and \(r\).
 				</div>
@@ -552,7 +550,7 @@
 						<!--l. 189-->
 						<div>
 							Show that \[ a{\partial ^2\over \partial ^2 x}(e^{rx})+b{\partial
-							\over \partial x}(e^{rx}) +ce^{rx}=a(r-r_1)^2e^{rx}. \, {\rm (B)}
+							\over \partial x}(e^{rx}) +ce^{rx}=a(r-r_1)^2e^{rx}. {\tag B}
 							\]
 						</div>
 					</dd>
@@ -566,7 +564,7 @@
 							\over \partial r}\left ({\partial ^2\over \partial ^2
 							x}(e^{rx})\right )+b{\partial \over \partial r}\left ({\partial
 							\over \partial x}(e^{rx})\right )
-							+c(xe^{rx})=[2+(r-r_1)x]a(r-r_1)e^{rx}. \, {\rm (C)} \]
+							+c(xe^{rx})=[2+(r-r_1)x]a(r-r_1)e^{rx}. {\tag C} \]
 						</div>
 					</dd>
 					<dt class="list">
@@ -578,7 +576,7 @@
 							Reverse the orders of the partial differentiations in the first
 							two terms on the left side of (C) to obtain \[ a{\partial ^2\over
 							\partial x^2}(xe^{rx})+b{\partial \over \partial
-							x}(xe^{rx})+c(xe^{rx})=[2+(r-r_1)x]a(r-r_1)e^{rx}. \, {\rm (D)} \]
+							x}(xe^{rx})+c(xe^{rx})=[2+(r-r_1)x]a(r-r_1)e^{rx}. {\tag D} \]
 						</div>
 					</dd>
 					<dt class="list">
@@ -603,15 +601,15 @@
 					In calculus you learned that \(e^u\), \(\cos u\), and \(\sin u\) can
 					be represented by the infinite series \[ e^u=\sum _{n=0}^\infty
 					{u^n\over n!} =1+{u\over 1!}+{u^2\over 2!}+{u^3\over 3!}+\cdots
-					+{u^n\over n!}+\cdots \, {\rm (A)} \] \[ \cos u=\sum _{n=0}^\infty
+					+{u^n\over n!}+\cdots {\tag A} \] \[ \cos u=\sum _{n=0}^\infty
 					(-1)^n{u^{2n}\over (2n)!} =1-{u^2\over 2!}+{u^4\over 4!}+\cdots
-					+(-1)^n{u^{2n}\over (2n)!} +\cdots , \, {\rm (B)} \] and \[ \sin
+					+(-1)^n{u^{2n}\over (2n)!} +\cdots , {\tag B} \] and \[ \sin
 					u=\sum _{n=0}^\infty (-1)^n{u^{2n+1}\over (2n+1)!} =u-{u^3\over
 					3!}+{u^5\over 5!}+\cdots +(-1)^n {u^{2n+1}\over (2n+1)!} +\cdots \,
 					{\rm (C)} \] for all real values of \(u\). Even though you have
 					previously considered (A) only for real values of \(u\), we can set
 					\(u=i\theta \), where \(\theta \) is real, to obtain \[ e^{i\theta
-					}=\sum _{n=0}^\infty {(i\theta )^n\over n!}. \, {\rm (D)} \] Given the
+					}=\sum _{n=0}^\infty {(i\theta )^n\over n!}. {\tag D} \] Given the
 					proper background in the theory of infinite series with complex terms,
 					it can be shown that the series in (D) converges for all real \(\theta
 					\).
@@ -638,7 +636,7 @@
 						<!--l. 268-->
 						<div>
 							By comparing this result with (B) and (C), conclude that \[
-							e^{i\theta }=\cos \theta +i\sin \theta . \, {\rm (E)} \] This is
+							e^{i\theta }=\cos \theta +i\sin \theta . {\tag E} \] This is
 							<span class="vocab">Euler’s identity</span>
 							.
 						</div>
@@ -676,7 +674,7 @@
 						<div>
 							If \(\alpha \) and \(\beta \) are real numbers, define \[
 							e^{\alpha +i\beta }=e^\alpha e^{i\beta }=e^\alpha (\cos \beta
-							+i\sin \beta ). \, {\rm (F)} \] Show that if \(z_1=\alpha
+							+i\sin \beta ). {\tag F} \] Show that if \(z_1=\alpha
 							_1+i\beta _1\) and \(z_2=\alpha _2+i\beta _2\) then \[
 							e^{z_1+z_2}=e^{z_1}e^{z_2}\]
 						</div>
@@ -703,8 +701,8 @@
 				</dl>
 			</dd>
 		</dl>
-		<nav class='ex'>
-			<a href='sec5.2.book.html'>Back</a>
+		<nav class="ex">
+			<a href="sec5.2.book.html">Back</a>
 		</nav>
 	</body>
 </html>

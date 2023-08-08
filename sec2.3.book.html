@@ -64,22 +64,12 @@
 				<!-- tex4ht:label?: x1-2r1  -->
 			</figure>
 			<div class="indent" id="45e97267-bb83-4a50-89e5-042d95e4e698">
-				Some terminology: an
-				<span class="vocab">open rectangle</span>
-				\(R\) is a set of points \((x,y)\) such that \[ a&lt;x&lt;b\mbox {\quad
-				and \quad }c&lt;y&lt;d \] (Figure&nbsp;
-				<a href="#-an-open-rectangle-">
-					2.3.1
-					<!-- tex4ht:ref: figure:2.3.1  -->
-				</a>
-				). We’ll denote this set by \(R: \{ a &lt; x &lt; b, c &lt; y &lt; d \}\).
+				Some terminology: an <span class="vocab">open rectangle</span> \(R\) is a
+				set of points \((x,y)\) such that \[ a&lt;x&lt;b \quad \mbox {and}
+				\quad c&lt;y&lt;d \] (Figure&nbsp;<a href="#-an-open-rectangle-">2.3.1</a>).
+				We’ll denote this set by \(R: \{ a &lt; x &lt; b, c &lt; y &lt; d \}\).
 				“Open” means that the boundary rectangle (indicated by the dashed lines in
-				Figure&nbsp;
-				<a href="#-an-open-rectangle-">
-					2.3.1
-					<!-- tex4ht:ref: figure:2.3.1  -->
-				</a>
-				) isn’t included in \(R\) .
+				Figure&nbsp;<a href="#-an-open-rectangle-">2.3.1</a>) isn’t included in \(R\) .
 			</div>
 		</details>
 
@@ -95,31 +85,22 @@
 				<div class="head">
 					Theorem&nbsp;2.3.1
 				</div>
-				<dl class="list1">
-					<dt class="list">
-						<span class="ptmb8t-">(a)</span>
-					</dt>
-					<dd class="list">
-						<div>
-							If \(f\) is continuous on an open rectangle \[ R: \{ a &lt; x &lt;
-							b, c &lt; y &lt; d \} \] that contains \((x_0,y_0)\) then the
-							initial value problem \begin {equation} \label {eq:2.3.1} y'=f(x,y),
-							\quad y(x_0)=y_0 \end {equation}
-							<a id="x1-5r1"></a>
-							has at least one solution on some open subinterval of \((a,b)\) that
-							contains \(x_0.\)
-						</div>
-					</dd>
-					<dt class="list">
-						<span class="ptmb8t-">(b)</span>
-					</dt>
-					<dd class="list">
-						<div>
-							If both \(f\) and \(f_y\) are continuous on \(R\) then <a href="#x1-5r1">(2.3.1)</a> has a unique solution on some open subinterval of \((a,b)\) that
-							contains \(x_0\).
-						</div>
-					</dd>
-				</dl>
+
+				<ol>
+					<li>
+						If \(f\) is continuous on an open rectangle \[ R: \{ a &lt; x &lt;
+						b, c &lt; y &lt; d \} \] that contains \((x_0,y_0)\) then the
+						initial value problem \begin {equation} \label {eq:2.3.1} \frac{dy}{dx}=f(x,y),
+						\quad y(x_0)=y_0 \end {equation}
+						<a id="x1-5r1"></a>
+						has at least one solution on some open subinterval of \((a,b)\) that
+						contains \(x_0.\)
+					</li>
+					<li>
+						If both \(f\) and \(f_y\) are continuous on \(R\) then <a href="#x1-5r1">(2.3.1)</a> has a unique solution on some open subinterval of \((a,b)\) that
+						contains \(x_0\).
+					</li>
+				</ol>
 			</div>
 
 			<div class="indent" id="365af7b8-ce58-4d13-9726-b8ffedc49414">
@@ -132,49 +113,30 @@
 			</div>
 			<ul class="itemize1" id="cfe205ad-2f70-40d0-b65e-702eb13a968e">
 				<li class="itemize">
-					<span class="ptmb8t-">(a)</span>
-					is an
-					<span class="vocab">existence theorem</span>
-					. It guarantees that a solution exists on some open interval that
+					<span class="ptmb8t-">(a)</span> is an <span class="vocab">existence theorem</span>. It
+					guarantees that a solution exists on some open interval that
 					contains \(x_0\), but provides no information on how to find the
 					solution, or to determine the open interval on which it exists.
-					Moreover,
-					<span class="ptmb8t-">(a)</span>
-					provides no information on the number of solutions that <a href="#x1-5r1">(2.3.1)</a> may have. It leaves open the possibility that <a href="#x1-5r1">(2.3.1)</a> may have two or more solutions that differ for values of \(x\)
-					arbitrarily close to \(x_0\). We will see in Example&nbsp;
-					<a href="#x1-216">
-						2.3.6
-						<!-- tex4ht:ref: example:2.3.6  -->
-					</a>
-					that this can happen.
+					Moreover, <span class="ptmb8t-">(a)</span> provides no information on the number of
+					solutions that <a href="#x1-5r1">(2.3.1)</a> may have. It leaves open the possibility that <a href="#x1-5r1">(2.3.1)</a> may have two or more solutions that differ for values of \(x\)
+					arbitrarily close to \(x_0\). We will see in Example&nbsp;<a href="#x1-216">2.3.6</a> that this can happen.
 				</li>
 				<li class="itemize">
-					<span class="ptmb8t-">(b)</span>
-					is a
-					<span class="vocab">uniqueness theorem</span>
-					. It guarantees that <a href="#x1-5r1">(2.3.1)</a> has a unique solution on some open interval (a,b) that contains
-					\(x_0\). However, if \((a,b)\ne (-\infty ,\infty )\), <a href="#x1-5r1">(2.3.1)</a> may have more than one solution on a larger interval that contains
+					<span class="ptmb8t-">(b)</span> is a <span class="vocab">uniqueness theorem</span>. It guarantees
+					that <a href="#x1-5r1">(2.3.1)</a> has a unique solution on some open interval (a,b) that contains
+					\(x_0\). However, if \((a,b)\ne (-\infty ,\infty )\), <a href="#x1-5r1">(2.3.1)</a> may have
+					more than one solution on a larger interval that contains
 					\((a,b)\). For example, it may happen that \(b&lt;\infty \) and all
 					solutions have the same values on \((a,b)\), but two solutions \(y_1\)
 					and \(y_2\) are defined on some interval \((a,b_1)\) with \(b_1&gt;b\),
 					and have different values for \(b&lt;x&lt;b_1\); thus, the graphs of the
 					\(y_1\) and \(y_2\) “branch off” in different directions at \(x=b\).
-					(See Example&nbsp;
-					<a href="#x1-267">
-						2.3.7
-						<!-- tex4ht:ref: example:2.3.7  -->
-					</a>
-					and Figure&nbsp;
-					<a
+					(See Example&nbsp;<a href="#x1-267">2.3.7</a> and Figure&nbsp;<a
 						href="#-two-solutions-of-eq-on-that-coincide-on-but-on-no-larger-open-interval-"
-					>
-						2.3.3
-						<!-- tex4ht:ref: figure:2.3.3  -->
-					</a>
-					). In this case, continuity implies that \(y_1(b)=y_2(b)\) (call their
+					>2.3.3</a>). In this case, continuity implies that \(y_1(b)=y_2(b)\) (call their
 					common value \(\overline y\)), and \(y_1\) and \(y_2\) are both
 					solutions of the initial value problem \begin {equation} \label
-					{eq:2.3.2} y'=f(x,y),\quad y(b)=\overline y \end {equation}
+					{eq:2.3.2} \frac{dy}{dx}=f(x,y),\quad y(b)=\overline y \end {equation}
 					<a id="x1-7r2"></a>
 					that differ on every open interval that contains \(b\). Therefore \(f\)
 					or \(f_y\) must have a discontinuity at some point in each open
@@ -190,26 +152,24 @@
 			<summary>Existence and Uniqueness Examples</summary>
 
 			<div class="example" id="x1-81" style="--ex-number: 1">
-				<div>
-					<a id="x1-9r3"></a>
-					Consider the initial value problem \begin {equation} \label {eq:2.3.3}
-					y'={x^2-y^2 \over 1+x^2+y^2}, \quad y(x_0)=y_0\end {equation}
+				<a id="x1-9r3"></a>
+				Consider the initial value problem \begin {equation} \label {eq:2.3.3}
+				\frac{dy}{dx}={x^2-y^2 \over 1+x^2+y^2}, \quad y(x_0)=y_0\end {equation}
 
-					Since \[ f(x,y) = {x^2-y^2 \over 1+x^2+y^2}\quad \mbox{ and } \quad 
-					f_y(x,y) = -{2y(1+2x^2)\over (1+x^2+y^2)^2} \] are continuous for all
-					\((x,y)\), Theorem&nbsp;
-					<a href="#x1-31">
-						2.3.1
-						<!-- tex4ht:ref: thmtype:2.3.1  -->
-					</a>
-					implies that if \((x_0,y_0)\) is arbitrary, then <a href="#x1-9r3">(2.3.3)</a> has a unique solution on some open interval that contains \(x_0\).
-				</div>
+				Since \[ f(x,y) = {x^2-y^2 \over 1+x^2+y^2}\quad \mbox{ and } \quad 
+				f_y(x,y) = -{2y(1+2x^2)\over (1+x^2+y^2)^2} \] are continuous for all
+				\((x,y)\), Theorem&nbsp;
+				<a href="#x1-31">
+					2.3.1
+					<!-- tex4ht:ref: thmtype:2.3.1  -->
+				</a>
+				implies that if \((x_0,y_0)\) is arbitrary, then <a href="#x1-9r3">(2.3.3)</a> has a unique solution on some open interval that contains \(x_0\).
 			</div>
 
 			<div class="example" id="x1-102" style="--ex-number: 2">
 				<div>
 					Consider the initial value problem \begin {equation} \label {eq:2.3.4}
-					y'={x^2-y^2 \over x^2+y^2}, \quad y(x_0)=y_0\end {equation}
+					\frac{dy}{dx}={x^2-y^2 \over x^2+y^2}, \quad y(x_0)=y_0\end {equation}
 					<a id="x1-11r4"></a>
 					Here \[ f(x,y) = {x^2-y^2 \over x^2+y^2}\quad \mbox{ and } \quad 
 					f_y(x,y) = \displaystyle -{4x^2y \over (x^2+y^2)^2} \] are continuous
@@ -228,7 +188,7 @@
 			<div class="example" id="x1-123" style="--ex-number: 3">
 				<div>
 					Consider the initial value problem \begin {equation} \label {eq:2.3.5}
-					y'={x+y\over x-y},\quad y(x_0)=y_0\end {equation}
+					\frac{dy}{dx}={x+y\over x-y},\quad y(x_0)=y_0\end {equation}
 					<a id="x1-13r5"></a>
 					Here \[ f(x,y) = {x+y\over x-y}\quad \mbox{ and } \quad  f_y(x,y) =
 					{2x\over (x-y)^2} \] are continuous everywhere except on the line
@@ -248,7 +208,7 @@
 					In Example&nbsp;
 					<span class="ptmb8t-">2.2.4</span>
 					we saw that the solutions of \begin {equation} \label {eq:2.3.6}
-					y'=2xy^2 \end {equation}
+					\frac{dy}{dx}=2xy^2 \end {equation}
 					<a id="x1-15r6"></a>
 					are \[ y\equiv 0\quad \mbox{ and } \quad  y=-{1 \over x^2+c}\] where
 					\(c\) is an arbitrary constant. In particular, this implies that no
@@ -266,12 +226,14 @@
 				</div>
 
 				<details class="solution" id="ecbf6946-53f1-45be-89b8-06a55e307fd1">
+					<summary>Solution</summary>
+
 					<div id="29abef06-5ed9-426b-b503-9bcb21ec860b">
 						We’ll obtain a contradiction by assuming that <a href="#x1-15r6">(2.3.6)</a> has a solution \(y_1\) that equals zero for some value of \(x\), but
 						isn’t identically zero. If \(y_1\) has this property, there’s a point
 						\(x_0\) such that \(y_1(x_0)=0\), but \(y_1(x)\ne 0\) for some value of
 						\(x\) in every open interval that contains \(x_0\). This means that the
-						initial value problem \begin {equation} \label {eq:2.3.7} y'=2xy^2,\quad
+						initial value problem \begin {equation} \label {eq:2.3.7} \frac{dy}{dx}=2xy^2,\quad
 						y(x_0)=0 \end {equation}
 						<a id="x1-16r7"></a>
 						has two solutions \(y\equiv 0\) and \(y=y_1\) that differ for some value
@@ -290,62 +252,39 @@
 			<div class="example" id="x1-175" style="--ex-number: 5">
 				<div>
 					Consider the initial value problem \begin {equation} \label {eq:2.3.8}
-					y' = {10\over 3}xy^{2/5}, \quad y(x_0) = y_0\end {equation}
+					\frac{dy}{dx} = {10\over 3}xy^{2/5}, \quad y(x_0) = y_0\end {equation}
 					<a id="x1-18r8"></a>
 				</div>
-				<dl class="list1">
-					<dt class="list">
-						<span class="ptmb8t-">(a)</span>
-					</dt>
-					<dd class="list">
-						<div>
-							For what points \((x_0,y_0)\) does Theorem&nbsp;
-							<a href="#x1-31">
-								2.3.1
-								<!-- tex4ht:ref: thmtype:2.3.1  -->
-							</a>
-							<span class="ptmb8t-">(a)</span>
-							imply that <a href="#x1-18r8">(2.3.8)</a> has a solution?
-						</div>
-					</dd>
-					<dt class="list">
-						<span class="ptmb8t-">(b)</span>
-					</dt>
-					<dd class="list">
-						<div>
-							For what points \((x_0,y_0)\) does Theorem&nbsp;
-							<a href="#x1-31">
-								2.3.1
-								<!-- tex4ht:ref: thmtype:2.3.1  -->
-							</a>
-							<span class="ptmb8t-">(b)</span>
-							imply that <a href="#x1-18r8">(2.3.8)</a> has a unique solution on some open interval that contains \(x_0\)?
-						</div>
-					</dd>
-				</dl>
+
+				<ol>
+					<li>
+						For what points \((x_0,y_0)\) does Theorem&nbsp;<a href="#x1-31">2.3.1</a>
+						<span class="ptmb8t-">(a)</span> imply that <a href="#x1-18r8">(2.3.8)</a> has
+						a solution?
+					</li>
+					<li>
+						For what points \((x_0,y_0)\) does Theorem&nbsp;<a href="#x1-31">2.3.1</a>
+						<span class="ptmb8t-">(b)</span> imply that <a href="#x1-18r8">(2.3.8)</a> has a
+						unique solution on some open interval that contains \(x_0\)?
+					</li>
+				</ol>
 			
 				<details class="solution" id="a95e3ad3-5659-47b4-b0c3-5121f9657501">
-					<div id="b2973c10-bdd9-4c2b-8304-542f55918257">
-						<span class="ptmb8t-">(a)</span>
-						Since \[ f(x,y) = {10\over 3}xy^{2/5} \] is continuous for all \((x,y)\),
-						Theorem&nbsp;
-						<a href="#x1-31">
-							2.3.1
-							<!-- tex4ht:ref: thmtype:2.3.1  -->
-						</a>
-						implies that <a href="#x1-18r8">(2.3.8)</a> has a solution for every \((x_0,y_0)\).
-					</div>
-					<div id="9c39cb5e-6bd9-48f3-a8cc-1f2d2674fed8">
-						<span class="ptmb8t-">(b)</span>
-						Here \[ f_y(x,y) = {4 \over 3}xy^{-3/5} \] is continuous for all \((x,y)\)
-						with \(y\ne 0\). Therefore, if \(y_0\ne 0\) there’s an open rectangle on
-						which both \(f\) and \(f_y\) are continuous, and Theorem&nbsp;
-						<a href="#x1-31">
-							2.3.1
-							<!-- tex4ht:ref: thmtype:2.3.1  -->
-						</a>
-						implies that <a href="#x1-18r8">(2.3.8)</a> has a unique solution on some open interval that contains \(x_0\).
-					</div>
+					<summary>Solution</summary>
+					<ol>
+						<li>
+							Since \[ f(x,y) = {10\over 3}xy^{2/5} \] is continuous for all \((x,y)\),
+							Theorem&nbsp;<a href="#x1-31">2.3.1</a> implies
+							that <a href="#x1-18r8">(2.3.8)</a> has a solution for every \((x_0,y_0)\).
+						</li>
+						<li>
+							Here \[ f_y(x,y) = {4 \over 3}xy^{-3/5} \] is continuous for all \((x,y)\)
+							with \(y\ne 0\). Therefore, if \(y_0\ne 0\) there’s an open rectangle on
+							which both \(f\) and \(f_y\) are continuous, and
+							Theorem&nbsp;<a href="#x1-31">2.3.1</a> implies that <a href="#x1-18r8">(2.3.8)</a> has
+							a unique solution on some open interval that contains \(x_0\).
+						</li>
+					</ol>
 				</details>
 			</div>
 
@@ -364,7 +303,7 @@
 						2.3.5
 					</a> leaves open the possibility that the initial value problem
 					<a id="x1-22r9"></a>
-					\begin {equation} \label {eq:2.3.9} y'={10 \over 3}xy^{2/5}, \quad y(0)=0 \end {equation}
+					\begin {equation} \label {eq:2.3.9} \frac{dy}{dx}={10 \over 3}xy^{2/5}, \quad y(0)=0 \end {equation}
 					has more than one solution on every open interval that contains
 					\(x_0=0\). Show that this is true.
 				</div>
@@ -373,14 +312,14 @@
 					<summary>Solution</summary>
 					<div id="b144ebcb-3991-4bfc-805a-439c8471a28f">
 						By inspection, \(y\equiv 0\) is a solution of the differential
-						equation \begin {equation} \label {eq:2.3.10} y'={10 \over 3} xy
+						equation \begin {equation} \label {eq:2.3.10} \frac{dy}{dx}={10 \over 3} xy
 						^{2/5}\end {equation}
 						<a id="x1-23r10"></a>
 						Since \(y\equiv 0\) satisfies the initial condition \(y(0)=0\), it’s a
 						solution of <a href="#x1-22r9">(2.3.9)</a>.
 					</div>
 					<div class="indent" id="ce845b9e-9a0d-468a-9a2e-4c6518b4b556">
-						Now suppose \(y\) is a solution of <a href="#x1-23r10">(2.3.10)</a> that isn’t identically zero. Separating variables in <a href="#x1-23r10">(2.3.10)</a> yields \[ y^{-2/5}y'={10 \over 3}x \] on any open interval where \(y\)
+						Now suppose \(y\) is a solution of <a href="#x1-23r10">(2.3.10)</a> that isn’t identically zero. Separating variables in <a href="#x1-23r10">(2.3.10)</a> yields \[ y^{-2/5}\frac{dy}{dx}={10 \over 3}x \] on any open interval where \(y\)
 						has no zeros. Integrating this and rewriting the arbitrary constant as
 						\(5c/3\) yields \[ {5\over 3}y^{3/5} = {5\over 3}(x^2+c)\] Therefore
 						\begin {equation} \label {eq:2.3.11} y = (x^2+c)^{5/3}\end {equation}
@@ -388,39 +327,35 @@
 					</div>
 					<div class="indent" id="ab393110-2e2e-4106-8b45-9b6f423d7f2d">
 						Since we divided by \(y\) to separate variables in <a href="#x1-23r10">(2.3.10)</a>, our derivation of <a href="#x1-24r11">(2.3.11)</a> is legitimate only on open intervals where \(y\) has no zeros. However,
-						<a href="#x1-24r11">(2.3.11)</a> actually defines \(y\) for all \(x\), and differentiating <a href="#x1-24r11">(2.3.11)</a> shows that \[ y'={10 \over 3}x(x^2+c)^{2/3}={10 \over
+						<a href="#x1-24r11">(2.3.11)</a> actually defines \(y\) for all \(x\), and differentiating <a href="#x1-24r11">(2.3.11)</a> shows that \[ \frac{dy}{dx}={10 \over 3}x(x^2+c)^{2/3}={10 \over
 						3}xy^{2/5},\,-\infty &lt;x&lt;\infty \] Therefore <a href="#x1-24r11">(2.3.11)</a> satisfies <a href="#x1-23r10">(2.3.10)</a> on \((-\infty ,\infty )\) even if \(c\le 0\), so that \(y(\sqrt
 						{|c|})=y(-\sqrt {|c|})=0\). In particular, taking \(c=0\) in <a href="#x1-24r11">(2.3.11)</a> yields \[ y=x^{10/3} \] as a second solution of <a href="#x1-22r9">(2.3.9)</a>. Both solutions are defined on \((-\infty ,\infty )\), and they differ
-						on every open interval that contains \(x_0=0\) (see Figure&nbsp;
-						<a
+						on every open interval that contains \(x_0=0\) (see Figure&nbsp;<a
 							href="#-two-solutions-y-and-yx-of-eq-that-differ-on-every-interval-containing-x-"
-						>
-							2.3.2
-							<!-- tex4ht:ref: figure:2.3.2  -->
-						</a>
-						.) In fact, there are
+						>2.3.2</a>.) In fact, there are
 						<em>four</em>
 						distinct solutions of <a href="#x1-22r9">(2.3.9)</a> defined on \((-\infty ,\infty )\) that differ from each other on every
 						open interval that contains \(x_0=0\). Can you identify the other two?
 					</div>
-					<figure class="figure" id="28443a47-c527-42da-b74a-1c75d4c7bc18">
-						<div
-							
-							id="-two-solutions-y-and-yx-of-eq-that-differ-on-every-interval-containing-x-"
-						>
-							<img height="264" src="EPS/fig020302.png" width="409" />
-							<a id="x1-25r2"></a>
-						</div>
-						<figcaption class="caption">
-							<span class="id">Figure&nbsp;2.3.2</span>
-							<span class="content">
-								Two solutions (\(y=0\) and \(y=x^{1/2}\)) of <a href="#x1-22r9">(2.3.9)</a> that differ on every interval containing \(x_{0}=0\)
-							</span>
-						</figcaption>
-						<!-- tex4ht:label?: x1-25r2  -->
-					</figure>
 				</details>
 			</div>
+
+			<figure class="figure" id="28443a47-c527-42da-b74a-1c75d4c7bc18">
+				<div
+					
+					id="-two-solutions-y-and-yx-of-eq-that-differ-on-every-interval-containing-x-"
+				>
+					<img height="264" src="EPS/fig020302.png" width="409" />
+					<a id="x1-25r2"></a>
+				</div>
+				<figcaption class="caption">
+					<span class="id">Figure&nbsp;2.3.2</span>
+					<span class="content">
+						Two solutions (\(y=0\) and \(y=x^{1/2}\)) of <a href="#x1-22r9">(2.3.9)</a> that differ on every interval containing \(x_{0}=0\)
+					</span>
+				</figcaption>
+				<!-- tex4ht:label?: x1-25r2  -->
+			</figure>
 
 			<div class="example" id="x1-267" style="--ex-number: 7">
 				<div>
@@ -428,7 +363,7 @@
 						2.3.5
 					</a>, the initial value problem
 					<a id="x1-27r12"></a>
-					\begin {equation} \label {eq:2.3.12} y'={10 \over 3}xy^{2/5}, \quad y(0)=-1 \end {equation}
+					\begin {equation} \label {eq:2.3.12} \frac{dy}{dx}={10 \over 3}xy^{2/5}, \quad y(0)=-1 \end {equation}
 					has a unique solution on some open interval that contains \(x_0=0\).
 					Find a solution and determine the largest open interval \((a,b)\) on
 					which it’s unique.
@@ -446,48 +381,44 @@
 						<span class="ptmb8t-">15</span>
 						, there are infinitely many other solutions of <a href="#x1-27r12">(2.3.12)</a> that differ from <a href="#x1-28r13">(2.3.13)</a> on every open interval larger than \((-1,1)\). One such solution is \[ y
 						= \left \{ \begin {array}{cl} (x^2-1)^{5/3}, &amp; -1 \le x \le 1, \\[6pt]
-						0, &amp; |x|&gt;1\end {array} \right. \] (Figure
-						<a
+						0, &amp; |x|&gt;1\end {array} \right. \] (Figure <a
 							href="#-two-solutions-of-eq-on-that-coincide-on-but-on-no-larger-open-interval-"
-						>
-							2.3.3
-							<!-- tex4ht:ref: figure:2.3.3  -->
-						</a>
-						).
+						>2.3.3</a>).
 					</div>
-					<figure class="figure" id="4bf52b65-b216-424b-ad69-e8f8202f857e">
-						<div class="minipage">
-							<div
-								
-								id="-two-solutions-of-eq-on-that-coincide-on-but-on-no-larger-open-interval-"
-							>
-								<img height="264" src="EPS/fig020303.png" width="409" />
-								<a id="x1-29r3"></a>
-							</div>
-							<figcaption class="caption">
-								<span class="id">Figure&nbsp;2.3.3</span>
-								<span class="content">
-									Two solutions of <a href="#x1-27r12">(2.3.12)</a> on \((-\infty ,\infty )\) that coincide on \((-1,1)\), but on no
-									larger open interval
-								</span>
-							</figcaption>
-							<!-- tex4ht:label?: x1-29r3  -->
-						</div>
-						&nbsp;
-						<div class="minipage" id="-the-unique-solution-of-eq-">
-							<img height="264" src="EPS/fig020304.png" width="409" />
-							<a id="x1-30r4"></a>
-							<figcaption class="caption">
-								<span class="id">Figure&nbsp;2.3.4</span>
-								<span class="content">
-									The unique solution of <a href="#x1-32r14">(2.3.14)</a>
-								</span>
-							</figcaption>
-							<!-- tex4ht:label?: x1-30r4  -->
-						</div>
-					</figure>
 				</details>
 			</div>
+
+			<figure class="figure" id="4bf52b65-b216-424b-ad69-e8f8202f857e">
+				<div class="minipage">
+					<div
+						
+						id="-two-solutions-of-eq-on-that-coincide-on-but-on-no-larger-open-interval-"
+					>
+						<img height="264" src="EPS/fig020303.png" width="409" />
+						<a id="x1-29r3"></a>
+					</div>
+					<figcaption class="caption">
+						<span class="id">Figure&nbsp;2.3.3</span>
+						<span class="content">
+							Two solutions of <a href="#x1-27r12">(2.3.12)</a> on \((-\infty ,\infty )\) that coincide on \((-1,1)\), but on no
+							larger open interval
+						</span>
+					</figcaption>
+					<!-- tex4ht:label?: x1-29r3  -->
+				</div>
+				&nbsp;
+				<div class="minipage" id="-the-unique-solution-of-eq-">
+					<img height="264" src="EPS/fig020304.png" width="409" />
+					<a id="x1-30r4"></a>
+					<figcaption class="caption">
+						<span class="id">Figure&nbsp;2.3.4</span>
+						<span class="content">
+							The unique solution of <a href="#x1-32r14">(2.3.14)</a>
+						</span>
+					</figcaption>
+					<!-- tex4ht:label?: x1-30r4  -->
+				</div>
+			</figure>
 
 			<div class="example" id="x1-318" style="--ex-number: 8">
 				<div>
@@ -495,7 +426,7 @@
 						2.3.5
 					</a>, the initial value problem
 					<a id="x1-32r14"></a>
-					\begin {equation} \label {eq:2.3.14} y'={10 \over 3}xy^{2/5}, \quad y(0)=1 \end {equation}
+					\begin {equation} \label {eq:2.3.14} \frac{dy}{dx}={10 \over 3}xy^{2/5}, \quad y(0)=1 \end {equation}
 					has a unique solution on some open interval that contains \(x_0=0\).
 					Find the solution and determine the largest open interval on which it’s
 					unique.

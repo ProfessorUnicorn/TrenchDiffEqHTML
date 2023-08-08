@@ -45,9 +45,9 @@
 				A first order differential equation is
 				<span class="vocab">separable</span>
 				if it can be written as \begin {equation} \label {eq:2.2.1}
-				h(y)y'=g(x)\end {equation}
+				h(y) \frac{dy}{dx} =g(x)\end {equation}
 				<a id="x1-2r1"></a>
-				where the left side is a product of \(y'\) and a function of \(y\) and the
+				where the left side is a product of \(\displaystyle \frac{dy}{dx}\) and a function of \(y\) and the
 				right side is a function of \(x\). Rewriting a separable differential
 				equation in this form is called
 				<span class="vocab">separation of variables.</span>
@@ -58,31 +58,33 @@
 			<div class="indent" id="28f2bd1b-285e-40e5-991e-cccdc74f3330">
 				To see how to solve <a href="#x1-2r1">(2.2.1)</a>, let’s first assume that \(y\) is a solution. Let \(G(x)\) and \(H(y)\)
 				be antiderivatives of \(g(x)\) and \(h(y)\); that is, \begin {equation}
-				\label {eq:2.2.2} H'(y)=h(y)\quad \mbox{ and } \quad G'(x)=g(x)\end
+				\label {eq:2.2.2} \left.\frac{dH}{dx}\right|_y = h(y)\quad \mbox{ and } \quad \left.\frac{dG}{dx}\right|_x = g(x)\end
 				{equation}
 				<a id="x1-3r2"></a>
-				Then, from the chain rule, \[ {d\over dx}H(y(x))=H'(y(x))y'(x)=h(y)y'(x)\]
+				Then, from the chain rule, \[ {d\over dx}H(y(x)) = \left.\frac{dH}{dx}\right|_{y(x)} \left.\frac{dy}{dx}\right|_x = h(y) \left.\frac{dy}{dx}\right|_x\]
 				Therefore <a href="#x1-2r1">(2.2.1)</a> is equivalent to \[ {d\over dx}H(y(x))={d\over dx}G(x)\] Integrating
 				both sides of this equation and combining the constants of integration
 				yields \begin {equation} \label {eq:2.2.3} H(y(x))=G(x)+c\end {equation}
 				<a id="x1-4r3"></a>
+			</div>
+			<div class="indent" id="38f2bd1b-285e-40e5-991e-cccdc74f3330">
 				Although we derived this equation on the assumption that \(y\) is a
 				solution of <a href="#x1-2r1">(2.2.1)</a>, we can now view it differently: Any differentiable function \(y\) that
-				satisfies <a href="#x1-4r3">(2.2.3)</a> for some constant \(c\) is a solution of <a href="#x1-2r1">(2.2.1)</a>. To see this, we differentiate both sides of <a href="#x1-4r3">(2.2.3)</a>, using the chain rule on the left, to obtain \[ H'(y(x))y'(x)=G'(x)\]
-				which is equivalent to \[ h(y(x))y'(x)=g(x) \] because of <a href="#x1-3r2">(2.2.2)</a>.
+				satisfies <a href="#x1-4r3">(2.2.3)</a> for some constant \(c\) is a solution of <a href="#x1-2r1">(2.2.1)</a>. To see this, we differentiate both sides of <a href="#x1-4r3">(2.2.3)</a>, using the chain rule on the left, to obtain \[ \left.\frac{dH}{dx}\right|_{y(x)} \left.\frac{dy}{dx}\right|_x = \left.\frac{dG}{dx}\right|_x \]
+				which is equivalent to \[ h(y(x)) \left.\frac{dy}{dx}\right|_x =g(x) \] because of <a href="#x1-3r2">(2.2.2)</a>.
 			</div>
 			<div class="indent" id="b9eeec21-afc4-40e3-b62e-cec4fa5bd2bd">
 				In conclusion, to solve <a href="#x1-2r1">(2.2.1)</a> it suffices to find functions \(G=G(x)\) and \(H=H(y)\) that satisfy <a href="#x1-3r2">(2.2.2)</a>. Then any differentiable function \(y=y(x)\) that satisfies <a href="#x1-4r3">(2.2.3)</a> is a solution of <a href="#x1-2r1">(2.2.1)</a>.
 			</div>
 			<div class="example" id="x1-51" style="--ex-number: 1">
 				<div>
-					Solve the equation \[ y'=x(1+y^2)\]
+					Solve the equation \[ \frac{dy}{dx} =x(1+y^2)\]
 				</div>
 			
 				<details class="solution" id="90f5caf1-202c-4a11-a99a-51ccc941688f">
 					<summary>Solution</summary>
 					<div id="61333e64-55a8-4b72-a76c-c7b47d7370a7">
-						&nbsp;Separating variables yields \[ {y'\over 1+y^2}=x\] Integrating
+						&nbsp;Separating variables yields \[ \frac{dy}{dx} \frac{1}{1+y^2}=x\] Integrating
 						yields \[ \tan ^{-1}y={x^2\over 2}+c \] Therefore \[ y=\tan \left
 						({x^2\over 2}+c\right )\]
 					</div>
@@ -93,18 +95,18 @@
 				<ol>
 					<li>
 						<a id="x1-8r4"></a>
-						Solve the equation \begin {equation} \label {eq:2.2.4} y'=-{x\over
+						Solve the equation \begin {equation} \label {eq:2.2.4} \frac{dy}{dx}=-{x\over
 						y}\end {equation}
 					</li>
 					<li>
 						<a id="x1-10r5"></a>
 						Solve the initial value problem \begin {equation} \label {eq:2.2.5}
-						y'=-{x\over y}, \quad y(1)=1\end {equation}
+						\frac{dy}{dx}=-{x\over y}, \quad y(1)=1\end {equation}
 					</li>
 					<li>
 						<a id="x1-12r6"></a>
 						Solve the initial value problem \begin {equation} \label {eq:2.2.6}
-						y'=-{x\over y}, \quad y(1)=-2\end {equation}
+						\frac{dy}{dx}=-{x\over y}, \quad y(1)=-2\end {equation}
 					</li>
 				</ol>
 		
@@ -113,8 +115,8 @@
 
 					<ol>
 						<li>
-							Separating variables in <a href="#x1-8r4">(2.2.4)</a> yields \[ yy'=-x\] Integrating yields \[ {y^2\over 2}=-{x^2\over
-							2}+c,\quad \mbox { or,\, equivalently, } \quad x^2+y^2=2c\] The last
+							Separating variables in <a href="#x1-8r4">(2.2.4)</a> yields \[ y \frac{dy}{dx} = -x\] Integrating yields \[ {y^2\over 2}=-{x^2\over
+							2}+c \quad \mbox { or equivalently } \quad x^2+y^2=2c\] The last
 							equation shows that \(c\) must be positive if \(y\) is to be a solution of
 							<a href="#x1-8r4">(2.2.4)</a> on an open interval. Therefore we let \(2c=a^2\) (with \(a &gt; 0\)) and
 							rewrite the last equation as <a id="x1-13r7"></a> \begin {equation} \label {eq:2.2.7}
@@ -137,29 +139,29 @@
 						<li>
 							The solution of <a href="#x1-12r6">(2.2.6)</a> is negative when \(x=1\) and is therefore of the
 							form <a href="#x1-15r9">(2.2.9)</a>. Substituting \(x=1\) and \(y=-2\) into <a href="#x1-13r7">(2.2.7)</a> to satisfy the
-							initial condition yields \(a^2=5\). Hence, the solution of <a href="#x1-12r6">(2.2.6)</a> is
+							initial condition yields \(a^2=5\) Hence, the solution of <a href="#x1-12r6">(2.2.6)</a> is
 							\[ y=- \sqrt {5-x^2}, \quad -\sqrt {5} &lt; x &lt; \sqrt {5}\]
 						</li>
 					</ol>
-
-					<figure class="figure" id="c9edc349-8741-4bba-9fe9-df39338ffcd6">
-						<div id="-a-y-x-x-b-y-x-x-">
-							<img height="264" src="EPS/fig020201.png" width="409" />
-							<a id="x1-16r1"></a>
-						</div>
-						<figcaption class="caption">
-							<span class="id">Figure&nbsp;2.2.1</span>
-							<span class="content">
-								<span class="ptmb8t-">(a)</span>
-								\(y=\sqrt {2-x^{2}}\), \(-\sqrt {2}&lt;x&lt;\sqrt {2}\);
-								<span class="ptmb8t-">(b)</span>
-								\(y=-\sqrt {5-x^{2}}\), \(-\sqrt {5}&lt;x&lt;\sqrt {5}\)
-							</span>
-						</figcaption>
-					</figure>
 				</details>
 			</div>
 		</details>
+
+		<figure class="figure" id="c9edc349-8741-4bba-9fe9-df39338ffcd6">
+			<div id="-a-y-x-x-b-y-x-x-">
+				<img height="264" src="EPS/fig020201.png" width="409" />
+				<a id="x1-16r1"></a>
+			</div>
+			<figcaption class="caption">
+				<span class="id">Figure&nbsp;2.2.1</span>
+				<span class="content">
+					<span class="ptmb8t-">(a)</span>
+					\(y=\sqrt {2-x^{2}}\), \(-\sqrt {2}&lt;x&lt;\sqrt {2}\);
+					<span class="ptmb8t-">(b)</span>
+					\(y=-\sqrt {5-x^{2}}\), \(-\sqrt {5}&lt;x&lt;\sqrt {5}\)
+				</span>
+			</figcaption>
+		</figure>
 
 		<details id="ee913fc6-2aa0-4076-99ea-c0b9fa886c57">
 			<summary>Implicit Solutions of Separable Equations</summary>
@@ -169,11 +171,8 @@
 				<a href="#x1-51">
 					2.2.1
 					<!-- tex4ht:ref: example:2.2.1  -->
-				</a>
-				and
-				<a href="#x1-62">
+				</a> and <a href="#x1-62">
 					2.2.2
-					<!-- tex4ht:ref: example:2.2.2  -->
 				</a>
 				we were able to solve the equation \(H(y)=G(x)+c\) to obtain explicit
 				formulas for solutions of the given separable differential equations. As
@@ -181,9 +180,7 @@
 				situation we must broaden our definition of a solution of a separable
 				equation. The next theorem provides the basis for this modification. We
 				omit the proof, which requires a result from advanced calculus called as
-				the
-				<span class="vocab">implicit function theorem</span>
-				.
+				the <span class="vocab">implicit function theorem</span>.
 			</div>
 			<div class="newtheorem" id="x1-171">
 				<div class="head">Theorem&nbsp;2.2.1</div>
@@ -196,23 +193,23 @@
 					\((c,d)\) such that \(h(y_0)\ne 0\), and define <a id="x1-18r10"></a>
 					\begin {equation} \label {eq:2.2.10} c=H(y_0)-G(x_0)\end {equation}
 					
-					Then there's a function \(y=y(x)\) defined on some open interval
+					Then there’s a function \(y=y(x)\) defined on some open interval
 					\((a_1,b_1),\) where \(a\le a_1&lt;x_0&lt;b_1\le b\), such that
 					\(y(x_0)=y_0\) and <a id="x1-19r11"></a>
 					\begin {equation} \label {eq:2.2.11} H(y)=G(x)+c \end {equation}
 					
-					&gt;for \(a_1&lt;x&lt;b_1\). Therefore \(y\) is a solution of the
+					for \(a_1&lt;x&lt;b_1\). Therefore \(y\) is a solution of the
 					initial value problem <a id="x1-20r12"></a> \begin {equation} \label {eq:2.2.12}
-					h(y)y'=g(x),\quad y(x_0)=x_0\end {equation}
+					h(y) \frac{dy}{dx} =g(x),\quad y(x_0)=x_0\end {equation}
 				</div>
 			</div>
 
 			<div class="indent" id="a0684f78-8a21-4147-951a-fa94437638c5">
 				It’s convenient to say that <a href="#x1-19r11">(2.2.11)</a> with \(c\) arbitrary is an
 				<span class="vocab">implicit solution</span>
-				of \(h(y)y'=g(x)\). Curves defined by <a href="#x1-19r11">(2.2.11)</a> are
+				of \(h(y) \frac{dy}{dx} = g(x)\). Curves defined by <a href="#x1-19r11">(2.2.11)</a> are
 				<span class="vocab">integral curves</span>
-				of \(h(y)y'=g(x)\). If \(c\) satisfies <a href="#x1-18r10">(2.2.10)</a>, we’ll say that <a href="#x1-19r11">(2.2.11)</a> is an
+				of \(h(y) \frac{dy}{dx} = g(x)\). If \(c\) satisfies <a href="#x1-18r10">(2.2.10)</a>, we’ll say that <a href="#x1-19r11">(2.2.11)</a> is an
 				<span class="vocab">implicit solution of the initial value problem</span>
 				<a href="#x1-20r12">(2.2.12)</a>. However, keep these points in mind:
 			</div>
@@ -222,7 +219,7 @@
 					\(y\) that satisfy <a href="#x1-19r11">(2.2.11)</a>.
 				</li>
 				<li class="itemize">
-					The function \(y\) in <a href="#x1-19r11">(2.2.11)</a> (not <a href="#x1-19r11">(2.2.11)</a> itself) is a solution of \(h(y)y'=g(x)\).
+					The function \(y\) in <a href="#x1-19r11">(2.2.11)</a> (not <a href="#x1-19r11">(2.2.11)</a> itself) is a solution of \(\displaystyle h(y) \frac{dy}{dx} =g(x)\).
 				</li>
 			</ul>
 			<div class="example" id="x1-213" style="--ex-number: 3">
@@ -230,12 +227,12 @@
 					<li>
 						<a id="x1-23r13"></a>
 						Find implicit solutions of \begin {equation} \label {eq:2.2.13}
-						y'={2x+1\over 5y^4+1}\end {equation}
+						\frac{dy}{dx} = {2x+1\over 5y^4+1}\end {equation}
 					</li>
 					<li>
 						<a id="x1-25r14"></a>
 							Find an implicit solution of \begin {equation} \label {eq:2.2.14}
-							y'={2x+1\over 5y^4+1},\quad y(2)=1\end {equation}
+							\frac{dy}{dx} = {2x+1\over 5y^4+1},\quad y(2)=1\end {equation}
 					</li>
 				</ol>
 
@@ -245,7 +242,7 @@
 					<ol>
 						<li>
 							<a id="x1-26r15"></a>
-							Separating variables yields \[ (5y^4+1)y'=2x+1\] Integrating yields the
+							Separating variables yields \[ (5y^4+1) \frac{dy}{dx} =2x+1\] Integrating yields the
 							implicit solution \begin {equation} \label {eq:2.2.15} y^5+y=x^2+x+ c\end
 							{equation} of <a href="#x1-23r13">(2.2.13)</a>.
 						</li>
@@ -279,7 +276,7 @@
 					<span class="content">
 						A direction field and
 						<span class="vocab">integral curves</span>
-						for \(y'=\displaystyle {\frac {2x+1}{5y^{4}+1}}\)
+						for \(\displaystyle \frac{dy}{dx} = \frac {2x+1}{5y^{4}+1}\)
 					</span>
 				</figcaption>
 				<!-- tex4ht:label?: x1-27r2  -->
@@ -290,15 +287,15 @@
 			<summary>Constant Solutions of Separable Equations</summary>
 		
 			<div id="a0a064fd-571e-4b46-8771-898c127c0380">
-				An equation of the form \[ y'=g(x)p(y) \] is separable, since it can be
-				rewritten as \[ {1\over p(y)}y'=g(x)\] However, the division by \(p(y)\)
+				An equation of the form \[ \frac{dy}{dx} = g(x)p(y) \] is separable, since it can be
+				rewritten as \[ {1\over p(y)} \frac{dy}{dx} = g(x)\] However, the division by \(p(y)\)
 				is not legitimate if \(p(y)=0\) for some values of \(y\). The next two
 				examples show how to deal with this problem.
 			</div>
 			<div class="example" id="x1-284" style="--ex-number: 4">
 				<div>
 					<a id="x1-29r16"></a>
-					Find all solutions of \begin {equation} \label {eq:2.2.16} y'=2xy^2\end
+					Find all solutions of \begin {equation} \label {eq:2.2.16} \frac{dy}{dx} = 2xy^2\end
 					{equation}
 				</div>
 
@@ -322,7 +319,7 @@
 						<a href="#x1-29r16">
 							(2.2.16)
 						</a>
-						to obtain \[ {y'\over y^2}=2x\] Integrating this yields \[ -{1\over
+						to obtain \[ \frac{dy}{dx} \frac{1}{y^2}=2x\] Integrating this yields \[ -{1\over
 						y}=x^2+c\] which is equivalent to \begin {equation} \label {eq:2.2.17}
 						y=-{1\over x^2+c}\end {equation}
 						<a id="x1-30r17"></a>
@@ -331,38 +328,39 @@
 					<div class="indent" id="fcc9b539-296f-496a-84cb-602d607bc042">
 						We’ve now shown that if \(y\) is a solution of <a href="#x1-29r16">(2.2.16)</a> that is not identically zero, then \(y\) must be of the form <a href="#x1-30r17">(2.2.17)</a>. By substituting <a href="#x1-30r17">(2.2.17)</a> into <a href="#x1-29r16">(2.2.16)</a>, you can verify that <a href="#x1-30r17">(2.2.17)</a> is a solution of <a href="#x1-29r16">(2.2.16)</a>. Thus, solutions of <a href="#x1-29r16">(2.2.16)</a> are \(y\equiv 0\) and the functions of the form <a href="#x1-30r17">(2.2.17)</a>. Note that the solution \(y\equiv 0\) isn’t of the form <a href="#x1-30r17">(2.2.17)</a> for any value of \(c\).
 					</div>
-					<div class="indent" id="5f0cf0e9-1f4d-4f59-aa72-662f715d88ef">
-						Figure&nbsp;
-						<a href="#-a-direction-field-and-integral-curves-for-yxy-">
-							2.2.3
-							<!-- tex4ht:ref: figure:2.2.3  -->
-						</a>
-						shows a direction field and some
-						<span class="vocab">integral curves</span>
-						for <a href="#x1-29r16">(2.2.16)</a>
-					</div>
-					<figure class="figure" id="99684344-beed-4d97-af10-eeff65b0cb76">
-						<div id="-a-direction-field-and-integral-curves-for-yxy-">
-							<img height="264" src="EPS/fig020203.png" width="409" />
-							<a id="x1-31r3"></a>
-						</div>
-						<figcaption class="caption">
-							<span class="id">Figure&nbsp;2.2.3</span>
-							<span class="content">
-								A direction field and
-								<span class="vocab">integral curves</span>
-								for \(y'=2xy^{2}\)
-							</span>
-						</figcaption>
-						<!-- tex4ht:label?: x1-31r3  -->
-					</figure>
 				</details>
 			</div>
+
+			<div class="indent" id="5f0cf0e9-1f4d-4f59-aa72-662f715d88ef">
+				Figure&nbsp;
+				<a href="#-a-direction-field-and-integral-curves-for-yxy-">
+					2.2.3
+					<!-- tex4ht:ref: figure:2.2.3  -->
+				</a>
+				shows a direction field and some
+				<span class="vocab">integral curves</span>
+				for <a href="#x1-29r16">(2.2.16)</a>
+			</div>
+			<figure class="figure" id="99684344-beed-4d97-af10-eeff65b0cb76">
+				<div id="-a-direction-field-and-integral-curves-for-yxy-">
+					<img height="264" src="EPS/fig020203.png" width="409" />
+					<a id="x1-31r3"></a>
+				</div>
+				<figcaption class="caption">
+					<span class="id">Figure&nbsp;2.2.3</span>
+					<span class="content">
+						A direction field and
+						<span class="vocab">integral curves</span>
+						for \(\displaystyle \frac{dy}{dx} =2xy^{2}\)
+					</span>
+				</figcaption>
+				<!-- tex4ht:label?: x1-31r3  -->
+			</figure>
 
 			<div class="example" id="x1-325" style="--ex-number: 5">
 				<div>
 					<a id="x1-33r18"></a>
-					Find all solutions of \begin {equation} \label {eq:2.2.18} y'={1\over
+					Find all solutions of \begin {equation} \label {eq:2.2.18} \frac{dy}{dx} = {1\over
 					2}x(1-y^2)\end {equation}
 				</div>
 			
@@ -375,8 +373,8 @@
 						is a solution of <a href="#x1-33r18">(2.2.18)</a> such that \(1-y^2\) isn’t identically zero. Since \(1-y^2\) is
 						continuous there must be an interval on which \(1-y^2\) is never zero.
 						Since division by \(1-y^2\) is legitimate for \(x\) in this interval, we
-						can separate variables in <a href="#x1-33r18">(2.2.18)</a> to obtain \[ {2y'\over y^2-1}=-x\] A partial fraction expansion on the
-						left yields \[ \left [{1\over y-1}-{1\over y+1}\right ]y'=-x\] and
+						can separate variables in <a href="#x1-33r18">(2.2.18)</a> to obtain \[ \frac{dy}{dx} {2\over y^2-1}=-x\] A partial fraction expansion on the
+						left yields \[ \left [{1\over y-1}-{1\over y+1}\right ] \frac{dy}{dx} = -x\] and
 						integrating yields \[ \ln \left |{y-1\over y+1}\right |=-{x^2\over 2}+k\]
 						hence, \[ \left |{y-1\over y+1}\right |=e^ke^{-x^2/2}\] Since \(y(x)\ne
 						\pm 1\) for \(x\) on the interval under discussion, the quantity
@@ -392,35 +390,35 @@
 						this formula by taking \(c=0\); however, the other constant solution, \(y
 						\equiv -1\), can’t be obtained in this way.
 					</div>
-					<div class="indent" id="4248a08e-4b1c-451f-bfed-d8a2ee0c1634">
-						Figure&nbsp;
-						<a href="#-a-direction-field-and-integral-curves-for-y-xy-1">
-							2.2.4
-							<!-- tex4ht:ref: figure:2.2.4  -->
-						</a>
-						shows a direction field and some integrals for <a href="#x1-33r18">(2.2.18)</a>.
-					</div>
-					<figure class="figure" id="50bdd5c7-295e-48e7-b2a9-af1c8cbddf3f">
-						<div
-							
-							id="-a-direction-field-and-integral-curves-for-y-xy-1"
-						>
-							<img height="264" src="EPS/fig020204.png" width="409" />
-							<a id="x1-35r4"></a>
-						</div>
-						<figcaption class="caption">
-							<span class="id">Figure&nbsp;2.2.4</span>
-							<span class="content">
-								A direction field and
-								<span class="vocab">integral curves</span>
-								for \(y'=\displaystyle {\frac {x(1-y^2)}{2}}\)
-							</span>
-						</figcaption>
-						<!-- tex4ht:label?: x1-35r4  -->
-					</figure>
 				</details>
 			</div>
 		</details>
+
+		<div class="indent" id="4248a08e-4b1c-451f-bfed-d8a2ee0c1634">
+			Figure&nbsp;
+			<a href="#-a-direction-field-and-integral-curves-for-y-xy-1">
+				2.2.4
+				<!-- tex4ht:ref: figure:2.2.4  -->
+			</a>
+			shows a direction field and some integrals for <a href="#x1-33r18">(2.2.18)</a>.
+		</div>
+		<figure class="figure" id="50bdd5c7-295e-48e7-b2a9-af1c8cbddf3f">
+			<div
+				id="-a-direction-field-and-integral-curves-for-y-xy-1"
+			>
+				<img height="264" src="EPS/fig020204.png" width="409" />
+				<a id="x1-35r4"></a>
+			</div>
+			<figcaption class="caption">
+				<span class="id">Figure&nbsp;2.2.4</span>
+				<span class="content">
+					A direction field and
+					<span class="vocab">integral curves</span>
+					for \(\displaystyle \frac{dy}{dx} \frac{x(1-y^2)}{2}\)
+				</span>
+			</figcaption>
+			<!-- tex4ht:label?: x1-35r4  -->
+		</figure>
 
 		<details id="30e43a76-9454-4010-a774-0581956a6b19">
 			<summary>
@@ -431,10 +429,10 @@
 				Theorem&nbsp;
 				<span class="ptmb8t-">2.1.2</span>
 				states that if \(p\) and \(f\) are continuous on \((a,b)\) then every
-				solution of \[ y'+p(x)y=f(x) \] on \((a,b)\) can be obtained by choosing a
+				solution of \[ \frac{dy}{dx} + p(x)y=f(x) \] on \((a,b)\) can be obtained by choosing a
 				value for the constant \(c\) in the general solution, and if \(x_0\) is
 				any point in \((a,b)\) and \(y_0\) is arbitrary, then the initial value
-				problem \[ y'+p(x)y=f(x),\quad y(x_0)=y_0 \] has a solution on \((a,b)\).
+				problem \[ \frac{dy}{dx} + p(x)y=f(x),\quad y(x_0)=y_0 \] has a solution on \((a,b)\).
 			</div>
 			<div class="indent" id="99848dd9-b546-4b2d-a868-42be9ddb5e62">
 				The not true for nonlinear equations. First, we saw in Examples&nbsp;
@@ -463,7 +461,7 @@
 			</div>
 			<div class="example" id="x1-366" style="--ex-number: 6">
 				<div>
-					Solve the initial value problem \[ y'=2xy^2, \quad y(0)=y_0 \] and
+					Solve the initial value problem \[ \frac{dy}{dx} = 2xy^2, \quad y(0)=y_0 \] and
 					determine the <span class="vocab">interval of validity</span> of the solution.
 				</div>
 

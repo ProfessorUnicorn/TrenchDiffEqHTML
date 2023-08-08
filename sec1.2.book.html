@@ -7,7 +7,7 @@
   <script type="text/javascript" src="niceties.js"></script>
   <meta content="Trench_DiffEQ_Book.tex" name="src">
   <script>window.MathJax = {
-      tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(1.2.' + tag + ')' } }
+      tex: { packages: { "[+]": ["tagformat"] }, tags: "ams", tagformat: { tag: (tag) => "(1.2." + tag + ")" } }
     }; </script>
   <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
   <style type="text/css">
@@ -124,15 +124,15 @@
 
     <div id="e44db55f-6ff8-4cd3-ae72-398ec3ab7891">
       A <span class="vocab">solution</span> of a differential equation is a function that satisfies
-      the differential equation on some <span class="vocab">open interval</span>; thus, \(y\) is a solution of (<a href="#x1-3r2">1.2.2</a>) if \(y\) is \(n\) times differentiable and
+      the differential equation on some <span class="vocab">open interval</span>; thus, \(y\) is a solution of <a href="#x1-3r2">(1.2.2)</a> if \(y\) is \(n\) times differentiable and
       \[ \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right) \]
       for all \(x\) in some open interval \((a,b)\). 
-      In this case, we also say that \(y\) is a solution of \(\eqref{eq:1.2.2}\) on \((a,b)\). Functions that satisfy a differential equation at isolated points are not interesting. For example, \(y=x^2\) satisfies
+      In this case, we also say that \(y\) is a solution of <a href="#x1-3r2">(1.2.2)</a> on \((a,b)\). Functions that satisfy a differential equation at isolated points are not interesting. For example, \(y=x^2\) satisfies
       \[ x\frac{dy}{dx}+x^2=3x \] if and only if \(x=0\) or \(x=1\), but it’s not a solution of this differential equation because it does not satisfy the equation on an open interval.
     </div>
     <div class="reading-exercise" id="a2fdbd8e-c0ff-4656-a729-0fda488c21ca">
       Show that \( y = x^2 \) satisfies the \( x\frac{dy}{dx}+x^2=3x \) if and only if \(x=0\) or \(x=1\)
-    </div>        
+    </div>
     <div id="7df658f9-e2c8-42fb-a390-c33316c01962"> The graph of a solution of a differential equation is a <span class="vocab">solution
         curve</span>. More generally, a curve \(C\) is said to be an
       <span class="vocab">integral curve</span> of a differential equation if every function \(y=y(x)\) whose graph is a segment of \(C\) is a solution of the differential equation. Thus, any <span class="vocab">solution curve</span> of a differential equation is an <span class="vocab">integral curve</span>, but an <span class="vocab">integral curve</span>
@@ -195,25 +195,26 @@
         Calculate \( \displaystyle \frac{dy}{dx} \) for \( \displaystyle y={x^2\over 3}+{1\over x} \) using the <span class="vocab">power rule</span>
       </div>
 
-      <details class='solution' id="92d0e10e-4281-4c49-b003-371bf5f868f4">
+      <details class="solution" id="92d0e10e-4281-4c49-b003-371bf5f868f4">
         <summary>Solution</summary>
 
-        <div class='noindent' id="fb89956d-f5da-4f7c-95c2-c2b4d0390aae">
+        <div class="noindent" id="fb89956d-f5da-4f7c-95c2-c2b4d0390aae">
           Substituting \( y \) (<a href="#x1-8r5">1.2.5</a>) and \( \displaystyle \frac{dy}{dx}={2x\over 3} - {1\over x^2} \) into (<a href="#x1-9r6">1.2.6</a>) yields
           \[ x\left.\frac{dy}{dx}\right|_x+y(x)=x \left ({2x\over 3} - {1\over x^2}\right )+ \left ({x^2\over 3}+{1\over x}\right )=x^2 \]
           Note that \( y \) is undefined at \( x = 0 \) so therefore \(y\) is a solution of (<a href="#x1-9r6">1.2.6</a>) on \((-\infty ,0)\) and \((0,\infty )\). However, \(y\) isn’t a solution of the differential equation on any open interval that contains \(x=0\), since \(y\) is not defined at \(x=0\).
         </div>
 
-        <div id="6a07830c-c4db-4f84-86ca-d594db684c47"> 
-          Figure&nbsp;<a href="#-y-x-x-">1.2.1</a> shows the graph of the <span class="vocab">integral curve</span> (<a href="#x1-8r5">1.2.5</a>). The segment of the graph of (<a href="#x1-8r5">1.2.5</a>) on \((0,\infty )\) is a <span class="vocab">solution  curve</span> of (<a href="#x1-9r6">1.2.6</a>), as is the segment of the graph on \((-\infty ,0)\).
-        </div>
-        <figure class="figure" id="a22c3ee7-00b9-4646-a119-454b1af7f964">
-          <div id="-y-x-x-"><img height="264" src="EPS/fig010201.png" width="409"> <a id="x1-13r1"></a></div>
-          <figcaption class="caption"><span class="id">Figure&nbsp;1.2.1 </span><span class="content">\(y=\displaystyle {\frac
-              {x^{2}}{3}+\frac {1}{x}}\) </span></figcaption><!-- tex4ht:label?: x1-13r1  -->
-        </figure>
       </details>
     </div>
+
+    <div id="6a07830c-c4db-4f84-86ca-d594db684c47"> 
+      Figure&nbsp;<a href="#-y-x-x-">1.2.1</a> shows the graph of the <span class="vocab">integral curve</span> (<a href="#x1-8r5">1.2.5</a>). The segment of the graph of (<a href="#x1-8r5">1.2.5</a>) on \((0,\infty )\) is a <span class="vocab">solution  curve</span> of (<a href="#x1-9r6">1.2.6</a>), as is the segment of the graph on \((-\infty ,0)\).
+    </div>
+    <figure class="figure" id="a22c3ee7-00b9-4646-a119-454b1af7f964">
+      <div id="-y-x-x-"><img height="264" src="EPS/fig010201.png" width="409"> <a id="x1-13r1"></a></div>
+      <figcaption class="caption"><span class="id">Figure&nbsp;1.2.1 </span><span class="content">\(y=\displaystyle {\frac
+          {x^{2}}{3}+\frac {1}{x}}\) </span></figcaption><!-- tex4ht:label?: x1-13r1  -->
+    </figure>
 
     <div class="example" id="x1-103" style="--ex-number: 3">
       <div>
@@ -232,7 +233,7 @@
         Calculate \( \displaystyle \frac{dy}{dx} \) and \( \displaystyle \frac{d^2y}{dx^2} \)  for \( \displaystyle y=(c_1+c_2x)e^{-x}+2x-4 \) using the <span class="vocab">product rule</span>
       </div>
 
-      <details class='solution' id="51a3ed66-986e-46bd-9d2b-7649deda5708">
+      <details class="solution" id="51a3ed66-986e-46bd-9d2b-7649deda5708">
         <summary>Solution</summary>
 
         <div id="bee02374-32a1-4c97-99df-ff23db4fe4e7">
@@ -274,7 +275,7 @@
         \label {eq:1.2.9} \frac{d^ny}{dx^n}=e^{2x}\end {equation}<a id="x1-15r9"></a>
       </div>
 
-      <details class='solution' id="51a3ed66-986e-46bd-9d2b-7649deda5708">
+      <details class="solution" id="51a3ed66-986e-46bd-9d2b-7649deda5708">
         <summary>Solution</summary>
         <div id="a98fd397-0f08-4e0e-8681-f3da5846a0ec"><span class="ptmb8t-">Solution </span>&nbsp;
           Antidifferentiating repeatedly (<a href="#x1-15r9">1.2.9</a>) yields
@@ -342,7 +343,7 @@
         \[ \frac{dy}{dx}=x^3 \]
       </div>
 
-      <details class='solution' id="66f647c4-7d0f-4284-9ccf-5a904d890f42">
+      <details class="solution" id="66f647c4-7d0f-4284-9ccf-5a904d890f42">
         <summary>Solution</summary>
 
         <div id="b224947b-14a0-4b2e-8e5d-4c34ca2330d0">
@@ -361,13 +362,14 @@
           solution. Note that imposing the condition \(y(1)=2\) is equivalent to requiring the
           graph of \(y\) to pass through the point \((1,2)\).
         </div>
-
-        <figure class="figure" id="3c7ea326-644b-42e3-a901-49bf3657b772">
-          <div id="-y-x-"><img height="264" src="EPS/fig010202.png" width="409"> <a id="x1-19r2"></a></div>
-          <figcaption class="caption"><span class="id">Figure&nbsp;1.2.2 </span><span class="content">\(y=\displaystyle \frac{1}{4}\left(x^2 + 7\right) \) </span></figcaption><!-- tex4ht:label?: x1-19r2  -->
-        </figure>
       </details>
     </div>
+
+
+    <figure class="figure" id="3c7ea326-644b-42e3-a901-49bf3657b772">
+      <div id="-y-x-"><img height="264" src="EPS/fig010202.png" width="409"> <a id="x1-19r2"></a></div>
+      <figcaption class="caption"><span class="id">Figure&nbsp;1.2.2 </span><span class="content">\(y=\displaystyle \frac{1}{4}\left(x^2 + 7\right) \) </span></figcaption><!-- tex4ht:label?: x1-19r2  -->
+    </figure>
 
     <div id="bc8bf255-8b4d-4e48-8209-21496b18ce9b"> 
       We can rewrite the problem considered in Example&nbsp;<a href="#x1-175">1.2.5</a> more briefly as
@@ -458,14 +460,14 @@
     <div class="example" id="x1-278" style="--ex-number: 8">
       <div>
         An object falls under the influence of <span class="vocab">gravity</span> near Earth’s surface, where it can be assumed that the magnitude of the acceleration due to gravity is a constant \(g\).
-        Using <span class="vocab">Newton's 2nd law of motion</span>, construct a mathematical model for the motion of the object in the form of an initial value problem for a second order differential equation, assuming that the height and velocity of the object at time \(t=0\) are known. Assume that gravity is the only force acting on the object. Solve the initial value problem to obtain the height as a function of time
+        Using <span class="vocab">Newton’s 2nd law of motion</span>, construct a mathematical model for the motion of the object in the form of an initial value problem for a second order differential equation, assuming that the height and velocity of the object at time \(t=0\) are known. Assume that gravity is the only force acting on the object. Solve the initial value problem to obtain the height as a function of time
       </div>
 
       <details class="solution" id="6d749057-a362-42fa-97dc-86f605f4e0d4">
         <summary>Solution</summary>
 
           <div id="2d14e395-4019-419f-b53b-142267b56647">
-            Recall <span class="vocab">Newton's 2nd law of motion</span>, \( F = ma \), the force \( F \) acting on the object is equal to the mass \( m \) of the object times the acceleration \( a \) of the object. Acceleration is the derivative of velocity and velocity is the derivative of position so position is the second derivative of acceleration and can be written as  \( a = \ddot{y} \) where \(y(t)\) represent the position (height) of the object at time \(t\). The only force acting on the object is <span class="vocab">gravity</span> and the acceleration due to gravity is in the downward (negative) direction, so the total force \( F \) is given by \( -mg \). Thus <span class="vocab">Newton's 2nd law of motion</span> can be rewritten to represent a second order differential equation modeling this situation:
+            Recall <span class="vocab">Newton’s 2nd law of motion</span>, \( F = ma \), the force \( F \) acting on the object is equal to the mass \( m \) of the object times the acceleration \( a \) of the object. Acceleration is the derivative of velocity and velocity is the derivative of position so position is the second derivative of acceleration and can be written as  \( a = \ddot{y} \) where \(y(t)\) represent the position (height) of the object at time \(t\). The only force acting on the object is <span class="vocab">gravity</span> and the acceleration due to gravity is in the downward (negative) direction, so the total force \( F \) is given by \( -mg \). Thus <span class="vocab">Newton’s 2nd law of motion</span> can be rewritten to represent a second order differential equation modeling this situation:
             \begin{equation*}
               F = ma \Longrightarrow
               -mg = m \ddot{y} \Longrightarrow

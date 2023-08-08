@@ -10,9 +10,7 @@
 		<script>
 			window.MathJax = {
 				tex: {
-					packages: { "[+]": ["tagformat"] },
 					tags: "ams",
-					tagformat: { tag: (tag) => "(2.6." + tag + ")" },
 				},
 			};
 		</script>
@@ -40,16 +38,16 @@
 				<ol>
 					<li>
 						Verify that \(\mu (x,y)=y\) is an integrating factor for \[
-						y\,dx+\left (2x+{1\over y}\right )\,dy=0 \, {\rm (A)} \] on any
+						y\,dx+\left (2x+{1\over y}\right )\,dy=0 {\tag A} \] on any
 						open rectangle that does not intersect the \(x\) axis or,
-						equivalently, that \[ y^2\,dx+(2xy+1)\,dy=0 \, {\rm (B)} \] is
+						equivalently, that \[ y^2\,dx+(2xy+1)\,dy=0 {\tag B} \] is
 						exact on any such rectangle.
 					</li>
 					<li>
 						Verify that \(y\equiv 0\) is a solution of (B), but not of (A).
 					</li>
 					<li>
-						Show that \[ y(xy+1)=c \, {\rm (C)} \] is an implicit solution of
+						Show that \[ y(xy+1)=c {\tag C} \] is an implicit solution of
 						(B), and explain why every differentiable function \(y=y(x)\)
 						other than \(y\equiv 0\) that satisfies (C) is also a solution
 						of&nbsp;(A).
@@ -64,14 +62,14 @@
 				<ol>
 					<li>
 						Verify that \(\mu (x,y)=1/(x-y)^2\) is an integrating factor for
-						\[ -y^2\,dx+x^2\,dy=0 \, {\rm (A)} \] on any open rectangle that
+						\[ -y^2\,dx+x^2\,dy=0 {\tag A} \] on any open rectangle that
 						does not intersect the line \(y=x\) or, equivalently, that \[
-						-{y^2\over (x-y)^2}\,dx+{x^2\over (x-y)^2}\,dy=0 \, {\rm (B)} \]
+						-{y^2\over (x-y)^2}\,dx+{x^2\over (x-y)^2}\,dy=0 {\tag B} \]
 						is exact on any such rectangle.
 					</li>
 					<li>
 						Use Theorem&nbsp;<span class="ptmb8t-">2.2.1</span> to
-						show that \[ {xy\over (x-y)}=c \, {\rm (C)} \] is an implicit
+						show that \[ {xy\over (x-y)}=c {\tag C} \] is an implicit
 						solution of (B), and explain why it’s also an implicit solution of (A)
 					</li>
 					<li>
@@ -325,7 +323,7 @@
 				<a id="x1-3629"></a>
 				Suppose \(M\), \(N\), \(M_x\), and \(N_y\) are continuous for all
 				\((x,y)\), and \(\mu =\mu (x,y)\) is an integrating factor for \[
-				M(x,y)\,dx+N(x,y)\,dy=0. \, {\rm (A)} \] Assume that \(\mu _x\) and
+				M(x,y)\,dx+N(x,y)\,dy=0. {\tag A} \] Assume that \(\mu _x\) and
 				\(\mu _y\) are continuous for all \((x,y)\), and suppose \(y=y(x)\) is
 				a differentiable function such that \(\mu (x,y(x))=0\) and \(\mu
 				_x(x,y(x))\ne 0\) for all \(x\) in some interval \(I\). Show that
@@ -339,15 +337,15 @@
 				<a id="x1-3730"></a>
 				According to Theorem&nbsp;<span class="ptmb8t-">2.1.2</span>,
 				the general solution of the linear nonhomogeneous equation \[
-				y'+p(x)y=f(x) \, {\rm (A)} \] is \[ y=y_1(x)\left (c+\int
-				f(x)/y_1(x)\,dx\right ), \, {\rm (B)} \] where \(y_1\) is any
-				nontrivial solution of the complementary equation \(y'+p(x)y=0\). In
+				\frac{dy}{dx} + p(x)y=f(x) {\tag A} \] is \[ y=y_1(x)\left (c+\int
+				f(x)/y_1(x)\,dx\right ), {\tag B} \] where \(y_1\) is any
+				nontrivial solution of the complementary equation \(\displaystyle \frac{dy}{dx} +p(x)y=0\). In
 				this exercise we obtain this conclusion in a different way. You may
 				find it instructive to apply the method suggested here to solve some
 				of the exercises in Section&nbsp;2.1.
 				<ol>
 					<li>
-						Rewrite (A) as \[ [p(x)y-f(x)]\,dx+\,dy=0, \, {\rm (C)} \] and
+						Rewrite (A) as \[ [p(x)y-f(x)]\,dx+\,dy=0, {\tag C} \] and
 						show that \(\mu =\pm e^{\int p(x)\,dx}\) is an integrating factor
 						for (C).
 					</li>
@@ -363,8 +361,8 @@
 			</div>
 		</div>
 
-		<nav class='ex'>
-			<a href='sec2.6.book.html'>Back</a>
+		<nav class="ex">
+			<a href="sec2.6.book.html">Back</a>
 		</nav>
 	</body>
 </html>

@@ -10,9 +10,7 @@
 		<script>
 			window.MathJax = {
 				tex: {
-					packages: { "[+]": ["tagformat"] },
 					tags: "ams",
-					tagformat: { tag: (tag) => "(8.4." + tag + ")" },
 				},
 			};
 		</script>
@@ -492,10 +490,10 @@
 			<!--tex4ht:ref: exer:8.4.30 -->
 		</a>
 		, assume that \[ |f_m(t)|\le Me^{s_0t},\,t\ge t_m,\,m=0,1,\dots , \, {\rm
-		(A)} \] and that the series \[ \sum _{m=0}^\infty e^{-\rho t_m} \, {\rm (B)}
+		(A)} \] and that the series \[ \sum _{m=0}^\infty e^{-\rho t_m} {\tag B}
 		\] converges for some \(\rho &gt;0\). Using the steps listed below, show
 		that \({\cal L}(f)\) is defined for \(s&gt;s_0\) and \[ {\cal L}(f)={\cal
-		L}(f_0)+\sum _{m=1}^\infty e^{-st_m}{\cal L}(g_m) \, {\rm (C)} \] for
+		L}(f_0)+\sum _{m=1}^\infty e^{-st_m}{\cal L}(g_m) {\tag C} \] for
 		\(s&gt;s_0+\rho \), where \[ g_m(t)=f_m(t+t_m)-f_{m-1}(t+t_m)\]
 		<dl class="list2" id="0179aa6d-f42a-4068-a7d3-c508ba453dcf">
 			<dt class="list">
@@ -505,7 +503,7 @@
 				<!--l. 177-->
 				<div>
 					Use (A) and Theorem&nbsp;8.1.6 to show that \[ {\cal L}(f)=\sum
-					_{m=0}^\infty \int _{t_m}^{t_{m+1}}e^{-st}f_m(t)\,dt \, {\rm (D)} \]
+					_{m=0}^\infty \int _{t_m}^{t_{m+1}}e^{-st}f_m(t)\,dt {\tag D} \]
 					is defined for \(s&gt;s_0\).
 				</div>
 			</dd>
@@ -517,7 +515,7 @@
 				<div>
 					Show that (D) can be rewritten as \[ {\cal L}(f)=\sum _{m=0}^\infty
 					\left (\int _{t_m}^\infty e^{-st}f_m(t)\,dt -\int _{t_{m+1}}^\infty
-					e^{-st}f_m(t)\,dt\right ). \, {\rm (E)} \]
+					e^{-st}f_m(t)\,dt\right ). {\tag E} \]
 				</div>
 			</dd>
 			<dt class="list">
@@ -644,8 +642,8 @@
 				</div>
 			</dd>
 		</dl>
-		<nav class='ex'>
-			<a href='sec8.4.book.html'>Back</a>
+		<nav class="ex">
+			<a href="sec8.4.book.html">Back</a>
 		</nav>
 	</body>
 </html>
