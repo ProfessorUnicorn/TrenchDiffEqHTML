@@ -24,10 +24,25 @@
   </div>
 
   <details id="d1c28e16-b8f4-4de2-a944-fd3e0030c774">
-    <summary>Box 1</summary>
+    <summary>Integral Properties</summary>
 
     <div id="81690557-2f8a-4b21-ac1f-85f1c00b3f67">
-      Text for Box 1
+      Basic Integrals
+      \begin{align*}
+        \int_a^a f(x) dx = & 0 \\
+        \int_a^b f(x) dx = & -\int_b^a f(x) dx \\
+        \int_a^b \Big( c \cdot f(x) \Big) dx = & c \cdot \int_a^b f(x) dx \\
+        \int_a^b \Big( f(x) + g(x) \Big) dx = & \int_a^b f(x) dx + \int_a^b g(x) dx \\
+        \int_a^b f(x) dx = & \int_a^c f(x) dx + \int_c^b f(x) dx \\
+        \end{align*}
+
+
+      Comparison Properties
+      \begin{align*}
+        f(x) > 0 \quad \text{and} \quad a < b \Longrightarrow & \int_a^b f(x) dx > 0 \\
+        f(x) < 0 \quad \text{and} \quad a < b \Longrightarrow & \int_a^b f(x) dx < 0 \\
+        f(x) < g(x) \quad \text{and} \quad a < b \Longrightarrow & \int_a^b f(x) dx < \int_a^b g(x) dx  \\
+      \end{align*}  
     </div>
 
     <div class="reading-exercise" id="80663d65-3f37-4cc5-aa52-470d245b4edc">
@@ -35,17 +50,58 @@
     </div>
   </details>
 
+
+  <details id="6816564d-0f36-4899-a1c0-c85a1dc6ff1g">
+    <summary>Fundamental Theorem of Calculus Part 1</summary>
+
+    <div id="b1eabd75-2ee2-43f4-917f-30a8f1e75952">
+      <p>
+        Let \( F(x) \) be the antiderivative of \( f(x) \) so that \( F'(x) = f(x) \) and \( F''(x) = f'(x) \) and so on. Then a function can be written as the derivative of its derivative with lower limit of integration a constant number and upper limit of integration the variation we differented with respect to.
+      </P>  
+
+      \begin{equation}
+          F(x) = \int_a^x f(t) dt
+      \end{equation}
+    </div>   
+
+    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52f4">
+      Find \( F'(x) \) given \( F(x) = x^2 \) then write it as a definite integral. Choose a constant lower limit of integration that evaluates to zero.
+    </div>
+    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52f5">
+      Find \( F'(x) \) given \( F(x) = \sin x \) then write it as a definite integral. Choose a constant lower limit of integration that evaluates to zero.
+    </div>
+    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52f5">
+      Find \( F'(x) \) given \( F(x) = \sin x \) then write it as a definite integral. Choose a constant lower limit of integration that evaluates to zero, different from the previous exercise.
+    </div>
+    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52f4">
+      Find \( F'(x) \) given \( F(x) = e^x \) then write it as a definite integral. Choose a constant lower limit of integration that evaluates to zero. <em>(Hint: use an improper integral)</em>
+    </div>
+  </details>  
+
+
+ 
   <details id="6816564d-0f36-4899-a1c0-c85a1dc6ff1f">
-    <summary>Box 2</summary>
+    <summary>Fundamental Theorem of Calculus Part 2</summary>
 
     <div id="b1eabd75-2ee2-43f4-917f-30a8f1e75951">
-      Text for Box 2
-    </div>
+      <p>
+        Let \( F(x) \) be the antiderivative of \( f(x) \) so that \( F'(x) = f(x) \) and \( F''(x) = f'(x) \) and so on. 
+        Then the definite integral of a function is its antiderivative evaluted at the upper limit of integration minus its antiderivative evaluted at the upper limit of integration
+      </P> 
+
+      \begin{align}
+        \int_a^b f(t) dt = \Bigg. F(t) \Bigg|_{t=a}^{t=b} = F(b) - F(a) \\  
+      \end{align} 
+    </div>   
 
     <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52e2">
-      Did you read box 2?
+      Using (0.5.2) as a formula, expand \( \displaystyle \int_3^x f(t) dt \quad \) and \( \quad \displaystyle \int_x^5 f(t) dt \quad \) then find  \( \quad \displaystyle \frac{d}{dx} \int_3^x f(t) dt \quad \) and \( \quad \displaystyle \frac{d}{dx} \int_x^5 f(t) dt \) 
     </div>
-  </details>
+    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52e3">
+      Using (0.5.2) as a formula, expand \( \displaystyle \int_x^{x^2} f(t) dt \quad \) and \( \quad \displaystyle \int_{\sin x}^{x} f(t) dt \quad \) then find  \( \quad \displaystyle \frac{d}{dx} \int_x^{x^2} f(t) dt \quad \) and \( \quad \displaystyle \frac{d}{dx} \int_{\sin x}^{x} f(t) dt \)
+    </div>
+
+  </details> 
 
   <nav class = "book">
     <a href="sec0.4.book.html">Back (0.4)</a>
