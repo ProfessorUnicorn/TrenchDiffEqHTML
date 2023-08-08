@@ -46,12 +46,12 @@
 
 			<div id="86d35120-608b-4b7a-8bf9-c1cabed1f294">
 				In Section&nbsp;2.1 we found that the solutions of a linear nonhomogeneous
-				equation \[ y'+p(x)y=f(x) \] are of the form \(y=uy_1\), where \(y_1\) is
+				equation \[ \frac{dy}{dx} +p(x)y=f(x) \] are of the form \(y=uy_1\), where \(y_1\) is
 				a nontrivial solution of the complementary equation \begin {equation}
-				\label {eq:2.4.1} y'+p(x)y=0 \end {equation}
+				\label {eq:2.4.1} \frac{dy}{dx} + p(x)y=0 \end {equation}
 				<a id="x1-2r1"></a>
-				and \(u\) is a solution of \[ u'y_1(x)=f(x)\] Note that this last equation
-				is separable, since it can be rewritten as \[ u'={f(x)\over y_1(x)}\] In
+				and \(u\) is a solution of \[ \frac{du}{dx} y_1(x)=f(x)\] Note that this last equation
+				is separable, since it can be rewritten as \[ \frac{du}{dx} = {f(x)\over y_1(x)}\] In
 				this section we’ll consider nonlinear differential equations that are not
 				separable to begin with, but can be solved in a similar fashion by writing
 				their solutions in the form \(y=uy_1\), where \(y_1\) is a suitably chosen
@@ -66,31 +66,30 @@
 			<summary>Bernoulli Equations</summary>
 		
 			<div id="fadd7061-2440-46f3-a2b0-28e56bc9db21">
-				A
-				<span class="vocab">Bernoulli equation</span>
-				is an equation of the form \begin {equation} \label {eq:2.4.2}
-				y'+p(x)y=f(x)y^r\end {equation}
+				A <span class="vocab">Bernoulli equation</span> is an equation of the form
 				<a id="x1-3r2"></a>
+				\begin {equation} \label {eq:2.4.2}
+				\frac{dy}{dx}+p(x)y=f(x)y^r\end {equation}
 				where \(r\) can be any real number other than \(0\) or \(1\). (Note that <a href="#x1-3r2">(2.4.2)</a> is linear if and only if \(r=0\) or \(r=1\).) We can transform <a href="#x1-3r2">(2.4.2)</a> into a separable equation by variation of parameters: if \(y_1\) is a
-				nontrivial solution of <a href="#x1-2r1">(2.4.1)</a>, substituting \(y=uy_1\) into <a href="#x1-3r2">(2.4.2)</a> yields \[ u'y_1+u(y_1'+p(x)y_1)=f(x)(uy_1)^r\] which is equivalent to
-				the separable equation \[ u'y_1(x)=f(x)\left (y_1(x)\right )^ru^r\quad \mbox{ or } \quad  {u'\over u^r}=f(x)\left (y_1(x)\right )^{r-1}\] since
-				\(y_1'+p(x)y_1=0\).
+				nontrivial solution of <a href="#x1-2r1">(2.4.1)</a>, substituting \(y=uy_1\) into <a href="#x1-3r2">(2.4.2)</a> yields \[ \frac{du}{dx} y_1 + u(\frac{dy_1}{dx} + p(x)y_1)=f(x)(uy_1)^r\] which is equivalent to
+				the separable equation \[ \frac{du}{dx} y_1(x)=f(x)\left (y_1(x)\right )^ru^r\quad \mbox{ or } \quad  \frac{du}{dx} \frac{1}{u^r} = f(x)\left (y_1(x)\right )^{r-1}\] since
+				\(\frac{dy_1}{dx} + p(x)y_1=0\).
 			</div>
 			<div class="example" id="x1-41" style="--ex-number: 1">
 				<div>
 					<a id="x1-5r3"></a>
 					Solve the Bernoulli equation \begin {equation} \label {eq:2.4.3}
-					y'-y=xy^2\end {equation}
+					\frac{dy}{dx} - y=xy^2\end {equation}
 				</div>
 			
 				<details class="solution" id="d894d29c-fca0-4d6c-885d-80603f97f33b">
 					<summary>Solution</summary>
 
 					<div id="1e01a29a-0150-4a61-8e85-1cfc0e8824e6">
-						Since \(y_1=e^x\) is a solution of \(y'-y=0\), we look for solutions
-						of <a href="#x1-5r3">(2.4.3)</a> in the form \(y=ue^x\), where \[ u'e^x=xu^2e^{2x}\mbox {\quad or,
-						equivalently, \quad } u'=xu^2e^x\] Separating variables yields \[ {u'\over
-						u^2}=xe^x\] and integrating yields \[ -{1\over u}=(x-1)e^x+c\] Hence, \[
+						Since \(y_1=e^x\) is a solution of \(\displaystyle \frac{dy}{dx} -y=0\), we look for solutions
+						of <a href="#x1-5r3">(2.4.3)</a> in the form \(y=ue^x\), where \[ \frac{du}{dx} e^x=xu^2e^{2x}\mbox {\quad or,
+						equivalently, \quad } \frac{du}{dx} = xu^2e^x\] Separating variables yields \[ \frac{du}{dx} \frac{1}{u^2} = xe^x\] and
+						integrating yields \[ -{1\over u}=(x-1)e^x+c\] Hence, \[
 						u=-{1\over (x-1)e^x+c} \] and \[ y=-{1\over x-1+ce^{-x}}\]
 					</div>
 				</details>
@@ -116,7 +115,7 @@
 				<span class="content">
 					A direction field and
 					<span class="vocab">integral curves</span>
-					for \(y'-y=xy^{2}\)
+					for \(\displaystyle \frac{dy}{dx} -y=xy^{2}\)
 				</span>
 			</figcaption>
 		</figure>
@@ -131,19 +130,18 @@
 				We’ve seen that the nonlinear Bernoulli equation can be transformed into a
 				separable equation by the substitution \(y=uy_1\) if \(y_1\) is suitably
 				chosen. Now let’s discover a sufficient condition for a nonlinear first
-				order differential equation \begin {equation} \label {eq:2.4.4} y'=f(x,y)
+				order differential equation \begin {equation} \label {eq:2.4.4} \frac{dy}{dx} = f(x,y)
 				\end {equation}
 				<a id="x1-7r4"></a>
 				to be transformable into a separable equation in the same way.
-				Substituting \(y=uy_1\) into <a href="#x1-7r4">(2.4.4)</a> yields \[ u'y_1(x)+uy_1'(x)=f(x,uy_1(x))\] which is equivalent to \begin
-				{equation} \label {eq:2.4.5} u'y_1(x)=f(x,uy_1(x))-uy_1'(x)\end {equation}
+				Substituting \(y=uy_1\) into <a href="#x1-7r4">(2.4.4)</a> yields \[ \frac{du}{dx} y_1(x)+u \left.\frac{dy_1}{dx}\right|_x = f(x,uy_1(x))\] which is equivalent to \begin
+				{equation} \label {eq:2.4.5} \frac{du}{dx} y_1(x)=f(x,uy_1(x))-u \left.\frac{dy_1}{dx}\right|_x \end {equation}
 				<a id="x1-8r5"></a>
-				If \[ f(x,uy_1(x))=q(u)y_1'(x) \] for some function \(q\), then <a href="#x1-8r5">(2.4.5)</a> becomes \begin {equation} \label {eq:2.4.6} u'y_1(x)=(q(u)-u)y_1'(x)\end
+				If \[ f(x,uy_1(x))=q(u) \left.\frac{dy_1}{dx}\right|_x \] for some function \(q\), then <a href="#x1-8r5">(2.4.5)</a> becomes \begin {equation} \label {eq:2.4.6} \frac{du}{dx} y_1(x)=(q(u)-u) \left.\frac{dy_1}{dx}\right|_x \end
 				{equation}
 				<a id="x1-9r6"></a>
 				which is separable. After checking for constant solutions \(u\equiv u_0\)
-				such that \(q(u_0)=u_0\), we can separate variables to obtain \[ {u'\over
-				q(u)-u}={y_1'(x)\over y_1(x)}\]
+				such that \(q(u_0)=u_0\), we can separate variables to obtain \[ \frac{du}{dx} \frac{1}{q(u)-u} = \left.\frac{dy_1}{dx}\right|_x \frac{1}{y_1(x)}\]
 			</div>
 		</details>
 
@@ -163,23 +161,23 @@
 				The differential equation <a href="#x1-7r4">(2.4.4)</a> is said to be
 				<span class="vocab">homogeneous</span>
 				if \(x\) and \(y\) occur in \(f\) in such a way that \(f(x,y)\) depends
-				only on the ratio \(y/x\); that is, <a href="#x1-7r4">(2.4.4)</a> can be written as \begin {equation} \label {eq:2.4.7} y'=q(y/x)\end
-				{equation}
+				only on the ratio \(y/x\); that is, <a href="#x1-7r4">(2.4.4)</a> can be written as
+				\begin {equation} \label {eq:2.4.7} \frac{dy}{dx}=q(y/x)\end {equation}
 				<a id="x1-10r7"></a>
 				where \(q=q(u)\) is a function of a single variable. For example, \[
-				y'={y+xe^{-y/x}\over x}={y\over x}+e^{-y/x} \] and \[ y'={y^2+xy-x^2\over
+				\frac{dy}{dx} = {y+xe^{-y/x}\over x}={y\over x}+e^{-y/x} \] and \[ \frac{dy}{dx} = {y^2+xy-x^2\over
 				x^2}=\left (y\over x\right )^2+{y\over x} -1 \] are of the form <a href="#x1-10r7">(2.4.7)</a>, with \[ q(u)=u+e^{-u}\quad \mbox{ and } \quad  q(u)=u^2+u-1\]
-				respectively. The general method discussed above can be applied to <a href="#x1-10r7">(2.4.7)</a> with \(y_1=x\) (and therefore \(y_1'=1)\). Thus, substituting \(y=ux\)
-				in <a href="#x1-10r7">(2.4.7)</a> yields \[ u'x+u=q(u)\] and separation of variables (after checking for
+				respectively. The general method discussed above can be applied to <a href="#x1-10r7">(2.4.7)</a> with \(y_1=x\) (and therefore \(\displaystyle \frac{dy_1}{dx} =1)\). Thus, substituting \(y=ux\)
+				in <a href="#x1-10r7">(2.4.7)</a> yields \[ \frac{du}{dx} x +u=q(u)\] and separation of variables (after checking for
 				constant solutions \(u\equiv u_0\) such that \(q(u_0)=u_0\)) yields \[
-				{u'\over q(u)-u}={1\over x}\]
+				\frac{du}{dx} \frac{1}{q(u)-u}={1\over x}\]
 			</div>
 			<div class="indent" id="cd044474-c799-435a-b1c9-eda3581c4b50">
 				Before turning to examples, we point out something that you may’ve have
 				already noticed: the definition of
 				<span class="vocab">homogeneous equation</span>
 				given here isn’t the same as the definition given in Section&nbsp;2.1,
-				where we said that a linear equation of the form \[ y'+p(x)y=0 \] is
+				where we said that a linear equation of the form \[ \frac{dy}{dx} + p(x)y=0 \] is
 				homogeneous. We make no apology for this inconsistency, since we didn’t
 				create it historically,
 				<span class="vocab">homogeneous</span>
@@ -195,7 +193,7 @@
 			<div class="example" id="x1-112" style="--ex-number: 2">
 				<div>
 					<a id="x1-12r8"></a>
-					Solve \begin {equation} \label {eq:2.4.8} y'={y+xe^{-y/x}\over x}\end
+					Solve \begin {equation} \label {eq:2.4.8} \frac{dy}{dx} = {y+xe^{-y/x}\over x}\end
 					{equation}
 				</div>
 
@@ -203,8 +201,8 @@
 					<summary>Solution</summary>
 					<div id="6e8a324d-04ef-441f-a52c-5778b53544c3">
 						Substituting \(y=ux\) into <a href="#x1-12r8">(2.4.8)</a>
-						yields \[ u'x+u = {ux+xe^{-ux/x}\over x} = u+e^{-u}\] Simplifying and
-						separating variables yields \[ e^uu'={1\over x}\] Integrating yields
+						yields \[ \frac{du}{dx} x + u = {ux+xe^{-ux/x}\over x} = u+e^{-u}\] Simplifying and
+						separating variables yields \[ e^u \frac{du}{dx} = {1\over x}\] Integrating yields
 						\(e^u=\ln |x|+c\). Therefore \(u=\ln (\ln |x|+c)\) and \(y=ux=x \ln (\ln
 						|x|+c)\).
 					</div>
@@ -234,7 +232,7 @@
 					<span class="content">
 						A direction field and some
 						<span class="vocab">integral curves</span>
-						for \(y'=\displaystyle {\frac {y+xe^{-y/x}}{x}}\)
+						for \(\displaystyle \frac{dy}{dx} = \frac {y+xe^{-y/x}}{x}\)
 					</span>
 				</figcaption>
 				<!-- tex4ht:label?: x1-13r2  -->
@@ -244,13 +242,12 @@
 				<ol>
 					<li>
 						<a id="x1-16r9"></a>
-						Solve \begin {equation} \label {eq:2.4.9} x^2y'=y^2+xy-x^2\end
-						{equation}
+						Solve \begin {equation} \label {eq:2.4.9} x^2 \frac{dy}{dx} = y^2+xy-x^2\end {equation}
 					</li>
 					<li>
 						<a id="x1-18r10"></a>
 						Solve the initial value problem \begin {equation} \label {eq:2.4.10}
-						x^2y'=y^2+xy-x^2, \quad y(1)=2\end {equation}
+						x^2\frac{dy}{dx} = y^2+xy-x^2, \quad y(1)=2\end {equation}
 					</li>
 				</ol>
 
@@ -262,15 +259,15 @@
 							<div>
 								We first find solutions of <a href="#x1-16r9">(2.4.9)</a>
 								on open intervals that don’t contain \(x=0\). We can rewrite <a href="#x1-16r9">(2.4.9)</a>
-								as \[ y'={y^2+xy-x^2\over x^2} \] for \(x\) in any such interval.
+								as \[ \frac{dy}{dx} = {y^2+xy-x^2\over x^2} \] for \(x\) in any such interval.
 								<a id="x1-19r11"></a>
-								Substituting \(y=ux\) yields \[ u'x+u ={ (ux)^2+x(ux)-x^2 \over x^2} =
-								u^2+u-1\] so \begin {equation} \label {eq:2.4.11} u'x=u^2-1\end {equation}
+								Substituting \(y=ux\) yields \[ \frac{du}{dx} x +u ={ (ux)^2+x(ux)-x^2 \over x^2} =
+								u^2+u-1\] so \begin {equation} \label {eq:2.4.11} \frac{du}{dx} x = u^2-1\end {equation}
 								By inspection this equation has the constant solutions \(u\equiv 1\) and
 								\(u\equiv -1\). Therefore \(y=x\) and \(y=-x\) are solutions of <a href="#x1-16r9">(2.4.9)</a>. If \(u\) is a solution of <a href="#x1-19r11">(2.4.11)</a> that doesn’t assume the values \(\pm 1\) on some interval, separating
-								variables yields \[ {u'\over u^2-1}={1\over x}\] or, after a partial
+								variables yields \[ \frac{du}{dx} \frac{1}{u^2-1}={1\over x}\] or, after a partial
 								fraction expansion, \[ {1\over 2}\left [{1\over u-1}-{1\over u+1}\right
-								]u'= {1\over x}\] Multiplying by 2 and integrating yields \[ \ln \left
+								] \frac{du}{dx} = {1\over x}\] Multiplying by 2 and integrating yields \[ \ln \left
 								|u-1\over u+1\right | =2 \ln |x|+k\] or \[ \left |{u-1\over u+1}\right
 								|=e^kx^2\] which holds if \begin {equation} \label {eq:2.4.12} {u-1\over
 								u+1}=cx^2 \end {equation}
@@ -301,7 +298,8 @@
 								}c_1\le 0\end {array}\right . \quad \mbox{ and } \quad  b=\left \{\begin
 								{array}{cl}\displaystyle {1\over \sqrt {c_2}}&amp;\mbox { if }c_2&gt;0,\\
 								\infty&amp; \mbox { if }c_2\le 0\end {array}\right. \] We leave it to you
-								to verify this. To do so, note that if \(y\) is any function of the form <a href="#x1-23r13">(2.4.13)</a> then \(y(0)=0\) and \(y'(0)=1\).
+								to verify this. To do so, note that if \(y\) is any function of the form <a href="#x1-23r13">(2.4.13)</a> then \(y(0)=0\)
+								and \(\displaystyle \left. \frac{dy}{dx} \right|_0 = 1\).
 							</div>
 						</li>
 
@@ -341,7 +339,7 @@
 					<span class="content">
 						A direction field and
 						<span class="vocab">integral curves</span>
-						for \(x^{2}y'=y^{2}+xy-x^{2}\)
+						for \(\displaystyle x^{2} \frac{dy}{dx} = y^{2}+xy-x^{2}\)
 					</span>
 				</figcaption>
 			</figure>
@@ -360,7 +358,7 @@
 				<figcaption class="caption">
 					<span class="id">Figure&nbsp;2.4.4</span>
 					<span class="content">
-						Solutions of \(x^{2}y'=y^{2}+xy-x^{2}\), \(y(1)=2\)
+						Solutions of \(\displaystyle x^{2} \frac{dy}{dx} = y^{2}+xy-x^{2}\), \(y(1)=2\)
 					</span>
 				</figcaption>
 			</figure>
@@ -372,7 +370,11 @@
 			</div>
 		</details>
 
-		<div class="nav" id="61490ac4-7b7d-40ab-bd7d-b9f130647907">
+		<nav class = "ex">
+			<a href = "sec2.4.ex.html">2.4 Exercises</a>
+		</nav>
+
+		<nav class = "book">
 			<a href="sec2.3.book.html">Back (2.3)</a>
 
 			<a href="sec2.0.html">Chapter 2</a>

@@ -11,9 +11,7 @@
 		<script>
 			window.MathJax = {
 				tex: {
-					packages: { "[+]": ["tagformat"] },
 					tags: "ams",
-					tagformat: { tag: (tag) => "(2.4." + tag + ")" },
 				},
 			};
 		</script>
@@ -280,12 +278,12 @@
 				<span class="fbox"><span id="textcolor5">L</span></span>
 				<ol>
 					<li>
-						Solve the exact equation \[ (x^3y^4+2x)\,dx+(x^4y^3+3y)\,dy=0 \, {\rm (A)} \] implicitly.
+						Solve the exact equation \[ (x^3y^4+2x)\,dx+(x^4y^3+3y)\,dy=0 {\tag A} \] implicitly.
 					</li>
 					<li>
 						For what choices of \((x_0,y_0)\) does Theorem&nbsp;<span class="ptmb8t-">2.3.1</span> imply
 						that the initial value problem \[
-						(x^3y^4+2x)\,dx+(x^4y^3+3y)\,dy=0,\quad y(x_0)=y_0, \, {\rm (B)}
+						(x^3y^4+2x)\,dx+(x^4y^3+3y)\,dy=0,\quad y(x_0)=y_0, {\tag B}
 						\] has a unique solution on an open interval \((a,b)\) that
 						contains \(x_0\)?
 					</li>
@@ -305,12 +303,12 @@
 				<span class="fbox"><span id="textcolor6">L</span></span>
 				<ol>
 					<li>
-						Solve the exact equation \[ (x^2+y^2)\,dx+2xy\,dy=0 \, {\rm (A)}\] implicitly.
+						Solve the exact equation \[ (x^2+y^2)\,dx+2xy\,dy=0 {\tag A}\] implicitly.
 					</li>
 					<li>
 						For what choices of \((x_0,y_0)\) does Theorem&nbsp;<span class="ptmb8t-">2.3.1</span> imply
 						that the initial value problem \[
-						(x^2+y^2)\,dx+2xy\,dy=0,\quad y(x_0)=y_0, \, {\rm (B)} \] has a
+						(x^2+y^2)\,dx+2xy\,dy=0,\quad y(x_0)=y_0, {\tag B} \] has a
 						unique solution \(y=y(x)\) on some open interval \((a,b)\) that
 						contains \(x_0\)?
 					</li>
@@ -449,7 +447,7 @@
 			<span class="ex-number">38.</span>
 			<div class="ex-body">
 				<a id="x1-5438"></a>
-				Solve the initial value problem \[ y'+{2\over x}y=-{2xy\over
+				Solve the initial value problem \[ \frac{dy}{dx} + {2\over x}y=-{2xy\over
 				x^2+2x^2y+1},\quad y(1)=-2\]
 			</div>
 		</div>
@@ -458,7 +456,7 @@
 			<span class="ex-number">39.</span>
 			<div class="ex-body">
 				<a id="x1-5539"></a>
-				Solve the initial value problem \[ y'-{3\over x}y={2x^4(4x^3-3y)\over
+				Solve the initial value problem \[ \frac{dy}{dx} - {3\over x}y={2x^4(4x^3-3y)\over
 				3x^5+3x^3+2y},\quad y(1)=1\]
 			</div>
 		</div>
@@ -467,7 +465,7 @@
 			<span class="ex-number">40.</span>
 			<div class="ex-body">
 				<a id="x1-5640"></a>
-				Solve the initial value problem \[ y'+2xy=-e^{-x^2}\left
+				Solve the initial value problem \[ \frac{dy}{dx} + 2xy = -e^{-x^2}\left
 				({3x+2ye^{x^2}\over 2x+3ye^{x^2}}\right ),\quad y(0)=-1\]
 			</div>
 		</div>
@@ -476,8 +474,8 @@
 			<span class="ex-number">41.</span>
 			<div class="ex-body">
 				<a id="x1-5741"></a>
-				Rewrite the separable equation \[ h(y)y'=g(x) \, {\rm (A)} \] as an
-				exact equation \[ M(x,y)\,dx+N(x,y)\,dy=0. \, {\rm (B)} \] Show that
+				Rewrite the separable equation \[ h(y) \frac{dy}{dx} = g(x) {\tag A} \] as an
+				exact equation \[ M(x,y)\,dx+N(x,y)\,dy=0. {\tag B} \] Show that
 				applying the method of this section to (B) yields the same solutions
 				that would be obtained by applying the method of separation of
 				variables to&nbsp;(A)
@@ -535,12 +533,8 @@
 			</div>
 		</div>
 
-		<a
-			class="back-to-ch"
-			href="sec2.0.html"
-			id="4d3d8cdf-5a73-4b11-b3c4-b5a86e44e664"
-		>
-			Back
-		</a>
+		<nav class="ex">
+			<a href="sec2.5.book.html">Back</a>
+		</nav>
 	</body>
 </html>
