@@ -149,37 +149,28 @@
 					Let \(M,\) \(N,\) \(M_y,\) and \(N_x\) be continuous on an open
 					rectangle \(R\). Then:
 				</div>
-				<dl class="list1">
-					<dt class="list">
-						<span class="ptmb8t-">(a)</span>
-					</dt>
-					<dd class="list">
-						<div>
-							If \((M_y-N_x)/N\) is independent of \(y\) on \(R\) and we define \[
-							p(x)={M_y-N_x\over N} \] then \begin {equation} \label {eq:2.6.10}
-							\mu (x)=\pm e^{\int p(x)\,dx} \end {equation}
-							<a id="x1-13r10"></a>
-							is an integrating factor for \begin {equation} \label {eq:2.6.11}
-							M(x,y)\,dx+N(x,y)\,dy=0 \end {equation}
-							<a id="x1-14r11"></a>
-							on \(R\).
-						</div>
-					</dd>
-					<dt class="list">
-						<span class="ptmb8t-">(b)</span>
-					</dt>
-					<dd class="list">
-						<div>
-							If \((N_x-M_y)/M\) is independent of \(x\) on \(R\) and we define \[
-							q(y)={N_x-M_y\over M}\] then \begin {equation} \label {eq:2.6.12}
-							\mu (y)=\pm e^{\int q(y)\,dy} \end {equation}
-							<a id="x1-16r12"></a>
-							is an integrating factor for <a href="#x1-14r11">(2.6.11)</a> on \(R\).
-						</div>
-					</dd>
-				</dl>
+
+				<ol>
+					<li>
+						If \((M_y-N_x)/N\) is independent of \(y\) on \(R\) and we define \[
+						p(x)={M_y-N_x\over N} \] then \begin {equation} \label {eq:2.6.10}
+						\mu (x)=\pm e^{\int p(x)\,dx} \end {equation}
+						<a id="x1-13r10"></a>
+						is an integrating factor for \begin {equation} \label {eq:2.6.11}
+						M(x,y)\,dx+N(x,y)\,dy=0 \end {equation}
+						<a id="x1-14r11"></a>
+						on \(R\).
+					</li>
+					<li>
+						If \((N_x-M_y)/M\) is independent of \(x\) on \(R\) and we define \[
+						q(y)={N_x-M_y\over M}\] then \begin {equation} \label {eq:2.6.12}
+						\mu (y)=\pm e^{\int q(y)\,dy} \end {equation}
+						<a id="x1-16r12"></a>
+						is an integrating factor for <a href="#x1-14r11">(2.6.11)</a> on \(R\).
+					</li>
+				</ol>
 			</div>
-			<div class="indent" id="9133e687-5d97-43a9-88c8-00bb799c258e"></div>
+
 			<div id="fd35a725-18d6-4cf9-b8e6-8647337e2bca">
 				<span class="ptmb8t-">Proof</span>
 				(a) If \((M_y-N_x)/N\) is independent of \(y\), then <a href="#x1-9r8">(2.6.8)</a> holds with \(p=(M_y-N_x)/N\) and \(q\equiv 0\). Therefore \[ P(x)=\pm
@@ -192,12 +183,7 @@
 				that <a href="#x1-16r12">(2.6.12)</a> is an integrating factor for <a href="#x1-14r11">(2.6.11)</a> on \(R\). __
 			</div>
 			<div class="indent" id="cbdf9785-0452-4b74-9601-f8d9a1c18364">
-				The next two examples show how to apply Theorem&nbsp;
-				<a href="#x1-111">
-					2.6.1
-					<!-- tex4ht:ref: thmtype:2.6.1  -->
-				</a>
-				.
+				The next two examples show how to apply Theorem&nbsp;<a href="#x1-111">2.6.1</a>.
 			</div>
 			<div class="example" id="x1-171" style="--ex-number: 1">
 				<div>
@@ -214,12 +200,7 @@
 						\[ M=2xy^3-2x^3y^3-4xy^2+2x,\ N=3x^2y^2+4y\] and \[
 						M_y-N_x=(6xy^2-6x^3y^2-8xy)-6xy^2=-6x^3y^2-8xy\] so <a href="#x1-18r13">(2.6.13)</a>
 						isn’t exact. However, \[ {M_y-N_x\over N}=-{6x^3y^2+8xy\over
-						3x^2y^2+4y}=-2x \] is independent of \(y\), so Theorem&nbsp;
-						<a href="#x1-111">
-							2.6.1
-							<!-- tex4ht:ref: thmtype:2.6.1  -->
-						</a>
-						<span class="ptmb8t-">(a)</span>
+						3x^2y^2+4y}=-2x \] is independent of \(y\), so Theorem&nbsp;<a href="#x1-111">2.6.1(a)</a>
 						applies with \(p(x)=-2x\). Since \[ \int p (x)\,dx=-\int 2x\,dx=-x^2\]
 						\(\mu (x)=e^{-x^2}\) is an integrating factor. Multiplying <a href="#x1-18r13">(2.6.13)</a>
 						by \(\mu \) yields the exact equation \begin {equation} \label
@@ -289,17 +270,9 @@
 						In <a href="#x1-25r18">(2.6.18)</a>, \[ M=2xy^3,\quad N=3x^2y^2+x^2y^3+1\] and \[
 						M_y-N_x=6xy^2-(6xy^2+2xy^3)=-2xy^3\] so <a href="#x1-25r18">(2.6.18)</a>
 						isn’t exact. Moreover, \[ {M_y-N_x\over N}=-{2xy^3\over
-						3x^2y^2+x^2y^2+1} \] is not independent of \(y\), so Theorem&nbsp;
-						<a href="#x1-111">
-							2.6.1
-							<!-- tex4ht:ref: thmtype:2.6.1  -->
-						</a>
-						(a) does not apply. However, Theorem&nbsp;
-						<a href="#x1-111">
-							2.6.1
-							<!-- tex4ht:ref: thmtype:2.6.1  -->
-						</a>
-						(b) does apply, since \[ {N_x-M_y\over M}={2xy^3\over 2xy^3}=1 \] is
+						3x^2y^2+x^2y^2+1} \] is not independent of \(y\), so Theorem&nbsp;<a href="#x1-111">2.6.1(a)</a>
+						does not apply. However, Theorem&nbsp;<a href="#x1-111">2.6.1(b)</a>
+						does apply, since \[ {N_x-M_y\over M}={2xy^3\over 2xy^3}=1 \] is
 						independent of \(x\), so we can take \(q(y)=1\). Since \[ \int
 						q(y)\,dy=\int \,dy=y\] \(\mu (y)=e^y\) is an integrating factor.
 						Multiplying <a href="#x1-25r18">(2.6.18)</a>
