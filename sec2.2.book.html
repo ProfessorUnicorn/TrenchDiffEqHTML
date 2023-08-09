@@ -44,34 +44,61 @@
 			<div id="ef784ae1-8d03-43e6-8740-2ac28d9babe8">
 				A first order differential equation is
 				<span class="vocab">separable</span>
-				if it can be written as \begin {equation} \label {eq:2.2.1}
-				h(y) \frac{dy}{dx} =g(x)\end {equation}
+				if it can be written as 
+				\begin {equation} \label {eq:2.2.1}
+					h(y) \frac{dy}{dx} = g(x)
+				\end {equation}
 				<a id="x1-2r1"></a>
-				where the left side is a product of \(\displaystyle \frac{dy}{dx}\) and a function of \(y\) and the
-				right side is a function of \(x\). Rewriting a separable differential
-				equation in this form is called
-				<span class="vocab">separation of variables.</span>
-				In Section&nbsp;2.1 we used separation of variables to solve homogeneous
-				linear equations. In this section we’ll apply this method to nonlinear
-				equations.
+				where the left side is a product of the derivative \( \frac{dy}{dx}\) and a function of the <span class="vocab">dependent variable</span> \(y\) and the right side is a function of the <span class="vocab">independent variable</span> \(x\). Rewriting a separable differential
+				equation in this form is called <span class="vocab">separation of variables</span>
+				and can be used to solve linear and nonlinear equations.
 			</div>
 			<div class="indent" id="28f2bd1b-285e-40e5-991e-cccdc74f3330">
-				To see how to solve <a href="#x1-2r1">(2.2.1)</a>, let’s first assume that \(y\) is a solution. Let \(G(x)\) and \(H(y)\)
-				be antiderivatives of \(g(x)\) and \(h(y)\); that is, \begin {equation}
-				\label {eq:2.2.2} \left.\frac{dH}{dx}\right|_y = h(y)\quad \mbox{ and } \quad \left.\frac{dG}{dx}\right|_x = g(x)\end
-				{equation}
+				To understand how to solve <a href="#x1-2r1">(2.2.1)</a>, we'll first assume that \(y\) is a solution. Let \(G(x)\) be antiderivative of \(g(x)\) and let \(H(y)\) be antiderivative of \(h(y)\) then rewriting them as derivatives using <span class="vocab">Leibniz notation</span>, we have:
+				
+				\begin {equation} \label {eq:2.2.2} 
+					\frac{dH}{dy}
+					= h(y) \quad\text{and}\quad \frac{dG}{dx} 
+					= g(x)
+				\end{equation}
 				<a id="x1-3r2"></a>
-				Then, from the chain rule, \[ {d\over dx}H(y(x)) = \left.\frac{dH}{dx}\right|_{y(x)} \left.\frac{dy}{dx}\right|_x = h(y) \left.\frac{dy}{dx}\right|_x\]
-				Therefore <a href="#x1-2r1">(2.2.1)</a> is equivalent to \[ {d\over dx}H(y(x))={d\over dx}G(x)\] Integrating
-				both sides of this equation and combining the constants of integration
-				yields \begin {equation} \label {eq:2.2.3} H(y(x))=G(x)+c\end {equation}
+
+				Then, from the <span class="vocab">chain rule</span> 
+				\[ 
+					{d\over dx} \Bigg[ H \Big( y(x) \Big) \Bigg] 
+						= \frac{dH}{dy} \cdot \frac{dy}{dx}
+						= h(y) \frac{dy}{dx}
+				\]
+				Therefore <a href="#x1-2r1">(2.2.1)</a> is equivalent to 
+				\[ 
+					h(y) \frac{dy}{dx} = g(x)
+					\Longrightarrow
+					\frac{dH}{dy} \cdot \frac{dy}{dx} = \frac{dG}{dx}
+					\Longrightarrow
+					{d\over dx} \Big[ H(y) \Big] = \frac{d}{dx} \Big[ G(x) \Big]
+				\] 
+				Finding the antiderivative of both sides yields 
 				<a id="x1-4r3"></a>
+
+				\begin{align}  \label{eq:2.2.3}
+					{d\over dx} \Big[ H(y) \Big] = & \frac{d}{dx} \Big[ G(x) \Big] \nonumber \\
+					\int {d\over dx} \Big[ H(y) \Big] dx = & \int \frac{d}{dx} \Big[ G(x) \Big] dx \nonumber \\
+					H(y) = & G(x) + c \\
+				\end{align}
+				
 			</div>
 			<div class="indent" id="38f2bd1b-285e-40e5-991e-cccdc74f3330">
 				Although we derived this equation on the assumption that \(y\) is a
-				solution of <a href="#x1-2r1">(2.2.1)</a>, we can now view it differently: Any differentiable function \(y\) that
-				satisfies <a href="#x1-4r3">(2.2.3)</a> for some constant \(c\) is a solution of <a href="#x1-2r1">(2.2.1)</a>. To see this, we differentiate both sides of <a href="#x1-4r3">(2.2.3)</a>, using the chain rule on the left, to obtain \[ \left.\frac{dH}{dx}\right|_{y(x)} \left.\frac{dy}{dx}\right|_x = \left.\frac{dG}{dx}\right|_x \]
-				which is equivalent to \[ h(y(x)) \left.\frac{dy}{dx}\right|_x =g(x) \] because of <a href="#x1-3r2">(2.2.2)</a>.
+				solution of <a href="#x1-2r1">(2.2.1)</a>, but now we can take a different perspective: Ant differentiable functions \(y\) that satisfies <a href="#x1-4r3">(2.2.3)</a> for some constant \(c\) is a solution of <a href="#x1-2r1">(2.2.1)</a>. 
+				To verify this, we differentiate both sides of <a href="#x1-4r3">(2.2.3)</a>, using the chain rule on the left, to obtain 
+
+				\begin{align*} 
+					H\Big(y(x)\Big) = & G(x) + c \\
+					\frac{d}{dx} \Bigg[ H(y) \Bigg] = & \frac{d}{dx} \Bigg[ G(x) + c \Bigg] \\	
+					\frac{dH}{dy} \cdot \frac{dy}{dx} = & \frac{dG}{dx} + 0 \\
+					h(y)	\frac{dy}{dx} = & g(x)
+				\end{align*}
+
 			</div>
 			<div class="indent" id="b9eeec21-afc4-40e3-b62e-cec4fa5bd2bd">
 				In conclusion, to solve <a href="#x1-2r1">(2.2.1)</a> it suffices to find functions \(G=G(x)\) and \(H=H(y)\) that satisfy <a href="#x1-3r2">(2.2.2)</a>. Then any differentiable function \(y=y(x)\) that satisfies <a href="#x1-4r3">(2.2.3)</a> is a solution of <a href="#x1-2r1">(2.2.1)</a>.
@@ -84,9 +111,19 @@
 				<details class="solution" id="90f5caf1-202c-4a11-a99a-51ccc941688f">
 					<summary>Solution</summary>
 					<div id="61333e64-55a8-4b72-a76c-c7b47d7370a7">
-						&nbsp;Separating variables yields \[ \frac{dy}{dx} \frac{1}{1+y^2}=x\] Integrating
-						yields \[ \tan ^{-1}y={x^2\over 2}+c \] Therefore \[ y=\tan \left
-						({x^2\over 2}+c\right )\]
+						&nbsp;Separating variables then finding the antiderivative:
+
+						\begin{align*} 
+							\frac{dy}{dx} = & x(1+y^2) \\
+							\frac{1}{1+y^2}\frac{dy}{dx} = & x \\
+							\int \Bigg( \frac{1}{1+y^2}\frac{dy}{dx} \Bigg) dx = & \int \Big( x \Big) dx \\
+							\int \frac{1}{1+\underset{\tan \theta}{\underbrace{y}}^2} \underset{\sec^2 \theta}{\underbrace{dy}} = & \int x dx \\
+							\int \frac{\sec^2 \theta}{1+\tan^2 \theta} d\theta = & \int x dx \\
+							\int d\theta = & \int x dx \\
+							\theta = & \frac{1}{2}x^2 + c \\
+							\tan^{-1} y = & \frac{1}{2}x^2 + c \\
+							y = & \tan \left(\frac{1}{2}x^2 + c\right) \\
+						\end{align*}
 					</div>
 				</details>
 			</div>
@@ -95,18 +132,23 @@
 				<ol>
 					<li>
 						<a id="x1-8r4"></a>
-						Solve the equation \begin {equation} \label {eq:2.2.4} \frac{dy}{dx}=-{x\over
+						Find the general solution 
+						\begin {equation} \label {eq:2.2.4} \frac{dy}{dx}=-{x\over
 						y}\end {equation}
 					</li>
 					<li>
 						<a id="x1-10r5"></a>
-						Solve the initial value problem \begin {equation} \label {eq:2.2.5}
-						\frac{dy}{dx}=-{x\over y}, \quad y(1)=1\end {equation}
+						Solve the initial value problem (IVP) 
+						\begin {equation} \label {eq:2.2.5}
+						\frac{dy}{dx}=-{x\over y} \quad\quad y(1)=1
+						\end {equation}
 					</li>
 					<li>
 						<a id="x1-12r6"></a>
-						Solve the initial value problem \begin {equation} \label {eq:2.2.6}
-						\frac{dy}{dx}=-{x\over y}, \quad y(1)=-2\end {equation}
+						Solve the initial value problem (IVP)
+						\begin {equation} \label {eq:2.2.6}
+						\frac{dy}{dx}=-{x\over y} \quad\quad y(1)=-2
+						\end {equation}
 					</li>
 				</ol>
 		
@@ -115,32 +157,82 @@
 
 					<ol>
 						<li>
-							Separating variables in <a href="#x1-8r4">(2.2.4)</a> yields \[ y \frac{dy}{dx} = -x\] Integrating yields \[ {y^2\over 2}=-{x^2\over
-							2}+c \quad \mbox { or equivalently } \quad x^2+y^2=2c\] The last
-							equation shows that \(c\) must be positive if \(y\) is to be a solution of
-							<a href="#x1-8r4">(2.2.4)</a> on an open interval. Therefore we let \(2c=a^2\) (with \(a &gt; 0\)) and
-							rewrite the last equation as <a id="x1-13r7"></a> \begin {equation} \label {eq:2.2.7}
-							x^2+y^2=a^2\end {equation}
-							This equation has two differentiable solutions for \(y\) in terms of \(x\):
-							<a id="x1-14r8"></a> \begin {equation} \label {eq:2.2.8} y=\phantom {-} \sqrt {a^2-x^2},
-							\quad -a &lt; x &lt; a\end {equation}
-							and <a id="x1-15r9"></a> \begin {equation} \label {eq:2.2.9} y= - \sqrt {a^2-x^2}, \quad -a
-							&lt; x &lt; a\end {equation}
-							The <span class="vocab">solution curves</span> defined by <a href="#x1-14r8">(2.2.8)</a> are semicircles
-							above the \(x\)-axis and those defined by <a href="#x1-15r9">(2.2.9)</a> are semicircles below
-							the \(x\)-axis (Figure&nbsp;<a href="#-a-y-x-x-b-y-x-x-">2.2.1</a>).
+							&nbsp;Separating variables in <a href="#x1-8r4">(2.2.4)</a> then finding the antiderivative:
+							\begin{align*} 
+								\frac{dy}{dx} = & -\frac{x}{y} \\
+								y\frac{dy}{dx} = & -x \\
+								\int \Bigg( y\frac{dy}{dx} \Bigg) dx = & \int -x dx \\
+								\int y dy = & - \int x dx \\
+								\frac{1}{2}y^2 = & -\frac{1}{2}x^2 + k \\
+								\frac{1}{2}y^2 + \frac{1}{2}x^2 = & + k \\
+								y^2 + x^2 = & 2 k \\
+								y^2 + x^2 = & c \\	
+							\end{align*}
+
+							Since the arbitrary constant is equal to positive quantities (squares being added), then the constant itself represents a positive value so we can replace it with an expression that is always positive. We'll use \( a^2 \) as our arbitrary constant, so we obtain:
+
+							<a id="x1-13r7"></a>
+							\begin{align} \label {eq:2.2.7}
+								y^2 + x^2 = & c \Longrightarrow y^2 + x^2 = a^2
+							\end{align}
+
+
+
+							This is an <span class="vocab">implicit</span> representation of our solution \( y \) but we can solve it explicitly which results in 2 different differentiable functions:
+
+							<a id="x1-14r8"></a>
+							\begin{equation}\label {eq:2.2.8}
+								y(x) = \sqrt{a^2-x^2} \quad\text{or}\quad y(x) = -\sqrt{a^2-x^2} 
+							\end{equation}
+
+
+							
+
+						
+
+
+							The <span class="vocab">solution curves</span> defined by \( y(x) = \sqrt{a^2-x^2} \) 
+							are semicircles above the \(x\)-axis and those defined by \( y(x) = -\sqrt{a^2-x^2} \) 
+							are semicircles below the \(x\)-axis (Figure&nbsp;<a href="#-a-y-x-x-b-y-x-x-">2.2.1</a>). The <span class="vocab">interval of validity</span> for both is 
+							
+							\begin{equation}\label {eq:2.2.9}
+							(-a,a)
+							\end{equation}
+
+							<div class="reading-exercise">
+								Solve <a href="#x1-13r7">(2.2.7)</a> explicitly for \(y\) to get <a href="x1-14r8">(2.2.8)</a>
+							</div>   
+							<div class="reading-exercise">
+								Find the domain of <a href="x1-14r8">(2.2.8)</a>
+							</div>  
 						</li>
 						<li>
-							The solution of <a href="#x1-10r5">(2.2.5)</a> is positive when \(x=1\); hence, it is of the
-							form <a href="#x1-14r8">(2.2.8)</a>. Substituting \(x=1\) and \(y=1\) into <a href="#x1-13r7">(2.2.7)</a> to satisfy the
-							initial condition yields \(a^2=2\); hence, the solution
-							of <a href="#x1-10r5">(2.2.5)</a> is \[ y=\sqrt {2-x^2}, \quad - \sqrt {2}&lt; x &lt; \sqrt {2}\]
+							To solve <a href="#x1-10r5">(2.2.5)</a> notice the initial condition \(y(1)=1\) indicates a positive value, so the function \( y(x) = \sqrt{a^2-x^2} \) will be used. Substituting the initial condition and solving for the arbitrary constant:
+
+							\begin{align*} 
+								y(x) =  \sqrt{a^2-x^2} \Longrightarrow
+								\underset{1}{\underbrace{y(1)}} = &  \sqrt{a^2-1^2} \\	
+								1 = &  \sqrt{a^2-1} \\	
+								1^2 = & a^2-1 \Longrightarrow a^2 = 2
+							\end{align*}
+							
+							Substituting \( a^2 = 2 \) into <a href="#x1-14r8">(2.2.8)</a>, we obtain the solution to the IVP:
+							 \[ y=\sqrt {2-x^2}\]
+							With interval of validity \((-\sqrt{2},\sqrt{2})\)
 						</li>
 						<li>
-							The solution of <a href="#x1-12r6">(2.2.6)</a> is negative when \(x=1\) and is therefore of the
-							form <a href="#x1-15r9">(2.2.9)</a>. Substituting \(x=1\) and \(y=-2\) into <a href="#x1-13r7">(2.2.7)</a> to satisfy the
-							initial condition yields \(a^2=5\) Hence, the solution of <a href="#x1-12r6">(2.2.6)</a> is
-							\[ y=- \sqrt {5-x^2}, \quad -\sqrt {5} &lt; x &lt; \sqrt {5}\]
+							To solve <a href="#x1-12r6">(2.2.6)</a> notice the  initial condition \(y(1)=-2\) indicates a negative value, so the function \( y(x) = -\sqrt{a^2-x^2} \) will be used. Substituting the initial condition and solving for the arbitrary constant:
+
+							\begin{align*} 
+								y(x) =  -\sqrt{a^2-x^2} \Longrightarrow
+								\underset{-2}{\underbrace{y(1)}} = &  \sqrt{a^2-1^2} \\	
+								-2 = &  -\sqrt{a^2-1} \\	
+								4 = & a^2-1 \Longrightarrow a^2 = 5
+							\end{align*}
+							
+							Substituting \( a^2 = 5 \) into <a href="#x1-14r8">(2.2.8)</a>, we obtain the solution to the IVP:
+							 \[ y=-\sqrt {5-x^2}\]
+							With interval of validity \((-\sqrt{5},\sqrt{5})\)
 						</li>
 					</ol>
 				</details>
@@ -156,9 +248,9 @@
 				<span class="id">Figure&nbsp;2.2.1</span>
 				<span class="content">
 					<span class="ptmb8t-">(a)</span>
-					\(y=\sqrt {2-x^{2}}\), \(-\sqrt {2}&lt;x&lt;\sqrt {2}\);
+					\(y=\sqrt {2-x^{2}} \quad \quad \) 
 					<span class="ptmb8t-">(b)</span>
-					\(y=-\sqrt {5-x^{2}}\), \(-\sqrt {5}&lt;x&lt;\sqrt {5}\)
+					\(y=-\sqrt {5-x^{2}}\)
 				</span>
 			</figcaption>
 		</figure>
@@ -198,28 +290,28 @@
 					\(y(x_0)=y_0\) and <a id="x1-19r11"></a>
 					\begin {equation} \label {eq:2.2.11} H(y)=G(x)+c \end {equation}
 					
-					for \(a_1&lt;x&lt;b_1\). Therefore \(y\) is a solution of the
-					initial value problem <a id="x1-20r12"></a> \begin {equation} \label {eq:2.2.12}
+					for \(a_1&lt;x&lt;b_1\). Therefore \(y(x) \) is a solution of the
+					IVP <a id="x1-20r12"></a> \begin {equation} \label {eq:2.2.12}
 					h(y) \frac{dy}{dx} =g(x),\quad y(x_0)=x_0\end {equation}
 				</div>
 			</div>
 
 			<div class="indent" id="a0684f78-8a21-4147-951a-fa94437638c5">
-				It’s convenient to say that <a href="#x1-19r11">(2.2.11)</a> with \(c\) arbitrary is an
+				It’s convenient to say that <a href="#x1-19r11">(2.2.11)</a> with arbitrary constant \(c\) is an
 				<span class="vocab">implicit solution</span>
 				of \(h(y) \frac{dy}{dx} = g(x)\). Curves defined by <a href="#x1-19r11">(2.2.11)</a> are
 				<span class="vocab">integral curves</span>
 				of \(h(y) \frac{dy}{dx} = g(x)\). If \(c\) satisfies <a href="#x1-18r10">(2.2.10)</a>, we’ll say that <a href="#x1-19r11">(2.2.11)</a> is an
-				<span class="vocab">implicit solution of the initial value problem</span>
+				<span class="vocab">implicit solution</span> of the <span class="vocab">IVP</span>
 				<a href="#x1-20r12">(2.2.12)</a>. However, keep these points in mind:
 			</div>
 			<ul class="itemize1" id="abbc2760-d2f7-4cbf-9bda-0da0b2ea7425">
 				<li class="itemize">
 					For some choices of \(c\) there may not be any differentiable functions
-					\(y\) that satisfy <a href="#x1-19r11">(2.2.11)</a>.
+					\(y\) that satisfy <a href="#x1-19r11">(2.2.11)</a>
 				</li>
 				<li class="itemize">
-					The function \(y\) in <a href="#x1-19r11">(2.2.11)</a> (not <a href="#x1-19r11">(2.2.11)</a> itself) is a solution of \(\displaystyle h(y) \frac{dy}{dx} =g(x)\).
+					The function \(y=y(x)\) in <a href="#x1-19r11">(2.2.11)</a> is a solution of \(\displaystyle h(y) \frac{dy}{dx} =g(x)\)
 				</li>
 			</ul>
 			<div class="example" id="x1-213" style="--ex-number: 3">
@@ -242,15 +334,36 @@
 					<ol>
 						<li>
 							<a id="x1-26r15"></a>
-							Separating variables yields \[ (5y^4+1) \frac{dy}{dx} =2x+1\] Integrating yields the
-							implicit solution \begin {equation} \label {eq:2.2.15} y^5+y=x^2+x+ c\end
-							{equation} of <a href="#x1-23r13">(2.2.13)</a>.
+							Separating variables in <a href="#x1-23r13">(2.2.13)</a> yields 
+							
+							\begin{align}\label {eq:2.2.15}
+								\frac{dy}{dx} = & \frac{2x+1}{5y^4+1} \nonumber \\
+								(5y^4+1)\frac{dy}{dx} = & 2x+1 \nonumber \\
+								\int (5y^4+1)\frac{dy}{dx} dx = & \int \left(2x+1\right) dx \nonumber \\
+								5\int y^4 dy + \int dy = & 2\int x dx + \int dx \nonumber \\
+								5\left(\frac{1}{5}y^5\right) + y = & 2\left(\frac{1}{2}x^2\right) + x + c \nonumber \\
+								\underset{H(y)}{\underbrace{y^5 + y}} = & \underset{G(x)}{\underbrace{x^2 + x}}+ c
+							\end{align}
+							
+							We call this the <span class="vocab">implicit solution</span> and notice in this case it is not possible to solve explicitly for \( y \)
 						</li>
 						<li>
-							Imposing the initial condition \(y(2)=1\) in <a href="#x1-26r15">(2.2.15)</a> yields \(1+1=4+2+c\), so \(c=-4\). Therefore \[ y^5+y=x^2+x-4 \] is an
-							implicit solution of the initial value problem <a href="#x1-25r14">(2.2.14)</a>. Although more than one differentiable function \(y=y(x)\) satisfies
-							<a href="#x1-23r13">(2.2.13)</a> near \(x=1\), it can be shown that there’s only one such function that
-							satisfies the initial condition \(y(1)=2\).
+							We already have our implicit solution <a href="#x1-26r15">(2.2.15)</a> so we just substitute in our initial condition \( y(2)=1 \) to solve for the constant \( c \)
+
+							\begin{align*}
+								y^5 + y = & x^2 + x + c \\
+								\Big[ y(x) \Big]^5 + y(x) = & x^2 + x + c \\
+								\Big[ \underset{1}{\underbrace{y(2)}} \Big]^5 + y(2) = & (2)^2 + (2) + c \\
+								\big[ 1 \big]^5 + 1 = & 4 + 2 + c \\
+								2 = & 6 + c \\
+								c = -4 
+							\end{align*}
+							
+							Substituting in \( c = -4  \) into <a href="#x1-26r15">(2.2.15)</a> 
+							
+							\begin{equation*} 
+								y^5 + y = x^2 + x -4 
+							\end{equation*}
 						</li>
 					</ol>
 				</details>
@@ -287,46 +400,67 @@
 			<summary>Constant Solutions of Separable Equations</summary>
 		
 			<div id="a0a064fd-571e-4b46-8771-898c127c0380">
-				An equation of the form \[ \frac{dy}{dx} = g(x)p(y) \] is separable, since it can be
-				rewritten as \[ {1\over p(y)} \frac{dy}{dx} = g(x)\] However, the division by \(p(y)\)
-				is not legitimate if \(p(y)=0\) for some values of \(y\). The next two
-				examples show how to deal with this problem.
+				Both linear and nonlinear equations of the form \( \frac{dy}{dx}=g(x)p(y) \) are always 
+				<span class="vocab">separable</span>. Simply divide by \( p(y) \) and find the antiderivative of  both sides:
+
+				\begin{align*}
+					\frac{dy}{dx} = & g(x)p(y) \\
+					\frac{1}{p(y)}\frac{dy}{dx} = & g(x) \\
+					\int \Bigg( \frac{1}{p(y)}\frac{dy}{dx} \Bigg) dx = & \int g(x) dx \\	
+				\end{align*}
+
+				However, the division by \( p(y) \) will only work if \( p(y) \) has no zeros. When \( p(y) \) has a zero, we treat it similarly to how we treated <span class="vocab">trivial solutions</span>, first considering the trivial solution case individually, and then assuming \( y \) is not equal to the individual values. We will do the same for <span class="vocab">constant solutions</span> (<span class="vocab">equilibrium solutions</span>)
 			</div>
 			<div class="example" id="x1-284" style="--ex-number: 4">
 				<div>
 					<a id="x1-29r16"></a>
-					Find all solutions of \begin {equation} \label {eq:2.2.16} \frac{dy}{dx} = 2xy^2\end
-					{equation}
+					Find the general solution
+					\begin {equation} \label {eq:2.2.16} 
+						\frac{dy}{dx} = 2xy^2
+					\end{equation}
 				</div>
 
 				<details class="solution" id="d414eac6-8138-4482-9a8c-04597554253d">
 					<summary>Solution</summary>
 
 					<div id="70a80c59-5742-4e67-8f3d-a6758858c901">
-						Here we must divide by \(p(y)=y^2\) to separate variables. This
-						isn’t legitimate if \(y\) is a solution of
-						<a href="#x1-29r16">
-							(2.2.16)
-						</a>
-						that equals zero for some value of \(x\). One such solution can be found
-						by inspection: \(y \equiv 0\). Now suppose \(y\) is a solution of
-						<a href="#x1-29r16">
-							(2.2.16)
-						</a>
-						that isn’t identically zero. Since \(y\) is continuous there must be an
-						interval on which \(y\) is never zero. Since division by \(y^2\) is
-						legitimate for \(x\) in this interval, we can separate variables in
-						<a href="#x1-29r16">
-							(2.2.16)
-						</a>
-						to obtain \[ \frac{dy}{dx} \frac{1}{y^2}=2x\] Integrating this yields \[ -{1\over
-						y}=x^2+c\] which is equivalent to \begin {equation} \label {eq:2.2.17}
-						y=-{1\over x^2+c}\end {equation}
-						<a id="x1-30r17"></a>
+						<div>
+							First notice <a href = "#x1-29r16">(2.1.16)</a> has a <span class = "vocab">trivial solution</span> \( y(x) \equiv 0 \) which we can verify by substitution:
+							\begin{align*} 	
+								\frac{dy}{dx} = & 2xy^2 \\
+								\frac{d}{dx} \Big( 0 \Big) = & 2x \Big(0\Big)^2 \quad \checkmark \\
+							\end{align*}
+						</div>
+
+						Now we seek nontrivial solution where \( y\ne0 \) and divide by  \( y^2 \) to separate the variables
+
+						\begin{align} 	
+							\frac{dy}{dx} = & 2xy^2 \nonumber \\
+							\frac{1}{y^2}\frac{dy}{dx} = & 2x \nonumber \\	
+							\int \Big( \frac{1}{y^2}\frac{dy}{dx} \Big) dx = & \int \Big( 2x \Big) dx \nonumber \\
+							\int y^{-2} dy = & 2\int x dx \nonumber \\
+							-1y^{-1} = & 2\left(\frac{1}{2}x^2\right) + c \nonumber \\
+							-\frac{1}{y} = & x^2 + k \nonumber \\
+							\frac{1}{y} = & - x^2 \underset{c}{\underbrace{-k}} \nonumber \\
+							\frac{1}{y} = & c - x^2 \nonumber \\
+							1 = & y \left( c - x^2 \right) \nonumber \\
+							y = & \frac{1}{c - x^2}
+						\end{align}
 					</div>
 
 					<div class="indent" id="fcc9b539-296f-496a-84cb-602d607bc042">
-						We’ve now shown that if \(y\) is a solution of <a href="#x1-29r16">(2.2.16)</a> that is not identically zero, then \(y\) must be of the form <a href="#x1-30r17">(2.2.17)</a>. By substituting <a href="#x1-30r17">(2.2.17)</a> into <a href="#x1-29r16">(2.2.16)</a>, you can verify that <a href="#x1-30r17">(2.2.17)</a> is a solution of <a href="#x1-29r16">(2.2.16)</a>. Thus, solutions of <a href="#x1-29r16">(2.2.16)</a> are \(y\equiv 0\) and the functions of the form <a href="#x1-30r17">(2.2.17)</a>. Note that the solution \(y\equiv 0\) isn’t of the form <a href="#x1-30r17">(2.2.17)</a> for any value of \(c\).
+						We’ve shown that if \(y\) is a solution of <a href="#x1-29r16">(2.2.16)</a> that is not identically zero, then \(y\) must be of the form of the <span class = "vocab">one-parameter family</span> given by <a href="#x1-30r17">(2.2.17)</a>. Notice that regardless of any choice of \( c \), there is no way to obtain the trivial solution. When a solution exists that is not from the one-parameter family. we call it a <span class = "vocab">singular solution</span>. Thus our general solution includes both:
+						
+						\begin{equation*}
+							y(x)=0 \quad \quad y(x) = \frac{1}{c - x^2}
+						\end{equation*}
+
+						<div class="reading-exercise">
+							Find the domain of <a href="#x1-30r17">(2.2.17)</a> and determine possible intervals of validity 
+						</div>  
+						<div class="reading-exercise">
+							Verify <a href="#x1-30r17">(2.2.17)</a> is a solution of <a href="#x1-29r16">(2.2.16)</a> by differentiating and substituting
+						</div>  
 					</div>
 				</details>
 			</div>
@@ -360,28 +494,97 @@
 			<div class="example" id="x1-325" style="--ex-number: 5">
 				<div>
 					<a id="x1-33r18"></a>
-					Find all solutions of \begin {equation} \label {eq:2.2.18} \frac{dy}{dx} = {1\over
-					2}x(1-y^2)\end {equation}
+					Find the general solution
+					\begin {equation} \label {eq:2.2.18} 
+						\frac{dy}{dx} = {1\over2}x(1-y^2)
+					\end {equation}
 				</div>
 			
 				<details class="solution" id="1531706a-a9c5-413f-8f0a-da9d7b75c4a8">
 					<summary>Solution</summary>
 					<div id="333ddafc-87d9-4d01-acf9-1461d048d7d8">
-						Here we must divide by \(p(y)=1-y^2\) to separate variables. This
-						isn’t legitimate if \(y\) is a solution of <a href="#x1-33r18">(2.2.18)</a> that equals \(\pm 1\) for some value of \(x\). Two such solutions can be
-						found by inspection: \(y \equiv 1\) and \(y\equiv -1\). Now suppose \(y\)
-						is a solution of <a href="#x1-33r18">(2.2.18)</a> such that \(1-y^2\) isn’t identically zero. Since \(1-y^2\) is
-						continuous there must be an interval on which \(1-y^2\) is never zero.
-						Since division by \(1-y^2\) is legitimate for \(x\) in this interval, we
-						can separate variables in <a href="#x1-33r18">(2.2.18)</a> to obtain \[ \frac{dy}{dx} {2\over y^2-1}=-x\] A partial fraction expansion on the
-						left yields \[ \left [{1\over y-1}-{1\over y+1}\right ] \frac{dy}{dx} = -x\] and
-						integrating yields \[ \ln \left |{y-1\over y+1}\right |=-{x^2\over 2}+k\]
-						hence, \[ \left |{y-1\over y+1}\right |=e^ke^{-x^2/2}\] Since \(y(x)\ne
-						\pm 1\) for \(x\) on the interval under discussion, the quantity
-						\((y-1)/(y+1)\) can’t change sign in this interval. Therefore we can
-						rewrite the last equation as \[ {y-1\over y+1}=ce^{-x^2/2}\] where \(c=\pm
-						e^k\), depending upon the sign of \((y-1)/(y+1)\) on the interval. Solving
-						for \(y\) yields \begin {equation} \label {eq:2.2.19}
+						Although there is no <span class = "vocab">trivial solution</span> for <a href="#x1-33r18">(2.2.18)</a>, there are other <span class = "vocab">constant solutions</span>. Notice that \( y=1 \) and  \( y=-1 \) are both solutions:				
+
+						\begin{align*} 	
+							\frac{d}{dx} \Big( 1 \Big) = {1\over2}x \Big( 1- (1)^2 \Big) 
+							\Longrightarrow
+							0 = & {1\over2}x \Big( 0 \Big) \quad \checkmark \\
+						\end{align*}
+
+						and
+
+						\begin{align*} 	
+							\frac{d}{dx} \Big( -1 \Big) =  {1\over2}x \Big( 1- (-1)^2 \Big)
+							\Longrightarrow 
+							0 = & {1\over2}x \Big( 0 \Big) \quad \checkmark \\
+						\end{align*}
+
+						These <span class = "vocab">constant solutions</span> are nontrivial and called <span class = "vocab">equilibrium solutions</span>. Now we can proceed to separate variables here, which requires dividing by \( (1-y^2) \), which is fine to do so long as we assume \( y \ne 1 \) and ( y \ne -1 \)
+
+						\begin{align*} 	
+							\frac{dy}{dx} = & \frac{1}{2}x(1-y^2) \\
+							\frac{dy}{dx} = & -\frac{1}{2}x(y^2-1) \\
+							\frac{1}{y^2-1}\frac{dy}{dx} = & \frac{1}{2}x \\		
+							\int \Bigg( \frac{1}{y^2-1}\frac{dy}{dx} \Bigg) dx = &\int \frac{1}{2}x dx \\	
+							\int \frac{1}{(y-1)(y+1)}dy = & \frac{1}{2}\int x dx \\						
+						\end{align*}
+
+						Finding the antiderivative on the right is simple enough using the <span class = "vocab">power rule</span> but the antiderivative on the left is more complicated, requiring <span class = "vocab">partial fraction decomposition</span>:
+
+						\begin{align*} 	
+							\frac{1}{(y-1)(y+1)} 
+							= \frac{A}{y-1}+\frac{B}{y+1}		
+							= \frac{(A+B)y+(A-B)}{(y-1)(y+1)} \\	
+						\end{align*}
+
+						To make the numerators \( 1 = (A+B)y+(A-B) \) equal, equate the coefficients to obtain the system of equations which we can add to find \(A\)
+						
+						\begin{align*}
+							\left\{
+								\begin{array}{r l}
+									A + B = & 0 \\
+									A - B = & 1 \\
+								\end{array}
+							\right.	
+							=
+							\left\{
+								\begin{array}{r l}
+									B = & -A \\
+									2A = & 1 \\
+								\end{array}
+							\right.	
+							=
+							\left\{
+								\begin{array}{r l}
+									B = & -\frac{1}{2} \\
+									A = & \frac{1}{2} \\
+								\end{array}
+							\right.									 		
+						\end{align*}
+
+						Substituting in these values we can decompose the fraction on the left:
+						
+						\begin{align*} 		
+							\int \frac{1}{(y-1)(y+1)}dy = & \frac{1}{2}\int x dx \\						
+							\frac{1}{2}\int \frac{1}{y-1}dy - \frac{1}{2}\int \frac{1}{y+1}dy = & \frac{1}{2}\int x dx \\						
+							\int \frac{1}{\underset{u}{\underbrace{y-1}}} \underset{du}{\underbrace{dy}} -\int \frac{1}{\underset{v}{\underbrace{y+1}}} \underset{dv}{\underbrace{dy}}  = & -\int x dx \\	
+							\int \frac{1}{u}du - \int \frac{1}{v}dv = &  -\int x dx \\
+							\ln \left| u \right| - \ln \left| v \right| = &  -\frac{1}{2} x^2 + k \\
+							\ln \left| \frac{y-1}{y+1} \right| = & -\frac{1}{2}x^2 + k \\	
+							\left| \frac{y-1}{y+1} \right| = & e^{-\frac{1}{2}x^2} e^{k} = Ke^{-\frac{1}{2}x^2}\\
+							\frac{y-1}{y+1} = Ke^{-\frac{1}{2}x^2} \quad & \text{or} \quad \frac{y-1}{y+1} = -Ke^{-\frac{1}{2}x^2} \\	
+							\frac{y-1}{y+1} =& ce^{-\frac{1}{2}x^2}										
+						\end{align*}
+						
+						So we can represent this <span class = "vocab">one-parameter family</span> by simply:
+
+						\begin{align*} 		
+							\frac{y-1}{y+1} =& ce^{-\frac{1}{2}x^2}										
+						\end{align*}
+
+						Although this representation is currently implicit, we can solve explicitly for \( y \)
+						
+						\begin {equation} \label {eq:2.2.19}
 						y={1+ce^{-x^2/2}\over 1-ce^{-x^2/2}}\end {equation}
 						<a id="x1-34r19"></a>
 					</div>
