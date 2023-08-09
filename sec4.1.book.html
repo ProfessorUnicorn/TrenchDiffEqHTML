@@ -41,8 +41,8 @@
 		<div id="9adec3d5-d06b-47f7-afe2-ec56d442e72e">
 			Since the applications in this section deal with functions of time, we’ll
 			denote the independent variable by \(t\). If \(Q\) is a function of \(t\),
-			\(Q'\) will denote the derivative of \(Q\) with respect to \(t\); thus, \[
-			Q'={dQ\over dt}\]
+			\(\dot{Q}\) will denote the derivative of \(Q\) with respect to \(t\); thus, \[
+			\dot{Q}={dQ\over dt}\]
 		</div>
 		<div id="c654329d-767e-4062-b324-81bd2ccd398f">
 			<span id="textcolor1">Exponential Growth and Decay</span>
@@ -50,21 +50,20 @@
 		<div class="indent" id="374b422e-a054-4dfd-b251-64e569628f6d"></div>
 		<div id="4fc1fa2b-1afa-43c3-b86f-e529860f0784">
 			One of the most common mathematical models for a physical process is the
-			<span class="vocab">exponential model</span>
-			, where it’s assumed that the rate of change of a quantity \(Q\) is
-			proportional to \(Q\); thus \begin {equation} \label {eq:4.1.1} Q'=aQ\end
+			<span class="vocab">exponential model</span>, where it’s assumed that the
+			rate of change of a quantity \(Q\) is
+			proportional to \(Q\); thus \begin {equation} \label {eq:4.1.1} \dot{Q}=aQ\end
 			{equation}
 			<a id="x1-2r1"></a>
 			where \(a\) is the constant of proportionality.
 		</div>
 		<div class="indent" id="c9725bab-0611-4c2d-a686-ec8c3547b498">
-			From Example
-			<span class="ptmb8t-">3</span>
-			, the general solution of <a href="#x1-2r1">(4.1.1)</a> is \[ Q=ce^{at} \] and the solution of the initial value problem \[
-			Q'=aQ, \quad Q(t_0)=Q_0 \] is \begin {equation} \label {eq:4.1.2}
+			From Example <span class="ptmb8t-">3</span>,
+			the general solution of <a href="#x1-2r1">(4.1.1)</a> is \[ Q=ce^{at} \] and the solution of the initial value problem \[
+			\dot{Q}=aQ, \quad Q(t_0)=Q_0 \] is \begin {equation} \label {eq:4.1.2}
 			Q=Q_0e^{a(t-t_0)}\end {equation}
 			<a id="x1-3r2"></a>
-			Since the solutions of \(Q'=aQ\) are exponential functions, we say that a
+			Since the solutions of \(\dot{Q}=aQ\) are exponential functions, we say that a
 			quantity \(Q\) that satisfies this equation
 			<span class="vocab">grows exponentially</span>
 			if \(a &gt; 0\), or
@@ -100,8 +99,8 @@
 			replace the negative constant \(a\) by \(-k\), where \(k\) is a positive
 			number that we’ll call the
 			<span class="vocab">decay constant</span>
-			of the material. Thus, <a href="#x1-2r1">(4.1.1)</a> becomes \[ Q'=-kQ\] If the mass of the material present at \(t=t_0\) is
-			\(Q_0\), the mass present at time \(t\) is the solution of \[ Q'=-kQ,\quad
+			of the material. Thus, <a href="#x1-2r1">(4.1.1)</a> becomes \[ \dot{Q}=-kQ\] If the mass of the material present at \(t=t_0\) is
+			\(Q_0\), the mass present at time \(t\) is the solution of \[ \dot{Q}=-kQ,\quad
 			Q(t_0)=Q_0\] From <a href="#x1-3r2">(4.1.2)</a> with \(a=-k\), the solution of this initial value problem is \begin
 			{equation} \label {eq:4.1.3} Q=Q_0e^{-k(t-t_0)}\end {equation}
 			<a id="x1-5r3"></a>
@@ -252,122 +251,108 @@
 		</blockquote>
 
 		<div class="indent" id="6b41ee57-6525-4b47-af51-8a356fc9c8a2">
-			You can see from Table&nbsp;
-			<a href="#x1-15r1">
-				4.1.1
-				<!-- tex4ht:ref: table:4.1.1  -->
-			</a>
+			You can see from Table&nbsp;<a href="#x1-15r1">4.1.1</a>
 			that the value of the account after 5 years is an increasing function of
 			\(n\). Now suppose the maximum allowable rate of interest on savings
 			accounts is restricted by law, but the time intervals between successive
 			compoundings isn’t ; then competing banks can attract savers by
 			compounding often. The ultimate step in this direction is to
-			<span class="vocab">compound continuously</span>
-			, by which we mean that \(n\to \infty \) in <a href="#x1-14r8">(4.1.8)</a>. Since we know from calculus that \[ \lim _{n\to \infty } \left
+			<span class="vocab">compound continuously</span>,
+			by which we mean that \(n\to \infty \) in <a href="#x1-14r8">(4.1.8)</a>. Since we know from calculus that \[ \lim _{n\to \infty } \left
 			(1+{r\over n}\right )^n=e^r\] this yields \[\begin {array}{rl} Q(t) &amp;
 			\displaystyle =\lim _{n\to \infty } Q_0\left (1+{r\over n}\right
 			)^{nt}=Q_0 \left [ \lim _{n\to \infty } \left (1+{r\over n}\right
 			)^n\right ]^t \\[12pt] &amp;=Q_0e^{rt}\end {array}\] Observe that
-			\(Q=Q_0e^{rt}\) is the solution of the initial value problem \[ Q'=rQ,
+			\(Q=Q_0e^{rt}\) is the solution of the initial value problem \[ \dot{Q}=rQ,
 			\quad Q(0)=Q_0\] that is, with continuous compounding the value of the
 			account grows exponentially.
 		</div>
-		<div class="newtheorem" id="8c3ef9ae-0b0d-46c1-8576-e69408f67e2f">
-			<div>
-				<span class="head">
-					<span class="ex-number">Example&nbsp;4.1.2</span>
-				</span>
-				<a id="x1-162"></a>
-				If $150 is deposited in a bank that pays \(5{1\over 2}\)% annual
-				interest compounded continuously, the value of the account after \(t\)
-				years is \[ Q(t)=150e^{.055t} \] dollars. (Note that it’s necessary to
-				write the interest rate as a decimal; thus, \(r=.055\).) Therefore,
-				after \(t=10\) years the value of the account is \[ Q(10)=150e^{.55}
-				\approx \$259.99\]
-			</div>
+		<div class="example" id="x1-162" style="--ex-number: 2">
+			If $150 is deposited in a bank that pays \(5{1\over 2}\)% annual
+			interest compounded continuously, the value of the account after \(t\)
+			years is \[ Q(t)=150e^{.055t} \] dollars. (Note that it’s necessary to
+			write the interest rate as a decimal; thus, \(r=.055\).) Therefore,
+			after \(t=10\) years the value of the account is \[ Q(10)=150e^{.55}
+			\approx \$259.99\]
 		</div>
-		<div class="indent" id="733764e4-02dc-4753-93f6-100577f365a5"></div>
-		<div class="newtheorem" id="585a878d-3e77-458f-9e97-495dd527debe">
+		
+		<div class="example" id="x1-173" style="--ex-number: 3">
 			<div>
-				<span class="head">
-					<span class="ex-number">Example&nbsp;4.1.3</span>
-				</span>
-				<a id="x1-173"></a>
 				We wish to accumulate $10,000 in 10 years by making a single deposit in
 				a savings account bearing \(5{1\over 2}\)% annual interest compounded
 				continuously. How much must we deposit in the account?
 			</div>
+
+			<details class="solution" id="b4dbc7c0-0952-4d84-a5d7-2e145a3e5b6a">
+				<summary>Solution</summary>
+
+				The value of the account at time \(t\) is \begin {equation} \label
+				{eq:4.1.9} Q(t)=Q_0e^{.055t}\end {equation}
+				<a id="x1-18r9"></a>
+				Since we want \(Q(10)\) to be $10,000, the initial deposit \(Q_0\) must
+				satisfy the equation \begin {equation} \label {eq:4.1.10}
+				10000=Q_0e^{.55}\end {equation}
+				<a id="x1-19r10"></a>
+				obtained by setting \(t=10\) and \(Q(10)=10000\) in <a href="#x1-18r9">(4.1.9)</a>. Solving <a href="#x1-19r10">(4.1.10)</a> for \(Q_0\) yields \[ Q_0=10000e^{-.55} \approx \$5769.50\]
+			</details>
 		</div>
-		<div class="indent" id="d43bbb39-6500-492e-b1bc-e50b4d47e087"></div>
-		<div id="b4dbc7c0-0952-4d84-a5d7-2e145a3e5b6a">
-			<span class="ptmb8t-">Solution</span>
-			&nbsp;The value of the account at time \(t\) is \begin {equation} \label
-			{eq:4.1.9} Q(t)=Q_0e^{.055t}\end {equation}
-			<a id="x1-18r9"></a>
-			Since we want \(Q(10)\) to be $10,000, the initial deposit \(Q_0\) must
-			satisfy the equation \begin {equation} \label {eq:4.1.10}
-			10000=Q_0e^{.55}\end {equation}
-			<a id="x1-19r10"></a>
-			obtained by setting \(t=10\) and \(Q(10)=10000\) in <a href="#x1-18r9">(4.1.9)</a>. Solving <a href="#x1-19r10">(4.1.10)</a> for \(Q_0\) yields \[ Q_0=10000e^{-.55} \approx \$5769.50\]
-		</div>
+
 		<div id="f9142195-3d24-4ace-bd85-4fd17d95cc40">
 			<span id="textcolor4">Mixed Growth and Decay</span>
 		</div>
-		<div class="indent" id="a82145f8-c58c-47cd-8d6a-b8adfb14b6eb"></div>
-		<div class="newtheorem" id="bfcd5cf2-7f8c-482d-ae5d-453ebed5bd9a">
-			<div>
-				<span class="head">
-					<span class="ex-number">Example&nbsp;4.1.4</span>
-				</span>
-				<a id="x1-204"></a>
-				A radioactive substance with decay constant \(k\) is produced at a
-				constant rate of \(a\) units of mass per unit time.
-			</div>
-			<dl class="list1">
-				<dt class="list">
-					<span class="ptmb8t-">(a)</span>
-				</dt>
-				<dd class="list">
-					<div>
-						Assuming that \(Q(0)=Q_0\), find the mass \(Q(t)\) of the substance
-						present at time&nbsp;\(t\).
-					</div>
-				</dd>
-				<dt class="list">
-					<span class="ptmb8t-">(b)</span>
-				</dt>
-				<dd class="list">
-					<div>Find \(\lim _{t\to \infty } Q(t)\).</div>
-				</dd>
-			</dl>
+		
+		<div class="example" id="x1-204" style="--ex-number: 4">
+			A radioactive substance with decay constant \(k\) is produced at a
+			constant rate of \(a\) units of mass per unit time.
+			<ol>
+				<li>
+					Assuming that \(Q(0)=Q_0\), find the mass \(Q(t)\) of the substance
+					present at time&nbsp;\(t\).
+				</li>
+				<li>
+					Find \(\lim _{t\to \infty } Q(t)\).
+				</li>
+			</ol>
+
+			<details class="solution" id="3fa98550-4a6c-4315-9643-c4534369569b">
+				<summary>Solution</summary>
+
+				<ol>
+					<li>
+						Here \[ \dot{Q}=\mbox { rate of increase of } Q - \mbox { rate of decrease of }
+						Q\] The rate of increase is the constant \(a\). Since \(Q\) is radioactive
+						with decay constant \(k\), the rate of decrease is \(kQ\). Therefore \[
+						\dot{Q}=a-kQ\] This is a linear first order differential equation. Rewriting it
+						and imposing the initial condition shows that \(Q\) is the solution of the
+						initial value problem \begin {equation} \label {eq:4.1.11} \dot{Q}+kQ=a, \quad
+						Q(0)=Q_0\end {equation}
+						<a id="x1-23r11"></a>
+						Since \(e^{-kt}\) is a solution of the complementary equation, the
+						solutions of <a href="#x1-23r11">(4.1.11)</a> are of the form \(Q=ue^{-kt}\), where \(\dot{u}e^{-kt}=a\), so
+						\(\dot{u}=ae^{kt}\). Hence, \[ u={a\over k}e^{kt}+c \] and \[
+						Q=ue^{-kt}={a\over k}+ce^{-kt}\] Since \(Q(0)=Q_0\), setting \(t=0\) here
+						yields \[ Q_0={a\over k}+c \quad \mbox{ or } \quad  c=Q_0-{a\over k}\]
+						Therefore \begin {equation} \label {eq:4.1.12} Q={a\over k}+\left
+						(Q_0-{a\over k}\right )e^{-kt}\end {equation}
+						<a id="x1-24r12"></a>
+					</li>
+					<li>
+						Since \(k &gt; 0\), \(\lim _{t\to \infty } e^{-kt}=0\), so from <a href="#x1-24r12">(4.1.12)</a> \[ \lim _{t\to \infty } Q(t)={a\over k}\] This limit depends only on
+						\(a\) and \(k\), and not on \(Q_0\). We say that \(a/k\) is the
+						<span class="vocab">steady state</span>
+						value of \(Q\). From <a href="#x1-24r12">(4.1.12)</a> we also see that \(Q\) approaches its steady state value from above if
+						\(Q_0 &gt; a/k\), or from below if \(Q_0 &lt; a/k\). If \(Q_0=a/k\), then
+						\(Q\) remains constant (Figure <a href="#-qt-approaches-the-steady-state-value-a-overk-as-t-"
+						>4.1.3</a>).
+					</li>
+				</ol>
+			</details>
 		</div>
-		<div class="indent" id="6e0f56b1-a16f-4370-8eb2-db11fd4c9c9a"></div>
-		<div id="3fa98550-4a6c-4315-9643-c4534369569b">
+
+		<div id="">
 			<span class="underline">
-				<span class="ptmrc8t-">
-					S
-					<span class="small-caps">OLUTION</span>
-					(
-				</span>
-				<span class="ptmb8t-">a</span>
-				<span class="ptmrc8t-">)&nbsp;</span>
-			</span>
-			Here \[ Q'=\mbox { rate of increase of } Q - \mbox { rate of decrease of }
-			Q\] The rate of increase is the constant \(a\). Since \(Q\) is radioactive
-			with decay constant \(k\), the rate of decrease is \(kQ\). Therefore \[
-			Q'=a-kQ\] This is a linear first order differential equation. Rewriting it
-			and imposing the initial condition shows that \(Q\) is the solution of the
-			initial value problem \begin {equation} \label {eq:4.1.11} Q'+kQ=a, \quad
-			Q(0)=Q_0\end {equation}
-			<a id="x1-23r11"></a>
-			Since \(e^{-kt}\) is a solution of the complementary equation, the
-			solutions of <a href="#x1-23r11">(4.1.11)</a> are of the form \(Q=ue^{-kt}\), where \(u'e^{-kt}=a\), so
-			\(u'=ae^{kt}\). Hence, \[ u={a\over k}e^{kt}+c \] and \[
-			Q=ue^{-kt}={a\over k}+ce^{-kt}\] Since \(Q(0)=Q_0\), setting \(t=0\) here
-			yields \[ Q_0={a\over k}+c \quad \mbox{ or } \quad  c=Q_0-{a\over k}\]
-			Therefore \begin {equation} \label {eq:4.1.12} Q={a\over k}+\left
-			(Q_0-{a\over k}\right )e^{-kt}\end {equation}
-			<a id="x1-24r12"></a>
+
+
 		</div>
 		<div id="a80244aa-5015-460e-b31c-329ddf6a3d26">
 			<span class="underline">
@@ -379,17 +364,7 @@
 				<span class="ptmb8t-">b</span>
 				<span class="ptmrc8t-">)&nbsp;</span>
 			</span>
-			Since \(k &gt; 0\), \(\lim _{t\to \infty } e^{-kt}=0\), so from <a href="#x1-24r12">(4.1.12)</a> \[ \lim _{t\to \infty } Q(t)={a\over k}\] This limit depends only on
-			\(a\) and \(k\), and not on \(Q_0\). We say that \(a/k\) is the
-			<span class="vocab">steady state</span>
-			value of \(Q\). From <a href="#x1-24r12">(4.1.12)</a> we also see that \(Q\) approaches its steady state value from above if
-			\(Q_0 &gt; a/k\), or from below if \(Q_0 &lt; a/k\). If \(Q_0=a/k\), then
-			\(Q\) remains constant (Figure
-			<a href="#-qt-approaches-the-steady-state-value-a-overk-as-t-">
-				4.1.3
-				<!-- tex4ht:ref: figure:4.1.3  -->
-			</a>
-			).
+			
 		</div>
 		<figure class="figure" id="4ca5c285-5b37-4404-9d91-caa084df7d53">
 			<div
@@ -415,8 +390,8 @@
 		<div id="1591b9ff-c621-4c27-9a18-35c499084456">
 			The fact that \(Q\) approaches a steady state value in the situation
 			discussed in Example 4 underlies the method of
-			<span class="vocab">carbon dating</span>
-			, devised by the American chemist and Nobel Prize Winner W.S. Libby.
+			<span class="vocab">carbon dating</span>,
+			devised by the American chemist and Nobel Prize Winner W.S. Libby.
 		</div>
 		<div class="indent" id="e18f0d0a-4c12-493e-a288-b59d19948eab">
 			Carbon 12 is stable, but carbon-14, which is produced by cosmic
@@ -495,15 +470,15 @@
 			assumption that the deposits are made continuously at a rate of $2600 per
 			year. This is essential, since solutions of differential equations are
 			continuous functions. With this assumption, \(Q\) increases continuously
-			at the rate \[ Q'=2600+.06 Q \] and therefore \(Q\) satisfies the
+			at the rate \[ \dot{Q}=2600+.06 Q \] and therefore \(Q\) satisfies the
 			differential equation \begin {equation} \label {eq:4.1.13}
-			Q'-.06Q=2600\end {equation}
+			\dot{Q}-.06Q=2600\end {equation}
 			<a id="x1-28r13"></a>
 			(Of course, we must recognize that the solution of this equation is an
 			approximation to the true value of \(Q\) at any given time. We’ll discuss
 			this further below.) Since \(e^{.06t}\) is a solution of the complementary
-			equation, the solutions of <a href="#x1-28r13">(4.1.13)</a> are of the form \(Q=ue^{.06t}\), where \(u'e^{.06t}=2600\). Hence,
-			\(u'=2600e^{-.06t}\), \[ u=- {2600\over .06}e^{-.06t}+c \] and \begin
+			equation, the solutions of <a href="#x1-28r13">(4.1.13)</a> are of the form \(Q=ue^{.06t}\), where \(\dot{u}e^{.06t}=2600\). Hence,
+			\(\dot{u}=2600e^{-.06t}\), \[ u=- {2600\over .06}e^{-.06t}+c \] and \begin
 			{equation} \label {eq:4.1.14} Q=ue^{.06t}=-{2600\over .06}+ce^{.06t}\end
 			{equation}
 			<a id="x1-29r14"></a>

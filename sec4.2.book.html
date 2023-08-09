@@ -47,7 +47,7 @@
 			at time \(t\) is in a medium with temperature \(T_m(t)\), the rate of
 			change of \(T\) at time \(t\) is proportional to \(T(t)-T_m(t)\); thus,
 			\(T\) satisfies a differential equation of the form \begin {equation}
-			\label {eq:4.2.1} T'=-k(T-T_m)\end {equation}
+			\label {eq:4.2.1} \dot{T}=-k(T-T_m)\end {equation}
 			<a id="x1-2r1"></a>
 			Here \(k &gt; 0\), since the temperature of the object must decrease if
 			\(T &gt; T_m\), or increase if \(T &lt; T_m\). We’ll call \(k\) the
@@ -66,9 +66,9 @@
 			.)
 		</div>
 		<div class="indent" id="3b203701-97a4-4ce8-a6ed-cbc85d08a398">
-			To solve <a href="#x1-2r1">(4.2.1)</a>, we rewrite it as \[ T'+kT=kT_m\] Since \(e^{-kt}\) is a solution of the
+			To solve <a href="#x1-2r1">(4.2.1)</a>, we rewrite it as \[ \dot{T}+kT=kT_m\] Since \(e^{-kt}\) is a solution of the
 			complementary equation, the solutions of this equation are of the form
-			\(T=ue^{-kt}\), where \(u'e^{-kt}=kT_m\), so \(u'=kT_me^{kt}\). Hence, \[
+			\(T=ue^{-kt}\), where \(\dot{u}e^{-kt}=kT_m\), so \(\dot{u}=kT_me^{kt}\). Hence, \[
 			u=T_me^{kt}+c\] so \[ T=ue^{-kt}=T_m+ce^{-kt}\] If \(T(0)=T_0\), setting
 			\(t=0\) here yields \(c=T_0-T_m\), so \begin {equation} \label {eq:4.2.2}
 			T=T_m+(T_0-T_m)e^{-kt}\end {equation}
@@ -247,14 +247,14 @@
 				<span class="ptmrc8t-">)&nbsp;</span>
 			</span>
 			To find a differential equation for \(Q\), we must use the given
-			information to derive an expression for \(Q'\). But \(Q'\) is the rate of
+			information to derive an expression for \(\dot{Q}\). But \(\dot{Q}\) is the rate of
 			change of the quantity of salt in the tank changes with respect to time;
 			thus, if
 			<span class="vocab">rate in</span>
 			denotes the rate at which salt enters the tank and
 			<span class="vocab">rate out</span>
 			denotes the rate by which it leaves, then \begin {equation} \label
-			{eq:4.2.5} Q' = \mbox {rate in}-\mbox {rate out}\end {equation}
+			{eq:4.2.5} \dot{Q} = \mbox {rate in}-\mbox {rate out}\end {equation}
 			<a id="x1-14r5"></a>
 			The rate in is \[ \left ({1\over 2}\ \mbox {lb/gal}\right ) \times (4\
 			\mbox {gal/min}) = 2\ \mbox {lb/min}\] Determining the rate out requires a
@@ -268,10 +268,10 @@
 			{rate out} &amp; = &amp; (\mbox {concentration})\times (\mbox {rate of
 			flow out})\\[6pt] \mbox {}&amp;=&amp;(\mbox {lb/gal})\times (\mbox
 			{gal/min})\\[10pt] &amp;=&amp;\displaystyle {Q(t)\over 600}\times
-			4=\displaystyle {Q(t)\over 150}\end {array} \] We can now write <a href="#x1-14r5">(4.2.5)</a> as \[ Q' = 2-{Q\over 150}\] This first order equation can be rewritten
-			as \[ Q'+{Q\over 150} = 2\] Since \(e^{-t/150}\) is a solution of the
+			4=\displaystyle {Q(t)\over 150}\end {array} \] We can now write <a href="#x1-14r5">(4.2.5)</a> as \[ \dot{Q} = 2-{Q\over 150}\] This first order equation can be rewritten
+			as \[ \dot{Q}+{Q\over 150} = 2\] Since \(e^{-t/150}\) is a solution of the
 			complementary equation, the solutions of this equation are of the form
-			\(Q=ue^{-t/150}\), where \(u'e^{-t/150}=2\), so \(u'=2e^{t/150}\). Hence,
+			\(Q=ue^{-t/150}\), where \(\dot{u}e^{-t/150}=2\), so \(\dot{u}=2e^{t/150}\). Hence,
 			\[ u = 300e^{t/150}+c\] so \begin {equation} \label {eq:4.2.6}
 			Q=ue^{-t/150}=300+ce^{-t/150} \end {equation}
 			<a id="x1-15r6"></a>
@@ -357,7 +357,7 @@
 				4.2.3
 				<!-- tex4ht:ref: example:4.2.3  -->
 			</a>
-			, \begin {equation} \label {eq:4.2.7} Q' = \mbox {rate in}-\mbox {rate
+			, \begin {equation} \label {eq:4.2.7} \dot{Q} = \mbox {rate in}-\mbox {rate
 			out}\end {equation}
 			<a id="x1-19r7"></a>
 			The rate in is \begin {equation} \label {eq:4.2.8} \left ({1\over 4}\
@@ -377,12 +377,12 @@
 			{array}{lcl} \mbox {rate out} &amp; = &amp; (\mbox {concentration})\times
 			(\mbox {rate of flow out}) =(\mbox {g/liter})\times (\mbox
 			{liters/min})\\[10pt] &amp;=&amp;\displaystyle {Q(t)\over 2t+200}\times
-			2=\displaystyle {Q(t)\over t+100}\end {array} \] Substituting <a href="#x1-20r8">(4.2.8)</a> and <a href="#x1-21r9">(4.2.9)</a> into <a href="#x1-19r7">(4.2.7)</a> yields \begin {equation} \label {eq:4.2.10} Q'=1-{Q\over t+100},\quad
-			\text { \rm so }\quad Q'+{1\over t+100} Q=1\end {equation}
+			2=\displaystyle {Q(t)\over t+100}\end {array} \] Substituting <a href="#x1-20r8">(4.2.8)</a> and <a href="#x1-21r9">(4.2.9)</a> into <a href="#x1-19r7">(4.2.7)</a> yields \begin {equation} \label {eq:4.2.10} \dot{Q}=1-{Q\over t+100},\quad
+			\text { \rm so }\quad \dot{Q}+{1\over t+100} Q=1\end {equation}
 			<a id="x1-22r10"></a>
 			By separation of variables, \(1/(t+100)\) is a solution of the
-			complementary equation, so the solutions of <a href="#x1-22r10">(4.2.10)</a> are of the form \[ Q={u\over t+100},\quad \mbox{ where } \quad {u'\over
-			t+100}=1,\quad \mbox{ so } \quad  u'=t+100\] Hence, \begin {equation}
+			complementary equation, so the solutions of <a href="#x1-22r10">(4.2.10)</a> are of the form \[ Q={u\over t+100},\quad \mbox{ where } \quad {\dot{u}\over
+			t+100}=1,\quad \mbox{ so } \quad  \dot{u}=t+100\] Hence, \begin {equation}
 			\label {eq:4.2.11} u = {(t+100)^2\over 2}+c\end {equation}
 			<a id="x1-23r11"></a>
 			Since \(Q(0)=10\) and \(u=(t+100)Q\), <a href="#x1-23r11">(4.2.11)</a> implies that \[ (100)(10) = {(100)^2\over 2}+c\] so \[
