@@ -137,7 +137,10 @@
       the differential equation on some <span class="vocab">open interval</span>; thus, \(y\) is a solution of <a href="#x1-3r2">(1.2.2)</a> if \(y\) is \(n\) times differentiable and
       \[ \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right) \]
       for all \(x\) in some open interval \((a,b)\). 
-      In this case, we also say that \(y\) is a solution of <a href="#x1-3r2">(1.2.2)</a> on \((a,b)\). Functions that satisfy a differential equation at isolated points are not interesting. For example, \(y=x^2\) satisfies
+      In this case, we also say that \(y\) is a solution of <a href="#x1-3r2">(1.2.2)</a> on \((a,b)\). 
+    </div> 
+    <div id="e44db55f-6ff8-4cd3-ae72-398ec3ab7892"> 
+      Functions that satisfy a differential equation at isolated points are not interesting. For example, \(y=x^2\) satisfies
       \[ x\frac{dy}{dx}+x^2=3x \] if and only if \(x=0\) or \(x=1\), but it’s not a solution of this differential equation because it does not satisfy the equation on an open interval.
     </div>
     <div class="reading-exercise" id="a2fdbd8e-c0ff-4656-a729-0fda488c21ca">
@@ -148,46 +151,60 @@
       <span class="vocab">integral curve</span> of a differential equation if every function \(y=y(x)\) whose graph is a segment of \(C\) is a solution of the differential equation. Thus, any <span class="vocab">solution curve</span> of a differential equation is an <span class="vocab">integral curve</span>, but an <span class="vocab">integral curve</span>
       need not be a <span class="vocab">solution curve</span>.
     </div>
+
+
+
     <div class="example" id="x1-41" style="--ex-number: 1">
       <div>
-        The circle 
+        Show that all the segments of the circle 
         <a id="x1-5r3"></a>
         \begin {equation} \label {eq:1.2.3} 
           x^2+y^2=9 
         \end {equation} 
-        is an <span class="vocab">integral curve</span> of the differential equation
+        are <span class="vocab">solution curves</span> and the circle itself is an
+        <span class="vocab">integral curve</span> 
+        of the differential equation
         <a id="x1-6r4"></a>
         \begin {equation} \label {eq:1.2.4} 
           \frac{dy}{dx}=-{x\over y}
         \end {equation}
       </div>
-      <div style="text-align: center;">
-        <iframe src="https://www.desmos.com/calculator/18xmlxlfyo?embed" width="400" height="250" frameborder="0"></iframe>
-      </div>
-      <div>
-        Although the circle (<a href="#x1-5r3">1.2.3</a>) is not a function, we can solve for \( y \) to obtain two separate functions that are segments of the circle:
-        \[ y_1=\sqrt {9-x^2}\quad \mbox{ and } \quad  y_2=-\sqrt {9-x^2}\]
-      </div>
-      <div class="reading-exercise">
-        Solve \( x^2+y^2=9 \) explicitly for \( y \) and show you get the semi-circle segments \( y_1 \) and \( y_2 \) 
-      </div>        
-      <div style="display: flex; gap: 2em; justify-content: center;">
-        <iframe src="https://www.desmos.com/calculator/rupzqf3rmh?embed" width="400" height="250" frameborder="0"></iframe>
-        <iframe src="https://www.desmos.com/calculator/bipn7z9qbd?embed" width="400" height="250" frameborder="0"></iframe>
-      </div>
 
-      <div>
-        By differentiating and substituting, it can be easily verified that both of the semi-circle curves, \( y_1 \) and \( y_2 \), are solutions to the differential equation.
-      </div>  
-      <div class="reading-exercise">
-        Show that \( y_1 \) and \( y_2 \) satisfies \( \displaystyle \frac{dy}{dx}=-{x\over y}\) on the open interval \((-3, 3)\)
-      </div>   
-      <div>
-        Note that all the segments of the circle that are functions (i.e. the semi-circles \( y_1 \) and \( y_2 \) ) are solutions to the differential equation (<a href="#x1-6r4">1.2.4</a>) and thus called <span class="vocab">solution curves</span>. Since all of the segments of the circle are solutions, the circle itself is an <span class="vocab">integral curve</span> of the equation, but it is not a <span class="vocab">solution curve</span> since the circle itself is not the graph of a function and is not itself a solution. 
-      </div>      
+      <details class="solution" id="92d0e10e-4281-4c49-b003-371bf5f868f4">
+        <summary>Solution</summary>
+
+        <div style="text-align: center;">
+          <iframe src="https://www.desmos.com/calculator/18xmlxlfyo?embed" width="400" height="250" frameborder="0"></iframe>
+        </div>
+        <div>
+          Although the circle (<a href="#x1-5r3">1.2.3</a>) is not a function, we can solve for \( y \) to obtain two separate functions that are segments of the circle:
+          \[ y_1=\sqrt {9-x^2}\quad \mbox{ and } \quad  y_2=-\sqrt {9-x^2}\]
+        </div>
+        <div class="reading-exercise">
+          Solve \( x^2+y^2=9 \) explicitly for \( y \) and show you get the semi-circle segments \( y_1 \) and \( y_2 \) 
+        </div>        
+        <div style="display: flex; gap: 2em; justify-content: center;">
+          <iframe src="https://www.desmos.com/calculator/rupzqf3rmh?embed" width="400" height="250" frameborder="0"></iframe>
+          <iframe src="https://www.desmos.com/calculator/bipn7z9qbd?embed" width="400" height="250" frameborder="0"></iframe>
+        </div>
+
+        <div>
+          By differentiating and substituting, it can be easily verified that both of the semi-circle curves, \( y_1 \) and \( y_2 \), are solutions to the differential equation.
+        </div>  
+        <div class="reading-exercise">
+          Show that \( y_1 \) and \( y_2 \) satisfies \( \displaystyle \frac{dy}{dx}=-{x\over y}\) on the open interval \((-3, 3)\)
+        </div>   
+        <div>
+          Note that all the segments of the circle that are functions (i.e. the semi-circles \( y_1 \) and \( y_2 \)) are solutions to the differential equation (<a href="#x1-6r4">1.2.4</a>) and thus called <span class="vocab">solution curves</span>. Since all of the segments of the circle are solutions, the circle itself is an <span class="vocab">integral curve</span> of the equation, but it is not a <span class="vocab">solution curve</span> since the circle itself is not the graph of a function and is not itself a solution. 
+        </div>  
+
+      </details>
+    
     </div>
+
     <div id="85e3c0d8-e1f8-46cc-a5e8-d04f0dbb1547">
     </div>
+
     <div class="example" id="x1-72" style="--ex-number: 2">
       <div>
         Verify that <a href="#x1-8r5">(1.2.5)</a> is a solution of <a href="#x1-9r6">(1.2.6)</a> on \((0,\infty )\) and on \((-\infty ,0)\).
@@ -210,8 +227,16 @@
 
         <div class="noindent" id="fb89956d-f5da-4f7c-95c2-c2b4d0390aae">
           Substituting \( y \) (<a href="#x1-8r5">1.2.5</a>) and \( \displaystyle \frac{dy}{dx}={2x\over 3} - {1\over x^2} \) into (<a href="#x1-9r6">1.2.6</a>) yields
-          \[ x\left.\frac{dy}{dx}\right|_x+y(x)=x \left ({2x\over 3} - {1\over x^2}\right )+ \left ({x^2\over 3}+{1\over x}\right )=x^2 \]
-          Note that \( y \) is undefined at \( x = 0 \) so therefore \(y\) is a solution of (<a href="#x1-9r6">1.2.6</a>) on \((-\infty ,0)\) and \((0,\infty )\). However, \(y\) isn’t a solution of the differential equation on any open interval that contains \(x=0\), since \(y\) is not defined at \(x=0\).
+          \begin{align*}
+            x \frac{dy}{dx} + y & = x^2 \\
+            x\left( 
+              \frac{2x}{3} - \frac{1}{x^2}
+            \right) + \left({x^2 \over 3} + {1 \over x}\right) & \overset{?}{=} x^2 \\
+            \frac{2x^2}{3} - \frac{1}{x} + {x^2 \over 3} + {1 \over x} & \overset{?}{=} x^2 \\
+            \frac{3}{3} x^2 & \overset{\checkmark}{=} x^2 \\	 
+          \end{align*}
+          
+          Note that \( y \) is undefined at \( x = 0 \) so while \(y\) is a solution of (<a href="#x1-9r6">1.2.6</a>), it is only valid on \((-\infty ,0)\) and \((0,\infty )\), meaning \(y\) is not a solution of (<a href="#x1-9r6">1.2.6</a>) on any open interval that contains \(x=0\), since \(y\) is not defined at \(x=0\).
         </div>
 
       </details>
@@ -247,6 +272,9 @@
         <summary>Solution</summary>
 
         <div id="bee02374-32a1-4c97-99df-ff23db4fe4e7">
+          First note that \( y \) (<a href="#x1-11r7">1.2.7</a>)  is defined for all values of \(x\) on \( (-\infty, \infty) \)
+        </div>
+        <div id="bee02374-32a1-4c97-99df-ff23db4fe4e8">  
           Differentiating (<a href="#x1-11r7">1.2.7</a>) twice yields 
           \[ 
             \frac{dy}{dx} = 2 + (-c_1 + c_2 -c_2x) e^{-x}
@@ -274,7 +302,6 @@
             \end{array}
           \end{align*}      
           \[ \]
-          for all values of \(x\). Therefore (<a href="#x1-11r7">1.2.7</a>) is a solution of (<a href="#x1-12r8">1.2.8</a>) on \((-\infty ,\infty )\)
         </div>
       </details>
     </div>
@@ -382,17 +409,16 @@
     </figure>
 
     <div id="bc8bf255-8b4d-4e48-8209-21496b18ce9b"> 
-      We can rewrite the problem considered in Example&nbsp;<a href="#x1-175">1.2.5</a> more briefly as
+      We can rewrite the problem considered in Example&nbsp;<a href="#x1-175">1.2.5</a> more briefly as an <span class="vocab">initial value problem</span> (<span class="vocab">IVP</span>):
       \[ \frac{dy}{dx}=x^3 \quad y(1)=2\]
-      We call this an <span class="vocab">initial value problem</span> and the requirement \(y(1)=2\) is an 
-      <span class="vocab">initial condition</span>. Initial value problems can also be posed for higher order differential equations. For instance,
+      First we list the differential equation followed by the requirement that \(y(1)=2\) which we call <span class="vocab">initial condition</span>. IVPs can also be posed for higher order differential equations with additional initial conditions. For instance, consider the second order differential equation:
       <a id="x1-18r11"></a> 
       \begin {equation} \label {eq:1.2.11} 
         \frac{d^2y}{dx^2} - 2\frac{dy}{dx}+3y=e^x
         \quad y(0)=1 \quad \left.\frac{dy}{dx}\right|_0=2 
       \end {equation} 
-      is an initial value problem for a second order differential equation where \(y\) and \(\displaystyle \frac{dy}{dx}\) are required to have specified values at \(x=0\). In general, an initial value problem for
-      an \(n^{th}\) order differential equation requires \(n \) <span class="vocab">initial conditions</span> specified on \(y\) and its first \(n-1\) derivatives at some initial point \(x_0\).
+      In this case there are two <span class="vocab">initial conditions</span>, one for \(y\) and one for \(\displaystyle \frac{dy}{dx}\) and both are required to have specified values at \(x=0\). 
+      In general, an initial value problem for an \(n^{th}\) order differential equation requires \(n \) <span class="vocab">initial conditions</span> specified on \(y\) and its first \(n-1\) derivatives at some initial point \(x_0\).
     </div>
     <div id="c097647d-3b57-42de-a586-4a535095725c"> 
       We’ll denote an initial value problem for a differential equation by writing the initial
@@ -418,44 +444,103 @@
 
     <div class="example" id="x1-216" style="--ex-number: 6">
       <div>
-        In Example&nbsp;<a href="#x1-175">1.2.5</a> we found that
+        In Example&nbsp;<a href="#x1-175">1.2.5</a> we found that <a href="#x1-22r13">(1.2.13)</a> is a <span class="vocab">solution</span> of the IVP
+        \[ \frac{dy}{dx} = x^3 \quad y(1) = 2 \]
+        Determine the <span class="vocab">interval of validity</span> of this solution.
         <a id="x1-22r13"></a>
         \begin {equation} \label {eq:1.2.13}
           y = \frac{1}{4} \left( x^4 + 7 \right) 
-        \end {equation} is a <span class="vocab">solution</span> of the initial value problem
-        \[ \frac{dy}{dx} = x^3 \quad y(1) = 2 \]
-        Since the function in (<a href="#x1-22r13">1.2.13<!-- tex4ht:ref: eq:1.2.13  --></a>) is defined for all \(x\),
-        the <span class="vocab">interval of validity</span> of this solution is \((-\infty ,\infty ) \)
+        \end {equation} 
       </div>
-    </div>
+      
+      <details class="solution" id="66f647c4-7d0f-4284-9ccf-5a904d890f423">
+        <summary>Solution</summary>
 
-    <div class="example" id="x1-237" style="--ex-number: 7">
-      <div>
-        <a id="x1-24r14"></a>
-        \begin {equation} \label{eq:1.2.14} 
-          y={x^2\over 3}+{1\over x} 
-        \end {equation}         
-        In Example&nbsp;<a href="#x1-72">1.2.2</a> we verified that (<a href="#x1-24r14">1.2.14</a>), is the solution of the following differential equation with <span class="vocab">intervals of validity</span> \((0,\infty )\) and \((-\infty ,0)\):
-        \[ x \frac{dy}{dx} + y = x^2 \]
+        <div id="b224947b-14a0-4b2e-8e5d-4c34ca2330d0">
+          Since the function in (<a href="#x1-22r13">1.2.13<!-- tex4ht:ref: eq:1.2.13  --></a>) is defined for all \(x\) values, the <span class="vocab">interval of validity</span> is \((-\infty ,\infty ) \)
+        </div>   
+      </details>
+    </div>  
 
-        By evaluating (<a href="#x1-24r14">1.2.14</a>) at \(x= 1\) and \(x= -1\), we can show that it is a solution of the following initial value problems: 
-        <a id="x1-25r15"></a>
-        \begin{equation} \label {eq:1.2.15} 
-          x\frac{dy}{dx}+y=x^2 \quad y(1)={4\over 3} 
-        \end {equation}
-        and 
-        <a id="x1-26r16"></a>
-        \begin{equation} \label {eq:1.2.16} 
-          x \frac{dy}{dx} + y = x^2 \quad y(-1) = -{2\over 3}
-        \end {equation}
-      </div>
+    <div class="example" id="x1-237" style="--ex-number: 7">    
+      <a id="x1-24r14"></a>
+
+      In Example&nbsp;<a href="#x1-72">1.2.2</a> we verified that 
+      
+      \begin {equation} \label{eq:1.2.14} 
+        y={x^2\over 3}+{1\over x} 
+      \end {equation}
+
+      is solution of the differential equation
+
+      \[ 
+        \quad x \displaystyle \frac{dy}{dx} + y = x^2 
+      \]
+
+        <ol>
+          <li>
+            Verify (<a href="#x1-24r14">1.2.14</a>) is the solution of the <span class="vocab">IVP</span> and determine the <span class="vocab">interval of validity</span>
+            <a id="x1-25r15"></a>
+            \begin{equation} \label {eq:1.2.15} 
+              x\frac{dy}{dx}+y=x^2 \quad y(1)={4\over 3} 
+            \end {equation}
+          </li>
+          <li>
+            Verify (<a href="#x1-24r14">1.2.14</a>) is the solution of the <span class="vocab">IVP</span> and determine the <span class="vocab">interval of validity</span>
+            <a id="x1-26r16"></a>
+            \begin{equation} \label {eq:1.2.16} 
+              x \frac{dy}{dx} + y = x^2 \quad y(-1) = -{2\over 3}
+            \end {equation}
+          </li>	
+        </ol>	
+
+
+      <details class="solution" id="66f647c4-7d0f-4284-9ccf-5a904d890f423">
+        <summary>Solution</summary>
+
+        <ol>
+          <li>
+            <div id = "49041906-b291-46f5-bd97-daaf2ba9e7871">
+              We already know (<a href="#x1-24r14">1.2.14</a>) is a solution from Example&nbsp;<a href="#x1-72">1.2.2</a>, and now we'll evaluate it at our initial value \( x = 1 \)
+    
+              \begin{align*}
+                y(x) & = {x^2\over3}+{1\over x} \\
+                y(1) & = {1^2\over3}+{1\over 1} = {1\over3}+1 = {4\over3} \quad \checkmark
+              \end{align*}
+
+              Notice that (<a href="#x1-24r14">1.2.14</a>) is undefined at \( x = 0 \) meaning this solution is only valid on intervals that don't contain \( x = 0 \) and since \((0,\infty)\) is the largest interval that doesn't contain \( x = 0 \) but does contain the initial value \(x=1\) then \((0,\infty)\) is the <span class="vocab">interval of validity</span> for the IVP
+            </div>
+          </li>
+          <li>
+            <div id = "6561841f-1e77-47bb-9641-0d34c79be2bc23">
+              Again we already know (<a href="#x1-24r14">1.2.14</a>) is a solution from Example&nbsp;<a href="#x1-72">1.2.2</a>, and now we'll evaluate it at our initial value \( x = -1 \)
+    
+              \begin{align*}
+                y(x) & = {x^2\over3}+{1\over x} \\
+                y(1) & = {(-1)^2\over3}+{1\over -1} = {1\over3}-1 = -{2\over3} \quad \checkmark
+              \end{align*}
+
+              Notice that (<a href="#x1-24r14">1.2.14</a>) is undefined at \( x = 0 \) meaning this solution is only valid on intervals that don't contain \( x = 0 \) and since \((0,\infty)\) is the largest interval that doesn't contain \( x = 0 \) but does contain the initial value \(x=-1\) then \((-\infty,0)\) is the <span class="vocab">interval of validity</span> for the IVP
+            </div>
+          </li>
+        </ol>
+
+      </details>
+
       <div class="reading-exercise">
-        Show that (<a href="#x1-24r14">1.2.14</a>) is a solution of the initial value problems (<a href="#x1-25r15">1.2.15</a>) and (<a href="#x1-26r16">1.2.16</a>)
-      </div>         
-      <div>
-        The <span class="vocab">interval of validity</span> of (<a href="#x1-24r14">1.2.14</a>) as a solution of (<a href="#x1-25r15">1.2.15</a>) is \((0,\infty )\), since this is the largest
-        interval that contains \(x=1\) on which (<a href="#x1-24r14">1.2.14</a>) is defined. Similarly, the <span class="vocab">interval of validity</span> of (<a href="#x1-24r14">1.2.14</a>) as a solution of (<a href="#x1-26r16">1.2.16</a>) is \((-\infty ,0)\), since this is the largest interval that contains \(x=-1\) on which (<a href="#x1-24r14">1.2.14</a>) is defined.
-      </div>
+        Verify (<a href="#x1-24r14">1.2.14</a>) is the solution of the <span class="vocab">IVP</span> and determine the <span class="vocab">interval of validity</span>
+        \(
+          x\frac{dy}{dx}+y=x^2 \quad y(3)={10\over 3} 
+        \)
+      </div>   
+
+      <div class="reading-exercise">
+        Verify (<a href="#x1-24r14">1.2.14</a>) is the solution of the <span class="vocab">IVP</span> and determine the <span class="vocab">interval of validity</span>
+        \(
+          x\frac{dy}{dx}+y=x^2 \quad y(-3)={8\over 3} 
+        \)
+      </div>  
+
     </div>
   </details>
 
@@ -469,47 +554,62 @@
 
     <div class="example" id="x1-278" style="--ex-number: 8">
       <div>
-        An object falls under the influence of <span class="vocab">gravity</span> near Earth’s surface, where it can be assumed that the magnitude of the acceleration due to gravity is a constant \(g\).
-        Using <span class="vocab">Newton’s 2nd law of motion</span>, construct a mathematical model for the motion of the object in the form of an initial value problem for a second order differential equation, assuming that the height and velocity of the object at time \(t=0\) are known. Assume that gravity is the only force acting on the object. Solve the initial value problem to obtain the height as a function of time
+        An object falls under the influence of <span class="vocab">gravity</span> near Earth’s surface, where it can be assumed that the magnitude of the acceleration due to gravity is a constant \(g\). Assume that gravity is the only force acting on the object.
       </div>
+      <ol>
+        <li>
+          Using <span class="vocab">Newton’s 2nd law of motion</span>, construct a mathematical model for the motion of the object in the form of an initial value problem for a second order differential equation, assuming that the height and velocity of the object at time \(t=0\) are known.
+        </li>  
+        <li>
+          Solve the initial value problem to obtain the height as a function of time
+        </li>  
+      </ol>  
 
       <details class="solution" id="6d749057-a362-42fa-97dc-86f605f4e0d4">
         <summary>Solution</summary>
+          <ol>
+            <li>
+              Recall <span class="vocab">Newton’s 2nd law of motion</span>, \( F = ma \), the force \( F \) acting on the object is equal to the mass \( m \) of the object times the acceleration \( a \) of the object. Acceleration is the derivative of velocity and velocity is the derivative of position so position is the second derivative of acceleration and can be written as  \( a = \ddot{y} \) where \(y(t)\) represent the position (height) of the object at time \(t\). The only force acting on the object is <span class="vocab">gravity</span> and the acceleration due to gravity is in the downward (negative) direction, so the total force \( F \) is given by \( -mg \). Thus <span class="vocab">Newton’s 2nd law of motion</span> can be rewritten to represent a second order differential equation modeling this situation:
+              \begin{equation*}
+                F = ma \Longrightarrow
+                -mg = m \ddot{y} \Longrightarrow
+                -g = \ddot{y}
+              \end{equation*}
+              where the dot notation indicates differentiation with respect to \(t\). If \(y_0 \) denotes the initial height and \(v_0\) denotes the initial velocity when \(t=0\), then \(y\) is a solution of the initial value problem 
+              <a id="x1-30r17"></a>
+              \begin {equation} \label {eq:1.2.17} 
+                \ddot{y}=-g \quad
+                y(0)=y_0 \quad 
+                \dot{y}(0)=v_0
+              \end {equation}
+            </li> 
+            <li>
+              The IVP can be solved by finding the antiderivative twice:
+              \begin {align*}
+                \ddot{y} = &amp; -g \\
+                \Longrightarrow
+                \dot{y} = &amp; -gt + c_1 \\
+                \Longrightarrow
+                y = &amp; -\frac{1}{2}gt^2 + c_1 t + c_2 \\
+              \end {align*}  
+
+              Imposing the initial conditions \(y(0)=y_0\) and \( \dot{y}(0)=v_0 \) in these two equations shows that
+              \(c_1=v_0\) and \(c_2=y_0\). Therefore the solution of the initial value problem <a href="#x1-30r17">(1.2.17)</a> is
+              \[ y = - \frac{1}{2} gt^2 + v_0 t + y_0 \]
+            </li>  
+          </ol>  
 
           <div id="2d14e395-4019-419f-b53b-142267b56647">
-            Recall <span class="vocab">Newton’s 2nd law of motion</span>, \( F = ma \), the force \( F \) acting on the object is equal to the mass \( m \) of the object times the acceleration \( a \) of the object. Acceleration is the derivative of velocity and velocity is the derivative of position so position is the second derivative of acceleration and can be written as  \( a = \ddot{y} \) where \(y(t)\) represent the position (height) of the object at time \(t\). The only force acting on the object is <span class="vocab">gravity</span> and the acceleration due to gravity is in the downward (negative) direction, so the total force \( F \) is given by \( -mg \). Thus <span class="vocab">Newton’s 2nd law of motion</span> can be rewritten to represent a second order differential equation modeling this situation:
-            \begin{equation*}
-              F = ma \Longrightarrow
-              -mg = m \ddot{y} \Longrightarrow
-              -g = \ddot{y}
-            \end{equation*}
-            where the dot notation indicates differentiation with respect to \(t\). If \(y_0 \) denotes the initial height and \(v_0\) denotes the initial velocity when \(t=0\), then \(y\) is a solution of the initial value problem 
-            <a id="x1-30r17"></a>
-            \begin {equation} \label {eq:1.2.17} 
-              \ddot{y}=-g \quad
-              y(0)=y_0 \quad 
-              \dot{y}(0)=v_0
-            \end {equation}
-            Which can be solved by antidifferentiating twice:
-            \begin {align*}
-              \ddot{y} = &amp; -g \\
-              \Longrightarrow
-              \dot{y} = &amp; -gt + c_1 \\
-              \Longrightarrow
-              y = &amp; -\frac{1}{2}gt^2 + c_1 t + c_2 \\
-            \end {align*}      
           </div>
           <div class="reading-exercise" id="7dc52b16-d26c-4b27-8258-b80f323fa9ba">
-            Show all the work for calculating the two antiderivatives
+            Rewrite <a href="#x1-30r17">(1.2.17)</a> using <span class="vocab">Leibniz notation</span> then use integral notation to show how to solve the equation using the <span class="vocab">power rule</span>.  
           </div> 
           <div id="b2e3d010-438a-44f3-9e3b-2324218add95">
-            Imposing the initial conditions \(y(0)=y_0\) and \( \dot{y}(0)=v_0 \) in these two equations shows that
-            \(c_1=v_0\) and \(c_2=y_0\). Therefore the solution of the initial value problem <a href="#x1-30r17">(1.2.17)</a> is
-            \[ y = - \frac{1}{2} gt^2 + v_0 t + y_0 \]
           </div>    
           <div class="reading-exercise" id="7358d49e-bf70-4116-a730-b9c960212a8b">
-            Show all the work for applying the initial conditions
+            Show the work for applying the initial conditions and calculating the constants of integration
           </div>
+
       </details>
     </div> 
   </details>
