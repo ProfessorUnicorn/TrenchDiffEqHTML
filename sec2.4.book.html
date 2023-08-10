@@ -69,11 +69,29 @@
 				A <span class="vocab">Bernoulli equation</span> is an equation of the form
 				<a id="x1-3r2"></a>
 				\begin {equation} \label {eq:2.4.2}
-				\frac{dy}{dx}+p(x)y=f(x)y^r\end {equation}
-				where \(r\) can be any real number other than \(0\) or \(1\). (Note that <a href="#x1-3r2">(2.4.2)</a> is linear if and only if \(r=0\) or \(r=1\).) We can transform <a href="#x1-3r2">(2.4.2)</a> into a separable equation by variation of parameters: if \(y_1\) is a
-				nontrivial solution of <a href="#x1-2r1">(2.4.1)</a>, substituting \(y=uy_1\) into <a href="#x1-3r2">(2.4.2)</a> yields \[ \frac{du}{dx} y_1 + u(\frac{dy_1}{dx} + p(x)y_1)=f(x)(uy_1)^r\] which is equivalent to
-				the separable equation \[ \frac{du}{dx} y_1(x)=f(x)\left (y_1(x)\right )^ru^r\quad \mbox{ or } \quad  \frac{du}{dx} \frac{1}{u^r} = f(x)\left (y_1(x)\right )^{r-1}\] since
-				\(\frac{dy_1}{dx} + p(x)y_1=0\).
+				\frac{dy}{dx}+p(x)y=f(x)y^r
+				\end {equation}
+				where \(r\) can be any real number other than \(0\) or \(1\). (Note that <a href="#x1-3r2">(2.4.2)</a> is linear if and only if \(r=0\) or \(r=1\).) 
+				
+				<div class="reading-exercise">
+					Substitute \(r=0\) and \(r=1\) into <a href="#x1-3r2">(2.4.2)</a> and show the result is linear
+				</div> 
+				
+				We can transform <a href="#x1-3r2">(2.4.2)</a> into a separable equation by 
+				<span class="vocab">variation of parameters</span>: if \(y_1\) is a
+				nontrivial solution of <a href="#x1-2r1">(2.4.1)</a>, substituting \(y=uy_1\) into <a href="#x1-3r2">(2.4.2)</a> yields 
+				
+				\[ \frac{du}{dx} y_1 
+					+ u \left( \frac{dy_1}{dx} + p(x)y_1 \right) = f(x)(uy_1)^r\] 
+				
+				which is equivalent to
+				the separable equation 
+				
+				\[ \frac{du}{dx} y_1(x) = f(x) \Big( y_1(x) \Big)^ru^r
+					\quad \mbox{ or } \quad  
+					\frac{du}{dx} \frac{1}{u^r} = f(x) \Big( y_1(x) \Big)^{r-1}\] 
+				
+				since \(\frac{dy_1}{dx} + p(x)y_1=0\).
 			</div>
 			<div class="example" id="x1-41" style="--ex-number: 1">
 				<div>
@@ -130,14 +148,17 @@
 				We’ve seen that the nonlinear Bernoulli equation can be transformed into a
 				separable equation by the substitution \(y=uy_1\) if \(y_1\) is suitably
 				chosen. Now let’s discover a sufficient condition for a nonlinear first
-				order differential equation \begin {equation} \label {eq:2.4.4} \frac{dy}{dx} = f(x,y)
+				order differential equation 
+				\begin {equation} \label {eq:2.4.4} 
+					\frac{dy}{dx} = f(x,y)
 				\end {equation}
 				<a id="x1-7r4"></a>
 				to be transformable into a separable equation in the same way.
 				Substituting \(y=uy_1\) into <a href="#x1-7r4">(2.4.4)</a> yields \[ \frac{du}{dx} y_1(x)+u \left.\frac{dy_1}{dx}\right|_x = f(x,uy_1(x))\] which is equivalent to \begin
 				{equation} \label {eq:2.4.5} \frac{du}{dx} y_1(x)=f(x,uy_1(x))-u \left.\frac{dy_1}{dx}\right|_x \end {equation}
 				<a id="x1-8r5"></a>
-				If \[ f(x,uy_1(x))=q(u) \left.\frac{dy_1}{dx}\right|_x \] for some function \(q\), then <a href="#x1-8r5">(2.4.5)</a> becomes \begin {equation} \label {eq:2.4.6} \frac{du}{dx} y_1(x)=(q(u)-u) \left.\frac{dy_1}{dx}\right|_x \end
+				If 
+				\[ f(x,uy_1(x))=q(u) \left.\frac{dy_1}{dx}\right|_x \] for some function \(q\), then <a href="#x1-8r5">(2.4.5)</a> becomes \begin {equation} \label {eq:2.4.6} \frac{du}{dx} y_1(x)=(q(u)-u) \left.\frac{dy_1}{dx}\right|_x \end
 				{equation}
 				<a id="x1-9r6"></a>
 				which is separable. After checking for constant solutions \(u\equiv u_0\)
