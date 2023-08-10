@@ -23,43 +23,61 @@
 <details id="1fe2cc6b-32cb-450d-97ae-ceeb2435f948">
 	<summary>Direction Fields</summary>
 
-	<div id="4190e175-c162-46cd-b66c-5d9f29e8e474">It’s impossible to find explicit formulas for solutions of some differential equations. Even if there are such
-	formulas, they may be so complicated that they’re useless. In this case we may resort to graphical or numerical
-	methods to get some idea of how the solutions of the given equation behave.
+	<div id="4190e175-c162-46cd-b66c-5d9f29e8e474">
+		It is impossible to find explicit formulas for solutions of many differential equations. Even if there are formulas, they may be so complicated that they’re useless. In this case we may resort to graphical or numerical methods to get some idea of how the solutions of the given equation behave.
 	</div>
-	<div class="indent" id="8c576fff-893a-48c6-b84a-a4bc0076958e">  In Section&nbsp;2.3 we’ll take up the question of existence of solutions of a first order equation \begin {equation}  \label {eq:1.3.1} \frac{dy}{dx}=f(x,y)\end {equation}<a id="x1-2r1"></a> In this section we’ll
-	simply assume that <a href="#x1-2r1">(1.3.1)</a> has solutions and discuss a graphical method for approximating them. In Chapter&nbsp;3
-	we discuss numerical methods for obtaining approximate solutions of <a href="#x1-2r1">(1.3.1)</a>.
+	<div class="indent" id="8c576fff-893a-48c6-b84a-a4bc0076958e">
+		In Section&nbsp;2.3 we’ll take up the question of existence of solutions of a first order differential equation but in this section we’ll simply assume that solutions exist and discuss a graphical method for approximating them.	
 	</div>
-	<div class="indent" id="0f43eae9-aebf-4c27-b034-b87a5300f7f2">  Recall that a solution of <a href="#x1-2r1">(1.3.1)</a> is a function \(y=y(x)\) such that
-	\[ \frac{dy}{dx}=f\Big(x,y(x)\Big) \]
-	for all values of \(x\) in some interval, and an <span class="vocab">integral curve</span> is either the graph of a solution or is made up of
-	segments that are graphs of solutions. Therefore, not being able to solve <a href="#x1-2r1">(1.3.1)</a> is equivalent to not knowing the
-	equations of <span class="vocab">integral curves</span> of <a href="#x1-2r1">(1.3.1)</a>. However, while it may be difficult to solve a differential equation, it is easy to calculate the slopes of the curves. To be specific,
-	the slope of an <span class="vocab">integral curve</span> of <a href="#x1-2r1">(1.3.1)</a> through a given point \((x_0,y_0)\) is given by the number \(f(x_0,y_0)\).
+	<div class="indent" id="0f43eae9-aebf-4c27-b034-b87a5300f7f2">
+		Recall that a solution of <a href="#x1-2r1">(1.3.1)</a> is a function \(y=y(x)\) such that
+		
+		<a id="x1-2r1"></a>
+		\begin {equation}  \label {eq:1.3.1} 
+			\frac{dy}{dx}=f\Big(x,y(x)\Big)
+		\end {equation} 
+		
+		for all values of \(x\) in some interval, and an <span class="vocab">integral curve</span> is either the graph of a solution or is made up of segments that are graphs of solutions. Therefore, not being able to solve <a href="#x1-2r1">(1.3.1)</a> is equivalent to not knowing the equations of <span class="vocab">integral curves</span> of <a href="#x1-2r1">(1.3.1)</a>
 	</div>
-	<div class="indent" id="e78eb11d-ddd1-425c-9668-8cbd0816b8e0">If \(f\) is defined on a set \(R\), we can construct a <span class="vocab">direction field</span> (<span class="vocab">slope field</span>) for <a href="#x1-2r1">(1.3.1)</a> in \(R\) by drawing a short line segment through
-	each point \((x,y)\) in \(R\) with slope \(f(x,y)\). Of course, as a practical matter, we can’t actually draw line segments through <em>every</em>
-	point in \(R\); rather, we must select a finite set of points in \(R\). For example, suppose \(f\) is defined on the closed rectangular region \( R:\{a\le x\le b, c\le y\le d\}\)
-	Let \( a= x_0&lt; x_1&lt; \cdots &lt; x_m=b \)
-	be equally spaced points in \([a,b]\) and
-	\( c=y_0&lt;y_1&lt;\cdots &lt;y_n=d \)
-	be equally spaced points in \([c,d]\). We say that the points
-	\[ (x_i,y_j) \quad 0\le i\le m \quad 0\le j\le n\]
-	form a <span class="vocab">rectangular grid</span> (Figure&nbsp;<a href="#-em-a-rectangular-grid-">1.3.1<!-- tex4ht:ref: figure:1.3.1  --></a>). Through each point in the grid we draw a short line segment
-	with slope \(f(x_i,y_j)\). The result is an approximation to a direction field for <a href="#x1-2r1">(1.3.1)</a> in \(R\). If the grid points are
-	sufficiently numerous and close together, we can draw approximate <span class="vocab">integral curves</span> of <a href="#x1-2r1">(1.3.1)</a> by
-	drawing curves through points in the grid tangent to the line segments associated with the points in the
-	grid.
+	<div class="indent" id="e78eb11d-ddd1-425c-9668-8cbd0816b8e01">	
+		While it may be difficult to solve a differential equation, it is easy to calculate the slopes of the curves. To be specific, the slope of an <span class="vocab">integral curve</span> of <a href="#x1-2r1">(1.3.1)</a> through a given point \((x_0,y_0)\) is given by the number \(f(x_0,y_0) = \left.\frac{dy}{dx}\right|_{(x_0,y_0)} \)	
 	</div>
+	<div class="indent" id="e78eb11d-ddd1-425c-9668-8cbd0816b8e0">
+		If \(f(x,y)\) is defined on a set \(R\), we can construct a <span class="vocab">direction field</span> (<span class="vocab">slope field</span>) for <a href="#x1-2r1">(1.3.1)</a> in \(R\) by drawing a short line segment through each point \((x,y)\) in \(R\) with slope \(f(x,y) = dy/dx \). Of course, as a practical matter, we can’t actually draw line segments through <em>every</em> point in \(R\) so we must select a finite set of points in the set. 
+	</div>
+	<div class="indent" id="e78eb11d-ddd1-425c-9668-8cbd0816b8e02">	
+		For example, suppose \(f(x,y)\) is defined on the closed rectangular region \( R:\{a\le x\le b, c\le y\le d\}\)Let \( a= x_0&lt; x_1&lt; \cdots &lt; x_m=b \) be equally spaced points in \([a,b]\) and \( c=y_0&lt;y_1&lt;\cdots &lt;y_n=d \) be equally spaced points in \([c,d]\). We say that the points
+		
+		\[ (x_i,y_j) \quad 0\le i\le m \quad 0\le j\le n\]
+		
+		form a <span class="vocab">rectangular grid</span> 
+	</div>
+
 	<figure class="figure" id="85fb6c17-cec0-499e-97db-8855a3d3a8fd"> 
 		<div id="-em-a-rectangular-grid-"><img height="292" src="EPS/fig010301.png" width="292"> <a id="x1-3r1"></a></div>
 		<figcaption class="caption"><span class="id">Figure&nbsp;1.3.1 </span><span class="content">    A rectangular grid                                                      </span></figcaption><!-- tex4ht:label?: x1-3r1  -->
 	</figure>
+
+	<div class="indent" id="e78eb11d-ddd1-425c-9668-8cbd0816b8e03">		
+		Through each point in the grid we draw a short line segment with slope \(f(x_i,y_j)\). The result is an approximation to a direction field for <a href="#x1-2r1">(1.3.1)</a> in \(R\). If the grid points are sufficiently numerous and close together, we can draw approximate <span class="vocab">integral curves</span> of <a href="#x1-2r1">(1.3.1)</a> by drawing curves through points in the grid tangent to the line segments associated with the points in the grid.
+	</div>
+
 	<div class="indent" id="6a36521b-4668-4c8f-aa93-ae910c56cd01">  Unfortunately, approximating a direction field and graphing <span class="vocab">integral curves</span> in this way is very tedious when
 		done by hand. However, there is software for doing this and using the <span class="vocab">direction
 			fields</span> and <span class="vocab">integral curves</span> gives useful insights into the behavior of the solutions of the differential equation even
 		if we can’t obtain exact solutions.
+
+		<ul>
+			<li>
+			  <a href="https://homepages.bluffton.edu/~nesterd/apps/slopefields.html" target=_blank>Bluffton University Direction Field Plotter</a>:
+			  https://homepages.bluffton.edu/~nesterd/apps/slopefields.html
+			</li>	
+			<li>
+			  <a href="https://c3d.libretexts.org/DirectionField/index.html" target=_blank>Libre Texts Direction Field Plotter</a>:
+			  https://c3d.libretexts.org/DirectionField/index.html
+			</li>	
+		</ul>
+
 	</div>
 
 	<div class="example" id="ex1.3.1" style="--ex-number: 1">
@@ -192,34 +210,45 @@
 <details id="c3086a83-f31d-4720-9699-3fb13ac4f79b">
 	<summary>Parameteric Representation</summary>
 		<div class="indent" id="33578aec-805a-4e5a-be3e-132028478afb">  
-			Plotting direction fields using slope calculations won’t work for the equation 
+			Constructing a <span class="vocab">direction field</span> (<span class="vocab">slope field</span>) for some differential equations can be challenging due to undefined values. For instance, consider the Equation:
+
 			<a id="x1-7r2"></a>
 			\begin {equation}  \label {eq:1.3.2} 
-				\frac{dy}{dx } =-\frac{x}{y}  
+				\frac{dy}{dx} = \overset{f(x,y)}{\overbrace{-\frac{x}{y}}}  
 			\end {equation} 
-			if the rectangle \(R\) contains part of the \(x\)-axis, since \(f(x,y)=-x/y\) is undefined when \(y=0\). Similarly, it won’t work for the equation 
+
+			The function \( \displaystyle f(x,y)= -\frac{x}{y} \) is undefined when \( y=0 \) which accounts for the entire \( x-\)axis. So if you are trying to construct your <span class="vocab-repeat">direction field</span> (<span class="vocab-repeat">slope field</span>) on any rectangle that contains part of the \( x-\)axis there will be undefined values in the calculations.
+		</div>
+		<div class="indent" id="33578aec-805a-4e5a-be3e-132028478afbc"> 	
+			Similarly, consider the differential equation:
+
 			<a id="x1-8r3"></a>
 			\begin {equation}  \label {eq:1.3.3} 
-				\frac{dy}{dx}={x^2\over 1-x^2-y^2}  
+				\frac{dy}{dx} = \overset{f(x,y)}{\overbrace{{x^2\over1-x^2-y^2}}}  
 			\end {equation} 
-			if the rectangle  \(R\) contains any part of the unit circle \(x^2+y^2=1\), because the right side of
-		<a href="#x1-8r3">(1.3.3)</a> is undefined if \(x^2+y^2=1\). 
-		</div>
-		<div>
-		Because of this, some differential equation software is based on 
-		writing differential equations in parametric form where \( x = x(t) \) and \( x = y(t) \) 
-		regarded as functions of a parameter \(t\) of the form and then we can calculate the derivative using the parametric equations
-		<a id="x1-9r4"></a>
-		\begin {equation}  \label {eq:1.3.4} 
-			\frac{dy}{dx} = \frac{ \displaystyle\frac{dy}{dt}}{ \displaystyle\frac{dx}{dt}} = \frac{A(x,y)}{B(x,y)}
-		\end {equation} 
 
-		In this method both \( A(x,y) \) and \( B(x,y) \) are continuous on any rectangle \(R\).
-		
-		<a id="x1-10r5"></a>
-		\begin {equation}  \label {eq:1.3.5} 
-			{dx\over dt}=B(x,y) \quad {dy\over dt}=A(x,y)  
-		\end {equation} 
+			The function \( \displaystyle  f(x,y)= {x^2\over1-x^2-y^2} \) is undefined when \( 1-x^2-y^2 \) or when 
+			
+			\[ x^2+y^2 = 1 \] 
+			
+			which is the equation of the unit circle. So if you are trying to construct your <span class="vocab-repeat">direction field</span> (<span class="vocab-repeat">slope field</span>) on any rectangle that contains part of the unit circle you will get undefined values there.
+		</div>
+
+		<div class="indent" id="33578aec-805a-4e5a-be3e-132028478afbd"> 
+
+			Because of the challenges that arise with these undefined values, it is common to write differential equations in parametric form where \( x = x(t) \) and \( x = y(t) \)  are regarded as functions of the parameter \(t\) and then we can calculate the derivative using the parametric equations instead. Recall parametric derivatives:
+
+			<a id="x1-9r4"></a>
+			\begin {equation}  \label {eq:1.3.4} 
+				\frac{dy}{dx} = \frac{ \displaystyle\frac{dy}{dt}}{ \displaystyle\frac{dx}{dt}} = \frac{A(x,y)}{B(x,y)}
+			\end {equation} 
+
+			In this method both \( A(x,y) \) and \( B(x,y) \) are continuous on any rectangle \(R\) so we can construct  <span class="vocab-repeat">direction fields</span> on any rectangle 
+			
+			<a id="x1-10r5"></a>
+			\begin {equation}  \label {eq:1.3.5} 
+				{dx\over dt}=B(x,y) \quad {dy\over dt}=A(x,y)  
+			\end {equation} 
 		</div>
 		<div class="indent" id="37a23307-55dd-4295-b059-5e7b807cada3">  
 			Equation&nbsp;<a href="#x1-7r2">(1.3.2)</a> can be rewritten in parametric form as
@@ -231,7 +260,7 @@
 			\[ {dx\over dt}=-y \quad {dy\over dt}=x \]
 		</div>
 		<div class="indent" id="86e7b5d2-23e6-4487-bfd0-805a0a13c6f1">  
-			Figure&nbsp;<a href="#-a-direction-field-and-integral-curves-for-y-x-overy-">1.3.5<!-- tex4ht:ref: figure:1.3.5  --></a> shows a direction field and some <span class="vocab">integral curves</span> for (<a href="#x1-7r2">1.3.2<!-- tex4ht:ref: eq:1.3.2  --></a>). As shown in Example&nbsp;<span class="ptmb8t-">1.2.1</span> and will verify again in Section&nbsp;2.2, the <span class="vocab">integral curves</span> of (<a href="#x1-7r2">1.3.2<!-- tex4ht:ref: eq:1.3.2  --></a>) are circles centered at the origin
+			Figure&nbsp;<a href="#-a-direction-field-and-integral-curves-for-y-x-overy-">1.3.5</a> shows a direction field and some <span class="vocab">integral curves</span> for <a href="#x1-7r2">(1.3.2)</a>. As shown in Example&nbsp;<span class="ptmb8t-">1.2.1</span> and will verify again in Section&nbsp;2.2, the <span class="vocab">integral curves</span> of <a href="#x1-7r2">(1.3.2)</a> are circles centered at the origin
 		</div>
  
 		<figure class="figure" id="b8289ed3-a33a-40dc-98b9-d0134726a421"> 
