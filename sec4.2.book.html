@@ -38,378 +38,319 @@
 			<span class="ptmb8t-">4.2</span>
 			<span class="ptmb8t-x-x-90">&nbsp; COOLING AND MIXING</span>
 		</div>
-		<div id="236c4180-0499-477f-bab6-82f4e15799e6">
-			<span id="textcolor1">Newton’s Law of Cooling</span>
-		</div>
-		<div class="indent" id="1e3b115b-e873-44f5-8723-e1acf5d128f7"></div>
-		<div id="d0a007b9-d274-4612-83be-40a1c0cf3137">
-			Newton’s law of cooling states that if an object with temperature \(T(t)\)
-			at time \(t\) is in a medium with temperature \(T_m(t)\), the rate of
-			change of \(T\) at time \(t\) is proportional to \(T(t)-T_m(t)\); thus,
-			\(T\) satisfies a differential equation of the form \begin {equation}
-			\label {eq:4.2.1} \dot{T}=-k(T-T_m)\end {equation}
-			<a id="x1-2r1"></a>
-			Here \(k &gt; 0\), since the temperature of the object must decrease if
-			\(T &gt; T_m\), or increase if \(T &lt; T_m\). We’ll call \(k\) the
-			<span class="vocab">temperature decay constant of the medium</span>
-			.
-		</div>
-		<div class="indent" id="35525f4f-4392-415e-b94b-9eee871fae6c">
-			For simplicity, in this section we’ll assume that the medium is maintained
-			at a constant temperature \(T_m\). This is another example of building a
-			simple mathematical model for a physical phenomenon. Like most
-			mathematical models it has its limitations. For example, it’s reasonable
-			to assume that the temperature of a room remains approximately constant if
-			the cooling object is a cup of coffee, but perhaps not if it’s a huge
-			cauldron of molten metal. (For more on this see Exercise&nbsp;
-			<span class="ptmb8t-">17</span>
-			.)
-		</div>
-		<div class="indent" id="3b203701-97a4-4ce8-a6ed-cbc85d08a398">
-			To solve <a href="#x1-2r1">(4.2.1)</a>, we rewrite it as \[ \dot{T}+kT=kT_m\] Since \(e^{-kt}\) is a solution of the
-			complementary equation, the solutions of this equation are of the form
-			\(T=ue^{-kt}\), where \(\dot{u}e^{-kt}=kT_m\), so \(\dot{u}=kT_me^{kt}\). Hence, \[
-			u=T_me^{kt}+c\] so \[ T=ue^{-kt}=T_m+ce^{-kt}\] If \(T(0)=T_0\), setting
-			\(t=0\) here yields \(c=T_0-T_m\), so \begin {equation} \label {eq:4.2.2}
-			T=T_m+(T_0-T_m)e^{-kt}\end {equation}
-			<a id="x1-3r2"></a>
-			Note that \(T-T_m\) decays exponentially, with decay constant \(k\).
-		</div>
-		<div class="newtheorem" id="eb923464-3e5e-42c6-9605-7edc64b18c57">
-			<div>
-				<span class="head">
-					<span class="ex-number">Example&nbsp;4.2.1</span>
-				</span>
-				<a id="x1-41"></a>
-				A ceramic insulator is baked at \(400^\circ \)C and cooled in a room in
-				which the temperature is \(25^\circ \)C. After 4 minutes the temperature
-				of the insulator is \(200^\circ \)C. What is its temperature after 8
-				minutes?
+
+		<details id="236c4180-0499-477f-bab6-82f4e15799e6">
+			<summary>Newton’s Law of Cooling</summary>
+		
+			<div id="d0a007b9-d274-4612-83be-40a1c0cf3137">
+				Newton’s law of cooling states that if an object with temperature \(T(t)\)
+				at time \(t\) is in a medium with temperature \(T_m(t)\), the rate of
+				change of \(T\) at time \(t\) is proportional to \(T(t)-T_m(t)\); thus,
+				\(T\) satisfies a differential equation of the form \begin {equation}
+				\label {eq:4.2.1} \dot{T}=-k(T-T_m)\end {equation}
+				<a id="x1-2r1"></a>
+				Here \(k &gt; 0\), since the temperature of the object must decrease if
+				\(T &gt; T_m\), or increase if \(T &lt; T_m\). We’ll call \(k\) the
+				<span class="vocab">temperature decay constant of the medium</span>.
 			</div>
-		</div>
-		<div class="indent" id="334d4a81-0ca9-4741-9380-bdc46fb08138"></div>
-		<div id="c9962928-a1d2-477d-b00d-e418eb4f1a67">
-			<span class="ptmb8t-">Solution</span>
-			&nbsp;Here \(T_0=400\) and \(T_m=25\), so <a href="#x1-3r2">(4.2.2)</a> becomes \begin {equation} \label {eq:4.2.3} T=25+375e^{-kt}\end
-			{equation}
-			<a id="x1-5r3"></a>
-			We determine \(k\) from the stated condition that \(T(4)=200\); that is,
-			\[ 200=25+375e^{-4k}\] hence, \[ e^{-4k} = {175\over 375} = {7\over 15}\]
-			Taking logarithms and solving for \(k\) yields \[ k=-{1\over 4} \ln
-			{7\over 15}={1\over 4}\ln {15\over 7}\] Substituting this into <a href="#x1-5r3">(4.2.3)</a> yields \[ T=25+375 e^{-{t\over 4} \ln {15\over 7}} \] (Figure&nbsp;
-			<a href="#-tet-">
-				4.2.1
-				<!-- tex4ht:ref: figure:4.2.1  -->
-			</a>
-			). Therefore the temperature of the insulator after 8 minutes is \[\begin
-			{array}{rl} T(8) &amp; \displaystyle = 25+375 e^{-2 \ln {15\over 7}}
-			\\[9pt] &amp; \displaystyle = 25+375 \left ({7\over 15}\right )^2 \approx
-			107^\circ \mbox {C}\end {array}\]
-		</div>
-		<figure class="figure" id="77e456d5-538b-4c26-826f-1785145f37e8">
-			<div id="-tet-">
-				<img height="264" src="EPS/fig040201.png" width="409" />
-				<a id="x1-6r1"></a>
+			<div class="indent" id="35525f4f-4392-415e-b94b-9eee871fae6c">
+				For simplicity, in this section we’ll assume that the medium is maintained
+				at a constant temperature \(T_m\). This is another example of building a
+				simple mathematical model for a physical phenomenon. Like most
+				mathematical models it has its limitations. For example, it’s reasonable
+				to assume that the temperature of a room remains approximately constant if
+				the cooling object is a cup of coffee, but perhaps not if it’s a huge
+				cauldron of molten metal. (For more on this see Exercise&nbsp;
+				<span class="ptmb8t-">17</span>.)
 			</div>
-			<figcaption class="caption">
-				<span class="id">Figure&nbsp;4.2.1</span>
-				<span class="content">\(T=25+375e^{-(t/4)\ln 15/7}\)</span>
-			</figcaption>
-			<!-- tex4ht:label?: x1-6r1  -->
-		</figure>
-		<div class="newtheorem" id="c10ad0c9-fbd5-4caa-84c3-9091b02a5bdf">
-			<div>
-				<span class="head">
-					<span class="ex-number">Example&nbsp;4.2.2</span>
-				</span>
-				<a id="x1-72"></a>
-				An object with temperature \(72^\circ \)F is placed outside, where the
-				temperature is \(-20^\circ \)F. At 11:05 the temperature of the object
-				is \(60^\circ \)F and at 11:07 its temperature is \(50^\circ \)F. At
-				what time was the object placed outside?
+			<div class="indent" id="3b203701-97a4-4ce8-a6ed-cbc85d08a398">
+				To solve <a href="#x1-2r1">(4.2.1)</a>, we rewrite it as \[ \dot{T}+kT=kT_m\] Since \(e^{-kt}\) is a solution of the
+				complementary equation, the solutions of this equation are of the form
+				\(T=ue^{-kt}\), where \(\dot{u}e^{-kt}=kT_m\), so \(\dot{u}=kT_me^{kt}\). Hence, \[
+				u=T_me^{kt}+c\] so \[ T=ue^{-kt}=T_m+ce^{-kt}\] If \(T(0)=T_0\), setting
+				\(t=0\) here yields \(c=T_0-T_m\), so \begin {equation} \label {eq:4.2.2}
+				T=T_m+(T_0-T_m)e^{-kt}\end {equation}
+				<a id="x1-3r2"></a>
+				Note that \(T-T_m\) decays exponentially, with decay constant \(k\).
 			</div>
-		</div>
-		<div class="indent" id="4b222158-a373-49b8-8b25-d8f20f6bdf4c"></div>
-		<div id="d27d0550-f238-4fac-8fe1-d5c53228ae35">
-			<span class="ptmb8t-">Solution</span>
-			&nbsp;Let \(T(t)\) be the temperature of the object at time \(t\). For
-			convenience, we choose the origin \(t_0=0\) of the time scale to be 11:05
-			so that \(T_0=60\). We must determine the time \(\tau \) when \(T(\tau
-			)=72\). Substituting \(T_0=60\) and \(T_m=-20\) into <a href="#x1-3r2">(4.2.2)</a> yields \[ T = -20+\bigl (60-(-20)\bigr )e^{-kt} \] or \begin {equation}
-			\label {eq:4.2.4} T = -20+80e^{-kt}\end {equation}
-			<a id="x1-8r4"></a>
-			We obtain \(k\) from the stated condition that the temperature of the
-			object is 50\(^\circ \)F at 11:07. Since 11:07 is \(t=2\) on our time
-			scale, we can determine \(k\) by substituting \(T=50\) and \(t=2\) into <a href="#x1-8r4">(4.2.4)</a> to obtain \[ 50 = -20+80e^{-2k} \] (Figure&nbsp;
-			<a href="#-t-et-over-over-">
-				4.2.2
-				<!-- tex4ht:ref: figure:4.2.2  -->
-			</a>
-			); hence, \[ e^{-2k}={70\over 80}={7\over 8}\] Taking logarithms and
-			solving for \(k\) yields \[ k =-{1\over 2} \ln {7\over 8} = {1\over 2} \ln
-			{8\over 7}\] Substituting this into <a href="#x1-8r4">(4.2.4)</a> yields \[ T = -20+80 e^{-{t\over 2}\ln {8\over 7}}\] and the condition
-			\(T(\tau )=72\) implies that \[ 72 =-20+80 e^{-{\tau \over 2} \ln {8\over
-			7}}\] hence, \[ e^{-{\tau \over 2} \ln {8\over 7}} ={92\over 80} =
-			{23\over 20}\] Taking logarithms and solving for \(\tau \) yields \[ \tau
-			= -{2 \ln {23\over 20}\over \ln {8\over 7}} \approx -2.09\ \mbox {min}\]
-			Therefore the object was placed outside about 2 minutes and 5 seconds
-			before 11:05; that is, at 11:02:55.
-		</div>
-		<figure class="figure" id="1bd69b7d-cf8c-4c7b-8a01-6cc780a9553f">
-			<div id="-t-et-over-over-">
-				<img height="264" src="EPS/fig040202.png" width="409" />
-				<a id="x1-9r2"></a>
+			<div class="example" id="x1-41" style="--ex-number: 1">
+				<div>
+					A ceramic insulator is baked at \(400^\circ \)C and cooled in a room in
+					which the temperature is \(25^\circ \)C. After 4 minutes the temperature
+					of the insulator is \(200^\circ \)C. What is its temperature after 8
+					minutes?
+				</div>
+
+				<details type="solution" id="c9962928-a1d2-477d-b00d-e418eb4f1a67">
+					<summary>Solution</summary>
+
+					Here \(T_0=400\) and \(T_m=25\), so <a href="#x1-3r2">(4.2.2)</a> becomes \begin {equation} \label {eq:4.2.3} T=25+375e^{-kt}\end {equation}
+					<a id="x1-5r3"></a>
+					We determine \(k\) from the stated condition that \(T(4)=200\); that is,
+					\[ 200=25+375e^{-4k}\] hence, \[ e^{-4k} = {175\over 375} = {7\over 15}\]
+					Taking logarithms and solving for \(k\) yields \[ k=-{1\over 4} \ln
+					{7\over 15}={1\over 4}\ln {15\over 7}\] Substituting this into <a href="#x1-5r3">(4.2.3)</a> yields \[ T=25+375 e^{-{t\over 4} \ln {15\over 7}} \]
+					(Figure&nbsp;<a href="#-tet-">4.2.1</a>). Therefore the temperature of the insulator after 8 minutes is \[\begin
+					{array}{rl} T(8) &amp; \displaystyle = 25+375 e^{-2 \ln {15\over 7}}
+					\\[9pt] &amp; \displaystyle = 25+375 \left ({7\over 15}\right )^2 \approx
+					107^\circ \mbox {C}\end {array}\]
+				</details>
 			</div>
-			<figcaption class="caption">
-				<span class="id">Figure&nbsp;4.2.2</span>
-				<span class="content">
-					\(T = -20+80 e^{-{t\over 2}\ln {8\over 7}}\)
-				</span>
-			</figcaption>
-			<!-- tex4ht:label?: x1-9r2  -->
-		</figure>
-		<div id="b9679dbe-6dfd-4fff-9d33-fd6539f26745">
-			<span id="textcolor2">Mixing Problems</span>
-		</div>
-		<div class="indent" id="cb1721c9-b327-40eb-94ab-19109dcaf1c5"></div>
-		<div id="c0396ec2-3c78-43ff-873a-b5c1ff60f19f">
-			In the next two examples a saltwater solution with a given concentration
-			(weight of salt per unit volume of solution) is added at a specified rate
-			to a tank that initially contains saltwater with a different
-			concentration. The problem is to determine the quantity of salt in the
-			tank as a function of time. This is an example of a
-			<span class="vocab">mixing problem</span>
-			. To construct a tractable mathematical model for mixing problems we
-			assume in our examples (and most exercises) that the mixture is stirred
-			instantly so that the salt is always uniformly distributed throughout the
-			mixture. Exercises&nbsp;
-			<span class="ptmb8t-">22</span>
-			and
-			<span class="ptmb8t-">23</span>
-			deal with situations where this isn’t so, but the distribution of salt
-			becomes approximately uniform as \(t\to \infty \).
-		</div>
-		<div class="newtheorem" id="61734c56-a07e-4ba3-b635-ec44625d5274">
-			<div>
-				<span class="head">
-					<span class="ex-number">Example&nbsp;4.2.3</span>
-				</span>
-				<a id="x1-103"></a>
-				A tank initially contains 40 pounds of salt dissolved in 600 gallons of
-				water. Starting at \(t_0 = 0\), water that contains 1/2 pound of salt
-				per gallon is poured into the tank at the rate of 4 gal/min and the
-				mixture is drained from the tank at the same rate (Figure&nbsp;
-				<a href="#-a-mixing-problem-">
-					4.2.3
-					<!-- tex4ht:ref: figure:4.2.3  -->
-				</a>
-				).
+			
+			<figure class="figure" id="77e456d5-538b-4c26-826f-1785145f37e8">
+				<div id="-tet-">
+					<img height="264" src="EPS/fig040201.png" width="409" />
+					<a id="x1-6r1"></a>
+				</div>
+				<figcaption class="caption">
+					<span class="id">Figure&nbsp;4.2.1</span>
+					<span class="content">\(T=25+375e^{-(t/4)\ln 15/7}\)</span>
+				</figcaption>
+				<!-- tex4ht:label?: x1-6r1  -->
+			</figure>
+
+			<div class="example" id="x1-72" style="--ex-number: 2">
+				<div>
+					An object with temperature \(72^\circ \)F is placed outside, where the
+					temperature is \(-20^\circ \)F. At 11:05 the temperature of the object
+					is \(60^\circ \)F and at 11:07 its temperature is \(50^\circ \)F. At
+					what time was the object placed outside?
+				</div>
+
+				<details class="solution" id="d27d0550-f238-4fac-8fe1-d5c53228ae35">
+					<summary>Solution</summary>
+					Let \(T(t)\) be the temperature of the object at time \(t\). For
+					convenience, we choose the origin \(t_0=0\) of the time scale to be 11:05
+					so that \(T_0=60\). We must determine the time \(\tau \) when \(T(\tau
+					)=72\). Substituting \(T_0=60\) and \(T_m=-20\) into <a href="#x1-3r2">(4.2.2)</a> yields \[ T = -20+\bigl (60-(-20)\bigr )e^{-kt} \] or \begin {equation}
+					\label {eq:4.2.4} T = -20+80e^{-kt}\end {equation}
+					<a id="x1-8r4"></a>
+					We obtain \(k\) from the stated condition that the temperature of the
+					object is 50\(^\circ \)F at 11:07. Since 11:07 is \(t=2\) on our time
+					scale, we can determine \(k\) by substituting \(T=50\) and \(t=2\) into <a href="#x1-8r4">(4.2.4)</a> to obtain \[ 50 = -20+80e^{-2k} \]
+					(Figure&nbsp;<a href="#-t-et-over-over-">4.2.2</a>);
+					hence, \[ e^{-2k}={70\over 80}={7\over 8}\] Taking logarithms and
+					solving for \(k\) yields \[ k =-{1\over 2} \ln {7\over 8} = {1\over 2} \ln
+					{8\over 7}\] Substituting this into <a href="#x1-8r4">(4.2.4)</a> yields \[ T = -20+80 e^{-{t\over 2}\ln {8\over 7}}\] and the condition
+					\(T(\tau )=72\) implies that \[ 72 =-20+80 e^{-{\tau \over 2} \ln {8\over
+					7}}\] hence, \[ e^{-{\tau \over 2} \ln {8\over 7}} ={92\over 80} =
+					{23\over 20}\] Taking logarithms and solving for \(\tau \) yields \[ \tau
+					= -{2 \ln {23\over 20}\over \ln {8\over 7}} \approx -2.09\ \mbox {min}\]
+					Therefore the object was placed outside about 2 minutes and 5 seconds
+					before 11:05; that is, at 11:02:55.
+				</details>
 			</div>
-			<dl class="list1">
-				<dt class="list">
-					<span class="ptmb8t-">(a)</span>
-				</dt>
-				<dd class="list">
-					<div>
+
+			<figure class="figure" id="1bd69b7d-cf8c-4c7b-8a01-6cc780a9553f">
+				<div id="-t-et-over-over-">
+					<img height="264" src="EPS/fig040202.png" width="409" />
+					<a id="x1-9r2"></a>
+				</div>
+				<figcaption class="caption">
+					<span class="id">Figure&nbsp;4.2.2</span>
+					<span class="content">
+						\(T = -20+80 e^{-{t\over 2}\ln {8\over 7}}\)
+					</span>
+				</figcaption>
+				<!-- tex4ht:label?: x1-9r2  -->
+			</figure>
+		</details>
+
+		<details id="b9679dbe-6dfd-4fff-9d33-fd6539f26745">
+			<summary>Mixing Problems</summary>
+		
+			<div id="c0396ec2-3c78-43ff-873a-b5c1ff60f19f">
+				In the next two examples a saltwater solution with a given concentration
+				(weight of salt per unit volume of solution) is added at a specified rate
+				to a tank that initially contains saltwater with a different
+				concentration. The problem is to determine the quantity of salt in the
+				tank as a function of time. This is an example of a
+				<span class="vocab">mixing problem</span>
+				. To construct a tractable mathematical model for mixing problems we
+				assume in our examples (and most exercises) that the mixture is stirred
+				instantly so that the salt is always uniformly distributed throughout the
+				mixture. Exercises&nbsp;
+				<span class="ptmb8t-">22</span>
+				and
+				<span class="ptmb8t-">23</span>
+				deal with situations where this isn’t so, but the distribution of salt
+				becomes approximately uniform as \(t\to \infty \).
+			</div>
+
+			<div class="example" id="x1-103" style="--ex-number: 3">
+				<div>
+					A tank initially contains 40 pounds of salt dissolved in 600 gallons of
+					water. Starting at \(t_0 = 0\), water that contains 1/2 pound of salt
+					per gallon is poured into the tank at the rate of 4 gal/min and the
+					mixture is drained from the tank at the same rate
+					(Figure&nbsp;<a href="#-a-mixing-problem-">4.2.3</a>).
+				</div>
+
+				<ol>
+					<li>
 						Find a differential equation for the quantity \(Q(t)\) of salt in
 						the tank at time \(t &gt; 0\), and solve the equation to determine
 						\(Q(t)\).
+					</li>
+					<li>
+						Find \(\lim _{t\to \infty }Q(t)\).
+					</li>
+				</ol>
+
+				<figure class="figure" id="d5866732-b4e5-47b5-a763-ec214f38ee77">
+					<div id="-a-mixing-problem-">
+						<img height="264" src="EPS/fig040203.png" width="409" />
+						<a id="x1-13r3"></a>
 					</div>
-				</dd>
-				<dt class="list">
-					<span class="ptmb8t-">(b)</span>
-				</dt>
-				<dd class="list">
-					<div>Find \(\lim _{t\to \infty }Q(t)\).</div>
-				</dd>
-			</dl>
-		</div>
-		<div class="indent" id="353f7226-8ea5-45f4-bb53-58fb9621d5a0"></div>
-		<figure class="figure" id="d5866732-b4e5-47b5-a763-ec214f38ee77">
-			<div id="-a-mixing-problem-">
-				<img height="264" src="EPS/fig040203.png" width="409" />
-				<a id="x1-13r3"></a>
+					<figcaption class="caption">
+						<span class="id">Figure&nbsp;4.2.3</span>
+						<span class="content">A mixing problem</span>
+					</figcaption>
+				</figure>
+
+				<details class="solution" id="4332e05b-c7cc-4e67-9059-258b5d6485f5">
+					<summary>Solution</summary>
+					<ol>
+						<li>
+							To find a differential equation for \(Q\), we must use the given
+							information to derive an expression for \(\dot{Q}\). But \(\dot{Q}\) is the rate of
+							change of the quantity of salt in the tank changes with respect to time;
+							thus, if <span class="vocab">rate in</span> denotes the rate at which salt enters the tank
+							and <span class="vocab">rate out</span> denotes the rate by which it leaves, then \begin {equation} \label
+							{eq:4.2.5} \dot{Q} = \mbox {rate in}-\mbox {rate out}\end {equation}
+							<a id="x1-14r5"></a>
+							The rate in is \[ \left ({1\over 2}\ \mbox {lb/gal}\right ) \times (4\
+							\mbox {gal/min}) = 2\ \mbox {lb/min}\] Determining the rate out requires a
+							little more thought. We’re removing 4 gallons of the mixture per minute,
+							and there are always 600 gallons in the tank; that is, we’re removing
+							\(1/150\) of the mixture per minute. Since the salt is evenly distributed
+							in the mixture, we are also removing \(1/150\) of the salt per minute.
+							Therefore, if there are \(Q(t)\) pounds of salt in the tank at time \(t\),
+							the rate out at any time \(t\) is \(Q(t)/150\). Alternatively, we can
+							arrive at this conclusion by arguing that \[ \begin {array}{lcl} \mbox
+							{rate out} &amp; = &amp; (\mbox {concentration})\times (\mbox {rate of
+							flow out})\\[6pt] \mbox {}&amp;=&amp;(\mbox {lb/gal})\times (\mbox
+							{gal/min})\\[10pt] &amp;=&amp;\displaystyle {Q(t)\over 600}\times
+							4=\displaystyle {Q(t)\over 150}\end {array} \] We can now write <a href="#x1-14r5">(4.2.5)</a> as \[ \dot{Q} = 2-{Q\over 150}\] This first order equation can be rewritten
+							as \[ \dot{Q}+{Q\over 150} = 2\] Since \(e^{-t/150}\) is a solution of the
+							complementary equation, the solutions of this equation are of the form
+							\(Q=ue^{-t/150}\), where \(\dot{u}e^{-t/150}=2\), so \(\dot{u}=2e^{t/150}\). Hence,
+							\[ u = 300e^{t/150}+c\] so \begin {equation} \label {eq:4.2.6}
+							Q=ue^{-t/150}=300+ce^{-t/150} \end {equation}
+							<a id="x1-15r6"></a>
+							(Figure&nbsp;<a href="#-qet-">4.2.4</a>). Since \(Q(0)=40\), \(c=-260\); therefore, \[ Q=300-260e^{-t/150}\]
+						</li>
+						<li>
+							From <a href="#x1-15r6">(4.2.6)</a>, we see that that \(\lim _{t \to \infty }Q(t)=300\) for any value of
+							\(Q(0)\). This is intuitively reasonable, since the incoming solution
+							contains 1/2 pound of salt per gallon and there are always 600 gallons of
+							water in the tank.
+						</li>
+					</ol>
+				</details>
 			</div>
-			<figcaption class="caption">
-				<span class="id">Figure&nbsp;4.2.3</span>
-				<span class="content">A mixing problem</span>
-			</figcaption>
-			<!-- tex4ht:label?: x1-13r3  -->
-		</figure>
-		<div id="4332e05b-c7cc-4e67-9059-258b5d6485f5">
-			<span class="underline">
-				<span class="ptmrc8t-">
-					S
-					<span class="small-caps">OLUTION</span>
-					(
-				</span>
-				<span class="ptmb8t-">a</span>
-				<span class="ptmrc8t-">)&nbsp;</span>
-			</span>
-			To find a differential equation for \(Q\), we must use the given
-			information to derive an expression for \(\dot{Q}\). But \(\dot{Q}\) is the rate of
-			change of the quantity of salt in the tank changes with respect to time;
-			thus, if
-			<span class="vocab">rate in</span>
-			denotes the rate at which salt enters the tank and
-			<span class="vocab">rate out</span>
-			denotes the rate by which it leaves, then \begin {equation} \label
-			{eq:4.2.5} \dot{Q} = \mbox {rate in}-\mbox {rate out}\end {equation}
-			<a id="x1-14r5"></a>
-			The rate in is \[ \left ({1\over 2}\ \mbox {lb/gal}\right ) \times (4\
-			\mbox {gal/min}) = 2\ \mbox {lb/min}\] Determining the rate out requires a
-			little more thought. We’re removing 4 gallons of the mixture per minute,
-			and there are always 600 gallons in the tank; that is, we’re removing
-			\(1/150\) of the mixture per minute. Since the salt is evenly distributed
-			in the mixture, we are also removing \(1/150\) of the salt per minute.
-			Therefore, if there are \(Q(t)\) pounds of salt in the tank at time \(t\),
-			the rate out at any time \(t\) is \(Q(t)/150\). Alternatively, we can
-			arrive at this conclusion by arguing that \[ \begin {array}{lcl} \mbox
-			{rate out} &amp; = &amp; (\mbox {concentration})\times (\mbox {rate of
-			flow out})\\[6pt] \mbox {}&amp;=&amp;(\mbox {lb/gal})\times (\mbox
-			{gal/min})\\[10pt] &amp;=&amp;\displaystyle {Q(t)\over 600}\times
-			4=\displaystyle {Q(t)\over 150}\end {array} \] We can now write <a href="#x1-14r5">(4.2.5)</a> as \[ \dot{Q} = 2-{Q\over 150}\] This first order equation can be rewritten
-			as \[ \dot{Q}+{Q\over 150} = 2\] Since \(e^{-t/150}\) is a solution of the
-			complementary equation, the solutions of this equation are of the form
-			\(Q=ue^{-t/150}\), where \(\dot{u}e^{-t/150}=2\), so \(\dot{u}=2e^{t/150}\). Hence,
-			\[ u = 300e^{t/150}+c\] so \begin {equation} \label {eq:4.2.6}
-			Q=ue^{-t/150}=300+ce^{-t/150} \end {equation}
-			<a id="x1-15r6"></a>
-			(Figure&nbsp;
-			<a href="#-qet-">
-				4.2.4
-				<!-- tex4ht:ref: figure:4.2.4  -->
-			</a>
-			). Since \(Q(0)=40\), \(c=-260\); therefore, \[ Q=300-260e^{-t/150}\]
-		</div>
-		<div id="e2b0518d-3195-4dfd-9dfc-8c4c2e0e9024">
-			<span class="underline">
-				<span class="ptmrc8t-">
-					S
-					<span class="small-caps">OLUTION</span>
-					(
-				</span>
-				<span class="ptmb8t-">b</span>
-				<span class="ptmrc8t-">)&nbsp;</span>
-			</span>
-			From <a href="#x1-15r6">(4.2.6)</a>, we see that that \(\lim _{t \to \infty }Q(t)=300\) for any value of
-			\(Q(0)\). This is intuitively reasonable, since the incoming solution
-			contains 1/2 pound of salt per gallon and there are always 600 gallons of
-			water in the tank.
-		</div>
-		<div class="newtheorem" id="48bf80e8-ca98-4bde-8c3f-9af8043c9a3f">
-			<div>
-				<span class="head">
-					<span class="ex-number">Example&nbsp;4.2.4</span>
-				</span>
-				<a id="x1-164"></a>
-				A 500-liter tank initially contains 10 g of salt dissolved in 200 liters
-				of water. Starting at \(t_0=0\), water that contains 1/4 g of salt per
-				liter is poured into the tank at the rate of 4 liters/min and the
-				mixture is drained from the tank at the rate of 2 liters/min
-				(Figure&nbsp;
-				<a href="#-another-mixing-problem-">
-					4.2.5
-					<!-- tex4ht:ref: figure:4.2.5  -->
-				</a>
-				). Find a differential equation for the quantity \(Q(t)\) of salt in the
-				tank at time \(t\) prior to the time when the tank overflows and find
-				the concentration \(K(t)\) (g/liter ) of salt in the tank at any such
-				time.
+
+			<figure class="figure" id="4b519f6d-2c53-4e55-b97a-a66ba54ff352">
+				<div id="-qet-">
+					<img height="264" src="EPS/fig040204.png" width="409" />
+					<a id="x1-17r4"></a>
+				</div>
+				<figcaption class="caption">
+					<span class="id">Figure&nbsp;4.2.4</span>
+					<span class="content">\(Q=300-260e^{-t/150}\)</span>
+				</figcaption>
+				<!-- tex4ht:label?: x1-17r4  -->
+			</figure>
+
+			<div class="example" id="x1-164" style="--ex-number: 4">
+				<div>
+					A 500-liter tank initially contains 10 g of salt dissolved in 200 liters
+					of water. Starting at \(t_0=0\), water that contains 1/4 g of salt per
+					liter is poured into the tank at the rate of 4 liters/min and the
+					mixture is drained from the tank at the rate of 2 liters/min
+					(Figure&nbsp;<a href="#-another-mixing-problem-">4.2.5</a>).
+					Find a differential equation for the quantity \(Q(t)\) of salt in the
+					tank at time \(t\) prior to the time when the tank overflows and find
+					the concentration \(K(t)\) (g/liter ) of salt in the tank at any such
+					time.
+				</div>
+
+				<figure class="figure" id="51ce7fdc-dd22-4188-becc-bcf0abe88974">
+					<div id="-another-mixing-problem-">
+						<img height="264" src="EPS/fig040205.png" width="409" />
+						<a id="x1-18r5"></a>
+					</div>
+					<figcaption class="caption">
+						<span class="id">Figure&nbsp;4.2.5</span>
+						<span class="content">Another mixing problem</span>
+					</figcaption>
+				</figure>
+
+				<details class="solution" id="d5175df2-94bd-48be-ba29-615b27c7bc2a">
+					<summary>Solution</summary>
+					<div>
+						We first determine the amount \(W(t)\) of solution in the tank at
+						any time \(t\) prior to overflow. Since \(W(0) = 200\) and we’re adding 4
+						liters/min while removing only 2 liters/min, there’s a net gain of 2
+						liters/min in the tank; therefore, \[ W(t) = 2t+200\] Since \(W(150)=500\)
+						liters (capacity of the tank), this formula is valid for \(0 \le t \le
+						150\).
+					</div>
+
+					<div>
+						Now let \(Q(t)\) be the number of grams of salt in the tank at time \(t\),
+						where \(0 \le t \le 150\). As in Example&nbsp;<a href="#x1-103">4.2.3</a>,
+						\begin {equation} \label {eq:4.2.7} \dot{Q} = \mbox {rate in}-\mbox {rate
+						out}\end {equation}
+						<a id="x1-19r7"></a>
+						The rate in is \begin {equation} \label {eq:4.2.8} \left ({1\over 4}\
+						\mbox {g/liter}\,\right ) \times (4\ \mbox {liters/min}\,) = 1\ \mbox
+						{g/min}\end {equation}
+						<a id="x1-20r8"></a>
+						To determine the rate out, we observe that since the mixture is being
+						removed from the tank at the constant rate of 2 liters/min and there are
+						\(2t+200\) liters in the tank at time \(t\), the fraction of the mixture
+						being removed per minute at time \(t\) is \[ {2\over 2t+200} = {1\over
+						t+100}\] We’re removing this same fraction of the salt per minute.
+						Therefore, since there are \(Q(t)\) grams of salt in the tank at time
+						\(t\), \begin {equation} \label {eq:4.2.9} \mbox {rate out} = {Q(t)\over
+						t+100}\end {equation}
+						<a id="x1-21r9"></a>
+						Alternatively, we can arrive at this conclusion by arguing that \[ \begin
+						{array}{lcl} \mbox {rate out} &amp; = &amp; (\mbox {concentration})\times
+						(\mbox {rate of flow out}) =(\mbox {g/liter})\times (\mbox
+						{liters/min})\\[10pt] &amp;=&amp;\displaystyle {Q(t)\over 2t+200}\times
+						2=\displaystyle {Q(t)\over t+100}\end {array} \] Substituting <a href="#x1-20r8">(4.2.8)</a> and <a href="#x1-21r9">(4.2.9)</a> into <a href="#x1-19r7">(4.2.7)</a> yields \begin {equation} \label {eq:4.2.10} \dot{Q}=1-{Q\over t+100},\quad
+						\text { \rm so }\quad \dot{Q}+{1\over t+100} Q=1\end {equation}
+						<a id="x1-22r10"></a>
+						By separation of variables, \(1/(t+100)\) is a solution of the
+						complementary equation, so the solutions of <a href="#x1-22r10">(4.2.10)</a> are of the form \[ Q={u\over t+100},\quad \mbox{ where } \quad {\dot{u}\over
+						t+100}=1,\quad \mbox{ so } \quad  \dot{u}=t+100\] Hence, \begin {equation}
+						\label {eq:4.2.11} u = {(t+100)^2\over 2}+c\end {equation}
+						<a id="x1-23r11"></a>
+						Since \(Q(0)=10\) and \(u=(t+100)Q\), <a href="#x1-23r11">(4.2.11)</a> implies that \[ (100)(10) = {(100)^2\over 2}+c\] so \[
+						c=100(10)-{(100)^2\over 2} =-4000 \] and therefore \[ u = {(t+100)^2\over
+						2} -4000\] Hence, \[ Q = {u\over t+200}= {t+100\over 2}-{4000\over
+						t+100}\] Now let \(K(t)\) be the concentration of salt at time \(t\). Then
+						\[ K(t) = {1\over 4}-{2000\over (t+100)^2} \]
+						(Figure&nbsp;<a href="#-kt-over-overt-">4.2.6</a>).
+					</div>
+				</details>
 			</div>
-		</div>
-		<div class="indent" id="0a8f957b-55ee-485d-9c7a-b523c4c433e0"></div>
-		<figure class="figure" id="4b519f6d-2c53-4e55-b97a-a66ba54ff352">
-			<div id="-qet-">
-				<img height="264" src="EPS/fig040204.png" width="409" />
-				<a id="x1-17r4"></a>
-			</div>
-			<figcaption class="caption">
-				<span class="id">Figure&nbsp;4.2.4</span>
-				<span class="content">\(Q=300-260e^{-t/150}\)</span>
-			</figcaption>
-			<!-- tex4ht:label?: x1-17r4  -->
-		</figure>
-		<figure class="figure" id="51ce7fdc-dd22-4188-becc-bcf0abe88974">
-			<div id="-another-mixing-problem-">
-				<img height="264" src="EPS/fig040205.png" width="409" />
-				<a id="x1-18r5"></a>
-			</div>
-			<figcaption class="caption">
-				<span class="id">Figure&nbsp;4.2.5</span>
-				<span class="content">Another mixing problem</span>
-			</figcaption>
-			<!-- tex4ht:label?: x1-18r5  -->
-		</figure>
-		<div id="d5175df2-94bd-48be-ba29-615b27c7bc2a">
-			<span class="ptmb8t-">Solution</span>
-			&nbsp;We first determine the amount \(W(t)\) of solution in the tank at
-			any time \(t\) prior to overflow. Since \(W(0) = 200\) and we’re adding 4
-			liters/min while removing only 2 liters/min, there’s a net gain of 2
-			liters/min in the tank; therefore, \[ W(t) = 2t+200\] Since \(W(150)=500\)
-			liters (capacity of the tank), this formula is valid for \(0 \le t \le
-			150\).
-		</div>
-		<div class="indent" id="78167fc0-b722-45a1-a3c4-09b2520f2b2b">
-			Now let \(Q(t)\) be the number of grams of salt in the tank at time \(t\),
-			where \(0 \le t \le 150\). As in Example&nbsp;
-			<a href="#x1-103">
-				4.2.3
-				<!-- tex4ht:ref: example:4.2.3  -->
-			</a>
-			, \begin {equation} \label {eq:4.2.7} \dot{Q} = \mbox {rate in}-\mbox {rate
-			out}\end {equation}
-			<a id="x1-19r7"></a>
-			The rate in is \begin {equation} \label {eq:4.2.8} \left ({1\over 4}\
-			\mbox {g/liter}\,\right ) \times (4\ \mbox {liters/min}\,) = 1\ \mbox
-			{g/min}\end {equation}
-			<a id="x1-20r8"></a>
-			To determine the rate out, we observe that since the mixture is being
-			removed from the tank at the constant rate of 2 liters/min and there are
-			\(2t+200\) liters in the tank at time \(t\), the fraction of the mixture
-			being removed per minute at time \(t\) is \[ {2\over 2t+200} = {1\over
-			t+100}\] We’re removing this same fraction of the salt per minute.
-			Therefore, since there are \(Q(t)\) grams of salt in the tank at time
-			\(t\), \begin {equation} \label {eq:4.2.9} \mbox {rate out} = {Q(t)\over
-			t+100}\end {equation}
-			<a id="x1-21r9"></a>
-			Alternatively, we can arrive at this conclusion by arguing that \[ \begin
-			{array}{lcl} \mbox {rate out} &amp; = &amp; (\mbox {concentration})\times
-			(\mbox {rate of flow out}) =(\mbox {g/liter})\times (\mbox
-			{liters/min})\\[10pt] &amp;=&amp;\displaystyle {Q(t)\over 2t+200}\times
-			2=\displaystyle {Q(t)\over t+100}\end {array} \] Substituting <a href="#x1-20r8">(4.2.8)</a> and <a href="#x1-21r9">(4.2.9)</a> into <a href="#x1-19r7">(4.2.7)</a> yields \begin {equation} \label {eq:4.2.10} \dot{Q}=1-{Q\over t+100},\quad
-			\text { \rm so }\quad \dot{Q}+{1\over t+100} Q=1\end {equation}
-			<a id="x1-22r10"></a>
-			By separation of variables, \(1/(t+100)\) is a solution of the
-			complementary equation, so the solutions of <a href="#x1-22r10">(4.2.10)</a> are of the form \[ Q={u\over t+100},\quad \mbox{ where } \quad {\dot{u}\over
-			t+100}=1,\quad \mbox{ so } \quad  \dot{u}=t+100\] Hence, \begin {equation}
-			\label {eq:4.2.11} u = {(t+100)^2\over 2}+c\end {equation}
-			<a id="x1-23r11"></a>
-			Since \(Q(0)=10\) and \(u=(t+100)Q\), <a href="#x1-23r11">(4.2.11)</a> implies that \[ (100)(10) = {(100)^2\over 2}+c\] so \[
-			c=100(10)-{(100)^2\over 2} =-4000 \] and therefore \[ u = {(t+100)^2\over
-			2} -4000\] Hence, \[ Q = {u\over t+200}= {t+100\over 2}-{4000\over
-			t+100}\] Now let \(K(t)\) be the concentration of salt at time \(t\). Then
-			\[ K(t) = {1\over 4}-{2000\over (t+100)^2} \] (Figure&nbsp;
-			<a href="#-kt-over-overt-">
-				4.2.6
-				<!-- tex4ht:ref: figure:4.2.6  -->
-			</a>
-			).
-		</div>
-		<figure class="figure" id="f7e7b1d8-be8e-4a53-bd18-dce6a2490a97">
-			<div id="-kt-over-overt-">
-				<img height="264" src="EPS/fig040206.png" width="409" />
-				<a id="x1-24r6"></a>
-			</div>
-			<figcaption class="caption">
-				<span class="id">Figure&nbsp;4.2.6</span>
-				<span class="content">
-					\(K(t) = \displaystyle {{1\over 4}-{2000\over (t+100)^2}}\)
-				</span>
-			</figcaption>
-			<!-- tex4ht:label?: x1-24r6  -->
-		</figure>
-		<div class="indent" id="2218527f-5009-4b8f-a815-4bd6733bcbf1"></div>
+			
+			<figure class="figure" id="f7e7b1d8-be8e-4a53-bd18-dce6a2490a97">
+				<div id="-kt-over-overt-">
+					<img height="264" src="EPS/fig040206.png" width="409" />
+					<a id="x1-24r6"></a>
+				</div>
+				<figcaption class="caption">
+					<span class="id">Figure&nbsp;4.2.6</span>
+					<span class="content">
+						\(K(t) = \displaystyle {{1\over 4}-{2000\over (t+100)^2}}\)
+					</span>
+				</figcaption>
+			</figure>
+		</details>
 
 		<nav class = "ex">
 			<a href = "sec4.2.ex.html">4.2 Exercises</a>
