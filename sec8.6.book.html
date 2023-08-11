@@ -175,7 +175,7 @@
 			</div>
 		</div>
 		<div class="indent" id="5b1c5906-535a-4f28-8af9-ae484fc45640"></div>
-		<div id="5b17da5e-0b23-4b48-a7a5-fc21046c23a4">
+		<details class="solution">
 			<summary>Solution</summary>
 			&nbsp;We first compute \[ \begin {array}{ccccc} (f\ast
 			g)(t)&amp;=&amp;\displaystyle \int _0^t e^{a\tau }e^{b(t-\tau )}\,d\tau
@@ -216,7 +216,7 @@
 			</div>
 		</div>
 		<div class="indent" id="0b0fdaef-16cd-4052-a457-2fbd52145404"></div>
-		<div id="e4b381ae-cc48-409c-a176-bdf0d605b520">
+		<details class="solution">
 			<summary>Solution</summary>
 			&nbsp;Taking Laplace transforms in <a href="#x1-13r7">(8.6.7)</a> yields \[ (s^2-2s+1)Y(s)=F(s)+(k_1+k_0s)-2k_0\] Therefore
 		</div>
@@ -247,7 +247,7 @@
 			</div>
 		</div>
 		<div class="indent" id="603ae34c-edca-454a-8df7-2bdc93c6084d"></div>
-		<div id="979753fd-3ddc-4d94-8f4a-e1034d420ea4">
+		<details class="solution">
 			<summary>Solution</summary>
 			&nbsp;Taking Laplace transforms in <a href="#x1-15r8">(8.6.8)</a> yields \[ (s^2+4)Y(s) =F(s)+k_1+k_0s\] Therefore \[ Y(s) ={1\over
 			(s^2+4)}F(s)+{k_1+k_0s\over s^2+4}\] From the table of Laplace transforms,
@@ -272,7 +272,7 @@
 			</div>
 		</div>
 		<div class="indent" id="5005c4e7-b90c-4a65-b0bf-f454e10c4d39"></div>
-		<div id="d0feea48-c95a-4dc7-8219-0a2f727bbe57">
+		<details class="solution">
 			<summary>Solution</summary>
 			&nbsp;Taking Laplace transforms in <a href="#x1-17r9">(8.6.9)</a> yields \[ (s^2+2s+2)Y(s)=F(s)+k_1+k_0s+2k_0\] Therefore
 		</div>
@@ -315,7 +315,7 @@
 			</div>
 		</div>
 		<div class="indent" id="3046edd2-4fcc-4edc-bdf2-94d5795a8fc8"></div>
-		<div id="ecd7517e-1c4e-4656-81c5-bfc980b0d96e">
+		<details class="solution">
 			<summary>Solution</summary>
 			&nbsp;We could evaluate this integral by expanding \((t-\tau )^5\) in
 			powers of \(\tau \) and then integrating. However, the convolution theorem
@@ -339,7 +339,7 @@
 			</div>
 		</div>
 		<div class="indent" id="a69e8cc1-6521-42fc-82d2-f84a0711e3fb"></div>
-		<div id="e7176e6e-4a28-488b-ba38-4bf99fef3e22">
+		<details class="solution">
 			<summary>Solution</summary>
 			&nbsp;Since \[ \sin at\leftrightarrow {a\over s^2+a^2}\quad \mbox
 			{and}\quad \cos bt\leftrightarrow {s\over s^2+b^2}\] the convolution
@@ -375,7 +375,7 @@
 			</div>
 		</div>
 		<div class="indent" id="54de917c-6011-4892-949c-8e86acb2ed05"></div>
-		<div id="a432ab79-5a1b-4016-a91c-d415c6f86ea9">
+		<details class="solution">
 			<summary>Solution</summary>
 			&nbsp;Taking Laplace transforms in <a href="#x1-23r12">(8.6.12)</a> yields \[ Y(s)={1\over s}+{2\over s+2} Y(s)\] and solving this for
 			\(Y(s)\) yields \[ Y(s)={1\over s}+{2\over s^2}\] Hence, \[ y(t)=1+2t\]
@@ -458,18 +458,8 @@
 			<span class="vocab">transient</span>
 			and
 			<span class="vocab">steady state components</span>,
-			respectively, of the solution \(y\) of <a href="#x1-25r13">(8.6.13)</a>. These definitions apply to the initial value problem of Example&nbsp;
-			<a href="#x1-164">
-				8.6.4
-				<!-- tex4ht:ref: example:8.6.4  -->
-			</a>
-			, where the zeros of \[ p(s)=s^2+2s+2=(s+1)^2+1 \] are \(-1\pm i\). From <a href="#x1-18r10">(8.6.10)</a>, we see that the solution of the general initial value problem of
-			Example&nbsp;
-			<a href="#x1-164">
-				8.6.4
-				<!-- tex4ht:ref: example:8.6.4  -->
-			</a>
-			is \(y=v+h\), where \[ v(t)=e^{-t}\left ((k_1+k_0)\sin t+k_0\cos t\right )
+			respectively, of the solution \(y\) of <a href="#x1-25r13">(8.6.13)</a>. These definitions apply to the initial value problem of Example&nbsp;<a href="#x1-164">8.6.4</a>, where the zeros of \[ p(s)=s^2+2s+2=(s+1)^2+1 \] are \(-1\pm i\). From <a href="#x1-18r10">(8.6.10)</a>, we see that the solution of the general initial value problem of
+			Example&nbsp;<a href="#x1-164">8.6.4</a> is \(y=v+h\), where \[ v(t)=e^{-t}\left ((k_1+k_0)\sin t+k_0\cos t\right )
 			\] is the transient component of the solution and \[ h(t)=\int _0^t
 			f(t-\tau )e^{-\tau }\sin \tau \,d\tau \] is the steady state component.
 			The definitions don’t apply to the initial value problems considered in
