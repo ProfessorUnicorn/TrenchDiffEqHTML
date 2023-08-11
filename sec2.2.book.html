@@ -53,43 +53,61 @@
 				equation in this form is called <span class="vocab">separation of variables</span>
 				and can be used to solve linear and nonlinear equations.
 			</div>
+
 			<div class="indent" id="28f2bd1b-285e-40e5-991e-cccdc74f3330">
-				To understand how to solve <a href="#x1-2r1">(2.2.1)</a>, we'll first assume that \(y\) is a solution. Let \(G(x)\) be antiderivative of \(g(x)\) and let \(H(y)\) be antiderivative of \(h(y)\) then rewriting them as derivatives using <span class="vocab">Leibniz notation</span>, we have:
+				To understand how to solve <a href="#x1-2r1">(2.2.1)</a>, we'll first assume that \(y = y(x)\) is a solution. Let \(G(x)\) be any antiderivative of \(g(x)\) and let \(H(y)\) be any antiderivative of \(h(y)\)
 				
-				\begin {equation} \label {eq:2.2.2} 
-					\frac{dH}{dy}
-					= h(y) \quad\text{and}\quad \frac{dG}{dx} 
-					= g(x)
-				\end{equation}
+				\begin {equation*}  
+					G(x) = \int_{x_0}^x g(t) dt
+					\quad\text{and}\quad
+					H(y) = \int_{y_0}^y h(t) dt
+				\end{equation*}
+
+				<div class="reading-exercise">
+					Calculate \( G'(x) \) and \( H'(y) \) using the Fundamental Theorem of Calculus
+				</div>   
+				
+				Rewriting them as derivatives using <span class="vocab">Differential (Leibniz) notation</span>, we have:
+				
 				<a id="x1-3r2"></a>
-
-				Then, from the <span class="vocab">chain rule</span> 
-				\[ 
-					{d\over dx} \Bigg[ H \Big( y(x) \Big) \Bigg] 
-						= \frac{dH}{dy} \cdot \frac{dy}{dx}
-						= h(y) \frac{dy}{dx}
-				\]
-				Therefore <a href="#x1-2r1">(2.2.1)</a> is equivalent to 
-				\[ 
-					h(y) \frac{dy}{dx} = g(x)
-					\Longrightarrow
-					\frac{dH}{dy} \cdot \frac{dy}{dx} = \frac{dG}{dx}
-					\Longrightarrow
-					{d\over dx} \Big[ H(y) \Big] = \frac{d}{dx} \Big[ G(x) \Big]
-				\] 
-				Finding the antiderivative of both sides yields 
-				<a id="x1-4r3"></a>
-
-				\begin{align}  \label{eq:2.2.3}
-					{d\over dx} \Big[ H(y) \Big] = & \frac{d}{dx} \Big[ G(x) \Big] \nonumber \\
-					\int {d\over dx} \Big[ H(y) \Big] dx = & \int \frac{d}{dx} \Big[ G(x) \Big] dx \nonumber \\
-					H(y) = & G(x) + c \\
-				\end{align}
+				\begin {equation} \label {eq:2.2.2} 
+					\frac{dG}{dx} = g(x)
+					\quad\text{and}\quad 
+					\frac{dH}{dy} = h(y) 
+				\end{equation}
 				
+				Now <a href="#x1-2r1">(2.2.1)</a> can be rewritten using <a href="#x1-3r2">(2.2.2)</a>
+
+				\begin {align*} 
+					\underbrace{h(y)} \frac{dy}{dx} = & \underbrace{g(x)} \\
+					\frac{dH}{dy} \cdot \frac{dy}{dx} = & \frac{dG}{dx} \\
+				\end {align*}
+
+
+				Differentiating \( H \big( y \big)  = H \Big( y(x) \Big) \) using the <span class="vocab">chain rule</span> we get the same expression as the left side
+				\begin{align*} 
+					{d\over dx} \Bigg[ H \Big( y(x) \Big) \Bigg] 
+						= H' \Big( y(x) \Big) \cdot y'(x)
+						= \frac{dH}{dy} \cdot \frac{dy}{dx}
+				\end{align*} 
+
+				Further modifying <a href="#x1-2r1">(2.2.1)</a> we can replace the left side with the expression from the chain rule and then find the antiderivative of both sides
+
+				<a id="x1-4r3"></a>
+				\begin {align} \label{eq:2.2.3}
+					\underbrace{h(y)} \frac{dy}{dx} = & \underbrace{g(x)} \nonumber \\
+					\underbrace{ \frac{dH}{dy} \cdot \frac{dy}{dx} } = & \frac{dG}{dx} \nonumber \\
+					{d\over dx} \Big[ H (y) \Big] = & {d\over dx} \Big[ G (x) \Big] \nonumber \\
+					\int {d\over dx} \Big[ H(y) \Big] dx = & \int \frac{d}{dx} \Big[ G(x) \Big] dx \nonumber \\
+					H(y) = & G(x) + c
+				\end {align}				
+	
 			</div>
+
+
 			<div class="indent" id="38f2bd1b-285e-40e5-991e-cccdc74f3330">
-				Although we derived this equation on the assumption that \(y\) is a
-				solution of <a href="#x1-2r1">(2.2.1)</a>, but now we can take a different perspective: Ant differentiable functions \(y\) that satisfies <a href="#x1-4r3">(2.2.3)</a> for some constant \(c\) is a solution of <a href="#x1-2r1">(2.2.1)</a>. 
+				The result is that when  \(y = y(x)\) is a solution of <a href="#x1-2r1">(2.2.1)</a> then we have 
+				<a href="#x1-4r3">(2.2.3)</a> but now we can take a different perspective: <em>any</em> differentiable functions \(y = y(x)\) that satisfies <a href="#x1-4r3">(2.2.3)</a> for some constant \(c\) is a solution of <a href="#x1-2r1">(2.2.1)</a>. 
 				To verify this, we differentiate both sides of <a href="#x1-4r3">(2.2.3)</a>, using the chain rule on the left, to obtain 
 
 				\begin{align*} 
@@ -101,7 +119,13 @@
 
 			</div>
 			<div class="indent" id="b9eeec21-afc4-40e3-b62e-cec4fa5bd2bd">
-				In conclusion, to solve <a href="#x1-2r1">(2.2.1)</a> it suffices to find functions \(G=G(x)\) and \(H=H(y)\) that satisfy <a href="#x1-3r2">(2.2.2)</a>. Then any differentiable function \(y=y(x)\) that satisfies <a href="#x1-4r3">(2.2.3)</a> is a solution of <a href="#x1-2r1">(2.2.1)</a>.
+				In conclusion, to solve <a href="#x1-2r1">(2.2.1)</a> it suffices to find functions \(G=G(x)\) and \(H=H(y)\) that satisfy <a href="#x1-3r2">(2.2.2)</a>. Then any differentiable function \(y=y(x)\) that satisfies <a href="#x1-4r3">(2.2.3)</a> is a solution of <a href="#x1-2r1">(2.2.1)</a>
+				\begin{align*} 
+					h(y) \frac{dy}{dx} = & g(x) \\
+					\int \Bigg( h(y) \frac{dy}{dx} \Bigg) dx = & \int g(x) dx	\\
+					\int h(y) dy = & \int g(x) dx	\\
+					H(y) = & G(x) + c
+				\end{align*}
 			</div>
 			<div class="example" id="x1-51" style="--ex-number: 1">
 				<div>
@@ -115,15 +139,23 @@
 
 						\begin{align*} 
 							\frac{dy}{dx} = & x(1+y^2) \\
-							\frac{1}{1+y^2}\frac{dy}{dx} = & x \\
-							\int \Bigg( \frac{1}{1+y^2}\frac{dy}{dx} \Bigg) dx = & \int \Big( x \Big) dx \\
-							\int \frac{1}{1+\underset{\tan \theta}{\underbrace{y}}^2} \underset{\sec^2 \theta}{\underbrace{dy}} = & \int x dx \\
+							\frac{1}{1+y^2} \cdot \frac{dy}{dx} = & x \\
+							\int \Bigg( \frac{1}{1+y^2} \cdot \frac{dy}{dx} \Bigg) dx = & \int \Big( x \Big) dx \\
+							\int \frac{1}{1+\underset{y = \tan \theta}{\underbrace{y^2}} } \underset{\sec^2 \theta}{\underbrace{dy}} = & \int x dx \\
 							\int \frac{\sec^2 \theta}{1+\tan^2 \theta} d\theta = & \int x dx \\
 							\int d\theta = & \int x dx \\
 							\theta = & \frac{1}{2}x^2 + c \\
 							\tan^{-1} y = & \frac{1}{2}x^2 + c \\
 							y = & \tan \left(\frac{1}{2}x^2 + c\right) \\
 						\end{align*}
+
+
+						<div class="reading-exercise">
+							Differentiate \( \tan x \) by rewriting as \( \displaystyle \frac{\sin x}{ \cos x} \) and using the quotient rule
+						</div> 
+						<div class="reading-exercise">
+							Divide the pythagorean identity \( \cos^2 x + \sin^2 x = 1\) by \( \cos^2 x \) to obtain the form of the pythagorean identity used in the Example 2.2.1
+						</div>  
 					</div>
 				</details>
 			</div>
@@ -160,149 +192,176 @@
 							&nbsp;Separating variables in <a href="#x1-8r4">(2.2.4)</a> then finding the antiderivative:
 							\begin{align*} 
 								\frac{dy}{dx} = & -\frac{x}{y} \\
-								y\frac{dy}{dx} = & -x \\
-								\int \Bigg( y\frac{dy}{dx} \Bigg) dx = & \int -x dx \\
+								y \cdot \frac{dy}{dx} = & -x \\
+								\int \Bigg( y \cdot \frac{dy}{dx} \Bigg) dx = & \int -x dx \\
 								\int y dy = & - \int x dx \\
 								\frac{1}{2}y^2 = & -\frac{1}{2}x^2 + k \\
 								\frac{1}{2}y^2 + \frac{1}{2}x^2 = & + k \\
-								y^2 + x^2 = & 2 k \\
+								y^2 + x^2 = & \underset{c}{\underbrace{2 k}} \\
 								y^2 + x^2 = & c \\	
 							\end{align*}
 
-							Since the arbitrary constant is equal to positive quantities (squares being added), then the constant itself represents a positive value so we can replace it with an expression that is always positive. We'll use \( a^2 \) as our arbitrary constant, so we obtain:
+							The arbitrary constant is a positive value since it is the sum of squares, so  we can replace it with an expression that is always positive. We'll use \( a^2 \) as our arbitrary constant to obtain the <span class="vocab">implicit solution</span>
 
 							<a id="x1-13r7"></a>
 							\begin{align} \label {eq:2.2.7}
-								y^2 + x^2 = & c \Longrightarrow y^2 + x^2 = a^2
+								y^2 + x^2 = r^2
 							\end{align}
 
+							Which we can recognize as the equation of a circle with radius \( r \) centered at the origin
 
+							<div class="reading-exercise">
+								Solve <a href="#x1-13r7">(2.2.7)</a> explicitly for \(y\)
+							</div>   
 
-							This is an <span class="vocab">implicit</span> representation of our solution \( y \) but we can solve it explicitly which results in 2 different differentiable functions:
+							Solving explicitly for \( y \) results in two different differentiable functions
 
 							<a id="x1-14r8"></a>
 							\begin{equation}\label {eq:2.2.8}
-								y(x) = \sqrt{a^2-x^2} \quad\text{or}\quad y(x) = -\sqrt{a^2-x^2} 
+								y(x) = \sqrt{r^2-x^2} \quad\text{and}\quad y(x) = -\sqrt{r^2-x^2} 
 							\end{equation}
 
 
+							Where \( y(x) = \sqrt{r^2-x^2} \) is the top half of the circle above the \(x\)-axis and \( y(x) = -\sqrt{r^2-x^2} \) is the bottom half blow the \(x\)-axis (Figure&nbsp;<a href="#-a-y-x-x-b-y-x-x-">2.2.1</a>). Each of these semicircles are <span class="vocab">solution curves</span> of <a href="#x1-8r4">(2.2.4)</a>
+							while the circle itself is an <span class="vocab">integral curve</span>.
+
+							<div>
 							
-
-						
-
-
-							The <span class="vocab">solution curves</span> defined by \( y(x) = \sqrt{a^2-x^2} \) 
-							are semicircles above the \(x\)-axis and those defined by \( y(x) = -\sqrt{a^2-x^2} \) 
-							are semicircles below the \(x\)-axis (Figure&nbsp;<a href="#-a-y-x-x-b-y-x-x-">2.2.1</a>). The <span class="vocab">interval of validity</span> for both is 
 							
-							\begin{equation}\label {eq:2.2.9}
-							(-a,a)
-							\end{equation}
+							Both of these functions are only defined when 
+							\( r^2-x^2 \ge 0 \) yields the same <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>) for both \( (-r,r) \)
+							</div>
 
-							<div class="reading-exercise">
-								Solve <a href="#x1-13r7">(2.2.7)</a> explicitly for \(y\) to get <a href="x1-14r8">(2.2.8)</a>
-							</div>   
+
 							<div class="reading-exercise">
 								Find the domain of <a href="x1-14r8">(2.2.8)</a>
 							</div>  
 						</li>
 						<li>
-							To solve <a href="#x1-10r5">(2.2.5)</a> notice the initial condition \(y(1)=1\) indicates a positive value, so the function \( y(x) = \sqrt{a^2-x^2} \) will be used. Substituting the initial condition and solving for the arbitrary constant:
+							To solve <a href="#x1-10r5">(2.2.5)</a> notice the initial condition \(y(1)=1\) indicates a positive value, so the function \( y(x) = \sqrt{r^2-x^2} \) will be used. Substituting the initial condition and solving for the arbitrary constant:
 
 							\begin{align*} 
-								y(x) =  \sqrt{a^2-x^2} \Longrightarrow
-								\underset{1}{\underbrace{y(1)}} = &  \sqrt{a^2-1^2} \\	
-								1 = &  \sqrt{a^2-1} \\	
-								1^2 = & a^2-1 \Longrightarrow a^2 = 2
+								y(x) =  \sqrt{r^2-x^2} \Longrightarrow
+								\underset{1}{\underbrace{y(1)}} = &  \sqrt{r^2-1^2} \\	
+								1 = &  \sqrt{r^2-1} \\	
+								1^2 = & r^2-1 \Longrightarrow r^2 = 2
 							\end{align*}
 							
-							Substituting \( a^2 = 2 \) into <a href="#x1-14r8">(2.2.8)</a>, we obtain the solution to the IVP:
-							 \[ y=\sqrt {2-x^2}\]
-							With interval of validity \((-\sqrt{2},\sqrt{2})\)
+							Substituting \( r^2 = 2 \) into <a href="#x1-14r8">(2.2.8)</a>, we obtain the solution to the IVP and its IOV
+							 \[
+								y=\sqrt {2-x^2}
+							 	\quad\quad
+								\left(-\sqrt{2},\sqrt{2}\right)
+							 \]
 						</li>
+
 						<li>
-							To solve <a href="#x1-12r6">(2.2.6)</a> notice the  initial condition \(y(1)=-2\) indicates a negative value, so the function \( y(x) = -\sqrt{a^2-x^2} \) will be used. Substituting the initial condition and solving for the arbitrary constant:
+							To solve <a href="#x1-12r6">(2.2.6)</a> notice the  initial condition \(y(1)=-2\) indicates a negative value, so the function \( y(x) = -\sqrt{r^2-x^2} \) will be used. Substituting the initial condition and solving for the arbitrary constant:
 
 							\begin{align*} 
-								y(x) =  -\sqrt{a^2-x^2} \Longrightarrow
-								\underset{-2}{\underbrace{y(1)}} = &  \sqrt{a^2-1^2} \\	
-								-2 = &  -\sqrt{a^2-1} \\	
-								4 = & a^2-1 \Longrightarrow a^2 = 5
+								y(x) =  -\sqrt{r^2-x^2} \Longrightarrow
+								\underset{-2}{\underbrace{y(1)}} = &  \sqrt{r^2-1^2} \\	
+								-2 = &  -\sqrt{r^2-1} \\	
+								4 = & r^2-1 \Longrightarrow r^2 = 5
 							\end{align*}
 							
-							Substituting \( a^2 = 5 \) into <a href="#x1-14r8">(2.2.8)</a>, we obtain the solution to the IVP:
-							 \[ y=-\sqrt {5-x^2}\]
-							With interval of validity \((-\sqrt{5},\sqrt{5})\)
+							Substituting \( r^2 = 5 \) into <a href="#x1-14r8">(2.2.8)</a>, we obtain the solution to the IVP and its IOV
+							 \[ 
+							 	y=-\sqrt {5-x^2}
+								\quad\quad
+								\left(-\sqrt{5},\sqrt{5}\right)
+							\]
 						</li>
 					</ol>
 				</details>
 			</div>
+
+			<figure class="figure" id="c9edc349-8741-4bba-9fe9-df39338ffcd6">
+				<div id="-a-y-x-x-b-y-x-x-">
+					<img height="264" src="EPS/fig020201.png" width="409" />
+					<a id="x1-16r1"></a>
+				</div>
+				<figcaption class="caption">
+					<span class="id">Figure&nbsp;2.2.1</span>
+					<span class="content">
+						<span class="ptmb8t-">(a)</span>
+						\(y=\sqrt {2-x^{2}} \quad \quad \) 
+						<span class="ptmb8t-">(b)</span>
+						\(y=-\sqrt {5-x^{2}}\)
+					</span>
+				</figcaption>
+			</figure>
+
 		</details>
 
-		<figure class="figure" id="c9edc349-8741-4bba-9fe9-df39338ffcd6">
-			<div id="-a-y-x-x-b-y-x-x-">
-				<img height="264" src="EPS/fig020201.png" width="409" />
-				<a id="x1-16r1"></a>
-			</div>
-			<figcaption class="caption">
-				<span class="id">Figure&nbsp;2.2.1</span>
-				<span class="content">
-					<span class="ptmb8t-">(a)</span>
-					\(y=\sqrt {2-x^{2}} \quad \quad \) 
-					<span class="ptmb8t-">(b)</span>
-					\(y=-\sqrt {5-x^{2}}\)
-				</span>
-			</figcaption>
-		</figure>
+
 
 		<details id="ee913fc6-2aa0-4076-99ea-c0b9fa886c57">
-			<summary>Implicit Solutions of Separable Equations</summary>
+			<summary>Implicit Solutions</summary>
 		
 			<div id="70632e26-c627-4415-8707-3f3e1f8bfd7e">
-				In Examples&nbsp;
-				<a href="#x1-51">
-					2.2.1
-					<!-- tex4ht:ref: example:2.2.1  -->
-				</a> and <a href="#x1-62">
-					2.2.2
-				</a>
-				we were able to solve the equation \(H(y)=G(x)+c\) to obtain explicit
-				formulas for solutions of the given separable differential equations. As
-				we’ll see in the next example, this isn’t always possible. In this
-				situation we must broaden our definition of a solution of a separable
-				equation. The next theorem provides the basis for this modification. We
-				omit the proof, which requires a result from advanced calculus called as
-				the <span class="vocab">implicit function theorem</span>.
+				In Examples&nbsp;<a href="#x1-51">2.2.1</a> and <a href="#x1-62">2.2.2</a>we were able to solve the equation explicitly for \( y \) for our general solution. However, sometimes we are not able to explicitly solve for \( y \) and when this happens we will leave the general solution in <span class="vocab">implicit</span> form.
 			</div>
+
 			<div class="theorem" id="x1-171">
 				<div class="head">Theorem&nbsp;2.2.1</div>
 
 				<div>
-					Suppose \(g=g(x)\) is continous on \((a,b)\) and \(h=h(y)\) are
-					continuous on \((c,d)\). Let \(G\) be an antiderivative of \(g\) on
-					\((a,b)\) and let \(H\) be an antiderivative of \(h\) on \((c,d)\). Let
-					\(x_0\) be an arbitrary point in \((a,b)\), let \(y_0\) be a point in
-					\((c,d)\) such that \(h(y_0)\ne 0\), and define <a id="x1-18r10"></a>
-					\begin {equation} \label {eq:2.2.10} c=H(y_0)-G(x_0)\end {equation}
+					<a id="x1-them221eq9"></a> 
 					
-					Then there’s a function \(y=y(x)\) defined on some open interval
-					\((a_1,b_1),\) where \(a\le a_1&lt;x_0&lt;b_1\le b\), such that
-					\(y(x_0)=y_0\) and <a id="x1-19r11"></a>
-					\begin {equation} \label {eq:2.2.11} H(y)=G(x)+c \end {equation}
-					
-					for \(a_1&lt;x&lt;b_1\). Therefore \(y(x) \) is a solution of the
-					IVP <a id="x1-20r12"></a> \begin {equation} \label {eq:2.2.12}
-					h(y) \frac{dy}{dx} =g(x),\quad y(x_0)=x_0\end {equation}
+
+					Suppose \(g=g(x)\) is continous on \((a,b)\) with antiderivative \(G\)
+					and \(h=h(y)\) is continous on \((c,d)\) with antiderivative \(H.\)
+					Let \(x_0\) be an arbitrary point in \((a,b)\) and \(y_0\) in
+					\((c,d)\) such that \(y(x_0)=y_0\) and \(h(y_0)\ne 0.\) 
+					Then the separable differential equation <a href="#x1-them221eq9">(2.2.9)</a> has a unique represented as an implicit solution <a href="#x1-them221eq10">(2.2.10)</a> where the function \(y=y(x,c)\) itself is the actual solution.
+
+					<a id="x1-them221eq9"></a> 
+					\begin {equation} \label {eq:2.2.9}
+						h(y) \frac{dy}{dx} =g(x)
+					\end {equation}
+
+					<a id="x1-19r11"></a>
+					<a id="x1-them221eq10"></a> 
+					\begin {equation} \label {eq:2.2.10}
+						H(y)=G(x)+c
+					\end {equation}					
+
+					And the IVP <a href="#x1-them221eq11">(2.2.11)</a> has a unique implicit solution <a href="#x1-them221eq12">(2.2.12)</a> where the function \(y=y(x)\) itself is the actual solution.
+
+					<a id="x1-them221eq11"></a> 
+					\begin {equation} \label {eq:2.2.11}
+						h(y) \frac{dy}{dx} =g(x)
+						\quad \quad  y(x_0) = y_0
+					\end {equation}
+
+					<a id="x1-them221eq12"></a> 
+					\begin {equation} \label {eq:2.2.12}
+						H(y)=G(x) + \Big( H(y_0) - G(x_0) \Big)
+					\end {equation}		
 				</div>
 			</div>
 
 			<div class="indent" id="a0684f78-8a21-4147-951a-fa94437638c5">
-				It’s convenient to say that <a href="#x1-19r11">(2.2.11)</a> with arbitrary constant \(c\) is an
-				<span class="vocab">implicit solution</span>
-				of \(h(y) \frac{dy}{dx} = g(x)\). Curves defined by <a href="#x1-19r11">(2.2.11)</a> are
-				<span class="vocab">integral curves</span>
-				of \(h(y) \frac{dy}{dx} = g(x)\). If \(c\) satisfies <a href="#x1-18r10">(2.2.10)</a>, we’ll say that <a href="#x1-19r11">(2.2.11)</a> is an
-				<span class="vocab">implicit solution</span> of the <span class="vocab">IVP</span>
+				<div>
+					We call <a href="#x1-them221eq10">(2.2.10)</a> with arbitrary constant \(c\) an <span class="vocab">implicit solution</span> of <a href="#x1-them221eq9">(2.2.9)</a> which might be written in different forms including  \( H(y)=G(x)+c \) or \( H(y) - G(x) = c \) but either way it is important to remember that the function \(y=y(x)\) itself is the actual solution.
+					For instance, curves defined by <a href="#x1-them221eq10">(2.2.10)</a> are <span class="vocab">integral curves</span> or <a href="#x1-them221eq9">(2.2.9)</a>, whereas the curves defined by \(y=y(x)\) are the actual <span class="vocab">solution curves</span> of <a href="#x1-them221eq9">(2.2.9)</a>.
+				</div>
+				<div>	
+					Evaluating <a href="#x1-them221eq10">(2.2.10)</a> at an initial point 
+					\( H(y)=G(x)+c \) 
+					
+				</div>	
+		
+				
+				If \(c\) satisfies <a href="#x1-them221eq12">(2.2.12)</a>, we’ll say that <a href="#x1-them221eq10">(2.2.10)</a> is also an <span class="vocab">implicit solution</span> of the <span class="vocab">IVP</span> <a href="#x1-them221eq11">(2.2.11)</a> however it is important to realize that for some choices of \( c\) there may not be any differentiable functions \( y \) that satisfy <a href="#x1-them221eq10">(2.2.10)</a>
+
+
+
+				blah blah
+
+				
+				<a href="#x1-19r11">(2.2.11)</a> is an <span class="vocab">implicit solution</span> of the <span class="vocab">IVP</span>
 				<a href="#x1-20r12">(2.2.12)</a>. However, keep these points in mind:
 			</div>
 			<ul class="itemize1" id="abbc2760-d2f7-4cbf-9bda-0da0b2ea7425">
@@ -397,7 +456,7 @@
 		</details>
 
 		<details id="2f366f1d-587f-47c0-93e9-859af4dcc39d">
-			<summary>Constant Solutions of Separable Equations</summary>
+			<summary>Constant Solutions</summary>
 		
 			<div id="a0a064fd-571e-4b46-8771-898c127c0380">
 				Both linear and nonlinear equations of the form \( \frac{dy}{dx}=g(x)p(y) \) are always 
@@ -595,37 +654,41 @@
 					</div>
 				</details>
 			</div>
+
+			<div class="indent" id="4248a08e-4b1c-451f-bfed-d8a2ee0c1634">
+				Figure&nbsp;
+				<a href="#-a-direction-field-and-integral-curves-for-y-xy-1">
+					2.2.4
+					<!-- tex4ht:ref: figure:2.2.4  -->
+				</a>
+				shows a direction field and some integrals for <a href="#x1-33r18">(2.2.18)</a>.
+			</div>
+			<figure class="figure" id="50bdd5c7-295e-48e7-b2a9-af1c8cbddf3f">
+				<div
+					id="-a-direction-field-and-integral-curves-for-y-xy-1"
+				>
+					<img height="264" src="EPS/fig020204.png" width="409" />
+					<a id="x1-35r4"></a>
+				</div>
+				<figcaption class="caption">
+					<span class="id">Figure&nbsp;2.2.4</span>
+					<span class="content">
+						A direction field and
+						<span class="vocab">integral curves</span>
+						for \(\displaystyle \frac{dy}{dx} \frac{x(1-y^2)}{2}\)
+					</span>
+				</figcaption>
+				<!-- tex4ht:label?: x1-35r4  -->
+			</figure>
+
+
 		</details>
 
-		<div class="indent" id="4248a08e-4b1c-451f-bfed-d8a2ee0c1634">
-			Figure&nbsp;
-			<a href="#-a-direction-field-and-integral-curves-for-y-xy-1">
-				2.2.4
-				<!-- tex4ht:ref: figure:2.2.4  -->
-			</a>
-			shows a direction field and some integrals for <a href="#x1-33r18">(2.2.18)</a>.
-		</div>
-		<figure class="figure" id="50bdd5c7-295e-48e7-b2a9-af1c8cbddf3f">
-			<div
-				id="-a-direction-field-and-integral-curves-for-y-xy-1"
-			>
-				<img height="264" src="EPS/fig020204.png" width="409" />
-				<a id="x1-35r4"></a>
-			</div>
-			<figcaption class="caption">
-				<span class="id">Figure&nbsp;2.2.4</span>
-				<span class="content">
-					A direction field and
-					<span class="vocab">integral curves</span>
-					for \(\displaystyle \frac{dy}{dx} \frac{x(1-y^2)}{2}\)
-				</span>
-			</figcaption>
-			<!-- tex4ht:label?: x1-35r4  -->
-		</figure>
+
 
 		<details id="30e43a76-9454-4010-a774-0581956a6b19">
 			<summary>
-				Differences Between Linear and Nonlinear Equations
+				Linear v. Nonlinear
 			</summary>
 		
 			<div id="d5172a30-4e22-483b-8d53-b038c5f630bf">
