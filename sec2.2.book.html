@@ -345,34 +345,9 @@
 			<div class="indent" id="a0684f78-8a21-4147-951a-fa94437638c5">
 				<div>
 					We call <a href="#x1-them221eq10">(2.2.10)</a> with arbitrary constant \(c\) an <span class="vocab">implicit solution</span> of <a href="#x1-them221eq9">(2.2.9)</a> which might be written in different forms including  \( H(y)=G(x)+c \) or \( H(y) - G(x) = c \) but either way it is important to remember that the function \(y=y(x)\) itself is the actual solution.
-					For instance, curves defined by <a href="#x1-them221eq10">(2.2.10)</a> are <span class="vocab">integral curves</span> or <a href="#x1-them221eq9">(2.2.9)</a>, whereas the curves defined by \(y=y(x)\) are the actual <span class="vocab">solution curves</span> of <a href="#x1-them221eq9">(2.2.9)</a>.
+					For instance, curves defined by <a href="#x1-them221eq10">(2.2.10)</a> are <span class="vocab">integral curves</span> or <a href="#x1-them221eq9">(2.2.9)</a>, whereas the curves defined by \(y=y(x)\) are the actual <span class="vocab">solution curves</span> of <a href="#x1-them221eq9">(2.2.9)</a>. Evaluating <a href="#x1-them221eq10">(2.2.10)</a> at the initial point \( \left( x_0, y_0 \right) \) we obtain \( H(y_0)=G(x_0)+c \) such that the arbitrary constant in our IVP evaluates to \( c = H(y_0) - G(x_0)\) and when \(c\) exists that satisfies this expression we’ll say that <a href="#x1-them221eq12">(2.2.12)</a> is an <span class="vocab">implicit solution</span> of the <span class="vocab">IVP</span> <a href="#x1-them221eq11">(2.2.11)</a> however it is important to realize that for some choices of \( c\) there may not be any differentiable functions \( y = y(x) \) that satisfy <a href="#x1-them221eq10">(2.2.10)</a>.
 				</div>
-				<div>	
-					Evaluating <a href="#x1-them221eq10">(2.2.10)</a> at an initial point 
-					\( H(y)=G(x)+c \) 
-					
-				</div>	
-		
-				
-				If \(c\) satisfies <a href="#x1-them221eq12">(2.2.12)</a>, we’ll say that <a href="#x1-them221eq10">(2.2.10)</a> is also an <span class="vocab">implicit solution</span> of the <span class="vocab">IVP</span> <a href="#x1-them221eq11">(2.2.11)</a> however it is important to realize that for some choices of \( c\) there may not be any differentiable functions \( y \) that satisfy <a href="#x1-them221eq10">(2.2.10)</a>
-
-
-
-				blah blah
-
-				
-				<a href="#x1-19r11">(2.2.11)</a> is an <span class="vocab">implicit solution</span> of the <span class="vocab">IVP</span>
-				<a href="#x1-20r12">(2.2.12)</a>. However, keep these points in mind:
-			</div>
-			<ul class="itemize1" id="abbc2760-d2f7-4cbf-9bda-0da0b2ea7425">
-				<li class="itemize">
-					For some choices of \(c\) there may not be any differentiable functions
-					\(y\) that satisfy <a href="#x1-19r11">(2.2.11)</a>
-				</li>
-				<li class="itemize">
-					The function \(y=y(x)\) in <a href="#x1-19r11">(2.2.11)</a> is a solution of \(\displaystyle h(y) \frac{dy}{dx} =g(x)\)
-				</li>
-			</ul>
+			
 			<div class="example" id="x1-213" style="--ex-number: 3">
 				<ol>
 					<li>
@@ -404,7 +379,7 @@
 								\underset{H(y)}{\underbrace{y^5 + y}} = & \underset{G(x)}{\underbrace{x^2 + x}}+ c
 							\end{align}
 							
-							We call this the <span class="vocab">implicit solution</span> and notice in this case it is not possible to solve explicitly for \( y \)
+							We call this the <span class="vocab">implicit solution</span> of <a href="#x1-23r13">(2.2.13)</a> and notice in this case it is not possible to solve explicitly for \( y \)
 						</li>
 						<li>
 							We already have our implicit solution <a href="#x1-26r15">(2.2.15)</a> so we just substitute in our initial condition \( y(2)=1 \) to solve for the constant \( c \)
@@ -418,7 +393,7 @@
 								c = -4 
 							\end{align*}
 							
-							Substituting in \( c = -4  \) into <a href="#x1-26r15">(2.2.15)</a> 
+							Substituting in \( c = -4  \) into <a href="#x1-26r15">(2.2.15)</a> we have the implicit solution for our IVP <a href="#x1-25r14">(2.2.14)</a>
 							
 							\begin{equation*} 
 								y^5 + y = x^2 + x -4 
@@ -459,13 +434,14 @@
 			<summary>Constant Solutions</summary>
 		
 			<div id="a0a064fd-571e-4b46-8771-898c127c0380">
-				Both linear and nonlinear equations of the form \( \frac{dy}{dx}=g(x)p(y) \) are always 
+				Both linear and nonlinear equations of the form \( \displaystyle \frac{dy}{dx}=g(x)p(y) \) are always 
 				<span class="vocab">separable</span>. Simply divide by \( p(y) \) and find the antiderivative of  both sides:
 
 				\begin{align*}
 					\frac{dy}{dx} = & g(x)p(y) \\
 					\frac{1}{p(y)}\frac{dy}{dx} = & g(x) \\
 					\int \Bigg( \frac{1}{p(y)}\frac{dy}{dx} \Bigg) dx = & \int g(x) dx \\	
+					\int  \frac{1}{p(y)} dy = & \int g(x) dx \\	
 				\end{align*}
 
 				However, the division by \( p(y) \) will only work if \( p(y) \) has no zeros. When \( p(y) \) has a zero, we treat it similarly to how we treated <span class="vocab">trivial solutions</span>, first considering the trivial solution case individually, and then assuming \( y \) is not equal to the individual values. We will do the same for <span class="vocab">constant solutions</span> (<span class="vocab">equilibrium solutions</span>)
@@ -508,7 +484,7 @@
 					</div>
 
 					<div class="indent" id="fcc9b539-296f-496a-84cb-602d607bc042">
-						We’ve shown that if \(y\) is a solution of <a href="#x1-29r16">(2.2.16)</a> that is not identically zero, then \(y\) must be of the form of the <span class = "vocab">one-parameter family</span> given by <a href="#x1-30r17">(2.2.17)</a>. Notice that regardless of any choice of \( c \), there is no way to obtain the trivial solution. When a solution exists that is not from the one-parameter family. we call it a <span class = "vocab">singular solution</span>. Thus our general solution includes both:
+						We’ve shown that if \(y\) is a solution of <a href="#x1-29r16">(2.2.16)</a> that is not identically zero, then \(y\) must be of the form of the <span class = "vocab">one-parameter family</span> given by <a href="#x1-30r17">(2.2.17)</a>. Notice that regardless of any choice of \( c \), there is no way to obtain the trivial solution. When a solution exists that is not from the one-parameter family. we call it a <span class = "vocab">singular solution</span>. Thus our general solution includes both the trivial solution and the one-parameter family:
 						
 						\begin{equation*}
 							y(x)=0 \quad \quad y(x) = \frac{1}{c - x^2}
@@ -578,14 +554,13 @@
 							0 = & {1\over2}x \Big( 0 \Big) \quad \checkmark \\
 						\end{align*}
 
-						These <span class = "vocab">constant solutions</span> are nontrivial and called <span class = "vocab">equilibrium solutions</span>. Now we can proceed to separate variables here, which requires dividing by \( (1-y^2) \), which is fine to do so long as we assume \( y \ne 1 \) and ( y \ne -1 \)
+						These <span class = "vocab">constant solutions</span> are called <span class = "vocab">equilibrium solutions</span> and separating variables requires dividing by \( 1-y^2 = (1-y)(1+y) \), which is perfectly fine to do as long as we first assume \( y(x) \ne 1 \) and \( y(x) \ne -1 \) and we'll start by factoring out the negative:
 
 						\begin{align*} 	
-							\frac{dy}{dx} = & \frac{1}{2}x(1-y^2) \\
 							\frac{dy}{dx} = & -\frac{1}{2}x(y^2-1) \\
-							\frac{1}{y^2-1}\frac{dy}{dx} = & \frac{1}{2}x \\		
-							\int \Bigg( \frac{1}{y^2-1}\frac{dy}{dx} \Bigg) dx = &\int \frac{1}{2}x dx \\	
-							\int \frac{1}{(y-1)(y+1)}dy = & \frac{1}{2}\int x dx \\						
+							\frac{1}{y^2-1}\frac{dy}{dx} = & -\frac{1}{2}x \\		
+							\int \Bigg( \frac{1}{y^2-1}\frac{dy}{dx} \Bigg) dx = & -\int \frac{1}{2}x dx \\	
+							\int \frac{1}{(y-1)(y+1)}dy = & - \frac{1}{2}\int x dx \\						
 						\end{align*}
 
 						Finding the antiderivative on the right is simple enough using the <span class = "vocab">power rule</span> but the antiderivative on the left is more complicated, requiring <span class = "vocab">partial fraction decomposition</span>:
@@ -624,33 +599,50 @@
 						Substituting in these values we can decompose the fraction on the left:
 						
 						\begin{align*} 		
-							\int \frac{1}{(y-1)(y+1)}dy = & \frac{1}{2}\int x dx \\						
-							\frac{1}{2}\int \frac{1}{y-1}dy - \frac{1}{2}\int \frac{1}{y+1}dy = & \frac{1}{2}\int x dx \\						
+							\int \frac{1}{(y-1)(y+1)}dy = & - \frac{1}{2}\int x dx \\						
+							\frac{1}{2}\int \frac{1}{y-1}dy - \frac{1}{2}\int \frac{1}{y+1}dy = & -\frac{1}{2}\int x dx \\						
 							\int \frac{1}{\underset{u}{\underbrace{y-1}}} \underset{du}{\underbrace{dy}} -\int \frac{1}{\underset{v}{\underbrace{y+1}}} \underset{dv}{\underbrace{dy}}  = & -\int x dx \\	
 							\int \frac{1}{u}du - \int \frac{1}{v}dv = &  -\int x dx \\
 							\ln \left| u \right| - \ln \left| v \right| = &  -\frac{1}{2} x^2 + k \\
 							\ln \left| \frac{y-1}{y+1} \right| = & -\frac{1}{2}x^2 + k \\	
-							\left| \frac{y-1}{y+1} \right| = & e^{-\frac{1}{2}x^2} e^{k} = Ke^{-\frac{1}{2}x^2}\\
-							\frac{y-1}{y+1} = Ke^{-\frac{1}{2}x^2} \quad & \text{or} \quad \frac{y-1}{y+1} = -Ke^{-\frac{1}{2}x^2} \\	
-							\frac{y-1}{y+1} =& ce^{-\frac{1}{2}x^2}										
+							\left| \frac{y-1}{y+1} \right| = & e^k e^{-\frac{1}{2}x^2}								
 						\end{align*}
 						
-						So we can represent this <span class = "vocab">one-parameter family</span> by simply:
+						Recall that we assumed \( y(x) \ne 1 \) and \( y(x) \ne -1 \) so the quantity \( (y-1)/(y+1) \) is always positive or always negative in any given interval we are on, therefore we can further simplify and represent this <span class = "vocab">one-parameter family</span> by:
 
 						\begin{align*} 		
 							\frac{y-1}{y+1} =& ce^{-\frac{1}{2}x^2}										
 						\end{align*}
 
 						Although this representation is currently implicit, we can solve explicitly for \( y \)
-						
-						\begin {equation} \label {eq:2.2.19}
-						y={1+ce^{-x^2/2}\over 1-ce^{-x^2/2}}\end {equation}
+
 						<a id="x1-34r19"></a>
+						\begin{align} 	
+							y-1 = & ce^{-\frac{1}{2}x^2} (y+1) \nonumber \\
+							y-1 = & cye^{-\frac{1}{2}x^2}+ce^{-\frac{1}{2}x^2} \nonumber \\	
+							y-cye^{-\frac{1}{2}x^2} = & 1 + ce^{-\frac{1}{2}x^2} \nonumber \\	
+							y\left(1-ce^{-\frac{1}{2}x^2}\right) = & 1 + ce^{-\frac{1}{2}x^2} \nonumber \\	
+							y(x) = & \frac{1 + ce^{-\frac{1}{2}x^2}}{1-ce^{-\frac{1}{2}x^2}}
+						\end{align}
+						
 					</div>
 					<div class="indent" id="36ee516f-3513-4a39-ab4c-6a6704b071b3">
-						We’ve now shown that if \(y\) is a solution of <a href="#x1-33r18">(2.2.18)</a> that is not identically equal to \(\pm 1\), then \(y\) must be as in <a href="#x1-34r19">(2.2.19)</a>. By substituting <a href="#x1-34r19">(2.2.19)</a> into <a href="#x1-33r18">(2.2.18)</a> you can verify that <a href="#x1-34r19">(2.2.19)</a> is a solution of <a href="#x1-33r18">(2.2.18)</a>. Thus, the solutions of <a href="#x1-33r18">(2.2.18)</a> are \(y\equiv 1\), \(y\equiv -1\) and the functions of the form <a href="#x1-34r19">(2.2.19)</a>. Note that the constant solution \(y \equiv 1\) can be obtained from
-						this formula by taking \(c=0\); however, the other constant solution, \(y
-						\equiv -1\), can’t be obtained in this way.
+						By first identifying the <span class = "vocab">constant solutions</span> (<span class = "vocab">equilibrium solutions</span>) and then assuming \( y \) was explicitly not equal to those values, we were able to find this <span class = "vocab">one-parameter family</span> <a href="#x1-34r19">(2.2.19)</a> to represent all solutions of <a href="#x1-33r18">(2.2.18)</a> which are not identically equal to one or negative one. It turns out that one of the equilibrium solutions, \( y(x)=1 \) is also represented in the one-parameter family when c = 0:
+
+						\begin{align*} 	
+							y(0) = & \frac{1 + 0\cdot e^{-\frac{1}{2}x^2}}{1-0\cdot e^{-\frac{1}{2}x^2}} = 1 \\
+						\end{align*}
+						
+						While one of the equilibrium solutions is part of the family, the other equilibrium solution is not. That is, regardless of choice of \( c \) we can never obtain the equilibrium solution \( y(x)=-1 \) from the family, so we call it a <span class = "vocab">singular solution</span> and it must be included in the <span class = "vocab">general solution</span>:
+
+						\begin{align*} 	
+							y(x) = -1 
+							\quad \quad 
+							y(x) = \frac{1 + ce^{-\frac{1}{2}x^2}}{1-ce^{-\frac{1}{2}x^2}}
+							\\
+						\end{align*}
+
+
 					</div>
 				</details>
 			</div>
@@ -675,7 +667,7 @@
 					<span class="content">
 						A direction field and
 						<span class="vocab">integral curves</span>
-						for \(\displaystyle \frac{dy}{dx} \frac{x(1-y^2)}{2}\)
+						for \(\displaystyle \frac{dy}{dx} = \frac{1}{2}x(1-y^2)\)
 					</span>
 				</figcaption>
 				<!-- tex4ht:label?: x1-35r4  -->
@@ -692,53 +684,95 @@
 			</summary>
 		
 			<div id="d5172a30-4e22-483b-8d53-b038c5f630bf">
-				Theorem&nbsp;
-				<span class="ptmb8t-">2.1.2</span>
-				states that if \(p\) and \(f\) are continuous on \((a,b)\) then every
-				solution of \[ \frac{dy}{dx} + p(x)y=f(x) \] on \((a,b)\) can be obtained by choosing a
-				value for the constant \(c\) in the general solution, and if \(x_0\) is
-				any point in \((a,b)\) and \(y_0\) is arbitrary, then the initial value
-				problem \[ \frac{dy}{dx} + p(x)y=f(x),\quad y(x_0)=y_0 \] has a solution on \((a,b)\).
+				Theorem <span class="ptmb8t-">2.1.2</span> shows us that there exists a unique solution for all linear first order differential equations and IVPs:
+				
+				 \[ \frac{dy}{dx} + p(x)y=f(x) \] 
+				 
+				 \[ \frac{dy}{dx} + p(x)y=f(x) \quad\quad y(x_0)=y_0 \]
 			</div>
 			<div class="indent" id="99848dd9-b546-4b2d-a868-42be9ddb5e62">
-				The not true for nonlinear equations. First, we saw in Examples&nbsp;
-				<a href="#x1-284">
-					2.2.4
-					<!-- tex4ht:ref: example:2.2.4  -->
-				</a>
-				and
-				<a href="#x1-325">
-					2.2.5
-					<!-- tex4ht:ref: example:2.2.5  -->
-				</a>
-				that a nonlinear equation may have solutions that can’t be obtained by
-				choosing a specific value of a constant appearing in a one-parameter
-				family of solutions. Second, it is in general impossible to determine the
-				<span class="vocab">interval of validity</span>
-				of a solution to an initial value problem for a nonlinear equation by
-				simply examining the equation, since the interval of validity may depend
-				on the initial condition. For instance, in Example&nbsp;<a href="#x1-62">2.2.2</a>we saw that the solution of \[ {dy\over dx}=-{x\over y},\quad y(x_0)=y_0
-				\] is valid on \((-a,a)\), where \(a=\sqrt {x_0^2+y_0^2}\).
+				The not true for nonlinear equations: first order nonlin- ear differential equations may or may not have a solution. 
+			</div>	
+			<div>	
+				While solutions of linear equations all come from a single one-parameter family, solutions of nonlinear equations may be a singular equilibrium solution (Examples <a href="#x1-284">2.2.4</a> and <a href="#x1-325">2.2.5</a>).
+			</div>
+			<div>	
+				Intervals of validity (IOV) are also different. For linear equations IOVs can be determined directly from the equation of the solution by determining undefined values whereas with nonlinear equations the equation does not provide enough information as the IOV may also depend on the initial condition (Example <a href="#x1-62">2.2.2</a>).
 			</div>
 			<div class="example" id="x1-366" style="--ex-number: 6">
 				<div>
-					Solve the initial value problem \[ \frac{dy}{dx} = 2xy^2, \quad y(0)=y_0 \] and
+					Solve the initial value problem \[ \frac{dy}{dx} = 2xy^2 \quad\quad y(0)=y_0 \] and
 					determine the <span class="vocab">interval of validity</span> of the solution.
 				</div>
 
 				<details class="solution" id="038ad0a8-e891-449d-9f76-a49d5d5f78d0">
 					<summary>Solution</summary>
 					<div id="437a289f-88e0-4041-a080-e96f69a2c39d">
-						First suppose \(y_0\ne 0\). From Example&nbsp;<a href="#x1-284">2.2.4</a>, we know that \(y\) must be of the form \begin {equation} \label
-						{eq:2.2.20} y=-{1\over x^2+c}\end {equation}
+						From Example&nbsp;<a href="#x1-284">2.2.4</a>, we know that other than the trivial solution, \(y\) must be of the form of the one-parameter family:
+
 						<a id="x1-37r20"></a>
-						Imposing the initial condition shows that \(c=-1/y_0\). Substituting this
-						into <a href="#x1-37r20">(2.2.20)</a> and rearranging terms yields the solution \[ y= {y_0\over 1-y_0x^2}\]
-						This is also the solution if \(y_0=0\). If \(y_0&lt;0\), the denominator
-						isn’t zero for any value of \(x\), so the the solution is valid on
-						\((-\infty ,\infty )\). If \(y_0&gt;0\), the solution is valid only on
-						\((-1/\sqrt {y_0},1/\sqrt {y_0})\).
+						\begin {equation} \label{eq:2.2.20} 
+							y={1\over c-x^2}
+						\end {equation}
+						
+						Applying the initial condition, we can solve for a specific \( c\)
+						
+						\begin{align*} 	
+							y(x) = & {1\over c-x^2} \\
+							\underset{y_0}{\underbrace{y(0)}} = & {1\over c-0^2} \\
+							y_0 = & {1\over c} \Longrightarrow c =\frac{1}{y_0} \\
+						\end{align*}
+
+						Substituting into <a href="#x1-37r20">(2.2.20)</a> we obtain the particular solution to the IVP:
+
+						\begin{align*} 	
+							y(x) = & \frac{1}{\frac{1}{y_0}-x^2} \\
+						\end{align*}
+
+						Simplifying by multiplying \( y_0 \) on top and bottom, we obtain:
+
+						\begin{align*} 	
+							y(x) = & \frac{y_0}{1-y_0x^2} \\
+						\end{align*}
 					</div>
+					<div>	
+						So we have our particular solution and now we need to determine the IOVs. We will have to consider cases for different values of \( y_0 \) so we will consider \( y_0 = 0 ,\) \( y_0 < 0 ,\) and \( y_0 > 0 \) separately:
+						<ul>
+							<li>
+								When \( y_0 = 0 \) then our solution is the trivial solution \( y(x) = \displaystyle \frac{0}{1-0\cdot x^2} = \frac{0}{1} = 0  \) which is valid for all values of \( x \) so the IOV is \( (-\infty, \infty) \)
+							</li>
+							<li>
+								When \( y_0 < 0 \) since this would result in the sum of two positive quantities in the denominator, guaranteeing that the solution is always defined, which again is valid for all values of \( x \) so the IOV is \( (-\infty, \infty) \)
+							</li>
+							<li>
+								When \( y_0 > 0 \) it is a little trickier since the denominator could evaluate to zero making it undefined. So we simply find the undefined points by setting the denominator to zero and solve:
+
+								\begin{align*} 	
+									1-y_0x^2 = & 0 \\
+									1 = & y_0x^2 \\
+									\frac{1}{y_0} = & x^2 \Longrightarrow x = \pm \frac{1}{\sqrt{y_0}}
+								\end{align*}
+
+								Meaning the expression is undefined at \( x = 1 / \sqrt{y_0} \) and \( x = -1 / \sqrt{y_0} \) so possible IOVs are 
+
+								\begin{align*} 	
+									\left(-\infty, -\frac{1}{\sqrt{y_0}}\right)
+									\quad
+									\text{or}
+									\quad
+									\left(-\frac{1}{\sqrt{y_0}}, \frac{1}{\sqrt{y_0}}\right)
+									\quad
+									\text{or}
+									\quad
+									\left(\frac{1}{\sqrt{y_0}}, \infty\right)
+								\end{align*}
+
+								The initial condition of \( y(0) = y_0 \) then the \(x\) value of 0 places us directly in the IOV 
+								\[ \left(-\frac{1}{\sqrt{y_0}}, \frac{1}{\sqrt{y_0}}\right) \]
+							</li>
+						</ul>	
+					</div>
+
 				</details>
 			</div>
 		</details>
