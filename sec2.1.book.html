@@ -463,6 +463,7 @@
 
 			<div class = "theorem" id = "c8582efa-4ba5-4629-b14e-ced68cd59398">
 				<div>
+					<a id = "x1-thm12"></a>
 					<span class = "head">Theorem&nbsp;2.1.1</span></span>
 					Given \(p(x)\) continuous on \((a,b)\) then the homogeneous first order linear differential equation
 
@@ -475,7 +476,7 @@
 
 					<a id = "x1-24r1213"></a>
 					\begin {equation} \label {eq:2.1.13}  
-						y = ce^{-P(x)}
+						y(x) = ce^{-P(x)}
 					\end {equation}
 
 					where  \( P(x) \) is any antiderivative of \(p(x)\) on \((a,b)\) and 
@@ -595,7 +596,7 @@
 						</div>
 
 						<div class="reading-exercise">
-							Differentiate \( u \cdot e^{-2x} \) using the product and chain rules	
+							Differentiate \( u \cdot e^{-2x} \)  with respect to \( x \) using the product and chain rules	
 						</div> 
 
 						<div>
@@ -708,8 +709,11 @@
 							<div class="reading-exercise"> 
 								Identify \( p(x) \), \( f(x) \), points of discontinuity, and possible IOVs for \( \displaystyle \frac{dy}{dx} + (\tan x) y = x \sec x \)
 							</div>
+
+
+
 							<div>
-								To solve  the nonhomogeneous <a href = "#x1-36r20">(2.1.20)</a>, always first  solve the complementary homogeneous equation:
+								To solve  the nonhomogeneous <a href = "#x1-36r20">(2.1.20)</a>, we will always first solve the complementary homogeneous equation:
 	
 								<a id = "x1-32r22"></a>
 								\begin{align}
@@ -721,9 +725,13 @@
 							</div>
 
 							<div>
-								The <span class = "vocab-repeat">general solution</span> for the <span class = "vocab-repeat">complementary equation</span> is \( y = \frac{c}{\sin x} \) and when using <span class = "vocab">variation of parameters</span> we select any simple <span class = "vocab-repeat">particular solution</span> so we choose \( c = 1 \) and use \( y_1 = \frac{1}{\sin x} \) to seek solutions of <a href = "#x1-31r18">(2.1.18)</a> of the form: 
+								Using <span class = "vocab">separation of variables</span> we find \( y = \frac{c}{\sin x} \) as the <span class = "vocab-repeat">general solution</span> of the <span class = "vocab-repeat">complementary equation</span>. Now when using <span class = "vocab">variation of parameters</span>, we will select \( y_1 \) as any simple <span class = "vocab-repeat">particular solution</span> of the complementary equation, so we choose \( c = 1 \) and use \( y_1 = \frac{1}{\sin x} \) to seek solutions of <a href = "#x1-36r20">(2.1.20)</a> of the form: 
 								\[ y = u \cdot y_1 = \frac{u}{\sin x} \]
 							</div>
+
+							<div class="reading-exercise">
+								Differentiate \( \frac{u}{\sin x} \) with respect to \( x \) using the quotient rule	
+							</div> 	
 	
 							<div>
 								Differentiating \( y = \frac{u}{\sin x} \) using the
@@ -736,11 +744,10 @@
 										\left( \sin x \frac{du}{dx} - u \cos x\right) \\
 								\end{align}
 							</div>
-							<div class="reading-exercise">
-								Differentiate \( \frac{u}{\sin x} \) using the quotient rule	
-							</div> 
+
+
 							<div>
-								Now substitute into <a href = "#x1-36r20">(2.1.20)</a> and by simplifying the equation transforms into an <span class = "vocab">integrable</span> equation <a href = "#x1-32r24">(2.1.24)</a>:
+								We now substitute into <a href = "#x1-36r20">(2.1.20)</a> and simplify the equation which transforms it into an <span class = "vocab-repeat">integrable</span> equation 
 				
 								<a id = "x1-32r24"></a>
 								\begin{align}\label{eq:2.1.24}
@@ -753,29 +760,25 @@
 								\end{align}
 	
 	
-								Now we simply find the antiderivative to find \( u \):
+								Now we simply find the antiderivative of <a href = "#x1-32r24">(2.1.24)</a> to obtain \( u \):
 								
 								\begin{align*}	
 									\int du = & \int x dx \Longrightarrow	
 									u = c + \frac{1}{2} x^2 \\	
 								\end{align*}
 	
-								Then multiply the result by \(y_1 = \frac{1}{\sin x} \) to get the <span class = "vocab-repeat">general solution</span> of <a href = "#x1-36r20">(2.1.20)</a>:
+								Then multiply the result by \(y_1 = \displaystyle \frac{1}{\sin x} = \csc x \) to get the <span class = "vocab-repeat">general solution</span> of <a href = "#x1-36r20">(2.1.20)</a>
 
 								<a id = "x1-32r25"></a>
 								\begin{align}	\label{eq:2.1.25}
-									y = \frac{u}{\sin x} = & \frac{x^2 + 2c}{2 \sin x} \\	
+									y = \frac{u}{\sin x} = u \csc x = & \left( c + \frac{1}{2} x^2 \right) \csc x  \\	
 								\end{align}
 
-								with <span class = "vocab">intervals of validity</span> \( \Big(k\pi,(k+1)\pi \Big) \) where \( k \) is any integer.
+								with <span class = "vocab">IOVs</span> \( \Big(k\pi,(k+1)\pi \Big) \) where \( k \) is any integer.
 							</div>
-
-							<div class="reading-exercise">
-								Calculate \( \frac{u}{\sin x} \) by substituting and simplifying to verify the result \( \frac{x^2 + 2c}{2 \sin x} \)	
-							</div> 
 							
 							<div class="reading-exercise">
-								Verify \( y  = \frac{x^2 + 2c}{2 \sin x} \) is a solution of <a href = "#x1-36r20">(2.1.20)</a> by differentiating and substituting
+								Verify <a href = "#x1-32r25">(2.1.25)</a> is a solution of <a href = "#x1-36r20">(2.1.20)</a> by differentiating and substituting
 							</div> 
 						</li>
 						<li>
@@ -783,26 +786,23 @@
 								We already found the <span class = "vocab">general solution</span> <a href = "#x1-32r25">(2.1.25)</a> now we evaluate it at our <span class = "vocab">initial condition</span> \( y\left( \frac{\pi}{2} \right) = 1\) to solve for the constant \( c \)
 
 								\begin{align*}
-									y(x) =&  \frac{x^2 + 2c}{2\sin x}	\\
-									\underset{1}{\underbrace{ y\left(\frac{\pi}{2}\right) }} = & \frac{\pi^2}{8} + c \\	
-									1 = & \frac{\pi^2}{8} + c \Longrightarrow c = \frac{8-\pi^2}{8}  \\	
+									y(x) =&  \left( c + \frac{1}{2} x^2 \right) \csc x	\\
+									\underset{1}{\underbrace{ y\left(\frac{\pi}{2}\right) }} 
+										= & \Big( c + \underset{\frac{\pi^2}{8}}{\underbrace{\frac{1}{2} \left( \frac{\pi}{2} \right)^2}} \Big) \underset{\frac{1}{\sin \left( \frac{\pi}{2} \right) }=1}{\underbrace{\csc \left( \frac{\pi}{2} \right)}} \\	
+									1 = & c + \frac{\pi^2}{8} \Longrightarrow c = 1 - \frac{\pi^2}{8}  \\	
 								\end{align*}
 							</div>
-							<div class="reading-exercise">
-								Evaluate <a href = "#x1-32r24">(2.1.24)</a> at \( \frac{\pi}{2} \) and show \( y\left(\frac{\pi}{2}\right) = \frac{\pi^2}{8} + c \) then solve for \( c \) to show \( c = \frac{8-\pi^2}{8} \) 
-							</div> 
+
 							<div>
-								Substituting \( c = \frac{8-\pi^2}{8} \) yields the <span class = "vocab">particular solution</span> of our IVP <a href = "#x1-38r21">(2.1.21)</a>:
+								Substituting \( c = \frac{8-\pi^2}{8} \) yields the <span class = "vocab">particular solution</span> of our IVP <a href = "#x1-38r21">(2.1.21)</a>
 								\begin{align*}
-									y(x) = & \frac{x^2 + 2c}{2\sin x} 
-									\Longrightarrow 
-									y(x) = \frac{4x^2 + 8-\pi^2}{8\sin x} \\	
+									y(x) = \left( 1 - \frac{\pi^2}{8} + \frac{1}{2} x^2 \right) \csc x
+									=  \frac{1}{8} \left( 8 - \pi^2 + 4x^2 \right) \csc x \\	
 								\end{align*}
-								Since \( x = \frac{\pi}{2} \) then the <span class = "vocab">interval of validity</span> for this solution is \((0,\pi )\) 
+								Which is only defined on open intervals  \( \Big(k\pi,(k+1)\pi \Big) \) and 
+								since \( x = \frac{\pi}{2} \) then the <span class = "vocab-repeat">IOV</span> is \((0,\pi )\) 
 							</div> 
-							<div class="reading-exercise">
-								Show all the work to evaluate <a href = "#x1-32r25">(2.1.25)</a> at \( c = \frac{8-\pi^2}{8} \) to get \( y(x) = \frac{4x^2 + 8-\pi^2}{8\sin x} \)
-							</div> 
+
 						</li>
 					</ol>
 
@@ -840,7 +840,7 @@
 				</div>	
 				<ol>
 					<li>
-						Solve the complementary homogeneous equation \( \frac{dy}{dx} + p(x)y = 0 \) and select a simple particular solution as \( y_1(x) \)
+						Solve the complementary homogeneous equation \( \frac{dy}{dx} + p(x)y = 0 \) and select a simple particular solution as \( y_1 \)
 					</li>
 					<li>
 						Express \( y \) as a product \( y = u \cdot y_1 \) and calculate its derivative \( \frac{d}{dx} \Big( u \cdot y_1  \Big) \) using product, quotient, and/or chain rules
@@ -887,34 +887,54 @@
 
 					<ol>
 						<li>
+							<div class = "stepbox"  id = "def4d167-1758-49e5-b147-dfd39480dee9">
+								1. Solve the complementary homogeneous equation \( \displaystyle \frac{dy}{dx} + p(x)y = 0 \) and select a simple particular solution as \( y_1 \)	
+							</div>
+
 							<div>
-								To solve <a href = "#x1-54r27">(2.1.27)</a>, first use <span class = "vocab">separation of variables</span> to solve the complementary homogeneous equation:
+								To solve the nonhomogeneous <a href = "#x1-54r27">(2.1.27)</a>, we will always first solve the complementary homogeneous equation:
 	
 								\begin{align*}
 									\frac{dy}{dx} - 2xy = & 0	
 								\end{align*}
 							</div>
+							
 							<div class="reading-exercise">
-								Show all the work to solve \( \frac{dy}{dx} - 2xy = 0 \) as in Examples <a href="#x1-93">2.1.3</a> and <a href="#x1-154">2.1.4</a> 	
+								Solve \( \frac{dy}{dx} - 2xy = 0 \) using separation of variables as in Examples <a href="#x1-93">2.1.3</a> and <a href="#x1-154">2.1.4</a> 	
+							</div>
+
+							<div>
+								Using <span class = "vocab">separation of variables</span> we find \( y = ce^{x^2} \) as the <span class = "vocab-repeat">general solution</span> of the <span class = "vocab-repeat">complementary equation</span>. Now we select \( y_1 \) as any simple <span class = "vocab-repeat">particular solution</span> of the complementary equation, so we choose \( c = 1 \) and use 
+								\[ y_1 = e^{x^2} \]
+							</div>
+
+							<div class = "stepbox"  id = "def4d167-1758-49e5-b147-dfd39480dee9">
+								2. Express \( y \) as a product \( y = u \cdot y_1 \) and calculate its derivative \( \frac{d}{dx} \Big( u \cdot y_1  \Big) \) using product, quotient, and/or chain rules	
+							</div>
+
+							<div>
+								We seek solutions of <a href = "#x1-31r18">(2.1.18)</a> of the form: 
+								\[ y = u \cdot y_1 = u \cdot e^{x^2} \]
 							</div>
 	
-							<div>
-								Our <span class = "vocab">general solution</span> for the <span class = "vocab">complementary equation</span> is \( y = ce^{x^2} \) and to use <span class = "vocab">variation of parameters</span> we select a simple <span class = "vocab">particular solution</span> of the <span class = "vocab">complementary equation</span> so we choose \( c = 1 \) and use \( y_1 = e^{x^2} \) and seek solutions of the form \( y = u \cdot y_1 = u \cdot e^{x^2} \)
-							</div>
+							<div class="reading-exercise">
+								Differentiate \( u \cdot e^{x^2} \)  with respect to \( x \) using the product and chain rules	
+							</div> 
+							
 							<div>
 								Differentiating \( y = u \cdot e^{x^2} \) using the
-								<span class = "vocab">product rule</span> gives us:
+								<span class = "vocab">product rule</span> and <span class = "vocab">chain rule</span> gives us:
 	
 								\begin{align*}
 									\frac{dy}{dx} = & \left( \frac{du}{dx} + 2 x u \right) e^{x^2} \\
 								\end{align*}
 							</div>
-							<div class="reading-exercise">
-								Show all the work to calculate \( \frac{d}{dx} \Big( u \cdot e^{x^2}  \Big) \) using the product and chain rules	
-							</div> 
+
+							<div class = "stepbox"  id = "def4d167-1758-49e5-b147-dfd39480dee9">
+								3. Substitute \( uy_1 \) and \( \frac{d}{dx} \Big( u \cdot y_1  \Big) \) into the nonhomogeneous and simplify to transform into an integrable equation	
+							</div>
+
 							<div>
-								Now we substitute into <a href = "#x1-54r27">(2.1.27)</a> and by simplifying the equation transforms into an <span class = "vocab">integrable</span> equation:
-				
 								\begin{align*}
 									\frac{dy}{dx} - 2 x y = & 1 \nonumber \\
 									\overset{\frac{dy}{dx}}{\overbrace{ \left( \frac{du}{dx} + 2 x u \right) e^{x^2} }} - 2x\overset{y}{\overbrace{ue^{x^2}}} = & 1 \nonumber \\	
@@ -922,25 +942,36 @@
 									\frac{du}{dx}e^{x^2} = & 1 \nonumber \\
 									\frac{du}{dx} = & e^{-x^2}
 								\end{align*}
-	
-	
-								Normally we integrate to find \( u \) but \( e^{-x^2} \) can not be integrated by any of the methods we know from calculus, and in fact, cannot be expressed in terms of elementary functions. No problem, using <span class = "vocab">Fundamental Theorem of Calculus</span> we can always write an antiderivative as a definite integral 
+							</div>
+
+							<div class = "stepbox"  id = "def4d167-1758-49e5-b147-dfd39480dee9">
+								4.  Find the antiderivative \( u \) including the constant of integration, and multiply result by \( y_1 \) to get \( y = uy_1 \)	
+							</div>
+
+							<div>	
+								Normally we simplfy find the antiderivative of \( \displaystyle \frac{du}{dx} \) but this time it is a little tricky
+
+								\begin{align*}	
+									u = \int du = & \int e^{-x^2} dx = ?
+								\end{align*}
+
+								There are no techniques we have from calculus to find the antiderivative of this function and in fact, it cannot even be expressed in terms of the elementary functions we have studied in math classes. This is no problem though, because using <span class = "vocab">Fundamental Theorem of Calculus</span> we can actually write any antiderivative as a definite integral 
 								
 								\begin{align*}	
-									\int du = & \int e^{-x^2} dx 
-									\Longrightarrow
-									u = c + \int_{x_0}^x e^{-t^2} dt	
+									u = & \int e^{-x^2} dx 
+									=c + \int_{x_0}^x e^{-t^2} dt
+									=c + \int_{0}^x e^{-t^2} dt	
 								\end{align*}
 	
 	
-								where \( x_0 \) is the initial \(x-\)value. Of course this always
-								introduces a <span class = "vocab">constant of integration</span> so be sure to include that. 
+								where \( x_0 \) is some initial \(x-\)value which we can choose conveniently to evaluate the definite integral to zero in the case of an IVP, so we use \(x_0 = 0\) from <a href = "#x1-54r28">(2.1.28)</a> in this case. We explicitly write out the "\( + c \)" here in front of the integral to make it more clear that we are "done" simplifying the integral for now as it will stay in this form for our general solution.
 							</div>
+
 							<div class="reading-exercise">
-								Verify \( \frac{du}{dx} = e^{-x^2} \) by differentiating \( u = c + \int_{x_0}^x e^{-t^2} dt\) using the <span class = "vocab">Fundamental Theorem of Calculus</span>
+								Differentiate \( u = c + \displaystyle \int_{0}^x e^{-t^2} dt\) using the <span class = "vocab">Fundamental Theorem of Calculus</span> to verify \( \displaystyle  \frac{du}{dx} = e^{-x^2} \) 
 							</div> 
 							<div>	
-								Then multiply the result by \(y_1 = e^{x^2} \) to get the <span class = "vocab">general solution</span> \( y \) of <a href = "#x1-54r27">(2.1.27)</a>:
+								Then multiply the result by \(y_1 = e^{x^2} \) to get the <span class = "vocab">general solution</span> \( y \) of <a href = "#x1-54r27">(2.1.27)</a>
 								
 								<a id = "x1-55r29"></a>
 								\begin{align}	\label {eq:2.1.29}
@@ -948,68 +979,73 @@
 								\end{align}
 							</div>
 							<div class="reading-exercise">
-								Verify \( y  = e^{x^2}\left( c + \int_{0}^x e^{-t^2} dt \right) \) is a solution of <a href = "#x1-54r27">(2.1.27)</a> by differentiating and substituting
+								Verify <a href = "#x1-54r29">(2.1.29)</a> is a solution of <a href = "#x1-54r27">(2.1.27)</a> by differentiating and substituting
 							</div> 
 						</li>
 						<li>
-							We already have the general solution <a href = "#x1-54r29">(2.1.29)</a> and we evaluate it at our  initial condition \( y(0) = y_0 \) to solve for the constant \( c \):
+							We already found the general solution <a href = "#x1-54r29">(2.1.29)</a> now we evaluate it at our  initial condition \( y(0) = y_0 \) to solve for the constant \( c \)
 							\begin{align*} 	
 								y(x) = & e^{x^2}\left( c + \int_{0}^x e^{-t^2} dt \right)  \\
-								\underset{y_0}{\underbrace{y(0)}} = & e^{0^2}\left( c + \int_{0}^0 e^{-t^2} dt \right) \\
-								y_0 = & 1 \left( c + 0 \right) \\
-								c = & y_0
+								\underset{y_0}{\underbrace{y(0)}} = & e^{\left(0^2\right)}\Bigg( c + \underset{0}{\underbrace{\int_{0}^0 e^{-t^2} dt}} \Bigg) \\
+								y_0 = & 1 \left( c + 0 \right) = c
 							\end{align*}
 
-							Substituting \( c = y_0 \) yields the <span class = "vocab">particular solution</span> of our IVP:
+							Substituting \( c = y_0 \) yields the <span class = "vocab">particular solution</span> of our IVP <a href = "#x1-54r28">(2.1.28)</a>:
 
 							<a id = "x1-56r30"></a>
 							\begin{align} \label {eq:2.1.30}
-								y(x) = e^{x^2}\left( c + \int_{0}^x e^{-t^2} dt \right)   
-								\Longrightarrow y(x) = & e^{x^2}\left( y_0 + \int_{0}^x e^{-t^2} dt \right)
+								y(x) = & e^{x^2}\left( y_0 + \int_{0}^x e^{-t^2} dt \right)
 							\end{align}
 						</li>
 					</ol>
 				</details>
 			</div>
+
+
+			<div id = "6561841f-1e77-47bb-9641-0d34c79be2bc">
+				Figure&nbsp;<a href = "#-solutions-of-yxy-yy-">2.1.5</a> shows graphs
+				of <a href = "#x1-56r30">(2.1.30)</a> for several values of \(y_0\).
+	
+				<figure class = "figure" id = "17e761ef-cbb7-4e1c-8011-25ced4d4ad98">
+					<div id = "-solutions-of-yxy-yy-">
+						<a id = "x1-57r5"></a>
+						<img height = "264" src = "EPS/fig020105.png" width = "409" />
+					</div>
+					<figcaption class = "caption">
+						<span class = "id">Figure&nbsp;2.1.5</span>
+						<span class = "content">Solutions of \( \displaystyle \frac{dy}{dx} -2xy = 1 \quad y(0) = y_{0}\)</span>
+					</figcaption>
+				</figure>
+			</div>
+			<div id = "5af3d00b-9729-4cda-a131-45d613c9153e">
+				A note about solutions in the form of an integral. Comparing to our experience in calculus, a general solution in the form of an integral <a href = "#x1-56r30">(2.1.30)</a> may seem incomplete, almost like we still have more steps to do; while this may have been true in calculus class, it is important to realize that a solution in the form or a definite integral is perfectly valid and can be easily analyzed using numerical methods. For instance, for any specific value of \( x \) this definite integral will evaluate to a number \( y(x) \) forming an ordered pair \( \big( x, y(x) \big) \) and we could always use a calculator or spreadsheet to make a table of those ordered pairs and simply plot the points on a graph which would be a graph of the solution. While we won’t be studying numerical methods in this class, hopefully you could imagine someone doing so and can be okay with sometimes having answers in the form of an integral.
+			</div>
+			<div class="reading-exercise" id = "e9fe5315-e5b9-407b-8313-74ad23134284">
+				Using a calculator or spreadhseet generate a table of 20 ordered pairs for <a href = "#x1-56r30">(2.1.30)</a>, plot them on a graph, and connect them with a smooth curve
+			</div>
+
 		</details>
 
 
-		<div id = "6561841f-1e77-47bb-9641-0d34c79be2bc">
-			Figure&nbsp;<a href = "#-solutions-of-yxy-yy-">2.1.5</a> shows graphs
-			of <a href = "#x1-56r30">(2.1.30)</a> for several values of \(y_0\).
 
-			<figure class = "figure" id = "17e761ef-cbb7-4e1c-8011-25ced4d4ad98">
-				<div id = "-solutions-of-yxy-yy-">
-					<a id = "x1-57r5"></a>
-					<img height = "264" src = "EPS/fig020105.png" width = "409" />
-				</div>
-				<figcaption class = "caption">
-					<span class = "id">Figure&nbsp;2.1.5</span>
-					<span class = "content">Solutions of \( \displaystyle \frac{dy}{dx} -2xy = 1 \quad y(0) = y_{0}\)</span>
-				</figcaption>
-			</figure>
-		</div>
-		<div id = "5af3d00b-9729-4cda-a131-45d613c9153e">
-			A note about solutions in the form of an integral. Comparing to our experience in calculus, a general solution in the form of an integral <a href = "#x1-56r30">(2.1.30)</a> may seem incomplete, almost like we still have more steps to do; while this may be true in calculus class, it is important to realize that a solution in the form or a definite integral is perfectly valid and can be easily analyzed using numerical methods. For instance, remember that for any specific value of \( x \), this definite integral will evaluate to a number, so we could always use a calculator to make a table of \( \big( x, y(x) \big) \) pairs and simply plot the points of the solution. While we won’t be studying numerical methods in this class, hopefully you could imagine someone doing so and can be okay with sometimes having answers in the form of an integral.
-		</div>
-		<div class="reading-exercise" id = "e9fe5315-e5b9-407b-8313-74ad23134284">
-			Using a calculator generate a table of 20 ordered pairs for <a href = "#x1-56r30">(2.1.30)</a>, plot them on a graph, and connect them with a curve
-		</div>
 
 		<details id = "4454b728-c934-46b0-b7ef-ca7e5afcc726">
 			<summary>Existence and Uniqueness</summary>
+
+			<div>
+				We already know from Theorem <a href = "#x1-thm12">2.1.1</a> that there exists a unique solution <a href = "#x1-24r1213">(2.1.13)</a> for every homogeneous first order linear differential equation <a href = "#x1-24r12">(2.1.12)</a>. Theorem 2.1.2 completes this section with the guarantees the existence and uniqueness of solutions for every nonhomogeneous first order linear differential equations.
+			</div>	
 
 			<div class = "theorem" id = "afc64397-4ef9-442d-8578-9debaa2943eb">
 				<div>
 					<span class = "head">Theorem&nbsp;2.1.2</span>
 					<a id = "x1-582"></a>
-					Suppose \(p(x)\) and \(f(x)\) are continuous on an open interval \((a,b),\)
-					and let \(y_1 = y_1(x) \) be any nontrivial solution of the complementary equation
-					\(  \displaystyle \frac{dy}{dx}  + p(x)y = 0 \) on \((a,b)\). Then:
+					Suppose \(p(x)\) and \(f(x)\) are continuous on an open interval \((a,b)\)
+					and let \(y_1 = y_1(x) \) be any nontrivial particular solution of the complementary homogeneous equation. Then:
 				</div>
 				<ol>
 					<li>
-						The general solution of the nonhomogeneous equation <a href = "#x1-60r31">(2.1.31)</a> on \((a,b)\) is given by <a href = "#x1-61r32">(2.1.32)</a>
+						The general solution of the nonhomogeneous <a href = "#x1-60r31">(2.1.31)</a> on \((a,b)\) is given by <a href = "#x1-61r32">(2.1.32)</a>
 						<a id = "x1-60r31"></a>
 						\begin {equation} \label {eq:2.1.31}  
 							\frac{dy}{dx}  + p(x)y = f(x) 
@@ -1021,8 +1057,8 @@
 						\end {equation}
 					</li>
 					<li>
-						If \(x_0\) is an arbitrary point in \((a,b)\) and \(y_0\) is an
-						arbitrary real number, then the initial value problem <a href = "#x1-61r33">(2.1.33)</a> has the unique solution <a href = "#x1-61r34">(2.1.34)</a> on \((a,b)\) 
+						If \(x_0\) is an arbitrary point in \((a,b)\) and \(y_0 = y(x_0)\) is an
+						arbitrary real number, then the IVP <a href = "#x1-61r33">(2.1.33)</a> has the unique solution <a href = "#x1-61r34">(2.1.34)</a> on \((a,b)\) 
 						
 						<a id = "x1-61r33"></a>
 						\begin {equation} \label {eq:2.1.33}  
