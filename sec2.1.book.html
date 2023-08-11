@@ -38,7 +38,7 @@
 		</div>
 
 		<details>
-			<summary>Linear First Order Equations</summary>
+			<summary>Linear Standard Form</summary>
 
 			<div id = "fbccb180-cac4-4668-a490-9ff35c7b6ec2">
 				A first order differential equation is said to be
@@ -125,7 +125,7 @@
 		</details>
 
 		<details id = "65027fca-e3a9-4ad7-90a8-1889301cfefe">
-			<summary>General Solution of Linear First Order Equations</summary>
+			<summary>Intervals of Validity of One–Parameter Families</summary>
 
 			<div id = "a952783b-21b6-40ba-852b-83f9793a1a63">
 				<div>
@@ -461,39 +461,50 @@
 	
 			</div>
 
-			<div id = "c8582efa-4ba5-4629-b14e-ced68cd5939998">
-				The following theorem generalizes the solution to all first order linear differential equations, which we will always solve using <span class = "vocab">separation of variables</span> although there are other techniques that work including <span class = "vocab">integrating factors</span> (Exercise )
-			</div>
-
 			<div class = "theorem" id = "c8582efa-4ba5-4629-b14e-ced68cd59398">
 				<div>
 					<span class = "head">Theorem&nbsp;2.1.1</span></span>
+					Given \(p(x)\) continuous on \((a,b)\) then the homogeneous first order linear differential equation
 
-					<a id = "x1-231"></a>
-					If \(p\) is continuous on \((a,b),\) then \( y = ce^{-P(x)}\) the general solution of
-					
 					<a id = "x1-24r12"></a>
 					\begin {equation} \label {eq:2.1.12}  
 						\frac{dy}{dx}  + p(x)y = 0
 					\end {equation}
 					
-					Where \( P(x) \) is any antiderivative of \(p(x)\) on \((a,b)\). That is,
-					
-					<a id = "x1-25r13"></a>
-					\begin {equation} \label{eq:2.1.13} 
-						P(x) = \int p(x) dx 
+					always has a general solution of 
+
+					<a id = "x1-24r1213"></a>
+					\begin {equation} \label {eq:2.1.13}  
+						y = ce^{-P(x)}
 					\end {equation}
-					
-					 \begin {equation}
-					\label {eq:2.1.14} \left.\frac{dP}{dx}\right|_x = p(x) \quad a&lt;x&lt;b\end {equation}
-					<a id = "x1-26r14"></a>
+
+					where  \( P(x) \) is any antiderivative of \(p(x)\) on \((a,b)\) and 
+					\(x_0\) any point in \((a,b)\) 
+
+		
+					<a id = "x1-25r1314"></a>
+					\begin {equation} \label{eq:2.1.14} 
+						P(x) = \int^x_{x_0} p(t) dt 
+					\end {equation}
+				
 				</div>
 			</div>
 
 			<div class="reading-exercise">
-				Prove by differentiating \( y = ce^{-P(x)} \) using <a href = "#x1-26r14">(2.1.14)</a>, rewriting in the form of <a href = "#x1-24r12">(2.1.12)</a> and then solving  
+				Differentiate <a href = "#x1-25r1314">(2.1.14)</a> with respect to \(x \) using the Fundamental Theorem of Calculus
 			</div>   
+			<div class="reading-exercise">
+				Differentiate <a href = "#x1-24r1213">(2.1.13)</a> with respect to \(x \) using the chain rule
+			</div>   
+			<div class="reading-exercise">
+				Show that  <a href = "#x1-24r1213">(2.1.13)</a> is a solution of <a href = "#x1-24r12">(2.1.12)</a> by substituting and simplifying
+			</div>   
+
+			<div id = "c8582efa-4ba5-4629-b14e-ced68cd5939998">
+				As a reminder while Theorem 2.1.1 guarantees the existance and uniqueness of a solution for all homogeneous first order linear differential equations <a href = "#x1-24r12">(2.1.12)</a> we will not apply the theorem as a formula, but instead we will solve using <span class = "vocab">separation of variables</span> although there are other techniques that work including <span class = "vocab">integrating factors</span> (Section 2.6 Exercise 30)
+			</div>
 		</details>
+
 
 		<details id = "c4957e1f-6e04-46b4-a12f-36838ea8045f">
 			<summary>Nonhomogeneous Linear First Order Equations</summary>
@@ -501,14 +512,14 @@
 			<div id = "e3cecd47-79ca-4517-970f-932221e78071">
 				In Examples <a href="#x1-93">2.1.3</a> and <a href="#x1-154">2.1.4</a>, 
 				we rewrote homogeneous linear equations so that one side depended on only \( y \) and its derivative and the other side only depended on \(x\) and then found the antiderivative on both sides. This method is called <span class = "vocab">separation of variables</span> and 
-				can be used to solve all homogeneous linear equations but now we would like to solve nonhomogeneous equations:
+				can be used to solve all homogeneous linear equations <a href = "#x1-5r2">(2.1.2)</a> but now we would like to solve nonhomogeneous equations:
 				
 				<a id = "x1-28r15"></a>
 				\begin {equation} \label{eq:2.1.15}  
 					\frac{dy}{dx} + p(x)y = f(x)
 				\end {equation}
 				
-				To solve nonhomogeneous equations <a href = "#x1-28r15">(2.1.15)</a>, we must first solve the corresponding homogeneous equation, which we call the <span class = "vocab">complementary equation</span>:
+				To solve nonhomogeneous equations <a href = "#x1-28r15">(2.1.15)</a> we will first solve the corresponding homogeneous equation, which we call the <span class = "vocab">complementary equation</span>
 				\[  \frac{dy}{dx}  + p(x)y = 0 \] 
 
 				We then use a method called <span class = "vocab">variation of parameters</span> to seek solutions of the form \( y = u y_1 \) where \( y_1 = y_1 (x) \) is a nontrivial solution of the <span class = "vocab">complementary equation</span> and \( u = u(x) \) is some function of \( x \) to be determined. Since \( y_1 \) is a solution of the <span class = "vocab">complementary equation</span>, then we know and will use the fact that 
@@ -519,7 +530,7 @@
 				\end{equation}
 			</div>
 			<div id="67f7fd67-56b0-47d1-a2a0-fdf04d3d6fa9">
-				To implement <span class = "vocab">variation of parameters</span>, we will differentiate \( y = uy_1 \) and then substitutute back into our nonhomogeneous equations <a href = "#x1-28r15">(2.1.15)</a> to solve. We differente using the <span class = "vocab">product rule</span> to get an expression for the derivative in terms of \( u \) and \( y_1 \):
+				To implement <span class = "vocab">variation of parameters</span>, we will differentiate \( y = uy_1 \) and then substitutute back into our nonhomogeneous equation <a href = "#x1-28r15">(2.1.15)</a> to solve. We differente using the <span class = "vocab">product rule</span> to get an expression for the derivative in terms of \( u \) and \( y_1 \):
 
 				\begin{align*}
 					\frac{dy}{dx} = &  \frac{d}{dx} \Big( u  \cdot  y_1 \Big) = y_1\frac{du}{dx} + u\frac{dy_1}{dx} 
@@ -542,7 +553,7 @@
 			</div>
 
 			<div id = "7384f551-3a81-42b1-bb8f-ba58b26f1d6a">
-				Now we simply find the antiderivative to find \( u \), which introduces a <span class = "vocab">arbitrary constant</span> of integration. Finally, multiply the result \( u \) by \(y_1\) to get \( y = uy_1 \):
+				Now we simply find the antiderivative to obtain \( u \), which introduces a <span class = "vocab">arbitrary constant</span> of integration. Finally, multiply the result \( u \) by \(y_1\) to get \( y = uy_1 \):
 				
 
 				\begin{align*}
@@ -556,8 +567,10 @@
 			<div class = "example" id = "x1-305" style = "--ex-number: 5">
 				<div>
 					<a id = "x1-31r18"></a>
-					Find the general solution of \begin {equation} \label {eq:2.1.18}
-					\frac{dy}{dx}  + 2y = x^3e^{-2x}\end {equation}
+					Find the general solution of 
+					\begin {equation} \label {eq:2.1.18}
+						\frac{dy}{dx} + 2y = x^3e^{-2x}
+					\end {equation}
 				</div>
 
 				<details class = "solution" id = "d3337b7c-0e16-49c6-9ba1-5a2720c898a9">
@@ -565,7 +578,7 @@
 
 					<div id = "7d777a29-8df4-4d1b-ba4e-300a4f61bcf9">
 						<div>
-							To solve the nonhomogeneous <a href = "#x1-31r18">(2.1.18)</a>, always first solve the complementary homogeneous equation:
+							To solve the nonhomogeneous <a href = "#x1-31r18">(2.1.18)</a>, we will always first solve the complementary homogeneous equation:
 
 							\begin{align*}
 								\frac{dy}{dx} + 2y = & 0	
@@ -577,16 +590,8 @@
 						</div>
 
 						<div>
-							The <span class = "vocab-repeat">general solution</span> for the <span class = "vocab-repeat">complementary equation</span> is \( y = ce^{-2x} \) and when using <span class = "vocab">variation of parameters</span> we select any simple <span class = "vocab-repeat">particular solution</span> so we choose \( c = 1 \) and use \( y_1 = e^{-2x} \) to seek solutions of <a href = "#x1-31r18">(2.1.18)</a> of the form: 
+							Using <span class = "vocab">separation of variables</span> we find \( y = ce^{-2x} \) as the <span class = "vocab-repeat">general solution</span> of the <span class = "vocab-repeat">complementary equation</span>. Now when using <span class = "vocab">variation of parameters</span>, we will select \( y_1 \) as any simple <span class = "vocab-repeat">particular solution</span> of the complementary equation, so we choose \( c = 1 \) and use \( y_1 = e^{-2x} \) to seek solutions of <a href = "#x1-31r18">(2.1.18)</a> of the form: 
 							\[ y = u \cdot y_1 = u \cdot e^{-2x} \]
-						</div>
-						<div>
-							Differentiating using the
-							<span class = "vocab">product rule</span> gives us:
-
-							\begin{align*}
-								\frac{dy}{dx} = & \left( \frac{du}{dx} - 2 u \right) e^{-2x} \\
-							\end{align*}
 						</div>
 
 						<div class="reading-exercise">
@@ -594,7 +599,18 @@
 						</div> 
 
 						<div>
-							Now substitute into <a href = "#x1-31r18">(2.1.18)</a> and by simplifying the equation it transforms into an <span class = "vocab-repeat">integrable</span> equation <a href = "#x1-32r19">(2.1.19)</a>:
+							Differentiating using the
+							<span class = "vocab">product rule</span> and <span class = "vocab">chain rule</span> yields
+
+							\begin{align*}
+								\frac{dy}{dx} = & \left( \frac{du}{dx} - 2 u \right) e^{-2x} \\
+							\end{align*}
+						</div>
+
+						
+
+						<div>
+							We now substitute this into <a href = "#x1-31r18">(2.1.18)</a> and simplify the equation which transforms it into an <span class = "vocab-repeat">integrable</span> equation
 			
 							<a id = "x1-32r19"></a>
 							\begin{align}\label{eq:2.1.19}
@@ -606,7 +622,7 @@
 							\end{align}
 
 
-							Now we simply find the antiderivative to find \( u \):
+							Now we simply find the antiderivative of <a href = "#x1-32r19">(2.1.19)</a> to obtain \( u \)
 							
 							\begin{align*}	
 								\int du = & \int x^3 dx \Longrightarrow	
@@ -614,7 +630,7 @@
 							\end{align*}
 
 
-							Then multiply the result by \(y_1 = e^{-2x} \) to get the <span class = "vocab-repeat">general solution</span> of <a href = "#x1-31r18">(2.1.18)</a>:
+							Then multiply the result by \(y_1 = e^{-2x} \) to get the <span class = "vocab-repeat">general solution</span> of <a href = "#x1-31r18">(2.1.18)</a>
 							
 							\begin{align*}	
 								y = ue^{-2x} = & \left( c + \frac{1}{4} x^4 \right)e^{-2x} \\	
@@ -665,8 +681,12 @@
 					</li>
 					<li>
 						<a id = "x1-38r21"></a>
-						Solve the initial value problem \begin {equation} \label {eq:2.1.21}
-						\frac{dy}{dx}  + (\cot x)y = x\csc x,\quad y(\pi /2) = 1\end {equation}
+						Solve the initial value problem 
+						
+						\begin {equation} \label {eq:2.1.21}
+							\frac{dy}{dx}  + (\cot x)y = x\csc x 
+							\quad\quad y(\pi /2) = 1
+						\end {equation}
 					</li>
 				</ol>
 
@@ -683,17 +703,17 @@
 									\frac{dy}{dx} + \frac{\cos x}{\sin x}y = & \frac{x}{\sin x} 
 								\end{align*}
 
-								First we’ll take note of points of discontinuity: <a href = "#x1-36r20">(2.1.20)</a> is discontinuous when \( \sin x = 0 \), which occurs at \( x=\dots,0,\pi,2\pi,\dots\), therefore the possible <span class = "vocab">intervals of validity</span> are \( \dots \), \( (0,\pi) \), \( (\pi,2\pi) \), \( \dots \), or \( \Big(k\pi,(k+1)\pi \Big) \) where \( k \) is any integer.
+								First we’ll take note of points of discontinuity: <a href = "#x1-36r20">(2.1.20)</a> is discontinuous when \( \sin x = 0 \), which occurs at \( x=\dots,0,\pi,2\pi,\dots\), therefore the largest possible <span class = "vocab">intervals of validity</span> (<span class = "vocab">IOVs</span>) are \( \dots \), \( (0,\pi) \), \( (\pi,2\pi) \), \( \dots \), or \( \Big(k\pi,(k+1)\pi \Big) \) where \( k \) is any integer.
 							</div>
 							<div class="reading-exercise"> 
-								For \( \frac{dy}{dx} + (\tan x) y = x \sec x \), identify \( p(x) \), \( f(x) \), points of discontinuity, and possible intervals of validity
+								Identify \( p(x) \), \( f(x) \), points of discontinuity, and possible IOVs for \( \displaystyle \frac{dy}{dx} + (\tan x) y = x \sec x \)
 							</div>
 							<div>
 								To solve  the nonhomogeneous <a href = "#x1-36r20">(2.1.20)</a>, always first  solve the complementary homogeneous equation:
 	
 								<a id = "x1-32r22"></a>
 								\begin{align}
-								\frac{dy}{dx}  + (\cot x) y = & 0	
+									\frac{dy}{dx}  + (\cot x) y = & 0	
 								\end{align}
 							</div>
 							<div class="reading-exercise">
