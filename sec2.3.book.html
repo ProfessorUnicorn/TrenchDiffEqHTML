@@ -187,7 +187,9 @@
 						\end{align*}
 
 						Since the denominator \( 1+x^2+y^2 \) is the sum of all positive quantities, \( f_x(x,y) = -\displaystyle \frac{2y\left(1+2x^2\right)}{\left(1+x^2+y^2\right)^2} \) is continuous for all
-						\((x,y).\) Since both \( f(x,y) \) and \( f_x(x,y) \) are continuous then there exists a unique solution for <a href="#x1-9r3">(2.3.3)</a>
+						\((x,y).\) Since both \( f(x,y) \) and \( f_x(x,y) \) are continuous then 
+						Theorem <a href="#x1-31">2.3.1 (b)</a> indicates that 
+						there exists a unique solution for <a href="#x1-9r3">(2.3.3)</a>
 					</div>
 				</details>
 			</div>
@@ -229,7 +231,9 @@
 							= & -\frac{4 x^2 y }{\left(x^2+y^2\right)^2} \\ 
 						\end{align*}
 
-						Again aside from \((x,y) = (0,0),\) the denominator \( x^2+y^2 \) is the sum of all positive quantities, \( f_x(x,y) = -\displaystyle \frac{4 x^2 y }{\left(x^2+y^2\right)^2} \) is continuous for all \((x,y) \ne (0,0). \) Since both \( f(x,y) \) and \( f_x(x,y) \) are continuous for all \((x,y) \ne (0,0) \) then for any open rectangle that does not contain 
+						Again aside from \((x,y) = (0,0),\) the denominator \( x^2+y^2 \) is the sum of all positive quantities, \( f_x(x,y) = -\displaystyle \frac{4 x^2 y }{\left(x^2+y^2\right)^2} \) is continuous for all \((x,y) \ne (0,0). \) Since both \( f(x,y) \) and \( f_x(x,y) \) are continuous for all \((x,y) \ne (0,0) \) then 
+						Theorem <a href="#x1-31">2.3.1 (b)</a> indicates that 
+						for any open rectangle that does not contain 
 						\( (0,0) \) then there exists a unique solution for <a href="#x1-9r3234">(2.3.4)</a>
 					</div>
 				</details>
@@ -271,7 +275,9 @@
 							= & \frac{ 2x }{\left(x-y\right)^2} \\ 
 						\end{align*}
 
-						Again aside from the line \( y = x, \) the derivative \( f_x(x,y) = \frac{ 2x }{\left(x-y\right)^2} \) is continuous for all other \((x,y). \) Since both \( f(x,y) \) and \( f_x(x,y) \) are continuous for all \((x,y) \) not on the line  \( y = x \) then for any open rectangle that does not contain part of the line  \( y = x \) then there exists a unique solution for <a href="#x1-9r3234">(2.3.5)</a>
+						Again aside from the line \( y = x, \) the derivative \( f_x(x,y) = \frac{ 2x }{\left(x-y\right)^2} \) is continuous for all other \((x,y). \) Since both \( f(x,y) \) and \( f_x(x,y) \) are continuous for all \((x,y) \) not on the line  \( y = x \) then 
+						Theorem <a href="#x1-31">2.3.1 (b)</a> indicates that 
+						for any open rectangle that does not contain part of the line  \( y = x \) then there exists a unique solution for <a href="#x1-9r3234">(2.3.5)</a>
 					</div>
 				</details>
 			</div>
@@ -326,6 +332,7 @@
 				<a id="x1-9r355"></a>
 				Determine whether the IVP has a unique solution using Theorem <a href="#x1-31">2.3.1</a> 
 
+				<a id="x1-9r355eq238"></a>
 				\begin {equation} \label {eq:2.3.8}
 					\frac{dy}{dx}= \frac{10}{3}xy^{\frac{2}{5}} \quad\quad y(x_0)=y_0
 				\end {equation}
@@ -355,7 +362,9 @@
 							= & \frac{4x}{3y^{\frac{3}{5}}} \\
 						\end{align*}
 
-						While the function \( f(x,y) = \displaystyle \frac{10}{3}xy^{\frac{2}{5}} \) is continuous for all \((x,y),\) the partial derivative \( f_y(x,y) = \frac{4x}{3y^{\frac{3}{5}}}  \) is discontinuous when \( y = 0 \) so for any open rectangle that does not contain  \( y = 0 \) then there exists a unique solution for <a href="#x1-9r3">(2.3.3)</a>
+						While the function \( f(x,y) = \displaystyle \frac{10}{3}xy^{\frac{2}{5}} \) is continuous for all \((x,y),\) the partial derivative \( f_y(x,y) = \frac{4x}{3y^{\frac{3}{5}}}  \) is discontinuous when \( y = 0 \) so 
+						Theorem <a href="#x1-31">2.3.1 (b)</a> indicates that 
+						for any open rectangle that does not contain  \( y = 0 \) then there exists a unique solution for <a href="#x1-9r3">(2.3.3)</a>
 					</div>
 				</details>
 			</div>
@@ -378,9 +387,13 @@
 					<summary>Solution</summary>
 					<div id="b144ebcb-3991-4bfc-805a-439c8471a28f">
 						<div>
-							First notice <a href = "#x1-22r9">(2.3.9)</a> has a <span class = "vocab">trivial solution</span> \( y(x) \equiv 0 \) which we can verify by substitution:
+							In Example <a href="#x1-9r355">2.3.5</a> we showed that the IVP <a href="#x1-9r355eq238">(2.3.8)</a> has a unique solution on any open rectangle that does not contain the \(x-\)axis \(( y = 0 )\) meaning that if the open rectangle does contain the \(x-\)axis then the IVP will have a solution, but it will be non-unique
+						</div>
+						<div>	
+							To show that the IVP <a href = "#x1-22r9">(2.3.9)</a> has more than one solution, 
+							first notice it has a <span class = "vocab">trivial solution</span> \( y(x) \equiv 0 \) which we can verify by substitution:
 						
-							<a id="x1-22r10"></a>
+							<a id="x1-22r10"></a> 
 						
 							\begin{align} 	
 								\frac{dy}{dx} = & {10 \over 3}xy^{\frac{2}{5}}  \\
@@ -402,23 +415,66 @@
 								y= & \left( x^2 + c \right)^{ \frac{5}{3} }
 							\end{align}
 
-							So we have found the one-parameter family of functions <a href = "#x1-22r11">(2.3.11)</a> that are a solution of <a href = "#x1-22r10">(2.3.10)</a>.
+							So we have found the one-parameter family of functions <a href = "#x1-22r11">(2.3.11)</a> that is a solution of the differential equation <a href = "#x1-22r10">(2.3.10)</a>. Note that the one-parameter family <a href="#x1-22r11">(2.3.11)</a> is defined for all \( x \) therefore has IOV \( (-\infty,\infty) \) and regardless of any choice of \( c \) the one-parameter family will not yield the trivial solution, so therefore the general solution  of the differential equation <a href = "#x1-22r10">(2.3.10)</a> includes the one-parameter family and the trivial solution, which is a singular solution:
+
+							\begin {equation*} 
+								y(x) = 0
+								\quad 
+								\quad
+								y(x) = \left( x^2 + c \right)^{ \frac{5}{3} }
+							\end {equation*}
 						</div>
+						<div class="reading-exercise">
+							Differentiate <a href = "#x1-22r11">(2.3.11)</a> with respect to \(x \) using the power rule and chain rule
+						</div> 
+						<div>
+							Differentiating <a href = "#x1-22r11">(2.3.11)</a>, we find:
+							
+							\begin{align*} 	
+								\frac{dy}{dx}= & \frac{10}{3} x \left( x^2 + c \right)^{ \frac{2}{3} }
+							\end{align*}
+						</div>	
+						<div>
+							Substituting into <a href = "#x1-22r10">(2.3.10)</a>
+							
+							\begin{align*} 
+								\overset{\frac{dy}{dx}}{\overbrace{ \frac{10}{3} x \left( x^2 + c \right)^{ \frac{2}{3} } }} \quad \overset{?}{=} & \quad {10 \over 3} x \Bigg( \overset{y}{ \overbrace{ \left(  x^2 + c \right)^{ \frac{5}{3} } } } \Bigg)^{\frac{2}{5}} \\
+								\frac{10}{3} x \left( x^2 + c \right)^{ \frac{2}{3} } = & {10 \over 3} x  \left(  x^2 + c \right)^{ \frac{2}{3} }   \quad \checkmark 
+							\end{align*}
+
+							So we have verified that <a href = "#x1-22r11">(2.3.11)</a> is a solution of <a href = "#x1-22r10">(2.3.10)</a> on \( (-\infty,\infty) \) 
+						</div>	
+
+						<div>
+							Now we apply the initial condition \( y(0) = 0 \) to solve the IVP <a href = "#x1-22r9">(2.3.9)</a> by finding \( c \) 
+
+							\begin{align*} 	
+								\underset{0}{\underbrace{y(0)}} = & \left( 0^2 + c \right)^{ \frac{5}{3} } \\
+								0= & c^{ \frac{5}{3} } \Longrightarrow c = 0 \\
+							\end{align*}
+
+							Substituting in \( c = 0 \) to <a href = "#x1-22r11">(2.3.11)</a>, we obtain a particular solution to the IVP <a href = "#x1-22r9">(2.3.9)</a>
+							
+							\begin{align*} 	
+								y(x) = & x^{ \frac{10}{3} }
+							\end{align*}
+
+						</div>	
+
+						<div class="indent" id="ab393110-2e2e-4106-8b45-9b6f423d7f2d">
+							Now we have two solutions to the IVP, one is from the one-parameter family \( y(x) = x^{ \frac{10}{3} } \) and one is the trivial solution \( y(x) = 0 \) so while the IVP definitely has a solution, it is not unique. Both solutions are defined on \((-\infty ,\infty )\), and they differ on every open interval that contains \(x_0=0\) (see Figure&nbsp;<a href="#-two-solutions-y-and-yx-of-eq-that-differ-on-every-interval-containing-x-"
+							>2.3.2</a>.)
+						</div>	
+
+						<div class="reading-exercise">
+							In fact, there are <em>four</em> distinct solutions of <a href="#x1-22r9">(2.3.9)</a> defined on \((-\infty ,\infty )\) that differ from each other on every
+							open interval that contains \(x_0=0\). Can you identify the other two?
+						</div> 
+						
 
 					</div>
 					
-					<div class="indent" id="ab393110-2e2e-4106-8b45-9b6f423d7f2d">
-						Since we divided by \(y\) to separate variables in <a href = "#x1-22r10">(2.3.10)</a>, our derivation of <a href = "#x1-22r11">(2.3.11)</a> is legitimate only on open intervals where \(y\) has no zeros. However,
-						<a href = "#x1-22r11">(2.3.11)</a> actually defines \(y\) for all \(x\), and differentiating <a href = "#x1-22r11">(2.3.11)</a> shows that \[ \frac{dy}{dx}={10 \over 3}x(x^2+c)^{2/3}={10 \over
-						3}xy^{2/5},\,-\infty &lt;x&lt;\infty \] Therefore <a href = "#x1-22r11">(2.3.11)</a> satisfies <a href="#x1-23r10">(2.3.10)</a> on \((-\infty ,\infty )\) even if \(c\le 0\), so that \(y(\sqrt
-						{|c|})=y(-\sqrt {|c|})=0\). In particular, taking \(c=0\) in <a href = "#x1-22r11">(2.3.11)</a> yields \[ y=x^{10/3} \] as a second solution of <a href = "#x1-22r9">(2.3.9)</a>. Both solutions are defined on \((-\infty ,\infty )\), and they differ
-						on every open interval that contains \(x_0=0\) (see Figure&nbsp;<a
-							href="#-two-solutions-y-and-yx-of-eq-that-differ-on-every-interval-containing-x-"
-						>2.3.2</a>.) In fact, there are
-						<em>four</em>
-						distinct solutions of <a href="#x1-22r9">(2.3.9)</a> defined on \((-\infty ,\infty )\) that differ from each other on every
-						open interval that contains \(x_0=0\). Can you identify the other two?
-					</div>
+					
 				</details>
 			</div>
 
@@ -441,11 +497,13 @@
 
 			<div class="example" id="x1-267" style="--ex-number: 7">
 				<div>
-					From Example&nbsp;<a href="#x1-175">
-						2.3.5
-					</a>, the initial value problem
+					From Example <a href="#x1-175">2.3.5</a>, the IVP
+
 					<a id="x1-27r12"></a>
-					\begin {equation} \label {eq:2.3.12} \frac{dy}{dx}={10 \over 3}xy^{2/5}, \quad y(0)=-1 \end {equation}
+					\begin {equation} \label {eq:2.3.12} 
+						\frac{dy}{dx}={10 \over 3}xy^{2/5} \quad\quad y(0)=-1 
+					\end {equation}
+
 					has a unique solution on some open interval that contains \(x_0=0\).
 					Find a solution and determine the largest open interval \((a,b)\) on
 					which it’s unique.
@@ -454,18 +512,42 @@
 				<details class="solution" id="70e28128-59a9-4e81-9ece-81cfa4c5d4b6">
 					<summary>Solution</summary>
 					<div id="6d39e8b5-7407-4223-ad3c-bb57d64053e7">
-						Let \(y\) be any solution of <a href="#x1-27r12">(2.3.12)</a>. Because of the initial condition \(y(0)=-1\) and the continuity of
-						\(y\), there’s an open interval \(I\) that contains \(x_0=0\) on which
-						\(y\) has no zeros, and is consequently of the form <a href="#x1-24r11">(2.3.11)</a>. Setting \(x=0\) and \(y=-1\) in <a href="#x1-24r11">(2.3.11)</a> yields \(c=-1\), so \begin {equation} \label {eq:2.3.13} y=(x^2-1)^{5/3}
-						\end {equation}
+						From Example <a href="#x1-216">2.3.6</a>, we found the general solution to the differential equation:
+
+						\begin {equation*} 
+							y(x) = 0
+							\quad 
+							\quad
+							y(x) = \left( x^2 + c \right)^{ \frac{5}{3} }
+						\end {equation*}
+						
+					</div>
+
+					<div>
+						Now we apply the initial condition \( y(0) = -1 \) to solve the IVP <a href = "#x1-22r9">(2.3.9)</a> by finding \( c \) 
+
+						\begin{align*} 	
+							\underset{-1}{\underbrace{y(0)}} = & \left( 0^2 + c \right)^{ \frac{5}{3} } \\
+							-1= & c^{ \frac{5}{3} } \Longrightarrow c = -1 \\
+						\end{align*}
+
+						Substituting in \( c = -1 \) to <a href = "#x1-22r11">(2.3.11)</a>, we obtain a particular solution to the IVP <a href = "#x1-27r12">(2.3.12)</a>
+						
 						<a id="x1-28r13"></a>
-						for \(x\) in \(I\). Therefore every solution of <a href="#x1-27r12">(2.3.12)</a> differs from zero and is given by <a href="#x1-28r13">(2.3.13)</a> on \((-1,1)\); that is, <a href="#x1-28r13">(2.3.13)</a> is the unique solution of <a href="#x1-27r12">(2.3.12)</a> on \((-1,1)\). This is the largest open interval on which <a href="#x1-27r12">(2.3.12)</a> has a unique solution. To see this, note that <a href="#x1-28r13">(2.3.13)</a> is a solution of <a href="#x1-27r12">(2.3.12)</a> on \((-\infty ,\infty )\). From Exercise&nbsp;2.2.&nbsp;
-						<span class="ptmb8t-">15</span>,
-						there are infinitely many other solutions of <a href="#x1-27r12">(2.3.12)</a> that differ from <a href="#x1-28r13">(2.3.13)</a> on every open interval larger than \((-1,1)\). One such solution is \[ y
-						= \left \{ \begin {array}{cl} (x^2-1)^{5/3}, &amp; -1 \le x \le 1, \\[6pt]
-						0, &amp; |x|&gt;1\end {array} \right. \] (Figure <a
-							href="#-two-solutions-of-eq-on-that-coincide-on-but-on-no-larger-open-interval-"
-						>2.3.3</a>).
+						\begin{align} 	\label {eq:2.3.13}
+							y(x) = & \left(x^2 - 1 \right)^{ \frac{5}{3} }
+						\end{align}
+
+						Note that <a href="#x1-28r13">(2.3.13)</a> is from the one-parameter family <a href = "#x1-22r11">(2.3.11)</a> and is a solution of <a href="#x1-27r12">(2.3.12)</a> on IOV \((-\infty ,\infty )\) and \((-1,1)\) is the largest open interval on which <a href="#x1-27r12">(2.3.12)</a> has a unique solution, shown in Figure <a href="#-two-solutions-of-eq-on-that-coincide-on-but-on-no-larger-open-interval-">2.3.3</a>.
+					</div>	
+
+					<div class=reading-exercise>	
+						From Exercise 2.2.<span class="ptmb8t-">15</span>, there are infinitely many other solutions of <a href="#x1-27r12">(2.3.12)</a> that differ from <a href="#x1-28r13">(2.3.13)</a> on every open interval larger than \((-1,1)\). One such solution is 
+						
+						\[ y = \left \{ 
+							\begin {array}{cl} (x^2-1)^{5/3} &amp; -1 \le x \le 1 \\[6pt]
+						0 &amp; |x|&gt;1\end {array} \right. 
+						\] 
 					</div>
 				</details>
 			</div>
@@ -486,52 +568,75 @@
 							larger open interval
 						</span>
 					</figcaption>
-					<!-- tex4ht:label?: x1-29r3  -->
 				</div>
-				&nbsp;
-				<div class="minipage" id="-the-unique-solution-of-eq-">
-					<img height="264" src="EPS/fig020304.png" width="409" />
-					<a id="x1-30r4"></a>
-					<figcaption class="caption">
-						<span class="id">Figure&nbsp;2.3.4</span>
-						<span class="content">
-							The unique solution of <a href="#x1-32r14">(2.3.14)</a>
-						</span>
-					</figcaption>
-					<!-- tex4ht:label?: x1-30r4  -->
-				</div>
+	
 			</figure>
 
 			<div class="example" id="x1-318" style="--ex-number: 8">
 				<div>
-					From Example&nbsp;<a href="#x1-175">
-						2.3.5
-					</a>, the initial value problem
-					<a id="x1-32r14"></a>
-					\begin {equation} \label {eq:2.3.14} \frac{dy}{dx}={10 \over 3}xy^{2/5}, \quad y(0)=1 \end {equation}
-					has a unique solution on some open interval that contains \(x_0=0\).
+					From Example&nbsp;<a href="#x1-175">2.3.5</a>, the initial value problem
+
+					<a id="x1-27r14"></a>
+					\begin {equation} \label {eq:2.3.14} 
+					\frac{dy}{dx}={10 \over 3}xy^{2/5} \quad \quad y(0)=1 
+					\end {equation}
+
+					has a unique solution on some open interval that contains \(x_0=0.\)
 					Find the solution and determine the largest open interval on which it’s
 					unique.
 				</div>
 			
 				<details class="solution" id="eebf7d20-74c6-48fe-862a-0996aa8a8825">
 					<summary>Solution</summary>
+					<div id="6d39e8b5-7407-4223-ad3c-bb57d64053e7">
+						From Example <a href="#x1-216">2.3.6</a>, we found the general solution to the differential equation:
+
+						\begin {equation*} 
+							y(x) = 0
+							\quad 
+							\quad
+							y(x) = \left( x^2 + c \right)^{ \frac{5}{3} }
+						\end {equation*}
+						
+					</div>
+
+					<div>
+						Now we apply the initial condition \( y(0) = 1 \) to solve the IVP <a href="#x1-32r14">(2.3.14)</a> by finding \( c \) 
+
+						\begin{align*} 	
+							\underset{1}{\underbrace{y(0)}} = & \left( 0^2 + c \right)^{ \frac{5}{3} } \\
+							1= & c^{ \frac{5}{3} } \Longrightarrow c = 1 \\
+						\end{align*}
+
+						Substituting in \( c = 1 \) to <a href = "#x1-22r11">(2.3.11)</a>, we obtain a particular solution to the IVP <a href = "#x1-27r12">(2.3.12)</a>
+						
+						<a id="x1-28r15"></a>
+						\begin{align} 	\label {eq:2.3.15}
+							y(x) = & \left(x^2 + 1 \right)^{ \frac{5}{3} }
+						\end{align}
+
+						Note that <a href="#x1-28r15">(2.3.15)</a> is from the one-parameter family <a href = "#x1-22r11">(2.3.11)</a> and is a solution of <a href="#x1-27r14">(2.3.14)</a> on IOV \((-\infty ,\infty )\) 
+					</div>	
 					<div id="367676dd-bf81-4c9f-b840-819847bc4137">
-						Let \(y\) be any solution of <a href="#x1-32r14">(2.3.14)</a>. Because of the initial condition \(y(0)=1\) and the continuity of
-						\(y\), there’s an open interval \(I\) that contains \(x_0=0\) on which
-						\(y\) has no zeros, and is consequently of the form <a href="#x1-24r11">(2.3.11)</a>. Setting \(x=0\) and \(y=1\) in <a href="#x1-24r11">(2.3.11)</a> yields \(c=1\), so \begin {equation} \label {eq:2.3.15} y=(x^2+1)^{5/3}
-						\end {equation}
-						<a id="x1-33r15"></a>
-						for \(x\) in \(I\). Therefore every solution of <a href="#x1-32r14">(2.3.14)</a> differs from zero and is given by <a href="#x1-33r15">(2.3.15)</a> on \((-\infty ,\infty )\); that is, <a href="#x1-33r15">(2.3.15)</a> is the unique solution of <a href="#x1-32r14">(2.3.14)</a> on \((-\infty ,\infty )\). Figure&nbsp;
-						<a href="#-the-unique-solution-of-eq-">
-							2.3.4
-							<!-- tex4ht:ref: figure:2.3.4  -->
-						</a>
-						shows the graph of this solution.
+						Figure <a href="#-the-unique-solution-of-eq-">2.3.4</a> shows the graph of this solution.
 					</div>
 				</details>
 			</div>
 		</details>
+
+		<figure class="figure" id="4bf52b65-b216-424b-ad69-e8f8202f857e2">
+			
+			<div class="minipage" id="-the-unique-solution-of-eq-2">
+				<img height="264" src="EPS/fig020304.png" width="409" />
+				<a id="x1-30r4"></a>
+				<figcaption class="caption">
+					<span class="id">Figure&nbsp;2.3.4</span>
+					<span class="content">
+						The unique solution of <a href="#x1-32r14">(2.3.14)</a>
+					</span>
+				</figcaption>
+			</div>
+		</figure>
 
 		<nav class = "ex">
 			<a href = "sec2.3.ex.html">2.3 Exercises</a>
