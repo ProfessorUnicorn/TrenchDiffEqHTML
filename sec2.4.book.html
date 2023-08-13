@@ -42,7 +42,7 @@
 		</div>
 
 		<details id="a31b2669-0ead-4963-ac2f-836e8566dfce">
-			<summary>Transformation of Nonlinear Equations into Separable Equations</summary>
+			<summary>Nonlinear to Separable Transformations</summary>
 
 			<div id="86d35120-608b-4b7a-8bf9-c1cabed1f294">
 				In Section&nbsp;2.1 we found that the solutions of a linear nonhomogeneous
@@ -58,7 +58,7 @@
 				known function and \(u\) satisfies a separable equation. We’ll say in this
 				case that we
 				<span class="vocab">transformed</span>
-				the given equation into a separable equation.
+				the given equation into a <span class="vocab">separable equation</span>.
 			</div>
 		</details>
 
@@ -72,27 +72,37 @@
 				\frac{dy}{dx}+p(x)y=f(x)y^r
 				\end {equation}
 				where \(r\) can be any real number other than \(0\) or \(1\). (Note that <a href="#x1-3r2">(2.4.2)</a> is linear if and only if \(r=0\) or \(r=1\).) 
-				
-				<div class="reading-exercise">
-					Substitute \(r=0\) and \(r=1\) into <a href="#x1-3r2">(2.4.2)</a> and show the result is linear
-				</div> 
-				
-				We can transform <a href="#x1-3r2">(2.4.2)</a> into a separable equation by 
-				<span class="vocab">variation of parameters</span>: if \(y_1\) is a
-				nontrivial solution of <a href="#x1-2r1">(2.4.1)</a>, substituting \(y=uy_1\) into <a href="#x1-3r2">(2.4.2)</a> yields 
-				
-				\[ \frac{du}{dx} y_1 
-					+ u \left( \frac{dy_1}{dx} + p(x)y_1 \right) = f(x)(uy_1)^r\] 
-				
-				which is equivalent to
-				the separable equation 
-				
-				\[ \frac{du}{dx} y_1(x) = f(x) \Big( y_1(x) \Big)^ru^r
-					\quad \mbox{ or } \quad  
-					\frac{du}{dx} \frac{1}{u^r} = f(x) \Big( y_1(x) \Big)^{r-1}\] 
-				
-				since \(\frac{dy_1}{dx} + p(x)y_1=0\).
+			</div>	
+			<div class="reading-exercise">
+				Substitute \(r=0\) and \(r=1\) into <a href="#x1-3r2">(2.4.2)</a> and show the result is linear
+			</div> 
+			<div>	
+				Using <span class="vocab">variation of parameters</span>, we will <span class="vocab">transform</span> the Bernoulli equations into a <span class="vocab">separable</span> equation by finding solutions of the form \( y=uy_1\) where \( y_1 \) a nontrivial solution of the "complementary" equation <a href="#x1-2r1">(2.4.1)</a>. Then, just as before, we differentiate \( y  = u y_1 \) using the <span class="vocab">product rule</span>
+
+				\begin{align*}
+					y = & u \cdot y_1 \\
+					\frac{d}{dx} \Big( y \Big) = & \frac{d}{dx} \Big( u  \cdot  y_1 \Big) \\
+					\frac{dy}{dx} = & y_1\frac{du}{dx} + u\frac{dy_1}{dx} 
+				\end{align*}
+
+				Now we substite \( y = uy_1\) and \( \frac{dy}{dx} = y_1\frac{du}{dx} + u\frac{dy_1}{dx}\) into the
+				<span class="vocab">Bernoulli equation</span> <a href="#x1-3r2">(2.4.2)</a> and simplify. By using the fact that \( y_1 \) is a solution to the "complementary" equation <a href="#x1-2r1">(2.4.1)</a>, we can use the fact that \( \frac{dy_1}{dx} + p(x)y_1=0\) and then <span class="vocab">transform</span> the <span class="vocab">Bernoulli equation</span> into a <span class="vocab">separable</span> equation in \( u\)
+
+				\begin{align*}
+					\frac{dy}{dx} + p(x)y = & f(x)y^r \nonumber \\
+					\overset{\frac{dy}{dx}}{\overbrace{y_1\frac{du}{dx} + u\frac{dy_1}{dx}}} + p(x) \overset{y}{\overbrace{u \cdot y_1}} = & f(x)\overset{y^r}{\overbrace{\left(uy_1\right)^r}}
+				\nonumber \\	
+					y_1\frac{du}{dx} + \underbrace{u\frac{dy_1}{dx} + p(x)u \cdot y_1} = & f(x)u^ry_1^r  \nonumber \\
+					y_1\frac{du}{dx} + u \underset{0}{\left( \underbrace{\frac{dy_1}{dx} + p(x)y_1 }  \right) } = & f(x)u^ry_1^r \nonumber u^ry_1^r \\		
+					y_1\frac{du}{dx} + u \left(0\right) = & f(x) \nonumber u^ry_1^r \\
+					y_1\frac{du}{dx} = & f(x) u^ry_1^r \nonumber \\
+					\frac{du}{dx} = & f(x) u^ry_1^{r-1}(x) \nonumber \\	
+					\frac{1}{u^r} \cdot \frac{du}{dx} = & f(x) y_1^{r-1}(x) \nonumber \\				
+					\int \Big( \frac{1}{u^r} \cdot \frac{du}{dx}\Big) dx = & \int \Big( f(x) y_1^{r-1}(x) \Big) dx \nonumber \\	
+					\int \frac{1}{u^r} dxu = & \int \Big( f(x) y_1^{r-1}(x) \Big) dx \nonumber \\			
+				\end{align*}
 			</div>
+			
 			<div class="example" id="x1-41" style="--ex-number: 1">
 				<div>
 					<a id="x1-5r3"></a>
@@ -112,31 +122,34 @@
 					</div>
 				</details>
 			</div>
+
+			<div class="indent" id="f9fbfb60-66fc-42ee-babf-a0fdd8247348">
+				Figure&nbsp;
+				<a href="#x1-2r1">
+					2.4.1
+					<!-- tex4ht:ref: eq:2.4.1  -->
+				</a>
+				shows direction field and some
+				<span class="vocab">integral curves</span>
+				of <a href="#x1-5r3">(2.4.3)</a>.
+			</div>
+			<figure class="figure" id="243dca68-08b9-41cd-80c2-dadf7d0449cc">
+				<div id="-a-direction-field-and-integral-curves-for-yyxy-">
+					<img id="x1-6r1" height="264" src="EPS/fig020401.png" width="409" />
+				</div>
+				<figcaption class="caption">
+					<span class="id">Figure&nbsp;2.4.1</span>
+					<span class="content">
+						A direction field and
+						<span class="vocab">integral curves</span>
+						for \(\displaystyle \frac{dy}{dx} -y=xy^{2}\)
+					</span>
+				</figcaption>
+			</figure>
+
 		</details>
 
-		<div class="indent" id="f9fbfb60-66fc-42ee-babf-a0fdd8247348">
-			Figure&nbsp;
-			<a href="#x1-2r1">
-				2.4.1
-				<!-- tex4ht:ref: eq:2.4.1  -->
-			</a>
-			shows direction field and some
-			<span class="vocab">integral curves</span>
-			of <a href="#x1-5r3">(2.4.3)</a>.
-		</div>
-		<figure class="figure" id="243dca68-08b9-41cd-80c2-dadf7d0449cc">
-			<div id="-a-direction-field-and-integral-curves-for-yyxy-">
-				<img id="x1-6r1" height="264" src="EPS/fig020401.png" width="409" />
-			</div>
-			<figcaption class="caption">
-				<span class="id">Figure&nbsp;2.4.1</span>
-				<span class="content">
-					A direction field and
-					<span class="vocab">integral curves</span>
-					for \(\displaystyle \frac{dy}{dx} -y=xy^{2}\)
-				</span>
-			</figcaption>
-		</figure>
+
 		
 		<details id="bf4395f6-f417-45ab-ada7-04bd745d0a8b">
 			<summary>
