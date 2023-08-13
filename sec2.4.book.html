@@ -37,7 +37,7 @@
 		<div id="a6846e3f-97dd-4825-a571-e332aaf04800">
 			<span class="ptmb8t-">2.4</span>
 			<span class="ptmb8t-x-x-90">
-				&nbsp; TRANSFORMATION OF NONLINEAR EQUATIONS INTO SEPARABLE EQUATIONS
+				&nbsp; Transformation of Nonlinear Equations into Separable Equations
 			</span>
 		</div>
 
@@ -103,15 +103,101 @@
 				\end{align*}
 			</div>
 			
+
 			<div class="example" id="x1-41" style="--ex-number: 1">
 				<div>
 					<a id="x1-5r3"></a>
-					Solve the Bernoulli equation \begin {equation} \label {eq:2.4.3}
-					\frac{dy}{dx} - y=xy^2\end {equation}
+					Solve the Bernoulli equation 
+					\begin {equation} \label {eq:2.4.3}
+						\frac{dy}{dx} - y=xy^2
+					\end {equation}
 				</div>
 			
 				<details class="solution" id="d894d29c-fca0-4d6c-885d-80603f97f33b">
 					<summary>Solution</summary>
+					<div>
+						To solve the Bernoulli equation <a href="#x1-5r3">(2.4.3)</a>, we will first solve the "complementary" equation: 
+
+						\begin {equation*} 
+							\frac{dy}{dx} - y = 0
+						\end {equation*}
+					</div>
+					<div class="reading-exercise">
+						Solve \( \frac{dy}{dx} - y = 0 \) using <span class = "vocab">separation of variables</span> as in Examples <a href="#x1-93">2.1.3</a> and <a href="#x1-154">2.1.4</a> 	
+					</div>	
+					
+					<div>
+						Using separation of variables we find \( y = ce^{x} \) as the general solution "complementary" equation. Now when using <span class = "vocab">variation of parameters</span>, we will select \( y_1 \) as any simple <span class = "vocab-repeat">particular solution</span> of the complementary equation, so we choose \( c = 1 \) and use \( y_1 = e^{x} \) to seek solutions of <a href="#x1-5r3">(2.4.3)</a> of the form: 
+						\[ y = u \cdot y_1 = u \cdot e^{x} \]
+					</div>
+
+					<div class="reading-exercise">
+						Differentiate \( u \cdot e^{x} \)  with respect to \( x \) using the product rule	
+					</div> 
+
+					<div>
+						Differentiating using the product rule yields
+
+						\begin{align*}
+							\frac{dy}{dx} = & \left( \frac{du}{dx} + u \right) e^{x} \\
+						\end{align*}
+					</div>
+					
+					<div>
+						We now substitute this into <a href="#x1-5r3">(2.4.3)</a> and simplify the equation which transforms it into an <span class = "vocab-repeat">integrable</span> equation
+		
+						\begin{align*}	
+							\frac{dy}{dx} -y = & xy^2 \\	
+							\overset{\frac{dy}{dx}}{\overbrace{ \left( \frac{du}{dx} + u \right) e^{x} }} - \overset{y}{\overbrace{ue^{x}}} = & x\overset{y^2}{\overbrace{\left(u e^{x}\right)^2}} \\	
+							\frac{du}{dx}e^{x} +\underset{0}{\underbrace{u e^{x} - ue^{x}}} = & xu^2 e^{2x} \\
+							\frac{du}{dx}e^{x} = & xu^2 e^{2x} \\
+							\frac{1}{u^2} \cdot \frac{du}{dx} = & x e^x\\	
+							\int u^{-2} du = & \int x e^x dx \\	
+						\end{align*}
+
+						<div class="reading-exercise">
+							Find the antiderivative of \( u^{-2} \) using the power rule
+						</div> 
+
+						<div class="reading-exercise">
+							Find the antiderivative of \(  x e^x  \) using <span class = "vocab-repeat">integration by parts</span>
+						</div> 
+
+						Finding the antiderivative on the left is pretty straighforward with <span class = "vocab-repeat">power rule</span> but finding the antiderivative on the right requires <span class = "vocab-repeat">integration by parts</span>
+						\begin{align*}	
+							\int x e^x dx
+						\end{align*}
+
+
+						both sides we obtain:
+						
+						\begin{align*}	
+							-\frac{1}{u} = (x-1)e^x + c
+						\end{align*}
+
+						<div class="reading-exercise">
+							Solve \( -\frac{1}{u} = (x-1)e^x + c \) for \( u \)
+						</div> 
+
+						Solving for \( u \) we obtain:
+						
+						\begin{align*}	
+							u = \frac{1}{c+(1-x)e^x}
+						\end{align*}
+						
+
+						Then multiply the result by \(y_1 = e^{x} \) to get \( y \)
+												
+						\begin{align*}	
+							y = ue^{x} = & \frac{e^{x}}{c+(1-x)e^x}  \\	
+						\end{align*}
+
+						Finally simplify by mulitplying by \( e^{-x} \) on top and bottom
+												
+						\begin{align*}	
+							y = & \frac{e^{x}}{c+(1-x)e^x}  \\	
+						\end{align*}
+					</div>
 
 					<div id="1e01a29a-0150-4a61-8e85-1cfc0e8824e6">
 						Since \(y_1=e^x\) is a solution of \(\displaystyle \frac{dy}{dx} -y=0\), we look for solutions
@@ -291,6 +377,7 @@
 					<ol>
 						<li>
 							<div>
+								Example 2.2.5 PFD
 								We first find solutions of <a href="#x1-16r9">(2.4.9)</a>
 								on open intervals that don’t contain \(x=0\). We can rewrite <a href="#x1-16r9">(2.4.9)</a>
 								as \[ \frac{dy}{dx} = {y^2+xy-x^2\over x^2} \] for \(x\) in any such interval.
