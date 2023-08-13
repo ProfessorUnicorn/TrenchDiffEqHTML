@@ -116,7 +116,15 @@
 				<details class="solution" id="d894d29c-fca0-4d6c-885d-80603f97f33b">
 					<summary>Solution</summary>
 					<div>
-						To solve the Bernoulli equation <a href="#x1-5r3">(2.4.3)</a>, we will first solve the "complementary" equation: 
+						First notice the Bernoulli equation <a href="#x1-5r3">(2.4.3)</a> has a trivial solution \(y(x)\equiv 0\) which we can verify by substitution:
+
+						\begin{align*} 	
+							\frac{dy}{dx} -y = & xy^2  \\
+							\frac{d}{dx}\Big(0\Big) -\Big(0\Big) \overset{?}{=} & x\Big(0\Big)^2 \quad \checkmark \\
+						\end{align*}
+					</div>	
+					<div>
+						Now we will seek nontrivial solutions \( y \ne 0 \) and start by solving the "complementary" equation: 
 
 						\begin {equation*} 
 							\frac{dy}{dx} - y = 0
@@ -155,24 +163,13 @@
 							\int u^{-2} du = & \int x e^x dx \\	
 						\end{align*}
 
-						<div class="reading-exercise">
-							Find the antiderivative of \( u^{-2} \) using the power rule
-						</div> 
+						Finding the antiderivative on the right requires <span class = "vocab">integration by parts</span> (<span class = "vocab">IBP</span>) \(\displaystyle \int U dV = UV - \int V dU\)
 
-						<div class="reading-exercise">
-							Find the antiderivative of \(  x e^x  \) using <span class = "vocab-repeat">integration by parts</span>
-						</div> 
-
-						Finding the antiderivative on the left is pretty straighforward with <span class = "vocab-repeat">power rule</span> but finding the antiderivative on the right requires <span class = "vocab-repeat">integration by parts</span>
 						\begin{align*}	
-							\int x e^x dx
-						\end{align*}
-
-
-						both sides we obtain:
-						
-						\begin{align*}	
-							-\frac{1}{u} = (x-1)e^x + c
+							\int u^{-2} du = & \int \overset{U}{\overbrace{x}} \underset{dV}{\underbrace{e^x dx}} \\	
+							-u^{-1} = & \overset{UV}{\overbrace{x e^x}} - \int \overset{VdU}{\overbrace{e^x dx}} \\	
+							-\frac{1}{u} = & x e^x - e^x + c \\
+							-\frac{1}{u} = & ( x - 1 )e^x + c \\
 						\end{align*}
 
 						<div class="reading-exercise">
@@ -182,29 +179,24 @@
 						Solving for \( u \) we obtain:
 						
 						\begin{align*}	
-							u = \frac{1}{c+(1-x)e^x}
+							u = \frac{1}{(1-x)e^ + c}
 						\end{align*}
 						
 
 						Then multiply the result by \(y_1 = e^{x} \) to get \( y \)
 												
 						\begin{align*}	
-							y = ue^{x} = & \frac{e^{x}}{c+(1-x)e^x}  \\	
+							y = ue^{x} = & \frac{e^{x}}{(1-x)e^x + c}  \\	
 						\end{align*}
 
 						Finally simplify by mulitplying by \( e^{-x} \) on top and bottom
 												
 						\begin{align*}	
-							y = & \frac{e^{x}}{c+(1-x)e^x}  \\	
+							y 
+							= & \frac{e^{x}}{(1-x)e^x + c} \cdot \left( \frac{e^{-x}}{e^{-x}} \right) \\	
+							= & \frac{e^{x}e^{-x}}{(1-x)e^xe^{-x} + ce^{-x}}  \\	
+							= & \frac{1}{(1-x) + ce^{-x}}  \\	
 						\end{align*}
-					</div>
-
-					<div id="1e01a29a-0150-4a61-8e85-1cfc0e8824e6">
-						Since \(y_1=e^x\) is a solution of \(\displaystyle \frac{dy}{dx} -y=0\), we look for solutions
-						of <a href="#x1-5r3">(2.4.3)</a> in the form \(y=ue^x\), where \[ \frac{du}{dx} e^x=xu^2e^{2x}\mbox {\quad or,
-						equivalently, \quad } \frac{du}{dx} = xu^2e^x\] Separating variables yields \[ \frac{du}{dx} \frac{1}{u^2} = xe^x\] and
-						integrating yields \[ -{1\over u}=(x-1)e^x+c\] Hence, \[
-						u=-{1\over (x-1)e^x+c} \] and \[ y=-{1\over x-1+ce^{-x}}\]
 					</div>
 				</details>
 			</div>
@@ -239,19 +231,24 @@
 		
 		<details id="bf4395f6-f417-45ab-ada7-04bd745d0a8b">
 			<summary>
-				Other Nonlinear Equations That Can be Transformed Into Separable
-				Equations
+				Nonlinear "Homogeneous"
 			</summary>
 		
 			<div id="17884ccb-68a8-4e70-9e29-7cf82f1dcfe0">
-				We’ve seen that the nonlinear Bernoulli equation can be transformed into a
-				separable equation by the substitution \(y=uy_1\) if \(y_1\) is suitably
-				chosen. Now let’s discover a sufficient condition for a nonlinear first
-				order differential equation 
+				We showed how the nonlinear Bernoulli equation can be transformed into a separable equation by the substitution \(y=uy_1\) where \(y_1\) is a solution to the "complementary equation". Now let's discover a sufficient condition for transforming other nonlinear first order differential equations:
+
+
+				<a id="x1-7r4"></a>
 				\begin {equation} \label {eq:2.4.4} 
 					\frac{dy}{dx} = f(x,y)
 				\end {equation}
-				<a id="x1-7r4"></a>
+
+				If  \( f(x,y) \) can be rewritten as a product of \( u \) and the derivative of \( y_1\), i.e. $f\Big(x,uy_1(x)\Big)=q(u)\frac{dy_1}{dx}$, then a nonlinear equation in general can be transformed into a separable equation:
+
+				Substituting $y=uy_1$ into Equation~\eqref{eq:2.4.4} and assuming that the 
+				
+				
+				
 				to be transformable into a separable equation in the same way.
 				Substituting \(y=uy_1\) into <a href="#x1-7r4">(2.4.4)</a> yields \[ \frac{du}{dx} y_1(x)+u \left.\frac{dy_1}{dx}\right|_x = f(x,uy_1(x))\] which is equivalent to \begin
 				{equation} \label {eq:2.4.5} \frac{du}{dx} y_1(x)=f(x,uy_1(x))-u \left.\frac{dy_1}{dx}\right|_x \end {equation}
