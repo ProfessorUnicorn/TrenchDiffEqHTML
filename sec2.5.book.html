@@ -58,7 +58,7 @@
 				variable. Since the solutions of <a href="#x1-3r2">(2.5.2)</a> and <a href="#x1-4r3">(2.5.3)</a> will often have to be left in implicit, form we’ll say that \(F(x,y)=c\)
 				is an implicit solution of <a href="#x1-2r1">(2.5.1)</a> if every differentiable function \(y=y(x)\) that satisfies \(F(x,y)=c\)
 				is a solution of <a href="#x1-3r2">(2.5.2)</a> and every differentiable function \(x=x(y)\) that satisfies \(F(x,y)=c\)
-				is a solution of <a href="#x1-4r3">(2.5.3)</a>.
+				is a solution of <a href="#x1-4r3">(2.5.3)</a>
 			</div>
 			<div class="indent" id="a3cd6ed1-2a24-45ab-9820-1a9ea6f0fb35">
 				Here are some examples:
@@ -287,35 +287,90 @@
 			</div>
 
 			<div class="indent" id="3f4d1e85-83d3-47f6-b354-5800dba02ef3">
-				We’ll develop a method for solving <a href="#x1-2r1">(2.5.1)</a> under appropriate assumptions on \(M\) and \(N\). This method is an
-				extension of the method of separation of variables (Exercise&nbsp;
-				<span class="ptmb8t-">41</span>
-				). Before stating it we consider an example.
+				We’ll develop a method for solving <a href="#x1-2r1">(2.5.1)</a> under appropriate assumptions on \(M(x,y)\) and \(N(x,y)\). This method is an
+				extension of the method of separation of variables (Exercise&nbsp;<span class="ptmb8t-">41</span>). Before stating it we consider an example.
 			</div>
 			<div class="example" id="x1-51" style="--ex-number: 1">
 				<div>
+					Show that 
 					<a id="x1-6r4"></a>
-					Show that \begin {equation} \label {eq:2.5.4} x^4y^3+x^2y^5+2xy=c \end
-					{equation}
+					\begin {equation} \label {eq:2.5.4} 
+						\overset{F(x,y)}{\overbrace{x^4y^3+x^2y^5+2xy}} = c 
+					\end{equation}
+					
+					is an implicit solution of 
+
 					<a id="x1-7r5"></a>
-					is an implicit solution of \begin {equation} \label {eq:2.5.5}
-					(4x^3y^3+2xy^5+2y)\,dx+(3x^4y^2+5x^2y^4+2x)\,dy=0\end {equation}
+					\begin {equation} \label {eq:2.5.5}
+						(4x^3y^3+2xy^5+2y)\,dx+(3x^4y^2+5x^2y^4+2x)\,dy=0
+					\end {equation}
 				</div>
 			
 				<details class="solution" id="995f14bf-ef17-4b6a-9795-7391b79a628c">
 					<summary>Solution</summary>
-					<div id="6d11d6d2-7cb9-4343-89a4-f77f605883e6">
-						Regarding \(y\) as a function of \(x\) and differentiating <a href="#x1-6r4">(2.5.4)</a> implicitly with respect to \(x\) yields \[
-						(4x^3y^3+2xy^5+2y)+(3x^4y^2+5x^2y^4+2x)\,{dy\over dx}=0\] Similarly,
-						regarding \(x\) as a function of \(y\) and differentiating <a href="#x1-6r4">(2.5.4)</a> implicitly with respect to \(y\) yields \[ (4x^3y^3+2xy^5+2y){dx\over
-						dy}+(3x^4y^2+5x^2y^4+2x)=0\] Therefore <a href="#x1-6r4">(2.5.4)</a> is an implicit solution of <a href="#x1-7r5">(2.5.5)</a> in either of its two possible interpretations. _
+					<div>
+						We want to show that <a href="#x1-6r4">(2.5.4)</a> is an implicit solution of <a href="#x1-7r5">(2.5.5)</a>. To do this we will differentiate <a href="#x1-6r4">(2.5.4)</a> implicitly with respect to \( x \) and then again with respect to \( y \) and show that both lead to <a href="#x1-7r5">(2.5.5)</a>. 
 					</div>
-					<div class="indent" id="080677e3-5ee9-45ae-b407-986f49ae3483">
-						You may think this example is pointless, since concocting a differential
-						equation that has a given implicit solution isn’t particularly
-						interesting. However, it illustrates the next important theorem, which
-						we’ll prove by using implicit differentiation, as in Example&nbsp;<a href="#x1-51">2.5.1</a>.
-					</div>
+					<div>	
+						Start by taking \( y=y(x) \) as a function of \( x \) and differentiate implicitly with respect to \( x \) 
+
+						\begin{align*}
+							\frac{d}{dx} \Big( \overset{F(x,y)}{\overbrace{ x^4 y^3 + x^2 y^5 + 2xy }} \Big) = & \frac{d}{dx} \Big( c \Big) \\ \\
+							\frac{d}{dx} \Big( x^4 y^3\Big)  + \frac{d}{dx} \Big( x^2 y^5 \Big)  + 2\frac{d}{dx} \Big( xy \Big)  = & 0 \\ \\	
+							x^4 \big( 3y^2  \big) \frac{dy}{dx}  
+								+ y^3 \big( 4x^3  \big)  
+							+ x^2 \big (5y^4 \big) \frac{dy}{dx} 
+								+ y^5 \big( 2x \big)
+							+ 2x \frac{dy}{dx}  
+								+ 2y \big( 1 \big) 
+								= & 0 \\ \\   
+							4x^3y^3    
+								+ 2xy^5   
+								+ 2y  
+							3x^4y^2 \frac{dy}{dx}  
+								+ 5x^2y^4 \frac{dy}{dx} 
+								+ 2x \frac{dy}{dx} 	
+								= & 0 \\ \\	 
+							\Big(  \underset{\frac{\partial}{\partial x}\Big( F(x,y) \Big)}{\underbrace{4x^3y^3 + 2xy^5 + 2y}}  \Big)
+							+ \Big( \underset{\frac{\partial}{\partial y}\Big( F(x,y) \Big)}{\underbrace{3x^4y^2 + 5x^2y^4 + 2x}} \Big)\frac{dy}{dx} 
+								= & 0 \\ \\	
+							\Big(  \underset{F_x(x,y)}{\underbrace{4x^3y^3 + 2xy^5 + 2y}}  \Big)dx
+							+ \Big( \underset{F_y(x,y)}{\underbrace{3x^4y^2 + 5x^2y^4 + 2x}} \Big)dy 
+								= & 0 \\ \\				
+						\end{align*}
+					</div>	
+					<div>
+						Now take \( x=x(y) \) as a function of \( y \) and differentiate implicitly with respect to \( y \)
+
+						\begin{align*}
+							\frac{d}{ dy} \Big( \overset{F(x,y)}{\overbrace{ x^4 y^3 + x^2 y^5 + 2xy }} \Big) = & \frac{d}{ dy} \Big( c \Big) \\ \\
+							\frac{d}{ dy} \Big( x^4 y^3\Big)  + \frac{d}{ dy} \Big( x^2 y^5 \Big)  + 2\frac{d}{ dy} \Big( xy \Big)  = & 0 \\ \\	
+							x^4 \big( 3y^2  \big) 
+								+ y^3 \big( 4x^3  \big)  \frac{dx}{ dy}
+							+ x^2 \big (5y^4 \big)  
+								+ y^5 \big( 2x \big)  \frac{dx}{ dy}
+							+ 2x  \big( 1 \big)  
+								+ 2y \big( 1 \big) \frac{dx}{ dy}
+								= & 0 \\ \\	
+
+							4x^3y^3   \frac{dx}{ dy} 
+								+ 2xy^5   \frac{dx}{ dy}
+								+ 2y  \frac{dx}{ dy}
+							+ 3x^4y^2 
+								+ 5x^2y^4 
+								+ 2x   
+								= & 0 \\ \\	
+							\Big(  \underset{\frac{\partial}{\partial x}\Big( F(x,y) \Big)}{\underbrace{4x^3y^3 + 2xy^5 + 2y}}  \Big) \frac{dx}{ dy}
+							+ \Big( \underset{\frac{\partial}{\partial y}\Big( F(x,y) \Big)}{\underbrace{3x^4y^2 + 5x^2y^4 + 2x}} \Big)
+								= & 0 \\ \\	
+							\Big(  \underset{F_x(x,y)}{\underbrace{4x^3y^3 + 2xy^5 + 2y}}  \Big) dx
+							+ \Big( \underset{F_y(x,y)}{\underbrace{3x^4y^2 + 5x^2y^4 + 2x}} \Big) dy
+								= & 0 \\ \\					
+						\end{align*}
+					</div>	
+					<div>
+						This we have shown that <a href="#x1-6r4">(2.5.4)</a> is an implicit solution of <a href="#x1-7r5">(2.5.5)</a>
+					</div>	
 				</details>
 			</div>
 
@@ -323,88 +378,96 @@
 				<div class="head">Theorem&nbsp;2.5.1</div>
 
 				<div>
-					If \(F=F(x,y)\) has continuous partial derivatives \(F_x\) and \(F_y\),
-					then <a id="x1-9r6"></a> 
-					\begin {equation} \label {eq:2.5.6} F(x,y)=c\qquad \text{ (} c = \text{constant} ) \end {equation}
-					is an implicit solution of the differential equation <a id="x1-10r7"></a> \begin {equation}
-					\label {eq:2.5.7} F_x(x,y)\,dx+F_y(x,y)\,dy=0\end {equation}
+					If \(F=F(x,y)\) has continuous partial derivatives \(F_x(x,y)\) and \(F_y(x,y)\)
+					then <a id="x1-9r6">(2.5.6)</a> is an implicit solution of <a id="x1-10r7">(2.5.7)</a> 
+					
+					<a id="x1-9r6"></a> 
+					\begin {equation} \label {eq:2.5.6} 
+						F(x,y) = c
+					\end {equation}
+
+					<a id="x1-10r7"></a> 
+					\begin {equation} \label {eq:2.5.7} 
+						F_x(x,y)\,dx+F_y(x,y)\,dy=0
+					\end {equation}
 				</div>
 			</div>
 
 			<div id="bb53d25d-1d3f-4142-bf13-6f0590ce2201">
 				<span class="ptmb8t-">Proof</span>
-				Regarding \(y\) as a function of \(x\) and differentiating <a href="#x1-9r6">(2.5.6)</a> implicitly with respect to \(x\) yields \[ F_x(x,y)+F_y(x,y)\,{dy\over
-				dx}=0\] On the other hand, regarding \(x\) as a function of \(y\) and
-				differentiating <a href="#x1-9r6">(2.5.6)</a> implicitly with respect to \(y\) yields \[ F_x(x,y)\,{dx\over
-				dy}+F_y(x,y)=0\] Thus, <a href="#x1-9r6">(2.5.6)</a> is an implicit solution of <a href="#x1-10r7">(2.5.7)</a> in either of its two possible interpretations. __
-			</div>
-			<div class="indent" id="5bd70076-159b-4cff-a7c5-ccf305397401">
-				We’ll say that the equation \begin {equation} \label {eq:2.5.8}
-				M(x,y)\,dx+N(x,y)\,dy=0 \end {equation}
-				<a id="x1-11r8"></a>
-				is
-				<em>exact</em>
-				on an an open rectangle \(R\) if there’s a function \(F=F(x,y)\) such
-				\(F_x\) and \(F_y\) are continuous, and \begin {equation} \label
-				{eq:2.5.9} F_x(x,y)=M(x,y) \quad \mbox{ and } \quad  F_y(x,y)=N(x,y) \end
-				{equation}
-				<a id="x1-12r9"></a>
-				for all \((x,y)\) in \(R\). This usage of “exact” is related to its usage
-				in calculus, where the expression \[ F_x(x,y)\,dx+F_y(x,y)\,dy \]
-				(obtained by substituting <a href="#x1-12r9">(2.5.9)</a> into the left side of <a href="#x1-11r8">(2.5.8)</a>) is the
-				<span class="vocab">exact differential of</span>
-				\(F\).
-			</div>
-			<div class="indent" id="05eaa443-835f-4e10-8fb9-46cae7805ffe">
-				Example&nbsp;<a href="#x1-51">2.5.1</a> shows that it’s easy to
-				solve <a href="#x1-11r8">(2.5.8)</a> if it’s exact <em>and</em>
-				we know a function \(F\) that satisfies <a href="#x1-12r9">(2.5.9)</a>. The important questions are:
-			</div>
-			<div class="indent" id="2df7c7ac-faa3-4900-bbe8-5ae8d9a8c268">
-				<span class="ptmrc8t-">
-					Question 1.
-				</span>
-				Given an equation <a href="#x1-11r8">(2.5.8)</a>, how can we determine whether it’s exact?
-			</div>
-			<div class="indent" id="7467c833-e60b-46a2-be79-9dfe11d67812">
-				<span class="ptmrc8t-">
-					Question 2.
-				</span>
-				If <a href="#x1-11r8">(2.5.8)</a> is exact, how do we find a function \(F\) satisfying <a href="#x1-12r9">(2.5.9)</a>?
-			</div>
-			<div class="indent" id="dd3b2325-8baa-4c7e-b0e8-8ffc6da11821">
-				To discover the answer to Question&nbsp;1, assume that there’s a function
-				\(F\) that satisfies <a href="#x1-12r9">(2.5.9)</a> on some open rectangle \(R\), and in addition that \(F\) has continuous
-				mixed partial derivatives \(F_{xy}\) and \(F_{yx}\). Then a theorem from
-				calculus implies that \begin {equation} \label {eq:2.5.10}
-				F_{xy}=F_{yx}\end {equation}
-				<a id="x1-13r10"></a>
-				If \(F_x=M\) and \(F_y=N\), differentiating the first of these equations
-				with respect to \(y\) and the second with respect to \(x\) yields \begin
-				{equation} \label {eq:2.5.11} F_{xy}=M_y\quad \mbox{ and } \quad 
-				F_{yx}=N_x\end {equation}
-				<a id="x1-14r11"></a>
-				From <a href="#x1-13r10">(2.5.10)</a> and <a href="#x1-14r11">(2.5.11)</a>, we conclude that a necessary condition for exactness is that
-				\(M_y=N_x\). This motivates the next theorem, which we state without
-				proof.
+				Regarding \(y = y(x)\) as a function of \(x\) and differentiating <a href="#x1-9r6">(2.5.6)</a> implicitly with respect to \(x\) yields 
+				
+				\[ F_x(x,y)+F_y(x,y)\,{dy\over dx}=0\] 
+				
+				Regarding \(x = x(y) \) as a function of \(y\) and differentiating <a href="#x1-9r6">(2.5.6)</a> implicitly with respect to \(y\) yields 
+				
+				\[ F_x(x,y)\,{dx\over dy}+F_y(x,y)=0\] 
+				
+				Thus, <a href="#x1-9r6">(2.5.6)</a> is an implicit solution of <a href="#x1-10r7">(2.5.7)</a> in either of its two possible interpretations.
 			</div>
 		</details>
 
 		<details id="a65d94dd-8307-4099-b66f-7cc0fd9f37c1">
 			<summary>Exactness Condition</summary>
+			<div class="indent" id="5bd70076-159b-4cff-a7c5-ccf305397401">
+				In calculus, we define \( F_x(x,y)dx+F_y(x,y)dy \) as the <span class="vocab">exact differential</span>
+				of the function \( F(x,y) .\) A differential equation <a hred="#x1-11r8">(2.5.8)</a> is defined to be <span class="vocab">exact</span> if there exists a function \( F(x,y) \) such that the equation can be rewritten as an <span class="vocab">exact differential</span> of that function, i.e. as \( F_x(x,y) dx + F_y(x,y) dy\)
+				
+				<a id="x1-11r8"></a>
+				\begin {align} \label {eq:2.5.8}
+					\underset{F_x(x,y)}{\underbrace{M(x,y)}} dx 
+						+ \underset{F_y(x,y)}{\underbrace{N(x,y)}} dy = & 0 \\
+					F_x(x,y) dx + F_y(x,y) dy = & 0 \label{eq:2.5.9} 
+				\end {align}
+
+				For instance, the differential equation <a href="#x1-7r5">(2.5.5)</a> in Example <a href="#x1-51">2.5.1</a> is an <span class="vocab">exact differential equation</span>. Taking the partial derivatives of the function \( F(x,y) \) in the implicit solution <a href="#x1-6r4">(2.5.4)</a> shows the definition of 
+				<span class="vocab">exact</span> given in <a href="#x1-11r8">(2.5.9)</a> to be satisfied: 
+			</div>
+			<div class="reading-exercise">
+				Calculate the partial derivatives \( F_x(x,y) \) and \( F_y(x,y) \) in <a href="#x1-6r4">(2.5.4)</a>
+			</div> 
+			<div class="reading-exercise">
+				Substitute the partial derivatives into <a href="#x1-11r8">(2.5.9)</a> to show that <a href="#x1-7r5">(2.5.5)</a> satisfies the definition of <span class="vocab">exact differential equation</span> 
+			</div> 
+			<div>
+				To show that the differential equation <a href="#x1-7r5">(2.5.5)</a> in Example <a href="#x1-51">2.5.1</a> was exact, we relied on being given the solution <a href="#x1-6r4">(2.5.4)</a> and then finding the exact differential of that solution and verifying that it matched our differential equation. 
+			</div>
+			<div>	
+				Given an arbitrary differential equation <a href="#x1-11r8">(2.5.8)</a>, how can we determine whether it is <span class="vocab">exact</span> without knowing the solution? We will start by assuming that \( F(x,y) \) exists that satisfies <a href="#x1-11r8">(2.5.9)</a> then we know from calculus that the mixed partial derivatives must be equal		
+
+				<a id="x1-13r10"></a>
+				\begin{equation} \label{eq:2.5.10}
+					F_{xy}(x,y) = F_{yx}(x,y)
+				\end{equation}	
+
+				Since <span class="vocab">exactness</span> requires \( M(x,y)=F_x(x,y) \) and \( N(x,y)=F_y(x,y) \) this means that \( M_y(x,y) \) must equal \( N_x(x,y) \) in order for the mixed partial derivatives to be equal, since \( M_y(x,y)=F_{xy}(x,y) \) and \( N_x(x,y)=F_{yx}(x,y) .\) Therefore in order to determine if a differential equation <a href="#x1-11r8">(2.5.8)</a> is exact, we simply compute the partial derivative with respect to \( y \) of \( M(x,y) \) and the partial derivative with respect to \( x \) of \( N(x,y) \) and determine if they are equal (exact) or not (not exact). Thus the differential equation <a href="#x1-11r8">(2.5.8)</a> \( M(x,y) dx + N(x,y) dy = 0 \) is exact whenever
+
+				\begin{equation} \label{eq:2.5.11}
+					M_y(x,y) = N_x(x,y)
+				\end{equation}
+
+
+				
+			</div>
 
 			<div class="theorem" id="x1-152">
 				<div>
 					<span class="head">Theorem&nbsp;2.5.2</span>
 					
-					\([\)The Exactness Condition\(]\)
+					<b>[ Exactness Condition ]</b>
 					
-					Suppose \(M\) and \(N\) are continuous and have continuous partial
-					derivatives \(M_y\) and \(N_x\) on an open rectangle \(R.\) Then
-					<a id="x1-16r12"></a> \[
-					M(x,y)\,dx+N(x,y)\,dy=0 \] is exact on \(R\) if and only if \begin
-					{equation} \label {eq:2.5.12} M_y(x,y)=N_x(x,y) \end {equation}
-					for all \((x,y)\) in \(R\).
+					Suppose \(M(x,y) \) and \(N(x,y)\) are continuous and have continuous partial
+					derivatives \(M_y(x,y)\) and \(N_x(x,y)\) on an open rectangle \(R.\) Then the differential equation
+					
+					<a id="x1-16r12"></a> 
+					\[
+						M(x,y)\,dx+N(x,y)\,dy=0 
+					\] 
+					
+					is exact on \(R\) if and only if 
+					\begin{equation} \label {eq:2.5.12} 
+						M_y(x,y)=N_x(x,y) 
+					\end {equation}
 				</div>
 			</div>
 			
@@ -417,19 +480,41 @@
 
 			<div class="example" id="x1-172" style="--ex-number: 2">
 				<div>
-					Show that the equation \[ 3x^2y\,dx+4x^3\,dy=0 \] is not exact on any
-					open rectangle.
+					Show that the equation is not exact
+					
+					\[ 3x^2y\,dx+4x^3\,dy=0 \] 
 				</div>
 
 				<details class="solution" id="80912ce8-6b57-4747-99be-a4d6b9417d4f">
 					<summary>Solution</summary>
-					<div id="3552f617-ff20-40db-89b8-5f5f9bffeb85">
-						Here \[ M(x,y)=3x^2y\quad \mbox{ and } \quad  N(x,y)=4x^3 \] so \[
-						M_y(x,y)=3x^2 \quad \mbox{ and } \quad  N_x(x,y)=12 x^2\] Therefore
-						\(M_y=N_x\) on the line \(x=0\), but not on any open rectangle, so there’s
-						no function \(F\) such that \(F_x(x,y)=M(x,y)\) and \(F_y(x,y)=N(x,y)\)
-						for all \((x,y)\) on any open rectangle. __
-					</div>
+					<div>
+						\begin{align*}
+							\underset{M(x,y)}{\underbrace{3x^2y}} dx
+								+ \underset{N(x,y)}{\underbrace{4x^3 }} dy = & 0 \\
+						\end{align*}
+						By the definition of <span class="vocab">exact differential equation</span>, in order to be 
+						<span class="vocab">exact</span>, the equation must represent an <span class="vocab">exact differential</span>. In other words, it must be truw that \( M(x,y)=F_x(x,y) \) and \( N(x,y)=F_y(x,y) .\) To determine this we will find \( M_y(x,y)=F_{xy}(x,y) \) and \( N_x(x,y)=F_{yx}(x,y) \) and if they are equal then the equation is <span class="vocab">exact</span>.
+
+						\begin{align*}
+							M(x,y) = & 3x^2y \\
+							M_y(x,y) = & 3x^2 \underset{1}{\underbrace{ \frac{\partial}{\partial y} \Big( y \Big) }} = 3x^2  \\	
+						\end{align*}
+						
+						\begin{align*}
+							N(x,y) = & 4x^3 \\
+							N_x(x,y) = & 4 \underset{3x^2}{\underbrace{ \frac{\partial}{\partial x} \Big( x^3 \Big) }} = 12x^2  \\	
+						\end{align*}
+						
+						\begin{equation*}
+							\boxed{
+								M_y(x,y) = 3x^2  \ne 12x^2 = N_x(x,y) 
+							}		
+						\end{equation*}
+						
+						Therefore the differential equation is <em>not exact</em>. Note that \( M_y(x,y) = N_x(x,y) \) on the vertical line \( x=0 \) only but not on an open rectangle.
+
+					</div>	
+
 				</details>
 			</div>
 		</details>
@@ -439,8 +524,8 @@
 
 			<div class="indent" id="c6d45793-7400-4cff-b5e4-684179cc20dc">
 				The next example illustrates two possible methods for finding a function
-				\(F\) that satisfies the condition \(F_x=M\) and \(F_y=N\) if
-				\(M\,dx+N\,dy=0 \) is exact.
+				\(F(x,y)\) that satisfies the condition \(F_x(x,y)=M(x,y)\) and \(F_y(x,y)=N(x,y)\) if
+				\(M(x,y)\,dx+N(x,y)\,dy = 0 \) is exact.
 			</div>
 			<div class="example" id="x1-183" style="--ex-number: 3">
 				<div>
@@ -451,55 +536,167 @@
 
 				<details class="solution" id="76b9347a-2103-4bb1-81c2-c5aa115c5afd">
 					<summary>Solution</summary>
+					<div>
+						\begin{align*}
+							\underset{M(x,y)}{\underbrace{(4x^3y^3+3x^2)}} dx
+								+ \underset{N(x,y)}{\underbrace{(3x^4y^2+6y^2)}} dy = & 0 \\
+						\end{align*}
+
+						First we verify the <span class="vocab">exactness condition</span>
+
+						\begin{align*}
+							M(x,y) 
+							= & 4x^3y^3+3x^2 \\
+							M_y(x,y) 
+							= & 4x^3 \underset{3y^2}{\underbrace{ \frac{\partial}{\partial y} \Big( y^3 \Big) }} 
+								+ 3x^2 \underset{0}{\underbrace{\frac{\partial}{\partial x} \Big( 1  \Big) }} =  12 x^3 y^2 \\ 
+						\end{align*}
+
+						\begin{align*}
+							N(x,y) 
+							= & 3x^4y^2+6y^2 \\
+							N_x(x,y) 
+							= & 3y^2 \underset{4x^3}{\underbrace{ \frac{\partial}{\partial x} \Big( x^4 \Big) }} 
+								+  6y^2 \underset{0}{\underbrace{ \frac{\partial}{\partial x} \Big( 1  \Big) }} = 12 x^3 y^2					 
+						\end{align*}
+
+						\begin{equation*}
+							\boxed{
+								M_y(x,y) = 2 x^3 y^2 = N_x(x,y) 
+								\quad
+								\quad
+								\checkmark
+								\text{Exact}
+							}		
+						\end{equation*}
+					</div>	
 					<div id="07cb0dd3-7d9f-471b-b5c3-de4e91f2dba9">
-						(Method 1) Here \[ M(x,y)=4x^3y^3+3x^2,\quad N(x,y)=3x^4y^2+6y^2\]
-						and \[ M_y(x,y)=N_x(x,y)=12 x^3y^2 \] for all \((x,y)\). Therefore
-						Theorem&nbsp;
-						<a href="#x1-152">
-							2.5.2
-							<!-- tex4ht:ref: thmtype:2.5.2  -->
-						</a>
-						implies that there’s a function \(F\) such that \begin {equation} \label
-						{eq:2.5.14} F_x(x,y)=M(x,y)=4x^3y^3+3x^2 \end {equation}
+						Therefore the differential equation is <em>exact</em>. 
+						
+						This means that there is a function \( F(x,y) \) such that \( M(x,y)=F_x(x,y) \) and \( N(x,y)=F_y(x,y) \)
+						
 						<a id="x1-20r14"></a>
-						and \begin {equation} \label {eq:2.5.15} F_y(x,y)=N(x,y)=3x^4y^2+6y^2 \end
-						{equation}
+						\begin {equation} \label{eq:2.5.14} 
+							M(x,y) = F_x(x,y) = 4x^3y^3+3x^2 
+						\end {equation}
+						
 						<a id="x1-21r15"></a>
-						for all \((x,y)\). To find \(F\), we integrate <a href="#x1-20r14">(2.5.14)</a> with respect to \(x\) to obtain \begin {equation} \label {eq:2.5.16}
-						F(x,y)=x^4y^3+x^3+\phi (y)\end {equation}
+						\begin {equation} \label {eq:2.5.15} 
+							N(x,y) = F_y(x,y) = 3x^4y^2+6y^2 
+						\end{equation}
+
+						Now we can find \( F(x,y) \) by finding the antiderivative of <a href="#x1-20r14">(2.5.14)</a> with respect to \( x \) or by by finding the antiderivative of <a href="#x1-21r15">(2.5.15)</a> with respect to \( y \)
+
 						<a id="x1-22r16"></a>
-						where \(\phi (y)\) is the “constant” of integration. (Here \(\phi \) is
-						“constant” in that it’s independent of \(x\), the variable of
-						integration.) If \(\phi \) is any differentiable function of \(y\) then
-						\(F\) satisfies <a href="#x1-20r14">(2.5.14)</a>. To determine \(\phi \) so that \(F\) also satisfies <a href="#x1-21r15">(2.5.15)</a>, assume that \(\phi \) is differentiable and differentiate \(F\) with
-						respect to \(y\). This yields \[ F_y(x,y)=3x^4y^2+\phi '(y)\] Comparing
-						this with <a href="#x1-21r15">(2.5.15)</a> shows that \[ \phi '(y)=6y^2\] We integrate this with respect to \(y\)
-						and take the constant of integration to be zero because we’re interested
-						only in finding
-						<em>some</em>
-						\(F\) that satisfies <a href="#x1-20r14">(2.5.14)</a> and <a href="#x1-21r15">(2.5.15)</a>. This yields \[ \phi (y)=2y^3\] Substituting this into <a href="#x1-22r16">(2.5.16)</a> yields \begin {equation} \label {eq:2.5.17} F(x,y)=x^4y^3+x^3+2y^3\end
-						{equation}
-						<a id="x1-23r17"></a>
-						Now Theorem&nbsp;
-						<a href="#x1-81">
-							2.5.1
-							<!-- tex4ht:ref: thmtype:2.5.1  -->
-						</a>
-						implies that \[ x^4y^3+x^3+2y^3=c \] is an implicit solution of <a href="#x1-19r13">(2.5.13)</a>. Solving this for \(y\) yields the explicit solution \[ y=\left
-						(c-x^3\over 2+x^4\right )^{1/3}\]
+						\begin{align} \label{eq:2.5.16}
+							F(x,y) = & \int F_x(x,y) dx = \int M(x,y) dx \nonumber \\
+							= & \int \Big( 4x^3y^3+3x^2 \Big) dx \nonumber \\
+							= & 4y^3 \int \Big( x^3 \Big) dx + 3 \int \Big( x^2 \Big) dx \nonumber \\
+							= & 4y^3 \Big( \frac{1}{4}x^4 \Big) + 3 \Big( \frac{1}{3} x^3 \Big) + \phi(y) \nonumber \\
+							= & x^4 y^3 + x^3 + \phi(y)
+						\end{align}
+						
+						Notice in <a href="#x1-22r16">(2.5.16)</a> that instead of adding \( +c \) at the end as a constant of integration, we added  \( \phi(y) \) which represents any combination of constants and \( y \) variables which were held constant when we found the antiderivative with respect to \( x .\)
 					</div>
 
-					<div id="310d9d6a-3c30-4d4b-8138-5d4376c726b0">
-						(Method 2) Instead of first integrating <a href="#x1-20r14">(2.5.14)</a> with respect to \(x\), we could begin by integrating <a href="#x1-21r15">(2.5.15)</a> with respect to \(y\) to obtain \begin {equation} \label {eq:2.5.18}
-						F(x,y)=x^4y^3+2y^3+\psi (x)\end {equation}
-						<a id="x1-24r18"></a>
-						where \(\psi \) is an arbitrary function of \(x\). To determine \(\psi \),
-						we assume that \(\psi \) is differentiable and differentiate \(F\) with
-						respect to \(x\), which yields \[ F_x(x,y)=4x^3y^3+\psi '(x)\] Comparing
-						this with <a href="#x1-20r14">(2.5.14)</a> shows that \[ \psi '(x)=3x^2\] Integrating this and again taking the
-						constant of integration to be zero yields \[ \psi (x)=x^3\] Substituting
-						this into <a href="#x1-24r18">(2.5.18)</a> yields <a href="#x1-23r17">(2.5.17)</a>.
+					<div class="reading-exercise">
+						Verify <a href="#x1-21r15">(2.5.16)</a> by finding the partial derivative with respect to \( x \) and comparing the result with <a href="#x1-20r14">(2.5.14)</a> 
+					</div> 
+
+					<div>
+						We already found an expression for \( F(x,y) \) in <a href="#x1-22r16">(2.5.16)</a> 
+						by finding the antiderivative of <a href="#x1-20r14">(2.5.14)</a> with respect to \( x \) but we should be able to accomplish the same thing by finding the antiderivative of <a href="#x1-21r15">(2.5.15)</a> with respect to \( y \)
+ 
+						<a id="x1-23r17"></a>
+						\begin{align} \label{eq:2.5.17}
+							F(x,y) = & \int F_y(x,y) dx = \int N(x,y) dy \nonumber \\
+							= & \int \Big( 3x^4y^2 + 6y^2 \Big) dy \nonumber \\
+							= & 3x^4 \int \Big( y^2 \Big) dy + 6 \int \Big( y^2 \Big) dy \nonumber \\
+							= & 3x^4 \Big( \frac{1}{3}y^3 \Big) + 6 \Big( \frac{1}{3} y^3 \Big) + \psi (x) \nonumber \\
+							= & x^4 y^3 + 2y^3 + \psi(x)
+						\end{align}
+
+						Just like we did in <a href="#x1-22r16">(2.5.16)</a>, instead of adding \( + c \) at the end of <a href="#x1-23r17">(2.5.17)</a> as a constant of integration, we added  \( \psi(x) \) which represents any combination of constants and \( x \) variables which were held constant when we found the antiderivative with respect to \( y \)						
+					</div>	
+
+					<div class="reading-exercise">
+						Verify <a href="#x1-23r17">(2.5.17)</a> by finding the partial derivative with respect to \( y \) and comparing the result with <a href="#x1-21r15">(2.5.15)</a> 
+					</div> 
+
+					<div>
+						We now have two expressions for \( F(x,y) \) both of which are in terms of unknown functions 
+						\( \phi = \phi(y) \) and \( \psi = \psi(x) \) that represent the "constants" of integration
+						\begin{equation*}
+							F(x,y) =  x^4 y^3 + 2y^3 + \psi(x)
+							\quad\quad
+							F(x,y) =  x^4 y^3 + x^3 + \phi(y)							
+						\end{equation*}
+					</div>	
+
+					<div class="reading-exercise">
+						Given \( F(x,y) =  x^4 y^3 + x^3 + \phi(y) \) calculate \( F_y(x,y) \) 
+					</div> 
+
+					<div class="reading-exercise">
+						Given \( F(x,y) =  x^4 y^3 + 2y^3 + \psi(x) \) calculate \( F_x(x,y) \) 
+					</div> 
+
+					<div>
+						Differentiating each expression with respect to the variable from the "constant" of integration, we obtain: 
+
+						\begin{equation*}
+							F_x(x,y) =  4 x^3 y^3 + \psi'(x) 
+							\quad \quad 
+							F_y(x,y) =  3 x^4 y^2 + \phi'(y)
+						\end{equation*}
+
+						Now we can compare these functions with the known functions \( M(x,y) = F_x(x,y) \) <a href="#x1-20r14">(2.5.14)</a> and \( N(x,y) = F_y(x,y) \) <a href="#x1-21r15">(2.5.15)</a> and use them to solve for \( \psi(x) \) and \( \phi(y) \)
+
+						\begin{equation*}
+							\begin{array}{rllrrl}
+								F_x(x,y) 				& = & M(x,y) 		&\quad & F_y(x,y) 				& = & N(x,y) \\
+								4 x^3 y^3 + \psi'(x) 	& = & 4x^3y^3+3x^2	&\quad & 3 x^4 y^2 + \phi'(y) 	& = & 3x^4y^2+6y^2 \\
+								\psi'(x) 				& = & 3x^2			&\quad & \phi'(y) 				& = & 6y^2 \\
+								\psi(x) 				& = & 3\int x^2 dx	&\quad & \phi(y) 				& = & 6 \int y^2 dy \\
+								\psi(x) 				& = & x^3			&\quad & \phi(y) 				& = & 2 y^3 \\
+							\end{array}
+						\end{equation*}
+
+						We have now found expressions for both \( \psi(x) \) and \( \phi(y) \) and you may have noticed that we took the constants of integration to be zero since there is still an arbitrary constant in the final implicit solution <a href="#x1-9r6">(2.5.6)</a> \( F(x,y) = c \) and these constants would simplify into that one.
+						
+					</div>	
+
+					<div>
+						Substituting \( \psi(x) = x^3 \) into <a href="#x1-23r17">(2.5.17)</a> and \( \phi(y) = 2 y^3 \) into <a href="#x1-22r16">(2.5.16)</a> we obtain \( F(x,y) \) 
+
+						\begin{equation*}
+							\begin{array}{rllrrl}
+								F(x,y) 	& = & x^4 y^3 + 2y^3 + \psi(x) 	&\quad & F(x,y) & = & x^4 y^3 + x^3 + \phi(y) \\
+								F(x,y) 	& = & x^4 y^3 + 2y^3 + x^3 		&\quad & F(x,y) & = & x^4 y^3 + x^3 + 2 y^3 \\
+							\end{array}
+						\end{equation*}
+
+						Conveniently both expressions for \( F(x,y) \) agree and this is a great way to check your work so either way you opt to solve, you should get the same answer. Our final implicit solution is written in the form of <a href="#x1-9r6">(2.5.6)</a> as \( F(x,y) = c \)
+						
+						<a id="x1-23r17"></a>
+						\begin{equation}
+							x^4 y^3 + 2y^3 + x^3 = c
+						\end{equation}
+
+						Which, in this case, we can solve explicitly for \( y \)
 					</div>
+
+					<div class="reading-exercise">
+						Solve <a href="#x1-23r17">(2.5.18)</a> explicitly for \( y \) 
+					</div> 
+					
+					<div>
+						After solving explicitly for \( y = y(x) \)
+						\begin{equation*}
+							y(x) = \sqrt[3]{\frac{c-x^3}{x^4+2}} 
+						\end{equation*}
+					</div>	
+
 					<div class="indent" id="5a10e0bc-c508-4317-bf29-091e926d9a5c">
 						Figure&nbsp;
 						<a href="#-a-direction-field-and-integral-curves-for-xyxdxxyydy-">
@@ -531,90 +728,41 @@
 				</details>
 			</div>
 
-			<div class="indent" id="af98cc11-8445-4a08-b47e-4fb969ae2dbf">
-				Here’s a summary of the procedure used in Method 1 of Example <a href='#x1-183'>2.5.3</a>. You
-				should summarize procedure used in Method 2.
-			</div>
-			<div class="centerline" id="37d09df9-cdf0-4e83-aac5-6ac527fab40b">
-				<span class="ptmb8t-">Procedure For Solving An Exact Equation</span>
-			</div>
-			<dl class="description" id="cffb1eaa-5710-4d0f-b2cd-f976c3d9010d">
-				<dt class="description">
-					<div></div>
-				</dt>
-				<dd class="description">
-					<div>
-						<span class="ptmb8t-">Step 1.</span>
-						Check that the equation \begin {equation} \label {eq:2.5.19}
-						M(x,y)\,dx+N(x,y)\,dy=0 \end {equation}
-						<a id="x1-26r19"></a>
-						satisfies the exactness condition \(M_y=N_x\). If not, don’t go
-						further with this procedure.
-					</div>
-				</dd>
-				<dt class="description">
-					<div></div>
-				</dt>
-				<dd class="description">
-					<div>
-						<span class="ptmb8t-">Step 2.</span>
-						Integrate \[ {\partial F(x,y)\over \partial x}=M(x,y) \] with respect
-						to \(x\) to obtain \begin {equation} \label {eq:2.5.20}
-						F(x,y)=G(x,y)+\phi (y)\end {equation}
-						<a id="x1-27r20"></a>
-						where \(G\) is an antiderivative of \(M\) with respect to \(x\), and
-						\(\phi \) is an unknown function of \(y\).
-					</div>
-				</dd>
-				<dt class="description">
-					<div></div>
-				</dt>
-				<dd class="description">
-					<div>
-						<span class="ptmb8t-">Step 3.</span>
-						Differentiate <a href="#x1-27r20">(2.5.20)</a> with respect to \(y\) to obtain \[ {\partial F(x,y)\over \partial
-						y}={\partial G(x,y)\over \partial y}+\phi '(y)\]
-					</div>
-				</dd>
-				<dt class="description">
-					<div></div>
-				</dt>
-				<dd class="description">
-					<div>
-						<span class="ptmb8t-">Step 4.</span>
-						Equate the right side of this equation to \(N\) and solve for \(\phi
-						'\); thus, \[ {\partial G(x,y)\over \partial y}+\phi '(y)=N(x,y),\quad \mbox{ so } \quad  \phi '(y)=N(x,y)-{\partial G(x,y)\over \partial y}\]
-					</div>
-				</dd>
-				<dt class="description">
-					<div></div>
-				</dt>
-				<dd class="description">
-					<div>
-						<span class="ptmb8t-">Step 5.</span>
-						Integrate \(\phi '\) with respect to \(y\), taking the constant of
-						integration to be zero, and substitute the result in <a href="#x1-27r20">(2.5.20)</a> to obtain \(F(x,y)\).
-					</div>
-				</dd>
-				<dt class="description">
-					<div></div>
-				</dt>
-				<dd class="description">
-					<div>
-						<span class="ptmb8t-">Step 6.</span>
-						Set \(F(x,y)=c\) to obtain an implicit solution of <a href="#x1-26r19">(2.5.19)</a>. If possible, solve for \(y\) explicitly as a function of \(x\).
-					</div>
-				</dd>
-			</dl>
-			<div class="indent" id="b0847ac0-1ea5-4dc7-892f-0ed321565f7e">
-				It’s a common mistake to omit Step 6. However, it’s important to include
-				this step, since \(F\) isn’t itself a solution of <a href="#x1-26r19">(2.5.19)</a>.
-			</div>
+			<div class="stepbox">
+				<span class="head">Procedure For Solving An Exact Equation</span>
+
+				\begin{equation*} 
+					M(x,y) dx + N(x,y) dy = 0
+				\end{equation*}
+				<ol>
+					<li>
+						Identify \( M(x,y) \) and \( N(x,y) \) and compute \( M_y(x,y) \) and \( N_x(x,y) \) and verify \( M_y(x,y)=N_x(x,y) \) to ensure that the equation is <span class="vocab-repeat">exact</span>
+					</li>
+					<li>
+						Antidifferentiate \( M(x,y) = F_x(x,y) \) with respect to \( x \) and/or \( N(x,y) = F_y(x,y) \) with respect to \( y \) to obtain \( F(x,y) \)
+							
+						\begin{align} \label{eq:2.5.20}
+							F(x,y) = & \int F_x(x,y) dx = \int M(x,y) dx = G_{\phi}(x,y) + \phi(y)	\\
+							F(x,y) = & \int F_y(x,y) dx = \int N(x,y) dx = G_{\psi}(x,y) + \psi(x)
+						\end{align}
+					</li>
+					<li>
+						Differentiating with respect to the same variable to check that the antidifferentiation is correct 
+					</li>
+					<li>
+						Differentiate with respect to the other variable to obtain expressions for \( F_x(x,y) \) and \( F_y(x,y) \) in terms of \( \psi'(x) \) and \( \phi'(y) \)
+					</li>
+					<li>
+						Set the new expressions equal to known expressions \( F_x(x,y) = M(x,y) \) and/or \( F_y(x,y) = N(x,y) \) and solve for \( \psi(x) \) and \( \phi(y) \)
+					</li>
+					<li>
+						Substitute \( \psi(x) \) and/or \( \phi(y) \) in to obtain \( F(x,y) \) and if possible verify they match. Set \( F(x,y)=c \) arbitrary constant which is an implicit solution. Solve explicitly for \( y = y(x) \) whenever possible
+					</li>
+				</ol>	
+			</div>	
+			
 			<div class="indent" id="56996089-55bd-4989-8626-39fe260c0178">
-				Many equations can be conveniently solved by either of the two methods
-				used in Example&nbsp;<a href="#x1-183">2.5.3</a>. However, sometimes the integration required in one approach is more
-				difficult than in the other. In such cases we choose the approach that
-				requires the easier integration.
+				Many equations can be conveniently solved by either of the two methods used in Example&nbsp;<a href="#x1-183">2.5.3</a>. In cases where both are simple, we will antidifferentiate both so we can check our answer. However, sometimes the antidifferentiation required in one approach is more difficult than in the other. In such cases we choose the approach that requires the easier antidifferentiation. 
 			</div>
 			<div class="example" id="x1-284" style="--ex-number: 4">
 				<div>
@@ -625,6 +773,42 @@
 			
 				<details class="solution" id="8eb6d573-f111-474e-aad2-cb9b4939419d">
 					<summary>Solution</summary>
+					<div class="stepline">
+						1. Identify \( M(x,y) \) and \( N(x,y) \) and compute \( M_y(x,y) \) and \( N_x(x,y) \) and verify \( M_y(x,y)=N_x(x,y) \) to ensure that the equation is <span class="vocab-repeat">exact</span>
+					</div>
+					<div>
+						Blank
+					</div>
+					<div class="stepline">
+						2. Antidifferentiate \( M(x,y) = F_x(x,y) \) with respect to \( x \) and/or \( N(x,y) = F_y(x,y) \) with respect to \( y \) to obtain \( F(x,y) \)
+					</div>	
+					<div>
+						Blank
+					</div>	
+					<div class="stepline">
+						3. Differentiating with respect to the same variable to check that the antidifferentiation is correct 		
+					</div>	
+					<div>
+						Blank
+					</div>
+					<div class="stepline">
+						4. Differentiate with respect to the other variable to obtain expressions for \( F_x(x,y) \) and \( F_y(x,y) \) in terms of \( \psi'(x) \) and \( \phi'(y) \)
+					</div>
+					<div>
+						Blank
+					</div>
+					<div class="stepline">
+						5. Set the new expressions equal to known expressions \( F_x(x,y) = M(x,y) \) and/or \( F_y(x,y) = N(x,y) \) and solve for \( \psi(x) \) and \( \phi(y) \)
+					</div>
+					<div>
+						Blank
+					</div>
+					<div class="stepline">
+						6. Substitute \( \psi(x) \) and/or \( \phi(y) \) in to obtain \( F(x,y) \) and if possible verify they match. Set \( F(x,y)=c \) arbitrary constant which is an implicit solution. Solve explicitly for \( y = y(x) \) whenever possible
+					</div>	
+					<div>
+						Blank
+					</div>		
 					<div id="10e9df11-c2ff-485f-8778-709b0f6d06fd">
 						We leave it to you to check that \(M_y=N_x\) on any open rectangle
 						where \(\tan x\) and \(\sec x\) are defined. Here we must find a function
