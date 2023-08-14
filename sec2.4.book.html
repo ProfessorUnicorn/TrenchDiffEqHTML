@@ -179,7 +179,7 @@
 						Solving for \( u \) we obtain:
 						
 						\begin{align*}	
-							u = \frac{1}{(1-x)e^ + c}
+							u = \frac{1}{(1-x)e^x + c}
 						\end{align*}
 						
 
@@ -189,14 +189,25 @@
 							y = ue^{x} = & \frac{e^{x}}{(1-x)e^x + c}  \\	
 						\end{align*}
 
-						Finally simplify by mulitplying by \( e^{-x} \) on top and bottom
+						Simplify by mulitplying by \( e^{-x} \) on top and bottom
 												
 						\begin{align*}	
-							y 
-							= & \frac{e^{x}}{(1-x)e^x + c} \cdot \left( \frac{e^{-x}}{e^{-x}} \right) \\	
-							= & \frac{e^{x}e^{-x}}{(1-x)e^xe^{-x} + ce^{-x}}  \\	
-							= & \frac{1}{(1-x) + ce^{-x}}  \\	
+							\frac{e^{x}}{(1-x)e^x + c} \cdot \left( \frac{e^{-x}}{e^{-x}} \right)	
+							= & \frac{e^{x}e^{-x}}{(1-x)e^xe^{-x} + ce^{-x}}	
+							=\frac{1}{(1-x) + ce^{-x}}  \\	
 						\end{align*}
+
+						Notice that our one-parameter family fails to include the trivial solution so our general solution includes the trivial solution (a singular solution) and the one-parameter family:  
+												
+						\begin{align*}	
+							y(x) \equiv 0
+							\quad\quad	
+							y(x)=\frac{1}{(1-x) + ce^{-x}}	
+						\end{align*}
+
+						<div class="reading-exercise">
+							Verify \( y(x)=\frac{1}{(1-x) + ce^{-x}} \) is a solution to <a href="#x1-5r3">(2.4.3)</a> by differentiating and substituting
+						</div> 
 					</div>
 				</details>
 			</div>
@@ -242,87 +253,189 @@
 				\begin {equation} \label {eq:2.4.4} 
 					\frac{dy}{dx} = f(x,y)
 				\end {equation}
-
-				If  \( f(x,y) \) can be rewritten as a product of \( u \) and the derivative of \( y_1\), i.e. $f\Big(x,uy_1(x)\Big)=q(u)\frac{dy_1}{dx}$, then a nonlinear equation in general can be transformed into a separable equation:
-
-				Substituting $y=uy_1$ into Equation~\eqref{eq:2.4.4} and assuming that the 
-				
-				
-				
-				to be transformable into a separable equation in the same way.
-				Substituting \(y=uy_1\) into <a href="#x1-7r4">(2.4.4)</a> yields \[ \frac{du}{dx} y_1(x)+u \left.\frac{dy_1}{dx}\right|_x = f(x,uy_1(x))\] which is equivalent to \begin
-				{equation} \label {eq:2.4.5} \frac{du}{dx} y_1(x)=f(x,uy_1(x))-u \left.\frac{dy_1}{dx}\right|_x \end {equation}
-				<a id="x1-8r5"></a>
-				If 
-				\[ f(x,uy_1(x))=q(u) \left.\frac{dy_1}{dx}\right|_x \] for some function \(q\), then <a href="#x1-8r5">(2.4.5)</a> becomes \begin {equation} \label {eq:2.4.6} \frac{du}{dx} y_1(x)=(q(u)-u) \left.\frac{dy_1}{dx}\right|_x \end
-				{equation}
-				<a id="x1-9r6"></a>
-				which is separable. After checking for constant solutions \(u\equiv u_0\)
-				such that \(q(u_0)=u_0\), we can separate variables to obtain \[ \frac{du}{dx} \frac{1}{q(u)-u} = \left.\frac{dy_1}{dx}\right|_x \frac{1}{y_1(x)}\]
 			</div>
+
+			<div class="reading-exercise">
+				Differentiate \( u y_1 \) where \( u = u(x) \) and \( y_1 = y_1(x) \) with respect to \( x \) using the product rule
+			</div> 
+
+			<div>
+				We'll start by making a familiar substitution of \( y = u y_1 \) into <a href="#x1-7r4">(2.4.4)</a>
+				
+				<a id="x1-7r45"></a>
+				\begin{align}
+					\overset{\frac{dy}{dx}}{\overbrace{\frac{du}{dx} y_1+u\frac{dy_1}{dx}}}
+						= &  f\Big(x,\overset{y}{\overbrace{uy_1}}\Big) \nonumber \\
+					\frac{du}{dx} y_1 = &  f\Big(x,uy_1\Big) - u\frac{dy_1}{dx}		
+				\end{align}
+			</div>
+			
+			<div>
+				Now if we are able to write \( f(x,y) \) as a product of a function of \( u \) and the derivative of \( y_1 \) then the nonlinear equation will transform into a separable equation.
+
+				<a id="x1-7r46"></a>
+				\begin{align}
+					\frac{du}{dx} y_1 = &  \overset{ f\Big(x,uy_1\Big) }{\overbrace{q(u)\frac{dy_1}{dx}}} - u\frac{dy_1}{dx} \nonumber \\	
+					\frac{du}{dx} y_1 = &  \Big( q(u) - u \Big) \frac{dy_1}{dx} \label{eq:2.4.6}		
+				\end{align}
+			</div>
+
+			<div>
+				Now <a href="#x1-7r46">(2.4.6)</a> is separable once we first handle constant solution cases individually 
+				\begin{align*}
+					y_1 = 0 
+					\quad\quad
+					q(u) - u = 0		
+				\end{align*}
+			</div>
+
+			<div>
+				Once constant solutions are identified, we can now proceed to separate the variables in <a href="#x1-7r46">(2.4.6)</a> and solve
+
+				\begin{align*}	
+					\frac{du}{dx} y_1 = &  \Big( q(u) - u \Big) \frac{dy_1}{dx}  \\
+					\frac{1}{q(u) - u} \cdot \frac{du}{dx}  = &  \frac{1}{y_1} \cdot \frac{dy_1}{dx}  \\		
+					\int \Big( \frac{1}{q(u) - u} \cdot \frac{du}{dx} \Big) dx = & \Big( \frac{1}{y_1} \cdot \frac{dy_1}{dx} \Big) dx  \\	
+					\int \frac{1}{q(u) - u} du = &  \int \frac{1}{y_1} dy_1 \\	
+				\end{align*}
+
+			</div>
+		
 		</details>
 
 		<details id="973da0d2-03ad-47f6-9ba2-e87019b50f82">
 			<summary>Homogeneous Nonlinear Equations</summary>
-		
-			<div id="ea9e5479-0302-47ed-abd1-8132878bccaf">
-				In the text we’ll consider only the most widely studied class of equations
-				for which the method of the preceding paragraph works. Other types of
-				equations appear in Exercises&nbsp;
-				<span class="ptmb8t-">44</span>
-				–
-				<span class="ptmb8t-">51</span>
-				.
-			</div>
-			<div class="indent" id="c991088b-8158-44a1-9e40-0daa790e047e">
-				The differential equation <a href="#x1-7r4">(2.4.4)</a> is said to be
-				<span class="vocab">homogeneous</span>
-				if \(x\) and \(y\) occur in \(f\) in such a way that \(f(x,y)\) depends
-				only on the ratio \(y/x\); that is, <a href="#x1-7r4">(2.4.4)</a> can be written as
-				\begin {equation} \label {eq:2.4.7} \frac{dy}{dx}=q(y/x)\end {equation}
+			
+			<div>
+				We will consider <span class="vocab">homogeneous nonlinear equations</span>, the most widely studied class of equations for which this substitution works. Other types of equations appear in Exercises&nbsp;<span class="ptmb8t-">44</span>–<span class="ptmb8t-">51</span>.
+			</div>	
+			<div>
+				We previously defined <span class="vocab">homogeneous</span> in terms of <em>linear</em> differential equations, but it is something entirely different for <em>nonlinear</em>  differential equations. A nonlinear differential equation <a href="#x1-7r4">(2.4.4)</a> is said to be <span class="vocab">homogeneous</span> if \( x \) and \( y \)  occur in \( f(x,y) \) in such a way that  \( f(x,y) \) can be written to depend on only the ratio \( y / x \) in other words if \( f(x,y) = q( y / x)  \) can be written as a function of a single variable \( u = y / x \)
+
 				<a id="x1-10r7"></a>
-				where \(q=q(u)\) is a function of a single variable. For example, \[
-				\frac{dy}{dx} = {y+xe^{-y/x}\over x}={y\over x}+e^{-y/x} \] and \[ \frac{dy}{dx} = {y^2+xy-x^2\over
-				x^2}=\left (y\over x\right )^2+{y\over x} -1 \] are of the form <a href="#x1-10r7">(2.4.7)</a>, with \[ q(u)=u+e^{-u}\quad \mbox{ and } \quad  q(u)=u^2+u-1\]
-				respectively. The general method discussed above can be applied to <a href="#x1-10r7">(2.4.7)</a> with \(y_1=x\) (and therefore \(\displaystyle \frac{dy_1}{dx} =1)\). Thus, substituting \(y=ux\)
-				in <a href="#x1-10r7">(2.4.7)</a> yields \[ \frac{du}{dx} x +u=q(u)\] and separation of variables (after checking for
-				constant solutions \(u\equiv u_0\) such that \(q(u_0)=u_0\)) yields \[
-				\frac{du}{dx} \frac{1}{q(u)-u}={1\over x}\]
+				\begin {equation} \label {eq:2.4.7} 
+					\frac{dy}{dx}= q \left( \frac{y}{x} \right)
+				\end {equation}
 			</div>
-			<div class="indent" id="cd044474-c799-435a-b1c9-eda3581c4b50">
-				Before turning to examples, we point out something that you may’ve have
-				already noticed: the definition of
-				<span class="vocab">homogeneous equation</span>
-				given here isn’t the same as the definition given in Section&nbsp;2.1,
-				where we said that a linear equation of the form \[ \frac{dy}{dx} + p(x)y=0 \] is
-				homogeneous. We make no apology for this inconsistency, since we didn’t
-				create it historically,
-				<span class="vocab">homogeneous</span>
-				has been used in these two inconsistent ways. The one having to do with
-				linear equations is the most important. This is the only section of the
-				book where the meaning defined here will apply.
+		
+		
+			<div> 
+				For instance, we can rewrite the following differential equations in terms of \( y / x \)
+				\[
+					\frac{dy}{dx} = {y+xe^{-y/x}\over x}
+					=
+					\underset{ q\left(y\over x\right) }{
+					\underbrace{
+						{\left(y\over x\right)}+e^{-\left(y\over x\right)}
+					}}
+				\] 
+				
+				and 
+				
+				\[ 
+					\frac{dy}{dx} = {y^2+xy-x^2\over x^2}
+					=
+					\underset{ q\left(y\over x\right) }{
+					\underbrace{
+						\left (y\over x\right )^2+{\left(y\over x\right)} -1 
+					}}	
+				\] are of the form <a href="#x1-10r7">(2.4.7)</a>, with 
+				
+				\[ 
+				
+					q(u)=u+e^{-u}\quad \mbox{ and } \quad  q(u)=u^2+u-1
+				
+				\]
+
 			</div>
+
+			<div> 
+				The general method for transforming nonlinear differential equations into separable differential equations involves first making a substitution \( y = uy_1 \) for an appropriately chosen \( y_1 \) and then rewriting \( f(x,y) \) of <a href="#x1-7r4">(2.4.4)</a> as a product of \( u \) and the derivative of \( y_1 \) as shown in <a href="#x1-7r46">(2.4.6)</a>
+				
+				\begin{align*}	
+					f\Big(x,uy_1(x)\Big)=q(u)\frac{dy_1}{dx}
+				\end{align*}	
+			</div>
+
+			<div> 
+				<span class="vocab">Homogeneous nonlinear</span> differential equations <a href="#x1-10r7">(2.4.7)</a> can be solved with this method using \( y_1 = x .\) Notice we are not using \(y_1\) to represent a solution to a "complementary equation" but rather we are choosing an appropriate \(y_1\) that is known to work. When we use \( y_1 = x\) then \(y = uy_1 = ux \) which we can differentiate using the product rule:
+
+				\begin{align*}	
+					\frac{d}{dx} \Big( ux \Big)
+					= & u \underset{1}{\underbrace{\frac{d}{dx} \Big( x \Big)}} + x\frac{d}{dx} \Big( u \Big)
+					= u + x\frac{du}{dx} 
+				\end{align*}	
+
+				Substituting \( y = ux \) and \( \frac{dy}{dx} = u + x\frac{du}{dx} \) into <a href="#x1-10r7">(2.4.7)</a> produces a separable equation:
+
+				\begin{align*}	
+					\frac{dy}{dx} = & \overset{f(x,y)}{\overbrace{q\left(\frac{y}{x}\right)}} \\
+					\overset{\frac{dy}{dx}}{\overbrace{u + x\frac{du}{dx}}} = & q\overset{y=ux}{\overbrace{\left( \frac{ux}{x} \right)}} \\
+					u + x\frac{du}{dx} = & q(u) \\
+					x\frac{du}{dx} = & q(u) - u \\
+					\frac{1}{q(u) - u} \cdot \frac{du}{dx} = & \frac{1}{x} \\	
+					\int \bigg( \frac{1}{q(u) - u} \cdot \frac{du}{dx} \bigg) dx = & \int \bigg( \frac{1}{x} \bigg) dx \\
+					\int \frac{1}{q(u) - u} du = & \int \frac{1}{x} dx \\	
+				\end{align*}
+			</div>	
+
 			<div class="indent" id="9da05731-7556-4a9b-a0d7-132c05641ffa">
 				Since \(y/x\) is in general undefined if \(x=0\), we’ll consider solutions
-				of nonhomogeneous equations only on open intervals that do not contain the
+				of homogeneous nonlinear equations only on open intervals that do not contain the
 				point \(x=0\).
 			</div>
+
+
+			<!-- Example 2 -->
 			<div class="example" id="x1-112" style="--ex-number: 2">
 				<div>
+					
+					Solve 
+
 					<a id="x1-12r8"></a>
-					Solve \begin {equation} \label {eq:2.4.8} \frac{dy}{dx} = {y+xe^{-y/x}\over x}\end
+					\begin {equation} \label {eq:2.4.8} 
+						\frac{dy}{dx} = {y+xe^{-y/x}\over x}\end
 					{equation}
 				</div>
 
 				<details class="solution" id="ad333ed0-83e6-43c4-b093-f8e25438c1b8">
 					<summary>Solution</summary>
-					<div id="6e8a324d-04ef-441f-a52c-5778b53544c3">
-						Substituting \(y=ux\) into <a href="#x1-12r8">(2.4.8)</a>
-						yields \[ \frac{du}{dx} x + u = {ux+xe^{-ux/x}\over x} = u+e^{-u}\] Simplifying and
-						separating variables yields \[ e^u \frac{du}{dx} = {1\over x}\] Integrating yields
-						\(e^u=\ln |x|+c\). Therefore \(u=\ln (\ln |x|+c)\) and \(y=ux=x \ln (\ln
-						|x|+c)\).
+					<div>
+						We showed earlier that we can rearrange the nonlinear differential equation <a href="#x1-12r8">(2.4.8)</a> into homogeneous form, written as a function of \( y / x \)
+		
+						\begin{align*}	
+							\frac{dy}{dx} = & \frac{y+xe^{-y/x}}{x} = \left(\frac{y}{x}\right) + e^{-\left(\frac{y}{x}\right)}	
+						\end{align*}
+		
 					</div>
+					<div>
+						For homogeneous nonlinear equations, we will always use the substitution \( y = u x \)
+					</div>
+
+					<div class="reading-exercise">
+						Differentiate \( u x \) where \( u = u(x) \) with respect to \( x \) using the product rule
+					</div> 
+
+					<div>
+						Substituting \( y = u x \) transforms <a href="#x1-12r8">(2.4.8)</a> into a separable equation which we can easily solve by finding the antiderivatives
+
+						\begin{align*}	
+							\overset{\frac{dy}{dx}}{\overbrace{u + x\frac{du}{dx}}} = & \overset{y=ux}{\overbrace{\left(\frac{ux}{x}\right)}} + e^{-\overset{y=ux}{\overbrace{\left(\frac{ux}{x}\right)}}} \\
+							u + x\frac{du}{dx} & = u + e^{-u} \\
+							e^{u}\frac{du}{dx} & = \frac{1}{x} \\	
+							\int e^{u} du & = \int \frac{1}{x} dx \\		
+							e^{u} & = \ln \left| x \right| + c \\			
+							\ln \Big( e^{u} \Big) & = \ln \Big( \ln \left| x \right| + c \Big) \\		
+							u & = \ln \Big( \ln \left| x \right| + c \Big) \\		
+						\end{align*}
+
+						Multiplying the result by \( x \) gets us our solution \( y = ux \)
+
+						\begin{align*}		
+							y(x) & = x\ln \Big( \ln \left| x \right| + c \Big) \\			
+						\end{align*}
+					</div>
+
 				</details>
 			</div>
 
@@ -355,16 +468,26 @@
 				<!-- tex4ht:label?: x1-13r2  -->
 			</figure>
 
+			<!-- Example 2 -->
 			<div class="example" id="x1-143" style="--ex-number: 3">
 				<ol>
 					<li>
+						Solve 
+						
 						<a id="x1-16r9"></a>
-						Solve \begin {equation} \label {eq:2.4.9} x^2 \frac{dy}{dx} = y^2+xy-x^2\end {equation}
+						\begin {equation} \label {eq:2.4.9} 
+							x^2 \frac{dy}{dx} = y^2+xy-x^2
+						\end {equation}
 					</li>
 					<li>
+						Solve the IVP 
+						
 						<a id="x1-18r10"></a>
-						Solve the initial value problem \begin {equation} \label {eq:2.4.10}
-						x^2\frac{dy}{dx} = y^2+xy-x^2, \quad y(1)=2\end {equation}
+						\begin {equation} \label {eq:2.4.10}
+							x^2\frac{dy}{dx} = y^2+xy-x^2 
+							\quad \quad
+							y(1)=2
+						\end {equation}
 					</li>
 				</ol>
 
@@ -374,13 +497,62 @@
 					<ol>
 						<li>
 							<div>
-								Example 2.2.5 PFD
-								We first find solutions of <a href="#x1-16r9">(2.4.9)</a>
-								on open intervals that don’t contain \(x=0\). We can rewrite <a href="#x1-16r9">(2.4.9)</a>
-								as \[ \frac{dy}{dx} = {y^2+xy-x^2\over x^2} \] for \(x\) in any such interval.
+								We showed earlier that we can rearrange the nonlinear differential equation <a href="#x1-16r9">(2.4.9)</a> into homogeneous form, written as a function of \( y / x \)
+				
+								\begin{align*}	
+									\frac{dy}{dx} 
+									= & \frac{y^2 +xy - x^2}{x^2} 
+									= \left(\frac{y}{x}\right)^2  +  \left(\frac{y}{x}\right)  -  1	
+								\end{align*}
+				
+							</div>
+							<div>
+								For homogeneous nonlinear equations, we will always use the substitution \( y = u x \)
+							</div>
+		
+							<div class="reading-exercise">
+								Differentiate \( u x \) where \( u = u(x) \) with respect to \( x \) using the product rule
+							</div> 
+		
+							<div>
+								Substituting \( y = u x \) transforms <a href="#x1-16r9">(2.4.9)</a> into a separable equation
+		
 								<a id="x1-19r11"></a>
-								Substituting \(y=ux\) yields \[ \frac{du}{dx} x +u ={ (ux)^2+x(ux)-x^2 \over x^2} =
-								u^2+u-1\] so \begin {equation} \label {eq:2.4.11} \frac{du}{dx} x = u^2-1\end {equation}
+								\begin{align} \label{eq:2.4.11}	
+									\overset{\frac{dy}{dx}}{\overbrace{u + x\frac{du}{dx}}} = &  \overset{y=ux}{\overbrace{\left(\frac{ux}{x}\right)^2}}  +  \overset{y=ux}{\overbrace{\left(\frac{ux}{x}\right)}}  -  1 \nonumber \\
+									u + x\frac{du}{dx} = & u^2  + u  -  1 \nonumber \\
+									x\frac{du}{dx} = & u^2 - 1
+								\end{align}
+
+								Separating the variables in <a href="#x1-19r11">(2.4.11)</a> will require dividing the expression by \(u^2-1 \) which is invalid if \((u-1)(u+1) = 0 \) so we first check these equilibrium solutions when \( u = 1 \) and \( u = -1 \) 
+							</div>
+
+							<div>
+								Recall we made the substitution \( y = ux ,\) so we get \( y = x\) and \( y = -x\) as the equilibrium solutions which we can verify by substituting into <a href="#x1-16r9">(2.4.9)</a>
+
+								\begin{align*}	
+									x^2 \frac{dy}{dx} = & y^2+xy-x^2 \\	
+									x^2 \underset{1}{\underbrace{\frac{d}{dx} \Big( x \Big)}} \overset{?}{=} & \underset{2x^2}{\underbrace{\Big( x \Big)^2+x\Big( x \Big)}}-x^2 \\	
+									x^2 = & 2x^2 -x^2 \quad \checkmark \\	
+								\end{align*}
+
+							</div>
+
+							<div>
+								Substituting \( y = u x \) transforms <a href="#x1-16r9">(2.4.9)</a>  into a separable equation which we can easily solve by finding the antiderivatives
+		
+								Multiplying the result by \( x \) gets us our solution \( y = ux \)
+		
+								\begin{align*}		
+									y(x) & = x\ln \Big( \ln \left| x \right| + c \Big) \\			
+								\end{align*}
+							</div>
+
+							<div>
+								Example 2.2.5 PFD
+								
+
+
 								By inspection this equation has the constant solutions \(u\equiv 1\) and
 								\(u\equiv -1\). Therefore \(y=x\) and \(y=-x\) are solutions of <a href="#x1-16r9">(2.4.9)</a>. If \(u\) is a solution of <a href="#x1-19r11">(2.4.11)</a> that doesn’t assume the values \(\pm 1\) on some interval, separating
 								variables yields \[ \frac{du}{dx} \frac{1}{u^2-1}={1\over x}\] or, after a partial
@@ -488,6 +660,7 @@
 			</div>
 		</details>
 
+		<!-- Exercises -->
 		<nav class = "ex">
 			<a href = "sec2.4.ex.html">2.4 Exercises</a>
 		</nav>
