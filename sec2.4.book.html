@@ -536,75 +536,137 @@
 									x^2 = & 2x^2 -x^2 \quad \checkmark \\	
 								\end{align*}
 
-							</div>
+								and
 
-							<div>
-								Substituting \( y = u x \) transforms <a href="#x1-16r9">(2.4.9)</a>  into a separable equation which we can easily solve by finding the antiderivatives
-		
-								Multiplying the result by \( x \) gets us our solution \( y = ux \)
-		
-								\begin{align*}		
-									y(x) & = x\ln \Big( \ln \left| x \right| + c \Big) \\			
+
+								\begin{align*}	
+									x^2 \frac{dy}{dx} = & y^2+xy-x^2 \\	
+									x^2 \underset{-1}{\underbrace{\frac{d}{dx} \Big( -x \Big)}} \overset{?}{=} & \underset{x^2}{\underbrace{\Big( -x \Big)^2 }} + \underset{-2x^2}{\underbrace{x\Big( -x \Big)-x^2}} \\	
+									-x^2 = & x^2 - 2x^2 \quad \checkmark \\	
 								\end{align*}
+
 							</div>
 
 							<div>
-								Example 2.2.5 PFD
-								
+								Now that we have verified our equilibrium solutions \( y = x\) (from \( u = 1 \)) and \( y = -x\) (from \( u = -1 \)) we can assume \( u \ne 1 \) and \( u \ne -1 \) in <a href="#x1-19r11">(2.4.11)</a> and separate variables
 
-
-								By inspection this equation has the constant solutions \(u\equiv 1\) and
-								\(u\equiv -1\). Therefore \(y=x\) and \(y=-x\) are solutions of <a href="#x1-16r9">(2.4.9)</a>. If \(u\) is a solution of <a href="#x1-19r11">(2.4.11)</a> that doesn’t assume the values \(\pm 1\) on some interval, separating
-								variables yields \[ \frac{du}{dx} \frac{1}{u^2-1}={1\over x}\] or, after a partial
-								fraction expansion, \[ {1\over 2}\left [{1\over u-1}-{1\over u+1}\right
-								] \frac{du}{dx} = {1\over x}\] Multiplying by 2 and integrating yields \[ \ln \left
-								|u-1\over u+1\right | =2 \ln |x|+k\] or \[ \left |{u-1\over u+1}\right
-								|=e^kx^2\] which holds if \begin {equation} \label {eq:2.4.12} {u-1\over
-								u+1}=cx^2 \end {equation}
-								<a id="x1-20r12"></a>
-								where \(c\) is an arbitrary constant. Solving for \(u\) yields \[ u
-								={1+cx^2\over 1-cx^2}\]
+								\begin{align}	
+									x\frac{du}{dx} = & u^2 - 1 \nonumber \\
+									\frac{1}{u^2 - 1}\frac{du}{dx} = &  \frac{1}{x} \nonumber \\
+									\int \Big( \frac{1}{u^2 - 1}\frac{du}{dx} \Big) dx = & \int \Big( \frac{1}{x} \Big) dx \nonumber \\
+									\int \frac{1}{u^2 - 1} du= & \int \frac{1}{x}  dx  \nonumber \\
+								\end{align}
 							</div>
 
+							<div class="reading-exercise">
+								Factor \( u^2 - 1 \) 
+							</div> 
+
+							<div class="reading-exercise">
+								Decompose \( \frac{1}{u^2 - 1} \) using PFD as in Example <a href="sec2.2.book.html#x1-325" target=_blank>2.2.5</a>
+							</div> 
+
 							<div>
-								Therefore \begin {equation} \label {eq:2.4.13} y=ux={x(1+cx^2)\over
-								1-cx^2} \end {equation}
+								Decomposing the left side yields:
+
+								\begin{align}	
+									\int \frac{1}{u^2 - 1} du= & \int \frac{1}{x}  dx  \nonumber \\
+									\int \frac{1}{2} \left( \frac{1}{u-1} \right) du - \int \frac{1}{2} \left( \frac{1}{u+1} \right) du= & \int \frac{1}{x}  dx  \nonumber \\
+									\int \frac{1}{\underset{w}{\underbrace{u-1}}} \underset{dw}{\underbrace{du}} -\int \frac{1}{\underset{v}{\underbrace{u+1}}} \underset{dv}{\underbrace{du}}  = &  2\int \frac{1}{x}  dx \nonumber \\	
+									\int \frac{1}{w}dw - \int \frac{1}{v}dv = &   2\int \frac{1}{x}  dx \nonumber \\
+									\ln \left| w \right| - \ln \left| v \right| = &  2\ln \left| x \right| + k \nonumber \\
+									\ln \left| \frac{w}{v} \right| = &  \ln \left| x \right|^2 + k \nonumber \\
+									\ln \left| \frac{u-1}{u+1} \right| = & \ln x^2 + k \nonumber \\
+									e^{\ln \left| \frac{u-1}{u+1} \right|} = & e^{2\ln x^2 + k} \nonumber \\
+									\left| \frac{u-1}{u+1} \right| = & e^{\ln x^2} \underset{c}{\underbrace{e^{k}}} \nonumber \\
+									\left| \frac{u-1}{u+1} \right| = & cx^2 \nonumber										
+								\end{align}
+
+								Since we assumed  \( u \ne 1 \) and \( u \ne -1 \) then the quantity \( \displaystyle \left| \frac{u-1}{u+1} \right| \) won't change signs on the interval so we can further simplify to
+
+								<a id="x1-23r12"></a>
+								\begin{align}	
+									\frac{u-1}{u+1} =& cx^2 \\										
+								\end{align}								
+							</div>	
+							<div class="reading-exercise">
+								Solve for \( u \) as in Example <a href="sec2.2.book.html#x1-325" target=_blank>2.2.5</a>
+							</div> 
+
+							<div>
+								Solving for \( u \) we obtain
+								\begin{align*}	
+									u  = & \frac{1 + cx^2}{1-cx^2} 										
+								\end{align*}	
+
+								Multiplying the result by \( x \) gets us \( y = ux \)
+
 								<a id="x1-23r13"></a>
-								is a solution of <a href="#x1-18r10">(2.4.10)</a> for any choice of the constant \(c\). Setting \(c=0\) in <a href="#x1-23r13">(2.4.13)</a> yields the solution \(y=x\). However, the solution \(y=-x\) can’t be
-								obtained from <a href="#x1-23r13">(2.4.13)</a>. Thus, the solutions of <a href="#x1-16r9">(2.4.9)</a> on intervals that don’t contain \(x=0\) are \(y=-x\) and functions of
-								the form <a href="#x1-23r13">(2.4.13)</a>.
+								\begin{align} \label {eq:2.4.13}		
+									y(x) & = \frac{x \left( 1 + cx^2 \right) }{1-cx^2}  \\			
+								\end{align} 
+
+								Now we have a one-parameter family <a href="#x1-23r13">(2.4.13)</a> representing non-equilibrium solutions to <a href="#x1-16r9">(2.4.9)</a> so we'll check if the family contains our equilibrium solutions. When \( c = 0 \) the one-parameter family <a href="#x1-23r13">(2.4.13)</a> simplifies to one of the equilibrium solutions \( y(x) = x \) but the other equilibrium solution \( y(x) = -x \) cannot be obtained from the family regardless of choice of \( c \) therefore it is a singular solution, so our general solution on intervals that don't contain \( x = 0 \) is 
+
+								<a id="x1-24r14"></a>
+								\begin{align} \label {eq:2.4.14}	
+									y(x) = -x
+									\quad \quad
+									y(x) = \frac{x \left( 1 + cx^2 \right) }{1-cx^2}  \\			
+								\end{align} 
+
+
+								The entire method of solving homogeneous nonlinear differential equations relies upon \( x \) and \( y \) occurring as a ratio \( y / x\) meaning \( x=0 \) by default will not be included in the IOVs for instance our general solution <a href="#x1-24r14">(2.4.14)</a> is defined on IOVs \( (-\infty,0) \) and \( (0,\infty) \)
 							</div>
 
 							<div>
-								The situation is more complicated if \(x=0\) is the open interval. First,
-								note that \(y=-x\) satisfies <a href="#x1-16r9">(2.4.9)</a> on \((-\infty ,\infty )\). If \(c_1\) and \(c_2\) are arbitrary
-								constants, the function \begin {equation} \label {eq:2.4.14} y=\left
-								\{\begin {array}{ll} \displaystyle {x(1+c_1x^2)\over
-								1-c_1x^2},&amp;a&lt;x&lt;0,\\ \displaystyle {x(1+c_2x^2)\over
-								1-c_2x^2},&amp;0\le x&lt;b\end {array}\right. \end {equation}
-								<a id="x1-24r14"></a>
-								is a solution of <a href="#x1-16r9">(2.4.9)</a> on \((a,b)\), where \[ a=\left \{\begin {array}{cl}-\displaystyle
-								{1\over \sqrt {c_1}}&amp;\mbox { if }c_1&gt;0,\\ -\infty&amp; \mbox { if
-								}c_1\le 0\end {array}\right . \quad \mbox{ and } \quad  b=\left \{\begin
-								{array}{cl}\displaystyle {1\over \sqrt {c_2}}&amp;\mbox { if }c_2&gt;0,\\
-								\infty&amp; \mbox { if }c_2\le 0\end {array}\right. \] We leave it to you
-								to verify this. To do so, note that if \(y\) is any function of the form <a href="#x1-23r13">(2.4.13)</a> then \(y(0)=0\)
-								and \(\displaystyle \left. \frac{dy}{dx} \right|_0 = 1\).
+								The situation is more complicated if the \( x=0 \) is included in the open interval. First note that the equilibrium solution \( y(x) = -x \) satisfies <a href="#x1-16r9">(2.4.9)</a> on \( (-\infty,\infty) \)
+							
 							</div>
+						
 						</li>
 
 						<li>
-							We could obtain \(c\) by imposing the initial condition \(y(1)=2\) in <a href="#x1-23r13">(2.4.13)</a>, and then solving for \(c\). However, it’s easier to use <a href="#x1-20r12">(2.4.12)</a>. Since \(u=y/x\), the initial condition \(y(1)=2\) implies that
-							\(u(1)=2\). Substituting this into <a href="#x1-20r12">(2.4.12)</a> yields \(c=1/3\). Hence, the solution of <a href="#x1-18r10">(2.4.10)</a> is \[ y={x(1+x^2/3)\over 1-x^2/3}\] The
-							<span class="vocab">interval of validity</span>
-							of this solution is \((-\sqrt 3,\sqrt 3)\). However, the largest interval
-							on which <a href="#x1-18r10">(2.4.10)</a> has a unique solution is \((0,\sqrt 3)\). To see this, note from <a href="#x1-24r14">(2.4.14)</a> that any function of the form \begin {equation} \label {eq:2.4.15}
-							y=\left \{\begin {array}{ll} \displaystyle {x(1+cx^2)\over
-							1-cx^2},&amp;a&lt;x\le 0,\\ \displaystyle {x(1+x^2/3)\over
-							1-x^2/3},&amp;0\le x&lt;\sqrt 3\end {array}\right. \end {equation}
-							<a id="x1-25r15"></a>
-							is a solution of <a href="#x1-18r10">(2.4.10)</a> on \((a,\sqrt 3)\), where \(a=-1/\sqrt c\) if \(c&gt;0\) or \(a=-\infty
-							\) if \(c\le 0\). (Why doesn’t this contradict Theorem&nbsp;<span class="ptmb8t-">2.3.1</span>?)
+							<div>
+								Applying the initial condition \( y(1)=2 \) we can solve for the constant \( c \)
+							</div>
+
+							<div class="reading-exercise">
+								Apply the initial condition \( y(1)=2 \) to <a href="#x1-23r13">(2.4.13)</a> and solve for \( c \)
+							</div> 
+
+							<div class="reading-exercise">
+								Apply the initial condition \( y(1)=2 \) to <a href="#x1-23r12">(2.4.12)</a> and solve for \( c \)
+							</div> 
+
+							<div class="reading-exercise">
+								Which equation was easier to solve? Do the two values for \( c \) agree?
+							</div> 
+
+							<div>
+								\begin{align*} 	
+									\underset{2}{\underbrace{y \cdot (1)}} = & \frac{\left(1\right) \cdot \left(1 + c \cdot \left(1\right)^2\right)}{1-c \cdot \left(1\right)^2} \Longrightarrow c = \frac{1}{3}	
+								\end{align*}
+
+								Substituting \( c = \frac{1}{3} \) back in to <a href="#x1-23r13">(2.4.13)</a> we obtain our particular solution of the IVP
+
+								\begin{align*} 	
+									y(x) = & \frac{x\left(1 +  \frac{1}{3}x^2\right)}{1- \frac{1}{3}x^2} \\
+								\end{align*}
+
+								Multiplying by \( 3 \) on top and bottom to simplify:
+
+								\begin{align*} 	
+									y(x) = & \frac{x\left(3 + x^2\right)}{3- x^2} \\
+								\end{align*}
+
+								Now to determind the IOV we start by checking for undefined values when \( 3- x^2 = 0\) which occurs when \( x = \sqrt{3}\)  or \( x = -\sqrt{3}\) which creates intervals \( ( -\infty,-\sqrt{3}) ,\) \( (-\sqrt{3}, \sqrt{3}) ,\) and \( (\sqrt{3} , \infty ) \) and with the initial condition with \( x = 1 \) that puts us directly in the IOV \( (-\sqrt{3}, \sqrt{3}) \)
+							</div>
+
+							<div>
+
+							</div>
+							
 						</li>
 					</ol>
 
@@ -648,14 +710,14 @@
 				<figcaption class="caption">
 					<span class="id">Figure&nbsp;2.4.4</span>
 					<span class="content">
-						Solutions of \(\displaystyle x^{2} \frac{dy}{dx} = y^{2}+xy-x^{2}\), \(y(1)=2\)
+						Solutions of \(\displaystyle x^{2} \frac{dy}{dx} = y^{2}+xy-x^{2} \quad y(1)=2\)
 					</span>
 				</figcaption>
 			</figure>
 
 			<div class="indent" id="d854275b-3523-435b-87a1-19bc77f5992c">
 				In the last two examples we were able to solve the given equations
-				explicitly. However, this isn’t always possible, as you’ll see in the
+				explicitly. However, this isn’t always possible, as you’ll find out in the
 				exercises.
 			</div>
 		</details>
