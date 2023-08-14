@@ -29,7 +29,6 @@
 		</style>
 	</head>
 	<body>
-		<div id="ccdb8a02-f0b0-475a-aa16-69ddd657fa8b"><a id="x1-1doc"></a></div>
 		<div id="378e28f9-95cd-4f69-bfdc-ba8e8aef4011">
 			Section 5.6 Reduction of Order
 		</div>
@@ -37,268 +36,274 @@
 			<span class="ptmb8t-">5.6</span>
 			<span class="ptmb8t-x-x-90">&nbsp; REDUCTION OF ORDER</span>
 		</div>
-		<div id="7add97e1-7c58-4c42-9961-aece9d38d295">
-			In this section we give a method for finding the general solution of
-			\begin {equation} \label {eq:5.6.1} P_0(x)y''+P_1(x)y'+P_2(x)y=F(x) \end
-			{equation}
-			<a id="x1-2r1"></a>
-			if we know a nontrivial solution \(y_1\) of the complementary equation
-			\begin {equation} \label {eq:5.6.2} P_0(x)y''+P_1(x)y'+P_2(x)y=0\end
-			{equation}
-			<a id="x1-3r2"></a>
-			The method is called
-			<span class="vocab">reduction of order</span>
-			because it reduces the task of solving <a href="#x1-2r1">(5.6.1)</a> to solving a first order equation. Unlike the method of undetermined
-			coefficients, it does not require \(P_0\), \(P_1\), and \(P_2\) to be
-			constants, or \(F\) to be of any special form.
-		</div>
-		<div class="indent" id="aa46d5ae-6fcd-47ca-b857-d45cf95314ad">
-			By now you shoudn’t be surprised that we look for solutions of <a href="#x1-2r1">(5.6.1)</a> in the form \begin {equation} \label {eq:5.6.3} y=uy_1 \end {equation}
-			<a id="x1-4r3"></a>
-			where \(u\) is to be determined so that \(y\) satisfies <a href="#x1-2r1">(5.6.1)</a>. Substituting <a href="#x1-4r3">(5.6.3)</a> and \[\begin {array}{rcl} y'&amp;=&amp; u'y_1+uy_1' \\ y''&amp;=&amp;
-			u''y_1+2u'y_1'+uy_1'' \end {array}\] into <a href="#x1-2r1">(5.6.1)</a> yields \[
-			P_0(x)(u''y_1+2u'y_1'+uy_1'')+P_1(x)(u'y_1+uy_1')+P_2(x)uy_1=F(x)\]
-			Collecting the coefficients of \(u\), \(u'\), and \(u''\) yields \begin
-			{equation} \label {eq:5.6.4}
-			(P_0y_1)u''+(2P_0y_1'+P_1y_1)u'+(P_0y_1''+P_1y_1'+P_2y_1) u=F\end
-			{equation}
-			<a id="x1-5r4"></a>
-			However, the coefficient of \(u\) is zero, since \(y_1\) satisfies <a href="#x1-3r2">(5.6.2)</a>. Therefore <a href="#x1-5r4">(5.6.4)</a> reduces to \begin {equation} \label {eq:5.6.5} Q_0(x)u''+Q_1(x)u'=F\end
-			{equation}
-			<a id="x1-6r5"></a>
-			with \[ Q_0=P_0y_1 \quad \mbox{ and } \quad Q_1=2P_0y_1'+P_1y_1\] (It isn’t
-			worthwhile to memorize the formulas for \(Q_0\) and \(Q_1\)!) Since <a href="#x1-6r5">(5.6.5)</a> is a linear first order equation in \(u'\), we can solve it for \(u'\)
-			by variation of parameters as in Section&nbsp;1.2, integrate the solution
-			to obtain \(u\), and then obtain \(y\) from <a href="#x1-4r3">(5.6.3)</a>.
-		</div>
-		<div class="newtheorem" id="6bf195ec-4c85-428c-b415-ec80fdab7352">
-			<div>
-				<span class="head">
-					<span class="ex-number">Example&nbsp;5.6.1</span>
-				</span>
-				<a id="x1-71"></a>
-				<br class="newline" />
+
+		<details id="ccdb8a02-f0b0-475a-aa16-69ddd657fa8b">
+			<summary>Reduction of Order</summary>
+
+			<div id="7add97e1-7c58-4c42-9961-aece9d38d295">
+				In this section we give a method for finding the general solution of
+				\begin {equation} \label {eq:5.6.1} P_0(x)y''+P_1(x)y'+P_2(x)y=F(x) \end
+				{equation}
+				<a id="x1-2r1"></a>
+				if we know a nontrivial solution \(y_1\) of the complementary equation
+				\begin {equation} \label {eq:5.6.2} P_0(x)y''+P_1(x)y'+P_2(x)y=0\end
+				{equation}
+				<a id="x1-3r2"></a>
+				The method is called
+				<span class="vocab">reduction of order</span>
+				because it reduces the task of solving <a href="#x1-2r1">(5.6.1)</a> to solving a first order equation. Unlike the method of undetermined
+				coefficients, it does not require \(P_0\), \(P_1\), and \(P_2\) to be
+				constants, or \(F\) to be of any special form.
 			</div>
-			<dl class="list1">
-				<dt class="list">
-					<span class="ptmb8t-">(a)</span>
-				</dt>
-				<dd class="list">
-					<div>
-						Find the general solution of \begin {equation} \label {eq:5.6.6}
-						xy''-(2x+1)y'+(x+1)y=x^2\end {equation}
-						<a id="x1-9r6"></a>
-						given that \(y_1=e^x\) is a solution of the complementary equation
-						\begin {equation} \label {eq:5.6.7} xy''-(2x+1)y'+(x+1)y=0\end
-						{equation}
-						<a id="x1-10r7"></a>
-					</div>
-				</dd>
-				<dt class="list">
-					<span class="ptmb8t-">(b)</span>
-				</dt>
-				<dd class="list">
-					<div>
-						As a byproduct of
-						<span class="ptmb8t-">(a)</span>,
-						find a fundamental set of solutions of <a href="#x1-10r7">(5.6.7)</a>.
-					</div>
-				</dd>
-			</dl>
-		</div>
-		<div class="indent" id="017e31c2-ec18-4491-be93-26e1cdec2c9e"></div>
-		<div id="cbdc8fdc-80f6-43af-b97f-93211636646c">
-			<span class="underline">
-				<span class="ptmrc8t-">
-					S
-					<span class="small-caps">OLUTION</span>
-					(
-				</span>
-				<span class="ptmb8t-">a</span>
-				<span class="ptmrc8t-">)&nbsp;</span>
-			</span>
-			If \(y=ue^x\), then \(y'=u'e^x+ue^x\) and \(y''=u''e^x+2u'e^x+ue^x\), so
-		</div>
-		<div class="eqnarray" id="0d3427b0-46be-4e6e-bacd-d89fdebef8ab">
-			\begin {eqnarray*} xy''-(2x+1)y'+(x+1)y&amp;=&amp;x(u''e^x+2u'e^x+ue^x)\\
-			&amp;&amp;-(2x+1)(u'e^x+ue^x)+(x+1)ue^x\\ &amp;=&amp;(xu''-u')e^x\end
-			{eqnarray*}
-		</div>
-		<div class="indent" id="170eb186-4b95-45aa-aae9-76e8c284c391">
-			Therefore \(y=ue^x\) is a solution of <a href="#x1-9r6">(5.6.6)</a> if and only if \[ (xu''-u')e^x=x^2\] which is a first order equation in
-			\(u'\). We rewrite it as \begin {equation} \label {eq:5.6.8} u''-{u'\over
-			x}=xe^{-x}\end {equation}
-			<a id="x1-12r8"></a>
-			To focus on how we apply variation of parameters to this equation, we
-			temporarily write \(z=u'\), so that <a href="#x1-12r8">(5.6.8)</a> becomes \begin {equation} \label {eq:5.6.9} z'-{z\over x}=xe^{-x}\end
-			{equation}
-			<a id="x1-13r9"></a>
-			We leave it to you to show (by separation of variables) that \(z_1=x\) is
-			a solution of the complementary equation \[ z'-{z\over x}=0 \] for <a href="#x1-13r9">(5.6.9)</a>. By applying variation of parameters as in Section&nbsp;1.2, we can now
-			see that every solution of <a href="#x1-13r9">(5.6.9)</a> is of the form \[ z=vx\quad \mbox{ where } \quad  v'x=xe^{-x}, \quad \mbox{ so } \quad  v'=e^{-x} \quad \mbox{ and } \quad  v=-e^{-x}+C_1\] Since
-			\(u'=z=vx\), \(u\) is a solution of <a href="#x1-12r8">(5.6.8)</a> if and only if \[ u'=vx=-xe^{-x}+C_1x\] Integrating this yields \[
-			u=(x+1)e^{-x}+{C_1\over 2}x^2+C_2\] Therefore the general solution of <a href="#x1-9r6">(5.6.6)</a> is \begin {equation} \label {eq:5.6.10} y=ue^x=x+1+{C_1\over
-			2}x^2e^x+C_2e^x\end {equation}
-			<a id="x1-14r10"></a>
-		</div>
-		<div id="88a71ad9-328a-4eda-a1de-fb0d64946991">
-			<span class="underline">
-				<span class="ptmrc8t-">
-					S
-					<span class="small-caps">OLUTION</span>
-					(
-				</span>
-				<span class="ptmb8t-">b</span>
-				<span class="ptmrc8t-">)&nbsp;</span>
-			</span>
-			By letting \(C_1=C_2=0\) in <a href="#x1-14r10">(5.6.10)</a>, we see that \(y_{p_1}=x+1\) is a solution of <a href="#x1-9r6">(5.6.6)</a>. By letting \(C_1=2\) and \(C_2=0\), we see that \(y_{p_2}=x+1+x^2e^x\)
-			is also a solution of <a href="#x1-9r6">(5.6.6)</a>. Since the difference of two solutions of <a href="#x1-9r6">(5.6.6)</a> is a solution of <a href="#x1-10r7">(5.6.7)</a>, \(y_2=y_{p_1}-y_{p_2}=x^2e^x\) is a solution of <a href="#x1-10r7">(5.6.7)</a>. Since \(y_2/y_1\) is nonconstant and we already know that \(y_1=e^x\)
-			is a solution of <a href="#x1-9r6">(5.6.6)</a>, Theorem&nbsp;
-			<span class="ptmb8t-">5.1.6</span>
-			implies that \(\{e^x,x^2e^x\}\) is a fundamental set of solutions of <a href="#x1-10r7">(5.6.7)</a>. __
-		</div>
-		<div class="indent" id="bc23b1cf-1793-4cfc-b174-720a1930352b">
-			Although <a href="#x1-14r10">(5.6.10)</a> is a correct form for the general solution of <a href="#x1-9r6">(5.6.6)</a>, it’s silly to leave the arbitrary coefficient of \(x^2e^x\) as
-			\(C_1/2\) where \(C_1\) is an arbitrary constant. Moreover, it’s sensible
-			to make the subscripts of the coefficients of \(y_1=e^x\) and
-			\(y_2=x^2e^x\) consistent with the subscripts of the functions themselves.
-			Therefore we rewrite <a href="#x1-14r10">(5.6.10)</a> as \[ y=x+1+c_1e^x+c_2x^2e^x \] by simply renaming the arbitrary
-			constants. We’ll also do this in the next two examples, and in the answers
-			to the exercises.
-		</div>
-		<div class="newtheorem" id="ec499f28-d80d-4169-adf1-8a0e2cd908d9">
-			<div>
-				<span class="head">
-					<span class="ex-number">Example&nbsp;5.6.2</span>
-				</span>
-				<a id="x1-152"></a>
-				<br class="newline" />
+			<div class="indent" id="aa46d5ae-6fcd-47ca-b857-d45cf95314ad">
+				By now you shoudn’t be surprised that we look for solutions of <a href="#x1-2r1">(5.6.1)</a> in the form \begin {equation} \label {eq:5.6.3} y=uy_1 \end {equation}
+				<a id="x1-4r3"></a>
+				where \(u\) is to be determined so that \(y\) satisfies <a href="#x1-2r1">(5.6.1)</a>. Substituting <a href="#x1-4r3">(5.6.3)</a> and \[\begin {array}{rcl} y'&amp;=&amp; u'y_1+uy_1' \\ y''&amp;=&amp;
+				u''y_1+2u'y_1'+uy_1'' \end {array}\] into <a href="#x1-2r1">(5.6.1)</a> yields \[
+				P_0(x)(u''y_1+2u'y_1'+uy_1'')+P_1(x)(u'y_1+uy_1')+P_2(x)uy_1=F(x)\]
+				Collecting the coefficients of \(u\), \(u'\), and \(u''\) yields \begin
+				{equation} \label {eq:5.6.4}
+				(P_0y_1)u''+(2P_0y_1'+P_1y_1)u'+(P_0y_1''+P_1y_1'+P_2y_1) u=F\end
+				{equation}
+				<a id="x1-5r4"></a>
+				However, the coefficient of \(u\) is zero, since \(y_1\) satisfies <a href="#x1-3r2">(5.6.2)</a>. Therefore <a href="#x1-5r4">(5.6.4)</a> reduces to \begin {equation} \label {eq:5.6.5} Q_0(x)u''+Q_1(x)u'=F\end
+				{equation}
+				<a id="x1-6r5"></a>
+				with \[ Q_0=P_0y_1 \quad \mbox{ and } \quad Q_1=2P_0y_1'+P_1y_1\] (It isn’t
+				worthwhile to memorize the formulas for \(Q_0\) and \(Q_1\)!) Since <a href="#x1-6r5">(5.6.5)</a> is a linear first order equation in \(u'\), we can solve it for \(u'\)
+				by variation of parameters as in Section&nbsp;1.2, integrate the solution
+				to obtain \(u\), and then obtain \(y\) from <a href="#x1-4r3">(5.6.3)</a>.
 			</div>
-			<dl class="list1">
-				<dt class="list">
-					<span class="ptmb8t-">(a)</span>
-				</dt>
-				<dd class="list">
-					<div>
-						Find the general solution of \[ x^2y''+xy'-y=x^2+1\] given that
-						\(y_1=x\) is a solution of the complementary equation \begin
-						{equation} \label {eq:5.6.11} x^2y''+xy'-y=0\end {equation}
-						<a id="x1-17r11"></a>
-						As a byproduct of this result, find a fundamental set of solutions
-						of <a href="#x1-17r11">(5.6.11)</a>.
-					</div>
-				</dd>
-				<dt class="list">
-					<span class="ptmb8t-">(b)</span>
-				</dt>
-				<dd class="list">
-					<div>
-						Solve the initial value problem \begin {equation} \label {eq:5.6.12}
-						x^2y''+xy'-y=x^2+1, \quad y(1)=2,\; y'(1)=-3\end {equation}
-						<a id="x1-19r12"></a>
-					</div>
-				</dd>
-			</dl>
-		</div>
-		<div class="indent" id="7c1f64f1-dafa-49fa-9ee2-c7a16480cf7c"></div>
-		<div id="57087b6d-51c2-4df6-952b-cfb8723df9b0">
-			<span class="underline">
-				<span class="ptmrc8t-">
-					S
-					<span class="small-caps">OLUTION</span>
-					(
-				</span>
-				<span class="ptmb8t-">a</span>
-				<span class="ptmrc8t-">)&nbsp;</span>
-			</span>
-			If \(y=ux\), then \(y'=u'x+u\) and \(y''=u''x+2u'\), so
-		</div>
-		<div class="eqnarray" id="38b99141-da2c-4e34-8c6f-b52d1ef88e3d">
-			\begin {eqnarray*} x^2y''+xy'-y&amp;=&amp;x^2(u''x+2u')+x(u'x+u)-ux\\
-			&amp;=&amp;x^3u''+3x^2u'\end {eqnarray*}
-		</div>
-		<div class="indent" id="1eeeefad-5787-4974-81e4-46cee8de23e6">
-			Therefore \(y=ux\) is a solution of <a href="#x1-19r12">(5.6.12)</a> if and only if \[ x^3u''+3x^2u'=x^2+1\] which is a first order equation
-			in \(u'\). We rewrite it as \begin {equation} \label {eq:5.6.13}
-			u''+{3\over x}u'={1\over x}+{1\over x^3}\end {equation}
-			<a id="x1-20r13"></a>
-			To focus on how we apply variation of parameters to this equation, we
-			temporarily write \(z=u'\), so that <a href="#x1-20r13">(5.6.13)</a> becomes \begin {equation} \label {eq:5.6.14} z'+{3\over x}z={1\over
-			x}+{1\over x^3}\end {equation}
-			<a id="x1-21r14"></a>
-			We leave it to you to show by separation of variables that \(z_1=1/x^3\)
-			is a solution of the complementary equation \[ z'+{3\over x}z=0 \] for <a href="#x1-21r14">(5.6.14)</a>. By variation of parameters, every solution of <a href="#x1-21r14">(5.6.14)</a> is of the form \[ z={v\over x^3}\quad \mbox{ where } \quad  {v'\over
-			x^3}={1\over x}+{1\over x^3}, \quad \mbox{ so } \quad  v'=x^2+1 \quad \mbox{ and } \quad  v={x^3\over 3}+x+C_1\] Since \(u'=z=v/x^3\), \(u\) is a
-			solution of <a href="#x1-21r14">(5.6.14)</a> if and only if \[ u'={v\over x^3}={1\over 3}+{1\over x^2}+{C_1\over
-			x^3}\] Integrating this yields \[ u={x\over 3}-{1\over x}-{C_1\over
-			2x^2}+C_2\] Therefore the general solution of <a href="#x1-19r12">(5.6.12)</a> is \begin {equation} \label {eq:5.6.15} y=ux={x^2\over 3}-1-{C_1\over
-			2x}+C_2x\end {equation}
-			<a id="x1-22r15"></a>
-			Reasoning as in the solution of Example&nbsp;<a href="#x1-71">5.6.1</a><span class="ptmb8t-">(a)</span>,
-			we conclude that \(y_1=x\) and \(y_2=1/x\) form a fundamental set of
-			solutions for <a href="#x1-17r11">(5.6.11)</a>.
-		</div>
-		<div class="indent" id="f5775825-372a-433d-8e96-9127a07ffc1f">
-			As we explained above, we rename the constants in <a href="#x1-22r15">(5.6.15)</a> and rewrite it as \begin {equation} \label {eq:5.6.16} y={x^2\over
-			3}-1+c_1x+{c_2\over x}\end {equation}
-			<a id="x1-23r16"></a>
-		</div>
-		<div id="c0fd1bbc-f328-482c-aa56-0e01418e19ae">
-			<span class="underline">
-				<span class="ptmrc8t-">
-					S
-					<span class="small-caps">OLUTION</span>
-					(
-				</span>
-				<span class="ptmb8t-">b</span>
-				<span class="ptmrc8t-">)&nbsp;</span>
-			</span>
-			Differentiating <a href="#x1-23r16">(5.6.16)</a> yields \begin {equation} \label {eq:5.6.17} y'={2x\over 3}+c_1-{c_2\over
-			x^2}\end {equation}
-			<a id="x1-24r17"></a>
-			Setting \(x=1\) in <a href="#x1-23r16">(5.6.16)</a> and <a href="#x1-24r17">(5.6.17)</a> and imposing the initial conditions \(y(1)=2\) and \(y'(1)=-3\) yields
-		</div>
-		<div class="eqnarray" id="a2ae8666-549a-49f3-94a4-2d49711a5941">
-			\begin {eqnarray*} c_1+c_2&amp;=&amp; \phantom {-}{8\over 3} \\
-			c_1-c_2&amp;=&amp; -{11\over 3}\end {eqnarray*}
-		</div>
-		<div class="indent" id="b88fc56e-0436-4ae5-96c3-20131ed31447">
-			Solving these equations yields \(c_1=-1/2\), \(c_2=19/6\). Therefore the
-			solution of <a href="#x1-19r12">(5.6.12)</a> is \[ y={x^2\over 3}-1-{x\over 2}+{19\over 6x}\]
-		</div>
-		<div class="indent" id="333c5c14-9f07-4eae-a7c9-226dda81d3fa">
-			Using reduction of order to find the general solution of a homogeneous
-			linear second order equation leads to a homogeneous linear first order
-			equation in \(u'\) that can be solved by separation of variables. The next
-			example illustrates this.
-		</div>
-		<div class="newtheorem" id="8ee20acd-1003-4852-83aa-216e2adf189b">
-			<div>
-				<span class="head">
-					<span class="ex-number">Example&nbsp;5.6.3</span>
-				</span>
-				<a id="x1-253"></a>
-				Find the general solution and a fundamental set of solutions of \begin
-				{equation} \label {eq:5.6.18} x^2y''-3xy'+3y=0\end {equation}
-				<a id="x1-26r18"></a>
-				given that \(y_1=x\) is a solution.
+			<div class="newtheorem" id="6bf195ec-4c85-428c-b415-ec80fdab7352">
+				<div>
+					<span class="head">
+						<span class="ex-number">Example&nbsp;5.6.1</span>
+					</span>
+					<a id="x1-71"></a>
+					<br class="newline" />
+				</div>
+				<dl class="list1">
+					<dt class="list">
+						<span class="ptmb8t-">(a)</span>
+					</dt>
+					<dd class="list">
+						<div>
+							Find the general solution of \begin {equation} \label {eq:5.6.6}
+							xy''-(2x+1)y'+(x+1)y=x^2\end {equation}
+							<a id="x1-9r6"></a>
+							given that \(y_1=e^x\) is a solution of the complementary equation
+							\begin {equation} \label {eq:5.6.7} xy''-(2x+1)y'+(x+1)y=0\end
+							{equation}
+							<a id="x1-10r7"></a>
+						</div>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(b)</span>
+					</dt>
+					<dd class="list">
+						<div>
+							As a byproduct of
+							<span class="ptmb8t-">(a)</span>,
+							find a fundamental set of solutions of <a href="#x1-10r7">(5.6.7)</a>.
+						</div>
+					</dd>
+				</dl>
 			</div>
-		</div>
-		<div class="indent" id="52fa8a62-79d1-4d4f-b905-696e0308c09c"></div>
-		<details class="solution">
-			<summary>Solution</summary>
-			&nbsp;If \(y=ux\) then \(y'=u'x+u\) and \(y''=u''x+2u'\), so
-		</div>
-		<div class="eqnarray" id="08528ca3-dbc2-40c2-b176-6527cdc204c5">
-			\begin {eqnarray*} x^2y''-3xy'+3y&amp;=&amp;x^2(u''x+2u')-3x(u'x+u)+3ux\\
-			&amp;=&amp;x^3u''-x^2u'\end {eqnarray*}
-		</div>
-		<div class="indent" id="c2aa435f-ca71-47a9-b091-3f7e52504bb9">
-			Therefore \(y=ux\) is a solution of <a href="#x1-26r18">(5.6.18)</a> if and only if \[ x^3u''-x^2u'=0\] Separating the variables \(u'\) and
-			\(x\) yields \[ {u''\over u'}={1\over x}\] so \[ \ln |u'|=\ln |x|+k,\quad \mbox{ or, equivalently, } \quad  u'=C_1x\] Therefore \[ u={C_1\over
-			2}x^2+C_2\] so the general solution of <a href="#x1-26r18">(5.6.18)</a> is \[ y=ux={C_1\over 2}x^3+C_2x\] which we rewrite as \[ y=c_1x+c_2x^3\]
-			Therefore \(\{x,x^3\}\) is a fundamental set of solutions of <a href="#x1-26r18">(5.6.18)</a>.
-		</div>
+			<div class="indent" id="017e31c2-ec18-4491-be93-26e1cdec2c9e"></div>
+			<div id="cbdc8fdc-80f6-43af-b97f-93211636646c">
+				<span class="underline">
+					<span class="ptmrc8t-">
+						S
+						<span class="small-caps">OLUTION</span>
+						(
+					</span>
+					<span class="ptmb8t-">a</span>
+					<span class="ptmrc8t-">)&nbsp;</span>
+				</span>
+				If \(y=ue^x\), then \(y'=u'e^x+ue^x\) and \(y''=u''e^x+2u'e^x+ue^x\), so
+			</div>
+			<div class="eqnarray" id="0d3427b0-46be-4e6e-bacd-d89fdebef8ab">
+				\begin {eqnarray*} xy''-(2x+1)y'+(x+1)y&amp;=&amp;x(u''e^x+2u'e^x+ue^x)\\
+				&amp;&amp;-(2x+1)(u'e^x+ue^x)+(x+1)ue^x\\ &amp;=&amp;(xu''-u')e^x\end
+				{eqnarray*}
+			</div>
+			<div class="indent" id="170eb186-4b95-45aa-aae9-76e8c284c391">
+				Therefore \(y=ue^x\) is a solution of <a href="#x1-9r6">(5.6.6)</a> if and only if \[ (xu''-u')e^x=x^2\] which is a first order equation in
+				\(u'\). We rewrite it as \begin {equation} \label {eq:5.6.8} u''-{u'\over
+				x}=xe^{-x}\end {equation}
+				<a id="x1-12r8"></a>
+				To focus on how we apply variation of parameters to this equation, we
+				temporarily write \(z=u'\), so that <a href="#x1-12r8">(5.6.8)</a> becomes \begin {equation} \label {eq:5.6.9} z'-{z\over x}=xe^{-x}\end
+				{equation}
+				<a id="x1-13r9"></a>
+				We leave it to you to show (by separation of variables) that \(z_1=x\) is
+				a solution of the complementary equation \[ z'-{z\over x}=0 \] for <a href="#x1-13r9">(5.6.9)</a>. By applying variation of parameters as in Section&nbsp;1.2, we can now
+				see that every solution of <a href="#x1-13r9">(5.6.9)</a> is of the form \[ z=vx\quad \mbox{ where } \quad  v'x=xe^{-x}, \quad \mbox{ so } \quad  v'=e^{-x} \quad \mbox{ and } \quad  v=-e^{-x}+C_1\] Since
+				\(u'=z=vx\), \(u\) is a solution of <a href="#x1-12r8">(5.6.8)</a> if and only if \[ u'=vx=-xe^{-x}+C_1x\] Integrating this yields \[
+				u=(x+1)e^{-x}+{C_1\over 2}x^2+C_2\] Therefore the general solution of <a href="#x1-9r6">(5.6.6)</a> is \begin {equation} \label {eq:5.6.10} y=ue^x=x+1+{C_1\over
+				2}x^2e^x+C_2e^x\end {equation}
+				<a id="x1-14r10"></a>
+			</div>
+			<div id="88a71ad9-328a-4eda-a1de-fb0d64946991">
+				<span class="underline">
+					<span class="ptmrc8t-">
+						S
+						<span class="small-caps">OLUTION</span>
+						(
+					</span>
+					<span class="ptmb8t-">b</span>
+					<span class="ptmrc8t-">)&nbsp;</span>
+				</span>
+				By letting \(C_1=C_2=0\) in <a href="#x1-14r10">(5.6.10)</a>, we see that \(y_{p_1}=x+1\) is a solution of <a href="#x1-9r6">(5.6.6)</a>. By letting \(C_1=2\) and \(C_2=0\), we see that \(y_{p_2}=x+1+x^2e^x\)
+				is also a solution of <a href="#x1-9r6">(5.6.6)</a>. Since the difference of two solutions of <a href="#x1-9r6">(5.6.6)</a> is a solution of <a href="#x1-10r7">(5.6.7)</a>, \(y_2=y_{p_1}-y_{p_2}=x^2e^x\) is a solution of <a href="#x1-10r7">(5.6.7)</a>. Since \(y_2/y_1\) is nonconstant and we already know that \(y_1=e^x\)
+				is a solution of <a href="#x1-9r6">(5.6.6)</a>, Theorem&nbsp;
+				<span class="ptmb8t-">5.1.6</span>
+				implies that \(\{e^x,x^2e^x\}\) is a fundamental set of solutions of <a href="#x1-10r7">(5.6.7)</a>. __
+			</div>
+			<div class="indent" id="bc23b1cf-1793-4cfc-b174-720a1930352b">
+				Although <a href="#x1-14r10">(5.6.10)</a> is a correct form for the general solution of <a href="#x1-9r6">(5.6.6)</a>, it’s silly to leave the arbitrary coefficient of \(x^2e^x\) as
+				\(C_1/2\) where \(C_1\) is an arbitrary constant. Moreover, it’s sensible
+				to make the subscripts of the coefficients of \(y_1=e^x\) and
+				\(y_2=x^2e^x\) consistent with the subscripts of the functions themselves.
+				Therefore we rewrite <a href="#x1-14r10">(5.6.10)</a> as \[ y=x+1+c_1e^x+c_2x^2e^x \] by simply renaming the arbitrary
+				constants. We’ll also do this in the next two examples, and in the answers
+				to the exercises.
+			</div>
+			<div class="newtheorem" id="ec499f28-d80d-4169-adf1-8a0e2cd908d9">
+				<div>
+					<span class="head">
+						<span class="ex-number">Example&nbsp;5.6.2</span>
+					</span>
+					<a id="x1-152"></a>
+					<br class="newline" />
+				</div>
+				<dl class="list1">
+					<dt class="list">
+						<span class="ptmb8t-">(a)</span>
+					</dt>
+					<dd class="list">
+						<div>
+							Find the general solution of \[ x^2y''+xy'-y=x^2+1\] given that
+							\(y_1=x\) is a solution of the complementary equation \begin
+							{equation} \label {eq:5.6.11} x^2y''+xy'-y=0\end {equation}
+							<a id="x1-17r11"></a>
+							As a byproduct of this result, find a fundamental set of solutions
+							of <a href="#x1-17r11">(5.6.11)</a>.
+						</div>
+					</dd>
+					<dt class="list">
+						<span class="ptmb8t-">(b)</span>
+					</dt>
+					<dd class="list">
+						<div>
+							Solve the initial value problem \begin {equation} \label {eq:5.6.12}
+							x^2y''+xy'-y=x^2+1, \quad y(1)=2,\; y'(1)=-3\end {equation}
+							<a id="x1-19r12"></a>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<div class="indent" id="7c1f64f1-dafa-49fa-9ee2-c7a16480cf7c"></div>
+			<div id="57087b6d-51c2-4df6-952b-cfb8723df9b0">
+				<span class="underline">
+					<span class="ptmrc8t-">
+						S
+						<span class="small-caps">OLUTION</span>
+						(
+					</span>
+					<span class="ptmb8t-">a</span>
+					<span class="ptmrc8t-">)&nbsp;</span>
+				</span>
+				If \(y=ux\), then \(y'=u'x+u\) and \(y''=u''x+2u'\), so
+			</div>
+			<div class="eqnarray" id="38b99141-da2c-4e34-8c6f-b52d1ef88e3d">
+				\begin {eqnarray*} x^2y''+xy'-y&amp;=&amp;x^2(u''x+2u')+x(u'x+u)-ux\\
+				&amp;=&amp;x^3u''+3x^2u'\end {eqnarray*}
+			</div>
+			<div class="indent" id="1eeeefad-5787-4974-81e4-46cee8de23e6">
+				Therefore \(y=ux\) is a solution of <a href="#x1-19r12">(5.6.12)</a> if and only if \[ x^3u''+3x^2u'=x^2+1\] which is a first order equation
+				in \(u'\). We rewrite it as \begin {equation} \label {eq:5.6.13}
+				u''+{3\over x}u'={1\over x}+{1\over x^3}\end {equation}
+				<a id="x1-20r13"></a>
+				To focus on how we apply variation of parameters to this equation, we
+				temporarily write \(z=u'\), so that <a href="#x1-20r13">(5.6.13)</a> becomes \begin {equation} \label {eq:5.6.14} z'+{3\over x}z={1\over
+				x}+{1\over x^3}\end {equation}
+				<a id="x1-21r14"></a>
+				We leave it to you to show by separation of variables that \(z_1=1/x^3\)
+				is a solution of the complementary equation \[ z'+{3\over x}z=0 \] for <a href="#x1-21r14">(5.6.14)</a>. By variation of parameters, every solution of <a href="#x1-21r14">(5.6.14)</a> is of the form \[ z={v\over x^3}\quad \mbox{ where } \quad  {v'\over
+				x^3}={1\over x}+{1\over x^3}, \quad \mbox{ so } \quad  v'=x^2+1 \quad \mbox{ and } \quad  v={x^3\over 3}+x+C_1\] Since \(u'=z=v/x^3\), \(u\) is a
+				solution of <a href="#x1-21r14">(5.6.14)</a> if and only if \[ u'={v\over x^3}={1\over 3}+{1\over x^2}+{C_1\over
+				x^3}\] Integrating this yields \[ u={x\over 3}-{1\over x}-{C_1\over
+				2x^2}+C_2\] Therefore the general solution of <a href="#x1-19r12">(5.6.12)</a> is \begin {equation} \label {eq:5.6.15} y=ux={x^2\over 3}-1-{C_1\over
+				2x}+C_2x\end {equation}
+				<a id="x1-22r15"></a>
+				Reasoning as in the solution of Example&nbsp;<a href="#x1-71">5.6.1</a><span class="ptmb8t-">(a)</span>,
+				we conclude that \(y_1=x\) and \(y_2=1/x\) form a fundamental set of
+				solutions for <a href="#x1-17r11">(5.6.11)</a>.
+			</div>
+			<div class="indent" id="f5775825-372a-433d-8e96-9127a07ffc1f">
+				As we explained above, we rename the constants in <a href="#x1-22r15">(5.6.15)</a> and rewrite it as \begin {equation} \label {eq:5.6.16} y={x^2\over
+				3}-1+c_1x+{c_2\over x}\end {equation}
+				<a id="x1-23r16"></a>
+			</div>
+			<div id="c0fd1bbc-f328-482c-aa56-0e01418e19ae">
+				<span class="underline">
+					<span class="ptmrc8t-">
+						S
+						<span class="small-caps">OLUTION</span>
+						(
+					</span>
+					<span class="ptmb8t-">b</span>
+					<span class="ptmrc8t-">)&nbsp;</span>
+				</span>
+				Differentiating <a href="#x1-23r16">(5.6.16)</a> yields \begin {equation} \label {eq:5.6.17} y'={2x\over 3}+c_1-{c_2\over
+				x^2}\end {equation}
+				<a id="x1-24r17"></a>
+				Setting \(x=1\) in <a href="#x1-23r16">(5.6.16)</a> and <a href="#x1-24r17">(5.6.17)</a> and imposing the initial conditions \(y(1)=2\) and \(y'(1)=-3\) yields
+			</div>
+			<div class="eqnarray" id="a2ae8666-549a-49f3-94a4-2d49711a5941">
+				\begin {eqnarray*} c_1+c_2&amp;=&amp; \phantom {-}{8\over 3} \\
+				c_1-c_2&amp;=&amp; -{11\over 3}\end {eqnarray*}
+			</div>
+			<div class="indent" id="b88fc56e-0436-4ae5-96c3-20131ed31447">
+				Solving these equations yields \(c_1=-1/2\), \(c_2=19/6\). Therefore the
+				solution of <a href="#x1-19r12">(5.6.12)</a> is \[ y={x^2\over 3}-1-{x\over 2}+{19\over 6x}\]
+			</div>
+			<div class="indent" id="333c5c14-9f07-4eae-a7c9-226dda81d3fa">
+				Using reduction of order to find the general solution of a homogeneous
+				linear second order equation leads to a homogeneous linear first order
+				equation in \(u'\) that can be solved by separation of variables. The next
+				example illustrates this.
+			</div>
+			<div class="newtheorem" id="8ee20acd-1003-4852-83aa-216e2adf189b">
+				<div>
+					<span class="head">
+						<span class="ex-number">Example&nbsp;5.6.3</span>
+					</span>
+					<a id="x1-253"></a>
+					Find the general solution and a fundamental set of solutions of \begin
+					{equation} \label {eq:5.6.18} x^2y''-3xy'+3y=0\end {equation}
+					<a id="x1-26r18"></a>
+					given that \(y_1=x\) is a solution.
+				</div>
+			</div>
+			<div class="indent" id="52fa8a62-79d1-4d4f-b905-696e0308c09c"></div>
+			<details class="solution">
+				<summary>Solution</summary>
+				&nbsp;If \(y=ux\) then \(y'=u'x+u\) and \(y''=u''x+2u'\), so
+			</div>
+			<div class="eqnarray" id="08528ca3-dbc2-40c2-b176-6527cdc204c5">
+				\begin {eqnarray*} x^2y''-3xy'+3y&amp;=&amp;x^2(u''x+2u')-3x(u'x+u)+3ux\\
+				&amp;=&amp;x^3u''-x^2u'\end {eqnarray*}
+			</div>
+			<div class="indent" id="c2aa435f-ca71-47a9-b091-3f7e52504bb9">
+				Therefore \(y=ux\) is a solution of <a href="#x1-26r18">(5.6.18)</a> if and only if \[ x^3u''-x^2u'=0\] Separating the variables \(u'\) and
+				\(x\) yields \[ {u''\over u'}={1\over x}\] so \[ \ln |u'|=\ln |x|+k,\quad \mbox{ or, equivalently, } \quad  u'=C_1x\] Therefore \[ u={C_1\over
+				2}x^2+C_2\] so the general solution of <a href="#x1-26r18">(5.6.18)</a> is \[ y=ux={C_1\over 2}x^3+C_2x\] which we rewrite as \[ y=c_1x+c_2x^3\]
+				Therefore \(\{x,x^3\}\) is a fundamental set of solutions of <a href="#x1-26r18">(5.6.18)</a>.
+			</div>
+		</details>
+
 
 		<nav class = "ex">
 			<a href = "sec5.6.ex.html">5.6 Exercises</a>
