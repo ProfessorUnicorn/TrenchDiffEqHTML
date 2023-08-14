@@ -30,7 +30,6 @@
 		</style>
 	</head>
 	<body>
-		<div id="de3c1ca7-bfce-4e6d-b4fd-ae89ab2a85c9"><a id="x1-1doc"></a></div>
 		<div id="a703b55e-dcd3-421d-a5c3-c539589fdaa2" class="section-title">
 			2.4 Transformation of Nonlinear Equations into Separable Equations
 		</div>
@@ -67,10 +66,10 @@
 				\end {equation}
 				where \(r\) can be any real number other than \(0\) or \(1\). (Note that <a href="#x1-3r2">(2.4.2)</a> is linear if and only if \(r=0\) or \(r=1\).) 
 			</div>	
-			<div class="reading-exercise">
+			<div id="x1-1" class="reading-exercise">
 				Substitute \(r=0\) and \(r=1\) into <a href="#x1-3r2">(2.4.2)</a> and show the result is linear
-			</div> 
-			<div>	
+			</div>
+			<div id="x1-2">
 				Using <span class="vocab">variation of parameters</span>, we will <span class="vocab">transform</span> the Bernoulli equations into a <span class="vocab">separable</span> equation by finding solutions of the form \( y=uy_1\) where \( y_1 \) a nontrivial solution of the "complementary" equation <a href="#x1-2r1">(2.4.1)</a>. Then, just as before, we differentiate \( y  = u y_1 \) using the <span class="vocab">product rule</span>
 
 				\begin{align*}
@@ -232,8 +231,7 @@
 
 		</details>
 
-
-		
+	
 		<details id="bf4395f6-f417-45ab-ada7-04bd745d0a8b">
 			<summary>
 				Nonlinear "Homogeneous"
@@ -249,11 +247,11 @@
 				\end {equation}
 			</div>
 
-			<div class="reading-exercise">
+			<div id="x1-3" class="reading-exercise">
 				Differentiate \( u y_1 \) where \( u = u(x) \) and \( y_1 = y_1(x) \) with respect to \( x \) using the product rule
 			</div> 
 
-			<div>
+			<div id="x1-4">
 				We'll start by making a familiar substitution of \( y = u y_1 \) into <a href="#x1-7r4">(2.4.4)</a>
 				
 				<a id="x1-7r45"></a>
@@ -264,7 +262,7 @@
 				\end{align}
 			</div>
 			
-			<div>
+			<div id="x1-5">
 				Now if we are able to write \( f(x,y) \) as a product of a function of \( u \) and the derivative of \( y_1 \) then the nonlinear equation will transform into a separable equation.
 
 				<a id="x1-7r46"></a>
@@ -274,7 +272,7 @@
 				\end{align}
 			</div>
 
-			<div>
+			<div id="x1-6">
 				Now <a href="#x1-7r46">(2.4.6)</a> is separable once we first handle constant solution cases individually 
 				\begin{align*}
 					y_1 = 0 
@@ -283,7 +281,7 @@
 				\end{align*}
 			</div>
 
-			<div>
+			<div id="x1-7">
 				Once constant solutions are identified, we can now proceed to separate the variables in <a href="#x1-7r46">(2.4.6)</a> and solve
 
 				\begin{align*}	
@@ -300,10 +298,10 @@
 		<details id="973da0d2-03ad-47f6-9ba2-e87019b50f82">
 			<summary>Homogeneous Nonlinear Equations</summary>
 			
-			<div>
+			<div id="x1-8">
 				We will consider <span class="vocab">homogeneous nonlinear equations</span>, the most widely studied class of equations for which this substitution works. Other types of equations appear in Exercises&nbsp;<span class="ptmb8t-">44</span>–<span class="ptmb8t-">51</span>.
-			</div>	
-			<div>
+			</div>
+			<div id="x1-9">
 				We previously defined <span class="vocab">homogeneous</span> in terms of <em>linear</em> differential equations, but it is something entirely different for <em>nonlinear</em>  differential equations. A nonlinear differential equation <a href="#x1-7r4">(2.4.4)</a> is said to be <span class="vocab">homogeneous</span> if \( x \) and \( y \)  occur in \( f(x,y) \) in such a way that  \( f(x,y) \) can be written to depend on only the ratio \( y / x \) in other words if \( f(x,y) = q( y / x)  \) can be written as a function of a single variable \( u = y / x \)
 
 				<a id="x1-10r7"></a>
@@ -312,8 +310,7 @@
 				\end {equation}
 			</div>
 		
-		
-			<div> 
+			<div id="x1-10">
 				For instance, we can rewrite the following differential equations in terms of \( y / x \)
 				\[
 					\frac{dy}{dx} = {y+xe^{-y/x}\over x}
@@ -343,7 +340,7 @@
 
 			</div>
 
-			<div> 
+			<div id="x1-11"> 
 				The general method for transforming nonlinear differential equations into separable differential equations involves first making a substitution \( y = uy_1 \) for an appropriately chosen \( y_1 \) and then rewriting \( f(x,y) \) of <a href="#x1-7r4">(2.4.4)</a> as a product of \( u \) and the derivative of \( y_1 \) as shown in <a href="#x1-7r46">(2.4.6)</a>
 				
 				\begin{align*}	
@@ -351,7 +348,7 @@
 				\end{align*}	
 			</div>
 
-			<div> 
+			<div id="x1-12"> 
 				<span class="vocab">Homogeneous nonlinear</span> differential equations <a href="#x1-10r7">(2.4.7)</a> can be solved with this method using \( y_1 = x .\) Notice we are not using \(y_1\) to represent a solution to a "complementary equation" but rather we are choosing an appropriate \(y_1\) that is known to work. When we use \( y_1 = x\) then \(y = uy_1 = ux \) which we can differentiate using the product rule:
 
 				\begin{align*}	
