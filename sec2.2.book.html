@@ -35,7 +35,7 @@
 		</div>
 
 		<details id="a50dd899-4b46-453a-ba27-59f85b1d1e1f">
-			<summary>Separable Equations</summary>
+			<summary>Separable Equations Theory</summary>
 
 			<div id="ef784ae1-8d03-43e6-8740-2ac28d9babe8">
 				A first order differential equation is
@@ -58,12 +58,14 @@
 					\quad\text{and}\quad
 					H(y) = \int_{y_0}^y h(t) dt
 				\end{equation*}
+			</div>	
 
-				<div class="reading-exercise">
-					Calculate \( G'(x) \) and \( H'(y) \) using the Fundamental Theorem of Calculus
-				</div>   
-				
-				Rewriting them as derivatives using <span class="vocab">Differential (Leibniz) notation</span>, we have:
+			<div class="reading-exercise">
+				Calculate \( G'(x) \) and \( H'(y) \) using the Fundamental Theorem of Calculus
+			</div>  
+
+			<div> 
+				Rewriting them as derivatives using <span class="vocab">differential (Leibniz) notation</span>, we have:
 				
 				<a id="x1-3r2"></a>
 				\begin {equation} \label {eq:2.2.2} 
@@ -123,11 +125,39 @@
 					H(y) = & G(x) + c
 				\end{align*}
 			</div>
+		</details>
+
+
+
+		<details id="a50dd899-4b46-453a-ba27-59f85b1d1e1f">
+			<summary>Separable Examples</summary>
+
 			<!--Example 1-->
 			<div class="example" id="x1-51" style="--ex-number: 1">
-				<div>
-					Solve the equation \[ \frac{dy}{dx} =x(1+y^2)\]
-				</div>
+				<ol>
+					<li>
+						Solve the equation \[ \frac{dy}{dx} =x(1+y^2)\]
+					</li>
+					<li>
+						Sketch some integral curves on the direction field
+						<a
+							class="no-solution"
+							href="https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=0&dydx=x(1+y)%5E2&x=-4,4,30&y=-4,4,30&method=rk4&h=0.1"
+							target="_blank"
+						>
+							<figure class="figure"> 
+								<div>
+									<img height="264" src="EPS/example2.2.1.png" width="409">
+								</div>
+						
+								<figcaption class="caption">
+									<span class="id">Figure&nbsp;2.2.0</span> <span class="content"> A direction field
+									for \(\displaystyle \frac{dy}{dx} =x(1+y^2)\)</span>
+								</figcaption>
+							</figure>
+						</a>
+					</li>
+				</ol>	
 			
 				<details class="solution" id="90f5caf1-202c-4a11-a99a-51ccc941688f">
 					<summary>Solution</summary>
@@ -168,14 +198,14 @@
 					</li>
 					<li>
 						<a id="x1-10r5"></a>
-						Solve the initial value problem (IVP) 
+						Solve the IVP 
 						\begin {equation} \label {eq:2.2.5}
 						\frac{dy}{dx}=-{x\over y} \quad\quad y(1)=1
 						\end {equation}
 					</li>
 					<li>
 						<a id="x1-12r6"></a>
-						Solve the initial value problem (IVP)
+						Solve the IVP 
 						\begin {equation} \label {eq:2.2.6}
 						\frac{dy}{dx}=-{x\over y} \quad\quad y(1)=-2
 						\end {equation}
@@ -199,7 +229,7 @@
 								y^2 + x^2 = & c \\	
 							\end{align*}
 
-							The arbitrary constant is a positive value since it is the sum of squares, so  we can replace it with an expression that is always positive. We'll use \( a^2 \) as our arbitrary constant to obtain the <span class="vocab">implicit solution</span>
+							The arbitrary constant is a positive value since it is the sum of squares, so  we can replace it with an expression that is always positive. We'll use \( r^2 \) as our arbitrary constant to obtain the <span class="vocab">implicit solution</span>
 
 							<a id="x1-13r7"></a>
 							\begin{align} \label {eq:2.2.7}
@@ -207,68 +237,76 @@
 							\end{align}
 
 							Which we can recognize as the equation of a circle with radius \( r \) centered at the origin
-
+						
 							<div class="reading-exercise">
 								Solve <a href="#x1-13r7">(2.2.7)</a> explicitly for \(y\)
 							</div>   
-
-							Solving explicitly for \( y \) results in two different differentiable functions
-
-							<a id="x1-14r8"></a>
-							\begin{equation}\label {eq:2.2.8}
-								y(x) = \sqrt{r^2-x^2} \quad\text{and}\quad y(x) = -\sqrt{r^2-x^2} 
-							\end{equation}
-
-
-							Where \( y(x) = \sqrt{r^2-x^2} \) is the top half of the circle above the \(x\)-axis and \( y(x) = -\sqrt{r^2-x^2} \) is the bottom half blow the \(x\)-axis (Figure&nbsp;<a href="#-a-y-x-x-b-y-x-x-">2.2.1</a>). Each of these semicircles are <span class="vocab">solution curves</span> of <a href="#x1-8r4">(2.2.4)</a>
-							while the circle itself is an <span class="vocab">integral curve</span>.
-
 							<div>
-							
-							
-							Both of these functions are only defined when 
-							\( r^2-x^2 \ge 0 \) yields the same <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>) for both \( (-r,r) \)
+								Solving explicitly for \( y \) results in two different differentiable functions
+
+								<a id="x1-14r8"></a>
+								\begin{equation}\label {eq:2.2.8}
+									y = \sqrt{r^2-x^2} 
+									\quad\text{and}\quad 
+									y = -\sqrt{r^2-x^2} 
+								\end{equation}
+
+
+								Where \( y = \sqrt{r^2-x^2} \) is the top half of the circle above the \(x\)-axis and \( y = -\sqrt{r^2-x^2} \) is the bottom half blow the \(x\)-axis (Figure&nbsp;<a href="#-a-y-x-x-b-y-x-x-">2.2.1</a>). Each of these semicircles are <span class="vocab">solution curves</span> of <a href="#x1-8r4">(2.2.4)</a>
+								while the circle itself is an <span class="vocab">integral curve</span>.
 							</div>
-
-
+							<div>
+								Both of these functions are only defined when 
+								\( r^2-x^2 \ge 0 \) or on the open interval \( (-r,r) \)
+							</div>
 							<div class="reading-exercise">
-								Find the domain of <a href="x1-14r8">(2.2.8)</a>
+								Find the domain of <a href="x1-14r8">(2.2.8)</a> by solving the inequality \( r^2-x^2 \ge 0 \)
 							</div>  
 						</li>
 						<li>
-							To solve <a href="#x1-10r5">(2.2.5)</a> notice the initial condition \(y(1)=1\) indicates a positive value, so the function \( y(x) = \sqrt{r^2-x^2} \) will be used. Substituting the initial condition and solving for the arbitrary constant:
+							<div>
+								To solve <a href="#x1-10r5">(2.2.5)</a> notice the initial condition \(y(1)=1\) results in a positive \( y \) value, so the function \( y = \sqrt{r^2-x^2} \) will be used. Substituting the initial condition and solving for the arbitrary constant:
 
-							\begin{align*} 
-								y(x) =  \sqrt{r^2-x^2} \Longrightarrow
-								\underset{1}{\underbrace{y(1)}} = &  \sqrt{r^2-1^2} \\	
-								1 = &  \sqrt{r^2-1} \\	
-								1^2 = & r^2-1 \Longrightarrow r^2 = 2
-							\end{align*}
-							
-							Substituting \( r^2 = 2 \) into <a href="#x1-14r8">(2.2.8)</a>, we obtain the solution to the IVP and its IOV
-							 \[
-								y=\sqrt {2-x^2}
-							 	\quad\quad
-								\left(-\sqrt{2},\sqrt{2}\right)
-							 \]
+								\begin{align*} 
+									y(x) =  \sqrt{r^2-x^2} \Longrightarrow
+									\underset{1}{\underbrace{y(1)}} = &  \sqrt{r^2-1^2} \\	
+									1 = &  \sqrt{r^2-1} \\	
+									1^2 = & r^2-1 \Longrightarrow r^2 = 2
+								\end{align*}
+								
+								Substituting \( r^2 = 2 \) into <a href="#x1-14r8">(2.2.8)</a>, we obtain the solution to the IVP and its IOV
+								\[
+									y=\sqrt {2-x^2}
+									\quad\quad
+									\left(-\sqrt{2},\sqrt{2}\right)
+								\]
+							</div> 
+							<div class="reading-exercise">
+								Verify \( y=\sqrt {2-x^2} \) is a solution of <a href="#x1-8r4">(2.2.4)</a> by differentiating and substituting
+							</div>  
 						</li>
 
 						<li>
-							To solve <a href="#x1-12r6">(2.2.6)</a> notice the  initial condition \(y(1)=-2\) indicates a negative value, so the function \( y(x) = -\sqrt{r^2-x^2} \) will be used. Substituting the initial condition and solving for the arbitrary constant:
+							<div>
+								To solve <a href="#x1-12r6">(2.2.6)</a> notice the  initial condition \(y(1)=-2\) results in a negative \( y \) value, so the function \( y = -\sqrt{r^2-x^2} \) will be used. Substituting the initial condition and solving for the arbitrary constant:
 
-							\begin{align*} 
-								y(x) =  -\sqrt{r^2-x^2} \Longrightarrow
-								\underset{-2}{\underbrace{y(1)}} = &  \sqrt{r^2-1^2} \\	
-								-2 = &  -\sqrt{r^2-1} \\	
-								4 = & r^2-1 \Longrightarrow r^2 = 5
-							\end{align*}
-							
-							Substituting \( r^2 = 5 \) into <a href="#x1-14r8">(2.2.8)</a>, we obtain the solution to the IVP and its IOV
-							 \[ 
-							 	y=-\sqrt {5-x^2}
-								\quad\quad
-								\left(-\sqrt{5},\sqrt{5}\right)
-							\]
+								\begin{align*} 
+									y(x) =  -\sqrt{r^2-x^2} \Longrightarrow
+									\underset{-2}{\underbrace{y(1)}} = &  \sqrt{r^2-1^2} \\	
+									-2 = &  -\sqrt{r^2-1} \\	
+									4 = & r^2-1 \Longrightarrow r^2 = 5
+								\end{align*}
+								
+								Substituting \( r^2 = 5 \) into <a href="#x1-14r8">(2.2.8)</a>, we obtain the solution to the IVP and its IOV
+								\[ 
+									y=-\sqrt {5-x^2}
+									\quad\quad
+									\left(-\sqrt{5},\sqrt{5}\right)
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \( y=-\sqrt {5-x^2} \) is a solution of <a href="#x1-8r4">(2.2.4)</a> by differentiating and substituting
+							</div>  
 						</li>
 					</ol>
 				</details>
@@ -350,12 +388,14 @@
 				<ol>
 					<li>
 						<a id="x1-23r13"></a>
-						Find implicit solutions of \begin {equation} \label {eq:2.2.13}
+						Find implicit solutions 
+						\begin {equation} \label {eq:2.2.13}
 						\frac{dy}{dx} = {2x+1\over 5y^4+1}\end {equation}
 					</li>
 					<li>
 						<a id="x1-25r14"></a>
-							Find an implicit solution of \begin {equation} \label {eq:2.2.14}
+							Find an implicit solution of the IVP 
+							\begin {equation} \label {eq:2.2.14}
 							\frac{dy}{dx} = {2x+1\over 5y^4+1},\quad y(2)=1\end {equation}
 					</li>
 				</ol>
@@ -365,37 +405,48 @@
 
 					<ol>
 						<li>
-							<a id="x1-26r15"></a>
-							Separating variables in <a href="#x1-23r13">(2.2.13)</a> yields 
-							
-							\begin{align}\label {eq:2.2.15}
-								\frac{dy}{dx} = & \frac{2x+1}{5y^4+1} \nonumber \\
-								(5y^4+1)\frac{dy}{dx} = & 2x+1 \nonumber \\
-								\int (5y^4+1)\frac{dy}{dx} dx = & \int \left(2x+1\right) dx \nonumber \\
-								5\int y^4 dy + \int dy = & 2\int x dx + \int dx \nonumber \\
-								5\left(\frac{1}{5}y^5\right) + y = & 2\left(\frac{1}{2}x^2\right) + x + c \nonumber \\
-								\underset{H(y)}{\underbrace{y^5 + y}} = & \underset{G(x)}{\underbrace{x^2 + x}}+ c
-							\end{align}
-							
-							We call this the <span class="vocab">implicit solution</span> of <a href="#x1-23r13">(2.2.13)</a> and notice in this case it is not possible to solve explicitly for \( y \)
+							<div>
+								<a id="x1-26r15"></a>
+								Separating variables in <a href="#x1-23r13">(2.2.13)</a> yields 
+								
+								\begin{align}\label {eq:2.2.15}
+									\frac{dy}{dx} = & \frac{2x+1}{5y^4+1} \nonumber \\
+									(5y^4+1)\frac{dy}{dx} = & 2x+1 \nonumber \\
+									\int (5y^4+1)\frac{dy}{dx} dx = & \int \left(2x+1\right) dx \nonumber \\
+									5\int y^4 dy + \int dy = & 2\int x dx + \int dx \nonumber \\
+									5\left(\frac{1}{5}y^5\right) + y = & 2\left(\frac{1}{2}x^2\right) + x + c \nonumber \\
+									\underset{H(y)}{\underbrace{y^5 + y}} = & \underset{G(x)}{\underbrace{x^2 + x}}+ c
+								\end{align}
+							</div>
+							<div> 
+								We call this the <span class="vocab">implicit solution</span> of <a href="#x1-23r13">(2.2.13)</a> and notice in this case it is not possible to solve explicitly for \( y \)
+							</div>	
+							<div class="reading-exercise">
+								Verify <a href="#x1-26r15">(2.2.15)</a> is a solution of <a href="#x1-23r13">(2.2.13)</a> using implicit differentiation
+							</div> 
 						</li>
 						<li>
-							We already have our implicit solution <a href="#x1-26r15">(2.2.15)</a> so we just substitute in our initial condition \( y(2)=1 \) to solve for the constant \( c \)
+							<div>
+								We already have our implicit solution <a href="#x1-26r15">(2.2.15)</a> so we just substitute in our initial condition \( y(2)=1 \) to solve for the constant \( c \)
 
-							\begin{align*}
-								y^5 + y = & x^2 + x + c \\
-								\Big[ y(x) \Big]^5 + y(x) = & x^2 + x + c \\
-								\Big[ \underset{1}{\underbrace{y(2)}} \Big]^5 + y(2) = & (2)^2 + (2) + c \\
-								\big[ 1 \big]^5 + 1 = & 4 + 2 + c \\
-								2 = & 6 + c \\
-								c = -4 
-							\end{align*}
-							
-							Substituting in \( c = -4  \) into <a href="#x1-26r15">(2.2.15)</a> we have the implicit solution for our IVP <a href="#x1-25r14">(2.2.14)</a>
-							
-							\begin{equation*} 
-								y^5 + y = x^2 + x -4 
-							\end{equation*}
+								\begin{align*}
+									y^5 + y = & x^2 + x + c \\
+									\Big[ y(x) \Big]^5 + y(x) = & x^2 + x + c \\
+									\Big[ \underset{1}{\underbrace{y(2)}} \Big]^5 + y(2) = & (2)^2 + (2) + c \\
+									\big[ 1 \big]^5 + 1 = & 4 + 2 + c \\
+									2 = & 6 + c \\
+									c = -4 
+								\end{align*}
+								
+								Substituting in \( c = -4  \) into <a href="#x1-26r15">(2.2.15)</a> we have the implicit solution for our IVP <a href="#x1-25r14">(2.2.14)</a>
+								
+								\begin{equation*} 
+									y^5 + y = x^2 + x -4 
+								\end{equation*}
+							</div>	
+							<div class="reading-exercise">
+								Verify \( y^5 + y = x^2 + x -4  \) is a solution of <a href="#x1-23r13">(2.2.13)</a> using implicit differentiation
+							</div> 
 						</li>
 					</ol>
 				</details>
@@ -443,7 +494,7 @@
 					\int  \frac{1}{p(y)} dy = & \int g(x) dx \\	
 				\end{align*}
 
-				However, the division by \( p(y) \) will only work if \( p(y) \) has no zeros. When \( p(y) \) has a zero, we treat it similarly to how we treated <span class="vocab">trivial solutions</span>, first considering the trivial solution case individually, and then assuming \( y \) is not equal to the individual values. We will do the same for <span class="vocab">constant solutions</span> (<span class="vocab">equilibrium solutions</span>)
+				However, the division by \( p(y) \) will only work if \( p(y) \) has no zeros. When \( p(y) \) has a zero, we treat it similarly to how we treated <span class="vocab">trivial solutions</span>, first considering the trivial solution case individually, and then assuming \( y \) is not equal to the individual values. We will do the same for the solutions which are <span class="vocab">constant solutions</span> (also called <span class="vocab">equilibrium solutions</span>)
 			</div>
 
 			<!--Example 4-->
@@ -492,7 +543,7 @@
 						\end{equation*}
 
 						<div class="reading-exercise">
-							Find the domain of <a href="#x1-30r17">(2.2.17)</a> and determine possible intervals of validity 
+							Find the domain of <a href="#x1-30r17">(2.2.17)</a> and open intervals of solutions
 						</div>  
 						<div class="reading-exercise">
 							Verify <a href="#x1-30r17">(2.2.17)</a> is a solution of <a href="#x1-29r16">(2.2.16)</a> by differentiating and substituting
@@ -624,7 +675,7 @@
 							y-1 = & cye^{-\frac{1}{2}x^2}+ce^{-\frac{1}{2}x^2} \nonumber \\	
 							y-cye^{-\frac{1}{2}x^2} = & 1 + ce^{-\frac{1}{2}x^2} \nonumber \\	
 							y\left(1-ce^{-\frac{1}{2}x^2}\right) = & 1 + ce^{-\frac{1}{2}x^2} \nonumber \\	
-							y(x) = & \frac{1 + ce^{-\frac{1}{2}x^2}}{1-ce^{-\frac{1}{2}x^2}}
+							y = & \frac{1 + ce^{-\frac{1}{2}x^2}}{1-ce^{-\frac{1}{2}x^2}}
 						\end{align}
 						
 					</div>
@@ -632,20 +683,21 @@
 						By first identifying the <span class = "vocab">constant solutions</span> (<span class = "vocab">equilibrium solutions</span>) and then assuming \( y \) was explicitly not equal to those values, we were able to find this <span class = "vocab">one-parameter family</span> <a href="#x1-34r19">(2.2.19)</a> to represent all solutions of <a href="#x1-33r18">(2.2.18)</a> which are not identically equal to one or negative one. It turns out that one of the equilibrium solutions, \( y(x)=1 \) is also represented in the one-parameter family when c = 0:
 
 						\begin{align*} 	
-							y(0) = & \frac{1 + 0\cdot e^{-\frac{1}{2}x^2}}{1-0\cdot e^{-\frac{1}{2}x^2}} = 1 \\
+							y = & \frac{1 + 0\cdot e^{-\frac{1}{2}x^2}}{1-0\cdot e^{-\frac{1}{2}x^2}} = 1 \\
 						\end{align*}
 						
 						While one of the equilibrium solutions is part of the family, the other equilibrium solution is not. That is, regardless of choice of \( c \) we can never obtain the equilibrium solution \( y(x)=-1 \) from the family, so we call it a <span class = "vocab">singular solution</span> and it must be included in the <span class = "vocab">general solution</span>:
 
 						\begin{align*} 	
-							y(x) = -1 
+							y = -1 
 							\quad \quad 
-							y(x) = \frac{1 + ce^{-\frac{1}{2}x^2}}{1-ce^{-\frac{1}{2}x^2}}
+							y = \frac{1 + ce^{-\frac{1}{2}x^2}}{1-ce^{-\frac{1}{2}x^2}}
 							\\
 						\end{align*}
-
-
 					</div>
+					<div class="reading-exercise">
+						Verify \( y = \displaystyle \frac{1 + ce^{-\frac{1}{2}x^2}}{1-ce^{-\frac{1}{2}x^2}} \) is a solution of <a href="#x1-33r18">(2.2.18)</a> by differentiating and substituting
+					</div>  
 				</details>
 			</div>
 
@@ -692,84 +744,112 @@
 				The not true for nonlinear equations: first order nonlinear differential equations may or may not have a solution. 
 			</div>	
 			<div id="x-1-592">
-				While solutions of linear equations all come from a single one-parameter family, solutions of nonlinear equations may be a singular equilibrium solution (Examples <a href="#x1-284">2.2.4</a> and <a href="#x1-325">2.2.5</a>).
+				While solutions of linear equations all come from a single one-parameter family, solutions of nonlinear equations may have a singular solution (Examples <a href="#x1-284">2.2.4</a> and <a href="#x1-325">2.2.5</a>).
 			</div>
 			<div id="x-1-593">
-				Intervals of validity (IOV) are also different. For linear equations IOVs can be determined directly from the equation of the solution by determining undefined values whereas with nonlinear equations the equation does not provide enough information as the IOV may also depend on the initial condition (Example <a href="#x1-62">2.2.2</a>).
+				Intervals of validity (IOV) are also different. For linear equations IOVs can be determined directly from the domain of the solution (by determining undefined values) as well as the \( x \) value of the initial condition, whereas with nonlinear equations this does not provide enough information as the IOV may also depend on the \( y \) value of the initial condition (Example <a href="#x1-62">2.2.2</a>).
 			</div>
 			<div class="example" id="x1-366" style="--ex-number: 6">
-				<div>
-					Solve the initial value problem \[ \frac{dy}{dx} = 2xy^2 \quad\quad y(0)=y_0 \] and
-					determine the <span class="vocab">interval of validity</span> of the solution.
-				</div>
+				<ol>
+					<li>
+						Solve the <span class="vocab-repeat">IVP</span> and determine the <span class="vocab-repeat">IOV</span>
+						\[ \frac{dy}{dx} = 2xy^2 \quad\quad y(0)=0 \] 
+					</li>	
+					<li>
+						Solve the <span class="vocab-repeat">IVP</span> and determine the <span class="vocab-repeat">IOV</span>
+						\[ \frac{dy}{dx} = 2xy^2 \quad\quad y(0)=-3 \] 
+					</li>	
+					<li>
+						Solve the <span class="vocab-repeat">IVP</span> and determine the <span class="vocab-repeat">IOV</span> 
+						\[ \frac{dy}{dx} = 2xy^2 \quad\quad y(0)=4 \] 
+					</li>	
+				</ol>
 
 				<details class="solution" id="038ad0a8-e891-449d-9f76-a49d5d5f78d0">
 					<summary>Solution</summary>
-					<div id="437a289f-88e0-4041-a080-e96f69a2c39d">
-						From Example&nbsp;<a href="#x1-284">2.2.4</a>, we know that other than the trivial solution, \(y\) must be of the form of the one-parameter family:
-
-						<a id="x1-37r20"></a>
-						\begin {equation} \label{eq:2.2.20} 
-							y={1\over c-x^2}
-						\end {equation}
+					<ol>
+						<li>
+							<div>
+								From Example&nbsp;<a href="#x1-284">2.2.4</a> we know the general solution of the differential equation is the trivial solution and the one-parameter family
 						
-						Applying the initial condition, we can solve for a specific \( c\)
-						
-						\begin{align*} 	
-							y(x) = & {1\over c-x^2} \\
-							\underset{y_0}{\underbrace{y(0)}} = & {1\over c-0^2} \\
-							y_0 = & {1\over c} \Longrightarrow c =\frac{1}{y_0} \\
-						\end{align*}
+								\begin{equation*}
+									y(x) \equiv 0 \quad \quad y(x) = \frac{1}{c - x^2}
+								\end{equation*}
 
-						Substituting into <a href="#x1-37r20">(2.2.20)</a> we obtain the particular solution to the IVP:
+								The trivial solution also satisfies the initial condition \( y(0)=0 \) so the solution to the IVP is simply the trivial solution \( y(x) \equiv 0 \) which is defined for all \( x \) so the IOV is \( (-\infty, \infty) \)
+							</div>	
+						</li>	
+						<li>
+							<div>
+								Again from Example&nbsp;<a href="#x1-284">2.2.4</a>, we know that other than the trivial solution, \(y\) must be of the form of the one-parameter family:
 
-						\begin{align*} 	
-							y(x) = & \frac{1}{\frac{1}{y_0}-x^2} \\
-						\end{align*}
-
-						Simplifying by multiplying \( y_0 \) on top and bottom, we obtain:
-
-						\begin{align*} 	
-							y(x) = & \frac{y_0}{1-y_0x^2} \\
-						\end{align*}
-					</div>
-					<div>	
-						So we have our particular solution and now we need to determine the IOVs. We will have to consider cases for different values of \( y_0 \) so we will consider \( y_0 = 0 ,\) \( y_0 < 0 ,\) and \( y_0 > 0 \) separately:
-						<ul>
-							<li>
-								When \( y_0 = 0 \) then our solution is the trivial solution \( y(x) = \displaystyle \frac{0}{1-0\cdot x^2} = \frac{0}{1} = 0  \) which is valid for all values of \( x \) so the IOV is \( (-\infty, \infty) \)
-							</li>
-							<li>
-								When \( y_0 < 0 \) since this would result in the sum of two positive quantities in the denominator, guaranteeing that the solution is always defined, which again is valid for all values of \( x \) so the IOV is \( (-\infty, \infty) \)
-							</li>
-							<li>
-								When \( y_0 > 0 \) it is a little trickier since the denominator could evaluate to zero making it undefined. So we simply find the undefined points by setting the denominator to zero and solve:
-
+								<a id="x1-37r2333"></a>
+								\begin {equation} 
+									y={1\over c-x^2}
+								\end {equation}
+								
+								Applying the initial condition, we can solve for a specific \( c\)
+								
 								\begin{align*} 	
-									1-y_0x^2 = & 0 \\
-									1 = & y_0x^2 \\
-									\frac{1}{y_0} = & x^2 \Longrightarrow x = \pm \frac{1}{\sqrt{y_0}}
+									y(x) = & {1\over c-x^2} \\
+									\underset{-3}{\underbrace{y(0)}} = & {1\over c-0^2} \\
+									-3 = & {1\over c} \Longrightarrow c =-\frac{1}{3} \\
 								\end{align*}
-
-								Meaning the expression is undefined at \( x = 1 / \sqrt{y_0} \) and \( x = -1 / \sqrt{y_0} \) so possible IOVs are 
-
+	
+								Substituting into <a href="#x1-37r20">(2.2.20)</a> we obtain the particular solution to the IVP:
+	
 								\begin{align*} 	
-									\left(-\infty, -\frac{1}{\sqrt{y_0}}\right)
-									\quad
-									\text{or}
-									\quad
-									\left(-\frac{1}{\sqrt{y_0}}, \frac{1}{\sqrt{y_0}}\right)
-									\quad
-									\text{or}
-									\quad
-									\left(\frac{1}{\sqrt{y_0}}, \infty\right)
+									y = & \frac{1}{-\frac{1}{3}-x^2} \\
 								\end{align*}
+	
+								Simplifying by multiplying \( -3 \) on top and bottom, we obtain:
+	
+								\begin{align*} 	
+									y = & -\frac{3}{1 + 3x^2} \\
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Verify \( \displaystyle y = -\frac{3}{1 + 3x^2} \) is a solution of \( \displaystyle \frac{dy}{dx} = 2xy^2 \) by differentiating and substituting
+							</div>  	
+							<div>
+								And as a rational function, we may feel alerted to check for undefined values when the denominator is zero, but \( 1 + 3x^2 \) can never equal zero for real numbers so then our solution is defined for all \( x \) so the IOV is \( (-\infty, \infty) \)
+							</div>	
+						</li>	
+						<li>
+							<div>
+								Again from Example&nbsp;<a href="#x1-284">2.2.4</a>, \(y\) must be of the form of the one-parameter family <a href="#x1-37r20">(2.2.20)</a> so we again apply the initial condition and solve for a specific \( c\)
+								
+								\begin{align*} 	
+									y(x) = & {1\over c-x^2} \\
+									\underset{4}{\underbrace{y(0)}} = & {1\over c-0^2} \\
+									4 = & {1\over c} \Longrightarrow c =\frac{1}{4} \\
+								\end{align*}
+	
+								Substituting into <a href="#x1-37r20">(2.2.20)</a> we obtain the particular solution to the IVP:
+	
+								\begin{align*} 	
+									y = & \frac{1}{\frac{1}{4}-x^2} \\
+								\end{align*}
+	
+								Simplifying by multiplying \( 4 \) on top and bottom, we obtain:
+	
+								\begin{align*} 	
+									y = & \frac{4}{1-4x^2} \\
+								\end{align*} 
+							</div>
+							<div class="reading-exercise">
+								Verify \( \displaystyle y = \frac{4}{1-4x^2} \) is a solution of \( \displaystyle \frac{dy}{dx} = 2xy^2 \) by differentiating and substituting
+							</div>  
+							<div class="reading-exercise">
+								Find the domain of \( y = \displaystyle \frac{4}{1-4x^2} \)
+							</div>  	
+							<div>
+								Again the result is a rational function so again we need to check when the denominator is zero, which happens when \( x = \displaystyle \frac{1}{2} \) or \( x = - \displaystyle \frac{1}{2} \)
+								so the largest interval that includes the initial \( x \) value \( x=0 \) is \( \left(-\displaystyle \frac{1}{2}, \displaystyle \frac{1}{2} \right) \) which is the IOV for this solution
+							</div>	
+						</li>	
+					</ol>
 
-								The initial condition of \( y(0) = y_0 \) then the \(x\) value of 0 places us directly in the IOV 
-								\[ \left(-\frac{1}{\sqrt{y_0}}, \frac{1}{\sqrt{y_0}}\right) \]
-							</li>
-						</ul>	
-					</div>
 
 				</details>
 			</div>
