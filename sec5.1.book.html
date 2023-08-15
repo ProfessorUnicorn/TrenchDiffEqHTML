@@ -551,16 +551,16 @@
 			<div id="5f80fb36-94ba-401c-9379-d9b5b08de13b">
 				<span class="ptmb8t-">Proof</span>
 				Differentiating <a href="#x1-50r28">(5.1.28)</a> yields \begin {equation} \label {eq:5.1.30}
-				\frac{dW}{dx}=\frac{dy}{dx}_1\frac{dy}{dx}_2+y_1\frac{d^2y}{dx^2}_2-\frac{dy}{dx}_1\frac{dy}{dx}_2-\frac{d^2y}{dx^2}_1y_2= y_1\frac{d^2y}{dx^2}_2-\frac{d^2y}{dx^2}_1y_2\end {equation}
+				\frac{dW}{dx}=\frac{dy_1}{dx}\frac{dy_2}{dx}+y_1\frac{d^2y}{dx^2}_2-\frac{dy_1}{dx}\frac{dy_2}{dx}-\frac{d^2y}{dx^2}_1y_2= y_1\frac{d^2y}{dx^2}_2-\frac{d^2y}{dx^2}_1y_2\end {equation}
 				<a id="x1-52r30"></a>
-				Since \(y_1\) and \(y_2\) both satisfy <a href="#x1-49r27">(5.1.27)</a>, \[ \frac{d^2y}{dx^2}_1 =-p\frac{dy}{dx}_1-qy_1\quad \mbox{ and } \quad  \frac{d^2y}{dx^2}_2 =-p\frac{dy}{dx}_2-qy_2\]
+				Since \(y_1\) and \(y_2\) both satisfy <a href="#x1-49r27">(5.1.27)</a>, \[ \frac{d^2y}{dx^2}_1 =-p\frac{dy_1}{dx}-qy_1\quad \mbox{ and } \quad  \frac{d^2y}{dx^2}_2 =-p\frac{dy_2}{dx}-qy_2\]
 				Substituting these into <a href="#x1-52r30">(5.1.30)</a> yields
 			
 				<div class="eqnarray" id="04fb7c9a-0e38-45ed-aafa-b2eff3486bdd">
-					\begin {eqnarray*} \frac{dW}{dx}&amp;=&amp; \displaystyle -y_1\bigl (p\frac{dy}{dx}_2+qy_2\bigr
-					) +y_2\bigl (p\frac{dy}{dx}_1+qy_1\bigr ) \\ &amp;=&amp; \displaystyle
-					-p(y_1\frac{dy}{dx}_2-y_2\frac{dy}{dx}_1)-q(y_1y_2-y_2y_1)\\ &amp;=&amp;
-					-p(y_1\frac{dy}{dx}_2-y_2\frac{dy}{dx}_1)=-pW\end {eqnarray*}
+					\begin {eqnarray*} \frac{dW}{dx}&amp;=&amp; \displaystyle -y_1\bigl (p\frac{dy_2}{dx}+qy_2\bigr
+					) +y_2\bigl (p\frac{dy_1}{dx}+qy_1\bigr ) \\ &amp;=&amp; \displaystyle
+					-p(y_1\frac{dy_2}{dx}-y_2\frac{dy_1}{dx})-q(y_1y_2-y_2y_1)\\ &amp;=&amp;
+					-p(y_1\frac{dy_2}{dx}-y_2\frac{dy_1}{dx})=-pW\end {eqnarray*}
 				</div>
 			
 				Therefore \(\frac{dW}{dx}+p(x)W=0\); that is, \(W\) is the solution of the initial
@@ -578,11 +578,11 @@
 
 			<div class="indent" id="25cd85d8-bf67-4ce0-9bc5-850eea3339a8">
 				The Wronskian of \(\{y_1,y_2\}\) is usually written as the determinant \[
-				W=\left | \begin {array}{cc} y_1 &amp; y_2 \\ \frac{dy}{dx}_1 &amp; \frac{dy}{dx}_2 \end {array}
+				W=\left | \begin {array}{cc} y_1 &amp; y_2 \\ \frac{dy_1}{dx} &amp; \frac{dy_2}{dx} \end {array}
 				\right |\] The expressions in <a href="#x1-47r26">(5.1.26)</a> for \(c_1\) and \(c_2\) can be written in terms of determinants as \[
 				c_1={1\over W(x_0)} \left | \begin {array}{cc} k_0 &amp; y_2(x_0) \\ k_1
-				&amp; \frac{dy}{dx}_2(x_0) \end {array} \right | \quad \mbox{ and } \quad  c_2={1\over
-				W(x_0)} \left | \begin {array}{cc} y_1(x_0) &amp; k_0 \\ \frac{dy}{dx}_1(x_0)
+				&amp; \frac{dy_2}{dx}(x_0) \end {array} \right | \quad \mbox{ and } \quad  c_2={1\over
+				W(x_0)} \left | \begin {array}{cc} y_1(x_0) &amp; k_0 \\ \frac{dy_1}{dx}(x_0)
 				&amp;k_1 \end {array} \right |\] If you’ve taken linear algebra you may
 				recognize this as <span class="vocab">Cramer’s rule</span>.
 			</div>

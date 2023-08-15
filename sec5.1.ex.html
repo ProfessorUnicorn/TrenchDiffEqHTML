@@ -512,7 +512,7 @@
 				Show that if \(y_1\) and \(y_2\) are twice continuously differentiable
 				on \((a,b)\) and the Wronskian \(W\) of \(\{y_1,y_2\}\) has no zeros
 				in \((a,b)\) then the equation \[ \frac {1}{W} \left | \begin
-				{array}{ccc} y &amp; y_1 &amp; y_2 \\ \frac{dy}{dx} &amp; \frac{dy}{dx}_1 &amp; \frac{dy}{dx}_2 \\ \frac{d^2y}{dx^2}
+				{array}{ccc} y &amp; y_1 &amp; y_2 \\ \frac{dy}{dx} &amp; \frac{dy_1}{dx} &amp; \frac{dy_2}{dx} \\ \frac{d^2y}{dx^2}
 				&amp; \frac{d^2y_1}{dx^2} &amp; \frac{d^2y_2}{dx^2} \end {array} \right |=0 \] can be written as
 				\[ \frac{d^2y}{dx^2}+p(x)\frac{dy}{dx}+q(x)y=0, {\tag A} \] where \(p\) and \(q\) are
 				continuous on \((a,b)\) and \(\{y_1,y_2\}\) is a fundamental set of
@@ -573,7 +573,7 @@
 				Suppose \(p\) and \(q\) are continuous on \((a,b)\) and \(x_0\) is in
 				\((a,b)\). Let \(y_1\) and \(y_2\) be the solutions of \[
 				\frac{d^2y}{dx^2}+p(x)\frac{dy}{dx}+q(x)y=0 {\tag A} \] such that \[ y_1(x_0)=1, \quad
-				\frac{dy}{dx}_1(x_0)=0\quad \mbox{ and } \quad  y_2(x_0)=0,\; \frac{dy}{dx}_2(x_0)=1\]
+				\frac{dy_1}{dx}(x_0)=0\quad \mbox{ and } \quad  y_2(x_0)=0,\; \frac{dy_2}{dx}(x_0)=1\]
 				(Theorem&nbsp;<span class="ptmb8t-">5.1.1</span>
 				implies that each of these initial value problems has a unique
 				solution on \((a,b)\).)
@@ -600,7 +600,7 @@
 			<div class="ex-body">
 				<a id="x1-6538"></a>
 				Find solutions \(y_1\) and \(y_2\) of the equation \(\frac{d^2y}{dx^2}=0\) that
-				satisfy the initial conditions \[ y_1(x_0)=1, \quad \frac{dy}{dx}_1(x_0)=0 \quad \mbox{ and } \quad  y_2(x_0)=0, \quad \frac{dy}{dx}_2(x_0)=1\] Then use
+				satisfy the initial conditions \[ y_1(x_0)=1, \quad \frac{dy_1}{dx}(x_0)=0 \quad \mbox{ and } \quad  y_2(x_0)=0, \quad \frac{dy_2}{dx}(x_0)=1\] Then use
 				Exercise&nbsp;<a href="#x1-6137">37</a>&nbsp;<span class="ptmb8t-">(c)</span>
 				to write the solution of the initial value problem \[ \frac{d^2y}{dx^2}=0,\quad
 				y(0)=k_0,\quad \left.\frac{dy}{dx}\right|_{0}=k_1 \] as a linear combination of \(y_1\) and
@@ -615,7 +615,7 @@
 				Let \(x_0\) be an arbitrary real number. Given (Example&nbsp;<span class="ptmb8t-">5.1.1</span>
 				) that \(e^x\) and \(e^{-x}\) are solutions of \(\frac{d^2y}{dx^2}-y=0\), find
 				solutions \(y_1\) and \(y_2\) of \(\frac{d^2y}{dx^2}-y=0\) such that \[ y_1(x_0)=1,
-				\quad \frac{dy}{dx}_1(x_0)=0\quad \mbox{ and } \quad  y_2(x_0)=0,\; \frac{dy}{dx}_2(x_0)=1\]
+				\quad \frac{dy_1}{dx}(x_0)=0\quad \mbox{ and } \quad  y_2(x_0)=0,\; \frac{dy_2}{dx}(x_0)=1\]
 				Then use Exercise&nbsp;<a href="#x1-6137">37</a>&nbsp;<span class="ptmb8t-">(c)</span>
 				to write the solution of the initial value problem \[ \frac{d^2y}{dx^2}-y=0,\quad
 				y(x_0)=k_0,\quad \left.\frac{dy}{dx}\right|_{x_0}=k_1 \] as a linear combination of \(y_1\) and
@@ -630,8 +630,8 @@
 				Let \(x_0\) be an arbitrary real number. Given (Example&nbsp;<span class="ptmb8t-">5.1.2</span>
 				) that \(\cos \omega x\) and \(\sin \omega x\) are solutions of
 				\(\frac{d^2y}{dx^2}+\omega ^2y=0\), find solutions of \(\frac{d^2y}{dx^2}+\omega ^2y=0\) such that
-				\[ y_1(x_0)=1, \quad \frac{dy}{dx}_1(x_0)=0\quad \mbox{ and } \quad  y_2(x_0)=0,\;
-				\frac{dy}{dx}_2(x_0)=1\] Then use Exercise&nbsp;<a href="#x1-6137">37</a>&nbsp;<span class="ptmb8t-">(c)</span>
+				\[ y_1(x_0)=1, \quad \frac{dy_1}{dx}(x_0)=0\quad \mbox{ and } \quad  y_2(x_0)=0,\;
+				\frac{dy_2}{dx}(x_0)=1\] Then use Exercise&nbsp;<a href="#x1-6137">37</a>&nbsp;<span class="ptmb8t-">(c)</span>
 				to write the solution of the initial value problem \[ \frac{d^2y}{dx^2}+\omega
 				^2y=0,\quad y(x_0)=k_0,\quad \left.\frac{dy}{dx}\right|_{x_0}=k_1 \] as a linear combination of
 				\(y_1\) and \(y_2\). Use the identities
@@ -650,8 +650,8 @@
 					Recall from Exercise&nbsp;<a href="#x1-174">4</a>
 					that \(1/(x-1)\) and \(1/(x+1)\) are solutions of \[
 					(x^2-1)\frac{d^2y}{dx^2}+4x\frac{dy}{dx}+2y=0 {\tag A} \] on \((-1,1)\). Find solutions of
-					(A) such that \[ y_1(0)=1, \quad \frac{dy}{dx}_1(0)=0\quad \mbox{ and } \quad 
-					y_2(0)=0,\; \frac{dy}{dx}_2(0)=1\] Then use Exercise&nbsp;<a href="#x1-6137">37</a>&nbsp;<span class="ptmb8t-">(c)</span>
+					(A) such that \[ y_1(0)=1, \quad \frac{dy_1}{dx}(0)=0\quad \mbox{ and } \quad 
+					y_2(0)=0,\; \frac{dy_2}{dx}(0)=1\] Then use Exercise&nbsp;<a href="#x1-6137">37</a>&nbsp;<span class="ptmb8t-">(c)</span>
 					to write the solution of initial value problem \[
 					(x^2-1)\frac{d^2y}{dx^2}+4x\frac{dy}{dx}+2y=0,\quad y(0)=k_0,\quad \left.\frac{dy}{dx}\right|_{0}=k_1 \] as a linear
 					combination of \(y_1\) and \(y_2\).
