@@ -68,18 +68,6 @@
 				done by hand. However, there is software for doing this and using the <span class="vocab">direction
 					fields</span> and <span class="vocab">integral curves</span> gives useful insights into the behavior of the solutions of the differential equation even
 				if we can’t obtain exact solutions.
-
-				<ul>
-					<li>
-					<a href="https://homepages.bluffton.edu/~nesterd/apps/slopefields.html" target=_blank>Bluffton University Direction Field Plotter</a>:
-					https://homepages.bluffton.edu/~nesterd/apps/slopefields.html
-					</li>	
-					<li>
-					<a href="https://c3d.libretexts.org/DirectionField/index.html" target=_blank>Libre Texts Direction Field Plotter</a>:
-					https://c3d.libretexts.org/DirectionField/index.html
-					</li>	
-				</ul>
-
 			</div>
 
 			<div class="example" id="ex1.3.1" style="--ex-number: 1">
@@ -252,62 +240,150 @@
 						{dx\over dt}=B(x,y) \quad {dy\over dt}=A(x,y)  
 					\end {equation} 
 				</div>
-				<div class="indent" id="37a23307-55dd-4295-b059-5e7b807cada3">  
-					Equation&nbsp;<a href="#x1-7r2">(1.3.2)</a> can be rewritten in parametric form as
-					\begin{equation*} 
-						\frac{dy}{dx} = \frac{ \displaystyle\frac{dy}{dt}}{ \displaystyle\frac{dx}{dt}} = -\frac{x}{y} = {A(x,y)\over B(x,y)}
-					\end{equation*}
-					with \( A(x,y) = -x \) and \( B(x,y)=y \), so we have
-					
-					\[ {dx\over dt}=-y \quad {dy\over dt}=x \]
-				</div>
-				<div class="indent" id="86e7b5d2-23e6-4487-bfd0-805a0a13c6f1">
-					Figure&nbsp;<a href="#-a-direction-field-and-integral-curves-for-y-x-overy-">1.3.5</a> shows a direction field and some <span class="vocab">integral curves</span> for <a href="#x1-7r2">(1.3.2)</a>. As shown in Example&nbsp;<span class="ptmb8t-">1.2.1</span> and will verify again in Section&nbsp;2.2, the <span class="vocab">integral curves</span> of <a href="#x1-7r2">(1.3.2)</a> are circles centered at the origin
-				</div>
-		
-				<figure class="figure" id="b8289ed3-a33a-40dc-98b9-d0134726a421">
-					<div id="-a-direction-field-and-integral-curves-for-y-x-overy-"><img height="264" src="EPS/fig010305.png" width="409"> <a id="x1-11r5"></a></div>
-					<figcaption class="caption"><span class="id">Figure&nbsp;1.3.5 </span><span class="content">A direction field and <span class="vocab">integral curves</span> for \(\displaystyle \frac{dy}{dx}=- {x\over y}\)                                       </span></figcaption><!-- tex4ht:label?: x1-11r5  -->
-				</figure>
 
-				<div id="b8289ed3-a33a-40dc-98b9-d0134726a422">
-					Equation&nbsp;<a href="#x1-8r3">(1.3.3)</a> can also be rewritten in this form as
-					\begin{equation*} 
-						\frac{dy}{dx} = \frac{ \displaystyle\frac{dy}{dt}}{ \displaystyle\frac{dx}{dt}} = {x^2\over1-x^2-y^2} = {A(x,y)\over B(x,y)}
-					\end{equation*}
-					with \( A(x,y) = x^2 \) and \( B(x,y)= 1-x^2-y^2  \), so we have
-					
-				\[ {dx\over dt}=1-x^2-y^2 \quad {dy\over dt}=x^2\]
-				</div> 
-
-				<div class="indent" id="bee92ce6-5ab7-4668-9b67-e807f384c50c">
-					Figure&nbsp;<a href="#-a-direction-field-and-integral-curves-for-y-x-overxy-">1.3.6<!-- tex4ht:ref: figure:1.3.6  --></a> shows a direction field and some <span class="vocab">integral curves</span> for (<a href="#x1-8r3">1.3.3<!-- tex4ht:ref: eq:1.3.3  --></a>). The <span class="vocab">integral curves</span> near the top and
-				bottom are <span class="vocab">solution curves</span>. However, the <span class="vocab">integral curves</span> near the middle are more complicated. For example,
-				Figure&nbsp;<a href="#-">1.3.7</a> shows the <span class="vocab">integral curve</span> through the origin. The vertices of the dashed rectangle are on the circle \(x^2+y^2=1\) (with \(a\approx 0.846\),
-				\(b\approx 0.533\)), where all <span class="vocab">integral curves</span> of (<a href="#x1-8r3">1.3.3<!-- tex4ht:ref: eq:1.3.3  --></a>) have infinite slope because the equation is undefined on the unit circle.
-				</div>
-				<figure class="figure" id="b41bccce-eeaa-4528-93a3-3b4a9d7d5c71">
-					<div class="minipage"><div id="-a-direction-field-and-integral-curves-for-y-x-overxy-"> <img height="264" src="EPS/fig010306.png" width="409"><a id="x1-12r6"></a></div>
-					<figcaption class="caption"><span class="id">Figure&nbsp;1.3.6 </span><span class="content">A direction field and <span class="vocab">integral curves</span>
-					for \(\displaystyle \frac{dy}{dx}= {x^2\over 1-x^2-y^2}\)</span>
-					</figcaption><!-- tex4ht:label?: x1-12r6  --></div>
-				</figure>
-				<div id="b8289ed3-a33a-40dc-98b9-d0134726a424">
-					There are three separate <span class="vocab">solution curves</span> of (<a href="#x1-8r3">1.3.3<!-- tex4ht:ref: eq:1.3.3  --></a>) on the integral curve in the Figure&nbsp;<a href="#-">1.3.7</a>: 
+				<div class="example" id="ex1.3.4" style="--ex-number: 4"> 
 					<ol>
-						<li> 
-							the segment above the level \(y=b\) is the graph of a solution on \((-\infty ,a)\)
-						</li>
-						<li> 
-							the segment below the level \(y=-b\) is the graph of a solution on \((-a,\infty )\)
+						<li>
+							Write in parametric form
+
+							<a id="x1-7r6"></a>
+							\begin {equation}   
+								\frac{dy}{dx} = -\frac{x}{y} 
+							\end {equation} 
 						</li>
 						<li>
-							the segment between these two levels is the graph of a solution on \((-a,a)\) 
+							Sketch some integral curves on the direction field
+							
+							<a
+								class="no-solution"
+								href="https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=0&dydx=-x/y&x=-4,4,30&y=-4,4,30&method=rk4&h=0.1"
+								target="_blank"
+							>
+								<figure class="figure"> 
+									<div>
+										<img height="350" src="EPS/example1.3.4.png" width="350">
+									</div>
+							
+									<figcaption class="caption">
+										<span class="id">Figure&nbsp;1.3.5a</span> <span class="content"> A direction field
+										for \(\displaystyle \frac{dy}{dx}=-\frac{x}{y}\)</span>
+									</figcaption>
+								</figure>
+							</a>
 						</li>
-				</div>  
-				<figure class="figure" id="e79d6ea7-e5a2-42f5-9416-235c90d775d6"> 
-						<div class="minipage" id="-"> <img height="264" src="EPS/fig010307.png" width="409"> <a id="x1-13r7"></a><figcaption class="caption"><span class="id">Figure&nbsp;1.3.7 </span><span class="content">                                                              </span></figcaption><!-- tex4ht:label?: x1-13r7  --></div>
-				</figure>
+					</ol>	
+				
+					<details class="solution">
+						<summary>Solution</summary>
+
+						<ol>
+							<li>
+								Equation&nbsp;<a href="#x1-7r2">(1.3.2)</a> can be rewritten in parametric form as
+								\begin{equation*} 
+									\frac{dy}{dx} = \frac{ \displaystyle\frac{dy}{dt}}{ \displaystyle\frac{dx}{dt}} = -\frac{x}{y} = {A(x,y)\over B(x,y)}
+								\end{equation*}
+								with \( A(x,y) = -x \) and \( B(x,y)=y \), so we have
+								
+								\[ {dx\over dt}=-y \quad {dy\over dt}=x \]
+							</li>	
+							<li>
+								Figure&nbsp;<a href="#-a-direction-field-and-integral-curves-for-y-x-overy-">1.3.5</a> shows a direction field and some <span class="vocab">integral curves</span> for <a href="#x1-7r2">(1.3.2)</a>. As shown in Example&nbsp;<span class="ptmb8t-">1.2.1</span> and will verify again in Section&nbsp;2.2, the <span class="vocab">integral curves</span> of <a href="#x1-7r2">(1.3.2)</a> are circles centered at the origin
+						
+								<figure class="figure" id="b8289ed3-a33a-40dc-98b9-d0134726a421">
+									<div id="-a-direction-field-and-integral-curves-for-y-x-overy-"><img height="264" src="EPS/fig010305.png" width="409"> <a id="x1-11r5"></a></div>
+									<figcaption class="caption"><span class="id">Figure&nbsp;1.3.5b </span><span class="content">A direction field and <span class="vocab">integral curves</span> for \(\displaystyle \frac{dy}{dx}=- {x\over y}\)                                       </span></figcaption>
+								</figure>
+							</li>	
+						</ol>
+
+						
+					</details>
+				
+				</div>	
+
+				<div class="example" id="ex1.3.5" style="--ex-number: 5"> 
+					<ol>
+						<li>
+							Write in parametric form
+
+							<a id="x1-7r7"></a>
+							\begin {equation}   
+								\frac{dy}{dx} ={x^2\over1-x^2-y^2}
+							\end {equation} 
+						</li>
+						<li>
+							Sketch some integral curves on the direction field
+							
+							<a
+								class="no-solution"
+								href="https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=0&dydx=x%5E2/(1-x%5E2-y%5E2)&x=-4,4,30&y=-4,4,30&method=rk4&h=0.1"
+								target="_blank"
+							>
+								<figure class="figure"> 
+									<div>
+										<img height="264" src="EPS/example1.3.5.png" width="409">
+									</div>
+							
+									<figcaption class="caption">
+										<span class="id">Figure&nbsp;1.3.6a</span> <span class="content"> A direction field
+										for \(\displaystyle \frac{dy}{dx}={x^2\over1-x^2-y^2}\)</span>
+									</figcaption>
+								</figure>
+							</a>
+						</li>
+					</ol>	
+				
+					<details class="solution">
+						<summary>Solution</summary>
+
+						<ol>
+							<li>
+								Equation&nbsp;<a href="#x1-8r3">(1.3.3)</a> can also be rewritten in this form as
+									\begin{equation*} 
+										\frac{dy}{dx} = \frac{ \displaystyle\frac{dy}{dt}}{ \displaystyle\frac{dx}{dt}} = {x^2\over1-x^2-y^2} = {A(x,y)\over B(x,y)}
+									\end{equation*}
+									with \( A(x,y) = x^2 \) and \( B(x,y)= 1-x^2-y^2  \), so we have
+									
+								\[ {dx\over dt}=1-x^2-y^2 \quad {dy\over dt}=x^2\]
+							</li>	
+							<li>
+								Figure&nbsp;<a href="#-a-direction-field-and-integral-curves-for-y-x-overxy-">1.3.6<!-- tex4ht:ref: figure:1.3.6  --></a> shows a direction field and some <span class="vocab">integral curves</span> for (<a href="#x1-8r3">1.3.3<!-- tex4ht:ref: eq:1.3.3  --></a>). The <span class="vocab">integral curves</span> near the top and bottom are <span class="vocab">solution curves</span>. However, the <span class="vocab">integral curves</span> near the middle are more complicated. For example, Figure&nbsp;<a href="#-">1.3.7</a> shows the <span class="vocab">integral curve</span> through the origin. The vertices of the dashed rectangle are on the circle \(x^2+y^2=1\) (with \(a\approx 0.846\),\(b\approx 0.533\)), where all <span class="vocab">integral curves</span> of (<a href="#x1-8r3">1.3.3<!-- tex4ht:ref: eq:1.3.3  --></a>) have infinite slope because the equation is undefined on the unit circle.
+
+								<figure class="figure" id="b41bccce-eeaa-4528-93a3-3b4a9d7d5c71">
+									<div class="minipage"><div id="-a-direction-field-and-integral-curves-for-y-x-overxy-"> <img height="264" src="EPS/fig010306.png" width="409"><a id="x1-12r6"></a></div>
+									<figcaption class="caption"><span class="id">Figure&nbsp;1.3.6b </span><span class="content">A direction field and <span class="vocab">integral curves</span>
+									for \(\displaystyle \frac{dy}{dx}= {x^2\over 1-x^2-y^2}\)</span>
+									</figcaption><!-- tex4ht:label?: x1-12r6  --></div>
+								</figure>
+
+							</li>	
+						</ol>
+
+						
+					</details>
+
+					<div id="b8289ed3-a33a-40dc-98b9-d0134726a424">
+						There are three separate <span class="vocab">solution curves</span> of (<a href="#x1-8r3">1.3.3<!-- tex4ht:ref: eq:1.3.3  --></a>) on the integral curve in the Figure&nbsp;<a href="#-">1.3.7</a>: 
+						<ol>
+							<li> 
+								the segment above the level \(y=b\) is the graph of a solution on \((-\infty ,a)\)
+							</li>
+							<li> 
+								the segment below the level \(y=-b\) is the graph of a solution on \((-a,\infty )\)
+							</li>
+							<li>
+								the segment between these two levels is the graph of a solution on \((-a,a)\) 
+							</li>
+					</div>  
+					<figure class="figure" id="e79d6ea7-e5a2-42f5-9416-235c90d775d6"> 
+							<div class="minipage" id="-"> <img height="264" src="EPS/fig010307.png" width="409"> <a id="x1-13r7"></a><figcaption class="caption"><span class="id">Figure&nbsp;1.3.7 </span><span class="content">                                                              </span></figcaption><!-- tex4ht:label?: x1-13r7  --></div>
+					</figure>
+				
+				</div>					
+
+		
+
+				
 
 				<div id="b8289ed3-a33a-40dc-98b9-d0134726a425">
 					Note that even if \(f(x,y)\) is continuous and otherwise “nice” throughout the rectangle \(R\), some software for producing directions fields may require the differential equation to be rewritten in paremetric form, but even \(\displaystyle \frac{dy}{dx}=f(x,y)\) can be written in this way as
@@ -320,12 +396,13 @@
 			<summary>Using Technology</summary>
 
 			<div class="indent" id="8f33697e-44ac-4ebf-92d4-0a1375d68d6e">
-				As you study from this book, you’ll often be asked to use computer software and graphics. Exercises with this
-				intent are marked as <span class="fbox comp">C</span>   (computer or calculator required), <span class="fbox comp">C/G</span>   (computer and/or graphics required), or <span class="fbox comp">L</span>
-				(laboratory work requiring software and/or graphics). Often you may not completely understand how the
-				software does what it does. This is similar to the situation most people are in when they drive automobiles or
-				watch television, and it doesn’t decrease the value of using modern technology as an aid to learning.
-				Just be careful that you use the technology as a supplement to thought rather than a substitute for it.
+				As we study differential equations, we will often need to use computer software or calculators.
+
+				Exercises with this intent are marked as <span class="fbox comp">C</span>   (computer or calculator required), <span class="fbox comp">C/G</span>   (computer and/or graphics required), or <span class="fbox comp">L</span>
+				(laboratory work requiring software and/or graphics). 
+
+				Here are some direction field plotters we may use but there may be many others. 
+
 				
 				<ul>
 					<li>
