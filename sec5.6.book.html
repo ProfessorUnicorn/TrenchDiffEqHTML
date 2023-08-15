@@ -38,11 +38,11 @@
 
 			<div id="7add97e1-7c58-4c42-9961-aece9d38d295">
 				In this section we give a method for finding the general solution of
-				\begin {equation} \label {eq:5.6.1} P_0(x)y''+P_1(x)y'+P_2(x)y=F(x) \end
+				\begin {equation} \label {eq:5.6.1} P_0(x)\frac{d^2y}{dx^2}+P_1(x) \frac{dy}{dx} +P_2(x)y=F(x) \end
 				{equation}
 				<a id="x1-2r1"></a>
 				if we know a nontrivial solution \(y_1\) of the complementary equation
-				\begin {equation} \label {eq:5.6.2} P_0(x)y''+P_1(x)y'+P_2(x)y=0\end
+				\begin {equation} \label {eq:5.6.2} P_0(x)\frac{d^2y}{dx^2}+P_1(x) \frac{dy}{dx} +P_2(x)y=0\end
 				{equation}
 				<a id="x1-3r2"></a>
 				The method is called
@@ -54,19 +54,19 @@
 			<div class="indent" id="aa46d5ae-6fcd-47ca-b857-d45cf95314ad">
 				By now you shoudn’t be surprised that we look for solutions of <a href="#x1-2r1">(5.6.1)</a> in the form \begin {equation} \label {eq:5.6.3} y=uy_1 \end {equation}
 				<a id="x1-4r3"></a>
-				where \(u\) is to be determined so that \(y\) satisfies <a href="#x1-2r1">(5.6.1)</a>. Substituting <a href="#x1-4r3">(5.6.3)</a> and \[\begin {array}{rcl} y'&amp;=&amp; u'y_1+uy_1' \\ y''&amp;=&amp;
-				u''y_1+2u'y_1'+uy_1'' \end {array}\] into <a href="#x1-2r1">(5.6.1)</a> yields \[
-				P_0(x)(u''y_1+2u'y_1'+uy_1'')+P_1(x)(u'y_1+uy_1')+P_2(x)uy_1=F(x)\]
-				Collecting the coefficients of \(u\), \(u'\), and \(u''\) yields \begin
+				where \(u\) is to be determined so that \(y\) satisfies <a href="#x1-2r1">(5.6.1)</a>. Substituting <a href="#x1-4r3">(5.6.3)</a> and \[\begin {array}{rcl}  \frac{dy}{dx} &amp;=&amp;  \frac{du}{dx}  y_1+u \frac{dy_1}{dx}   \\ \frac{d^2y}{dx^2}&amp;=&amp;
+				\frac{d^2u}{dx^2} y_1+2 \frac{du}{dx}   \frac{dy_1}{dx}  +u \frac{d^2y_1}{dx^2}   \end {array}\] into <a href="#x1-2r1">(5.6.1)</a> yields \[
+				P_0(x)(\frac{d^2u}{dx^2} y_1+2 \frac{du}{dx}   \frac{dy_1}{dx}  +u \frac{d^2y_1}{dx^2}  )+P_1(x)( \frac{du}{dx}  y_1+u \frac{dy_1}{dx}  )+P_2(x)uy_1=F(x)\]
+				Collecting the coefficients of \(u\), \( \frac{du}{dx}  \), and \(\frac{d^2u}{dx^2} \) yields \begin
 				{equation} \label {eq:5.6.4}
-				(P_0y_1)u''+(2P_0y_1'+P_1y_1)u'+(P_0y_1''+P_1y_1'+P_2y_1) u=F\end
+				(P_0y_1)\frac{d^2u}{dx^2} +(2P_0 \frac{dy_1}{dx}  +P_1y_1) \frac{du}{dx}  +(P_0 \frac{d^2y_1}{dx^2}  +P_1 \frac{dy_1}{dx}  +P_2y_1) u=F\end
 				{equation}
 				<a id="x1-5r4"></a>
-				However, the coefficient of \(u\) is zero, since \(y_1\) satisfies <a href="#x1-3r2">(5.6.2)</a>. Therefore <a href="#x1-5r4">(5.6.4)</a> reduces to \begin {equation} \label {eq:5.6.5} Q_0(x)u''+Q_1(x)u'=F\end
+				However, the coefficient of \(u\) is zero, since \(y_1\) satisfies <a href="#x1-3r2">(5.6.2)</a>. Therefore <a href="#x1-5r4">(5.6.4)</a> reduces to \begin {equation} \label {eq:5.6.5} Q_0(x)\frac{d^2u}{dx^2} +Q_1(x) \frac{du}{dx}  =F\end
 				{equation}
 				<a id="x1-6r5"></a>
-				with \[ Q_0=P_0y_1 \quad \mbox{ and } \quad Q_1=2P_0y_1'+P_1y_1\] (It isn’t
-				worthwhile to memorize the formulas for \(Q_0\) and \(Q_1\)!) Since <a href="#x1-6r5">(5.6.5)</a> is a linear first order equation in \(u'\), we can solve it for \(u'\)
+				with \[ Q_0=P_0y_1 \quad \mbox{ and } \quad Q_1=2P_0 \frac{dy_1}{dx}  +P_1y_1\] (It isn’t
+				worthwhile to memorize the formulas for \(Q_0\) and \(Q_1\)!) Since <a href="#x1-6r5">(5.6.5)</a> is a linear first order equation in \( \frac{du}{dx}  \), we can solve it for \( \frac{du}{dx}  \)
 				by variation of parameters as in Section&nbsp;1.2, integrate the solution
 				to obtain \(u\), and then obtain \(y\) from <a href="#x1-4r3">(5.6.3)</a>.
 			</div>
@@ -85,10 +85,10 @@
 					<dd class="list">
 						<div>
 							Find the general solution of \begin {equation} \label {eq:5.6.6}
-							xy''-(2x+1)y'+(x+1)y=x^2\end {equation}
+							x\frac{d^2y}{dx^2}-(2x+1) \frac{dy}{dx} +(x+1)y=x^2\end {equation}
 							<a id="x1-9r6"></a>
 							given that \(y_1=e^x\) is a solution of the complementary equation
-							\begin {equation} \label {eq:5.6.7} xy''-(2x+1)y'+(x+1)y=0\end
+							\begin {equation} \label {eq:5.6.7} x\frac{d^2y}{dx^2}-(2x+1) \frac{dy}{dx} +(x+1)y=0\end
 							{equation}
 							<a id="x1-10r7"></a>
 						</div>
@@ -116,26 +116,26 @@
 					<span class="ptmb8t-">a</span>
 					<span class="ptmrc8t-">)&nbsp;</span>
 				</span>
-				If \(y=ue^x\), then \(y'=u'e^x+ue^x\) and \(y''=u''e^x+2u'e^x+ue^x\), so
+				If \(y=ue^x\), then \( \frac{dy}{dx} = \frac{du}{dx}  e^x+ue^x\) and \(\frac{d^2y}{dx^2}=\frac{d^2u}{dx^2} e^x+2 \frac{du}{dx}  e^x+ue^x\), so
 			</div>
 			<div class="eqnarray" id="0d3427b0-46be-4e6e-bacd-d89fdebef8ab">
-				\begin {eqnarray*} xy''-(2x+1)y'+(x+1)y&amp;=&amp;x(u''e^x+2u'e^x+ue^x)\\
-				&amp;&amp;-(2x+1)(u'e^x+ue^x)+(x+1)ue^x\\ &amp;=&amp;(xu''-u')e^x\end
+				\begin {eqnarray*} x\frac{d^2y}{dx^2}-(2x+1) \frac{dy}{dx} +(x+1)y&amp;=&amp;x(\frac{d^2u}{dx^2} e^x+2 \frac{du}{dx}  e^x+ue^x)\\
+				&amp;&amp;-(2x+1)( \frac{du}{dx}  e^x+ue^x)+(x+1)ue^x\\ &amp;=&amp;(x\frac{d^2u}{dx^2} - \frac{du}{dx}  )e^x\end
 				{eqnarray*}
 			</div>
 			<div class="indent" id="170eb186-4b95-45aa-aae9-76e8c284c391">
-				Therefore \(y=ue^x\) is a solution of <a href="#x1-9r6">(5.6.6)</a> if and only if \[ (xu''-u')e^x=x^2\] which is a first order equation in
-				\(u'\). We rewrite it as \begin {equation} \label {eq:5.6.8} u''-{u'\over
+				Therefore \(y=ue^x\) is a solution of <a href="#x1-9r6">(5.6.6)</a> if and only if \[ (x\frac{d^2u}{dx^2} - \frac{du}{dx}  )e^x=x^2\] which is a first order equation in
+				\( \frac{du}{dx}  \). We rewrite it as \begin {equation} \label {eq:5.6.8} \frac{d^2u}{dx^2} -{ \frac{du}{dx}  \over
 				x}=xe^{-x}\end {equation}
 				<a id="x1-12r8"></a>
 				To focus on how we apply variation of parameters to this equation, we
-				temporarily write \(z=u'\), so that <a href="#x1-12r8">(5.6.8)</a> becomes \begin {equation} \label {eq:5.6.9} z'-{z\over x}=xe^{-x}\end
+				temporarily write \(z= \frac{du}{dx}  \), so that <a href="#x1-12r8">(5.6.8)</a> becomes \begin {equation} \label {eq:5.6.9}  \frac{dz}{dx}  -{z\over x}=xe^{-x}\end
 				{equation}
 				<a id="x1-13r9"></a>
 				We leave it to you to show (by separation of variables) that \(z_1=x\) is
-				a solution of the complementary equation \[ z'-{z\over x}=0 \] for <a href="#x1-13r9">(5.6.9)</a>. By applying variation of parameters as in Section&nbsp;1.2, we can now
-				see that every solution of <a href="#x1-13r9">(5.6.9)</a> is of the form \[ z=vx\quad \mbox{ where } \quad  v'x=xe^{-x}, \quad \mbox{ so } \quad  v'=e^{-x} \quad \mbox{ and } \quad  v=-e^{-x}+C_1\] Since
-				\(u'=z=vx\), \(u\) is a solution of <a href="#x1-12r8">(5.6.8)</a> if and only if \[ u'=vx=-xe^{-x}+C_1x\] Integrating this yields \[
+				a solution of the complementary equation \[  \frac{dz}{dx}  -{z\over x}=0 \] for <a href="#x1-13r9">(5.6.9)</a>. By applying variation of parameters as in Section&nbsp;1.2, we can now
+				see that every solution of <a href="#x1-13r9">(5.6.9)</a> is of the form \[ z=vx\quad \mbox{ where } \quad   \frac{dv}{dx}  x=xe^{-x}, \quad \mbox{ so } \quad   \frac{dv}{dx}  =e^{-x} \quad \mbox{ and } \quad  v=-e^{-x}+C_1\] Since
+				\( \frac{du}{dx}  =z=vx\), \(u\) is a solution of <a href="#x1-12r8">(5.6.8)</a> if and only if \[  \frac{du}{dx}  =vx=-xe^{-x}+C_1x\] Integrating this yields \[
 				u=(x+1)e^{-x}+{C_1\over 2}x^2+C_2\] Therefore the general solution of <a href="#x1-9r6">(5.6.6)</a> is \begin {equation} \label {eq:5.6.10} y=ue^x=x+1+{C_1\over
 				2}x^2e^x+C_2e^x\end {equation}
 				<a id="x1-14r10"></a>
@@ -179,9 +179,9 @@
 					</dt>
 					<dd class="list">
 						<div>
-							Find the general solution of \[ x^2y''+xy'-y=x^2+1\] given that
+							Find the general solution of \[ x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=x^2+1\] given that
 							\(y_1=x\) is a solution of the complementary equation \begin
-							{equation} \label {eq:5.6.11} x^2y''+xy'-y=0\end {equation}
+							{equation} \label {eq:5.6.11} x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=0\end {equation}
 							<a id="x1-17r11"></a>
 							As a byproduct of this result, find a fundamental set of solutions
 							of <a href="#x1-17r11">(5.6.11)</a>.
@@ -193,7 +193,7 @@
 					<dd class="list">
 						<div>
 							Solve the initial value problem \begin {equation} \label {eq:5.6.12}
-							x^2y''+xy'-y=x^2+1, \quad y(1)=2,\; y'(1)=-3\end {equation}
+							x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=x^2+1, \quad y(1)=2,\; \left. \frac{dy}{dx} \right| _{1}=-3\end {equation}
 							<a id="x1-19r12"></a>
 						</div>
 					</dd>
@@ -210,25 +210,25 @@
 					<span class="ptmb8t-">a</span>
 					<span class="ptmrc8t-">)&nbsp;</span>
 				</span>
-				If \(y=ux\), then \(y'=u'x+u\) and \(y''=u''x+2u'\), so
+				If \(y=ux\), then \( \frac{dy}{dx} = \frac{du}{dx}  x+u\) and \(\frac{d^2y}{dx^2}=\frac{d^2u}{dx^2} x+2 \frac{du}{dx}  \), so
 			</div>
 			<div class="eqnarray" id="38b99141-da2c-4e34-8c6f-b52d1ef88e3d">
-				\begin {eqnarray*} x^2y''+xy'-y&amp;=&amp;x^2(u''x+2u')+x(u'x+u)-ux\\
-				&amp;=&amp;x^3u''+3x^2u'\end {eqnarray*}
+				\begin {eqnarray*} x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y&amp;=&amp;x^2(\frac{d^2u}{dx^2} x+2 \frac{du}{dx}  )+x( \frac{du}{dx}  x+u)-ux\\
+				&amp;=&amp;x^3\frac{d^2u}{dx^2} +3x^2 \frac{du}{dx}  \end {eqnarray*}
 			</div>
 			<div class="indent" id="1eeeefad-5787-4974-81e4-46cee8de23e6">
-				Therefore \(y=ux\) is a solution of <a href="#x1-19r12">(5.6.12)</a> if and only if \[ x^3u''+3x^2u'=x^2+1\] which is a first order equation
-				in \(u'\). We rewrite it as \begin {equation} \label {eq:5.6.13}
-				u''+{3\over x}u'={1\over x}+{1\over x^3}\end {equation}
+				Therefore \(y=ux\) is a solution of <a href="#x1-19r12">(5.6.12)</a> if and only if \[ x^3\frac{d^2u}{dx^2} +3x^2 \frac{du}{dx}  =x^2+1\] which is a first order equation
+				in \( \frac{du}{dx}  \). We rewrite it as \begin {equation} \label {eq:5.6.13}
+				\frac{d^2u}{dx^2} +{3\over x} \frac{du}{dx}  ={1\over x}+{1\over x^3}\end {equation}
 				<a id="x1-20r13"></a>
 				To focus on how we apply variation of parameters to this equation, we
-				temporarily write \(z=u'\), so that <a href="#x1-20r13">(5.6.13)</a> becomes \begin {equation} \label {eq:5.6.14} z'+{3\over x}z={1\over
+				temporarily write \(z= \frac{du}{dx}  \), so that <a href="#x1-20r13">(5.6.13)</a> becomes \begin {equation} \label {eq:5.6.14}  \frac{dz}{dx}  +{3\over x}z={1\over
 				x}+{1\over x^3}\end {equation}
 				<a id="x1-21r14"></a>
 				We leave it to you to show by separation of variables that \(z_1=1/x^3\)
-				is a solution of the complementary equation \[ z'+{3\over x}z=0 \] for <a href="#x1-21r14">(5.6.14)</a>. By variation of parameters, every solution of <a href="#x1-21r14">(5.6.14)</a> is of the form \[ z={v\over x^3}\quad \mbox{ where } \quad  {v'\over
-				x^3}={1\over x}+{1\over x^3}, \quad \mbox{ so } \quad  v'=x^2+1 \quad \mbox{ and } \quad  v={x^3\over 3}+x+C_1\] Since \(u'=z=v/x^3\), \(u\) is a
-				solution of <a href="#x1-21r14">(5.6.14)</a> if and only if \[ u'={v\over x^3}={1\over 3}+{1\over x^2}+{C_1\over
+				is a solution of the complementary equation \[  \frac{dz}{dx}  +{3\over x}z=0 \] for <a href="#x1-21r14">(5.6.14)</a>. By variation of parameters, every solution of <a href="#x1-21r14">(5.6.14)</a> is of the form \[ z={v\over x^3}\quad \mbox{ where } \quad  { \frac{dv}{dx}  \over
+				x^3}={1\over x}+{1\over x^3}, \quad \mbox{ so } \quad   \frac{dv}{dx}  =x^2+1 \quad \mbox{ and } \quad  v={x^3\over 3}+x+C_1\] Since \( \frac{du}{dx}  =z=v/x^3\), \(u\) is a
+				solution of <a href="#x1-21r14">(5.6.14)</a> if and only if \[  \frac{du}{dx}  ={v\over x^3}={1\over 3}+{1\over x^2}+{C_1\over
 				x^3}\] Integrating this yields \[ u={x\over 3}-{1\over x}-{C_1\over
 				2x^2}+C_2\] Therefore the general solution of <a href="#x1-19r12">(5.6.12)</a> is \begin {equation} \label {eq:5.6.15} y=ux={x^2\over 3}-1-{C_1\over
 				2x}+C_2x\end {equation}
@@ -252,10 +252,10 @@
 					<span class="ptmb8t-">b</span>
 					<span class="ptmrc8t-">)&nbsp;</span>
 				</span>
-				Differentiating <a href="#x1-23r16">(5.6.16)</a> yields \begin {equation} \label {eq:5.6.17} y'={2x\over 3}+c_1-{c_2\over
+				Differentiating <a href="#x1-23r16">(5.6.16)</a> yields \begin {equation} \label {eq:5.6.17}  \frac{dy}{dx} ={2x\over 3}+c_1-{c_2\over
 				x^2}\end {equation}
 				<a id="x1-24r17"></a>
-				Setting \(x=1\) in <a href="#x1-23r16">(5.6.16)</a> and <a href="#x1-24r17">(5.6.17)</a> and imposing the initial conditions \(y(1)=2\) and \(y'(1)=-3\) yields
+				Setting \(x=1\) in <a href="#x1-23r16">(5.6.16)</a> and <a href="#x1-24r17">(5.6.17)</a> and imposing the initial conditions \(y(1)=2\) and \(\left. \frac{dy}{dx} \right| _{1}=-3\) yields
 			</div>
 			<div class="eqnarray" id="a2ae8666-549a-49f3-94a4-2d49711a5941">
 				\begin {eqnarray*} c_1+c_2&amp;=&amp; \phantom {-}{8\over 3} \\
@@ -268,7 +268,7 @@
 			<div class="indent" id="333c5c14-9f07-4eae-a7c9-226dda81d3fa">
 				Using reduction of order to find the general solution of a homogeneous
 				linear second order equation leads to a homogeneous linear first order
-				equation in \(u'\) that can be solved by separation of variables. The next
+				equation in \( \frac{du}{dx}  \) that can be solved by separation of variables. The next
 				example illustrates this.
 			</div>
 			<div class="newtheorem" id="8ee20acd-1003-4852-83aa-216e2adf189b">
@@ -278,7 +278,7 @@
 					</span>
 					<a id="x1-253"></a>
 					Find the general solution and a fundamental set of solutions of \begin
-					{equation} \label {eq:5.6.18} x^2y''-3xy'+3y=0\end {equation}
+					{equation} \label {eq:5.6.18} x^2\frac{d^2y}{dx^2}-3x \frac{dy}{dx} +3y=0\end {equation}
 					<a id="x1-26r18"></a>
 					given that \(y_1=x\) is a solution.
 				</div>
@@ -286,15 +286,15 @@
 			<div class="indent" id="52fa8a62-79d1-4d4f-b905-696e0308c09c"></div>
 			<details class="solution">
 				<summary>Solution</summary>
-				&nbsp;If \(y=ux\) then \(y'=u'x+u\) and \(y''=u''x+2u'\), so
+				&nbsp;If \(y=ux\) then \( \frac{dy}{dx} = \frac{du}{dx}  x+u\) and \(\frac{d^2y}{dx^2}=\frac{d^2u}{dx^2} x+2 \frac{du}{dx}  \), so
 			</div>
 			<div class="eqnarray" id="08528ca3-dbc2-40c2-b176-6527cdc204c5">
-				\begin {eqnarray*} x^2y''-3xy'+3y&amp;=&amp;x^2(u''x+2u')-3x(u'x+u)+3ux\\
-				&amp;=&amp;x^3u''-x^2u'\end {eqnarray*}
+				\begin {eqnarray*} x^2\frac{d^2y}{dx^2}-3x \frac{dy}{dx} +3y&amp;=&amp;x^2(\frac{d^2u}{dx^2} x+2 \frac{du}{dx}  )-3x( \frac{du}{dx}  x+u)+3ux\\
+				&amp;=&amp;x^3\frac{d^2u}{dx^2} -x^2 \frac{du}{dx}  \end {eqnarray*}
 			</div>
 			<div class="indent" id="c2aa435f-ca71-47a9-b091-3f7e52504bb9">
-				Therefore \(y=ux\) is a solution of <a href="#x1-26r18">(5.6.18)</a> if and only if \[ x^3u''-x^2u'=0\] Separating the variables \(u'\) and
-				\(x\) yields \[ {u''\over u'}={1\over x}\] so \[ \ln |u'|=\ln |x|+k,\quad \mbox{ or, equivalently, } \quad  u'=C_1x\] Therefore \[ u={C_1\over
+				Therefore \(y=ux\) is a solution of <a href="#x1-26r18">(5.6.18)</a> if and only if \[ x^3\frac{d^2u}{dx^2} -x^2 \frac{du}{dx}  =0\] Separating the variables \( \frac{du}{dx}  \) and
+				\(x\) yields \[ {\frac{d^2u}{dx^2} \over  \frac{du}{dx}  }={1\over x}\] so \[ \ln | \frac{du}{dx}  |=\ln |x|+k,\quad \mbox{ or, equivalently, } \quad   \frac{du}{dx}  =C_1x\] Therefore \[ u={C_1\over
 				2}x^2+C_2\] so the general solution of <a href="#x1-26r18">(5.6.18)</a> is \[ y=ux={C_1\over 2}x^3+C_2x\] which we rewrite as \[ y=c_1x+c_2x^3\]
 				Therefore \(\{x,x^3\}\) is a fundamental set of solutions of <a href="#x1-26r18">(5.6.18)</a>.
 			</div>
