@@ -291,99 +291,37 @@
 									\quad T(0) = 60^\circ\text{F}
 								\end{align*}
 
-								First identify the constant solution \(T=-20^\circ\text{F}\)
+								First identify the constant solution \(T=25^\circ\text{C}\)
 							</div>	
-							<div id="x1-1" class="reading-exercise">
-								Verify \(T=-20^\circ\text{F}\) is a solution of \( \dot{T} = -k(T+20) \)
-							</div> 
-							<div id="x1-1" class="reading-exercise">
-								Solve \( \dot{T} = -k(T+20^\circ\text{F}) \) using separation of variables 
-							</div> 
-
-							<div>
-								Assuming \( T \ne -20 \) and using separation of variables, we obtain
-								\begin{align*}
-									T  = & -20 + ce^{-kt} \\						
-								\end{align*}
-
-							</div> 
-
-							<div id="x1-1" class="reading-exercise">
-								Verify \(T= -20 + ce^{-kt} \) is a solution of \( \dot{T} = -k(T+20) \)
-							</div> 
-
-							<div id="x1-1" class="reading-exercise">
-								Apply the initial condition \( T(0) = 60^\circ\text{F} \) to \(T= -20 + ce^{-kt} \) and solve for \( c\)
-							</div> 
-
-							<div>
-								Applying the initial condition \( T(0) = 60^\circ\text{F} \) we can solve for \( c \)
-
-								\begin{align*}
-									\underset{60}{\underbrace{T(0)}} = & -20 + ce^{-k(0)} 
-									\Longrightarrow
-									c = 80 \\						
-								\end{align*}
-								
-								So we finally obtain our particular solution
-
-								<a id="x1-8r4"></a>
-								\begin{equation}  \label{eq:4.2.4}
-									T = -20 + 80 e^{-kt} 
-								\end{equation}
-							</div> 	
-							<div id="x1-1" class="reading-exercise">
-								Verify \(T= -20 + 80 e^{-kt}  \) is a solution of \( \dot{T} = -k(T+20) \)
-							</div> 
-							
-				
 						</li>
 						<li>
-							<div>
-								At 11:05 the temperature of the object is \( 60^\circ\)F and at 11:07 its temperature is \(50^\circ\)F since we took 11:05 to be time \(t=0\), then 11:07 would be time \(t=2\), so we have \(T(2) = 50\), and, substituting this in we can obtain the temperature decay constant value: 
-
-								\begin{align*}
-									T(t) = & -20 + 80 e^{-kt} \\
-									\underset{50}{\underbrace{T(2)}} = & -20 + 80 e^{-k\cdot (2)} \\
-									50 = & -20 + 80 e^{-2k} \\
-									70 = & 80 e^{-2k} \\
-									\frac{70}{80} = & e^{-2k} \\
-									\ln \left( \frac{7}{8} \right) = & \ln e^{-2k} \\
-									\ln \left( \frac{7}{8} \right) = & -2k \\	
-									k = & - \frac{1}{2} \ln \left( \frac{7}{8} \right) =\frac{1}{2} \ln \left( \frac{8}{7} \right) \\	
-								\end{align*}
-
-								Substituting in the the temperature decay constant \(k\)
-
-								\begin{equation*}  
-									T = -20 + 80 e^{-\frac{t}{2} \ln \left( \frac{8}{7} \right)} 
-								\end{equation*}
-
-							</div>	
-							<div id="x1-1" class="reading-exercise">
-								Verify \(T= -20 + 80 e^{-\frac{t}{2} \ln \left( \frac{8}{7} \right)}  \) is a solution of \( \dot{T} = -k(T+20) \)
-							</div> 
+							Calculate the <span class="vocab"> decay constant</span> and substitute it in to the particular solution to the IVP
 						</li>
 						<li>
-							<div>
-								The object was originally \(72^\circ\)F and placed outside some time in the past. At 11:05 the temperature of the object is \(60^\circ\)F, which we wrote as \(T(0)=60\). At 11:07 its temperature is \(50^\circ\)F, which we wrote as \(T(2)=50\). We want to find out what time the object was placed outside. In other words, we need to find the time \(t\) when the temperature is \(72^\circ\)F, so substitute in \(T(t)=72\) and solve for \(t\):
- 
-								\begin{align*}
-									T(t) = & -20 + 80 e^{-\frac{t}{2} \ln \left( \frac{8}{7} \right)}  \\
-									72 = & -20 + 80 e^{-\frac{t}{2} \ln \left( \frac{8}{7} \right)}  \\
-									92 = & 80 e^{-\frac{t}{2} \ln \left( \frac{8}{7} \right)}  \\
-									\frac{92}{80} = & e^{-\frac{t}{2} \ln \left( \frac{8}{7} \right)}  \\
-									\ln \left( \frac{46}{40} \right) = & \ln e^{-\frac{t}{2} \ln \left( \frac{8}{7} \right)}  \\
-									\ln \left( \frac{23}{20} \right) = & -\frac{t}{2} \ln \left( \frac{8}{7} \right)  \\
-									-\frac{t}{2} = & \frac{ \ln \left( \frac{23}{20} \right) }{ \ln \left( \frac{8}{7} \right) } \\
-									t = & -2 \frac{ \ln \left( \frac{23}{20} \right) }{ \ln \left( \frac{8}{7} \right) } \approx -2.09
-								\end{align*}
-
-								As our initial time at \(t=0\) was taken as 11:05,  \(t \approx -2.09\) represents about 2 minutes earlier, so the object was placed outside at about about 11:03.
-							</div>	
+							Use the result from (Part 2) to solve the original problem
 						</li>
 					</ol>
 
+
+					Let \(T(t)\) be the temperature of the object at time \(t\). For
+					convenience, we choose the origin \(t_0=0\) of the time scale to be 11:05
+					so that \(T_0=60\). We must determine the time \(\tau \) when \(T(\tau
+					)=72\). Substituting \(T_0=60\) and \(T_m=-20\) into <a href="#x1-3r2">(4.2.2)</a> yields \[ T = -20+\bigl (60-(-20)\bigr )e^{-kt} \] or \begin {equation}
+					\label {eq:4.2.4} T = -20+80e^{-kt}\end {equation}
+					<a id="x1-8r4"></a>
+					We obtain \(k\) from the stated condition that the temperature of the
+					object is 50\(^\circ \)F at 11:07. Since 11:07 is \(t=2\) on our time
+					scale, we can determine \(k\) by substituting \(T=50\) and \(t=2\) into <a href="#x1-8r4">(4.2.4)</a> to obtain \[ 50 = -20+80e^{-2k} \]
+					(Figure&nbsp;<a href="#-t-et-over-over-">4.2.2</a>);
+					hence, \[ e^{-2k}={70\over 80}={7\over 8}\] Taking logarithms and
+					solving for \(k\) yields \[ k =-{1\over 2} \ln {7\over 8} = {1\over 2} \ln
+					{8\over 7}\] Substituting this into <a href="#x1-8r4">(4.2.4)</a> yields \[ T = -20+80 e^{-{t\over 2}\ln {8\over 7}}\] and the condition
+					\(T(\tau )=72\) implies that \[ 72 =-20+80 e^{-{\tau \over 2} \ln {8\over
+					7}}\] hence, \[ e^{-{\tau \over 2} \ln {8\over 7}} ={92\over 80} =
+					{23\over 20}\] Taking logarithms and solving for \(\tau \) yields \[ \tau
+					= -{2 \ln {23\over 20}\over \ln {8\over 7}} \approx -2.09\ \mbox {min}\]
+					Therefore the object was placed outside about 2 minutes and 5 seconds
+					before 11:05; that is, at 11:02:55.
 				</details>
 			</div>
 
