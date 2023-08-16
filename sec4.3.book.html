@@ -38,14 +38,14 @@
 			<summary>Newton’s Second Law of Motion</summary>
 		
 			<div id="bd59eb0d-9dc6-4d66-8f3f-70d7e684584b">
-				In this section we consider an object with constant mass \(m\) moving
-				along a line under a force \(F\). Let \(y=y(t)\) be the displacement of
-				the object from a reference point on the line at time \(t\), and let
-				\(v=v(t)\) and \(a=a(t)\) be the velocity and acceleration of the object
-				at time \(t\). Thus, \(v=\dot{y}\) and \(a=\dot{v}=\ddot{y}\). Newton’s second law of motion
-				asserts that the force \(F\) and the acceleration \(a\) are related by the
-				equation \begin {equation} \label {eq:4.3.1} F=ma\end {equation}
+				In this section we consider an object with constant mass \(m\) moving along a line under a force \(F\). Let \(y=y(t)\) be the <span class="vocab">displacement</span> of the object from a reference point on the line at time \(t\), and let \(v=v(t)\) and \(a=a(t)\) be the <span class="vocab">velocity</span>and <span class="vocab">acceleration</span> of the object at time \(t\). Thus, \(v=\dot{y}\) and \(a=\dot{v}=\ddot{y}\), where the
+				<span class="vocab">dot notation</span> represents differentiation with respect to \(t\). 
+				<span class="vocab">Newton's 2nd law of motion</span> asserts that the force \(F\) and the acceleration \(a\) are related by the equation
+
 				<a id="x1-2r1"></a>
+				\begin{equation} \label{eq:4.3.1}
+					F=ma \quad \text{or} \quad F = m\dot{v}  \quad \text{or} \quad F= m\ddot{y}
+				\end{equation}
 			</div>
 		</details>
 
@@ -115,7 +115,7 @@
 									id="TBL-1-2-1"
 									style="white-space: nowrap; text-align: center"
 								>
-									cgs
+									cgs units (centimenter, gram, second)
 								</td>
 								<td
 									class="td11"
@@ -151,7 +151,7 @@
 									id="TBL-1-3-1"
 									style="white-space: nowrap; text-align: center"
 								>
-									mks
+									mks units (meter, kilogram, second)
 								</td>
 								<td
 									class="td11"
@@ -187,7 +187,7 @@
 									id="TBL-1-4-1"
 									style="white-space: nowrap; text-align: center"
 								>
-									British
+									British units
 								</td>
 								<td
 									class="td11"
@@ -224,37 +224,55 @@
 			</div>
 			<div class="indent" id="cb2fc5d8-5b4b-4135-bb4d-fe810e42aedb">
 				If we assume that Earth is a perfect sphere with constant mass density,
-				Newton’s law of gravitation (discussed later in this section) asserts that
-				the force exerted on an object by Earth’s gravitational field is
+				<span class="vocab">Newton’s law of gravitation</span> asserts that
+				<em>the force exerted on an object by Earth’s gravitational field is
 				proportional to the mass of the object and inversely proportional to the
-				square of its distance from the center of Earth. However, if the object
+				square of its distance from the center of Earth</em>. 
+
+				\begin{equation*}
+					F_G \propto m 	\quad \text{and}	 \quad	F_G \propto \frac{1}{r^2}
+				\end{equation*}
+
+			</div>	
+			<div class="indent" id="cb2fc5d8-5b4b-4135-bb4d-fe810e42aedbcd">
+
+				
+				
+				
+				However, if the object
 				remains sufficiently close to Earth’s surface, we may assume that the
 				gravitational force is constant and equal to its value at the surface. The
-				magnitude of this force is \(mg\), where \(g\) is called the
-				<span class="vocab">acceleration due to gravity</span>
-				. (To be completely accurate, \(g\) should be called the
-				<span class="vocab">
-					magnitude of the acceleration due to gravity at Earth’s surface
-				</span>
-				.)&nbsp;This quantity has been determined experimentally. Approximate
-				values of \(g\) are \[\begin {array}{rl} g &amp;=980\ \mbox {cm/s}^2
-				\hskip 40pt \mbox {(cgs)} \\ g &amp;=9.8\ \mbox {m/s}^2 \hskip 48pt \mbox
+				magnitude of this force is \(mg\), where \(g\) is called the <span class="vocab">acceleration due to gravity</span>. This quantity has been determined experimentally. Approximate values of \(g\) are \[\begin {array}{rl} g &amp;=980\ \mbox {cm/s}^2 \hskip 40pt \mbox {(cgs)} \\ g &amp;=9.8\ \mbox {m/s}^2 \hskip 48pt \mbox
 				{(mks)} \\ g &amp;=32\ \mbox {ft/s}^2 \hskip 52pt \mbox {(British)}\end
 				{array}\]
 			</div>
 			<div class="indent" id="5681983c-e062-4eb4-b2b0-df8495a987f7">
-				In general, the force \(F\) in <a href="#x1-2r1">(4.3.1)</a> may depend upon \(t\), \(y\), and \(\dot{y}\). Since \(a=\ddot{y}\), <a href="#x1-2r1">(4.3.1)</a> can be written in the form \begin {equation} \label {eq:4.3.2}
-				m\ddot{y}=F(t,y,\dot{y})\end {equation}
+				In general, the force \(F\) in <a href="#x1-2r1">(4.3.1)</a> may depend upon \(t\), \(y\), and \(\dot{y}\). Since \(a=\ddot{y}\), <a href="#x1-2r1">(4.3.1)</a> can be written in the form 
+				
 				<a id="x1-3r2"></a>
+				\begin {equation} \label {eq:4.3.2}
+					m\ddot{y}=F(t,y,\dot{y})
+				\end {equation}
+				
 				which is a second order equation. We’ll consider this equation with
 				restrictions on \(F\) later; however, since Chapter&nbsp;2 dealt only with
 				first order equations, we consider here only problems in which <a href="#x1-3r2">(4.3.2)</a> can be recast as a first order equation. This is possible if \(F\) does
-				not depend on \(y\), so <a href="#x1-3r2">(4.3.2)</a> is of the form \[ m\ddot{y}=F(t,\dot{y})\] Letting \(v=\dot{y}\) and \(\dot{v}=\ddot{y}\) yields
-				a first order equation for \(v\): \begin {equation} \label {eq:4.3.3}
-				m\dot{v}=F(t,v)\end {equation}
+				not depend on \(y\), so <a href="#x1-3r2">(4.3.2)</a> is of the form 
+				
+				\[ 
+					m\ddot{y}=F(t,\dot{y})
+				\] 
+				
+				Letting \(v=\dot{y}\) and \(\dot{v}=\ddot{y}\) yields
+				a first order equation for \(v\): 
+				
 				<a id="x1-4r3"></a>
-				Solving this equation yields \(v\) as a function of \(t\). If we know
-				\(y(t_0)\) for some time \(t_0\), we can integrate \(v\) to obtain \(y\)
+				\begin {equation} \label {eq:4.3.3}
+					m\dot{v}=F(t,v)
+				\end {equation}
+				
+				Solving this equation yields \(v\) as a function of time \(t\). If we know
+				\(y(t_0)\) for some time \(t_0\), we can antidifferentiate \(v\) to obtain \(y\)
 				as a function of \(t\).
 			</div>
 			<div class="indent" id="0f48c910-2a7d-4f00-8a6b-39fb5340ed2e">
