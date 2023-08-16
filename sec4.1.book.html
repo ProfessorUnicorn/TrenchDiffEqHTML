@@ -34,112 +34,182 @@
 			4.1 Growth and Decay
 		</div>
 		<div id="9adec3d5-d06b-47f7-afe2-ec56d442e72e">
-			Since the applications in this section deal with functions of time, we’ll
-			denote the independent variable by \(t\). If \(Q\) is a function of \(t\),
-			\(\dot{Q}\) will denote the derivative of \(Q\) with respect to \(t\); thus, \[
-			\dot{Q}={dQ\over dt}\]
+			Since the applications in this section deal with functions of time, we'll denote the independent variable by \(t\). We'll be using <span class="vocab">dot notation</span> (<span class="vocab">Newton notation</span>) where if \( Q=Q(t) \) is a function of time \(t\), \(\dot{Q}\) will denote the derivative of \(Q\)  with respect to \(t\) time:
+
+			\[ \dot{Q}={dQ\over dt}\]
 		</div>
 
 		<details id="c654329d-767e-4062-b324-81bd2ccd398f">
-			<summary>Exponential Growth and Decay</summary>
+			<summary>Exponential Growth</summary>
 		
 			<div id="4fc1fa2b-1afa-43c3-b86f-e529860f0784">
 				One of the most common mathematical models for a physical process is the
-				<span class="vocab">exponential model</span>, where it’s assumed that the
-				rate of change of a quantity \(Q\) is
-				proportional to \(Q\); thus \begin {equation} \label {eq:4.1.1} \dot{Q}=aQ\end
-				{equation}
-				<a id="x1-2r1"></a>
-				where \(a\) is the constant of proportionality.
-			</div>
-			<div class="indent" id="c9725bab-0611-4c2d-a686-ec8c3547b498">
-				Replacing \( y \) with \(Q\) in Example <a href="sec2.1.book.html#x1-93" target="_blank">2.1.3</a>, the general solution of <a href="#x1-2r1">(4.1.1)</a> is \[ Q=ce^{at} \] and the solution of the IVP 
+				<span class="vocab">exponential model</span>, where it is assumed that <em>the rate of change of a quantity \(Q\) over time is proportional to that quantity \(Q\)</em>.  Using \(a\) as the <span class="vocab">constant of proportionality</span> we obtain the differential equation:
 
-				\[
-					\dot{Q}=aQ \quad Q(t_0)=Q_0 
-				\] 
-				
-				is \begin {equation} \label {eq:4.1.2}
-				Q=Q_0e^{a(t-t_0)}\end {equation}
-				<a id="x1-3r2"></a>
-				Since the solutions of \(\dot{Q}=aQ\) are exponential functions, we say that a
-				quantity \(Q\) that satisfies this equation
-				<span class="vocab">grows exponentially</span>
-				if \(a &gt; 0\), or
-				<span class="vocab">decays exponentially</span>
-				if \(a &lt; 0\) (Figure&nbsp;<a href="#-exponential-growth-and-decay-">4.1.1</a>).
+				<a id="x1-2r1"></a>
+				\begin{equation} \label{eq:4.1.1}
+						\dot{Q} = aQ
+				\end{equation}
+
+				which you may recognize if you replace \( y \) with \(Q\) from Example <a href="sec2.1.book.html#x1-93" target="_blank">2.1.3</a>
 			</div>
-			<figure class="figure" id="9457ea37-75b2-4cbc-aebd-0128a242adaf">
-				<div id="-exponential-growth-and-decay-">
-					<img height="264" src="EPS/fig040101.png" width="409" />
-					<a id="x1-4r1"></a>
-				</div>
-				<figcaption class="caption">
-					<span class="id">Figure&nbsp;4.1.1</span>
-					<span class="content">Exponential growth and decay</span>
-				</figcaption>
-				<!-- tex4ht:label?: x1-4r1  -->
-			</figure>
+
+			<div class="indent" id="c9725bab-0611-4c2d-a686-ec8c3547b498">
+				Assuming \( Q \ne 0\), we can find the general solution of <a href="#x1-2r1">(4.1.1)</a> by
+				<span class="vocab">separation of variables</span>
+
+				\begin{align*}
+					\frac{dQ}{dt} = aQ \Longrightarrow
+					\frac{1}{Q} \cdot \frac{dQ}{dt} = & a \\
+					\int \left( \frac{1}{Q} \cdot \frac{dQ}{dt} \right) dt = & \int a \, dt \\	
+					\int  \frac{1}{Q} dQ = & a \int dt \\		
+					\ln \left| Q \right| = & at + c \\	
+					e^{\ln \left| Q \right| } = & e^{at + c} \\	
+					\left| Q \right| =  & c e^{at} \Longrightarrow
+					Q =  c e^{at}
+				\end{align*}
+			<div>
+			<div id="x1-1" class="reading-exercise">
+				Explain how \( \left| Q \right|  \) simplified to \( Q \)
+			</div> 		
+			<div id="x1-1" class="reading-exercise">
+				Explain how \( e^{at + c} \) simplified to \( c e^{at} \)
+			</div> 	
+			<div id="x1-1" class="reading-exercise">
+				Verify \( Q =  c e^{at} \) is a solution to <a href="#x1-2r1">(4.1.1)</a>
+			</div> 	
+				
+			<div class="indent" id="c9725bab-0611-4c2d-a686-ec8c3547b49810">
+				We can rewrite <a href="#x1-2r1">(4.1.1)</a> as an IVP by including an initial condition:
+
+				\begin{equation*}
+						\dot{Q} = aQ \quad Q(t_0)=Q_0
+				\end{equation*}
+			</div>	
+			<div id="x1-1" class="reading-exercise">
+				Evaluate \( Q =  c e^{at} \) at the initial condition \( Q(t_0)=Q_0 \) and solve for \( c \)
+			</div> 	
+			<div id="x1-1" class="reading-exercise">
+				Substitute \( c \) in to \( Q =  c e^{at} \) to obtain a particular solution of the IVP
+			</div> 	
+
+			<div class="indent" id="c9725bab-0611-4c2d-a686-ec8c3547b49810">
+				Then applying the inititial condition, we can find \( c\) and get a particular solution.
+				
+				<a id="x1-3r2"></a>
+				\begin {equation} \label {eq:4.1.2}
+					Q=Q_0e^{a(t-t_0)}
+				\end {equation}
+
+				
+
+				Since the solutions of \(\dot{Q}=aQ\) <a href="#x1-2r1">(4.1.1)</a> are exponential functions, we say that a quantity \(Q\) that satisfies this equation <span class="vocab">grows exponentially</span> if \(a &gt; 0\), or <span class="vocab">decays exponentially</span> if \(a &lt; 0\) (Figure&nbsp;<a href="#-exponential-growth-and-decay-">4.1.1</a>).
+			</div>	
+			<div class="indent" id="c9725bab-0611-4c2d-a686-ec8c3547b49811">
+				<figure class="figure" id="9457ea37-75b2-4cbc-aebd-0128a242adaf">
+					<div id="-exponential-growth-and-decay-">
+						<img height="264" src="EPS/fig040101.png" width="409" />
+						<a id="x1-4r1"></a>
+					</div>
+					<figcaption class="caption">
+						<span class="id">Figure&nbsp;4.1.1</span>
+						<span class="content">Exponential growth and decay</span>
+					</figcaption>
+					<!-- tex4ht:label?: x1-4r1  -->
+				</figure>
+			</div>	
 		</details>
 			
 		<details id="f7f1d597-f1d0-4419-b3be-40c9e613f318">
 			<summary>Radioactive Decay</summary>
+
+			<div class="indent" id="c9725bab-0611-4c2d-a686-ec8c3547b49812">		
+				Experimental evidence shows that <em>it radioactive material decays at a rate proportional to the mass of the material present</em>. According to this model the mass \(Q(t)\) of a radioactive material present at time \(t\) satisfies the <span class="vocab">exponential model</span> of <a href="#x1-2r1">(4.1.1)</a>, where the constant of proportionality \(a\) in this case is a negative constant whose value for any given material must be determined by experimental observation. For mathematical simplicity, we'll replace the negative constant \(a\) by \(-k\), where \(k\) is a positive number that we'll call the <span class="vocab"> decay constant</span> of the material. Thus, <a href="#x1-2r1">(4.1.1)</a> becomes
+
+				\begin{equation*}
+						\dot{Q} = -kQ	
+				\end{equation*}
+
+				If \(Q_0\) represents the mass of the material present at time \(t=t_0\)
+				then the mass present at any time \(t\) is the solution of the IVP
+				
+				\[
+					\dot{Q}=-kQ \quad  Q(t_0)=Q_0
+				\]
+				
+
+				Replacing \(a\) with \(-k\) in <a href="#x1-3r2">(4.1.2)</a> with \(a=-k\) we have the solution of IVP
+
+				<a id="x1-5r3"></a>
+				\begin{equation} \label{eq:4.1.3}
+					Q(t) = Q_0e^{-k(t-t_0)}
+				\end{equation}
+
+			</div>
+			<div id="x1-1" class="reading-exercise">
+				Verify <a href="#x1-5r3">(4.1.3)</a> is a solution of \( \dot{Q}=-kQ \)
+			</div> 	
 		
 			<div id="03187968-9c6a-427b-b0d7-c47cfd215bb1">
-				Experimental evidence shows that radioactive material decays at a rate
-				proportional to the mass of the material present. According to this model
-				the mass \(Q(t)\) of a radioactive material present at time \(t\)
-				satisfies <a href="#x1-2r1">(4.1.1)</a>, where \(a\) is a negative constant whose value for any given material
-				must be determined by experimental observation. For simplicity, we’ll
-				replace the negative constant \(a\) by \(-k\), where \(k\) is a positive
-				number that we’ll call the
-				<span class="vocab">decay constant</span>
-				of the material. Thus, <a href="#x1-2r1">(4.1.1)</a> becomes \[ \dot{Q}=-kQ\] If the mass of the material present at \(t=t_0\) is
-				\(Q_0\), the mass present at time \(t\) is the solution of \[ \dot{Q}=-kQ,\quad
-				Q(t_0)=Q_0\] From <a href="#x1-3r2">(4.1.2)</a> with \(a=-k\), the solution of this initial value problem (IVP) is 
+				The <span class="vocab">half–life</span> of a radioactive material is defined to be the time required for half of its mass to decay. 
 				
-				\begin
-				{equation} \label {eq:4.1.3} Q=Q_0e^{-k(t-t_0)}\end {equation}
-				<a id="x1-5r3"></a>
-			</div>
-			<div class="indent" id="8264448f-3ee9-4f01-a7cc-a32355c16629">
-				The <span class="vocab">half–life</span> \(\tau \) of a radioactive material
-				is defined to be the time required for
-				half of its mass to decay; that is, if \(Q(t_0)=Q_0\), then \begin
-				{equation} \label {eq:4.1.4} Q(\tau +t_0)={Q_0\over 2}\end {equation}
+				
+				\(Q_0\) represents the initial mass of the quantity and \(Q(t)\) represents the mass of the quantity at time \(t\), so when the mass has decayed to half the initial value, that is to \(\frac{1}{2}Q_0\), then the time that it takes is called the <span class="vocab">half–life</span>. Taking the initial time \(t_0\) as zero, and replacing \(Q(t)\) with \(\frac{1}{2}Q_0\) in <a href="#x1-5r3">(4.1.3)</a> we can solve for the half life:
+
 				<a id="x1-6r4"></a>
-				From <a href="#x1-5r3">(4.1.3)</a> with \(t=\tau +t_0\), <a href="#x1-6r4">(4.1.4)</a> is equivalent to \[ Q_0e^{-k\tau }={Q_0\over 2}\] so \[ e^{-k\tau
-				}={1\over 2}\] Taking logarithms yields \[ -k\tau =\ln {1\over 2}=-\ln 2\]
-				so the half-life is \begin {equation} \label {eq:4.1.5} \tau ={1\over
-				k}\ln 2\end {equation}
+				\begin{align}
+					Q(t) = & Q_0e^{-k(t-t_0)} \nonumber \\
+					\frac{1}{2}Q_0 = & Q_0e^{-k(t-0)} \nonumber \\
+					\frac{1}{2}Q_0 = & Q_0e^{-kt} \label{eq:4.1.4}\\
+					\frac{1}{2} = & e^{-kt} \nonumber \\
+					\ln \left( 2^{-1}\right) = & \ln \left( e^{-kt} \right) \nonumber \\	
+					-1 \ln 2 = & -kt \ln e \nonumber \\
+					\ln 2 = & kt \nonumber \\
+					t = & \frac{1}{k} \ln 2 \label{eq:4.1.5}		
+				\end{align}
 				<a id="x1-7r5"></a>
-				(Figure <a href="#-halflife-of-a-radioactive-substance-">4.1.2</a>).
-				The half-life is independent of \(t_0\) and \(Q_0\), since it’s
-				determined by the properties of material, not by the amount of the
-				material present at any particular time.
+
+				The equation for half-life <a href="#x1-7r5">(4.1.5)</a> is only dependent on the 
+				
+				<span class="vocab"> decay constant</span> of the material. It is worth noting that the initial qantity of the material \(Q_0\), or the amount at any time in the decay process does not impact the half life.
+
 			</div>
-			<figure class="figure" id="d616cc1c-d18f-4e9b-8dab-e4e45311ca1e">
-				<div id="-halflife-of-a-radioactive-substance-">
-					<img height="264" src="EPS/fig040102.png" width="409" />
-					<a id="x1-8r2"></a>
-				</div>
-				<figcaption class="caption">
-					<span class="id">Figure&nbsp;4.1.2</span>
-					<span class="content">Half-life of a radioactive substance</span>
-				</figcaption>
-				<!-- tex4ht:label?: x1-8r2  -->
-			</figure>
+			<div id="x1-1" class="reading-exercise">
+				Evaluate <a href="#x1-5r3">(4.1.3)</a> at \( t = \frac{1}{k} \ln 2 \) and \( t_0 = 0\) to verify 				
+			</div> 	
+
+			<div class="indent" id="8264448f-3ee9-4f01-a7cc-a32355c16629">
+				<figure class="figure" id="d616cc1c-d18f-4e9b-8dab-e4e45311ca1e">
+					<div id="-halflife-of-a-radioactive-substance-">
+						<img height="264" src="EPS/fig040102.png" width="409" />
+						<a id="x1-8r2"></a>
+					</div>
+					<figcaption class="caption">
+						<span class="id">Figure&nbsp;4.1.2</span>
+						<span class="content">Half-life of a radioactive substance</span>
+					</figcaption>
+					<!-- tex4ht:label?: x1-8r2  -->
+				</figure>
+				
+			</div>
+
+
+			<!--Example 1-->
 			<div class="example" id="x1-91" style="--ex-number: 1">
 				<div>
-					A radioactive substance has a half-life of 1620 years.
+					A  radioactive substance has a half-life of 1620 years. If its mass is now 4 g (grams), how much will be left 810 years from now? Find the time when 1.5 g of the substance remain.
 				</div>
+
+
 				<ol>
 					<li>
-						If its mass is now 4 g (grams), how much will be left 810 years from
-						now?
+						Set up and solve an IVP using the exponential decay model
 					</li>
 					<li>
-						Find the time \(t_1\) when 1.5 g of the substance remain.
+						Calculate the <span class="vocab"> decay constant</span> and substitute it in to the particular solution to the IVP
+					</li>
+					<li>
+						Use the result from (Part 2) to solve the original problem
 					</li>
 				</ol>
 
@@ -148,22 +218,95 @@
 
 					<ol>
 						<li>
-							From <a href="#x1-5r3">(4.1.3)</a> with \(t_0=0\) and \(Q_0=4\), \begin {equation} \label {eq:4.1.6}
-							Q=4e^{-kt}\end {equation}
-							<a id="x1-12r6"></a>
-							where we determine \(k\) from <a href="#x1-7r5">(4.1.5)</a>, with \(\tau \)= 1620 years: \[ k={\ln 2\over \tau }={\ln 2\over 1620}\]
-							Substituting this in <a href="#x1-12r6">(4.1.6)</a> yields \begin {equation} \label {eq:4.1.7} Q=4e^{-(t\ln 2)/1620}\end
-							{equation}
-							<a id="x1-13r7"></a>
-							Therefore the mass left after 810 years will be \[\begin {array}{rl}
-							Q(810) &amp;=4e^{-(810\ln 2)/1620}=4e^{-(\ln 2)/2} \\ &amp;=2\sqrt {2}
-							\mbox { g}\end {array}\]
-						</li>
+							<div>
+								An IVP must have a differential equation and an initial condition. The differential equation matches the familiar <span class="vocab">exponential model</span>, where <em>the rate of change of a quantity \(Q\) over time is proportional to that quantity \(Q\)</em> and we'll use \(-k\) as the constant of proportionality with \( k\) representing positive values. The initial condition is given in the problem statement when it states that the mass is initially 4 grams, so in other words we take the initial amount at time \(t=0\) to be 4 grams, so we obtain the IVP:
+
+								\begin{align*}
+										\dot{Q}=-kQ \quad Q(0)=4
+								\end{align*}
+
+								Now we can solve using <span class="vocab">separation of variables</span>:
+
+								\begin{align}
+									\dot{Q} = & -kQ \quad\quad\quad Q(0)=4 \nonumber \\
+									\frac{dQ}{dt} = & -kQ \nonumber \\
+									\frac{1}{Q} \cdot \frac{dQ}{dt} = & -k \nonumber \\
+									\int \left( \frac{1}{Q} \cdot\frac{dQ}{dt} \right) dt = & \int -k \, dt \nonumber \\
+									\int  \frac{1}{Q} dQ = & -k \int dt \nonumber \\		
+									\ln \left| Q \right| = & -kt + c \nonumber \\
+									e^{\ln \left| Q \right| } = & e^{-kt + c} \nonumber \\
+									\left| Q \right| =  & c e^{-kt} \nonumber \\
+									Q(t) =  & c e^{-kt} \quad\quad\quad Q(0)=4  \nonumber \\
+									Q(0) =  & c e^{-k(0)} \nonumber \\
+									4 =  & c e^{0} \Longrightarrow c = 4 \nonumber \\
+									Q(t) =  & 4 e^{-kt} \label{eq:4.1.6}	
+								\end{align}
+								<a id="x1-12r6"></a>
+							</div>
+							<div id="x1-1" class="reading-exercise">
+								Verify <a href="#x1-12r6">(4.1.6)</a> is a solution of \( \dot{Q}=-kQ \)
+							</div> 	
+						</li>	
+
 						<li>
-							Setting \(t=t_1\) in <a href="#x1-13r7">(4.1.7)</a> and requiring that \(Q(t_1)=1.5\) yields \[ {3\over 2}=4e^{(-t_1\ln
-							2)/1620}\] Dividing by 4 and taking logarithms yields \[ \ln {3\over
-							8}=-{t_1\ln 2\over 1620}\] Since \(\ln 3/8=-\ln 8/3\), \[ t_1=1620{\ln
-							8/3\over \ln 2}\approx 2292.4\;\mbox { years}\]
+							<div>
+								We can use the half-life of 1620 years to calculate the decay constant. Since the initial mass of the substance is 4 grams, then it will take 1620 years to decay to 2 grams, i.e. \(Q(1620)=2\):
+
+								\begin{align*}
+									Q(t) =  & 4 e^{-kt} \quad\quad\quad Q(1620)=2 \\
+									\underset{2}{\underbrace{Q(1620)}} =  & 4 e^{-k(1620)} \\	
+									2 =  & 4 e^{-1620k} \\	
+									\frac{2}{4} =  & e^{-1620k} \\	
+									\frac{1}{2} =  & e^{-1620k} \\	
+									\ln \left( 2^{-1} \right) =  & \ln e^{-1620k} \\	
+									-\ln \left( 2 \right) =  & -1620k \ln e \\	
+									\ln \left( 2 \right) =  & 1620k  \\	
+									k =  & \frac{1}{1620}\ln \left( 2 \right) \approx 0.0004278 \\		
+								\end{align*}
+
+								It's nice to know what the decimal approximation is to get an idea of the number but we substitute our exact decay constant into the solution <a href="#x1-12r6">(4.1.6)</a> of our IVP
+
+								<a id="x1-13r7"></a>
+								\begin{align} \label{eq:4.1.7}
+									Q(t) =  & 4 e^{-kt} \nonumber \\	
+									Q(t) =  & 4 e^{-{(t\ln 2)}/{1620} }
+								\end{align}
+							</div>
+							
+						</li>	
+						<li>
+							<div>
+								The original problem asked us to find out how much material will be left in 810 years, i.e. find \(Q(810)\) using <a href="#x1-13r7">(4.1.7)</a>
+
+								\begin{align*} 
+									Q(t) =  & 4 e^{-{(t\ln 2)}/{1620} } \\
+									Q(810) =  & 4 e^{-\frac{810\ln 2}{1620} } \\
+									=  & 4 e^{- \frac{1}{2} \ln 2} \\	
+									=  & 4 e^{ \ln (2)^{- \frac{1}{2} } } \\	
+									=  & 4 (2)^{- \frac{1}{2} } \\	
+									=  & 4 \left(\frac{1}{2} \right)^{\frac{1}{2} } \\	
+									=  & \frac{4}{ \sqrt{2} }  \left( \frac{\sqrt{2}}{\sqrt{2}} \right) \\	
+									=  & \frac{4\sqrt{2}}{ 2 } = 2 \sqrt{2} \approx 2.828 \quad \text{grams} \\							
+								\end{align*}
+
+								So we found the amount left after 810 years to be \(2 \sqrt{2} \approx 2.828\) grams. We also want to find the time when 1.5 g remain, so we substitute 1.5 for \(Q(t)\) and solve for \(t\)
+
+								\begin{align*} 
+									Q(t) =  & 4 e^{-{(t\ln 2)}/{1620} } \\							
+									1.5 =  & 4 e^{-{(t\ln 2)}/{1620} } \\	
+									\frac{1.5}{4} =  & e^{-{(t\ln 2)}/{1620} } \\		
+									\ln \left( \frac{15}{40} \right) =  & \ln e^{-{(t\ln 2)}/{1620} } \\
+									\ln \left( \frac{15/5}{40/5} \right) =  & - \frac{t\ln 2}{1620} \\
+									-1620 \ln \left( \frac{3}{8} \right) =  & t\ln 2 \\
+									1620 \ln \left( \frac{3}{8} \right)^{-1} =  & t\ln 2 \\
+									t =  &  1620 \frac{\ln \left( \frac{8}{3} \right) }{\ln 2} \approx 2292 \quad \text{years}
+								\end{align*}
+
+								So in about 2292 years is when there will be 1.5 grams remaining.
+							</div>	
+							<div id="x1-1" class="reading-exercise">
+								Evaluate \( Q(2292)\) using <a href="#x1-13r7">(4.1.7)</a> and find out if it agrees with our answer
+							</div> 	
 						</li>
 					</ol>
 				</details>
@@ -180,108 +323,338 @@
 				To calculate the value of the account at the end of \(t\) years, we need
 				one more piece of information: how the interest is added to the account,
 				or—as the bankers say—how it is <span class="vocab">compounded</span>.
+				
 				If the interest is compounded annually, the value of the account is
 				multiplied by \(1+r\) at the end of each year. This means that after \(t\)
-				years the value of the account is \[ Q(t)=Q_0(1+r)^t\] If interest is
-				compounded semiannually, the value of the account is multiplied by
+				years the value of the account is 
+
+				\[ Q(t)=Q_0(1+r)^t\] 
+				
+				If interest is compounded semiannually, the value of the account is multiplied by
 				\((1+r/2)\) every 6 months. Since this occurs twice annually, the value of
-				the account after \(t\) years is \[ Q(t)=Q_0\left (1+{r\over 2}\right
-				)^{2t}\] In general, if interest is compounded \(n\) times per year, the
+				the account after \(t\) years is 
+
+				\[ Q(t)=Q_0\left (1+{r\over 2}\right)^{2t}\] 
+
+				If interest is compounded quarterly, the value of the account is multiplied by
+				\((1+r/4)\) every 3 months. Since this occurs four times annually, the value of
+				the account after \(t\) years is 
+
+				\[ Q(t)=Q_0\left (1+{r\over 4}\right)^{4t}\] 
+
+				If interest is compounded monthly, the value of the account is multiplied by
+				\((1+r/12)\) every month. Since this occurs twelve times annually, the value of
+				the account after \(t\) years is 
+
+				\[ Q(t)=Q_0\left (1+{r\over 12}\right)^{12t}\] 
+			</div>
+
+			<div id="x1-1" class="reading-exercise">
+				Write a formula for the value of the account with weekly compounding
+			</div> 	
+
+			<div id="3613ffee-16d9-4f58-aba3-5b08ae53a7064312">
+
+				If interest is compounded daily, the value of the account is multiplied by
+				\((1+r/365)\) every month. Since this occurs 365 times annually, the value of
+				the account after \(t\) years is 
+
+				\[ Q(t)=Q_0\left (1+{r\over 365}\right)^{365t}\] 
+				
+				
+				In general, if interest is compounded \(n\) times per year, the
 				value of the account is multiplied \(n\) times per year by \((1+r/n)\);
-				therefore, the value of the account after \(t\) years is \begin {equation}
-				\label {eq:4.1.8} Q(t)=Q_0\left (1+{r\over n}\right )^{nt}\end {equation}
+				therefore, the value of the account after \(t\) years is 
+				
 				<a id="x1-14r8"></a>
+				\begin {equation} \label {eq:4.1.8} 
+					Q(t)=Q_0\left (1+{r\over n}\right )^{nt}
+				\end {equation}
+				
 				Thus, increasing the frequency of compounding increases the value of the
-				account after a fixed period of time. Table&nbsp;<a href="#x1-15r1">4.1.1</a>
+				account after a fixed period of time. 
+			</div>
+			<div id="3613ffee-16d9-4f58-aba3-5b08ae53a707">	
+				Table&nbsp;<a href="#x1-15r1">4.1.1</a>
 				shows the effect of increasing the number of compoundings over \(t=5\)
-				years on an initial deposit of \(Q_0=100\) (dollars), at an annual
+				years on an initial deposit of \(Q_0=\$100\) at an annual
 				interest rate of 6%.
 			</div>
-			<blockquote class="quote" id="b08c4303-7986-45b1-9faa-371f94ebbbdd">
-				<div>
-					<a id="x1-15r1"></a>
-					Table 4.1.1. Table The effect of compound interest
-				</div>
-				<div class="center">
-					<div></div>
-					<div>
-						\[\begin {array}{|c|c|}\hline n &amp; \displaystyle \$100 \left
-						(1+{.06\over n}\right )^{5n}\\ \hbox {(number of compoundings} &amp;
-						\hbox {(value in dollars}\\ \hbox {per year)} &amp;\hbox {after 5
-						years)}\\ \hline 1 &amp; \$133.82 \\ 2 &amp; \$134.39 \\ 4 &amp;
-						\$134.68 \\ 8 &amp; \$134.83 \\ 364 &amp; \$134.98 \\\hline \end
-						{array}\]
-					</div>
-				</div>
-			</blockquote>
+			<div id="3613ffee-16d9-4f58-aba3-5b08ae53a708">	
+		
 
-			<div class="indent" id="6b41ee57-6525-4b47-af51-8a356fc9c8a2">
-				You can see from Table&nbsp;<a href="#x1-15r1">4.1.1</a>
-				that the value of the account after 5 years is an increasing function of
-				\(n\). Now suppose the maximum allowable rate of interest on savings
-				accounts is restricted by law, but the time intervals between successive
-				compoundings isn’t ; then competing banks can attract savers by
-				compounding often. The ultimate step in this direction is to
-				<span class="vocab">compound continuously</span>,
-				by which we mean that \(n\to \infty \) in <a href="#x1-14r8">(4.1.8)</a>. Since we know from calculus that \[ \lim _{n\to \infty } \left
-				(1+{r\over n}\right )^n=e^r\] this yields \[\begin {array}{rl} Q(t) &amp;
-				\displaystyle =\lim _{n\to \infty } Q_0\left (1+{r\over n}\right
-				)^{nt}=Q_0 \left [ \lim _{n\to \infty } \left (1+{r\over n}\right
-				)^n\right ]^t \\[12pt] &amp;=Q_0e^{rt}\end {array}\] Observe that
-				\(Q=Q_0e^{rt}\) is the solution of the IVP \[ \dot{Q}=rQ,
-				\quad Q(0)=Q_0\] that is, with continuous compounding the value of the
-				account grows exponentially.
+				<blockquote class="quote" id="b08c4303-7986-45b1-9faa-371f94ebbbdd">
+					<div>
+						<a id="x1-15r1"></a> 
+						Table 4.1.1. Table The effect of compound interest
+					</div>
+					
+					<div class="center">
+					$$
+					
+					\begin{array}{|c|c|c|}\hline \label{table:4.1.1}
+					n & \$100\displaystyle\left(1+{r\over n}\right)^{nt} 
+					& \displaystyle\$100 \left(1+{.06\over n}\right)^{5n}\\
+					\hbox{(compoundings/year)} & &   \hbox{(value in dollars after 5 years)}\\
+					\hline
+					& & \\
+					1 & \$100\left(1+{r\over 1}\right)^{1t} & \$133.82 \\ & & \\
+					2 & \$100\left(1+{r\over 2}\right)^{2t} & \$134.39 \\ & & \\
+					4 & \$100\left(1+{r\over 4}\right)^{4t} & \$134.68 \\ & & \\
+					12 & \$100\left(1+{r\over 12}\right)^{12t} & \$134.89 \\ & & \\
+					365 &  \$100\left(1+{r\over 365}\right)^{365t} & \$134.98 \\ & & \\ \hline
+					\end{array}
+					
+					$$
+					</div>
+				</blockquote>
+		
+
 			</div>
+
+			<div id="3613ffee-16d9-4f58-aba3-5b08ae53a709">	
+				Table <a href="#x1-15r1">4.1.1</a> shows that the value of the account after 5
+				years is an increasing function of \(n\). Now suppose the maximum
+				allowable rate of interest on savings accounts is restricted by law,
+				but the time intervals between successive compoundings isn't. Then
+				competing banks can attract savers by compounding often. The ultimate
+				step in this direction is to <span class="vocab">compound continuously</span>, by which we
+				mean we let the number of compoundings \(n \) approach infinity in <a href="#x1-14r8">(4.1.8)</a> 		
+			</div>
+		
+			<div class="indent" id="6b41ee57-6525-4b47-af51-8a356fc9c8a2">
+				Calculating the limit of <a href="#x1-14r8">(4.1.8)</a> as \(n\to \infty \)
+
+				\begin{align*}
+					Q(t) = & Q_0\left(1+{r\over n}\right)^{nt} \\
+					\lim_{n \to \infty} Q(t) = & Q_0 \lim_{t \to \infty}  \left(1+{r\over n}\right)^{nt} \\	
+					= & Q_0 \lim_{n \to \infty}  e^{\ln \left(\left(1+{r\over n}\right)^{nt} \right) } \\	
+					= & Q_0  e^{\displaystyle \lim_{n \to \infty}  \left( nt \cdot \ln \left(1+{r\over n}\right) \right) } \\	
+					= & Q_0  e^{t \displaystyle \lim_{n \to \infty}  \left( \frac{ \ln \left({n+r\over n}\right) } {1/n} \right)  } \\	
+					= & Q_0  e^{t \displaystyle \lim_{n \to \infty}  \left( \frac{ \frac{d}{dn} \ln \left({n+r\over n}\right) } {\frac{d}{dn}n^{-1} } \right)  } \\	
+					= & Q_0  e^{t \displaystyle \lim_{n \to \infty}  \left( \frac{  {n\over n+r} \left( -rn^{-2} \right) } { -n^{-2} } \right)  } \\		
+					= & Q_0  e^{t \displaystyle \lim_{n \to \infty}   {rn\over n+r} } \\	
+					= & Q_0  e^{rt \displaystyle \lim_{n \to \infty}   {{n}/{n}\over {n}/{n}+{r}/{n}} } \\
+					= & Q_0  e^{rt \displaystyle \lim_{n \to \infty}   {1\over 1+{r}/{n}} } \\	
+					= & Q_0  e^{rt}		
+				\end{align*}
+
+				It is interesting to note that with continuous compounding, \(Q(t)=Q_0e^{rt}\) which is exactly the solution to the IVP
+
+				$$
+					\dot{Q}=rQ \quad Q(0)=Q_0
+				$$
+
+				This means that the value of the account grows exponentially with continuous compounding
+
+			</div>
+			<div id="x1-1" class="reading-exercise">
+				Verify \(Q(t)=Q_0e^{rt}\) is a solution of \( \dot{Q}=rQ \quad Q(0)=Q_0 \)
+			</div> 	
+		
+			
 				
 			<div class="example" id="x1-162" style="--ex-number: 2">
 				<div>
-					If $150 is deposited in a bank that pays \(5{1\over 2}\)% annual
-					interest compounded continuously, the value of the account after \(t\)
-					years is \[ Q(t)=150e^{.055t} \] dollars. (Note that it’s necessary to
-					write the interest rate as a decimal; thus, \(r=.055\).) Therefore,
-					after \(t=10\) years the value of the account is \[ Q(10)=150e^{.55}
-					\approx \$259.99\]
+					Suppose \$150 is deposited in a bank that pays \(5{1\over2}\)% annual interest compounded continuously. Find the value of the account after 10 years. How long will it take until the account is worth \$500?
 				</div>
-			</div>
-			
-			<div class="example" id="x1-173" style="--ex-number: 3">
-				<div>
-					We wish to accumulate $10,000 in 10 years by making a single deposit in
-					a savings account bearing \(5{1\over 2}\)% annual interest compounded
-					continuously. How much must we deposit in the account?
-				</div>
+
+				<ol>
+					<li>
+						Set up and solve an IVP using the exponential decay model	
+					</li>
+					<li>
+						Use the result from (Part 1) to solve the original problem
+					</li>
+				</ol>
 
 				<details class="solution" id="b4dbc7c0-0952-4d84-a5d7-2e145a3e5b6a">
 					<summary>Solution</summary>
 
-					The value of the account at time \(t\) is \begin {equation} \label
-					{eq:4.1.9} Q(t)=Q_0e^{.055t}\end {equation}
+					<ol>
+						<li>
+							<div>
+							An IVP must have a differential equation and an initial condition. The differential equation matches the familiar <span class="vocab">exponential model</span>, with the interest rate \(5{1\over2}\)%\(=0.055 = \frac{55}{1000} = \frac{11}{200}\) as the constant of proportionality. The initial condition is given in the problem statement when it states that $150 is deposited in a bank so in other words we take the initial amount at time \(t=0\) to be $150, so we obtain the IVP
+
+							\begin{align*}
+									\dot{Q} = \frac{11}{20} \, Q \quad Q(0)=\$150
+							\end{align*}
+
+							Now we can solve using <span class="vocab">separation of variables</span>:
+
+							\begin{align}
+								\dot{Q} = & \frac{11}{20} Q \quad\quad\quad Q(0)=\$150 \nonumber \\
+								\frac{dQ}{dt} = & \frac{11}{200} Q \nonumber \\
+								\frac{1}{Q} \frac{dQ}{dt} = & \frac{11}{200} \nonumber \\
+								\int \left( \frac{1}{Q} \frac{dQ}{dt} \right) dt = & \int \frac{11}{200} \, dt \nonumber \\
+								\int  \frac{1}{Q} dQ = & \frac{11}{200} \int dt \nonumber \\		
+								\ln \left| Q \right| = & \frac{11}{200}t + c \nonumber \\
+								e^{\ln \left| Q \right| } = & e^{\frac{11}{200}t + c} \nonumber \\
+								\left| Q \right| =  & c e^{\frac{11}{200}t} \nonumber \\
+								Q(t) =  & c e^{\frac{11}{200}t} \quad\quad\quad Q(0)=4  \nonumber \\
+								Q(0) =  & c e^{\frac{11}{200}(0)} \nonumber \\
+								\$150 =  & c e^{0} \Longrightarrow c = \$150 \nonumber \\
+								Q(t) =  & \$150 e^{\frac{11}{200}t} \label{eq:4.1.9}	
+							\end{align}
+
+							We are using a fraction as our interest rate here to emphasize exact values, however, it is common to express the interest rate as an exact decimal \(\frac{11}{200} = 0.055\) so we could express <a href="#x1-18r9">(4.1.9)</a> as
+
+							\begin{align*} 
+								Q(t) =  & \$150 e^{0.055t}
+							\end{align*}
+							</div>
+							<div id="x1-1" class="reading-exercise">
+								Verify \(Q(t) = \$150 e^{0.055t}\) is a solution of \( \dot{Q} = \frac{11}{20} \, Q  \)
+							</div> 	
+						</li>
+						<li>
+							<div>
+							We want to find out how much money will be in the account after 10 years, i.e. find \(Q(10)\)
+
+							\begin{align*} 
+								Q(t) =  & \$150 e^{\frac{11}{200}t} \\							
+								Q(10) =  & \$150 e^{\left(\frac{11}{200}\right)10} \\
+								=  & \$150 e^{\frac{11}{20}} \\		
+								=  & \$150 e^{0.55} \approx \$ 259.99  \\										
+							\end{align*}
+
+							We found the value of the account after 10 years to be \$ 259.99 but we also want to know how long will it take until the account is worth \$500 so we substitute \$500 for \(Q(t)\) and solve for \(t\)
+
+							\begin{align*} 
+								Q(t) =  & \$150 e^{\frac{11}{200}t} \\							
+								\$500 =  & \$150 e^{\frac{11}{200}t} \\		
+								\frac{\$500}{\$150} =  & e^{\frac{11}{200}t} \\ 	
+								\frac{50/5}{15/5} =  & e^{\frac{11}{200}t} \\ 	
+								\ln \left( \frac{10}{3} \right) =  & \ln e^{\frac{11}{200}t} \\ 	
+								\ln \left( \frac{10}{3} \right) =  & \frac{11}{200}t \\ 	
+								t =  & \frac{200}{11} \ln \left( \frac{10}{3} \right) \approx 21.89 \quad \text{years} \\	
+							\end{align*}
+
+							So it will take about 22 years for the account to grow to \$500.
+							<div>
+							<div id="x1-1" class="reading-exercise">
+								Evaluate \( Q(22)\) using <a href="#x1-18r9">(4.1.9)</a> and find out if it agrees with our answer
+							</div> 
+						</li>
+					</ol>
+
+				</details>
+
+			</div>
+			
+			<div class="example" id="x1-173" style="--ex-number: 3">
+
+				<div>
+					We wish to have an account worth \$10,000 in 10 years by making a single deposit
+					in a savings account bearing \(5{1\over2}\)% annual interest
+					compounded continuously. How much must we deposit in the account?
+				</div>
+
+				<ol>
+					<li>
+						Set up and solve an IVP using the exponential growth model	
+					</li>
+					<li>
+						Use the result from (Part 1) to solve the original problem
+					</li>
+				</ol>
+
+				<details class="solution" id="b4dbc7c0-0952-4d84-a5d7-2e145a3e5b6a">
+					<summary>Solution</summary>
+
+					The value of the account at time \(t\) is
 					<a id="x1-18r9"></a>
 					Since we want \(Q(10)\) to be $10,000, the initial deposit \(Q_0\) must
-					satisfy the equation \begin {equation} \label {eq:4.1.10}
-					10000=Q_0e^{.55}\end {equation}
-					<a id="x1-19r10"></a>
-					obtained by setting \(t=10\) and \(Q(10)=10000\) in <a href="#x1-18r9">(4.1.9)</a>. Solving <a href="#x1-19r10">(4.1.10)</a> for \(Q_0\) yields \[ Q_0=10000e^{-.55} \approx \$5769.50\]
+					
+					
+					obtained by setting \(t=10\) and \(Q(10)=10000\) in <a href="#x1-18r9">(4.1.9)</a>. Solving for \(Q_0\) yields \[ Q_0=10000e^{-.55} \approx \$5769.50\]
+
+					<ol>
+						<li>
+							<div>
+							Again an IVP must always have both a differential equation and an initial condition. And again the differential equation matches the familiar <span class="vocab">exponential model</span>, with the interest rate \(5{1\over2}\)% which can be written as \(0.055 = \frac{11}{200}\) as the constant of proportionality. Although the initial value of the account is not given, and in fact, is what we want to find, but an IVP requires an initial condition so we will set the initial value of the account at time \(t=0\) as \(Q_0\) for the initial value, which is what we are ultimately solving for.
+
+							\begin{align*}
+									\dot{Q} = \frac{11}{20} \, Q \quad Q(0)=Q_0
+							\end{align*}
+							</div>
+							<div id="x1-1" class="reading-exercise">
+								Solve the IVP \( \dot{Q} = \frac{11}{20} \, Q \quad Q(0)=Q_0 \) using <span class="vocab">separation of variables</span>
+							</div> 
+
+							<div>
+							After using <span class="vocab">separation of variables</span>, we obtain
+
+							<a id="x1-19r10"></a>
+							\begin{align}
+								Q(t) =  & Q_0 e^{\frac{11}{200}t} \label{eq:4.1.10}	
+							\end{align}
+							</div>
+							<div id="x1-1" class="reading-exercise">
+								Verify <a href="#x1-19r10">(4.1.10)</a> is a solution of \( \dot{Q} = \frac{11}{20} \, Q  \)
+							</div> 	
+
+							<div id="x1-1" class="reading-exercise">
+								Verify \(Q(t) = \$150 e^{0.055t}\) is a solution of \( \dot{Q} = \frac{11}{20} \, Q  \)
+							</div> 	
+						</li>
+						<li>
+							<div>
+								We are given that we want to have an account worth \$10000 in 10 years, so we substitute time \(t=10\) and quantity after 10 years \(Q(10)\) as \$10,000 and then we can solve for \(Q_0\), the initial value of the account, which is the amount we must deposit:
+
+								\begin{align*}
+									Q(t) =  & Q_0 e^{\frac{11}{200}t} \nonumber \\
+									\underset{$10,000 }{\underbrace{Q(10)}} =  & Q_0 e^{\frac{11}{200}10} \nonumber \\
+									\$10,000 =  & Q_0 e^{\frac{11}{20}}  \\
+									Q_0 = & \$10,000e^{-\frac{11}{20}} \approx \$5769.50 \nonumber			
+								\end{align*}
+								
+								
+								Meaning we must deposit \$5769.50 initially in order for the account to be worth \$10000 in 10 years.
+							<div>
+							<div id="x1-1" class="reading-exercise">
+								Evaluate \( Q(10)\) with \( Q_0 = $5769.50 \) using <a href="#x1-19r10">(4.1.10)</a> and find out if it agrees with our answer
+							</div> 
+						</li>
+					</ol>
+
 				</details>
 			</div>
 		</details>
 
 		<details id="f9142195-3d24-4ace-bd85-4fd17d95cc40">
 			<summary>Mixed Growth and Decay</summary>
+
+									
+			<div class="indent" id="6b41ee57-6525-4b47-af51-8a356fc9c8a5">
+							
+			</div>
+		
+			<div class="indent" id="6b41ee57-6525-4b47-af51-8a356fc9c8a6">		
+				
+	
+			</div>
+			<div class="indent" id="6b41ee57-6525-4b47-af51-8a356fc9c8a3">
+				
+			</div>
+		
+			<div class="indent" id="6b41ee57-6525-4b47-af51-8a356fc9c8a4">		
+				
+	
+			</div>
+
 		
 			<div class="example" id="x1-204" style="--ex-number: 4">
 				<div>
-					A radioactive substance with decay constant \(k\) is produced at a
-					constant rate of \(a\) units of mass per unit time.
+					A radioactive substance <em>decays at a rate proportional to the mass of the material present</em> and satisfies the the <span class="vocab">exponential model</span> with <span class="vocab">decay constant</span> \(k\) but the substance is simultaneously being produced at a constant rate of \(a\) units of mass per unit time. Find the <span class="vocab">steady state</span> value of the substance, i.e., when it levels off to a horizontal asymptote in the limit to infinity.
 				</div>
 				
 				<ol>
 					<li>
-						Assuming that \(Q(0)=Q_0\), find the mass \(Q(t)\) of the substance
-						present at time&nbsp;\(t\).
+						Set up and solve an IVP using the exponential growth model	
 					</li>
 					<li>
-						Find \(\lim _{t\to \infty } Q(t)\).
+						Use the result from (Part 1) to solve the original problem
 					</li>
 				</ol>
 
@@ -290,32 +663,118 @@
 
 					<ol>
 						<li>
-							Here \[ \dot{Q}=\mbox { rate of increase of } Q - \mbox { rate of decrease of }
-							Q\] The rate of increase is the constant \(a\). Since \(Q\) is radioactive
-							with decay constant \(k\), the rate of decrease is \(kQ\). Therefore \[
-							\dot{Q}=a-kQ\] This is a linear first order differential equation. Rewriting it
-							and imposing the initial condition shows that \(Q\) is the solution of the
-							IVP \begin {equation} \label {eq:4.1.11} \dot{Q}+kQ=a, \quad
-							Q(0)=Q_0\end {equation}
-							<a id="x1-23r11"></a>
-							Since \(e^{-kt}\) is a solution of the complementary equation, the
-							solutions of <a href="#x1-23r11">(4.1.11)</a> are of the form \(Q=ue^{-kt}\), where \(\dot{u}e^{-kt}=a\), so
-							\(\dot{u}=ae^{kt}\). Hence, \[ u={a\over k}e^{kt}+c \] and \[
-							Q=ue^{-kt}={a\over k}+ce^{-kt}\] Since \(Q(0)=Q_0\), setting \(t=0\) here
-							yields \[ Q_0={a\over k}+c \quad \mbox{ or } \quad  c=Q_0-{a\over k}\]
-							Therefore \begin {equation} \label {eq:4.1.12} Q={a\over k}+\left
-							(Q_0-{a\over k}\right )e^{-kt}\end {equation}
-							<a id="x1-24r12"></a>
+							<div>
+								There are two competing rates here: the rate of decay is decreasing the quantity of the substance and the rate of production is increasing the quantity of the substance. Our differential equation must account for both of these rates. The rate of decrease is the familiar exponential decay rate which is proportional to the substance so \(-kQ\) and the rate of increase is constant \(a\)
+
+								\begin{align*}
+									\dot{Q} = & \mbox{ rate of increase of } Q - \mbox{ rate of decrease of } Q	\\
+									\dot{Q} = & \quad\quad\quad\quad a \quad\quad\quad\quad - \quad\quad\quad\quad kQ	\\ \\	
+									\dot{Q} = & a - kQ	
+								\end{align*}
+
+								Rewriting our differential equation in the standard form <a href = "sec2.1book.html#x1-7r4" target=_blank>(2.1.4)</a> and including an initial condition yields our IVP
+
+								<a id="x1-23r11"></a>
+								\begin{equation}  \label{eq:4.1.11}
+										\dot{Q} + kQ = a \quad Q(0) = Q_0
+								\end{equation}
+
+								Recall we can solve first order <span class="vocab">linear nonhomogenous</span> differential equations using the <span class="vocab">complementary equation</span> followed by <span class="vocab">variation of parameters</span> so we start with solving the complementary equation
+
+								\begin{align*}
+									\frac{dQ}{dt} + kQ = & 0 \\	
+									\frac{dQ}{dt} = & -kQ \\	
+									\frac{1}{Q} \cdot \frac{dQ}{dt} = & -k \\
+									\int \left( \frac{1}{Q} \cdot \frac{dQ}{dt} \right) dt = & \int \Big( -k \Big) dt \\
+									\int \frac{1}{Q}  dQ = & -k \int dt \\
+									\ln \left| Q \right| = & -kt + c \\	
+									e^{\ln \left| Q \right|} = & e^{-kt + c} \\		
+									\left| Q \right| = & ce^{-kt} \\	
+									Q = & ce^{-kt} \\			
+								\end{align*}
+
+								Choosing a simple particular solution \( Q_1=e^{-kt} \) we use <span class="vocab">variation of parameters</span> to find solutions of the form \( Q=uQ_1=u \cdot e^{-kt}\) where \(u=u(t)\) is some function of \(t\) to be determined
+							</div>
+
+							<div class="reading-exercise">
+								Differentiate \( u \cdot e^{-kt} \)  with respect to \( t \) using the product and chain rules	
+							</div> 
+								
+							<div>
+								Then substituting into the nonhomogeneous <a href="#x1-23r11">(4.1.11)</a>
+
+								\begin{align*}
+									\frac{dQ}{dt} + kQ = & a \\	
+									\Big(\frac{du}{dt} - k u \Big) e^{-kt}  + k \Big(ue^{-kt} \Big)= & a \\		
+									\frac{du}{dt}e^{-kt} - k u e^{-kt}  + kue^{-kt}= & a \\	
+									\frac{du}{dt} = & a e^{kt} \\		
+									\int du = & a \int e^{kt} dt \\		
+									\int du = & \frac{a}{k} \int e^{\overset{v}{\overbrace{kt}}} \overset{dv}{\overbrace{(k dt)}} \\	
+									\int du = & \frac{a}{k} \int e^{v} dv \\	
+									u = & \frac{a}{k} e^{v} + c \\
+									u = & \frac{a}{k} e^{kt} + c \\		
+									ue^{-kt} = & \left( \frac{a}{k} e^{kt} + c \right) e^{-kt} \\	
+									Q = & \frac{a}{k} e^{kt}e^{-kt} + ce^{-kt} \\	
+									Q = & \frac{a}{k} + ce^{-kt} \\													
+								\end{align*}
+							</div>
+							<div id="x1-1" class="reading-exercise">
+								Verify \(Q = \frac{a}{k} + ce^{-kt}\) is a solution of \( \frac{dQ}{dt} + kQ = a\)
+							</div> 	
+							<div id="x1-1" class="reading-exercise">
+								Evaluate \(Q = \frac{a}{k} + ce^{-kt}\) at the initial condition \(Q(0)=Q_0\) and solve for \(c\)
+							</div> 	
+							<div>
+								Applying the initial condition \(Q(0)=Q_0\) and solving for \(c\) yields
+
+								\begin{align*}
+									Q(0) = & \frac{a}{k} + ce^{-k(0)}\
+									\Longrightarrow	
+									c = Q_0 - \frac{a}{k} \\																
+								\end{align*}
+
+								Therefore we have the solution to the IVP, which we will rearrange a bit to make it more clear where each part of the solution comes from
+
+								<a id="x1-24r12"></a>
+								\begin{align} \label{eq:4.1.12}
+									Q = &  {a\over k}+\left(Q_0-{a\over k}\right)e^{-kt} \\
+									Q = &  {a\over k} + Q_0e^{-kt} - {a\over k}e^{-kt} \nonumber \\
+									Q = &  {a\over k} - {a\over k}e^{-kt} + Q_0e^{-kt} \nonumber \\
+									Q = &  \underset{\text{increase of $Q$}}{\underbrace{{a\over k}\left(1 - e^{-kt}\right)}} + \underset{\text{decrease of $Q$}}{\underbrace{Q_0e^{-kt}}} \nonumber
+									
+									
+
+								\end{align}
+
+							</div>
+							<div id="x1-1" class="reading-exercise">
+								Verify <a href="#x1-24r12">(4.1.12)</a> is a solution of \( \frac{dQ}{dt} + kQ = a\)
+							</div> 	
 						</li>
 						<li>
-							Since \(k &gt; 0\), \(\lim _{t\to \infty } e^{-kt}=0\), so from <a href="#x1-24r12">(4.1.12)</a> \[ \lim _{t\to \infty } Q(t)={a\over k}\] This limit depends only on
-							\(a\) and \(k\), and not on \(Q_0\). We say that \(a/k\) is the
-							<span class="vocab">steady state</span>
-							value of \(Q\). From <a href="#x1-24r12">(4.1.12)</a> we also see that \(Q\) approaches its steady state value from above if
-							\(Q_0 &gt; a/k\), or from below if \(Q_0 &lt; a/k\). If \(Q_0=a/k\), then
-							\(Q\) remains constant (Figure <a href="#-qt-approaches-the-steady-state-value-a-overk-as-t-"
-							>4.1.3</a>).
+							<div>
+								We wish to find the <span class="vocab">steady state</span> value of the substance, i.e., when it levels off to a horizontal asymptote in the limit to infinity:
+
+								\begin{align*}
+									Q = & {a\over k}\left(1 - e^{-kt}\right) + Q_0e^{-kt} \\		
+									\lim_{t \to \infty} Q 
+									= & \lim_{t \to \infty}  \Bigg( {a\over k}\left(1 - e^{-kt}\right) + Q_0e^{-kt} \Bigg) \\	
+									= & {a\over k}\left(1 - \lim_{t \to \infty}e^{-kt}\right) + Q_0\lim_{t \to \infty}e^{-kt} \\	
+									= & {a\over k}\left(1 - e^{-\infty}\right) + Q_0 e^{-\infty} \\	
+									= & {a\over k}\left(1 - 0\right) + Q_0 \cdot 0 \\	
+									= & \frac{a}{k}  \\			
+								\end{align*}
+
+
+								This steady state only on \( a \) and \( k\) and not on \(Q_0\).
+								We call \(a/k\) is the <span class="vocab">steady state</span> value of \(Q\). 
+								From <a href="#x1-24r12">(4.1.12)</a> \(Q\) approaches its steady state value
+								from above if \(Q_0 > a/k\), or from below if \(Q_0 < a/k\). If \(Q_0=a/k\),
+								then \(Q\) remains constant.
+							</div>
+					
 						</li>
+					
 					</ol>
 				</details>
 			</div>
@@ -342,63 +801,139 @@
 			<summary>Carbon Dating</summary>
 		
 			<div id="1591b9ff-c621-4c27-9a18-35c499084456">
-				The fact that \(Q\) approaches a steady state value in the situation
-				discussed in Example 4 underlies the method of
-				<span class="vocab">carbon dating</span>,
-				devised by the American chemist and Nobel Prize Winner W.S. Libby.
+				<div>
+				The fact that \(Q\) approaches a <span class="vocab">steady state</span> value in the situation discussed in Example 4 underlies the method of <span class="vocab">carbon dating</span>, devised by the American chemist and Nobel Prize Winner W.S. Libby. 
+				</div>
+				<div>
+				Carbon-12 is stable, but carbon-14, which is produced by cosmic bombardment of nitrogen in the upper atmosphere, is radioactive with a half-life of about 5570 years. Libby assumed that the quantity of carbon-12 in the atmosphere has been constant throughout time, and that the quantity of radioactive carbon-14 achieved its <span class="vocab">steady state</span> value long ago as a result of its creation and decomposition over millions of years. These assumptions led Libby to conclude that <em>the ratio of carbon-14 to carbon-12 has been nearly constant for a long time</em>. this constant, which we denote by \(R\), has been determined experimentally.
+				</div>
+				<div>
+				Living cells absorb both carbon-12 and carbon-14 in the proportion in which they are present in the environment. Therefore the ratio of carbon-14 to carbon-12 in a living cell is always \(R\), determined experimentally. However, when the cell dies it ceases to absorb carbon, and the ratio of carbon-14 to carbon-12 decreases exponentially as the radioactive carbon-14 decays while the carbon-14 remains stable. This is the basis for the method of carbon dating, as illustrated in the next example.
+				</div>	
 			</div>
-			<div class="indent" id="e18f0d0a-4c12-493e-a288-b59d19948eab">
-				Carbon 12 is stable, but carbon-14, which is produced by cosmic
-				bombardment of nitrogen in the upper atmosphere, is radioactive with a
-				half-life of about 5570 years. Libby assumed that the quantity of
-				carbon-12 in the atmosphere has been constant throughout time, and that
-				the quantity of radioactive carbon-14 achieved its steady state value long
-				ago as a result of its creation and decomposition over millions of years.
-				These assumptions led Libby to conclude that the ratio of carbon-14 to
-				carbon-12 has been nearly constant for a long time. This constant, which
-				we denote by \(R\), has been determined experimentally.
-			</div>
-			<div class="indent" id="2914b909-62f0-4d2d-9b05-501c2f20a684">
-				Living cells absorb both carbon-12 and carbon-14 in the proportion in
-				which they are present in the environment. Therefore the ratio of
-				carbon-14 to carbon-12 in a living cell is always \(R\). However, when the
-				cell dies it ceases to absorb carbon, and the ratio of carbon-14 to
-				carbon-12 decreases exponentially as the radioactive carbon-14 decays.
-				This is the basis for the method of carbon dating, as illustrated in the
-				next example.
-			</div>
+
+
+			<!--Example 5-->
 			<div class="example" id="x1-265" style="--ex-number: 5">
+
 				<div>
 					An archaeologist investigating the site of an ancient village finds a
 					burial ground where the amount of carbon-14 present in individual
-					remains is between 42 and 44% of the amount present in live individuals.
+					remains is between 42% and 44% of the amount present in live individuals.
 					Estimate the age of the village and the length of time for which it
-					survived.
+					survived using the fact that carbon-14 has a half-life of about 5570 years.
 				</div>
 
-				<details id="87e72fee-4156-408b-a1d2-b34f7e47c209">
+				<ol>
+					<li>
+						Set up and solve an IVP using the exponential decay model
+					</li>
+					<li>
+						Calculate the <span class="vocab"> decay constant</span> and substitute it in to the particular solution to the IVP
+					</li>
+					<li>
+						Use the result from (Part 2) to solve the original problem
+					</li>
+				</ol>
+
+				<details class = "solution" id="87e72fee-4156-408b-a1d2-b34f7e47c209">
 					<summary>Solution</summary>
-					Let \(Q=Q(t)\) be the quantity of carbon-14 in an individual set of
-					remains \(t\) years after death, and let \(Q_0\) be the quantity that
-					would be present in live individuals. Since carbon-14 decays exponentially
-					with half-life 5570 years, its decay constant is \[ k={\ln 2\over 5570}\]
-					Therefore \[ Q=Q_0e^{-t(\ln 2)/5570} \] if we choose our time scale so
-					that \(t_0=0\) is the time of death. If we know the present value of \(Q\)
-					we can solve this equation for \(t\), the number of years since death
-					occurred. This yields \[ t=-5570 {\ln Q/Q_0\over \ln 2}\] It is given that
-					\(Q=.42Q_0\) in the remains of individuals who died first. Therefore these
-					deaths occurred about \[ t_1=-5570 {\ln .42\over \ln 2} \approx 6971 \]
-					years ago. For the most recent deaths, \(Q=.44 Q_0\); hence, these deaths
-					occurred about \[ t_2=-5570 {\ln .44\over \ln 2} \approx 6597 \] years
-					ago. Therefore it’s reasonable to conclude that the village was founded
-					about 7000 years ago, and lasted for about 400 years.
+
+					<ol>
+						<li>
+							<div>
+								The differential equation matches the familiar <span class="vocab">exponential model</span>, where <em>it the rate of decay of a quantity \(Q\) over time is proportional to that quantity \(Q\)</em> and we'll use \(k\) as the <span class="vocab">decay constant</span>. The initial quantity is not know but as an IVP requires an initial condition we will take the initial quantity to be \(Q_0\) at time \(t=0\), hence we obtain the IVP
+
+								\begin{align*}
+									\dot{Q}=-kQ \quad Q(0) = Q_0
+								\end{align*}
+							</div>	
+							<div id="x1-1" class="reading-exercise">
+								Solve the IVP \( \dot{Q}=-kQ \quad Q(0) = Q_0\) using <span class="vocab">separation of variables</span>
+							</div> 
+
+							<div>
+							After using <span class="vocab">separation of variables</span>, we obtain
+
+							\begin{align*}
+								Q =  & Q_0 e^{-kt}  	
+							\end{align*}
+
+							</div>
+							<div id="x1-1" class="reading-exercise">
+								Verify \( Q =  Q_0 e^{-kt} \) is a solution of \( \dot{Q}=-kQ \)
+							</div> 		
+						</li>
+						<li>
+							<div>
+								We can use carbon-14's half-life of 5570 years to calculate the decay constant:
+
+								\begin{align*}
+									Q(t) =  & Q_0 e^{-kt} \\
+									Q(5570) =  & Q_0 e^{-k(5570)} \\	
+									\frac{1}{2}Q_0  =  & Q_0 e^{-5570k} \\
+									\vdots &								
+								\end{align*}
+							</div>
+							<div id="x1-1" class="reading-exercise">
+								Solve \( \frac{1}{2}Q_0  =  Q_0 e^{-5570k} \) for \(k\)
+							</div> 	
+							<div>
+								Since we have the decay constant:
+
+								\begin{align*}		
+									k =  & \frac{\ln 2}{5570} \approx 0.0001244 \\										
+								\end{align*}
+
+								Now we have a general formula for the amount of carbon-14 at any time:
+
+								\begin{equation*}
+										Q =  Q_0 e^{-{(t \ln 2)}/{5570} } 									
+								\end{equation*}
+							</div>
+							<div id="x1-1" class="reading-exercise">
+								Verify \( Q =  Q_0 e^{-{(t \ln 2)}/{5570} } \) is a solution of \( \dot{Q}=-kQ \quad Q(0) = Q_0 \)
+							</div>
+						</li>
+						<li>
+							We have an equation the models the amount of carbon-14 at any time and we know that the amount of carbon-14 present is about 42% to 44% compared to live individuals. Using this we can estimate how many years ago they died. Let \(Q_0\) be the quantity of carbon-14 that would be present in live individuals, then \(Q=Q(t)\) is the quantity of carbon-14 in an individual set of remains \(t\) years after death. Calculating the two years gives us a range of time when the civilization died:
+
+							\begin{align*}
+								44\% Q_0 =  & Q_0 e^{-{(t \ln 2)}/{5570} } \\	
+								0.44Q_0 =  & Q_0 e^{-{(t \ln 2)}/{5570} } \\		
+								0.44 =  & e^{-{(t \ln 2)}/{5570} } \\	
+								\ln 0.44 =  & \ln e^{-{(t \ln 2)}/{5570} } \\		
+								\ln 0.44 =  & -\frac{t \ln 2}{5570}  \\		
+								-5570 \ln 0.44 =  & t \ln 2  \\	
+								t =  &  -5570 \frac{\ln 0.44}{\ln 2 } \approx 6597 \quad \text{years}\\
+							\end{align*}
+
+							\begin{align*}
+								42\% Q_0 =  & Q_0 e^{-{(t \ln 2)}/{5570} } \\	
+								0.42Q_0 =  & Q_0 e^{-{(t \ln 2)}/{5570} } \\		
+								0.42 =  & e^{-{(t \ln 2)}/{5570} } \\	
+								\ln 0.42 =  & \ln e^{-{(t \ln 2)}/{5570} } \\		
+								\ln 0.42 =  & -\frac{t \ln 2}{5570}  \\		
+								-5570 \ln 0.42 =  & t \ln 2  \\	
+								t =  &  -5570 \frac{\ln 0.42}{\ln 2 } \approx 6971 \quad \text{years}\\
+							\end{align*}
+
+							Therefore it's reasonable to conclude that the village was founded about 7000 years ago, and lasted for about 400 years.
+
+						</li>
+					</ol>
+
+					
+
+					
 				</details>
 			</div>
 		</details>
 
 		<details id="3c857f22-2dc8-460c-bf4f-9cc28c3ca7db">
-			<summary>A Savings Program</summary>
+			<summary>Savings Plan</summary>
 		
+			<!--Example 6-->
 			<div class="example" id="x1-276" style="--ex-number: 6">
 				<div>
 					A person opens a savings account with an initial deposit of $1000 and
@@ -406,62 +941,164 @@
 					account at time \(t &gt; 0\), assuming that the bank pays 6% interest
 					compounded continuously.
 				</div>
+				<ol>
+					<li>
+						Set up and solve an IVP using the exponential growth model
+					</li>
+					<li>
+						Compare the model with the actual value
+					</li>
+				</ol>
 
-				<details id="f409e06b-aa73-4568-8284-e26b0aba0a31">
+				<details class="solution" id="f409e06b-aa73-4568-8284-e26b0aba0a31">
 					<summary>Solution</summary>
-					Observe that \(Q\) isn’t continuous, since there are 52 discrete
-					deposits per year of $50 each. To construct a mathematical model for this
-					problem in the form of a differential equation, we make the simplifying
-					assumption that the deposits are made continuously at a rate of $2600 per
-					year. This is essential, since solutions of differential equations are
-					continuous functions. With this assumption, \(Q\) increases continuously
-					at the rate \[ \dot{Q}=2600+.06 Q \] and therefore \(Q\) satisfies the
-					differential equation \begin {equation} \label {eq:4.1.13}
-					\dot{Q}-.06Q=2600\end {equation}
-					<a id="x1-28r13"></a>
-					(Of course, we must recognize that the solution of this equation is an
-					approximation to the true value of \(Q\) at any given time. We’ll discuss
-					this further below.) Since \(e^{.06t}\) is a solution of the complementary
-					equation, the solutions of <a href="#x1-28r13">(4.1.13)</a> are of the form \(Q=ue^{.06t}\), where \(\dot{u}e^{.06t}=2600\). Hence,
-					\(\dot{u}=2600e^{-.06t}\), \[ u=- {2600\over .06}e^{-.06t}+c \] and \begin
-					{equation} \label {eq:4.1.14} Q=ue^{.06t}=-{2600\over .06}+ce^{.06t}\end
-					{equation}
-					<a id="x1-29r14"></a>
-					Setting \(t=0\) and \(Q=1000\) here yields \[ c=1000+{2600\over .06}\] and
-					substituting this into <a href="#x1-29r14">(4.1.14)</a> yields \begin {equation} \label {eq:4.1.15} Q=1000e^{.06t}+{2600\over
-					.06}(e^{.06t}-1)\end {equation}
-					<a id="x1-30r15"></a>
-					where the first term is the value due to the initial deposit and the
-					second is due to the subsequent weekly deposits.
+
+					<ol>
+						<li>
+							<div>
+								Start by observing that \(Q\) isn't continuous, since there weekly deposits of \$50 each there will be 52 discrete deposits per year. To construct a mathematical model for this problem in the form of a differential equation, we will have to assume the functions are continuous, so we make the simplifying assumption that the deposits are made continuously at a rate of \( \$52 \cdot \$50 = \$2600\) per year. 
+							</div>
+							<div>	
+								Now notice that there are two rates here: the rate of increase caused by continuous constant deposits of \(\$2600\) per year, and the rate of increase caused by the exponential growth rate which is proportional to the amount so \(rQ\) with proportionality constant \(r\) indicating \(r=6\% = \frac{6}{100}=0.06\), the interest rate. Adding these two rates together yields our differential equation:
+
+								\begin{align*}
+									\dot{Q} = & \mbox{ rate of increase from deposits} + \mbox{ rate of increase from interest} 	\\
+									\dot{Q} = & \quad\quad\quad\quad \$2600 \quad\quad\quad\quad - \quad\quad\quad\quad rQ	\\ \\	
+									\dot{Q} = & \$2600 + 0.06 Q	\\		
+								\end{align*}
+
+								Rewriting our differential equation in the standard form of <a href = "sec2.1book.html#x1-7r4" target=_blank>(2.1.4)</a> and including the initial condition of our initial deposit of $1000, we have our IVP
+
+								<a id="x1-28r13"></a>
+								\begin{equation}  \label{eq:4.1.13}
+									\dot{Q} - 0.06 Q = 2600 \quad Q(0) = \$1000
+								\end{equation}
+							</div>	
+							<div>
+								Again any solve first order <span class="vocab-repeat">linear nonhomogenous</span> differential equations using the <span class="vocab-repeat">complementary equation</span> followed by <span class="vocab-repeat">variation of parameters</span> so we start with solving the complementary equation
+							</div>	
+							<div class="reading-exercise">
+								Solve \( \dot{Q} - 0.06 Q = 0 \) using separation of variables
+							</div> 
+							<div>
+								Solving the complementary equation, we obtain 
+								\begin{align*}
+									Q = & ce^{0.06t} \\			
+								\end{align*}
+
+								Choosing a simple particular solution \( Q_1=e^{0.06t} \) we use <span class="vocab">variation of parameters</span> to find solutions of the form \( Q=uQ_1=u \cdot e^{0.06t}\) where \(u=u(t)\) is some function of \(t\) to be determined
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \( u \cdot e^{0.06t} \)  with respect to \( t \) using the product and chain rules	
+							</div> 
+
+							<div>
+								Substituting into the nonhomogeneous equation from the IVP <a href="#x1-28r13">(4.1.13)</a>				
+								\begin{align}
+									\frac{dQ}{dt} - 0.06 Q = & 2600  \nonumber \\		
+									\Big( \frac{du}{dt} - 0.06 u  \Big) e^{0.06t} - 0.06 \Big( ue^{0.06t} \Big) = & 2600 \nonumber
+								\end{align}	
+							</div>
+							<div class="reading-exercise">
+								Simplify to show the equation can be rewritten as \( \frac{du}{dt} = 2600 e^{-0.06t}  \)	
+							</div> 
+							<div>
+								We can solve by separating variables and using substitution
+								\begin{align}
+									\frac{du}{dt} = & 2600 e^{-0.06t}  \nonumber \\
+									\int du = & 2600 \int e^{-0.06t} dt  \nonumber
+								\end{align}	
+							</div>
+							<div class="reading-exercise">
+								Find the antiderivative of \( \int e^{-0.06t} dt \) using substitution	
+							</div> 
+
+							<div>
+								After finding antiderivatives on both sides we obtain
+								\begin{align}
+									u = & -\frac{2600}{0.06} e^{-0.06t} + c  \nonumber \\		
+								\end{align}	
+								where we have left the values \( 2600\) and \( 0.06 \) as exact values so we can understand where the numbers came from (\( 2600\) from the weekly deposits and \( 0.06 \) from the interest rate).
+							</div>
+
+							<div class="reading-exercise">
+								Multiply \( u \) by \( e^{0.06t} \)	to obtain \( Q \)
+							</div> 
+
+							<div>		
+								After multiplying by \( e^{0.06t} \) we obtain our general solution
+
+								<a id="x1-29r14"></a>
+								\begin{align}
+									Q= & -\frac{2600}{0.06} + ce^{0.06t} 	\label{eq:4.1.14}				
+								\end{align}		
+							</div>
+
+							<div class="reading-exercise">
+								Verify <a href="#x1-29r14">(4.1.14)</a> is a solution of \( \dot{Q} - 0.06 Q = 2600 \) 
+							</div> 
+
+							<div>
+								Applying the initial condition \(Q(0)=1000\) we can find \(c\)
+
+								\begin{align*}
+									Q(t) = & -\frac{2600}{0.06} + ce^{0.06t} \\
+									\underset{1000}{\underbrace{Q(0)}} = & -\frac{2600}{0.06} + ce^{0.06\cdot(0)} \\
+									1000 = & -\frac{2600}{0.06} + ce^{0} \\
+									c = & 1000 + \frac{2600}{0.06}  \\														
+								\end{align*}
+
+								Where again we are leaving the values \( 1000\), \( 2600\) and \( 0.06 \) as exact values.
+							</div>
+							<div>	
+								Substituting in our \(c\) we have the solution to the IVP, which we will rearrange a bit to make it more clear where each part of the solution comes from
+
+								\begin{align*}
+									Q = & -\frac{2600}{0.06} + \left( 1000 + \frac{2600}{0.06} \right) e^{0.06t} \\
+									Q = & -\frac{2600}{0.06} + 1000e^{-0.06t} + \frac{2600}{0.06}e^{0.06t} \\
+									Q = & 1000e^{0.06t} + \frac{2600}{0.06}e^{0.06t}  -\frac{2600}{0.06} \\	
+									Q = & 1000e^{0.06t} + \frac{2600}{0.06} \left( e^{0.06t}  - 1 \right) \\		
+								\end{align*}
+
+								<a id="x1-30r15"></a>
+								\begin{equation} \label{eq:4.1.15}
+										Q = \underset{\text{initial deposit}}{\underbrace{1000e^{0.06t}}} + \underset{\text{weekly deposits}}{\underbrace{\frac{2600}{0.06} \left( e^{0.06t}  - 1 \right) }}	
+								\end{equation}
+							
+							</div>	
+							<div class="reading-exercise">
+								Verify <a href="#x1-30r15">(4.1.15)</a> is a solution of \( \dot{Q} - 0.06 Q = 2600 \) 
+							</div> 
+						</li>
+						<li>
+							
+							<div class="indent" id="b19a1cae-3b6a-472a-a7ec-3e33e8c44c57">
+								Recall that although our mathematical model to describe this situation is a continuous function the actual situation was discrete with individual deposits made weekly. Our model is only an approximation to the true value of of the account at any given time. In general, mathematical models must be tested for validity by comparing predictions based on them with the actual outcome of experiments. Example 6 is special in that we are able to compute the exact value of the account at any specified time and compare it with the approximate value predicted by <a href="#x1-30r15">(4.1.15)</a> (Exercise <span class="ptmb8t-">21</span>). The follwing table gives a comparison for a ten year period. Each exact answer corresponds to the time of the year-end deposit, and each year is assumed to have exactly 52 weeks.
+							</div>
+				
+							<div class="indent" id="0ec884dc-41a3-4c37-ab75-5be6ed2a930f">
+								\[ \begin{array}{c|c|c|c|c} \text{Year} &amp; \text{Approximate Value of}
+								Q &amp; \text{Exact Value of } P &amp; \text{Error} &amp; \text{Percentage
+								Error}\\ &amp; \text{(Example 4.1.6)} &amp; \text{(Exercise 21)} &amp; Q-P
+								&amp; \ \; (Q-P)/P \\ 1 &amp; \$ 3741.42 &amp; \$ 3739.87 &amp; \$ 1.55
+								&amp;\ \; .0413 \% \\ 2 &amp;\ \, 6652.36 &amp;\ \; 6649.17 &amp;\ \; 3.19
+								&amp;\ \; .0479 \\ 3 &amp;\ \, 9743.30 &amp;\ \; 9738.37 &amp;\ \; 4.93
+								&amp;\ \; .0506 \\ 4 &amp; \, 13,025.38 &amp; \, 13,018.60 &amp;\ \; 6.78
+								&amp;\ \; .0521 \\ 5 &amp; \, 16,510.41 &amp; \, 16,501.66 &amp;\ \; 8.75
+								&amp;\ \; .0530 \\ 6 &amp; \, 20,210.94 &amp; \, 20,200.11 &amp; 10.83
+								&amp;\ \; .0536 \\ 7 &amp; \, 24,140.30 &amp; \, 24,127.25 &amp; 13.05
+								&amp;\ \; .0541 \\ 8 &amp; \, 28,312.63 &amp; \, 28,297.23 &amp; 15.40
+								&amp;\ \; .0544 \\ 9 &amp; \, 32,742.97 &amp; \, 32,725.07 &amp; 17.90
+								&amp;\ \; .0547 \\ 10 &amp; \, 37,447.27 &amp; \, 37,426.72 &amp; 20.55
+								&amp;\ \; .0549 \\ \end{array} \]
+							</div>							
+						</li>
+					</ol>
+					
 				</details>
 			</div>
 			
-			<div class="indent" id="b19a1cae-3b6a-472a-a7ec-3e33e8c44c57">
-				Mathematical models must be tested for validity by comparing predictions
-				based on them with the actual outcome of experiments. Example 6 is unusual
-				in that we can compute the exact value of the account at any specified
-				time and compare it with the approximate value predicted by <a href="#x1-30r15">(4.1.15)</a> (See Exercise
-				<span class="ptmb8t-">21</span>.) The following table gives a comparison for a ten year period. Each
-				exact answer corresponds to the time of the year-end deposit, and each
-				year is assumed to have exactly 52 weeks.
-			</div>
 
-			<div class="indent" id="0ec884dc-41a3-4c37-ab75-5be6ed2a930f">
-				\[ \begin{array}{c|c|c|c|c} \text{Year} &amp; \text{Approximate Value of}
-				Q &amp; \text{Exact Value of } P &amp; \text{Error} &amp; \text{Percentage
-				Error}\\ &amp; \text{(Example 4.1.6)} &amp; \text{(Exercise 21)} &amp; Q-P
-				&amp; \ \; (Q-P)/P \\ 1 &amp; \$ 3741.42 &amp; \$ 3739.87 &amp; \$ 1.55
-				&amp;\ \; .0413 \% \\ 2 &amp;\ \, 6652.36 &amp;\ \; 6649.17 &amp;\ \; 3.19
-				&amp;\ \; .0479 \\ 3 &amp;\ \, 9743.30 &amp;\ \; 9738.37 &amp;\ \; 4.93
-				&amp;\ \; .0506 \\ 4 &amp; \, 13,025.38 &amp; \, 13,018.60 &amp;\ \; 6.78
-				&amp;\ \; .0521 \\ 5 &amp; \, 16,510.41 &amp; \, 16,501.66 &amp;\ \; 8.75
-				&amp;\ \; .0530 \\ 6 &amp; \, 20,210.94 &amp; \, 20,200.11 &amp; 10.83
-				&amp;\ \; .0536 \\ 7 &amp; \, 24,140.30 &amp; \, 24,127.25 &amp; 13.05
-				&amp;\ \; .0541 \\ 8 &amp; \, 28,312.63 &amp; \, 28,297.23 &amp; 15.40
-				&amp;\ \; .0544 \\ 9 &amp; \, 32,742.97 &amp; \, 32,725.07 &amp; 17.90
-				&amp;\ \; .0547 \\ 10 &amp; \, 37,447.27 &amp; \, 37,426.72 &amp; 20.55
-				&amp;\ \; .0549 \\ \end{array} \]
-			</div>
 		</details>
 
 		<nav class = "ex">
