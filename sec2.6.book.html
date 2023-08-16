@@ -37,249 +37,259 @@
 		<details id="30bc0f7f-b717-42aa-985b-dd0fe0801168">
 			<summary>Integrating Factors</summary>
 
-			<div id="aafcfa51-09b3-4c91-a9e3-bc154f9ab895">
-				In Section&nbsp;2.5 we learned how differential equations that can be written in terms of an
-				<span class="vocab">exact differential</span> are called <span class="vocab">exact differential equations</span>, whenever \( M_y(x,y)=N_x(x,y) \) for
-				
-				<a id="x1-2r1"></a>
-				\begin{equation} \label {eq:2.6.1} 
-					M(x,y)\,dx+N(x,y)\,dy=0 
-				\end {equation}
+			<div class="pdf-page" id="aafcfa51-09b3-4c91-a9e3-bc154f9ab895">
 
-				However, it is not often the case that an equation is <span class="vocab">exact</span>. There is a method to modify an existing equation into an exact equation, called multiplying by an <span class="vocab">integrating factor</span>. For instance, let's show that <a id="x1-3r2">(2.6.2)</a> is <em>not exact</em>.
-				
-				<a id="x1-3r2"></a>
-				\begin{equation} \label {eq:2.6.2} 
-					(\underset{M(x,y)}{\underbrace{3x+2y^2}}) dx + \underset{N(x,y)}{\underbrace{2xy}} dy = 0
-				\end {equation}
-			</div>	
-			<div id="x1-1" class="reading-exercise">
-				Calculate \( M_y(x,y)  \) and \( N_x(x,y)  \) using the power rule
-			</div> 	
-			<div id="x1-2">
-				\begin{equation*}
-					\begin{array}{rllrrl}
-										M(x,y) 		& = 3x+2y^2 	&\quad & N(x,y) 					& = & 2xy \\
-						\Longrightarrow	M_y(x,y) 	& = 4y 			&\quad & \Longrightarrow N_x(x,y) 	& = & 2y \\
-					\end{array}
-				\end{equation*}
+				<div>
+					In Section&nbsp;2.5 we learned how differential equations that can be written in terms of an
+					<span class="vocab">exact differential</span> are called <span class="vocab">exact differential equations</span>, whenever \( M_y(x,y)=N_x(x,y) \) for
+					
+					<a id="x1-2r1"></a>
+					\begin{equation} \label {eq:2.6.1} 
+						M(x,y)\,dx+N(x,y)\,dy=0 
+					\end {equation}
 
-				\begin{equation*}
-					\boxed{
-						M_y(x,y) = 4y \ne 2y = N_x(x,y)
-						\quad
-						\quad
-						\text{Not Exact}
-					}	
-				\end{equation*}
+					However, it is not often the case that an equation is <span class="vocab">exact</span>. There is a method to modify an existing equation into an exact equation, called multiplying by an <span class="vocab">integrating factor</span>. For instance, let's show that <a href="#x1-3r2">(2.6.2)</a> is <em>not exact</em>.
+					
+					<a id="x1-3r2"></a>
+					\begin{equation} \label {eq:2.6.2} 
+						(\underset{M(x,y)}{\underbrace{3x+2y^2}}) dx + \underset{N(x,y)}{\underbrace{2xy}} dy = 0
+					\end {equation}
+				</div>
+				<div id="x1-1" class="reading-exercise">
+					Calculate \( M_y(x,y)  \) and \( N_x(x,y)  \) using the power rule
+				</div> 	
+				<div id="x1-2">
+					\begin{equation*}
+						\begin{array}{rllrrl}
+											M(x,y) 		& = 3x+2y^2 	&\quad & N(x,y) 					& = & 2xy \\
+							\Longrightarrow	M_y(x,y) 	& = 4y 			&\quad & \Longrightarrow N_x(x,y) 	& = & 2y \\
+						\end{array}
+					\end{equation*}
 
-				Although the equation is currently <em>not exact</em>, if we multiply by the correct <span class="vocab">integrating factor</span>, then the new equation will be <span class="vocab">exact</span>. We'll use \( x \) for the <span class="vocab">integrating factor</span> so we multiply both sides of <a id="x1-3r2">(2.6.2)</a> by \( x \)
+					\begin{equation*}
+						\boxed{
+							M_y(x,y) = 4y \ne 2y = N_x(x,y)
+							\quad
+							\quad
+							\text{Not Exact}
+						}	
+					\end{equation*}
 
-				<a id="x1-4r3"></a>
-				\begin{align}\label{eq:2.6.3}
-					\Big( \left( 3x+2y^2 \right) dx + 2xy dy \Big) \cdot x = & \Big( 0 \Big) \cdot x \nonumber \\
-					( \underset{x \cdot M(x,y)}{\underbrace{3x^2+2xy^2} }) dx + \underset{x \cdot N(x,y)}{\underbrace{2x^2y}} dy = & 0
-				\end{align}
+					Although the equation is currently <em>not exact</em>, if we multiply by the correct <span class="vocab">integrating factor</span>, then the new equation will be <span class="vocab">exact</span>. We'll use \( x \) for the <span class="vocab">integrating factor</span> so we multiply both sides of <a href="#x1-3r2">(2.6.2)</a> by \( x \)
 
-				Now the new equation <a href="#x1-4r3">(2.6.3)</a> is exact which we can verify by checking the partial derivatives 
+					<a id="x1-4r3"></a>
+					\begin{align}\label{eq:2.6.3}
+						\Big( \left( 3x+2y^2 \right) dx + 2xy dy \Big) \cdot x = & \Big( 0 \Big) \cdot x \nonumber \\
+						( \underset{x \cdot M(x,y)}{\underbrace{3x^2+2xy^2} }) dx + \underset{x \cdot N(x,y)}{\underbrace{2x^2y}} dy = & 0
+					\end{align}
+
+					Now the new equation <a href="#x1-4r3">(2.6.3)</a> is exact which we can verify by checking the partial derivatives 
+				</div>
+				<div id="x1-3" class="reading-exercise">
+					Calculate \( \frac{\partial}{\partial y} \left( 3x^2+2xy^2 \right)  \) using the power rule
+				</div> 
+				<div id="x1-4" class="reading-exercise">
+					Calculate \( \frac{\partial}{\partial x} \left( 2x^2y \right) \) using the power rule
+				</div> 
+				<div id="x1-5">
+					\begin{equation*}
+						\boxed{
+							\frac{\partial}{\partial y} \left( 3x^2+2xy^2 \right) 
+							= 4xy 
+							= \frac{\partial}{\partial x} \left( 2x^2y \right)
+							\quad
+							\quad
+							\checkmark
+							\text{Exact}
+						}	
+					\end{equation*}
+				</div>
 			</div>
-			<div id="x1-3" class="reading-exercise">
-				Calculate \( \frac{\partial}{\partial y} \left( 3x^2+2xy^2 \right)  \) using the power rule
-			</div> 
-			<div id="x1-4" class="reading-exercise">
-				Calculate \( \frac{\partial}{\partial x} \left( 2x^2y \right) \) using the power rule
-			</div> 
-			<div id="x1-5">
-				\begin{equation*}
-					\boxed{
-						\frac{\partial}{\partial y} \left( 3x^2+2xy^2 \right) 
-						= 4xy 
-						= \frac{\partial}{\partial x} \left( 2x^2y \right)
-						\quad
-						\quad
-						\checkmark
-						\text{Exact}
-					}	
-				\end{equation*}
-				Now that we multiplied <a id="x1-3r2">(2.6.2)</a> by the <span class="vocab">integrating factor</span> \( x \), the new equation <a href="#x1-4r3">(2.6.3)</a> is exact, meaning we can solve with the same method we used last section, plus we already completed the first step! One small detail to keep track of is that the procedure refers to \( M(x,y) \) and \( N(x,y) \) but in our case, we multiplied both by \( x \) so when the exact procedure refers to \( M(x,y) \) we will use \( x \cdot M(x,y) \) and when the exact procedure refers to \( N(x,y) \) we will use \( x \cdot N(x,y) \) 
-				 what we previously referred to as
-			</div>
+
+			<div class="pdf-page" id="x1-5-2">
+				<div>
+					Now that we multiplied <a href="#x1-3r2">(2.6.2)</a> by the <span class="vocab">integrating factor</span> \( x \), the new equation <a href="#x1-4r3">(2.6.3)</a> is exact, meaning we can solve with the same method we used last section, plus we already completed the first step! One small detail to keep track of is that the procedure refers to \( M(x,y) \) and \( N(x,y) \) but in our case, we multiplied both by \( x \) so when the exact procedure refers to \( M(x,y) \) we will use \( x \cdot M(x,y) \) and when the exact procedure refers to \( N(x,y) \) we will use \( x \cdot N(x,y) \) 
+					what we previously referred to as
+				</div>
 			
-			<div id="x1-6" class="stepline">
-				\( \checkmark \) 1. Identify \( M(x,y) \) and \( N(x,y) \) and compute \( M_y(x,y) \) and \( N_x(x,y) \) and verify \( M_y(x,y)=N_x(x,y) \) to ensure that the equation is <span class="vocab-repeat">exact</span>
+				<div id="x1-6" class="stepline">
+					\( \checkmark \) 1. Identify \( M(x,y) \) and \( N(x,y) \) and compute \( M_y(x,y) \) and \( N_x(x,y) \) and verify \( M_y(x,y)=N_x(x,y) \) to ensure that the equation is <span class="vocab-repeat">exact</span>
+				</div>
+
+				<div id="x1-7" class="stepline">
+					2. Antidifferentiate \( M(x,y) = F_x(x,y) \) with respect to \( x \) and/or \( N(x,y) = F_y(x,y) \) with respect to \( y \) to obtain \( F(x,y) \)
+				</div>	
+				<div id="x1-8" class="reading-exercise">
+					Antidifferentiate \( \int \Big( 3x^2+2xy^2 \Big) dx \) using power rule 
+				</div>
+				<div id="x1-9">
+					\begin{align*} 
+						F(x,y) = & \int F_x(x,y) dx = \int M(x,y) dx \\
+						= & \int \Big( 3x^2+2xy^2 \Big) dx
+						= x^3 + y^2 x^2 + \phi(y) \\
+					\end{align*}
+				</div>	
+				<div id="x1-10" class="reading-exercise">
+					Antidifferentiate \( \int \Big( 2x^2y \Big) dy \) using power rule 
+				</div>
+				<div id="x1-11">
+					\begin{align*} 
+						F(x,y) = & \int F_y(x,y) dy = \int N(x,y) dy \\
+						= & \int \Big( 2x^2y \Big) dy
+						= x^2 y^2 + \psi(x) \\	
+					\end{align*}
+				</div>	
+				<div id="x1-12" class="stepline">
+					3. Differentiating with respect to the same variable to check that the antidifferentiation is correct 		
+				</div>	
+				<div id="x1-13" class="reading-exercise">
+					Find  \( F_x(x,y) \) where  \( F(x,y) = x^3 + y^2 x^2 + \phi(y) \) 
+				</div>
+				<div id="x1-14" class="reading-exercise">
+					Find  \( F_y(x,y) \) where  \( F(x,y) = x^2 y^2 + \psi(x)  \) 
+				</div>
+				<div id="x1-15">
+					\begin{equation*}
+						\begin{array}{rllrrl}
+							F(x,y) 		& = x^3 + y^2 x^2 + \phi(y) 			&\quad & F(x,y) 					& = & x^2 y^2 + \psi(x) \\
+			\Longrightarrow	F_x(x,y) 	& = 3x^2 + 2xy^2 = M(x,y) \checkmark 	&\quad & \Longrightarrow F_y(x,y) 	& = & 2x^2 y = N(x,y) \checkmark \\
+						\end{array}
+					\end{equation*}
+				</div>	
 			</div>
 
-			<div id="x1-7" class="stepline">
-				2. Antidifferentiate \( M(x,y) = F_x(x,y) \) with respect to \( x \) and/or \( N(x,y) = F_y(x,y) \) with respect to \( y \) to obtain \( F(x,y) \)
-			</div>	
-			<div id="x1-8" class="reading-exercise">
-				Antidifferentiate \( \int \Big( 3x^2+2xy^2 \Big) dx \) using power rule 
-			</div>
-			<div id="x1-9">
-				\begin{align*} 
-					F(x,y) = & \int F_x(x,y) dx = \int M(x,y) dx \\
-					= & \int \Big( 3x^2+2xy^2 \Big) dx
-					= x^3 + y^2 x^2 + \phi(y) \\
-				\end{align*}
-			</div>	
-			<div id="x1-10" class="reading-exercise">
-				Antidifferentiate \( \int \Big( 2x^2y \Big) dy \) using power rule 
-			</div>
-			<div id="x1-11">
-				\begin{align*} 
-					F(x,y) = & \int F_y(x,y) dy = \int N(x,y) dy \\
-					= & \int \Big( 2x^2y \Big) dy
-					= x^2 y^2 + \psi(x) \\	
-				\end{align*}
-			</div>	
-			<div id="x1-12" class="stepline">
-				3. Differentiating with respect to the same variable to check that the antidifferentiation is correct 		
-			</div>	
-			<div id="x1-13" class="reading-exercise">
-				Find  \( F_x(x,y) \) where  \( F(x,y) = x^3 + y^2 x^2 + \phi(y) \) 
-			</div>
-			<div id="x1-14" class="reading-exercise">
-				Find  \( F_y(x,y) \) where  \( F(x,y) = x^2 y^2 + \psi(x)  \) 
-			</div>
-			<div id="x1-15">
-				\begin{equation*}
+			<div class="pdf-page" id="x1-16">
+				<div class="stepline">
+					4. Differentiate with respect to the other variable to obtain expressions for \( F_x(x,y) \) and \( F_y(x,y) \) in terms of \( \psi'(x) \) and \( \phi'(y) \)
+				</div>
+
+				<div id="x1-17" class="reading-exercise">
+					Find \( F_x(x,y) \) by differentiating \( F(x,y) = x^2 y^2 + \psi(x) \) 
+				</div>
+
+				<div id="x1-18" class="reading-exercise">
+					Find \( F_y(x,y) \) by differentiating \( F(x,y) = x^3 + y^2 x^2 + \phi(y)  \) 
+				</div>
+
+
+				<div id="x1-19">
+					\begin{equation*}
 					\begin{array}{rllrrl}
-						F(x,y) 		& = x^3 + y^2 x^2 + \phi(y) 			&\quad & F(x,y) 					& = & x^2 y^2 + \psi(x) \\
-		\Longrightarrow	F_x(x,y) 	& = 3x^2 + 2xy^2 = M(x,y) \checkmark 	&\quad & \Longrightarrow F_y(x,y) 	& = & 2x^2 y = N(x,y) \checkmark \\
+						F(x,y) 		& = x^3 + y^2 x^2 + \phi(y) 	&\quad & F(x,y) 					& = & x^2 y^2 + \psi(x) \\
+		\Longrightarrow	F_y(x,y) 	& = 2 x^2 y + \phi'(y)  		&\quad & \Longrightarrow F_x(x,y) 	& = & 2x y^2 + \psi'(x) \\
 					\end{array}
 				\end{equation*}
 
+				</div>	
+
+				<div id="x1-20" class="stepline">
+					5. Set the new expressions equal to known expressions \( F_x(x,y) = M(x,y) \) and/or \( F_y(x,y) = N(x,y) \) and solve for \( \psi(x) \) and \( \phi(y) \)
+				</div>
+
+				<div id="x1-21">
+					\begin{equation*}
+						\begin{array}{rllrrl}
+							F_x(x,y) 				& = & M(x,y) 		&\quad & F_y(x,y) 				& = & N(x,y) \\
+							2x y^2 + \psi'(x) 		& = & 3x^2 + 2xy^2	&\quad & 2 x^2 y + \phi'(y) 	& = & 2x^2y \\
+							\psi'(x) 				& = & 3x^2			&\quad & \phi'(y) 				& = & 0 \\
+							\psi(x) 				& = & 3 \int x^2 dx	&\quad & \phi(y) 				& = & \int 0 dy \\
+							\psi(x) 				& = & x^3			&\quad & \phi(y) 				& = & k \\
+						\end{array}
+					\end{equation*}
+
+					We have obtained expressions for  \( \psi(x) \) and \( \phi(y) \) and in both cases, again, we can take the constants of integration to zero.
+				</div>
+			</div>
+
+			<div class="pdf-page" id="x1-22" >
+				<div class="stepline">
+					6. Substitute \( \psi(x) \) and/or \( \phi(y) \) in to obtain \( F(x,y) \) and if possible verify they match. Set \( F(x,y)=c \) arbitrary constant which is an implicit solution. Solve explicitly for \( y = y(x) \) whenever possible
+				</div>
+
+				<div id="x1-23">
+					Substituting in \( \psi(x) = x^3 \) and \( \phi(y) = 0 \) we obtain \( F(x,y) \) 
+
+							\begin{equation*}
+								\begin{array}{rllrrl}
+									F(x,y) 	& = x^2 y^2 + \psi(x) 	&\quad & F(x,y) & = & x^3 + y^2 x^2 + \phi(y) \\
+									F(x,y) 	& = x^2 y^2 + x^3 		&\quad & F(x,y) & = & x^3 + y^2 x^2 + 0 \\
+								\end{array}
+							\end{equation*}
+
+					Both expressions for \( F(x,y) = x^2 y^2 + x^3 \) agree and this is a great way to check your work so either way you opt to solve, you should get the same answer. Our final implicit solution is written in the form of <a href="#x1-9r6">(2.5.6)</a> as \( F(x,y) = c \)
 			
-			</div>	
+					\begin{equation*}
+						x^4 y^3 + 2y^3 + x^3 = c
+					\end{equation*}
 
-			<div id="x1-16" class="stepline">
-				4. Differentiate with respect to the other variable to obtain expressions for \( F_x(x,y) \) and \( F_y(x,y) \) in terms of \( \psi'(x) \) and \( \phi'(y) \)
+					So we get the implicit solution:
+
+					\begin{align*}
+						x^2 y^2 + x^3 = & c \\		
+					\end{align*}
+				</div>
+
+				<div id="x1-24" class="reading-exercise">
+					Solve \(  x^2 y^2 + x^3 = c \) explicitly for \( y \)
+				</div>
+
+				<div id="x1-25">
+					Which can be solved explicitly for \( y\)
+
+					\begin{align*}
+						y(x) = & \sqrt{ \frac{c - x^3}{x^2} } \\
+					\end{align*}
+				</div>
 			</div>
-
-			<div id="x1-17" class="reading-exercise">
-				Find \( F_x(x,y) \) by differentiating \( F(x,y) = x^2 y^2 + \psi(x) \) 
-			</div>
-
-			<div id="x1-18" class="reading-exercise">
-				Find \( F_y(x,y) \) by differentiating \( F(x,y) = x^3 + y^2 x^2 + \phi(y)  \) 
-			</div>
-
-
-			<div id="x1-19">
-				\begin{equation*}
-				\begin{array}{rllrrl}
-					F(x,y) 		& = x^3 + y^2 x^2 + \phi(y) 	&\quad & F(x,y) 					& = & x^2 y^2 + \psi(x) \\
-	\Longrightarrow	F_y(x,y) 	& = 2 x^2 y + \phi'(y)  		&\quad & \Longrightarrow F_x(x,y) 	& = & 2x y^2 + \psi'(x) \\
-				\end{array}
-			\end{equation*}
-
-			</div>	
-
-			<div id="x1-20" class="stepline">
-				5. Set the new expressions equal to known expressions \( F_x(x,y) = M(x,y) \) and/or \( F_y(x,y) = N(x,y) \) and solve for \( \psi(x) \) and \( \phi(y) \)
-			</div>
-
-			<div id="x1-21">
-				\begin{equation*}
-					\begin{array}{rllrrl}
-						F_x(x,y) 				& = & M(x,y) 		&\quad & F_y(x,y) 				& = & N(x,y) \\
-						2x y^2 + \psi'(x) 		& = & 3x^2 + 2xy^2	&\quad & 2 x^2 y + \phi'(y) 	& = & 2x^2y \\
-						\psi'(x) 				& = & 3x^2			&\quad & \phi'(y) 				& = & 0 \\
-						\psi(x) 				& = & 3 \int x^2 dx	&\quad & \phi(y) 				& = & \int 0 dy \\
-						\psi(x) 				& = & x^3			&\quad & \phi(y) 				& = & k \\
-					\end{array}
-				\end{equation*}
-
-				We have obtained expressions for  \( \psi(x) \) and \( \phi(y) \) and in both cases, again, we can take the constants of integration to zero.
-			</div>
-
-			<div id="x1-22" class="stepline">
-				6. Substitute \( \psi(x) \) and/or \( \phi(y) \) in to obtain \( F(x,y) \) and if possible verify they match. Set \( F(x,y)=c \) arbitrary constant which is an implicit solution. Solve explicitly for \( y = y(x) \) whenever possible
-			</div>
-
-			<div id="x1-23">
-				Substituting in \( \psi(x) = x^3 \) and \( \phi(y) = 0 \) we obtain \( F(x,y) \) 
-
-						\begin{equation*}
-							\begin{array}{rllrrl}
-								F(x,y) 	& = x^2 y^2 + \psi(x) 	&\quad & F(x,y) & = & x^3 + y^2 x^2 + \phi(y) \\
-								F(x,y) 	& = x^2 y^2 + x^3 		&\quad & F(x,y) & = & x^3 + y^2 x^2 + 0 \\
-							\end{array}
-						\end{equation*}
-
-				Both expressions for \( F(x,y) = x^2 y^2 + x^3 \) agree and this is a great way to check your work so either way you opt to solve, you should get the same answer. Our final implicit solution is written in the form of <a href="#x1-9r6">(2.5.6)</a> as \( F(x,y) = c \)
-		
-				\begin{equation*}
-					x^4 y^3 + 2y^3 + x^3 = c
-				\end{equation*}
-
-				So we get the implicit solution:
-
-				\begin{align*}
-					x^2 y^2 + x^3 = & c \\		
-				\end{align*}
-			</div>
-
-			<div id="x1-24" class="reading-exercise">
-				Solve \(  x^2 y^2 + x^3 = c \) explicitly for \( y \)
-			</div>
-
-			<div id="x1-25">
-				Which can be solved explicitly for \( y\)
-
-				\begin{align*}
-					y(x) = & \sqrt{ \frac{c - x^3}{x^2} } \\				
-				\end{align*}
-			</div>
-
-		
 		</details>
 
 		<details id="77bb32d0-c143-46be-a7aa-2fbc839a4483">
 			<summary>Finding Integrating Factors</summary>
-			<div id="x1-26">
-				Consider the differential equation in <a href="#x1-2r1">(2.6.1)</a>
-				\begin{equation*}
-					M(x,y) dx + N(x,y) dy = 0
-				\end{equation*}
 
-				A function \( \mu=\mu(x,y) \) is an <span class="vocab">integrating factor</span> for <a href="#x1-2r1">(2.6.1)</a>
-				if multiplying both sides by it creates an <span class="vocab">exact differential equation</span>
-				
-				<a id="x1-5r4"></a>
-				\begin{equation} \label{eq:2.6.4}
-					\mu(x,y) M(x,y) dx + \mu(x,y) N(x,y) dy = 0
-				\end{equation}
+			<div class="pdf-page" id="x1-26">
+				<div>
+					Consider the differential equation in <a href="#x1-2r1">(2.6.1)</a>
+					\begin{equation*}
+						M(x,y) dx + N(x,y) dy = 0
+					\end{equation*}
 
-				Where <a href="#x1-5r4">(2.6.4)</a> is exact whenever
-				\[
-					\frac{\partial}{\partial y} \Big( \mu(x,y) M(x,y) \Big)
-						=
-						\frac{\partial}{\partial x} \Big( \mu(x,y) N(x,y) \Big)
-				\]
+					A function \( \mu=\mu(x,y) \) is an <span class="vocab">integrating factor</span> for <a href="#x1-2r1">(2.6.1)</a>
+					if multiplying both sides by it creates an <span class="vocab">exact differential equation</span>
+					
+					<a id="x1-5r4"></a>
+					\begin{equation} \label{eq:2.6.4}
+						\mu(x,y) M(x,y) dx + \mu(x,y) N(x,y) dy = 0
+					\end{equation}
 
-				When <a href="#x1-5r4">(2.6.4)</a> is an <span class="vocab">exact</span> then we call \( \mu(x,y) \) an <span class="vocab">integrating factor</span>. We can use <span class="vocab-repeat">integrating factors</span> \( \mu(x,y) \) to convert non-exact differential equations into exact differential equations. 
+					Where <a href="#x1-5r4">(2.6.4)</a> is exact whenever
+					\[
+						\frac{\partial}{\partial y} \Big( \mu(x,y) M(x,y) \Big)
+							=
+							\frac{\partial}{\partial x} \Big( \mu(x,y) N(x,y) \Big)
+					\]
+
+					When <a href="#x1-5r4">(2.6.4)</a> is an <span class="vocab">exact</span> then we call \( \mu(x,y) \) an <span class="vocab">integrating factor</span>. We can use <span class="vocab-repeat">integrating factors</span> \( \mu(x,y) \) to convert non-exact differential equations into exact differential equations. 
+				</div>
+				<div id="x1-27">
+					It would be nice if we could say that <a href="#x1-2r1">(2.6.1)</a> and <a href="#x1-5r4">(2.6.4)</a> always have the same solutions, but this isn't so. For example, a solution \( y=y(x) \) of <a href="#x1-5r4">(2.6.4)</a>  such that \( \mu\big(x,y(x)\big)=0 \) on some interval could fail to be a solution of <a href="#x1-2r1">(2.6.1)</a> (Exercise&nbsp;<span class="ptmb8t-">1</span>), while <a href="#x1-2r1">(2.6.1)</a> may have a solution \( y=y(x) \) such that \( \mu \big(x,y(x) \big) \) isn't even defined (Exercise&nbsp;<span class="ptmb8t-">2</span>).  However, if \( \mu(x,y) \) is defined and nonzero for all \( (x,y) ,\) then <a href="#x1-2r1">(2.6.1)</a> and <a href="#x1-5r4">(2.6.4)</a> are equivalent meaning they have the same solutions.
+				</div>
+				<div id="x1-28">
+					By applying the <span class="vocab">Exactness Condition</span> (Theorem <a href="sec2.5.book.html#5bd70076-159b-4cff-a7c5-ccf305397401">2.5.2</a>) to <a href="#x1-5r4">(2.6.4)</a>, we replace \( M(x,y) \) with  \( \mu(x,y) M(x,y) \) written more simply as \( \mu M\) and \( N(x,y) \)  with \( \mu(x,y) N(x,y) \) written more simply as \( \mu N\) and use the product rule to determine what the
+					<span class="vocab-repeat">exactness condition</span> requires.
+
+					\begin{align} \label{eq:2.6.5}
+						\frac{\partial}{\partial y} \Big( \mu  M  \Big) = & \frac{\partial}{\partial x} \Big( \mu  N  \Big)  \nonumber \\	
+						\mu  \frac{\partial}{\partial y} \Big( M  \Big) + M  \frac{\partial}{\partial y} \Big( \mu  \Big) 
+							= & \mu  \frac{\partial}{\partial x} \Big( N  \Big) + N  \frac{\partial}{\partial x} \Big( \mu  \Big)  \nonumber \\	
+						\mu  M_y  + \mu_y  M  = & \mu  N_x   +  \mu_x N   \nonumber \\	
+						\mu  M_y  - \mu  N_x  = & \mu_x N  - \mu_y  M     \nonumber \\	
+						\mu  \Big( M_y  - N_x  \Big) = & \mu_x N  - \mu_y  M  		
+					\end{align}
+
+					This reduces to the known result for exact equations that if
+					\(M_y=N_x\) then <a href="#x1-6r5">(2.6.5)</a> holds with \(\mu =1\), so <a href="#x1-2r1">(2.6.1)</a> is exact.
+				</div>
 			</div>
-			<div id="x1-27">
-				It would be nice if we could say that <a href="#x1-2r1">(2.6.1)</a> and <a href="#x1-5r4">(2.6.4)</a> always have the same solutions, but this isn't so. For example, a solution \( y=y(x) \) of <a href="#x1-5r4">(2.6.4)</a>  such that \( \mu\big(x,y(x)\big)=0 \) on some interval could fail to be a solution of <a href="#x1-2r1">(2.6.1)</a> (Exercise&nbsp;<span class="ptmb8t-">1</span>), while <a href="#x1-2r1">(2.6.1)</a> may have a solution \( y=y(x) \) such that \( \mu \big(x,y(x) \big) \) isn't even defined (Exercise&nbsp;<span class="ptmb8t-">2</span>).  However, if \( \mu(x,y) \) is defined and nonzero for all \( (x,y) ,\) then <a href="#x1-2r1">(2.6.1)</a> and <a href="#x1-5r4">(2.6.4)</a> are equivalent meaning they have the same solutions.
-			</div>
-			<div id="x1-28">
-				By applying the <span class="vocab">Exactness Condition</span> (Theorem <a href="sec2.5.book.html#5bd70076-159b-4cff-a7c5-ccf305397401">2.5.2</a>) to <a href="#x1-5r4">(2.6.4)</a>, we replace \( M(x,y) \) with  \( \mu(x,y) M(x,y) \) written more simply as \( \mu M\) and \( N(x,y) \)  with \( \mu(x,y) N(x,y) \) written more simply as \( \mu N\) and use the product rule to determine what the
-				<span class="vocab-repeat">exactness condition</span> requires.
-
-				\begin{align} \label{eq:2.6.5}
-					\frac{\partial}{\partial y} \Big( \mu  M  \Big) = & \frac{\partial}{\partial x} \Big( \mu  N  \Big)  \nonumber \\	
-					\mu  \frac{\partial}{\partial y} \Big( M  \Big) + M  \frac{\partial}{\partial y} \Big( \mu  \Big) 
-						= & \mu  \frac{\partial}{\partial x} \Big( N  \Big) + N  \frac{\partial}{\partial x} \Big( \mu  \Big)  \nonumber \\	
-					\mu  M_y  + \mu_y  M  = & \mu  N_x   +  \mu_x N   \nonumber \\	
-					\mu  M_y  - \mu  N_x  = & \mu_x N  - \mu_y  M     \nonumber \\	
-					\mu  \Big( M_y  - N_x  \Big) = & \mu_x N  - \mu_y  M  		
-				\end{align}
-
-				This reduces to the known result for exact equations that if
-				\(M_y=N_x\) then <a href="#x1-6r5">(2.6.5)</a> holds with \(\mu =1\), so <a href="#x1-2r1">(2.6.1)</a> is exact.
- 
-			</div>	
 
 			<div id="0b6aa317-f7aa-43d8-b6bf-7408b1f6ba14">
 				At first glance <a href="#x1-6r5">(2.6.5)</a> may look quite complicated since it involves
@@ -318,7 +328,8 @@
 				\end{align}
 
 				We notice the factors \( \frac{ P'(x)} {P(x)} \) and \( \frac{ Q'(y)} {Q(y)} \) in <a href="#x1-8r7">(2.6.7)</a> and recall that if we let \( p(x) = \frac{ P'(x)} {P(x)} \) and \( q(y) = \frac{ Q'(y)} {Q(y)} \), then those differential equations are <span class="vocab">separable</span> and easily solvable. We'll solve them in a moment, but for now we will go ahead and make the replacement to obtain <a href="#x1-9r8">(2.6.8)</a>
-
+			</div>
+			<div id="0b6aa317-f7aa-43d8-b6bf-7408b1f6ba14-2">
 				<a id="x1-9r8"></a>
 				\begin{align}		
 					M_y  - N_x  
@@ -327,7 +338,7 @@
 						= & p(x)N - q(y)M  \label{eq:2.6.8}	
 				\end{align}
 
-				So, if we can find functions \( p(x) \) and \( q(y) \) such that \( p(x) = \frac{ P'} {P} \) and \( q(y) = \frac{ Q'} {Q} \) that also satisfy <a href="#x1-9r8">(2.6.8)</a>, then we can obtain an integrating factor \( \mu = P(x) Q(y) \) for <a href="#x1-2r1">(2.6.1)</a>. As we mentioned, we can easily solve for $P(x)$ and $Q(y)$ since those equations are \boldindex{separable}. To keep the solutions as simple as possible we will take all the constants of integration to be zero and choosing positive sign whenever possible
+				So, if we can find functions \( p(x) \) and \( q(y) \) such that \( p(x) = \frac{ P'} {P} \) and \( q(y) = \frac{ Q'} {Q} \) that also satisfy <a href="#x1-9r8">(2.6.8)</a>, then we can obtain an integrating factor \( \mu = P(x) Q(y) \) for <a href="#x1-2r1">(2.6.1)</a>. As we mentioned, we can easily solve for \(P(x)\) and \(Q(y)\) since those equations are <span class="vocab">separable</span>. To keep the solutions as simple as possible we will take all the constants of integration to be zero and choosing positive sign whenever possible
 
 				\begin{align*} 
 					\frac{ P'} {P} = p(x) \Longrightarrow \frac{1} {P}\frac{dP} {dx} = & p(x) \\
@@ -346,8 +357,10 @@
 					e^{\ln \left| Q \right|} = & e^{\int q(y) dy} \\	
 					\left| Q \right| = & e^{\int q(y) dy} \Longrightarrow Q(y) = e^{\int q(y) dy} \\			
 				\end{align*}
+			</div>
+			<div id="0b6aa317-f7aa-43d8-b6bf-7408b1f6ba14-3">
 
-				Using <span class="vocab">separation of variables</span> for both \( \frac{ P'} {P} = p(x) \) and \( \frac{ Q'} {Q} = q(y) \), we can easily obtain expressions for \( P(x) \) and \( Q(y) \)
+				Using <span class="vocab">separation of variables</span> for both \( \frac{ P'} {P} = p(x) \) and \( \frac{ Q'} {Q} = q(y) \), we obtained expressions for \( P(x) \) and \( Q(y) \)
 
 				<a id="x1-10r9"></a>
 				\begin{equation} \label{eq:2.6.9}
@@ -359,36 +372,38 @@
 				\begin{equation*} 
 					\mu(x,y) = P(x) Q(y) = \left( e^{\int p(x) dx}	\right) \left( e^{\int q(y) dy} \right)	
 				\end{equation*}
-			</div>
-			<div id="x1-29">
+			
 				There is no simple general method for ascertaining whether functions \( p=p(x) \) and \( q=q(y) \) exist. For now we will make extensive usage of <a href="#x1-9r8">(2.6.8)</a> as a general condition to check for integrating factors of the form \( \mu(x,y) = P(x) Q(y) \)
 			</div>
-			<div id="x1-30">
-				This was an exploration of discovering <span class="vocab">integrating factor</span> that are products of a function of \( x \) and a function of \( y ,\) i.e. |( \mu(x,y) = P(x) Q(y) .\) As mentioned, there is no general method for ascertaining whether these functions \( p=p(x) \) and \( q=q(y) \) exist. However, the next theorem gives simple sufficient conditions for the given equation to have an integrating factor that depends on only one of the independent variables \( x \) and \( y \), and for finding an integrating factor in this form, \( \mu(x,y) = \mu(x) = P(x) \) or \( \mu(x,y) = \mu(y) = Q(y) \). So now we'll go back and develop this case by the same logic, starting with <span class="vocab">integrating factors</span> that are a function of \( x \) only:
 
-				\begin{equation*} 
-					\mu(x,y) = \mu(x) = P(x)
-				\end{equation*}
-			</div>	
+			<div class="pdf-page"  id="x1-30">
+				<div>
+					This was an exploration of discovering <span class="vocab">integrating factors</span> that are products of a function of \( x \) and a function of \( y ,\) i.e. \( \mu(x,y) = P(x) Q(y) .\) As mentioned, there is no general method for ascertaining whether these functions \( p=p(x) \) and \( q=q(y) \) exist. However, the next theorem gives simple sufficient conditions for the given equation to have an integrating factor that depends on only one of the independent variables \( x \) and \( y \), and for finding an integrating factor in this form, \( \mu(x,y) = \mu(x) = P(x) \) or \( \mu(x,y) = \mu(y) = Q(y) \). So now we'll go back and develop this case by the same logic, starting with <span class="vocab">integrating factors</span> that are a function of \( x \) only:
 
-			<div id="x1-31">
-				Assuming \( \mu(x,y)=\mu(x) = P(x) \) then \( \mu_x = P'(x) \) and \( \mu_y = 0 .\) Substituting \( \mu = P(x) \) and the expressions for \( \mu_x=P'(x) \) and \( \mu_y=0 \) into <a href="#x1-6r5">(2.6.5)</a>, we obtain:
+					\begin{equation*} 
+						\mu(x,y) = \mu(x) = P(x)
+					\end{equation*}
+				</div>	
 
-				\begin{align*}
-					\mu  \Big( M_y  - N_x  \Big) = & \mu_x N  - \mu_y  M \nonumber \\
-					P(x) \Big( M_y  - N_x  \Big) = & P'(x) N \\	 
-					M_y  - N_x = & \frac{P'(x)}{P(x)} N \\	 
-					\frac{M_y  - N_x}{N}  
-						= & \underset{p(x)}{\underbrace{\frac{ P'(x)} {P(x)}}} \\
-					\frac{M_y  - N_x}{N} 
-						= & p(x)	 
-				\end{align*}
+				<div id="x1-31">
+					Assuming \( \mu(x,y)=\mu(x) = P(x) \) then \( \mu_x = P'(x) \) and \( \mu_y = 0 .\) Substituting \( \mu = P(x) \) and the expressions for \( \mu_x=P'(x) \) and \( \mu_y=0 \) into <a href="#x1-6r5">(2.6.5)</a>, we obtain:
 
-				This means that if \( \frac{M_y  - N_x}{N} \) yields a function that is only dependent on \( x ,\) then an integrating factor \( P(x) \) exists that only depends on \( x ,\) and in fact is the solution to the separable differential equation \( p(x) = \frac{ P'(x)} {P(x)} ,\) which we already solved above:
+					\begin{align*}
+						\mu  \Big( M_y  - N_x  \Big) = & \mu_x N  - \mu_y  M \nonumber \\
+						P(x) \Big( M_y  - N_x  \Big) = & P'(x) N \\	 
+						M_y  - N_x = & \frac{P'(x)}{P(x)} N \\	 
+						\frac{M_y  - N_x}{N}  
+							= & \underset{p(x)}{\underbrace{\frac{ P'(x)} {P(x)}}} \\
+						\frac{M_y  - N_x}{N} 
+							= & p(x)	 
+					\end{align*}
 
-				\begin{equation*} 
-					\mu(x) = P(x) = e^{\int p(x) dx}	
-				\end{equation*}
+					This means that if \( \frac{M_y  - N_x}{N} \) yields a function that is only dependent on \( x ,\) then an integrating factor \( P(x) \) exists that only depends on \( x ,\) and in fact is the solution to the separable differential equation \( p(x) = \frac{ P'(x)} {P(x)} ,\) which we already solved above:
+
+					\begin{equation*} 
+						\mu(x) = P(x) = e^{\int p(x) dx}	
+					\end{equation*}
+				</div>
 			</div>
 			<div id="x1-32">
 				Similar logic applies for finding <span class="vocab">integrating factors</span> that are a function of \( y \) only:
@@ -413,9 +428,10 @@
 				Again, this means that if \( \frac{N_x-M_y}{M} \) yields a function that is only dependent on \( y ,\) then an integrating factor \( Q(y) \) exists that only depends on \( y ,\) and in fact is the solution to the separable differential equation \( q(y) = \frac{ Q'(y)} {Q(y)} ,\) which we already solved above:
 
 				\begin{equation*} 
-					\mu(y) = Q(y) = e^{\int q(y) dy}	
+					\mu(y) = Q(y) = e^{\int q(y) dy}
 				\end{equation*}
 			</div>
+
 			<div id="x1-33">
 				And this is exactly stated in the following theorem:
 			</div>	
@@ -478,7 +494,7 @@
 		</details>
 
 
-		<details id="77bb32d0-c143-46be-a7aa-2fbc839a4483">
+		<details id="77bb32d0-c143-46be-a7aa-2fbc839a4483-2">
 			<summary>Integrating Factor Examples</summary>
 
 			<div class="indent" id="cbdf9785-0452-4b74-9601-f8d9a1c18364">
@@ -642,7 +658,7 @@
 								= & \overset{M(x,y) \cdot e^{-x^2} }{\overbrace{(2xy^3-2x^3y^3-4xy^2+2x)e^{-x^2}}} \\
 							\psi'(x) = & 2x e^{-x^2} \\	
 							\psi(x) = & \int \left(2x e^{-x^2} \right) dx \\
-							\psi(x) = & -e^{-x^2} \\						
+							\psi(x) = & -e^{-x^2} \\
 						\end{align*}
 					</div>	
 
