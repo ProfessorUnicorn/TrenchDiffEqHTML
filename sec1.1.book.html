@@ -29,8 +29,6 @@
     <div id="8c9641a7-78ed-4435-83ea-623f11ccef77">
       In order to apply mathematical methods to a physical or “real life” problem, we must formulate the problem in mathematical terms; that is, we must construct a <span class="vocab">mathematical model</span> for the problem. Many physical problems concern relationships between changing quantities. Since <span class="vocab">rates of change</span> are represented mathematically by <span class="vocab">derivatives</span>, mathematical models often involve equations relating an unknown function and one or more of its derivatives. Such equations are <span class="vocab">differential equations</span>.
     </div>
-    <div class="indent" id="421bc149-feed-4f88-90ec-b127bc1b97b1"> 
-    </div>
     <div class="indent" id="233e3015-1e31-45e2-8640-64c8d52be946"> 
       The mathematical model for an applied problem is almost always simpler than the actual situation
       being studied, since simplifying assumptions are usually required to obtain a mathematical problem that can be solved. For example, in modeling the motion of a falling object, we might neglect air resistance and the gravitational pull of celestial bodies other than Earth, or in modeling population growth we might assume that the population grows continuously rather than in discrete steps.
@@ -155,7 +153,7 @@
     <div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384123">
       Verify \( P \) is a solution for <a href="#x1-5r4">(1.1.4)</a> by differentiating and substituting
     </div>
-    <div>  
+    <div  id="9e90a6da-5334-4272-b9e2-92ea65091384123-2">
       The solution to the Malthusian model <a href="#x1-3r2">(1.1.2)</a> grows exponentially forever but the solution to the Verhulst model <a href="#x1-5r4">(1.1.4)</a> does not. Interestingly, the Verhulst model converges to the value \( 1 / \alpha \) meaning it is completely independent of the initial population.
     </div>
     <div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384">
@@ -192,7 +190,7 @@
     <div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384456">
       Verify <a href="#x1-8r6">(1.1.6)</a> is a solution for <a href="#x1-7r5">(1.1.5)</a> by differentiating and substituting
     </div>
-    <div>    
+    <div id="9e90a6da-5334-4272-b9e2-92ea65091384456-2">    
       Interestingly, Newton's Law of Cooling suggests that the object's temperature converges to the value \( A \) of the surroundings meaning it is completely independent of the initial temperature.
     </div>
     <div class="reading-exercise" id="3494f2cc-68d7-4b67-94dc-3a7a9ebe9f64">
@@ -328,7 +326,7 @@
     <div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384789">
       Rewrite \( F=m \dot{v} \) using <span class="vocab">differential notation</span> (<span class="vocab">Newton notation</span>)
     </div>
-    <div>   
+    <div id="9e90a6da-5334-4272-b9e2-92ea65091384789-2">
       We'll assume the motion of the object is along a vertical line on the \(y-\)axis. For instance, suppose you are tossing a ball directly upward and \(y(t)\) represent the position of the ball measured positive upward. Recall that velocity is the first derivative of position and acceleration is the second derivative of position, so Newton’s 2nd law could be written as a second order differential equation with position \( y \) as the dependent variable
       \[F=m \ddot{y} \] 
     </div>  
@@ -371,7 +369,8 @@
 
   <details class="removed" id="e286c4d8-0d42-4a7b-85e4-35e5cbf1335a">
     <summary>Interacting Species: Competition</summary>
-    <div id="8ef42a0e-4e2f-42ef-a39d-76cb7c8358de">Let \(P=P(t)\) and \(Q=Q(t)\) be the populations of two species at time \(t\), and assume that
+    <div id="8ef42a0e-4e2f-42ef-a39d-76cb7c8358de">
+      Let \(P=P(t)\) and \(Q=Q(t)\) be the populations of two species at time \(t\), and assume that
       each population would grow exponentially if
       the other didn’t exist. In the absence of competition we would have 
       
@@ -384,10 +383,13 @@
       One way to model the effect of competition is to assume that the growth rate per individual of each
       population is reduced by an amount proportional to the other population, so (<a href="#x1-16r10">1.1.10<!-- tex4ht:ref: eq:1.1.10  --></a>) is replaced by
     </div>
-    <div class="eqnarray" id="81d513c2-603a-4115-987e-cfca7473d5ba">\begin {eqnarray*} \dot{P}&amp;=&amp;\phantom {-}aP-\alpha Q\\ \dot{Q}&amp;=&amp;-\beta P+bQ\end
-      {eqnarray*}</div>
+    <div class="eqnarray" id="81d513c2-603a-4115-987e-cfca7473d5ba">
+      \begin {eqnarray*} \dot{P}&amp;=&amp;\phantom {-}aP-\alpha Q\\ \dot{Q}&amp;=&amp;-\beta P+bQ\end
+      {eqnarray*}
+    </div>
     
-    <div class="indent" id="ac872766-3c58-45e2-96fe-7218de14edb5"> where \(\alpha \) and \(\beta \) are positive constants. (Since negative population doesn’t make
+    <div class="indent" id="ac872766-3c58-45e2-96fe-7218de14edb5">
+       where \(\alpha \) and \(\beta \) are positive constants. (Since negative population doesn’t make
       sense, this system works only
       while \(P\) and \(Q\) are both positive.) Now suppose \(P(0)=P_0&gt;0\) and \(Q(0)=Q_0&gt;0\). It can be shown
       (Exercise&nbsp;10.4.&nbsp;<span class="ptmb8t-">42</span>) that there’s a positive

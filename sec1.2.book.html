@@ -43,142 +43,159 @@
       \end {align*}
     </div>
       
-    <div id="89236804-b01b-47b4-bd20-19dec0afa7ee">
-      We already know from calculus from the <span class="vocab">power rule</span> how to find functions that satisfy this kind of equation by finding the antiderivative. 
-    <div>
-    <div id="89236804-b01b-47b4-bd20-19dec0afa7ee123">   
-      For instance, consider you know the derivative such as
-      \[ 
-        \frac{dy}{dx}=x^3
-      \]
-      then you can simplfy find the antiderivative to solve
-      \[ 
-        y=\int x^3 dx=\frac{1}{4} x^4 + c 
-      \]
-      where \(c\) is an <span class="vocab">arbitrary constant</span> of integration representing an infinite <span class="vocab">family of functions</span>. Now supposed you have an additional condition such as we know the the derivative of a function and we know a value the function should equal at a certain point
-      \[ 
-        \frac{dy}{dx}=x^3
-        \quad\quad 
-        y(2)=6
-      \]
-      Then we can use the condition \( y(2)=6 \) to solve for the arbitrary constant
-      \begin{align*} 
-        \underset{6}{\underbrace{y(2)}} = & \frac{1}{4} \cdot \underset{16}{\underbrace{(2)^4}} + c \\
-        6 = & \frac{1}{4} \cdot 16 + c \\
-        6 = & 4 + c \\
-        c = & 2 \\
-      \end{align*} 
-      Therefore we have a specific value for the constant and we can substitute it in to get a particlar solution
-      \[ 
-        y = \frac{1}{4} x^4 + 2
-      \]
-      Finally we can verify our solution is correct by differentiating.
-    </div>  
+    <div class="pdf-page" id="89236804-b01b-47b4-bd20-19dec0afa7ee">
+      <div>
+        We already know from calculus from the <span class="vocab">power rule</span> how to find functions that satisfy this kind of equation by finding the antiderivative. 
+      </div>
+      <div>
+        For instance, consider you know the derivative such as
+        \[ 
+          \frac{dy}{dx}=x^3
+        \]
+        then you can simplify find the antiderivative to solve
+        \[ 
+          y=\int x^3 dx=\frac{1}{4} x^4 + c 
+        \]
+        where \(c\) is an <span class="vocab">arbitrary constant</span> of integration representing an infinite <span class="vocab">family of functions</span>.
+      </div>
+    </div>
+    <div class="pdf-page" id="89236804-b01b-47b4-bd20-19dec0afa-3">
+      <div>
+        Now suppose you have an additional condition such as we know the the derivative of a function and we know a value the function should equal at a certain point
+        \[ 
+          \frac{dy}{dx}=x^3
+          \quad\quad 
+          y(2)=6
+        \]
+        Then we can use the condition \( y(2)=6 \) to solve for the arbitrary constant
+        \begin{align*} 
+          \underset{6}{\underbrace{y(2)}} = & \frac{1}{4} \cdot \underset{16}{\underbrace{(2)^4}} + c \\
+          6 = & \frac{1}{4} \cdot 16 + c \\
+          6 = & 4 + c \\
+          c = & 2 \\
+        \end{align*} 
+        Therefore we have a specific value for the constant and we can substitute it in to get a particular solution
+        \[ 
+          y = \frac{1}{4} x^4 + 2
+        \]
+        Finally we can verify our solution is correct by differentiating.
+      </div>  
 
-    <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fd">
-      Verify \( y = \frac{1}{4} x^4 + 2 \) is a solution of \( \frac{dy}{dx}=x^3 \)
-    </div> 
+      <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fd">
+        Verify \( y = \frac{1}{4} x^4 + 2 \) is a solution of \( \frac{dy}{dx}=x^3 \)
+      </div> 
 
-    <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fb">
-      Solve the differential equation \( \displaystyle \frac{dy}{dx}=x^2 \) 
-    </div>  
+      <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fb">
+        Solve the differential equation \( \displaystyle \frac{dy}{dx}=x^2 \) 
+      </div>  
 
-    <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbc">
-      Evaluate the solution at the given point \( \displaystyle \frac{dy}{dx}=x^2 \quad y(3)=7 \) 
-    </div>  
+      <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbc">
+        Evaluate the solution at the given point \( \displaystyle \frac{dy}{dx}=x^2 \quad y(3)=7 \) 
+      </div>  
+    </div>
 
-    <div class="indent" id="5fe84c8f-d326-4411-b31b-b8d6a6c8c6b7">
-      We can even solve second order differential equations of this form  
-      \[ {d^2y\over dx^2}=x^3 \]
+    <div class="pdf-page" id="5fe84c8f-d326-4411-b31b-b8d6a6c8c6b7">
+      <div class="indent">
+        We can even solve second order differential equations of this form  
+        \[ {d^2y\over dx^2}=x^3 \]
 
-      The antiderivative of the second derivative is the first derivative
-     
-      \[ \frac{dy}{dx} = \int \Bigg({d^2y\over dx^2} \Bigg) dx = \int x^3 dx = \frac{1}{4} x^4 + c \]
-
-      But to get the function we simply antidifferentiate again
+        The antiderivative of the second derivative is the first derivative
       
-      \[ y = \int \Bigg( \frac{dy}{dx} \Bigg) dx = \int \Big( \frac{1}{4} x^4 + c_1 \Big) dx 
-      = \frac{1}{20} x^5 + c_1x + c_2 \]
+        \[ \frac{dy}{dx} = \int \Bigg({d^2y\over dx^2} \Bigg) dx = \int x^3 dx = \frac{1}{4} x^4 + c \]
 
-      Notice this time our solution has two arbitrary constants \(c_1\) and \(c_2\)
-    </div> 
-    <div class="reading-exercise" id="9935aa3f-259c-4b3b-bc3a-4f5f9f03a813">
-      Use antiderivative properties to show \( \displaystyle \int \Big( \frac{1}{4} x^4 + c_1 \Big) dx 
-      = \frac{1}{20} x^5 + c_1x + c_2 \)
-    </div>   
+        But to get the function we simply antidifferentiate again
+        
+        \[ y = \int \Bigg( \frac{dy}{dx} \Bigg) dx = \int \Big( \frac{1}{4} x^4 + c_1 \Big) dx 
+        = \frac{1}{20} x^5 + c_1x + c_2 \]
 
-    <div class="indent" id="5fe84c8f-d326-4411-b31b-b8d6a6c8c6b8">   
-      Again we can solve any other simple higher order differential equations by repeated antidifferentiation or repeated integration 
-      <a id="x1-2r1"></a>
-      \begin {equation} \label {eq:1.2.1} 
-        \frac{d^ny}{dx^n}=f(x) 
-      \end {equation}
-    </div>   
-
-
-    <div class="reading-exercise" id="9935aa3f-259c-4b3b-bc3a-4f5f9f03a813-2">
-      Solve the differential equation \( \displaystyle \frac{dy}{dx} = \sqrt[5]{x} \)
-    </div>      
-    <div class="reading-exercise" id="0bb205bc-6a3e-43dd-bbb2-d22267e13a0e">
-      Solve the differential equation \( \displaystyle \frac{d^2y}{dx^2} = \frac{1}{x^8} \)
-    </div>        
-    <div class="reading-exercise" id="de0e7ed9-1db9-42cf-b164-fb86e45324cd">
-      Solve the differential equation \( \displaystyle \frac{d^3y}{dx^3} = \cos x \)
-    </div>      
-    <div class="reading-exercise" id="df218857-0727-4e2c-b840-51360fa3a5f9">
-      Solve the differential equation \( \displaystyle \frac{d^4y}{dx^4} = e^x \)
+        Notice this time our solution has two arbitrary constants \(c_1\) and \(c_2\)
+      </div> 
+      <div class="reading-exercise" id="9935aa3f-259c-4b3b-bc3a-4f5f9f03a813">
+        Use antiderivative properties to show \( \displaystyle \int \Big( \frac{1}{4} x^4 + c_1 \Big) dx 
+        = \frac{1}{20} x^5 + c_1x + c_2 \)
+      </div>
     </div>
-    <div id="d7e317be-e6c0-43fa-80fb-4d0ed80ab700">      
-      Since we already sovled these in calculus, we ususally won't consider differential equations like (<a href="#x1-2r1">1.2.1</a>) and we’ll usually consider differential equations that can be written as 
-      <a id="x1-3r2"></a>
-      \begin {equation} \label {eq:1.2.2} 
-        \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right) 
-      \end {equation} 
-      where either the function itself, \(y\), or one of its derivatives \(\displaystyle \frac{dy}{dx}\), …,
-      \(\displaystyle  \frac{d^{n-1}y}{dx^{n-1}}\) is also present in the equation. While we will be using antidifferentiation to solve these differential equations as well, it will not be as straightforward as a basic calculus problem.
+
+    <div class="pdf-page" id="5fe84c8f-d326-4411-b31b-b8d6a6c8c6b8">
+      <div class="indent">
+        Again we can solve any other simple higher order differential equations by repeated antidifferentiation or repeated integration 
+        <a id="x1-2r1"></a>
+        \begin {equation} \label {eq:1.2.1} 
+          \frac{d^ny}{dx^n}=f(x) 
+        \end {equation}
+      </div>
+
+
+      <div class="reading-exercise" id="9935aa3f-259c-4b3b-bc3a-4f5f9f03a813-2">
+        Solve the differential equation \( \displaystyle \frac{dy}{dx} = \sqrt[5]{x} \)
+      </div>      
+      <div class="reading-exercise" id="0bb205bc-6a3e-43dd-bbb2-d22267e13a0e">
+        Solve the differential equation \( \displaystyle \frac{d^2y}{dx^2} = \frac{1}{x^8} \)
+      </div>        
+      <div class="reading-exercise" id="de0e7ed9-1db9-42cf-b164-fb86e45324cd">
+        Solve the differential equation \( \displaystyle \frac{d^3y}{dx^3} = \cos x \)
+      </div>      
+      <div class="reading-exercise" id="df218857-0727-4e2c-b840-51360fa3a5f9">
+        Solve the differential equation \( \displaystyle \frac{d^4y}{dx^4} = e^x \)
+      </div>
     </div>
-    <div id="d7e317be-e6c0-43fa-80fb-4d0ed80ab7001">
-      Here are some examples of differential equations we will be solving
-      \[
-        \begin {array}{rcll}
-          \displaystyle {dy\over dx}-x^2&amp;=&amp;0&amp;\mbox { (first order)}\\ \\
-          \displaystyle {dy\over dx}+2xy^2&amp;=&amp;-2&amp;\mbox { (first order)}\\ \\
-          \displaystyle {d^2y\over dx^2}+2\displaystyle {dy\over dx}+y&amp;=&amp;2x&amp;\mbox { (second order)}\\ \\
-          \displaystyle  x\frac{d^3y}{dx^3}+y^2&amp;=&amp;\sin x &amp;\mbox { (third order)}\\ \\
-          \displaystyle  \frac{d^ny}{dx^n}+x\frac{dy}{dx}+3y&amp;=&amp;x&amp;\mbox { ($n$-th order)}
-        \end {array}
-      \]
-    </div> 
 
-    <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcfg">
-      Find the order of the differential equation 
-      \( \displaystyle  \frac{d^7y}{dx^7} + \frac{d^3y}{dx^3} = 6 \) 
-    </div>  
+    <div class="pdf-page" id="d7e317be-e6c0-43fa-80fb-4d0ed80ab700">
+        Since we already solved these in calculus, we usually won't consider differential equations like (<a href="#x1-2r1">1.2.1</a>) and we’ll usually consider differential equations that can be written as 
+        <a id="x1-3r2"></a>
+        \begin {equation} \label {eq:1.2.2} 
+          \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right) 
+        \end {equation} 
+        where either the function itself, \(y\), or one of its derivatives \(\displaystyle \frac{dy}{dx}\), …,
+        \(\displaystyle  \frac{d^{n-1}y}{dx^{n-1}}\) is also present in the equation. While we will be using antidifferentiation to solve these differential equations as well, it will not be as straightforward as a basic calculus problem.
+    </div>
 
-    <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcef">
-      Find the order of the differential equation 
-      \( \displaystyle  e^x \frac{dy}{dx} - \frac{d^2y}{dx^2} \cdot \frac{dy}{dx} - y^3 = 3x \) 
-    </div>  
+    <div class="pdf-page" id="d7e317be-e6c0-43fa-80fb-4d0ed80ab7001">
+      <div>
+        Here are some examples of differential equations we will be solving
+        \[
+          \begin {array}{rcll}
+            \displaystyle {dy\over dx}-x^2&amp;=&amp;0&amp;\mbox { (first order)}\\ \\
+            \displaystyle {dy\over dx}+2xy^2&amp;=&amp;-2&amp;\mbox { (first order)}\\ \\
+            \displaystyle {d^2y\over dx^2}+2\displaystyle {dy\over dx}+y&amp;=&amp;2x&amp;\mbox { (second order)}\\ \\
+            \displaystyle  x\frac{d^3y}{dx^3}+y^2&amp;=&amp;\sin x &amp;\mbox { (third order)}\\ \\
+            \displaystyle  \frac{d^ny}{dx^n}+x\frac{dy}{dx}+3y&amp;=&amp;x&amp;\mbox { ($n$-th order)}
+          \end {array}
+        \]
+      </div> 
 
-    <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcd">
-      Find the order of the differential equation 
-      \( \displaystyle  x^3 \frac{dy}{dx} + x^5 \frac{d^4y}{dx^4} + 6y^2 = \cos x \) 
-    </div>  
+      <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcfg">
+        Find the order of the differential equation 
+        \( \displaystyle  \frac{d^7y}{dx^7} + \frac{d^3y}{dx^3} = 6 \) 
+      </div>  
 
-    <div id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcde">
-      Differential equations we encounter may be written in this form, but we can easily rearrange them to make them in the form of <a href="#x1-3r2">(1.2.2)</a> so we can easily identify \( f\left(x,y,{dy\over dx},{d^2y\over dx^2} \dots,{d^ny\over dx^n}\right)\)
+      <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcef">
+        Find the order of the differential equation 
+        \( \displaystyle  e^x \frac{dy}{dx} - \frac{d^2y}{dx^2} \cdot \frac{dy}{dx} - y^3 = 3x \) 
+      </div>  
 
-      \begin{align*}
-          {dy\over dx} & = \overset{f(x)}{\overbrace{x^2}} \\ \\
-          {dy\over dx} & = \overset{f(x,y)}{\overbrace{-2 - 2xy^2}} \\ \\
-          {d^2y\over dx^2} & = \overset{f\left(x,y,{dy\over dx}\right)}{\overbrace{2x - y -2{dy\over dx}}} \\ \\
-          {d^3y\over dx^3} & = \overset{f(x,y)}{\overbrace{\frac{\sin{x}}{x} - \frac{y^2}{x}}} \\ \\
-          {d^ny\over dx^n} &= \overset{f\left(x,y,{dy\over dx}\right)}{\overbrace{x - 3y -x{dy\over dx}}} 
-      \end{align*}
-    </div>  
-    <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcdef">
-      Rewrite in the form of <a href="#x1-3r2">(1.2.2)</a> and idenity \( f\left(x,y,{dy\over dx},{d^2y\over dx^2} \dots,{d^ny\over dx^n}\right)\) 
-    </div>  
+      <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcd">
+        Find the order of the differential equation 
+        \( \displaystyle  x^3 \frac{dy}{dx} + x^5 \frac{d^4y}{dx^4} + 6y^2 = \cos x \) 
+      </div>
+    </div>
+
+    <div class="pdf-page" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcde">
+      <div>
+        Differential equations we encounter may be written in this form, but we can easily rearrange them to make them in the form of <a href="#x1-3r2">(1.2.2)</a> so we can easily identify \( f\left(x,y,{dy\over dx},{d^2y\over dx^2} \dots,{d^ny\over dx^n}\right)\)
+
+        \begin{align*}
+            {dy\over dx} & = \overset{f(x)}{\overbrace{x^2}} \\ \\
+            {dy\over dx} & = \overset{f(x,y)}{\overbrace{-2 - 2xy^2}} \\ \\
+            {d^2y\over dx^2} & = \overset{f\left(x,y,{dy\over dx}\right)}{\overbrace{2x - y -2{dy\over dx}}} \\ \\
+            {d^3y\over dx^3} & = \overset{f(x,y)}{\overbrace{\frac{\sin{x}}{x} - \frac{y^2}{x}}} \\ \\
+            {d^ny\over dx^n} &= \overset{f\left(x,y,{dy\over dx}\right)}{\overbrace{x - 3y -x{dy\over dx}}} 
+        \end{align*}
+      </div>  
+      <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcdef">
+        Rewrite \( x \frac{d^2y}{dx^2} + 3y - 2 = \frac{dy}{dx} \) in the form of <a href="#x1-3r2">(1.2.2)</a> and identify \( f\left(x,y,{dy\over dx},{d^2y\over dx^2} \dots,{d^ny\over dx^n}\right)\) 
+      </div>
+    </div>
   </details>
 
   <details id="801b2ff6-05c1-489a-a380-b485d2527211">
