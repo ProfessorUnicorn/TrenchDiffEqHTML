@@ -193,13 +193,13 @@
 						Notice that our one-parameter family fails to include the trivial solution so our general solution includes the trivial solution (a singular solution) and the one-parameter family:  
 												
 						\begin{align*}	
-							y(x) \equiv 0
+							y \equiv 0
 							\quad\quad	
-							y(x)=\frac{1}{(1-x) + ce^{-x}}	
+							y =\frac{1}{(1-x) + ce^{-x}}	
 						\end{align*}
 
 						<div class="reading-exercise">
-							Verify \( y(x)=\frac{1}{(1-x) + ce^{-x}} \) is a solution to <a href="#x1-5r3">(2.4.3)</a> by differentiating and substituting
+							Verify \( y =\frac{1}{(1-x) + ce^{-x}} \) is a solution to <a href="#x1-5r3">(2.4.3)</a> by differentiating and substituting
 						</div> 
 					</div>
 				</details>
@@ -423,9 +423,12 @@
 						Multiplying the result by \( x \) gets us our solution \( y = ux \)
 
 						\begin{align*}		
-							y(x) & = x\ln \Big( \ln \left| x \right| + c \Big) \\			
+							y & = x\ln \Big( \ln \left| x \right| + c \Big) \\			
 						\end{align*}
 					</div>
+					<div class="reading-exercise">
+						Verify \( y =x\ln \Big( \ln \left| x \right| + c \Big) \) is a solution to <a href="#x1-12r8">(2.4.8)</a> by differentiating and substituting
+					</div> 
 
 				</details>
 			</div>
@@ -470,6 +473,16 @@
 							x^2 \frac{dy}{dx} = y^2+xy-x^2
 						\end {equation}
 					</li>
+					<li>
+						Show that the solution to the IVP is not unique 
+						
+						\begin {equation*} 
+							x^2\frac{dy}{dx} = y^2+xy-x^2 
+							\quad \quad
+							y(0)=0
+						\end {equation*}
+					</li>
+					
 					<li>
 						Solve the IVP 
 						
@@ -590,27 +603,85 @@
 
 								<a id="x1-23r13"></a>
 								\begin{align} \label {eq:2.4.13}		
-									y(x) & = \frac{x \left( 1 + cx^2 \right) }{1-cx^2}  \\			
+									y & = \frac{x \left( 1 + cx^2 \right) }{1-cx^2}  \\			
 								\end{align} 
-
-								Now we have a one-parameter family <a href="#x1-23r13">(2.4.13)</a> representing non-equilibrium solutions to <a href="#x1-16r9">(2.4.9)</a> so we'll check if the family contains our equilibrium solutions. When \( c = 0 \) the one-parameter family <a href="#x1-23r13">(2.4.13)</a> simplifies to one of the equilibrium solutions \( y(x) = x \) but the other equilibrium solution \( y(x) = -x \) cannot be obtained from the family regardless of choice of \( c \) therefore it is a singular solution, so our general solution on intervals that don't contain \( x = 0 \) is 
+							</div>
+							<div class="reading-exercise">
+								Differentiate \( y = \displaystyle \frac{x \left( 1 + cx^2 \right) }{1-cx^2}  \) using quotient rule
+							</div> 
+							<div class="reading-exercise">
+								Verify \( y = \displaystyle \frac{x \left( 1 + cx^2 \right) }{1-cx^2}  \) is a solution to <a href="#x1-16r9">(2.4.9)</a>
+							</div> 
+							<div>
+								Choosing \( c = 0 \) in the one-parameter family <a href="#x1-23r13">(2.4.13)</a> yields one of the equilibrium solutions
+								\begin{align*}		
+									y & = \frac{x \left( 1 + 0 \cdot x^2 \right) }{1-0 \cdot x^2} = x \\			
+								\end{align*} 
+								but the other equilibrium solution \( y = -x \) cannot be obtained from the family regardless of choice of \( c \) therefore it is a singular solution, so our general solution on intervals that don't contain \( x = 0 \) is 
 
 								<a id="x1-24r14"></a>
 								\begin{align} \label {eq:2.4.14}	
-									y(x) = -x
+									y = -x
 									\quad \quad
-									y(x) = \frac{x \left( 1 + cx^2 \right) }{1-cx^2}  \\			
+									y = \frac{x \left( 1 + cx^2 \right) }{1-cx^2}  \\			
 								\end{align} 
-
-
-								The entire method of solving homogeneous nonlinear differential equations relies upon \( x \) and \( y \) occurring as a ratio \( y / x\) meaning \( x=0 \) by default will not be included in the IOVs for instance our general solution <a href="#x1-24r14">(2.4.14)</a> is defined on IOVs \( (-\infty,0) \) and \( (0,\infty) \)
 							</div>
 
-							<div>
-								The situation is more complicated if the \( x=0 \) is included in the open interval. First note that the equilibrium solution \( y(x) = -x \) satisfies <a href="#x1-16r9">(2.4.9)</a> on \( (-\infty,\infty) \)
+						</li>
+
+						<li>
 							
+							<div>
+								Recall that the entire method of solving this (and all) <span class="vocab">nonlinear homogeneous</span> differential equation(s) relied upon \( x \) and \( y \) occurring as a ratio \( y / x\) meaning by default we are onlly considering intervals not containing \( x = 0 .\) However, right away we notice that both the singular solution \( y = -x \) and 
+								the one-parameter family <em>are defined</em> at \( x = 0 \) (which is a hint to us that perhaps it is possible to consider intervals that do contain \( x = 0 \))				
+							</div>	
+							<div>
+								Both the singular solution \( y = -x \) and 
+								the one-parameter family <em>are defined</em> at \( x = 0 \)
+								\begin{align*}	
+									y(0) = -0=0
+									\quad\quad	
+									y(0) & = \frac{0 \left( 1 + c\cdot0^2 \right) }{1-c\cdot0^2} = 0 \\			
+								\end{align*} 
+								And in fact, both satisfy the initial condition \( y(0) = 0 \) so right away we have two distinct solutions that satisfy the IVP so the solution to the IVP is not unique. And actually, we left \(c\) arbitrary in that calculation, so we have already found an infinite number of solutions that satisfy the IVP. Now the IOV is another question entirely. It is fairly straightforward for the equilibrium solution \( y = -x \) which is defined everywhere so the IOV is \( (-\infty,\infty)\) but for the  one-parameter family <a href="#x1-23r13">(2.4.13)</a> it is more tricky since it is a rational function and we have to ensure the denominator is not zero. 
 							</div>
-						
+							<div class="reading-exercise">
+								Assuming \( c < 0 \) find any points of discontinuity \(y = \displaystyle \frac{x \left( 1 + cx^2 \right) }{1-cx^2} \)
+							</div> 
+							<div>	
+								Assuming \( c \le 0 \) the denominator would be all positive quantities since subtracting a negative would result in a positive and the one and square are both positive as well. Therefore there are no discontinuities in this case so the IOV would be \( (-\infty,\infty)\) 
+							</div>
+							<div class="reading-exercise">
+								Assuming \( c > 0 \) find any points of discontinuity \(y = \displaystyle \frac{x \left( 1 + cx^2 \right) }{1-cx^2} \)
+							</div> 
+							<div>	
+								Assuming \( c > 0 \) and setting \( 1-cx^2 = 0\) we find the one-parameter family is discontinuous at \( x = \frac{1}{\sqrt{c}}\) and \( x = -\frac{1}{\sqrt{c}}\) and with the initial \(x\) value of \(x=0\) that makes the IOV for this solution \( \left( -\frac{1}{\sqrt{c}} , \frac{1}{\sqrt{c}} \right) \) 
+							</div>	
+							<div>
+								<figure class="figure" id="28443a47-c527-42da-b74a-1c75d4c7bc18">
+									<div
+										
+										id="-two-solutions-y-and-yx-of-eq-that-differ-on-every-interval-containing-x-"
+									>
+										<a id="x1-25r2"></a>
+										<iframe src="https://www.desmos.com/calculator/squud3kgfs?embed" width="400" height="250" frameborder="0"></iframe>
+									</div>
+									<figcaption class="caption">
+										<span class="id">Figure&nbsp;2.4.3a</span>
+										<span class="content">
+											Three distinct solutions to the IVP from \( y = \displaystyle \frac{x \left( 1 + cx^2 \right) }{1-cx^2} ,\) one of each where \(c=0,\) \(c=1,\) and \(c=-1\) 
+										</span>
+									</figcaption>
+									<!-- tex4ht:label?: x1-25r2  -->
+								</figure>
+							</div>	
+							
+							<div>
+								
+							</div>	
+
+
+							
 						</li>
 
 						<li>
@@ -638,16 +709,18 @@
 								Substituting \( c = \frac{1}{3} \) back in to <a href="#x1-23r13">(2.4.13)</a> we obtain our particular solution of the IVP
 
 								\begin{align*} 	
-									y(x) = & \frac{x\left(1 +  \frac{1}{3}x^2\right)}{1- \frac{1}{3}x^2} \\
+									y = & \frac{x\left(1 +  \frac{1}{3}x^2\right)}{1- \frac{1}{3}x^2} \\
 								\end{align*}
 
 								Multiplying by \( 3 \) on top and bottom to simplify:
 
 								\begin{align*} 	
-									y(x) = & \frac{x\left(3 + x^2\right)}{3- x^2} \\
+									y = & \frac{x\left(3 + x^2\right)}{3- x^2} \\
 								\end{align*}
 
-								Now to determind the IOV we start by checking for undefined values when \( 3- x^2 = 0\) which occurs when \( x = \sqrt{3}\)  or \( x = -\sqrt{3}\) which creates possible intervals \( ( -\infty,-\sqrt{3}) ,\) \( (-\sqrt{3}, \sqrt{3}) ,\) and \( (\sqrt{3} , \infty ) \) and with the initial condition with \( x = 1 \) that puts us directly in the IOV \( (-\sqrt{3}, \sqrt{3}) \)
+								Now to determind the IOV we start by checking for undefined values when \( 3- x^2 = 0\) which occurs when \( x = \sqrt{3}\)  or \( x = -\sqrt{3}\) 
+								and with the initial \(x\) value of \(x=0\) that makes the IOV for this solution \( (-\sqrt{3}, \sqrt{3}) \)
+						
 							</div>
 
 							<div>
