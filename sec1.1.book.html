@@ -94,24 +94,24 @@
       Of course, exponential functions! \(\displaystyle \frac{d}{dt} \Big( e^t \Big) = e^t\) and including the proportionality constant \(a\), the function \(P(t) = e^{at}\) satisfies <a href="#x1-3r2">(1.1.2)</a>. 
       
       <div class="reading-exercise" id="b197ff1d-fa55-4739-bbfb-1acdad17d675">
-        Show \(P(t) = e^{at}\) is a solution to <a href="#x1-3r2">(1.1.2)</a> by differentiating and substituting
+        Show \(P = e^{at}\) is a solution to <a href="#x1-3r2">(1.1.2)</a> by differentiating and substituting
       </div>  
       
       In fact, the function still satisfies (<a href="#x1-3r2">1.1.2</a>) when we include an <span class="vocab">arbitrary constant</span> factor
       <a id="x1-4r3"></a> 
       \begin {equation} \label {eq:1.1.3}
-        P(t) = ce^{at}
+        P = ce^{at}
       \end {equation} 
     </div>
     <div class="reading-exercise" id="b197ff1d-fa55-4739-bbfb-1acdad17d6756">
-      Show \(P(t) = ce^{at}\) is a solution to <a href="#x1-3r2">(1.1.2)</a> by differentiating and substituting
+      Show \(P = ce^{at}\) is a solution to <a href="#x1-3r2">(1.1.2)</a> by differentiating and substituting
     </div>    
     <div id="fa10e7cb-8500-405e-9416-23ec863913f4">   
       If an equation (<a href="#x1-4r3">1.1.3</a>) represents all possible solutions then we call it the <span class="vocab">general solution</span> (the <span class="vocab">arbitrary constant</span> \(c\) represents infinitely many possible solutions). 
       
       The Malthusian model <a href="#x1-3r2">(1.1.2)</a> is used to model population growth and states that a population’s rate of growth is proportional to its initial population. Taking the initial population at time \( t = 0 \) to be \( P(0) = P_0 \) as the <span class="vocab">initial condition</span>, we can solve for the constant \(c \) to obtain a <span class="vocab">particular solution</span>
 
-      \[ P(t)=P_0e^{at}\]
+      \[ P=P_0e^{at}\]
 
       <div class="reading-exercise" id="b197ff1d-fa55-4739-bbfb-1acdad17d6757">
         Evaluate (<a href="#x1-4r3">1.1.3</a>) at the <span class="vocab-repeat">initial condition</span> \( P(0) = P_0 \) and solve for \( c \)
@@ -119,10 +119,10 @@
 
     </div>
     <div id="9a0b21cb-96de-4191-b2e6-bb2730b90afc">
-      While \( P(t)=P_0e^{at} \) is the solution to the Malthusian model <a href="#x1-3r2">(1.1.2)</a> with initial population \( P_0 \), it is only a mathematical model and it cannot model a real-life situation perfectly forever. For instance, whenever the birth rate minus the death rate is a positive value \( a \), then the function grows exponentially forever:
+      While \( P=P_0e^{at} \) is the solution to the Malthusian model <a href="#x1-3r2">(1.1.2)</a> with initial population \( P_0 \), it is only a mathematical model and it cannot model a real-life situation perfectly forever. For instance, whenever the birth rate minus the death rate is a positive value \( a \), then the function grows exponentially forever:
         
         \begin{align*}
-            \lim_{t \to \infty}P(t)
+            \lim_{t \to \infty}P
             & =\lim_{t \to \infty}P_0e^{at} \\
             & =P_0\lim_{t \to \infty}e^{at} \\
             & =P_0 e^{\infty} \\
@@ -132,7 +132,7 @@
       But there are other variables that limit a population's growth that are not being accounted for. This model only models the population growth accurately for range of time when the resources of the population needed to reproduce (food, water, air, shelter, etc.) are effectively infinite.
     </div>
     <div class="reading-exercise" id="66fc7339-e552-443b-8120-5717fb4f4d99">
-      For \(a &lt; 0\), use the limit laws to show the \(\lim _{t\to \infty }P(t)= 0 \) in the Malthusian model
+      For \(a &lt; 0\), use the limit laws to show the \(\lim _{t\to \infty }P= 0 \) in the Malthusian model
     </div>
     <div class="indent" id="4378dc66-99b6-4592-a5c8-54becf17027b"> 
       In general populations do not have infinite resources. This flaw in the Malthusian model suggests the need for a model that accounts for limitations of space and resources that tend to oppose the rate of population growth as the population increases. Perhaps the most famous model of this kind is the <span class="vocab">Verhulst model</span>, where <a href="#x1-3r2">(1.1.2)</a> is replaced by 
@@ -149,11 +149,11 @@
     <div class="indent" id="35375884-e6ac-40d3-9578-046cb127709a"> 
       Equation&nbsp;<a href="#x1-5r4">(1.1.4)</a> is also referred to as the <span class="vocab">logistic equation</span> and for an initial population \( P(0)=P_0 \gt 0 \) the solution is
       \[ 
-        P(t) ={P_0\over \alpha P_0+(1-\alpha P_0)e^{-at}}
+        P ={P_0\over \alpha P_0+(1-\alpha P_0)e^{-at}}
       \]
     </div>
     <div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384123">
-      Verify \( P(t) \) is a solution for <a href="#x1-5r4">(1.1.4)</a> by differentiating and substituting
+      Verify \( P \) is a solution for <a href="#x1-5r4">(1.1.4)</a> by differentiating and substituting
     </div>
     <div>  
       The solution to the Malthusian model <a href="#x1-3r2">(1.1.2)</a> grows exponentially forever but the solution to the Verhulst model <a href="#x1-5r4">(1.1.4)</a> does not. Interestingly, the Verhulst model converges to the value \( 1 / \alpha \) meaning it is completely independent of the initial population.
@@ -162,7 +162,7 @@
       Use the limit laws to show \(\lim _{t\to \infty }P(t)=1/\alpha \) in the Verhulst model
     </div>
     <div class="indent" id="efa005ae-b2d1-41d0-b0f5-09b02aa53490"> Figure&nbsp;<a href="#-solutions-of-the-logistic-equation-">1.1.1<!-- tex4ht:ref: figure:1.1.1  --></a>
-      shows typical graphs of population \(P(t) = \displaystyle {P_0\over \alpha P_0+(1-\alpha P_0)e^{-at}}\) versus time \(t\) for various initial population \(P_0\) values
+      shows typical graphs of population \(P = \displaystyle {P_0\over \alpha P_0+(1-\alpha P_0)e^{-at}}\) versus time \(t\) for various initial population \(P_0\) values
     </div>
     <figure class="figure" id="05f95a3f-7fdc-421c-967d-5146866ceb3e">
       <div id="-solutions-of-the-logistic-equation-"><img height="264" src="EPS/fig010101.png" width="409"> <a id="x1-6r1"></a></div>
@@ -186,7 +186,7 @@
 
       <a id="x1-8r6"></a>
       \begin {equation} \label {eq:1.1.6}
-        T(t) =A+(T_0-A)e^{-kt}
+        T =A+(T_0-A)e^{-kt}
       \end {equation}
     </div>
     <div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384456">
@@ -196,7 +196,7 @@
       Interestingly, Newton's Law of Cooling suggests that the object's temperature converges to the value \( A \) of the surroundings meaning it is completely independent of the initial temperature.
     </div>
     <div class="reading-exercise" id="3494f2cc-68d7-4b67-94dc-3a7a9ebe9f64">
-      Use the limit laws to show the \(\lim _{t\to \infty }T(t)= A \) in <a href="#x1-8r6">(1.1.6)</a> and describe in words what is physically happening in this limit and explain why it makes sense
+      Use the limit laws to show the \(\lim _{t\to \infty }T= A \) in <a href="#x1-8r6">(1.1.6)</a> and describe in words what is physically happening in this limit and explain why it makes sense
     </div>
 
     <div class="indent" id="3bb266be-3c70-476d-8761-c5f4f231be20"> Figure&nbsp;<a href="#-temperature-according-to-newtons-law-of-cooling-">1.1.2<!-- tex4ht:ref: figure:1.1.2  --></a> shows
@@ -244,7 +244,7 @@
         Solving this equation for \( A \), we obtain an expression for a function that models the temperature of the surroundings
 
         \begin{equation*}
-          A(t) = -\frac{\tau}{a}(T-T_0) + A_0
+          A = -\frac{\tau}{a}(T-T_0) + A_0
         \end{equation*}         
  
         <div class="reading-exercise" id="4005a35f-82db-4abb-b55d-7e57c0ed782b">
@@ -258,14 +258,14 @@
       The solution of which yields the function \( T(t) \) which describes the temperature of the object:
 
       \[ 
-        T(t) ={\tau T_0+aA_{0}\over \tau + a }+{a(T_0-A_{0})\over \tau+a}e^{-k(1+\tau/a)t}
+        T ={\tau T_0+aA_{0}\over \tau + a }+{a(T_0-A_{0})\over \tau+a}e^{-k(1+\tau/a)t}
       \]
       </P>
       Now what happens to the temperature of the object according to this model over time? Calculate the limit to find out!
     </div>
    
     <div class="reading-exercise" id="84d1aee1-26c4-4f53-8eff-6b8a552e7461">
-      Use the limit laws to show \(\lim _{t\to \infty }T(t) = \displaystyle \frac{\tau T_0 + a A_0 }{\tau + a}\)
+      Use the limit laws to show \(\lim _{t\to \infty }T = \displaystyle \frac{\tau T_0 + a A_0 }{\tau + a}\)
     </div>            
   </details>
 
