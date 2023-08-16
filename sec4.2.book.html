@@ -444,39 +444,143 @@
 					<summary>Solution</summary>
 					<ol>
 						<li>
-							To find a differential equation for \(Q\), we must use the given
-							information to derive an expression for \(\dot{Q}\). But \(\dot{Q}\) is the rate of
-							change of the quantity of salt in the tank changes with respect to time;
-							thus, if <span class="vocab">rate in</span> denotes the rate at which salt enters the tank
-							and <span class="vocab">rate out</span> denotes the rate by which it leaves, then \begin {equation} \label
-							{eq:4.2.5} \dot{Q} = \mbox {rate in}-\mbox {rate out}\end {equation}
-							<a id="x1-14r5"></a>
-							The rate in is \[ \left ({1\over 2}\ \mbox {lb/gal}\right ) \times (4\
-							\mbox {gal/min}) = 2\ \mbox {lb/min}\] Determining the rate out requires a
-							little more thought. We’re removing 4 gallons of the mixture per minute,
-							and there are always 600 gallons in the tank; that is, we’re removing
-							\(1/150\) of the mixture per minute. Since the salt is evenly distributed
-							in the mixture, we are also removing \(1/150\) of the salt per minute.
-							Therefore, if there are \(Q(t)\) pounds of salt in the tank at time \(t\),
-							the rate out at any time \(t\) is \(Q(t)/150\). Alternatively, we can
-							arrive at this conclusion by arguing that \[ \begin {array}{lcl} \mbox
-							{rate out} &amp; = &amp; (\mbox {concentration})\times (\mbox {rate of
-							flow out})\\[6pt] \mbox {}&amp;=&amp;(\mbox {lb/gal})\times (\mbox
-							{gal/min})\\[10pt] &amp;=&amp;\displaystyle {Q(t)\over 600}\times
-							4=\displaystyle {Q(t)\over 150}\end {array} \] We can now write <a href="#x1-14r5">(4.2.5)</a> as \[ \dot{Q} = 2-{Q\over 150}\] This first order equation can be rewritten
-							as \[ \dot{Q}+{Q\over 150} = 2\] Since \(e^{-t/150}\) is a solution of the
-							complementary equation, the solutions of this equation are of the form
-							\(Q=ue^{-t/150}\), where \(\dot{u}e^{-t/150}=2\), so \(\dot{u}=2e^{t/150}\). Hence,
-							\[ u = 300e^{t/150}+c\] so \begin {equation} \label {eq:4.2.6}
-							Q=ue^{-t/150}=300+ce^{-t/150} \end {equation}
-							<a id="x1-15r6"></a>
-							(Figure&nbsp;<a href="#-qet-">4.2.4</a>). Since \(Q(0)=40\), \(c=-260\); therefore, \[ Q=300-260e^{-t/150}\]
+							<div>
+								There are two competing rates here: the <span class="vocab">rate in</span> which is increasing of the quantity of salt \(Q\) from the solution that is being poured into the tank and the <span class="vocab">rate out</span> which is decreasing the quantity of salt from the draining of the tank. Our differential equation must account for both of these rates
+
+								<a id="x1-14r5"></a>
+								\begin{align} \label{eq:4.2.5}
+									\dot{Q} = & \mbox{ rate in } - \mbox{ rate out } 
+								\end{align}
+							</div>	
+							<div>
+								We'll analyze each of these rates separately to determine how to set up our differential equation. We'll start with the rate in which is increasing of the quantity of salt from the solution that is being poured into the tank. The solution being poured into the tank contains \({1}/{2}\) pound of salt per gallon and is flowing in at \(4\) gallons/minute:
+ 
+								\begin{align*}
+									\mbox{ rate in } 
+										= & 
+											\Bigg( \frac{1}{2} \,\, \frac{ \text{lb} }{ \text{gal} } \Bigg)
+											\Bigg( 4 \,\, \frac{ \text{gal} }{ \text{min} } \Bigg)
+										= 2 \,\, \frac{ \text{lb} }{ \text{min} }	
+								\end{align*}
+							</div>	
+							<div>
+								So the rate in is pretty straightforward and is just a constant rate. As for the rate out we will need to do a little more work. We know \(2\) pounds of salt are being added per minute to the tank. We need to find out how many pounds of salt are being drained out of the tank each minute. The total tank is \(600\) gallons and assuming the solution being drained out of the tank is always uniformly mixed it contains a total of \(Q\) pounds of salt, or taken as a ratio of the entire tank \({ Q }/{ 600 } \) pounds of salt per gallon and is flowing out at \(4\) gallons/minute:
+
+								\begin{align*}
+									\mbox{ rate out }
+										= & 
+											\Bigg( \frac{ Q }{ 600 } \,\, \frac{ \text{lb} }{ \text{gal} } \Bigg)
+											\Bigg( 4 \,\, \frac{ \text{gal} }{ \text{min} } \Bigg)
+										= \frac{4 Q}{600} \,\, \frac{ \text{lb} }{ \text{min} }	
+										= \frac{Q}{150} \,\, \frac{ \text{lb} }{ \text{min} }	
+								\end{align*}
+
+							</div>	
+							<div>
+								With both the rate in (quantity of salt increasing) and the rate out (quantity of salt decreasing), we can substitute into <a href="#x1-14r5">(4.2.5)</a>
+
+								\begin{align*}
+									\dot{Q} = & \mbox{ rate in } - \mbox{ rate out} \\
+									\dot{Q} = & 2 \,\, \frac{ \text{lb} }{ \text{min} } - \frac{Q}{150} \,\, \frac{ \text{lb} }{ \text{min} }	\\ \\	
+									\dot{Q} = & 2 - \frac{Q}{150}		
+								\end{align*}
+
+							</div>
+							<div>
+								Rewriting our first order linear equation in standard form and pairing this with our initial condition, that the tank initially contains 40 pounds of salt, i.e. \(Q(0)=40\), we have our IVP
+
+								\begin{equation*}
+									\dot{Q} + \frac{1}{150}Q = 2 \quad Q(0)=40
+								\end{equation*}
+
+							</div>
+
+							<div id="x1-1" class="reading-exercise">
+								Solve \( \dot{Q} + \frac{1}{150}Q = 2 \) using separation of variables
+							</div> 	
+
+							<div>
+								Separating variables, we find
+
+								\begin{align*}
+									\frac{dQ}{dt} = & \frac{300-Q}{150} \\			
+								\end{align*}
+
+								So we take note of the constant solution \( Q=300\) 
+							</div>
+
+							<div id="x1-1" class="reading-exercise">
+								Verify \(Q=300\) is a solution of \( \dot{Q} + \frac{1}{150}Q = 2 \)
+							</div> 	
+
+							<div>	
+								Assuming \(Q\ne300\) and factoring out the negative, we can separate variables and solve
+
+								<a id="x1-15r6"></a>
+								\begin{align}
+									\frac{dQ}{dt} = & -\frac{Q-300}{150} \nonumber \\	
+									\frac{1}{Q-300} \cdot \frac{dQ}{dt} = & -\frac{1}{150} \nonumber \\
+									\int \left( \frac{1}{Q-300} \cdot \frac{dQ}{dt} \right) dt = & \int \Big( -\frac{1}{150} \Big) dt \nonumber \\
+									\int \frac{1}{Q-300} dQ = & -\frac{1}{150} \int dt \nonumber \\
+									\int \frac{1}{u} du = & -\frac{1}{150} \int dt \nonumber \\
+									\ln \left| u \right| = & -\frac{1}{150} t + c  \nonumber \\
+									\ln \left| Q-300 \right| = & -\frac{1}{150} t + c  \nonumber \\
+									e^{\ln \left| Q-300 \right|} = & e^{-\frac{1}{150} t + c} \nonumber \\
+									\left| Q-300 \right| = & ce^{-\frac{1}{150} t} \nonumber \\
+									Q-300 = & ce^{-\frac{1}{150} t}  \nonumber \\
+									Q = & 300 + ce^{-\frac{t}{150}}	\label{eq:4.2.6}					
+								\end{align}
+							</div>
+
+							<div id="x1-1" class="reading-exercise">
+								Verify <a href="#x1-15r6">(4.2.6)</a> is a solution of \( \dot{Q} + \frac{1}{150}Q = 2 \)
+							</div> 	
+
+
+							<div>	
+								Applying the initial condition, \(Q(0)=40\) we can solve for \(c\)
+
+								\begin{align*}
+									Q(t) = & 300 + ce^{-\frac{t}{150}} \\
+									Q(0) = & 300 + ce^{-\frac{0}{150}} \\
+									40 = & 300 + c \\
+									c = & -260 \\
+								\end{align*}
+
+
+								So we have the particular solution to our IVP: 
+
+								\begin{equation*}
+									Q = 300 - 260 e^{-\frac{t}{150}}
+								\end{equation*}
+
+							</div>	
+
+							<div id="x1-1" class="reading-exercise">
+								Verify \( Q = 300 - 260 e^{-\frac{t}{150}} \) is a solution of \( \dot{Q} + \frac{1}{150}Q = 2 \)
+							</div> 
+						
 						</li>
 						<li>
-							From <a href="#x1-15r6">(4.2.6)</a>, we see that that \(\lim _{t \to \infty }Q(t)=300\) for any value of
-							\(Q(0)\). This is intuitively reasonable, since the incoming solution
-							contains 1/2 pound of salt per gallon and there are always 600 gallons of
-							water in the tank.
+							<div>
+								Taking the limit of our solution:
+
+								\begin{align*}
+									\lim_{x\to \infty} Q 
+									= & \lim_{x\to \infty} \Bigg( 300 - 260 e^{-\frac{t}{150}} \Bigg) \\
+									= & \lim_{x\to \infty} \Big( 300 \Big) - 260 \lim_{x\to \infty} \Big( e^{-\frac{t}{150}} \Big) \\
+									= & 300 - 260  e^{-\infty}  \\	
+									= & 300  \\		
+								\end{align*}
+								
+
+							</div>	
+							<div>
+								From <a href="#x1-15r6">(4.2.6)</a> we find that that \(\lim _{t \to \infty }Q=300\) for any value of \(Q(0)\). This is intuitively reasonable, since the incoming solution contains 1/2 pound of salt per gallon and there are always 600 gallons of water in the tank.
+								
+
+							</div>	
+							
 						</li>
 					</ol>
 				</details>
@@ -502,11 +606,18 @@
 					liter is poured into the tank at the rate of 4 liters/min and the
 					mixture is drained from the tank at the rate of 2 liters/min
 					(Figure&nbsp;<a href="#-another-mixing-problem-">4.2.5</a>).
-					Find a differential equation for the quantity \(Q(t)\) of salt in the
-					tank at time \(t\) prior to the time when the tank overflows and find
-					the concentration \(K(t)\) (g/liter ) of salt in the tank at any such
-					time.
+
+					Find the quantity \(Q=Q(t)\) of salt in the tank at time \(t\) prior to the time when the tank overflows. Represent the concentration \(K = K(t)\) (g/liter) of salt in the tank at any time \( t \).
 				</div>
+
+				<ol>
+					<li>
+						Set up and solve an IVP to model the mixing
+					</li>
+					<li>
+						Use the result from (Part 1) to solve the original problem
+					</li>
+				</ol>
 
 				<figure class="figure" id="51ce7fdc-dd22-4188-becc-bcf0abe88974">
 					<div id="-another-mixing-problem-">
@@ -521,53 +632,226 @@
 
 				<details class="solution" id="d5175df2-94bd-48be-ba29-615b27c7bc2a">
 					<summary>Solution</summary>
-					<div>
-						We first determine the amount \(W(t)\) of solution in the tank at
-						any time \(t\) prior to overflow. Since \(W(0) = 200\) and we’re adding 4
-						liters/min while removing only 2 liters/min, there’s a net gain of 2
-						liters/min in the tank; therefore, \[ W(t) = 2t+200\] Since \(W(150)=500\)
-						liters (capacity of the tank), this formula is valid for \(0 \le t \le
-						150\).
-					</div>
 
-					<div>
-						Now let \(Q(t)\) be the number of grams of salt in the tank at time \(t\),
-						where \(0 \le t \le 150\). As in Example&nbsp;<a href="#x1-103">4.2.3</a>,
-						\begin {equation} \label {eq:4.2.7} \dot{Q} = \mbox {rate in}-\mbox {rate
-						out}\end {equation}
-						<a id="x1-19r7"></a>
-						The rate in is \begin {equation} \label {eq:4.2.8} \left ({1\over 4}\
-						\mbox {g/liter}\,\right ) \times (4\ \mbox {liters/min}\,) = 1\ \mbox
-						{g/min}\end {equation}
-						<a id="x1-20r8"></a>
-						To determine the rate out, we observe that since the mixture is being
-						removed from the tank at the constant rate of 2 liters/min and there are
-						\(2t+200\) liters in the tank at time \(t\), the fraction of the mixture
-						being removed per minute at time \(t\) is \[ {2\over 2t+200} = {1\over
-						t+100}\] We’re removing this same fraction of the salt per minute.
-						Therefore, since there are \(Q(t)\) grams of salt in the tank at time
-						\(t\), \begin {equation} \label {eq:4.2.9} \mbox {rate out} = {Q(t)\over
-						t+100}\end {equation}
-						<a id="x1-21r9"></a>
-						Alternatively, we can arrive at this conclusion by arguing that \[ \begin
-						{array}{lcl} \mbox {rate out} &amp; = &amp; (\mbox {concentration})\times
-						(\mbox {rate of flow out}) =(\mbox {g/liter})\times (\mbox
-						{liters/min})\\[10pt] &amp;=&amp;\displaystyle {Q(t)\over 2t+200}\times
-						2=\displaystyle {Q(t)\over t+100}\end {array} \] Substituting <a href="#x1-20r8">(4.2.8)</a> and <a href="#x1-21r9">(4.2.9)</a> into <a href="#x1-19r7">(4.2.7)</a> yields \begin {equation} \label {eq:4.2.10} \dot{Q}=1-{Q\over t+100},\quad
-						\text { so }\quad \dot{Q}+{1\over t+100} Q=1\end {equation}
-						<a id="x1-22r10"></a>
-						By separation of variables, \(1/(t+100)\) is a solution of the
-						complementary equation, so the solutions of <a href="#x1-22r10">(4.2.10)</a> are of the form \[ Q={u\over t+100},\quad \mbox{ where } \quad {\dot{u}\over
-						t+100}=1,\quad \mbox{ so } \quad  \dot{u}=t+100\] Hence, \begin {equation}
-						\label {eq:4.2.11} u = {(t+100)^2\over 2}+c\end {equation}
-						<a id="x1-23r11"></a>
-						Since \(Q(0)=10\) and \(u=(t+100)Q\), <a href="#x1-23r11">(4.2.11)</a> implies that \[ (100)(10) = {(100)^2\over 2}+c\] so \[
-						c=100(10)-{(100)^2\over 2} =-4000 \] and therefore \[ u = {(t+100)^2\over
-						2} -4000\] Hence, \[ Q = {u\over t+200}= {t+100\over 2}-{4000\over
-						t+100}\] Now let \(K(t)\) be the concentration of salt at time \(t\). Then
-						\[ K(t) = {1\over 4}-{2000\over (t+100)^2} \]
-						(Figure&nbsp;<a href="#-kt-over-overt-">4.2.6</a>).
-					</div>
+					<ol>
+						<li>
+							<div>
+								There are two competing rates here: the rate of increase of the quantity of salt $Q$ from the solution that is being poured into the tank and the rate of decrease of  the quantity of salt $Q$ from the draining of the tank. Our differential equation must account for both of these rates. 
+
+								<a id="x1-19r7"></a>
+								\begin{align} \label{eq:4.2.7}
+									\dot{Q} = & \mbox{ rate in } - \mbox{ rate out }
+								\end{align}
+
+							</div>	
+							<div>
+								Again we'll analyze each of these rates separately to determine how to set up our differential equation. We'll start with the rate of increase of the quantity of salt from the solution that is being poured into the tank. The solution being poured into the tank contains \({1}/{4}\) gram of salt per liter and is flowing in at \(4\) liters/minute:
+ 
+								<a id="x1-20r8"></a>
+								\begin{align} \label{eq:4.2.8}
+									\mbox{ rate in} 
+										= & 
+											\Bigg( \frac{1}{4} \,\, \frac{ \text{gm} }{ \text{L} } \Bigg)
+											\Bigg( 4 \,\, \frac{ \text{L} }{ \text{min} } \Bigg)
+										= 1 \,\, \frac{ \text{gm} }{ \text{min} }	
+								\end{align}
+							</div>	
+							<div>
+								We know \(1\) gram of salt is being added per minute to the tank. We need to find out how many grams of salt are being drained out of the tank each minute. Recall that the volume of solution in our tank is not constant as it was in the previous example. In this case, we start out with 200 liters of solution and 4 liters per minute are being added to the tank while 2 liters per minute are being drained from the tank. That means the volume \(V\) of solution in the tank is increasing at 2 liters per minute:
+
+								\begin{align*}
+									V = & 
+											\overset{ \text{initial volume} }{\overbrace{200} } 
+											+ \overset{ \text{solution added} }{\overbrace{4t} }
+											- \overset{ \text{solution drained} }{\overbrace{2t} } \\
+									V = & \quad 200 \quad + \quad 2t \\		
+									V = & \quad 2t + 200 
+								\end{align*}
+							</div>	
+							<div>
+								So at time \(t=0\), the volume of our tank is \(V(0)=200\) and the volume of fluid is increasing until the time when our tank gets full at 500 liters, or when \(V(t)=500\) which is after 150 minutes
+
+								\begin{align*}
+									V(t) = & 2t + 200 \\
+									500 = & 2t + 200 \\	
+									300 = & 2t \\	
+									t = & 150 \\					
+								\end{align*}
+							</div>	
+							<div>
+								The total tank is \( 2t + 200 \) liters and assuming the solution being drained out of the tank is always uniformly mixed it contains a total of \( Q\) grams of salt, or taken as a ratio of the entire tank \({ Q }/{ (2t + 200) } \) grams of salt per liter and is flowing out at \(2\) liters/minute
+
+								
+								\begin{align} 
+									\mbox{ rate out } 
+										= & 
+											\Bigg( \frac{ Q }{ (2t + 200) } \,\, \frac{ \text{gm} }{ \text{L} } \Bigg)
+											\Bigg( 2 \,\, \frac{ \text{L} }{ \text{min} } \Bigg) \nonumber 	
+											= \frac{2 Q}{2t + 200} \,\, \frac{ \text{L} }{ \text{min} } \nonumber \\	
+								\end{align}
+
+								Simplifying we obtain the rate out:
+
+								<a id="x1-21r9"></a>
+								\begin{align} \label{eq:4.2.9}	
+									\mbox{ rate out } 			
+										= & \frac{Q}{t + 100} \,\, \frac{ \text{L} }{ \text{min} }	
+								\end{align}
+							</div>	
+							<div>
+								With both the rate in and the rate out, we can substitute into  <a href="#x1-19r7">(4.2.7)</a>
+
+								\begin{align*}
+									\dot{Q} = & \mbox{ rate in } - \mbox{ rate out} \\
+									\dot{Q} = &  1 \,\, \frac{ \text{gm} }{ \text{min} } \ -  \frac{Q}{t + 100} \,\, \frac{ \text{L} }{ \text{min} }		\\	
+									\dot{Q} = & 1 - \frac{Q}{t + 100}		
+								\end{align*}
+								
+							</div>	
+							<div>
+								Rewriting our 1st order linear equation in standard form and pairing this with our initial condition, that the tank initially contains 10 grams of salt, i.e. \(Q(0)=10\), we have our IVP:
+
+								<a id="x1-22r10"></a>
+								\begin{equation}\label{eq:4.2.10}
+										\dot{Q} + \left( \frac{1}{t + 100} \right) Q = 1 \quad Q(0)=10
+								\end{equation}
+							</div>	
+							<div>
+								Although our IVP <a href="#x1-22r10">(4.2.10)</a> is not separable, since it is linear first order, we can start by solving the complementary equation which is separable
+
+								\begin{align*}
+									\dot{Q} + & \left(  \frac{1}{t+100} \right) Q = 0 \\
+								\end{align*}
+							</div>
+							<div id="x1-1" class="reading-exercise">
+								Separate the variables \( \dot{Q} + \left(  \frac{1}{t+100} \right) Q = 0 \)
+							</div> 		
+							<div>
+								After separating the variables we get:
+								\begin{align*}
+									\int \frac{1}{Q} dQ = &  -  \int \frac{1}{t+100} dt \\				  						
+								\end{align*}
+							</div>	
+							<div id="x1-1" class="reading-exercise">
+								Find the antiderivative \( \int \frac{1}{t+100} dt \) using substitution
+							</div> 	
+							<div>
+								Then we find the antiderivatives on both sides and solve for \(Q \) to obtain the solution to our complementary equation.
+								\begin{align*}
+									Q = &  \frac{c}{t+100} \\		  						
+								\end{align*}
+								We will use <span class="vocab">variation of parameters</span> with and  now select a simple particular solution so using \(c=1\) we will select \( Q_1 = \frac{1}{t+100} \) and seek solutions of the form \(Q=uQ_1 = u \cdot \left(\frac{1}{t+100} \right) = \frac{u}{t+100} \) where \( u = u(t) \) is some unknown function of \(t\)
+							</div>	
+							<div id="x1-1" class="reading-exercise">
+								Differentiate \( \frac{u}{t+100} \) using the quotient rule
+							</div> 	
+
+							<div>
+							</div>	
+							<div>
+								and then substitute back into the nonhomogeneous equation <a href="#x1-22r10">(4.2.10)</a> and separate variables
+
+								\begin{align}
+									\frac{dQ}{dt}  + \frac{1}{t+100}Q = & 1 \nonumber \\
+
+									\Bigg(\frac{1}{t+100}\frac{du}{dt}
+									- \frac{u}{\left(t+100\right)^2} \Bigg)
+									+\frac{1}{t+100} \Bigg( \frac{u}{t+100} \Bigg) = & 1 \nonumber \\
+
+									\frac{1}{t+100}\frac{du}{dt}
+									- \frac{u}{\left(t+100\right)^2}
+									+\frac{u}{\left(t+100\right)^2}  = & 1 \nonumber \\
+
+									\frac{1}{t+100}\frac{du}{dt}= & 1 \nonumber \\
+
+									\frac{du}{dt} = &  t+100 \nonumber \\
+
+								\end{align}
+
+								Now we find the antiderivative on both sides
+
+								\begin{align}
+									\int \left( \frac{du}{dt} \right) dt = & \int \overset{v}{\overbrace{\left( t+100 \right)}} \overset{dv}{\overbrace{dt}}  \nonumber \\
+									\int du = & \int v dv  \nonumber \\
+									u = & \frac{1}{2}v^2 + c \nonumber \\ 	
+									u = & \frac{1}{2}\left( t+100 \right)^2 + c  \label{eq:4.2.11} \\	
+								\end{align}
+
+								Then multiplying both sides by \(Q_1\)
+							</div>
+							<div>
+								\begin{align}
+									\underset{Q}{\underbrace{u \cdot \left(\frac{1}{t+100} \right)}} 
+										= & \left( \frac{1}{2}\left( t+100 \right)^2 + c \right) \cdot \left(\frac{1}{t+100} \right) \nonumber \\
+									Q = & \frac{1}{2}\left(\frac{\left( t+100 \right)^2}{t+100} \right) + 	\frac{c}{t+100}  \nonumber \\
+									Q(t) = & \frac{t+100}{2} + \frac{c}{t+100}  \nonumber
+								\end{align}
+							</div>	
+
+							<div id="x1-1" class="reading-exercise">
+								Verify \( Q = \frac{t+100}{2} - \frac{c}{t+100}\) is a solution of \( \dot{Q} + \left(  \frac{1}{t+100} \right) Q = 1 \)
+							</div> 	
+
+							<div>
+								Applying our initial condition that the tank initially contains 10 g of salt, i.e. \(Q(0)=10\), we can find \(c\)
+
+
+								\begin{align*}
+									Q(t) = & \frac{t+100}{2} + \frac{c}{t+100} \\
+									Q(0) = & \frac{0+100}{2} + \frac{c}{0+100} \\
+									10 = & 50 + \frac{c}{100} \\	
+									-40 = & \frac{c}{100} 
+									\Longrightarrow	c = -4000		
+								\end{align*}
+
+								Substituting back in 
+								\(c = -4000\), we have an equation that represents the weight of salt at any time \(t\)
+
+								\begin{equation*}
+									Q = \frac{t+100}{2} - \frac{4000}{t+100}
+								\end{equation*}
+
+							</div>	
+							<div id="x1-1" class="reading-exercise">
+								Verify \( Q = \frac{t+100}{2} - \frac{4000}{t+100}\) is a solution of \( \dot{Q} + \left(  \frac{1}{t+100} \right) Q = 1 \)
+							</div> 	
+
+						
+						</li>
+						<li>
+							
+							<div>
+								We want to represent the concentration \(K(t)\) (grams/liter) of salt in the tank at any time \(t\). From earlier, we have the equation that represents the volume of solution:
+
+								\begin{align*}
+									V(t) = & 200 + 2t \\
+								\end{align*}
+						
+							</div>
+
+							<div>
+								The concentration \(K(t)\) of salt is the weight of salt per unit volume of solution:
+
+								\begin{align*}
+									K = & \frac{\text{Weight of Salt}}{\text{Volume of Solution}} \\ \\
+									K = & \frac{Q(t)}{V(t)} \\ \\
+									K = & \frac{\frac{t+100}{2} - \frac{4000}{t+100}}{2t + 200} \\
+									K = & \frac{1}{2(t + 100)} \left( \frac{t+100}{2} - \frac{4000}{t+100} \right) \\
+									K = & \frac{t+100}{2\cdot 2(t + 100)} - \frac{4000}{2(t + 100)(t + 100)} \\
+									K = & \frac{1}{4} - \frac{2000}{(t + 100)^2} \\ 
+								\end{align*}
+								
+							
+							
+
+							</div>
+							
+					
+						</li>
+					</ol>
+
+
+					
 				</details>
 			</div>
 			
