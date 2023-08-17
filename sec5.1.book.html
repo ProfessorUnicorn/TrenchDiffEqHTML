@@ -6,6 +6,7 @@
 		<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator" />
 		<meta content="width=device-width,initial-scale=1" name="viewport" />
 		<link rel="stylesheet" type="text/css" href="combined.css" />
+		<script type="text/javascript" src="niceties.js"></script>
 		<meta content="Trench_DiffEQ_Book.tex" name="src" />
 		<script>
 			window.MathJax = {
@@ -117,7 +118,7 @@
 
 				<ol>
 					<li>
-						Write in standard form <a href="#x1-2r1">(5.1.1)</a> and use Theorem&nbsp;<a href="#x1-51">5.1.1</a> to determine where a solutions exists for IVPs of <a href="#x1-7r4">(5.1.4)</a> 	    
+						Determine where a solutions exists for IVPs of <a href="#x1-7r4">(5.1.4)</a> 	    
 					</li>	
 					<li>						
 						Verify that \(y_1=e^x\) and \(y_2=e^{-x}\) are solutions of <a href="#x1-7r4">(5.1.4)</a> on \((-\infty ,\infty )\)
@@ -144,7 +145,7 @@
 					<ol>
 						<li>
 							<div>
-								Using linear standard form <a href="#x1-2r1">(5.1.1)</a> we can identify  \(p(x) = 1\) and \(q(x) = -1\) which are both constant functions and continuous everywhere \((-\infty ,\infty )\) therefore Theorem&nbsp;<a href="#x1-51">5.1.1</a> indicates that every IVP for <a href="#x1-7r4">(5.1.4)</a> has a unique solution on \((-\infty ,\infty )\).
+								Using linear standard form <a href="#x1-2r1">(5.1.1)</a> we can identify  \(p(x) = 0\) and \(q(x) = -1\) which are both constant functions and continuous everywhere \((-\infty ,\infty )\) therefore Theorem&nbsp;<a href="#x1-51">5.1.1</a> indicates that every IVP for <a href="#x1-7r4">(5.1.4)</a> has a unique solution on \((-\infty ,\infty )\)
 							</div>
 							<div>
 							</div>	
@@ -157,81 +158,174 @@
 						</li>	
 						<li>
 							<div>
-								Start by finding the second derivatives of both \(y_1\) and \(y_2\) and then substitute them into <a href="#x1-7r4">(5.1.4)</a> to verify. 
+								Start by checking for discontinuities in \(y_1\) and \(y_2.\) Since they are exponential functions they are defined everywhere so their domains are \((-\infty ,\infty )\) 
+							</div>	
+							<div>
+								Now calculate the second derivatives of both \(y_1\) and \(y_2\) and then substitute them into <a href="#x1-7r4">(5.1.4)</a> to verify. 
 							</div>
-							<div id="x5-1-1" class="reading-exercise">
+							<div class="reading-exercise">
 								Differentiate \( y_1 = e^x \) twice
 							</div> 	
 							<div>
-								We’ll start with y1 since it is simpler. Differentiating:
+								We’ll start with \(y_1\) since it is simpler. Differentiating:
+
+								\begin{align*}
+									y_1 = & e^x \Longrightarrow
+									\frac{dy_1}{dx} = e^x \Longrightarrow
+									\frac{d^2y_1}{dx^2} = e^x \\		
+								\end{align*} 
+								
+								Substituting into <a href="#x1-7r4">(5.1.4)</a>
+								
+								\begin{align*}
+									\frac{d^2 y}{dx^2} - y = & 0 \\	
+									\underset{e^x}{\underbrace{\frac{d^2y_1}{dx^2}}}  - \underset{e^x}{\underbrace{y_1}} \overset{?}{=} & 0 \\
+									e^x - e^x = & 0 \quad \checkmark
+								\end{align*} 								
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \( y_2 = e^{-x} \) twice
+							</div> 	
+							<div>
+								Now we'll verify \(y_2\) is a solution. Differentiating:
+ 
+								\begin{align*}
+									y_2 = & e^{-x} \\
+									\frac{dy_2}{dx} = & e^{-x}\frac{d}{dx}(-x) = -e^{-x} \\
+									\frac{d^2y_2}{dx^2} = & \frac{d}{dx}(- e^{-x}) = -e^{-x} \frac{d}{dx}(-x) = e^{-x} \\		
+								\end{align*} 
+								
+								Substituting into <a href="#x1-7r4">(5.1.4)</a>
+								 
+								\begin{align*}
+									\frac{d^2 y}{dx^2} - y = & 0 \\	
+									\underset{e^{-x}}{\underbrace{\frac{d^2y_2}{dx^2}}}  - \underset{e^{-x}}{\underbrace{y_2}} \overset{?}{=} & 0 \\
+									e^{-x} - e^{-x} = & 0 \quad \checkmark
+								\end{align*} 								
+							</div>	
+							<div>
+								Therefore \(y_1=e^x\) and \(y_2=e^{-x}\) are solutions of <a href="#x1-7r4">(5.1.4)</a> on \((-\infty ,\infty )\)
 							</div>	
 							<div>
 							</div>	
-							<div>
-							</div>	
-							<div>
-							</div>	
-							If \( y_1 = e^x \) then \(\frac{dy_1}{dx}=e^x\) and \(\frac{d^2y_1}{dx^2}=e^x=y_1\), so
-							\(\frac{d^2y_1}{dx^2}-y_1=0\). If \(y_2=e^{-x}\), then \(\frac{dy_2}{dx}=-e^{-x}\) and
-							\(\frac{d^2y_2}{dx^2}=e^{-x}=y_2\), so \(\frac{d^2y_2}{dx^2}-y_2=0\).
 						</li>
 						<li>
 							<div>
+								Start by checking for discontinuities. Since <a href="#x1-12r6">(5.1.6)</a> is just the sum of exponential functions it is defined everywhere so its domain is \((-\infty ,\infty )\) 
+							</div>	
+							<div>
+								<a id="x1-12r6"></a>
+								\begin {equation} \label {eq:5.1.6} 
+									y=c_1e^x+c_2e^{-x} 
+								\end {equation}
+
+								Now find the second derivative <a href="#x1-12r6">(5.1.6)</a> and substitute into <a href="#x1-7r4">(5.1.4)</a> to verify
+							</div>
+							<div class="reading-exercise">
+								Differentiate <a href="#x1-12r6">(5.1.6)</a> twice using the chain rule
+							</div> 
+							<div>
+								<a id="x1-13r7"></a>
+								\begin{align}
+									\frac{dy}{dx} 
+									= & \frac{d}{dx} \left( c_1e^x+c_2e^{-x} \right)
+									= c_1 e^x - c_2e^{-x}  \nonumber \\  \nonumber \\
+								\frac{d^2y}{dx^2} 
+									= & \frac{d}{dx} \left( c_1 e^x - c_2e^{-x} \right)	
+									= c_1 e^x +  c_2e^{-x}  
+								\end{align} 
+								
+								Substituting <a href="#x1-12r6">(5.1.6)</a> and <a href="#x1-13r7">(5.1.7)</a> into <a href="#x1-7r4">(5.1.4)</a>
+							
 							</div>
 							<div>
+								\begin{align*}
+								\begin{array}{rrl}
+								  \displaystyle \frac{d^2y}{dx^2}   = &amp; c_1 e^x   &amp; + c_2 e^{-x} \\
+								  + \quad \quad \quad \quad -y  	= &amp; -c_1 e^x &amp; -c_2 e^{-x}   \\
+								  \hline \\
+								  \displaystyle \frac{d^2y}{dx^2} 
+									- y                           	= &amp; \overset{1-1}{\overbrace{0}}c_1 e^x 
+																	  &amp;  + \overset{1-1}{\overbrace{0}}c_2 e^{-x} \\ \\
+								  \displaystyle \frac{d^2y}{dx^2} 
+								  	- y                            \overset{\checkmark}{=} &amp; 0 \quad \quad \quad &amp; \\                
+								\end{array}
+							  \end{align*}      
+					
+							</div>	
+							<div>
+								Therefore \(y=c_1e^x+c_2e^{-x}\) is a solution of <a href="#x1-7r4">(5.1.4)</a> on \((-\infty ,\infty )\)
 							</div>	
 							<div>
 							</div>	
 							<div>
 							</div>	
-							<div>
-							</div>	
-							If 
-							
-							<a id="x1-12r6"></a>
-							\begin {equation} \label {eq:5.1.6} 
-								y=c_1e^x+c_2e^{-x} 
-							\end {equation}
-							
-							then 
-							
-							<a id="x1-13r7"></a>
-							\begin {equation} \label {eq:5.1.7} 
-								\frac{dy}{dx}=c_1e^x-c_2e^{-x} 
-							\end{equation}
-
-							and 
-							
-							\[ \frac{d^2y}{dx^2}=c_1e^x+c_2e^{-x}\] 
-							
-							so
-
-							<div class="eqnarray" id="f1f9c23f-edb9-48a6-ada6-86e2ccc6d9ce">
-								\begin {eqnarray*} \frac{d^2y}{dx^2}-y&amp;=&amp;(c_1e^x+c_2e^{-x})-(c_1e^x+c_2e^{-x})\\
-								&amp;=&amp;c_1(e^x-e^x)+c_2(e^{-x}-e^{-x})=0 \end {eqnarray*}
-							</div>
-
-							for all \(x\). Therefore \(y=c_1e^x+c_2e^{-x}\) is a solution of <a href="#x1-7r4">(5.1.4)</a> on \((-\infty ,\infty )\).
 						</li>
 						<li>
 							<div>
+								In Part 3 we already verified \(y=c_1e^x+c_2e^{-x}\) is a solution of <a href="#x1-7r4">(5.1.4)</a> and we computed its derivative so we have:
+
+								\begin{align*}
+									y= & c_1e^x+c_2e^{-x} \\ \nonumber \\
+									\frac{dy}{dx} = & c_1 e^x - c_2e^{-x}  \nonumber \\
+								\end{align*} 
 							</div>
 							<div>
+								To solve the IVP we simply apply the initial conditions 
+								\( y(0)=1 \) and \( \displaystyle \left.\frac{dy}{dx}\right|_{0}=3 \)
 							</div>	
 							<div>
+								\begin{align*}
+									y(x) = & c_1e^x+c_2e^{-x} \\ 
+									y(0) = & c_1e^0+c_2e^{-0} \\  
+									1 = & c_1 + c_2 \\ \\	
+									\frac{dy}{dx} = & c_1 e^x - c_2e^{-x}  \\
+									\left.\frac{dy}{dx}\right|_{x=0} = & c_1 e^0 - c_2e^{-0}  \\	
+									3= & c_1 - c_2  \\	
+								\end{align*} 								
 							</div>	
 							<div>
+								And we obtain a system of equations which we can solve by adding them together to find \(c_2\) then substituting that back to find \(c_1\)
+								\begin{align*}
+								\left\{
+									\begin{array}{r l}
+										c_1 + c_2 = & 1 \\
+										c_1 - c_2 = & 3 \\
+									\end{array}
+								\right.	
+								=
+								\left\{
+									\begin{array}{r l}
+										c_1 + c_2 = & 1 \\
+										2c_1 = & 4 \\
+									\end{array}
+								\right.	
+								=
+								\left\{
+									\begin{array}{r l}
+										2 + c_2 = & 1 \\
+										c_1 = & 2 \\
+									\end{array}
+								\right.		
+								=
+								\left\{
+									\begin{array}{r l}
+										c_2 = & -1 \\
+										c_1 = & 2 \\
+									\end{array}
+								\right.									 		
+							\end{align*}								
 							</div>	
 							<div>
-							</div>	
-							We can solve <a href="#x1-11r5">(5.1.5)</a> by choosing \(c_1\) and \(c_2\) in <a href="#x1-12r6">(5.1.6)</a> so that \(y(0)=1\) and \(\left.\frac{dy}{dx}\right|_{0}=3\). Setting \(x=0\) in <a href="#x1-12r6">(5.1.6)</a> and <a href="#x1-13r7">(5.1.7)</a> shows that this is equivalent to
+								Substituting \(c_1 = 2\) and \(c_2 = -1\) into <a href="#x1-12r6">(5.1.6)</a> we obtain our unique solution to the IVP <a href="#x1-11r5">(5.1.5)</a> on \((-\infty ,\infty )\)
 
-							<div class="eqnarray" id="b38bafeb-f5c8-4ced-a795-568f39bc43c3">
-								\begin {eqnarray*} c_1+c_2&amp;=&amp;1\\ c_1-c_2&amp;=&amp;3\end
-								{eqnarray*}
-							</div>
-
-							Solving these equations yields \(c_1=2\) and \(c_2=-1\). Therefore \(y=2e^x-e^{-x}\) is the unique solution of <a href="#x1-11r5">(5.1.5)</a> on \((-\infty ,\infty )\).
+								\[
+									y= 2e^x - e^{-x}
+								\]
+							</div>	
+							<div class="reading-exercise">
+								Verify \( y= 2e^x - e^{-x} \) is a solution to <a href="#x1-7r4">(5.1.4)</a> 
+							</div> 
 						</li>
 					</ol>
 				</details>
@@ -241,179 +335,580 @@
 			<div class="example" id="x1-142" style="--ex-number: 2">
 				<div>
 					<a id="x1-"></a>
-					Let \(\omega \) be a positive constant. The coefficients of \(\frac{dy}{dx}\) and
-					\(y\) in 
+					Let \(\omega \) be a positive constant. Consider the linear second order equation:  
 					
 					<a id="x1-15r8"></a>
 					\begin {equation} \label {eq:5.1.8} 
 						\frac{d^2y}{dx^2}+\omega ^2y=0 
 					\end{equation}
-
-					are the constant functions \(p\equiv 0\) and \(q\equiv \omega ^2\), which are continuous on \((-\infty ,\infty )\). Therefore Theorem&nbsp;<a href="#x1-51">5.1.1</a> implies that every IVP for <a href="#x1-15r8">(5.1.8)</a> has a unique solution on \((-\infty ,\infty )\).
 				</div>
 				<ol>
 					<li>
-						Verify that \(y_1=\cos \omega x\) and \(y_2=\sin \omega x\) are solutions of <a href="#x1-15r8">(5.1.8)</a> on \((-\infty ,\infty )\).
+						Determine where a solutions exists for IVPs of <a href="#x1-7r4">(5.1.4)</a> 	    
 					</li>
 					<li>
-						Verify that if \(c_1\) and \(c_2\) are arbitrary constants then \(y=c_1\cos \omega x+c_2\sin \omega x\) is a solution of <a href="#x1-15r8">(5.1.8)</a> on \((-\infty ,\infty )\).
+						Verify that \(y_1=\cos \omega x\) and \(y_2=\sin \omega x\) are solutions of <a href="#x1-15r8">(5.1.8)</a> on \((-\infty ,\infty )\)
+					</li>
+					<li>
+						Verify that \(y=c_1\cos \omega x+c_2\sin \omega x\) is a solution of <a href="#x1-15r8">(5.1.8)</a> on \((-\infty ,\infty )\)
 					</li>
 					<li>
 						<a id="x1-19r9"></a>
 						Solve the IVP 
 						
 						\begin {equation} \label {eq:5.1.9}
-							\frac{d^2y}{dx^2}+\omega ^2y=0,\quad y(0)=1,\quad \left.\frac{dy}{dx}\right|_{0}=3
+							\frac{d^2y}{dx^2}+\omega ^2y=0
+							\quad y(0)=1
+							\quad \left.\frac{dy}{dx}\right|_{0}=3
 						\end {equation}
 					</li>
 				</ol>
 				<details class="solution" id="857aa373-5a74-4453-bd1c-ec8c4b2b8989">
 					<summary>Solution</summary>
+
 					<ol>
 						<li>
-							If \(y_1=\cos \omega x\) then \(\frac{dy_1}{dx}=-\omega \sin \omega x\) and
-							\(\frac{d^2y_1}{dx^2}=-\omega ^2\cos \omega x=-\omega ^2y_1\), so \(\frac{d^2y_1}{dx^2}+\omega
-							^2y_1=0\). If \(y_2=\sin \omega x\) then, \(\frac{dy_2}{dx}=\omega \cos \omega x\)
-							and \(\frac{d^2y_2}{dx^2}=-\omega ^2\sin \omega x=-\omega ^2y_2\), so \(\frac{d^2y_2}{dx^2}+\omega
-							^2y_2=0\).
-						</li>
-						<li>
-							If \begin {equation} \label {eq:5.1.10} y=c_1\cos \omega x+c_2\sin \omega
-							x \end {equation}
-							<a id="x1-20r10"></a>
-							then \begin {equation} \label {eq:5.1.11} \frac{dy}{dx}=\omega (-c_1\sin \omega
-							x+c_2\cos \omega x) \end {equation}
-							<a id="x1-21r11"></a>
-							and \[ \frac{d^2y}{dx^2}=-\omega ^2(c_1\cos \omega x+c_2\sin \omega x)\] so
-
-							<div class="eqnarray" id="be85aab1-a8f8-4807-b9ff-f4d1b20d0c8d">
-								\begin {eqnarray*} \frac{d^2y}{dx^2}+\omega ^2y&amp;=&amp; -\omega ^2(c_1\cos \omega
-								x+c_2\sin \omega x) +\omega ^2(c_1\cos \omega x+c_2\sin \omega x)\\
-								&amp;=&amp;c_1\omega ^2(-\cos \omega x+\cos \omega x)+ c_2\omega ^2(-\sin
-								\omega x+\sin \omega x)=0 \end {eqnarray*}
+							<div>
+								Using linear standard form <a href="#x1-2r1">(5.1.1)</a> we can identify  \(p(x) = 0\) and \(q(x) = \omega ^2\) which are both constant functions and continuous everywhere \((-\infty ,\infty )\) therefore Theorem&nbsp;<a href="#x1-51">5.1.1</a> indicates that every IVP for <a href="#x1-15r8">(5.1.8)</a> has a unique solution on \((-\infty ,\infty )\)
 							</div>
+						</li>	
+						<li>
+							<div>
+								Start by checking for discontinuities in \(y_1\) and \(y_2.\) Since they are sines and cosines they are defined everywhere so their domains are \((-\infty ,\infty )\) 
+							</div>	
+							<div>
+								Now calculate the second derivatives of both \(y_1\) and \(y_2\) and then substitute them into <a href="#x1-15r8">(5.1.8)</a> to verify. 
+							</div>
+							<div class="reading-exercise">
+								Differentiate \( y_1 = \cos \omega x \) twice using chain rule
+							</div> 	
+							<div>
+								We’ll start with \(y_1\). Differentiating:
 
-							for all \(x\). Therefore \(y=c_1\cos \omega x+c_2\sin \omega x\) is a
-							solution of <a href="#x1-15r8">(5.1.8)</a> on \((-\infty ,\infty )\).
+								\begin{align*}
+									y_1 = & \cos \omega x \\ 
+									\Longrightarrow
+									\frac{dy_1}{dx} = & -\omega \sin \omega x \\ 
+									\Longrightarrow
+									\frac{d^2y_1}{dx^2} = & -\omega^2 \cos \omega x \\		
+								\end{align*} 
+								
+								Substituting into <a href="#x1-15r8">(5.1.8)</a>
+								
+								\begin{align*}
+									\frac{d^2 y}{dx^2} + \omega^2 y = & 0 \\	
+									\underset{-\omega^2 \cos \omega x}{\underbrace{\frac{d^2y_1}{dx^2}}}  
+										+ \omega^2 \underset{\cos \omega x}{\underbrace{y_1}} \overset{?}{=} & 0 \\
+										-\omega^2 \cos \omega x + \omega^2 \cos \omega x = & 0 \quad \checkmark
+								\end{align*} 								
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \( y_2 = \sin \omega x \) twice
+							</div> 	
+							<div>
+								Now we'll verify \(y_2\) is a solution. Differentiating:
+ 
+								\begin{align*}
+									y_2 = & \sin \omega x \\
+									\Longrightarrow
+									\frac{dy_2}{dx} = & \omega \cos \omega x \\
+									\Longrightarrow
+									\frac{d^2y_2}{dx^2} = &  -\omega^2 \sin \omega x \\		
+								\end{align*} 
+								
+								Substituting into <a href="#x1-15r8">(5.1.8)</a>
+								 
+								\begin{align*}
+									\frac{d^2 y}{dx^2} + \omega^2 y = & 0 \\	
+									\underset{-\omega^2 \sin \omega x}{\underbrace{\frac{d^2y_2}{dx^2}}}  
+										+ \omega^2 \underset{\sin \omega x}{\underbrace{y_2}} \overset{?}{=} & 0 \\
+										-\omega^2 \sin \omega x + \omega^2 \sin \omega x = & 0 \quad \checkmark
+								\end{align*} 								
+							</div>	
+							<div>
+								Therefore \(y_1 = \cos \omega x \) and \(y_2 = \sin \omega x\) are solutions of <a href="#x1-15r8">(5.1.8)</a> on \((-\infty ,\infty )\)
+							</div>	
 						</li>
 						<li>
-							To solve <a href="#x1-19r9">(5.1.9)</a>, we must choosing \(c_1\) and \(c_2\) in <a href="#x1-20r10">(5.1.10)</a> so that \(y(0)=1\) and \(\left.\frac{dy}{dx}\right|_{0}=3\). Setting \(x=0\) in <a href="#x1-20r10">(5.1.10)</a> and <a href="#x1-21r11">(5.1.11)</a> shows that \(c_1=1\) and \(c_2=3/\omega \). Therefore \[ y=\cos \omega
-							x+{3\over \omega }\sin \omega x \] is the unique solution of <a href="#x1-19r9">(5.1.9)</a> on \((-\infty ,\infty )\).
+							<div>
+								Start by checking for discontinuities. Since <a href="#x1-20r10">(5.1.10)</a> is just the sum of sine and cosine it is defined everywhere so its domain is \((-\infty ,\infty )\) 
+							</div>	
+							<div>
+								<a id="x1-20r10"></a>
+								\begin {equation} \label {eq:5.1.10} 
+									y = c_1 \cos \omega x + c_2 \sin \omega x 
+								\end {equation}
+
+								Now find the second derivative <a href="#x1-20r10">(5.1.10)</a> and substitute into <a href="#x1-15r8">(5.1.8)</a> to verify
+							</div>
+							<div class="reading-exercise">
+								Differentiate <a href="#x1-20r10">(5.1.10)</a> twice using the chain rule
+							</div> 
+							<div>
+								<a id="x1-21r11"></a>
+								\begin{align} \label {eq:5.1.11}
+									\frac{dy}{dx} 
+									= & \frac{d}{dx} \left( c_1 \cos \omega x + c_2 \sin \omega x \right) \nonumber  \\
+									= & - \omega c_1  \sin \omega x + c_2 \omega \cos \omega x  \nonumber \\  \nonumber \\
+								\frac{d^2y}{dx^2} 
+									= & \frac{d}{dx} \Big( - \omega c_1  \sin \omega x + c_2 \omega \cos \omega x \Big)	 \nonumber  \\
+									= & - \omega^2 c_1  \cos \omega x - \omega^2 c_2 \sin \omega 
+								\end{align} 
+								
+								Substituting <a href="#x1-20r10">(5.1.10)</a> and <a href="#x1-21r11">(5.1.11)</a> into <a href="#x1-15r8">(5.1.8)</a>
+							</div>
+							<div>
+								\begin{align*}
+								\begin{array}{rrl}
+								  \displaystyle \frac{d^2y}{dx^2}   = &amp; - \omega^2 c_1  \cos \omega x   &amp; - \omega^2 c_2 \sin \omega x \\
+								  + \quad\quad\quad\quad\omega^2 y  = &amp; + \omega^2 c_1 \cos \omega x &amp; + \omega^2 c_2 \sin \omega x   \\
+								  \hline \\
+								  \displaystyle \frac{d^2y}{dx^2} 
+									+ \omega^2 y                    = &amp; \overset{-1+1}{\overbrace{0}}\omega^2 c_1  \cos \omega x
+																	  &amp;  + \overset{-1+1}{\overbrace{0}}\omega^2 c_2 e^{-x} \sin \omega x \\ \\
+								  \displaystyle \frac{d^2y}{dx^2} 
+								  	+ \omega^2 y                    \overset{\checkmark}{=} &amp; 0 \quad \quad \quad \quad \quad \quad &amp; \\                
+								\end{array}
+							  \end{align*}      
+							</div>	
+							<div>
+								Therefore \( y = c_1 \cos \omega x + c_2 \sin \omega x \) is a solution of <a href="#x1-15r8">(5.1.8)</a> on \((-\infty ,\infty )\)
+							</div>	
+						</li>
+						<li>
+							<div>
+								In Part 3 we already verified \( y = c_1 \cos \omega x + c_2 \sin \omega x \) is a solution of <a href="#x1-15r8">(5.1.8)</a> and we computed its derivative so we have:
+
+								\begin{align*}
+									y = & c_1 \cos \omega x + c_2 \sin \omega x \\ \nonumber \\
+									\frac{dy}{dx} = & - \omega c_1 \sin \omega x + \omega c_2 \cos \omega x  \nonumber \\
+								\end{align*} 
+							</div>
+							<div>
+								To solve the IVP we simply apply the initial conditions 
+								\( y(0)=1 \) and \( \displaystyle \left.\frac{dy}{dx}\right|_{0}=3 \)
+							</div>	
+							<div>
+								\begin{align*}
+									y(x) = & c_1 \cos \omega x + c_2 \sin \omega x \\ 
+									y(0) = & c_1 \cos (\omega \cdot 0) + c_2 \sin (\omega \cdot 0) \\  
+									1 = & c_1 \cdot 1 + c_2 \cdot 0 
+									\Longrightarrow c_1 = 1 \\ \\	
+									\frac{dy}{dx} = & - \omega c_1 \sin \omega x + \omega c_2 \cos \omega x   \\
+									\left.\frac{dy}{dx}\right|_{x=0} = & - \omega c_1 \sin (\omega \cdot 0 ) + \omega c_2 \cos ( \omega \cdot 0 )   \\
+									3 = & 	- \omega c_1 \cdot 0  + \omega c_2 \cdot 1 \\
+									3= & \omega c_2 
+									\Longrightarrow 
+									c_2 = \frac{3}{\omega}
+								\end{align*} 								
+							</div>	
+
+							<div>
+								Substituting \(c_1 = 1\) and \(c_2 = \frac{3}{\omega}\) into <a href="#x1-20r10">(5.1.10)</a> we obtain our unique solution to the IVP <a href="#x1-19r9">(5.1.9)</a> on \((-\infty ,\infty )\)
+
+								\[
+									y= \cos \omega x + \frac{3}{\omega} \sin \omega x
+								\]
+							</div>	
+							<div class="reading-exercise">
+								Verify \( y= \cos \omega x + \frac{3}{\omega} \sin \omega x \) is a solution to <a href="#x1-15r8">(5.1.8)</a> 
+							</div> 
 						</li>
 					</ol>
+
 				</details>
 			</div>
 
 			<!--Blurb after Example 2-->
 			<div class="indent" id="994bd946-38c4-47d2-9892-c54f712d2e08">
-				Theorem&nbsp;<a href="#x1-51">5.1.1</a>
-				implies that if \(k_0\) and \(k_1\) are arbitrary real numbers then the
-				IVP \begin {equation} \label {eq:5.1.12}
-				P_0(x)\frac{d^2y}{dx^2}+P_1(x)\frac{dy}{dx}+P_2(x)y=0,\quad y(x_0)=k_0,\quad \left.\frac{dy}{dx}\right|_{x_0}=k_1 \end
-				{equation}
+				Theorem&nbsp;<a href="#x1-51">5.1.1</a> implies that if \(k_0\) and \(k_1\) are arbitrary real numbers then the IVP 
+				
 				<a id="x1-22r12"></a>
-				has a unique solution on an interval \((a,b)\) that contains \(x_0\),
-				provided that \(P_0\), \(P_1\), and \(P_2\) are continuous and \(P_0\) has
-				no zeros on \((a,b)\). To see this, we rewrite the differential equation
-				in <a href="#x1-22r12">(5.1.12)</a> as \[ \frac{d^2y}{dx^2}+{P_1(x)\over P_0(x)}\frac{dy}{dx}+{P_2(x)\over P_0(x)}y=0 \] and apply
-				Theorem&nbsp;<a href="#x1-51">5.1.1</a>
-				with \(p=P_1/P_0\) and \(q=P_2/P_0\).
+				\begin {equation} \label {eq:5.1.12}
+					P_0(x)\frac{d^2y}{dx^2}+P_1(x)\frac{dy}{dx}+P_2(x)y=0
+					\quad y(x_0)=k_0
+					\quad \left.\frac{dy}{dx}\right|_{x_0}=k_1 
+				\end{equation}
+				
+				has a unique solution on an interval \((a,b)\) that contains \(x_0\), provided that \(P_0(x)\), \(P_1(x)\), and \(P_2(x)\) are continuous and \(P_0(x)\) has no zeros on \((a,b)\). To see this, we rewrite the differential equation in <a href="#x1-22r12">(5.1.12)</a> as 
+				
+				\[ 
+					\frac{d^2y}{dx^2}+{P_1(x)\over P_0(x)}\frac{dy}{dx}+{P_2(x)\over P_0(x)}y=0 
+				\] 
+				
+				and apply Theorem&nbsp;<a href="#x1-51">5.1.1</a> with \(p(x) = \displaystyle  \frac{P_1(x)}{P_0(x)}\) and \(q(x) = \displaystyle \frac{P_2(x)}{P_0(x)}\)
 			</div>
 
 
 			<!--Example 3-->
 			<div class="example" id="x1-233" style="--ex-number: 3">
 				<div>
+					Consider the linear second order equation:
 					<a id="x1-24r13"></a>
-					The equation \begin {equation} \label {eq:5.1.13} x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}-4y=0 \end {equation}
-					has the form of the differential equation in <a href="#x1-22r12">(5.1.12)</a>, with \(P_0(x)=x^2\), \(P_1(x)=x\), and \(P_2(x)=-4\), which are are
-					all continuous on \((-\infty ,\infty )\). However, since \(P(0)=0\) we
-					must consider solutions of <a href="#x1-24r13">(5.1.13)</a> on \((-\infty ,0)\) and \((0,\infty )\). Since \(P_0\) has no zeros on
-					these intervals, Theorem&nbsp;<a href="#x1-51">5.1.1</a>
-					implies that the IVP \[ x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}-4y=0,\quad
-					y(x_0)=k_0,\quad \left.\frac{dy}{dx}\right|_{x_0}=k_1 \] has a unique solution on \((0,\infty )\)
-					if \(x_0&gt;0\), or on \((-\infty ,0)\) if \(x_0&lt;0\).
+					\begin {equation} \label {eq:5.1.13} 
+						x^2 \frac{d^2y}{dx^2} + x \frac{dy}{dx} - 4 y = 0 
+					\end {equation}
 				</div>
 
 				<ol>
 					<li>
-						Verify that \(y_1=x^2\) is a solution of <a href="#x1-24r13">(5.1.13)</a> on \((-\infty ,\infty )\) and \(y_2=1/x^2\) is a solution of <a href="#x1-24r13">(5.1.13)</a> on \((-\infty ,0)\) and \((0,\infty )\).
+						Determine where a solutions exists for IVPs of <a href="#x1-24r13">(5.1.13)</a> 	    
+					</li>
+					<li>
+						Verify that \(y_1=x^2\) is a solution of <a href="#x1-24r13">(5.1.13)</a> on \((-\infty ,\infty )\) and \(y_2=1/x^2\) is a solution of <a href="#x1-24r13">(5.1.13)</a> on \((-\infty ,0)\) and \((0,\infty )\)
 					</li>
 					<li>
 						Verify that if \(c_1\) and \(c_2\) are any constants then
-						\(y=c_1x^2+c_2/x^2\) is a solution of <a href="#x1-24r13">(5.1.13)</a> on \((-\infty ,0)\) and \((0,\infty )\).
+						\(y = c_1 x^2 + c_2/x^2 \) is a solution of <a href="#x1-24r13">(5.1.13)</a> on \((-\infty ,0)\) and \((0,\infty )\)
 					</li>
 					<li>
+						Solve the IVP 
+
 						<a id="x1-28r14"></a>
-						Solve the IVP \begin {equation} \label {eq:5.1.14}
-						x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}-4y=0,\quad y(1)=2,\quad \left.\frac{dy}{dx}\right|_{1}=0\end {equation}
+						\begin {equation} \label {eq:5.1.14}
+							x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}-4y=0
+							\quad y(1)=2
+							\quad \left.\frac{dy}{dx}\right|_{1}=0
+						\end {equation}
 					</li>
 					<li>
+						Solve the IVP 
+						
 						<a id="x1-30r15"></a>
-						Solve the IVP \begin {equation} \label {eq:5.1.15}
-						x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}-4y=0,\quad y(-1)=2,\quad \left.\frac{dy}{dx}\right|_{-1}=0\end {equation}
+						\begin {equation} \label {eq:5.1.15}
+							x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}-4y=0
+							\quad y(-1)=2
+							\quad \left.\frac{dy}{dx}\right|_{-1}=0
+						\end {equation}
 					</li>
 				</ol>
 
 				<details class="solution" id="ac9b3a00-5b58-4d10-889b-eefc35d85843">
+					<summary>Solution</summary>
+
 					<ol>
 						<li>
-							If \(y_1=x^2\) then \(\frac{dy_1}{dx}=2x\) and \(\frac{d^2y_1}{dx^2}=2\), so \[
-							x^2\frac{d^2y_1}{dx^2}+x\frac{dy_1}{dx}-4y_1=x^2(2)+x(2x)-4x^2=0 \] for \(x\) in \((-\infty ,\infty
-							)\). If \(y_2=1/x^2\), then \(\frac{dy_2}{dx}=-2/x^3\) and \(\frac{d^2y_2}{dx^2}=6/x^4\), so \[
-							x^2\frac{d^2y_2}{dx^2}+x\frac{dy_2}{dx}-4y_2=x^2\left (6\over x^4\right )-x\left (2\over x^3\right
-							)-{4\over x^2}=0 \] for \(x\) in \((-\infty ,0)\) or \((0,\infty )\).
+							<div>
+								First notice that <a href="#x1-24r13">(5.1.13)</a> is not in linear standard form <a href="#x1-2r1">(5.1.1)</a> but is actually in the form of <a href="#x1-22r12">(5.1.12)</a> with \( P_0(x) = x^2 \), \( P_1(x) = x \), and \( P_2(x) = -4 \), which are are all continuous everywhere \((-\infty ,\infty )\) 
+							</div>	
+							<div>	
+								
+								However, we can only consider intervals where \( P_0(x) = x^2 \) has no zeros and since \( P_0(x) = 0 \) at \( x = 0 \) we can only consider solutions of <a href="#x1-24r13">(5.1.13)</a> on intervals that don't contain zero \((-\infty ,0)\) and \((0,\infty )\). Then Theorem&nbsp;<a href="#x1-51">5.1.1</a> says that any IVP of <a href="#x1-24r13">(5.1.13)</a> has a unique solution on \((0,\infty )\) or on \((-\infty ,0)\) depending on the \( x \) value of the initial condition.
+							</div>
+						</li>	
+						<li>
+							<div>
+								Start by checking for discontinuities in \(y_1 = x^2\) and \(y_2 = 1/x^2.\) Since \(y_1\) is a parabola it is defined everywhere with domain \((-\infty ,\infty ).\) As for \(y_2 = 1/x^2\) it is a rational function and undefined at \( x = 0 \) so its domain is \((-\infty ,0 )\) and \((0,\infty )\) 
+							</div>	
+							<div>
+								Now calculate the second derivatives of both \(y_1\) and \(y_2\) and then substitute them into <a href="#x1-24r13">(5.1.13)</a> to verify. 
+							</div>
+							<div class="reading-exercise">
+								Differentiate \( y_1 = x^2 \) twice using power rule
+							</div> 	
+							<div>
+								We’ll start with \(y_1\). Differentiating:
+
+								\begin{align*}
+									y_1 = & x^2
+									\Longrightarrow
+									\frac{dy_1}{dx} = 2x 
+									\Longrightarrow
+									\frac{d^2y_1}{dx^2} = 2 \\		
+								\end{align*} 
+								
+								Substituting into <a href="#x1-24r13">(5.1.13)</a>
+								
+								\begin{align*}
+									x^2 \frac{d^2y}{dx^2} + x \frac{dy}{dx} - 4 y = & 0 \\
+									x^2 \underset{2}{\underbrace{\frac{d^2y1}{dx^2}}} + x \underset{2x}{\underbrace{\frac{dy1}{dx}}} - 4 \underset{x^2}{\underbrace{y1}} = & 0 \\
+									2x^2 + 2x^2 - 4 x^2 = & 0 \quad \checkmark
+								\end{align*} 								
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \( y_2 = 1/x^2 \) twice
+							</div> 	
+							<div>
+								Now we'll verify \(y_2\) is a solution. Differentiating:
+ 
+								\begin{align*}
+									y_2 = & \frac{1}{x^2}
+									\Longrightarrow
+									\frac{dy_2}{dx} = -\frac{2}{x^3}
+									\Longrightarrow
+									\frac{d^2y_2}{dx^2} = \frac{6}{x^4}  \\		
+								\end{align*} 
+								
+								Substituting into <a href="#x1-24r13">(5.1.13)</a>
+								 
+								\begin{align*}
+									x^2 \frac{d^2 y}{dx^2} + x \frac{dy}{dx} - 4y = 0 \\	
+									x^2 \underset{\frac{6}{x^4}}{\underbrace{\frac{d^2 y_2}{dx^2}}} + x \underset{ -\frac{2}{x^3}}{\underbrace{\frac{dy_2}{dx}}} - 4\underset{\frac{1}{x^2}}{\underbrace{y_2}} = 0 \\	
+									x^2 \cdot \frac{6}{x^4} + x \cdot  -\frac{2}{x^3} - 4\cdot \frac{1}{x^2} \overset{?}{=} & 0 \\
+									\frac{6}{x^2} - \frac{2}{x^2} - \frac{4}{x^2} \overset{?}{=} & 0 \\
+									\frac{6}{x^2} - \frac{6}{x^2} = & 0 \quad \checkmark
+								\end{align*} 							
+							</div>	
+							<div>
+								Therefore \( y_1 = x^2 \) is a solution of <a href="#x1-24r13">(5.1.13)</a> on \((-\infty ,\infty )\) and \( y_2 = 1/x^2 \) is a solution of <a href="#x1-24r13">(5.1.13)</a> on \((-\infty ,0 )\) and \((0,\infty )\) 
+							</div>	
+						
 						</li>
 						<li>
-							If \begin {equation} \label {eq:5.1.16} y=c_1x^2+{c_2\over x^2} \end
-							{equation}
-							<a id="x1-31r16"></a>
-							then \begin {equation} \label {eq:5.1.17} \frac{dy}{dx}=2c_1x-{2c_2\over x^3} \end
-							{equation}
-							<a id="x1-32r17"></a>
-							and \[ \frac{d^2y}{dx^2}=2c_1+{6c_2\over x^4}\] so
-							<div class="eqnarray" id="515bebcb-41e3-4f1b-9a8b-530263b6404d">
-								\begin {eqnarray*} x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}-4y&amp;=&amp;x^2\displaystyle {\left
-								(2c_1+{6c_2\over x^4}\right )} +x\displaystyle {\left (2c_1x-{2c_2\over
-								x^3}\right )} -4\displaystyle {\left (c_1x^2+{c_2\over x^2}\right )}\\
-								&amp;=&amp;c_1(2x^2+2x^2-4x^2) +c_2\displaystyle {\left ({6\over
-								x^2}-{2\over x^2}-{4\over x^2}\right )}\\ &amp;=&amp;c_1\cdot 0+c_2\cdot
-								0=0 \end {eqnarray*}
+							<div>
+								Start by checking for discontinuities. Since <a href="#x1-31r16">(5.1.16)</a> is just the sum of \( y_1 = x^2 \) and \( y_2 = 1/x^2 \) it also has a discontinuity at \( x = 0 \) so the domain is \((-\infty ,0 )\) and \((0,\infty )\) 
+							</div>	
+							<div>
+								<a id="x1-31r16"></a>
+								\begin {equation} \label {eq:5.1.16} 
+									y = c_1 x^2 + \frac{c_2}{x^2}  
+								\end {equation}
+
+								Now find the second derivative of <a href="#x1-31r16">(5.1.16)</a> and substitute into <a href="#x1-24r13">(5.1.13)</a> to verify
 							</div>
-							for \(x\) in \((-\infty ,0)\) or \((0,\infty )\).
+							<div class="reading-exercise">
+								Differentiate <a href="#x1-31r16">(5.1.16)</a> twice using the power rule
+							</div> 
+							<div>
+								<a id="x1-32r17"></a>
+								\begin{align} \label {eq:5.1.17}
+									\frac{dy}{dx} 
+									= & \frac{d}{dx} \left( c_1 x^2 + \frac{c_2}{x^2} \right) \nonumber  \\
+									= & 2 c_1 x - \frac{2c_2}{x^3}  \nonumber \\  \nonumber \\
+								\frac{d^2y}{dx^2} 
+									= & \frac{d}{dx} \Big( 2 c_1 x - \frac{2c_2}{x^3} \Big)	 \nonumber  \\
+									= & 2 c_1 + \frac{6c_2}{x^4} 
+								\end{align} 
+								
+								Substituting <a href="#x1-31r16">(5.1.16)</a> and <a href="#x1-32r17">(5.1.17)</a> into <a href="#x1-24r13">(5.1.13)</a>
+							</div>
+							<div>
+								\begin{align*}
+								\begin{array}{rlrrlrl}
+								  \displaystyle x^2 \frac{d^2y}{dx^2}  & = & x^2 \Big( & 2c_1 & + & 6 \displaystyle\frac{c_2}{x^4} & \Big)  \\
+								  \quad\quad\quad\quad \displaystyle x \frac{dy}{dx} &  = & x \Big( & 2c_1 x & - & 2 \displaystyle\frac{c_2}{x^3} & \Big)  \\
+								  + \quad\quad\quad\quad \displaystyle -4y &  = & -4 \Big( & c_1 x^2 & + & \displaystyle\frac{c_2}{x^2} & \Big)  \\
+								  \hline \\
+								  \displaystyle x^2 \frac{d^2y}{dx^2}  & = &   & 2 c_1 x^2 & + & 6 \displaystyle\frac{c_2}{x^2} &   \\
+								  \quad\quad\quad\quad \displaystyle x \frac{dy}{dx} &  = &   & 2c_1 x^2 & - & 2 \displaystyle\frac{c_2}{x^2} &   \\
+								  + \quad\quad\quad\quad \displaystyle -4y &  = &   & -4 c_1 x^2 & - & 4 \displaystyle\frac{c_2}{x^2} &   \\
+								  \hline \\		
+								  x^2 \displaystyle \frac{d^2y}{dx^2}
+								  	+ x \frac{dy}{dx}
+									- 4y 			
+										&  = &   & \overset{2+2-4}{\overbrace{0}} c_1 x^2 & + & \overset{6-2-4}{\overbrace{0}} \displaystyle\frac{c_2}{x^2} &   \\ \\	
+									x^2 \displaystyle \frac{d^2y}{dx^2}
+										+ x \frac{dy}{dx}
+									  	- 4y 			
+										  &  \overset{\checkmark}{=} & 0  &   \\					  
+								\end{array}
+							  \end{align*}      
+							</div>	
+							<div>
+								Therefore \( \displaystyle y = c_1 x^2 + \frac{c_2}{x^2} \) is a solution of <a href="#x1-24r13">(5.1.13)</a> on \((-\infty ,0 )\) and \((0,\infty )\)  								
+							</div>	
+							<div>
+								<figure class="figure">
+									<div
+									>
+										<iframe src="https://www.desmos.com/calculator/5qna6hhxnm?embed" width="400" height="250" frameborder="0"></iframe>
+									</div>
+									<figcaption class="caption">
+										<span class="id">Figure&nbsp;5.1.1(a)</span>
+										<span class="content">
+											Solution
+											\( \displaystyle y = c_1 x^2 + \frac{c_2}{x^2} \)
+											of <a href="#x1-24r13">(5.1.13)</a> on \((-\infty ,0 )\) and \((0,\infty )\) 
+										</span>
+									</figcaption>
+								</figure>								
+							</div>	
 						</li>
 						<li>
-							To solve <a href="#x1-28r14">(5.1.14)</a>, we choose \(c_1\) and \(c_2\) in <a href="#x1-31r16">(5.1.16)</a> so that \(y(1)=2\) and \(\left.\frac{dy}{dx}\right|_{1}=0\). Setting \(x=1\) in <a href="#x1-31r16">(5.1.16)</a> and <a href="#x1-32r17">(5.1.17)</a> shows that this is equivalent to
-							<div class="eqnarray" id="2d7b04e5-9680-4376-bcb3-3906d9aded2d">
-								\begin {eqnarray*} \phantom {2}c_1+\phantom {2}c_2&amp;=&amp;2\\
-								2c_1-2c_2&amp;=&amp;0\end {eqnarray*}
+							<div>
+								In Part 3 we already verified \( \displaystyle y = c_1 x^2 + \frac{c_2}{x^2} \) is a solution of <a href="#x1-24r13">(5.1.13)</a> and we computed its derivative so we have:
+
+								\begin{align*}
+									y = & c_1 x^2 + \frac{c_2}{x^2} \\ \nonumber \\
+									\frac{dy}{dx} = & 2 c_1 x - \frac{2c_2}{x^3} \nonumber \\
+								\end{align*} 
 							</div>
-							Solving these equations yields \(c_1=1\) and \(c_2=1\). Therefore
-							\(y=x^2+1/x^2\) is the unique solution of <a href="#x1-28r14">(5.1.14)</a> on \((0,\infty )\).
+							<div>
+								To solve the IVP we simply apply the initial conditions 
+								\( y(1)=2 \) and \( \displaystyle \left.\frac{dy}{dx}\right|_{1}=0 \)
+							</div>	
+							<div>
+								\begin{align*}
+									y(x) = & c_1 x^2 + \frac{c_2}{x^2} \\ 
+									y(1) = & c_1 \cdot 1^2 + \frac{c_2}{1^2} \\  
+									2    = & c_1           + c_2 \\  \\ 
+		
+									\frac{dy}{dx} = & 2 c_1 x - \frac{2c_2}{x^3}   \\
+									\left.\frac{dy}{dx}\right|_{1} = & 2 c_1 \cdot 1 - \frac{2c_2}{1^3}   \\
+									0							   = & 2 c_1 	     - 2c_2   \\
+									0							   = &   c_1 	     - c_2   \\
+								\end{align*} 								
+							</div>	
+							<div>
+								And we obtain a system of equations which we can solve by adding them together to find \(c_1\) then substituting that back to find \(c_2\)
+								\begin{align*}
+								\left\{
+									\begin{array}{r l}
+										c_1 + c_2 = & 2 \\
+										c_1 - c_2 = & 0 \\
+									\end{array}
+								\right.	
+								=
+								\left\{
+									\begin{array}{r l}
+										c_1 + c_2 = & 2 \\
+										2c_1 = & 2 \\
+									\end{array}
+								\right.	
+								=
+								\left\{
+									\begin{array}{r l}
+										1 + c_2 = & 2 \\
+										c_1 = & 1 \\
+									\end{array}
+								\right.		
+								=
+								\left\{
+									\begin{array}{r l}
+										c_2 = & 1 \\
+										c_1 = & 1 \\
+									\end{array}
+								\right.									 		
+							\end{align*}								
+							</div>	
+
+							<div>
+								Substituting \(c_1 = 1\) and \(c_2 = 1 \) into <a href="#x1-31r16">(5.1.16)</a> we obtain our unique solution to the IVP <a href="#x1-28r14">(5.1.14)</a> on IOV \((0,\infty )\) since our initial value of \(x\) is \(1\)
+								\[
+									y=  x^2 + \frac{1}{x^2}
+								\]
+							</div>	
+							<div class="reading-exercise">
+								Verify \( y=  x^2 + \frac{1}{x^2} \) is a solution to <a href="#x1-24r13">(5.1.13)</a> 
+							</div> 
+							<div>
+								<figure class="figure">
+									<div
+									>
+										<iframe src="https://www.desmos.com/calculator/rgbyh3sm0j?embed" width="400" height="250" frameborder="0"></iframe>
+									</div>
+									<figcaption class="caption">
+										<span class="id">Figure&nbsp;5.1.1(b)</span>
+										<span class="content">
+											Unique solution
+											\( \displaystyle y = x^2 + \frac{1}{x^2} \)
+											of <a href="#x1-28r14">(5.1.14)</a> on \((0,\infty )\) 
+										</span>
+									</figcaption>
+								</figure>								
+							</div>	
+						
+
 						</li>
 						<li>
-							We can solve <a href="#x1-30r15">(5.1.15)</a> by choosing \(c_1\) and \(c_2\) in <a href="#x1-31r16">(5.1.16)</a> so that \(y(-1)=2\) and \(\left.\frac{dy}{dx}\right|_{-1}=0\). Setting \(x=-1\) in <a href="#x1-31r16">(5.1.16)</a> and <a href="#x1-32r17">(5.1.17)</a> shows that this is equivalent to
-							<div class="eqnarray" id="c38a4121-915d-4873-810d-a598d1eef339">
-								\begin {eqnarray*} \phantom {-2}c_1+\phantom {2}c_2&amp;=&amp;2\\
-								-2c_1+2c_2&amp;=&amp;0\end {eqnarray*}
+							<div>
+								Again in Part 3 we already verified \( \displaystyle y = c_1 x^2 + \frac{c_2}{x^2} \) is a solution of <a href="#x1-24r13">(5.1.13)</a> and we computed its derivative so we have:
+
+								\begin{align*}
+									y = & c_1 x^2 + \frac{c_2}{x^2} \\ \nonumber \\
+									\frac{dy}{dx} = & 2 c_1 x - \frac{2c_2}{x^3} \nonumber \\
+								\end{align*} 
 							</div>
-							Solving these equations yields \(c_1=1\) and \(c_2=1\). Therefore
-							\(y=x^2+1/x^2\) is the unique solution of <a href="#x1-30r15">(5.1.15)</a> on \((-\infty ,0)\).
-						</li>
+							<div>
+								To solve the IVP we simply apply the initial conditions 
+								\( y(-1)=2 \) and \( \displaystyle \left.\frac{dy}{dx}\right|_{-1}=0 \)
+							</div>	
+							<div>
+								\begin{align*}
+									y(x) = & c_1 x^2 + \frac{c_2}{x^2} \\ 
+									y(-1) = & c_1 \cdot (-1)^2 + \frac{c_2}{(-1)^2} \\  
+									2    = & c_1           + c_2 \\  \\ 
+		
+									\frac{dy}{dx} = & 2 c_1 x - \frac{2c_2}{x^3}   \\
+									\left.\frac{dy}{dx}\right|_{-1} = & 2 c_1 \cdot (-1) - \frac{2c_2}{(-1)^3}   \\
+									0							   = & - 2 c_1 	     + 2c_2   \\
+									0							   = &  - c_1 	     + c_2   \\
+									0							   = &  c_1 	     - c_2   \\
+								\end{align*} 								
+							</div>	
+							<div>
+								And we obtain a system of equations which is the same system we got in Part 4 and we already solved
+								\begin{align*}
+								\left\{
+									\begin{array}{r l}
+										c_1 + c_2 = & 2 \\
+										c_1 - c_2 = & 0 \\
+									\end{array}
+								\right.		
+								\quad
+								=
+								\left\{
+									\begin{array}{r l}
+										c_1 = & 1 \\
+										c_2 = & 1 \\
+									\end{array}
+								\right.									 		
+							\end{align*}								
+							</div>	
+
+							<div>
+								Again we obtain our unique solution to the IVP <a href="#x1-28r14">(5.1.14)</a> but this time on IOV \( (-\infty ,0 )\) since our initial value of \(x\) is \(-1\)
+
+								\[
+									y=  x^2 + \frac{1}{x^2}
+								\]
+							</div>	
+							<div>
+								<figure class="figure">
+									<div
+									>
+										<iframe src="https://www.desmos.com/calculator/nrjm8eb71x?embed" width="400" height="250" frameborder="0"></iframe>
+									</div>
+									<figcaption class="caption">
+										<span class="id">Figure&nbsp;5.1.1(c)</span>
+										<span class="content">
+											Unique solution
+											\( \displaystyle y = x^2 + \frac{1}{x^2} \)
+											of <a href="#x1-30r15">(5.1.15)</a> on \( (-\infty ,0 )\) 
+										</span>
+
+									</figcaption>
+								</figure>								
+							</div>								
+						</li>						
 					</ol>
+
 				</details>
 			</div>
 
 			<!--Blurb after Example 3-->
 			<div class="indent" id="467c5185-9cf7-47c1-9bbe-0f1bce3be4a1">
 				Although the <em>formulas</em>
-				for the solutions of <a href="#x1-28r14">(5.1.14)</a> and <a href="#x1-30r15">(5.1.15)</a> are both \(y=x^2+1/x^2\), you should not conclude that these two initial
-				value problems have the same solution. Remember that a solution of an
-				IVP is defined on an interval that contains the initial
-				point; therefore, the solution of <a href="#x1-28r14">(5.1.14)</a> is \(y=x^2+1/x^2\) on the interval \((0,\infty )\), which contains the
-				initial point \(x_0=1\), while the solution of <a href="#x1-30r15">(5.1.15)</a> is \(y=x^2+1/x^2\) on the interval \((-\infty ,0)\), which contains the
-				initial point \(x_0=-1\).
+				for the solutions of <a href="#x1-28r14">(5.1.14)</a> and <a href="#x1-30r15">(5.1.15)</a> are both \(y=x^2+1/x^2\), we should not conclude that these two IVPs have the same solution. Remember that a solution of an IVP is defined on an interval that contains the initial point; therefore, the solution of <a href="#x1-28r14">(5.1.14)</a> is \(y=x^2+1/x^2\) on the interval \((0,\infty )\), which contains the initial point \(x_0=1\), while the solution of <a href="#x1-30r15">(5.1.15)</a> is \(y=x^2+1/x^2\) on the interval \((-\infty ,0)\), which contains the initial point \(x_0=-1\)
 			</div>
+			<div>
+				<figure class="figure">
+					<div
+					>
+						<iframe src="https://www.desmos.com/calculator/zmnwbbikes?embed" width="400" height="250" frameborder="0"></iframe>
+					</div>
+					<figcaption class="caption">
+						<span class="id">Figure&nbsp;5.1.1(d)</span>
+						<span class="content">
+							Unique solutions
+							of <a href="#x1-28r14">(5.1.14)</a> on \((0,\infty )\) 
+							and
+							of <a href="#x1-30r15">(5.1.15)</a> on \( (-\infty ,0 )\) 
+
+						</span>
+					</figcaption>
+				</figure>								
+			</div>				
 
 		</details>		
 
@@ -440,39 +935,40 @@
 				<div>
 					<span class="head">Theorem&nbsp;5.1.2</span>
 					<a id="x1-332"></a>
-					If \(y_1\) and \(y_2\) are solutions of the homogeneous equation \begin
-					{equation} \label {eq:5.1.18} \frac{d^2y}{dx^2}+p(x)\frac{dy}{dx}+q(x)y=0 \end {equation}
+					If \(y_1\) and \(y_2\) are solutions of the homogeneous equation on \((a,b)\)
+					
 					<a id="x1-34r18"></a>
-					on \((a,b),\) then any linear combination \begin {equation} \label
-					{eq:5.1.19} y=c_1y_1+c_2y_2 \end {equation}
+					\begin {equation} \label {eq:5.1.18} 
+						\frac{d^2y}{dx^2}+p(x)\frac{dy}{dx}+q(x)y=0 
+					\end {equation}
+					
+					Then any linear combination of \(y_1\) and \(y_2\) is also a solution of <a href="#x1-34r18">(5.1.18)</a> on \((a,b)\)
+
 					<a id="x1-35r19"></a>
-					of \(y_1\) and \(y_2\) is also a solution of \(\eqref {eq:5.1.18}\) on
-					\((a,b).\)
+					\begin {equation} \label {eq:5.1.19} 
+						y=c_1y_1+c_2y_2 
+					\end {equation}
+					
 				</div>
 			</div>
+			<div class="reading-exercise" id="c5e939e5-3da8-4282-941e-dfa60fa89893reaw">
+				Differentiate \( y=c_1y_1+c_2y_2 \) twice to find \(\frac{dy}{dx}\) and \(\frac{d^2y}{dx^2}\) 
+			</div> 
 
-			<div id="e2a0c89d-a971-4b15-ad83-b46ccd25fbf8">
-				<span class="ptmb8t-">Proof</span>
-				If \[ y=c_1y_1+c_2y_2 \] then \[ \frac{dy}{dx}=c_1\frac{dy_1}{dx}+c_2\frac{dy_2}{dx}\quad \mbox{ and } \quad  \frac{d^2y}{dx^2}=c_1\frac{d^2y_1}{dx^2}+c_2\frac{d^2y_2}{dx^2}\] Therefore
+			<div class="reading-exercise" id="c5e939e5-3da8-4282-941e-dfa60fa89893feqw">
+				Substitute \(y_1\) into <a href="#x1-34r18">(5.1.18)</a>
+			</div> 
 
-				<div class="eqnarray" id="992c794b-e810-46b5-bb67-967851986160">
-					\begin {eqnarray*}
-					\frac{d^2y}{dx^2}+p(x)\frac{dy}{dx}+q(x)y&amp;=&amp;(c_1\frac{d^2y_1}{dx^2}+c_2\frac{d^2y_2}{dx^2})+p(x)(c_1\frac{dy_1}{dx}+c_2\frac{dy_2}{dx})
-					+q(x)(c_1y_1+c_2y_2)\\ &amp;=&amp;c_1\left (\frac{d^2y_1}{dx^2}+p(x)\frac{dy_1}{dx}+q(x)y_1\right )
-					+c_2\left (\frac{d^2y_2}{dx^2}+p(x)\frac{dy_2}{dx}+q(x)y_2\right )\\ &amp;=&amp;c_1\cdot 0+c_2\cdot
-					0=0\end {eqnarray*}
-				</div>
+			<div class="reading-exercise" id="c5e939e5-3da8-4282-941e-dfa60fa8989fasd3">
+				Substitute \(y_2\) into <a href="#x1-34r18">(5.1.18)</a>
+			</div> 
 
-				since \(y_1\) and \(y_2\) are solutions of <a href="#x1-34r18">(5.1.18)</a>.
-			</div>
+			<div class="reading-exercise" id="c5e939e5-3da8-4282-941e-dfa60fa898fdsaf93">
+				Verify \( y=c_1y_1+c_2y_2 \) is a solution of <a href="#x1-34r18">(5.1.18)</a>
+			</div> 
 
 			<div class="indent" id="cd388051-210f-4db7-9cdd-f4d32479734e">
-				We say that \(\{y_1,y_2\}\) is a
-				<span class="vocab">fundamental set of solutions of</span>
-				\(\eqref {eq:5.1.18}\) on \((a,b)\) if every solution of <a href="#x1-34r18">(5.1.18)</a> on \((a,b)\) can be written as a linear combination of \(y_1\) and
-				\(y_2\) as in <a href="#x1-35r19">(5.1.19)</a>. In this case we say that <a href="#x1-35r19">(5.1.19)</a> is
-				<span class="vocab">general solution of</span>
-				\(\eqref {eq:5.1.18}\) on \((a,b)\).
+				We say that \(\{y_1,y_2\}\) is a <span class="vocab">fundamental set</span> of solutions of <a href="#x1-34r18">(5.1.18)</a> on \((a,b)\) if every solution of <a href="#x1-34r18">(5.1.18)</a> on \((a,b)\) can be written as a linear combination of \(y_1\) and \(y_2\) as in <a href="#x1-35r19">(5.1.19)</a>. In this case we say that <a href="#x1-35r19">(5.1.19)</a> is <span class="vocab">general solution</span> of <a href="#x1-34r18">(5.1.18)</a> on \((a,b)\)
 			</div>
 		</details>
 
@@ -486,32 +982,23 @@
 				necessary and sufficient conditions for this.
 			</div>
 			<div class="indent" id="8886d612-039f-40e8-908a-2153ca66e3a8">
-				We say that two functions \(y_1\) and \(y_2\) defined on an interval
-				\((a,b)\) are
-				<span class="vocab">linearly independent</span>
-				on \((a,b)\) if neither is a constant multiple of the other on \((a,b)\).
-				(In particular, this means that neither can be the trivial solution of <a href="#x1-34r18">(5.1.18)</a>, since, for example, if \(y_1\equiv 0\) we could write \(y_1=0y_2\).)
-				We’ll also say that the set \(\{y_1,y_2\}\) is
-				<span class="vocab">linearly independent</span>
-				on \((a,b)\).
+				We say that two functions \(y_1\) and \(y_2\) defined on an interval \((a,b)\) are <span class="vocab">linearly independent</span> on \((a,b)\) if neither is a constant multiple of the other on \((a,b)\). In particular, this means that neither can be the trivial solution \( y \equiv 0 .\) When \(y_1\) and \(y_2\) are <span class="vocab">linearly independent</span> on \((a,b),\) we also say that the set \(\{y_1,y_2\}\) is <span class="vocab">linearly independent</span> on \((a,b)\).
 			</div>
 			<div class="theorem" id="a5aa20a7-255d-4d9e-978c-b2d9d72509d2">
 				<div>
 					<span class="head">Theorem&nbsp;5.1.3</span>
 					<a id="x1-363"></a>
-					Suppose \(p\) and \(q\) are continuous on \((a,b).\) Then a set
+					Suppose \(p(x)\) and \(q(x)\) are continuous on \((a,b).\) Then a set
 					\(\{y_1,y_2\}\) of solutions of \begin {equation} \label {eq:5.1.20}
 					\frac{d^2y}{dx^2}+p(x)\frac{dy}{dx}+q(x)y=0 \end {equation}
 					<a id="x1-37r20"></a>
-					on \((a,b)\) is a fundamental set if and only if \(\{y_1,y_2\}\) is
-					linearly independent on \((a,b).\)
+					on \((a,b)\) is a <span class="vocab">fundamental set</span> if and only if \(\{y_1,y_2\}\) is
+					<span class="vocab">linearly independent</span> on \((a,b)\)
 				</div>
 			</div>
 
 			<div class="indent" id="40fabbc2-5ca7-4e81-a280-3706257d9809">
-				We’ll present the proof of Theorem&nbsp;<a href="#x1-363">5.1.3</a>
-				in steps worth regarding as theorems in their own right. However, let’s
-				first interpret Theorem&nbsp;<a href="#x1-363">5.1.3</a>
+				New let’s interpret Theorem&nbsp;<a href="#x1-363">5.1.3</a>
 				in terms of Examples&nbsp;<a href="#x1-61">5.1.1</a>,
 				<a href="#x1-142">5.1.2</a>, and
 				<a href="#x1-233">5.1.3</a>.
@@ -520,22 +1007,81 @@
 			<div class="example" id="x1-384" style="--ex-number: 4">
 				<ol>
 					<li>
-						Since \(e^x/e^{-x}=e^{2x}\) is nonconstant, Theorem&nbsp;<a href="#x1-363">5.1.3</a>
-						implies that \(y=c_1e^x+c_2e^{-x}\) is the general solution of
-						\(\frac{d^2y}{dx^2}-y=0\) on \((-\infty ,\infty )\).
+						Using \(y_1 = e^x\) and \(y_2 = e^{-x}\) 
+						from Example <a href="#x1-61">5.1.1</a> 
+						find the general solution of <a href="#x1-7r4">(5.1.4)</a>
 					</li>
 					<li>
-						Since \(\cos \omega x/\sin \omega x=\cot \omega x\) is nonconstant,
-						Theorem&nbsp;<a href="#x1-363">5.1.3</a>
-						implies that \(y=c_1\cos \omega x+c_2\sin \omega x\) is the general
-						solution of \(\frac{d^2y}{dx^2}+\omega ^2y=0\) on \((-\infty ,\infty )\).
+						Show that \(y_1 = \cos \omega x\) and \(y_2 = \sin \omega x\) 
+						from Example <a href="#x1-142">5.1.2</a> 
+						are <span class="vocab">linearly independent</span>
 					</li>
 					<li>
-						Since \(x^2/x^{-2}=x^4\) is nonconstant, Theorem&nbsp;<a href="#x1-363">5.1.3</a>
-						implies that \(y=c_1x^2+c_2/x^2\) is the general solution of
-						\(x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}-4y=0\) on \((-\infty ,0)\) and \((0,\infty )\).
+						Show that \(y_1 = x^2\) and \(y_2 = 1/x^2\) 
+						from Example <a href="#x1-233">5.1.3</a>
+						are <span class="vocab">linearly independent</span>
 					</li>
 				</ol>
+
+				<details class="solution">
+					<summary>Solution</summary>
+					<ol>
+						<li>
+							<div>
+								In Example <a href="#x1-61">5.1.1</a> we already established that \(y_1 = e^x\) and \(y_2 = e^{-x}\) are continuous on \((-\infty ,\infty .)\) Now we would like to know if \(y_1 = e^x\) and \(y_2 = e^{-x}\) are <span class="vocab">linearly independent</span> 
+
+								\[
+									\frac{y_1}{y_2} = \frac{e^x}{e^{-x}}=e^{2x}
+								\]
+								
+								Since \( y_1/y_2\) is not constant neither is a constant multiple of the other meaning \(y_1 = e^x\) and \(y_2 = e^{-x}\) are <span class="vocab-repeat">linearly independent</span> and therefore from Theorem Theorem&nbsp;<a href="#x1-363">5.1.3</a> \(\{y_1,y_2\} = \{e^x,e^{-x}\}  \) represents a <span class="vocab">fundamental set</span> of solutions of <a href="#x1-7r4">(5.1.4)</a> and that  
+
+								\[
+									y = c_1 y_1 + c_2 y_2
+									= c_1 e^x + c_2 e^{-x}
+								\]
+
+								is the <span class="vocab">general solution</span> of <a href="#x1-7r4">(5.1.4)</a> on \((-\infty ,\infty )\)
+							</div>
+							<div>
+							</div>
+							<div>
+							</div>
+							<div>
+							</div>
+							<div>
+							</div>	
+							Since \(e^x/e^{-x}=e^{2x}\) is nonconstant, Theorem&nbsp;<a href="#x1-363">5.1.3</a> implies that \(y=c_1e^x+c_2e^{-x}\) is the general solution of \(\frac{d^2y}{dx^2}-y=0\) on \((-\infty ,\infty )\).
+						</li>
+						<li>
+							Since \(\cos \omega x/\sin \omega x=\cot \omega x\) is nonconstant,
+							Theorem&nbsp;<a href="#x1-363">5.1.3</a>
+							implies that \(y=c_1\cos \omega x+c_2\sin \omega x\) is the general
+							solution of \(\frac{d^2y}{dx^2}+\omega ^2y=0\) on \((-\infty ,\infty )\).
+						</li>
+						<li>
+							Since \(x^2/x^{-2}=x^4\) is nonconstant, Theorem&nbsp;<a href="#x1-363">5.1.3</a>
+							implies that \(y=c_1x^2+c_2/x^2\) is the general solution of
+							\(x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}-4y=0\) on \((-\infty ,0)\) and \((0,\infty )\).
+						</li>
+						<li>
+							Show that \(y_1 = e^x\) and \(y_2 = e^{-x}\) 
+							from Example <a href="#x1-61">5.1.1</a> 
+							are <span class="vocab">linearly independent</span>
+						</li>
+						<li>
+							Show that \(y_1 = \cos \omega x\) and \(y_2 = \sin \omega x\) 
+							from Example <a href="#x1-142">5.1.2</a> 
+							are <span class="vocab">linearly independent</span>
+						</li>
+						<li>
+							Show that \(y_1 = x^2\) and \(y_2 = 1/x^2\) 
+							from Example <a href="#x1-233">5.1.3</a>
+							are <span class="vocab">linearly independent</span>
+						</li>
+					</ol>
+				</details>
+
 			</div>
 		</details>
 		
