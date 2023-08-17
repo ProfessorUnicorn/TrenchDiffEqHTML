@@ -78,8 +78,9 @@
 					Although the equation is currently <em>not exact</em>, if we multiply by the correct <span class="vocab">integrating factor</span>, then the new equation will be <span class="vocab">exact</span>. We'll use \( x \) for the <span class="vocab">integrating factor</span> so we multiply both sides of <a href="#x1-3r2">(2.6.2)</a> by \( x \)
 
 					<a id="x1-4r3"></a>
-					\begin{align}\label{eq:2.6.3}
+					\begin{align}
 						\Big( \left( 3x+2y^2 \right) dx + 2xy dy \Big) \cdot x = & \Big( 0 \Big) \cdot x \nonumber \\
+						\label{eq:2.6.3}
 						( \underset{x \cdot M(x,y)}{\underbrace{3x^2+2xy^2} }) dx + \underset{x \cdot N(x,y)}{\underbrace{2x^2y}} dy = & 0
 					\end{align}
 
@@ -277,12 +278,13 @@
 					By applying the <span class="vocab">Exactness Condition</span> (Theorem <a href="sec2.5.book.html#5bd70076-159b-4cff-a7c5-ccf305397401">2.5.2</a>) to <a href="#x1-5r4">(2.6.4)</a>, we replace \( M(x,y) \) with  \( \mu(x,y) M(x,y) \) written more simply as \( \mu M\) and \( N(x,y) \)  with \( \mu(x,y) N(x,y) \) written more simply as \( \mu N\) and use the product rule to determine what the
 					<span class="vocab-repeat">exactness condition</span> requires.
 
-					\begin{align} \label{eq:2.6.5}
+					\begin{align}
 						\frac{\partial}{\partial y} \Big( \mu  M  \Big) = & \frac{\partial}{\partial x} \Big( \mu  N  \Big)  \nonumber \\	
 						\mu  \frac{\partial}{\partial y} \Big( M  \Big) + M  \frac{\partial}{\partial y} \Big( \mu  \Big) 
 							= & \mu  \frac{\partial}{\partial x} \Big( N  \Big) + N  \frac{\partial}{\partial x} \Big( \mu  \Big)  \nonumber \\	
 						\mu  M_y  + \mu_y  M  = & \mu  N_x   +  \mu_x N   \nonumber \\	
 						\mu  M_y  - \mu  N_x  = & \mu_x N  - \mu_y  M     \nonumber \\	
+						\label{eq:2.6.5}
 						\mu  \Big( M_y  - N_x  \Big) = & \mu_x N  - \mu_y  M  		
 					\end{align}
 
@@ -318,8 +320,9 @@
 
 				<a id="x1-7r6"></a>
 				<a id="x1-8r7"></a>
-				\begin{align} \label{eq:2.6.6}
+				\begin{align} 
 					\mu  \Big( M_y  - N_x  \Big) = & \mu_x N  - \mu_y  M \nonumber \\
+					\label{eq:2.6.6}
 					P(x) Q(y)  \Big( M_y  - N_x  \Big) = & P'(x) Q(y) N  - P(x) Q'(y)  M \\	 
 					M_y  - N_x  = & \frac{ P'(x) Q(y) N  - P(x) Q'(y)  M } {P(x) Q(y)} \nonumber \\	 			
 					M_y  - N_x  = & \frac{ P'(x) Q(y) N } {P(x) Q(y)} - \frac{ P(x) Q'(y)  M } {P(x) Q(y)}  \nonumber \\	 			
@@ -617,10 +620,10 @@
 						Antidifferentiate \( \int \Big( (3x^2y^2+4y)e^{-x^2} \Big) dy \) 
 					</div>
 					<div>
-						\begin{align} \label{eq:2.6.16}
+						\begin{align}
 							F(x,y) = & \int F_y(x,y) dy = \int N(x,y) dy \nonumber \\
-							& = \int (3x^2y^2+4y)e^{-x^2} dy \\
-							& = y^2 \Big( x^2  y + 2 \Big) e^{-x^2} + \psi(x)
+							& = \int (3x^2y^2+4y)e^{-x^2} dy \nonumber \\
+							& = y^2 \Big( x^2  y + 2 \Big) e^{-x^2} + \psi(x)  \label{eq:2.6.16}
 						\end{align}
 					</div>	
 					<div class="reading-exercise">
