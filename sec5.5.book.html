@@ -6,7 +6,7 @@
 		<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator" />
 		<meta content="width=device-width,initial-scale=1" name="viewport" />
 		<link rel="stylesheet" type="text/css" href="combined.css" />
- 		<script type="text/javascript" src="niceties.js"></script>
+		<script type="text/javascript" src="niceties.js"></script>
 		<script>
 			window.MathJax = {
 				tex: {
@@ -16,12 +16,7 @@
 				},
 			};
 		</script>
-		<script
-			async="async"
-			id="MathJax-script"
-			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
-			type="text/javascript"
-		></script>
+		<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 		<style type="text/css">
 			:root {
 				--section-number: "5.5";
@@ -30,394 +25,303 @@
 	</head>
 	<body>
 		<div id="95bd8f21-d8b2-4097-b2b2-dee2711de534" class="section-title">
-			5.5 The Method of Undetermined Coefficients II
+			5.5 The Method of Undetermined Coefficients II 
 		</div>
 		<div id="63a29fae-2010-48a1-8922-1db41984a5f1">
-			In this section we consider the constant coefficient equation \begin
-			{equation} \label {eq:5.5.1} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=e^{\lambda x}\left (P(x)\cos
-			\omega x+Q(x)\sin \omega x\right ) \end {equation}
-			<a id="x1-2r1"></a>
-			where \(\lambda \) and \(\omega \) are real numbers, \(\omega \ne 0\), and
-			\(P\) and \(Q\) are polynomials. We want to find a particular solution of
-			<a href="#x1-2r1">(5.5.1)</a>. As in Section&nbsp;5.4, the procedure that we will use is called
-			<span class="vocab">the method of undetermined coefficients</span>.
+			In this section we consider the constant coefficient equation 
+			\begin {equation} \label {eq:5.5.1} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=e^{\lambda x}\left (P(x)\cos \omega x+Q(x)\sin \omega x\right ) 
+			\end {equation} <a id="x1-2r1"></a> where \(\lambda \) and \(\omega \) are real numbers, \(\omega \ne 0\), and \(P\) and \(Q\) are polynomials. We want to find a particular solution of <a href="#x1-2r1">(5.5.1)</a>. As in Section&nbsp;5.4, the procedure that we will use is called <span class="vocab">the method of undetermined coefficients</span>. 
 		</div>
 		<details id="8c5aab71-a13d-4dc3-a5f3-4d8bd339ec70">
 			<summary>Forcing Functions Without Exponential Factors</summary>
-		
+
 			<div id="8c7afc80-48c3-4a75-8f44-b45249ed9ace">
-				We begin with the case where \(\lambda =0\) in <a href="#x1-2r1">(5.5.1)</a>; thus, we we want to find a particular solution of \begin {equation}
-				\label {eq:5.5.2} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=P(x)\cos \omega x+Q(x)\sin \omega x\end
-				{equation}
-				<a id="x1-3r2"></a>
-				where \(P\) and \(Q\) are polynomials.
+				We begin with the case where \(\lambda =0\) in <a href="#x1-2r1">(5.5.1)</a>; thus, we we want to find a particular solution of 
+				\begin {equation} \label {eq:5.5.2} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=P(x)\cos \omega x+Q(x)\sin \omega x 
+				\end {equation} <a id="x1-3r2"></a> where \(P\) and \(Q\) are polynomials. 
 			</div>
 			<div class="indent" id="92987c3f-5613-42a0-8075-b825fec76ff0">
-				Differentiating \(x^r\cos \omega x\) and \(x^r\sin \omega x\) yields
+				Differentiating \(x^r\cos \omega x\) and \(x^r\sin \omega x\) yields 
 			</div>
 			<div class="eqnarray" id="7da92628-1237-454d-a1da-582dc2efc931">
-				\begin {eqnarray*} \displaystyle {d\over dx}x^r\cos \omega
-				x&amp;=&amp;-\omega x^r\sin \omega x+ rx^{r-1}\cos \omega x \\ \text {and}
-				\displaystyle {d\over dx}x^r\sin \omega x&amp;=&amp;\phantom {-}\omega
-				x^r\cos \omega x+ rx^{r-1}\sin \omega x\end {eqnarray*}
+				\begin {eqnarray*}
+					\displaystyle {d\over dx}x^r\cos \omega x&amp;=&amp;-\omega x^r\sin \omega x+ rx^{r-1}\cos \omega x \\ \text {and} \displaystyle {d\over dx}x^r\sin \omega x&amp;=&amp;\phantom {-}\omega x^r\cos \omega x+ rx^{r-1}\sin \omega x 
+				\end {eqnarray*} 
 			</div>
 			<div class="indent" id="29cbd94c-beb6-4cf0-8574-5e2e7d6b6ce3">
-				This implies that if \[ y_p=A(x)\cos \omega x+B(x)\sin \omega x \] where
-				\(A\) and \(B\) are polynomials, then \[ a\frac{d^2y_p}{dx^2}+b\frac{dy_p}{dx}+cy_p=F(x)\cos \omega
-				x+G(x)\sin \omega x\] where \(F\) and \(G\) are polynomials with
-				coefficients that can be expressed in terms of the coefficients of \(A\)
-				and \(B\). This suggests that we try to choose \(A\) and \(B\) so that
-				\(F=P\) and \(G=Q\), respectively. Then \(y_p\) will be a particular
-				solution of <a href="#x1-3r2">(5.5.2)</a>. The next theorem tells us how to choose the proper form for \(y_p\).
-				For the proof see Exercise&nbsp;<span class="ptmb8t-">37</span>.
+				This implies that if \[ y_p=A(x)\cos \omega x+B(x)\sin \omega x \] where \(A\) and \(B\) are polynomials, then \[ a\frac{d^2y_p}{dx^2}+b\frac{dy_p}{dx}+cy_p=F(x)\cos \omega x+G(x)\sin \omega x\] where \(F\) and \(G\) are polynomials with coefficients that can be expressed in terms of the coefficients of \(A\) and \(B\). This suggests that we try to choose \(A\) and \(B\) so that \(F=P\) and \(G=Q\), respectively. Then \(y_p\) will be a particular solution of <a href="#x1-3r2">(5.5.2)</a>. The next theorem tells us how to choose the proper form for \(y_p\). For the proof see Exercise&nbsp;<span class="ptmb8t-">37</span>. 
 			</div>
 			<div class="theorem" id="139c643b-6017-4295-9d4c-cb45c1c20192">
 				<div>
-					<span class="head">Theorem&nbsp;5.5.1</span>
-					<a id="x1-41"></a>
-					Suppose \(\omega \) is a positive number and \(P\) and \(Q\) are
-					polynomials. Let \(k\) be the larger of the degrees of \(P\) and \(Q\).
-					Then the equation \[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=P(x)\cos \omega x+Q(x)\sin \omega x \]
-					has a <span class="vocab">particular solution</span>
-					\begin {equation} \label {eq:5.5.3} y_p=A(x)\cos \omega x+B(x)\sin
-					\omega x\end {equation}
+					<span class="head">Theorem&nbsp;5.5.1</span><a id="x1-41"></a> Suppose \(\omega \) is a positive number and \(P\) and \(Q\) are polynomials. Let \(k\) be the larger of the degrees of \(P\) and \(Q\). Then the equation \[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=P(x)\cos \omega x+Q(x)\sin \omega x \] has a <span class="vocab">particular solution</span>
 					<a id="x1-5r3"></a>
-					where \[ A(x)=A_0+A_1x+\cdots +A_kx^k \quad \mbox{ and } \quad 
-					B(x)=B_0+B_1x+\cdots +B_kx^k\] provided that \(\cos \omega x\) and
-					\(\sin \omega x\) are not solutions of the complementary equation. The
-					solutions of \[ a(\frac{d^2y}{dx^2}+\omega ^2y)=P(x)\cos \omega x+Q(x)\sin \omega x \]
-					\((\)for which \(\cos \omega x\) and \(\sin \omega x\) are solutions of
-					the complementary equation\()\) are of the form \(\eqref {eq:5.5.3},\)
-					where \[ A(x)=A_0x+A_1x^2+\cdots +A_kx^{k+1} \quad \mbox{ and } \quad 
-					B(x)=B_0x+B_1x^2+\cdots +B_kx^{k+1}\]
+					\begin {equation}
+						\label {eq:5.5.3} y_p=A(x)\cos \omega x+B(x)\sin \omega x 
+					\end {equation} where \[ A(x)=A_0+A_1x+\cdots +A_kx^k \quad \mbox{ and } \quad B(x)=B_0+B_1x+\cdots +B_kx^k\] provided that \(\cos \omega x\) and \(\sin \omega x\) are not solutions of the complementary equation. The solutions of \[ a(\frac{d^2y}{dx^2}+\omega ^2y)=P(x)\cos \omega x+Q(x)\sin \omega x \] \((\)for which \(\cos \omega x\) and \(\sin \omega x\) are solutions of the complementary equation\()\) are of the form <a href="#x1-5r3">(5.5.3)</a>, where \[ A(x)=A_0x+A_1x^2+\cdots +A_kx^{k+1} \quad \mbox{ and } \quad B(x)=B_0x+B_1x^2+\cdots +B_kx^{k+1}\] 
 				</div>
 			</div>
 
 			<div class="indent" id="e372f764-62d0-4311-aeba-c91260925fb1">
-				For an analog of this theorem that’s applicable to <a href="#x1-2r1">(5.5.1)</a>, see Exercise&nbsp;<span class="ptmb8t-">38</span>.
+				For an analog of this theorem that’s applicable to <a href="#x1-2r1">(5.5.1)</a>, see Exercise&nbsp;<span class="ptmb8t-">38</span>. 
 			</div>
 
 			<div class="example" id="x1-61" style="--ex-number: 1">
 				<div>
-					<a id="x1-7r4"></a>
-					Find a particular solution of \begin {equation} \label {eq:5.5.4}
-					\frac{d^2y}{dx^2}-2\frac{dy}{dx}+y=5\cos 2x+10\sin 2x\end {equation}
+					<a id="x1-7r4"></a> Find a particular solution of 
+					\begin {equation} \label {eq:5.5.4} \frac{d^2y}{dx^2}-2\frac{dy}{dx}+y=5\cos 2x+10\sin 2x 
+					\end {equation} 
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-					In <a href="#x1-7r4">(5.5.4)</a> the coefficients of \(\cos 2x\) and \(\sin 2x\) are both zero degree
-					polynomials (constants). Therefore Theorem&nbsp;<a href="#x1-41">5.5.1</a>
-					implies that <a href="#x1-7r4">(5.5.4)</a> has a particular solution \[ y_p=A\cos 2x+B\sin 2x\] Since \[
-					\frac{dy_p}{dx}=-2A\sin 2x+2B\cos 2x\quad \mbox{ and } \quad  \frac{d^2y_p}{dx^2}=-4(A\cos 2x+B\sin
-					2x)\] replacing \(y\) by \(y_p\) in <a href="#x1-7r4">(5.5.4)</a> yields
-				
+					In <a href="#x1-7r4">(5.5.4)</a> the coefficients of \(\cos 2x\) and \(\sin 2x\) are both zero degree polynomials (constants). Therefore Theorem&nbsp;<a href="#x1-41">5.5.1</a> implies that <a href="#x1-7r4">(5.5.4)</a> has a particular solution \[ y_p=A\cos 2x+B\sin 2x\] Since \[ \frac{dy_p}{dx}=-2A\sin 2x+2B\cos 2x\quad \mbox{ and } \quad \frac{d^2y_p}{dx^2}=-4(A\cos 2x+B\sin 2x)\] replacing \(y\) by \(y_p\) in <a href="#x1-7r4">(5.5.4)</a> yields
+
 					<div class="eqnarray" id="3f31700a-9664-4cae-a494-e5bec97183bc">
-						\begin {eqnarray*} \frac{d^2y_p}{dx^2}-2\frac{dy_p}{dx}+y_p&amp;=&amp;-4(A\cos 2x+B\sin
-						2x)-4(-A\sin 2x+B\cos 2x) \\ &amp;&amp;+(A\cos 2x+B\sin 2x)\\ &amp;=&amp;
-						(-3A-4B)\cos 2x+(4A-3B)\sin 2x\end {eqnarray*}
+						\begin {eqnarray*}
+							\frac{d^2y_p}{dx^2}-2\frac{dy_p}{dx}+y_p&amp;=&amp;-4(A\cos 2x+B\sin 2x)-4(-A\sin 2x+B\cos 2x) \\ &amp;&amp;+(A\cos 2x+B\sin 2x)\\ &amp;=&amp; (-3A-4B)\cos 2x+(4A-3B)\sin 2x 
+						\end {eqnarray*} 
 					</div>
 
-					Equating the coefficients of \(\cos 2x\) and \(\sin 2x\) here with the
-					corresponding coefficients on the right side of <a href="#x1-7r4">(5.5.4)</a> shows that \(y_p\) is a solution of <a href="#x1-7r4">(5.5.4)</a> if
-			
+					Equating the coefficients of \(\cos 2x\) and \(\sin 2x\) here with the corresponding coefficients on the right side of <a href="#x1-7r4">(5.5.4)</a> shows that \(y_p\) is a solution of <a href="#x1-7r4">(5.5.4)</a> if
+
 					<div class="eqnarray" id="b1dd1084-1a12-4ce3-ab94-5a6f05804c6e">
-						\begin {eqnarray*} -3A-4B&amp;=&amp;\phantom {1}5\phantom {.}\\ \phantom
-						{-}4A-3B&amp;=&amp;10\end {eqnarray*}
+						\begin {eqnarray*}
+							-3A-4B&amp;=&amp;\phantom {1}5\phantom {.}\\ \phantom {-}4A-3B&amp;=&amp;10 
+						\end {eqnarray*} 
 					</div>
-			
-					Solving these equations yields \(A=1\), \(B=-2\). Therefore \[ y_p=\cos
-					2x-2\sin 2x \] is a particular solution of <a href="#x1-7r4">(5.5.4)</a>.
+
+					Solving these equations yields \(A=1\), \(B=-2\). Therefore \[ y_p=\cos 2x-2\sin 2x \] is a particular solution of <a href="#x1-7r4">(5.5.4)</a>.
 				</details>
 			</div>
 
 			<div class="example" id="x1-82" style="--ex-number: 2">
 				<div>
-					<a id="x1-9r5"></a>
-					Find a particular solution of \begin {equation} \label {eq:5.5.5}
-					\frac{d^2y}{dx^2}+4y=8\cos 2x+12\sin 2x\end {equation}
+					<a id="x1-9r5"></a> Find a particular solution of 
+					\begin {equation} \label {eq:5.5.5} \frac{d^2y}{dx^2}+4y=8\cos 2x+12\sin 2x 
+					\end {equation} 
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-						The procedure used in Example&nbsp;<a href="#x1-61">5.5.1</a> doesn’t work here; substituting \(y_p=A\cos 2x+B\sin 2x\) for \(y\) in <a href="#x1-9r5">(5.5.5)</a> yields \[ \frac{d^2y_p}{dx^2}+4y_p=-4(A\cos 2x+B\sin 2x) +4(A\cos 2x+B\sin 2x)=0 \]
-						for any choice of \(A\) and \(B\), since \(\cos 2x\) and \(\sin 2x\) are
-						both solutions of the complementary equation for <a href="#x1-9r5">(5.5.5)</a>. We’re dealing with the second case mentioned in Theorem&nbsp;<a href="#x1-41">5.5.1</a>,
-						and should therefore try a particular solution of the form \begin
-						{equation} \label {eq:5.5.6} y_p=x(A\cos 2x+B\sin 2x)\end {equation}
-						<a id="x1-10r6"></a>
-						Then
-						<div class="eqnarray" id="f928f004-5448-45b4-af3d-df97b75e3350">
-							\begin {eqnarray*} \frac{dy_p}{dx}&amp;=&amp;A\cos 2x+B\sin 2x+2x(-A\sin 2x+B\cos 2x)
-							\\ \text {and} \frac{d^2y_p}{dx^2}&amp;=&amp;-4A\sin 2x+4B\cos 2x-4x(A\cos 2x+B\sin
-							2x)\\ &amp;=&amp;-4A\sin 2x+4B\cos 2x-4y_p \mbox { (see \eqref
-							{eq:5.5.6})}\end {eqnarray*}
-						</div>
+					The procedure used in Example&nbsp;<a href="#x1-61">5.5.1</a> doesn’t work here; substituting \(y_p=A\cos 2x+B\sin 2x\) for \(y\) in <a href="#x1-9r5">(5.5.5)</a> yields \[ \frac{d^2y_p}{dx^2}+4y_p=-4(A\cos 2x+B\sin 2x) +4(A\cos 2x+B\sin 2x)=0 \] for any choice of \(A\) and \(B\), since \(\cos 2x\) and \(\sin 2x\) are both solutions of the complementary equation for <a href="#x1-9r5">(5.5.5)</a>. We’re dealing with the second case mentioned in Theorem&nbsp;<a href="#x1-41">5.5.1</a>, and should therefore try a particular solution of the form 
+					\begin {equation} \label {eq:5.5.6} y_p=x(A\cos 2x+B\sin 2x) 
+					\end {equation}
+					<a id="x1-10r6"></a>
+					Then
+					<div class="eqnarray" id="f928f004-5448-45b4-af3d-df97b75e3350">
+						\begin {eqnarray*}
+							\frac{dy_p}{dx}&amp;=&amp;A\cos 2x+B\sin 2x+2x(-A\sin 2x+B\cos 2x) \\ \text {and} \frac{d^2y_p}{dx^2}&amp;=&amp;-4A\sin 2x+4B\cos 2x-4x(A\cos 2x+B\sin 2x)\\ &amp;=&amp;-4A\sin 2x+4B\cos 2x-4y_p \mbox { (see \eqref {eq:5.5.6})} 
+						\end {eqnarray*} 
+					</div>
 
-						so \[ \frac{d^2y_p}{dx^2}+4y_p=-4A\sin 2x+4B\cos 2x\] Therefore \(y_p\) is a solution of
-						<a href="#x1-9r5">(5.5.5)</a> if \[ -4A\sin 2x+4B\cos 2x=8\cos 2x+12\sin 2x\] which holds if \(A=-3\)
-						and \(B=2\). Therefore \[ y_p=-x(3\cos 2x-2\sin 2x) \] is a particular
-						solution of <a href="#x1-9r5">(5.5.5)</a>.
+					so \[ \frac{d^2y_p}{dx^2}+4y_p=-4A\sin 2x+4B\cos 2x\] Therefore \(y_p\) is a solution of
+					<a href="#x1-9r5">(5.5.5)</a> if \[ -4A\sin 2x+4B\cos 2x=8\cos 2x+12\sin 2x\] which holds if \(A=-3\) and \(B=2\). Therefore \[ y_p=-x(3\cos 2x-2\sin 2x) \] is a particular solution of <a href="#x1-9r5">(5.5.5)</a>.
 				</details>
 			</div>
 
 			<div class="example" id="x1-113" style="--ex-number: 3">
+				
 				<div>
-					<a id="x1-12r7"></a>
-					Find a particular solution of \begin {equation} \label {eq:5.5.7}
-					\frac{d^2y}{dx^2}+3\frac{dy}{dx}+2y=(16+20x)\cos x+10\sin x\end {equation}
+					<a id="x1-12r7"></a> Find a particular solution of 
+					\begin {equation} \label {eq:5.5.7} \frac{d^2y}{dx^2}+3\frac{dy}{dx}+2y=(16+20x)\cos x+10\sin x 
+					\end {equation} 
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-						The coefficients of \(\cos x\) and \(\sin x\) in <a href="#x1-12r7">(5.5.7)</a> are polynomials of degree one and zero, respectively. Therefore
-						Theorem&nbsp;<a href="#x1-41">5.5.1</a>
-						tells us to look for a particular solution of <a href="#x1-12r7">(5.5.7)</a> of the form \begin {equation} \label {eq:5.5.8} y_p=(A_0+A_1x)\cos
-						x+(B_0+B_1x)\sin x\end {equation}
-						<a id="x1-13r8"></a>
-						Then \begin {equation} \label {eq:5.5.9} \frac{dy_p}{dx}=(A_1+B_0+B_1x)\cos
-						x+(B_1-A_0-A_1x)\sin x \end {equation}
-						<a id="x1-14r9"></a>
-						and \begin {equation} \label {eq:5.5.10} \frac{d^2y_p}{dx^2}=(2B_1-A_0-A_1x)\cos
-						x-(2A_1+B_0+B_1x)\sin x\end {equation}
-						<a id="x1-15r10"></a>
-						so \begin {equation} \label {eq:5.5.11} \begin {array}{rcl}
-						\frac{d^2y_p}{dx^2}+3\frac{dy_p}{dx}+2y_p&amp;=&amp;\left [A_0+3 A_1+3 B_0+2 B_1+(A_1+3 B_1)x\right
-						]\cos x\\ &amp;&amp;+ \left [B_0+3 B_1-3 A_0-2 A_1+(B_1-3 A_1)x\right
-						]\sin x\end {array} \end {equation}
-						<a id="x1-16r11"></a>
-						Comparing the coefficients of \(x\cos x\), \(x\sin x\), \(\cos x\), and
-						\(\sin x\) here with the corresponding coefficients in <a href="#x1-12r7">(5.5.7)</a> shows that \(y_p\) is a solution of <a href="#x1-12r7">(5.5.7)</a> if \[ \begin {array}{rcr} \phantom {-3}A_1+3B_1&amp;=&amp;20\phantom
-						{.}\\ -3A_1+\phantom {3}B_1&amp;=&amp;0\phantom {.}\\ \phantom
-						{-3}A_0+3B_0+3A_1+2B_1&amp;=&amp;16\phantom {.}\\ -3A_0+\phantom
-						{3}B_0-2A_1+3B_1&amp;=&amp;10\end {array} \] Solving the first two
-						equations yields \(A_1=2\), \(B_1=6\). Substituting these into the last
-						two equations yields
-						<div class="eqnarray" id="4d3d4f3e-1ade-40ab-9962-5f96603d1f74">
-							\begin {eqnarray*} \phantom {-3}A_0+3B_0&amp;=&amp;16-3A_1-2B_1=-2\phantom
-							{.}\\ -3A_0+\phantom {3}B_0&amp;=&amp;10+2A_1-3B_1=-4\end {eqnarray*}
-						</div>
+					The coefficients of \(\cos x\) and \(\sin x\) in <a href="#x1-12r7">(5.5.7)</a> are polynomials of degree one and zero, respectively. Therefore Theorem&nbsp;<a href="#x1-41">5.5.1</a> tells us to look for a particular solution of <a href="#x1-12r7">(5.5.7)</a> of the form 
+					\begin {equation} \label {eq:5.5.8} y_p=(A_0+A_1x)\cos x+(B_0+B_1x)\sin x 
+					\end {equation}
+					<a id="x1-13r8"></a>
+					Then 
+					\begin {equation} \label {eq:5.5.9} \frac{dy_p}{dx}=(A_1+B_0+B_1x)\cos x+(B_1-A_0-A_1x)\sin x 
+					\end {equation}
+					<a id="x1-14r9"></a>
+					and 
+					\begin {equation} \label {eq:5.5.10} \frac{d^2y_p}{dx^2}=(2B_1-A_0-A_1x)\cos x-(2A_1+B_0+B_1x)\sin x 
+					\end {equation}
+					<a id="x1-15r10"></a>
+					so \begin {equation} \label {eq:5.5.11} 
+					\begin {array}{rcl} \frac{d^2y_p}{dx^2}+3\frac{dy_p}{dx}+2y_p&amp;=&amp;\left [A_0+3 A_1+3 B_0+2 B_1+(A_1+3 B_1)x\right ]\cos x\\ &amp;&amp;+ \left [B_0+3 B_1-3 A_0-2 A_1+(B_1-3 A_1)x\right ]\sin x 
+					\end {array} \end {equation}
+					<a id="x1-16r11"></a>
+					Comparing the coefficients of \(x\cos x\), \(x\sin x\), \(\cos x\), and \(\sin x\) here with the corresponding coefficients in <a href="#x1-12r7">(5.5.7)</a> shows that \(y_p\) is a solution of <a href="#x1-12r7">(5.5.7)</a> if \[ 
+					\begin {array}{rcr} \phantom {-3}A_1+3B_1&amp;=&amp;20\phantom {.}\\ -3A_1+\phantom {3}B_1&amp;=&amp;0\phantom {.}\\ \phantom {-3}A_0+3B_0+3A_1+2B_1&amp;=&amp;16\phantom {.}\\ -3A_0+\phantom {3}B_0-2A_1+3B_1&amp;=&amp;10 
+					\end {array} \] Solving the first two equations yields \(A_1=2\), \(B_1=6\). Substituting these into the last two equations yields
+					<div class="eqnarray" id="4d3d4f3e-1ade-40ab-9962-5f96603d1f74">
+						\begin {eqnarray*}
+							\phantom {-3}A_0+3B_0&amp;=&amp;16-3A_1-2B_1=-2\phantom {.}\\ -3A_0+\phantom {3}B_0&amp;=&amp;10+2A_1-3B_1=-4 
+						\end {eqnarray*} 
+					</div>
 
-						Solving these equations yields \(A_0=1\), \(B_0=-1\). Substituting
-						\(A_0=1\), \(A_1=2\), \(B_0=-1\), \(B_1=6\) into <a href="#x1-13r8">(5.5.8)</a> shows that \[ y_p=(1+2x)\cos x-(1-6x)\sin x \] is a particular solution
-						of <a href="#x1-12r7">(5.5.7)</a>.
+					Solving these equations yields \(A_0=1\), \(B_0=-1\). Substituting \(A_0=1\), \(A_1=2\), \(B_0=-1\), \(B_1=6\) into <a href="#x1-13r8">(5.5.8)</a> shows that \[ y_p=(1+2x)\cos x-(1-6x)\sin x \] is a particular solution of <a href="#x1-12r7">(5.5.7)</a>.
 				</details>
 			</div>
 		</details>
 
 		<details id="37137913-1da3-4aca-9113-848682302f60">
 			<summary>A Useful Observation</summary>
-			
+
 			<div id="557bec93-d7ca-4be1-b862-6395d67f5318">
-				In <a href="#x1-14r9">(5.5.9)</a>, <a href="#x1-15r10">(5.5.10)</a>, and <a href="#x1-16r11">(5.5.11)</a> the polynomials multiplying \(\sin x\) can be obtained by replacing
-				\(A_0,A_1,B_0\), and \(B_1\) by \(B_0\), \(B_1\), \(-A_0\), and \(-A_1\),
-				respectively, in the polynomials mutiplying \(\cos x\). An analogous
-				result applies in general, as follows (Exercise&nbsp;<span class="ptmb8t-">36</span>).
+				In <a href="#x1-14r9">(5.5.9)</a>, <a href="#x1-15r10">(5.5.10)</a>, and <a href="#x1-16r11">(5.5.11)</a> the polynomials multiplying \(\sin x\) can be obtained by replacing \(A_0,A_1,B_0\), and \(B_1\) by \(B_0\), \(B_1\), \(-A_0\), and \(-A_1\), respectively, in the polynomials multiplying \(\cos x\). An analogous result applies in general, as follows (Exercise&nbsp;<span class="ptmb8t-">36</span>). 
 			</div>
 			<div class="theorem" id="ae2e2531-7326-494c-84eb-44c4342d6ef5">
 				<div>
-					<span class="head">Theorem&nbsp;5.5.2</span>
-					<a id="x1-172"></a>
-					If \[ y_p=A(x)\cos \omega x+B(x)\sin \omega x\] where \(A(x)\) and
-					\(B(x)\) are polynomials with coefficients \(A_0\) …, \(A_k\) and
-					\(B_0\), …, \(B_k,\) then the polynomials multiplying \(\sin \omega x\)
-					in \[ \frac{dy_p}{dx},\quad \frac{d^2y_p}{dx^2},\quad a\frac{d^2y_p}{dx^2}+b\frac{dy_p}{dx}+cy_p \quad \mbox{ and } \quad 
-					\frac{d^2y_p}{dx^2}+\omega ^2 y_p \] can be obtained by replacing \(A_0\), …\(,\)
-					\(A_k\) by \(B_0,\) …\(,\) \(B_k\) and \(B_0,\) …\(,\) \(B_k\) by
-					\(-A_0,\) …\(,\) \(-A_k\) in the corresponding polynomials multiplying
-					\(\cos \omega x\).
+					<span class="head">Theorem&nbsp;5.5.2</span><a id="x1-172"></a> If \[ y_p=A(x)\cos \omega x+B(x)\sin \omega x\] where \(A(x)\) and \(B(x)\) are polynomials with coefficients \(A_0\) …, \(A_k\) and \(B_0\), …, \(B_k,\) then the polynomials multiplying \(\sin \omega x\) in \[ \frac{dy_p}{dx},\quad \frac{d^2y_p}{dx^2},\quad a\frac{d^2y_p}{dx^2}+b\frac{dy_p}{dx}+cy_p \quad \mbox{ and } \quad \frac{d^2y_p}{dx^2}+\omega ^2 y_p \] can be obtained by replacing \(A_0\), …\(,\) \(A_k\) by \(B_0,\) …\(,\) \(B_k\) and \(B_0,\) …\(,\) \(B_k\) by \(-A_0,\) …\(,\) \(-A_k\) in the corresponding polynomials multiplying \(\cos \omega x\). 
 				</div>
 			</div>
 
 			<div class="indent" id="423586da-68a7-448e-991a-d3f30260b038">
-				We won’t use this theorem in our examples, but we recommend that you use
-				it to check your manipulations when you work the exercises.
+				We won’t use this theorem in our examples, but we recommend that you use it to check your manipulations when you work the exercises. 
 			</div>
 			<div class="example" id="x1-184" style="--ex-number: 4">
-				<div>
-					<a id="x1-19r12"></a>
-					Find a particular solution of \begin {equation} \label {eq:5.5.12}
-					\frac{d^2y}{dx^2}+y=(8-4x)\cos x-(8+8x)\sin x\end {equation}
+				<div> 
+					<a id="x1-19r12"></a> Find a particular solution of 
+					\begin {equation} \label {eq:5.5.12} \frac{d^2y}{dx^2}+y=(8-4x)\cos x-(8+8x)\sin x 
+					\end {equation} 
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-					According to Theorem&nbsp;<a href="#x1-41">5.5.1</a>, we should look for a particular solution of the form \begin {equation}
-					\label {eq:5.5.13} y_p=(A_0x+A_1x^2)\cos x+(B_0x+B_1x^2)\sin x\end {equation}
+					According to Theorem&nbsp;<a href="#x1-41">5.5.1</a>, we should look for a particular solution of the form 
+					\begin {equation} \label {eq:5.5.13} y_p=(A_0x+A_1x^2)\cos x+(B_0x+B_1x^2)\sin x 
+					\end {equation}
 					<a id="x1-20r13"></a>
-					since \(\cos x\) and \(\sin x\) are solutions of the complementary
-					equation. However, let’s try \begin {equation} \label {eq:5.5.14}
-					y_p=(A_0+A_1x)\cos x+(B_0+B_1x)\sin x \end {equation}
+					since \(\cos x\) and \(\sin x\) are solutions of the complementary equation. However, let’s try 
+					\begin {equation} \label {eq:5.5.14} y_p=(A_0+A_1x)\cos x+(B_0+B_1x)\sin x 
+					\end {equation}
 					<a id="x1-21r14"></a>
-					first, so you can see why it doesn’t work. From <a href="#x1-15r10">(5.5.10)</a>, \[ \frac{d^2y_p}{dx^2}=(2B_1-A_0-A_1x)\cos x-(2A_1+B_0+B_1x)\sin x\] which together
-					with <a href="#x1-21r14">(5.5.14)</a> implies that \[ \frac{d^2y_p}{dx^2}+y_p=2B_1\cos x-2A_1\sin x\] Since the right side
-					of this equation does not contain \(x\cos x\) or \(x\sin x\), <a href="#x1-21r14">(5.5.14)</a> can’t satisfy <a href="#x1-19r12">(5.5.12)</a> no matter how we choose \(A_0\), \(A_1\), \(B_0\), and \(B_1\).
+					first, so you can see why it doesn’t work. From <a href="#x1-15r10">(5.5.10)</a>, \[ \frac{d^2y_p}{dx^2}=(2B_1-A_0-A_1x)\cos x-(2A_1+B_0+B_1x)\sin x\] which together with <a href="#x1-21r14">(5.5.14)</a> implies that \[ \frac{d^2y_p}{dx^2}+y_p=2B_1\cos x-2A_1\sin x\] Since the right side of this equation does not contain \(x\cos x\) or \(x\sin x\), <a href="#x1-21r14">(5.5.14)</a> can’t satisfy <a href="#x1-19r12">(5.5.12)</a> no matter how we choose \(A_0\), \(A_1\), \(B_0\), and \(B_1\).
 					<br />
 					Now let \(y_p\) be as in <a href="#x1-20r13">(5.5.13)</a>. Then
 					<div class="eqnarray" id="49bd2027-2fdd-4d61-8a73-e4f6662a312c">
-						\begin {eqnarray*} \frac{dy_p}{dx}&amp;=&amp;\left [A_0+(2A_1+B_0)x+B_1x^2\right
-						]\cos x\\ &amp;&amp; +\left [B_0+(2B_1-A_0)x-A_1x^2\right ]\sin x\\ \text
-						{and} \frac{d^2y_p}{dx^2}&amp;=&amp; \left [2A_1+2B_0-(A_0-4B_1)x-A_1x^2\right ]\cos x\\
-						&amp;&amp;+ \left [2B_1-2A_0-(B_0+4A_1)x-B_1x^2\right ]\sin x\end
-						{eqnarray*}
+						\begin {eqnarray*} 
+							\frac{dy_p}{dx}&amp;=&amp;\left [A_0+(2A_1+B_0)x+B_1x^2\right ]\cos x\\ &amp;&amp; +\left [B_0+(2B_1-A_0)x-A_1x^2\right ]\sin x\\ \text {and} \frac{d^2y_p}{dx^2}&amp;=&amp; \left [2A_1+2B_0-(A_0-4B_1)x-A_1x^2\right ]\cos x\\ &amp;&amp;+ \left [2B_1-2A_0-(B_0+4A_1)x-B_1x^2\right ]\sin x 
+						\end {eqnarray*} 
 					</div>
 
-					so \[ \frac{d^2y_p}{dx^2}+y_p=(2A_1+2B_0+4B_1x)\cos x+(2B_1-2A_0-4A_1x)\sin x\]
-					Comparing the coefficients of \(\cos x\) and \(\sin x\) here with the
-					corresponding coefficients in <a href="#x1-19r12">(5.5.12)</a> shows that \(y_p\) is a solution of <a href="#x1-19r12">(5.5.12)</a> if \[ \begin {array}{rcr} \phantom {-}4B_1&amp;=&amp;-4\phantom {.}\\
-					-4A_1&amp;=&amp;-8\phantom {.}\\ \phantom {-}2B_0+2A_1&amp;=&amp;8\phantom
-					{.}\\ -2A_0+2B_1&amp;=&amp;-8\end {array} \] The solution of this system
-					is \(A_1=2\), \(B_1=-1\), \(A_0=3\), \(B_0=2\). Therefore \[ y_p=x\left
-					[(3+2x)\cos x+(2-x)\sin x\right ] \] is a particular solution of <a href="#x1-19r12">(5.5.12)</a>.
+					so \[ \frac{d^2y_p}{dx^2}+y_p=(2A_1+2B_0+4B_1x)\cos x+(2B_1-2A_0-4A_1x)\sin x\] Comparing the coefficients of \(\cos x\) and \(\sin x\) here with the corresponding coefficients in <a href="#x1-19r12">(5.5.12)</a> shows that \(y_p\) is a solution of <a href="#x1-19r12">(5.5.12)</a> if \[ 
+					\begin {array}{rcr} \phantom {-}4B_1&amp;=&amp;-4\phantom {.}\\ -4A_1&amp;=&amp;-8\phantom {.}\\ \phantom {-}2B_0+2A_1&amp;=&amp;8\phantom {.}\\ -2A_0+2B_1&amp;=&amp;-8 
+					\end {array} \] The solution of this system is \(A_1=2\), \(B_1=-1\), \(A_0=3\), \(B_0=2\). Therefore \[ y_p=x\left [(3+2x)\cos x+(2-x)\sin x\right ] \] is a particular solution of <a href="#x1-19r12">(5.5.12)</a>.
 				</details>
 			</div>
 		</details>
 
 		<details id="bb6d3273-e0f0-4e62-b5c5-d5aaca717f30">
 			<summary>Forcing Functions with Exponential Factors</summary>
-		
+
 			<div id="1df83f16-6928-401b-9cc7-d6c7d40e777c">
-				To find a particular solution of \begin {equation} \label {eq:5.5.15}
-				a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=e^{\lambda x}\left (P(x)\cos \omega x+Q(x)\sin \omega x\right
-				) \end {equation}
-				<a id="x1-22r15"></a>
-				when \(\lambda \ne 0\), we recall from Section&nbsp;5.4 that substituting
-				\(y=ue^{\lambda x}\) into <a href="#x1-22r15">(5.5.15)</a> will produce a constant coefficient equation for \(u\) with the forcing
-				function \(P(x)\cos \omega x+Q(x)\sin \omega x\). We can find a particular
-				solution \(u_p\) of this equation by the procedure that we used in
-				Examples&nbsp;<a href="#x1-61">5.5.1</a> – <a href="#x1-184">5.5.4</a>.
-				Then \(y_p=u_pe^{\lambda x}\) is a particular solution of <a href="#x1-22r15">(5.5.15)</a>.
+				To find a particular solution of 
+				\begin {equation} \label {eq:5.5.15} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=e^{\lambda x}\left (P(x)\cos \omega x+Q(x)\sin \omega x\right ) 
+				\end {equation} <a id="x1-22r15"></a> when \(\lambda \ne 0\), we recall from Section&nbsp;5.4 that substituting \(y=ue^{\lambda x}\) into <a href="#x1-22r15">(5.5.15)</a> will produce a constant coefficient equation for \(u\) with the forcing function \(P(x)\cos \omega x+Q(x)\sin \omega x\). We can find a particular solution \(u_p\) of this equation by the procedure that we used in Examples&nbsp;<a href="#x1-61">5.5.1</a> – <a href="#x1-184">5.5.4</a>. Then \(y_p=u_pe^{\lambda x}\) is a particular solution of <a href="#x1-22r15">(5.5.15)</a>. 
 			</div>
 
 			<div class="example" id="x1-235" style="--ex-number: 5">
-				<div>
-					<a id="x1-24r16"></a>
-					Find a particular solution of \begin {equation} \label {eq:5.5.16}
-					\frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y=e^{-2x}\left [2\cos 3x-(34-150x)\sin 3x\right ]\end {equation}
+				<div> 
+					<a id="x1-24r16"></a> Find a particular solution of 
+					\begin {equation} \label {eq:5.5.16} \frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y=e^{-2x}\left [2\cos 3x-(34-150x)\sin 3x\right ] 
+					\end {equation} 
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
 					Let \(y=ue^{-2x}\). Then
-		
+
 					<div class="eqnarray" id="0582c59d-cde5-4f21-8d0f-f7dde43e22be">
-						\begin {eqnarray*} \frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y&amp;=&amp;e^{-2x}\left
-						[(\frac{d^2u}{dx^2}-4\frac{du}{dx}+4u)-3(\frac{du}{dx}-2u)+2u\right ]\\ &amp;=&amp;e^{-2x}(\frac{d^2u}{dx^2}-7\frac{du}{dx}+12u)\\
-						&amp;=&amp; e^{-2x}\left [2\cos 3x-(34-150x)\sin 3x\right ] \end
-						{eqnarray*}
+						\begin {eqnarray*}
+							\frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y&amp;=&amp;e^{-2x}\left [(\frac{d^2u}{dx^2}-4\frac{du}{dx}+4u)-3(\frac{du}{dx}-2u)+2u\right ]\\ &amp;=&amp;e^{-2x}(\frac{d^2u}{dx^2}-7\frac{du}{dx}+12u)\\ &amp;=&amp; e^{-2x}\left [2\cos 3x-(34-150x)\sin 3x\right ] 
+						\end {eqnarray*} 
 					</div>
-		
-					if \begin {equation} \label {eq:5.5.17} \frac{d^2u}{dx^2}-7\frac{du}{dx}+12u=2\cos 3x-(34-150x)\sin 3x\end {equation}
+
+					if 
+					\begin {equation} \label {eq:5.5.17} \frac{d^2u}{dx^2}-7\frac{du}{dx}+12u=2\cos 3x-(34-150x)\sin 3x 
+					\end {equation}
 					<a id="x1-25r17"></a>
-					Since \(\cos 3x\) and \(\sin 3x\) aren’t solutions of the complementary
-					equation \[ \frac{d^2u}{dx^2}-7\frac{du}{dx}+12u=0\] Theorem&nbsp;<a href="#x1-41">5.5.1</a>
-					tells us to look for a particular solution of <a href="#x1-25r17">(5.5.17)</a> of the form \begin {equation} \label {eq:5.5.18} u_p=(A_0+A_1x)\cos 3x
-					+(B_0+B_1x)\sin 3x\end {equation}
+					Since \(\cos 3x\) and \(\sin 3x\) aren’t solutions of the complementary equation \[ \frac{d^2u}{dx^2}-7\frac{du}{dx}+12u=0\] Theorem&nbsp;<a href="#x1-41">5.5.1</a> tells us to look for a particular solution of <a href="#x1-25r17">(5.5.17)</a> of the form 
+					\begin {equation} \label {eq:5.5.18} u_p=(A_0+A_1x)\cos 3x +(B_0+B_1x)\sin 3x 
+					\end {equation}
 					<a id="x1-26r18"></a>
 					Then
 
 					<div class="eqnarray" id="ba499976-ea52-4a88-8893-a8657b414b41">
-						\begin {eqnarray*} \frac{du_p}{dx}&amp;=&amp;(A_1+3B_0+3B_1x)\cos
-						3x+(B_1-3A_0-3A_1x)\sin 3x\\ \text {and}
-						\frac{d^2u_p}{dx^2}&amp;=&amp;(-9A_0+6B_1-9A_1x)\cos 3x-(9B_0+6A_1+9B_1x)\sin 3x\end
-						{eqnarray*}
+						\begin {eqnarray*}
+							\frac{du_p}{dx}&amp;=&amp;(A_1+3B_0+3B_1x)\cos 3x+(B_1-3A_0-3A_1x)\sin 3x\\ \text {and} \frac{d^2u_p}{dx^2}&amp;=&amp;(-9A_0+6B_1-9A_1x)\cos 3x-(9B_0+6A_1+9B_1x)\sin 3x 
+						\end {eqnarray*} 
 					</div>
 
 					<div class="eqnarray" id="1f20d599-cc56-46f3-9ba7-7a6b8968d8d6">
-						\begin {eqnarray*} \frac{d^2u_p}{dx^2}-7\frac{du_p}{dx}+12u_p&amp;=&amp;\left
-						[3A_0-21B_0-7A_1+6B_1+(3A_1-21B_1)x\right ]\cos 3x\\ &amp;&amp;+\left
-						[21A_0+3B_0-6A_1-7B_1+(21A_1+3B_1)x\right ]\sin 3x\end {eqnarray*}
+						\begin {eqnarray*}
+							\frac{d^2u_p}{dx^2}-7\frac{du_p}{dx}+12u_p&amp;=&amp;\left [3A_0-21B_0-7A_1+6B_1+(3A_1-21B_1)x\right ]\cos 3x\\ &amp;&amp;+\left [21A_0+3B_0-6A_1-7B_1+(21A_1+3B_1)x\right ]\sin 3x 
+						\end {eqnarray*} 
 					</div>
 
-					Comparing the coefficients of \(x\cos 3x\), \(x\sin 3x\), \(\cos 3x\), and
-					\(\sin 3x\) here with the corresponding coefficients on the right side of
-					<a href="#x1-25r17">(5.5.17)</a> shows that \(u_p\) is a solution of <a href="#x1-25r17">(5.5.17)</a> if \begin {equation} \label {eq:5.5.19} \begin {array}{rcr}
-					3A_1-21B_1&amp;=&amp;0\phantom {.}\\ 21A_1+\phantom
-					{2}3B_1&amp;=&amp;150\phantom {.}\\ 3A_0-21B_0-7A_1+\phantom
-					{2}6B_1&amp;=&amp;\phantom {-3}2\phantom {.}\\ 21A_0+\phantom
-					{2}3B_0-6A_1-\phantom {5}7B_1&amp;=&amp;-34\end {array} \end {equation}
+					Comparing the coefficients of \(x\cos 3x\), \(x\sin 3x\), \(\cos 3x\), and \(\sin 3x\) here with the corresponding coefficients on the right side of
+					<a href="#x1-25r17">(5.5.17)</a> shows that \(u_p\) is a solution of <a href="#x1-25r17">(5.5.17)</a> if \begin {equation} \label {eq:5.5.19} 
+					\begin {array}{rcr} 3A_1-21B_1&amp;=&amp;0\phantom {.}\\ 21A_1+\phantom {2}3B_1&amp;=&amp;150\phantom {.}\\ 3A_0-21B_0-7A_1+\phantom {2}6B_1&amp;=&amp;\phantom {-3}2\phantom {.}\\ 21A_0+\phantom {2}3B_0-6A_1-\phantom {5}7B_1&amp;=&amp;-34 
+					\end {array} \end {equation}
 					<a id="x1-27r19"></a>
-					Solving the first two equations yields \(A_1=7\), \(B_1=1\). Substituting
-					these values into the last two equations of <a href="#x1-27r19">(5.5.19)</a> yields
+					Solving the first two equations yields \(A_1=7\), \(B_1=1\). Substituting these values into the last two equations of <a href="#x1-27r19">(5.5.19)</a> yields
 
 					<div class="eqnarray" id="9ec9a192-514d-4e4a-b454-e17a4a087443">
-						\begin {eqnarray*} \phantom {2}3A_0-21B_0&amp;=&amp;\phantom
-						{-3}2+7A_1-6B_1=45\phantom {.}\\ 21A_0+\phantom
-						{2}3B_0&amp;=&amp;-34+6A_1+7B_1=15\end {eqnarray*}
+						\begin {eqnarray*}
+							\phantom {2}3A_0-21B_0&amp;=&amp;\phantom {-3}2+7A_1-6B_1=45\phantom {.}\\ 21A_0+\phantom {2}3B_0&amp;=&amp;-34+6A_1+7B_1=15 
+						\end {eqnarray*} 
 					</div>
 
-					Solving this system yields \(A_0=1\), \(B_0=-2\). Substituting \(A_0=1\),
-					\(A_1=7\), \(B_0=-2\), and \(B_1=1\) into <a href="#x1-26r18">(5.5.18)</a> shows that \[ u_p=(1+7x)\cos 3x-(2-x)\sin 3x \] is a particular solution
-					of <a href="#x1-25r17">(5.5.17)</a>. Therefore \[ y_p=e^{-2x}\left [(1+7x)\cos 3x-(2-x)\sin 3x\right ] \] is
-					a particular solution of <a href="#x1-24r16">(5.5.16)</a>.
+					Solving this system yields \(A_0=1\), \(B_0=-2\). Substituting \(A_0=1\), \(A_1=7\), \(B_0=-2\), and \(B_1=1\) into <a href="#x1-26r18">(5.5.18)</a> shows that \[ u_p=(1+7x)\cos 3x-(2-x)\sin 3x \] is a particular solution of <a href="#x1-25r17">(5.5.17)</a>. Therefore \[ y_p=e^{-2x}\left [(1+7x)\cos 3x-(2-x)\sin 3x\right ] \] is a particular solution of <a href="#x1-24r16">(5.5.16)</a>.
 				</details>
 			</div>
 
 			<div class="example" id="x1-286" style="--ex-number: 6">
-				<div>
-					<a id="x1-29r20"></a>
-					Find a particular solution of \begin {equation} \label {eq:5.5.20}
-					\frac{d^2y}{dx^2}+2\frac{dy}{dx}+5y=e^{-x}\left [(6-16x)\cos 2x-(8+8x)\sin 2x\right ]\end {equation}
+				<div> 
+					<a id="x1-29r20"></a> Find a particular solution of 
+					\begin {equation} \label {eq:5.5.20} \frac{d^2y}{dx^2}+2\frac{dy}{dx}+5y=e^{-x}\left [(6-16x)\cos 2x-(8+8x)\sin 2x\right ] 
+					\end {equation} 
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
 					Let \(y=ue^{-x}\). Then
 					<div class="eqnarray" id="ae42018a-d05a-44f4-8b0b-de2b45f50976">
-						\begin {eqnarray*} \frac{d^2y}{dx^2}+2\frac{dy}{dx}+5y&amp;=&amp;e^{-x}\left
-						[(\frac{d^2u}{dx^2}-2\frac{du}{dx}+u)+2(\frac{du}{dx}-u)+5u\right ]\\ &amp;=&amp;e^{-x}(\frac{d^2u}{dx^2}+4u)\\ &amp;=&amp;
-						e^{-x}\left [(6-16x)\cos 2x-(8+8x)\sin 2x\right ] \end {eqnarray*}
+						\begin {eqnarray*}
+							\frac{d^2y}{dx^2}+2\frac{dy}{dx}+5y&amp;=&amp;e^{-x}\left [(\frac{d^2u}{dx^2}-2\frac{du}{dx}+u)+2(\frac{du}{dx}-u)+5u\right ]\\ &amp;=&amp;e^{-x}(\frac{d^2u}{dx^2}+4u)\\ &amp;=&amp; e^{-x}\left [(6-16x)\cos 2x-(8+8x)\sin 2x\right ] 
+						\end {eqnarray*} 
 					</div>
 					<a id="x1-30r21"></a>
-					if \begin {equation} \label {eq:5.5.21} \frac{d^2u}{dx^2}+4u=(6-16x)\cos 2x-(8+8x)\sin 2x\end {equation}
-					Since \(\cos 2x\) and \(\sin 2x\) are solutions of the complementary
-					equation \[ \frac{d^2u}{dx^2}+4u=0\] Theorem&nbsp;<a href="#x1-41">5.5.1</a>
-					tells us to look for a particular solution of <a href="#x1-30r21">(5.5.21)</a> of the form \[ u_p=(A_0x+A_1x^2)\cos 2x+(B_0x+B_1x^2)\sin 2x\] Then
-			
+					if 
+					\begin {equation} \label {eq:5.5.21} \frac{d^2u}{dx^2}+4u=(6-16x)\cos 2x-(8+8x)\sin 2x 
+					\end {equation} Since \(\cos 2x\) and \(\sin 2x\) are solutions of the complementary equation \[ \frac{d^2u}{dx^2}+4u=0\] Theorem&nbsp;<a href="#x1-41">5.5.1</a> tells us to look for a particular solution of <a href="#x1-30r21">(5.5.21)</a> of the form \[ u_p=(A_0x+A_1x^2)\cos 2x+(B_0x+B_1x^2)\sin 2x\] Then
+
 					<div class="eqnarray" id="df703f15-9a6b-4988-a50c-a2ebf1df3462">
-						\begin {eqnarray*} \frac{du_p}{dx}&amp;=&amp;\left [A_0+(2A_1+2B_0)x+2B_1x^2\right
-						]\cos 2x \\ &amp;&amp; +\left [B_0+(2B_1-2A_0)x-2A_1x^2\right ]\sin 2x\\
-						\text {and} \frac{d^2u_p}{dx^2}&amp;=&amp;\left [2A_1+4B_0-(4A_0-8B_1)x-4A_1x^2\right
-						]\cos 2x\\ &amp;&amp; +\left [2B_1-4A_0-(4B_0+8A_1)x-4B_1x^2\right ]\sin
-						2x\end {eqnarray*}
+						\begin {eqnarray*}
+							\frac{du_p}{dx}&amp;=&amp;\left [A_0+(2A_1+2B_0)x+2B_1x^2\right ]\cos 2x \\ &amp;&amp; +\left [B_0+(2B_1-2A_0)x-2A_1x^2\right ]\sin 2x\\ \text {and} \frac{d^2u_p}{dx^2}&amp;=&amp;\left [2A_1+4B_0-(4A_0-8B_1)x-4A_1x^2\right ]\cos 2x\\ &amp;&amp; +\left [2B_1-4A_0-(4B_0+8A_1)x-4B_1x^2\right ]\sin 2x 
+						\end {eqnarray*} 
 					</div>
-			
-					so \[ \frac{d^2u_p}{dx^2}+4u_p=(2A_1+4B_0+8B_1x)\cos 2x+(2B_1-4A_0-8A_1x)\sin 2x\]
-					Equating the coefficients of \(x\cos 2x\), \(x\sin 2x\), \(\cos 2x\), and
-					\(\sin 2x\) here with the corresponding coefficients on the right side of
-					<a href="#x1-30r21">(5.5.21)</a> shows that \(u_p\) is a solution of <a href="#x1-30r21">(5.5.21)</a> if \begin {equation} \label {eq:5.5.22} \begin {array}{rcr}
-					8B_1&amp;=&amp;-16\phantom {.}\\ -8A_1&amp;=&amp;-\phantom {1}8\phantom
-					{.}\\ \phantom {-}4B_0+2A_1&amp;=&amp;6\phantom {.}\\
-					-4A_0+2B_1&amp;=&amp;-8\end {array} \end {equation}
+
+					so \[ \frac{d^2u_p}{dx^2}+4u_p=(2A_1+4B_0+8B_1x)\cos 2x+(2B_1-4A_0-8A_1x)\sin 2x\] Equating the coefficients of \(x\cos 2x\), \(x\sin 2x\), \(\cos 2x\), and \(\sin 2x\) here with the corresponding coefficients on the right side of
+					<a href="#x1-30r21">(5.5.21)</a> shows that \(u_p\) is a solution of <a href="#x1-30r21">(5.5.21)</a> if \begin {equation} \label {eq:5.5.22} 
+					\begin {array}{rcr} 8B_1&amp;=&amp;-16\phantom {.}\\ -8A_1&amp;=&amp;-\phantom {1}8\phantom {.}\\ \phantom {-}4B_0+2A_1&amp;=&amp;6\phantom {.}\\ -4A_0+2B_1&amp;=&amp;-8 
+					\end {array} \end {equation}
 					<a id="x1-31r22"></a>
-					The solution of this system is \(A_1=1\), \(B_1=-2\), \(B_0=1\),
-					\(A_0=1\). Therefore \[ u_p=x[(1+x)\cos 2x+(1-2x)\sin 2x] \] is a
-					particular solution of <a href="#x1-30r21">(5.5.21)</a>, and \[ y_p=xe^{-x}\left [(1+x)\cos 2x+(1-2x)\sin 2x\right ] \] is a
-					particular solution of <a href="#x1-29r20">(5.5.20)</a>.
+					The solution of this system is \(A_1=1\), \(B_1=-2\), \(B_0=1\), \(A_0=1\). Therefore \[ u_p=x[(1+x)\cos 2x+(1-2x)\sin 2x] \] is a particular solution of <a href="#x1-30r21">(5.5.21)</a>, and \[ y_p=xe^{-x}\left [(1+x)\cos 2x+(1-2x)\sin 2x\right ] \] is a particular solution of <a href="#x1-29r20">(5.5.20)</a>.
 				</details>
 			</div>
 
 			<div class="indent" id="ceaaa10b-c8ec-4304-862c-d6838e0cf781">
-				You can also find a particular solution of <a href="#x1-29r20">(5.5.20)</a> by substituting \[ y_p=xe^{-x}\left [(A_0+A_1x)\cos 2x +(B_0+B_1x)\sin
-				2x\right ] \] for \(y\) in <a href="#x1-29r20">(5.5.20)</a> and equating the coefficients of \(xe^{-x}\cos 2x\), \(xe^{-x}\sin 2x\),
-				\(e^{-x}\cos 2x\), and \(e^{-x}\sin 2x\) in the resulting expression for
-				\[ \frac{d^2y_p}{dx^2}+2\frac{dy_p}{dx}+5y_p \] with the corresponding coefficients on the right
-				side of <a href="#x1-29r20">(5.5.20)</a>. (See Exercise&nbsp;<span class="ptmb8t-">38</span>). This
-				leads to the same system <a href="#x1-31r22">(5.5.22)</a> of equations for \(A_0\), \(A_1\), \(B_0\), and \(B_1\) that we obtained
-				in Example&nbsp;<a href="#x1-286">5.5.6</a>. However, if you try this approach you’ll see that deriving <a href="#x1-31r22">(5.5.22)</a> this way is much more tedious than the way we did it in Example&nbsp;<a href="#x1-286">5.5.6</a>.
+				You can also find a particular solution of <a href="#x1-29r20">(5.5.20)</a> by substituting \[ y_p=xe^{-x}\left [(A_0+A_1x)\cos 2x +(B_0+B_1x)\sin 2x\right ] \] for \(y\) in <a href="#x1-29r20">(5.5.20)</a> and equating the coefficients of \(xe^{-x}\cos 2x\), \(xe^{-x}\sin 2x\), \(e^{-x}\cos 2x\), and \(e^{-x}\sin 2x\) in the resulting expression for \[ \frac{d^2y_p}{dx^2}+2\frac{dy_p}{dx}+5y_p \] with the corresponding coefficients on the right side of <a href="#x1-29r20">(5.5.20)</a>. (See Exercise&nbsp;<span class="ptmb8t-">38</span>). This leads to the same system <a href="#x1-31r22">(5.5.22)</a> of equations for \(A_0\), \(A_1\), \(B_0\), and \(B_1\) that we obtained in Example&nbsp;<a href="#x1-286">5.5.6</a>. However, if you try this approach you’ll see that deriving <a href="#x1-31r22">(5.5.22)</a> this way is much more tedious than the way we did it in Example&nbsp;<a href="#x1-286">5.5.6</a>. 
 			</div>
 		</details>
 
-		<nav class = "ex">
-			<a href = "sec5.5.ex.html">5.5 Exercises</a>
+		<nav class="ex">
+			<a href="sec5.5.ex.html">5.5 Exercises</a>
 		</nav>
 
-		<nav class = "book">
+		<nav class="book">
 			<a href="sec5.4.book.html">Back (5.4)</a>
 
 			<a href="sec5.0.html">Chapter 5</a>
 
 			<a href="sec5.6.book.html">Next (5.6)</a>
-		</div>
-	</body>
-</html>
+		</nav></body
+	></html
+>

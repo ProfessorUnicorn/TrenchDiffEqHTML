@@ -1,377 +1,279 @@
-<!DOCTYPE html><html lang="en-US" xml:lang="en-US"><head>
-    <title></title>
-    <meta charset="utf-8">
-    <meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="combined.css">
-    <meta name="src" content="Trench_DiffEQ_Book.tex">
-    <script>window.MathJax = {
-            tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(10.7.' + tag + ')' } }
-        }; </script>
-    <script type="text/javascript" async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
-    <style type="text/css">
-        :root {
-            --section-number: "10.7"
-        }
-    </style>
-</head>
+<!doctype html>
+<html lang="en-US" xml:lang="en-US">
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="combined.css" />
+		<meta name="src" content="Trench_DiffEQ_Book.tex" />
+		<script>
+			window.MathJax = {
+				tex: { packages: { "[+]": ["tagformat"] }, tags: "ams", tagformat: { tag: (tag) => "(10.7." + tag + ")" } },
+			};
+		</script>
+		<script type="text/javascript" async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"></script>
+		<style type="text/css">
+			:root {
+				--section-number: "10.7";
+			}
+		</style>
+	</head>
 
-<body>
-    <div style="display: none;" id="41e7a538-522d-4c65-9b6a-5afc533ca229">
-        \(
-        \newcommand{\place}{\bigskip\hrule\bigskip\noindent}
-        \newcommand{\threecol}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]}
-        \newcommand{\threecolj}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]}
-        \newcommand{\lims}[2]{\,\bigg|_{#1}^{#2}}
-        \newcommand{\twocol}[2]{\left[\begin{array}{l}#1\\#2\end{array}\right]}
-        \newcommand{\ctwocol}[2]{\left[\begin{array}{c}#1\\#2\end{array}\right]}
-        \newcommand{\cthreecol}[3]{\left[\begin{array}{c}#1\\#2\\#3\end{array}\right]}
-        \newcommand{\eqline}[1]{\centerline{\hfill$\displaystyle#1$\hfill}}
-        \newcommand{\twochar}[4]{\left|\begin{array}{cc}
-        #1-\lambda&amp; #2\\#3&amp; #4-\lambda\end{array}\right|}
-        \newcommand{\twobytwo}[4]{\left[\begin{array}{rr}
-        #1&amp; #2\\#3&amp; #4\end{array}\right]}
-        \newcommand{\threechar}[9]{\left[\begin{array}{ccc}
-        #1-\lambda&amp; #2&amp; #3\\#4&amp; #5-\lambda&amp; #6\\#7&amp; #8&amp; #9-\lambda\end{array}\right]}
-        \newcommand{\threebythree}[9]{\left[\begin{array}{rrr}
-        #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9\end{array}\right]}
-        \newcommand{\solutionpart}[1]{\vskip10pt\noindent\underbar{\color{blue}\sc
-        Solution({\bf #1})\ }}
-        \newcommand{\Cex}{\fbox{\textcolor{red}{C}}\, }
-        \newcommand{\CGex}{\fbox{\textcolor{red}{C/G}}\, }
-        \newcommand{\Lex}{\fbox{\textcolor{red}{L}}\, }
-
-        \newcommand{\matfunc}[3]{\left[\begin{array}{cccc}#1_{11}(t)&amp; #1_{12}(t)&amp;\cdots
-        &amp; #1_{1#3}(t)\\#1_{21}(t)&amp; #1_{22}(t)&amp;\cdots&amp; #1_{2#3}(t)\\\vdots&amp;
-        \vdots&amp;\ddots&amp;\vdots\\#1_{#21}(t)&amp; #1_{#22}(t)&amp;\cdots&amp; #1_{#2#3}(t)
-        \end{array}\right]}
-
-
-        \newcommand{\col}[2]{\left[\begin{array}{c}#1_1\\#1_2\\\vdots\\#1_#2\end{array}\right]}
-        \newcommand{\colfunc}[2]{\left[\begin{array}{c}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t)\end{array}\right]}
-
-        \newcommand{\cthreebythree}[9]{\left[\begin{array}{ccc}
-        #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9\end{array}\right]}
-
-        \)
-    </div>
-    <div class="centerline" id="361c6153-8760-44e6-84e2-d3d1bdd8aedb"> <span class="ptmb8t-x-x-120">10.7</span><span class="ptmb8t-x-x-120">&nbsp;Exercises</span> </div>
-    <a id="x1-1doc"></a>
-    <!--l. 1-->
-    <div id="b5802c88-5b92-4552-9373-168c3140fee1">In Exercises&nbsp;<a href="#x1-21">1<!--tex4ht:ref: exer:10.7.1 --></a>–<a href="#x1-1110">10<!--tex4ht:ref: exer:10.7.10 --></a> find a particular solution.
-    </div>
-    <div class="tabular" id="0aa4b66e-52cb-4689-950f-ab947863b2be">
-        <table id="TBL-1" class="tabular">
-            <colgroup id="TBL-1-1g">
-                <col id="TBL-1-1">
-                <col id="TBL-1-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-1-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-1-1-1" class="td00">
-                    <dl class="list1">
-                        <dt class="list">
-                            <span class="ptmb8t-">1.</span>
-                        </dt>
-                        <dd class="list">
-                            <!--l. 8-->
-                            <div><a id="x1-21"></a>\(\displaystyle {{\bf y}'=\twobytwo
-                                {-1}{-4}{-1}{-1}{\bf y}+\left [\begin {array}{cc}21e^{4t}\\8e^{-3t}\end {array}\right
-                                ]}\) </div>
-                </dd></dl></td>
-                <td style="white-space:normal; text-align:left;" id="TBL-1-1-2" class="td01">
-                    
-                    <dt class="list">
-                        <span class="ptmb8t-">2.</span>
-                    </dt>
-                    <dd class="list">
-                        <!--l. 10-->
-                        <div><a id="x1-32"></a>\(\displaystyle {{\bf y}'={1\over 5}\twobytwo
-                            {-4}3{-2}{-11}{\bf y}+\left [\begin {array}{cc}50e^{3t}\\10e^{-3t}\end {array}\right ]}\)
-                        </div>
-                </dd></td>
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tabular" id="02b05140-7232-40da-9089-5654eaa19372">
-        <table id="TBL-2" class="tabular">
-            <colgroup id="TBL-2-1g">
-                <col id="TBL-2-1">
-                <col id="TBL-2-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-2-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-2-1-1" class="td00">
-                    <span class="ptmb8t-">3.</span><a id="x1-43"></a>\(\displaystyle {{\bf y}'=\twobytwo 1221{\bf
-                    y}+\left [\begin {array}{cc}1\\t\end {array}\right ]}\)
-                </td>
-                <td style="white-space:normal; text-align:left;" id="TBL-2-1-2" class="td01">
-                    <span class="ptmb8t-">4.</span><a id="x1-54"></a>\(\displaystyle {{\bf y}'=\twobytwo {-4}{-3}65{\bf
-                    y}+\left [\begin {array}{cc}2\\-2e^t\end {array}\right ]}\)
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tabular" id="9a66260f-56b7-4377-9a31-a605b08193bc">
-        <table id="TBL-3" class="tabular">
-            <colgroup id="TBL-3-1g">
-                <col id="TBL-3-1">
-                <col id="TBL-3-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-3-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-3-1-1" class="td00">
-                    <span class="ptmb8t-">5.</span><a id="x1-65"></a>\(\displaystyle {{\bf y}'=\twobytwo
-                    {-6}{-3}1{-2}{\bf y}+\left [\begin {array}{cc}4e^{-3t}\\4e^{-5t}\end {array}\right ]}\)
-                </td>
-                <td style="white-space:normal; text-align:left;" id="TBL-3-1-2" class="td01">
-                    <span class="ptmb8t-">6.</span><a id="x1-76"></a>\(\displaystyle {{\bf y}'=\twobytwo 01{-1}0{\bf
-                    y}+\left [\begin {array}{cc}1\\t\end {array}\right ]}\)
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-    <div class="tabular" id="85347aae-ab34-4095-87f3-79038796b710">
-        <table id="TBL-4" class="tabular">
-            <colgroup id="TBL-4-1g">
-                <col id="TBL-4-1">
-                <col id="TBL-4-2">
-            </colgroup>
-            <tbody><tr style="vertical-align:baseline;" id="TBL-4-1-">
-                <td style="white-space:normal; text-align:left;" id="TBL-4-1-1" class="td00">
-                    <span class="ptmb8t-">7.</span><a id="x1-87"></a>\(\displaystyle {{\bf y}'=\threebythree
-                    31{-1}351{-6}24{\bf y}+\left [\begin {array}{cc}3\\6\\3\end {array}\right ]}\)
-                </td>
-                <td style="white-space:normal; text-align:left;" id="TBL-4-1-2" class="td01">
-                    <span class="ptmb8t-">8.</span><a id="x1-98"></a>\(\displaystyle {{\bf y}'=\threebythree
-                    3{-1}{-1}{-2}324{-1}{-2}{\bf y}+\left [\begin {array}{cc}1\\e^t\\e^t\end {array}\right ]}\)
-                </td>
-            </tr>
-        </tbody></table>
-    </div>
-    <span class="ptmb8t-">9.</span> <a id="x1-109"></a> \(\displaystyle {{\bf y}'=\threebythree {-3}222{-3}222{-3}{\bf
-    y}+\left [\begin {array}{cc}e^t\\e^{-5t}\\e^t\end {array}\right ]}\)
-    <span class="ptmb8t-">10.</span> <a id="x1-1110"></a>\(\displaystyle {{\bf y}'={1\over 3}\threebythree
-    11{-3}{-4}{-4}3{-2}10{\bf y}+\left [\begin {array}{cc}e^t\\e^t\\e^t\end {array}\right ]}\)
-    <!--l. 47-->
-    <div id="7c7d8b7e-49b4-479e-8c25-dd792feb6c57">In Exercises&nbsp;<a href="#x1-1211">11<!--tex4ht:ref: exer:10.7.11 --></a>–<a href="#x1-2120">20<!--tex4ht:ref: exer:10.7.20 --></a> find a particular solution,
-            given that \(Y\) is a fundamental matrix for the complementary
-        system.
-    </div>
-    <dl class="list1" id="87862359-4e3b-4cc2-b8a7-d2e6af75b481">
-        <dt class="list">
-            <span class="ptmb8t-">11.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 49-->
-            <div><a id="x1-1211"></a> \(\displaystyle {{\bf y}'={1\over t}\left [\begin
-                {array}{rc}1&amp;t\\-t&amp;1\end {array}\right ]{\bf y} +t\left [\begin {array}{cc} \cos t\\\sin t\end
-                {array}\right ]; \quad Y=t\left [\begin {array}{rc}\cos t&amp;\sin t\\-\sin t&amp;\cos t \end
-                {array}\right ]}\)
-            </div>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">12.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 57-->
-            <div><a id="x1-1312"></a> \(\displaystyle {{\bf y}'={1\over t}\left [\begin
-                {array}{cc}1&amp;t\\t&amp;1\end {array}\right ]{\bf y} +\left [\begin {array}{c} t\\t^2\end
-                {array}\right ]; \quad Y=t\left [\begin {array}{cr} e^t&amp;e^{-t}\\e^t&amp;-e^{-t} \end {array}\right
-                ]}\)
-            </div>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">13.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 65-->
-            <div><a id="x1-1413"></a> \(\displaystyle {{\bf y}'={1\over t^2-1}\left [\begin
-                {array}{rr}t&amp;-1\\-1&amp;t\end {array}\right ]{\bf y}+ t\left [\begin {array}{r} 1\\-1\end
-                {array}\right ]; \quad Y=\left [\begin {array}{cc} t&amp;1\\1&amp;t \end {array}\right ]}\)
-            </div>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">14.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 73-->
-            <div><a id="x1-1514"></a> \(\displaystyle {{\bf y}'={1\over 3}\left [\begin
-                {array}{cc}1&amp;-2e^{-t}\\2e^t&amp;-1\end {array}\right ]{\bf y}+ \left [\begin {array}{c}e^{2t}
-                \\e^{-2t}\end {array}\right ]; \quad Y=\left [\begin {array}{cc} 2&amp;e^{-t}\\e^t&amp;2 \end
-                {array}\right ]}\)
-            </div>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">15.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 81-->
-            <div><a id="x1-1615"></a> \(\displaystyle {{\bf y}'={1\over 2t^4}\left [\begin
-                {array}{cc}3t^3&amp;t^6\\1&amp;-3t^3\end {array}\right ]{\bf y}+ {1\over t}\left [\begin {array}{c}
-                t^2\\1\end {array}\right ]; \quad Y={1\over t^2}\left [\begin {array}{rc} t^3&amp;t^4\\-1&amp;t \end
-                {array}\right ]}\)
-            </div>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">16.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 89-->
-            <div><a id="x1-1716"></a> \(\displaystyle {{\bf y}'= \left [\begin {array}{cc}\displaystyle
-                {1\over t-1} &amp;-\displaystyle {e^{-t}\over t-1}\\\displaystyle {e^t\over t+1}&amp;\displaystyle
-                {1\over t+1}\end {array}\right ]{\bf y}+\left [\begin {array}{c} t^2-1\\t^2-1\end {array}\right ]; \quad
-                Y=\left [\begin {array}{cc} t&amp;e^{-t}\\e^t&amp;t \end {array}\right ]}\)
-            </div>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">17.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 98-->
-            <div><a id="x1-1817"></a> \(\displaystyle {{\bf y}'={1\over t}\threebythree 110021{-2}22{\bf
-                y} +\threecol 121 \quad Y=\left [\begin {array}{ccr}
-                t^2&amp;t^3&amp;1\\t^2&amp;2t^3&amp;-1\\0&amp;2t^3&amp;2 \end {array}\right ]}\)
-
-
-
-            </div>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">18.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 106-->
-            <div><a id="x1-1918"></a> \(\displaystyle {{\bf y}'= \left [\begin
-                {array}{ccc}3&amp;e^t&amp;e^{2t}\\e^{-t}&amp;2&amp;e^t\\e^{-2t}&amp;e^{-t}&amp;1\end {array}\right ]{\bf
-                y} +\left [\begin {array}{c} e^{3t}\\0 \\ 0\end {array}\right ]; \quad Y=\left [\begin {array}{crr}
-                e^{5t}&amp;e^{2t}&amp;0\\e^{4t}&amp;0&amp;e^t\\e^{3t}&amp;-1&amp;-1 \end {array}\right ]}\)
-            </div>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">19.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 115-->
-            <div><a id="x1-2019"></a> \(\displaystyle {{\bf y}'={1\over t}\left [\begin
-                {array}{crc}1&amp;t&amp;0\\0&amp;1&amp;t\\0&amp;-t&amp;1\end {array}\right ]{\bf y} +\left [\begin
-                {array}{c} t\\t \\t \end {array}\right ]; \quad Y=t\left [\begin {array}{crr} 1&amp;\cos t&amp;\sin t
-                \\0&amp;-\sin t&amp;\cos t\\0&amp;-\cos t&amp;-\sin t \end {array}\right ]}\)
-            </div>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">20.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 123-->
-            <div><a id="x1-2120"></a> \(\displaystyle {{\bf y}'=-{1\over t}\left [\begin
-                {array}{crr}e^{-t}&amp;-t&amp;1-e^{-t}\\e^{-t}&amp;1&amp;-t-e^{-t}\\e^{-t}&amp;-t &amp;1-e^{-t}\end
-                {array}\right ]{\bf y} +{1\over t}\left [\begin {array}{c} e^t\\0 \\e^t \end {array}\right ]; \quad
-                Y={1\over t}\left [\begin {array}{crc}
-                e^t&amp;e^{-t}&amp;t\\e^t&amp;-e^{-t}&amp;e^{-t}\\e^t&amp;e^{-t}&amp;0 \end {array}\right ]}\)
-            </div>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">21.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 133-->
-            <div><a id="x1-2221"></a> Prove Theorem&nbsp;<span class="ptmb8t-">10.7.1</span>.
-            </div>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">22.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 135-->
-            <div><a id="x1-2322"></a>
-            </div>
-            <dl class="list2">
-                <dt class="list">
-                    <span class="ptmb8t-">(a)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 138-->
-                    <div>Convert the scalar equation
-                        \[ P_0(t)y^{(n)}+P_1(t)y^{(n-1)}+\cdots +P_n(t)y=F(t) {\tag A} \]
-                        into an equivalent \(n\times n\) system
-                        \[ {\bf y}'=A(t){\bf y}+{\bf f}(t). {\tag B} \]
-
-
-
-                    </div>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(b)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 149-->
-                    <div>Suppose (A) is normal on an interval \((a,b)\) and \(\{y_1,y_2,\dots ,y_n\}\) is
-                        a fundamental set of solutions of
-                        \[ P_0(t)y^{(n)}+P_1(t)y^{(n-1)}+\cdots +P_n(t)y=0 {\tag C} \]
-                        on \((a,b)\). Find a corresponding fundamental matrix \(Y\) for
-                        \[ {\bf y}'=A(t){\bf y} {\tag D} \]
-                        on \((a,b)\) such that
-                        \[ y=c_1y_1+c_2y_2+\cdots +c_ny_n \]
-                        is a solution of (C) if and only if \({\bf y}=Y{\bf c}\) with
-
-
-
-                        \[ {\bf c}=\left [\begin {array}{c}c_1\\c_2\\\vdots \\c_n\end {array}\right ] \]
-                        is a solution of (D).
-                    </div>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(c)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 171-->
-                    <div>Let \(y_p=u_1y_1+u_1y_2+\cdots +u_ny_n\) be a particular solution of (A),
-                        obtained by the method of variation of parameters for
-                        scalar equations as given in Section&nbsp;9.4, and define
-                        \[ {\bf u}=\left [\begin {array}{c}u_1\\u_2\\\vdots \\u_n\end {array}\right ]\]
-                        Show that \({\bf y}_p=Y{\bf u}\) is a solution of (B).
-                    </div>
-                </dd>
-                <dt class="list">
-                    <span class="ptmb8t-">(d)</span>
-                </dt>
-                <dd class="list">
-                    <!--l. 179-->
-                    <div>Let \({\bf y}_p=Y{\bf u}\) be a particular solution of (B), obtained by the
-                        method of variation of parameters for
-                        systems as given in this section. Show that \(y_p=u_1y_1+u_1y_2+\cdots +u_ny_n\) is a solution
-                        of (A).</div>
-                </dd>
-            </dl>
-        </dd>
-        <dt class="list">
-            <span class="ptmb8t-">23.</span>
-        </dt>
-        <dd class="list">
-            <!--l. 186-->
-            <div><a id="x1-2823"></a> Suppose the \(n\times n\) matrix function \(A\) and the
-                \(n\)–vector function \(\bf f\) are continuous on \((a,b)\). Let \(t_0\) be in \((a,b)\), let
-                \(\bf k\) be an arbitrary
-                constant vector, and let \(Y\) be a fundamental matrix for the homogeneous system \({\bf y}'=A(t){\bf
-                y}\). Use variation of
-                parameters to show that the solution of the initial value problem
-                \[ {\bf y}'=A(t){\bf y}+{\bf f}(t),\quad {\bf y}(t_0)={\bf k} \]
-                is
-
-
-
-                \[ {\bf y}(t)=Y(t)\left ( Y^{-1}(t_0){\bf k}+\int _{t_0}^t Y^{-1}(s){\bf f}(s)\, ds\right )\]
-            </div>
-        </dd>
-    </dl>
-    <!--l. 206-->
-    <div class="indent" id="5218aa19-4d4a-4072-8462-7f070f45cc33">
-
-
-
-    </div>
+	<body>
+		<div style="display: none" id="41e7a538-522d-4c65-9b6a-5afc533ca229">
+			 \( \newcommand{\place}{\bigskip\hrule\bigskip\noindent} \newcommand{\threecol}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]} \newcommand{\threecolj}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]} \newcommand{\lims}[2]{\,\bigg|_{#1}^{#2}} \newcommand{\twocol}[2]{\left[\begin{array}{l}#1\\#2\end{array}\right]} \newcommand{\ctwocol}[2]{\left[\begin{array}{c}#1\\#2\end{array}\right]} \newcommand{\cthreecol}[3]{\left[\begin{array}{c}#1\\#2\\#3\end{array}\right]} \newcommand{\eqline}[1]{\centerline{\hfill$\displaystyle#1$\hfill}} \newcommand{\twochar}[4]{\left| \begin {array}{cc} #1-\lambda&amp; #2\\#3&amp; #4-\lambda \end{array}\right|} \newcommand{\twobytwo}[4]{\left[ \begin {array}{rr} #1&amp; #2\\#3&amp; #4 \end{array}\right]} \newcommand{\threechar}[9]{\left[ \begin {array}{ccc} #1-\lambda&amp; #2&amp; #3\\#4&amp; #5-\lambda&amp; #6\\#7&amp; #8&amp; #9-\lambda \end{array}\right]} \newcommand{\threebythree}[9]{\left[ \begin {array}{rrr} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9 \end{array}\right]} \newcommand{\solutionpart}[1]{\vskip10pt\noindent\underbar{\color{blue}\sc Solution({\bf #1})\ }} \newcommand{\Cex}{\fbox{\textcolor{red}{C}}\, } \newcommand{\CGex}{\fbox{\textcolor{red}{C/G}}\, } \newcommand{\Lex}{\fbox{\textcolor{red}{L}}\, } \newcommand{\matfunc}[3]{\left[ \begin {array}{cccc}#1_{11}(t)&amp; #1_{12}(t)&amp;\cdots &amp; #1_{1#3}(t)\\#1_{21}(t)&amp; #1_{22}(t)&amp;\cdots&amp; #1_{2#3}(t)\\\vdots&amp; \vdots&amp;\ddots&amp;\vdots\\#1_{#21}(t)&amp; #1_{#22}(t)&amp;\cdots&amp; #1_{#2#3}(t) \end{array}\right]} \newcommand{\col}[2]{\left[\begin{array}{c}#1_1\\#1_2\\\vdots\\#1_#2\end{array}\right]} \newcommand{\colfunc}[2]{\left[\begin{array}{c}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t)\end{array}\right]} \newcommand{\cthreebythree}[9]{\left[ 
+			 \begin  {array}{ccc} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9 
+			 \end{array}\right]} \) 
+		</div>
+		<div class="centerline" id="361c6153-8760-44e6-84e2-d3d1bdd8aedb"><span class="ptmb8t-x-x-120">10.7</span><span class="ptmb8t-x-x-120">&nbsp;Exercises</span>
+		</div>
+		<a id="x1-1doc"></a>
+		<!--l. 1-->
+		<div id="b5802c88-5b92-4552-9373-168c3140fee1">
+			
+			In Exercises&nbsp;<a href="#x1-21">1<!--tex4ht:ref: exer:10.7.1 --></a>–<a href="#x1-1110">10<!--tex4ht:ref: exer:10.7.10 --></a> find a particular solution.
 		
-    <nav class="ex">
-        <a href='sec10.7.book.html'>Back</a>
-    </nav>
+		</div>
+		<div class="tabular" id="0aa4b66e-52cb-4689-950f-ab947863b2be">
+			
+			<table id="TBL-1" class="tabular">
+				<colgroup id="TBL-1-1g"> <col id="TBL-1-1" /> <col id="TBL-1-2" /> </colgroup>
+				<tbody
+					><tr style="vertical-align: baseline" id="TBL-1-1-">
+						<td style="white-space: normal; text-align: left" id="TBL-1-1-1" class="td00">
+							<dl class="list1">
+								<dt class="list"><span class="ptmb8t-">1.</span></dt>
+								<dd class="list">
+									<!--l. 8-->
+									<div><a id="x1-21"></a>\(\displaystyle {{\bf y}'=\twobytwo {-1}{-4}{-1}{-1}{\bf y}+\left [ 
+									\begin  {array}{cc}21e^{4t}\\8e^{-3t} 
+									\end {array}\right ]}\) 
+		</div>
+								</dd></dl
+							></td
+						>
+						<td style="white-space: normal; text-align: left" id="TBL-1-1-2" class="td01">
+							<dt class="list"><span class="ptmb8t-">2.</span></dt>
+							<dd class="list">
+								<!--l. 10-->
+								<div>
+									 <a id="x1-32"></a>\(\displaystyle {{\bf y}'={1\over 5}\twobytwo {-4}3{-2}{-11}{\bf y}+\left [ 
+									 \begin  {array}{cc}50e^{3t}\\10e^{-3t} 
+									 \end {array}\right ]}\) 
+								</div>
+							</dd></td
+						>
+					</tr>
+				</tbody></table
+			>
+		</div>
+		<div class="tabular" id="02b05140-7232-40da-9089-5654eaa19372">
+			
+			<table id="TBL-2" class="tabular">
+				<colgroup id="TBL-2-1g"> <col id="TBL-2-1" /> <col id="TBL-2-2" /> </colgroup>
+				<tbody
+					><tr style="vertical-align: baseline" id="TBL-2-1-">
+						<td style="white-space: normal; text-align: left" id="TBL-2-1-1" class="td00"><span class="ptmb8t-">3.</span><a id="x1-43"></a>\(\displaystyle {{\bf y}'=\twobytwo 1221{\bf y}+\left [\begin {array}{cc}1\\t\end {array}\right ]}\) </td> <td style="white-space: normal; text-align: left" id="TBL-2-1-2" class="td01"><span class="ptmb8t-">4.</span><a id="x1-54"></a>\(\displaystyle {{\bf y}'=\twobytwo {-4}{-3}65{\bf y}+\left [ 
+						\begin  {array}{cc}2\\-2e^t 
+						\end {array}\right ]}\) </td>
+					</tr>
+				</tbody></table
+			>
+		
+		</div>
+		<div class="tabular" id="9a66260f-56b7-4377-9a31-a605b08193bc">
+			
+			<table id="TBL-3" class="tabular">
+				<colgroup id="TBL-3-1g"> <col id="TBL-3-1" /> <col id="TBL-3-2" /> </colgroup>
+				<tbody
+					><tr style="vertical-align: baseline" id="TBL-3-1-">
+						<td style="white-space: normal; text-align: left" id="TBL-3-1-1" class="td00"><span class="ptmb8t-">5.</span><a id="x1-65"></a>\(\displaystyle {{\bf y}'=\twobytwo {-6}{-3}1{-2}{\bf y}+\left [\begin {array}{cc}4e^{-3t}\\4e^{-5t}\end {array}\right ]}\) </td> <td style="white-space: normal; text-align: left" id="TBL-3-1-2" class="td01"><span class="ptmb8t-">6.</span><a id="x1-76"></a>\(\displaystyle {{\bf y}'=\twobytwo 01{-1}0{\bf y}+\left [ 
+						\begin  {array}{cc}1\\t 
+						\end {array}\right ]}\) </td>
+					</tr>
+				</tbody></table
+			>
+		
+		</div>
+		<div class="tabular" id="85347aae-ab34-4095-87f3-79038796b710">
+			
+			<table id="TBL-4" class="tabular">
+				<colgroup id="TBL-4-1g"> <col id="TBL-4-1" /> <col id="TBL-4-2" /> </colgroup>
+				<tbody
+					><tr style="vertical-align: baseline" id="TBL-4-1-">
+						<td style="white-space: normal; text-align: left" id="TBL-4-1-1" class="td00"><span class="ptmb8t-">7.</span><a id="x1-87"></a>\(\displaystyle {{\bf y}'=\threebythree 31{-1}351{-6}24{\bf y}+\left [\begin {array}{cc}3\\6\\3\end {array}\right ]}\) </td> <td style="white-space: normal; text-align: left" id="TBL-4-1-2" class="td01"><span class="ptmb8t-">8.</span><a id="x1-98"></a>\(\displaystyle {{\bf y}'=\threebythree 3{-1}{-1}{-2}324{-1}{-2}{\bf y}+\left [ 
+						\begin  {array}{cc}1\\e^t\\e^t 
+						\end {array}\right ]}\) </td>
+					</tr>
+				</tbody></table
+			>
+		
+		</div><span class="ptmb8t-">9.</span><a id="x1-109"></a> \(\displaystyle {{\bf y}'=\threebythree {-3}222{-3}222{-3}{\bf y}+\left [ \begin {array}{cc}e^t\\e^{-5t}\\e^t \end {array}\right ]}\)<span class="ptmb8t-">10.</span><a id="x1-1110"></a>\(\displaystyle {{\bf y}'={1\over 3}\threebythree 11{-3}{-4}{-4}3{-2}10{\bf y}+\left [ 
+		\begin  {array}{cc}e^t\\e^t\\e^t 
+		\end {array}\right ]}\)
+		<!--l. 47-->
+		<div id="7c7d8b7e-49b4-479e-8c25-dd792feb6c57">
+			
+			In Exercises&nbsp;<a href="#x1-1211">11<!--tex4ht:ref: exer:10.7.11 --></a>–<a href="#x1-2120">20<!--tex4ht:ref: exer:10.7.20 --></a> find a particular solution, given that \(Y\) is a fundamental matrix for the complementary system.
+		
+		</div>
+		<dl class="list1" id="87862359-4e3b-4cc2-b8a7-d2e6af75b481">
+			<dt class="list"><span class="ptmb8t-">11.</span></dt>
+			<dd class="list">
+				<!--l. 49-->
+				<div>
+					 <a id="x1-1211"></a> \(\displaystyle {{\bf y}'={1\over t}\left [ \begin {array}{rc}1&amp;t\\-t&amp;1 \end {array}\right ]{\bf y} +t\left [\begin {array}{cc} \cos t\\\sin t\end {array}\right ]; \quad Y=t\left [ 
+					 \begin  {array}{rc}\cos t&amp;\sin t\\-\sin t&amp;\cos t 
+					 \end {array}\right ]}\) 
+				</div>
+			</dd>
+			<dt class="list"><span class="ptmb8t-">12.</span></dt>
+			<dd class="list">
+				<!--l. 57-->
+				<div>
+					 <a id="x1-1312"></a> \(\displaystyle {{\bf y}'={1\over t}\left [ \begin {array}{cc}1&amp;t\\t&amp;1 \end {array}\right ]{\bf y} +\left [\begin {array}{c} t\\t^2\end {array}\right ]; \quad Y=t\left [ 
+					 \begin  {array}{cr} e^t&amp;e^{-t}\\e^t&amp;-e^{-t} 
+					 \end {array}\right ]}\) 
+				</div>
+			</dd>
+			<dt class="list"><span class="ptmb8t-">13.</span></dt>
+			<dd class="list">
+				<!--l. 65-->
+				<div>
+					 <a id="x1-1413"></a> \(\displaystyle {{\bf y}'={1\over t^2-1}\left [ \begin {array}{rr}t&amp;-1\\-1&amp;t \end {array}\right ]{\bf y}+ t\left [\begin {array}{r} 1\\-1\end {array}\right ]; \quad Y=\left [ 
+					 \begin  {array}{cc} t&amp;1\\1&amp;t 
+					 \end {array}\right ]}\) 
+				</div>
+			</dd>
+			<dt class="list"><span class="ptmb8t-">14.</span></dt>
+			<dd class="list">
+				<!--l. 73-->
+				<div>
+					 <a id="x1-1514"></a> \(\displaystyle {{\bf y}'={1\over 3}\left [ \begin {array}{cc}1&amp;-2e^{-t}\\2e^t&amp;-1 \end {array}\right ]{\bf y}+ \left [ \begin {array}{c}e^{2t} \\e^{-2t} \end {array}\right ]; \quad Y=\left [ 
+					 \begin  {array}{cc} 2&amp;e^{-t}\\e^t&amp;2 
+					 \end {array}\right ]}\) 
+				</div>
+			</dd>
+			<dt class="list"><span class="ptmb8t-">15.</span></dt>
+			<dd class="list">
+				<!--l. 81-->
+				<div>
+					 <a id="x1-1615"></a> \(\displaystyle {{\bf y}'={1\over 2t^4}\left [ \begin {array}{cc}3t^3&amp;t^6\\1&amp;-3t^3 \end {array}\right ]{\bf y}+ {1\over t}\left [ \begin {array}{c} t^2\\1 \end {array}\right ]; \quad Y={1\over t^2}\left [ 
+					 \begin  {array}{rc} t^3&amp;t^4\\-1&amp;t 
+					 \end {array}\right ]}\) 
+				</div>
+			</dd>
+			<dt class="list"><span class="ptmb8t-">16.</span></dt>
+			<dd class="list">
+				<!--l. 89-->
+				<div>
+					 <a id="x1-1716"></a> \(\displaystyle {{\bf y}'= \left [ \begin {array}{cc}\displaystyle {1\over t-1} &amp;-\displaystyle {e^{-t}\over t-1}\\\displaystyle {e^t\over t+1}&amp;\displaystyle {1\over t+1} \end {array}\right ]{\bf y}+\left [\begin {array}{c} t^2-1\\t^2-1\end {array}\right ]; \quad Y=\left [ 
+					 \begin  {array}{cc} t&amp;e^{-t}\\e^t&amp;t 
+					 \end {array}\right ]}\) 
+				</div>
+			</dd>
+			<dt class="list"><span class="ptmb8t-">17.</span></dt>
+			<dd class="list">
+				<!--l. 98-->
+				<div>
+					 <a id="x1-1817"></a> \(\displaystyle {{\bf y}'={1\over t}\threebythree 110021{-2}22{\bf y} +\threecol 121 \quad Y=\left [ 
+					 \begin  {array}{ccr} t^2&amp;t^3&amp;1\\t^2&amp;2t^3&amp;-1\\0&amp;2t^3&amp;2 
+					 \end {array}\right ]}\) 
+				</div>
+			</dd>
+			<dt class="list"><span class="ptmb8t-">18.</span></dt>
+			<dd class="list">
+				<!--l. 106-->
+				<div>
+					 <a id="x1-1918"></a> \(\displaystyle {{\bf y}'= \left [ \begin {array}{ccc}3&amp;e^t&amp;e^{2t}\\e^{-t}&amp;2&amp;e^t\\e^{-2t}&amp;e^{-t}&amp;1 \end {array}\right ]{\bf y} +\left [\begin {array}{c} e^{3t}\\0 \\ 0\end {array}\right ]; \quad Y=\left [ 
+					 \begin  {array}{crr} e^{5t}&amp;e^{2t}&amp;0\\e^{4t}&amp;0&amp;e^t\\e^{3t}&amp;-1&amp;-1 
+					 \end {array}\right ]}\) 
+				</div>
+			</dd>
+			<dt class="list"><span class="ptmb8t-">19.</span></dt>
+			<dd class="list">
+				<!--l. 115-->
+				<div>
+					 <a id="x1-2019"></a> \(\displaystyle {{\bf y}'={1\over t}\left [ \begin {array}{crc}1&amp;t&amp;0\\0&amp;1&amp;t\\0&amp;-t&amp;1 \end {array}\right ]{\bf y} +\left [ \begin {array}{c} t\\t \\t \end {array}\right ]; \quad Y=t\left [ 
+					 \begin  {array}{crr} 1&amp;\cos t&amp;\sin t \\0&amp;-\sin t&amp;\cos t\\0&amp;-\cos t&amp;-\sin t 
+					 \end {array}\right ]}\) 
+				</div>
+			</dd>
+			<dt class="list"><span class="ptmb8t-">20.</span></dt>
+			<dd class="list">
+				<!--l. 123-->
+				<div>
+					 <a id="x1-2120"></a> \(\displaystyle {{\bf y}'=-{1\over t}\left [ \begin {array}{crr}e^{-t}&amp;-t&amp;1-e^{-t}\\e^{-t}&amp;1&amp;-t-e^{-t}\\e^{-t}&amp;-t &amp;1-e^{-t} \end {array}\right ]{\bf y} +{1\over t}\left [\begin {array}{c} e^t\\0 \\e^t \end {array}\right ]; \quad Y={1\over t}\left [ 
+					 \begin  {array}{crc} e^t&amp;e^{-t}&amp;t\\e^t&amp;-e^{-t}&amp;e^{-t}\\e^t&amp;e^{-t}&amp;0 
+					 \end {array}\right ]}\) 
+				</div>
+			</dd>
+			<dt class="list"><span class="ptmb8t-">21.</span></dt>
+			<dd class="list">
+				<!--l. 133-->
+				<div>
+					 <a id="x1-2221"></a> Prove Theorem&nbsp;<span class="ptmb8t-">10.7.1</span>. 
+				</div>
+			</dd>
+			<dt class="list"><span class="ptmb8t-">22.</span></dt>
+			<dd class="list">
+				<!--l. 135-->
+				<div>
+					
+					<a id="x1-2322"></a>
+				
+				</div>
+				<dl class="list2">
+					<dt class="list"><span class="ptmb8t-">(a)</span></dt>
+					<dd class="list">
+						<!--l. 138-->
+						<div>
+							 Convert the scalar equation \[ P_0(t)y^{(n)}+P_1(t)y^{(n-1)}+\cdots +P_n(t)y=F(t) {\tag A} \] into an equivalent \(n\times n\) system \[ {\bf y}'=A(t){\bf y}+{\bf f}(t). {\tag B} \] 
+						</div>
+					</dd>
+					<dt class="list"><span class="ptmb8t-">(b)</span></dt>
+					<dd class="list">
+						<!--l. 149-->
+						<div>
+							 Suppose (A) is normal on an interval \((a,b)\) and \(\{y_1,y_2,\dots ,y_n\}\) is a fundamental set of solutions of \[ P_0(t)y^{(n)}+P_1(t)y^{(n-1)}+\cdots +P_n(t)y=0 {\tag C} \] on \((a,b)\). Find a corresponding fundamental matrix \(Y\) for \[ {\bf y}'=A(t){\bf y} {\tag D} \] on \((a,b)\) such that \[ y=c_1y_1+c_2y_2+\cdots +c_ny_n \] is a solution of (C) if and only if \({\bf y}=Y{\bf c}\) with \[ {\bf c}=\left [ 
+							 \begin  {array}{c}c_1\\c_2\\\vdots \\c_n 
+							 \end {array}\right ] \] is a solution of (D). 
+						</div>
+					</dd>
+					<dt class="list"><span class="ptmb8t-">(c)</span></dt>
+					<dd class="list">
+						<!--l. 171-->
+						<div>
+							 Let \(y_p=u_1y_1+u_1y_2+\cdots +u_ny_n\) be a particular solution of (A), obtained by the method of variation of parameters for scalar equations as given in Section&nbsp;9.4, and define \[ {\bf u}=\left [ 
+							 \begin  {array}{c}u_1\\u_2\\\vdots \\u_n 
+							 \end {array}\right ]\] Show that \({\bf y}_p=Y{\bf u}\) is a solution of (B). 
+						</div>
+					</dd>
+					<dt class="list"><span class="ptmb8t-">(d)</span></dt>
+					<dd class="list">
+						<!--l. 179-->
+						<div>
+							 Let \({\bf y}_p=Y{\bf u}\) be a particular solution of (B), obtained by the method of variation of parameters for systems as given in this section. Show that \(y_p=u_1y_1+u_1y_2+\cdots +u_ny_n\) is a solution of (A). 
+						</div>
+					</dd>
+				</dl>
+			</dd>
+			<dt class="list"><span class="ptmb8t-">23.</span></dt>
+			<dd class="list">
+				<!--l. 186-->
+				<div>
+					 <a id="x1-2823"></a> Suppose the \(n\times n\) matrix function \(A\) and the \(n\)–vector function \(\bf f\) are continuous on \((a,b)\). Let \(t_0\) be in \((a,b)\), let \(\bf k\) be an arbitrary constant vector, and let \(Y\) be a fundamental matrix for the homogeneous system \({\bf y}'=A(t){\bf y}\). Use variation of parameters to show that the solution of the initial value problem \[ {\bf y}'=A(t){\bf y}+{\bf f}(t),\quad {\bf y}(t_0)={\bf k} \] is \[ {\bf y}(t)=Y(t)\left ( Y^{-1}(t_0){\bf k}+\int _{t_0}^t Y^{-1}(s){\bf f}(s)\, ds\right )\] 
+				</div>
+			</dd>
+		</dl>
+		<!--l. 206-->
+		<div class="indent" id="5218aa19-4d4a-4072-8462-7f070f45cc33">
+			 
+		</div>
 
-
-</body></html>
+		<nav class="ex">
+			<a href="sec10.7.book.html">Back</a>
+		</nav>
+	</body></html
+>

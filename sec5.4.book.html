@@ -6,7 +6,8 @@
 		<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator" />
 		<meta content="width=device-width,initial-scale=1" name="viewport" />
 		<link rel="stylesheet" type="text/css" href="combined.css" />
- 		<script type="text/javascript" src="niceties.js"></script>
+
+		<script type="text/javascript" src="niceties.js"></script>
 		<script>
 			window.MathJax = {
 				tex: {
@@ -16,12 +17,7 @@
 				},
 			};
 		</script>
-		<script
-			async="async"
-			id="MathJax-script"
-			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
-			type="text/javascript"
-		></script>
+		<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 		<style type="text/css">
 			:root {
 				--section-number: "5.4";
@@ -30,237 +26,158 @@
 	</head>
 	<body>
 		<div id="abe2f333-e30b-4f50-be13-e5f80a4bf8e7" class="section-title">
-			5.4 The Method of Undetermined Coefficients I
+			5.4 The Method of Undetermined Coefficients I 
 		</div>
 
 		<details id="497cd290-d8a4-4d25-8386-cb523b8aea58">
 			<summary>The Method of Undetermined Coefficients</summary>
-			
+
 			<div id="1e183268-1a6c-476a-aa2e-d815c5f6b4b3">
-				In this section we consider the constant coefficient equation \begin
-				{equation} \label {eq:5.4.1} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=e^{\alpha x}G(x)\end {equation}
-				<a id="x1-2r1"></a>
-				where \(\alpha \) is a constant and \(G\) is a polynomial.
+				In this section we consider the constant coefficient equation 
+				\begin {equation} \label {eq:5.4.1} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=e^{\alpha x}G(x) 
+				\end {equation} <a id="x1-2r1"></a> where \(\alpha \) is a constant and \(G\) is a polynomial. 
 			</div>
 			<div class="indent" id="44308b03-ca02-420a-8a1e-5d57d042c407">
-				From Theorem&nbsp;<span class="ptmb8t-">5.3.2</span>,
-				the general solution of <a href="#x1-2r1">(5.4.1)</a> is \(y=y_p+c_1y_1+c_2y_2\), where \(y_p\) is a particular solution of <a href="#x1-2r1">(5.4.1)</a> and \(\{y_1,y_2\}\) is a fundamental set of solutions of the
-				complementary equation \[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0\] In Section&nbsp;5.2 we showed
-				how to find \(\{y_1,y_2\}\). In this section we’ll show how to find
-				\(y_p\). The procedure that we’ll use is called
-				<span class="vocab">the method of undetermined coefficients</span>.
+				From Theorem&nbsp;<span class="ptmb8t-">5.3.2</span>, the general solution of <a href="#x1-2r1">(5.4.1)</a> is \(y=y_p+c_1y_1+c_2y_2\), where \(y_p\) is a particular solution of <a href="#x1-2r1">(5.4.1)</a> and \(\{y_1,y_2\}\) is a fundamental set of solutions of the complementary equation \[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0\] In Section&nbsp;5.2 we showed how to find \(\{y_1,y_2\}\). In this section we’ll show how to find \(y_p\). The procedure that we’ll use is called <span class="vocab">the method of undetermined coefficients</span>. 
 			</div>
 			<div class="indent" id="001121b1-aa1a-477f-982b-33272cb2fb3c">
-				Our first example is similar to Exercises&nbsp;<span class="ptmb8t-">16</span> – <span class="ptmb8t-">21</span>.
+				Our first example is similar to Exercises&nbsp;<span class="ptmb8t-">16</span>–<span class="ptmb8t-">21</span>. 
 			</div>
 			<div class="example" id="x1-31" style="--ex-number: 1">
 				<div>
-					<a id="x1-4r2"></a>
-					Find a particular solution of \begin {equation} \label {eq:5.4.2}
-					\frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=4e^{2x}\end {equation}
-					Then find the general solution.
+					<a id="x1-4r2"></a> Find a particular solution of 
+					\begin {equation} \label {eq:5.4.2} \frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=4e^{2x} 
+					\end {equation} Then find the general solution. 
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-					Substituting \(y_p=Ae^{2x}\) for \(y\) in <a href="#x1-4r2">(5.4.2)</a> will produce a constant multiple of \(Ae^{2x}\) on the left side of <a href="#x1-4r2">(5.4.2)</a>, so it may be possible to choose \(A\) so that \(y_p\) is a solution of
-					<a href="#x1-4r2">(5.4.2)</a>. Let’s try it; if \(y_p=Ae^{2x}\) then \[
-					\frac{d^2y_p}{dx^2}-7\frac{dy_p}{dx}+12y_p=4Ae^{2x}-14Ae^{2x}+12Ae^{2x}=2Ae^{2x}=4e^{2x} \] if
-					\(A=2\). Therefore \(y_p=2e^{2x}\) is a particular solution of <a href="#x1-4r2">(5.4.2)</a>. To find the general solution, we note that the characteristic
-					polynomial of the complementary equation \begin {equation} \label
-					{eq:5.4.3} \frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=0 \end {equation}
+					Substituting \(y_p=Ae^{2x}\) for \(y\) in <a href="#x1-4r2">(5.4.2)</a> will produce a constant multiple of \(Ae^{2x}\) on the left side of <a href="#x1-4r2">(5.4.2)</a>, so it may be possible to choose \(A\) so that \(y_p\) is a solution of <a href="#x1-4r2">(5.4.2)</a>. Let’s try it; if \(y_p=Ae^{2x}\) then \[ \frac{d^2y_p}{dx^2}-7\frac{dy_p}{dx}+12y_p=4Ae^{2x}-14Ae^{2x}+12Ae^{2x}=2Ae^{2x}=4e^{2x} \] if \(A=2\). Therefore \(y_p=2e^{2x}\) is a particular solution of <a href="#x1-4r2">(5.4.2)</a>. To find the general solution, we note that the characteristic polynomial of the complementary equation 
+					\begin {equation} \label {eq:5.4.3} \frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=0 
+					\end {equation}
 					<a id="x1-5r3"></a>
-					is \(p(r)=r^2-7r+12=(r-3)(r-4)\), so \(\{e^{3x},e^{4x}\}\) is a
-					fundamental set of solutions of <a href="#x1-5r3">(5.4.3)</a>. Therefore the general solution of <a href="#x1-4r2">(5.4.2)</a> is \[ y=2e^{2x}+c_1e^{3x}+c_2e^{4x}\]
+					is \(p(r)=r^2-7r+12=(r-3)(r-4)\), so \(\{e^{3x},e^{4x}\}\) is a fundamental set of solutions of <a href="#x1-5r3">(5.4.3)</a>. Therefore the general solution of <a href="#x1-4r2">(5.4.2)</a> is \[ y=2e^{2x}+c_1e^{3x}+c_2e^{4x}\]
 				</details>
 			</div>
 			<div class="example" id="x1-62" style="--ex-number: 2">
-				<div>
-					Find a particular solution of \begin {equation} \label {eq:5.4.4}
-					\frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=5e^{4x}\end {equation}
-					<a id="x1-7r4"></a>
-					Then find the general solution.
+				<div> 
+					Find a particular solution of 
+					\begin {equation} \label {eq:5.4.4} \frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=5e^{4x} 
+					\end {equation} <a id="x1-7r4"></a> Then find the general solution. 
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-						Fresh from our success in finding a particular solution of <a href="#x1-4r2">(5.4.2)</a> — where we chose \(y_p=Ae^{2x}\) because the right side of <a href="#x1-4r2">(5.4.2)</a> is a constant multiple of \(e^{2x}\) — it may seem reasonable to try
-						\(y_p=Ae^{4x}\) as a particular solution of <a href="#x1-7r4">(5.4.4)</a>. However, this won’t work, since we saw in
-						Example&nbsp;<a href="#x1-31">5.4.1</a>
-						that \(e^{4x}\) is a solution of the complementary equation <a href="#x1-5r3">(5.4.3)</a>, so substituting \(y_p=Ae^{4x}\) into the left side of <a href="#x1-7r4">(5.4.4)</a> produces zero on the left, no matter how we choose\(A\). To discover a
-						suitable form for \(y_p\), we use the same approach that we used in
-						Section&nbsp;5.2 to find a second solution of \[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0 \] in the
-						case where the characteristic equation has a repeated real root: we look
-						for solutions of <a href="#x1-7r4">(5.4.4)</a> in the form \(y=ue^{4x}\), where \(u\) is a function to be determined.
-						Substituting \begin {equation} \label {eq:5.4.5} y=ue^{4x},\quad
-						\frac{dy}{dx}=\frac{du}{dx}e^{4x}+4ue^{4x},\quad \mbox{ and } \quad 
-						\frac{d^2y}{dx^2}=\frac{d^2u}{dx^2}e^{4x}+8\frac{du}{dx}e^{4x}+16ue^{4x} \end {equation}
-						<a id="x1-8r5"></a>
-						into <a href="#x1-7r4">(5.4.4)</a> and canceling the common factor \(e^{4x}\) yields \[
-						(\frac{d^2u}{dx^2}+8\frac{du}{dx}+16u)-7(\frac{du}{dx}+4u)+12u=5\] or \[ \frac{d^2u}{dx^2}+\frac{du}{dx}=5\] By inspection we see that
-						\(u_p=5x\) is a particular solution of this equation, so \(y_p=5xe^{4x}\)
-						is a particular solution of <a href="#x1-7r4">(5.4.4)</a>. Therefore \[ y=5xe^{4x}+c_1e^{3x}+c_2e^{4x} \] is the general solution.
+					Fresh from our success in finding a particular solution of <a href="#x1-4r2">(5.4.2)</a> — where we chose \(y_p=Ae^{2x}\) because the right side of <a href="#x1-4r2">(5.4.2)</a> is a constant multiple of \(e^{2x}\) — it may seem reasonable to try \(y_p=Ae^{4x}\) as a particular solution of <a href="#x1-7r4">(5.4.4)</a>. However, this won’t work, since we saw in Example&nbsp;<a href="#x1-31">5.4.1</a> that \(e^{4x}\) is a solution of the complementary equation <a href="#x1-5r3">(5.4.3)</a>, so substituting \(y_p=Ae^{4x}\) into the left side of <a href="#x1-7r4">(5.4.4)</a> produces zero on the left, no matter how we choose\(A\). To discover a suitable form for \(y_p\), we use the same approach that we used in Section&nbsp;5.2 to find a second solution of \[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0 \] in the case where the characteristic equation has a repeated real root: we look for solutions of <a href="#x1-7r4">(5.4.4)</a> in the form \(y=ue^{4x}\), where \(u\) is a function to be determined. Substituting 
+					\begin {equation} \label {eq:5.4.5} y=ue^{4x},\quad \frac{dy}{dx}=\frac{du}{dx}e^{4x}+4ue^{4x},\quad \mbox{ and } \quad \frac{d^2y}{dx^2}=\frac{d^2u}{dx^2}e^{4x}+8\frac{du}{dx}e^{4x}+16ue^{4x} 
+					\end {equation}
+					<a id="x1-8r5"></a>
+					into <a href="#x1-7r4">(5.4.4)</a> and canceling the common factor \(e^{4x}\) yields \[ (\frac{d^2u}{dx^2}+8\frac{du}{dx}+16u)-7(\frac{du}{dx}+4u)+12u=5\] or \[ \frac{d^2u}{dx^2}+\frac{du}{dx}=5\] By inspection we see that \(u_p=5x\) is a particular solution of this equation, so \(y_p=5xe^{4x}\) is a particular solution of <a href="#x1-7r4">(5.4.4)</a>. Therefore \[ y=5xe^{4x}+c_1e^{3x}+c_2e^{4x} \] is the general solution.
 				</details>
 			</div>
 
 			<div class="example" id="x1-93" style="--ex-number: 3">
-				<div>
-					<a id="x1-10r6"></a>
-					Find a particular solution of \begin {equation} \label {eq:5.4.6}
-					\frac{d^2y}{dx^2}-8\frac{dy}{dx}+16y=2e^{4x}\end {equation}
+				<div> 
+					<a id="x1-10r6"></a> Find a particular solution of 
+					\begin {equation} \label {eq:5.4.6} \frac{d^2y}{dx^2}-8\frac{dy}{dx}+16y=2e^{4x} 
+					\end {equation} 
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-					Since the characteristic polynomial of the complementary equation
-					\begin {equation} \label {eq:5.4.7} \frac{d^2y}{dx^2}-8\frac{dy}{dx}+16y=0 \end {equation}
+					Since the characteristic polynomial of the complementary equation 
+					\begin {equation} \label {eq:5.4.7} \frac{d^2y}{dx^2}-8\frac{dy}{dx}+16y=0 
+					\end {equation}
 					<a id="x1-11r7"></a>
-					is \(p(r)=r^2-8r+16=(r-4)^2\), both \(y_1=e^{4x}\) and \(y_2=xe^{4x}\) are
-					solutions of <a href="#x1-11r7">(5.4.7)</a>. Therefore <a href="#x1-10r6">(5.4.6)</a> does not have a solution of the form \(y_p=Ae^{4x}\) or
-					\(y_p=Axe^{4x}\). As in Example&nbsp;<a href="#x1-62">5.4.2</a>, we look for solutions of <a href="#x1-10r6">(5.4.6)</a> in the form \(y=ue^{4x}\), where \(u\) is a function to be determined.
-					Substituting from <a href="#x1-8r5">(5.4.5)</a> into <a href="#x1-10r6">(5.4.6)</a> and canceling the common factor \(e^{4x}\) yields \[
-					(\frac{d^2u}{dx^2}+8\frac{du}{dx}+16u)-8(\frac{du}{dx}+4u)+16u=2\] or \[ \frac{d^2u}{dx^2}=2\] Integrating twice and taking
-					the constants of integration to be zero shows that \(u_p=x^2\) is a
-					particular solution of this equation, so \(y_p=x^2e^{4x}\) is a particular
-					solution of <a href="#x1-7r4">(5.4.4)</a>. Therefore \[ y=e^{4x}(x^2+c_1+c_2x) \] is the general solution.
+					is \(p(r)=r^2-8r+16=(r-4)^2\), both \(y_1=e^{4x}\) and \(y_2=xe^{4x}\) are solutions of <a href="#x1-11r7">(5.4.7)</a>. Therefore <a href="#x1-10r6">(5.4.6)</a> does not have a solution of the form \(y_p=Ae^{4x}\) or \(y_p=Axe^{4x}\). As in Example&nbsp;<a href="#x1-62">5.4.2</a>, we look for solutions of <a href="#x1-10r6">(5.4.6)</a> in the form \(y=ue^{4x}\), where \(u\) is a function to be determined. Substituting from <a href="#x1-8r5">(5.4.5)</a> into <a href="#x1-10r6">(5.4.6)</a> and canceling the common factor \(e^{4x}\) yields \[ (\frac{d^2u}{dx^2}+8\frac{du}{dx}+16u)-8(\frac{du}{dx}+4u)+16u=2\] or \[ \frac{d^2u}{dx^2}=2\] Integrating twice and taking the constants of integration to be zero shows that \(u_p=x^2\) is a particular solution of this equation, so \(y_p=x^2e^{4x}\) is a particular solution of <a href="#x1-7r4">(5.4.4)</a>. Therefore \[ y=e^{4x}(x^2+c_1+c_2x) \] is the general solution.
 				</details>
 			</div>
 
 			<div class="indent" id="787f4d9e-ffca-435f-92f8-b0bf48647305">
-				The preceding examples illustrate the following facts concerning the form
-				of a particular solution \(y_p\) of a constant coefficent equation \[
-				a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=ke^{\alpha x}\] where \(k\) is a nonzero constant:
-			
-				<ol style="list-style-type: lower-alpha;">
-					<li>
-						If \(e^{\alpha x}\) isn’t a solution of the complementary equation
-						\begin {equation} \label {eq:5.4.8} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0\end {equation}
-						<a id="x1-13r8"></a>
-						then \(y_p=Ae^{\alpha x}\), where \(A\) is a constant. (See
-						Example&nbsp;<a href="#x1-31">5.4.1</a>).
-					</li>
-					<li>
-						If \(e^{\alpha x}\) is a solution of <a href="#x1-13r8">(5.4.8)</a> but \(xe^{\alpha x}\) is not, then \(y_p=Axe^{\alpha x}\), where
-						\(A\) is a constant. (See Example&nbsp;<a href="#x1-62">5.4.2</a>.)
-					</li>
-					<li>
-						If both \(e^{\alpha x}\) and \(xe^{\alpha x}\) are solutions of <a href="#x1-13r8">(5.4.8)</a>, then \(y_p=Ax^2e^{\alpha x}\), where \(A\) is a constant. (See
-						Example&nbsp;<a href="#x1-93">5.4.3</a>.)
-					</li>
+				
+				The preceding examples illustrate the following facts concerning the form of a particular solution \(y_p\) of a constant coefficient equation \[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=ke^{\alpha x}\] where \(k\) is a nonzero constant:
+				<ol style="list-style-type: lower-alpha">
+					<li> If \(e^{\alpha x}\) isn’t a solution of the complementary equation 
+					\begin {equation} \label {eq:5.4.8} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0 
+					\end {equation} <a id="x1-13r8"></a> then \(y_p=Ae^{\alpha x}\), where \(A\) is a constant. (See Example&nbsp;<a href="#x1-31">5.4.1</a>). </li>
+					<li> If \(e^{\alpha x}\) is a solution of <a href="#x1-13r8">(5.4.8)</a> but \(xe^{\alpha x}\) is not, then \(y_p=Axe^{\alpha x}\), where \(A\) is a constant. (See Example&nbsp;<a href="#x1-62">5.4.2</a>.) </li>
+					<li> If both \(e^{\alpha x}\) and \(xe^{\alpha x}\) are solutions of <a href="#x1-13r8">(5.4.8)</a>, then \(y_p=Ax^2e^{\alpha x}\), where \(A\) is a constant. (See Example&nbsp;<a href="#x1-93">5.4.3</a>.) </li>
 				</ol>
+			
 			</div>
 
 			<div id="82609843-a5a2-48f9-be40-a3393c750731">
-				See Exercise&nbsp;<span class="ptmb8t-">30</span>
-				for the proofs of these facts.
+				See Exercise&nbsp;<span class="ptmb8t-">30</span>for the proofs of these facts. 
 			</div>
 
 			<div class="indent" id="4808f2b5-e93d-4ecd-857e-77f4b89e0c59">
-				In all three cases you can just substitute the appropriate form for
-				\(y_p\) and its derivatives directly into \[ a\frac{d^2y_p}{dx^2}+b\frac{dy_p}{dx}+cy_p=ke^{\alpha
-				x}\] and solve for the constant \(A\), as we did in Example&nbsp;<a href="#x1-31">5.4.1</a>. (See Exercises&nbsp;
-				<span class="ptmb8t-">31</span> – <span class="ptmb8t-">33</span>.) However, if the equation is \[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=k e^{\alpha x}G(x)\] where
-				\(G\) is a polynomial of degree greater than zero, we recommend that you
-				use the substitution \(y=ue^{\alpha x}\) as we did in Examples&nbsp;<a href="#x1-62">5.4.2</a>and
-				<a href="#x1-93">5.4.3</a>. The equation for \(u\) will turn out to be \begin {equation} \label
-				{eq:5.4.9} a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{\alpha}\frac{du}{dx}+p(\alpha )u=G(x)\end {equation}
-				<a id="x1-16r9"></a>
-				where \(p(r)=ar^2+br+c\) is the characteristic polynomial of the
-				complementary equation and \(\left. \frac{dp}{dx} \right|_{r}=2ar+b\) (Exercise&nbsp;<span class="ptmb8t-">30</span>); however, you shouldn’t memorize this since it’s easy to derive the
-				equation for \(u\) in any particular case. Note, however, that if
-				\(e^{\alpha x}\) is a solution of the complementary equation then
-				\(p(\alpha )=0\), so <a href="#x1-16r9">(5.4.9)</a> reduces to \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{\alpha}\frac{du}{dx}=G(x)\] while if both \(e^{\alpha x}\)
-				and \(xe^{\alpha x}\) are solutions of the complementary equation then
-				\(p(r)=a(r-\alpha )^2\) and \(\left. \frac{dp}{dx} \right|_{r}=2a(r-\alpha )\), so \(p(\alpha
-				)=\left. \frac{dp}{dx} \right|_{\alpha}=0\) and <a href="#x1-16r9">(5.4.9)</a> reduces to \[ a\frac{d^2u}{dx^2}=G(x)\]
+				In all three cases you can just substitute the appropriate form for \(y_p\) and its derivatives directly into \[ a\frac{d^2y_p}{dx^2}+b\frac{dy_p}{dx}+cy_p=ke^{\alpha x}\] and solve for the constant \(A\), as we did in Example&nbsp;<a href="#x1-31">5.4.1</a>. (See Exercises&nbsp;<span class="ptmb8t-">31</span>–<span class="ptmb8t-">33</span>.) However, if the equation is \[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=k e^{\alpha x}G(x)\] where \(G\) is a polynomial of degree greater than zero, we recommend that you use the substitution \(y=ue^{\alpha x}\) as we did in Examples&nbsp;<a href="#x1-62">5.4.2</a>and <a href="#x1-93">5.4.3</a>. The equation for \(u\) will turn out to be 
+				\begin {equation} \label {eq:5.4.9} a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{\alpha}\frac{du}{dx}+p(\alpha )u=G(x) 
+				\end {equation} <a id="x1-16r9"></a> where \(p(r)=ar^2+br+c\) is the characteristic polynomial of the complementary equation and \(\left. \frac{dp}{dx} \right|_{r}=2ar+b\) (Exercise&nbsp;<span class="ptmb8t-">30</span>); however, you shouldn’t memorize this since it’s easy to derive the equation for \(u\) in any particular case. Note, however, that if \(e^{\alpha x}\) is a solution of the complementary equation then \(p(\alpha )=0\), so <a href="#x1-16r9">(5.4.9)</a> reduces to \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{\alpha}\frac{du}{dx}=G(x)\] while if both \(e^{\alpha x}\) and \(xe^{\alpha x}\) are solutions of the complementary equation then \(p(r)=a(r-\alpha )^2\) and \(\left. \frac{dp}{dx} \right|_{r}=2a(r-\alpha )\), so \(p(\alpha )=\left. \frac{dp}{dx} \right|_{\alpha}=0\) and <a href="#x1-16r9">(5.4.9)</a> reduces to \[ a\frac{d^2u}{dx^2}=G(x)\] 
 			</div>
 			<div class="example" id="x1-174" style="--ex-number: 4">
-				<div>
-					<a id="x1-18r10"></a>
-					Find a particular solution of \begin {equation} \label {eq:5.4.10}
-					\frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y=e^{3x}(-1+2x+x^2)\end {equation}
+				<div> 
+					<a id="x1-18r10"></a> Find a particular solution of 
+					\begin {equation} \label {eq:5.4.10} \frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y=e^{3x}(-1+2x+x^2) 
+					\end {equation} 
 				</div>
-			
+
 				<details class="solution">
 					<summary>Solution</summary>
-					Substituting \[ y=ue^{3x},\quad \frac{dy}{dx}=\frac{du}{dx}e^{3x}+3ue^{3x},\mbox {\quad
-					and } \frac{d^2y}{dx^2}=\frac{d^2u}{dx^2}e^{3x}+6\frac{du}{dx}e^{3x}+9ue^{3x} \] into <a href="#x1-18r10">(5.4.10)</a> and canceling \(e^{3x}\) yields \[ (\frac{d^2u}{dx^2}+6\frac{du}{dx}+9u)-3(\frac{du}{dx}+3u)+2u=-1+2x+x^2\]
-					or \begin {equation} \label {eq:5.4.11} \frac{d^2u}{dx^2}+3\frac{du}{dx}+2u=-1+2x+x^2\end
-					{equation}
+					Substituting \[ y=ue^{3x},\quad \frac{dy}{dx}=\frac{du}{dx}e^{3x}+3ue^{3x},\mbox {\quad and } \frac{d^2y}{dx^2}=\frac{d^2u}{dx^2}e^{3x}+6\frac{du}{dx}e^{3x}+9ue^{3x} \] into <a href="#x1-18r10">(5.4.10)</a> and canceling \(e^{3x}\) yields \[ (\frac{d^2u}{dx^2}+6\frac{du}{dx}+9u)-3(\frac{du}{dx}+3u)+2u=-1+2x+x^2\] or 
+					\begin {equation} \label {eq:5.4.11} \frac{d^2u}{dx^2}+3\frac{du}{dx}+2u=-1+2x+x^2 
+					\end {equation}
 					<a id="x1-19r11"></a>
-					As in Exercise&nbsp;<span class="ptmb8t-">2</span>, in order to guess a form for a particular solution of <a href="#x1-19r11">(5.4.11)</a>, we note that substituting a second degree polynomial \(u_p=A+Bx+Cx^2\)
-					for \(u\) in the left side of <a href="#x1-19r11">(5.4.11)</a> produces another second degree polynomial with coefficients that depend
-					upon \(A\), \(B\), and \(C\); thus, \[ \mbox { if \quad
-					}u_p=A+Bx+Cx^2\quad \mbox{ then \quad } \frac{du_p}{dx}=B+2Cx\mbox {\quad and } \quad 
-					\frac{d^2u_p}{dx^2}=2C\] If \(u_p\) is to satisfy <a href="#x1-19r11">(5.4.11)</a>, we must have
-					
+					As in Exercise&nbsp;<span class="ptmb8t-">2</span>, in order to guess a form for a particular solution of <a href="#x1-19r11">(5.4.11)</a>, we note that substituting a second degree polynomial \(u_p=A+Bx+Cx^2\) for \(u\) in the left side of <a href="#x1-19r11">(5.4.11)</a> produces another second degree polynomial with coefficients that depend upon \(A\), \(B\), and \(C\); thus, \[ \mbox { if \quad }u_p=A+Bx+Cx^2\quad \mbox{ then \quad } \frac{du_p}{dx}=B+2Cx\mbox {\quad and } \quad \frac{d^2u_p}{dx^2}=2C\] If \(u_p\) is to satisfy <a href="#x1-19r11">(5.4.11)</a>, we must have
+
 					<div class="eqnarray" id="33a26359-5e3c-45e3-8c63-f60e98ee266a">
-						\begin {eqnarray*} \frac{d^2u_p}{dx^2}+3\frac{du_p}{dx}+2u_p&amp;=&amp;2C+3(B+2Cx)+2(A+Bx+Cx^2)\\
-						&amp;=&amp;(2C+3B+2A)+(6C+2B)x+2Cx^2=-1+2x+x^2\end {eqnarray*}
+						\begin {eqnarray*} \frac{d^2u_p}{dx^2}+3\frac{du_p}{dx}+2u_p&amp;=&amp;2C+3(B+2Cx)+2(A+Bx+Cx^2)\\ &amp;=&amp;(2C+3B+2A)+(6C+2B)x+2Cx^2=-1+2x+x^2 
+						\end {eqnarray*} 
 					</div>
-				
-					Equating coefficients of like powers of \(x\) on the two sides of the last
-					equality yields \[ \begin {array}{rcr} 2C&amp;=&amp;1\phantom {.}\\
-					2B+6C&amp;=&amp;2\phantom {.}\\ 2A+3B+2C&amp;=&amp; -1\end {array} \]
-					Solving these equations for \(C\), \(B\), and \(A\) (in that order) yields
-					\(C=1/2,B=-1/2,A=-1/4\). Therefore \[ u_p=-{1\over 4}(1+2x-2x^2) \] is a
-					particular solution of <a href="#x1-19r11">(5.4.11)</a>, and \[ y_p=u_pe^{3x}=-{e^{3x}\over 4}(1+2x-2x^2) \] is a particular
-					solution of <a href="#x1-18r10">(5.4.10)</a>.
+
+					Equating coefficients of like powers of \(x\) on the two sides of the last equality yields \[ 
+					\begin {array}{rcr} 2C&amp;=&amp;1\phantom {.}\\ 2B+6C&amp;=&amp;2\phantom {.}\\ 2A+3B+2C&amp;=&amp; -1 
+					\end {array} \] Solving these equations for \(C\), \(B\), and \(A\) (in that order) yields \(C=1/2,B=-1/2,A=-1/4\). Therefore \[ u_p=-{1\over 4}(1+2x-2x^2) \] is a particular solution of <a href="#x1-19r11">(5.4.11)</a>, and \[ y_p=u_pe^{3x}=-{e^{3x}\over 4}(1+2x-2x^2) \] is a particular solution of <a href="#x1-18r10">(5.4.10)</a>.
 				</details>
 			</div>
 
 			<div class="example" id="x1-205" style="--ex-number: 5">
-				<div>
-					<a id="x1-21r12"></a>
-					Find a particular solution of \begin {equation} \label {eq:5.4.12}
-					\frac{d^2y}{dx^2}-4\frac{dy}{dx}+3y=e^{3x}(6+8x+12x^2)\end {equation}
+				<div> 
+					<a id="x1-21r12"></a> Find a particular solution of 
+					\begin {equation} \label {eq:5.4.12} \frac{d^2y}{dx^2}-4\frac{dy}{dx}+3y=e^{3x}(6+8x+12x^2) 
+					\end {equation} 
 				</div>
-			
+
 				<details class="solution">
 					<summary>Solution</summary>
-					Substituting \[ y=ue^{3x},\quad \frac{dy}{dx}=\frac{du}{dx}e^{3x}+3ue^{3x},\mbox {\quad
-					and } \frac{d^2y}{dx^2}=\frac{d^2u}{dx^2}e^{3x}+6\frac{du}{dx}e^{3x}+9ue^{3x} \] into <a href="#x1-21r12">(5.4.12)</a> and canceling \(e^{3x}\) yields \[ (\frac{d^2u}{dx^2}+6\frac{du}{dx}+9u)-4(\frac{du}{dx}+3u)+3u=6+8x+12x^2\]
-					or \begin {equation} \label {eq:5.4.13} \frac{d^2u}{dx^2}+2\frac{du}{dx}=6+8x+12x^2\end {equation}
+					Substituting \[ y=ue^{3x},\quad \frac{dy}{dx}=\frac{du}{dx}e^{3x}+3ue^{3x},\mbox {\quad and } \frac{d^2y}{dx^2}=\frac{d^2u}{dx^2}e^{3x}+6\frac{du}{dx}e^{3x}+9ue^{3x} \] into <a href="#x1-21r12">(5.4.12)</a> and canceling \(e^{3x}\) yields \[ (\frac{d^2u}{dx^2}+6\frac{du}{dx}+9u)-4(\frac{du}{dx}+3u)+3u=6+8x+12x^2\] or 
+					\begin {equation} \label {eq:5.4.13} \frac{d^2u}{dx^2}+2\frac{du}{dx}=6+8x+12x^2 
+					\end {equation}
 					<a id="x1-22r13"></a>
-					There’s no \(u\) term in this equation, since \(e^{3x}\) is a solution of
-					the complementary equation for <a href="#x1-21r12">(5.4.12)</a>. (See Exercise&nbsp;<span class="ptmb8t-">30</span>.) Therefore <a href="#x1-22r13">(5.4.13)</a> does not have a particular solution of the form \(u_p=A+Bx+Cx^2\) that
-					we used successfully in Example&nbsp;<a href="#x1-174">5.4.4</a>, since with this choice of \(u_p\), \[ \frac{d^2u_p}{dx^2}+2\frac{du_p}{dx}=2C+(B+2Cx) \] can’t
-					contain the last term (\(12x^2\)) on the right side of <a href="#x1-22r13">(5.4.13)</a>. Instead, let’s try \(u_p=Ax+Bx^2+Cx^3\) on the grounds that \[
-					\frac{du_p}{dx}=A+2Bx+3Cx^2\quad \mbox{ and } \quad  \frac{d^2u_p}{dx^2}=2B+6Cx \] together contain
-					all the powers of \(x\) that appear on the right side of <a href="#x1-22r13">(5.4.13)</a>.
-			
-					<br/>
+					There’s no \(u\) term in this equation, since \(e^{3x}\) is a solution of the complementary equation for <a href="#x1-21r12">(5.4.12)</a>. (See Exercise&nbsp;<span class="ptmb8t-">30</span>.) Therefore <a href="#x1-22r13">(5.4.13)</a> does not have a particular solution of the form \(u_p=A+Bx+Cx^2\) that we used successfully in Example&nbsp;<a href="#x1-174">5.4.4</a>, since with this choice of \(u_p\), \[ \frac{d^2u_p}{dx^2}+2\frac{du_p}{dx}=2C+(B+2Cx) \] can’t contain the last term (\(12x^2\)) on the right side of <a href="#x1-22r13">(5.4.13)</a>. Instead, let’s try \(u_p=Ax+Bx^2+Cx^3\) on the grounds that \[ \frac{du_p}{dx}=A+2Bx+3Cx^2\quad \mbox{ and } \quad \frac{d^2u_p}{dx^2}=2B+6Cx \] together contain all the powers of \(x\) that appear on the right side of <a href="#x1-22r13">(5.4.13)</a>.
 
-					Substituting these expressions in place of \(\frac{du}{dx}\) and \(\frac{d^2u}{dx^2}\) in <a href="#x1-22r13">(5.4.13)</a> yields \[ (2B+6Cx)+2(A+2Bx+3Cx^2)=(2B+2A)+(6C+4B)x+6Cx^2=6+8x+12x^2\]
-					Comparing coefficients of like powers of \(x\) on the two sides of the
-					last equality shows that \(u_p\) satisfies <a href="#x1-22r13">(5.4.13)</a> if \[ \begin {array}{rcr} 6C&amp;=&amp;12\phantom {.}\\
-					4B+6C&amp;=&amp;8\phantom {.}\\ 2A+2B\phantom {+6u_2}&amp;=&amp;6\end
-					{array} \] Solving these equations successively yields \(C=2\), \(B=-1\),
-					and \(A=4\). Therefore \[ u_p=x(4-x+2x^2) \] is a particular solution of <a href="#x1-22r13">(5.4.13)</a>, and \[ y_p=u_pe^{3x}=xe^{3x}(4-x+2x^2) \] is a particular solution of <a href="#x1-21r12">(5.4.12)</a>.
+					<br />
+
+					Substituting these expressions in place of \(\frac{du}{dx}\) and \(\frac{d^2u}{dx^2}\) in <a href="#x1-22r13">(5.4.13)</a> yields \[ (2B+6Cx)+2(A+2Bx+3Cx^2)=(2B+2A)+(6C+4B)x+6Cx^2=6+8x+12x^2\] Comparing coefficients of like powers of \(x\) on the two sides of the last equality shows that \(u_p\) satisfies <a href="#x1-22r13">(5.4.13)</a> if \[ 
+					\begin {array}{rcr} 6C&amp;=&amp;12\phantom {.}\\ 4B+6C&amp;=&amp;8\phantom {.}\\ 2A+2B\phantom {+6u_2}&amp;=&amp;6 
+					\end {array} \] Solving these equations successively yields \(C=2\), \(B=-1\), and \(A=4\). Therefore \[ u_p=x(4-x+2x^2) \] is a particular solution of <a href="#x1-22r13">(5.4.13)</a>, and \[ y_p=u_pe^{3x}=xe^{3x}(4-x+2x^2) \] is a particular solution of <a href="#x1-21r12">(5.4.12)</a>.
 				</details>
 			</div>
 
 			<div class="example" id="x1-236" style="--ex-number: 6">
-				<div>
-					<a id="x1-24r14"></a>
-					Find a particular solution of \begin {equation} \label {eq:5.4.14}
-					4\frac{d^2y}{dx^2}+4\frac{dy}{dx}+y=e^{-x/2}(-8+48x+144x^2)\end {equation}
+				<div> 
+					<a id="x1-24r14"></a> Find a particular solution of 
+					\begin {equation} \label {eq:5.4.14} 4\frac{d^2y}{dx^2}+4\frac{dy}{dx}+y=e^{-x/2}(-8+48x+144x^2) 
+					\end {equation} 
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-					Substituting \[ y=ue^{-x/2},\quad \frac{dy}{dx}=\frac{du}{dx}e^{-x/2}-{1\over
-					2}ue^{-x/2},\quad \mbox{ and } \quad  \frac{d^2y}{dx^2}=\frac{d^2u}{dx^2}e^{-x/2}-\frac{du}{dx}e^{-x/2}+{1\over
-					4}ue^{-x/2} \] into <a href="#x1-24r14">(5.4.14)</a> and canceling \(e^{-x/2}\) yields \[ 4\left (\frac{d^2u}{dx^2}-\frac{du}{dx}+{u\over 4}\right
-					)+4\left (\frac{du}{dx}-{u\over 2}\right )+u=4\frac{d^2u}{dx^2}=-8+48x+144x^2\] or \begin
-					{equation} \label {eq:5.4.15} \frac{d^2u}{dx^2}=-2+12x+36x^2\end {equation}
+					Substituting \[ y=ue^{-x/2},\quad \frac{dy}{dx}=\frac{du}{dx}e^{-x/2}-{1\over 2}ue^{-x/2},\quad \mbox{ and } \quad \frac{d^2y}{dx^2}=\frac{d^2u}{dx^2}e^{-x/2}-\frac{du}{dx}e^{-x/2}+{1\over 4}ue^{-x/2} \] into <a href="#x1-24r14">(5.4.14)</a> and canceling \(e^{-x/2}\) yields \[ 4\left (\frac{d^2u}{dx^2}-\frac{du}{dx}+{u\over 4}\right )+4\left (\frac{du}{dx}-{u\over 2}\right )+u=4\frac{d^2u}{dx^2}=-8+48x+144x^2\] or 
+					\begin {equation} \label {eq:5.4.15} \frac{d^2u}{dx^2}=-2+12x+36x^2 
+					\end {equation}
 					<a id="x1-25r15"></a>
-					which does not contain \(u\) or \(\frac{du}{dx}\) because \(e^{-x/2}\) and
-					\(xe^{-x/2}\) are both solutions of the complementary equation. (See
-					Exercise&nbsp;<span class="ptmb8t-">30</span>.) To obtain a particular solution of <a href="#x1-25r15">(5.4.15)</a> we integrate twice, taking the constants of integration to be zero;
-					thus, \[ \frac{du_p}{dx}=-2x+6x^2+12x^3\quad \mbox{ and } \quad 
-					u_p=-x^2+2x^3+3x^4=x^2(-1+2x+3x^2)\] Therefore \[
-					y_p=u_pe^{-x/2}=x^2e^{-x/2}(-1+2x+3x^2) \] is a particular solution of <a href="#x1-24r14">(5.4.14)</a>.
+					which does not contain \(u\) or \(\frac{du}{dx}\) because \(e^{-x/2}\) and \(xe^{-x/2}\) are both solutions of the complementary equation. (See Exercise&nbsp;<span class="ptmb8t-">30</span>.) To obtain a particular solution of <a href="#x1-25r15">(5.4.15)</a> we integrate twice, taking the constants of integration to be zero; thus, \[ \frac{du_p}{dx}=-2x+6x^2+12x^3\quad \mbox{ and } \quad u_p=-x^2+2x^3+3x^4=x^2(-1+2x+3x^2)\] Therefore \[ y_p=u_pe^{-x/2}=x^2e^{-x/2}(-1+2x+3x^2) \] is a particular solution of <a href="#x1-24r14">(5.4.14)</a>.
 				</details>
 			</div>
 		</details>
@@ -269,53 +186,20 @@
 			<summary>Summary</summary>
 
 			<div id="0def9a87-fec0-438a-92f7-c9eab3db92a8">
-				The preceding examples illustrate the following facts concerning
-				particular solutions of a constant coefficent equation of the form \[
-				a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=e^{\alpha x}G(x)\] where \(G\) is a polynomial (see
-				Exercise&nbsp;<span class="ptmb8t-">30</span>):
-			
+				
+				The preceding examples illustrate the following facts concerning particular solutions of a constant coefficient equation of the form \[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=e^{\alpha x}G(x)\] where \(G\) is a polynomial (see Exercise&nbsp;<span class="ptmb8t-">30</span>):
 				<ol>
-					<li>
-						If \(e^{\alpha x}\) isn’t a solution of the complementary equation
-						\begin {equation} \label {eq:5.4.16} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0\end {equation}
-						<a id="x1-27r16"></a>
-						then \(y_p=e^{\alpha x}Q(x)\), where \(Q\) is a polynomial of the same
-						degree as \(G\). (See Example&nbsp;<a href="#x1-174">5.4.4</a>).
-					</li>
-					<li>
-						If \(e^{\alpha x}\) is a solution of <a href="#x1-27r16">(5.4.16)</a> but \(xe^{\alpha x}\) is not, then \(y_p=xe^{\alpha x}Q(x)\), where
-						\(Q\) is a polynomial of the same degree as \(G\). (See Example&nbsp;<a href="#x1-205">5.4.5</a>.)
-					</li>
-					<li>
-						If both \(e^{\alpha x}\) and \(xe^{\alpha x}\) are solutions of <a href="#x1-27r16">(5.4.16)</a>, then \(y_p=x^2e^{\alpha x}Q(x)\), where \(Q\) is a polynomial of
-						the same degree as \(G\). (See Example&nbsp;<a href="#x1-236">5.4.6</a>.)
-					</li>
+					<li> If \(e^{\alpha x}\) isn’t a solution of the complementary equation 
+					\begin {equation} \label {eq:5.4.16} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0 
+					\end {equation} <a id="x1-27r16"></a> then \(y_p=e^{\alpha x}Q(x)\), where \(Q\) is a polynomial of the same degree as \(G\). (See Example&nbsp;<a href="#x1-174">5.4.4</a>). </li>
+					<li> If \(e^{\alpha x}\) is a solution of <a href="#x1-27r16">(5.4.16)</a> but \(xe^{\alpha x}\) is not, then \(y_p=xe^{\alpha x}Q(x)\), where \(Q\) is a polynomial of the same degree as \(G\). (See Example&nbsp;<a href="#x1-205">5.4.5</a>.) </li>
+					<li> If both \(e^{\alpha x}\) and \(xe^{\alpha x}\) are solutions of <a href="#x1-27r16">(5.4.16)</a>, then \(y_p=x^2e^{\alpha x}Q(x)\), where \(Q\) is a polynomial of the same degree as \(G\). (See Example&nbsp;<a href="#x1-236">5.4.6</a>.) </li>
 				</ol>
+			
 			</div>
 
 			<div class="indent" id="10e05740-b9a6-429c-8be2-8765e5e4132d">
-				In all three cases, you can just substitute the appropriate form for
-				\(y_p\) and its derivatives directly into \[ a\frac{d^2y_p}{dx^2}+b\frac{dy_p}{dx}+cy_p=e^{\alpha
-				x}G(x)\] and solve for the coefficients of the polynomial \(Q\). However,
-				if you try this you will see that the computations are more tedious than
-				those that you encounter by making the substitution \(y=ue^{\alpha x}\)
-				and finding a particular solution of the resulting equation for \(u\).
-				(See Exercises&nbsp;<span class="ptmb8t-">34</span> - <span class="ptmb8t-">36</span>.)
-				In Case&nbsp;<span class="ptmb8t-">(a)</span>
-				the equation for \(u\) will be of the form \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{\alpha}\frac{du}{dx}+p(\alpha
-				)u=G(x)\] with a particular solution of the form \(u_p=Q(x)\), a
-				polynomial of the same degree as \(G\), whose coefficients can be found by
-				the method used in Example&nbsp;<a href="#x1-174">5.4.4</a>. In Case&nbsp;
-				<span class="ptmb8t-">(b)</span>
-				the equation for \(u\) will be of the form \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{\alpha}\frac{du}{dx}=G(x) \]
-				(no \(u\) term on the left), with a particular solution of the form
-				\(u_p=xQ(x)\), where \(Q\) is a polynomial of the same degree as \(G\)
-				whose coefficents can be found by the method used in Example&nbsp;<a href="#x1-205">5.4.5</a>. In Case&nbsp;
-				<span class="ptmb8t-">(c)</span>
-				the equation for \(u\) will be of the form \[ a\frac{d^2u}{dx^2}=G(x) \] with a
-				particular solution of the form \(u_p=x^2Q(x)\) that can be obtained by
-				integrating \(G(x)/a\) twice and taking the constants of integration to be
-				zero, as in Example&nbsp;<a href="#x1-236">5.4.6</a>.
+				In all three cases, you can just substitute the appropriate form for \(y_p\) and its derivatives directly into \[ a\frac{d^2y_p}{dx^2}+b\frac{dy_p}{dx}+cy_p=e^{\alpha x}G(x)\] and solve for the coefficients of the polynomial \(Q\). However, if you try this you will see that the computations are more tedious than those that you encounter by making the substitution \(y=ue^{\alpha x}\) and finding a particular solution of the resulting equation for \(u\). (See Exercises&nbsp;<span class="ptmb8t-">34</span>-<span class="ptmb8t-">36</span>.) In Case&nbsp;<span class="ptmb8t-">(a)</span>the equation for \(u\) will be of the form \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{\alpha}\frac{du}{dx}+p(\alpha )u=G(x)\] with a particular solution of the form \(u_p=Q(x)\), a polynomial of the same degree as \(G\), whose coefficients can be found by the method used in Example&nbsp;<a href="#x1-174">5.4.4</a>. In Case&nbsp;<span class="ptmb8t-">(b)</span>the equation for \(u\) will be of the form \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{\alpha}\frac{du}{dx}=G(x) \] (no \(u\) term on the left), with a particular solution of the form \(u_p=xQ(x)\), where \(Q\) is a polynomial of the same degree as \(G\) whose coefficients can be found by the method used in Example&nbsp;<a href="#x1-205">5.4.5</a>. In Case&nbsp;<span class="ptmb8t-">(c)</span>the equation for \(u\) will be of the form \[ a\frac{d^2u}{dx^2}=G(x) \] with a particular solution of the form \(u_p=x^2Q(x)\) that can be obtained by integrating \(G(x)/a\) twice and taking the constants of integration to be zero, as in Example&nbsp;<a href="#x1-236">5.4.6</a>. 
 			</div>
 		</details>
 
@@ -323,38 +207,32 @@
 			<summary>Using the Principle of Superposition</summary>
 
 			<div id="c2619a75-5473-4029-a972-a31531737ba4">
-				The next example shows how to combine the method of undetermined
-				coefficients and Theorem&nbsp;
-				<span class="ptmb8t-">5.3.3</span>,
-				the principle of superposition.
+				The next example shows how to combine the method of undetermined coefficients and Theorem&nbsp;<span class="ptmb8t-">5.3.3</span>, the principle of superposition. 
 			</div>
 			<div class="example" id="x1-307" style="--ex-number: 7">
-				<div>
-					<a id="x1-31r17"></a>
-					Find a particular solution of \begin {equation} \label {eq:5.4.17}
-					\frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=4e^{2x}+5e^{4x}\end {equation}
+				<div> 
+					<a id="x1-31r17"></a> Find a particular solution of 
+					\begin {equation} \label {eq:5.4.17} \frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=4e^{2x}+5e^{4x} 
+					\end {equation} 
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-					In Example&nbsp;<a href="#x1-31">5.4.1</a>we found that \(y_{p_1}=2e^{2x}\) is a particular solution of \[
-					\frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=4e^{2x}\] and in Example&nbsp;<a href="#x1-62">5.4.2</a>we found that \(y_{p_2}=5xe^{4x}\) is a particular solution of \[
-					\frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=5e^{4x}\] Therefore the principle of superposition implies
-					that \(y_p=2e^{2x}+5xe^{4x}\) is a particular solution of <a href="#x1-31r17">(5.4.17)</a>.
+					In Example&nbsp;<a href="#x1-31">5.4.1</a>we found that \(y_{p_1}=2e^{2x}\) is a particular solution of \[ \frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=4e^{2x}\] and in Example&nbsp;<a href="#x1-62">5.4.2</a>we found that \(y_{p_2}=5xe^{4x}\) is a particular solution of \[ \frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=5e^{4x}\] Therefore the principle of superposition implies that \(y_p=2e^{2x}+5xe^{4x}\) is a particular solution of <a href="#x1-31r17">(5.4.17)</a>.
 				</details>
 			</div>
 		</details>
 
-		<nav class = "ex">
-			<a href = "sec5.4.ex.html">5.4 Exercises</a>
+		<nav class="ex">
+			<a href="sec5.4.ex.html">5.4 Exercises</a>
 		</nav>
 
-		<nav class = "book">
+		<nav class="book">
 			<a href="sec5.3.book.html">Back (5.3)</a>
 
 			<a href="sec5.0.html">Chapter 5</a>
 
 			<a href="sec5.5.book.html">Next (5.5)</a>
-		</div>
-	</body>
-</html>
+		</nav></body
+	></html
+>
