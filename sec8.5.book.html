@@ -6,7 +6,7 @@
 		<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator" />
 		<meta content="width=device-width,initial-scale=1" name="viewport" />
 		<link rel="stylesheet" type="text/css" href="combined.css" />
-		<meta content="Trench_DiffEQ_Book.tex" name="src" />
+		<script type="text/javascript" src="niceties.js"></script>
 		<script>
 			window.MathJax = {
 				tex: {
@@ -17,12 +17,7 @@
 			};
 		</script>
 
-		<script
-			async="async"
-			id="MathJax-script"
-			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
-			type="text/javascript"
-		></script>
+		<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 		<style type="text/css">
 			:root {
 				--section-number: "8.5";
@@ -32,397 +27,256 @@
 
 	<body>
 		<div id="0b23e245-fecf-4dd2-a702-b7a4ed3f0428" class="section-title">
-			8.5 Constant Coeefficient Equations with Piecewise Continuous Forcing Functions
+			8.5 Constant Coeefficient Equations with Piecewise Continuous Forcing Functions 
 		</div>
 		<div id="f213fa05-717d-4634-a2e0-8fca538e6231">
-			We’ll now consider initial value problems of the form \begin {equation}
-			\label {eq:8.5.1} ay''+by'+cy=f(t), \quad y(0)=k_0,\quad y'(0)=k_1\end
-			{equation}
-			<a id="x1-2r1"></a>
-			where \(a\), \(b\), and \(c\) are constants (\(a\ne 0\)) and \(f\) is
-			piecewise continuous on \([0,\infty )\). Problems of this kind occur in
-			situations where the input to a physical system undergoes instantaneous
-			changes, as when a switch is turned on or off or the forces acting on the
-			system change abruptly.
+			We’ll now consider initial value problems of the form 
+			\begin {equation} \label {eq:8.5.1} ay''+by'+cy=f(t), \quad y(0)=k_0,\quad y'(0)=k_1 
+			\end {equation} <a id="x1-2r1"></a> where \(a\), \(b\), and \(c\) are constants (\(a\ne 0\)) and \(f\) is piecewise continuous on \([0,\infty )\). Problems of this kind occur in situations where the input to a physical system undergoes instantaneous changes, as when a switch is turned on or off or the forces acting on the system change abruptly. 
 		</div>
 		<div class="indent" id="b5387b21-23fc-4f57-a5ea-134af76f20d7">
-			It can be shown (Exercises&nbsp;
-			<span class="ptmb8t-">23</span>
-			and
-			<span class="ptmb8t-">24</span>
-			) that the differential equation in <a href="#x1-2r1">(8.5.1)</a> has no solutions on an open interval that contains a jump discontinuity
-			of \(f\). Therefore we must define what we mean by a solution of <a href="#x1-2r1">(8.5.1)</a> on \([0,\infty )\) in the case where \(f\) has jump discontinuities. The
-			next theorem motivates our definition. We omit the proof.
+			It can be shown (Exercises&nbsp;<span class="ptmb8t-">23</span> and <span class="ptmb8t-">24</span>) that the differential equation in <a href="#x1-2r1">(8.5.1)</a> has no solutions on an open interval that contains a jump discontinuity of \(f\). Therefore we must define what we mean by a solution of <a href="#x1-2r1">(8.5.1)</a> on \([0,\infty )\) in the case where \(f\) has jump discontinuities. The next theorem motivates our definition. We omit the proof. 
 		</div>
 		<div class="newtheorem" id="812d7e9b-5c7e-4db2-b7e4-ccf47737c252">
-			<div>
-				<span class="head">
-					<span class="ptmb8t-">Theorem&nbsp;8.5.1</span>
-				</span>
-				<a id="x1-31"></a>
-				Suppose \(a,b\), and \(c\) are constants \((a\ne 0),\) and \(f\) is
-				piecewise continuous on \([0,\infty ).\) with jump discontinuities at
-				\(t_1,\) …, \(t_n,\) where \[ 0&lt;t_1&lt;\cdots &lt;t_n\] Let \(k_0\)
-				and \(k_1\) be arbitrary real numbers. Then there is a unique function
-				\(y\) defined on \([0,\infty )\) with these properties:
-			</div>
+			
+			<div><span class="head"> <span class="ptmb8t-">Theorem&nbsp;8.5.1</span></span> <a id="x1-31"></a> Suppose \(a,b\), and \(c\) are constants \((a\ne 0),\) and \(f\) is piecewise continuous on \([0,\infty ).\) with jump discontinuities at \(t_1,\) …, \(t_n,\) where \[ 0&lt;t_1&lt;\cdots &lt;t_n\] Let \(k_0\) and \(k_1\) be arbitrary real numbers. Then there is a unique function \(y\) defined on \([0,\infty )\) with these properties:
+			
+		</div>
 			<dl class="list1">
-				<dt class="list">
-					<span class="ptmb8t-">(a)</span>
-				</dt>
-				<dd class="list">
-					<div>\(y(0)=k_0\) and \(y'(0)=k_1\).</div>
-				</dd>
-				<dt class="list">
-					<span class="ptmb8t-">(b)</span>
-				</dt>
+				<dt class="list"><span class="ptmb8t-">(a)</span></dt>
 				<dd class="list">
 					<div>
-						\(y\) and \(y'\) are continuous on \([0,\infty )\).
+						\(y(0)=k_0\) and \(y'(0)=k_1\). 
 					</div>
 				</dd>
-				<dt class="list">
-					<span class="ptmb8t-">(c)</span>
-				</dt>
+				<dt class="list"><span class="ptmb8t-">(b)</span></dt>
 				<dd class="list">
 					<div>
-						\(y''\) is defined on every open subinterval of \([0,\infty)\) that
-						does not contain any of the points \(t_1,\) …, \(t_n\), and \[
-						ay''+by'+cy=f(t) \] on every such subinterval.
+						\(y\) and \(y'\) are continuous on \([0,\infty )\). 
 					</div>
 				</dd>
-				<dt class="list">
-					<span class="ptmb8t-">(d)</span>
-				</dt>
+				<dt class="list"><span class="ptmb8t-">(c)</span></dt>
 				<dd class="list">
 					<div>
-						\(y''\) has limits from the right and left at \(t_1,\) …\(,\)
-						\(t_n\).
+						\(y''\) is defined on every open subinterval of \([0,\infty)\) that does not contain any of the points \(t_1,\) …, \(t_n\), and \[ ay''+by'+cy=f(t) \] on every such subinterval. 
+					</div>
+				</dd>
+				<dt class="list"><span class="ptmb8t-">(d)</span></dt>
+				<dd class="list">
+					<div>
+						\(y''\) has limits from the right and left at \(t_1,\) …\(,\) \(t_n\). 
 					</div>
 				</dd>
 			</dl>
 		</div>
-		<div class="indent" id="2400ff9e-b230-49a1-bcc8-947365b768a8"></div>
+		<div class="indent" id="2400ff9e-b230-49a1-bcc8-947365b768a8">
+			
+		</div>
 		<div class="indent" id="d955bc7e-6d40-45c1-ab7c-4bb3fa50bd9b">
-			We define the function \(y\) of Theorem&nbsp;
-			<a href="#x1-31">
-				8.5.1
-				<!-- tex4ht:ref: thmtype:8.5.1  -->
-			</a>
-			to be the solution of the initial value problem <a href="#x1-2r1">(8.5.1)</a>.
+			
+			We define the function \(y\) of Theorem<a href="#x1-31">8.5.1</a> to be the solution of the initial value problem <a href="#x1-2r1">(8.5.1)</a>.
+		
 		</div>
 		<div class="indent" id="bebf9278-d315-4c6c-8109-da554753395d">
-			We begin by considering initial value problems of the form \begin
-			{equation} \label {eq:8.5.2} ay''+by'+cy=\left \{\begin {array}{cl}
-			f_0(t),&amp;0\le t&lt;t_1,\\f_1(t),&amp;t\ge t_1\end {array}\right .\quad
-			y(0)=k_0,\quad y'(0)=k_1\end {equation}
-			<a id="x1-8r2"></a>
-			where the forcing function has a single jump discontinuity at \(t_1\).
+			We begin by considering initial value problems of the form \begin {equation} \label {eq:8.5.2} ay''+by'+cy=\left \{
+			\begin {array}{cl} f_0(t),&amp;0\le t&lt;t_1,\\f_1(t),&amp;t\ge t_1 
+			\end {array}\right .\quad y(0)=k_0,\quad y'(0)=k_1\end {equation} <a id="x1-8r2"></a> where the forcing function has a single jump discontinuity at \(t_1\). 
 		</div>
 		<div class="indent" id="dd3b57a1-1f7f-4959-9669-395bd63f5e27">
-			We can solve <a href="#x1-8r2">(8.5.2)</a> by the these steps:
+			We can solve <a href="#x1-8r2">(8.5.2)</a> by the these steps: 
 		</div>
 		<dl class="description" id="1486a9e4-9fe3-4079-a04f-1f42ed8c799f">
 			<dt class="description">
-				<div></div>
+				<div>
+					
+				</div>
 			</dt>
 			<dd class="description">
-				<div>
-					<span class="ptmb8t-">Step 1.</span>
-					Find the solution \(y_0\) of the initial value problem \[
-					ay''+by'+cy=f_0(t), \quad y(0)=k_0,\quad y'(0)=k_1\]
+				<div><span class="ptmb8t-">Step 1.</span> Find the solution \(y_0\) of the initial value problem \[ ay''+by'+cy=f_0(t), \quad y(0)=k_0,\quad y'(0)=k_1\] 
 				</div>
 			</dd>
 			<dt class="description">
-				<div></div>
+				<div>
+					
+				</div>
 			</dt>
 			<dd class="description">
-				<div>
-					<span class="ptmb8t-">Step 2.</span>
-					Compute \(c_0=y_0(t_1)\) and \(c_1=y_0'(t_1)\).
+				<div><span class="ptmb8t-">Step 2.</span> Compute \(c_0=y_0(t_1)\) and \(c_1=y_0'(t_1)\). 
 				</div>
 			</dd>
 			<dt class="description">
-				<div></div>
+				<div>
+					
+				</div>
 			</dt>
 			<dd class="description">
-				<div>
-					<span class="ptmb8t-">Step 3.</span>
-					Find the solution \(y_1\) of the initial value problem \[
-					ay''+by'+cy=f_1(t), \quad y(t_1)=c_0,\quad y'(t_1)=c_1\]
+				<div><span class="ptmb8t-">Step 3.</span> Find the solution \(y_1\) of the initial value problem \[ ay''+by'+cy=f_1(t), \quad y(t_1)=c_0,\quad y'(t_1)=c_1\] 
 				</div>
 			</dd>
 			<dt class="description">
-				<div></div>
+				<div>
+					
+				</div>
 			</dt>
 			<dd class="description">
-				<div>
-					<span class="ptmb8t-">Step 4.</span>
-					Obtain the solution \(y\) of <a href="#x1-8r2">(8.5.2)</a> as \[ y=\left \{\begin {array}{cl} y_0(t),&amp;0\le
-					t&lt;t_1\\y_1(t),&amp;t\ge t_1\end {array}\right. \]
+				<div><span class="ptmb8t-">Step 4.</span> Obtain the solution \(y\) of <a href="#x1-8r2">(8.5.2)</a> as \[ y=\left \{ 
+					\begin {array}{cl} y_0(t),&amp;0\le t&lt;t_1\\y_1(t),&amp;t\ge t_1 
+					\end {array}\right. \] 
 				</div>
 			</dd>
 		</dl>
 		<div class="indent" id="6f6ee566-1ee4-4969-ab5c-5a4d78a0ef49">
-			It is shown in Exercise&nbsp;
-			<span class="ptmb8t-">23</span>
-			that \(y'\) exists and is continuous at \(t_1\). The next example
-			illustrates this procedure.
+			It is shown in Exercise&nbsp;<span class="ptmb8t-">23</span> that \(y'\) exists and is continuous at \(t_1\). The next example illustrates this procedure. 
 		</div>
 		<div class="newtheorem" id="82a8e7cf-ca49-442a-9f5c-f8eef0287151">
-			<div>
-				<span class="head">
-					<span class="ex-number">Example&nbsp;8.5.1</span>
-				</span>
-				<a id="x1-91"></a>
-				Solve the initial value problem \begin {equation} \label {eq:8.5.3}
-				y''+y=f(t), \quad y(0)=2,\; y'(0)=-1\end {equation}
-				<a id="x1-10r3"></a>
-				where \[ f(t)=\left \{\begin {array}{rl} 1,&amp;0\le t&lt;\displaystyle
-				{\pi \over 2},\\ -1,&amp;t\ge \displaystyle {{\pi \over 2}}\end
-				{array}\right. \]
-			</div>
+			
+			<div><span class="head"> <span class="ex-number">Example&nbsp;8.5.1</span></span> <a id="x1-91"></a> Solve the initial value problem \begin {equation} \label {eq:8.5.3} y''+y=f(t), \quad y(0)=2,\; y'(0)=-1 \end {equation} <a id="x1-10r3"></a> where \[ f(t)=\left \{ 
+				\begin {array}{rl} 1,&amp;0\le t&lt;\displaystyle {\pi \over 2},\\ -1,&amp;t\ge \displaystyle {{\pi \over 2}} 
+				\end {array}\right. \]
+			
 		</div>
-		<div class="indent" id="4695057e-9f4b-4119-9799-05add9c5f3bc"></div>
+		</div>
+		<div class="indent" id="4695057e-9f4b-4119-9799-05add9c5f3bc">
+			
+		</div>
 		<details class="solution">
 			<summary>Solution</summary>
-			&nbsp;The initial value problem in Step 1 is \[ y''+y=1, \quad
-			y(0)=2,\quad y'(0)=-1\] We leave it to you to verify that its solution is
-			\[ y_0=1+\cos t-\sin t\] Doing Step 2 yields \(y_0(\pi /2)=0\) and
-			\(y_0'(\pi /2)=-1\), so the second initial value problem is \[ y''+y=-1,
-			\quad y\left ({\pi \over 2}\right )=0,\; y'\left ({\pi \over 2}\right
-			)=-1\] We leave it to you to verify that the solution of this problem is
-			\[ y_1=-1+\cos t+\sin t\] Hence, the solution of <a href="#x1-10r3">(8.5.3)</a> is \begin {equation} \label {eq:8.5.4} y=\left \{\begin {array}{rl}
-			1+\cos t-\sin t,&amp;0\le t&lt;\displaystyle {{\pi \over 2}}, \\ -1+\cos
-			t+\sin t,&amp;t\ge \displaystyle {{\pi \over 2}} \end {array}\right. \end
-			{equation}
+			&nbsp;The initial value problem in Step 1 is \[ y''+y=1, \quad y(0)=2,\quad y'(0)=-1\] We leave it to you to verify that its solution is \[ y_0=1+\cos t-\sin t\] Doing Step 2 yields \(y_0(\pi /2)=0\) and \(y_0'(\pi /2)=-1\), so the second initial value problem is \[ y''+y=-1, \quad y\left ({\pi \over 2}\right )=0,\; y'\left ({\pi \over 2}\right )=-1\] We leave it to you to verify that the solution of this problem is \[ y_1=-1+\cos t+\sin t\] Hence, the solution of <a href="#x1-10r3">(8.5.3)</a> is \begin {equation} \label {eq:8.5.4} y=\left \{ 
+			\begin {array}{rl} 1+\cos t-\sin t,&amp;0\le t&lt;\displaystyle {{\pi \over 2}}, \\ -1+\cos t+\sin t,&amp;t\ge \displaystyle {{\pi \over 2}} 
+			\end {array}\right. \end {equation}
 			<a id="x1-11r4"></a>
 			(Figure:8.5.1).
-		</div>
-		<figure class="figure" id="51e006ba-9e39-4218-b4f5-dc528d2ca497">
-			<div id="-graph-of-eq-">
-				<img height="264" src="EPS/fig080501.png" width="409" />
-				<a id="x1-12r1"></a>
-			</div>
-			<figcaption class="caption">
-				<span class="id">Figure&nbsp;8.5.1</span>
-				<span class="content">
-					Graph of <a href="#x1-11r4">(8.5.4)</a>
-				</span>
-			</figcaption>
-			<!-- tex4ht:label?: x1-12r1  -->
-		</figure>
-		<div class="indent" id="24d53bec-d7cd-45e3-ae9d-0e6913fbc1f0">
-			If \(f_0\) and \(f_1\) are defined on \([0,\infty )\), we can rewrite <a href="#x1-8r2">(8.5.2)</a> as \[ ay''+by'+cy=f_0(t)+u(t-t_1)\left (f_1(t)-f_0(t)\right ), \quad
-			y(0)=k_0,\quad y'(0)=k_1\] and apply the method of Laplace transforms.
-			We’ll now solve the problem considered in Example&nbsp;<a href="#x1-91">8.5.1</a> by this method.
-		</div>
-		<div class="newtheorem" id="48528fdf-5524-424e-98e7-2254a7cdfd09">
-			<div>
-				<span class="head">
-					<span class="ex-number">Example&nbsp;8.5.2</span>
-				</span>
-				<a id="x1-132"></a>
-				Use the Laplace transform to solve the initial value problem \begin
-				{equation} \label {eq:8.5.5} y''+y=f(t), \quad y(0)=2,\; y'(0)=-1\end
-				{equation}
-				<a id="x1-14r5"></a>
-				where \[ f(t)=\left \{\begin {array}{cl} \phantom {-}1,&amp;0\le
-				t&lt;\displaystyle {{\pi \over 2}},\\ -1,&amp;t\ge \displaystyle {{\pi
-				\over 2}}\end {array}\right. \]
-			</div>
-		</div>
-		<div class="indent" id="63bb915a-b25e-4917-9652-fbaa27fa09a5"></div>
-		<details class="solution">
-			<summary>Solution</summary>
-			&nbsp;Here \[ f(t)=1-2u\left (t-{\pi \over 2}\right )\] so Theorem&nbsp;
-			<span class="ptmb8t-">8.4.1</span>
-			(with \(g(t)=1\)) implies that \[ {\cal L}(f)={1-2e^{-{\pi s/2}}\over s}\]
-			Therefore, transforming <a href="#x1-14r5">(8.5.5)</a> yields \[ (s^2+1)Y(s)={1-2e^{-{\pi s/ 2}}\over s}-1+2s\] so \begin
-			{equation} \label {eq:8.5.6} Y(s)=(1-2e^{-{\pi s/ 2}}) G(s)+{2s-1\over
-			s^2+1}\end {equation}
-			<a id="x1-15r6"></a>
-			with \[ G(s)={1\over s(s^2+1)}\] The form for the partial fraction
-			expansion of \(G\) is \begin {equation} \label {eq:8.5.7} {1\over
-			s(s^2+1)}={A\over s}+{Bs+C\over s^2+1}\end {equation}
-			<a id="x1-16r7"></a>
-			Multiplying through by \(s(s^2+1)\) yields \[ A(s^2+1)+(Bs+C)s=1\] or \[
-			(A+B)s^2+Cs+A=1\] Equating coefficients of like powers of \(s\) on the two
-			sides of this equation shows that \(A=1\), \(B=-A=-1\) and \(C=0\). Hence,
-			from <a href="#x1-16r7">(8.5.7)</a>, \[ G(s)={1\over s}-{s\over s^2+1}\] Therefore \[ g(t)=1-\cos t\] From
-			this, <a href="#x1-15r6">(8.5.6)</a>, and Theorem&nbsp;
-			<span class="ptmb8t-">8.4.2</span>,
-			\[ y=1-\cos t-2u\left (t-{\pi \over 2}\right )\left (1-\cos \left
-			(t-{\pi \over 2}\right )\right )+2\cos t-\sin t\] Simplifying this
-			(recalling that \(\cos (t-\pi /2)=\sin t)\) yields \[ y=1+\cos t-\sin
-			t-2u\left (t-{\pi \over 2}\right )(1-\sin t)\] or \[ y=\left \{\begin
-			{array}{cl} \phantom {-} 1+\cos t-\sin t,&amp;0\le t&lt;\displaystyle
-			{{\pi \over 2}},\\ -1+\cos t+\sin t,&amp;t\ge \displaystyle {{\pi \over
-			2}}\end {array}\right. \] which is the result obtained in Example&nbsp;<a href="#x1-91">8.5.1</a>.
-		</div>
-		<div id="33788ffe-1092-4a25-ae41-153df8ecf62a">
-			<span class="ptmrc8t-">
-				R
-				<span class="small-caps">EMARK</span>
-			</span>
-			:&nbsp;It isn’t obvious that using the Laplace transform to solve <a href="#x1-8r2">(8.5.2)</a> as we did in Example&nbsp;<a href="#x1-132">8.5.2</a> yields a function \(y\) with the properties stated in Theorem&nbsp;
-			<a href="#x1-31">
-				8.5.1
-				<!-- tex4ht:ref: thmtype:8.5.1  -->
-			</a>
-			; that is, such that \(y\) and \(y'\) are continuous on \([0,\infty )\)
-			and \(y''\) has limits from the right and left at \(t_1\). However, this
-			is true if \(f_0\) and \(f_1\) are continuous and of exponential order on
-			\([0,\infty )\). A proof is sketched in Exercises&nbsp;8.6.&nbsp;
-			<span class="ptmb8t-">11</span>
-			–8.6.
-			<span class="ptmb8t-">13</span>
-			.
-		</div>
 
-		<div class="newtheorem" id="aad637d1-e060-4e3a-baa1-47f729c66e5f">
-			<div>
-				<span class="head">
-					<span class="ex-number">Example&nbsp;8.5.3</span>
-				</span>
-				<a id="x1-173"></a>
-				Solve the initial value problem \begin {equation} \label {eq:8.5.8}
-				y''-y=f(t), \quad y(0)=-1,\; y'(0)=2\end {equation}
-				<a id="x1-18r8"></a>
-				where \[ f(t)=\left \{\begin {array}{cl} t,&amp;0\le t&lt;1,\\
-				1,&amp;t\ge 1\end {array}\right. \]
+			<figure class="figure" id="51e006ba-9e39-4218-b4f5-dc528d2ca497">
+				<div id="-graph-of-eq-">
+					<img height="264" src="EPS/fig080501.png" width="409" /> <a id="x1-12r1"></a> 
+				</div>
+				<figcaption class="caption"><span class="id">Figure&nbsp;8.5.1</span><span class="content"> Graph of <a href="#x1-11r4">(8.5.4)</a> </span></figcaption>
+				<!-- tex4ht:label?: x1-12r1  -->
+			</figure>
+			<div class="indent" id="24d53bec-d7cd-45e3-ae9d-0e6913fbc1f0">
+				If \(f_0\) and \(f_1\) are defined on \([0,\infty )\), we can rewrite <a href="#x1-8r2">(8.5.2)</a> as \[ ay''+by'+cy=f_0(t)+u(t-t_1)\left (f_1(t)-f_0(t)\right ), \quad y(0)=k_0,\quad y'(0)=k_1\] and apply the method of Laplace transforms. We’ll now solve the problem considered in Example&nbsp;<a href="#x1-91">8.5.1</a> by this method. 
 			</div>
-		</div>
-		<div class="indent" id="52041119-2bf7-4df2-815a-efe9a7eda63d"></div>
-		<details class="solution">
-			<summary>Solution</summary>
-			&nbsp;Here \[ f(t)=t-u(t-1)(t-1)\] so
-		</div>
-		<div class="eqnarray" id="b02e2f86-ced0-4060-9764-5cd3c72fd254">
-			\begin {eqnarray*} {\cal L}(f)&amp;=&amp;{\cal L}(t)-{\cal L}\left
-			(u(t-1)(t-1)\right )\\ &amp;=&amp;{\cal L}(t)-e^{-s}{\cal L}(t)\mbox {
-			(from Theorem 8.4.1)}\\ &amp;=&amp;{1\over s^2}-{e^{-s}\over s^2}\end
-			{eqnarray*}
-		</div>
-		<div class="indent" id="ba5eba95-fa90-4d3c-9774-87cae86e6692">
-			Since transforming <a href="#x1-18r8">(8.5.8)</a> yields \[ (s^2-1) Y(s)={\cal L}(f)+2-s\] we see that \begin {equation}
-			\label {eq:8.5.9} Y(s)=(1-e^{-s})H(s)+{2-s\over s^2-1}\end {equation}
-			<a id="x1-19r9"></a>
-			where \[ H(s)={1\over s^2(s^2-1)}={1\over s^2-1}-{1\over s^2}\] therefore
-			\begin {equation} \label {eq:8.5.10} h(t)=\sinh t-t\end {equation}
-			<a id="x1-20r10"></a>
-			Since \[ {\cal L}^{-1}\left ({2-s\over s^2-1}\right )=2\sinh t-\cosh t\]
-			we conclude from <a href="#x1-19r9">(8.5.9)</a>, <a href="#x1-20r10">(8.5.10)</a>, and Theorem&nbsp;
-			<span class="ptmb8t-">8.4.1</span>
-			that \[ y=\sinh t-t-u(t-1)\left (\sinh (t-1)-t+1\right )+2\sinh t- \cosh
-			t\] or \begin {equation} \label {eq:8.5.11} y=3\sinh t-\cosh
-			t-t-u(t-1)\left (\sinh (t-1)-t+1\right ) \end {equation}
-			<a id="x1-21r11"></a>
-			We leave it to you to verify that \(y\) and \(y'\) are continuous and
-			\(y''\) has limits from the right and left at \(t_1=1\).
-		</div>
-		<div class="newtheorem" id="da018aa7-72d9-4c6a-9b40-b8aa409b2b64">
-			<div>
-				<span class="head">
-					<span class="ex-number">Example&nbsp;8.5.4</span>
-				</span>
-				<a id="x1-224"></a>
-				Solve the initial value problem \begin {equation} \label {eq:8.5.12}
-				y''+y=f(t), \quad y(0)=0,\; y'(0)=0\end {equation}
-				<a id="x1-23r12"></a>
-				where \[ f(t)=\left \{\begin {array}{cl} 0,&amp;0\le t&lt;\displaystyle
-				{{\pi \over 4}},\\ \cos 2t,&amp;\displaystyle {{\pi \over 4}}\le
-				t&lt;\pi ,\\ 0,&amp;t\ge \pi \end {array}\right. \]
+			<div class="newtheorem" id="48528fdf-5524-424e-98e7-2254a7cdfd09">
+				
+				<div><span class="head"> <span class="ex-number">Example&nbsp;8.5.2</span></span> <a id="x1-132"></a> Use the Laplace transform to solve the initial value problem \begin {equation} \label {eq:8.5.5} y''+y=f(t), \quad y(0)=2,\; y'(0)=-1 \end {equation} <a id="x1-14r5"></a> where \[ f(t)=\left \{ 
+					\begin {array}{cl} \phantom {-}1,&amp;0\le t&lt;\displaystyle {{\pi \over 2}},\\ -1,&amp;t\ge \displaystyle {{\pi \over 2}} 
+					\end {array}\right. \]
+				
 			</div>
-		</div>
-		<div class="indent" id="d6660d5a-c78c-4f80-ac86-4fa4177552d6"></div>
-		<details class="solution">
-			<summary>Solution</summary>
-			&nbsp;Here \[ f(t)=u(t-\pi /4)\cos 2t-u(t-\pi )\cos 2t\] so
-		</div>
-		<div class="eqnarray" id="8941e937-70f2-4881-8604-e6a00b86babe">
-			\begin {eqnarray*} {\cal L}(f)&amp;=&amp;{\cal L}\left (u(t-\pi /4)\cos
-			2t\right )-{\cal L}\left ( u(t-\pi )\cos 2t\right )\\ &amp;=&amp;e^{-{\pi
-			s/4}}{\cal L}\left (\cos 2(t+\pi /4)\right )-e^{-\pi s} {\cal L}\left
-			(\cos 2(t+\pi )\right )\\ &amp;=&amp;-e^{-{\pi s/4}}{\cal L}(\sin
-			2t)-e^{-\pi s} {\cal L}(\cos 2t)\\ &amp;=&amp;-{2e^{-{\pi s/ 4}}\over
-			s^2+4}-{se^{-\pi s}\over s^2+4}\end {eqnarray*}
-		</div>
-		<div class="indent" id="1d25cc7a-9157-4a3d-b13d-6c5fce4e776a">
-			Since transforming <a href="#x1-23r12">(8.5.12)</a> yields \[ (s^2+1)Y(s)={\cal L}(f)\] we see that \begin {equation} \label
-			{eq:8.5.13} Y(s)=e^{-{\pi s/ 4}} H_1(s)+e^{-\pi s} H_2(s)\end {equation}
-			<a id="x1-24r13"></a>
-			where \begin {equation} \label {eq:8.5.14} H_1(s)=-{2\over
-			(s^2+1)(s^2+4)}\quad \mbox { and }\quad H_2(s)=-{s \over
-			(s^2+1)(s^2+4)}\end {equation}
-			<a id="x1-25r14"></a>
-			To simplify the required partial fraction expansions, we first write \[
-			{1\over (x+1)(x+4)}={1\over 3}\left [{1\over x+1}-{1\over x+4}\right ]\]
-			Setting \(x=s^2\) and substituting the result in <a href="#x1-25r14">(8.5.14)</a> yields \[ H_1(s)=-{2\over 3}\left [{1\over s^2+1}-{1\over s^2+4}\right ]
-			\quad \mbox { and }\quad H_2(s)=-{1\over 3}\left [{s\over s^2+1}-{s\over
-			s^2+4}\right ]\] The inverse transforms are \[ h_1(t)=-{2\over 3}\sin
-			t+{1\over 3}\sin 2t \quad \mbox { and }\; h_2(t)=-{1\over 3}\cos t+{1\over
-			3}\cos 2t\] From <a href="#x1-24r13">(8.5.13)</a> and Theorem&nbsp;8.4.2, \begin {equation} \label {eq:8.5.15} y=u\left
-			(t-{\pi \over 4}\right ) h_1\left (t-{\pi \over 4}\right )+ u(t-\pi )
-			h_2(t-\pi )\end {equation}
-			<a id="x1-26r15"></a>
-			Since
-		</div>
-		<div class="eqnarray" id="84d81df8-ae78-477a-87a7-81c891600ea2">
-			\begin {eqnarray*} h_1\left (t-{\pi \over 4}\right )&amp;=&amp;-{2\over
-			3}\sin \left (t-{\pi \over 4}\right )+{1\over 3}\sin 2\left (t-{\pi \over
-			4}\right )\\ &amp;=&amp;-{\sqrt {2}\over 3} (\sin t-\cos t)-{1\over 3}\cos
-			2t \end {eqnarray*}
-		</div>
-		<div class="indent" id="13c2ba19-f620-498b-9618-551bc7e0e2c0">and</div>
-		<div class="eqnarray" id="8518c731-f48b-4d5b-b1e7-1eb137a10a19">
-			\begin {eqnarray*} h_2(t-\pi )&amp;=&amp;-{1\over 3}\cos (t-\pi )+{1\over
-			3}\cos 2(t-\pi )\\ &amp;=&amp;{1\over 3}\cos t+{1\over 3}\cos 2t\end
-			{eqnarray*}
-		</div>
-		<div class="indent" id="b84a06f4-e672-44c1-9425-482a732ed1e7">
-			<a href="#x1-26r15">(8.5.15)</a> can be rewritten as \[ y=-{1\over 3}u\left (t-{\pi \over 4}\right )\left
-			(\sqrt {2}(\sin t-\cos t)+\cos 2t\right ) + {1\over 3} u(t-\pi ) (\cos
-			t+\cos 2t) \] or \begin {equation} \label {eq:8.5.16} y=\left \{\begin
-			{array}{cl} 0,&amp;0\le t&lt;\displaystyle {{\pi \over 4}},\\
-			-\displaystyle {{\sqrt {2}\over 3}}(\sin t-\cos t)-\displaystyle {{1\over
-			3}}\cos 2t,&amp;\displaystyle {\pi \over 4}\le t&lt;\pi ,\\ -\displaystyle
-			{ {\sqrt {2}\over 3}}\sin t+ \displaystyle {{1+\sqrt {2}\over 3}}\cos t
-			,&amp;t\ge \pi \end {array}\right. \end {equation}
-			<a id="x1-27r16"></a>
-			We leave it to you to verify that \(y\) and \(y'\) are continuous and
-			\(y''\) has limits from the right and left at \(t_1=\pi /4\) and \(t_2=\pi
-			\) (Figure&nbsp;
-			<a href="#-graph-of-eq-1">
-				8.5.2
-				<!-- tex4ht:ref: figure:8.5.2  -->
-			</a>
-			).
-		</div>
-		<figure class="figure" id="efce40e4-8bcd-4a54-b3c9-3d0a90eaef06">
-			<div id="-graph-of-eq-1">
-				<img height="264" src="EPS/fig080502.png" width="409" />
-				<a id="x1-28r2"></a>
 			</div>
-			<figcaption class="caption">
-				<span class="id">Figure&nbsp;8.5.2</span>
-				<span class="content">
-					Graph of <a href="#x1-27r16">(8.5.16)</a>
-				</span>
-			</figcaption>
-			<!-- tex4ht:label?: x1-28r2  -->
-		</figure>
+			
+			<details class="solution">
+				<summary>Solution</summary>
+				&nbsp;Here \[ f(t)=1-2u\left (t-{\pi \over 2}\right )\] so Theorem&nbsp;<span class="ptmb8t-">8.4.1</span>(with \(g(t)=1\)) implies that \[ {\cal L}(f)={1-2e^{-{\pi s/2}}\over s}\] Therefore, transforming <a href="#x1-14r5">(8.5.5)</a> yields \[ (s^2+1)Y(s)={1-2e^{-{\pi s/ 2}}\over s}-1+2s\] so 
+				\begin {equation} \label {eq:8.5.6} Y(s)=(1-2e^{-{\pi s/ 2}}) G(s)+{2s-1\over s^2+1} 
+				\end {equation}
+				<a id="x1-15r6"></a>
+				with \[ G(s)={1\over s(s^2+1)}\] The form for the partial fraction expansion of \(G\) is 
+				\begin {equation} \label {eq:8.5.7} {1\over s(s^2+1)}={A\over s}+{Bs+C\over s^2+1} 
+				\end {equation}
+				<a id="x1-16r7"></a>
+				Multiplying through by \(s(s^2+1)\) yields \[ A(s^2+1)+(Bs+C)s=1\] or \[ (A+B)s^2+Cs+A=1\] Equating coefficients of like powers of \(s\) on the two sides of this equation shows that \(A=1\), \(B=-A=-1\) and \(C=0\). Hence, from <a href="#x1-16r7">(8.5.7)</a>, \[ G(s)={1\over s}-{s\over s^2+1}\] Therefore \[ g(t)=1-\cos t\] From this, <a href="#x1-15r6">(8.5.6)</a>, and Theorem&nbsp;<span class="ptmb8t-">8.4.2</span>, \[ y=1-\cos t-2u\left (t-{\pi \over 2}\right )\left (1-\cos \left (t-{\pi \over 2}\right )\right )+2\cos t-\sin t\] Simplifying this (recalling that \(\cos (t-\pi /2)=\sin t)\) yields \[ y=1+\cos t-\sin t-2u\left (t-{\pi \over 2}\right )(1-\sin t)\] or \[ y=\left \{ 
+				\begin {array}{cl} \phantom {-} 1+\cos t-\sin t,&amp;0\le t&lt;\displaystyle {{\pi \over 2}},\\ -1+\cos t+\sin t,&amp;t\ge \displaystyle {{\pi \over 2}} 
+				\end {array}\right. \] which is the result obtained in Example&nbsp;<a href="#x1-91">8.5.1</a>.
 
-		<nav class = "ex">
-			<a href = "sec8.5.ex.html">8.5 Exercises</a>
-		  </nav>
+				<div id="33788ffe-1092-4a25-ae41-153df8ecf62a">
+					<span class="ptmrc8t-"> R <span class="small-caps">EMARK</span></span> :&nbsp;It isn’t obvious that using the Laplace transform to solve <a href="#x1-8r2">(8.5.2)</a> as we did in Example&nbsp;<a href="#x1-132">8.5.2</a> yields a function \(y\) with the properties stated in Theorem<a href="#x1-31">8.5.1</a>; that is, such that \(y\) and \(y'\) are continuous on \([0,\infty )\) and \(y''\) has limits from the right and left at \(t_1\). However, this is true if \(f_0\) and \(f_1\) are continuous and of exponential order on \([0,\infty )\). A proof is sketched in Exercises&nbsp;8.6.&nbsp;<span class="ptmb8t-">11</span>–8.6. <span class="ptmb8t-">13</span>.
+				
+				</div>
 
-		<nav class = "book">
-			<a href="sec8.4.book.html">Back (8.4)</a>
+				<div class="newtheorem" id="aad637d1-e060-4e3a-baa1-47f729c66e5f">
+					
+					<div><span class="head"> <span class="ex-number">Example&nbsp;8.5.3</span></span> <a id="x1-173"></a> Solve the initial value problem \begin {equation} \label {eq:8.5.8} y''-y=f(t), \quad y(0)=-1,\; y'(0)=2 \end {equation} <a id="x1-18r8"></a> where \[ f(t)=\left \{ 
+						\begin {array}{cl} t,&amp;0\le t&lt;1,\\ 1,&amp;t\ge 1 
+						\end {array}\right. \]
+					
+				</div>
+				</div>
+				<div class="indent" id="52041119-2bf7-4df2-815a-efe9a7eda63d">
+					
+				</div>
+				<details class="solution">
+					<summary>Solution</summary>
+					&nbsp;Here \[ f(t)=t-u(t-1)(t-1)\] so
 
-			<a href="sec8.0.html">Chapter 8</a>
+					<div class="eqnarray" id="b02e2f86-ced0-4060-9764-5cd3c72fd254">
+						
+						\begin {eqnarray*} {\cal L}(f)&amp;=&amp;{\cal L}(t)-{\cal L}\left (u(t-1)(t-1)\right )\\ &amp;=&amp;{\cal L}(t)-e^{-s}{\cal L}(t)\mbox { (from Theorem 8.4.1)}\\ &amp;=&amp;{1\over s^2}-{e^{-s}\over s^2} 
+						\end {eqnarray*} 
+					</div>
+					<div class="indent" id="ba5eba95-fa90-4d3c-9774-87cae86e6692">
+						Since transforming <a href="#x1-18r8">(8.5.8)</a> yields \[ (s^2-1) Y(s)={\cal L}(f)+2-s\] we see that \begin {equation} \label {eq:8.5.9} Y(s)=(1-e^{-s})H(s)+{2-s\over s^2-1} \end {equation} <a id="x1-19r9"></a> where \[ H(s)={1\over s^2(s^2-1)}={1\over s^2-1}-{1\over s^2}\] therefore \begin {equation} \label {eq:8.5.10} h(t)=\sinh t-t\end {equation} <a id="x1-20r10"></a> Since \[ {\cal L}^{-1}\left ({2-s\over s^2-1}\right )=2\sinh t-\cosh t\] we conclude from <a href="#x1-19r9">(8.5.9)</a>, <a href="#x1-20r10">(8.5.10)</a>, and Theorem&nbsp;<span class="ptmb8t-">8.4.1</span> that \[ y=\sinh t-t-u(t-1)\left (\sinh (t-1)-t+1\right )+2\sinh t- \cosh t\] or 
+						\begin {equation} \label {eq:8.5.11} y=3\sinh t-\cosh t-t-u(t-1)\left (\sinh (t-1)-t+1\right ) 
+						\end {equation} <a id="x1-21r11"></a> We leave it to you to verify that \(y\) and \(y'\) are continuous and \(y''\) has limits from the right and left at \(t_1=1\). 
+					</div>
+					<div class="newtheorem" id="da018aa7-72d9-4c6a-9b40-b8aa409b2b64">
+						
+						<div><span class="head"> <span class="ex-number">Example&nbsp;8.5.4</span></span> <a id="x1-224"></a> Solve the initial value problem \begin {equation} \label {eq:8.5.12} y''+y=f(t), \quad y(0)=0,\; y'(0)=0 \end {equation} <a id="x1-23r12"></a> where \[ f(t)=\left \{ 
+							\begin {array}{cl} 0,&amp;0\le t&lt;\displaystyle {{\pi \over 4}},\\ \cos 2t,&amp;\displaystyle {{\pi \over 4}}\le t&lt;\pi ,\\ 0,&amp;t\ge \pi 
+							\end {array}\right. \]
+						
+					</div>
+					</div>
+					<div class="indent" id="d6660d5a-c78c-4f80-ac86-4fa4177552d6">
+						
+					</div>
+					<details class="solution">
+						<summary>Solution</summary>
+						&nbsp;Here \[ f(t)=u(t-\pi /4)\cos 2t-u(t-\pi )\cos 2t\] so
 
-			<a href="sec8.6.book.html">Next (8.6)</a>
-		</div>
-	</body>
-</html>
+						<div class="eqnarray" id="8941e937-70f2-4881-8604-e6a00b86babe">
+							
+							\begin {eqnarray*} {\cal L}(f)&amp;=&amp;{\cal L}\left (u(t-\pi /4)\cos 2t\right )-{\cal L}\left ( u(t-\pi )\cos 2t\right )\\ &amp;=&amp;e^{-{\pi s/4}}{\cal L}\left (\cos 2(t+\pi /4)\right )-e^{-\pi s} {\cal L}\left (\cos 2(t+\pi )\right )\\ &amp;=&amp;-e^{-{\pi s/4}}{\cal L}(\sin 2t)-e^{-\pi s} {\cal L}(\cos 2t)\\ &amp;=&amp;-{2e^{-{\pi s/ 4}}\over s^2+4}-{se^{-\pi s}\over s^2+4} 
+							\end {eqnarray*} 
+						</div>
+						<div class="indent" id="1d25cc7a-9157-4a3d-b13d-6c5fce4e776a">
+							Since transforming <a href="#x1-23r12">(8.5.12)</a> yields \[ (s^2+1)Y(s)={\cal L}(f)\] we see that \begin {equation} \label {eq:8.5.13} Y(s)=e^{-{\pi s/ 4}} H_1(s)+e^{-\pi s} H_2(s) \end {equation} <a id="x1-24r13"></a> where \begin {equation} \label {eq:8.5.14} H_1(s)=-{2\over (s^2+1)(s^2+4)}\quad \mbox { and }\quad H_2(s)=-{s \over (s^2+1)(s^2+4)} \end {equation} <a id="x1-25r14"></a> To simplify the required partial fraction expansions, we first write \[ {1\over (x+1)(x+4)}={1\over 3}\left [{1\over x+1}-{1\over x+4}\right ]\] Setting \(x=s^2\) and substituting the result in <a href="#x1-25r14">(8.5.14)</a> yields \[ H_1(s)=-{2\over 3}\left [{1\over s^2+1}-{1\over s^2+4}\right ] \quad \mbox { and }\quad H_2(s)=-{1\over 3}\left [{s\over s^2+1}-{s\over s^2+4}\right ]\] The inverse transforms are \[ h_1(t)=-{2\over 3}\sin t+{1\over 3}\sin 2t \quad \mbox { and }\; h_2(t)=-{1\over 3}\cos t+{1\over 3}\cos 2t\] From <a href="#x1-24r13">(8.5.13)</a> and Theorem&nbsp;8.4.2, 
+							\begin {equation} \label {eq:8.5.15} y=u\left (t-{\pi \over 4}\right ) h_1\left (t-{\pi \over 4}\right )+ u(t-\pi ) h_2(t-\pi ) 
+							\end {equation} <a id="x1-26r15"></a> Since 
+						</div>
+						<div class="eqnarray" id="84d81df8-ae78-477a-87a7-81c891600ea2">
+							
+							\begin {eqnarray*} h_1\left (t-{\pi \over 4}\right )&amp;=&amp;-{2\over 3}\sin \left (t-{\pi \over 4}\right )+{1\over 3}\sin 2\left (t-{\pi \over 4}\right )\\ &amp;=&amp;-{\sqrt {2}\over 3} (\sin t-\cos t)-{1\over 3}\cos 2t 
+							\end {eqnarray*} 
+						</div>
+						<div class="indent" id="13c2ba19-f620-498b-9618-551bc7e0e2c0">
+							and 
+						</div>
+						<div class="eqnarray" id="8518c731-f48b-4d5b-b1e7-1eb137a10a19">
+							
+							\begin {eqnarray*} h_2(t-\pi )&amp;=&amp;-{1\over 3}\cos (t-\pi )+{1\over 3}\cos 2(t-\pi )\\ &amp;=&amp;{1\over 3}\cos t+{1\over 3}\cos 2t 
+							\end {eqnarray*} 
+						</div>
+						<div class="indent" id="b84a06f4-e672-44c1-9425-482a732ed1e7">
+							
+							<a href="#x1-26r15">(8.5.15)</a> can be rewritten as \[ y=-{1\over 3}u\left (t-{\pi \over 4}\right )\left (\sqrt {2}(\sin t-\cos t)+\cos 2t\right ) + {1\over 3} u(t-\pi ) (\cos t+\cos 2t) \] or \begin {equation} \label {eq:8.5.16} y=\left \{ 
+							\begin {array}{cl} 0,&amp;0\le t&lt;\displaystyle {{\pi \over 4}},\\ -\displaystyle {{\sqrt {2}\over 3}}(\sin t-\cos t)-\displaystyle {{1\over 3}}\cos 2t,&amp;\displaystyle {\pi \over 4}\le t&lt;\pi ,\\ -\displaystyle { {\sqrt {2}\over 3}}\sin t+ \displaystyle {{1+\sqrt {2}\over 3}}\cos t ,&amp;t\ge \pi 
+							\end {array}\right. \end {equation} <a id="x1-27r16"></a> We leave it to you to verify that \(y\) and \(y'\) are continuous and \(y''\) has limits from the right and left at \(t_1=\pi /4\) and \(t_2=\pi \) (Figure<a href="#-graph-of-eq-1">8.5.2</a>).
+						
+						</div>
+						<figure class="figure" id="efce40e4-8bcd-4a54-b3c9-3d0a90eaef06">
+							<div id="-graph-of-eq-1">
+								<img height="264" src="EPS/fig080502.png" width="409" /> <a id="x1-28r2"></a> 
+							</div>
+							<figcaption class="caption"><span class="id">Figure&nbsp;8.5.2</span><span class="content"> Graph of <a href="#x1-27r16">(8.5.16)</a> </span></figcaption>
+							<!-- tex4ht:label?: x1-28r2  -->
+						</figure>
+
+						<nav class="ex">
+							<a href="sec8.5.ex.html">8.5 Exercises</a>
+						</nav>
+
+						<nav class="book">
+							<a href="sec8.4.book.html">Back (8.4)</a>
+
+							<a href="sec8.0.html">Chapter 8</a>
+
+							<a href="sec8.6.book.html">Next (8.6)</a>
+						</nav></details
+					></details
+				></details
+			></details
+		></body
+	></html
+>

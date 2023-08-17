@@ -92,13 +92,14 @@
 				Further modifying <a href="#x1-2r1">(2.2.1)</a> we can replace the left side with the expression from the chain rule and then find the antiderivative of both sides
 
 				<a id="x1-4r3"></a>
-				\begin {align} \label{eq:2.2.3}
+				\begin {align}
 					\underbrace{h(y)} \frac{dy}{dx} = & \underbrace{g(x)} \nonumber \\
 					\underbrace{ \frac{dH}{dy} \cdot \frac{dy}{dx} } = & \frac{dG}{dx} \nonumber \\
 					{d\over dx} \Big[ H (y) \Big] = & {d\over dx} \Big[ G (x) \Big] \nonumber \\
 					\int {d\over dx} \Big[ H(y) \Big] dx = & \int \frac{d}{dx} \Big[ G(x) \Big] dx \nonumber \\
+					\label{eq:2.2.3}
 					H(y) = & G(x) + c
-				\end {align}				
+				\end {align}
 	
 			</div>
 
@@ -336,7 +337,7 @@
 			<summary>Implicit Solutions</summary>
 		
 			<div id="70632e26-c627-4415-8707-3f3e1f8bfd7e">
-				In Examples&nbsp;<a href="#x1-51">2.2.1</a> and <a href="#x1-62">2.2.2</a>we were able to solve the equation explicitly for \( y \) for our general solution. However, sometimes we are not able to explicitly solve for \( y \) and when this happens we will leave the general solution in <span class="vocab">implicit</span> form.
+				In Examples&nbsp;<a href="#x1-51">2.2.1</a> and <a href="#x1-62">2.2.2</a> we were able to solve the equation explicitly for \( y \) for our general solution. However, sometimes we are not able to explicitly solve for \( y \) and when this happens we will leave the general solution in <span class="vocab">implicit</span> form.
 			</div>
 
 			<div class="theorem" id="x1-171">
@@ -407,12 +408,13 @@
 								<a id="x1-26r15"></a>
 								Separating variables in <a href="#x1-23r13">(2.2.13)</a> yields 
 								
-								\begin{align}\label {eq:2.2.15}
+								\begin{align}
 									\frac{dy}{dx} = & \frac{2x+1}{5y^4+1} \nonumber \\
 									(5y^4+1)\frac{dy}{dx} = & 2x+1 \nonumber \\
 									\int (5y^4+1)\frac{dy}{dx} dx = & \int \left(2x+1\right) dx \nonumber \\
 									5\int y^4 dy + \int dy = & 2\int x dx + \int dx \nonumber \\
 									5\left(\frac{1}{5}y^5\right) + y = & 2\left(\frac{1}{2}x^2\right) + x + c \nonumber \\
+									\label {eq:2.2.15}
 									\underset{H(y)}{\underbrace{y^5 + y}} = & \underset{G(x)}{\underbrace{x^2 + x}}+ c
 								\end{align}
 							</div>
@@ -529,6 +531,7 @@
 							\frac{1}{y} = & - x^2 \underset{c}{\underbrace{-k}} \nonumber \\
 							\frac{1}{y} = & c - x^2 \nonumber \\
 							1 = & y \left( c - x^2 \right) \nonumber \\
+							\label {eq:2.2.17} 
 							y = & \frac{1}{c - x^2}
 						\end{align}
 					</div>
@@ -662,7 +665,7 @@
 						Recall that we assumed \( y(x) \ne 1 \) and \( y(x) \ne -1 \) so the quantity \( (y-1)/(y+1) \) is always positive or always negative in any given interval we are on, therefore we can further simplify and represent this <span class="vocab">one-parameter family</span> by:
 
 						\begin{align*} 		
-							\frac{y-1}{y+1} =& ce^{-\frac{1}{2}x^2}										
+							\frac{y-1}{y+1} =& ce^{-\frac{1}{2}x^2}
 						\end{align*}
 
 						Although this representation is currently implicit, we can solve explicitly for \( y \)
@@ -672,7 +675,8 @@
 							y-1 = & ce^{-\frac{1}{2}x^2} (y+1) \nonumber \\
 							y-1 = & cye^{-\frac{1}{2}x^2}+ce^{-\frac{1}{2}x^2} \nonumber \\	
 							y-cye^{-\frac{1}{2}x^2} = & 1 + ce^{-\frac{1}{2}x^2} \nonumber \\	
-							y\left(1-ce^{-\frac{1}{2}x^2}\right) = & 1 + ce^{-\frac{1}{2}x^2} \nonumber \\	
+							y\left(1-ce^{-\frac{1}{2}x^2}\right) = & 1 + ce^{-\frac{1}{2}x^2} \nonumber \\
+							\label {eq:2.2.19} 
 							y = & \frac{1 + ce^{-\frac{1}{2}x^2}}{1-ce^{-\frac{1}{2}x^2}}
 						\end{align}
 						
