@@ -289,6 +289,8 @@
 				Now we consider an object moving vertically in some medium. We assume that the only forces acting on the object are <span class="vocab">gravity</span> and <span class="vocab">resistance</span> from the medium. We also assume that the motion takes place close to Earth’s surface and take the upward direction to be positive, so the gravitational force can be assumed to have the constant value \(-mg\). We’ll find that,
 				under reasonable assumptions on the resisting force, the velocity approaches a limit as \(t\to \infty \). We call this limit the <span class="vocab">terminal velocity</span>.
 			</div>
+
+			<!--Example 1-->
 			<div class="example" id="x1-51" style="--ex-number: 1">
 				<div>
 					An object with mass \(m\) moves under constant gravitational force
@@ -309,61 +311,182 @@
 
 					<ol>
 						<li>
-							Set up and solve an IVP using the Newton's 2nd Law of Motion
+							<div>
+								We assume that the only forces acting on the object are <span class="vocab">gravity</span> and <span class="vocab">resistance</span>
+								from the medium, therefore the total force is given as:
+								
+								<a id="x1-6r4"></a>
+								\begin{equation} \label{eq:4.3.4}
+									F = -mg + F_1
+								\end{equation}
+								
+								The force due to <span class="vocab">gravity</span> is \(-mg\) and the force due to <span class="vocab">resistance</span> from the medium is \(F_1\). It is given that the magnitude of the force due to resistance \(\left| F_1 \right|\) is proportional to the speed of the object. Recall that the speed of an object is \(\left| v \right|\), the absolute value of its velocity \(v\). Thus where \(k\) is the positive constant of proportionality we have the equation:
+								
+								\begin{equation*}
+									\left|  F_1 \right| = k \left| v \right|
+								\end{equation*} 
+								
+								Now we will simplify the absolute value bars by considering two cases: Case (1) the object is moving downward demonstrated in Figure&nbsp;<a href="#-resistive-forces-">4.3.1 (a)</a>, and Case (2) the object is moving upward, demonstrated in Figure&nbsp;<a href="#-resistive-forces-">4.3.1 (b)</a>. 
+							</div>
+							<div>
+								<figure class="figure" id="e6962ad1-d291-42ca-8fe3-5a726eb6f6e3">
+									<div id="-resistive-forces-">
+										<img height="264" src="EPS/fig040301.png" width="409" />
+										<a id="x1-8r1"></a>
+									</div>
+									<figcaption class="caption">
+										<span class="id">Figure&nbsp;4.3.1</span>
+										<span class="content">Resistive forces</span>
+									</figcaption>
+									<!-- tex4ht:label?: x1-8r1  -->
+								</figure>
+							</div>	
+							<div>	
+								Case (1) If the object is move downward, then the velocity is negative (\(v\le 0\)). Since the resisting force is opposite, the resisting force is upward, which is positive (\(F_1 \ge 0\)) so our resisting force can be represented as:
+								
+								\begin{align*}
+									\left|  F_1 \right| = & k \left| v \right| \\
+									+ F_1 = & k \left( - v \right) \\	
+									F_1 = & -k v \\		
+								\end{align*} 
+							</div>
+
+							<div>
+								Case (2): if the object is move upward, then the velocity is positive (\(v \ge 0\)). Since the resisting force is opposite, the resisting force is downward, which is negative (\(F_1 \le 0\)) so our resisting force can be represented as:
+								
+								\begin{align*}
+									\left|  F_1 \right| = & k \left| v \right| \\
+									- F_1 = & k \left( + v \right) \\		
+									F_1 = & -k v \\		
+								\end{align*} 
+								
+								In either case, our resisting force can be represented as \(F_1=-kv\) so <a href="#x1-6r4">(4.3.4)</a> can be written as:
+								
+								<a id="x1-7r5"></a>
+								\begin{equation} \label{eq:4.3.5}
+									F = -mg - kv
+								\end{equation}								
+							</div>	
+							<div>
+								From Newton's second law of motion, \(F=ma=m\dot{v}\), substituting this into <a href="#x1-7r5">(4.3.5)</a>  yields a first order differential equation, which we can write in standard form
+
+								<a href="#x1-9r6">(4.3.6)</a>
+								\begin{align}\label{eq:4.3.6}
+									m\dot{v} = & -mg - kv \nonumber \\
+									\dot{v} = & -g - \frac{k}{m}v \nonumber \\	
+									\dot{v} + \frac{k}{m}v = & -g		
+								\end{align}
+
+								Including our initial condition \(v(0)=v_0\), we can write it as an IVP
+
+								\begin{equation*}
+									\dot{v} + \frac{k}{m}v = -g \quad v(0)=v_0	
+								\end{equation*}
+							</div>
+							<div id="x1-1" class="reading-exercise">
+								Solve \( \dot{v} + \frac{k}{m}v = -g \) for \( \dot{v} \)
+							</div> 
+							<div>
+								Solving for \(\dot{v}\) and simplifying the right side, we obtain:
+
+								\begin{align}	
+									\dot{v}  = &  -\frac{kv + mg}{m}  \nonumber \\			
+								\end{align}
+
+								Which is separable, but requires dividing by \( kv + mg \) so we need to check for constant solutions first when \(kv + mg=0\)
+							</div>
+							
+							<div id="x1-1" class="reading-exercise">
+								Solve \(kv + mg=0\) for \( v \)
+							</div> 
+							<div>
+								Solving for constant solutions, we have \( \displaystyle v = -\frac{mg}{k} \) as a constant solution.
+							</div>
+							<div id="x1-1" class="reading-exercise">
+								Verify \(\displaystyle v = -\frac{mg}{k}\) is a solution for \( \dot{v} + \frac{k}{m}v = -g \)
+							</div> 
+								
+							
+							<div>
+								Now assuming \( v \ne -\frac{mg}{k}\) we can divide by \( kv + mg \) and separate variables
+
+								<a id="x1-10r7"></a>
+								\begin{align}	\label{eq:4.3.7}
+									\int  \frac{1}{kv + mg}  dv = &  -\frac{1}{m} \int  dt  \nonumber \\
+									\frac{1}{k} \int  \frac{1}{ \underset{u}{\underbrace{kv + gm}} }  \overset{du}{\overbrace{(kdv)}} = &  -\frac{1}{m} \int dt  \nonumber \\
+									\int  \frac{1}{u} du = &  -\frac{k}{m}  \int dt \nonumber \\
+									\ln \left| u \right| = &  -\frac{k}{m}t + c  \nonumber \\
+									e^{\ln \left| kv + mg \right|} = &  e^{-\frac{k}{m}t + c}  \nonumber \\
+									\left| kv + mg \right| = &  ce^{-\frac{kt}{m}}  \nonumber \\
+									kv + mg = &  ce^{-\frac{kt}{m}}  \nonumber \\
+									kv = &  -mg + ce^{-\frac{kt}{m}}  \nonumber \\
+									v = &  -\frac{mg}{k} + \frac{c}{k}e^{-\frac{kt}{m}}  \nonumber \\	
+									v = &  -\frac{mg}{k} + ce^{-\frac{kt}{m}}				
+								\end{align}
+
+								And it turns out that if we let \( c = 0 \) our one-parameter family also represents the constant solution \( v = -\frac{mg}{k} \)
+							
+							</div>
+							<div id="x1-1" class="reading-exercise">
+								Verify \(\displaystyle v = -\frac{mg}{k} + ce^{-\frac{kt}{m}}\) is a solution for \( \dot{v} + \frac{k}{m}v = -g \)
+							</div> 
+
+							<div>
+								Applying our initial condition \(v(0)=v_0\)
+
+								\begin{align*}	
+									v(t) = &  -\frac{mg}{k} + ce^{-\frac{kt}{m}} \\
+									v(0) = &  -\frac{mg}{k} + ce^{-\frac{k(0)}{m}} \\	
+									v_0 = &  -\frac{mg}{k} + ce^{0}
+									\Longrightarrow		
+									c = v_0 + \frac{mg}{k}  \\						
+								\end{align*}
+
+								\vskip0.5cm
+
+								Substituting \(c = v_0 + \frac{mg}{k}\) back in to <a href="x1-10r7">(4.3.7)</a> and rearranging to factor commong factors
+
+								\begin{align*}	
+									v = &  -\frac{mg}{k} + ce^{-\frac{kt}{m}}	\\
+									v = &  -\frac{mg}{k} + \left( v_0 + \frac{mg}{k} \right) e^{-\frac{kt}{m}}	\\
+									v = &  -\frac{mg}{k} + v_0 e^{-\frac{kt}{m}} + \frac{mg}{k}e^{-\frac{kt}{m}}	\\
+									v = &  v_0 e^{-\frac{kt}{m}} + \frac{mg}{k}e^{-\frac{kt}{m}}-\frac{mg}{k} \\
+									v = &  v_0 e^{-\frac{kt}{m}} + \frac{mg}{k} \left(e^{-\frac{kt}{m}}-1\right) \\
+								\end{align*}
+
+							</div>
+							<div id="x1-1" class="reading-exercise">
+								Verify \(\displaystyle v = v_0 e^{-\frac{kt}{m}} + \frac{mg}{k} \left(e^{-\frac{kt}{m}}-1\right)\) is a solution for \( \dot{v} + \frac{k}{m}v = -g \)
+							</div> 
+							<div>
+							</div>	
 						</li>
 						<li>
-							Use the result from (Part 1) to solve the original problem
+							<div>
+								We want to find the terminal velocity, i.e. take the limit of velocity as :
+
+								\begin{align*}	
+									v 
+										= &  v_0 e^{-\frac{kt}{m}} + \frac{mg}{k} \left(e^{-\frac{kt}{m}}-1\right) \\
+									\lim_{t \to \infty} v 
+										= &  \lim_{t \to \infty} \Bigg[ v_0 e^{-\frac{kt}{m}} + \frac{mg}{k} \left(e^{-\frac{kt}{m}}-1\right) \Bigg] \\
+										= &   v_0 \lim_{t \to \infty} e^{-\frac{kt}{m}} + \frac{mg}{k} \lim_{t \to \infty}\left(e^{-\frac{kt}{m}}-1\right) \\
+										= &   v_0  e^{-\infty} + \frac{mg}{k} \left(e^{-\infty}-1\right) \\
+										= &   v_0  \cdot 0 + \frac{mg}{k} \left(0-1\right) \\
+										= &   -\frac{mg}{k} 			
+								\end{align*}
+
+								It is interesting to notice that the terminal velocity is independent of the initial velocity \(v_0\) and the terminal verlocity is equal to the constant solution!
+
+
+							</div>	
 						</li>
 					</ol>
-
 					
-					The total force acting on the object is \begin {equation} \label
-					{eq:4.3.4} F=-mg+F_1\end {equation}
-					<a id="x1-6r4"></a>
-					where \(-mg\) is the force due to gravity and \(F_1\) is the resisting
-					force of the medium, which has magnitude \(k|v|\), where \(k\) is a
-					positive constant. If the object is moving downward (\(v\le 0\)), the
-					resisting force is upward (Figure&nbsp;<a href="#-resistive-forces-">4.3.1</a>
-					<span class="ptmb8t-">(a)</span>), so \[ F_1=k|v|=k(-v)=-kv\] On the other hand, if the object is moving
-					upward (\(v\ge 0\)), the resisting force is downward
-					(Figure&nbsp;<a href="#-resistive-forces-">4.3.1</a>
-					<span class="ptmb8t-">(b)</span>), so \[ F_1=-k|v|=-kv\] Thus,
-					<a href="#x1-6r4">(4.3.4)</a> can be written as
-					<a id="x1-7r5"></a>
-					\begin {equation} \label {eq:4.3.5} F=-mg-kv\end {equation}
-					regardless of the sign of the velocity.
 				</details>
 			</div>
 
-			<figure class="figure" id="e6962ad1-d291-42ca-8fe3-5a726eb6f6e3">
-				<div id="-resistive-forces-">
-					<img height="264" src="EPS/fig040301.png" width="409" />
-					<a id="x1-8r1"></a>
-				</div>
-				<figcaption class="caption">
-					<span class="id">Figure&nbsp;4.3.1</span>
-					<span class="content">Resistive forces</span>
-				</figcaption>
-				<!-- tex4ht:label?: x1-8r1  -->
-			</figure>
-
-			<div class="indent" id="0ac24362-8ecf-4359-93e5-cdf145f8702d">
-				From Newton’s second law of motion, \[ F=ma=m\dot{v}\] so <a href="#x1-7r5">(4.3.5)</a> yields \[ m\dot{v}=-mg-kv\] or \begin {equation} \label {eq:4.3.6} \dot{v}+{k\over
-				m}v=-g\end {equation}
-				<a id="x1-9r6"></a>
-				Since \(e^{-kt/m}\) is a solution of the complementary equation, the
-				solutions of <a href="#x1-9r6">(4.3.6)</a> are of the form \(v=ue^{-kt/m}\), where \(\dot{u}e^{-kt/m}=-g\), so
-				\(\dot{u}=-ge^{kt/m}\). Hence, \[ u=-{mg\over k} e^{kt/m}+c\] so \begin
-				{equation} \label {eq:4.3.7} v=ue^{-kt/m}=-{mg\over k}+ce^{-kt/m}\end
-				{equation}
-				<a id="x1-10r7"></a>
-				Since \(v(0)=v_0\), \[ v_0=-{mg\over k}+c\] so \[ c=v_0+{mg\over k} \] and
-				<a href="#x1-10r7">(4.3.7)</a> becomes \[ v=-{mg\over k}+\left (v_0+{mg\over k}\right ) e^{-kt/m}\]
-				Letting \(t\to \infty \) here shows that the terminal velocity is \[ \lim
-				_{t\to \infty } v(t)=-{mg\over k}\] which is independent of the initial
-				velocity \(v_0\) (Figure&nbsp;<a href="#-solutions-of-mvmgkv-">4.3.2</a>).
-			</div>
-
+			
 			<figure class="figure" id="4ef31ce9-3f6e-4507-925c-ccac1549c232">
 				<div id="-solutions-of-mvmgkv-">
 					<img height="264" src="EPS/fig040302.png" width="409" />
@@ -371,10 +494,12 @@
 				</div>
 				<figcaption class="caption">
 					<span class="id">Figure&nbsp;4.3.2</span>
-					<span class="content">Solutions of \(m\dot{v}=-mg-kv\)</span>
+					<span class="content">Solutions of \(\dot{v} + \displaystyle \frac{k}{m}v=-g\)</span>
 				</figcaption>
 				<!-- tex4ht:label?: x1-11r2  -->
 			</figure>
+
+			<!--Example 2-->
 			<div class="example" id="x1-122" style="--ex-number: 2">
 				<div>
 					A 960-lb object is given an initial upward velocity of 60 ft/s near the
@@ -384,66 +509,342 @@
 					\(t\), and find its terminal velocity.
 				</div>
 
+				<ol>
+					<li>
+						Set up and solve an IVP using the Newton's 2nd Law of Motion
+					</li>
+					<li>
+						Use the result from (Part 1) to solve the original problem
+					</li>
+				</ol>
+
 				<details class="solution" id="379acb16-3a6e-495e-8fb1-ce8e19316165">
 					<summary>Solution</summary>
-					Since \(mg=960\) and \(g=32\), \(m=960/32=30\). The atmospheric
-					resistance is \(-3v\) lb if \(v\) is expressed in feet per second.
-					Therefore \[ 30\dot{v}=-960-3v\] which we rewrite as \[ \dot{v}+{1\over 10}v=-32\]
-					Since \(e^{-t/10}\) is a solution of the complementary equation, the
-					solutions of this equation are of the form \(v=ue^{-t/10}\), where
-					\(\dot{u}e^{-t/10}=-32\), so \(\dot{u}=-32e^{t/10}\). Hence, \[ u=-320 e^{t/10}+c\]
-					so \begin {equation} \label {eq:4.3.8} v=ue^{-t/10}=-320+ce^{-t/10}\end
-					{equation}
-					<a id="x1-13r8"></a>
-					The initial velocity is 60 ft/s in the upward (positive) direction; hence,
-					\(v_0=60\). Substituting \(t=0\) and \(v=60\) in <a href="#x1-13r8">(4.3.8)</a> yields \[ 60=-320+c\] so \(c=380\), and <a href="#x1-13r8">(4.3.8)</a> becomes \[ v=-320+380e^{-t/10}\ \mbox {ft/s} \] The terminal velocity is
-					\[ \lim _{t\to \infty }v(t)=-320\mbox { ft/s.} \]
+
+					<ol>
+						<li>
+							<div>
+								We assume that the only forces acting on the object are <span class="vocab">gravity</span> and <span class="vocab">resistance</span> from the medium, therefore the total force is given as: \(F = -mg + F_1\), where \(-mg\) is the force due to gravity and \(F_1\) is the resisting force. The force due to <span class="vocab">gravity</span> is the weight of the object, given as \(mg=960 \, lb\) in this case. The force due to the <span class="vocab">resistance</span> from the medium is \(F_1\) is \(3 \, lb\) for each \(ft/s\) of velocity \(v\), so \(F_1=-3v\). Substituting in to \(F = -mg + F_1\) we have:
+
+								\begin{equation*}
+									F = -960 -3v
+								\end{equation*} 
+
+								From <span class="vocab">Newton's 2nd Law of Motion</span>, \(F=ma=m\dot{v}\), substituting this in yields a first order differential equation:
+
+								\begin{align*}
+									m\dot{v} = -960 -3v
+								\end{align*}
+
+								In Example <a href="#x1-51">4.3.1</a> we didn't know the exact value of the mass, and we left it generically as \(m\) in the equation, but in this situation we can calculate it, since we know \(mg=960\) so \(m= {960}/{g}\) and in the British unit system \(g=32 \, {ft}/{s^2}\) so \(m= {960}/{32} = 30\) and our equation becomes:
+
+								\begin{align*}
+									30 \dot{v} = & -960 -3v \\		
+								\end{align*}
+							</div>
+
+							<div id="x1-1" class="reading-exercise">
+								Write \(30 \dot{v} = -960 -3v\) in linear standard form <a href="sec2.1.book.html#x1-2r1">(2.1.1)</a>
+							</div> 
+
+							<div>
+
+								Which we can rewrite in standard form:
+
+								\begin{align*}		
+									\dot{v} + \frac{1}{10}v = & -32 \\					
+								\end{align*}
+
+								Including our initial condition of initial upward velocity of 60 ft/s, \(v(0)=60\), we can write our IVP:
+
+								\begin{equation*}	
+										\dot{v} + \frac{1}{10}v = -32 \quad v(0)=60						
+								\end{equation*}
+							</div>	
+							<div>
+								Our IVP is separable:
+
+								\begin{align}	\label{eq:4.3.8}
+									\frac{dv}{dt} + \frac{1}{10}v = & -32 \nonumber \\	
+									\frac{dv}{dt} = & - \frac{1}{10}v -32 \nonumber \\		
+									-\frac{dv}{dt} = & \frac{1}{10}v + \frac{320}{10} \nonumber \\	
+									-\frac{dv}{dt} = & \frac{v+320}{10} \nonumber \\	
+									\frac{1}{v+320}\frac{dv}{dt} = & -\frac{1}{10} \nonumber \\		
+									\int \left( \frac{1}{v+320}\frac{dv}{dt} \right) dt = & \int \left( -\frac{1}{10} \right) dt \nonumber \\	
+									\int \frac{1}{ \underset{u}{\underbrace{v+320}} } \overset{du}{\overbrace{dv}} = &  -\frac{1}{10} \int dt \nonumber \\	
+									\int \frac{1}{u} du = &  -\frac{1}{10} \int dt \nonumber \\
+									\ln \left| u \right| = &  -\frac{1}{10} t + c \nonumber \\		
+									e^{\ln \left| v+320 \right|} = &  e^{-\frac{1}{10} t + c} \nonumber \\		
+									\left| v+320 \right|= &  ce^{-\frac{t}{10} } \nonumber \\
+									v+320 = &  ce^{-\frac{t}{10} } \nonumber \\	
+									v(t) = &  -320 + ce^{-\frac{t}{10} } 				
+								\end{align}
+
+							</div>
+							<div>
+								Applying our initial condition \(v(0)=60:\)
+
+								\begin{align*}	
+									v(t) = &  -320 + ce^{-\frac{t}{10} } \\
+									v(0) = &  -320 + ce^{-\frac{(0)}{10} } \\
+									60 = &  -320 + ce^{0} \\
+									c = &  60 + 320 = 380	
+								\end{align*}
+
+								Substituting \( c = 380 \) back in to <a href="#x1-13r8">(4.3.8)</a>
+
+								\begin{align*}	
+									v = &  -320 + ce^{-\frac{t}{10} } \\
+									v = &  -320 + 380e^{-\frac{t}{10} } \\
+								\end{align*}
+
+							</div>	
+							<div>
+							</div>	
+							<div>
+							</div>	
+								
+						</li>
+						<li>
+							<div>
+								We want to find the terminal velocity, i.e. take the limit of velocity:
+
+								\begin{align*}	
+									v 
+										= &  -320 + 380e^{-\frac{t}{10} } 	\\
+									\lim_{t \to \infty} v 
+										= &  \lim_{t \to \infty} \Bigg[ -320 + 380e^{-\frac{t}{10} } \Bigg] \\
+										= &   -320 + 380 \lim_{t \to \infty} \Big[e^{-\frac{t}{10} } \Big] \\
+										= &   -320 + 380 \Big[e^{-\infty} \Big] \\
+										= &   -320 \, {ft}/{s}			
+								\end{align*}
+
+
+							</div>
+						</li>
+					</ol>
+
 				</details>
 			</div>
+
+			<!--Example 3-->
 			<div class="example" id="x1-143" style="--ex-number: 3">
 				<div>
 					A 10 kg mass is given an initial velocity \(v_0\le 0\) near Earth’s
 					surface. The only forces acting on it are gravity and atmospheric
 					resistance proportional to the square of the speed. Assuming that the
 					resistance is 8 N if the speed is 2 m/s, find the velocity of the object
-					as a function of \(t\), and find the terminal velocity.
+					as a function of time \(t\), and find the terminal velocity.
 				</div>
+
+				<ol>
+					<li>
+						Set up and solve an IVP using the Newton's 2nd Law of Motion
+					</li>
+					<li>
+						Use the result from (Part 1) to solve the original problem
+					</li>
+				</ol>
 
 				<details class="solution" id="6af98992-3deb-409f-9998-3072459c1579">
 					<summary>Solution</summary>
-					Since the object is falling, the resistance is in the upward
-					(positive) direction. Hence, \begin {equation} \label {eq:4.3.9}
-					m\dot{v}=-mg+kv^2\end {equation}
-					<a id="x1-15r9"></a>
-					where \(k\) is a constant. Since the magnitude of the resistance is 8 N
-					when \(v=2\) m/s, \[ k(2^2)=8\] so \(k=2\ \mbox {N-s}^2/\mbox {m}^2\).
-					Since \(m=10\) and \(g=9.8\), <a href="#x1-15r9">(4.3.9)</a> becomes \begin {equation} \label {eq:4.3.10} 10\dot{v}=-98+2v^2=2(v^2-49)\end
-					{equation}
-					<a id="x1-16r10"></a>
-					If \(v_0=-7\), then \(v\equiv -7\) for all \(t\ge 0\). If \(v_0\ne -7\),
-					we separate variables to obtain \begin {equation} \label {eq:4.3.11}
-					{1\over v^2-49}\dot{v}={1\over 5}\end {equation}
-					<a id="x1-17r11"></a>
-					which is convenient for the required partial fraction expansion \begin
-					{equation} \label {eq:4.3.12} \frac {1}{v^2-49} =\frac {1}{(v-7)(v+7)}
-					={1\over 14}\left [{1\over v-7} -{1\over v+7}\right ]\end {equation}
-					<a id="x1-18r12"></a>
-					Substituting <a href="#x1-18r12">(4.3.12)</a> into <a href="#x1-17r11">(4.3.11)</a> yields \[ {1\over 14}\left [{1\over v-7}-{1\over v+7}\right ]\dot{v}={1\over
-					5}\] so \[ \left [{1\over v-7}-{1\over v+7}\right ]\dot{v}={14\over 5}\]
-					Integrating this yields \[ \ln |v-7|-\ln |v+7|=14t/5+k\] Therefore \[
-					\left |{v-7\over v+7}\right |=e^ke^{14t/5}\] Since Theorem&nbsp;<span class="ptmb8t-">2.3.1</span> implies that \((v-7)/(v+7)\) can’t change sign (why?), we can rewrite the
-					last equation as \begin {equation} \label {eq:4.3.13} {v-7\over
-					v+7}=ce^{14t/5}\end {equation}
-					<a id="x1-19r13"></a>
-					which is an implicit solution of <a href="#x1-16r10">(4.3.10)</a>. Solving this for \(v\) yields \begin {equation} \label {eq:4.3.14}
-					v=-7{c+e^{-14t/5}\over c-e^{-14t/5}}\end {equation}
-					<a id="x1-20r14"></a>
-					Since \(v(0)=v_0\), it <a href="#x1-19r13">(4.3.13)</a> implies that \[ c={v_0-7\over v_0+7}\] Substituting this into <a href="#x1-20r14">(4.3.14)</a> and simplifying yields \[ v=-7{v_0(1+e^{-14t/5})-7(1-e^{-14t/5})\over
-					v_0(1-e^{-14t/5})-7(1+e^{-14t/5}}\] Since \(v_0\le 0\), \(v\) is defined
-					and negative for all \(t&gt;0\). The terminal velocity is \[ \lim _{t\to
-					\infty } v(t)=-7\ \mbox {m/s}\] independent of \(v_0\). More generally, it
-					can be shown (Exercise&nbsp;<span class="ptmb8t-">11</span>) that if \(v\) is any solution of <a href="#x1-15r9">(4.3.9)</a> such that \(v_0\le 0\) then \[ \lim _{t\to \infty }v(t)=-\sqrt {mg\over
-					k} \] (Figure&nbsp;<a href="#-solutions-of-mvmgkv-vv-">4.3.3</a>).
+
+					<ol>
+						<li>
+							<div>
+								We assume that the only forces acting on the object are <span class="vocab">gravity</span> and <span class="vocab">resistance</span> from the medium, therefore the total force is given as: \(F = -mg + F_1\), where \(-mg\) is the force due to gravity and \(F_1\) is the resisting force. With given \(m=10 \, kg\) and known \(g=9.8 \, {m}/{s^2}\), we can calculate as \(-mg = -98\) so we have the force due to gravity.
+							</div>
+
+							<div>	
+								The force due to the <span class="vocab">resistance</span> from the medium is \(F_1\) and given as proportional to the square of the speed, so \(F_1=k \left|v \right|^2 = kv^2\) where \(k\) is the constant of proportionality. With the speed given as  \(2 \, {m}/{s}\) with a resistance of \(8 \, N\), then we can calculate the proportionality constant \(k\):
+
+								\begin{align*}
+									F_1 = & kv^2 \\
+									8 = & k(2)^2 \\
+									8 = & 4k \\
+									k = & 2 \\		
+								\end{align*}
+
+								Thus we have the resisting force \(F_1= kv^2 = 2v^2\) so our total force can be expressed:
+
+								<a id="x1-15r9"></a>
+								\begin{equation} \label{eq:4.3.9}
+									F = -98 + 2v^2
+								\end{equation} 
+
+
+								From Newton's second law of motion, \(F=ma=m\dot{v}\), and with mass given as \(m=10\), substituting this in yields a first order <span class="vocab">nonlinear</span> differential equation:
+
+								\begin{align*}
+									10\dot{v} = & -98 + 2v^2
+								\end{align*}
+
+
+								Rewriting in standard form and including our initial condition of an initial velocity \(v(0)=v_0\le0\), we can write our IVP:
+
+								<a id="x1-16r10"></a>
+								\begin{equation} \label{eq:4.3.10}
+										\dot{v} - \frac{1}{5}v^2 = -\frac{49}{5} \quad v(0)=v_0 \le 0	
+								\end{equation}
+							</div>	
+
+							<div>
+								Our IVP is separable:
+
+								\begin{align*}
+									\frac{dv}{dt} - \frac{1}{5}v^2 = & -\frac{49}{5}  \\		
+									\frac{dv}{dt}  = & \frac{1}{5}v^2 -\frac{49}{5}  \\	
+									\frac{dv}{dt}  = & \frac{v^2 - 49}{5}  \\					
+								\end{align*}
+								
+								But requires dividing by the quantity \(v^2 - 49\) so we identify constant solutions first \(v=7\) and \(v=-7\), and then assuming \(v \ne 7, -7\) we can solve for \(v\):
+								
+								<a id="x1-17r11"></a>
+								\begin{align}	\label{eq:4.3.11}
+									\frac{dv}{dt}  = & \frac{v^2 - 49}{5} \nonumber \\	
+									\frac{1}{v^2 - 49} \frac{dv}{dt}  = & \frac{1}{5} \\		
+									\int \left( \frac{1}{v^2 - 49} \frac{dv}{dt} \right) dt  = &\int \left( \frac{1}{5} \right) dt \nonumber \\	
+									\int \frac{1}{(v-7)(v+7)}dv  = & \frac{1}{5} \int dt \nonumber \\	
+									\int \frac{A}{v-7}dv + \int \frac{B}{v+7}dv  = & \frac{1}{5} \int dt \nonumber								
+								\end{align}
+								
+								Which requires partial fraction decomposition:
+								
+								\begin{align*} 	
+									\frac{1}{(v-7)(v+7)} = & \frac{A}{v-7}+\frac{B}{v+7} \\		
+									= & \frac{A(v+7)}{(v-7)(v+7)}+\frac{B(v-7)}{(v+7)(v-7)} \\
+									= & \frac{Av+7A+By-7B}{(v-7)(v+7)} \\
+									= & \frac{(A+B)v+7(A-B)}{(v-7)(v+7)} \\	
+								\end{align*}
+								
+								So we obtain the system \(A+B=0, 7(A-B)=1\). Solving \(A+B=0 \Longrightarrow B = -A\) and substituting it into the other equation, we get \(A-B=\frac{1}{7} \Longrightarrow A-(-A)=\frac{1}{7} \Longrightarrow 2A=\frac{1}{7}\), so we get \(A=\frac{1}{14}\) and \(B=-A=-\frac{1}{14}\). 
+								
+							</div>	
+
+							<div>
+								Substituting back into our integral, we can integrate:
+
+								<a id="x1-18r12"></a> <a id="x1-19r13"></a> 
+								\begin{align} 	 \label{eq:4.3.12}
+									\frac{dv}{dt}  = & \frac{v^2 - 49}{5} \nonumber \\
+									\vdots & \nonumber \\
+									\int \frac{\frac{1}{14}}{v-7}dv + \int \frac{-\frac{1}{14}}{v+7}dv  = & \frac{1}{5} \int dt \nonumber \\		
+									\frac{1}{14}\int \frac{1}{v-7}dv -\frac{1}{14} \int \frac{1}{v+7}dv  = & \frac{1}{5} \int dt  \\
+									\int \frac{1}{v-7}dv - \int \frac{1}{v+7}dv  = & \frac{14}{5} \int dt \nonumber \\ 
+									\int \frac{1}{\underset{u}{\underbrace{v-7}}} \underset{du}{\underbrace{dv}} 
+										-\int \frac{1}{\underset{w}{\underbrace{v+7}}} \underset{dw}{\underbrace{dv}}  = & \frac{14}{5} \int dt \nonumber \\ 
+									\int \frac{1}{u}du - \int \frac{1}{w}dw = & \frac{14}{5} \int dt \nonumber \\	
+									\ln \left| u \right| - \ln \left| w \right| = &  \frac{14}{5} t + c \nonumber \\
+									\ln \left| \frac{u}{w} \right| = &  \frac{14}{5} t + c \nonumber \\
+									\ln \left| \frac{v-7}{v+7} \right| = &  \frac{14}{5} t + c \nonumber \\
+									e^{\ln \left| \frac{v-7}{v+7} \right|} = &  e^{\frac{14}{5} t + c} \nonumber \\
+									\left| \frac{v-7}{v+7} \right|= &  ce^{\frac{14t}{5} } \nonumber \\	
+									\frac{v-7}{v+7} = &  ce^{\frac{14t}{5} }  \label{eq:4.3.13} \\	
+									v-7 = &  (v+7)ce^{\frac{14t}{5} } \nonumber \\
+									v-7 = &  vce^{\frac{14t}{5} } + 7ce^{\frac{14t}{5} } \nonumber \\	
+									v - vce^{\frac{14t}{5} }= & 7  + 7ce^{\frac{14t}{5} } \nonumber \\
+									v \left(1 - ce^{\frac{14t}{5} } \right) = & 7 \left( 1  + ce^{\frac{14t}{5} } \right) \nonumber \\	
+								%	v = & 7 \left( \frac{ 1  + ce^{\frac{14t}{5} } }{ 1 - ce^{\frac{14t}{5} } } \right) \nonumber \\	
+									v = & 7 \left( \frac{ 1  + ce^{\frac{14t}{5} } }{ 1 - ce^{\frac{14t}{5} } } \right)  
+											\left( \frac{ e^{-\frac{14t}{5} } }{e^{-\frac{14t}{5} } } \right)  \nonumber \\	
+									v = & 7 \left( \frac{ e^{-\frac{14t}{5} }  + c }{ e^{-\frac{14t}{5} } - c } \right)	 \nonumber \\
+									v(t)  = & -7 \left( \frac{ c + e^{-\frac{14t}{5} }  }{ c - e^{-\frac{14t}{5} } } \right) \label{eq:4.3.14}	
+								\end{align}	
+								<a id="x1-20r14"></a>
+
+							</div>	
+
+							<div>
+								Applying our initial condition \(v(0)=v_0 \le 0\)
+
+								\begin{align*}	
+									v(t)  = & -7 \left( \frac{ c+ e^{-\frac{14t}{5} } }{ c - e^{-\frac{14t}{5} } } \right) \\
+									v(0)  = & -7 \left( \frac{ c + e^{0} }{ c - e^{0} } \right) \\	
+									v_0  = & -7 \left( \frac{ c + 1 }{ c - 1 } \right) \\	
+									v_0 ( c - 1)  = & -7 (c + 1) \\	
+									v_0 c - v_0  = & -7c - 7  \\	
+									v_0 c +7c  = & v_0 - 7  \\
+									c (v_0 +7)  = & v_0 - 7  \\	
+									c  = & \frac{v_0 - 7}{v_0 +7}  \\					
+								\end{align*}
+								
+								Substituting \(c =  \frac{v_0 - 7}{v_0 +7}\) back in to (4.3.14)
+								
+								\begin{align*}	
+									v(t)  = & -7 \left( \frac{ c + e^{-\frac{14t}{5} }  }{ c - e^{-\frac{14t}{5} } } \right)\\
+									v(t)  = & -7 \left( \frac{ \left(\frac{v_0 - 7}{v_0 +7}\right) + e^{-\frac{14t}{5} }  }{ \left(\frac{v_0 - 7}{v_0 +7}\right) - e^{-\frac{14t}{5} } } \right) \left( \frac{v_0 + 7}{v_0 + 7} \right) \\
+									v(t)  = & -7 \left( \frac{ \left( v_0 - 7 \right) + \left( v_0 + 7 \right)e^{-\frac{14t}{5} }  }{ \left( v_0 - 7 \right) - \left( v_0 + 7 \right)e^{-\frac{14t}{5} } } \right)\\
+								\end{align*}
+								
+							</div>	
+
+							<div>
+							</div>	
+
+							<div>
+							</div>	
+
+							<div>
+							</div>	
+
+							<div>
+							</div>	
+						</li>
+						<li>
+							<div>
+								We want to find the terminal velocity, i.e. take the limit of velocity:
+
+								\begin{align*}	
+									v(t)  
+										= & -7 \left( \frac{ \left( v_0 - 7 \right) 
+											+ \left( v_0 + 7 \right)e^{-\frac{14t}{5} }  }{ \left( v_0 - 7 \right) 
+											- \left( v_0 + 7 \right)e^{-\frac{14t}{5} } } \right)\\
+									\lim_{t \to \infty}v(t)  
+										= & -7 \lim_{t \to \infty} \left( \frac{ \left( v_0 - 7 \right) 
+											+ \left( v_0 + 7 \right)e^{-\frac{14t}{5} }  }{ \left( v_0 - 7 \right) 
+											- \left( v_0 + 7 \right)e^{-\frac{14t}{5} } } \right)\\	
+										= & -7  \left( \frac{ \left( v_0 - 7 \right) 
+											+ \left( v_0 + 7 \right)\displaystyle\lim_{t \to \infty}e^{-\frac{14t}{5} }  }{ \left( v_0 - 7 \right) 
+											- \left( v_0 + 7 \right)\displaystyle\lim_{t \to \infty}e^{-\frac{14t}{5} } } \right)\\	
+										= & -7  \left( \frac{ \left( v_0 - 7 \right) 
+											+ \left( v_0 + 7 \right) e^{-\infty}  }{ \left( v_0 - 7 \right) 
+											- \left( v_0 + 7 \right) e^{-\infty} } \right)\\							
+										= & -7  \frac{ \left( v_0 - 7 \right) }{ \left( v_0 - 7 \right) } \\	
+										= & -7 \, {m}/{s} \\					
+								\end{align*}
+								
+							</div>	
+
+							<div>
+								More generally, it an be shown (Exercise&nbsp;<span class="ptmb8t-">11</span>) that if \(v\) is any solution
+								of <a href="#x1-15r9">(4.3.9)</a> such that \(v_0\le0\):
+								$$
+								\lim_{t\to\infty}v(t)=-\sqrt{mg\over k}
+								$$		
+								(Figure&nbsp;<a href="#-solutions-of-mvmgkv-vv-">4.3.3</a>).						
+							</div>	
+
+							<div>
+							</div>	
+
+							<div>
+							</div>	
+
+							<div>
+							</div>	
+
+							<div>
+							</div>	
+
+							<div>
+							</div>	
+
+							<div>
+							</div>	
+						</li>
+					</ol>
+
+		
 				</details>
 
 			</div>
@@ -460,6 +861,8 @@
 				</figcaption>
 				<!-- tex4ht:label?: x1-21r3  -->
 			</figure>
+
+			<!--Example 4-->
 			<div class="example" id="x1-224" style="--ex-number: 4">
 				<div>
 					A 10-kg mass is launched vertically upward from Earth’s surface with an
@@ -470,45 +873,147 @@
 					altitude.
 				</div>
 
+				<ol>
+					<li>
+						Set up and solve an IVP using the Newton's 2nd Law of Motion
+					</li>
+					<li>
+						Use the result from (Part 1) to solve the original problem
+					</li>
+				</ol>
+
 				<details class="solution" id="b7cf6bad-5a3c-42f7-9029-69ab701fb2b2">
 					<summary>Solution</summary>
-					The mass will climb while \(v&gt;0 \) and reach its maximum altitude
-					when \(v=0\). Therefore \(v&gt;0\) for \(0\le t&lt;T\) and \(v(T)=0\).
-					Although the mass of the object and our assumptions concerning the forces
-					acting on it are the same as those in Example 3, <a href="#x1-16r10">(4.3.10)</a> does not apply here, since the resisting force is negative if
-					\(v&gt;0\); therefore, we replace <a href="#x1-16r10">(4.3.10)</a> by
-					<a id="x1-23r15"></a>
-					\begin {equation} \label {eq:4.3.15} 10\dot{v}=-98-2v^2\end {equation}
+
+					<ol>
+						<li>
+							<div>
+								This is the same problem set-up as Example 4.3.3 except the object is launched vertically so that the initial condition is \( v(0)=v_0\ge0\). The force due to gravity is still \(-mg=-98\). The resisting force \(F_1\) is still proportional to the square of the speed, with the same constant of proportionality, so the magnitude of the force is the same as the previous problem \(\left| F_1 \right|  = 2v^2\), however, the resisting force is always negative, so \(F_1 = -2v^2\), leading to our differential equation:
+
+
+								<a id="x1-23r15"></a>
+								\begin{equation} \label{eq:4.3.15}
+									10\dot{v}  = -98 - 2v^2
+								\end{equation} 
+								
+								Rewriting in standard form and including our initial condition of an initial velocity \(v(0)=v_0\le0\), we can write our IVP:
+								
+								\begin{equation*}
+										\dot{v} + \frac{1}{5}v^2 = -\frac{49}{5} \quad v(0)=v_0 \ge 0			
+								\end{equation*}								
+							</div>	
+
+							<div>
+								Our IVP is separable:
+
+								\begin{align}
+									\frac{dv}{dt} + \frac{1}{5}v^2 = & -\frac{49}{5} \nonumber \\		
+									\frac{dv}{dt}  = & -\frac{1}{5}v^2 -\frac{49}{5} \nonumber \\	
+									-\frac{dv}{dt}  = & \frac{v^2 + 49}{5} \nonumber \\					
+									\frac{1}{v^2 + 49} \frac{dv}{dt}  = & -\frac{1}{5} \nonumber \\		
+									\int \Big( \frac{1}{ v^2 +49} \frac{dv}{dt} \Big) dt  = & \int \left( -\frac{1}{5} \right) dt \nonumber \\	
+									\int \frac{1}{ \underset{7\tan\theta}{\underbrace{v}}^2 +49} \underset{7\sec^2\theta d\theta}{\underbrace{dv}}  = & -\frac{1}{5} \int dt \nonumber \\
+									\int \frac{7\sec^2\theta d\theta}{ 49\tan^2\theta +49}  = & -\frac{1}{5} \int dt \nonumber \\	
+									\frac{7}{ 49} \int \frac{\sec^2\theta }{ \tan^2\theta +1} d\theta  = & -\frac{1}{5} \int dt \nonumber \\	
+									\frac{1}{ 7} \int d\theta  = & -\frac{1}{5} \int dt \nonumber \\			
+									\theta  = & -\frac{7}{5}t + c \nonumber \\	
+									\tan^{-1}\left( \frac{v(t)}{7} \right)  = & -\frac{7}{5}t + c \nonumber \\							
+								\end{align}
+								
+							</div>	
+
+							<div>
+								Applying our initial condition \(v(0)=v_0 \ge 0\)
+
+								\begin{align}	
+									\tan^{-1}\left( \frac{v(t)}{7} \right)  = & -\frac{7}{5}t + c  \nonumber \\		
+									\tan^{-1}\left( \frac{v(0)}{7} \right)  = & -\frac{7}{5}\cdot(0) + c  \nonumber  \\		
+									\tan^{-1}\left( \frac{v_0}{7} \right)  = &  c  \\							
+								\end{align}
+								
+								Substituting \(c =  \tan^{-1}\left( \frac{v_0}{7} \right) \) back in and solving explicitly for \(v(t)\): 
+								
+								\begin{align}	\label{eq:4.3.17}
+									\tan^{-1}\left( \frac{v(t)}{7} \right)  = & -\frac{7}{5}t + c \nonumber \\
+									\tan^{-1}\left( \frac{v(t)}{7} \right)  = & -\frac{7}{5}t +  \tan^{-1}\left( \frac{v_0}{7} \right) \nonumber \\
+									\frac{v(t)}{7}  = & \tan \left( -\frac{7}{5}t +  \tan^{-1}\left( \frac{v_0}{7} \right)  \right) \nonumber \\
+									v(t)  = & 7 \tan \left( -\frac{7}{5}t +  \tan^{-1}\left( \frac{v_0}{7} \right)  \right)
+								\end{align}
+								
+								Simplifying using the identity \(\displaystyle \tan(A-B)={\tan A-\tan B\over1+\tan A\tan B}\):
+								
+								
+								
+								\begin{align*}
+									v
+									= & 7 \tan \left( -\frac{7}{5}t +  \tan^{-1}\left( \frac{v_0}{7} \right)  \right) \\
+									= & 7 \tan \left( \underset{A}{\underbrace{\tan^{-1}\left( \frac{v_0}{7} \right)}} - \underset{B}{\underbrace{\frac{7}{5}t}}  \right) \\
+									= & 7 \left( \frac{\tan \left( \tan^{-1}\left( \frac{v_0}{7} \right) \right) - \tan \left( \frac{7}{5}t \right)}{1 
+										+ \tan \left( \tan^{-1}\left( \frac{v_0}{7} \right)\right) \tan \left( \frac{7}{5}t \right) } \right) \\	
+									= & 7 \left( \frac{ \frac{v_0}{7} - \tan \left( \frac{7t}{5} \right)}{1 
+										+ \left(\frac{v_0}{7}\right) \tan \left( \frac{7t}{5} \right) } \right) \left( \frac{7}{7} \right) \\		
+									= & 7 \left( \frac{   v_0 - 7 \tan \left( \frac{7t}{5} \right)}{7 
+										+ v_0 \tan \left( \frac{7t}{5} \right) } \right) \\
+								\end{align*}								
+							</div>	
+
+							<div>
+
+							</div>	
+
+							<div>
+							</div>	
+
+							<div>
+							</div>	
+						</li>
+						<li>
+							<div>
+								We want to find the time required for the mass to reach maximum altitude. The object will slow down and eventually reach \(v(t)=0\) at maximum altitude. Thus we substitute \(v(t)=0\) and solve for t:
+
+								\begin{align*}	
+									v(t)  = & 7 \left( \frac{   v_0 - 7 \tan \left( \frac{7t}{5} \right)}{7 
+										+ v_0 \tan \left( \frac{7t}{5} \right) } \right) \\	
+									0  = & 7 \left( \frac{   v_0 - 7 \tan \left( \frac{7t}{5} \right)}{7 
+										+ v_0 \tan \left( \frac{7t}{5} \right) } \right) \\	
+									0 = &  \frac{   v_0 - 7 \tan \left( \frac{7t}{5} \right)}{7 
+										+ v_0 \tan \left( \frac{7t}{5} \right) }  \\	
+									0 = &  v_0 - 7 \tan \left( \frac{7t}{5} \right)\\	
+									7 \tan \left( \frac{7t}{5} \right) = &  v_0 \\		
+									 \tan \left( \frac{7t}{5} \right) = &  \frac{v_0}{7} \\	
+									 \frac{7t}{5} = &  \tan^{-1} \left( \frac{v_0}{7} \right) \\	 
+									 t = &  \frac{5}{7} \tan^{-1} \left( \frac{v_0}{7} \right) \\	 											
+								\end{align*}
+								
+								Since \( \tan^{-1}x < \frac{\pi}{2}\) for all \(x\), then the time to reach maximum altitude is less than
+								
+								\begin{align*}	
+									 t = &  \frac{5}{7} \tan^{-1} \left( \frac{v_0}{7} \right) <  \frac{5}{7} \cdot \frac{\pi}{2} = \frac{5\pi}{14} \approx 1.122 \, s\\	 		
+								\end{align*}
+								
+							</div>	
+
+							<div>
+							</div>	
+
+							<div>
+							</div>	
+
+							<div>
+							</div>	
+
+							<div>
+							</div>	
+
+							<div>
+							</div>	
+						</li>
+					</ol>
+
 				</details>
 			</div>
-			<div class="indent" id="16e8864a-73eb-4234-af0b-73a5d12c258e">
-				Separating variables yields \[ {5\over v^2+49}\dot{v}=-1\] and integrating this
-				yields \[ {5\over 7}\tan ^{-1}{v\over 7}=-t+c\] (Recall that \(\tan
-				^{-1}u\) is the number \(\theta \) such that \(-\pi /2 &lt; \theta &lt;
-				\pi /2\) and \(\tan \theta =u\).) Since \(v(0)=v_0\), \[ c={5\over 7}\tan
-				^{-1}{v_0\over 7}\] so \(v\) is defined implicitly by \begin {equation}
-				\label {eq:4.3.16} {5\over 7} \tan ^{-1}{v\over 7}=-t+{5\over 7} \tan
-				^{-1}{v_0\over 7}, \quad 0\le t\le T\end {equation}
-				<a id="x1-24r16"></a>
-				Solving this for \(v\) yields \begin {equation} \label {eq:4.3.17} v=7\tan
-				\left (-{7t\over 5}+\tan ^{-1}{v_0\over 7}\right )\end {equation}
-				<a id="x1-25r17"></a>
-				Using the identity \[ \tan (A-B)={\tan A-\tan B\over 1+\tan A\tan B} \]
-				with \(A=\tan ^{-1}(v_0/7)\) and \(B=7t/5\), and noting that \(\tan (\tan
-				^{-1}\theta )=\theta \), we can simplify <a href="#x1-25r17">(4.3.17)</a> to \[ v=7{v_0-7\tan (7t/5)\over 7+v_0\tan (7t/5)}\]
-			</div>
-			<div class="indent" id="236eb6f4-d296-45a5-ba74-5f3f6ada14e9">
-				Since \(v(T)=0\) and \(\tan ^{-1}(0)=0\), <a href="#x1-24r16">(4.3.16)</a> implies that \[ -T+{5\over 7} \tan ^{-1}{v_0\over 7}=0\] Therefore \[
-				T={5\over 7} \tan ^{-1}{v_0\over 7}\] Since \(\tan ^{-1}(v_0/7)&lt;\pi
-				/2\) for all \(v_0\), the time required for the mass to reach its maximum
-				altitude is less than \[ {5\pi \over 14} \approx 1.122\ \mbox {s} \]
-				regardless of the initial velocity. Figure&nbsp;
-				<a href="#-solutions-of-ref-eq-for-various-v-">
-					4.3.4
-					<!-- tex4ht:ref: figure:4.3.4  -->
-				</a>
-				shows graphs of \(v\) over \([0,T]\) for various values of \(v_0\).
-			</div>
+			
+			
 			<figure class="figure" id="2f2bd851-a345-4a8e-a729-92a7eccb084c">
 				<div id="-solutions-of-ref-eq-for-various-v-">
 					<img height="264" src="EPS/fig040304.png" width="409" />
@@ -523,7 +1028,9 @@
 				<!-- tex4ht:label?: x1-26r4  -->
 			</figure>
 		</details>
-		
+
+
+		<!--Escape Velocity-->
 		<details id="24488886-5e1f-4e89-951d-417939e716b8">
 			<summary>Escape Velocity</summary>
 
@@ -599,8 +1106,42 @@
 				we can obtain \(v\) as a function of \(y\) by solving the initial value
 				problem \[ v{dv\over dy}=-{gR^2\over (y+R)^2},\quad v(h)=v_0\]
 			</div>
+			<div>
+
+
+				\begin{align}	
+				v \frac{dv}{dy} = & - \frac{gR^2}{(y+R)^2} \nonumber \\
+				\int \left( v \frac{dv}{dy} \right) dy= & \int \left( - \frac{gR^2}{(y+R)^2} \right) dy \nonumber \\
+				\int v dy = & -gR^2 \int \frac{1}{(y+R)^2} dy \nonumber \\
+				\int v dy = & -gR^2 \int \frac{1}{(\underset{u}{\underbrace{y+R}})^2} \underset{du}{\underbrace{dy}} \nonumber \\
+				\int v dy = & -gR^2 \int \frac{1}{u^2} du \nonumber \\
+				\int v dy = & -gR^2 \int u^{-2} du  \nonumber \\
+				\frac{1}{2} v^2 = & -gR^2 (-u^{-1}) + c \nonumber \\
+				\frac{1}{2} v^2 = & \frac{gR^2}{y+R} + c \label{eq:4.3.22}
+			\end{align}
+			
+			 \vskip0.5cm
+			
+			\noindent Applying the initial condition $v(0)=v_0$ and $y(0)=h$:
+			
+			\begin{align*}	
+				\frac{1}{2} v^2(t) = & \frac{gR^2}{y(t)+R} + c  \\
+				\frac{1}{2} v^2(0) = & \frac{gR^2}{y(0)+R} + c  \\
+				\frac{1}{2} v_0^2 = & \frac{gR^2}{h+R} + c \\ 	
+				c = & \frac{1}{2}v_0^2 - \frac{gR^2}{h+R} \\					
+			\end{align*}
+							
+			</div>	
+			<div>
+				Substituting back in:
+
+				\begin{align*}	
+					\frac{1}{2} v^2 = & \frac{gR^2}{y+R} + c \nonumber \\	
+					\frac{1}{2} v^2 = & \frac{gR^2}{y+R} + \left( \frac{1}{2}v_0^2 - \frac{gR^2}{h+R} \right)	
+				\end{align*}				
+			</div>	
 			<div class="indent" id="9ceae6cd-96ce-4e36-9fbf-df0cd6cc2154">
-				Integrating <a href="#x1-35r21">(4.3.21)</a> with respect to \(y\) yields \begin {equation} \label {eq:4.3.22}
+				Integrating <a href="#x1-35r21">(4.3.21)</a> with respect to \(y\) yields \begin {equation} 
 				{v^2\over 2}={gR^2\over y+R}+c\end {equation}
 				<a id="x1-36r22"></a>
 				Since \(v(h)=v_0\), \[ c={v_0^2\over 2}-{gR^2\over h+R}\] so <a href="#x1-36r22">(4.3.22)</a> becomes \begin {equation} \label {eq:4.3.23} {v^2\over 2}={gR^2\over
