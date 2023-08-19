@@ -33,30 +33,63 @@
 
 			<div id="c67fb16a-3b72-4762-9c9a-b25db4da4406">
 				If \(a,b\), and \(c\) are real constants and \(a\ne 0\), then \[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=F(x) \] is said to be a <span class="vocab">constant coefficient equation</span>. In this section we consider the homogeneous constant coefficient equation 
-				\begin {equation} \label {eq:5.2.1} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0 
-				\end {equation} <a id="x1-2r1"></a> As we’ll see, all solutions of <a href="#x1-2r1">(5.2.1)</a> are defined on \((-\infty ,\infty )\). This being the case, we’ll omit references to the interval on which solutions are defined, or on which a given set of solutions is a fundamental set, etc., since the interval will always be \((-\infty ,\infty )\). 
+
+				<a id="x1-2r1"></a> 
+				\begin {equation} \label {eq:5.2.1} 
+					a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0 
+				\end {equation} 
+				
+				As we’ll see, all solutions of <a href="#x1-2r1">(5.2.1)</a> are defined on \((-\infty ,\infty )\). This being the case, we’ll omit references to the interval on which solutions are defined, or on which a given set of solutions is a fundamental set, etc., since the interval will always be \((-\infty ,\infty )\). 
 			</div>
+
 			<div class="indent" id="27f3b082-3d4d-4dbc-a106-73fe7488798f">
-				The key to solving <a href="#x1-2r1">(5.2.1)</a> is that if \(y=e^{rx}\) where \(r\) is a constant then the left side of <a href="#x1-2r1">(5.2.1)</a> is a multiple of \(e^{rx}\); thus, if \(y=e^{rx}\) then \(\frac{dy}{dx}=re^{rx}\) and \(\frac{d^2y}{dx^2}=r^2e^{rx}\), so 
+				The key to solving <a href="#x1-2r1">(5.2.1)</a> is that if \(y=e^{rx}\) where \(r\) is a constant then the left side of <a href="#x1-2r1">(5.2.1)</a> is a multiple of \(e^{rx}\)
+				
+				
+				\[
+					y=e^{rx}
+					\Longrightarrow 
+					\frac{dy}{dx}=re^{rx}
+					\Longrightarrow 
+					\frac{d^2y}{dx^2}=r^2e^{rx}
+				\] 
+
+				Substituting into <a href="#x1-2r1">(5.2.1)</a>
+				
 				<a id="x1-3r2"></a> 
-				\begin {equation} \label {eq:5.2.2} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=ar^2e^{rx}+bre^{rx}+ce^{rx}=(ar^2+br+c)e^{rx} 
-				\end {equation} The quadratic polynomial \[ p(r)=ar^2+br+c \] is the <span class="vocab">characteristic polynomial</span> of <a href="#x1-2r1">(5.2.1)</a>, and \(p(r)=0\) is the <span class="vocab">characteristic equation</span>. From <a href="#x1-3r2">(5.2.2)</a> we can see that \(y=e^{rx}\) is a solution of <a href="#x1-2r1">(5.2.1)</a> if and only if \(p(r)=0\). 
+				\begin{align} \label{eq:5.2.2}
+					a \frac{d^2y}{dx^2}  +  b \frac{dy}{dx}  + c y  = & 0\nonumber \\
+					a \left( r^2e^{rx} \right) + b \left( re^{rx} \right) + c \left( e^{rx} \right) = & 0 \nonumber \\
+					ar^2e^{rx} + bre^{rx} + ce^{rx} = & 0 \nonumber \\	
+					(ar^2 + br + c) e^{rx} = & 0 \\
+					ar^2 + br + c = 0 \quad \text{or} & \quad e^{rx} = 0 \nonumber
+				\end{align}
+				
+				Now since the factor \( e^{rx} \) is never zero, the only way to solve <a href="#x1-3r2">(5.2.2)</a> would be when the quadratic polynomial  \(ar^2+br+c \) is zero:
+				
+				\[ ar^2 + br + c = 0  \]
 			</div>
+
 			<div class="indent" id="009e8204-9655-4015-bfd6-47e91c57953c">
-				The roots of the characteristic equation are given by the quadratic formula 
-				\begin {equation} \label {eq:5.2.3} r={-b\pm \sqrt {b^2-4ac}\over 2a} 
-				\end {equation} <a id="x1-4r3"></a> We consider three cases: 
+				We call this equation the <span class="vocab">characteristic equation</span> of <a href="#x1-2r1">(5.2.1)</a> and we call the quadratic polynomial \(p(r)=ar^2+br+c \) the <span class="vocab">characteristic polynomial</span>. As the characteristic equation is quadratic, the roots are given by the quadratic formula 
+				
+				<a id="x1-4r3"></a>
+				\begin {equation} \label {eq:5.2.3} 
+					r={-b\pm \sqrt {b^2-4ac}\over 2a} 
+				\end {equation} 
 			</div>
 			<div id="4f6fe2a6-39d7-4164-9480-d837038852b9">
+				We consider three cases: 
 				<div>
-					<strong>Case 1:</strong> \(b^2-4ac&gt;0\), so the characteristic equation has two distinct real roots. 
+					<strong>Case 1:</strong> \(b^2-4ac&gt;0\), so the characteristic equation has two distinct real roots 
 				</div>
 				<div>
-					<strong>Case 2:</strong> \(b^2-4ac=0\), so the characteristic equation has a repeated real root. 
+					<strong>Case 2:</strong> \(b^2-4ac=0\), so the characteristic equation has a repeated real root
 				</div>
 				<div>
-					<strong>Case 3:</strong> \(b^2-4ac&lt;0\), so the characteristic equation has complex roots. 
+					<strong>Case 3:</strong> \(b^2-4ac&lt;0\), so the characteristic equation has complex roots
 				</div>
+				In each case we’ll start with an example
 			</div>
 		</details>
 
@@ -66,25 +99,157 @@
 			<div class="example" id="x1-51" style="--ex-number: 1">
 				
 				<ol>
-					<li> <a id="x1-7r4"></a> Find the general solution of 
-					\begin {equation} \label {eq:5.2.4} \frac{d^2y}{dx^2}+6\frac{dy}{dx}+5y=0 
-					\end {equation} </li>
-					<li> <a id="x1-9r5"></a> Solve the initial value problem 
-					\begin {equation} \label {eq:5.2.5} \frac{d^2y}{dx^2}+6\frac{dy}{dx}+5y=0, \quad y(0)=3,\; \left. \frac{dy}{dx} \right|_{0}=-1 
-					\end {equation} </li>
+					<li> 
+						<a id="x1-7r4"></a> 
+						Find the general solution
+						\begin {equation} \label {eq:5.2.4} 
+							\frac{d^2y}{dx^2}+6\frac{dy}{dx}+5y=0 
+						\end {equation} 
+					</li>	
+					<li> 
+						Solve the IVP 
+
+						<a id="x1-9r5"></a> 
+						\begin {equation} \label {eq:5.2.5} 
+							\frac{d^2y}{dx^2}+6\frac{dy}{dx}+5y=0
+							\quad y(0)=3
+							\quad \left. \frac{dy}{dx} \right|_{0}=-1 
+						\end {equation} 
+					</li>
 				</ol>
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
 						<li>
-							The characteristic polynomial of <a href="#x1-7r4">(5.2.4)</a> is \[ p(r)=r^2+6r+5=(r+1)(r+5)\] Since \(p(-1)=p(-5)=0\), \(y_1=e^{-x}\) and \(y_2=e^{-5x}\) are solutions of <a href="#x1-7r4">(5.2.4)</a>. Since \(y_2/y_1=e^{-4x}\) is nonconstant, <span class="ptmb8t-">5.1.6</span> implies that the general solution of <a href="#x1-7r4">(5.2.4)</a> is <a id="x1-10r6"></a>
-							
-							\begin {equation} \label {eq:5.2.6} y=c_1e^{-x}+c_2e^{-5x} 
-							\end {equation}
+							<div>
+								We start by seeking solutions of the form \( y=e^{rx} \)
+
+								\[
+									y=e^{rx}
+									\Longrightarrow 
+									\frac{dy}{dx}=re^{rx}
+									\Longrightarrow 
+									\frac{d^2y}{dx^2}=r^2e^{rx}
+								\] 								
+
+								Substituting these in we obtain:
+
+								\begin{align*} 
+									\frac{d^2y}{dx^2} + 6 \frac{dy}{dx}  + 5 y  = &  0 \\
+									\left( r^2 e^{rx} \right) + 6 \left( r e^{rx} \right) + 5 \left( e^{rx} \right) = & 0 \\
+									\left( r^2 + 6 r + 5 \right)  e^{rx} = & 0 \\	
+									r^2 + 6 r + 5  = & 0 \quad \text{ or } \quad e^{rx} = 0 \\			
+								\end{align*}
+
+								Where \( p(r) = r^2 + 6 r + 5 \) is the <span class="vocab">characteristic polynomial</span> and since \( e^{rx}  \ne 0 \) to solve <a href="#x1-7r4">(5.2.4)</a> we must solve the <span class="vocab">characteristic equation</span> which is always a quadratic equation for second order differential equations so this is always solvable using the quadratic formula <a id="x1-4r3">(5.2.3)</a> but this one happens to be factorable:
+
+								\begin{align*} 
+									r^2 + 6 r + 5  = & 0 \\ 	
+									\left( r + 1 \right) \left( r + 5 \right) = & 0 \\	
+									r + 1= 0 \quad \text{or} \quad r + 5 = & 0 \\	
+									r = -1 \quad \text{or} \quad r = & -5 \\				
+								\end{align*}
+
+								Substituting in \(r = -1\) and \(r = -5\) into \( y = e^{rx} \) we obtain solutions of 
+								<a href="#x1-7r4">(5.2.4)</a>
+
+								\[ y_1 = e^{-x} \quad \text{ and } \quad y_2 = e^{-5x} \] 
+							</div>
+							<div>
+								Now we would like to know if \( \{ y_1, y_2 \} = \{ e^{-x}, e^{-5x}\} \) is a <span class="vocab">fundamental set</span> so we check if they are <span class="vocab">linearly independent</span>:
+
+								\begin{align*} 
+									\frac{y_2}{y_1} =&  \frac{e^{-5x}}{e^{-x}} = e^{-5x+x} = e^{-4x} \\			
+								\end{align*}
+
+								Since the ratio \({y_1}/{y_2}\) is <em>not constant</em>, then \(y_1\) and \(y_2\) are <span class="vocab">linearly independent</span>, so \( \{ y_1, y_2 \} = \{ e^{-x}, e^{-5x}\} \) is a <span class="vocab">fundamental set</span> and therefore from Theorem <a href="sec5.1book.html#x1-616" target=_blank>5.1.6</a> \(y=c_1y_1 + c_2y_2\) is the  <span class="vocab">general solution</span>: 
+
+								<a id="x1-10r6"></a>
+								\begin{equation} \label{eq:5.2.6}
+									y  = c_1e^{-x} + c_2e^{-5x}
+								\end{equation}
+							</div>	
 						</li>
-						<li> We must determine \(c_1\) and \(c_2\) in <a href="#x1-10r6">(5.2.6)</a> so that \(y\) satisfies the initial conditions in <a href="#x1-9r5">(5.2.5)</a>. Differentiating <a href="#x1-10r6">(5.2.6)</a> yields <a id="x1-11r7"></a> \begin {equation} \label {eq:5.2.7} \frac{dy}{dx}=-c_1e^{-x}-5c_2e^{-5x}\end {equation} Imposing the initial conditions \(y(0)=3,\, \left. \frac{dy}{dx} \right|_{0}=-1\) in <a href="#x1-10r6">(5.2.6)</a> and <a href="#x1-11r7">(5.2.7)</a> yields \[ 
-						\begin {array}{rcr} \phantom {-}c_1+\phantom {5}c_2 &amp; = &amp; 3\phantom {.}\\ -c_1-5c_2 &amp; = &amp; -1 
-						\end {array}\] The solution of this system is \(c_1=7/2,c_2=-1/2\). Therefore the solution of <a href="#x1-9r5">(5.2.5)</a> is \[ y={7\over 2}e^{-x}-{1\over 2}e^{-5x}\] Figure&nbsp;<a href="#-y-overex-overex-">5.2.1</a> is a graph of this solution. </li>
+						<li> 
+							<div>
+								We already found the general solution <a href="#x1-10r6">(5.2.6)</a> and now we apply the initial conditions to find the constants \(c_1\) and \(c_2\) to solve the IVP <a href="#x1-9r5">(5.2.5)</a>. Starting with \( y(0)=3 \)
+
+								\begin{align*} 
+									y(x)  = & c_1e^{-x} + c_2e^{-5x}	 \\
+									y(0)  = & c_1e^{-0} + c_2e^{-5\cdot 0}	 \\	
+									3  = & c_1e^{0} + c_2e^{0}	 \\
+									3  = & c_1 + c_2	 \\				
+								\end{align*}
+
+								So we obtain the equation \( c_1 + c_2 = 3 \) and now we will need another equation in order to solve for the constants so we use the other initial condition which is at the derivative of our general solution <a href="#x1-10r6">(5.2.6)</a>
+							</div>
+							<div class="reading-exercise">
+								Differentiate <a href="#x1-10r6">(5.2.6)</a>
+							</div> 	
+							<div>	
+								\begin{align}  \label{eq:5.2.7}
+									y  = & c_1e^{-x} + c_2e^{-5x}	\nonumber  \\
+									\frac{dy}{dx}  = & \frac{d}{dx} \Big( c_1e^{-x} + c_2e^{-5x} \Big)	\nonumber  \\
+									\frac{dy}{dx}	= & - c_1 e^{-x}  -5  c_2 e^{-5x} 	\\	
+								\end{align}
+							
+								Now we can apply the initial condition \( \left. \displaystyle \frac{dy}{dx} \right|_{0}=-1  \)
+
+								\begin{align}  
+									\left. \frac{dy}{dx} \right|_0	= & - c_1 e^{0}  -5  c_2 e^{0} 	\nonumber  \\
+									-1	= & - c_1   -5  c_2 	\nonumber \\
+									1	= & c_1   + 5  c_2 	\nonumber 
+								\end{align}
+							</div>	
+							<div>
+								So we obtain the system of equations:
+								And we obtain a system of equations which we can solve by subtracting them to find \(c_2\) then substituting that back to find \(c_1\)
+								\begin{align*}
+									\left\{
+										\begin{array}{r l l}
+											c_1 + c_2 &=& 3 \\
+											c_1 + 5c_2 &=& 1 \\
+										\end{array}
+									\right.	
+									\quad
+									\longrightarrow
+									\left\{
+										\begin{array}{r l r}
+											c_1 + c_2 &=& 3 \\
+											4c_2 &=& -2 \\
+										\end{array}
+									\right.	
+									\quad
+									\longrightarrow
+									\left\{
+										\begin{array}{r l r}
+											\displaystyle c_1 - \frac{1}{2} &=& 3 \\
+											c_2 &=& \displaystyle -\frac{1}{2} \\
+										\end{array}
+									\right.	
+									\quad	
+									\longrightarrow
+									\left\{
+										\begin{array}{r l l}
+											c_2 &=& \displaystyle \frac{7}{2} \\
+											c_1 &=& \displaystyle -\frac{1}{2} \\
+										\end{array}
+									\right.									 		
+								\end{align*}								
+							</div>								
+							<div>
+								Substituting \( c_1 = -\frac{1}{2} \) and \( c_2 = \frac{7}{2} \) into <a href="#x1-10r6">(5.2.6)</a> we obtain the particular solution of the IVP <a href="#x1-9r5">(5.2.5)</a>
+
+								\begin{equation*}
+									y  = -\frac{1}{2} e^{-x} + \frac{7}{2} e^{-5x}
+								\end{equation*}
+								
+								
+							</div>	
+							<div class="reading-exercise">
+								Solve the IVP <a href="#x1-7r4">(5.2.4)</a> \( \quad y(0)=2 \quad \left. \frac{dy}{dx} \right|_{0}=-4  \)
+							</div> 
+						</li>	
 					</ol>
 				</details>
 			
@@ -99,8 +264,8 @@
 			</figure>
 
 			<div class="indent" id="d9223d07-8504-4e81-98f6-534abc1ef366">
-				If the characteristic equation has arbitrary distinct real roots \(r_1\) and \(r_2\), then \(y_1=e^{r_1x}\) and \(y_2=e^{r_2x}\) are solutions of \(a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0\). Since \(y_2/y_1=e^{(r_2-r_1)x}\) is nonconstant, Theorem&nbsp; <span class="ptmb8t-">5.1.6</span> implies that \(\{y_1,y_2\}\) is a fundamental set of solutions of \(a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0\). 
 			</div>
+
 		</details>
 
 		<details id="4f172aa0-7085-48e8-81d7-60e1ea461723">
@@ -109,37 +274,159 @@
 			<div class="example" id="x1-132" style="--ex-number: 2">
 				
 				<ol>
-					<li> <a id="x1-15r8"></a> Find the general solution of 
-					\begin {equation} \label {eq:5.2.8} \frac{d^2y}{dx^2}+6\frac{dy}{dx}+9y=0 
-					\end {equation} </li>
-					<li> <a id="x1-17r9"></a> Solve the initial value problem 
-					\begin {equation} \label {eq:5.2.9} \frac{d^2y}{dx^2}+6\frac{dy}{dx}+9y=0, \quad y(0)=3,\; \left. \frac{dy}{dx} \right|_{0}=-1 
-					\end {equation} </li>
+					<li> 
+						Find the general solution 
+					
+						<a id="x1-15r8"></a> 
+						\begin {equation} \label {eq:5.2.8} 
+							\frac{d^2y}{dx^2}+6\frac{dy}{dx}+9y=0 
+						\end {equation} 
+					</li>
+					<li> 
+						Solve the IVP 
+
+						<a id="x1-17r9"></a> 
+						\begin {equation} \label {eq:5.2.9} 
+							\frac{d^2y}{dx^2}+6\frac{dy}{dx}+9y=0 
+							\quad y(0)=3
+							\quad \left. \frac{dy}{dx} \right|_{0}=-1 
+						\end {equation} 
+					</li>
 				</ol>
+
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
 						<li>
-							The characteristic polynomial of <a href="#x1-15r8">(5.2.8)</a> is \[ p(r)=r^2+6r+9=(r+3)^2\] so the characteristic equation has the repeated real root \(r_1=-3\). Therefore \(y_1=e^{-3x}\) is a solution of <a href="#x1-15r8">(5.2.8)</a>. Since the characteristic equation has no other roots, <a href="#x1-15r8">(5.2.8)</a> has no other solutions of the form \(e^{rx}\). We look for solutions of the form \(y=uy_1=ue^{-3x}\), where \(u\) is a function that we’ll now determine. (This should remind you of the method of variation of parameters used in Section&nbsp;2.1 to solve the nonhomogeneous equation \(\frac{dy}{dx}+p(x)y=f(x)\), given a solution \(y_1\) of the complementary equation \(\frac{dy}{dx}+p(x)y=0\). It’s also a special case of a method called <span class="vocab">reduction of order</span> that we’ll study in Section&nbsp;5.6. For other ways to obtain a second solution of <a href="#x1-15r8">(5.2.8)</a> that’s not a multiple of \(e^{-3x}\), see Exercises&nbsp;5.1.&nbsp; <span class="ptmb8t-">9</span>, 5.1.&nbsp; <span class="ptmb8t-">12</span>, and <span class="ptmb8t-">33</span>. <br />
-							If \(y=ue^{-3x}\), then \[ \frac{dy}{dx}=\frac{du}{dx}e^{-3x}-3ue^{-3x}\quad \mbox{ and } \quad \frac{d^2y}{dx^2}=\frac{d^2u}{dx^2}e^{-3x}-6\frac{du}{dx}e^{-3x}+9ue^{-3x}\] so
-							<div class="eqnarray" id="e12dbac2-949c-4359-94d3-c3be1f165e96"> 
-							\begin {eqnarray*} \frac{d^2y}{dx^2}+6\frac{dy}{dx}+9y&amp;=&amp;e^{-3x}\left [(\frac{d^2u}{dx^2}-6\frac{du}{dx}+9u)+6(\frac{du}{dx}-3u)+9u\right ]\\ &amp;=&amp;e^{-3x}\left [\frac{d^2u}{dx^2}-(6-6)\frac{du}{dx}+(9-18+9)u\right ]=\frac{d^2u}{dx^2}e^{-3x} 
-							\end {eqnarray*} 
-							</div>
+							<div>
+								We start by seeking solutions of the form \( y=e^{rx} \)
 
-							Therefore \(y=ue^{-3x}\) is a solution of <a href="#x1-15r8">(5.2.8)</a> if and only if \(\frac{d^2u}{dx^2}=0\), which is equivalent to \(u=c_1+c_2x\), where \(c_1\) and \(c_2\) are constants. Therefore any function of the form 
-							\begin {equation} \label {eq:5.2.10} y=e^{-3x}(c_1+c_2x) 
-							\end {equation}
-							<a id="x1-18r10"></a>
-							is a solution of <a href="#x1-15r8">(5.2.8)</a>. Letting \(c_1=1\) and \(c_2=0\) yields the solution \(y_1=e^{-3x}\) that we already knew. Letting \(c_1=0\) and \(c_2=1\) yields the second solution \(y_2=xe^{-3x}\). Since \(y_2/y_1=x\) is nonconstant, <span class="ptmb8t-">5.1.6</span> implies that \(\{y_1,y_2\}\) is fundamental set of solutions of <a href="#x1-15r8">(5.2.8)</a>, and <a href="#x1-18r10">(5.2.10)</a> is the general solution.
+								\[
+									y=e^{rx}
+									\Longrightarrow 
+									\frac{dy}{dx}=re^{rx}
+									\Longrightarrow 
+									\frac{d^2y}{dx^2}=r^2e^{rx}
+								\] 								
+
+								Substituting these in we obtain:
+
+								\begin{align*} 
+									\frac{d^2y}{dx^2} + 6 \frac{dy}{dx}  + 9 y  = &  0 \\
+									\left( r^2 e^{rx} \right) + 6 \left( r e^{rx} \right) + 9 \left( e^{rx} \right) = & 0 \\
+									\left( r^2 + 6 r + 9 \right)  e^{rx} = & 0 \\	
+									r^2 + 6 r + 9  = & 0 \quad \text{ or } \quad e^{rx} = 0 \\			
+								\end{align*}
+
+								Where \( p(r) = r^2 + 6 r + 9 \) is the <span class="vocab">characteristic polynomial</span> and since \( e^{rx}  \ne 0 \) to solve <a href="#x1-7r4">(5.2.4)</a> we must solve the <span class="vocab">characteristic equation</span> which is always a quadratic equation for second order differential equations so this is always solvable using the quadratic formula <a id="x1-4r3">(5.2.3)</a> but this one happens to be factorable:
+
+								\begin{align*} 
+									r^2 + 6 r + 5  = & 0 \\ 	
+									\left( r + 1 \right) \left( r + 5 \right) = & 0 \\	
+									r + 1= 0 \quad \text{or} \quad r + 5 = & 0 \\	
+									r = -1 \quad \text{or} \quad r = & -5 \\				
+								\end{align*}
+
+								Substituting in \(r = -1\) and \(r = -5\) into \( y = e^{rx} \) we obtain solutions of 
+								<a href="#x1-7r4">(5.2.4)</a>
+
+								\[ y_1 = e^{-x} \quad \text{ and } \quad y_2 = e^{-5x} \] 
+							</div>
+							<div>
+								Now we would like to know if \( \{ y_1, y_2 \} = \{ e^{-x}, e^{-5x}\} \) is a <span class="vocab">fundamental set</span> so we check if they are <span class="vocab">linearly independent</span>:
+
+								\begin{align*} 
+									\frac{y_2}{y_1} =&  \frac{e^{-5x}}{e^{-x}} = e^{-5x+x} = e^{-4x} \\			
+								\end{align*}
+
+								Since the ratio \({y_1}/{y_2}\) is <em>not constant</em>, then \(y_1\) and \(y_2\) are <span class="vocab">linearly independent</span>, so \( \{ y_1, y_2 \} = \{ e^{-x}, e^{-5x}\} \) is a <span class="vocab">fundamental set</span> and therefore from Theorem <a href="sec5.1book.html#x1-616" target=_blank>5.1.6</a> \(y=c_1y_1 + c_2y_2\) is the  <span class="vocab">general solution</span>: 
+
+								<a id="x1-10r6"></a>
+								\begin{equation} \label{eq:5.2.6}
+									y  = c_1e^{-x} + c_2e^{-5x}
+								\end{equation}
+							</div>	
 						</li>
-						<li>
-							Differentiating <a href="#x1-18r10">(5.2.10)</a> yields 
-							\begin {equation} \label {eq:5.2.11} \frac{dy}{dx}=-3e^{-3x}(c_1+c_2x)+c_2e^{-3x} 
-							\end {equation}
-							<a id="x1-19r11"></a>
-							Imposing the initial conditions \(y(0)=3,\, \left. \frac{dy}{dx} \right|_{0}=-1\) in <a href="#x1-18r10">(5.2.10)</a> and <a href="#x1-19r11">(5.2.11)</a> yields \(c_1=3\) and \(-3c_1+c_2=-1\), so \(c_2=8\). Therefore the solution of <a href="#x1-17r9">(5.2.9)</a> is \[ y=e^{-3x}(3+8x)\] Figure&nbsp;<a href="#-yexx-">5.2.2</a> is a graph of this solution.
-						</li>
+						<li> 
+							<div>
+								We already found the general solution <a href="#x1-10r6">(5.2.6)</a> and now we apply the initial conditions to find the constants \(c_1\) and \(c_2\) to solve the IVP <a href="#x1-9r5">(5.2.5)</a>. Starting with \( y(0)=3 \)
+
+								\begin{align*} 
+									y(x)  = & c_1e^{-x} + c_2e^{-5x}	 \\
+									y(0)  = & c_1e^{-0} + c_2e^{-5\cdot 0}	 \\	
+									3  = & c_1e^{0} + c_2e^{0}	 \\
+									3  = & c_1 + c_2	 \\				
+								\end{align*}
+
+								So we obtain the equation \( c_1 + c_2 = 3 \) and now we will need another equation in order to solve for the constants so we use the other initial condition which is at the derivative of our general solution <a href="#x1-10r6">(5.2.6)</a>
+							</div>
+							<div class="reading-exercise">
+								Differentiate <a href="#x1-10r6">(5.2.6)</a>
+							</div> 	
+							<div>	
+								\begin{align}  \label{eq:5.2.7}
+									y  = & c_1e^{-x} + c_2e^{-5x}	\nonumber  \\
+									\frac{dy}{dx}  = & \frac{d}{dx} \Big( c_1e^{-x} + c_2e^{-5x} \Big)	\nonumber  \\
+									\frac{dy}{dx}	= & - c_1 e^{-x}  -5  c_2 e^{-5x} 	\\	
+								\end{align}
+							
+								Now we can apply the initial condition \( \left. \displaystyle \frac{dy}{dx} \right|_{0}=-1  \)
+
+								\begin{align}  
+									\left. \frac{dy}{dx} \right|_0	= & - c_1 e^{0}  -5  c_2 e^{0} 	\nonumber  \\
+									-1	= & - c_1   -5  c_2 	\nonumber \\
+									1	= & c_1   + 5  c_2 	\nonumber 
+								\end{align}
+							</div>	
+							<div>
+								So we obtain the system of equations:
+								And we obtain a system of equations which we can solve by subtracting them to find \(c_2\) then substituting that back to find \(c_1\)
+								\begin{align*}
+									\left\{
+										\begin{array}{r l l}
+											c_1 + c_2 &=& 3 \\
+											c_1 + 5c_2 &=& 1 \\
+										\end{array}
+									\right.	
+									\quad
+									\longrightarrow
+									\left\{
+										\begin{array}{r l r}
+											c_1 + c_2 &=& 3 \\
+											4c_2 &=& -2 \\
+										\end{array}
+									\right.	
+									\quad
+									\longrightarrow
+									\left\{
+										\begin{array}{r l r}
+											\displaystyle c_1 - \frac{1}{2} &=& 3 \\
+											c_2 &=& \displaystyle -\frac{1}{2} \\
+										\end{array}
+									\right.	
+									\quad	
+									\longrightarrow
+									\left\{
+										\begin{array}{r l l}
+											c_2 &=& \displaystyle \frac{7}{2} \\
+											c_1 &=& \displaystyle -\frac{1}{2} \\
+										\end{array}
+									\right.									 		
+								\end{align*}								
+							</div>								
+							<div>
+								Substituting \( c_1 = -\frac{1}{2} \) and \( c_2 = \frac{7}{2} \) into <a href="#x1-10r6">(5.2.6)</a> we obtain the particular solution of the IVP <a href="#x1-9r5">(5.2.5)</a>
+
+								\begin{equation*}
+									y  = -\frac{1}{2} e^{-x} + \frac{7}{2} e^{-5x}
+								\end{equation*}
+								
+								
+							</div>	
+							<div class="reading-exercise">
+								Solve the IVP <a href="#x1-7r4">(5.2.4)</a> \( \quad y(0)=2 \quad \left. \frac{dy}{dx} \right|_{0}=-4  \)
+							</div> 
+						</li>	
 					</ol>
 				</details>
 			</div>
