@@ -27,13 +27,16 @@
 		<div id="95bd8f21-d8b2-4097-b2b2-dee2711de534" class="section-title">
 			5.5 The Method of Undetermined Coefficients II 
 		</div>
-		<div id="63a29fae-2010-48a1-8922-1db41984a5f1">
-			In this section we consider the constant coefficient equation 
-			\begin {equation} \label {eq:5.5.1} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=e^{\lambda x}\left (P(x)\cos \omega x+Q(x)\sin \omega x\right ) 
-			\end {equation} <a id="x1-2r1"></a> where \(\lambda \) and \(\omega \) are real numbers, \(\omega \ne 0\), and \(P\) and \(Q\) are polynomials. We want to find a particular solution of <a href="#x1-2r1">(5.5.1)</a>. As in Section&nbsp;5.4, the procedure that we will use is called <span class="vocab">the method of undetermined coefficients</span>. 
-		</div>
+		
+		<!---->
 		<details id="8c5aab71-a13d-4dc3-a5f3-4d8bd339ec70">
-			<summary>Forcing Functions Without Exponential Factors</summary>
+			<summary>Forcing Functions without Exponential Factors</summary>
+
+			<div id="63a29fae-2010-48a1-8922-1db41984a5f1">
+				In this section we consider the constant coefficient equation 
+				\begin {equation} \label {eq:5.5.1} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=e^{\lambda x}\left (P(x)\cos \omega x+Q(x)\sin \omega x\right ) 
+				\end {equation} <a id="x1-2r1"></a> where \(\lambda \) and \(\omega \) are real numbers, \(\omega \ne 0\), and \(P\) and \(Q\) are polynomials. We want to find a particular solution of <a href="#x1-2r1">(5.5.1)</a>. As in Section&nbsp;5.4, the procedure that we will use is called <span class="vocab">the method of undetermined coefficients</span>. 
+			</div>
 
 			<div id="8c7afc80-48c3-4a75-8f44-b45249ed9ace">
 				We begin with the case where \(\lambda =0\) in <a href="#x1-2r1">(5.5.1)</a>; thus, we we want to find a particular solution of 
@@ -65,10 +68,18 @@
 				For an analog of this theorem that’s applicable to <a href="#x1-2r1">(5.5.1)</a>, see Exercise&nbsp;<span class="ptmb8t-">38</span>. 
 			</div>
 
+		</details>
+		
+		<!---->
+		<details id="8c5aab71-a13d-4dc3-a5f3-4d8bd339ec702">
+			<summary>Undetermined Coefficients \( \cos \omega x + \sin \omega x \) </summary>
+
+			<!--Example 1-->
 			<div class="example" id="x1-61" style="--ex-number: 1">
 				<div>
 					<a id="x1-7r4"></a> Find a particular solution of 
-					\begin {equation} \label {eq:5.5.4} \frac{d^2y}{dx^2}-2\frac{dy}{dx}+y=5\cos 2x+10\sin 2x 
+					\begin {equation} \label {eq:5.5.4} 
+						\frac{d^2y}{dx^2}-2\frac{dy}{dx}+y=5\cos 2x+10\sin 2x 
 					\end {equation} 
 				</div>
 
@@ -94,6 +105,7 @@
 				</details>
 			</div>
 
+			<!--Example 2-->
 			<div class="example" id="x1-82" style="--ex-number: 2">
 				<div>
 					<a id="x1-9r5"></a> Find a particular solution of 
@@ -119,6 +131,13 @@
 				</details>
 			</div>
 
+		</details>
+		
+		<!--Example 3-->
+		<details id="8c5aab71-a13d-4dc3-a5f3-4d8bd339ec702">
+			<summary>Undetermined Coefficients \( P(x) \cos \omega x + \sin \omega x \) </summary>
+
+			<!--Example 3-->
 			<div class="example" id="x1-113" style="--ex-number: 3">
 				
 				<div>
@@ -157,10 +176,7 @@
 					Solving these equations yields \(A_0=1\), \(B_0=-1\). Substituting \(A_0=1\), \(A_1=2\), \(B_0=-1\), \(B_1=6\) into <a href="#x1-13r8">(5.5.8)</a> shows that \[ y_p=(1+2x)\cos x-(1-6x)\sin x \] is a particular solution of <a href="#x1-12r7">(5.5.7)</a>.
 				</details>
 			</div>
-		</details>
 
-		<details id="37137913-1da3-4aca-9113-848682302f60">
-			<summary>A Useful Observation</summary>
 
 			<div id="557bec93-d7ca-4be1-b862-6395d67f5318">
 				In <a href="#x1-14r9">(5.5.9)</a>, <a href="#x1-15r10">(5.5.10)</a>, and <a href="#x1-16r11">(5.5.11)</a> the polynomials multiplying \(\sin x\) can be obtained by replacing \(A_0,A_1,B_0\), and \(B_1\) by \(B_0\), \(B_1\), \(-A_0\), and \(-A_1\), respectively, in the polynomials multiplying \(\cos x\). An analogous result applies in general, as follows (Exercise&nbsp;<span class="ptmb8t-">36</span>). 
@@ -174,6 +190,16 @@
 			<div class="indent" id="423586da-68a7-448e-991a-d3f30260b038">
 				We won’t use this theorem in our examples, but we recommend that you use it to check your manipulations when you work the exercises. 
 			</div>
+
+		</details>
+
+		<details id="37137913-1da3-4aca-9113-848682302f60">
+			<summary>Undetermined Coefficients \( P(x) \cos \omega x + Q(x) \sin \omega x \) </summary>
+
+			
+
+
+
 			<div class="example" id="x1-184" style="--ex-number: 4">
 				<div> 
 					<a id="x1-19r12"></a> Find a particular solution of 
@@ -208,7 +234,7 @@
 		</details>
 
 		<details id="bb6d3273-e0f0-4e62-b5c5-d5aaca717f30">
-			<summary>Forcing Functions with Exponential Factors</summary>
+				<summary>Undetermined Coefficients \( e^{\lambda x} \Big( P(x) \cos \omega x + Q(x) \sin \omega x \Big)  \) </summary>
 
 			<div id="1df83f16-6928-401b-9cc7-d6c7d40e777c">
 				To find a particular solution of 
