@@ -1,767 +1,764 @@
 <!DOCTYPE html><html lang="en-US" xml:lang="en-US"><head>
-  <title>1.2 Basic Concepts</title>
-  <meta charset="utf-8">
-  <meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <link href="combined.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="niceties.js"></script>
-  <meta content="Trench_DiffEQ_Book.tex" name="src">
-  <script>window.MathJax = {
-      tex: { packages: { "[+]": ["tagformat"] }, tags: "ams", tagformat: { tag: (tag) => "(1.2." + tag + ")" } }
-    }; </script>
-  <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-  <style type="text/css">
-    :root {
-      --section-number: "1.2"
-    }
-  </style>
+	<title>1.2 Basic Concepts</title>
+	<meta charset="utf-8">
+	<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<link href="combined.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="niceties.js"></script>
+	<meta content="Trench_DiffEQ_Book.tex" name="src">
+	<script>window.MathJax = {
+			tex: { packages: { "[+]": ["tagformat"] }, tags: "ams", tagformat: { tag: (tag) => "(1.2." + tag + ")" } }
+		}; </script>
+	<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+	<style type="text/css">
+		:root {
+			--section-number: "1.2"
+		}
+	</style>
 </head>
 
 <body>
-  <div id="e9c4430b-a807-4692-9790-6c1fa2254f7b" class="section-title">
-    1.2 Basic Concepts
-  </div>
-
-  <details id="df4cbb0a-eba9-4ce2-af41-6b9b694ea92d">
-    <summary>Basic Concepts</summary>
-
-    <div id="f3cdb922-ce2c-47c0-b31a-3312136f7183">
-      A <span class="vocab">differential equation</span> is an equation that contains one or more
-      derivatives of an unknown function. The <span class="vocab">order</span> of a differential equation is the order of the highest derivative that it contains. A differential equation is an <span class="vocab">ordinary differential equation</span> if it involves an unknown function of only one
-      variable, or a <span class="vocab">partial differential equation</span> if it involves <span class="vocab">partial derivatives</span> of a function of more than one variable. For now we’ll consider only ordinary differential equations, and we’ll just call them <span class="vocab">differential equations</span>.
-    </div>
-    <div id="5fe84c8f-d326-4411-b31b-b8d6a6c8c6b6"> 
-      The simplest differential equations are first order equations where the derivative equals a known function of \(x\) only and we can solve them using calculus
-      \[ {dy\over dx}=f(x) \]
-    </div>
-
-    <div id="0987da28-1362-4634-b02a-3ad4863c0932">
-      When a differential equation is of this form with only the derivative of the dependent variable present and not the dependent variable itself, we will call the equation <span class="vocab">integrable</span> since we can immediately solve by either finding the antiderivative or by integrating.
-      \begin {align*}  
-        \frac{dy}{dx} = & f(x) \Longrightarrow
-        y = c + \int f(x) dx
-      \end {align*}
-    </div>
-      
-    <div class="pdf-page" id="89236804-b01b-47b4-bd20-19dec0afa7ee">
-      <div>
-        We already know from calculus from the <span class="vocab">power rule</span> how to find functions that satisfy this kind of equation by finding the antiderivative. 
-      </div>
-      <div>
-        For instance, consider you know the derivative such as
-        \[ 
-          \frac{dy}{dx}=x^3
-        \]
-        then you can simplify find the antiderivative to solve
-        \[ 
-          y=\int x^3 dx=\frac{1}{4} x^4 + c 
-        \]
-        where \(c\) is an <span class="vocab">arbitrary constant</span> of integration representing an infinite <span class="vocab">family of functions</span>.
-      </div>
-    </div>
-    <div class="pdf-page" id="89236804-b01b-47b4-bd20-19dec0afa-3">
-      <div>
-        Now suppose you have an additional condition such as we know the the derivative of a function and we know a value the function should equal at a certain point
-        \[ 
-          \frac{dy}{dx}=x^3
-          \quad\quad 
-          y(2)=6
-        \]
-        Then we can use the condition \( y(2)=6 \) to solve for the arbitrary constant
-        \begin{align*} 
-          \underset{6}{\underbrace{y(2)}} = & \frac{1}{4} \cdot \underset{16}{\underbrace{(2)^4}} + c \\
-          6 = & \frac{1}{4} \cdot 16 + c \\
-          6 = & 4 + c \\
-          c = & 2 \\
-        \end{align*} 
-        Therefore we have a specific value for the constant and we can substitute it in to get a particular solution
-        \[ 
-          y = \frac{1}{4} x^4 + 2
-        \]
-        Finally we can verify our solution is correct by differentiating.
-      </div>  
-
-      <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fd">
-        Verify \( y = \frac{1}{4} x^4 + 2 \) is a solution of \( \frac{dy}{dx}=x^3 \)
-      </div> 
-
-      <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fb">
-        Solve the differential equation \( \displaystyle \frac{dy}{dx}=x^2 \) 
-      </div>  
-
-      <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbc">
-        Evaluate the solution at the given point \( \displaystyle \frac{dy}{dx}=x^2 \quad y(3)=7 \) 
-      </div>  
-    </div>
-
-    <div class="pdf-page" id="5fe84c8f-d326-4411-b31b-b8d6a6c8c6b7">
-      <div class="indent">
-        We can even solve second order differential equations of this form  
-        \[ {d^2y\over dx^2}=x^3 \]
-
-        The antiderivative of the second derivative is the first derivative
-      
-        \[ \frac{dy}{dx} = \int \Bigg({d^2y\over dx^2} \Bigg) dx = \int x^3 dx = \frac{1}{4} x^4 + c \]
-
-        But to get the function we simply antidifferentiate again
-        
-        \[ y = \int \Bigg( \frac{dy}{dx} \Bigg) dx = \int \Big( \frac{1}{4} x^4 + c_1 \Big) dx 
-        = \frac{1}{20} x^5 + c_1x + c_2 \]
-
-        Notice this time our solution has two arbitrary constants \(c_1\) and \(c_2\)
-      </div> 
-      <div class="reading-exercise" id="9935aa3f-259c-4b3b-bc3a-4f5f9f03a813">
-        Use antiderivative properties to show \( \displaystyle \int \Big( \frac{1}{4} x^4 + c_1 \Big) dx 
-        = \frac{1}{20} x^5 + c_1x + c_2 \)
-      </div>
-    </div>
-
-    <div class="pdf-page" id="5fe84c8f-d326-4411-b31b-b8d6a6c8c6b8">
-      <div class="indent">
-        Again we can solve any other simple higher order differential equations by repeated antidifferentiation or repeated integration 
-        <a id="x1-2r1"></a>
-        \begin {equation} \label {eq:1.2.1} 
-          \frac{d^ny}{dx^n}=f(x) 
-        \end {equation}
-      </div>
-
-
-      <div class="reading-exercise" id="9935aa3f-259c-4b3b-bc3a-4f5f9f03a813-2">
-        Solve the differential equation \( \displaystyle \frac{dy}{dx} = \sqrt[5]{x} \)
-      </div>      
-      <div class="reading-exercise" id="0bb205bc-6a3e-43dd-bbb2-d22267e13a0e">
-        Solve the differential equation \( \displaystyle \frac{d^2y}{dx^2} = \frac{1}{x^8} \)
-      </div>        
-      <div class="reading-exercise" id="de0e7ed9-1db9-42cf-b164-fb86e45324cd">
-        Solve the differential equation \( \displaystyle \frac{d^3y}{dx^3} = \cos x \)
-      </div>      
-      <div class="reading-exercise" id="df218857-0727-4e2c-b840-51360fa3a5f9">
-        Solve the differential equation \( \displaystyle \frac{d^4y}{dx^4} = e^x \)
-      </div>
-    </div>
-
-    <div class="pdf-page" id="d7e317be-e6c0-43fa-80fb-4d0ed80ab700">
-        Since we already solved these in calculus, we usually won't consider differential equations like (<a href="#x1-2r1">1.2.1</a>) and we’ll usually consider differential equations that can be written as 
-        <a id="x1-3r2"></a>
-        \begin {equation} \label {eq:1.2.2} 
-          \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right) 
-        \end {equation} 
-        where either the function itself, \(y\), or one of its derivatives \(\displaystyle \frac{dy}{dx}\), …,
-        \(\displaystyle  \frac{d^{n-1}y}{dx^{n-1}}\) is also present in the equation. While we will be using antidifferentiation to solve these differential equations as well, it will not be as straightforward as a basic calculus problem.
-    </div>
-
-    <div class="pdf-page" id="d7e317be-e6c0-43fa-80fb-4d0ed80ab7001">
-      <div>
-        Here are some examples of differential equations we will be solving
-        \[
-          \begin {array}{rcll}
-            \displaystyle {dy\over dx}-x^2&amp;=&amp;0&amp;\mbox { (first order)}\\ \\
-            \displaystyle {dy\over dx}+2xy^2&amp;=&amp;-2&amp;\mbox { (first order)}\\ \\
-            \displaystyle {d^2y\over dx^2}+2\displaystyle {dy\over dx}+y&amp;=&amp;2x&amp;\mbox { (second order)}\\ \\
-            \displaystyle  x\frac{d^3y}{dx^3}+y^2&amp;=&amp;\sin x &amp;\mbox { (third order)}\\ \\
-            \displaystyle  \frac{d^ny}{dx^n}+x\frac{dy}{dx}+3y&amp;=&amp;x&amp;\mbox { ($n$-th order)}
-          \end {array}
-        \]
-      </div> 
-
-      <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcfg">
-        Find the order of the differential equation 
-        \( \displaystyle  \frac{d^7y}{dx^7} + \frac{d^3y}{dx^3} = 6 \) 
-      </div>  
-
-      <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcef">
-        Find the order of the differential equation 
-        \( \displaystyle  e^x \frac{dy}{dx} - \frac{d^2y}{dx^2} \cdot \frac{dy}{dx} - y^3 = 3x \) 
-      </div>  
-
-      <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcd">
-        Find the order of the differential equation 
-        \( \displaystyle  x^3 \frac{dy}{dx} + x^5 \frac{d^4y}{dx^4} + 6y^2 = \cos x \) 
-      </div>
-    </div>
-
-    <div class="pdf-page" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcde">
-      <div>
-        Differential equations we encounter may be written in this form, but we can easily rearrange them to make them in the form of <a href="#x1-3r2">(1.2.2)</a> so we can easily identify \( f\left(x,y,{dy\over dx},{d^2y\over dx^2} \dots,{d^ny\over dx^n}\right)\)
-
-        \begin{align*}
-            {dy\over dx} & = \overset{f(x)}{\overbrace{x^2}} \\ \\
-            {dy\over dx} & = \overset{f(x,y)}{\overbrace{-2 - 2xy^2}} \\ \\
-            {d^2y\over dx^2} & = \overset{f\left(x,y,{dy\over dx}\right)}{\overbrace{2x - y -2{dy\over dx}}} \\ \\
-            {d^3y\over dx^3} & = \overset{f(x,y)}{\overbrace{\frac{\sin{x}}{x} - \frac{y^2}{x}}} \\ \\
-            {d^ny\over dx^n} &= \overset{f\left(x,y,{dy\over dx}\right)}{\overbrace{x - 3y -x{dy\over dx}}} 
-        \end{align*}
-      </div>  
-      <div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcdef">
-        Rewrite \( x \frac{d^2y}{dx^2} + 3y - 2 = \frac{dy}{dx} \) in the form of <a href="#x1-3r2">(1.2.2)</a> and identify \( f\left(x,y,{dy\over dx},{d^2y\over dx^2} \dots,{d^ny\over dx^n}\right)\) 
-      </div>
-    </div>
-  </details>
-
-  <details id="801b2ff6-05c1-489a-a380-b485d2527211">
-    <summary>Solutions of Differential Equations</summary>
-
-    <div id="e44db55f-6ff8-4cd3-ae72-398ec3ab7891">
-      A <span class="vocab">solution</span> of a differential equation is a function that satisfies
-      the differential equation on some <span class="vocab">open interval</span> thus \(y(x)\) is a solution of <a href="#x1-3r2">(1.2.2)</a> if \(y\) is \(n\) times differentiable and
-      \[ \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right) \]
-      for all \(x\) in some open interval \((a,b).\) 
-      We also say that \(y\) is a solution of <a href="#x1-3r2">(1.2.2)</a> on \((a,b)\) 
-    </div> 
-    <div id="e44db55f-6ff8-4cd3-ae72-398ec3ab7892"> 
-      We only consider functions that satisfy a differential equation on an open interval to be solutions. For instance, consider the differential equation
-
-      \[ x\frac{dy}{dx}+x^2=3x \]
-
-      The function \(y = x^2\) does satisfy the differential equation but only at two isolated points \(x=0\) and \(x=1\)
-    </div>  
-    <div class="reading-exercise" id="a2fdbd8e-c0ff-4656-a729-0fda488c21ca">
-      Differentiate \( y = x^2 \) and substitute into \( \displaystyle x\frac{dy}{dx}+x^2=3x \) and simplify to show it is only true at \(x=0\) and \(x=1\)
-    </div>
-    <div id="e44db55f-6ff8-4cd3-ae72-398ec3ab78923"> 
-      Since \( y=x^2 \) only satisfies the equation at two isolated points, and not an open interval, then we do not consider \( y=x^2 \) to be a solution of the differential equation.
-    </div>
-    
-    <div id="7df658f9-e2c8-42fb-a390-c33316c01962"> 
-      The graph of a solution of a differential equation is a <span class="vocab">solution
-      curve</span>. More generally, a curve \(C\) is said to be an
-      <span class="vocab">integral curve</span> of a differential equation if every function \(y=y(x)\) whose graph is a segment of \(C\) is a solution of the differential equation. <em>Thus, any <span class="vocab-repeat">solution curve</span> of a differential equation is an <span class="vocab-repeat">integral curve</span>, but an <span class="vocab-repeat">integral curve</span>
-      may not be a <span class="vocab-repeat">solution curve</span></em>. The following example demonstrates this.
-    </div>
-
-    <div class="example" id="x1-41" style="--ex-number: 1">
-      <div>
-        Show that all the segments of the circle 
-        <a id="x1-5r3"></a>
-        \begin {equation} \label {eq:1.2.3} 
-          x^2+y^2=9 
-        \end {equation} 
-        are <span class="vocab">solution curves</span> and the circle itself is an
-        <span class="vocab">integral curve</span> 
-        of the differential equation
-        <a id="x1-6r4"></a>
-        \begin {equation} \label {eq:1.2.4} 
-          \frac{dy}{dx}=-{x\over y}
-        \end {equation}
-      </div>
-
-      <details class="solution">
-        <summary>Solution</summary>
-
-        <div style="text-align: center;">
-          <iframe src="https://www.desmos.com/calculator/18xmlxlfyo?embed" width="400" height="250" frameborder="0"></iframe>
-        </div>
-        <div>
-          Although the circle <a href="#x1-5r3">(1.2.3)</a> is not a function, we can solve for \( y \) to obtain two separate functions of \(x\) that are segments of the circle:
-          \[ y_1(x)=\sqrt {9-x^2}\quad \mbox{ and } \quad  y_2(x)=-\sqrt {9-x^2}\]
-          Note: \( y(x)\) means \( y \) is a function of \(x\) kind of like \( f(x)\) but we just use \( y \) instead of \( f \) for simplicity
-        </div>
-        <div class="reading-exercise">
-          Solve \( x^2+y^2=9 \) explicitly for \( y \) and show how to get the equations of the semi-circle segments 
-        </div>   
-        <div class="reading-exercise">
-          Find the domain of \( y_1(x) \) and  \( y_2(x) \)
-        </div>         
-        <div style="display: flex; gap: 2em; justify-content: center;">
-          <iframe src="https://www.desmos.com/calculator/rupzqf3rmh?embed" width="400" height="250" frameborder="0"></iframe>
-          <iframe src="https://www.desmos.com/calculator/bipn7z9qbd?embed" width="400" height="250" frameborder="0"></iframe>
-        </div>
-
-        <div>
-          By differentiating and substituting, it can be easily verified that both of the semi-circle segments, \( y_1 \) and \( y_2 \), are solutions to the differential equation.
-        </div>  
-        <div class="reading-exercise">
-          Show that \( y_1 \) and \( y_2 \) satisfy \( \displaystyle \frac{dy}{dx}=-{x\over y}\)
-        </div>   
-        <div>
-          Note that all the segments of the circle that are functions (i.e. the semi-circles \( y_1 \) and \( y_2 \)) are solutions to the differential equation <a href="#x1-6r4">(1.2.4)</a> and thus called <span class="vocab">solution curves</span>. Since all of the segments of the circle are solutions, the circle itself is an <span class="vocab">integral curve</span> of the equation, but it is not a <span class="vocab">solution curve</span> since the circle itself is not the graph of a function and is not itself a solution to the differential equation. 
-        </div>  
-        <div class="reading-exercise">
-          Show that <a href="#x1-5r3">(1.2.3)</a> is a solution of <a href="#x1-6r4">(1.2.4)</a> using implicit differentiation
-        </div> 
-        <div class="reading-exercise">
-          Show that \( x^2+y^2 = c  \) is also solution of <a href="#x1-6r4">(1.2.4)</a> using implicit differentiation
-        </div> 
-
-      </details>
-    
-    </div>
-
-    <div class="example" id="x1-72" style="--ex-number: 2">
-      <div>
-        Verify that <a href="#x1-8r5">(1.2.5)</a> is a solution of <a href="#x1-9r6">(1.2.6)</a> on \((0,\infty )\) and on \((-\infty ,0)\).
-        <a id="x1-8r5"></a>
-        \begin {equation} \label {eq:1.2.5} 
-          y={x^2\over 3}+{1\over x} 
-        \end {equation}  
-        <a id="x1-9r6"></a>
-        \begin {equation}\label {eq:1.2.6} 
-          x\frac{dy}{dx}+y=x^2 
-        \end {equation} 
-      </div>
-
-      <div class="reading-exercise" id="0cbb2d89-5852-44e6-805b-3e7bc167cbd6">
-        Calculate \( \displaystyle \frac{dy}{dx} \) for \( \displaystyle y={x^2\over 3}+{1\over x} \) using the <span class="vocab">power rule</span>
-      </div>
-
-      <details class="solution">
-        <summary>Solution</summary>
-
-        <div class="noindent" id="fb89956d-f5da-4f7c-95c2-c2b4d0390aae">
-          Substituting \( y \) (<a href="#x1-8r5">1.2.5</a>) and \( \displaystyle \frac{dy}{dx}={2x\over 3} - {1\over x^2} \) into (<a href="#x1-9r6">1.2.6</a>) yields
-          \begin{align*}
-            x \frac{dy}{dx} + y & = x^2 \\
-            x\left( 
-              \frac{2x}{3} - \frac{1}{x^2}
-            \right) + \left({x^2 \over 3} + {1 \over x}\right) & \overset{?}{=} x^2 \\
-            \frac{2x^2}{3} - \frac{1}{x} + {x^2 \over 3} + {1 \over x} & \overset{?}{=} x^2 \\
-            \frac{3}{3} x^2 & \overset{\checkmark}{=} x^2 \\	 
-          \end{align*}
-          
-          Note that (<a href="#x1-8r5">1.2.5</a>) satisfies the differential equation on all \( x \ne 0 \) since \( y \) is undefined at \( x = 0 \) therefore \( y \) is a solution of (<a href="#x1-9r6">1.2.6</a>) on the open intervals \((-\infty ,0)\) and \((0,\infty )\) and \( y \) is not a solution on any open interval that contains \(x=0\) since \(y\) is not defined at \(x=0\)
-        </div>
-
-      </details>
-    </div>
-
-    <div id="6a07830c-c4db-4f84-86ca-d594db684c47"> 
-      Figure&nbsp;<a href="#-y-x-x-">1.2.1</a> shows the graph of the <span class="vocab">integral curve</span> <a href="#x1-8r5">(1.2.5)</a>. The segment of the graph of (<a href="#x1-8r5">1.2.5</a>) on \((0,\infty )\) is a <span class="vocab">solution  curve</span> of <a href="#x1-9r6">(1.2.6)</a>, as is the segment of the graph on \((-\infty ,0)\).
-    </div>
-
-    <figure class="figure" id="a22c3ee7-00b9-4646-a119-454b1af7f964">
-      <div id="-y-x-x-"><img height="264" src="EPS/fig010201.png" width="409"> <a id="x1-13r1"></a></div>
-      <figcaption class="caption"><span class="id">Figure&nbsp;1.2.1 </span><span class="content">\(y(x) =\displaystyle {\frac
-          {x^{2}}{3}+\frac {1}{x}}\) </span></figcaption><!-- tex4ht:label?: x1-13r1  -->
-    </figure>
-
-    <div class="example" id="x1-103" style="--ex-number: 3">
-      <div>
-        Show that if \(c_1\) and \(c_2\) are constants then <a href="#x1-11r7">(1.2.7)</a> is a solution of <a href="#x1-12r8">(1.2.8)</a> on \((-\infty ,\infty )\)
-        <a id="x1-11r7"></a>
-        \begin {equation} \label {eq:1.2.7} 
-          y = 2x - 4 + (c_1+c_2x) e^{-x}  
-        \end {equation}
-        <a id="x1-12r8"></a>
-        \begin {equation} \label {eq:1.2.8} 
-          \frac{d^2y}{dx^2} + 2 \frac{dy}{dx} + y = 2x 
-        \end {equation} 
-      </div>
-
-      <div class="reading-exercise" id="085c43af-5ff5-411c-af11-1e18d97c10e6">
-        Calculate \( \displaystyle \frac{dy}{dx} \) and \( \displaystyle \frac{d^2y}{dx^2} \)  for \( \displaystyle y=(c_1+c_2x)e^{-x}+2x-4 \) using the <span class="vocab">product rule</span>
-      </div>
-
-      <details class="solution">
-        <summary>Solution</summary>
-
-        <div id="bee02374-32a1-4c97-99df-ff23db4fe4e7">
-          First note that (<a href="#x1-11r7">1.2.7</a>)  is defined for all values of \(x\) on \( (-\infty, \infty) \)
-        </div>
-        <div id="bee02374-32a1-4c97-99df-ff23db4fe4e8">  
-          Differentiating (<a href="#x1-11r7">1.2.7</a>) twice yields 
-          \[ 
-            \frac{dy}{dx} = 2 + (-c_1 + c_2 -c_2x) e^{-x}
-            \quad
-            \text{and}
-            \quad
-            \frac{d^2y}{dx^2} = (c_1 - 2c_2 + c_2x) e^{-x} 
-          \] 
-          Substituting in to <a href="#x1-12r8">(1.2.8)</a>
-          \begin{align*}
-            \begin{array}{rlllllrll}
-              \displaystyle \frac{d^2y}{dx^2}    = &amp;    &amp;   &amp;    &amp;    &amp; (   &amp; c_1   &amp; - &amp; 2c_2 &amp; + &amp; c_2 x  &amp; )e^{-x} \\
-              2 \displaystyle \frac{dy}{dx}      = &amp;    &amp;   &amp; 4  &amp; +  &amp; (   &amp; -2c_1 &amp; + &amp; 2c_2 &amp; - &amp; 2c_2 x &amp; )e^{-x} \\
-              + \quad \quad \quad \quad \quad y  = &amp; 2x &amp; - &amp; 4  &amp; +  &amp; (   &amp; c_1   &amp;   &amp;      &amp; + &amp; c_2 x  &amp; )e^{-x} \\
-              \hline \\
-              \displaystyle \frac{d^2y}{dx^2} 
-                + 2 \displaystyle\frac{dy}{dx} 
-                  + y                            = &amp; 2x &amp;   &amp;    &amp; +  &amp; (  
-                                                                            &amp; \overset{1-2+1}{\overbrace{0}}c_1   &amp; + 
-                                                                            &amp; \overset{-2+2}{\overbrace{0}}c_2 &amp; + 
-                                                                            &amp; \overset{1-2+1}{\overbrace{0}} c_2x &amp; )e^{-x} \\ \\
-              \displaystyle \frac{d^2y}{dx^2} 
-              + 2 \displaystyle\frac{dy}{dx} 
-                + y                            \overset{\checkmark}{=} &amp; 2x &amp; &amp; &amp; &amp; &amp; &amp; &amp; &amp; &amp; &amp; \\                
-            \end{array}
-          \end{align*}      
-          
-          Therefore <a href="#x1-11r7">(1.2.7)</a> is a solution of <a href="#x1-12r8">(1.2.8)</a> on \((-\infty ,\infty )\)
-        </div>
-      </details>
-    </div>
-
-    <div class="example" id="x1-144" style="--ex-number: 4">
-      <div>
-        Find all solutions of \begin {equation}
-        \label {eq:1.2.9} \frac{d^ny}{dx^n}=e^{2x}\end {equation}<a id="x1-15r9"></a>
-      </div>
-
-      <details class="solution">
-        <summary>Solution</summary>
-        <div id="a98fd397-0f08-4e0e-8681-f3da5846a0ec"><span class="ptmb8t-">Solution </span>&nbsp;
-          Antidifferentiating repeatedly (<a href="#x1-15r9">1.2.9</a>) yields
-          \begin{align*}
-            \frac{d^{n-1}y}{dx^{n-1}} = &amp; \frac{1}{2} e^{2x} + k_1 \\ \\
-            \frac{d^{n-2}y}{dx^{n-2}} = &amp; \frac{1}{4} e^{2x} + k_1x + k_2 \\ \\
-            \frac{d^{n-3}y}{dx^{n-3}} = &amp; \frac{1}{8} e^{2x} + \frac{1}{2}k_1x^2 + k_2x + k_3 \\ \\
-            \frac{d^{n-4}y}{dx^{n-4}} = &amp; \frac{1}{16} e^{2x} + \frac{1}{6}k_1x^3 + \frac{1}{2}k_2x^2 + k_3x + k_4 \\ \\
-            \frac{d^{n-5}y}{dx^{n-5}} = &amp; \frac{1}{32} e^{2x} + \frac{1}{24}k_1x^4 + \frac{1}{6}k_2x^3 + \frac{1}{2}k_3x^2 + k_4x + k_5 \\ \\
-          \end{align*}  
-        </div>
-        <div class="reading-exercise" id="449253c8-1685-4bc6-863d-6f087cd0c3ec">
-          Show the work for the first five antiderivatives using integral notation
-        </div>
-        <div id="36fd2164-0be3-4855-8697-1987456edd02">
-          Notice the pattern on the \( e^{2x} \) terms; the \( n^{th} \) derivative has a factor of \( \displaystyle \frac{1}{2^n} \):
-          \[ \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \frac{1}{32}, \dots \]
-        </div>
-        <div id="767b7dac-f608-4635-8b6f-cf2c4f79a189">  
-          Notice the pattern on the rest of the terms; the coefficients are factorials: 
-          \[ 	\underset{0!}{\underbrace{1}}, 
-              \underset{1!}{\underbrace{1}}, 
-              \underset{2!}{\underbrace{2}}, 
-              \underset{3!}{\underbrace{6}}, 
-              \underset{4!}{\underbrace{24}}, 
-              \dots
-          \]
-        </div>
-        <div id="5a96357c-5ad0-4ba5-9ab1-20709a2646fe"> 
-          Incorporating these patterns, flipping the order of the polynomial terms, and renaming the arbitrary constants, we can rewrite the fifth antiderivative more simply:
-          \begin{align*}
-            \frac{d^{n-5}y}{dx^{n-5}} 
-            = &amp; \frac{1}{32} e^{2x} + \frac{1}{24}k_1x^4 + \frac{1}{6}k_2x^3 + \frac{1}{2}k_3x^2 + k_4x + k_5 \\
-            = &amp; \frac{1}{2^5} e^{2x} + \frac{1}{4!}k_1x^4 + \frac{1}{3!}k_2x^3 + \frac{1}{2!}k_3x^2 + \frac{1}{1!}k_4x + \frac{1}{0!}k_5 \\
-            = &amp; \frac{1}{2^5} e^{2x} + \frac{1}{0!}K_0 + \frac{1}{1!} K_1 x + \frac{1}{2!} K_2 x^2 + \frac{1}{3!} K_3 x^3 + \frac{1}{4!} K_4 x^4 \\
-            = &amp; \frac{1}{2^5} e^{2x} + \underbrace{ c_0 + c_1 x + c_2 x^2 + c_3 x^3 + c_4 x^4 } \\        
-            = &amp; \frac{1}{2^5} e^{2x} + \sum_{n=0}^{4} { c_n x^n } 
-          \end{align*}
-        </div>
-        <div id="d309171c-c81d-438a-ac37-e8497fa22131">
-          Therefore all solutions of (<a href="#x1-15r9">1.2.9</a>) can be written as
-          <a id="x1-16r10"></a> 
-          \begin {equation} \label {eq:1.2.10} 
-            y(x) = \frac{1}{2^n} e^{2x} + c_0 + c_1 x + c_2 x^2 + \cdots +c_n x^n = \frac{1}{2^n} e^{2x} + \sum_{n=0}^{n} { c_n x^n } 
-          \end {equation}
-          where we renamed the arbitrary constants to make the formula as simple as possible. As a general rule, arbitrary
-          constants appearing in solutions of differential equations should be simplified whenever possible.
-        </div>
-        <div class="reading-exercise" id="ed9090d6-3e9a-48bd-a460-09f943ba4560">
-          Rewrite the first five antiderivatives above using sigma notation
-        </div>
-      </details>
-    </div>
-  </details>
-
-  <details id="5eaac97d-d99e-4a64-9a9d-f956ef96c666">
-    <summary>Initial Value Problems</summary>
-
-    <div id="1e891292-86e6-42ee-9f7b-1105480898a6">
-      In several examples we have found solutions to differential equations that include arbitrary constants of integration \( c \) which represent an infinite <span class="vocab">family of solutions</span>. Without additional conditions, there is no reason to prefer one solution over another. However, in real-life applications of differential equations, we often want to find a <span class="vocab">particular solution</span> of a differential equation that satisfies one or more specific <span class="vocab">initial conditions</span> which we call an <span class="vocab">initial value problem</span> (<span class="vocab">IVP</span>).
-    </div>
-    <div class="example" id="x1-175" style="--ex-number: 5">
-      <ol>
-        <li>
-          Find a solution of the differential equation such that \(y(1)=2\)
-          \[ \frac{dy}{dx}=x^3 \]
-        </li>
-        <li>
-          Find a solution of the differential equation such that \(y(3)=22\)
-          \[ \frac{dy}{dx}=x^3 \]
-        </li>
-      </ol>  
-
-      <details class="solution" id="66f647c4-7d0f-4284-9ccf-5a904d890f42">
-        <summary>Solution</summary>
-        <ol>
-          <li>
-            At the beginning of this section we solved this differential equation \(\displaystyle \frac{dy}{dx}=x^3\) by finding the antiderivative
-            \[ y=\int x^3 dx=\frac{1}{4} x^4 + c \]
-
-            The antiderivative represents the <span class="vocab">general solution</span> of the differential equation and includes the arbitrary constant of integration. We can determine a particular value of \(c\) that satisfies the given <span class="vocab">initial condition</span> \(y(1)=2\) by evaluating the solution at \( x=2 \)
-            \begin{align*}
-              y(x) = &amp; \frac{1}{4}x^{4} + c \\ \\
-              \underset{2}{\underbrace{y(1)}} = &amp; \frac{1}{4}\left(1\right)^{4} + c \\
-              2 = &amp; \frac{1}{4}+ c \Longrightarrow c = \frac{7}{4}  \\
-            \end{align*} 
-            Once we have a particular \( c = \frac{7}{4} \) simply substituting it back in to the general solution to obtain the <span class="vocab">particular solution</span>:
-            \[ y(x) = \frac{1}{4}x^{4} +  \frac{7}{4} = \frac{1}{4}\left(x^4 + 7\right) \]
-            <div id="3d8bc9e5-87ab-4705-8841-d47471e3c750"> Figure&nbsp;<a href="#-y-x-">1.2.2</a> shows the graph of this
-              solution. Note that the condition \(y(1)=2\) is equivalent to requiring the
-              graph of \(y\) to pass through the point \((1,2)\)
-            </div>
-            <div class="reading-exercise">
-              Verify that \(y = \frac{1}{4}x^4 + \frac{7}{4} \) is a solution of \( \frac{dy}{dx}=x^3 \) by differentiating
-            </div>
-            <div class="reading-exercise">
-              Verify that \(y = \frac{1}{4}x^4 + c \) is a solution of \( \frac{dy}{dx}=x^3 \) by differentiating
-            </div>
-          </li>
-          <li>
-            Again we can determine a particular value of \(c\) that satisfies the given <span class="vocab">initial condition</span> \(y(3)=22\) by evaluating the solution at \( x=3 \)
-            \begin{align*}
-              y(x) = &amp; \frac{1}{4}x^{4} + c \\ \\
-              \underset{22}{\underbrace{y(3)}} = &amp; \frac{1}{4}\left(3\right)^{4} + c \\
-              22 = &amp; \frac{1}{4}\cdot (81) + c \Longrightarrow c = \frac{7}{4}  \\
-            \end{align*} 
-            <div class="reading-exercise">
-              Show that evaluating at \(y(3)=22\) results in \( c = \frac{7}{4} \)
-            </div>
-            So again we got the same particular value for \( c = \frac{7}{4} \) so we have the <span class="vocab-repeat">particular solution</span>:
-            \[ y(x) = \frac{1}{4}x^{4} +  \frac{7}{4} = \frac{1}{4}\left(x^4 + 7\right) \]
-            Again the condition \(y(3)=22\) means the graph of \(y\) to pass through the point \((3,22)\) 
-          </li>
-        </ol> 
-      </details>
-    </div>
-
-
-    <figure class="figure" id="3c7ea326-644b-42e3-a901-49bf3657b772">
-      <div id="-y-x-"><img height="264" src="EPS/fig010202.png" width="409"> <a id="x1-19r2"></a></div>
-      <figcaption class="caption"><span class="id">Figure&nbsp;1.2.2 </span><span class="content">\(y=\displaystyle \frac{1}{4}\left(x^4 + 7\right) \) </span></figcaption><!-- tex4ht:label?: x1-19r2  -->
-    </figure>
-
-    <div id="bc8bf255-8b4d-4e48-8209-21496b18ce9b"> 
-      We can rewrite Part 1 of Example&nbsp;<a href="#x1-175">1.2.5</a> more briefly as an <span class="vocab">initial value problem</span> (<span class="vocab">IVP</span>):
-      \[ \frac{dy}{dx}=x^3 \quad y(1)=2\]
-      First we write the differential equation followed by the requirement \(y(1)=2\) which we call <span class="vocab">initial condition</span>. 
-    </div>
-    <div id="bc8bf255-8b4d-4e48-8209-21496b18ce9c">
-      IVPs can also be written for higher order differential equations with additional initial conditions. For instance, consider the second order differential equation:
-      <a id="x1-18r11"></a> 
-      \begin {equation} \label {eq:1.2.11} 
-        \frac{d^2y}{dx^2} - 2\frac{dy}{dx}+3y=e^x
-        \quad y(0)=1 \quad \left.\frac{dy}{dx}\right|_0=2 
-      \end {equation} 
-      In this case there are two <span class="vocab">initial conditions</span>, one for \(y\) and one for \(\displaystyle \frac{dy}{dx}\) and both are required to have specified values at \(x=0\). 
-      In general, an initial value problem for an \(n^{th}\) order differential equation requires \(n \) <span class="vocab">initial conditions</span> specified on \(y\) and its first \(n-1\) derivatives at some initial point \(x_0\).
-    </div>
-    <div id="c097647d-3b57-42de-a586-4a535095725c"> 
-      We will write an IVP for a differential equation by writing the initial
-      conditions after the differential equation, as in (<a href="#x1-18r11">1.2.11</a>).
-      For example, we could write an IVP for (<a href="#x1-3r2">1.2.2</a>) as
-      <a id="x1-20r12"></a>
-      \begin {align}\label {eq:1.2.12}
-        \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx},\frac{d^2y}{dx^2}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right)
-        \quad y(x_0) = & k_0 \nonumber \\
-        \quad \left.\frac{dy}{dx}\right|_{x_0} = & k_1 \nonumber  \\
-        \quad \left.\frac{d^2y}{dx^2}\right|_{x_0} = & k_2 \nonumber  \\
-        & \vdots  \nonumber \\
-        \quad \left.\frac{d^{n-1}y}{dx^{n-1}}\right|_{x_0} = & k_{n-1}
-      \end {align}
-
-      Consistent with our earlier definition of a solution of the differential equation in
-      (<a href="#x1-20r12">1.2.12</a>), we say that \(y\) is a solution
-      of the initial value problem (<a href="#x1-20r12">1.2.12</a>) if \(y\)
-      is \(n\) times differentiable and 
-      \[ \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx},\frac{d^2y}{dx^2}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right) \]
-      for all \(x\) in some open interval \((a,b)\) that contains \(x_0\), and \(y\) satisfies the initial conditions in
-      (<a href="#x1-20r12">1.2.12</a>). 
-
-
-      We also say that \( y \)  is a solution of (<a href="#x1-20r12">1.2.12</a>) on the open interval \( (a,b) \) and the largest open interval that contains \( x_0 \) on which \( y(x) \) is defined and
-      satisfies the differential equation is called the <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>)
-    </div>
-
-    <div class="example" id="x1-216" style="--ex-number: 6">
-      <div>
-        In Example&nbsp;<a href="#x1-175">1.2.5</a> we found that <a href="#x1-22r13">(1.2.13)</a> is a <span class="vocab">solution</span> of the IVP
-        \[ \frac{dy}{dx} = x^3 \quad y(1) = 2 \]
-        Determine the <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>) of this solution.
-        <a id="x1-22r13"></a>
-        \begin {equation} \label {eq:1.2.13}
-          y = \frac{1}{4} \left( x^4 + 7 \right) 
-        \end {equation} 
-      </div>
-      
-      <details class="solution">
-        <summary>Solution</summary>
-
-        <div id="b224947b-14a0-4b2e-8e5d-4c34ca2330d0">
-          Since the function in (<a href="#x1-22r13">1.2.13<!-- tex4ht:ref: eq:1.2.13  --></a>) is defined for all \(x\) values, the <span class="vocab">interval of validity</span> is \((-\infty ,\infty ) \)
-        </div>   
-      </details>
-    </div>  
-
-    <div class="example" id="x1-237" style="--ex-number: 7">    
-      
-
-      In Example&nbsp;<a href="#x1-72">1.2.2</a> we verified that <a href="#x1-24r14">(1.2.14)</a> is solution of the differential equation:
-
-      \[ 
-        \quad x \displaystyle \frac{dy}{dx} + y = x^2 
-      \]
-
-      <a id="x1-24r14"></a>
-      \begin {equation} \label{eq:1.2.14} 
-        y={x^2\over 3}+{1\over x} 
-      \end {equation}
-
-      
-
-      
-
-        <ol>
-          <li>
-            Verify <a href="#x1-24r14">(1.2.14)</a> is the solution of the <span class="vocab">IVP</span> and determine the <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>)
-            <a id="x1-25r15"></a>
-            \begin{equation} \label {eq:1.2.15} 
-              x\frac{dy}{dx}+y=x^2 \quad y(1)={4\over 3} 
-            \end {equation}
-          </li>
-          <li>
-            Verify (<a href="#x1-24r14">1.2.14</a>) is the solution of the <span class="vocab">IVP</span> and determine the <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>)
-            <a id="x1-26r16"></a>
-            \begin{equation} \label {eq:1.2.16} 
-              x \frac{dy}{dx} + y = x^2 \quad y(-1) = -{2\over 3}
-            \end {equation}
-          </li>	
-        </ol>	
-
-
-      <details class="solution" id="66f647c4-7d0f-4284-9ccf-5a904d890f423">
-        <summary>Solution</summary>
-
-        <ol>
-          <li>
-            <div id = "49041906-b291-46f5-bd97-daaf2ba9e7871">
-              We already know <a href="#x1-24r14">(1.2.14)</a> is a solution from Example&nbsp;<a href="#x1-72">1.2.2</a>, and now we'll evaluate it at our initial value \( x = 1 \)
-    
-              \begin{align*}
-                y(x) & = {x^2\over3}+{1\over x} \\
-                y(1) & = {1^2\over3}+{1\over 1} = {1\over3}+1 = {4\over3} \quad \checkmark
-              \end{align*}
-            </div>
-            <div>
-              We verified <a href="#x1-24r14">(1.2.14)</a> satisfies the initial condition \( y(1) = 4/3 \). Now notice that <a href="#x1-24r14">(1.2.14)</a> is undefined at \( x = 0 \) meaning the solution is only defined on the open intervals \((-\infty,0)\) and \((0,\infty).\) 
-            </div>
-            <div>    
-                The <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>) is the largest open interval that contains our initial value \( x = 1 \) so \((0,\infty)\) is the IOV for this IVP
-            </div>
-          </li>
-          <li>
-            <div id = "6561841f-1e77-47bb-9641-0d34c79be2bc23">
-              Again we already know (<a href="#x1-24r14">1.2.14</a>) is a solution from Example&nbsp;<a href="#x1-72">1.2.2</a>, and now we'll evaluate it at our initial value \( x = -1 \)
-            </div>
-            <div>
-              We verified <a href="#x1-24r14">(1.2.14)</a> satisfies the initial condition \( y(-1) = -2/3 \). Again since <a href="#x1-24r14">(1.2.14)</a> is undefined at \( x = 0 \) the solution is only valid on the open intervals \((-\infty,0)\) and \((0,\infty).\) 
-            </div>
-            <div>    
-                The <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>) is the largest open interval that contains our initial value \( x = -1 \) so \((-\infty,0)\) is the IOV for this IVP
-            </div>
-          </li>
-        </ol>
-
-      </details>
-
-      <div class="reading-exercise">
-        Verify (<a href="#x1-24r14">1.2.14</a>) is the solution of the <span class="vocab">IVP</span> and determine the <span class="vocab">IOV</span>
-        \(
-          \displaystyle x\frac{dy}{dx}+y=x^2 \quad y(3)={10\over 3} 
-        \)
-      </div>   
-
-      <div class="reading-exercise">
-        Verify (<a href="#x1-24r14">1.2.14</a>) is the solution of the <span class="vocab">IVP</span> and determine the <span class="vocab">IOV</span>
-        \(
-          \displaystyle  x\frac{dy}{dx}+y=x^2 \quad y(-3)={8\over 3} 
-        \)
-      </div>  
-
-    </div>
-  </details>
-
-  <details id="4091eae1-6353-4522-a340-062694d0b9e6">
-    <summary>Free Fall Under Constant Gravity</summary>
-
-    <div id="db10db2b-a5d1-47e3-9984-5684c3598146">The term <span class="vocab">initial value problem</span> originated in problems of motion where
-      the independent variable is \(t\) (representing
-      elapsed time), and the initial conditions are the <span class="vocab">position</span> and <span class="vocab">velocity</span> of an object at the initial time of an experiment.
-    </div>
-
-    <div class="example" id="x1-278" style="--ex-number: 8">
-      <div>
-        An object falls under the influence of <span class="vocab">gravity</span> near Earth’s surface, where it can be assumed that the magnitude of the acceleration due to gravity is a constant \(g\). Assume that gravity is the only force acting on the object.
-      </div>
-      <ol>
-        <li>
-          Using <span class="vocab">Newton’s 2nd law of motion</span>, construct a mathematical model for the motion of the object in the form of an IVP for a second order differential equation, assuming that the height and velocity of the object at time \(t=0\) are known.
-        </li>  
-        <li>
-          Solve the IVP to obtain the height as a function of time
-        </li>  
-      </ol>  
-
-      <details class="solution" id="6d749057-a362-42fa-97dc-86f605f4e0d4">
-        <summary>Solution</summary>
-          <ol>
-            <li>
-              Recall <span class="vocab">Newton’s 2nd law of motion</span>, \( F = ma \), the force \( F \) acting on the object is equal to the mass \( m \) of the object times the acceleration \( a \) of the object. Acceleration is the derivative of velocity and velocity is the derivative of position so position is the second derivative of acceleration and can be written as  \( a = \ddot{y} \) where \(y(t)\) represent the position (height) of the object at time \(t\). The only force acting on the object is <span class="vocab">gravity</span> and the acceleration due to gravity is in the downward (negative) direction, so the total force \( F \) is given by \( -mg \). Thus <span class="vocab">Newton’s 2nd law of motion</span> can be rewritten to represent a second order differential equation modeling this situation:
-              \begin{equation*}
-                F = ma \Longrightarrow
-                -mg = m \ddot{y} \Longrightarrow
-                -g = \ddot{y}
-              \end{equation*}
-              where the dot notation indicates differentiation with respect to \(t\). If \(y_0 \) denotes the initial height and \(v_0\) denotes the initial velocity when \(t=0\), then \(y\) is a solution of the initial value problem 
-              <a id="x1-30r17"></a>
-              \begin {equation} \label {eq:1.2.17} 
-                \ddot{y}=-g \quad
-                y(0)=y_0 \quad 
-                \dot{y}(0)=v_0
-              \end {equation}
-              <div class="reading-exercise" id="7dc52b16-d26c-4b27-8258-b80f323fa9ba">
-                Rewrite the IVP <a href="#x1-30r17">(1.2.17)</a> using <span class="vocab-repeat">differential notation</span> (<span class="vocab-repeat">Leibniz notation</span>) 
-              </div> 
-            </li> 
-            <li>
-              The IVP can be solved by antidifferentiating 
-
-              \begin {align*}
-                \ddot{y} = -g
-                \Longrightarrow
-                \int \ddot{y} \, dt = & -g \int dt \\
-                \Longrightarrow
-                \dot{y} = & -gt + c
-              \end {align*}  
-
-              <div class="reading-exercise" id="7dc52b16-d26c-4b27-8258-b80f323fa9babcd">
-                Apply the initial condition \( \dot{y}(0)=v_0 \) to find \( c \)
-              </div> 
-
-              Applying the initial condition \( \dot{y}(0)=v_0 \) we can show \(c=v_0\) so our equation becomes \( \dot{y} = -gt + v_0 \) and not we just antidifferentiate again:
-            
-
-              \begin {align*}
-                \dot{y} = -gt + v_0
-                \Longrightarrow
-                \int \dot{y} dt = & -g \int t dt + v_0 \int dy \\
-                \Longrightarrow
-                y = & -\frac{1}{2}gt^2 + v_0 t + c \\
-              \end {align*}  
-
-              <div class="reading-exercise" id="7dc52b16-d26c-4b27-8258-b80f323fa9babcde">
-                Apply the initial condition \( y(0)=y_0\) to find \( c \)
-              </div>   
-
-            Applying the initial condition \(y(0)=y_0\) we can show \(c=y_0\) so the solution of <a href="#x1-30r17">(1.2.17)</a> is 
-            \[ y(t) = -\frac{1}{2}gt^2 + v_0 t + y_0 \] 
-            </li>  
-          </ol>  
-
-      </details>
-    </div> 
-  </details>
-
-  <nav class = "ex">
-    <a href = "sec1.2.ex.html">1.2 Exercises</a>
-  </nav>
-
-  <nav class = "book">
-    <a href="sec1.1.book.html">Back (1.1)</a>
-
-    <a href="sec1.0.html">Chapter 1</a>
-
-    <a href="sec1.3.book.html">Next (1.3)</a>
-  </div>
+	<div id="e9c4430b-a807-4692-9790-6c1fa2254f7b" class="section-title">
+		1.2 Basic Concepts
+	</div>
+
+	<details id="df4cbb0a-eba9-4ce2-af41-6b9b694ea92d">
+		<summary>Basic Concepts</summary>
+
+		<div id="f3cdb922-ce2c-47c0-b31a-3312136f7183">
+			A <span class="vocab">differential equation</span> is an equation that contains one or more
+			derivatives of an unknown function. The <span class="vocab">order</span> of a differential equation is the order of the highest derivative that it contains. A differential equation is an <span class="vocab">ordinary differential equation</span> if it involves an unknown function of only one
+			variable, or a <span class="vocab">partial differential equation</span> if it involves <span class="vocab">partial derivatives</span> of a function of more than one variable. For now we’ll consider only ordinary differential equations, and we’ll just call them <span class="vocab">differential equations</span>.
+		</div>
+		<div id="5fe84c8f-d326-4411-b31b-b8d6a6c8c6b6"> 
+			The simplest differential equations are first order equations where the derivative equals a known function of \(x\) only and we can solve them using calculus
+			\[ {dy\over dx}=f(x) \]
+		</div>
+
+		<div id="0987da28-1362-4634-b02a-3ad4863c0932">
+			When a differential equation is of this form with only the derivative of the dependent variable present and not the dependent variable itself, we will call the equation <span class="vocab">integrable</span> since we can immediately solve by either finding the antiderivative or by integrating.
+			\begin {align*}  
+				\frac{dy}{dx} = & f(x) \Longrightarrow
+				y = c + \int f(x) dx
+			\end {align*}
+		</div>
+			
+		<div class="pdf-page" id="89236804-b01b-47b4-bd20-19dec0afa7ee">
+			<div>
+				We already know from calculus from the <span class="vocab">power rule</span> how to find functions that satisfy this kind of equation by finding the antiderivative. 
+			</div>
+			<div>
+				For instance, consider you know the derivative such as
+				\[ 
+					\frac{dy}{dx}=x^3
+				\]
+				then you can simplify find the antiderivative to solve
+				\[ 
+					y=\int x^3 dx=\frac{1}{4} x^4 + c 
+				\]
+				where \(c\) is an <span class="vocab">arbitrary constant</span> of integration representing an infinite <span class="vocab">family of functions</span>.
+			</div>
+		</div>
+		<div class="pdf-page" id="89236804-b01b-47b4-bd20-19dec0afa-3">
+			<div>
+				Now suppose you have an additional condition such as we know the the derivative of a function and we know a value the function should equal at a certain point
+				\[ 
+					\frac{dy}{dx}=x^3
+					\quad\quad 
+					y(2)=6
+				\]
+				Then we can use the condition \( y(2)=6 \) to solve for the arbitrary constant
+				\begin{align*} 
+					\underset{6}{\underbrace{y(2)}} = & \frac{1}{4} \cdot \underset{16}{\underbrace{(2)^4}} + c \\
+					6 = & \frac{1}{4} \cdot 16 + c \\
+					6 = & 4 + c \\
+					c = & 2 \\
+				\end{align*} 
+				Therefore we have a specific value for the constant and we can substitute it in to get a particular solution
+				\[ 
+					y = \frac{1}{4} x^4 + 2
+				\]
+				Finally we can verify our solution is correct by differentiating.
+			</div>  
+
+			<div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fd">
+				Verify \( y = \frac{1}{4} x^4 + 2 \) is a solution of \( \frac{dy}{dx}=x^3 \)
+			</div> 
+
+			<div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fb">
+				Solve the differential equation \( \displaystyle \frac{dy}{dx}=x^2 \) 
+			</div>  
+
+			<div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbc">
+				Evaluate the solution of \( \displaystyle \frac{dy}{dx}=x^2 \) at the given point \( y(3)=7 \) 
+			</div>  
+		</div>
+
+		<div class="pdf-page" id="5fe84c8f-d326-4411-b31b-b8d6a6c8c6b7">
+			<div class="indent">
+				We can even solve second order differential equations of this form  
+				\[ {d^2y\over dx^2}=x^3 \]
+
+				The antiderivative of the second derivative is the first derivative
+			
+				\[ \frac{dy}{dx} = \int \Bigg({d^2y\over dx^2} \Bigg) dx = \int x^3 dx = \frac{1}{4} x^4 + c \]
+
+				But to get the function we simply antidifferentiate again
+				
+				\[ y = \int \Bigg( \frac{dy}{dx} \Bigg) dx = \int \Big( \frac{1}{4} x^4 + c_1 \Big) dx 
+				= \frac{1}{20} x^5 + c_1x + c_2 \]
+
+				Notice this time our solution has two arbitrary constants \(c_1\) and \(c_2\)
+			</div> 
+			<div class="reading-exercise" id="9935aa3f-259c-4b3b-bc3a-4f5f9f03a813">
+				Use antiderivative properties to show \( \displaystyle \int \Big( \frac{1}{4} x^4 + c_1 \Big) dx 
+				= \frac{1}{20} x^5 + c_1x + c_2 \)
+			</div>
+		</div>
+
+		<div class="pdf-page" id="5fe84c8f-d326-4411-b31b-b8d6a6c8c6b8">
+			<div class="indent">
+				Again we can solve any other simple higher order differential equations by repeated antidifferentiation or repeated integration 
+				<a id="x1-2r1"></a>
+				\begin {equation} \label {eq:1.2.1} 
+					\frac{d^ny}{dx^n}=f(x) 
+				\end {equation}
+			</div>
+
+
+			<div class="reading-exercise" id="9935aa3f-259c-4b3b-bc3a-4f5f9f03a813-2">
+				Solve the differential equation \( \displaystyle \frac{dy}{dx} = \sqrt[5]{x} \)
+			</div>      
+			<div class="reading-exercise" id="0bb205bc-6a3e-43dd-bbb2-d22267e13a0e">
+				Solve the differential equation \( \displaystyle \frac{d^2y}{dx^2} = \frac{1}{x^8} \)
+			</div>        
+			<div class="reading-exercise" id="de0e7ed9-1db9-42cf-b164-fb86e45324cd">
+				Solve the differential equation \( \displaystyle \frac{d^3y}{dx^3} = \cos x \)
+			</div>      
+			<div class="reading-exercise" id="df218857-0727-4e2c-b840-51360fa3a5f9">
+				Solve the differential equation \( \displaystyle \frac{d^4y}{dx^4} = e^x \)
+			</div>
+		</div>
+
+		<div class="pdf-page" id="d7e317be-e6c0-43fa-80fb-4d0ed80ab700">
+				Since we already solved these in calculus, we usually won't consider differential equations like (<a href="#x1-2r1">1.2.1</a>) and we’ll usually consider differential equations that can be written as 
+				<a id="x1-3r2"></a>
+				\begin {equation} \label {eq:1.2.2} 
+					\frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right) 
+				\end {equation} 
+				where either the function itself, \(y\), or one of its derivatives \(\displaystyle \frac{dy}{dx}\), …,
+				\(\displaystyle  \frac{d^{n-1}y}{dx^{n-1}}\) is also present in the equation. While we will be using antidifferentiation to solve these differential equations as well, it will not be as straightforward as a basic calculus problem.
+		</div>
+
+		<div class="pdf-page" id="d7e317be-e6c0-43fa-80fb-4d0ed80ab7001">
+			<div>
+				Here are some examples of differential equations we will be solving
+				\[
+					\begin {array}{rcll}
+						\displaystyle {dy\over dx}-x^2&amp;=&amp;0&amp;\mbox { (first order)}\\ \\
+						\displaystyle {dy\over dx}+2xy^2&amp;=&amp;-2&amp;\mbox { (first order)}\\ \\
+						\displaystyle {d^2y\over dx^2}+2\displaystyle {dy\over dx}+y&amp;=&amp;2x&amp;\mbox { (second order)}\\ \\
+						\displaystyle  x\frac{d^3y}{dx^3}+y^2&amp;=&amp;\sin x &amp;\mbox { (third order)}\\ \\
+						\displaystyle  \frac{d^ny}{dx^n}+x\frac{dy}{dx}+3y&amp;=&amp;x&amp;\mbox { ($n$-th order)}
+					\end {array}
+				\]
+			</div> 
+
+			<div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcfg">
+				Find the order of the differential equation 
+				\( \displaystyle  \frac{d^7y}{dx^7} + \frac{d^3y}{dx^3} = 6 \) 
+			</div>  
+
+			<div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcef">
+				Find the order of the differential equation 
+				\( \displaystyle  e^x \frac{dy}{dx} - \frac{d^2y}{dx^2} \cdot \frac{dy}{dx} - y^3 = 3x \) 
+			</div>  
+
+			<div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcd">
+				Find the order of the differential equation 
+				\( \displaystyle  x^3 \frac{dy}{dx} + x^5 \frac{d^4y}{dx^4} + 6y^2 = \cos x \) 
+			</div>
+		</div>
+
+		<div class="pdf-page" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcde">
+			<div>
+				Differential equations we encounter may be written in this form, but we can easily rearrange them to make them in the form of <a href="#x1-3r2">(1.2.2)</a> so we can easily identify \( f\left(x,y,{dy\over dx},{d^2y\over dx^2} \dots,{d^ny\over dx^n}\right)\)
+
+				\begin{align*}
+						{dy\over dx} & = \overset{f(x)}{\overbrace{x^2}} \\ \\
+						{dy\over dx} & = \overset{f(x,y)}{\overbrace{-2 - 2xy^2}} \\ \\
+						{d^2y\over dx^2} & = \overset{f\left(x,y,{dy\over dx}\right)}{\overbrace{2x - y -2{dy\over dx}}} \\ \\
+						{d^3y\over dx^3} & = \overset{f(x,y)}{\overbrace{\frac{\sin{x}}{x} - \frac{y^2}{x}}} \\ \\
+						{d^ny\over dx^n} &= \overset{f\left(x,y,{dy\over dx}\right)}{\overbrace{x - 3y -x{dy\over dx}}} 
+				\end{align*}
+			</div>  
+			<div class="reading-exercise" id="ece8cd3b-bcfc-410a-9d25-f312cb44a7fbcdef">
+				Rewrite \( x \frac{d^2y}{dx^2} + 3y - 2 = \frac{dy}{dx} \) in the form of <a href="#x1-3r2">(1.2.2)</a> and identify \( f\left(x,y,{dy\over dx},{d^2y\over dx^2} \dots,{d^ny\over dx^n}\right)\) 
+			</div>
+		</div>
+	</details>
+
+	<details id="801b2ff6-05c1-489a-a380-b485d2527211">
+		<summary>Solutions of Differential Equations</summary>
+
+		<div id="e44db55f-6ff8-4cd3-ae72-398ec3ab7891">
+			A <span class="vocab">solution</span> of a differential equation is a function that satisfies
+			the differential equation on some <span class="vocab">open interval</span> thus \(y(x)\) is a solution of <a href="#x1-3r2">(1.2.2)</a> if \(y\) is \(n\) times differentiable and
+			\[ \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right) \]
+			for all \(x\) in some open interval \((a,b).\) 
+			We also say that \(y\) is a solution of <a href="#x1-3r2">(1.2.2)</a> on \((a,b)\) 
+		</div> 
+		<div id="e44db55f-6ff8-4cd3-ae72-398ec3ab7892"> 
+			We only consider functions that satisfy a differential equation on an open interval to be solutions. For instance, consider the differential equation
+
+			\[ x\frac{dy}{dx}+x^2=3x \]
+
+			The function \(y = x^2\) does satisfy the differential equation but only at two isolated points \(x=0\) and \(x=1\)
+		</div>  
+		<div class="reading-exercise" id="a2fdbd8e-c0ff-4656-a729-0fda488c21ca">
+			Differentiate \( y = x^2 \) and substitute into \( \displaystyle x\frac{dy}{dx}+x^2=3x \) and simplify to show it is only true at \(x=0\) and \(x=1\)
+		</div>
+		<div id="e44db55f-6ff8-4cd3-ae72-398ec3ab78923"> 
+			Since \( y=x^2 \) only satisfies the equation at two isolated points, and not an open interval, then we do not consider \( y=x^2 \) to be a solution of the differential equation.
+		</div>
+		
+		<div id="7df658f9-e2c8-42fb-a390-c33316c01962"> 
+			The graph of a solution of a differential equation is a <span class="vocab">solution
+			curve</span>. More generally, a curve \(C\) is said to be an
+			<span class="vocab">integral curve</span> of a differential equation if every function \(y=y(x)\) whose graph is a segment of \(C\) is a solution of the differential equation. <em>Thus, any <span class="vocab-repeat">solution curve</span> of a differential equation is an <span class="vocab-repeat">integral curve</span>, but an <span class="vocab-repeat">integral curve</span>
+			may not be a <span class="vocab-repeat">solution curve</span></em>. The following example demonstrates this.
+		</div>
+
+		<div class="example" id="x1-41" style="--ex-number: 1">
+			<div>
+				Show that all the segments of the circle 
+				<a id="x1-5r3"></a>
+				\begin {equation} \label {eq:1.2.3} 
+					x^2+y^2=9 
+				\end {equation} 
+				are <span class="vocab">solution curves</span> and the circle itself is an
+				<span class="vocab">integral curve</span> 
+				of the differential equation
+				<a id="x1-6r4"></a>
+				\begin {equation} \label {eq:1.2.4} 
+					\frac{dy}{dx}=-{x\over y}
+				\end {equation}
+			</div>
+
+			<details class="solution">
+				<summary>Solution</summary>
+
+				<div style="text-align: center;">
+					<iframe src="https://www.desmos.com/calculator/18xmlxlfyo?embed" width="400" height="250" frameborder="0"></iframe>
+				</div>
+				<div>
+					Although the circle <a href="#x1-5r3">(1.2.3)</a> is not a function, we can solve for \( y \) to obtain two separate functions of \(x\) that are segments of the circle:
+					\[ y_1(x)=\sqrt {9-x^2}\quad \mbox{ and } \quad  y_2(x)=-\sqrt {9-x^2}\]
+					Note: \( y(x)\) means \( y \) is a function of \(x\) kind of like \( f(x)\) but we just use \( y \) instead of \( f \) for simplicity
+				</div>
+				<div class="reading-exercise">
+					Solve \( x^2+y^2=9 \) explicitly for \( y \) and show how to get the equations of the semi-circle segments 
+				</div>   
+				<div class="reading-exercise">
+					Find the domain of \( y_1(x) \) and  \( y_2(x) \)
+				</div>         
+				<div style="display: flex; gap: 2em; justify-content: center;">
+					<iframe src="https://www.desmos.com/calculator/rupzqf3rmh?embed" width="400" height="250" frameborder="0"></iframe>
+					<iframe src="https://www.desmos.com/calculator/bipn7z9qbd?embed" width="400" height="250" frameborder="0"></iframe>
+				</div>
+
+				<div>
+					By differentiating and substituting, it can be easily verified that both of the semi-circle segments, \( y_1 \) and \( y_2 \), are solutions to the differential equation.
+				</div>  
+				<div class="reading-exercise">
+					Show that \( y_1 \) and \( y_2 \) satisfy \( \displaystyle \frac{dy}{dx}=-{x\over y}\)
+				</div>   
+				<div>
+					Note that all the segments of the circle that are functions (i.e. the semi-circles \( y_1 \) and \( y_2 \)) are solutions to the differential equation <a href="#x1-6r4">(1.2.4)</a> and thus called <span class="vocab">solution curves</span>. Since all of the segments of the circle are solutions, the circle itself is an <span class="vocab">integral curve</span> of the equation, but it is not a <span class="vocab">solution curve</span> since the circle itself is not the graph of a function and is not itself a solution to the differential equation. 
+				</div>  
+				<div class="reading-exercise">
+					Show that <a href="#x1-5r3">(1.2.3)</a> is a solution of <a href="#x1-6r4">(1.2.4)</a> using implicit differentiation
+				</div> 
+				<div class="reading-exercise">
+					Show that \( x^2+y^2 = c  \) is also solution of <a href="#x1-6r4">(1.2.4)</a> using implicit differentiation
+				</div> 
+
+			</details>
+		
+		</div>
+
+		<div class="example" id="x1-72" style="--ex-number: 2">
+			<div>
+				Verify that <a href="#x1-8r5">(1.2.5)</a> is a solution of <a href="#x1-9r6">(1.2.6)</a> on \((0,\infty )\) and on \((-\infty ,0)\).
+				<a id="x1-8r5"></a>
+				\begin {equation} \label {eq:1.2.5} 
+					y={x^2\over 3}+{1\over x} 
+				\end {equation}  
+				<a id="x1-9r6"></a>
+				\begin {equation}\label {eq:1.2.6} 
+					x\frac{dy}{dx}+y=x^2 
+				\end {equation} 
+			</div>
+
+			<div class="reading-exercise" id="0cbb2d89-5852-44e6-805b-3e7bc167cbd6">
+				Calculate \( \displaystyle \frac{dy}{dx} \) for \( \displaystyle y={x^2\over 3}+{1\over x} \) using the <span class="vocab">power rule</span>
+			</div>
+
+			<details class="solution">
+				<summary>Solution</summary>
+
+				<div class="noindent" id="fb89956d-f5da-4f7c-95c2-c2b4d0390aae">
+					Substituting \( y \) (<a href="#x1-8r5">1.2.5</a>) and \( \displaystyle \frac{dy}{dx}={2x\over 3} - {1\over x^2} \) into (<a href="#x1-9r6">1.2.6</a>) yields
+					\begin{align*}
+						x \frac{dy}{dx} + y & = x^2 \\
+						x\left( 
+							\frac{2x}{3} - \frac{1}{x^2}
+						\right) + \left({x^2 \over 3} + {1 \over x}\right) & \overset{?}{=} x^2 \\
+						\frac{2x^2}{3} - \frac{1}{x} + {x^2 \over 3} + {1 \over x} & \overset{?}{=} x^2 \\
+						\frac{3}{3} x^2 & \overset{\checkmark}{=} x^2 \\	 
+					\end{align*}
+					
+					Note that (<a href="#x1-8r5">1.2.5</a>) satisfies the differential equation on all \( x \ne 0 \) since \( y \) is undefined at \( x = 0 \) therefore \( y \) is a solution of (<a href="#x1-9r6">1.2.6</a>) on the open intervals \((-\infty ,0)\) and \((0,\infty )\) and \( y \) is not a solution on any open interval that contains \(x=0\) since \(y\) is not defined at \(x=0\)
+				</div>
+
+			</details>
+		</div>
+
+		<div id="6a07830c-c4db-4f84-86ca-d594db684c47"> 
+			Figure&nbsp;<a href="#-y-x-x-">1.2.1</a> shows the graph of the <span class="vocab">integral curve</span> <a href="#x1-8r5">(1.2.5)</a>. The segment of the graph of (<a href="#x1-8r5">1.2.5</a>) on \((0,\infty )\) is a <span class="vocab">solution  curve</span> of <a href="#x1-9r6">(1.2.6)</a>, as is the segment of the graph on \((-\infty ,0)\).
+		</div>
+
+		<figure class="figure" id="a22c3ee7-00b9-4646-a119-454b1af7f964">
+			<div id="-y-x-x-"><img height="264" src="EPS/fig010201.png" width="409"> <a id="x1-13r1"></a></div>
+			<figcaption class="caption"><span class="id">Figure&nbsp;1.2.1 </span><span class="content">\(y(x) =\displaystyle {\frac
+					{x^{2}}{3}+\frac {1}{x}}\) </span></figcaption><!-- tex4ht:label?: x1-13r1  -->
+		</figure>
+
+		<div class="example" id="x1-103" style="--ex-number: 3">
+			<div>
+				Show that if \(c_1\) and \(c_2\) are constants then <a href="#x1-11r7">(1.2.7)</a> is a solution of <a href="#x1-12r8">(1.2.8)</a> on \((-\infty ,\infty )\)
+				<a id="x1-11r7"></a>
+				\begin {equation} \label {eq:1.2.7} 
+					y = 2x - 4 + (c_1+c_2x) e^{-x}  
+				\end {equation}
+				<a id="x1-12r8"></a>
+				\begin {equation} \label {eq:1.2.8} 
+					\frac{d^2y}{dx^2} + 2 \frac{dy}{dx} + y = 2x 
+				\end {equation} 
+			</div>
+
+			<div class="reading-exercise" id="085c43af-5ff5-411c-af11-1e18d97c10e6">
+				Calculate \( \displaystyle \frac{dy}{dx} \) and \( \displaystyle \frac{d^2y}{dx^2} \)  for \( \displaystyle y=(c_1+c_2x)e^{-x}+2x-4 \) using the <span class="vocab">product rule</span>
+			</div>
+
+			<details class="solution">
+				<summary>Solution</summary>
+
+				<div id="bee02374-32a1-4c97-99df-ff23db4fe4e7">
+					First note that (<a href="#x1-11r7">1.2.7</a>)  is defined for all values of \(x\) on \( (-\infty, \infty) \)
+				</div>
+				<div id="bee02374-32a1-4c97-99df-ff23db4fe4e8">  
+					Differentiating (<a href="#x1-11r7">1.2.7</a>) twice yields 
+					\[ 
+						\frac{dy}{dx} = 2 + (-c_1 + c_2 -c_2x) e^{-x}
+						\quad
+						\text{and}
+						\quad
+						\frac{d^2y}{dx^2} = (c_1 - 2c_2 + c_2x) e^{-x} 
+					\] 
+					Substituting in to <a href="#x1-12r8">(1.2.8)</a>
+					\begin{align*}
+						\begin{array}{rlllllrll}
+							\displaystyle \frac{d^2y}{dx^2}    = &amp;    &amp;   &amp;    &amp;    &amp; (   &amp; c_1   &amp; - &amp; 2c_2 &amp; + &amp; c_2 x  &amp; )e^{-x} \\
+							2 \displaystyle \frac{dy}{dx}      = &amp;    &amp;   &amp; 4  &amp; +  &amp; (   &amp; -2c_1 &amp; + &amp; 2c_2 &amp; - &amp; 2c_2 x &amp; )e^{-x} \\
+							+ \quad \quad \quad \quad \quad y  = &amp; 2x &amp; - &amp; 4  &amp; +  &amp; (   &amp; c_1   &amp;   &amp;      &amp; + &amp; c_2 x  &amp; )e^{-x} \\
+							\hline \\
+							\displaystyle \frac{d^2y}{dx^2} 
+								+ 2 \displaystyle\frac{dy}{dx} 
+									+ y                            = &amp; 2x &amp;   &amp;    &amp; +  &amp; (  
+																																						&amp; \overset{1-2+1}{\overbrace{0}}c_1   &amp; + 
+																																						&amp; \overset{-2+2}{\overbrace{0}}c_2 &amp; + 
+																																						&amp; \overset{1-2+1}{\overbrace{0}} c_2x &amp; )e^{-x} \\ \\
+							\displaystyle \frac{d^2y}{dx^2} 
+							+ 2 \displaystyle\frac{dy}{dx} 
+								+ y                            \overset{\checkmark}{=} &amp; 2x &amp; &amp; &amp; &amp; &amp; &amp; &amp; &amp; &amp; &amp; \\                
+						\end{array}
+					\end{align*}      
+					
+					Therefore <a href="#x1-11r7">(1.2.7)</a> is a solution of <a href="#x1-12r8">(1.2.8)</a> on \((-\infty ,\infty )\)
+				</div>
+			</details>
+		</div>
+
+		<div class="example" id="x1-144" style="--ex-number: 4">
+			<div>
+				Find all solutions of \begin {equation}
+				\label {eq:1.2.9} \frac{d^ny}{dx^n}=e^{2x}\end {equation}<a id="x1-15r9"></a>
+			</div>
+
+			<details class="solution">
+				<summary>Solution</summary>
+				<div id="a98fd397-0f08-4e0e-8681-f3da5846a0ec"><span class="ptmb8t-">Solution </span>&nbsp;
+					Antidifferentiating repeatedly (<a href="#x1-15r9">1.2.9</a>) yields
+					\begin{align*}
+						\frac{d^{n-1}y}{dx^{n-1}} = &amp; \frac{1}{2} e^{2x} + k_1 \\ \\
+						\frac{d^{n-2}y}{dx^{n-2}} = &amp; \frac{1}{4} e^{2x} + k_1x + k_2 \\ \\
+						\frac{d^{n-3}y}{dx^{n-3}} = &amp; \frac{1}{8} e^{2x} + \frac{1}{2}k_1x^2 + k_2x + k_3 \\ \\
+						\frac{d^{n-4}y}{dx^{n-4}} = &amp; \frac{1}{16} e^{2x} + \frac{1}{6}k_1x^3 + \frac{1}{2}k_2x^2 + k_3x + k_4 \\ \\
+						\frac{d^{n-5}y}{dx^{n-5}} = &amp; \frac{1}{32} e^{2x} + \frac{1}{24}k_1x^4 + \frac{1}{6}k_2x^3 + \frac{1}{2}k_3x^2 + k_4x + k_5 \\ \\
+					\end{align*}  
+				</div>
+				<div class="reading-exercise" id="449253c8-1685-4bc6-863d-6f087cd0c3ec">
+					Show the work for the first five antiderivatives using integral notation
+				</div>
+				<div id="36fd2164-0be3-4855-8697-1987456edd02">
+					Notice the pattern on the \( e^{2x} \) terms; the \( n^{th} \) derivative has a factor of \( \displaystyle \frac{1}{2^n} \):
+					\[ \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \frac{1}{32}, \dots \]
+				</div>
+				<div id="767b7dac-f608-4635-8b6f-cf2c4f79a189">  
+					Notice the pattern on the rest of the terms; the coefficients are factorials: 
+					\[ 	\underset{0!}{\underbrace{1}}, 
+							\underset{1!}{\underbrace{1}}, 
+							\underset{2!}{\underbrace{2}}, 
+							\underset{3!}{\underbrace{6}}, 
+							\underset{4!}{\underbrace{24}}, 
+							\dots
+					\]
+				</div>
+				<div id="5a96357c-5ad0-4ba5-9ab1-20709a2646fe"> 
+					Incorporating these patterns, flipping the order of the polynomial terms, and renaming the arbitrary constants, we can rewrite the fifth antiderivative more simply:
+					\begin{align*}
+						\frac{d^{n-5}y}{dx^{n-5}} 
+						= &amp; \frac{1}{32} e^{2x} + \frac{1}{24}k_1x^4 + \frac{1}{6}k_2x^3 + \frac{1}{2}k_3x^2 + k_4x + k_5 \\
+						= &amp; \frac{1}{2^5} e^{2x} + \frac{1}{4!}k_1x^4 + \frac{1}{3!}k_2x^3 + \frac{1}{2!}k_3x^2 + \frac{1}{1!}k_4x + \frac{1}{0!}k_5 \\
+						= &amp; \frac{1}{2^5} e^{2x} + \frac{1}{0!}K_0 + \frac{1}{1!} K_1 x + \frac{1}{2!} K_2 x^2 + \frac{1}{3!} K_3 x^3 + \frac{1}{4!} K_4 x^4 \\
+						= &amp; \frac{1}{2^5} e^{2x} + \underbrace{ c_0 + c_1 x + c_2 x^2 + c_3 x^3 + c_4 x^4 } \\        
+						= &amp; \frac{1}{2^5} e^{2x} + \sum_{n=0}^{4} { c_n x^n } 
+					\end{align*}
+				</div>
+				<div id="d309171c-c81d-438a-ac37-e8497fa22131">
+					Therefore all solutions of (<a href="#x1-15r9">1.2.9</a>) can be written as
+					<a id="x1-16r10"></a> 
+					\begin {equation} \label {eq:1.2.10} 
+						y(x) = \frac{1}{2^n} e^{2x} + c_0 + c_1 x + c_2 x^2 + \cdots +c_n x^n = \frac{1}{2^n} e^{2x} + \sum_{n=0}^{n} { c_n x^n } 
+					\end {equation}
+					where we renamed the arbitrary constants to make the formula as simple as possible. As a general rule, arbitrary
+					constants appearing in solutions of differential equations should be simplified whenever possible.
+				</div>
+				<div class="reading-exercise" id="ed9090d6-3e9a-48bd-a460-09f943ba4560">
+					Rewrite the first five antiderivatives above using sigma notation
+				</div>
+			</details>
+		</div>
+	</details>
+
+	<details id="5eaac97d-d99e-4a64-9a9d-f956ef96c666">
+		<summary>Initial Value Problems</summary>
+
+		<div id="1e891292-86e6-42ee-9f7b-1105480898a6">
+			In several examples we have found solutions to differential equations that include arbitrary constants of integration \( c \) which represent an infinite <span class="vocab">family of solutions</span>. Without additional conditions, there is no reason to prefer one solution over another. However, in real-life applications of differential equations, we often want to find a <span class="vocab">particular solution</span> of a differential equation that satisfies one or more specific <span class="vocab">initial conditions</span> which we call an <span class="vocab">initial value problem</span> (<span class="vocab">IVP</span>).
+		</div>
+		<div class="example" id="x1-175" style="--ex-number: 5">
+			<ol>
+				<li>
+					Find a solution of the differential equation such that \(y(1)=2\)
+					\[ \frac{dy}{dx}=x^3 \]
+				</li>
+				<li>
+					Find a solution of the differential equation such that \(y(3)=22\)
+					\[ \frac{dy}{dx}=x^3 \]
+				</li>
+			</ol>  
+
+			<details class="solution" id="66f647c4-7d0f-4284-9ccf-5a904d890f42">
+				<summary>Solution</summary>
+				<ol>
+					<li>
+						At the beginning of this section we solved this differential equation \(\displaystyle \frac{dy}{dx}=x^3\) by finding the antiderivative
+						\[ y=\int x^3 dx=\frac{1}{4} x^4 + c \]
+
+						The antiderivative represents the <span class="vocab">general solution</span> of the differential equation and includes the arbitrary constant of integration. We can determine a particular value of \(c\) that satisfies the given <span class="vocab">initial condition</span> \(y(1)=2\) by evaluating the solution at \( x=2 \)
+						\begin{align*}
+							y(x) = &amp; \frac{1}{4}x^{4} + c \\ \\
+							\underset{2}{\underbrace{y(1)}} = &amp; \frac{1}{4}\left(1\right)^{4} + c \\
+							2 = &amp; \frac{1}{4}+ c \Longrightarrow c = \frac{7}{4}  \\
+						\end{align*} 
+						Once we have a particular \( c = \frac{7}{4} \) simply substituting it back in to the general solution to obtain the <span class="vocab">particular solution</span>:
+						\[ y(x) = \frac{1}{4}x^{4} +  \frac{7}{4} = \frac{1}{4}\left(x^4 + 7\right) \]
+						<div id="3d8bc9e5-87ab-4705-8841-d47471e3c750"> Figure&nbsp;<a href="#-y-x-">1.2.2</a> shows the graph of this
+							solution. Note that the condition \(y(1)=2\) is equivalent to requiring the
+							graph of \(y\) to pass through the point \((1,2)\)
+						</div>
+						<div class="reading-exercise">
+							Verify that \(y = \frac{1}{4}x^4 + \frac{7}{4} \) is a solution of \( \frac{dy}{dx}=x^3 \) by differentiating
+						</div>
+						<div class="reading-exercise">
+							Verify that \(y = \frac{1}{4}x^4 + c \) is a solution of \( \frac{dy}{dx}=x^3 \) by differentiating
+						</div>
+					</li>
+					<li>
+						Again we can determine a particular value of \(c\) that satisfies the given <span class="vocab">initial condition</span> \(y(3)=22\) by evaluating the solution at \( x=3 \)
+						\begin{align*}
+							y(x) = &amp; \frac{1}{4}x^{4} + c \\ \\
+							\underset{22}{\underbrace{y(3)}} = &amp; \frac{1}{4}\left(3\right)^{4} + c \\
+							22 = &amp; \frac{1}{4}\cdot (81) + c \Longrightarrow c = \frac{7}{4}  \\
+						\end{align*} 
+						<div class="reading-exercise">
+							Show that evaluating at \(y(3)=22\) results in \( c = \frac{7}{4} \)
+						</div>
+						So again we got the same particular value for \( c = \frac{7}{4} \) so we have the <span class="vocab-repeat">particular solution</span>:
+						\[ y(x) = \frac{1}{4}x^{4} +  \frac{7}{4} = \frac{1}{4}\left(x^4 + 7\right) \]
+						Again the condition \(y(3)=22\) means the graph of \(y\) to pass through the point \((3,22)\) 
+					</li>
+				</ol> 
+			</details>
+		</div>
+
+
+		<figure class="figure" id="3c7ea326-644b-42e3-a901-49bf3657b772">
+			<div id="-y-x-"><img height="264" src="EPS/fig010202.png" width="409"> <a id="x1-19r2"></a></div>
+			<figcaption class="caption"><span class="id">Figure&nbsp;1.2.2 </span><span class="content">\(y=\displaystyle \frac{1}{4}\left(x^4 + 7\right) \) </span></figcaption><!-- tex4ht:label?: x1-19r2  -->
+		</figure>
+
+		<div id="bc8bf255-8b4d-4e48-8209-21496b18ce9b"> 
+			We can rewrite Part 1 of Example&nbsp;<a href="#x1-175">1.2.5</a> more briefly as an <span class="vocab">initial value problem</span> (<span class="vocab">IVP</span>):
+			\[ \frac{dy}{dx}=x^3 \quad y(1)=2\]
+			First we write the differential equation followed by the requirement \(y(1)=2\) which we call <span class="vocab">initial condition</span>. 
+		</div>
+		<div id="bc8bf255-8b4d-4e48-8209-21496b18ce9c">
+			IVPs can also be written for higher order differential equations with additional initial conditions. For instance, consider the second order differential equation:
+			<a id="x1-18r11"></a> 
+			\begin {equation} \label {eq:1.2.11} 
+				\frac{d^2y}{dx^2} - 2\frac{dy}{dx}+3y=e^x
+				\quad y(0)=1 \quad \left.\frac{dy}{dx}\right|_0=2 
+			\end {equation} 
+			In this case there are two <span class="vocab">initial conditions</span>, one for \(y\) and one for \(\displaystyle \frac{dy}{dx}\) and both are required to have specified values at \(x=0\). 
+			In general, an initial value problem for an \(n^{th}\) order differential equation requires \(n \) <span class="vocab">initial conditions</span> specified on \(y\) and its first \(n-1\) derivatives at some initial point \(x_0\).
+		</div>
+		<div id="c097647d-3b57-42de-a586-4a535095725c"> 
+			We will write an IVP for a differential equation by writing the initial
+			conditions after the differential equation, as in (<a href="#x1-18r11">1.2.11</a>).
+			For example, we could write an IVP for (<a href="#x1-3r2">1.2.2</a>) as
+			<a id="x1-20r12"></a>
+			\begin {align}\label {eq:1.2.12}
+				\frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx},\frac{d^2y}{dx^2}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right)
+				\quad y(x_0) = & k_0 \nonumber \\
+				\quad \left.\frac{dy}{dx}\right|_{x_0} = & k_1 \nonumber  \\
+				\quad \left.\frac{d^2y}{dx^2}\right|_{x_0} = & k_2 \nonumber  \\
+				& \vdots  \nonumber \\
+				\quad \left.\frac{d^{n-1}y}{dx^{n-1}}\right|_{x_0} = & k_{n-1}
+			\end {align}
+
+			Consistent with our earlier definition of a solution of the differential equation in
+			(<a href="#x1-20r12">1.2.12</a>), we say that \(y\) is a solution
+			of the initial value problem (<a href="#x1-20r12">1.2.12</a>) if \(y\)
+			is \(n\) times differentiable and 
+			\[ \frac{d^ny}{dx^n}=f\left(x,y,\frac{dy}{dx},\frac{d^2y}{dx^2}, \dots ,\frac{d^{n-1}y}{dx^{n-1}}\right) \]
+			for all \(x\) in some open interval \((a,b)\) that contains \(x_0\), and \(y\) satisfies the initial conditions in
+			(<a href="#x1-20r12">1.2.12</a>). 
+
+
+			We also say that \( y \)  is a solution of (<a href="#x1-20r12">1.2.12</a>) on the open interval \( (a,b) \) and the largest open interval that contains \( x_0 \) on which \( y(x) \) is defined and
+			satisfies the differential equation is called the <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>)
+		</div>
+
+		<div class="example" id="x1-216" style="--ex-number: 6">
+			<div>
+				In Example&nbsp;<a href="#x1-175">1.2.5</a> we found that <a href="#x1-22r13">(1.2.13)</a> is a <span class="vocab">solution</span> of the IVP
+				\[ \frac{dy}{dx} = x^3 \quad y(1) = 2 \]
+				Determine the <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>) of this solution.
+				<a id="x1-22r13"></a>
+				\begin {equation} \label {eq:1.2.13}
+					y = \frac{1}{4} \left( x^4 + 7 \right) 
+				\end {equation} 
+			</div>
+			
+			<details class="solution">
+				<summary>Solution</summary>
+
+				<div id="b224947b-14a0-4b2e-8e5d-4c34ca2330d0">
+					Since the function in (<a href="#x1-22r13">1.2.13<!-- tex4ht:ref: eq:1.2.13  --></a>) is defined for all \(x\) values, the <span class="vocab">interval of validity</span> is \((-\infty ,\infty ) \)
+				</div>   
+			</details>
+		</div>  
+
+		<div class="example" id="x1-237" style="--ex-number: 7">    
+			
+			<div>
+				In Example&nbsp;<a href="#x1-72">1.2.2</a> we verified that <a href="#x1-24r14">(1.2.14)</a> is solution of the differential equation:
+
+				\[ 
+					\quad x \displaystyle \frac{dy}{dx} + y = x^2 
+				\]
+
+				<a id="x1-24r14"></a>
+				\begin {equation} \label{eq:1.2.14} 
+					y={x^2\over 3}+{1\over x} 
+				\end {equation}
+			</div>
+
+			<ol>
+				<li>
+					Verify <a href="#x1-24r14">(1.2.14)</a> is the solution of the <span class="vocab">IVP</span> and determine the <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>)
+					<a id="x1-25r15"></a>
+					\begin{equation} \label {eq:1.2.15} 
+						x\frac{dy}{dx}+y=x^2 \quad y(1)={4\over 3} 
+					\end {equation}
+				</li>
+				<li>
+					Verify (<a href="#x1-24r14">1.2.14</a>) is the solution of the <span class="vocab">IVP</span> and determine the <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>)
+					<a id="x1-26r16"></a>
+					\begin{equation} \label {eq:1.2.16} 
+						x \frac{dy}{dx} + y = x^2 \quad y(-1) = -{2\over 3}
+					\end {equation}
+				</li>	
+			</ol>	
+
+
+			<details class="solution" id="66f647c4-7d0f-4284-9ccf-5a904d890f423">
+				<summary>Solution</summary>
+
+				<ol>
+					<li>
+						<div id = "49041906-b291-46f5-bd97-daaf2ba9e7871">
+							We already know <a href="#x1-24r14">(1.2.14)</a> is a solution from Example&nbsp;<a href="#x1-72">1.2.2</a>, and now we'll evaluate it at our initial value \( x = 1 \)
+		
+							\begin{align*}
+								y(x) & = {x^2\over3}+{1\over x} \\
+								y(1) & = {1^2\over3}+{1\over 1} = {1\over3}+1 = {4\over3} \quad \checkmark
+							\end{align*}
+						</div>
+						<div>
+							We verified <a href="#x1-24r14">(1.2.14)</a> satisfies the initial condition \( y(1) = 4/3 \). Now notice that <a href="#x1-24r14">(1.2.14)</a> is undefined at \( x = 0 \) meaning the solution is only defined on the open intervals \((-\infty,0)\) and \((0,\infty).\) 
+						</div>
+						<div>    
+								The <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>) is the largest open interval that contains our initial value \( x = 1 \) so \((0,\infty)\) is the IOV for this IVP
+						</div>
+					</li>
+					<li>
+						<div id = "6561841f-1e77-47bb-9641-0d34c79be2bc23">
+							Again we already know (<a href="#x1-24r14">1.2.14</a>) is a solution from Example&nbsp;<a href="#x1-72">1.2.2</a>, and now we'll evaluate it at our initial value \( x = -1 \)
+						</div>
+						<div>
+							We verified <a href="#x1-24r14">(1.2.14)</a> satisfies the initial condition \( y(-1) = -2/3 \). Again since <a href="#x1-24r14">(1.2.14)</a> is undefined at \( x = 0 \) the solution is only valid on the open intervals \((-\infty,0)\) and \((0,\infty).\) 
+						</div>
+						<div>    
+								The <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>) is the largest open interval that contains our initial value \( x = -1 \) so \((-\infty,0)\) is the IOV for this IVP
+						</div>
+					</li>
+				</ol>
+
+			</details>
+
+			<div class="reading-exercise">
+				Verify (<a href="#x1-24r14">1.2.14</a>) is the solution of the <span class="vocab">IVP</span> and determine the <span class="vocab">IOV</span>
+				\(
+					\displaystyle x\frac{dy}{dx}+y=x^2 \quad y(3)={10\over 3} 
+				\)
+			</div>   
+
+			<div class="reading-exercise">
+				Verify (<a href="#x1-24r14">1.2.14</a>) is the solution of the <span class="vocab">IVP</span> and determine the <span class="vocab">IOV</span>
+				\(
+					\displaystyle  x\frac{dy}{dx}+y=x^2 \quad y(-3)={8\over 3} 
+				\)
+			</div>  
+
+		</div>
+	</details>
+
+	<details id="4091eae1-6353-4522-a340-062694d0b9e6">
+		<summary>Free Fall Under Constant Gravity</summary>
+
+		<div id="db10db2b-a5d1-47e3-9984-5684c3598146">The term <span class="vocab">initial value problem</span> originated in problems of motion where
+			the independent variable is \(t\) (representing
+			elapsed time), and the initial conditions are the <span class="vocab">position</span> and <span class="vocab">velocity</span> of an object at the initial time of an experiment.
+		</div>
+
+		<div class="example" id="x1-278" style="--ex-number: 8">
+			<div>
+				An object falls under the influence of <span class="vocab">gravity</span> near Earth’s surface, where it can be assumed that the magnitude of the acceleration due to gravity is a constant \(g\). Assume that gravity is the only force acting on the object.
+			</div>
+			<ol>
+				<li>
+					Using <span class="vocab">Newton’s 2nd law of motion</span>, construct a mathematical model for the motion of the object in the form of an IVP for a second order differential equation, assuming that the height and velocity of the object at time \(t=0\) are known.
+				</li>  
+				<li>
+					Solve the IVP to obtain the height as a function of time
+				</li>  
+			</ol>  
+
+			<details class="solution" id="6d749057-a362-42fa-97dc-86f605f4e0d4">
+				<summary>Solution</summary>
+					<ol>
+						<li>
+							Recall <span class="vocab">Newton’s 2nd law of motion</span>, \( F = ma \), the force \( F \) acting on the object is equal to the mass \( m \) of the object times the acceleration \( a \) of the object. Acceleration is the derivative of velocity and velocity is the derivative of position so position is the second derivative of acceleration and can be written as  \( a = \ddot{y} \) where \(y(t)\) represent the position (height) of the object at time \(t\). The only force acting on the object is <span class="vocab">gravity</span> and the acceleration due to gravity is in the downward (negative) direction, so the total force \( F \) is given by \( -mg \). Thus <span class="vocab">Newton’s 2nd law of motion</span> can be rewritten to represent a second order differential equation modeling this situation:
+							\begin{equation*}
+								F = ma \Longrightarrow
+								-mg = m \ddot{y} \Longrightarrow
+								-g = \ddot{y}
+							\end{equation*}
+							where the dot notation indicates differentiation with respect to \(t\). If \(y_0 \) denotes the initial height and \(v_0\) denotes the initial velocity when \(t=0\), then \(y\) is a solution of the initial value problem 
+							<a id="x1-30r17"></a>
+							\begin {equation} \label {eq:1.2.17} 
+								\ddot{y}=-g \quad
+								y(0)=y_0 \quad 
+								\dot{y}(0)=v_0
+							\end {equation}
+							<div class="reading-exercise" id="7dc52b16-d26c-4b27-8258-b80f323fa9ba">
+								Rewrite the IVP <a href="#x1-30r17">(1.2.17)</a> using <span class="vocab-repeat">differential notation</span> (<span class="vocab-repeat">Leibniz notation</span>) 
+							</div> 
+						</li> 
+						<li>
+							The IVP can be solved by antidifferentiating 
+
+							\begin {align*}
+								\ddot{y} = -g
+								\Longrightarrow
+								\int \ddot{y} \, dt = & -g \int dt \\
+								\Longrightarrow
+								\dot{y} = & -gt + c
+							\end {align*}  
+
+							<div class="reading-exercise" id="7dc52b16-d26c-4b27-8258-b80f323fa9babcd">
+								Apply the initial condition \( \dot{y}(0)=v_0 \) to find \( c \)
+							</div> 
+
+							Applying the initial condition \( \dot{y}(0)=v_0 \) we can show \(c=v_0\) so our equation becomes \( \dot{y} = -gt + v_0 \) and not we just antidifferentiate again:
+						
+
+							\begin {align*}
+								\dot{y} = -gt + v_0
+								\Longrightarrow
+								\int \dot{y} dt = & -g \int t dt + v_0 \int dy \\
+								\Longrightarrow
+								y = & -\frac{1}{2}gt^2 + v_0 t + c \\
+							\end {align*}  
+
+							<div class="reading-exercise" id="7dc52b16-d26c-4b27-8258-b80f323fa9babcde">
+								Apply the initial condition \( y(0)=y_0\) to find \( c \)
+							</div>   
+
+						Applying the initial condition \(y(0)=y_0\) we can show \(c=y_0\) so the solution of <a href="#x1-30r17">(1.2.17)</a> is 
+						\[ y(t) = -\frac{1}{2}gt^2 + v_0 t + y_0 \] 
+						</li>  
+					</ol>  
+
+			</details>
+		</div> 
+	</details>
+
+	<nav class = "ex">
+		<a href = "sec1.2.ex.html">1.2 Exercises</a>
+	</nav>
+
+	<nav class = "book">
+		<a href="sec1.1.book.html">Back (1.1)</a>
+
+		<a href="sec1.0.html">Chapter 1</a>
+
+		<a href="sec1.3.book.html">Next (1.3)</a>
+	</div>
 
 
 </body></html>
