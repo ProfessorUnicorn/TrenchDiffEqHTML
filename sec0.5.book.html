@@ -22,43 +22,119 @@
 		0.5 Calculus II
 	</div>
 
+	<details id="6816564d-0f36-4899-a1c0-c85a1dc6ff1gfdas">
+		<summary>Integration By Parts (IBP)</summary>
+
+		\begin{align*}
+			\int u dv = uv - \int v du
+		\end{align*}
+
+	</details>	
+
+
+
 	<details id="6816564d-0f36-4899-a1c0-c85a1dc6ff1g">
 		<summary>Taylor Series</summary>
 
 		<div>
 			Taylor Series:
 
-			\begin{equation*}
-				\boxed{
+
+			 
+
+			\begin{align*}
 				f\left(x\right)
-					= f\left(a\right)
+        			= & \sum_{n=0}^{\infty}{\frac{f^{^{(n)}}\left(a\right)}{n!} \left(x-a\right)^n} \\
+				f\left(x\right)
+					= & f\left(a\right)
 						+f^{'}\left(a\right)\left(x-a\right)
 						+\frac{f^{''}\left(a\right)}{2!} \left(x-a\right)^2
 						+\frac{f^{'''}\left(a\right)}{3!} \left(x-a\right)^3
 						+\frac{f^{^{IV}}\left(a\right)}{4!} \left(x-a\right)^4
 						+ \cdots
-				}
-			\end{equation*}
+			\end{align*}
 
 		</div>
 
 		<div>
-			Maclaurin Series
+			Maclaurin Series (Taylor Series centered at 0)
 
-			\begin{equation*}
-				\boxed{
+
+			\begin{align*}
 				f\left(x\right)
-					= f\left(0\right)
-						+f^{'}\left(0\right)\left(x\right)
-						+\frac{f^{''}\left(0\right)}{2!} \left(x\right)^2
-						+\frac{f^{'''}\left(0\right)}{3!} \left(x\right)^3
-						+\frac{f^{^{IV}}\left(0\right)}{4!} \left(x\right)^4
+					= & \sum_{n=0}^{\infty}{\frac{f^{^{(n)}}\left(0\right)}{n!} x^n} \\
+				f\left(x\right)
+					= & f\left(0\right)
+						+f^{'}\left(0\right) x
+						+\frac{f^{''}\left(0\right)}{2!} x^2
+						+\frac{f^{'''}\left(0\right)}{3!} x^3
+						+\frac{f^{^{IV}}\left(0\right)}{4!} x^4
 						+ \cdots
-				}
-			\end{equation*}
+			\end{align*}			
 
-			Taylor Series centered at 0 is called the Maclaurin Series
+			
 		</div>
+
+		<div class="reading-exercise" id="ba2a4f2a-dd6c-46ff-a509-aedce84cc0b0fdas-1">
+			Find the first 5 nonzero terms of the Maclaurin Series for \( \frac{1}{1-x} \) and write in sigma notation
+		</div> 
+		<div class="reading-exercise" id="ba2a4f2a-dd6c-46ff-a509-aedce84cc0b0fdas-2">
+			Find the first 5 nonzero terms of the Maclaurin Series for \( e^x \) and write in sigma notation
+		</div> 
+		<div class="reading-exercise" id="ba2a4f2a-dd6c-46ff-a509-aedce84cc0b0fdas-3">
+			Find the first 5 nonzero terms of the Maclaurin Series for \( \sin x \) and write in sigma notation
+		</div> 
+		<div class="reading-exercise" id="ba2a4f2a-dd6c-46ff-a509-aedce84cc0b0fdas-4">
+			Find the first 5 nonzero terms of the Maclaurin Series for \( \cos x\) and write in sigma notation
+		</div> 
+		<div class="reading-exercise" id="ba2a4f2a-dd6c-46ff-a509-aedce84cc0b0fdas-5">
+			Find the first 5 nonzero terms of the Maclaurin Series for \( \ln x\) and write in sigma notation
+		</div> 
+		<div class="reading-exercise" id="ba2a4f2a-dd6c-46ff-a509-aedce84cc0b0fdas-6">
+			Find the first 5 nonzero terms of the Maclaurin Series for \( \tan^{-1} x\) and write in sigma notation
+		</div> 
+
+		<div class="theorem">
+			Common Taylor Series 
+
+			\begin{align*}
+				\frac{1}{1-x}
+					= & 1 + x + x^2 + x^3 + x^4 + \cdots
+					= \sum_{n=0}^{\infty}{x^n} \\	
+			\end{align*}	
+
+			\begin{align*}
+				e^x
+					= & 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots
+					= \sum_{n=0}^{\infty}{ \frac{x^n}{n!} } \\	
+			\end{align*}
+			
+			\begin{align*}
+				\sin x
+					= & x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \frac{x^9}{9!} -+ \cdots
+					= \sum_{n=0}^{\infty}{ (-1)^{n} \frac{x^{2n+1}}{(2n+1)!} } \\	
+			\end{align*}
+
+			\begin{align*}
+				\cos x
+					= & 1 - \frac{x^2}{2!} + \frac{x^4}{4!} -\frac{x^6}{6!} + \frac{x^8}{8!} -+\cdots
+					= \sum_{n=0}^{\infty}{ (-1)^n \frac{x^{2n}}{(2n)!} } \\	
+			\end{align*}
+
+			\begin{align*}
+				\ln x
+					= & x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \frac{x^5}{5} -+\cdots
+					= \sum_{n=0}^{\infty}{ (-1)^{n+1}\frac{x^n}{n} } \\	
+			\end{align*}
+
+			\begin{align*}
+				\tan^{-1} x
+					= & x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \frac{x^9}{9} -+\cdots
+					= \sum_{n=0}^{\infty}{x^n} \\	
+			\end{align*}
+			
+		</div>	
+		
 	</details>
 
 
