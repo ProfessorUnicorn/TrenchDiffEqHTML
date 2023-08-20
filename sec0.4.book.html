@@ -149,17 +149,107 @@
   </details>
 
 
-  <details id="5d4f600f-3f7d-4e9e-a466-a909c90707f8">
-    <summary>Box 2</summary>
+  <details id="d1c28e16-b8f4-4de2-a944-fd3e0030c7741">
+    <summary>Antiderivative Properties</summary>
 
-    <div id="05428d75-4f6a-4ebf-9956-733db2d4bea8">
-      Text for Box 2
+    <div id="81690557-2f8a-4b21-ac1f-85f1c00b3f671">
+      Basic Antiderivatives
+      \begin{align*}
+        \int \Big( c \cdot f(x) \Big) dx = & c \cdot \int f(x) dx \\
+        \int \Big( f(x) + g(x) \Big) dx = & \int f(x) dx + \int g(x) dx \\
+        \int dx = & x + c \\
+        \int x dx = & \frac{1}{2}x^{2} + c \\
+        \int x^n dx = & \left( \frac{1}{n+1}x^{n+1} \right) + c \\
+        \end{align*}
+    </div>    
+
+    <div class="reading-exercise" id="80663d65-3f37-4cc5-aa52-470d245b4edc1-1">
+      Evaluate \( \displaystyle \int x^3 dx \)
+    </div>    
+    <div class="reading-exercise" id="80663d65-3f37-4cc5-aa52-470d245b4edc1-2">
+      Evaluate \( \displaystyle \int \frac{1}{x^5} dx \) by rewriting \( \displaystyle \frac{1}{x^5} \) as a power of \( x \)
+    </div>
+    <div class="reading-exercise" id="80663d65-3f37-4cc5-aa52-470d245b4edc1-3">
+      Evaluate \( \displaystyle \int \sqrt[3]{x} dx \) by rewriting \( \displaystyle \sqrt[3]{x} \) as a power of \( x \)
     </div>
 
-    <div class="reading-exercise" id="cd039f46-ad78-4d34-b1c8-95174b60e629">
-      Did you read box 2?
+    <div id="81690557-2f8a-4b21-ac1f-85f1c00b3f67">
+      Basic Integrals
+      \begin{align*}
+        \int_a^a f(x) dx = & 0 \\
+        \int_a^b f(x) dx = & -\int_b^a f(x) dx \\
+        \int_a^b \Big( c \cdot f(x) \Big) dx = & c \cdot \int_a^b f(x) dx \\
+        \int_a^b \Big( f(x) + g(x) \Big) dx = & \int_a^b f(x) dx + \int_a^b g(x) dx \\
+        \int_a^b f(x) dx = & \int_a^c f(x) dx + \int_c^b f(x) dx \\
+        \end{align*}
+    </div>
+
+    <div class="reading-exercise" id="80663d65-3f37-4cc5-aa52-470d245b4edc1-4">
+      Simplify \( \quad -\displaystyle \int_3^0 f(x) dx \)
+    </div>   
+    <div class="reading-exercise" id="80663d65-3f37-4cc5-aa52-470d245b4edc1-5">
+      Simplify \( \quad \displaystyle \int_0^2 f(x) dx + \int_2^{10} f(x) dx \)
+    </div> 
+
+    <div id="81690557-2f8a-4b21-ac1f-85f1c00b3f679">
+      Comparison Properties
+      \begin{align*}
+        f(x) > 0 \quad \text{and} \quad a < b \Longrightarrow & \int_a^b f(x) dx > 0 \\
+        f(x) < 0 \quad \text{and} \quad a < b \Longrightarrow & \int_a^b f(x) dx < 0 \\
+        f(x) < g(x) \quad \text{and} \quad a < b \Longrightarrow & \int_a^b f(x) dx < \int_a^b g(x) dx  \\
+      \end{align*}  
     </div>
   </details>
+
+  <details id="6816564d-0f36-4899-a1c0-c85a1dc6ff1g">
+    <summary>Fundamental Theorem of Calculus (FTC)</summary>
+
+    <div>FTC Part 1</div>
+    <div id="b1eabd75-2ee2-43f4-917f-30a8f1e75952">
+      <p>
+        Let \( F(x) \) be the antiderivative of \( f(x) \) so that \( F'(x) = f(x) \) and \( F''(x) = f'(x) \) and so on. Then a function can be written as the derivative of its derivative with lower limit of integration a constant number and upper limit of integration the variation we differentiated with respect to.
+      </P>  
+
+      \begin{equation}
+          F(x) = \int_a^x f(t) dt
+      \end{equation}
+    </div>   
+
+    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52f4-1">
+      Find \( F'(x) \) given \( F(x) = x^2 \) then write it as a definite integral. Choose a constant lower limit of integration that evaluates to zero.
+    </div>
+    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52f5-1">
+      Find \( F'(x) \) given \( F(x) = \sin x \) then write it as a definite integral. Choose a constant lower limit of integration that evaluates to zero.
+    </div>
+    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52f5-2">
+      Find \( F'(x) \) given \( F(x) = \sin x \) then write it as a definite integral. Choose a constant lower limit of integration that evaluates to zero, different from the previous exercise.
+    </div>
+    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52f4-2">
+      Find \( F'(x) \) given \( F(x) = e^x \) then write it as a definite integral. Choose a constant lower limit of integration that evaluates to zero. <em>(Hint: use an improper integral)</em>
+    </div>
+
+    <div>FTC Part 2</div>
+
+    <div id="b1eabd75-2ee2-43f4-917f-30a8f1e75951">
+      <p>
+        Let \( F(x) \) be the antiderivative of \( f(x) \) so that \( F'(x) = f(x) \) and \( F''(x) = f'(x) \) and so on. 
+        Then the definite integral of a function is its antiderivative evaluated at the upper limit of integration minus its antiderivative evaluated at the upper limit of integration
+      </P> 
+
+      \begin{align}
+        \int_a^b f(t) dt = \Bigg. F(t) \Bigg|_{t=a}^{t=b} = F(b) - F(a) \\  
+      \end{align} 
+    </div>   
+
+    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52e2">
+      Using (0.5.2) as a formula, expand \( \displaystyle \int_3^x f(t) dt \quad \) and \( \quad \displaystyle \int_x^5 f(t) dt \quad \) then find  \( \quad \displaystyle \frac{d}{dx} \int_3^x f(t) dt \quad \) and \( \quad \displaystyle \frac{d}{dx} \int_x^5 f(t) dt \) 
+    </div>
+    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52e3">
+      Using (0.5.2) as a formula, expand \( \displaystyle \int_x^{x^2} f(t) dt \quad \) and \( \quad \displaystyle \int_{\sin x}^{x} f(t) dt \quad \) then find  \( \quad \displaystyle \frac{d}{dx} \int_x^{x^2} f(t) dt \quad \) and \( \quad \displaystyle \frac{d}{dx} \int_{\sin x}^{x} f(t) dt \)
+    </div>
+
+  </details>
+
 
 
   <nav class = "book">

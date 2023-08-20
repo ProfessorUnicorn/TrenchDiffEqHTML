@@ -1,146 +1,74 @@
 <!DOCTYPE html><html lang="en-US" xml:lang="en-US"><head>
-  <title>0.5 Calculus II</title>
-  <meta charset="utf-8">
-  <meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <link href="combined.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="niceties.js"></script>
-  <meta content="Trench_DiffEQ_Book.tex" name="src">
-  <script>window.MathJax = {
-      tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(0.5.' + tag + ')' } }
-    }; </script>
-  <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-  <style type="text/css">
-    :root {
-      --section-number: "0.5"
-    }
-  </style>
+	<title>0.5 Calculus II</title>
+	<meta charset="utf-8">
+	<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<link href="combined.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="niceties.js"></script>
+	<meta content="Trench_DiffEQ_Book.tex" name="src">
+	<script>window.MathJax = {
+			tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(0.5.' + tag + ')' } }
+		}; </script>
+	<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+	<style type="text/css">
+		:root {
+			--section-number: "0.5"
+		}
+	</style>
 </head>
 
 <body>
-  <div id="02999fea-3904-49a8-b931-3380a45dbb64" class="section-title">
-    0.5 Calculus II
-  </div>
+	<div id="02999fea-3904-49a8-b931-3380a45dbb64" class="section-title">
+		0.5 Calculus II
+	</div>
 
-  <details id="d1c28e16-b8f4-4de2-a944-fd3e0030c7741">
-    <summary>Antiderivative Properties</summary>
+	<details id="6816564d-0f36-4899-a1c0-c85a1dc6ff1g">
+		<summary>Taylor Series</summary>
 
-    <div id="81690557-2f8a-4b21-ac1f-85f1c00b3f671">
-      Basic Antiderivatives
-      \begin{align*}
-        \int \Big( c \cdot f(x) \Big) dx = & c \cdot \int f(x) dx \\
-        \int \Big( f(x) + g(x) \Big) dx = & \int f(x) dx + \int g(x) dx \\
-        \int dx = & x + c \\
-        \int x dx = & \frac{1}{2}x^{2} + c \\
-        \int x^n dx = & \left( \frac{1}{n+1}x^{n+1} \right) + c \\
-        \end{align*}
-    </div>    
+		<div>
+			Taylor Series:
 
-    <div class="reading-exercise" id="80663d65-3f37-4cc5-aa52-470d245b4edc1-1">
-      Evaluate \( \displaystyle \int x^3 dx \)
-    </div>    
-    <div class="reading-exercise" id="80663d65-3f37-4cc5-aa52-470d245b4edc1-2">
-      Evaluate \( \displaystyle \int \frac{1}{x^5} dx \) by rewriting \( \displaystyle \frac{1}{x^5} \) as a power of \( x \)
-    </div>
-    <div class="reading-exercise" id="80663d65-3f37-4cc5-aa52-470d245b4edc1-3">
-      Evaluate \( \displaystyle \int \sqrt[3]{x} dx \) by rewriting \( \displaystyle \sqrt[3]{x} \) as a power of \( x \)
-    </div>
+			\begin{equation*}
+				\boxed{
+				f\left(x\right)
+					= f\left(a\right)
+						+f^{'}\left(a\right)\left(x-a\right)
+						+\frac{f^{''}\left(a\right)}{2!} \left(x-a\right)^2
+						+\frac{f^{'''}\left(a\right)}{3!} \left(x-a\right)^3
+						+\frac{f^{^{IV}}\left(a\right)}{4!} \left(x-a\right)^4
+						+ \cdots
+				}
+			\end{equation*}
 
-  </details>
+		</div>
 
-  <details id="d1c28e16-b8f4-4de2-a944-fd3e0030c774">
-    <summary>Integral Properties</summary>
+		<div>
+			Maclaurin Series
 
-    <div id="81690557-2f8a-4b21-ac1f-85f1c00b3f67">
-      Basic Integrals
-      \begin{align*}
-        \int_a^a f(x) dx = & 0 \\
-        \int_a^b f(x) dx = & -\int_b^a f(x) dx \\
-        \int_a^b \Big( c \cdot f(x) \Big) dx = & c \cdot \int_a^b f(x) dx \\
-        \int_a^b \Big( f(x) + g(x) \Big) dx = & \int_a^b f(x) dx + \int_a^b g(x) dx \\
-        \int_a^b f(x) dx = & \int_a^c f(x) dx + \int_c^b f(x) dx \\
-        \end{align*}
-    </div>
+			\begin{equation*}
+				\boxed{
+				f\left(x\right)
+					= f\left(0\right)
+						+f^{'}\left(0\right)\left(x\right)
+						+\frac{f^{''}\left(0\right)}{2!} \left(x\right)^2
+						+\frac{f^{'''}\left(0\right)}{3!} \left(x\right)^3
+						+\frac{f^{^{IV}}\left(0\right)}{4!} \left(x\right)^4
+						+ \cdots
+				}
+			\end{equation*}
 
-    <div class="reading-exercise" id="80663d65-3f37-4cc5-aa52-470d245b4edc1-4">
-      Simplify \( \quad -\displaystyle \int_3^0 f(x) dx \)
-    </div>   
-    <div class="reading-exercise" id="80663d65-3f37-4cc5-aa52-470d245b4edc1-5">
-      Simplify \( \quad \displaystyle \int_0^2 f(x) dx + \int_2^{10} f(x) dx \)
-    </div> 
-
-    <div id="81690557-2f8a-4b21-ac1f-85f1c00b3f679">
-      Comparison Properties
-      \begin{align*}
-        f(x) > 0 \quad \text{and} \quad a < b \Longrightarrow & \int_a^b f(x) dx > 0 \\
-        f(x) < 0 \quad \text{and} \quad a < b \Longrightarrow & \int_a^b f(x) dx < 0 \\
-        f(x) < g(x) \quad \text{and} \quad a < b \Longrightarrow & \int_a^b f(x) dx < \int_a^b g(x) dx  \\
-      \end{align*}  
-    </div>
-  
-
-  </details>
+			Taylor Series centered at 0 is called the Maclaurin Series
+		</div>
+	</details>
 
 
-  <details id="6816564d-0f36-4899-a1c0-c85a1dc6ff1g">
-    <summary>Fundamental Theorem of Calculus Part 1</summary>
+	<nav class = "book">
+		<a href="sec0.4.book.html">Back (0.4)</a>
 
-    <div id="b1eabd75-2ee2-43f4-917f-30a8f1e75952">
-      <p>
-        Let \( F(x) \) be the antiderivative of \( f(x) \) so that \( F'(x) = f(x) \) and \( F''(x) = f'(x) \) and so on. Then a function can be written as the derivative of its derivative with lower limit of integration a constant number and upper limit of integration the variation we differented with respect to.
-      </P>  
+		<a href="sec0.0.html">Chapter 0</a>
 
-      \begin{equation}
-          F(x) = \int_a^x f(t) dt
-      \end{equation}
-    </div>   
-
-    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52f4-1">
-      Find \( F'(x) \) given \( F(x) = x^2 \) then write it as a definite integral. Choose a constant lower limit of integration that evaluates to zero.
-    </div>
-    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52f5-1">
-      Find \( F'(x) \) given \( F(x) = \sin x \) then write it as a definite integral. Choose a constant lower limit of integration that evaluates to zero.
-    </div>
-    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52f5-2">
-      Find \( F'(x) \) given \( F(x) = \sin x \) then write it as a definite integral. Choose a constant lower limit of integration that evaluates to zero, different from the previous exercise.
-    </div>
-    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52f4-2">
-      Find \( F'(x) \) given \( F(x) = e^x \) then write it as a definite integral. Choose a constant lower limit of integration that evaluates to zero. <em>(Hint: use an improper integral)</em>
-    </div>
-  </details>  
-
-
- 
-  <details id="6816564d-0f36-4899-a1c0-c85a1dc6ff1f">
-    <summary>Fundamental Theorem of Calculus Part 2</summary>
-
-    <div id="b1eabd75-2ee2-43f4-917f-30a8f1e75951">
-      <p>
-        Let \( F(x) \) be the antiderivative of \( f(x) \) so that \( F'(x) = f(x) \) and \( F''(x) = f'(x) \) and so on. 
-        Then the definite integral of a function is its antiderivative evaluted at the upper limit of integration minus its antiderivative evaluted at the upper limit of integration
-      </P> 
-
-      \begin{align}
-        \int_a^b f(t) dt = \Bigg. F(t) \Bigg|_{t=a}^{t=b} = F(b) - F(a) \\  
-      \end{align} 
-    </div>   
-
-    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52e2">
-      Using (0.5.2) as a formula, expand \( \displaystyle \int_3^x f(t) dt \quad \) and \( \quad \displaystyle \int_x^5 f(t) dt \quad \) then find  \( \quad \displaystyle \frac{d}{dx} \int_3^x f(t) dt \quad \) and \( \quad \displaystyle \frac{d}{dx} \int_x^5 f(t) dt \) 
-    </div>
-    <div class="reading-exercise" id="165f8e8c-0d37-4baf-b536-88690dec52e3">
-      Using (0.5.2) as a formula, expand \( \displaystyle \int_x^{x^2} f(t) dt \quad \) and \( \quad \displaystyle \int_{\sin x}^{x} f(t) dt \quad \) then find  \( \quad \displaystyle \frac{d}{dx} \int_x^{x^2} f(t) dt \quad \) and \( \quad \displaystyle \frac{d}{dx} \int_{\sin x}^{x} f(t) dt \)
-    </div>
-
-  </details> 
-
-  <nav class = "book">
-    <a href="sec0.4.book.html">Back (0.4)</a>
-
-    <a href="sec0.0.html">Chapter 0</a>
-
-    <a href="sec1.0.html">Next (Chapter 1)</a>
-  </div>
+		<a href="sec1.0.html">Next (Chapter 1)</a>
+	</div>
 
 
 </body></html>
