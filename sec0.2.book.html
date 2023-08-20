@@ -1,58 +1,200 @@
 <!DOCTYPE html><html lang="en-US" xml:lang="en-US"><head>
-  <title>0.2 Algebra</title>
-  <meta charset="utf-8">
-  <meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <link href="combined.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="niceties.js"></script>
-  <meta content="Trench_DiffEQ_Book.tex" name="src">
-  <script>window.MathJax = {
-      tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(0.2.' + tag + ')' } }
-    }; </script>
-  <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-  <style type="text/css">
-    :root {
-      --section-number: "0.2"
-    }
-  </style>
+	<title>0.2 Algebra</title>
+	<meta charset="utf-8">
+	<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<link href="combined.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="niceties.js"></script>
+	<meta content="Trench_DiffEQ_Book.tex" name="src">
+	<script>window.MathJax = {
+			tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(0.2.' + tag + ')' } }
+		}; </script>
+	<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+	<style type="text/css">
+		:root {
+			--section-number: "0.2"
+		}
+	</style>
 </head>
 
 <body>
-  <div id="ebc0d1e6-e0ce-4768-8782-b66588250f7b" class="section-title">
-    0.2 Algebra
-  </div>
+	<div id="ebc0d1e6-e0ce-4768-8782-b66588250f7b" class="section-title">
+		0.2 Algebra
+	</div>
 
-  <details id="d59e96bd-bc10-4895-a54c-c2c94031666f">
-    <summary>Box 1</summary>
+	<details id="d59e96bd-bc10-4895-a54c-c2c94031666f">
+		<summary>Exponents</summary>
 
-    <div id="8e679810-f88d-416a-bab5-ac2373d039a7">
-      Text for Box 1
-    </div>
+		<div>
+			Definitions:
+			\(
+				x^0=1
+			\),
+			\(
+				x=x^1
+			\),
+			\(
+				\sqrt{x}=x^\frac{1}{2}
+			\),
+			\(
+				x^\frac{2}{3} = \left(\sqrt[3]{x}\right)^2
+			\),
+			\(
+				\displaystyle
+				\frac{1}{x}=x^{-1}
+			\)
+		</div>
+		<div>
+			Multiply Variables:
+			\(
+				X^2 = X \cdot X
+			\)
+		</div>
+		<div>
+			Add Exponents:
+			\(
+					X^2 \cdot X^3 = 
+						\left( X \cdot X \right)
+						\cdot
+						\left( X \cdot X \cdot X \right)
+					= X^5
+					=X^{2+3}
+			\)
+		</div>
+		<div>
+			Subtract Exponents:
+			\(
+				\displaystyle
+				\frac{X^5}{X^8} =
+					\frac{X \cdot X \cdot X \cdot X \cdot X}{X \cdot X \cdot X \cdot X \cdot X \cdot X \cdot X}
+				=\frac{1}{x^3}
+				=X^-3
+				=X^{5-8}
+			\)
+		</div>
+		<div>
+			Multiply Exponents:
+			\(
+				\left(X^3\right)^2
+				=X^3 \cdot X^3
+				=\left(X \cdot X \cdot X\right)
+				\left(X \cdot X \cdot X\right)
+				=X^6
+				=X^{2\cdot3}
+			\)
+	</details>
 
-    <div class="reading-exercise" id="38e8d753-918b-4bba-bf02-49635486051c">
-      Did you read box 1?
-    </div>
-  </details>
+	<details id="5fe96ba8-fedc-4b35-982d-5e92605f633a">
+		<summary>Logs</summary>
 
-  <details id="5fe96ba8-fedc-4b35-982d-5e92605f633a">
-    <summary>Box 2</summary>
+		<div>
+			Natural Log:
+			\(
+				\ln x = \log_e x \approx \log_{2.71828} x
+			\)
+		</div>
+		<div>
+			Change of Base:
+			\(
+				\displaystyle \log_{B}{A} = \frac{\ln A}{\ln B}
+				=\left(\frac{1}{\ln B}\right)\ln A
+			\)
+		</div>
+		<div>
+			<strong>Log Properties</strong>
+		</div>
+		<div>
+			Power:
+			\(
+				\log {x}^{power}
+				=
+				power \cdot \log{x}
+			\)
+		</div>
+		<div>
+			Product:
+			\(
+				\log \left(1st \cdot 2nd\right)
+				=
+				\log \left(1st\right)
+				+
+				\log \left(2nd\right)
+			\)
+		</div>
+		<div>
+			Quotient:
+			\(
+				\log \left(\frac{top}{bottom}\right)
+				=
+				\log \left(top\right)
+				-
+				\log \left(bottom\right)
+			\)
+		</div>
+		<div>
+			Inverse:
+			\(
+				e^{\ln x} = x
+			\),
+			\(
+				\ln \left(e^x\right)=x
+			\)
+		</div>
+	</details>
 
-    <div id="ae1c0194-7fdd-4ea0-8642-f6515e71d472">
-      Text for Box 2
-    </div>
+	<details id="ae1c0194-7fdd-4ea0-8642-f6515e71d472">
+		<summary>Graphing</summary>
 
-    <div class="reading-exercise" id="4c0b5057-5cfe-4579-9125-3d28d9fa09d9">
-      Did you read box 2?
-    </div>
-  </details>
+		<div>
+			<strong>Graphing</strong>
+		</div>
+		<div>
+			x-intercept:
+			\( (x_{int}, 0 ) \): Set \(y=0\) and solve for \(x\).
+		</div>
+		<div>
+			y-intercept: 
+			\( (0, y_{int} ) \): Set \(x=0\) and solve for \(y\).
+		</div>
+		<div>
+			Parabola Vertex: \( x=-\frac{b}{2a} \)
+		</div>
+		<div>
+			<strong>Function Transformations</strong>
+		</div>
+		<div>
+			Graph Up/Down Shift:
+			\(
+				f(x) \Longrightarrow f(x) \pm k
+			\)
+		</div>
+		<div>
+			Graph Left/Right Shift:
+			\(
+				f(x) \Longrightarrow f(x \pm h)
+			\)
+		</div>		
+	</details>
 
-  <nav class = "book">
-    <a href="sec0.1.book.html">Back (0.1)</a>
+	<details id="4c0b5057-5cfe-4579-9125-3d28d9fa09d9">
+		<summary>Quadratics</summary>
 
-    <a href="sec0.0.html">Chapter 0</a>
+		<div>
+			Quadratic Formula: 
+			\(
+				\displaystyle
+				x=\frac{-b\pm \sqrt{b^2-4ac}}{2a}
+			\)
+		</div>
+	</details>
 
-    <a href="sec0.3.book.html">Next (0.3)</a>
-  </div>
+	<nav class = "book">
+		<a href="sec0.1.book.html">Back (0.1)</a>
+
+		<a href="sec0.0.html">Chapter 0</a>
+
+		<a href="sec0.3.book.html">Next (0.3)</a>
+	</div>
 
 
 </body></html>
