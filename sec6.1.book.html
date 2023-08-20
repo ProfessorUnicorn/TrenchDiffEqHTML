@@ -30,7 +30,7 @@
 			6.1 Spring Problems I 
 		</div>
 
-		<details>
+		<details id="details-1">
 			<summary>Spring Problems</summary>
 
 			<div id="b2218b98-230a-4397-afb5-f8c849210627">
@@ -90,7 +90,7 @@
 			</figure>
 		</details>
 
-		<details>
+		<details id="details-2">
 			<summary>Simple Harmonic Motion</summary>
 
 			<div id="676e9bdc-eeb6-4643-9d86-7f37531cac46">
@@ -198,22 +198,25 @@
 			</div>
 		</details>
 
-		<details>
-			<summary
-				>Undamped Forced Oscillation
+		<details id="details-3">
+			<summary>Undamped Forced Oscillation</summary>
 
-				<div id="dc0ca0c9-e4b2-4cfb-bd97-0a1168e1b91e">
-					In many mechanical problems a device is subjected to periodic external forces. For example, soldiers marching in cadence on a bridge cause periodic disturbances in the bridge, and the engines of a propeller driven aircraft cause periodic disturbances in its wings. In the absence of sufficient damping forces, such disturbances – even if small in magnitude – can cause structural breakdown if they are at certain critical frequencies. To illustrate, this we’ll consider the motion of an object in a spring–mass system without damping, subject to an external force \[ F(t)=F_0\cos \omega t \] where \(F_0\) is a constant. In this case the equation of motion <a href="#x1-5r2">(6.1.2)</a> is \[ m\frac{d^2y}{dx^2}+ky=F_0\cos \omega t\] which we rewrite as 
-					\begin {equation} \label {eq:6.1.13} \frac{d^2y}{dx^2}+\omega _0^2y={F_0\over m}\cos \omega t 
-					\end {equation} <a id="x1-24r13"></a> with \(\omega _0=\sqrt {k/m}\). We’ll see from the next two examples that the solutions of <a href="#x1-24r13">(6.1.13)</a> with \(\omega \ne \omega _0\) behave very differently from the solutions with \(\omega =\omega _0\). 
-				</div>
+			<div id="dc0ca0c9-e4b2-4cfb-bd97-0a1168e1b91e">
+				In many mechanical problems a device is subjected to periodic external forces. For example, soldiers marching in cadence on a bridge cause periodic disturbances in the bridge, and the engines of a propeller driven aircraft cause periodic disturbances in its wings. In the absence of sufficient damping forces, such disturbances – even if small in magnitude – can cause structural breakdown if they are at certain critical frequencies. To illustrate, this we’ll consider the motion of an object in a spring–mass system without damping, subject to an external force \[ F(t)=F_0\cos \omega t \] where \(F_0\) is a constant. In this case the equation of motion <a href="#x1-5r2">(6.1.2)</a> is \[ m\frac{d^2y}{dx^2}+ky=F_0\cos \omega t\] which we rewrite as 
+				\begin {equation} \label {eq:6.1.13} \frac{d^2y}{dx^2}+\omega _0^2y={F_0\over m}\cos \omega t 
+				\end {equation} <a id="x1-24r13"></a> with \(\omega _0=\sqrt {k/m}\). We’ll see from the next two examples that the solutions of <a href="#x1-24r13">(6.1.13)</a> with \(\omega \ne \omega _0\) behave very differently from the solutions with \(\omega =\omega _0\). 
+			</div>
 
 				<div class="example" id="x1-254" style="--ex-number: 4">
-					
-					<div> Solve the initial value problem 
-					\begin {equation} \label {eq:6.1.14} \frac{d^2y}{dx^2}+\omega _0^2y={F_0\over m}\cos \omega t, \quad y(0)=0,\quad \left. \frac{dy}{dx} \right|_{0}=0 
-					\end {equation} <a id="x1-26r14"></a> given that \(\omega \ne \omega _0\). 
-				</div>
+					<div>
+						Solve the initial value problem 
+						<a id="x1-26r14"></a>
+						\begin {equation} 
+							\label {eq:6.1.14} 
+							\frac{d^2y}{dx^2}+\omega _0^2y={F_0\over m}\cos \omega t, \quad y(0)=0,\quad \left. \frac{dy}{dx} \right|_{0}=0 
+						\end {equation} 
+						given that \(\omega \ne \omega _0\). 
+					</div>
 
 					<details class="solution">
 						<summary>Solution</summary>
@@ -232,9 +235,9 @@
 					It is revealing to write this in a different form. We start with the trigonometric identities 
 				</div>
 				<div class="eqnarray" id="d5d84bd4-319c-460e-b924-50b2b008be61">
-					
-					\begin {eqnarray*} \cos (\alpha -\beta )&amp;=&amp;\cos \alpha \cos \beta +\sin \alpha \sin \beta \\ \cos (\alpha +\beta )&amp;=&amp;\cos \alpha \cos \beta -\sin \alpha \sin \beta 
-					\end {eqnarray*} 
+					\begin {eqnarray*} 
+					\cos (\alpha -\beta )&amp;=&amp;\cos \alpha \cos \beta +\sin \alpha \sin \beta \\ \cos (\alpha +\beta )&amp;=&amp;\cos \alpha \cos \beta -\sin \alpha \sin \beta 
+					\end {eqnarray*}
 				</div>
 				<div class="indent" id="5c970724-0529-45ab-b4c7-8027f466cb0b">
 					Subtracting the second identity from the first yields \begin {equation} \label {eq:6.1.17} \cos (\alpha -\beta )-\cos (\alpha +\beta )=2\sin \alpha \sin \beta \end {equation} <a id="x1-29r17"></a> Now let \begin {equation} \label {eq:6.1.18} \alpha -\beta =\omega t\quad \mbox{ and } \quad \alpha +\beta =\omega _0t\end {equation} <a id="x1-30r18"></a> so that \begin {equation} \label {eq:6.1.19} \alpha ={(\omega _0+\omega )t\over 2}\quad \mbox{ and } \quad \beta ={(\omega _0-\omega )t\over 2} \end {equation} <a id="x1-31r19"></a> Substituting <a href="#x1-30r18">(6.1.18)</a> and <a href="#x1-31r19">(6.1.19)</a> into <a href="#x1-29r17">(6.1.17)</a> yields \[ \cos \omega t-\cos \omega _0t= 2\sin {(\omega _0-\omega )t\over 2}\sin {(\omega _0+\omega )t\over 2}\] and substituting this into <a href="#x1-28r16">(6.1.16)</a> yields \begin {equation} \label {eq:6.1.20} y=R(t)\sin {(\omega _0+\omega )t\over 2} \end {equation} <a id="x1-32r20"></a> where 
@@ -249,17 +252,17 @@
 						<img height="264" src="EPS/fig060106.png" width="409" /> <a id="x1-34r6"></a> 
 					</div>
 					<figcaption class="caption"><span class="id">Figure&nbsp;6.1.6</span><span class="content">Undamped oscillation with beats</span></figcaption>
-					<!-- tex4ht:label?: x1-34r6  -->
 				</figure>
 				<div class="indent" id="472fef90-4970-4793-ba4f-e64fe2ea3294">
 					You can see from <a href="#x1-32r20">(6.1.20)</a> and <a href="#x1-33r21">(6.1.21)</a> that \[ |y(t)|\le {2|F_0|\over m|\omega _0^2-\omega ^2|}\] moreover, if \(\omega +\omega _0\) is sufficiently large compared with \(\omega -\omega _0\), then \(|y|\) assumes values close to (perhaps equal to) this upper bound during each beat. However, the oscillation remains bounded for all \(t\). (This assumes that the spring can withstand deflections of this size and continue to obey Hooke’s law.) The next example shows that this isn’t so if \(\omega =\omega _0\). 
 				</div>
 				<div class="example" id="x1-355" style="--ex-number: 5">
-					
-					<div> Find the general solution of 
-					\begin {equation} \label {eq:6.1.22} \frac{d^2y}{dx^2}+\omega _0^2y={F_0\over m}\cos \omega _0t 
-					\end {equation} <a id="x1-36r22"></a> 
-				</div>
+					<div> 
+						Find the general solution of 
+						<a id="x1-36r22"></a> 
+						\begin {equation} \label {eq:6.1.22} \frac{d^2y}{dx^2}+\omega _0^2y={F_0\over m}\cos \omega _0t 
+						\end {equation} 
+					</div>
 
 					<details class="solution">
 						<summary>Solution</summary>
@@ -285,8 +288,8 @@
 					<figcaption class="caption"><span class="id">Figure&nbsp;6.1.7</span><span class="content">Unbounded displacement due to resonance</span></figcaption>
 					<!-- tex4ht:label?: x1-39r7  -->
 				</figure>
-			</summary></details
-		>
+			</summary>
+		</details>
 
 		<nav class="ex">
 			<a href="sec6.1.ex.html">6.1 Exercises</a>
@@ -298,6 +301,6 @@
 			<a href="sec6.0.html">Chapter 6</a>
 
 			<a href="sec6.2.book.html">Next (6.2)</a>
-		</nav></body
-	></html
->
+		</nav>
+	</body>
+</html>
