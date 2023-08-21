@@ -229,6 +229,31 @@
 			may not be a <span class="vocab-repeat">solution curve</span></em>. The following example demonstrates this.
 		</div>
 
+		<div class="reading-exercise" id="formerly-1-a">
+			Find the order of the equation. Determine if the equation is linear or nonlinear.
+			\(\displaystyle {d^2y\over dx^2}+2 {dy\over dx}\ {d^3y\over dx^3}+x=0\)
+		</div>
+
+		<div class="reading-exercise" id="formerly-1-b">
+			Find the order of the equation. Determine if the equation is linear or nonlinear.
+			\(\displaystyle\frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y=x^7\)
+		</div>
+
+		<div class="reading-exercise" id="formerly-1-c">
+			Find the order of the equation. Determine if the equation is linear or nonlinear.
+			\(\displaystyle\frac{dy}{dx}-y^7=x\)
+		</div>
+
+		<div class="reading-exercise" id="formerly-1-d">
+			Find the order of the equation. Determine if the equation is linear or nonlinear.
+			\(\displaystyle\frac{d^2y}{dx^2}y-\left(\frac{dy}{dx}\right)^2=2\)
+		</div>
+
+		<div class="reading-exercise" id="formerly-1-e">
+			Find the order of the equation. Determine if the equation is linear or nonlinear.
+			\(\displaystyle\frac{d^3y}{dx^3} - \displaystyle\frac{d^2y}{dx^2} + \frac{1}{x}\frac{dy}{dx} = 0 \)
+		</div>
+
 		<div class="example" id="x1-41" style="--ex-number: 1">
 			<div>
 				Show that all the segments of the circle 
@@ -690,60 +715,59 @@
 
 			<details class="solution" id="6d749057-a362-42fa-97dc-86f605f4e0d4">
 				<summary>Solution</summary>
-					<ol>
-						<li>
-							Recall <span class="vocab">Newton’s 2nd law of motion</span>, \( F = ma \), the force \( F \) acting on the object is equal to the mass \( m \) of the object times the acceleration \( a \) of the object. Acceleration is the derivative of velocity and velocity is the derivative of position so position is the second derivative of acceleration and can be written as  \( a = \ddot{y} \) where \(y(t)\) represent the position (height) of the object at time \(t\). The only force acting on the object is <span class="vocab">gravity</span> and the acceleration due to gravity is in the downward (negative) direction, so the total force \( F \) is given by \( -mg \). Thus <span class="vocab">Newton’s 2nd law of motion</span> can be rewritten to represent a second order differential equation modeling this situation:
-							\begin{equation*}
-								F = ma \Longrightarrow
-								-mg = m \ddot{y} \Longrightarrow
-								-g = \ddot{y}
-							\end{equation*}
-							where the dot notation indicates differentiation with respect to \(t\). If \(y_0 \) denotes the initial height and \(v_0\) denotes the initial velocity when \(t=0\), then \(y\) is a solution of the initial value problem 
-							<a id="x1-30r17"></a>
-							\begin {equation} \label {eq:1.2.17} 
-								\ddot{y}=-g \quad
-								y(0)=y_0 \quad 
-								\dot{y}(0)=v_0
-							\end {equation}
-							<div class="reading-exercise" id="7dc52b16-d26c-4b27-8258-b80f323fa9ba">
-								Rewrite the IVP <a href="#x1-30r17">(1.2.17)</a> using <span class="vocab-repeat">differential notation</span> (<span class="vocab-repeat">Leibniz notation</span>) 
-							</div> 
-						</li> 
-						<li>
-							The IVP can be solved by antidifferentiating 
+				<ol>
+					<li>
+						Recall <span class="vocab">Newton’s 2nd law of motion</span>, \( F = ma \), the force \( F \) acting on the object is equal to the mass \( m \) of the object times the acceleration \( a \) of the object. Acceleration is the derivative of velocity and velocity is the derivative of position so position is the second derivative of acceleration and can be written as  \( a = \ddot{y} \) where \(y(t)\) represent the position (height) of the object at time \(t\). The only force acting on the object is <span class="vocab">gravity</span> and the acceleration due to gravity is in the downward (negative) direction, so the total force \( F \) is given by \( -mg \). Thus <span class="vocab">Newton’s 2nd law of motion</span> can be rewritten to represent a second order differential equation modeling this situation:
+						\begin{equation*}
+							F = ma \Longrightarrow
+							-mg = m \ddot{y} \Longrightarrow
+							-g = \ddot{y}
+						\end{equation*}
+						where the dot notation indicates differentiation with respect to \(t\). If \(y_0 \) denotes the initial height and \(v_0\) denotes the initial velocity when \(t=0\), then \(y\) is a solution of the initial value problem 
+						<a id="x1-30r17"></a>
+						\begin {equation} \label {eq:1.2.17} 
+							\ddot{y}=-g \quad
+							y(0)=y_0 \quad 
+							\dot{y}(0)=v_0
+						\end {equation}
+						<div class="reading-exercise" id="7dc52b16-d26c-4b27-8258-b80f323fa9ba">
+							Rewrite the IVP <a href="#x1-30r17">(1.2.17)</a> using <span class="vocab-repeat">differential notation</span> (<span class="vocab-repeat">Leibniz notation</span>) 
+						</div> 
+					</li> 
+					<li>
+						The IVP can be solved by antidifferentiating 
 
-							\begin {align*}
-								\ddot{y} = -g
-								\Longrightarrow
-								\int \ddot{y} \, dt = & -g \int dt \\
-								\Longrightarrow
-								\dot{y} = & -gt + c
-							\end {align*}  
+						\begin {align*}
+							\ddot{y} = -g
+							\Longrightarrow
+							\int \ddot{y} \, dt = & -g \int dt \\
+							\Longrightarrow
+							\dot{y} = & -gt + c
+						\end {align*}  
 
-							<div class="reading-exercise" id="7dc52b16-d26c-4b27-8258-b80f323fa9babcd">
-								Apply the initial condition \( \dot{y}(0)=v_0 \) to find \( c \)
-							</div> 
+						<div class="reading-exercise" id="7dc52b16-d26c-4b27-8258-b80f323fa9babcd">
+							Apply the initial condition \( \dot{y}(0)=v_0 \) to find \( c \)
+						</div> 
 
-							Applying the initial condition \( \dot{y}(0)=v_0 \) we can show \(c=v_0\) so our equation becomes \( \dot{y} = -gt + v_0 \) and not we just antidifferentiate again:
-						
+						Applying the initial condition \( \dot{y}(0)=v_0 \) we can show \(c=v_0\) so our equation becomes \( \dot{y} = -gt + v_0 \) and not we just antidifferentiate again:
+					
 
-							\begin {align*}
-								\dot{y} = -gt + v_0
-								\Longrightarrow
-								\int \dot{y} dt = & -g \int t dt + v_0 \int dy \\
-								\Longrightarrow
-								y = & -\frac{1}{2}gt^2 + v_0 t + c \\
-							\end {align*}  
+						\begin {align*}
+							\dot{y} = -gt + v_0
+							\Longrightarrow
+							\int \dot{y} dt = & -g \int t dt + v_0 \int dy \\
+							\Longrightarrow
+							y = & -\frac{1}{2}gt^2 + v_0 t + c \\
+						\end {align*}  
 
-							<div class="reading-exercise" id="7dc52b16-d26c-4b27-8258-b80f323fa9babcde">
-								Apply the initial condition \( y(0)=y_0\) to find \( c \)
-							</div>   
+						<div class="reading-exercise" id="7dc52b16-d26c-4b27-8258-b80f323fa9babcde">
+							Apply the initial condition \( y(0)=y_0\) to find \( c \)
+						</div>   
 
-						Applying the initial condition \(y(0)=y_0\) we can show \(c=y_0\) so the solution of <a href="#x1-30r17">(1.2.17)</a> is 
-						\[ y(t) = -\frac{1}{2}gt^2 + v_0 t + y_0 \] 
-						</li>  
-					</ol>  
-
+					Applying the initial condition \(y(0)=y_0\) we can show \(c=y_0\) so the solution of <a href="#x1-30r17">(1.2.17)</a> is 
+					\[ y(t) = -\frac{1}{2}gt^2 + v_0 t + y_0 \] 
+					</li>  
+				</ol>
 			</details>
 		</div> 
 	</details>
