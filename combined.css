@@ -114,6 +114,8 @@ span#textcolor7{color:#FF0000}
 span#textcolor8{color:#FF0000}
 span#textcolor9{color:#FF0000}
 table.eqnarray {width:100%;}
+
+
 table.tabular td p{margin-top:0em;}
 table.tabular {width:100%; margin-left: auto; margin-right: auto;}
 table.tabular{border-collapse: collapse; border-spacing: 0;}
@@ -152,6 +154,7 @@ nav.ex { font-size: small; text-align: center; margin: 0.7rem }
 .theorem { margin-bottom: 2em; margin-top: 8em; background: #f7f7f7; border-radius: 8px; border: 1px solid #cecdcd; padding: 8px; }
 .theorem > ol { list-style-type: none; }
 .theorem > ol li::before { font-weight: bold; content: counter(list-item, lower-alpha) '.)'; }
+.theorem.roman > ol li::before { content: counter(list-item, lower-roman) '.)'; }
 
 .stepbox .head { font-weight: bold; }
 .stepbox { margin-bottom: 2em; margin-top: 8em; }
@@ -176,3 +179,9 @@ summary + .example { margin-top: 0; }
 
 .chapter-title { font-size: 248%; font-weight: bold; }
 .section-title { text-align: center; font-weight: bold; }
+
+
+table.tabular { width: calc(100% - 6rem); margin: 3rem; }
+table.tabular th { font-weight: bold; }
+table.tabular thead tr { border-bottom: 2px solid black; }
+table.tabular tbody tr { border-bottom: 1px solid black; }

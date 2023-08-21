@@ -28,302 +28,336 @@
 		<div id="a3fe9be6-7395-4c0e-ba51-e7449aca3337" class="section-title">
 			7.2 Series Solutions Near an Ordinary Point I 
 		</div>
+
 		<div id="d6dbcde5-f1f3-48da-8a60-9e083c84b394">
 			Many physical applications give rise to second order homogeneous linear differential equations of the form 
-			\begin {equation} \label {eq:7.2.1} P_0(x)y''+P_1(x)y'+P_2(x)y=0 
-			\end {equation} <a id="x1-2r1"></a> where \(P_0\), \(P_1\), and \(P_2\) are polynomials. Usually the solutions of these equations can’t be expressed in terms of familiar elementary functions. Therefore we’ll consider the problem of representing solutions of <a href="#x1-2r1">(7.2.1)</a> with series. 
+			<a id="x1-2r1"></a> 
+			\begin {equation}
+				\label {eq:7.2.1} P_0(x)y''+P_1(x)y'+P_2(x)y=0 
+			\end {equation} 
+			where \(P_0\), \(P_1\), and \(P_2\) are polynomials. Usually the solutions of these equations can’t be expressed in terms of familiar elementary functions. Therefore we’ll consider the problem of representing solutions of <a href="#x1-2r1">(7.2.1)</a> with series. 
 		</div>
 		<div class="indent" id="f2bba6e4-8fe6-4f4d-bb58-5407f7652b95">
-			We assume throughout that \(P_0\), \(P_1\) and \(P_2\) have no common factors. Then we say that \(x_0\) is an <span class="vocab">ordinary point</span> of <a href="#x1-2r1">(7.2.1)</a> if \(P_0(x_0)\ne 0\), or a <span class="vocab">singular point</span> if \(P_0(x_0)=0\). For Legendre’s equation, \begin {equation} \label {eq:7.2.2} (1-x^2)y''-2xy'+\alpha (\alpha +1)y=0 \end {equation} <a id="x1-3r2"></a> \(x_0=1\) and \(x_0=-1\) are singular points and all other points are ordinary points. For Bessel’s&nbsp; equation, \[ x^2y''+xy'+(x^2-\nu ^2)y=0\] \(x_0=0\) is a singular point and all other points are ordinary points. If \(P_0\) is a nonzero constant as in Airy’s equation, 
-			\begin {equation} \label {eq:7.2.3} y''-xy=0 
-			\end {equation} <a id="x1-4r3"></a> then every point is an ordinary point. 
+			We assume throughout that \(P_0\), \(P_1\) and \(P_2\) have no common factors. Then we say that \(x_0\) is an <span class="vocab">ordinary point</span> of <a href="#x1-2r1">(7.2.1)</a> if \(P_0(x_0)\ne 0\), or a <span class="vocab">singular point</span> if \(P_0(x_0)=0\). For Legendre’s equation,
+			<a id="x1-3r2"></a>
+			\begin {equation}
+				\label {eq:7.2.2} (1-x^2)y''-2xy'+\alpha (\alpha +1)y=0
+			\end {equation} 
+			\(x_0=1\) and \(x_0=-1\) are singular points and all other points are ordinary points. For Bessel’s equation, \[ x^2y''+xy'+(x^2-\nu ^2)y=0\] \(x_0=0\) is a singular point and all other points are ordinary points. If \(P_0\) is a nonzero constant as in Airy’s equation, 
+			<a id="x1-4r3"></a>
+			\begin {equation}
+				\label {eq:7.2.3} y''-xy=0 
+			\end {equation} 
+			then every point is an ordinary point. 
 		</div>
 		<div class="indent" id="f1e1dab5-c115-4170-b621-a57059a993dc">
 			Since polynomials are continuous everywhere, \(P_1/P_0\) and \(P_2/P_0\) are continuous at any point \(x_0\) that isn’t a zero of \(P_0\). Therefore, if \(x_0\) is an ordinary point of <a href="#x1-2r1">(7.2.1)</a> and \(a_0\) and \(a_1\) are arbitrary real numbers, then the initial value problem 
-			\begin {equation} \label {eq:7.2.4} P_0(x)y''+P_1(x)y'+P_2(x)y=0, \quad y(x_0)=a_0,\quad y'(x_0)=a_1 
-			\end {equation} <a id="x1-5r4"></a> has a unique solution on the largest open interval that contains \(x_0\) and does not contain any zeros of \(P_0\). To see this, we rewrite the differential equation in <a href="#x1-5r4">(7.2.4)</a> as \[ y''+{P_1(x)\over P_0(x)}y'+{P_2(x)\over P_0(x)}y=0 \] and apply Theorem&nbsp;<span class="ptmb8t-">5.1.1</span> with \(p=P_1/P_0\) and \(q=P_2/P_0\). In this section and the next we consider the problem of representing solutions of <a href="#x1-2r1">(7.2.1)</a> by power series that converge for values of \(x\) near an ordinary point \(x_0\). 
+			<a id="x1-5r4"></a>
+			\begin {equation}
+				\label {eq:7.2.4} P_0(x)y''+P_1(x)y'+P_2(x)y=0, \quad y(x_0)=a_0,\quad y'(x_0)=a_1 
+			\end {equation} 
+			has a unique solution on the largest open interval that contains \(x_0\) and does not contain any zeros of \(P_0\). To see this, we rewrite the differential equation in <a href="#x1-5r4">(7.2.4)</a> as \[ y''+{P_1(x)\over P_0(x)}y'+{P_2(x)\over P_0(x)}y=0 \] and apply Theorem&nbsp;<span class="ptmb8t-">5.1.1</span> with \(p=P_1/P_0\) and \(q=P_2/P_0\). In this section and the next we consider the problem of representing solutions of <a href="#x1-2r1">(7.2.1)</a> by power series that converge for values of \(x\) near an ordinary point \(x_0\). 
 		</div>
 		<div class="indent" id="a7ad220e-5d00-4bf2-8025-c13d4e4630bb">
 			We state the next theorem without proof. 
 		</div>
-		<div class="newtheorem" id="847e93ad-55bd-4c00-94e0-e82f529e98cc">
-			
-			<div><span class="head"> <span class="ptmb8t-">Theorem&nbsp;7.2.1</span></span> <a id="x1-61"></a> Suppose \(P_0\), \(P_1\), and \(P_2\) are polynomials with no common factor and \(P_0\) isn’t identically zero. Let \(x_0\) be a point such that \(P_0(x_0)\ne 0,\) and let \(\rho \) be the distance from \(x_0\) to the nearest zero of \(P_0\) in the complex plane. \((\)If \(P_0\) is constant, then \(\rho =\infty \).\()\) Then every solution of \begin {equation} \label {eq:7.2.5} P_0(x)y''+P_1(x)y'+P_2(x)y=0 \end {equation} <a id="x1-7r5"></a> can be represented by a power series 
-				\begin {equation} \label {eq:7.2.6} y=\sum _{n=0}^\infty a_n(x-x_0)^n 
-				\end {equation} <a id="x1-8r6"></a> that converges at least on the open interval \((x_0-\rho ,x_0+\rho )\). \((\) If \(P_0\) is nonconstant, so that \(\rho \) is necessarily finite, then the open interval of convergence of \(\eqref {eq:7.2.6}\) may be larger than \((x_0-\rho ,x_0+\rho )\). If \(P_0\) is constant then \(\rho =\infty \) and \((x_0-\rho ,x_0+\rho )=(-\infty ,\infty )\).\()\)
+		<div class="theorem" id="x1-61">
+			<span class="head">Theorem&nbsp;7.2.1</span>
+			Suppose \(P_0\), \(P_1\), and \(P_2\) are polynomials with no common factor and \(P_0\) isn’t identically zero. Let \(x_0\) be a point such that \(P_0(x_0)\ne 0,\) and let \(\rho \) be the distance from \(x_0\) to the nearest zero of \(P_0\) in the complex plane. \((\)If \(P_0\) is constant, then \(\rho =\infty \).\()\) Then every solution of
+			<a id="x1-7r5"></a>
+			\begin {equation}
+				\label {eq:7.2.5} P_0(x)y''+P_1(x)y'+P_2(x)y=0
+			\end {equation}
+			can be represented by a power series 
+			<a id="x1-8r6"></a>
+			\begin {equation}
+				\label {eq:7.2.6} y=\sum _{n=0}^\infty a_n(x-x_0)^n 
+			\end {equation} 
+			that converges at least on the open interval \((x_0-\rho ,x_0+\rho )\). \((\) If \(P_0\) is nonconstant, so that \(\rho \) is necessarily finite, then the open interval of convergence of <a href="#x1-8r6">(7.2.6)</a> may be larger than \((x_0-\rho ,x_0+\rho )\). If \(P_0\) is constant then \(\rho =\infty \) and \((x_0-\rho ,x_0+\rho )=(-\infty ,\infty )\).\()\)
 			
 		</div>
-		</div>
-		<div class="indent" id="13689c6b-a1ad-4e83-a2ce-8e58824c6bac">
-			
 		</div>
 		<div class="indent" id="6f32b471-bc9f-409b-afc9-95e4ffa031c3">
 			We call <a href="#x1-8r6">(7.2.6)</a> a <span class="vocab">power series solution in</span>\(x-x_0\) of <a href="#x1-7r5">(7.2.5)</a>. We’ll now develop a method for finding power series solutions of <a href="#x1-7r5">(7.2.5)</a>. For this purpose we write <a href="#x1-7r5">(7.2.5)</a> as \(Ly=0\), where 
-			\begin {equation} \label {eq:7.2.7} Ly=P_0y''+P_1y'+P_2y 
-			\end {equation} <a id="x1-9r7"></a> 
+			<a id="x1-9r7"></a> 
+			\begin {equation}
+				\label {eq:7.2.7} Ly=P_0y''+P_1y'+P_2y 
+			\end {equation}
 		</div>
 		<div class="indent" id="7a46e407-9c6d-4e5d-ba56-b47747b0c0a4">
-			
 			Theorem<a href="#x1-61">7.2.1</a> implies that every solution of \(Ly=0\) on \((x_0-\rho ,x_0+\rho )\) can be written as \[ y=\sum _{n=0}^\infty a_n(x-x_0)^n\] Setting \(x=x_0\) in this series and in the series \[ y'=\sum _{n=1}^\infty na_n(x-x_0)^{n-1} \] shows that \(y(x_0)=a_0\) and \(y'(x_0)=a_1\). Since every initial value problem <a href="#x1-5r4">(7.2.4)</a> has a unique solution, this means that \(a_0\) and \(a_1\) can be chosen arbitrarily, and \(a_2\), \(a_3\), …are uniquely determined by them.
-		
 		</div>
 		<div class="indent" id="72b0a4ca-88dc-4203-8f4c-e1249a199d3a">
 			To find \(a_2\), \(a_3\), …, we write \(P_0\), \(P_1\), and \(P_2\) in powers of \(x-x_0\), substitute \[ y=\sum ^\infty _{n=0}a_n(x-x_0)^n\] \[ y'=\sum ^\infty _{n=1}na_n(x-x_0)^{n-1}\] \[ y''=\sum ^\infty _{n=2}n(n-1)a_n(x-x_0)^{n-2} \] into <a href="#x1-9r7">(7.2.7)</a>, and collect the coefficients of like powers of \(x-x_0\). This yields 
-			\begin {equation} \label {eq:7.2.8} Ly=\sum ^\infty _{n=0}b_n(x-x_0)^n 
-			\end {equation} <a id="x1-10r8"></a> where \(\{b_0, b_1, \dots , b_n, \dots \}\) are expressed in terms of \(\{a_0, a_1, \dots ,a_n, \dots \}\) and the coefficients of \(P_0\), \(P_1\), and \(P_2\), written in powers of \(x-x_0\). Since <a href="#x1-10r8">(7.2.8)</a> and <span class="ptmb8t-">(a)</span> of Theorem&nbsp;<span class="ptmb8t-">7.1.6</span> imply that \(Ly=0\) if and only if \(b_n=0\) for \(n\ge 0\), all power series solutions in \(x-x_0\) of \(Ly=0\) can be obtained by choosing \(a_0\) and \(a_1\) arbitrarily and computing \(a_2\), \(a_3\), …, successively so that \(b_n=0\) for \(n\ge 0\). For simplicity, we call the power series obtained this way <span class="vocab">the power series in</span>\(x-x_0\)<span class="vocab">for the general solution</span> of \(Ly=0\), without explicitly identifying the open interval of convergence of the series. 
+			<a id="x1-10r8"></a>
+			\begin {equation}
+				\label {eq:7.2.8} Ly=\sum ^\infty _{n=0}b_n(x-x_0)^n 
+			\end {equation} 
+			where \(\{b_0, b_1, \dots , b_n, \dots \}\) are expressed in terms of \(\{a_0, a_1, \dots ,a_n, \dots \}\) and the coefficients of \(P_0\), \(P_1\), and \(P_2\), written in powers of \(x-x_0\). Since <a href="#x1-10r8">(7.2.8)</a> and <span class="ptmb8t-">(a)</span> of Theorem&nbsp;<span class="ptmb8t-">7.1.6</span> imply that \(Ly=0\) if and only if \(b_n=0\) for \(n\ge 0\), all power series solutions in \(x-x_0\) of \(Ly=0\) can be obtained by choosing \(a_0\) and \(a_1\) arbitrarily and computing \(a_2\), \(a_3\), …, successively so that \(b_n=0\) for \(n\ge 0\). For simplicity, we call the power series obtained this way <span class="vocab">the power series in</span>\(x-x_0\)<span class="vocab">for the general solution</span> of \(Ly=0\), without explicitly identifying the open interval of convergence of the series. 
 		</div>
-		<div class="newtheorem" id="690c304b-bbbd-4f40-ade9-5b4c769cc17c">
-			
-			<div><span class="head"> <span class="ex-number">Example&nbsp;7.2.1</span></span> <a id="x1-111"></a> Let \(x_0\) be an arbitrary real number. Find the power series in \(x-x_0\) for the general solution of 
-				\begin {equation} \label {eq:7.2.9} y''+ y=0 
-				\end {equation} <a id="x1-12r9"></a>
-			
-		</div>
-		</div>
-		<div class="indent" id="2ee82d4d-33e1-47cf-a8d3-63f839deb8fb">
-			
-		</div>
-		<details class="solution">
-			<summary>Solution</summary>
-			&nbsp;Here \[ Ly=y''+y\] If \[ y=\sum _{n=0}^\infty a_n(x-x_0)^n\] then \[ y''=\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}\] so \[ Ly=\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}+\sum _{n=0}^\infty a_n(x-x_0)^n\] To collect coefficients of like powers of \(x-x_0\), we shift the summation index in the first sum. This yields \[ Ly=\sum ^\infty _{n=0}(n+2)(n+1)a_{n+2}(x-x_0)^n + \sum ^\infty _{n=0}a_n(x-x_0)^n =\sum ^\infty _{n=0}b_n(x-x_0)^n\] with \[ b_n=(n+2)(n+1)a_{n+2}+a_n\] Therefore \(Ly=0\) if and only if 
-			\begin {equation} \label {eq:7.2.10} a_{n+2}={-a_n\over (n+2)(n+1)},\quad n\ge 0 
-			\end {equation}
-			<a id="x1-13r10"></a>
-			where \(a_0\) and \(a_1\) are arbitrary. Since the indices on the left and right sides of <a href="#x1-13r10">(7.2.10)</a> differ by two, we write <a href="#x1-13r10">(7.2.10)</a> separately for \(n\) even \((n=2m)\) and \(n\) odd \((n=2m+1)\). This yields
+		<div class="example" id="x1-111" style="--ex-number: 1">
+			<div>
+				Let \(x_0\) be an arbitrary real number. Find the power series in \(x-x_0\) for the general solution of 
+				<a id="x1-12r9"></a>
+				\begin {equation}
+					\label {eq:7.2.9} y''+ y=0 
+				\end {equation}
+			</div>
 
-			<div class="eqnarray" id="763eb6a6-80e1-4435-94f2-d1b788b711ca">
-				
-				\begin {eqnarray} a_{2m+2}&amp;=&amp;{-a_{2m}\over (2m+2)(2m+1)},\quad m\ge 0, \label {eq:7.2.11} \\ {\mbox {and}}\nonumber \\ a_{2m+3}&amp;=&amp;{-a_{2m+1}\over (2m+3)(2m+2)},\quad m\ge 0. \label {eq:7.2.12} 
-				\end {eqnarray} 
-			</div>
-			<div class="indent" id="8b7a40e0-9c04-48d1-a6da-f59389e7c9cd">
-				Computing the coefficients of the even powers of \(x-x_0\) from (<span class="ptmb8t-">7.2.11</span>) yields 
-			</div>
-			<div class="eqnarray" id="57662f68-00ac-441c-b1c1-552099190d93">
-				
-				\begin {eqnarray*} a_2&amp;=&amp;-{a_0\over 2\cdot 1}\\ a_4&amp;=&amp;-{a_2\over 4\cdot 3}=-{1\over 4\cdot 3} \left (-{a_0\over 2\cdot 1}\right )= {a_0\over 4\cdot 3\cdot 2\cdot 1}, \\ a_6&amp;=&amp;-{a_4\over 6\cdot 5}=-{1\over 6\cdot 5} \left ({a_0\over 4\cdot 3\cdot 2\cdot 1}\right ) =-{a_0\over 6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1} 
-				\end {eqnarray*} 
-			</div>
-			<div class="indent" id="158dc9cc-9304-4bbc-b09d-bda1f8d5f294">
-				and, in general, 
-				\begin {equation} \label {eq:7.2.13} a_{2m}=(-1)^m {a_0\over (2m)!}\; ,\quad m\ge 0 
-				\end {equation} <a id="x1-14r11"></a> Computing the coefficients of the odd powers of \(x-x_0\) from (<span class="ptmb8t-">7.2.12</span>) yields 
-			</div>
-			<div class="eqnarray" id="267dae74-a0a2-402b-a259-ea63a398f1bd">
-				
-				\begin {eqnarray*} a_3&amp;=&amp;-{a_1\over 3\cdot 2}\\ a_5&amp;=&amp;-{a_3\over 5\cdot 4}=-{1\over 5\cdot 4} \left (-{a_1\over 3\cdot 2}\right )= {a_1\over 5\cdot 4\cdot 3\cdot 2}, \\ a_7&amp;=&amp;-{a_5\over 7\cdot 6}=-{1\over 7\cdot 6} \left ({a_1\over 5\cdot 4\cdot 3\cdot 2}\right ) =-{a_1\over 7\cdot 6\cdot 5\cdot 4\cdot 3\cdot 2} 
-				\end {eqnarray*} 
-			</div>
-			<div class="indent" id="1fbda931-4fde-4f2b-bfd3-e78bc35d46e0">
-				and, in general, \begin {equation} \label {eq:7.2.14} a_{2m+1}={(-1)^ma_1\over (2m+1)!}\quad m\ge 0 \end {equation} <a id="x1-15r12"></a> Thus, the general solution of <a href="#x1-12r9">(7.2.9)</a> can be written as \[ y=\sum _{m=0}^\infty a_{2m}(x-x_0)^{2m}+\sum _{m=0}^\infty a_{2m+1}(x-x_0)^{2m+1}\] or, from <a href="#x1-14r11">(7.2.13)</a> and <a href="#x1-15r12">(7.2.14)</a>, as 
-				\begin {equation} \label {eq:7.2.15} y=a_0\sum _{m=0}^\infty (-1)^m{(x-x_0)^{2m}\over (2m)!} +a_1\sum _{m=0}^\infty (-1)^m{(x-x_0)^{2m+1}\over (2m+1)!} 
-				\end {equation} <a id="x1-16r13"></a> If we recall from calculus that \[ \sum _{m=0}^\infty (-1)^m{(x-x_0)^{2m}\over (2m)!}=\cos (x-x_0) \quad \mbox{ and } \quad \sum _{m=0}^\infty (-1)^m{(x-x_0)^{2m+1}\over (2m+1)!}=\sin (x-x_0)\] then <a href="#x1-16r13">(7.2.15)</a> becomes \[ y=a_0\cos (x-x_0)+a_1\sin (x-x_0)\] which should look familiar. __ 
-			</div>
+			<details class="solution">
+				<summary>Solution</summary>
+				Here \[ Ly=y''+y\] If \[ y=\sum _{n=0}^\infty a_n(x-x_0)^n\] then \[ y''=\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}\] so \[ Ly=\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}+\sum _{n=0}^\infty a_n(x-x_0)^n\] To collect coefficients of like powers of \(x-x_0\), we shift the summation index in the first sum. This yields \[ Ly=\sum ^\infty _{n=0}(n+2)(n+1)a_{n+2}(x-x_0)^n + \sum ^\infty _{n=0}a_n(x-x_0)^n =\sum ^\infty _{n=0}b_n(x-x_0)^n\] with \[ b_n=(n+2)(n+1)a_{n+2}+a_n\] Therefore \(Ly=0\) if and only if 
+				<a id="x1-13r10"></a>
+				\begin {equation}
+					\label {eq:7.2.10} a_{n+2}={-a_n\over (n+2)(n+1)},\quad n\ge 0 
+				\end {equation}
+				where \(a_0\) and \(a_1\) are arbitrary. Since the indices on the left and right sides of <a href="#x1-13r10">(7.2.10)</a> differ by two, we write <a href="#x1-13r10">(7.2.10)</a> separately for \(n\) even \((n=2m)\) and \(n\) odd \((n=2m+1)\). This yields
+
+				<div class="eqnarray" id="763eb6a6-80e1-4435-94f2-d1b788b711ca">
+					\begin {eqnarray}
+						a_{2m+2}&amp;=&amp;{-a_{2m}\over (2m+2)(2m+1)},\quad m\ge 0, \label {eq:7.2.11} \\ {\mbox {and}}\nonumber \\ a_{2m+3}&amp;=&amp;{-a_{2m+1}\over (2m+3)(2m+2)},\quad m\ge 0. \label {eq:7.2.12} 
+					\end {eqnarray} 
+				</div>
+				<div class="indent" id="8b7a40e0-9c04-48d1-a6da-f59389e7c9cd">
+					Computing the coefficients of the even powers of \(x-x_0\) from (<span class="ptmb8t-">7.2.11</span>) yields 
+				</div>
+				<div class="eqnarray" id="57662f68-00ac-441c-b1c1-552099190d93">
+					\begin {eqnarray*}
+						a_2&amp;=&amp;-{a_0\over 2\cdot 1}\\ a_4&amp;=&amp;-{a_2\over 4\cdot 3}=-{1\over 4\cdot 3} \left (-{a_0\over 2\cdot 1}\right )= {a_0\over 4\cdot 3\cdot 2\cdot 1}, \\ a_6&amp;=&amp;-{a_4\over 6\cdot 5}=-{1\over 6\cdot 5} \left ({a_0\over 4\cdot 3\cdot 2\cdot 1}\right ) =-{a_0\over 6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1} 
+					\end {eqnarray*} 
+				</div>
+				<div class="indent" id="158dc9cc-9304-4bbc-b09d-bda1f8d5f294">
+					and, in general, 
+					<a id="x1-14r11"></a>
+					\begin {equation}
+						\label {eq:7.2.13} a_{2m}=(-1)^m {a_0\over (2m)!}\; ,\quad m\ge 0 
+					\end {equation} 
+					Computing the coefficients of the odd powers of \(x-x_0\) from (<span class="ptmb8t-">7.2.12</span>) yields 
+				</div>
+				<div class="eqnarray" id="267dae74-a0a2-402b-a259-ea63a398f1bd">
+					\begin {eqnarray*}
+						a_3&amp;=&amp;-{a_1\over 3\cdot 2}\\ a_5&amp;=&amp;-{a_3\over 5\cdot 4}=-{1\over 5\cdot 4} \left (-{a_1\over 3\cdot 2}\right )= {a_1\over 5\cdot 4\cdot 3\cdot 2}, \\ a_7&amp;=&amp;-{a_5\over 7\cdot 6}=-{1\over 7\cdot 6} \left ({a_1\over 5\cdot 4\cdot 3\cdot 2}\right ) =-{a_1\over 7\cdot 6\cdot 5\cdot 4\cdot 3\cdot 2} 
+					\end {eqnarray*} 
+				</div>
+				<div class="indent" id="1fbda931-4fde-4f2b-bfd3-e78bc35d46e0">
+					and, in general,
+					<a id="x1-15r12"></a>
+					\begin {equation}
+						\label {eq:7.2.14} a_{2m+1}={(-1)^ma_1\over (2m+1)!}\quad m\ge 0
+					\end {equation} 
+					Thus, the general solution of <a href="#x1-12r9">(7.2.9)</a> can be written as \[ y=\sum _{m=0}^\infty a_{2m}(x-x_0)^{2m}+\sum _{m=0}^\infty a_{2m+1}(x-x_0)^{2m+1}\] or, from <a href="#x1-14r11">(7.2.13)</a> and <a href="#x1-15r12">(7.2.14)</a>, as 
+					<a id="x1-16r13"></a>
+					\begin {equation} 
+						\label {eq:7.2.15} y=a_0\sum _{m=0}^\infty (-1)^m{(x-x_0)^{2m}\over (2m)!} +a_1\sum _{m=0}^\infty (-1)^m{(x-x_0)^{2m+1}\over (2m+1)!} 
+					\end {equation}
+					If we recall from calculus that \[ \sum _{m=0}^\infty (-1)^m{(x-x_0)^{2m}\over (2m)!}=\cos (x-x_0) \quad \mbox{ and } \quad \sum _{m=0}^\infty (-1)^m{(x-x_0)^{2m+1}\over (2m+1)!}=\sin (x-x_0)\] then <a href="#x1-16r13">(7.2.15)</a> becomes \[ y=a_0\cos (x-x_0)+a_1\sin (x-x_0)\] which should look familiar. __ 
+				</div>
+			</details>
+
 			<div class="indent" id="098d79b5-ddfd-4ae7-8826-3eb1a3c76440">
 				Equations like <a href="#x1-13r10">(7.2.10)</a>, (<span class="ptmb8t-">7.2.11</span>), and (<span class="ptmb8t-">7.2.12</span>), which define a given coefficient in the sequence \(\{a_n\}\) in terms of one or more coefficients with lesser indices are called <span class="vocab">recurrence relations</span>. When we use a recurrence relation to compute terms of a sequence we’re computing <span class="vocab">recursively</span>. 
 			</div>
 			<div class="indent" id="4ea2de17-981a-403d-8bc0-8a7f02741a22">
-				
 				In the remainder of this section we consider the problem of finding power series solutions in \(x-x_0\) for equations of the form 
 				\begin {equation} \label {eq:7.2.16} \left (1+\alpha (x-x_0)^2\right )y''+\beta (x-x_0) y'+\gamma y=0 
 				\end {equation} <a id="x1-17r14"></a> Many important equations that arise in applications are of this form with \(x_0=0\), including Legendre’s equation <a href="#x1-3r2">(7.2.2)</a>, Airy’s equation <a href="#x1-4r3">(7.2.3)</a>, <span class="vocab">Chebyshev’s equation</span>, \[ (1-x^2)y''-xy'+\alpha ^2 y=0\] and <span class="vocab">Hermite’s equation</span>, \[ y''-2xy'+2\alpha y=0\] Since \[ P_0(x)=1+\alpha (x-x_0)^2 \] in <a href="#x1-17r14">(7.2.16)</a>, the point \(x_0\) is an ordinary point of <a href="#x1-17r14">(7.2.16)</a>, and Theorem&nbsp;<a href="#x1-61">7.2.1</a> implies that the solutions of <a href="#x1-17r14">(7.2.16)</a> can be written as power series in \(x-x_0\) that converge on the interval \((x_0-1/\sqrt |\alpha |,x_0+1/\sqrt |\alpha |)\) if \(\alpha \ne 0\), or on \((-\infty ,\infty )\) if \(\alpha =0\). We’ll see that the coefficients in these power series can be obtained by methods similar to the one used in Example&nbsp;<a href="#x1-111">7.2.1</a>.
-			
 			</div>
 			<div class="indent" id="926213d3-1ae9-44dd-bf05-6f35f2f93fd2">
 				To simplify finding the coefficients, we introduce some notation for products: \[ \prod ^s_{j=r}b_j=b_rb_{r+1}\cdots b_s\quad \mbox {if} \quad s\ge r\] Thus, \[ \prod ^7_{j=2}b_j=b_2b_3b_4b_5b_6b_7\] \[ \prod ^4_{j=0}(2j+1)=(1)(3)(5)(7)(9)=945\] and \[ \prod ^2_{j=2}j^2=2^2=4\] We define \[ \prod ^s_{j=r}b_j=1\quad \mbox {if}\quad s &lt; r\] no matter what the form of \(b_j\). 
 			</div>
-			<div class="newtheorem" id="3fabfc52-09cf-46b8-a2e1-964e38147dbb">
-				
-				<div><span class="head"> <span class="ex-number">Example&nbsp;7.2.2</span></span> <a id="x1-182"></a> Find the power series in \(x\) for the general solution of 
-					\begin {equation} \label {eq:7.2.17} (1+2x^2)y''+6xy'+2y=0 
-					\end {equation} <a id="x1-19r15"></a>
-				
-			</div>
-			</div>
-			
-			<details class="solution">
-				<summary>Solution</summary>
-				&nbsp;Here \[ Ly=(1+2x^2)y''+6xy'+2y\] If \[ y=\sum _{n=0}^\infty a_nx^n \] then \[ y'=\sum _{n=1}^\infty na_nx^{n-1}\quad \mbox { and }\quad y''=\sum _{n=2}^\infty n(n-1)a_nx^{n-2}\] so
+			<div class="example" id="x1-182" style="--ex-number: 2">
+				<div>
+					Find the power series in \(x\) for the general solution of 
+					<a id="x1-19r15"></a>
+					\begin {equation}
+						\label {eq:7.2.17} (1+2x^2)y''+6xy'+2y=0 
+					\end {equation}
+				</div>
 
-				<div class="eqnarray" id="4af8c0b9-a452-4682-8730-7cf2639425cb">
-					
-					\begin {eqnarray*} Ly&amp;=&amp;(1+2x^2) \sum ^\infty _{n=2}n(n-1)a_nx^{n-2}+ 6x \sum ^\infty _{n=1}na_nx^{n-1} +2 \sum ^\infty _{n=0}a_nx^n\\ &amp;=&amp;\sum _{n=2}^\infty n(n-1)a_nx^{n-2}+\sum _{n=0}^\infty \left [2n(n-1)+6n+2\right ]a_nx^n\\ &amp;=&amp;\sum _{n=2}^\infty n(n-1)a_nx^{n-2}+2\sum _{n=0}^\infty (n+1)^2a_nx^n 
-					\end {eqnarray*} 
-				</div>
-				<div class="indent" id="22d32d37-ef6d-4310-b151-742c9bab307b">
-					To collect coefficients of \(x^n\), we shift the summation index in the first sum. This yields \[ Ly=\sum _{n=0}^\infty (n+2)(n+1)a_{n+2}x^n+2\sum _{n=0}^\infty (n+1)^2a_nx^n =\sum _{n=0}^\infty b_nx^n\] with \[ b_n=(n+2)(n+1)a_{n+2}+2(n+1)^2a_n,\quad n\ge 0\] To obtain solutions of <a href="#x1-19r15">(7.2.17)</a>, we set \(b_n=0\) for \(n\ge 0\). This is equivalent to the recurrence relation 
-					\begin {equation} \label {eq:7.2.18} a_{n+2}=-2{n+1\over n+2}a_n,\quad n\ge 0 
-					\end {equation} <a id="x1-20r16"></a> Since the indices on the left and right differ by two, we write <a href="#x1-20r16">(7.2.18)</a> separately for \(n=2m\) and \(n=2m+1\), as in Example&nbsp;<a href="#x1-111">7.2.1</a>. This yields 
-				</div>
-				<div class="eqnarray" id="e4e74194-4c6c-4884-8e34-91bb1ec46269">
-					
-					\begin {eqnarray} a_{2m+2}&amp;=&amp;-2 {2m+1\over 2m+2}a_{2m}=-{2m+1\over m+1}a_{2m},\quad m \ge 0,\label {eq:7.2.19}\\ {\mbox {and}}\nonumber \\ a_{2m+3}&amp;=&amp;-2{2m+2\over 2m+3}a_{2m+1}=-4{m+1\over 2m+3}a_{2m+1},\quad m\ge 0. \label {eq:7.2.20} 
-					\end {eqnarray} 
-				</div>
-				<div class="indent" id="6d75f856-e00a-4763-8452-739517a2032a">
-					Computing the coefficients of even powers of \(x\) from (<span class="ptmb8t-">7.2.19</span>) yields 
-				</div>
-				<div class="eqnarray" id="c6a0eaba-444c-41b5-992a-cee594afbc55">
-					
-					\begin {eqnarray*} a_2&amp;=&amp;-{1\over 1}a_0,\\[5pt] a_4&amp;=&amp;-{3\over 2}a_2=\left (-{3\over 2}\right )\left (-{1\over 1}\right )a_0 ={1\cdot 3\over 1\cdot 2}a_0, \\[5pt] a_6&amp;=&amp;-{5\over 3}a_4= -{5\over 3}\left (1\cdot 3\over 1\cdot 2\right )a_0 =-{1\cdot 3\cdot 5\over 1\cdot 2\cdot 3}a_0, \\[5pt] a_8&amp;=&amp;-{7\over 4}a_6=-{7\over 4} \left (-{1\cdot 3\cdot 5\over 1\cdot 2\cdot 3}\right )a_0= {1\cdot 3\cdot 5\cdot 7\over 1\cdot 2\cdot 3\cdot 4}a_0.\\ 
-					\end {eqnarray*} 
-				</div>
-				<div class="indent" id="4dfb936e-5c1a-4cfb-a47b-30af79648487">
-					In general, 
-					\begin {equation} \label {eq:7.2.21} a_{2m}=(-1)^m{\prod _{j=1}^m(2j-1)\over m!}a_0,\quad m\ge 0 
-					\end {equation} <a id="x1-21r17"></a> (Note that <a href="#x1-21r17">(7.2.21)</a> is correct for \(m=0\) because we defined \(\prod _{j=1}^0b_j=1\) for any&nbsp;\(b_j\).) 
-				</div>
-				<div class="indent" id="ffd3a9f3-190b-4fcb-8e50-7eeb8c12886f">
-					Computing the coefficients of odd powers of \(x\) from (<span class="ptmb8t-">7.2.20</span>) yields 
-				</div>
-				<div class="eqnarray" id="a817c4e2-cca0-467f-83bf-38652ad0a94e">
-					
-					\begin {eqnarray*} a_3&amp;=&amp;-4\,{1\over 3}a_1, \\[5pt] a_5&amp;=&amp;-4\,{2\over 5}a_3=-4\,{2\over 5}\left (-4{1\over 3}\right )a_1 =4^2{1\cdot 2\over 3\cdot 5}a_1, \\[5pt] a_7&amp;=&amp;-4\,{3\over 7}a_5=-4\,{3\over 7}\left ( 4^2{1\cdot 2\over 3\cdot 5}\right )a_1= -4^3{1\cdot 2\cdot 3\over 3\cdot 5\cdot 7}a_1,\\[5pt] a_9&amp;=&amp;-4\, {4\over 9}a_7=-4\, {4\over 9}\left ( 4^3{1\cdot 2\cdot 3\over 3\cdot 5\cdot 7}\right )a_1= 4^4{1\cdot 2\cdot 3\cdot 4\over 3\cdot 5\cdot 7\cdot 9}a_1 
-					\end {eqnarray*} 
-				</div>
-				<div class="indent" id="a1e2e247-13bf-476e-8409-829d3ea97548">
-					
-					In general, 
-					\begin {equation} \label {eq:7.2.22} a_{2m+1}={(-1)^m4^m m!\over \prod _{j=1}^m(2j+1)}a_1,\quad m\ge 0 
-					\end {equation} <a id="x1-22r18"></a> From <a href="#x1-21r17">(7.2.21)</a> and <a href="#x1-22r18">(7.2.22)</a>, \[ y=a_0 \sum ^\infty _{m=0}(-1)^m {\prod _{j=1}^m(2j-1)\over m!}x^{2m} +a_1 \sum ^\infty _{m=0}(-1)^m {4^mm!\over \prod _{j=1}^m(2j+1)} x^{2m+1}\] is the power series in \(x\) for the general solution of <a href="#x1-19r15">(7.2.17)</a>. Since \(P_0(x)=1+2x^2\) has no real zeros, Theorem&nbsp;<span class="ptmb8t-">5.1.1</span> implies that every solution of <a href="#x1-19r15">(7.2.17)</a> is defined on \((-\infty ,\infty )\). However, since \(P_0(\pm i/\sqrt 2)=0\), Theorem<a href="#x1-61">7.2.1</a> implies only that the power series converges in \((-1/\sqrt 2,1/\sqrt 2)\) for any choice of \(a_0\) and \(a_1\).
-				
-				</div>
-				<div class="indent" id="3de72000-6174-4b06-b54b-c24ae8869770">
-					
-					The results in Examples<a href="#x1-111">7.2.1</a> and
-					<a href="#x1-182">
-						7.2.2
-						<!-- tex4ht:ref: example:7.2.2  -->
-					</a>
-					are consequences of the following general theorem.
-				
-				</div>
-				<div class="newtheorem" id="7ceb82f3-01df-4047-9d03-7f0f8a42e0de">
-					
-					<div><span class="head"> <span class="ptmb8t-">Theorem&nbsp;7.2.2</span></span> <a id="x1-232"></a> The coefficients \(\{a_n\}\) in any solution \(y=\sum _{n=0}^\infty a_n(x-x_0)^n\) of \begin {equation} \label {eq:7.2.23} \left (1+\alpha (x-x_0)^2\right )y''+\beta (x-x_0) y'+\gamma y=0 \end {equation} <a id="x1-24r19"></a> satisfy the recurrence relation \begin {equation} \label {eq:7.2.24} a_{n+2}=-{p(n) \over (n+2)(n+1)}a_n,\quad n\ge 0 \end {equation} <a id="x1-25r20"></a> where 
-						\begin {equation} \label {eq:7.2.25} p(n)=\alpha n(n-1) +\beta n+\gamma 
-						\end {equation} <a id="x1-26r21"></a> Moreover, the coefficients of the even and odd powers of \(x-x_0\) can be computed separately as
-					
-				</div>
-					<div class="eqnarray">
-						
-						\begin {eqnarray} a_{2m+2}&amp;=&amp;-{p(2m)\over (2m+2)(2m+1)}a_{2m},\quad m\ge 0\label {eq:7.2.26}\\ {\mbox {and}}\nonumber \\ a_{2m+3}&amp;=&amp;-{p(2m+1)\over (2m+3)(2m+2)}a_{2m+1},\quad m\ge 0, \label {eq:7.2.27} 
-						\end {eqnarray} 
-					</div>
-					<div class="indent">
-						where \(a_0\) and \(a_1\) are arbitrary. 
-					</div>
-				</div>
-				<div class="indent" id="40cfa8e0-236d-4130-b567-d2d26306a041">
-					
-				</div>
-				<div id="6c1d015a-93e7-429d-a357-622ed2b958a8"><span class="ptmb8t-">Proof</span> Here \[ Ly=\left (1+\alpha (x-x_0\right )^2)y''+\beta (x-x_0) y'+\gamma y\] If \[ y=\sum _{n=0}^\infty a_n(x-x_0)^n\] then \[ y'=\sum _{n=1}^\infty na_n(x-x_0)^{n-1} \quad \mbox { and }\quad y''=\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}\] Hence, \[ 
-					\begin {array}{ccl} Ly&amp;=&amp;\displaystyle {\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}+ \sum _{n=0}^\infty \left [\alpha n(n-1) +\beta n+\gamma \right ]a_n(x-x_0)^n}\\ &amp;=&amp;\displaystyle {\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}+\sum _{n=0}^\infty p(n)a_n(x-x_0)^n} 
-					\end {array} \] from <a href="#x1-26r21">(7.2.25)</a>. To collect coefficients of powers of \(x-x_0\), we shift the summation index in the first sum. This yields \[ Ly=\sum _{n=0}^\infty \left [(n+2)(n+1)a_{n+2}+p(n)a_n\right ](x-x_0)^n\] Thus, \(Ly=0\) if and only if \[ (n+2)(n+1)a_{n+2}+p(n)a_n=0,\quad n\ge 0\] which is equivalent to <a href="#x1-25r20">(7.2.24)</a>. Writing <a href="#x1-25r20">(7.2.24)</a> separately for the cases where \(n=2m\) and \(n=2m+1\) yields (<span class="ptmb8t-">7.2.26</span>) and (<span class="ptmb8t-">7.2.27</span>). 
-				</div>
-				<div class="newtheorem" id="1c841761-a86f-4999-8833-fc0cb205ea19">
-					
-					<div><span class="head"> <span class="ex-number">Example&nbsp;7.2.3</span></span> <a id="x1-273"></a> Find the power series in \(x-1\) for the general solution of 
-						\begin {equation} \label {eq:7.2.28} (2+4x-2x^2)y''-12(x-1)y'-12y=0 
-						\end {equation} <a id="x1-28r22"></a>
-					
-				</div>
-				</div>
-				<div class="indent" id="c0ca57b2-553f-47fa-a9ab-12f1a9951e6b">
-					
-				</div>
 				<details class="solution">
 					<summary>Solution</summary>
-					&nbsp;We must first write the coefficient \(P_0(x)=2+4x-x^2\) in powers of \(x-1\). To do this, we write \(x=(x-1)+1\) in \(P_0(x)\) and then expand the terms, collecting powers of \(x-1\); thus,
+					Here \[ Ly=(1+2x^2)y''+6xy'+2y\] If \[ y=\sum _{n=0}^\infty a_nx^n \] then \[ y'=\sum _{n=1}^\infty na_nx^{n-1}\quad \mbox { and }\quad y''=\sum _{n=2}^\infty n(n-1)a_nx^{n-2}\] so
 
-					<div class="eqnarray" id="a353355b-9bfd-4d95-824a-202adcb952e4">
-						
-						\begin {eqnarray*} 2+4x-2x^2&amp;=&amp;2+4[(x-1)+1]-2[(x-1)+1]^2\\ &amp;=&amp;4-2(x-1)^2 
+					<div class="eqnarray" id="4af8c0b9-a452-4682-8730-7cf2639425cb">
+						\begin {eqnarray*}
+							Ly&amp;=&amp;(1+2x^2) \sum ^\infty _{n=2}n(n-1)a_nx^{n-2}+ 6x \sum ^\infty _{n=1}na_nx^{n-1} +2 \sum ^\infty _{n=0}a_nx^n\\ &amp;=&amp;\sum _{n=2}^\infty n(n-1)a_nx^{n-2}+\sum _{n=0}^\infty \left [2n(n-1)+6n+2\right ]a_nx^n\\ &amp;=&amp;\sum _{n=2}^\infty n(n-1)a_nx^{n-2}+2\sum _{n=0}^\infty (n+1)^2a_nx^n 
 						\end {eqnarray*} 
 					</div>
-					<div class="indent" id="d3ed571d-876b-4d3d-9281-c67a06061063">
-						
-						Therefore we can rewrite <a href="#x1-28r22">(7.2.28)</a> as \[ \left (4-2(x-1)^2\right )y''-12(x-1)y'-12y=0\] or, equivalently, \[ \left (1-{1\over 2}(x-1)^2\right )y''-3(x-1)y'-3y=0\] This is of the form <a href="#x1-24r19">(7.2.23)</a> with \(\alpha =-1/2\), \(\beta =-3\), and \(\gamma =-3\). Therefore, from <a href="#x1-26r21">(7.2.25)</a> \[ p(n)=-{n(n-1)\over 2}-3n-3=-{(n+2)(n+3)\over 2}\] Hence, Theorem<a href="#x1-232">7.2.2</a> implies that
-					
+					<div class="indent" id="22d32d37-ef6d-4310-b151-742c9bab307b">
+						To collect coefficients of \(x^n\), we shift the summation index in the first sum. This yields \[ Ly=\sum _{n=0}^\infty (n+2)(n+1)a_{n+2}x^n+2\sum _{n=0}^\infty (n+1)^2a_nx^n =\sum _{n=0}^\infty b_nx^n\] with \[ b_n=(n+2)(n+1)a_{n+2}+2(n+1)^2a_n,\quad n\ge 0\] To obtain solutions of <a href="#x1-19r15">(7.2.17)</a>, we set \(b_n=0\) for \(n\ge 0\). This is equivalent to the recurrence relation 
+						<a id="x1-20r16"></a> 
+						\begin {equation}
+							\label {eq:7.2.18} a_{n+2}=-2{n+1\over n+2}a_n,\quad n\ge 0 
+						\end {equation} 
+						Since the indices on the left and right differ by two, we write <a href="#x1-20r16">(7.2.18)</a> separately for \(n=2m\) and \(n=2m+1\), as in Example&nbsp;<a href="#x1-111">7.2.1</a>. This yields 
 					</div>
-					<div class="eqnarray" id="0f8b99f7-e277-4b01-8f5c-bcaf1743f1d5">
-						
-						\begin {eqnarray*} a_{2m+2}&amp;=&amp;-{p(2m)\over (2m+2)(2m+1)}a_{2m}\\&amp;=&amp; {(2m+2)(2m+3)\over 2(2m+2)(2m+1)} a_{2m}={2m+3\over 2(2m+1)}a_{2m},\quad m\ge 0\\ {\mbox {and}}\\ a_{2m+3}&amp;=&amp;-{p(2m+1)\over (2m+3)(2m+2)}a_{2m+1}\\&amp;=&amp; {(2m+3)(2m+4)\over 2 (2m+3)(2m+2)}a_{2m+1}={m+2\over 2(m+1)}a_{2m+1},\quad m\ge 0 
+					<div class="eqnarray" id="e4e74194-4c6c-4884-8e34-91bb1ec46269">
+						\begin {eqnarray}
+							a_{2m+2}&amp;=&amp;-2 {2m+1\over 2m+2}a_{2m}=-{2m+1\over m+1}a_{2m},\quad m \ge 0,\label {eq:7.2.19}\\
+							{\mbox {and}}\nonumber \\
+							a_{2m+3}&amp;=&amp;-2{2m+2\over 2m+3}a_{2m+1}=-4{m+1\over 2m+3}a_{2m+1},\quad m\ge 0. \label {eq:7.2.20} 
+						\end {eqnarray} 
+					</div>
+					<div class="indent" id="6d75f856-e00a-4763-8452-739517a2032a">
+						Computing the coefficients of even powers of \(x\) from (<span class="ptmb8t-">7.2.19</span>) yields 
+					</div>
+					<div class="eqnarray" id="c6a0eaba-444c-41b5-992a-cee594afbc55">
+						\begin {eqnarray*}
+							a_2&amp;=&amp;-{1\over 1}a_0,\\[5pt] a_4&amp;=&amp;-{3\over 2}a_2=\left (-{3\over 2}\right )\left (-{1\over 1}\right )a_0 ={1\cdot 3\over 1\cdot 2}a_0, \\[5pt] a_6&amp;=&amp;-{5\over 3}a_4= -{5\over 3}\left (1\cdot 3\over 1\cdot 2\right )a_0 =-{1\cdot 3\cdot 5\over 1\cdot 2\cdot 3}a_0, \\[5pt] a_8&amp;=&amp;-{7\over 4}a_6=-{7\over 4} \left (-{1\cdot 3\cdot 5\over 1\cdot 2\cdot 3}\right )a_0= {1\cdot 3\cdot 5\cdot 7\over 1\cdot 2\cdot 3\cdot 4}a_0.\\ 
 						\end {eqnarray*} 
 					</div>
-					<div class="indent" id="2b16f343-8f9b-495a-8323-089aab015cdd">
-						We leave it to you to show that \[ a_{2m}={2m+1\over 2^m}a_0\quad \mbox { and }\quad a_{2m+1}={m+1\over 2^m}a_1,\quad m\ge 0\] which implies that the power series in \(x-1\) for the general solution of <a href="#x1-28r22">(7.2.28)</a> is \[ y=a_0\sum _{m=0}^\infty {2m+1\over 2^m}(x-1)^{2m}+a_1\sum _{m=0}^\infty {m+1\over 2^m}(x-1)^{2m+1}\] 
+					<div class="indent" id="4dfb936e-5c1a-4cfb-a47b-30af79648487">
+						In general, 
+						<a id="x1-21r17"></a>
+						\begin {equation} \label {eq:7.2.21} a_{2m}=(-1)^m{\prod _{j=1}^m(2j-1)\over m!}a_0,\quad m\ge 0 
+						\end {equation} 
+						(Note that <a href="#x1-21r17">(7.2.21)</a> is correct for \(m=0\) because we defined \(\prod _{j=1}^0b_j=1\) for any&nbsp;\(b_j\).) 
 					</div>
-					<div class="indent" id="3f94c983-be74-4441-bdc1-233c515c802d">
-						In the examples considered so far we were able to obtain closed formulas for coefficients in the power series solutions. In some cases this is impossible, and we must settle for computing a finite number of terms in the series. The next example illustrates this with an initial value problem. 
+					<div class="indent" id="ffd3a9f3-190b-4fcb-8e50-7eeb8c12886f">
+						Computing the coefficients of odd powers of \(x\) from (<span class="ptmb8t-">7.2.20</span>) yields 
 					</div>
-					<div class="newtheorem" id="b7f3affd-190e-4515-ab0c-8761472bbf6c">
-						
-						<div><span class="head"> <span class="ex-number">Example&nbsp;7.2.4</span></span> <a id="x1-294"></a> Compute \(a_0\), \(a_1\), …, \(a_7\) in the series solution \(y=\sum _{n=0}^\infty a_nx^n\) of the initial value problem 
-							\begin {equation} \label {eq:7.2.29} (1+2x^2)y''+10xy'+8y=0,\quad y(0)=2,\quad y'(0)=-3 
-							\end {equation} <a id="x1-30r23"></a>
-						
+					<div class="eqnarray" id="a817c4e2-cca0-467f-83bf-38652ad0a94e">
+						\begin {eqnarray*}
+							a_3&amp;=&amp;-4\,{1\over 3}a_1, \\[5pt] a_5&amp;=&amp;-4\,{2\over 5}a_3=-4\,{2\over 5}\left (-4{1\over 3}\right )a_1 =4^2{1\cdot 2\over 3\cdot 5}a_1, \\[5pt] a_7&amp;=&amp;-4\,{3\over 7}a_5=-4\,{3\over 7}\left ( 4^2{1\cdot 2\over 3\cdot 5}\right )a_1= -4^3{1\cdot 2\cdot 3\over 3\cdot 5\cdot 7}a_1,\\[5pt] a_9&amp;=&amp;-4\, {4\over 9}a_7=-4\, {4\over 9}\left ( 4^3{1\cdot 2\cdot 3\over 3\cdot 5\cdot 7}\right )a_1= 4^4{1\cdot 2\cdot 3\cdot 4\over 3\cdot 5\cdot 7\cdot 9}a_1 
+						\end {eqnarray*} 
 					</div>
+					<div class="indent" id="a1e2e247-13bf-476e-8409-829d3ea97548">
+						In general, 
+						<a id="x1-22r18"></a>
+						\begin {equation}
+							\label {eq:7.2.22} a_{2m+1}={(-1)^m4^m m!\over \prod _{j=1}^m(2j+1)}a_1,\quad m\ge 0 
+						\end {equation} 
+						From <a href="#x1-21r17">(7.2.21)</a> and <a href="#x1-22r18">(7.2.22)</a>, \[ y=a_0 \sum ^\infty _{m=0}(-1)^m {\prod _{j=1}^m(2j-1)\over m!}x^{2m} +a_1 \sum ^\infty _{m=0}(-1)^m {4^mm!\over \prod _{j=1}^m(2j+1)} x^{2m+1}\] is the power series in \(x\) for the general solution of <a href="#x1-19r15">(7.2.17)</a>. Since \(P_0(x)=1+2x^2\) has no real zeros, Theorem&nbsp;<span class="ptmb8t-">5.1.1</span> implies that every solution of <a href="#x1-19r15">(7.2.17)</a> is defined on \((-\infty ,\infty )\). However, since \(P_0(\pm i/\sqrt 2)=0\), Theorem<a href="#x1-61">7.2.1</a> implies only that the power series converges in \((-1/\sqrt 2,1/\sqrt 2)\) for any choice of \(a_0\) and \(a_1\).
 					</div>
-					<div class="indent" id="f1fd6e92-4f7b-4565-8f05-56b9fafd956a">
-						
+					<div class="indent" id="3de72000-6174-4b06-b54b-c24ae8869770">
+						The results in Examples<a href="#x1-111">7.2.1</a> and <a href="#x1-182">7.2.2</a> are consequences of the following general theorem.
 					</div>
-					<details class="solution">
-						<summary>Solution</summary>
-						&nbsp;Since \(\alpha =2\), \(\beta =10\), and \(\gamma =8\) in <a href="#x1-30r23">(7.2.29)</a>, \[ p(n)=2n(n-1)+10n+8=2(n+2)^2\] Therefore \[ a_{n+2}=-2{(n+2)^2\over (n+2)(n+1)}a_n=-2{n+2\over n+1}a_n,\quad n\ge 0\] Writing this equation separately for \(n=2m\) and \(n=2m+1\) yields
+				</details>
+			</div>
 
-						<div class="eqnarray" id="56fcd055-9bea-475e-85e2-9ec9824a9a85">
-							
-							\begin {eqnarray} a_{2m+2}&amp;=&amp;-2{(2m+2)\over 2m+1}a_{2m}=-4{m+1\over 2m+1}a_{2m},\quad m\ge 0\label {eq:7.2.30}\\ {\mbox {and}}\nonumber \\ a_{2m+3}&amp;=&amp;-2{2m+3\over 2m+2}a_{2m+1}=-{2m+3\over m+1}a_{2m+1},\quad m\ge 0. \label {eq:7.2.31} 
-							\end {eqnarray} 
-						</div>
-						<div class="indent" id="0e3f98de-ec17-4abd-a977-c29fc9bccb02">
-							Starting with \(a_0=y(0)=2\), we compute \(a_2, a_4\), and \(a_6\) from (<span class="ptmb8t-">7.2.30</span>): 
-						</div>
-						<div class="eqnarray" id="5a8131ba-753b-449b-93dc-b71a09682812">
-							
-							\begin {eqnarray*} a_2&amp;=&amp;-4\,{1\over 1}2=-8,\\ a_4&amp;=&amp;-4\,{2\over 3}(-8)={64\over 3},\\ a_6&amp;=&amp;-4\,{3\over 5}\left (64\over 3\right )=-{256\over 5} 
-							\end {eqnarray*} 
-						</div>
-						<div class="indent" id="0c1cc00c-f550-42b9-a109-ae32c0ac29be">
-							Starting with \(a_1=y'(0)=-3\), we compute \(a_3,a_5\) and \(a_7\) from (<span class="ptmb8t-">7.2.31</span>): 
-						</div>
-						<div class="eqnarray" id="775e0331-5ba1-49c9-9d70-4ef80eb0d1da">
-							
-							\begin {eqnarray*} a_3&amp;=&amp;-{3\over 1}(-3)=9,\\ a_5&amp;=&amp;-{5\over 2}9=-{45\over 2},\\ a_7&amp;=&amp;-{7\over 3}\left (-{45\over 2}\right )={105\over 2} 
-							\end {eqnarray*} 
-						</div>
-						<div class="indent" id="9b6b11ae-20c6-4744-9aec-7eb7735b403c">
-							Therefore the solution of <a href="#x1-30r23">(7.2.29)</a> is \[ y=2-3x-8x^2+9x^3+{64\over 3}x^4-{45\over 2}x^5-{256\over 5} x^6+{105\over 2}x^7+\cdots \\] 
-						</div>
-						<div id="03d938cf-b6db-4eb8-b370-0a467c1eda90">
-							<span class="fbox">USING TECHNOLOGY</span>
-						</div>
-						<div class="indent" id="e59d8f2a-cbc4-490a-bca5-730c59f6717d">
-							
-							Computing coefficients recursively as in Example&nbsp;<a href="#x1-294">7.2.4</a> is tedious. We recommend that you do this kind of computation by writing a short program to implement the appropriate recurrence relation on a calculator or computer. You may wish to do this in verifying examples and doing exercises (identified by the symbol <span class="fbox"><span id="textcolor1">C</span></span> ) in this chapter that call for numerical computation of the coefficients in series solutions. We obtained the answers to these exercises by using software that can produce answers in the form of rational numbers. However, it’s perfectly acceptable - and more practical - to get your answers in decimal form. You can always check them by converting our fractions to decimals.
-						
-						</div>
-						<div class="indent" id="dfb7b260-b00b-46dd-9aea-c19c9c910710">
-							If you’re interested in actually using series to compute numerical approximations to solutions of a differential equation, then whether or not there’s a simple closed form for the coefficents is essentially irrelevant. For computational purposes it’s usually more efficient to start with the given coefficients \(a_0=y(x_0)\) and \(a_1=y'(x_0)\), compute \(a_2\), …, \(a_N\) recursively, and then compute approximate values of the solution from the Taylor polynomial \[ T_N(x)=\sum _{n=0}^Na_n(x-x_0)^n\] The trick is to decide how to choose \(N\) so the approximation \(y(x)\approx T_N(x)\) is sufficiently accurate on the subinterval of the interval of convergence that you’re interested in. In the computational exercises in this and the next two sections, you will often be asked to obtain the solution of a given problem by numerical integration with software of your choice (see Section&nbsp;10.1 for a brief discussion of one such method), and to compare the solution obtained in this way with the approximations obtained with \(T_N\) for various values of \(N\). This is a typical textbook kind of exercise, designed to give you insight into how the accuracy of the approximation \(y(x)\approx T_N(x)\) behaves as a function of \(N\) and the interval that you’re working on. In real life, you would choose one or the other of the two methods (numerical integration or series solution). If you choose the method of series solution, then a practical procedure for determining a suitable value of \(N\) is to continue increasing \(N\) until the maximum of \(|T_N-T_{N-1}|\) on the interval of interest is within the margin of error that you’re willing to accept. 
-						</div>
-						<div class="indent" id="fa886b00-2c12-45fb-8a49-63b246af8206">
-							In doing computational problems that call for numerical solution of differential equations you should choose the most accurate numerical integration procedure your software supports, and experiment with the step size until you’re confident that the numerical results are sufficiently accurate for the problem at hand. 
-						</div>
+		<div class="theorem" id="x1-232">
+			<span class="head">Theorem&nbsp;7.2.2</span>
+			The coefficients \(\{a_n\}\) in any solution \(y=\sum _{n=0}^\infty a_n(x-x_0)^n\) of \begin {equation} \label {eq:7.2.23} \left (1+\alpha (x-x_0)^2\right )y''+\beta (x-x_0) y'+\gamma y=0 \end {equation} <a id="x1-24r19"></a> satisfy the recurrence relation \begin {equation} \label {eq:7.2.24} a_{n+2}=-{p(n) \over (n+2)(n+1)}a_n,\quad n\ge 0 \end {equation} <a id="x1-25r20"></a> where 
+			<a id="x1-26r21"></a>
+			\begin {equation}
+				\label {eq:7.2.25} p(n)=\alpha n(n-1) +\beta n+\gamma 
+			\end {equation} 
+			Moreover, the coefficients of the even and odd powers of \(x-x_0\) can be computed separately as
+		
+			<div class="eqnarray">
+				\begin {eqnarray}
+					a_{2m+2}&amp;=&amp;-{p(2m)\over (2m+2)(2m+1)}a_{2m},\quad m\ge 0\label {eq:7.2.26}\\ {\mbox {and}}\nonumber \\ a_{2m+3}&amp;=&amp;-{p(2m+1)\over (2m+3)(2m+2)}a_{2m+1},\quad m\ge 0, \label {eq:7.2.27} 
+				\end {eqnarray}
+			</div>
+			where \(a_0\) and \(a_1\) are arbitrary. 
+		</div>
 
-						<nav class="ex">
-							<a href="sec7.2.ex.html">7.2 Exercises</a>
-						</nav>
+		<div id="6c1d015a-93e7-429d-a357-622ed2b958a8">
+			<span class="ptmb8t-">Proof</span>
+			Here \[ Ly=\left (1+\alpha (x-x_0\right )^2)y''+\beta (x-x_0) y'+\gamma y\] If \[ y=\sum _{n=0}^\infty a_n(x-x_0)^n\] then \[ y'=\sum _{n=1}^\infty na_n(x-x_0)^{n-1} \quad \mbox { and }\quad y''=\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}\] Hence, \[ 
+			\begin {array}{ccl} Ly&amp;=&amp;\displaystyle {\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}+ \sum _{n=0}^\infty \left [\alpha n(n-1) +\beta n+\gamma \right ]a_n(x-x_0)^n}\\ &amp;=&amp;\displaystyle {\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}+\sum _{n=0}^\infty p(n)a_n(x-x_0)^n} 
+			\end {array} \] from <a href="#x1-26r21">(7.2.25)</a>. To collect coefficients of powers of \(x-x_0\), we shift the summation index in the first sum. This yields \[ Ly=\sum _{n=0}^\infty \left [(n+2)(n+1)a_{n+2}+p(n)a_n\right ](x-x_0)^n\] Thus, \(Ly=0\) if and only if \[ (n+2)(n+1)a_{n+2}+p(n)a_n=0,\quad n\ge 0\] which is equivalent to <a href="#x1-25r20">(7.2.24)</a>. Writing <a href="#x1-25r20">(7.2.24)</a> separately for the cases where \(n=2m\) and \(n=2m+1\) yields (<span class="ptmb8t-">7.2.26</span>) and (<span class="ptmb8t-">7.2.27</span>). 
+		</div>
 
-						<nav class="book">
-							<a href="sec7.1.book.html">Back (7.1)</a>
+		<div class="example" id="x1-273" style="--ex-number: 3">
+			<div>
+				Find the power series in \(x-1\) for the general solution of 
+				<a id="x1-28r22"></a>
+				\begin {equation}
+					\label {eq:7.2.28} (2+4x-2x^2)y''-12(x-1)y'-12y=0 
+				\end {equation}
+			</div>
 
-							<a href="sec7.0.html">Chapter 7</a>
+			<details class="solution">
+				<summary>Solution</summary>
+				We must first write the coefficient \(P_0(x)=2+4x-x^2\) in powers of \(x-1\). To do this, we write \(x=(x-1)+1\) in \(P_0(x)\) and then expand the terms, collecting powers of \(x-1\); thus,
 
-							<a href="sec8.0.html">Next (Chapter 8)</a>
-						</nav></details
-					></details
-				></details
-			></details
-		>	</body>
+				<div class="eqnarray" id="a353355b-9bfd-4d95-824a-202adcb952e4">
+					\begin {eqnarray*}
+						2+4x-2x^2&amp;=&amp;2+4[(x-1)+1]-2[(x-1)+1]^2\\ &amp;=&amp;4-2(x-1)^2 
+					\end {eqnarray*}
+				</div>
+				<div class="indent" id="d3ed571d-876b-4d3d-9281-c67a06061063">
+					Therefore we can rewrite <a href="#x1-28r22">(7.2.28)</a> as \[ \left (4-2(x-1)^2\right )y''-12(x-1)y'-12y=0\] or, equivalently, \[ \left (1-{1\over 2}(x-1)^2\right )y''-3(x-1)y'-3y=0\] This is of the form <a href="#x1-24r19">(7.2.23)</a> with \(\alpha =-1/2\), \(\beta =-3\), and \(\gamma =-3\). Therefore, from <a href="#x1-26r21">(7.2.25)</a> \[ p(n)=-{n(n-1)\over 2}-3n-3=-{(n+2)(n+3)\over 2}\] Hence, Theorem<a href="#x1-232">7.2.2</a> implies that
+				</div>
+				<div class="eqnarray" id="0f8b99f7-e277-4b01-8f5c-bcaf1743f1d5">
+					\begin {eqnarray*} 
+						a_{2m+2}&amp;=&amp;-{p(2m)\over (2m+2)(2m+1)}a_{2m}\\&amp;=&amp; {(2m+2)(2m+3)\over 2(2m+2)(2m+1)} a_{2m}={2m+3\over 2(2m+1)}a_{2m},\quad m\ge 0\\ {\mbox {and}}\\ a_{2m+3}&amp;=&amp;-{p(2m+1)\over (2m+3)(2m+2)}a_{2m+1}\\&amp;=&amp; {(2m+3)(2m+4)\over 2 (2m+3)(2m+2)}a_{2m+1}={m+2\over 2(m+1)}a_{2m+1},\quad m\ge 0 
+					\end {eqnarray*} 
+				</div>
+				<div class="indent" id="2b16f343-8f9b-495a-8323-089aab015cdd">
+					We leave it to you to show that \[ a_{2m}={2m+1\over 2^m}a_0\quad \mbox { and }\quad a_{2m+1}={m+1\over 2^m}a_1,\quad m\ge 0\] which implies that the power series in \(x-1\) for the general solution of <a href="#x1-28r22">(7.2.28)</a> is \[ y=a_0\sum _{m=0}^\infty {2m+1\over 2^m}(x-1)^{2m}+a_1\sum _{m=0}^\infty {m+1\over 2^m}(x-1)^{2m+1}\] 
+				</div>
+			</details>
+		</div>
+
+		<div class="indent" id="3f94c983-be74-4441-bdc1-233c515c802d">
+			In the examples considered so far we were able to obtain closed formulas for coefficients in the power series solutions. In some cases this is impossible, and we must settle for computing a finite number of terms in the series. The next example illustrates this with an initial value problem. 
+		</div>
+		
+		<div class="example" id="x1-294" style="--ex-number: 4">
+			<div>
+				Compute \(a_0\), \(a_1\), …, \(a_7\) in the series solution \(y=\sum _{n=0}^\infty a_nx^n\) of the initial value problem 
+				<a id="x1-30r23"></a>
+				\begin {equation}
+					\label {eq:7.2.29} (1+2x^2)y''+10xy'+8y=0,\quad y(0)=2,\quad y'(0)=-3 
+				\end {equation}
+			</div>
+
+			<details class="solution">
+				<summary>Solution</summary>
+				Since \(\alpha =2\), \(\beta =10\), and \(\gamma =8\) in <a href="#x1-30r23">(7.2.29)</a>, \[ p(n)=2n(n-1)+10n+8=2(n+2)^2\] Therefore \[ a_{n+2}=-2{(n+2)^2\over (n+2)(n+1)}a_n=-2{n+2\over n+1}a_n,\quad n\ge 0\] Writing this equation separately for \(n=2m\) and \(n=2m+1\) yields
+
+				<div class="eqnarray" id="56fcd055-9bea-475e-85e2-9ec9824a9a85">
+					\begin {eqnarray}
+						a_{2m+2}&amp;=&amp;-2{(2m+2)\over 2m+1}a_{2m}=-4{m+1\over 2m+1}a_{2m},\quad m\ge 0\label {eq:7.2.30}\\ {\mbox {and}}\nonumber \\ a_{2m+3}&amp;=&amp;-2{2m+3\over 2m+2}a_{2m+1}=-{2m+3\over m+1}a_{2m+1},\quad m\ge 0. \label {eq:7.2.31} 
+					\end {eqnarray}
+				</div>
+
+				Starting with \(a_0=y(0)=2\), we compute \(a_2, a_4\), and \(a_6\) from (<span class="ptmb8t-">7.2.30</span>): 
+
+				<div class="eqnarray" id="5a8131ba-753b-449b-93dc-b71a09682812">
+					\begin {eqnarray*}
+						a_2&amp;=&amp;-4\,{1\over 1}2=-8,\\ a_4&amp;=&amp;-4\,{2\over 3}(-8)={64\over 3},\\ a_6&amp;=&amp;-4\,{3\over 5}\left (64\over 3\right )=-{256\over 5} 
+					\end {eqnarray*} 
+				</div>
+
+				Starting with \(a_1=y'(0)=-3\), we compute \(a_3,a_5\) and \(a_7\) from (<span class="ptmb8t-">7.2.31</span>): 
+
+				<div class="eqnarray" id="775e0331-5ba1-49c9-9d70-4ef80eb0d1da">
+					\begin {eqnarray*}
+						a_3&amp;=&amp;-{3\over 1}(-3)=9,\\ a_5&amp;=&amp;-{5\over 2}9=-{45\over 2},\\ a_7&amp;=&amp;-{7\over 3}\left (-{45\over 2}\right )={105\over 2} 
+					\end {eqnarray*} 
+				</div>
+
+				Therefore the solution of <a href="#x1-30r23">(7.2.29)</a> is \[ y=2-3x-8x^2+9x^3+{64\over 3}x^4-{45\over 2}x^5-{256\over 5} x^6+{105\over 2}x^7+\cdots \\] 
+			</details>
+		</div>
+
+		<div id="03d938cf-b6db-4eb8-b370-0a467c1eda90">
+			<span class="fbox">USING TECHNOLOGY</span>
+		</div>
+
+		<div class="indent" id="e59d8f2a-cbc4-490a-bca5-730c59f6717d">
+			Computing coefficients recursively as in Example&nbsp;<a href="#x1-294">7.2.4</a> is tedious. We recommend that you do this kind of computation by writing a short program to implement the appropriate recurrence relation on a calculator or computer. You may wish to do this in verifying examples and doing exercises (identified by the symbol <span class="fbox"><span id="textcolor1">C</span></span> ) in this chapter that call for numerical computation of the coefficients in series solutions. We obtained the answers to these exercises by using software that can produce answers in the form of rational numbers. However, it’s perfectly acceptable - and more practical - to get your answers in decimal form. You can always check them by converting our fractions to decimals.
+		</div>
+		<div class="indent" id="dfb7b260-b00b-46dd-9aea-c19c9c910710">
+			If you’re interested in actually using series to compute numerical approximations to solutions of a differential equation, then whether or not there’s a simple closed form for the coefficients is essentially irrelevant. For computational purposes it’s usually more efficient to start with the given coefficients \(a_0=y(x_0)\) and \(a_1=y'(x_0)\), compute \(a_2\), …, \(a_N\) recursively, and then compute approximate values of the solution from the Taylor polynomial \[ T_N(x)=\sum _{n=0}^Na_n(x-x_0)^n\] The trick is to decide how to choose \(N\) so the approximation \(y(x)\approx T_N(x)\) is sufficiently accurate on the subinterval of the interval of convergence that you’re interested in. In the computational exercises in this and the next two sections, you will often be asked to obtain the solution of a given problem by numerical integration with software of your choice (see Section&nbsp;10.1 for a brief discussion of one such method), and to compare the solution obtained in this way with the approximations obtained with \(T_N\) for various values of \(N\). This is a typical textbook kind of exercise, designed to give you insight into how the accuracy of the approximation \(y(x)\approx T_N(x)\) behaves as a function of \(N\) and the interval that you’re working on. In real life, you would choose one or the other of the two methods (numerical integration or series solution). If you choose the method of series solution, then a practical procedure for determining a suitable value of \(N\) is to continue increasing \(N\) until the maximum of \(|T_N-T_{N-1}|\) on the interval of interest is within the margin of error that you’re willing to accept. 
+		</div>
+		<div class="indent" id="fa886b00-2c12-45fb-8a49-63b246af8206">
+			In doing computational problems that call for numerical solution of differential equations you should choose the most accurate numerical integration procedure your software supports, and experiment with the step size until you’re confident that the numerical results are sufficiently accurate for the problem at hand. 
+		</div>
+
+		<nav class="ex">
+			<a href="sec7.2.ex.html">7.2 Exercises</a>
+		</nav>
+
+		<nav class="book">
+			<a href="sec7.1.book.html">Back (7.1)</a>
+
+			<a href="sec7.0.html">Chapter 7</a>
+
+			<a href="sec8.0.html">Next (Chapter 8)</a>
+		</nav>
+	</body>
 </html>
