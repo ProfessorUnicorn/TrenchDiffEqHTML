@@ -478,6 +478,7 @@
 					Show that the equation is not exact
 					
 					\[ 3x^2y\,dx+4x^3\,dy=0 \] 
+					<br>
 				</div>
 
 				<details class="solution" id="80912ce8-6b57-4747-99be-a4d6b9417d4f">
@@ -522,218 +523,9 @@
 				\(F(x,y)\) that satisfies the condition \(F_x(x,y)=M(x,y)\) and \(F_y(x,y)=N(x,y)\) if
 				\(M(x,y)\,dx+N(x,y)\,dy = 0 \) is exact.
 			</div>
-			<div class="example" id="x1-183" style="--ex-number: 3">
-				<div>
-					<a id="x1-19r13"></a>
-					Solve \begin {equation} \label {eq:2.5.13}
-					(4x^3y^3+3x^2)\,dx+(3x^4y^2+6y^2)\,dy=0\end {equation}
-				</div>
-
-				<details class="solution" id="76b9347a-2103-4bb1-81c2-c5aa115c5afd">
-					<summary>Solution</summary>
-					<div>
-						\begin{align*}
-							\underset{M(x,y)}{\underbrace{(4x^3y^3+3x^2)}} dx
-								+ \underset{N(x,y)}{\underbrace{(3x^4y^2+6y^2)}} dy = & 0 \\
-						\end{align*}
-
-						First we verify the <span class="vocab">exactness condition</span>
-
-						\begin{align*}
-							M(x,y) 
-							= & 4x^3y^3+3x^2 \\
-							M_y(x,y) 
-							= & 4x^3 \underset{3y^2}{\underbrace{ \frac{\partial}{\partial y} \Big( y^3 \Big) }} 
-								+ 3x^2 \underset{0}{\underbrace{\frac{\partial}{\partial x} \Big( 1  \Big) }} =  12 x^3 y^2 \\ 
-						\end{align*}
-
-						\begin{align*}
-							N(x,y) 
-							= & 3x^4y^2+6y^2 \\
-							N_x(x,y) 
-							= & 3y^2 \underset{4x^3}{\underbrace{ \frac{\partial}{\partial x} \Big( x^4 \Big) }} 
-								+  6y^2 \underset{0}{\underbrace{ \frac{\partial}{\partial x} \Big( 1  \Big) }} = 12 x^3 y^2					 
-						\end{align*}
-
-						\begin{equation*}
-							\boxed{
-								M_y(x,y) = 2 x^3 y^2 = N_x(x,y) 
-								\quad
-								\quad
-								\checkmark
-								\text{Exact}
-							}		
-						\end{equation*}
-					</div>	
-					<div id="07cb0dd3-7d9f-471b-b5c3-de4e91f2dba9">
-						Therefore the differential equation is <em>exact</em>. 
-						
-						This means that there is a function \( F(x,y) \) such that \( M(x,y)=F_x(x,y) \) and \( N(x,y)=F_y(x,y) \)
-						
-						<a id="x1-20r14"></a>
-						\begin {equation} \label{eq:2.5.14} 
-							M(x,y) = F_x(x,y) = 4x^3y^3+3x^2 
-						\end {equation}
-						
-						<a id="x1-21r15"></a>
-						\begin {equation} \label {eq:2.5.15} 
-							N(x,y) = F_y(x,y) = 3x^4y^2+6y^2 
-						\end{equation}
-
-						Now we can find \( F(x,y) \) by finding the antiderivative of <a href="#x1-20r14">(2.5.14)</a> with respect to \( x \) or by by finding the antiderivative of <a href="#x1-21r15">(2.5.15)</a> with respect to \( y \)
-
-						<a id="x1-22r16"></a>
-						\begin{align}
-							F(x,y) = & \int F_x(x,y) dx = \int M(x,y) dx \nonumber \\
-							= & \int \Big( 4x^3y^3+3x^2 \Big) dx \nonumber \\
-							= & 4y^3 \int \Big( x^3 \Big) dx + 3 \int \Big( x^2 \Big) dx \nonumber \\
-							= & 4y^3 \Big( \frac{1}{4}x^4 \Big) + 3 \Big( \frac{1}{3} x^3 \Big) + \phi(y) \nonumber \\
-							\label{eq:2.5.16}
-							= & x^4 y^3 + x^3 + \phi(y)
-						\end{align}
-						
-						Notice in <a href="#x1-22r16">(2.5.16)</a> that instead of adding \( +c \) at the end as a constant of integration, we added  \( \phi(y) \) which represents any combination of constants and \( y \) variables which were held constant when we found the antiderivative with respect to \( x .\)
-					</div>
-
-					<div class="reading-exercise">
-						Verify <a href="#x1-21r15">(2.5.16)</a> by finding the partial derivative with respect to \( x \) and comparing the result with <a href="#x1-20r14">(2.5.14)</a> 
-					</div> 
-
-					<div>
-						We already found an expression for \( F(x,y) \) in <a href="#x1-22r16">(2.5.16)</a> 
-						by finding the antiderivative of <a href="#x1-20r14">(2.5.14)</a> with respect to \( x \) but we should be able to accomplish the same thing by finding the antiderivative of <a href="#x1-21r15">(2.5.15)</a> with respect to \( y \)
- 
-						<a id="x1-23r17"></a>
-						\begin{align}
-							F(x,y) = & \int F_y(x,y) dx = \int N(x,y) dy \nonumber \\
-							= & \int \Big( 3x^4y^2 + 6y^2 \Big) dy \nonumber \\
-							= & 3x^4 \int \Big( y^2 \Big) dy + 6 \int \Big( y^2 \Big) dy \nonumber \\
-							= & 3x^4 \Big( \frac{1}{3}y^3 \Big) + 6 \Big( \frac{1}{3} y^3 \Big) + \psi (x) \nonumber \\
-							\label{eq:2.5.17}
-							= & x^4 y^3 + 2y^3 + \psi(x)
-						\end{align}
-
-						Just like we did in <a href="#x1-22r16">(2.5.16)</a>, instead of adding \( + c \) at the end of <a href="#x1-23r17">(2.5.17)</a> as a constant of integration, we added  \( \psi(x) \) which represents any combination of constants and \( x \) variables which were held constant when we found the antiderivative with respect to \( y \)						
-					</div>	
-
-					<div class="reading-exercise">
-						Verify <a href="#x1-23r17">(2.5.17)</a> by finding the partial derivative with respect to \( y \) and comparing the result with <a href="#x1-21r15">(2.5.15)</a> 
-					</div> 
-
-					<div>
-						We now have two expressions for \( F(x,y) \) both of which are in terms of unknown functions 
-						\( \phi = \phi(y) \) and \( \psi = \psi(x) \) that represent the "constants" of integration
-						\begin{equation*}
-							F(x,y) =  x^4 y^3 + 2y^3 + \psi(x)
-							\quad\quad
-							F(x,y) =  x^4 y^3 + x^3 + \phi(y)							
-						\end{equation*}
-					</div>	
-
-					<div class="reading-exercise">
-						Given \( F(x,y) =  x^4 y^3 + x^3 + \phi(y) \) calculate \( F_y(x,y) \) 
-					</div> 
-
-					<div class="reading-exercise">
-						Given \( F(x,y) =  x^4 y^3 + 2y^3 + \psi(x) \) calculate \( F_x(x,y) \) 
-					</div> 
-
-					<div>
-						Differentiating each expression with respect to the variable from the "constant" of integration, we obtain: 
-
-						\begin{equation*}
-							F_x(x,y) =  4 x^3 y^3 + \psi'(x) 
-							\quad \quad 
-							F_y(x,y) =  3 x^4 y^2 + \phi'(y)
-						\end{equation*}
-
-						Now we can compare these functions with the known functions \( M(x,y) = F_x(x,y) \) <a href="#x1-20r14">(2.5.14)</a> and \( N(x,y) = F_y(x,y) \) <a href="#x1-21r15">(2.5.15)</a> and use them to solve for \( \psi(x) \) and \( \phi(y) \)
-
-						\begin{equation*}
-							\begin{array}{rllrrl}
-								F_x(x,y) 				& = & M(x,y) 		&\quad & F_y(x,y) 				& = & N(x,y) \\
-								4 x^3 y^3 + \psi'(x) 	& = & 4x^3y^3+3x^2	&\quad & 3 x^4 y^2 + \phi'(y) 	& = & 3x^4y^2+6y^2 \\
-								\psi'(x) 				& = & 3x^2			&\quad & \phi'(y) 				& = & 6y^2 \\
-								\psi(x) 				& = & 3\int x^2 dx	&\quad & \phi(y) 				& = & 6 \int y^2 dy \\
-								\psi(x) 				& = & x^3			&\quad & \phi(y) 				& = & 2 y^3 \\
-							\end{array}
-						\end{equation*}
-
-						We have now found expressions for both \( \psi(x) \) and \( \phi(y) \) and you may have noticed that we took the constants of integration to be zero since there is still an arbitrary constant in the final implicit solution <a href="#x1-9r6">(2.5.6)</a> \( F(x,y) = c \) and these constants would simplify into that one.
-						
-					</div>	
-
-					<div>
-						Substituting \( \psi(x) = x^3 \) into <a href="#x1-23r17">(2.5.17)</a> and \( \phi(y) = 2 y^3 \) into <a href="#x1-22r16">(2.5.16)</a> we obtain \( F(x,y) \) 
-
-						\begin{equation*}
-							\begin{array}{rllrrl}
-								F(x,y) 	& = & x^4 y^3 + 2y^3 + \psi(x) 	&\quad & F(x,y) & = & x^4 y^3 + x^3 + \phi(y) \\
-								F(x,y) 	& = & x^4 y^3 + 2y^3 + x^3 		&\quad & F(x,y) & = & x^4 y^3 + x^3 + 2 y^3 \\
-							\end{array}
-						\end{equation*}
-
-						Conveniently both expressions for \( F(x,y) \) agree and this is a great way to check your work so either way you opt to solve, you should get the same answer. Our final implicit solution is written in the form of <a href="#x1-9r6">(2.5.6)</a> as \( F(x,y) = c \)
-						
-						<a id="eq2.5.18"></a>
-						\begin{equation}
-							\label{eq:2.5.18}
-							x^4 y^3 + 2y^3 + x^3 = c
-						\end{equation}
-					</div>
-					<div class="reading-exercise">
-						Differentiate \( x^4 y^3 + 2y^3 + x^3 = c \) implicitly
-					</div> 
-					<div>	
-						Which, in this case, we can solve explicitly for \( y \)
-					</div>
-
-					<div class="reading-exercise">
-						Solve <a href="#eq2.5.18">(2.5.18)</a> explicitly for \( y \) 
-					</div> 
-					
-					<div>
-						After solving explicitly for \( y \)
-						\begin{equation*}
-							y = \sqrt[3]{\frac{c-x^3}{x^4+2}} 
-						\end{equation*}
-					</div>	
-					<div class="reading-exercise">
-						Differentiate \( y = \displaystyle \sqrt[3]{\frac{c-x^3}{x^4+2}}  \)
-					</div> 
-					<div class="reading-exercise">
-						Verify \( y = \displaystyle \sqrt[3]{\frac{c-x^3}{x^4+2}}  \) is a solution to <a href="#x1-19r13">(2.5.13)</a> by differentiating and substituting
-					</div> 
-
-					<div class="indent" id="5a10e0bc-c508-4317-bf29-091e926d9a5c">
-						Figure&nbsp;<a href="#-a-direction-field-and-integral-curves-for-xyxdxxyydy-">2.5.1</a>
-						shows a direction field and some
-						<span class="vocab">integral curves</span>
-						of <a href="#x1-19r13">(2.5.13)</a>,
-					</div>
-					<figure class="figure" id="6c22ab3a-2f33-472c-a7f1-17585aa94487">
-						<div
-							
-							id="-a-direction-field-and-integral-curves-for-xyxdxxyydy-"
-						>
-							<img height="264" src="EPS/fig020501.png" width="409" />
-							<a id="x1-25r1"></a>
-						</div>
-						<figcaption class="caption">
-							<span class="id">Figure&nbsp;2.5.1</span>
-							<span class="content">
-								A direction field and
-								<span class="vocab">integral curves</span>
-								for \((4x^3y^3+3x^2)\,dx+(3x^4y^2+6y^2)\,dy=0\)
-							</span>
-						</figcaption>
-						<!-- tex4ht:label?: x1-25r1  -->
-					</figure>
-				</details>
-			</div>
 
 			<div id="x1-5" class="stepbox">
-				<span class="head">Procedure For Solving An Exact Equation</span>
+				<span class="head">Procedure for Solving an Exact Equation</span>
 
 				\begin{equation*} 
 					M(x,y) dx + N(x,y) dy = 0
@@ -745,10 +537,10 @@
 					<li>
 						Antidifferentiate \( M(x,y) = F_x(x,y) \) with respect to \( x \) and/or \( N(x,y) = F_y(x,y) \) with respect to \( y \) to obtain \( F(x,y) \)
 							
-						\begin{align} \label{eq:2.5.20}
+						\begin{align*} \label{eq:2.5.20}
 							F(x,y) = & \int F_x(x,y) dx = \int M(x,y) dx = G_{M}(x,y) + \phi(y)	\\
 							F(x,y) = & \int F_y(x,y) dx = \int N(x,y) dx = G_{N}(x,y) + \psi(x) \nonumber
-						\end{align}
+						\end{align*}
 					</li>
 					<li>
 						Differentiating with respect to the same variable to check that the antidifferentiation is correct 
@@ -764,6 +556,260 @@
 					</li>
 				</ol>	
 			</div>	
+
+			<div class="example" id="x1-183" style="--ex-number: 3">
+				<div>
+					<a id="x1-19r13"></a>
+					Solve \begin {equation} \label {eq:2.5.13}
+					(4x^3y^3+3x^2)\,dx+(3x^4y^2+6y^2)\,dy=0\end {equation}
+				</div>
+
+				<details class="solution" id="76b9347a-2103-4bb1-81c2-c5aa115c5afd">
+					<summary>Solution</summary>
+
+
+					<ol>
+						<li>
+							<div class="stepline">
+								1. Identify \( M(x,y) \) and \( N(x,y) \) and compute \( M_y(x,y) \) and \( N_x(x,y) \) and verify \( M_y(x,y)=N_x(x,y) \) to ensure that the equation is <span class="vocab-repeat">exact</span>
+							</div>
+							<div>
+								\begin{align*}
+									\underset{M(x,y)}{\underbrace{(4x^3y^3+3x^2)}} dx
+										+ \underset{N(x,y)}{\underbrace{(3x^4y^2+6y^2)}} dy = & 0 \\
+								\end{align*}
+
+								First we verify the <span class="vocab">exactness condition</span>
+
+								\begin{align*}
+									M(x,y) 
+									= & 4x^3y^3+3x^2 \\
+									M_y(x,y) 
+									= & 4x^3 \underset{3y^2}{\underbrace{ \frac{\partial}{\partial y} \Big( y^3 \Big) }} 
+										+ 3x^2 \underset{0}{\underbrace{\frac{\partial}{\partial x} \Big( 1  \Big) }} =  12 x^3 y^2 \\ 
+								\end{align*}
+
+								\begin{align*}
+									N(x,y) 
+									= & 3x^4y^2+6y^2 \\
+									N_x(x,y) 
+									= & 3y^2 \underset{4x^3}{\underbrace{ \frac{\partial}{\partial x} \Big( x^4 \Big) }} 
+										+  6y^2 \underset{0}{\underbrace{ \frac{\partial}{\partial x} \Big( 1  \Big) }} = 12 x^3 y^2					 
+								\end{align*}
+
+								\begin{equation*}
+									\boxed{
+										M_y(x,y) = 2 x^3 y^2 = N_x(x,y) 
+										\quad
+										\quad
+										\checkmark
+										\text{Exact}
+									}		
+								\end{equation*}
+							</div>
+							<div>
+								Therefore the differential equation is <em>exact</em>. 
+								
+								This means that there is a function \( F(x,y) \) such that \( M(x,y)=F_x(x,y) \) and \( N(x,y)=F_y(x,y) \)
+								
+								<a id="x1-20r14"></a>
+								\begin {equation} \label{eq:2.5.14} 
+									M(x,y) = F_x(x,y) = 4x^3y^3+3x^2 
+								\end {equation}
+								
+								<a id="x1-21r15"></a>
+								\begin {equation} \label {eq:2.5.15} 
+									N(x,y) = F_y(x,y) = 3x^4y^2+6y^2 
+								\end{equation}
+							</div>
+						</li>
+						<li>
+							<div class="stepline">
+								2. Antidifferentiate \( M(x,y) = F_x(x,y) \) with respect to \( x \) and/or \( N(x,y) = F_y(x,y) \) with respect to \( y \) to obtain \( F(x,y) \)
+							</div>	
+							<div>
+								Now we can find \( F(x,y) \) by finding the antiderivative of <a href="#x1-20r14">(2.5.14)</a> with respect to \( x \) or by by finding the antiderivative of <a href="#x1-21r15">(2.5.15)</a> with respect to \( y \)
+
+								<a id="x1-22r16"></a>
+								\begin{align}
+									F(x,y) = & \int F_x(x,y) dx = \int M(x,y) dx \nonumber \\
+									= & \int \Big( 4x^3y^3+3x^2 \Big) dx \nonumber \\
+									= & 4y^3 \int \Big( x^3 \Big) dx + 3 \int \Big( x^2 \Big) dx \nonumber \\
+									= & 4y^3 \Big( \frac{1}{4}x^4 \Big) + 3 \Big( \frac{1}{3} x^3 \Big) + \phi(y) \nonumber \\
+									\label{eq:2.5.16}
+									= & x^4 y^3 + x^3 + \phi(y)
+								\end{align}
+								
+								Notice in <a href="#x1-22r16">(2.5.16)</a> that instead of adding \( +c \) at the end as a constant of integration, we added  \( \phi(y) \) which represents any combination of constants and \( y \) variables which were held constant when we found the antiderivative with respect to \( x .\)
+							</div>
+
+							<div class="reading-exercise">
+								Verify <a href="#x1-21r15">(2.5.16)</a> by finding the partial derivative with respect to \( x \) and comparing the result with <a href="#x1-20r14">(2.5.14)</a> 
+							</div> 
+
+							<div>
+								We already found an expression for \( F(x,y) \) in <a href="#x1-22r16">(2.5.16)</a> 
+								by finding the antiderivative of <a href="#x1-20r14">(2.5.14)</a> with respect to \( x \) but we should be able to accomplish the same thing by finding the antiderivative of <a href="#x1-21r15">(2.5.15)</a> with respect to \( y \)
+		
+								<a id="x1-23r17"></a>
+								\begin{align}
+									F(x,y) = & \int F_y(x,y) dx = \int N(x,y) dy \nonumber \\
+									= & \int \Big( 3x^4y^2 + 6y^2 \Big) dy \nonumber \\
+									= & 3x^4 \int \Big( y^2 \Big) dy + 6 \int \Big( y^2 \Big) dy \nonumber \\
+									= & 3x^4 \Big( \frac{1}{3}y^3 \Big) + 6 \Big( \frac{1}{3} y^3 \Big) + \psi (x) \nonumber \\
+									\label{eq:2.5.17}
+									= & x^4 y^3 + 2y^3 + \psi(x)
+								\end{align}
+
+								Just like we did in <a href="#x1-22r16">(2.5.16)</a>, instead of adding \( + c \) at the end of <a href="#x1-23r17">(2.5.17)</a> as a constant of integration, we added  \( \psi(x) \) which represents any combination of constants and \( x \) variables which were held constant when we found the antiderivative with respect to \( y \)						
+							</div>	
+
+							<div class="reading-exercise">
+								Verify <a href="#x1-23r17">(2.5.17)</a> by finding the partial derivative with respect to \( y \) and comparing the result with <a href="#x1-21r15">(2.5.15)</a> 
+							</div> 
+
+							<div>
+								We now have two expressions for \( F(x,y) \) both of which are in terms of unknown functions 
+								\( \phi = \phi(y) \) and \( \psi = \psi(x) \) that represent the "constants" of integration
+								\begin{equation*}
+									F(x,y) =  x^4 y^3 + 2y^3 + \psi(x)
+									\quad\quad
+									F(x,y) =  x^4 y^3 + x^3 + \phi(y)
+								\end{equation*}
+							</div>
+						</li>
+						<li>
+							<div class="stepline">
+								3. Differentiating with respect to the same variable to check that the antidifferentiation is correct
+							</div>
+
+							<div class="reading-exercise">
+								Given \( F(x,y) =  x^4 y^3 + x^3 + \phi(y) \) calculate \( F_x(x,y) \) 
+							</div> 
+
+							<div class="reading-exercise">
+								Given \( F(x,y) =  x^4 y^3 + 2y^3 + \psi(x) \) calculate \( F_y(x,y) \) 
+							</div> 
+
+						</li>
+						<li>
+							<div class="stepline">
+								4. Differentiate with respect to the other variable to obtain expressions for \( F_x(x,y) \) and \( F_y(x,y) \) in terms of \( \psi'(x) \) and \( \phi'(y) \)
+							</div>
+
+							<div class="reading-exercise">
+								Given \( F(x,y) =  x^4 y^3 + x^3 + \phi(y) \) calculate \( F_y(x,y) \) 
+							</div> 
+
+							<div class="reading-exercise">
+								Given \( F(x,y) =  x^4 y^3 + 2y^3 + \psi(x) \) calculate \( F_x(x,y) \) 
+							</div> 
+
+							<div>
+								Differentiating each expression with respect to the variable from the "constant" of integration, we obtain: 
+
+								\begin{equation*}
+									F_x(x,y) =  4 x^3 y^3 + \psi'(x) 
+									\quad \quad 
+									F_y(x,y) =  3 x^4 y^2 + \phi'(y)
+								\end{equation*}
+							</div>
+						</li>
+						<li>
+							<div class="stepline">
+								5. Set the new expressions equal to known expressions \( F_x(x,y) = M(x,y) \) and/or \( F_y(x,y) = N(x,y) \) and solve for \( \psi(x) \) and \( \phi(y) \)
+							</div>
+							<div>
+								Now we can compare these functions with the known functions \( M(x,y) = F_x(x,y) \) <a href="#x1-20r14">(2.5.14)</a> and \( N(x,y) = F_y(x,y) \) <a href="#x1-21r15">(2.5.15)</a> and use them to solve for \( \psi(x) \) and \( \phi(y) \)
+
+								\begin{equation*}
+									\begin{array}{rllrrl}
+										F_x(x,y) 				& = & M(x,y) 		&\quad & F_y(x,y) 				& = & N(x,y) \\
+										4 x^3 y^3 + \psi'(x) 	& = & 4x^3y^3+3x^2	&\quad & 3 x^4 y^2 + \phi'(y) 	& = & 3x^4y^2+6y^2 \\
+										\psi'(x) 				& = & 3x^2			&\quad & \phi'(y) 				& = & 6y^2 \\
+										\psi(x) 				& = & 3\int x^2 dx	&\quad & \phi(y) 				& = & 6 \int y^2 dy \\
+										\psi(x) 				& = & x^3			&\quad & \phi(y) 				& = & 2 y^3 \\
+									\end{array}
+								\end{equation*}
+
+								We have now found expressions for both \( \psi(x) \) and \( \phi(y) \) and you may have noticed that we took the constants of integration to be zero since there is still an arbitrary constant in the final implicit solution <a href="#x1-9r6">(2.5.6)</a> \( F(x,y) = c \) and these constants would simplify into that one.
+								
+							</div>	
+						</li>
+						<li>
+							<div class="stepline">
+								6. Substitute \( \psi(x) \) and/or \( \phi(y) \) in to obtain \( F(x,y) \) and if possible verify they match. Set \( F(x,y)=c \) arbitrary constant which is an implicit solution. Solve explicitly for \( y = y(x) \) whenever possible
+							</div>
+							<div>
+								Substituting \( \psi(x) = x^3 \) into <a href="#x1-23r17">(2.5.17)</a> and \( \phi(y) = 2 y^3 \) into <a href="#x1-22r16">(2.5.16)</a> we obtain \( F(x,y) \) 
+
+								\begin{equation*}
+									\begin{array}{rllrrl}
+										F(x,y) 	& = & x^4 y^3 + 2y^3 + \psi(x) 	&\quad & F(x,y) & = & x^4 y^3 + x^3 + \phi(y) \\
+										F(x,y) 	& = & x^4 y^3 + 2y^3 + x^3 		&\quad & F(x,y) & = & x^4 y^3 + x^3 + 2 y^3 \\
+									\end{array}
+								\end{equation*}
+
+								Conveniently both expressions for \( F(x,y) \) agree and this is a great way to check your work so either way you opt to solve, you should get the same answer. Our final implicit solution is written in the form of <a href="#x1-9r6">(2.5.6)</a> as \( F(x,y) = c \)
+								
+								<a id="eq2.5.18"></a>
+								\begin{equation}
+									\label{eq:2.5.18}
+									x^4 y^3 + 2y^3 + x^3 = c
+								\end{equation}
+							</div>
+							<div class="reading-exercise">
+								Differentiate \( x^4 y^3 + 2y^3 + x^3 = c \) implicitly
+							</div> 
+							<div>	
+								Which, in this case, we can solve explicitly for \( y \)
+							</div>
+
+							<div class="reading-exercise">
+								Solve <a href="#eq2.5.18">(2.5.18)</a> explicitly for \( y \) 
+							</div> 
+							
+							<div>
+								After solving explicitly for \( y \)
+								\begin{equation*}
+									y = \sqrt[3]{\frac{c-x^3}{x^4+2}} 
+								\end{equation*}
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \( y = \displaystyle \sqrt[3]{\frac{c-x^3}{x^4+2}}  \)
+							</div> 
+							<div class="reading-exercise">
+								Verify \( y = \displaystyle \sqrt[3]{\frac{c-x^3}{x^4+2}}  \) is a solution to <a href="#x1-19r13">(2.5.13)</a> by differentiating and substituting
+							</div>
+						</li>
+
+					</ol>
+				</details> 
+
+				<div class="indent" id="5a10e0bc-c508-4317-bf29-091e926d9a5c">
+					Figure&nbsp;<a href="#-a-direction-field-and-integral-curves-for-xyxdxxyydy-">2.5.1</a>
+					shows a direction field and some
+					<span class="vocab">integral curves</span>
+					of <a href="#x1-19r13">(2.5.13)</a>,
+				</div>
+				<figure class="figure" id="6c22ab3a-2f33-472c-a7f1-17585aa94487">
+					<div
+						
+						id="-a-direction-field-and-integral-curves-for-xyxdxxyydy-"
+					>
+						<img height="264" src="EPS/fig020501.png" width="409" />
+						<a id="x1-25r1"></a>
+					</div>
+					<figcaption class="caption">
+						<span class="id">Figure&nbsp;2.5.1</span>
+						<span class="content">
+							A direction field and
+							<span class="vocab">integral curves</span>
+							for \((4x^3y^3+3x^2)\,dx+(3x^4y^2+6y^2)\,dy=0\)
+						</span>
+					</figcaption>
+				</figure>
+			</div>
 			
 			<div class="indent" id="56996089-55bd-4989-8626-39fe260c0178">
 				Many equations can be conveniently solved by either of the two methods used in Example&nbsp;<a href="#x1-183">2.5.3</a>. In cases where both are simple, we will antidifferentiate both so we can check our answer. However, sometimes the antidifferentiation required in one approach is more difficult than in the other. In such cases we choose the approach that requires the easier antidifferentiation. 
@@ -777,182 +823,193 @@
 			
 				<details class="solution" id="8eb6d573-f111-474e-aad2-cb9b4939419d">
 					<summary>Solution</summary>
-					<div class="stepline">
-						1. Identify \( M(x,y) \) and \( N(x,y) \) and compute \( M_y(x,y) \) and \( N_x(x,y) \) and verify \( M_y(x,y)=N_x(x,y) \) to ensure that the equation is <span class="vocab-repeat">exact</span>
-					</div>
-					<div>
-						\begin{align}
-							\label{eq:2.5.22}
-							\underset{M(x,y)}{\Big( \underbrace{ye^{xy} \tan x+e^{xy} \sec^2x }\Big)} dx
-								+ \underset{N(x,y)}{\underbrace{xe^{xy} \tan x}} dy = & 0
-						\end{align}
-					</div>
-					<div class="reading-exercise">
-						Calculate \( M_y(x,y)  \) using product and chain rules  
-					</div> 	
-	
-					<div>
-						\begin{align*}
-							M(x,y) = & ye^{xy} \tan x+e^{xy} \sec^2x \\
-							M_y(x,y) 
-							= & \tan x \Bigg[ y \frac{\partial}{\partial y}\Big( e^{xy} \Big) 
-								+ e^{xy} \frac{\partial}{\partial y}\Big( y \Big) \Bigg]
-								\sec^2x \frac{\partial}{\partial x} \Big( e^{xy}  \Big)  \\
-							= & \Big( xy + 1 \Big) e^{xy} \tan x + x e^{xy} \sec^2x			
-						\end{align*}
-					</div>
-					<div class="reading-exercise">
-						Calculate \( N_x(x,y)  \) using product and chain rules  
-					</div> 		
-					<div>	
-						\begin{align*}
-							N(x,y) = & xe^{xy} \tan x \\
-							N_x(x,y)
-							= & xe^{xy} \frac{\partial}{\partial x} \Big( \tan x \Big) 
-								+ \tan x \frac{\partial}{\partial x} \Big( xe^{xy} \Big) \\
-							= & xe^{xy} \sec^2 x 
-								+ \Big(xy + 1\Big) e^{xy} \tan x \\							
-						\end{align*}
 
-						\begin{equation*}
-							\boxed{
-								M_y(x,y) 
-								=  xe^{xy} \sec^2 x + \Big(xy + 1\Big) e^{xy} \tan x 
-								= N_x(x,y) 
-								\quad
-								\quad
-								\checkmark
-								\text{Exact}
-							}		
-						\end{equation*}
-					</div>
-					<div class="stepline">
-						2. Antidifferentiate \( M(x,y) = F_x(x,y) \) with respect to \( x \) and/or \( N(x,y) = F_y(x,y) \) with respect to \( y \) to obtain \( F(x,y) \)
-					</div>	
-					<div>
-						\begin{align*} 
-							F(x,y) = & \int F_x(x,y) dx = \int M(x,y) dx \\
-							= & \int \Big( ye^{xy} \tan x+e^{xy} \sec^2x \Big) dx \\
-							= & y \int \Big( e^{xy} \tan x\Big) dx
-								+  \int \Big( e^{xy} \sec^2x \Big) dx \\
-						\end{align*}
-					</div>
-					<div class="reading-exercise">
-						Antidifferentiate \( \int e^{xy}  dx  \) using substitution with \( u = xy \) 
-					</div>
-					<div class="reading-exercise">
-						Antidifferentiate \( \int \tan x  dx  \) using substitution with \( u = \cos x \)   
-					</div>
-					<div class="reading-exercise">
-						Antidifferentiate \( \int \sec^2 x  dx  \) using substitution with \( u = \sin x / \cos x \) 
-					</div>
+					<ol>
+						<li>
+							<div class="stepline">
+								1. Identify \( M(x,y) \) and \( N(x,y) \) and compute \( M_y(x,y) \) and \( N_x(x,y) \) and verify \( M_y(x,y)=N_x(x,y) \) to ensure that the equation is <span class="vocab-repeat">exact</span>
+							</div>
+							<div>
+								\begin{align}
+									\label{eq:2.5.22}
+									\underset{M(x,y)}{\Big( \underbrace{ye^{xy} \tan x+e^{xy} \sec^2x }\Big)} dx
+										+ \underset{N(x,y)}{\underbrace{xe^{xy} \tan x}} dy = & 0
+								\end{align}
+							</div>
+							<div class="reading-exercise">
+								Calculate \( M_y(x,y)  \) using product and chain rules  
+							</div> 	
+			
+							<div>
+								\begin{align*}
+									M(x,y) = & ye^{xy} \tan x+e^{xy} \sec^2x \\
+									M_y(x,y) 
+									= & \tan x \Bigg[ y \frac{\partial}{\partial y}\Big( e^{xy} \Big) 
+										+ e^{xy} \frac{\partial}{\partial y}\Big( y \Big) \Bigg]
+										\sec^2x \frac{\partial}{\partial x} \Big( e^{xy}  \Big)  \\
+									= & \Big( xy + 1 \Big) e^{xy} \tan x + x e^{xy} \sec^2x			
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Calculate \( N_x(x,y)  \) using product and chain rules  
+							</div> 		
+							<div>	
+								\begin{align*}
+									N(x,y) = & xe^{xy} \tan x \\
+									N_x(x,y)
+									= & xe^{xy} \frac{\partial}{\partial x} \Big( \tan x \Big) 
+										+ \tan x \frac{\partial}{\partial x} \Big( xe^{xy} \Big) \\
+									= & xe^{xy} \sec^2 x 
+										+ \Big(xy + 1\Big) e^{xy} \tan x \\							
+								\end{align*}
 
-					<div>
-						While finding antiderivatives for  \( e^{xy} ,\) \( \tan x  ,\) and \( \sec^2 ,\) are fairly straightforward using substitution, the more complicated ones appear to require IBP multiple times or other more complicated techniques. Overall, these appear quite tedious, so in this case, we will go ahead and skip this one and just try to antidifferentiate the other one. Whenever it is feasible to do both, we will, but when it isn't it is nice that the method does not require both. So let's try to find the antiderivative for \( N(x,y) \)
-						
-						\begin{align*} 
-							F(x,y) = & \int F_y(x,y) dy = \int N(x,y) dy \\
-							= & \int \Big( xe^{xy} \tan x \Big) dy = e^{xy} \tan x  + \psi(x) \\			
-						\end{align*}
+								\begin{equation*}
+									\boxed{
+										M_y(x,y) 
+										=  xe^{xy} \sec^2 x + \Big(xy + 1\Big) e^{xy} \tan x 
+										= N_x(x,y) 
+										\quad
+										\quad
+										\checkmark
+										\text{Exact}
+									}		
+								\end{equation*}
+							</div>
+						</li>
+						<li>
+							<div class="stepline">
+								2. Antidifferentiate \( M(x,y) = F_x(x,y) \) with respect to \( x \) and/or \( N(x,y) = F_y(x,y) \) with respect to \( y \) to obtain \( F(x,y) \)
+							</div>	
+							<div>
+								\begin{align*} 
+									F(x,y) = & \int F_x(x,y) dx = \int M(x,y) dx \\
+									= & \int \Big( ye^{xy} \tan x+e^{xy} \sec^2x \Big) dx \\
+									= & y \int \Big( e^{xy} \tan x\Big) dx
+										+  \int \Big( e^{xy} \sec^2x \Big) dx \\
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Antidifferentiate \( \int e^{xy}  dx  \) using substitution with \( u = xy \) 
+							</div>
+							<div class="reading-exercise">
+								Antidifferentiate \( \int \tan x  dx  \) using substitution with \( u = \cos x \)   
+							</div>
+							<div class="reading-exercise">
+								Antidifferentiate \( \int \sec^2 x  dx  \) using substitution with \( u = \sin x / \cos x \) 
+							</div>
 
-						Indeed this antidifferentiation was much simpler, so we now have an expression for \( F (x,y) \)
-					</div>	
-					<div class="reading-exercise">
-						Antidifferentiate \( \int \Big( xe^{xy} \tan x \Big) dy \) using substitution 
-					</div>
+							<div>
+								While finding antiderivatives for  \( e^{xy} ,\) \( \tan x  ,\) and \( \sec^2 ,\) are fairly straightforward using substitution, the more complicated ones appear to require IBP multiple times or other more complicated techniques. Overall, these appear quite tedious, so in this case, we will go ahead and skip this one and just try to antidifferentiate the other one. Whenever it is feasible to do both, we will, but when it isn't it is nice that the method does not require both. So let's try to find the antiderivative for \( N(x,y) \)
+								
+								\begin{align*} 
+									F(x,y) = & \int F_y(x,y) dy = \int N(x,y) dy \\
+									= & \int \Big( xe^{xy} \tan x \Big) dy = e^{xy} \tan x  + \psi(x) \\			
+								\end{align*}
 
-					<div class="stepline">
-						3. Differentiating with respect to the same variable to check that the antidifferentiation is correct 		
-					</div>	
-					<div class="reading-exercise">
-						Verify \( F_y(x,y) = N(x,y) \) by differentiating \( F(x,y) = e^{xy} \tan x  + \psi(x) \) 
-					</div>
-					<div>
-						\begin{align*}
-							F(x,y) = & e^{xy}  \tan x + \psi(x)  \\
-							F_y(x,y) 
-							= & 
-								xe^{xy}\tan x = N(x,y) \quad \checkmark 
-						\end{align*}
-					</div>
+								Indeed this antidifferentiation was much simpler, so we now have an expression for \( F (x,y) \)
+							</div>	
+							<div class="reading-exercise">
+								Antidifferentiate \( \int \Big( xe^{xy} \tan x \Big) dy \) using substitution 
+							</div>
+						</li>
+						<li>
+							<div class="stepline">
+								3. Differentiating with respect to the same variable to check that the antidifferentiation is correct 		
+							</div>
+							<div class="reading-exercise">
+								Verify \( F_y(x,y) = N(x,y) \) by differentiating \( F(x,y) = e^{xy} \tan x  + \psi(x) \) 
+							</div>
+							<div>
+								\begin{align*}
+									F(x,y) = & e^{xy}  \tan x + \psi(x)  \\
+									F_y(x,y) 
+									= & 
+										xe^{xy}\tan x = N(x,y) \quad \checkmark 
+								\end{align*}
+							</div>
+						</li>
+						<li>
+							<div class="stepline">
+								4. Differentiate with respect to the other variable to obtain expressions for \( F_x(x,y) \) and \( F_y(x,y) \) in terms of \( \psi'(x) \) and \( \phi'(y) \)
+							</div>
+							<div class="reading-exercise">
+								Find \( F_x(x,y) \) by differentiating \( F(x,y) = e^{xy} \tan x  + \psi(x) \) 
+							</div>
+							<div>
+								\begin{align}
+									F(x,y) = & e^{xy} \tan x  + \psi(x)  \nonumber \\
+									F_x(x,y) 
+									= & 
+										\frac{\partial}{\partial x} \Big( e^{xy} \tan x \Big)
+										+ \frac{\partial}{\partial x} \Big( \psi(x) \Big) \nonumber \\
+									\label{eq:2.5.23}
+									= & 
+										e^{xy} \Big(
+										\sec^2 x  
+										+   y \tan x 
+										\Big)
+										+ \psi'(x)
+								\end{align}
+							</div>
+						</li>
+						<li>
+							<div class="stepline">
+								5. Set the new expressions equal to known expressions \( F_x(x,y) = M(x,y) \) and/or \( F_y(x,y) = N(x,y) \) and solve for \( \psi(x) \) and \( \phi(y) \)
+							</div>
+							<div>
+								\begin{align*}
+									F_x(x,y) = & M(x,y) \\
+									e^{xy} \Big(\sec x^2 +   y \tan x \Big) + \psi'(x) =& ye^{xy} \tan x+e^{xy} \sec^2x \\
+									\psi'(x) =& 0 \\			
+									\psi(x) =& k \\					
+								\end{align*}
 
-					<div class="stepline">
-						4. Differentiate with respect to the other variable to obtain expressions for \( F_x(x,y) \) and \( F_y(x,y) \) in terms of \( \psi'(x) \) and \( \phi'(y) \)
-					</div>
-					<div class="reading-exercise">
-						Find \( F_x(x,y) \) by differentiating \( F(x,y) = e^{xy} \tan x  + \psi(x) \) 
-					</div>
-					<div>
-						\begin{align}
-							F(x,y) = & e^{xy} \tan x  + \psi(x)  \nonumber \\
-							F_x(x,y) 
-							= & 
-								\frac{\partial}{\partial x} \Big( e^{xy} \tan x \Big)
-								+ \frac{\partial}{\partial x} \Big( \psi(x) \Big) \nonumber \\
-							\label{eq:2.5.23}
-							= & 
-								e^{xy} \Big(
-								\sec^2 x  
-								+   y \tan x 
-								\Big)
-								+ \psi'(x)
-						\end{align}
-					</div>
-					<div class="stepline">
-						5. Set the new expressions equal to known expressions \( F_x(x,y) = M(x,y) \) and/or \( F_y(x,y) = N(x,y) \) and solve for \( \psi(x) \) and \( \phi(y) \)
-					</div>
-					<div>
-						\begin{align*}
-							F_x(x,y) = & M(x,y) \\
-							e^{xy} \Big(\sec x^2 +   y \tan x \Big) + \psi'(x) =& ye^{xy} \tan x+e^{xy} \sec^2x \\
-							\psi'(x) =& 0 \\			
-							\psi(x) =& k \\					
-						\end{align*}
+								Thus we get a constant for \( \psi(x) \) which again we can take as zero since there is a constant in the final expression and they will simplify but we will leave it as \( k \) to demonstrate this.
+							</div>
+						</li>
+						<li>
+							<div class="stepline">
+								6. Substitute \( \psi(x) \) and/or \( \phi(y) \) in to obtain \( F(x,y) \) and if possible verify they match. Set \( F(x,y)=c \) arbitrary constant which is an implicit solution. Solve explicitly for \( y = y(x) \) whenever possible
+							</div>
+							<div>
+								Substituting in \( \psi(x) = k ,\) we obtain an expression for \( F(x,y) \)
 
-						Thus we get a constant for \( \psi(x) \) which again we can take as zero since there is a constant in the final expression and they will simplify but we will leave it as \( k \) to demonstrate this.
-					
-					</div>
-					<div class="stepline">
-						6. Substitute \( \psi(x) \) and/or \( \phi(y) \) in to obtain \( F(x,y) \) and if possible verify they match. Set \( F(x,y)=c \) arbitrary constant which is an implicit solution. Solve explicitly for \( y = y(x) \) whenever possible
-					</div>	
-					<div>
-						Substituting in \( \psi(x) = k ,\) we obtain an expression for \( F(x,y) \)
+								\begin{align*}
+									F(x,y) = & e^{xy} \tan x  + \underset{k}{\underbrace{\psi(x)}} \\
+									F(x,y) = & e^{xy} \tan x  + k \\				
+								\end{align*}
+								
+								Now the implicit solution is \( F(x,y)= C \)
+								
+								\begin{align*}
+									e^{xy} \tan x + k  = & C \\	
+									e^{xy} \tan x  = & \underset{c}{\underbrace{C-k}} \\	
+									e^{xy} \tan x  = & c \\	 			 				
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Differentiate \( e^{xy} \tan x  = c  \) implicitly
+							</div> 
+							
+							<div>	
 
-						\begin{align*}
-							F(x,y) = & e^{xy} \tan x  + \underset{k}{\underbrace{\psi(x)}} \\
-							F(x,y) = & e^{xy} \tan x  + k \\				
-						\end{align*}
-						
-						Now the implicit solution is \( F(x,y)= C \)
-						
-						\begin{align*}
-							e^{xy} \tan x + k  = & C \\	
-							e^{xy} \tan x  = & \underset{c}{\underbrace{C-k}} \\	
-							e^{xy} \tan x  = & c \\	 			 				
-						\end{align*}
-					</div>
-					<div class="reading-exercise">
-						Differentiate \( e^{xy} \tan x  = c  \) implicitly
-					</div> 
-					
-					<div>	
+								Whenever reasonable solve the implicit solution explicitly for \( y \)
 
-						Whenever reasonable solve the implicit solution explicitly for \( y \)
-
-						\begin{align*}
-							e^{xy} = & \frac{c}{\tan x} \\
-							\ln \Big( e^{xy} \Big) = & \ln \left( \frac{c}{\tan x} \right) \\		
-							xy= & \ln \left( \frac{c}{\tan x} \right) \\
-							y= & \frac{1}{x} \ln \left( \frac{c}{\tan x} \right) \\
-						\end{align*}
-					</div>	
-					<div class="reading-exercise">
-						Differentiate \( y= \frac{1}{x} \ln \left( \frac{c}{\tan x} \right) \) 
-					</div> 
-					<div class="reading-exercise">
-						Verify \( y= \frac{1}{x} \ln \left( \frac{c}{\tan x} \right)  \) is a solution to <a href="#x1-29r21">(2.5.21)</a> by differentiating and substituting
-					</div> 	
-				
+								\begin{align*}
+									e^{xy} = & \frac{c}{\tan x} \\
+									\ln \Big( e^{xy} \Big) = & \ln \left( \frac{c}{\tan x} \right) \\		
+									xy= & \ln \left( \frac{c}{\tan x} \right) \\
+									y= & \frac{1}{x} \ln \left( \frac{c}{\tan x} \right) \\
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \( y= \frac{1}{x} \ln \left( \frac{c}{\tan x} \right) \) 
+							</div> 
+							<div class="reading-exercise">
+								Verify \( y= \frac{1}{x} \ln \left( \frac{c}{\tan x} \right)  \) is a solution to <a href="#x1-29r21">(2.5.21)</a> by differentiating and substituting
+							</div>
+						</li>
+					</ol>
 				</details>
 			</div>
 			
@@ -981,120 +1038,128 @@
 				<details class="solution" id="e111c594-fc7c-4a93-9fdc-7ed0a9222c54">
 					<summary>Solution</summary>
 
-					<div class="stepline">
-						1. Identify \( M(x,y) \) and \( N(x,y) \) and compute \( M_y(x,y) \) and \( N_x(x,y) \) and verify \( M_y(x,y)=N_x(x,y) \) to ensure that the equation is <span class="vocab-repeat">exact</span>
-					</div>
+					<ol>
+						<li>
+							<div class="stepline">
+								1. Identify \( M(x,y) \) and \( N(x,y) \) and compute \( M_y(x,y) \) and \( N_x(x,y) \) and verify \( M_y(x,y)=N_x(x,y) \) to ensure that the equation is <span class="vocab-repeat">exact</span>
+							</div>
 
-					<div class="reading-exercise">
-						Calculate \( M_y(x,y)  \) and \( N_x(x,y)  \) using the power rule
-					</div> 	
+							<div class="reading-exercise">
+								Calculate \( M_y(x,y)  \) and \( N_x(x,y)  \) using the power rule
+							</div> 	
 
-					<div>
-						\begin{align}
-							\label{eq:2.5.26}
-							\underset{M(x,y)}{ \underbrace{3 x^2 y^2} } dx
-								+ \underset{N(x,y)}{\underbrace{6 x^3 y}} dy = & 0
-						\end{align}
+							<div>
+								\begin{align}
+									\label{eq:2.5.26}
+									\underset{M(x,y)}{ \underbrace{3 x^2 y^2} } dx
+										+ \underset{N(x,y)}{\underbrace{6 x^3 y}} dy = & 0
+								\end{align}
 
-						\begin{equation*}
-							\boxed{
-								M_y(x,y) =  6 x^2 y \ne 18x^2y = N_x(x,y)
-								\quad
-								\quad
-								\text{Not Exact} 
-							}		
-						\end{equation*}
-					</div>
-
-					<div class="stepline">
-						2. Antidifferentiate \( M(x,y) = F_x(x,y) \) with respect to \( x \) and/or \( N(x,y) = F_y(x,y) \) with respect to \( y \) to obtain \( F(x,y) \)
-					</div>
-					<div class="reading-exercise">
-						Antidifferentiate \( \int M(x,y) dx \) using power rule 
-					</div>
-					<div>
-						\begin{align*} 
-							F(x,y) = & \int F_x(x,y) dx = \int M(x,y) dx \\
-							= & \int 3 x^2 y^2 dx 
-							= x^3 y^2 + \phi(y)	
-						\end{align*}
-					</div>	
-					<div class="reading-exercise">
-						Antidifferentiate \( \int N(x,y) dy \) using power rule  
-					</div>
-					<div>
-						\begin{align*} 
-							F(x,y) = & \int F_y(x,y) dy = \int N(x,y) dy \\
-							= & \int 6 x^3 y dy
-							= 3 x^3 y^2 + \psi(x) 
-						\end{align*}
-					</div>	
-
-					<div class="stepline">
-						3. Differentiating with respect to the same variable to check that the antidifferentiation is correct 		
-					</div>	
-					<div class="reading-exercise">
-						Verify \( F_x(x,y) = M(x,y) \) by differentiating \( F(x,y) = x^3 y^2 + \phi(y)  \) 
-					</div>
-					<div>
-						\begin{align*}
-							F(x,y) = & x^3 y^2 + \phi(y) \\
-							F_x(x,y) = & 3 x^2 y^2 = M(x,y) \quad \checkmark 
-						\end{align*}
-			
-					</div>
-					<div class="reading-exercise">
-						Verify \( F_y(x,y) = N(x,y) \) by differentiating \( F(x,y) = e^{xy} \tan x  + \psi(x) \) 
-					</div>
-					<div>
-						
-						\begin{align*}
-							F(x,y) = & 3 x^3 y^2 + \psi(x) \\
-							F_y(x,y) = & 6 x^3 y = N(x,y) \quad \checkmark 
-						\end{align*}
+								\begin{equation*}
+									\boxed{
+										M_y(x,y) =  6 x^2 y \ne 18x^2y = N_x(x,y)
+										\quad
+										\quad
+										\text{Not Exact} 
+									}		
+								\end{equation*}
+							</div>
+						</li>
+						<li>
+							<div class="stepline">
+								2. Antidifferentiate \( M(x,y) = F_x(x,y) \) with respect to \( x \) and/or \( N(x,y) = F_y(x,y) \) with respect to \( y \) to obtain \( F(x,y) \)
+							</div>
+							<div class="reading-exercise">
+								Antidifferentiate \( \int M(x,y) dx \) using power rule 
+							</div>
+							<div>
+								\begin{align*} 
+									F(x,y) = & \int F_x(x,y) dx = \int M(x,y) dx \\
+									= & \int 3 x^2 y^2 dx 
+									= x^3 y^2 + \phi(y)	
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Antidifferentiate \( \int N(x,y) dy \) using power rule  
+							</div>
+							<div>
+								\begin{align*} 
+									F(x,y) = & \int F_y(x,y) dy = \int N(x,y) dy \\
+									= & \int 6 x^3 y dy
+									= 3 x^3 y^2 + \psi(x) 
+								\end{align*}
+							</div>
+						</li>
+						<li>
+							<div class="stepline">
+								3. Differentiating with respect to the same variable to check that the antidifferentiation is correct 		
+							</div>	
+							<div class="reading-exercise">
+								Verify \( F_x(x,y) = M(x,y) \) by differentiating \( F(x,y) = x^3 y^2 + \phi(y)  \) 
+							</div>
+							<div>
+								\begin{align*}
+									F(x,y) = & x^3 y^2 + \phi(y) \\
+									F_x(x,y) = & 3 x^2 y^2 = M(x,y) \quad \checkmark 
+								\end{align*}
 					
-					</div>
-					
-					<div class="stepline">
-						4. Differentiate with respect to the other variable to obtain expressions for \( F_x(x,y) \) and \( F_y(x,y) \) in terms of \( \psi'(x) \) and \( \phi'(y) \)
-					</div>
-					<div class="reading-exercise">
-						Find \( F_x(x,y) \) by differentiating \( F(x,y) = 3 x^3 y^2 + \psi(x) \) 
-					</div>
-					<div>
+							</div>
+							<div class="reading-exercise">
+								Verify \( F_y(x,y) = N(x,y) \) by differentiating \( F(x,y) = e^{xy} \tan x  + \psi(x) \) 
+							</div>
+							<div>
+								
+								\begin{align*}
+									F(x,y) = & 3 x^3 y^2 + \psi(x) \\
+									F_y(x,y) = & 6 x^3 y = N(x,y) \quad \checkmark 
+								\end{align*}
+							
+							</div>
+						</li>
+						<li>
+							<div class="stepline">
+								4. Differentiate with respect to the other variable to obtain expressions for \( F_x(x,y) \) and \( F_y(x,y) \) in terms of \( \psi'(x) \) and \( \phi'(y) \)
+							</div>
+							<div class="reading-exercise">
+								Find \( F_x(x,y) \) by differentiating \( F(x,y) = 3 x^3 y^2 + \psi(x) \) 
+							</div>
+							<div>
 
-						\begin{align*}
-							F(x,y) = & 3 x^3 y^2 + \psi(x)  \\
-							F_x(x,y) = & 9 x^2 y^2 + \psi'(x) \\												
-						\end{align*}
-					</div>
-					
-					<div class="reading-exercise">
-						Find \( F_y(x,y) \) by differentiating \( F(x,y) = 3 x^3 y^2 + \psi(x) \) 
-					</div>
-					<div>
-						\begin{align*}
-							F(x,y) = & x^3 y^2 + \phi(y) \\
-							F_y(x,y) 
-							= & 2 x^3 y +  \phi'(y)  \\						
-						\end{align*}
-					</div>
-					<div class="stepline">
-						5. Set the new expressions equal to known expressions \( F_x(x,y) = M(x,y) \) and/or \( F_y(x,y) = N(x,y) \) and solve for \( \psi(x) \) and \( \phi(y) \)
-					</div>
-					<div>
-						\begin{equation*}
-							\begin{array}{rllrrl}
-								F_x(x,y) 				& = & M(x,y) 		&\quad & F_y(x,y) 				& = & N(x,y) \\
-								9 x^2 y^2 + \psi'(x) 	& = & 3 x^2 y^2		&\quad & 2 x^3 y +  \phi'(y) 	& = & 6 x^3 y \\
-								\psi'(x) 				& = & -6 x^2 y^2	&\quad & \phi'(y) 				& = & -4 x^3 y \\
-							\end{array}
-						\end{equation*}
+								\begin{align*}
+									F(x,y) = & 3 x^3 y^2 + \psi(x)  \\
+									F_x(x,y) = & 9 x^2 y^2 + \psi'(x) \\												
+								\end{align*}
+							</div>
+							
+							<div class="reading-exercise">
+								Find \( F_y(x,y) \) by differentiating \( F(x,y) = 3 x^3 y^2 + \psi(x) \) 
+							</div>
+							<div>
+								\begin{align*}
+									F(x,y) = & x^3 y^2 + \phi(y) \\
+									F_y(x,y) 
+									= & 2 x^3 y +  \phi'(y)  \\
+								\end{align*}
+							</div>
+						</li>
+						<li>
+							<div class="stepline">
+								5. Set the new expressions equal to known expressions \( F_x(x,y) = M(x,y) \) and/or \( F_y(x,y) = N(x,y) \) and solve for \( \psi(x) \) and \( \phi(y) \)
+							</div>
+							<div>
+								\begin{equation*}
+									\begin{array}{rllrrl}
+										F_x(x,y) 				& = & M(x,y) 		&\quad & F_y(x,y) 				& = & N(x,y) \\
+										9 x^2 y^2 + \psi'(x) 	& = & 3 x^2 y^2		&\quad & 2 x^3 y +  \phi'(y) 	& = & 6 x^3 y \\
+										\psi'(x) 				& = & -6 x^2 y^2	&\quad & \phi'(y) 				& = & -4 x^3 y \\
+									\end{array}
+								\end{equation*}
 
-						Notice how in both cases, the \( \psi'(x) \) function should be a function of \( x \) variable only and the \( \phi(y) \)  function should be a function of \( y \) variable only, but both still depend on both \( x \) and \( y \) and this demonstrates how the process for solving exact differential equations fails in this case where the equation is not exact.
-					
-					</div>
-					
+								Notice how in both cases, the \( \psi'(x) \) function should be a function of \( x \) variable only and the \( \phi(y) \)  function should be a function of \( y \) variable only, but both still depend on both \( x \) and \( y \) and this demonstrates how the process for solving exact differential equations fails in this case where the equation is not exact.
+							
+							</div>
+						</li>
+					</ol>
 				</details>
 			</div>
 		</details>
