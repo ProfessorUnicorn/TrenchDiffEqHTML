@@ -129,6 +129,60 @@
         \frac{d}{dx} \Big( \ln x \Big) = &amp; \frac{1}{x} \\                         
         \end{align*} 
 
+        <div class = "example" id = "x1-93" style = "--ex-number: 1"> 
+          Use the chain rule to calculate the following derivatives
+          <ol>
+            <li>
+              \begin {equation*}
+                \frac{d}{dx} \left( e^{3x^2}\right)
+              \end {equation*}
+            </li>
+            <li>
+              \begin {equation*}
+                \frac{d}{dx} \left( \ln {3x^2} \right)
+              \end {equation*}
+            </li>
+            <li>
+              \begin {equation*}
+                \frac{d}{dx} \Big( \ln \big( \sin(e^x) \big) \Big)
+              \end {equation*}
+            </li>	
+          </ol>	
+  
+          <details class = "solution">
+            <summary>Solution</summary>
+  
+            <ol>
+              <li>
+                \begin {align*}
+                  \frac{d}{dx}  \left( e^{3x^2}\right)
+                  = & e^{3x^2} \cdot \frac{d}{dx} \left( 3x^2\right) \\
+                  = & e^{3x^2} \cdot 6x \\
+                  = & 6xe^{3x^2}  \\
+                \end {align*}
+              </li>
+              <li>
+                \begin {align*}
+                  \frac{d}{dx} \left( \ln {3x^2} \right)
+                  = & \frac{1}{3x^2} \cdot \frac{d}{dx} \left(3x^2 \right) \\
+                  = & \frac{1}{3x^2} \cdot \frac{d}{dx} 6x \\
+                  = & \frac{6x}{3x^2}  \\
+                  = & \frac{2}{x}  \\
+                \end {align*}
+              </li>
+              <li>
+                \begin {align*}
+                  \frac{d}{dx} \Big( \ln \big( \sin(e^x) \big) \Big)
+                  = & \frac{1}{\sin(e^x)} \cdot \frac{d}{dx} \big( \sin(e^x) \big) \\
+                  = & \frac{1}{\sin(e^x)} \cdot \cos(e^x) \cdot \frac{d}{dx} \big( e^x \big) \\
+                  = & \frac{\cos(e^x)}{\sin(e^x)}  \cdot  e^x \\
+                  = & e^x \cot (e^x)  \\
+                  \end {align*}
+              </li>	
+            </ol>	
+          </details>
+        </div>        
+
         <div class="reading-exercise" id="ba2a4f2a-dd6c-46ff-a509-aedce84cc0b0-8">
           Use implicit differentiation to prove \( \frac{d}{dx} \Big( \ln x \Big) = \frac{1}{x} \)
         </div>
