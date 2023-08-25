@@ -894,6 +894,118 @@
 			</div>
 		</details>
 
+		<details id="fe31a5a0-4d43-469a-b59b-dde69065c25efaddfdsafdsafsfdafdaa">
+			<summary>Guessing Sine and Cosine Functions</summary>
+
+
+			<!--Example 3-->
+			<div class="example" id="x1-243" style="--ex-number: 3">
+				
+				<div> 
+	
+
+					<ol>
+						<li>
+							Find a particlar solution
+							\begin {equation*} 
+								\frac{d^2y}{dx^2} + \frac{dy}{dx} = -8 \cos 2x + 6 \sin 2x
+							\end {equation*} 
+						</li>
+						<li>
+							Find a particlar solution
+							\begin {equation*} 
+								\frac{d^2y}{dx^2} + \frac{dy}{dx} = 4x^3
+							\end {equation*} 
+						</li>
+						<li>
+							Use the principle of superposition to find a particular solution for
+							\begin {equation*} 
+								\frac{d^2y}{dx^2} + \frac{dy}{dx} = 4x^3 -8 \cos 2x + 6 \sin 2x
+							\end {equation*} 
+						</li>
+					</ol>						
+					
+				</div>
+
+				<details class="solution" id="bf29c62c-9838-44ab-829d-a1ccb839e8a8">
+					<summary>Solution</summary>
+
+					<ol>
+						<li>
+							<div>
+								Solve the complementary equation
+								\[
+									x^2 \frac{d^2y}{dx^2}+x \frac{dy}{dx}-4y = 0
+								\]
+							</div>	
+							<div>
+								Although we don't have methods to solve this equation yet since we have only solved constant coefficient equations so far, we did already verify the solutions to this equation in Example <a href="sec5.1.book.html#x1-233" target=_blank>5.1.3<a> so we already have a fundamental set of solutions:
+								\[
+									\{y_1,y_2\} = \left\{x^2, \frac{1}{x^2} \right\}
+								\]
+							</div>	
+
+						</li>	
+						<li>
+							<div>
+								Now we will try to find a particlar solution for <a href="#x1-25r13">(5.3.13)</a> by guessing a solution based on the forcing function
+								\[
+									x^2 \frac{d^2y}{dx^2}+x \frac{dy}{dx}-4y 
+										= \underset{f(x)}{\underbrace{2x^4}} 
+								\]
+							</div>	
+							<div>
+								Since the forcing function \( f(x) = 2x^4 \) is a power function, we will guess an arbitrary power function of the same power
+								\[
+									y = Ax^4
+								\]
+							</div>
+							<div class="reading-exercise">
+								Differentiate \( y = Ax^4 \) twice
+							</div> 
+
+							<div>	
+								After differentiating we obtain \( dy/dx = 4Ax^3 \) and \(d^2y/dx^2 = 12Ax^2 \) which we substitute into the nonhomogeneous equation <a href="#x1-19r10">(5.3.10)</a> 
+								\begin{align*}
+									x^2 \frac{d^2y}{dx^2} + x \frac{dy}{dx}-4y = & 2x^4 \\
+									x^2 \overset{\frac{d^2y}{dx^2} }{\overbrace{\Big( 12Ax^2 \Big)}} + x \overset{\frac{dy}{dx} }{\overbrace{\Big( 4Ax^3 \Big)}} -4  \overset{y }{\overbrace{\Big( Ax^4 \Big)}} = & 2x^4 \\
+									\big( 12A \big) x^4 + \underbrace{\big(4A \big) x^4 - \big(4A \big)x^4} = & 2x^4 \\
+									\big(12A\big)x^4 = & 2x^4 \\
+									A \, x^4 = & \frac{1}{6}x^4 \\
+								\end{align*}
+							</div>			
+						
+							<div>	
+								Again equating the coefficients we obtain \(A=1/6\) and
+								substituting the value in the arbitrary power function \( y = Ax^4 \) to obtain the particular solution
+								\[
+									y = \frac{1}{6} x^4
+								\]
+							</div>	
+
+							<div class="reading-exercise">
+								Verify \( y = \frac{1}{6} x^4 \) is a solution of <a href="#x1-25r13">(5.3.13)</a>
+							</div> 
+
+						</li>
+
+						<li>
+							<div>
+								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \left\{x^2, \frac{1}{x^2} \right\} \) and a particular solution to the nonhomogeneous equation \( y_p = \frac{1}{6} x^4 \), then we can use Theorem&nbsp;<a href="#x1-52">5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
+								\[
+									y = \frac{1}{6} x^4 + c_1 x^2 + \frac{c_2}{x^2} 
+								\]
+							</div>
+							<div class="reading-exercise">
+								Find the domain of \(y = \frac{1}{6} x^4 + c_1 x^2 + \frac{c_2}{x^2}\)
+							</div> 
+						</li>
+					</ol>	
+
+				</details>
+			</div>
+		</details>			
+
 		<nav class="ex">
 			<a href="sec5.3.ex.html">5.3 Exercises</a>
 		</nav>
