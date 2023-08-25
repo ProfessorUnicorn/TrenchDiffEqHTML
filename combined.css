@@ -172,6 +172,11 @@ summary + .example { margin-top: 0; }
 
 .example > ol, .example .solution > ol { list-style-type: none; padding-left: 0; margin-top: 0.5rem; }
 .example > ol li::before, .example .solution > ol li::before { font-weight: bold; content: 'Part ' counter(list-item) '.'; }
+.example .solution > ol li.continued { counter-increment: list-item 0; }
+.example .solution > ol li.continued::before { content: ''; }
+.example > ol li.skip { counter-increment: list-item 0; }
+.example > ol li.skip::before { content: ''; }
+
 
 .exercise { display: flex; gap: 1rem; }
 .exercise .ex-number { flex: 0; }
@@ -185,3 +190,4 @@ table.tabular { width: calc(100% - 6rem); margin: 3rem; }
 table.tabular th { font-weight: bold; }
 table.tabular thead tr { border-bottom: 2px solid black; }
 table.tabular tbody tr { border-bottom: 1px solid black; }
+

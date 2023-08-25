@@ -595,115 +595,120 @@
 			
 				<details class="solution" id="1531706a-a9c5-413f-8f0a-da9d7b75c4a8">
 					<summary>Solution</summary>
-					<div id="333ddafc-87d9-4d01-acf9-1461d048d7d8">
-						Although there is no <span class="vocab">trivial solution</span> for <a href="#x1-33r18">(2.2.18)</a>, there are other <span class="vocab">constant solutions</span>. Notice that \( y=1 \) and  \( y=-1 \) are both solutions:				
+					<ol>
+						<li>
+							Although there is no <span class="vocab">trivial solution</span> for <a href="#x1-33r18">(2.2.18)</a>, there are other <span class="vocab">constant solutions</span>. Notice that \( y=1 \) and  \( y=-1 \) are both solutions:				
 
-						\begin{align*} 	
-							\frac{d}{dx} \Big( 1 \Big) = {1\over2}x \Big( 1- (1)^2 \Big) 
-							\Longrightarrow
-							0 = & {1\over2}x \Big( 0 \Big) \quad \checkmark \\
-						\end{align*}
+							\begin{align*} 	
+								\frac{d}{dx} \Big( 1 \Big) = {1\over2}x \Big( 1- (1)^2 \Big) 
+								\Longrightarrow
+								0 = & {1\over2}x \Big( 0 \Big) \quad \checkmark \\
+							\end{align*}
 
-						and
+							and
 
-						\begin{align*} 	
-							\frac{d}{dx} \Big( -1 \Big) =  {1\over2}x \Big( 1- (-1)^2 \Big)
-							\Longrightarrow 
-							0 = & {1\over2}x \Big( 0 \Big) \quad \checkmark \\
-						\end{align*}
+							\begin{align*} 	
+								\frac{d}{dx} \Big( -1 \Big) =  {1\over2}x \Big( 1- (-1)^2 \Big)
+								\Longrightarrow 
+								0 = & {1\over2}x \Big( 0 \Big) \quad \checkmark \\
+							\end{align*}
 
-						These <span class="vocab">constant solutions</span> are called <span class="vocab">equilibrium solutions</span> and separating variables requires dividing by \( 1-y^2 = (1-y)(1+y) \), which is perfectly fine to do as long as we first assume \( y(x) \ne 1 \) and \( y(x) \ne -1 \) and we'll start by factoring out the negative:
+							These <span class="vocab">constant solutions</span> are called <span class="vocab">equilibrium solutions</span> and separating variables requires dividing by \( 1-y^2 = (1-y)(1+y) \), which is perfectly fine to do as long as we first assume \( y(x) \ne 1 \) and \( y(x) \ne -1 \) and we'll start by factoring out the negative:
 
-						\begin{align*} 	
-							\frac{dy}{dx} = & -\frac{1}{2}x(y^2-1) \\
-							\frac{1}{y^2-1}\frac{dy}{dx} = & -\frac{1}{2}x \\		
-							\int \Bigg( \frac{1}{y^2-1}\frac{dy}{dx} \Bigg) dx = & -\int \frac{1}{2}x dx \\	
-							\int \frac{1}{(y-1)(y+1)}dy = & - \frac{1}{2}\int x dx \\						
-						\end{align*}
+							\begin{align*} 	
+								\frac{dy}{dx} = & -\frac{1}{2}x(y^2-1) \\
+								\frac{1}{y^2-1}\frac{dy}{dx} = & -\frac{1}{2}x \\		
+								\int \Bigg( \frac{1}{y^2-1}\frac{dy}{dx} \Bigg) dx = & -\int \frac{1}{2}x dx \\	
+								\int \frac{1}{(y-1)(y+1)}dy = & - \frac{1}{2}\int x dx \\						
+							\end{align*}
 
-						Finding the antiderivative on the right is simple enough using the <span class="vocab">power rule</span> but the antiderivative on the left is more complicated, requiring <span class="vocab">partial fraction decomposition</span> (<span class="vocab">PFD</span>):
+						</li>
+						<li>
+							Finding the antiderivative on the right is simple enough using the <span class="vocab">power rule</span> but the antiderivative on the left is more complicated, requiring <span class="vocab">partial fraction decomposition</span> (<span class="vocab">PFD</span>):
 
-						\begin{align*} 	
-							\frac{1}{(y-1)(y+1)} 
-							= \frac{A}{y-1}+\frac{B}{y+1}		
-							= \frac{(A+B)y+(A-B)}{(y-1)(y+1)} \\	
-						\end{align*}
+							\begin{align*} 	
+								\frac{1}{(y-1)(y+1)} 
+								= \frac{A}{y-1}+\frac{B}{y+1}		
+								= \frac{(A+B)y+(A-B)}{(y-1)(y+1)} \\	
+							\end{align*}
 
-						To make the numerators \( 1 = (A+B)y+(A-B) \) equal, equate the coefficients to obtain the system of equations which we can add to find \(A\)
-						
-						\begin{align*}
-							\left\{
-								\begin{array}{r l}
-									A + B = & 0 \\
-									A - B = & 1 \\
-								\end{array}
-							\right.	
-							=
-							\left\{
-								\begin{array}{r l}
-									B = & -A \\
-									2A = & 1 \\
-								\end{array}
-							\right.	
-							=
-							\left\{
-								\begin{array}{r l}
-									B = & -\frac{1}{2} \\
-									A = & \frac{1}{2} \\
-								\end{array}
-							\right.									 		
-						\end{align*}
+							To make the numerators \( 1 = (A+B)y+(A-B) \) equal, equate the coefficients to obtain the system of equations which we can add to find \(A\)
+							
+							\begin{align*}
+								\left\{
+									\begin{array}{r l}
+										A + B = & 0 \\
+										A - B = & 1 \\
+									\end{array}
+								\right.	
+								=
+								\left\{
+									\begin{array}{r l}
+										B = & -A \\
+										2A = & 1 \\
+									\end{array}
+								\right.	
+								=
+								\left\{
+									\begin{array}{r l}
+										B = & -\frac{1}{2} \\
+										A = & \frac{1}{2} \\
+									\end{array}
+								\right.									 		
+							\end{align*}
 
-						Substituting in these values we can decompose the fraction on the left:
-						
-						\begin{align*} 		
-							\int \frac{1}{(y-1)(y+1)}dy = & - \frac{1}{2}\int x dx \\						
-							\frac{1}{2}\int \frac{1}{y-1}dy - \frac{1}{2}\int \frac{1}{y+1}dy = & -\frac{1}{2}\int x dx \\						
-							\int \frac{1}{\underset{u}{\underbrace{y-1}}} \underset{du}{\underbrace{dy}} -\int \frac{1}{\underset{v}{\underbrace{y+1}}} \underset{dv}{\underbrace{dy}}  = & -\int x dx \\	
-							\int \frac{1}{u}du - \int \frac{1}{v}dv = &  -\int x dx \\
-							\ln \left| u \right| - \ln \left| v \right| = &  -\frac{1}{2} x^2 + k \\
-							\ln \left| \frac{y-1}{y+1} \right| = & -\frac{1}{2}x^2 + k \\	
-							\left| \frac{y-1}{y+1} \right| = & e^k e^{-\frac{1}{2}x^2}								
-						\end{align*}
-						
-						Recall that we assumed \( y(x) \ne 1 \) and \( y(x) \ne -1 \) so the quantity \( (y-1)/(y+1) \) is always positive or always negative in any given interval we are on, therefore we can further simplify and represent this <span class="vocab">one-parameter family</span> by:
+							Substituting in these values we can decompose the fraction on the left:
+							
+							\begin{align*} 		
+								\int \frac{1}{(y-1)(y+1)}dy = & - \frac{1}{2}\int x dx \\						
+								\frac{1}{2}\int \frac{1}{y-1}dy - \frac{1}{2}\int \frac{1}{y+1}dy = & -\frac{1}{2}\int x dx \\						
+								\int \frac{1}{\underset{u}{\underbrace{y-1}}} \underset{du}{\underbrace{dy}} -\int \frac{1}{\underset{v}{\underbrace{y+1}}} \underset{dv}{\underbrace{dy}}  = & -\int x dx \\	
+								\int \frac{1}{u}du - \int \frac{1}{v}dv = &  -\int x dx \\
+								\ln \left| u \right| - \ln \left| v \right| = &  -\frac{1}{2} x^2 + k \\
+								\ln \left| \frac{y-1}{y+1} \right| = & -\frac{1}{2}x^2 + k \\	
+								\left| \frac{y-1}{y+1} \right| = & e^k e^{-\frac{1}{2}x^2}								
+							\end{align*}
+					
+						</li>
+						<li>
+							Recall that we assumed \( y(x) \ne 1 \) and \( y(x) \ne -1 \) so the quantity \( (y-1)/(y+1) \) is always positive or always negative in any given interval we are on, therefore we can further simplify and represent this <span class="vocab">one-parameter family</span> by:
 
-						\begin{align*} 		
-							\frac{y-1}{y+1} =& ce^{-\frac{1}{2}x^2}
-						\end{align*}
+							\begin{align*} 		
+								\frac{y-1}{y+1} =& ce^{-\frac{1}{2}x^2}
+							\end{align*}
 
-						Although this representation is currently implicit, we can solve explicitly for \( y \)
+							Although this representation is currently implicit, we can solve explicitly for \( y \)
 
-						<a id="x1-34r19"></a>
-						\begin{align} 	
-							y-1 = & ce^{-\frac{1}{2}x^2} (y+1) \nonumber \\
-							y-1 = & cye^{-\frac{1}{2}x^2}+ce^{-\frac{1}{2}x^2} \nonumber \\	
-							y-cye^{-\frac{1}{2}x^2} = & 1 + ce^{-\frac{1}{2}x^2} \nonumber \\	
-							y\left(1-ce^{-\frac{1}{2}x^2}\right) = & 1 + ce^{-\frac{1}{2}x^2} \nonumber \\
-							\label {eq:2.2.19} 
-							y = & \frac{1 + ce^{-\frac{1}{2}x^2}}{1-ce^{-\frac{1}{2}x^2}}
-						\end{align}
-						
-					</div>
-					<div class="indent" id="36ee516f-3513-4a39-ab4c-6a6704b071b3">
-						By first identifying the <span class="vocab">constant solutions</span> (<span class="vocab">equilibrium solutions</span>) and then assuming \( y \) was explicitly not equal to those values, we were able to find this <span class="vocab">one-parameter family</span> <a href="#x1-34r19">(2.2.19)</a> to represent all solutions of <a href="#x1-33r18">(2.2.18)</a> which are not identically equal to one or negative one. It turns out that one of the equilibrium solutions, \( y(x)=1 \) is also represented in the one-parameter family when c = 0:
+							<a id="x1-34r19"></a>
+							\begin{align} 	
+								y-1 = & ce^{-\frac{1}{2}x^2} (y+1) \nonumber \\
+								y-1 = & cye^{-\frac{1}{2}x^2}+ce^{-\frac{1}{2}x^2} \nonumber \\	
+								y-cye^{-\frac{1}{2}x^2} = & 1 + ce^{-\frac{1}{2}x^2} \nonumber \\	
+								y\left(1-ce^{-\frac{1}{2}x^2}\right) = & 1 + ce^{-\frac{1}{2}x^2} \nonumber \\
+								\label {eq:2.2.19} 
+								y = & \frac{1 + ce^{-\frac{1}{2}x^2}}{1-ce^{-\frac{1}{2}x^2}}
+							\end{align}
+							<div>
+								By first identifying the <span class="vocab">constant solutions</span> (<span class="vocab">equilibrium solutions</span>) and then assuming \( y \) was explicitly not equal to those values, we were able to find this <span class="vocab">one-parameter family</span> <a href="#x1-34r19">(2.2.19)</a> to represent all solutions of <a href="#x1-33r18">(2.2.18)</a> which are not identically equal to one or negative one. It turns out that one of the equilibrium solutions, \( y(x)=1 \) is also represented in the one-parameter family when c = 0:
 
-						\begin{align*} 	
-							y = & \frac{1 + 0\cdot e^{-\frac{1}{2}x^2}}{1-0\cdot e^{-\frac{1}{2}x^2}} = 1 \\
-						\end{align*}
-						
-						While one of the equilibrium solutions is part of the family, the other equilibrium solution is not. That is, regardless of choice of \( c \) we can never obtain the equilibrium solution \( y(x)=-1 \) from the family, so we call it a <span class="vocab">singular solution</span> and it must be included in the <span class="vocab">general solution</span>:
+								\begin{align*} 	
+									y = & \frac{1 + 0\cdot e^{-\frac{1}{2}x^2}}{1-0\cdot e^{-\frac{1}{2}x^2}} = 1 \\
+								\end{align*}
+								
+								While one of the equilibrium solutions is part of the family, the other equilibrium solution is not. That is, regardless of choice of \( c \) we can never obtain the equilibrium solution \( y(x)=-1 \) from the family, so we call it a <span class="vocab">singular solution</span> and it must be included in the <span class="vocab">general solution</span>:
 
-						\begin{align*} 	
-							y = -1 
-							\quad \quad 
-							y = \frac{1 + ce^{-\frac{1}{2}x^2}}{1-ce^{-\frac{1}{2}x^2}}
-							\\
-						\end{align*}
-					</div>
-					<div class="reading-exercise">
-						Verify \( y = \displaystyle \frac{1 + ce^{-\frac{1}{2}x^2}}{1-ce^{-\frac{1}{2}x^2}} \) is a solution of <a href="#x1-33r18">(2.2.18)</a> by differentiating and substituting
-					</div>  
+								\begin{align*} 	
+									y = -1 
+									\quad \quad 
+									y = \frac{1 + ce^{-\frac{1}{2}x^2}}{1-ce^{-\frac{1}{2}x^2}}
+									\\
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Verify \( y = \displaystyle \frac{1 + ce^{-\frac{1}{2}x^2}}{1-ce^{-\frac{1}{2}x^2}} \) is a solution of <a href="#x1-33r18">(2.2.18)</a> by differentiating and substituting
+							</div>
+						</li>
+					</ol>
 				</details>
 			</div>
 
