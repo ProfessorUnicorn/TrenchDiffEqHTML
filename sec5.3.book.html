@@ -893,33 +893,30 @@
 				</details>
 			</div>
 		</details>
+		<details id="fe31a5a0-4d43-469a-b59b-dde69065c25efaddfdsafdsafs555fdafdaa">
+			<summary>Exponentials</summary>
 
-		<details id="fe31a5a0-4d43-469a-b59b-dde69065c25efaddfdsafdsafsfdafdaa">
-			<summary>Sines and Cosines</summary>
 
-
-			<!--Example 5-->
+			<!--Example 6-->
 			<div class="example" id="example-5" style="--ex-number: 5">
-				<ol>
-					<li>
-						Find a particular solution
-						\begin {equation*} 
-							\frac{d^2y}{dx^2} + \frac{dy}{dx} = -8 \cos 2x + 6 \sin 2x
-						\end {equation*} 
-					</li>
-					<li>
-						Find a particular solution
-						\begin {equation*} 
-							\frac{d^2y}{dx^2} + \frac{dy}{dx} = 4x^3
-						\end {equation*} 
-					</li>
-					<li>
-						Use the principle of superposition to find a particular solution for
-						\begin {equation*} 
-							\frac{d^2y}{dx^2} + \frac{dy}{dx} = 4x^3 -8 \cos 2x + 6 \sin 2x
-						\end {equation*} 
-					</li>
-				</ol>
+				<div>
+					Given the differential equation
+					\begin {equation*} 
+						\frac{d^2y}{dx^2} + 5\frac{dy}{dx} - 6 y = 6e^{3x}
+					\end {equation*} 
+
+					<ol>
+						<li>
+							Solve the complementary equation
+						</li>	
+						<li>
+							Find a particular solution
+						</li>
+						<li>
+							Find the general solution
+						</li>
+					</ol>						
+				</div>	
 
 				<details class="solution">
 					<summary>Solution</summary>
@@ -929,72 +926,174 @@
 							<div>
 								Solve the complementary equation
 								\[
-									x^2 \frac{d^2y}{dx^2}+x \frac{dy}{dx}-4y = 0
+								\frac{d^2y}{dx^2} + 5\frac{dy}{dx} - 6 y = 0
 								\]
 							</div>	
-							<div>
-								Although we don't have methods to solve this equation yet since we have only solved constant coefficient equations so far, we did already verify the solutions to this equation in Example <a href="sec5.1.book.html#x1-233" target=_blank>5.1.3<a> so we already have a fundamental set of solutions:
-								\[
-									\{y_1,y_2\} = \left\{x^2, \frac{1}{x^2} \right\}
-								\]
-							</div>	
-
-						</li>	
-						<li>
-							<div>
-								Now we will try to find a particular solution for <a href="#x1-25r13">(5.3.13)</a> by guessing a solution based on the forcing function
-								\[
-									x^2 \frac{d^2y}{dx^2}+x \frac{dy}{dx}-4y 
-										= \underset{f(x)}{\underbrace{2x^4}} 
-								\]
-							</div>	
-							<div>
-								Since the forcing function \( f(x) = 2x^4 \) is a power function, we will guess an arbitrary power function of the same power
-								\[
-									y = Ax^4
-								\]
-							</div>
 							<div class="reading-exercise">
-								Differentiate \( y = Ax^4 \) twice
-							</div> 
-
-							<div>	
-								After differentiating we obtain \( dy/dx = 4Ax^3 \) and \(d^2y/dx^2 = 12Ax^2 \) which we substitute into the nonhomogeneous equation <a href="#x1-19r10">(5.3.10)</a> 
-								\begin{align*}
-									x^2 \frac{d^2y}{dx^2} + x \frac{dy}{dx}-4y = & 2x^4 \\
-									x^2 \overset{\frac{d^2y}{dx^2} }{\overbrace{\Big( 12Ax^2 \Big)}} + x \overset{\frac{dy}{dx} }{\overbrace{\Big( 4Ax^3 \Big)}} -4  \overset{y }{\overbrace{\Big( Ax^4 \Big)}} = & 2x^4 \\
-									\big( 12A \big) x^4 + \underbrace{\big(4A \big) x^4 - \big(4A \big)x^4} = & 2x^4 \\
-									\big(12A\big)x^4 = & 2x^4 \\
-									A \, x^4 = & \frac{1}{6}x^4 \\
-								\end{align*}
-							</div>			
+								Differentiate and substitute \( y = e^{rx} \) to find and solve the characteristic equation
+							</div> 	
+							<div>
+								We obtain the characteristic equation
+								\[
+									r^2 +5r - 6 = 0
+								\]
+								
+							</div>	
 						
-							<div>	
-								Again equating the coefficients we obtain \(A=1/6\) and
-								substituting the value in the arbitrary power function \( y = Ax^4 \) to obtain the particular solution
+							<div class="reading-exercise">
+								Use the method in Example <a href="sec5.2.book.html#x1-51" target=_blank>5.2.1</a> to find a fundamental set of solutions  
+							</div> 
+
+							<div>
+								Solving the characteristic equation we obtain a fundamental set of solutions
 								\[
-									y = \frac{1}{6} x^4
+									y_1 = e^x
+									\quad
+									y_2 = e^{-6x}
 								\]
 							</div>	
-
-							<div class="reading-exercise">
-								Verify \( y = \frac{1}{6} x^4 \) is a solution of <a href="#x1-25r13">(5.3.13)</a>
-							</div> 
 
 						</li>
 
 						<li>
 							<div>
-								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \left\{x^2, \frac{1}{x^2} \right\} \) and a particular solution to the nonhomogeneous equation \( y_p = \frac{1}{6} x^4 \), then we can use Theorem&nbsp;<a href="#x1-52">5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
+								Now we will try to find a particular solution for the nonhomogeneous equation by guessing a solution based on the forcing function
 								\[
-									y = \frac{1}{6} x^4 + c_1 x^2 + \frac{c_2}{x^2} 
+									\frac{d^2y}{dx^2} + 5\frac{dy}{dx} - 6 y 
+										= \underset{f(x)}{\underbrace{6e^{3x}}} 
+								\]
+							</div>	
+							<div>
+								Since the forcing function \( f(x) = 6e^{3x} \) is an exponential function linearly independent from the complementary solutions, we can guess an exponential function with the same argument \(3x\)
+								\[
+									y = Ae^{3x}
 								\]
 							</div>
 							<div class="reading-exercise">
-								Find the domain of \(y = \frac{1}{6} x^4 + c_1 x^2 + \frac{c_2}{x^2}\)
+								Differentiate \( Ae^{3x} \) twice
+							</div> 
+
+							<div>	
+								After differentiating we obtain \( dy/dx = 3A e^{3x} \) and \(d^2y/dx^2 =  9A e^{3x} \) which we substitute into the nonhomogeneous equation  
+								\begin{align*}
+								\frac{d^2y}{dx^2} + 5\frac{dy}{dx} - 6 y = & 6e^{3x} \\
+									\overset{\frac{d^2y}{dx^2} }{\overbrace{\Big( 9A e^{3x} \Big)}} + 5 \overset{\frac{dy}{dx} }{\overbrace{\Big( 3A e^{3x} \Big)}} - 6 \overset{y }{\overbrace{\Big( Ae^{3x} \Big)}} = & 6e^{3x}  \\
+									\big( 9A \big) e^{3x} + \big( 15A \big) e^{3x} - \big( 6A \big) e^{3x} = & 6e^{3x} \\
+									\big( 18A \big) e^{3x} = & 6e^{3x} \\
+									A \, e^{3x} = & \frac{1}{3}e^{3x} \\
+								\end{align*}
+
+								Again equating the coefficients we obtain \( A = \frac{1}{3} \) and substituting the value in the arbitrary exponential function \( y = Ae^{3x} \) to obtain the particular solution 
+
+								\[
+									y = \frac{1}{3}e^{3x}
+								\]
+
+
+							</div>	
+							<div class="reading-exercise">
+								Verify \( y = \frac{1}{3}e^{3x} \) is a particular solution of \( \frac{d^2y}{dx^2} + 5\frac{dy}{dx} - 6 y = 6e^{3x} \)
 							</div> 
 						</li>
-					</ol>	
+
+						<li>
+							<div>
+								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \{ e^x, e^{6x} \}\) and a particular solution to the nonhomogeneous equation \( y_p = \frac{1}{3}e^{3x} \), then we can use Theorem&nbsp;<a href="#x1-52">5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
+								\[
+									y = \frac{1}{3}e^{3x} + c_1 e^x + c_2 e^{6x}
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \( y = \frac{1}{3}e^{3x} + c_1 e^x + c_2 e^{6x} \) is a solution of \( \frac{d^2y}{dx^2} + 5\frac{dy}{dx} - 6 y = 6e^{3x} \)
+							</div> 
+						</li>
+					</ol>
+
+				</details>
+			</div>
+		</details>	
+
+
+		<details id="fe31a5a0-4d43-469a-b59b-dde69065c25efaddfdsafdsafsfdafdaa">
+			<summary>Sines and Cosines</summary>
+
+
+			<!--Example 6-->
+			<div class="example" id="ex-6" style="--ex-number: 6">
+				<div>
+					Find a particular solution
+					\begin {equation*} 
+						\frac{d^2y}{dx^2} + \frac{dy}{dx} = -8 \cos 2x + 6 \sin 2x
+					\end {equation*} 
+				</div>	
+
+				<details class="solution">
+					<summary>Solution</summary>
+
+					<div>
+						Notice that the forcing function consists of sines and cosines
+					
+						\[
+							\frac{d^2y}{dx^2} + \frac{dy}{dx} = 
+								\underset{f(x)}{\underbrace{-8 \cos 2x + 6 \sin 2x}} 
+						\]
+
+						Thus we will guess a linear combination of of sine and cosine of the same argument as a particular solution:
+						\[
+							y = A \cos 2x + B \sin 2x
+						\]
+						Differentiating:
+						\[
+							\frac{dy}{dx} = -2A \sin 2x + 2B \cos 2x
+						\]
+						Differentiating again:
+						\[
+							\frac{d^2y}{dx^2} = -4A \cos 2x - 4B \sin 2x
+						\]
+					</div>	
+
+					<div>
+						Substituting back into the equation:
+						\begin{array}{rlrr}
+								\displaystyle \frac{d^2y}{dx^2} & = & -4A \, \cos 2x & -4B \, \sin 2x \\
+								+ \quad\quad
+								\displaystyle\frac{dy}{dx} 	  & = & 2B \, \cos 2x & -2A \, \sin 2x \\
+								\hline
+								\underset{f(x)}{
+								\underbrace{\displaystyle\frac{d^2y}{dx^2} + \frac{dy}{dx}}} 
+												  & = & \underset{-8}{\underbrace{(-4A+2B)}} \, \cos 2x & +  \underset{6}{\underbrace{(-2A-4B)}} \, \sin 2x \\							  
+						\end{array}
+
+						Now equating the result with the forcing function \( f(x) = -8 \cos 2x + 6 \sin 2x\) we obtain a system of equations:
+							\begin{align*}
+								\left\{
+								\begin{array}{rlr}
+									-4A+2B	&=& -8 \\	
+									-2A-4B	&=& 6 \\				  
+								\end{array}
+								\right.
+							\end{align*}	
+
+						Which we can solve by multiplying the first equation by two and then adding the equations together to obtain \(A\)
+						\begin{align*}
+								\begin{array}{rlr}
+									-8A+4B	&=& -16 \\	
+									+ \quad\quad
+									-2A-4B	&=& 6 \\	
+									\hline	
+									-10A	&=& -10 \\	
+									A	&=& 1 \\		  
+								\end{array}
+							\end{align*}
+
+						And finally substituting \(A=1\) back in to either equation we can obtain \(B=-2\) so we have the particular solution:
+						\[
+							y = \cos 2x -2 \sin 2x
+						\]
+					</div>
+					<div class="reading-exercise">
+						Verify \( y = \cos 2x -2 \sin 2x \) is a solution of \(\frac{d^2y}{dx^2} + \frac{dy}{dx} = -8 \cos 2x + 6 \sin 2x\) 
+					</div> 	
 
 				</details>
 			</div>
