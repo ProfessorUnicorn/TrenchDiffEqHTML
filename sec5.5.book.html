@@ -911,104 +911,626 @@
 
 			<!--Example 5-->
 			<div class="example" id="x1-235" style="--ex-number: 5">
-				<div> 
-					<a id="x1-24r16"></a> Find a particular solution of 
+	
+				<div>
+					Given the differential equation
+					<a id="x1-24r16"></a>
 					\begin {equation} \label {eq:5.5.16}
-						\frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y= \left [2\cos 3x-(34-150x)\sin 3x\right ] e^{-2x}
+						\frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y= \big[2\cos 3x+(150x-34)\sin 3x\big] e^{-2x}
 					\end {equation} 
-				</div>
+				</div>	 
+
+				<ol>
+					<li>
+						Solve the complementary equation
+					</li>	
+					<li>
+						Find a particular solution
+					</li>
+					<li>
+						Find the general solution
+					</li>
+				</ol>	
 
 				<details class="solution">
 					<summary>Solution</summary>
-					Let \(y=ue^{-2x}\). Then
 
-					<div class="eqnarray" id="0582c59d-cde5-4f21-8d0f-f7dde43e22be">
-						\begin {eqnarray*}
-							\frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y&amp;=&amp;e^{-2x}\left [(\frac{d^2u}{dx^2}-4\frac{du}{dx}+4u)-3(\frac{du}{dx}-2u)+2u\right ]\\ &amp;=&amp;e^{-2x}(\frac{d^2u}{dx^2}-7\frac{du}{dx}+12u)\\ &amp;=&amp; e^{-2x}\left [2\cos 3x-(34-150x)\sin 3x\right ] 
-						\end {eqnarray*} 
-					</div>
+					<ol>
+						<li>
+							<div>
+								Solve the complementary equation
+								\begin {equation*}  
+									\frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y = 0
+								\end {equation*}
+							</div>	
+							<div class="reading-exercise">
+								Find the characteristic equation
+							</div> 	
+						
+							<div class="reading-exercise">
+								Use the method in Example <a href="sec5.2.book.html#x1-51" target=_blank>5.2.1</a> to find a fundamental set of solutions  
+							</div> 
 
-					if 
-					\begin {equation} \label {eq:5.5.17} \frac{d^2u}{dx^2}-7\frac{du}{dx}+12u=2\cos 3x-(34-150x)\sin 3x 
-					\end {equation}
-					<a id="x1-25r17"></a>
-					Since \(\cos 3x\) and \(\sin 3x\) aren’t solutions of the complementary equation \[ \frac{d^2u}{dx^2}-7\frac{du}{dx}+12u=0\] Theorem&nbsp;<a href="#x1-41">5.5.1</a> tells us to look for a particular solution of <a href="#x1-25r17">(5.5.17)</a> of the form 
-					\begin {equation} \label {eq:5.5.18} u_p=(A_0+A_1x)\cos 3x +(B_0+B_1x)\sin 3x 
-					\end {equation}
-					<a id="x1-26r18"></a>
-					Then
+							<div>
+								Solving the characteristic equation we obtain a fundamental set of solutions
+								\[
+									y_1 = e^x
+									\quad
+									y_2 = e^{2x}
+								\]
+							</div>	
+						</li>	
 
-					<div class="eqnarray" id="ba499976-ea52-4a88-8893-a8657b414b41">
-						\begin {eqnarray*}
-							\frac{du_p}{dx}&amp;=&amp;(A_1+3B_0+3B_1x)\cos 3x+(B_1-3A_0-3A_1x)\sin 3x\\ \text {and} \frac{d^2u_p}{dx^2}&amp;=&amp;(-9A_0+6B_1-9A_1x)\cos 3x-(9B_0+6A_1+9B_1x)\sin 3x 
-						\end {eqnarray*} 
-					</div>
+						<li>
+							<div>
+								Now we will try to find a particular solution for the nonhomogeneous equation by guessing a solution based on the forcing function
+								\[
+									\frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y
+										= \underset{f(x)}{\underbrace{\big[2\cos 3x+(150x-34)\sin 3x\big] e^{-2x}}} 
+								\]
+							</div>	
+							<div>
+								We start by identifying the forcing function \( f(x) = \big[2\cos 3x(150x-34)\sin 3x\big] e^{-2x} \) to help us formulate a reasonable guess for a solution. Since there is an exponential factor, we will first use the method of seeking solutions of the form \( y = u e^{-2x} \) where \(u\) is a function to be determined.
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \( y = u e^{-2x} \) twice
+							</div> 
+							<div>
+								Differentiating we obtain:
+								\begin{align*}
+										\frac{dy}{dx} = & \frac{du}{dx} e^{-2x} - 2u e^{-2x} \\
+										\frac{d^2y}{dx^2} = & \frac{d^2u}{dx^2} e^{-2x} -4 \frac{du}{dx} e^{-2x} + 4u e^{-2x} \\
+								\end{align*}
+							</div> 
+							<div>
+								Substituting into the nonhomogeneous equation <a href="#x1-24r16">(5.5.16)</a> 
 
-					<div class="eqnarray" id="1f20d599-cc56-46f3-9ba7-7a6b8968d8d6">
-						\begin {eqnarray*}
-							\frac{d^2u_p}{dx^2}-7\frac{du_p}{dx}+12u_p&amp;=&amp;\left [3A_0-21B_0-7A_1+6B_1+(3A_1-21B_1)x\right ]\cos 3x\\ &amp;&amp;+\left [21A_0+3B_0-6A_1-7B_1+(21A_1+3B_1)x\right ]\sin 3x 
-						\end {eqnarray*} 
-					</div>
+								\begin{array}{rrrrr}
+									\displaystyle
+									\frac{d^2y}{dx^2} 
+										&=&  \displaystyle \frac{d^2u}{dx^2} e^{-2x} -4 \frac{du}{dx} e^{-2x} + 4u e^{-2x}  \\	
+									\displaystyle
+									-3 \frac{dy}{dx} 
+										&=&   \displaystyle -3 \frac{du}{dx} e^{-2x} + 6 u e^{-2x} \\		
+									+ \quad\quad\quad\quad\quad   2 y
+										&=&  + \, 2u e^{-2x} & \\	
+									\hline	
+									\underbrace{
+									\displaystyle
+									\frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y}
+										&& & \\		
+									\big[2\cos 3x+(150x-34)\sin 3x\big] e^{-2x}
+									&=& \displaystyle \frac{d^2u}{dx^2} e^{-2x} -7 \frac{du}{dx} e^{-2x} + 12u e^{-2x} & \\			
+								\end{array}
+							</div>
+							<br> 
+							<div>
+								Cancelling the \( e^{-2x} \) factor we obtain the following equation
+								<a id="x1-12r17"></a>
+								\begin{align}
+									\frac{d^2u}{dx^2} -7 \frac{du}{dx} + 12u 
+										= 2\cos 3x+(150x-34)\sin 3x
+								\end{align}
 
-					Comparing the coefficients of \(x\cos 3x\), \(x\sin 3x\), \(\cos 3x\), and \(\sin 3x\) here with the corresponding coefficients on the right side of
-					<a href="#x1-25r17">(5.5.17)</a> shows that \(u_p\) is a solution of <a href="#x1-25r17">(5.5.17)</a> if \begin {equation} \label {eq:5.5.19} 
-					\begin {array}{rcr} 3A_1-21B_1&amp;=&amp;0\phantom {.}\\ 21A_1+\phantom {2}3B_1&amp;=&amp;150\phantom {.}\\ 3A_0-21B_0-7A_1+\phantom {2}6B_1&amp;=&amp;\phantom {-3}2\phantom {.}\\ 21A_0+\phantom {2}3B_0-6A_1-\phantom {5}7B_1&amp;=&amp;-34 
-					\end {array} \end {equation}
-					<a id="x1-27r19"></a>
-					Solving the first two equations yields \(A_1=7\), \(B_1=1\). Substituting these values into the last two equations of <a href="#x1-27r19">(5.5.19)</a> yields
+							</div> 
+							<div>
+								Now we can solve this using the same method as Example&nbsp;<a href="#x1-113">5.5.3</a>
+							</div>  
+							<div>
+								We start by solving the completementary equation
+								\begin {equation*}  
+									\frac{d^2u}{dx^2} -7 \frac{du}{dx} + 12u = 0 
+								\end {equation*}
+							</div>	
+							<div class="reading-exercise">
+								Find the characteristic equation
+							</div> 	
+						
+							<div class="reading-exercise">
+								Use the method in Example <a href="sec5.2.book.html#x1-51" target=_blank>5.2.1</a> to find a fundamental set of solutions  
+							</div> 
 
-					<div class="eqnarray" id="9ec9a192-514d-4e4a-b454-e17a4a087443">
-						\begin {eqnarray*}
-							\phantom {2}3A_0-21B_0&amp;=&amp;\phantom {-3}2+7A_1-6B_1=45\phantom {.}\\ 21A_0+\phantom {2}3B_0&amp;=&amp;-34+6A_1+7B_1=15 
-						\end {eqnarray*} 
-					</div>
+							<div>
+								Solving the characteristic equation we obtain a fundamental set of solutions
+								\[
+									u_1 = e^{3x}
+									\quad
+									u_2 = e^{4x}
+								\]
+							</div>
+							<div>
+								Now we will try to find a particular solution for the nonhomogeneous equation by guessing a solution based on the forcing function
+								\[
+									\frac{d^2u}{dx^2} -7 \frac{du}{dx} + 12u 
+										= \underset{f(x)}{\underbrace{2\cos 3x+(150x-34)\sin 3x}} 
+								\]
+							</div>	
+							<div>
+								We start by identifying the forcing function \( f(x) = 2\cos 3x+(150x-34)\sin 3x \) to help us formulate a reasonable guess for a solution. Our guess will include both a linear coefficient and a constant coefficient for each function:
+								<a id="x1-12r18"></a>
+								\begin{align}
+									u =  \big( Ax + B \big) \cos 3x + \big( Cx + D \big)\sin 3x
+								\end{align}
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \( u =  \big(Ax + B \big) \cos 3x + \big( Cx + D \big)\sin 3x \) twice
+							</div> 
+							<div>
+								Differentiating we obtain:
+								\begin{align*}
+									\frac{du}{dx} = &  \big( 3Cx + A + 3D \big) \cos x + \big( -3Ax - 3B + C \big)\sin x \\ \nonumber\\
+									\frac{d^2u}{dx^2} = &  \big( -9Ax - 9B + 6C \big) \cos x + \big( -9Cx - 6A - 9D \big)\sin x \\
+								\end{align*}
+							</div> 
+							<div>
+								Substituting into the nonhomogeneous equation <a href="#x1-12r17">(5.5.17)</a> 
 
-					Solving this system yields \(A_0=1\), \(B_0=-2\). Substituting \(A_0=1\), \(A_1=7\), \(B_0=-2\), and \(B_1=1\) into <a href="#x1-26r18">(5.5.18)</a> shows that \[ u_p=(1+7x)\cos 3x-(2-x)\sin 3x \] is a particular solution of <a href="#x1-25r17">(5.5.17)</a>. Therefore \[ y_p=e^{-2x}\left [(1+7x)\cos 3x-(2-x)\sin 3x\right ] \] is a particular solution of <a href="#x1-24r16">(5.5.16)</a>.
+								\begin{array}{rrrrr}
+									\displaystyle
+									\frac{d^2y}{dx^2} 
+										&=& {\small \big( -9Ax - 9B + 6C \big)} \cos x & + {\small \big( -9Cx - 6A - 9D \big)}\sin x & \\
+									- 7 \displaystyle \frac{dy}{dx} 
+										&=& {\small  \big( -21Cx - 7A - 21D \big)} \cos x & + {\small \big( 21Ax + 21B - 7C \big)}\sin x & \\	
+									+ \quad\quad\quad\quad\quad   12y
+										&=& {\small \big( 12Ax + 12B \big)} \cos x & + {\small \big( 12Cx + 12D \big)}\sin x & \\	
+									\hline	
+									\underbrace{
+									\displaystyle
+									\frac{d^2y}{dx^2} - 7 \frac{dy}{dx}  + 12y}
+										&& & \\		
+									2\cos 3x+(150x-34)\sin 3x
+										& \\			
+								\end{array}
+							</div>
+							<br>
+							<div>
+								Now adding up the cosines on the right we get
+								\[
+									{\small \Big[\big( 3A - 21C \big)x+ \big( -7A + 3B + 6C - 21D \big) \Big]}  \cos x 
+								\]
+								Now adding up the sines on the right we get
+								\[
+									{\small \Big[\big( 21A + 3C \big)x+ \big( -6A + 21B - 7C + 3D \big) \Big]}  \sin x 
+								\]
+								And equating with the terms on the left we have
+								\[
+									2\cos 3x={\small \Big[\overset{0}{\overbrace{\big(  3A - 21C \big)}}x+ \overset{2}{\overbrace{\big( -7A + 3B + 6C - 21D \big)} \Big]}}  \cos x 
+								\]
+								\[
+									(150x-34)\sin 3x = {\small \Big[\underset{150}{\underbrace{\big( 21A + 3C \big)}}x+ \underset{-34}{\underbrace{\big( -6A + 21B - 7C + 3D  \big)}} \Big]}  \sin x 
+								\]
+
+								Thus we obtain the system of equations
+
+								\begin{align*}
+								\left\{
+									\begin{array}{r r r}
+										-6A + 21B - 7C + 3D &=& -34 \\
+										-7A + 3B + 6C - 21D &=& 2 \\
+										21A + 3C &=& 150 \\
+										3A - 21C &=& 0 \\
+									\end{array}
+								\right.			
+								\end{align*}
+							</div> 	
+							<div class="reading-exercise">
+								Solve \( \left\{
+									\begin{array}{r r r}
+										21A + 3C &=& 150 \\
+										3A - 21C &=& 0 \\
+									\end{array}
+								\right.	\quad \) for \(A\) and \(C\)
+							</div> 	
+							<div>	
+								Which we can solve the last two:
+
+								\begin{align*}
+								\left\{
+									\begin{array}{r r r}
+										21A + 3C &=& 150 \\
+										3A - 21C &=& 0 \\
+									\end{array}
+								\right.			
+								\longrightarrow
+								\left\{
+									\begin{array}{r r r}
+										A &=& 7 \\
+										C &=& 1 \\
+									\end{array}
+								\right.	
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Substitute the values for \(A\) and \(C\) in to \(
+								\left\{
+									\begin{array}{r r r}
+										-6A + 21B - 7C + 3D &=& -34 \\
+										-7A + 3B + 6C - 21D &=& 2 \\
+									\end{array}
+								\right.		 \)
+							</div> 
+							<div class="reading-exercise">
+								Solve for \(B\) and \(D\)
+							</div> 
+							<div>
+								Substituting in \(A=2\) and \(C=6\) we obtain:
+								\begin{align*}
+								\left\{
+									\begin{array}{r r r}
+										-6\cdot 7 + 21B - 7\cdot 1 + 3D &=& -34 \\
+										-7 \cdot 7 + 3B + 6\cdot 1 - 21D &=& 2 \\
+									\end{array}
+								\right.		
+								\longrightarrow
+								\left\{
+									\begin{array}{r r r}
+										21B + 3D &=& 15 \\
+										3B - 21D &=& 45 \\
+									\end{array}
+								\right.	
+								\longrightarrow
+								\left\{
+									\begin{array}{r r r}
+										B &=& 1 \\
+										D &=& -2 \\
+									\end{array}
+								\right.		
+								\end{align*}
+							</div> 
+							<br>
+							<br>
+							<div>	
+								So we can finally substitute  \(A,\)\(B,\) \(C\) and \(D\) back in \( u =  \big( Ax + B \big) \cos 3x + \big( Cx + D \big)\sin 3x\) to get our particular solution 
+
+								\begin{align*}
+									u =  \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x
+								\end{align*}
+
+							</div>
+							
+							<div class="reading-exercise">
+								Verify \( u =  \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \) is a solution of <a href="#x1-12r17">(5.5.17)</a>
+							</div> 																								 
+
+							<div>
+								Now we can substitute \(u\) back to determine our particular solution \(y = ue^{-2x}\)
+								\[
+									y =  \Big[ \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \Big] \, e^{-2x}
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \( y =  \Big[ \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \Big] \, e^{-2x} \) is a solution of <a href="#x1-24r16">(5.5.16)</a>
+							</div> 	
+							
+						</li>
+						<li>
+							<div>
+								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \{ e^x, e^{2x}\}\) and a particular solution to the nonhomogeneous equation \( y_p =\Big[ \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \Big] \, e^{-2x} \), then we can use Theorem&nbsp;<a href="sec5.3.book.html#x1-52" target=_blank>5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
+								\begin{align*}
+									y =   \Big[ \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \Big] \, e^{-2x} + c_1 e^x + c_2 e ^{2x}
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Verify \(y = \Big[ \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \Big] \, e^{-2x} + c_1 e^x + c_2 e ^{2x}\) is a solution of <a href="#x1-24r16">(5.5.16)</a>
+							</div> 
+						</li>	 
+					</ol>
 				</details>
+
 			</div>
 
 			<!--Example 6-->
 			<div class="example" id="x1-286" style="--ex-number: 6">
 				<div> 
-					<a id="x1-29r20"></a> Find a particular solution of 
-					\begin {equation} \label {eq:5.5.20} 
-						\frac{d^2y}{dx^2}+2\frac{dy}{dx}+5y=\left [(6-16x)\cos 2x-(8+8x)\sin 2x\right ] \, e^{-x} 
+				<div>
+					Given the differential equation
+					<a id="x1-29r20"></a>
+					\begin {equation} \label {eq:5.5.20}
+						\frac{d^2y}{dx^2}+2\frac{dy}{dx}+5y= \big[(6-16x)\cos 2x-(8x + 8)\sin 2x \big] \, e^{-x} 
 					\end {equation} 
-				</div>
+				</div>	 
+
+				<ol>
+					<li>
+						Solve the complementary equation
+					</li>	
+					<li>
+						Find a particular solution
+					</li>
+					<li>
+						Find the general solution
+					</li>
+				</ol>	
 
 				<details class="solution">
 					<summary>Solution</summary>
-					Let \(y=ue^{-x}\). Then
-					<div class="eqnarray" id="ae42018a-d05a-44f4-8b0b-de2b45f50976">
-						\begin {eqnarray*}
-							\frac{d^2y}{dx^2}+2\frac{dy}{dx}+5y&amp;=&amp;e^{-x}\left [(\frac{d^2u}{dx^2}-2\frac{du}{dx}+u)+2(\frac{du}{dx}-u)+5u\right ]\\ &amp;=&amp;e^{-x}(\frac{d^2u}{dx^2}+4u)\\ &amp;=&amp; e^{-x}\left [(6-16x)\cos 2x-(8+8x)\sin 2x\right ] 
-						\end {eqnarray*} 
-					</div>
-					<a id="x1-30r21"></a>
-					if 
-					\begin {equation} \label {eq:5.5.21} \frac{d^2u}{dx^2}+4u=(6-16x)\cos 2x-(8+8x)\sin 2x 
-					\end {equation} Since \(\cos 2x\) and \(\sin 2x\) are solutions of the complementary equation \[ \frac{d^2u}{dx^2}+4u=0\] Theorem&nbsp;<a href="#x1-41">5.5.1</a> tells us to look for a particular solution of <a href="#x1-30r21">(5.5.21)</a> of the form \[ u_p=(A_0x+A_1x^2)\cos 2x+(B_0x+B_1x^2)\sin 2x\] Then
 
-					<div class="eqnarray" id="df703f15-9a6b-4988-a50c-a2ebf1df3462">
-						\begin {eqnarray*}
-							\frac{du_p}{dx}&amp;=&amp;\left [A_0+(2A_1+2B_0)x+2B_1x^2\right ]\cos 2x \\ &amp;&amp; +\left [B_0+(2B_1-2A_0)x-2A_1x^2\right ]\sin 2x\\ \text {and} \frac{d^2u_p}{dx^2}&amp;=&amp;\left [2A_1+4B_0-(4A_0-8B_1)x-4A_1x^2\right ]\cos 2x\\ &amp;&amp; +\left [2B_1-4A_0-(4B_0+8A_1)x-4B_1x^2\right ]\sin 2x 
-						\end {eqnarray*} 
-					</div>
+					<ol>
+						<li>
+							<div>
+								Solve the complementary equation
+								\begin {equation*}  
+									\frac{d^2y}{dx^2}+2\frac{dy}{dx}+5y = 0
+								\end {equation*}
+							</div>	
+							<div class="reading-exercise">
+								Find the characteristic equation
+							</div> 	
+						
+							<div class="reading-exercise">
+								Use the method in Example <a href="sec5.2.book.html#x1-233" target=_blank>5.2.3</a> to find a fundamental set of solutions  
+							</div> 
 
-					so \[ \frac{d^2u_p}{dx^2}+4u_p=(2A_1+4B_0+8B_1x)\cos 2x+(2B_1-4A_0-8A_1x)\sin 2x\] Equating the coefficients of \(x\cos 2x\), \(x\sin 2x\), \(\cos 2x\), and \(\sin 2x\) here with the corresponding coefficients on the right side of
-					<a href="#x1-30r21">(5.5.21)</a> shows that \(u_p\) is a solution of <a href="#x1-30r21">(5.5.21)</a> if \begin {equation} \label {eq:5.5.22} 
-					\begin {array}{rcr} 8B_1&amp;=&amp;-16\phantom {.}\\ -8A_1&amp;=&amp;-\phantom {1}8\phantom {.}\\ \phantom {-}4B_0+2A_1&amp;=&amp;6\phantom {.}\\ -4A_0+2B_1&amp;=&amp;-8 
-					\end {array} \end {equation}
-					<a id="x1-31r22"></a>
-					The solution of this system is \(A_1=1\), \(B_1=-2\), \(B_0=1\), \(A_0=1\). Therefore \[ u_p=x[(1+x)\cos 2x+(1-2x)\sin 2x] \] is a particular solution of <a href="#x1-30r21">(5.5.21)</a>, and \[ y_p=xe^{-x}\left [(1+x)\cos 2x+(1-2x)\sin 2x\right ] \] is a particular solution of <a href="#x1-29r20">(5.5.20)</a>.
+							<div>
+								Solving the characteristic equation we obtain a fundamental set of solutions
+								\[
+									y_1 = e^{-x} \cos 2x
+									\quad
+									y_2 = e^{-x} \sin 2x
+								\]
+							</div>	
+						</li>	
+
+						<li>
+							<div>
+								Now we will try to find a particular solution for the nonhomogeneous equation by guessing a solution based on the forcing function
+								\[
+									\frac{d^2y}{dx^2}+2\frac{dy}{dx}+5y= 
+										\underset{f(x)}{\underbrace{\big[(6-16x)\cos 2x-(8x+8)\sin 2x \big] \, e^{-x}}} 
+								\]
+							</div>	
+							<div>
+								We start by identifying the forcing function \( f(x) = \big[(6-16x)\cos 2x-(8x+8)\sin 2x \big] \, e^{-x} \) to help us formulate a reasonable guess for a solution. Since there is an exponential factor, we will first use the method of seeking solutions of the form \( y = u e^{-x} \) where \(u\) is a function to be determined.
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \( y = u e^{-x} \) twice
+							</div> 
+							<div>
+								Differentiating we obtain:
+								\begin{align*}
+										\frac{dy}{dx} = & \frac{du}{dx} e^{-x} - u e^{-x} \\
+										\frac{d^2y}{dx^2} = & \frac{d^2u}{dx^2} e^{-x} -2 \frac{du}{dx} e^{-x} + u e^{-x} \\
+								\end{align*}
+							</div> 
+							<div>
+								Substituting into the nonhomogeneous equation <a href="#x1-24r16">(5.5.16)</a> 
+
+								\begin{array}{rrrrr}
+									\displaystyle
+									\frac{d^2y}{dx^2} 
+										&=&  \displaystyle\frac{d^2u}{dx^2} e^{-x}& -2  \displaystyle \frac{du}{dx} e^{-x}&  + \,  u e^{-x}&  \\	
+									\displaystyle
+									+2 \frac{dy}{dx} 
+										&=&  & 2\displaystyle\frac{du}{dx} e^{-x}& - 2u e^{-x}& \\		
+									+ \quad\quad\quad\quad\quad   5 y
+										&=& & & + \, 5u e^{-x}&  & \\	
+									\hline	
+									\underbrace{
+									\displaystyle
+									\frac{d^2y}{dx^2}+2\frac{dy}{dx}+5y}
+										&& & \\		
+									\big[(6-16x)\cos 2x-(8x+8)\sin 2x\big] e^{-x}
+									&=& \displaystyle \frac{d^2u}{dx^2} e^{-x} & &+ 4u e^{-x} & \\			
+								\end{array}
+							</div>
+							<br> 
+							<div>
+								Cancelling the \( e^{-x} \) factor we obtain the following equation
+								<a id="x1-12r17"></a>
+								\begin{align}
+									\frac{d^2u}{dx^2}  + 4u  
+										= (6-16x)\cos 2x-(8x+8)\sin 2x
+								\end{align}
+
+							</div>  
+							<div>
+								We start by solving the completementary equation
+								\begin {equation*}  
+									\frac{d^2u}{dx^2}  + 4u = 0 
+								\end {equation*}
+							</div>	
+							<div class="reading-exercise">
+								Find the characteristic equation
+							</div> 	
+						
+							<div class="reading-exercise">
+								Use the method in Example <a href="sec5.2.book.html#x1-51" target=_blank>5.2.1</a> to find a fundamental set of solutions  
+							</div> 
+
+							<div>
+								Solving the characteristic equation we obtain a fundamental set of solutions
+								\[
+									u_1 = \cos 2x
+									\quad
+									u_2 = \sin 2x
+								\]
+							</div>
+							<div>
+								Now we will try to find a particular solution for the nonhomogeneous equation by guessing a solution based on the forcing function
+								\[
+									\frac{d^2u}{dx^2}  + 4u  
+										= \underset{f(x)}{\underbrace{(6-16x)\cos 2x-(8x+8)\sin 2x}} 
+								\]
+							</div>	
+							<div>
+								We start by identifying the forcing function \( f(x) = (6-16x) \cos 2x - (8x+8)\sin 2x \) to help us formulate a reasonable guess for a solution. We might think our guess will include both a linear coefficient and a constant coefficient for each function:
+								\begin{align*}
+									u =  \big( Ax + B \big) \cos 2x + \big( Cx + D \big)\sin 2x
+								\end{align*}
+
+								However, this won't work since \( \cos 2x  \) and \( \sin 2x \) are solutions to the complementary equation. Recall how in Example <a href="#x1-184">5.5.4</a> when the terms were solutions of the complementary equation, we simply update our guess to include an extra factor of \(x\) so we will guess
+							</div>
+							<div>	
+
+								<a id="x1-12r18"></a>
+								\begin{align}
+									u =  \big( Ax^2 + Bx \big) \cos 2x + \big( Cx^2 + Dx \big)\sin 2x
+								\end{align}
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \( u =  \big( Ax^2 + Bx \big) \cos 2x + \big( Cx^2 + Dx \big)\sin 2x \) twice
+							</div> 
+							<div>
+								Differentiating we obtain:
+								\begin{align*}
+									\frac{du}{dx} = &  \big( 3Cx + A + 3D \big) \cos x + \big( -3Ax - 3B + C \big)\sin x \\ \nonumber\\
+									\frac{d^2u}{dx^2} = &  \big( -9Ax - 9B + 6C \big) \cos x + \big( -9Cx - 6A - 9D \big)\sin x \\
+								\end{align*}
+							</div> 
+							<div>
+								Substituting into the nonhomogeneous equation <a href="#x1-12r17">(5.5.17)</a> 
+
+								\begin{array}{rrrrr}
+									\displaystyle
+									\frac{d^2y}{dx^2} 
+										&=& {\small \big( -9Ax - 9B + 6C \big)} \cos x & + {\small \big( -9Cx - 6A - 9D \big)}\sin x & \\
+									- 7 \displaystyle \frac{dy}{dx} 
+										&=& {\small  \big( -21Cx - 7A - 21D \big)} \cos x & + {\small \big( 21Ax + 21B - 7C \big)}\sin x & \\	
+									+ \quad\quad\quad\quad\quad   12y
+										&=& {\small \big( 12Ax + 12B \big)} \cos x & + {\small \big( 12Cx + 12D \big)}\sin x & \\	
+									\hline	
+									\underbrace{
+									\displaystyle
+									\frac{d^2y}{dx^2} - 7 \frac{dy}{dx}  + 12y}
+										&& & \\		
+									2\cos 3x+(150x-34)\sin 3x
+										& \\			
+								\end{array}
+							</div>
+							<br>
+							<div>
+								Now adding up the cosines on the right we get
+								\[
+									{\small \Big[\big( 3A - 21C \big)x+ \big( -7A + 3B + 6C - 21D \big) \Big]}  \cos x 
+								\]
+								Now adding up the sines on the right we get
+								\[
+									{\small \Big[\big( 21A + 3C \big)x+ \big( -6A + 21B - 7C + 3D \big) \Big]}  \sin x 
+								\]
+								And equating with the terms on the left we have
+								\[
+									2\cos 3x={\small \Big[\overset{0}{\overbrace{\big(  3A - 21C \big)}}x+ \overset{2}{\overbrace{\big( -7A + 3B + 6C - 21D \big)} \Big]}}  \cos x 
+								\]
+								\[
+									(150x-34)\sin 3x = {\small \Big[\underset{150}{\underbrace{\big( 21A + 3C \big)}}x+ \underset{-34}{\underbrace{\big( -6A + 21B - 7C + 3D  \big)}} \Big]}  \sin x 
+								\]
+
+								Thus we obtain the system of equations
+
+								\begin{align*}
+								\left\{
+									\begin{array}{r r r}
+										-6A + 21B - 7C + 3D &=& -34 \\
+										-7A + 3B + 6C - 21D &=& 2 \\
+										21A + 3C &=& 150 \\
+										3A - 21C &=& 0 \\
+									\end{array}
+								\right.			
+								\end{align*}
+							</div> 	
+							<div class="reading-exercise">
+								Solve \( \left\{
+									\begin{array}{r r r}
+										21A + 3C &=& 150 \\
+										3A - 21C &=& 0 \\
+									\end{array}
+								\right.	\quad \) for \(A\) and \(C\)
+							</div> 	
+							<div>	
+								Which we can solve the last two:
+
+								\begin{align*}
+								\left\{
+									\begin{array}{r r r}
+										21A + 3C &=& 150 \\
+										3A - 21C &=& 0 \\
+									\end{array}
+								\right.			
+								\longrightarrow
+								\left\{
+									\begin{array}{r r r}
+										A &=& 7 \\
+										C &=& 1 \\
+									\end{array}
+								\right.	
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Substitute the values for \(A\) and \(C\) in to \(
+								\left\{
+									\begin{array}{r r r}
+										-6A + 21B - 7C + 3D &=& -34 \\
+										-7A + 3B + 6C - 21D &=& 2 \\
+									\end{array}
+								\right.		 \)
+							</div> 
+							<div class="reading-exercise">
+								Solve for \(B\) and \(D\)
+							</div> 
+							<div>
+								Substituting in \(A=2\) and \(C=6\) we obtain:
+								\begin{align*}
+								\left\{
+									\begin{array}{r r r}
+										-6\cdot 7 + 21B - 7\cdot 1 + 3D &=& -34 \\
+										-7 \cdot 7 + 3B + 6\cdot 1 - 21D &=& 2 \\
+									\end{array}
+								\right.		
+								\longrightarrow
+								\left\{
+									\begin{array}{r r r}
+										21B + 3D &=& 15 \\
+										3B - 21D &=& 45 \\
+									\end{array}
+								\right.	
+								\longrightarrow
+								\left\{
+									\begin{array}{r r r}
+										B &=& 1 \\
+										D &=& -2 \\
+									\end{array}
+								\right.		
+								\end{align*}
+							</div> 
+							<br>
+							<br>
+							<div>	
+								So we can finally substitute  \(A,\)\(B,\) \(C\) and \(D\) back in \( u =  \big( Ax + B \big) \cos 3x + \big( Cx + D \big)\sin 3x\) to get our particular solution 
+
+								\begin{align*}
+									u =  \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x
+								\end{align*}
+
+							</div>
+							
+							<div class="reading-exercise">
+								Verify \( u =  \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \) is a solution of <a href="#x1-12r17">(5.5.17)</a>
+							</div> 																								 
+
+							<div>
+								Now we can substitute \(u\) back to determine our particular solution \(y = ue^{-2x}\)
+								\[
+									y =  \Big[ \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \Big] \, e^{-2x}
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \( y =  \Big[ \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \Big] \, e^{-2x} \) is a solution of <a href="#x1-24r16">(5.5.16)</a>
+							</div> 	
+							
+						</li>
+						<li>
+							<div>
+								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \{ e^x, e^{2x}\}\) and a particular solution to the nonhomogeneous equation \( y_p =\Big[ \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \Big] \, e^{-2x} \), then we can use Theorem&nbsp;<a href="sec5.3.book.html#x1-52" target=_blank>5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
+								\begin{align*}
+									y =   \Big[ \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \Big] \, e^{-2x} + c_1 e^x + c_2 e ^{2x}
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Verify \(y = \Big[ \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \Big] \, e^{-2x} + c_1 e^x + c_2 e ^{2x}\) is a solution of <a href="#x1-24r16">(5.5.16)</a>
+							</div> 
+						</li>	 
+					</ol>
 				</details>
-			</div>
-
-			<br>
-
-			<div class="indent" id="ceaaa10b-c8ec-4304-862c-d6838e0cf781">
-				You can also find a particular solution of <a href="#x1-29r20">(5.5.20)</a> by substituting \[ y_p=xe^{-x}\left [(A_0+A_1x)\cos 2x +(B_0+B_1x)\sin 2x\right ] \] for \(y\) in <a href="#x1-29r20">(5.5.20)</a> and equating the coefficients of \(xe^{-x}\cos 2x\), \(xe^{-x}\sin 2x\), \(e^{-x}\cos 2x\), and \(e^{-x}\sin 2x\) in the resulting expression for \[ \frac{d^2y_p}{dx^2}+2\frac{dy_p}{dx}+5y_p \] with the corresponding coefficients on the right side of <a href="#x1-29r20">(5.5.20)</a>. (See Exercise&nbsp;<span class="ptmb8t-">38</span>). This leads to the same system <a href="#x1-31r22">(5.5.22)</a> of equations for \(A_0\), \(A_1\), \(B_0\), and \(B_1\) that we obtained in Example&nbsp;<a href="#x1-286">5.5.6</a>. However, if you try this approach you’ll see that deriving <a href="#x1-31r22">(5.5.22)</a> this way is much more tedious than the way we did it in Example&nbsp;<a href="#x1-286">5.5.6</a>. 
-			</div>
 		</details>
 
 		<!--Principle of Superposition-->
