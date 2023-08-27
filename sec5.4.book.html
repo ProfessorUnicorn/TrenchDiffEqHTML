@@ -34,11 +34,11 @@
 			<summary>Undetermined Coefficients</summary>
 
 			<div id="1e183268-1a6c-476a-aa2e-d815c5f6b4b3">
-				In this section we consider the constant coefficient equation where \(\alpha \) is a constant and \(G(x)\) is a polynomial. 
+				In this section we consider the constant coefficient equation where \(r  \) is a constant and \(G(x)\) is a polynomial. 
 				
 				<a id="x1-2r1"></a> 
 				\begin {equation} \label {eq:5.4.1} 
-					a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=e^{\alpha x}G(x) 
+					a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=e^{r  x}G(x) 
 				\end {equation} 
 			</div>
 			<div class="indent" id="44308b03-ca02-420a-8a1e-5d57d042c407">
@@ -57,7 +57,7 @@
 		
 
 		<details id="497cd290-d8a4-4d25-8386-cb523b8aeafdakslj;58-2">
-			<summary>Exponentials \( e^{\alpha x}\)</summary>	
+			<summary>Exponentials \( e^{r  x}\)</summary>	
 
 			<!--Example 1-->
 			<div class="example" id="x1-31" style="--ex-number: 1">
@@ -495,7 +495,7 @@
 
 					<a id="x1-13r8"></a>
 					\begin {equation} \label {eq:5.4.8} 
-						a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=ke^{\alpha x} 
+						a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=ke^{r  x} 
 					\end {equation} 
 
 					With complementary equation
@@ -507,13 +507,13 @@
 
 				<ol>
 					<li> 
-						If \(e^{\alpha x}\) isn’t a solution of the complementary equation (5.4.8) then \(y_p=Ae^{\alpha x}\)
+						If \(e^{r  x}\) isn’t a solution of the complementary equation (5.4.8) then \(y_p=Ae^{r  x}\)
 					</li>
 					<li> 
-						If \(e^{\alpha x}\) is a solution of <a href="#x1-13r8">(5.4.7)</a> but \(xe^{\alpha x}\) is not, then \(y_p=Axe^{\alpha x}\)
+						If \(e^{r  x}\) is a solution of <a href="#x1-13r8">(5.4.7)</a> but \(xe^{r  x}\) is not, then \(y_p=Axe^{r  x}\)
 					</li>
 					<li> 
-						If both \(e^{\alpha x}\) and \(xe^{\alpha x}\) are solutions of <a href="#x1-13r8">(5.4.7)</a>, then \(y_p=Ax^2e^{\alpha x}\)
+						If both \(e^{r  x}\) and \(xe^{r  x}\) are solutions of <a href="#x1-13r8">(5.4.7)</a>, then \(y_p=Ax^2e^{r  x}\)
 					</li>
 				</ol>
 
@@ -527,31 +527,31 @@
 		
 		<!---->
 		<details id="497cd290-d8a4-4d25-8386-cb523b8aeafdakslj;58-1">
-			<summary>Exponential Polynomials \( e^{\alpha x} \, P(x) \)</summary>
+			<summary>Exponential Polynomials \( e^{r  x} \, P(x) \)</summary>
 
 
 			<div class="indent" id="4808f2b5-e93d-4ecd-857e-77f4b89e0c59">
 				<div>	
 					Examples <a href="#x1-31">5.4.1</a>, <a href="#x1-62">5.4.2</a>, and <a href="#x1-93">5.4.3</a> covered the basic cases of solving equations with an exponential forcing function:
 					
-					\[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=ke^{\alpha x}\] 
+					\[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=ke^{r  x}\] 
 				</div>
 				<div>	
 					However, we still have to determine what to do if the forcing function is the product of an exponential and a polynomial \( P(x) \)
 					
-					\[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=k e^{\alpha x}\,P(x)\] 
+					\[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=k e^{r  x}\,P(x)\] 
 				</div>
 				<div>
-					We will stick with the same stragey we used in Examples	<a href="#x1-62">5.4.2</a>, and <a href="#x1-93">5.4.3</a> where we seek solutions of the form \(y=ue^{\alpha x}\)
+					We will stick with the same stragey we used in Examples	<a href="#x1-62">5.4.2</a>, and <a href="#x1-93">5.4.3</a> where we seek solutions of the form \(y=ue^{r  x}\)
 				</div>
 				<div class="reading-exercise">
-					Differentiate \(y=ue^{\alpha x}\) twice
+					Differentiate \(y=ue^{r  x}\) twice
 				</div> 
 				<div>	
 					Differentiating we obtain:
 					\begin{align*}
-						\frac{dy}{dx} =& \frac{du}{dx}e^{\alpha x} + \alpha ue^{4x} \\ \\
-						\frac{d^2y}{dx^2} =& \frac{d^2u}{dx^2}e^{\alpha x} + 2\alpha \frac{du}{dx}e^{\alpha x} + \alpha^2 ue^{\alpha x} \\
+						\frac{dy}{dx} =& \frac{du}{dx}e^{r  x} + r  ue^{4x} \\ \\
+						\frac{d^2y}{dx^2} =& \frac{d^2u}{dx^2}e^{r  x} + 2r  \frac{du}{dx}e^{r  x} + r ^2 ue^{r  x} \\
 					\end{align*}
 				</div>
 				<div>	
@@ -560,13 +560,13 @@
 					\begin{array}{rrrrr}
 						\displaystyle
 						a\frac{d^2y}{dx^2} 
-							&=& a\displaystyle\frac{d^2u}{dx^2}e^{\alpha x} 
-								+ 2a\alpha\displaystyle\frac{du}{dx}e^{\alpha x}& 
-								+ a\alpha^2 \,ue^{\alpha x}& \\
+							&=& a\displaystyle\frac{d^2u}{dx^2}e^{r  x} 
+								+ 2ar \displaystyle\frac{du}{dx}e^{r  x}& 
+								+ ar ^2 \,ue^{r  x}& \\
 						\displaystyle
 						+b\frac{dy}{dx} 
-							&=& +b \displaystyle\frac{du}{dx}e^{\alpha x}& 
-								+b \alpha \,ue^{\alpha x}& \\
+							&=& +b \displaystyle\frac{du}{dx}e^{r  x}& 
+								+b r  \,ue^{r  x}& \\
 						+ \quad\quad\quad\quad\quad   cy
 							&=& & 
 								+c\,ue^{4x}& \\	
@@ -575,19 +575,19 @@
 						\displaystyle
 						a\frac{d^2y}{dx^2} +b\frac{dy}{dx} + cy}
 							& \\	
-						ke^{\alpha x} \, P(x)
-							&=& a\displaystyle\frac{d^2u}{dx^2}e^{\alpha x} 
-								+ (2a \alpha + b)\displaystyle\frac{du}{dx}e^{\alpha x}& 
-								+ (a \alpha^2 + b \alpha + c) ue^{\alpha x}& \\				
+						ke^{r  x} \, P(x)
+							&=& {\small a}\displaystyle\frac{d^2u}{dx^2}e^{r  x} 
+								+ {\small (2a r  + b)}\displaystyle\frac{du}{dx}e^{r  x}& 
+								+ {\small (a r ^2 + b r  + c)} ue^{r  x}& \\				
 					\end{array}
-					Cancelling out the \( e^{\alpha x}\) we obtain a new equation
+					Cancelling out the \( e^{r  x}\) we obtain a new equation
 
 					
 					\begin{align*} 
 						k \, P(x) = & 
-							\frac{d^2u}{dx^2}e^{\alpha x} 
-								+ (2a \alpha + b) \frac{du}{dx}e^{\alpha x} 
-								+ (a \alpha^2 + b \alpha + c) ue^{\alpha x}
+							\frac{d^2u}{dx^2} 
+								+ (2a r  + b) \frac{du}{dx} 
+								+ (a r ^2 + b r  + c) u
 					\end{align*}
 
 					Now this equation is integrable! So we can just find the antiderivative twice.
@@ -600,10 +600,10 @@
 
 					<a id="x1-16r9"></a>
 					\begin {equation} \label {eq:5.4.9} 
-						a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{\alpha}\frac{du}{dx}+p(\alpha )u=G(x) 
+						a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{r }\frac{du}{dx}+p(r  )u=G(x) 
 					\end {equation}  
 				
-					where \(p(r)=ar^2+br+c\) is the characteristic polynomial of the complementary equation and \(\left. \frac{dp}{dx} \right|_{r}=2ar+b\) (Exercise&nbsp;<span class="ptmb8t-">30</span>); however, you shouldn’t memorize this since it’s easy to derive the equation for \(u\) in any particular case. Note, however, that if \(e^{\alpha x}\) is a solution of the complementary equation then \(p(\alpha )=0\), so <a href="#x1-16r9">(5.4.9)</a> reduces to \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{\alpha}\frac{du}{dx}=G(x)\] while if both \(e^{\alpha x}\) and \(xe^{\alpha x}\) are solutions of the complementary equation then \(p(r)=a(r-\alpha )^2\) and \(\left. \frac{dp}{dx} \right|_{r}=2a(r-\alpha )\), so \(p(\alpha )=\left. \frac{dp}{dx} \right|_{\alpha}=0\) and <a href="#x1-16r9">(5.4.9)</a> reduces to \[ a\frac{d^2u}{dx^2}=G(x)\] 
+					where \(p(r)=ar^2+br+c\) is the characteristic polynomial of the complementary equation and \(\left. \frac{dp}{dx} \right|_{r}=2ar+b\) (Exercise&nbsp;<span class="ptmb8t-">30</span>); however, you shouldn’t memorize this since it’s easy to derive the equation for \(u\) in any particular case. Note, however, that if \(e^{r  x}\) is a solution of the complementary equation then \(p(r  )=0\), so <a href="#x1-16r9">(5.4.9)</a> reduces to \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{r }\frac{du}{dx}=G(x)\] while if both \(e^{r  x}\) and \(xe^{r  x}\) are solutions of the complementary equation then \(p(r)=a(r-r  )^2\) and \(\left. \frac{dp}{dx} \right|_{r}=2a(r-r  )\), so \(p(r  )=\left. \frac{dp}{dx} \right|_{r }=0\) and <a href="#x1-16r9">(5.4.9)</a> reduces to \[ a\frac{d^2u}{dx^2}=G(x)\] 
 				</div>
 			</div>
 			<div class="example" id="x1-174" style="--ex-number: 4">
@@ -678,19 +678,19 @@
 
 			<div id="0def9a87-fec0-438a-92f7-c9eab3db92a8">
 				
-				The preceding examples illustrate the following facts concerning particular solutions of a constant coefficient equation of the form \[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=e^{\alpha x}G(x)\] where \(G\) is a polynomial (see Exercise&nbsp;<span class="ptmb8t-">30</span>):
+				The preceding examples illustrate the following facts concerning particular solutions of a constant coefficient equation of the form \[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=e^{r  x}G(x)\] where \(G\) is a polynomial (see Exercise&nbsp;<span class="ptmb8t-">30</span>):
 				<ol>
-					<li> If \(e^{\alpha x}\) isn’t a solution of the complementary equation 
+					<li> If \(e^{r  x}\) isn’t a solution of the complementary equation 
 					\begin {equation} \label {eq:5.4.16} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0 
-					\end {equation} <a id="x1-27r16"></a> then \(y_p=e^{\alpha x}Q(x)\), where \(Q\) is a polynomial of the same degree as \(G\). (See Example&nbsp;<a href="#x1-174">5.4.4</a>). </li>
-					<li> If \(e^{\alpha x}\) is a solution of <a href="#x1-27r16">(5.4.16)</a> but \(xe^{\alpha x}\) is not, then \(y_p=xe^{\alpha x}Q(x)\), where \(Q\) is a polynomial of the same degree as \(G\). (See Example&nbsp;<a href="#x1-205">5.4.5</a>.) </li>
-					<li> If both \(e^{\alpha x}\) and \(xe^{\alpha x}\) are solutions of <a href="#x1-27r16">(5.4.16)</a>, then \(y_p=x^2e^{\alpha x}Q(x)\), where \(Q\) is a polynomial of the same degree as \(G\). (See Example&nbsp;<a href="#x1-236">5.4.6</a>.) </li>
+					\end {equation} <a id="x1-27r16"></a> then \(y_p=e^{r  x}Q(x)\), where \(Q\) is a polynomial of the same degree as \(G\). (See Example&nbsp;<a href="#x1-174">5.4.4</a>). </li>
+					<li> If \(e^{r  x}\) is a solution of <a href="#x1-27r16">(5.4.16)</a> but \(xe^{r  x}\) is not, then \(y_p=xe^{r  x}Q(x)\), where \(Q\) is a polynomial of the same degree as \(G\). (See Example&nbsp;<a href="#x1-205">5.4.5</a>.) </li>
+					<li> If both \(e^{r  x}\) and \(xe^{r  x}\) are solutions of <a href="#x1-27r16">(5.4.16)</a>, then \(y_p=x^2e^{r  x}Q(x)\), where \(Q\) is a polynomial of the same degree as \(G\). (See Example&nbsp;<a href="#x1-236">5.4.6</a>.) </li>
 				</ol>
 			
 			</div>
 
 			<div class="indent" id="10e05740-b9a6-429c-8be2-8765e5e4132d">
-				In all three cases, you can just substitute the appropriate form for \(y_p\) and its derivatives directly into \[ a\frac{d^2y_p}{dx^2}+b\frac{dy_p}{dx}+cy_p=e^{\alpha x}G(x)\] and solve for the coefficients of the polynomial \(Q\). However, if you try this you will see that the computations are more tedious than those that you encounter by making the substitution \(y=ue^{\alpha x}\) and finding a particular solution of the resulting equation for \(u\). (See Exercises&nbsp;<span class="ptmb8t-">34</span>-<span class="ptmb8t-">36</span>.) In Case&nbsp;<span class="ptmb8t-">(a)</span> the equation for \(u\) will be of the form \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{\alpha}\frac{du}{dx}+p(\alpha )u=G(x)\] with a particular solution of the form \(u_p=Q(x)\), a polynomial of the same degree as \(G\), whose coefficients can be found by the method used in Example&nbsp;<a href="#x1-174">5.4.4</a>. In Case&nbsp;<span class="ptmb8t-">(b)</span> the equation for \(u\) will be of the form \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{\alpha}\frac{du}{dx}=G(x) \] (no \(u\) term on the left), with a particular solution of the form \(u_p=xQ(x)\), where \(Q\) is a polynomial of the same degree as \(G\) whose coefficients can be found by the method used in Example&nbsp;<a href="#x1-205">5.4.5</a>. In Case&nbsp;<span class="ptmb8t-">(c)</span> the equation for \(u\) will be of the form \[ a\frac{d^2u}{dx^2}=G(x) \] with a particular solution of the form \(u_p=x^2Q(x)\) that can be obtained by integrating \(G(x)/a\) twice and taking the constants of integration to be zero, as in Example&nbsp;<a href="#x1-236">5.4.6</a>. 
+				In all three cases, you can just substitute the appropriate form for \(y_p\) and its derivatives directly into \[ a\frac{d^2y_p}{dx^2}+b\frac{dy_p}{dx}+cy_p=e^{r  x}G(x)\] and solve for the coefficients of the polynomial \(Q\). However, if you try this you will see that the computations are more tedious than those that you encounter by making the substitution \(y=ue^{r  x}\) and finding a particular solution of the resulting equation for \(u\). (See Exercises&nbsp;<span class="ptmb8t-">34</span>-<span class="ptmb8t-">36</span>.) In Case&nbsp;<span class="ptmb8t-">(a)</span> the equation for \(u\) will be of the form \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{r }\frac{du}{dx}+p(r  )u=G(x)\] with a particular solution of the form \(u_p=Q(x)\), a polynomial of the same degree as \(G\), whose coefficients can be found by the method used in Example&nbsp;<a href="#x1-174">5.4.4</a>. In Case&nbsp;<span class="ptmb8t-">(b)</span> the equation for \(u\) will be of the form \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{r }\frac{du}{dx}=G(x) \] (no \(u\) term on the left), with a particular solution of the form \(u_p=xQ(x)\), where \(Q\) is a polynomial of the same degree as \(G\) whose coefficients can be found by the method used in Example&nbsp;<a href="#x1-205">5.4.5</a>. In Case&nbsp;<span class="ptmb8t-">(c)</span> the equation for \(u\) will be of the form \[ a\frac{d^2u}{dx^2}=G(x) \] with a particular solution of the form \(u_p=x^2Q(x)\) that can be obtained by integrating \(G(x)/a\) twice and taking the constants of integration to be zero, as in Example&nbsp;<a href="#x1-236">5.4.6</a>. 
 			</div>
 		</details>
 
