@@ -461,161 +461,194 @@
 								\]
 							</div>	
 							<div>
-								We start by identifying the forcing function \( f(x) = (20x + 16)\cos x+10\sin x \) to help us formulate a reasonable guess for a solution. We won't be able to guess a linear combination of cosine and sine
+								We start by identifying the forcing function \( f(x) = (20x + 16)\cos x+10\sin x \) to help us formulate a reasonable guess for a solution. We won't be able to guess a simple linear combination of cosine and sine
 								\[
 									y =  A\cos x + B\sin x
 								\]
-								Since there is not way to obtain the \(20x\) term from that guess, so we may be tempted to consider just tacking on an extra factor of \(x\) like we did in Example 5.5.2
+								This won't work since there is not way to obtain the \(20x\) term from that guess, so we may be tempted to consider just tacking on an extra factor of \(x\) like we did in Example 5.5.2
 								\[
 									y =  Ax\cos x + Bx\sin x
 								\]
-							</div>	
-							<div>
-
-								Now if we approach this problem the same way we did in Example 5.5.1, we might just notice that since the forcing function is \( f(x) = 8\cos 2x+12\sin 2x \) then a reasonable guess for a solution might be \( y = A\cos 2x+B\sin 2x \), however, this is where we run into an issue. While guessing like this worked in the past, it won't work here, since \(\cos 2x \) and \(\sin 2x \) are actually both solutions of the complementary equation. Let's try it to find out what happens if we were to use 
+								These might seem simple enough but it won't work because we do not have enough variables to solve for the coefficients. Notice there are 3 different coefficients we want to find for our forcing function
 								\[
-									y =  A\cos 2x + B\sin 2x
+									f(x) = 20x \cos x + 16\cos x +10\sin x
 								\]
-
-							</div>
-							<div class="reading-exercise">
-								Differentiate \(y = A\cos 2x + B\sin 2x \) twice
-							</div> 
-
-							<div>	
-								After differentiating twice we find \(d^2y/dx^2 =  -4A\cos 2x + 4B\sin 2x \) which we substitute into the nonhomogeneous equation <a href="#x1-9r5">(5.5.5)</a>  
-
-								\begin{array}{rrrrr}
-									\displaystyle
-									\frac{d^2y}{dx^2} 
-										&=& -4A\cos 2x& - 4B\sin 2x& \\
-									+ \quad\quad\quad\quad\quad   4y
-										&=& 4A\cos 2x& + 4B\sin 2x& \\	
-									\hline	
-									\underbrace{
-									\displaystyle
-									\frac{d^2y}{dx^2} + 4y}
-										&=& {\small (4A-4A)}\cos 2x& + {\small (4B-4B)}\sin 2x& \\		
-									8\cos 2x+12\sin 2x 
-										&=& {0}\, \cos 2x& + \,  {0}\, \sin 2x& \\			
-								\end{array}
-
-								Since \(\cos 2x \) and \(\sin 2x \) are solutions of the complementary equation, then the entire right side of the equation simplified to zero. Therefore this guess will not help us find a particular solution. No problem, we will just update our guess to 
-								
+								So we will update our guess to include both a linear coefficient and a constant coefficient for each function:
 								\begin{align}
-									y = x \big(A\cos 2x + B\sin 2x \big) 
-									= Ax \cos 2x + Bx \sin 2x
+									y =  \big( Ax + B \big) \cos x + \big( Cx + D \big)\sin x
 								\end{align}
 							</div>	
-
 							<div class="reading-exercise">
-								Differentiate \(y = x \big(A\cos 2x + B\sin 2x \big) \) twice
+								Differentiate \( y =  \big(Ax + B \big) \cos x + \big( Cx + D \big)\sin x \) twice
 							</div> 
-
-							<div>	
-								After differentiating twice we find 
-								
-								\begin{align*}
-									\frac{dy}{dx} = & \big( 2Bx + A \big) \cos 2x + \big( B - 2Ax \big) \sin 2x \\
-									\frac{d^2y}{dx^2} = & \big( 4B - 4Ax \big) \cos 2x - \big( 4A + 4Bx \big) \sin 2x \\
-								\end{align*}
-								
-								Then substituting into the nonhomogeneous equation <a href="#x1-9r5">(5.5.5)</a> 
+							<div>
+								Differentiating we obtain:
+								\begin{align}
+									\frac{dy}{dx} = &  \big( Cx + A + D \big) \cos x + \big( -Ax - B + C \big)\sin x \\ \nonumber\\
+									\frac{d^2y}{dx^2} = &  \big( -Ax + 2C - B \big) \cos x + \big( -Cx -2A - D \big)\sin x \\
+								\end{align}
+							</div> 
+							<div>
+								Substituting into the nonhomogeneous equation <a href="#x1-12r7">(5.5.7)</a> 
 
 								\begin{array}{rrrrr}
 									\displaystyle
 									\frac{d^2y}{dx^2} 
-										&=& {\small \big( 4B - 4Ax \big)}\cos 2x& + {\small \big( -4A - 4Bx \big)}\sin 2x& \\
-									+ \quad\quad\quad\quad\quad   4y
-										&=& {\small 4Ax} \, \cos 2x& + \, {\small  4Bx} \, \sin 2x& \\	
+										&=& {\small \big( -Ax + 2C - B \big)} \cos x & + {\small \big( -Cx -2A - D \big)}\sin x & \\
+									3 \displaystyle \frac{dy}{dx} 
+										&=& {\small \big( 3Cx + 3A + 3D \big)} \cos x & + {\small \big( -3Ax - 3B + 3C \big)}\sin x & \\	
+									+ \quad\quad\quad\quad\quad   2y
+										&=& {\small \big( 2Ax + 2B \big)} \cos x & + {\small \big( 2Cx + 2D \big)}\sin x & \\	
 									\hline	
 									\underbrace{
 									\displaystyle
-									\frac{d^2y}{dx^2} + 4y}
-										&=& & \\		
-									8\cos 2x+12\sin 2x 
-										&=& {4B}\, \cos 2x& - \,  {4A}\, \sin 2x& \\			
+									\frac{d^2y}{dx^2} + 3 \frac{dy}{dx}  + 2y}
+										&& & \\		
+									(20x + 16)\cos x+10\sin x 
+										& \\			
 								\end{array}
-							</div>
+
+							</div> 
 							<br>
-							<div>	
+							<div>
+								Now adding up the cosines on the right we get
+								\[
+									{\small \Big[\big( A + 3C \big)x+ \big( 3A + B + 2C + 3D \big) \Big]}  \cos x 
+								\]
+								Now adding up the sines on the right we get
+								\[
+									{\small \Big[\big( -3A + C \big)x+ \big( -2A - 3B + 3C + D \big) \Big]}  \sin x 
+								\]
+								And equating with the terms on the left we have
+								\[
+									(\overbrace{20x} + \overbrace{16})\cos x={\small \Big[\overset{20}{\overbrace{\big( A + 3C \big)}}x+ \overset{16}{\overbrace{\big( 3A + B + 2C + 3D \big)} \Big]}}  \cos x 
+								\]
+								\[
+									\underbrace{10}\sin x = {\small \Big[\underset{0}{\underbrace{\big( -3A + C \big)}}x+ \underset{10}{\underbrace{\big( -2A - 3B + 3C + D \big)}} \Big]}  \sin x 
+								\]
 
-								So we obtain the equation 
-
-								\begin{align*}
-									8\cos 2x+12\sin 2x = {4B}\, \cos 2x - \, {4A}\, \sin 2x 
-								\end{align*}
-							</div>
-							<br>
-							<div>		
-
-								Equating the coefficients, we find \(A\) and \(B\)
+								Thus we obtain the system of equations
 
 								\begin{align*}
 								\left\{
 									\begin{array}{r r r}
-										4B &=& 8 \\
-										-4A &=& 12 \\
+										3A + B + 2C + 3D &=& 16 \\
+										-2A - 3B + 3C + D&=& 10 \\
+										A + 3C &=& 20 \\
+										-3A + C &=& 0 \\
+									\end{array}
+								\right.			
+								\end{align*}
+
+							</div> 
+							<div class="reading-exercise">
+								Solve \( \left\{
+									\begin{array}{r r r}
+										A + 3C &=& 20 \\
+										-3A + C &=& 0 \\
+									\end{array}
+								\right.	\quad \) for \(A\) and \(C\)
+							</div> 
+							<div>	
+
+								Which we can solve the last two:
+
+								\begin{align*}
+								\left\{
+									\begin{array}{r r r}
+										A + 3C &=& 20 \\
+										-3A + C &=& 0 \\
 									\end{array}
 								\right.			
 								\longrightarrow
 								\left\{
 									\begin{array}{r r r}
-										B &=& 2 \\
-										A &=& -3 \\
+										A &=& 2 \\
+										C &=& 6 \\
 									\end{array}
 								\right.	
 								\end{align*}
-
-								Therefore we have our particular solution \( y = x \big(A\cos 2x + B\sin 2x \big) \)
-								
-								\[y = x \big( 2\sin 2x -3\cos 2x \big) \]
-							</div>
-
+							</div> 
 							<div class="reading-exercise">
-								Verify \( y = x \big( 2\sin 2x -3\cos 2x \big) \) is a solution of <a href="#x1-9r5">(5.5.5)</a>
+								Substitute the values for \(A\) and \(C\) in to \(
+								\left\{
+									\begin{array}{r r r}
+									3A + B + 2C + 3D &=& 16 \\
+									-2A - 3B + 3C + D&=& 10 \\
+									\end{array}
+								\right.		 \)
+							</div> 
+							<div>
+								Substituting in \(A=2\) and \(C=6\) we obtain:
+								\begin{align*}
+								\left\{
+									\begin{array}{r r r}
+									3\cdot 2 + B + 2\cdot 6 + 3D &=& 16 \\
+									-2\cdot 2 - 3B + 3\cdot 6 + D&=& 10 \\
+									\end{array}
+								\right.		
+								\longrightarrow	
+								\left\{
+									\begin{array}{r r r}
+									B + 3D &=& -2 \\
+									- 3B + D&=& -4 \\
+									\end{array}
+								\right.		
+								\end{align*}
+							</div> 
+							<div class="reading-exercise">
+								Solve \( \left\{
+									\begin{array}{r r r}
+									B + 3D &=& -2 \\
+									- 3B + D&=& -4 \\
+									\end{array}
+								\right.	\quad \) for \(B\) and \(D\)
+							</div> 
+							<div>
+								Solving for	\(B\) and \(D\)
+
+								\begin{align*}
+								\left\{
+									\begin{array}{r r r}
+										B + 3D &=& -2 \\
+										- 3B + D&=& -4 \\
+									\end{array}
+								\right.			
+								\longrightarrow
+								\left\{
+									\begin{array}{r r r}
+										B &=& 1 \\
+										D &=& -1 \\
+									\end{array}
+								\right.	
+								\end{align*}
+							</div> 
+							<div>	
+								So we can finally substitute  \(A,\)\(B,\) \(C\) and \(D\) back in \( y =  \big( Ax + B \big) \cos x + \big( Cx + D \big)\sin x\) to get our particular solution 
+
+								\begin{align*}
+									y =  \big( 2x + 1 \big) \cos x + \big( 6x -1  \big)\sin x
+								\end{align*}
+
+							</div>
+							
+							<div class="reading-exercise">
+								Verify \( y =  \big( 2x + 1 \big) \cos x + \big( 6x -1  \big)\sin x \) is a solution of <a href="#x1-9r5">(5.5.5)</a>
 							</div> 
 							
 						</li>
 						<li>
 							<div>
-								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \{ \cos 2x, \sin 2x \}\) and a particular solution to the nonhomogeneous equation \( y_p = x \big( 2\sin 2x -3\cos 2x \big) \), then we can use Theorem&nbsp;<a href="sec5.3.book.html#x1-52" target=_blank>5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
-								\[
-									y = x \big( 2\sin 2x -3\cos 2x \big) + c_1 \cos 2x + c_2 \sin 2x
-								\]
+								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \{ e^{-x}, e^{-2x} \}\) and a particular solution to the nonhomogeneous equation \( y_p =  \big( 2x + 1 \big) \cos x + \big( 6x -1  \big)\sin x \), then we can use Theorem&nbsp;<a href="sec5.3.book.html#x1-52" target=_blank>5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
+								\begin{align}
+									y =  \big( 2x + 1 \big) \cos x + \big( 6x -1  \big)\sin x + c_1 e^{-x} + c_2 e^{-2x}
+								\end{align}
 							</div>
 							<div class="reading-exercise">
-								Verify \( y = x \big( 2\sin 2x -3\cos 2x \big) + c_1 \cos 2x + c_2 \sin 2x \) is a solution of <a href="#x1-9r5">(5.5.5)</a>
+								Verify (5.5.11) is a solution of <a href="#x1-12r7">(5.5.7)</a>
 							</div> 
 						</li>	
 					</ol>
-
-					The coefficients of \(\cos x\) and \(\sin x\) in <a href="#x1-12r7">(5.5.7)</a> are polynomials of degree one and zero, respectively. Therefore Theorem&nbsp;<a href="#x1-41">5.5.1</a> tells us to look for a particular solution of <a href="#x1-12r7">(5.5.7)</a> of the form 
-					\begin {equation} \label {eq:5.5.8} y_p=(A_0+A_1x)\cos x+(B_0+B_1x)\sin x 
-					\end {equation}
-					<a id="x1-13r8"></a>
-					Then 
-					\begin {equation} \label {eq:5.5.9} \frac{dy_p}{dx}=(A_1+B_0+B_1x)\cos x+(B_1-A_0-A_1x)\sin x 
-					\end {equation}
-					<a id="x1-14r9"></a>
-					and 
-					\begin {equation} \label {eq:5.5.10} \frac{d^2y_p}{dx^2}=(2B_1-A_0-A_1x)\cos x-(2A_1+B_0+B_1x)\sin x 
-					\end {equation}
-					<a id="x1-15r10"></a>
-					so \begin {equation} \label {eq:5.5.11} 
-					\begin {array}{rcl} \frac{d^2y_p}{dx^2}+3\frac{dy_p}{dx}+2y_p&amp;=&amp;\left [A_0+3 A_1+3 B_0+2 B_1+(A_1+3 B_1)x\right ]\cos x\\ &amp;&amp;+ \left [B_0+3 B_1-3 A_0-2 A_1+(B_1-3 A_1)x\right ]\sin x 
-					\end {array} \end {equation}
-					<a id="x1-16r11"></a>
-					Comparing the coefficients of \(x\cos x\), \(x\sin x\), \(\cos x\), and \(\sin x\) here with the corresponding coefficients in <a href="#x1-12r7">(5.5.7)</a> shows that \(y_p\) is a solution of <a href="#x1-12r7">(5.5.7)</a> if \[ 
-					\begin {array}{rcr} \phantom {-3}A_1+3B_1&amp;=&amp;20\phantom {.}\\ -3A_1+\phantom {3}B_1&amp;=&amp;0\phantom {.}\\ \phantom {-3}A_0+3B_0+3A_1+2B_1&amp;=&amp;16\phantom {.}\\ -3A_0+\phantom {3}B_0-2A_1+3B_1&amp;=&amp;10 
-					\end {array} \] Solving the first two equations yields \(A_1=2\), \(B_1=6\). Substituting these into the last two equations yields
-					<div class="eqnarray" id="4d3d4f3e-1ade-40ab-9962-5f96603d1f74">
-						\begin {eqnarray*}
-							\phantom {-3}A_0+3B_0&amp;=&amp;16-3A_1-2B_1=-2\phantom {.}\\ -3A_0+\phantom {3}B_0&amp;=&amp;10+2A_1-3B_1=-4 
-						\end {eqnarray*} 
-					</div>
-
-					Solving these equations yields \(A_0=1\), \(B_0=-1\). Substituting \(A_0=1\), \(A_1=2\), \(B_0=-1\), \(B_1=6\) into <a href="#x1-13r8">(5.5.8)</a> shows that \[ y_p=(1+2x)\cos x-(1-6x)\sin x \] is a particular solution of <a href="#x1-12r7">(5.5.7)</a>.
 				</details>
 			</div>
 
@@ -625,7 +658,7 @@
 
 			<!--AFTER Example 3-->
 			<div id="557bec93-d7ca-4be1-b862-6395d67f5318">
-				In <a href="#x1-14r9">(5.5.9)</a>, <a href="#x1-15r10">(5.5.10)</a>, and <a href="#x1-16r11">(5.5.11)</a> the polynomials multiplying \(\sin x\) can be obtained by replacing \(A_0,A_1,B_0\), and \(B_1\) by \(B_0\), \(B_1\), \(-A_0\), and \(-A_1\), respectively, in the polynomials multiplying \(\cos x\). An analogous result applies in general, as follows (Exercise&nbsp;<span class="ptmb8t-">36</span>). 
+				 
 			</div>
 			<div class="theorem" id="ae2e2531-7326-494c-84eb-44c4342d6ef5">
 				<div>
@@ -639,34 +672,222 @@
 
 			<!--Example 4-->
 			<div class="example" id="x1-184" style="--ex-number: 4">
-				<div> 
-					<a id="x1-19r12"></a> Find a particular solution of 
-					\begin {equation} \label {eq:5.5.12} \frac{d^2y}{dx^2}+y=(8-4x)\cos x-(8+8x)\sin x 
+	
+				<div>
+					Given the differential equation
+					<a id="x1-19r12"></a>
+					\begin {equation}  \label {eq:5.5.12}
+						\frac{d^2y}{dx^2}+y=(8-4x)\cos x-(8x+8)\sin x 
 					\end {equation} 
-				</div>
+				</div>	 
+
+				<ol>
+					<li>
+						Solve the complementary equation
+					</li>	
+					<li>
+						Find a particular solution
+					</li>
+					<li>
+						Find the general solution
+					</li>
+				</ol>	
 
 				<details class="solution">
 					<summary>Solution</summary>
-					According to Theorem&nbsp;<a href="#x1-41">5.5.1</a>, we should look for a particular solution of the form 
-					\begin {equation} \label {eq:5.5.13} y_p=(A_0x+A_1x^2)\cos x+(B_0x+B_1x^2)\sin x 
-					\end {equation}
-					<a id="x1-20r13"></a>
-					since \(\cos x\) and \(\sin x\) are solutions of the complementary equation. However, let’s try 
-					\begin {equation} \label {eq:5.5.14} y_p=(A_0+A_1x)\cos x+(B_0+B_1x)\sin x 
-					\end {equation}
-					<a id="x1-21r14"></a>
-					first, so you can see why it doesn’t work. From <a href="#x1-15r10">(5.5.10)</a>, \[ \frac{d^2y_p}{dx^2}=(2B_1-A_0-A_1x)\cos x-(2A_1+B_0+B_1x)\sin x\] which together with <a href="#x1-21r14">(5.5.14)</a> implies that \[ \frac{d^2y_p}{dx^2}+y_p=2B_1\cos x-2A_1\sin x\] Since the right side of this equation does not contain \(x\cos x\) or \(x\sin x\), <a href="#x1-21r14">(5.5.14)</a> can’t satisfy <a href="#x1-19r12">(5.5.12)</a> no matter how we choose \(A_0\), \(A_1\), \(B_0\), and \(B_1\).
-					<br />
-					Now let \(y_p\) be as in <a href="#x1-20r13">(5.5.13)</a>. Then
-					<div class="eqnarray" id="49bd2027-2fdd-4d61-8a73-e4f6662a312c">
-						\begin {eqnarray*} 
-							\frac{dy_p}{dx}&amp;=&amp;\left [A_0+(2A_1+B_0)x+B_1x^2\right ]\cos x\\ &amp;&amp; +\left [B_0+(2B_1-A_0)x-A_1x^2\right ]\sin x\\ \text {and} \frac{d^2y_p}{dx^2}&amp;=&amp; \left [2A_1+2B_0-(A_0-4B_1)x-A_1x^2\right ]\cos x\\ &amp;&amp;+ \left [2B_1-2A_0-(B_0+4A_1)x-B_1x^2\right ]\sin x 
-						\end {eqnarray*} 
-					</div>
 
-					so \[ \frac{d^2y_p}{dx^2}+y_p=(2A_1+2B_0+4B_1x)\cos x+(2B_1-2A_0-4A_1x)\sin x\] Comparing the coefficients of \(\cos x\) and \(\sin x\) here with the corresponding coefficients in <a href="#x1-19r12">(5.5.12)</a> shows that \(y_p\) is a solution of <a href="#x1-19r12">(5.5.12)</a> if \[ 
-					\begin {array}{rcr} \phantom {-}4B_1&amp;=&amp;-4\phantom {.}\\ -4A_1&amp;=&amp;-8\phantom {.}\\ \phantom {-}2B_0+2A_1&amp;=&amp;8\phantom {.}\\ -2A_0+2B_1&amp;=&amp;-8 
-					\end {array} \] The solution of this system is \(A_1=2\), \(B_1=-1\), \(A_0=3\), \(B_0=2\). Therefore \[ y_p=x\left [(3+2x)\cos x+(2-x)\sin x\right ] \] is a particular solution of <a href="#x1-19r12">(5.5.12)</a>.
+					<ol>
+						<li>
+							<div>
+								Solve the complementary equation
+								\begin {equation*}  
+									\frac{d^2y}{dx^2}+y = 0
+								\end {equation*}
+							</div>	
+							<div class="reading-exercise">
+								Find the characteristic equation
+							</div> 	
+						
+							<div class="reading-exercise">
+								Use the method in Example <a href="sec5.2.book.html#x1-233" target=_blank>5.2.3</a> to find a fundamental set of solutions  
+							</div> 
+
+							<div>
+								Solving the characteristic equation we obtain a fundamental set of solutions
+								\[
+									y_1 = \cos x
+									\quad
+									y_2 = \sin x
+								\]
+							</div>	
+						</li>	
+
+						<li>
+							<div>
+								Now we will try to find a particular solution for the nonhomogeneous equation by guessing a solution based on the forcing function
+								\[
+									\frac{d^2y}{dx^2}+y
+										= \underset{f(x)}{\underbrace{(8-4x)\cos x-(8x+8)\sin x}} 
+								\]
+							</div>	
+							<div>
+								We start by identifying the forcing function \( f(x) = (8-4x)\cos x-(8x+8)\sin x \) to help us formulate a reasonable guess for a solution. It appears to be similar to Example 5.4.3 so perhaps we can guess to both a linear coefficient and a constant coefficient for each function:
+								\begin{align}
+									y =  \big( Ax + B \big) \cos x + \big( Cx + D \big)\sin x
+								\end{align}
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \( y =  \big(Ax + B \big) \cos x + \big( Cx + D \big)\sin x \) twice
+							</div> 
+							<div>
+								Differentiating we obtain:
+								\begin{align*}
+									\frac{dy}{dx} = &  \big( Cx + A + D \big) \cos x + \big( -Ax - B + C \big)\sin x \\ \nonumber\\
+									\frac{d^2y}{dx^2} = &  \big( -Ax + 2C - B \big) \cos x + \big( -Cx -2A - D \big)\sin x \\
+								\end{align*}
+							</div> 
+							<div>
+								Substituting into the nonhomogeneous equation <a href="#x1-12r7">(5.5.7)</a> 
+
+								\begin{array}{rrrrr}
+									\displaystyle
+									\frac{d^2y}{dx^2} 
+										&=& {\small \big( -Ax + 2C - B \big)} \cos x & + {\small \big( -Cx -2A - D \big)}\sin x & \\	
+									+ \quad\quad\quad\quad\quad   y
+										&=& {\small \big( Ax + B \big)} \cos x & + {\small \big( Cx + D \big)}\sin x & \\	
+									\hline	
+									\underbrace{
+									\displaystyle
+									\frac{d^2y}{dx^2}  + y}
+										&& & \\		
+									(8-4x)\cos x-(8x+8)\sin x 
+									&=& {\big( 2c \big)} \cos x & + {\big( -2A \big)}\sin x & \\			
+								\end{array}
+
+								But all the \(x\) terms ended up cancelling out, so this will not produce a solution for us. This makes sense since \( \cos x \) and \( \sin x \) are both solutions to the complementary equation, thus causing terms to zero out in the calculations. So just like when this happened before in Example 5.5.2 we will simplify tack on an extra \(x\) factor to our guess:
+
+								\begin{align}
+									y =  \big( Ax^2 + Bx \big) \cos x + \big( Cx^2 + Dx \big)\sin x
+								\end{align}
+
+							</div> 
+
+							<div class="reading-exercise">
+								Differentiate \( y =  \big( Ax^2 + Bx \big) \cos x + \big( Cx^2 + Dx \big)\sin x \) twice
+							</div> 
+
+
+							<div>
+								Differentiating we obtain:
+								\begin{align*}
+									\frac{dy}{dx} = &  {\small \Big( Cx^2 + (2A+D)x + B  \Big)} \cos x + {\small \Big( -Ax^2 + (2C-B)x + D  \Big)}\sin x \\ \nonumber\\
+									\frac{d^2y}{dx^2} = &  {\small \Big( -Ax^2 + (4C-B)x + 2(A+D)  \Big)} \cos x + {\small \Big( -Cx^2 - (4A+D)x + 2(C-B)  \Big)}\sin x \\
+								\end{align*}
+							</div> 
+							<div>
+								Substituting into the nonhomogeneous equation <a href="#x1-19r12">(5.5.12)</a> 
+							
+								\begin{array}{rrrrr}
+									\displaystyle
+									\frac{d^2y}{dx^2} 
+										&=&  {\small \Big( -Ax^2 + (4C-B)x + 2(A+D)  \Big)} \cos x & +{\small \Big( -Cx^2 - (4A+D)x + 2(C-B)  \Big)}\sin x & \\	
+									+ \quad\quad\quad\quad\quad   y
+										&=& {\small \big( Ax^2 + Bx \big)} \cos x & + {\small \big( Cx^2 + Dx \big)}\sin x & \\	
+									\hline	
+									\underbrace{
+									\displaystyle
+									\frac{d^2y}{dx^2}  + y}
+										&& & \\					
+								\end{array}
+
+							</div> 
+							<br>
+							<div>
+								Now adding up the cosines and sines on the right and equating with the cosines and sines  in <a href="#x1-19r12">(5.5.12)</a>
+								\[
+
+									(-4x + 8)\cos x =
+									{\small \Big[\big( 0\big)x^2 + \overset{-4}{\overbrace{\big( 4c\big)}}x+ \overset{8}{\overbrace{\big( 2A + 2D  \big)}} \Big]}  \cos x 
+								\]
+								\[
+									(-8x-8)\sin x = 
+									{\small \Big[\big( 0\big)x^2  + \underset{-8}{\underbrace{\big( -4 A  \big)}}x+ \underset{-8}{\underbrace{\big( 2C-2B \big)}} \Big]}  \sin x 
+								\]
+
+								Thus we obtain the system of equations
+
+								\begin{align*}
+								\left\{
+									\begin{array}{r r r}
+										2C - 2B &=& -8 \\
+										2A + 2D &=& 8 \\
+										-4A &=& -8 \\
+										4C &=& -4 \\
+									\end{array}
+								\right.			
+								\end{align*}
+
+							</div> 
+							<div class="reading-exercise">
+								Solve \( \left\{
+									\begin{array}{r r r}
+										2C - 2B &=& -8 \\
+										2A + 2D &=& 8 \\
+										-4A &=& -8 \\
+										4C &=& -4 \\
+									\end{array}
+								\right.		\quad \) for \(A,\) \(B,\) \(C,\) and \(D\) 
+							</div> 
+					
+							<div>
+								Solving for	\(A,\) \(B,\) \(C,\) and \(D\)
+
+								\begin{align*}
+								\left\{
+									\begin{array}{r r r}
+										2C - 2B &=& -8 \\
+										2A + 2D &=& 8 \\
+										-4A &=& -8 \\
+										4C &=& -4 \\
+									\end{array}
+								\right.			
+								\longrightarrow
+								\left\{
+									\begin{array}{r r r}
+										A &=& 2 \\
+										B &=& 3 \\
+										C &=& -1 \\
+										D &=& 2 \\
+									\end{array}
+								\right.	
+								\end{align*}
+							</div> 
+							<div>	
+								So we can finally substitute  \(A,\)\(B,\) \(C\) and \(D\) back in \( y =  \big( Ax^2 + Bx \big) \cos x + \big( Cx^2 + Dx \big)\sin x\) to get our particular solution 
+
+								\begin{align*}
+									y =  \big( 2x^2 + 3x \big) \cos x + \big( -x^2 +2x  \big)\sin x
+								\end{align*}
+
+							</div>
+							
+							<div class="reading-exercise">
+								Verify \( y =  \big( 2x^2 + 3x \big) \cos x + \big( -x^2 +2x  \big)\sin x \) is a solution of <a href="#x1-19r12">(5.5.12)</a>
+							</div> 
+							
+						</li>
+						<li>
+							<div>
+								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \{ \cos x, \sin x \}\) and a particular solution to the nonhomogeneous equation \( y_p = \big( 2x^2 + 3x \big) \cos x + \big( -x^2 +2x  \big)\sin x \), then we can use Theorem&nbsp;<a href="sec5.3.book.html#x1-52" target=_blank>5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
+								\begin{align*}
+									y =   \big( 2x^2 + 3x + c_1 \big) \cos x + \big( -x^2 +2x + c_2  \big)\sin x
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Verify \(y = \big( 2x^2 + 3x + c_1 \big) \cos x + \big( -x^2 +2x + c_2  \big)\sin x\) is a solution of <a href="#x1-19r12">(5.5.12)</a>
+							</div> 
+						</li>	 
+					</ol>
 				</details>
 			</div>			
 
