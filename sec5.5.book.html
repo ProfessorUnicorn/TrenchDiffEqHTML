@@ -1371,10 +1371,10 @@
 								Differentiate \( u =  \big( Ax^2 + Bx \big) \cos 2x + \big( Cx^2 + Dx \big)\sin 2x \) twice
 							</div> 
 							<div>
-								Differentiating we obtain:
+								Differentiating we obtain
 								\begin{align*}
-									\frac{du}{dx} = &  \big( 3Cx + A + 3D \big) \cos x + \big( -3Ax - 3B + C \big)\sin x \\ \nonumber\\
-									\frac{d^2u}{dx^2} = &  \big( -9Ax - 9B + 6C \big) \cos x + \big( -9Cx - 6A - 9D \big)\sin x \\
+									\frac{du}{dx} = &  \big( 2Cx^2 + 2(A+D)x + B \big) \cos 2x + \big( -2Ax^2 + 2(C-B)x + D \big)\sin 2x \\ \nonumber\\
+									\frac{d^2u}{dx^2} = &  \big( -4Ax^2 +4(2C-B)x + 2(A+2D) \big) \cos 2x + \big( -4Cx^2 - 4(2A+D)x + 2(C-2B) \big)\sin 2x \\
 								\end{align*}
 							</div> 
 							<div>
@@ -1382,37 +1382,24 @@
 
 								\begin{array}{rrrrr}
 									\displaystyle
-									\frac{d^2y}{dx^2} 
-										&=& {\small \big( -9Ax - 9B + 6C \big)} \cos x & + {\small \big( -9Cx - 6A - 9D \big)}\sin x & \\
-									- 7 \displaystyle \frac{dy}{dx} 
-										&=& {\small  \big( -21Cx - 7A - 21D \big)} \cos x & + {\small \big( 21Ax + 21B - 7C \big)}\sin x & \\	
-									+ \quad\quad\quad\quad\quad   12y
-										&=& {\small \big( 12Ax + 12B \big)} \cos x & + {\small \big( 12Cx + 12D \big)}\sin x & \\	
+									\frac{d^2u}{dx^2} 
+										&=& {\small \Big( -4Ax^2 +4(2C-B)x + 2(A+2D) \Big)} \cos 2x & + {\small  \Big( -4Cx^2 - 4(2A+D)x + 2(C-2B) \Big)}\sin 2x & \\
+									+ \quad\quad\quad\quad\quad   4u
+										&=& {\small  4\Big( Ax^2 + Bx \Big)} \cos 2x & + {\small 4\Big( Cx^2 + Dx \Big)}\sin 2x & \\	
 									\hline	
 									\underbrace{
 									\displaystyle
-									\frac{d^2y}{dx^2} - 7 \frac{dy}{dx}  + 12y}
-										&& & \\		
-									2\cos 3x+(150x-34)\sin 3x
-										& \\			
+									\frac{d^2u}{dx^2} + 4u} & = & {\small \Big( (8C) x + (2A+4D) \Big)} \cos 2x & + {\small  \Big( (-8A)x + (2C-4B) \Big)}\sin 2x & \\			
 								\end{array}
 							</div>
 							<br>
 							<div>
-								Now adding up the cosines on the right we get
+								Equating with the sine and cosine terms we have
 								\[
-									{\small \Big[\big( 3A - 21C \big)x+ \big( -7A + 3B + 6C - 21D \big) \Big]}  \cos x 
-								\]
-								Now adding up the sines on the right we get
-								\[
-									{\small \Big[\big( 21A + 3C \big)x+ \big( -6A + 21B - 7C + 3D \big) \Big]}  \sin x 
-								\]
-								And equating with the terms on the left we have
-								\[
-									2\cos 3x={\small \Big[\overset{0}{\overbrace{\big(  3A - 21C \big)}}x+ \overset{2}{\overbrace{\big( -7A + 3B + 6C - 21D \big)} \Big]}}  \cos x 
+									(6-16x)\cos 2x={\small \Big[\overset{-16}{\overbrace{\big(  8C \big)}}x+ \overset{6}{\overbrace{\big( 2A+4D \big)} \Big]}}  \cos 2x 
 								\]
 								\[
-									(150x-34)\sin 3x = {\small \Big[\underset{150}{\underbrace{\big( 21A + 3C \big)}}x+ \underset{-34}{\underbrace{\big( -6A + 21B - 7C + 3D  \big)}} \Big]}  \sin x 
+									(-8x-8)\sin 2x = {\small \Big[\underset{-8}{\underbrace{\big( -8A \big)}}x+ \underset{-8}{\underbrace{\big( 2C-4B  \big)}} \Big]}  \sin 2x 
 								\]
 
 								Thus we obtain the system of equations
@@ -1420,10 +1407,10 @@
 								\begin{align*}
 								\left\{
 									\begin{array}{r r r}
-										-6A + 21B - 7C + 3D &=& -34 \\
-										-7A + 3B + 6C - 21D &=& 2 \\
-										21A + 3C &=& 150 \\
-										3A - 21C &=& 0 \\
+										2A+4D &=& 6 \\
+										2C - 4B &=& -8 \\
+										-8A &=& -8 \\
+										8C &=& -16 \\
 									\end{array}
 								\right.			
 								\end{align*}
@@ -1431,102 +1418,71 @@
 							<div class="reading-exercise">
 								Solve \( \left\{
 									\begin{array}{r r r}
-										21A + 3C &=& 150 \\
-										3A - 21C &=& 0 \\
+										2A+4D &=& 6 \\
+										2C - 4B &=& -8 \\
+										-8A &=& -8 \\
+										8C &=& -16 \\
 									\end{array}
-								\right.	\quad \) for \(A\) and \(C\)
+								\right.		 \) for \(A,\) \(B,\) \(C,\) and \(D\) 
 							</div> 	
 							<div>	
-								Which we can solve the last two:
 
 								\begin{align*}
 								\left\{
 									\begin{array}{r r r}
-										21A + 3C &=& 150 \\
-										3A - 21C &=& 0 \\
+										2A+4D &=& 6 \\
+										2C - 4B &=& -8 \\
+										-8A &=& -8 \\
+										8C &=& -16 \\
 									\end{array}
 								\right.			
 								\longrightarrow
 								\left\{
 									\begin{array}{r r r}
-										A &=& 7 \\
-										C &=& 1 \\
+										A &=& 1 \\
+										B &=& 1 \\
+										C &=& -2 \\
+										D &=& 1 \\
 									\end{array}
 								\right.	
 								\end{align*}
 							</div>	
-							<div class="reading-exercise">
-								Substitute the values for \(A\) and \(C\) in to \(
-								\left\{
-									\begin{array}{r r r}
-										-6A + 21B - 7C + 3D &=& -34 \\
-										-7A + 3B + 6C - 21D &=& 2 \\
-									\end{array}
-								\right.		 \)
-							</div> 
-							<div class="reading-exercise">
-								Solve for \(B\) and \(D\)
-							</div> 
-							<div>
-								Substituting in \(A=2\) and \(C=6\) we obtain:
-								\begin{align*}
-								\left\{
-									\begin{array}{r r r}
-										-6\cdot 7 + 21B - 7\cdot 1 + 3D &=& -34 \\
-										-7 \cdot 7 + 3B + 6\cdot 1 - 21D &=& 2 \\
-									\end{array}
-								\right.		
-								\longrightarrow
-								\left\{
-									\begin{array}{r r r}
-										21B + 3D &=& 15 \\
-										3B - 21D &=& 45 \\
-									\end{array}
-								\right.	
-								\longrightarrow
-								\left\{
-									\begin{array}{r r r}
-										B &=& 1 \\
-										D &=& -2 \\
-									\end{array}
-								\right.		
-								\end{align*}
-							</div> 
+
 							<br>
 							<br>
 							<div>	
-								So we can finally substitute  \(A,\)\(B,\) \(C\) and \(D\) back in \( u =  \big( Ax + B \big) \cos 3x + \big( Cx + D \big)\sin 3x\) to get our particular solution 
+								So we can finally substitute  \(A,\)\(B,\) \(C\) and \(D\) back in \( u =  \big( Ax^2 + Bx \big) \cos 2x + \big( Cx^2 + Dx \big)\sin 2x\) to get our particular solution 
 
 								\begin{align*}
-									u =  \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x
+									u =  \big( x^2 + x \big) \cos 2x + \big( -2x^2 + x \big)\sin 2x
 								\end{align*}
 
 							</div>
 							
 							<div class="reading-exercise">
-								Verify \( u =  \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \) is a solution of <a href="#x1-12r17">(5.5.17)</a>
+								Verify \( u =  \big( x^2 + x \big) \cos 2x + \big( -2x^2 + x \big)\sin 2x \) is a solution of <a href="#">(5.5.20)</a>
 							</div> 																								 
 
 							<div>
-								Now we can substitute \(u\) back to determine our particular solution \(y = ue^{-2x}\)
+								Now we can substitute \(u\) back to determine our particular solution \(y = ue^{-x}\)
 								\[
-									y =  \Big[ \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \Big] \, e^{-2x}
+									y =  \Big[ \big( x^2 + x \big) \cos 2x + \big( -2x^2 + x \big)\sin 2x \Big] \, e^{-x}
 								\]
 							</div>
 							<div class="reading-exercise">
-								Verify \( y =  \Big[ \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \Big] \, e^{-2x} \) is a solution of <a href="#x1-24r16">(5.5.16)</a>
+								Verify \( y = \Big[ \big( x^2 + x \big) \cos 2x + \big( -2x^2 + x \big)\sin 2x \Big] \, e^{-x} \) is a solution of <a href="#">(5.5.19)</a>
 							</div> 	
 							
 						</li>
 						<li>
 							<div>
-								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \{ e^x, e^{2x}\}\) and a particular solution to the nonhomogeneous equation \( y_p =\Big[ \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \Big] \, e^{-2x} \), then we can use Theorem&nbsp;<a href="sec5.3.book.html#x1-52" target=_blank>5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
+								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \{ e^{-x}\cos 2x, e^{-x} \sin 2x\}\) and a particular solution to the nonhomogeneous equation \( y_p =\Big[ \big( x^2 + x \big) \cos 2x + \big( -2x^2 + x \big)\sin 2x \Big] \, e^{-x} \), then we can use Theorem&nbsp;<a href="sec5.3.book.html#x1-52" target=_blank>5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
 								\begin{align*}
-									y =   \Big[ \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \Big] \, e^{-2x} + c_1 e^x + c_2 e ^{2x}
+									y =  \Big[ \big( x^2 + x \big) \cos 2x + \big( -2x^2 + x \big)\sin 2x \Big] \, e^{-x} + c_1  e^{-x}\cos 2x + c_2  e^{-x}\sin 2x
 								\end{align*}
 							</div>
 							<div class="reading-exercise">
-								Verify \(y = \Big[ \big( 7x + 1 \big) \cos 3x + \big( x -2  \big)\sin 3x \Big] \, e^{-2x} + c_1 e^x + c_2 e ^{2x}\) is a solution of <a href="#x1-24r16">(5.5.16)</a>
+								Verify \(y =  \Big[ \big( x^2 + x \big) \cos 2x + \big( -2x^2 + x \big)\sin 2x \Big] \, e^{-x} + c_1  e^{-x}\cos 2x + c_2  e^{-x}\sin 2x\) is a solution of <a href="#">(5.5.19)</a>
 							</div> 
 						</li>	 
 					</ol>
