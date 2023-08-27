@@ -57,7 +57,7 @@
 		
 
 		<details id="497cd290-d8a4-4d25-8386-cb523b8aeafdakslj;58-2">
-			<summary>Undetermined Coefficients \( e^{\alpha x}\)</summary>	
+			<summary>Exponentials \( e^{\alpha x}\)</summary>	
 
 			<!--Example 1-->
 			<div class="example" id="x1-31" style="--ex-number: 1">
@@ -317,11 +317,11 @@
 							<div>
 								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \{ e^{3x}, e^{4x} \}\) and a particular solution to the nonhomogeneous equation \( y_p = 5x e^{4x} \), then we can use Theorem&nbsp;<a href="sec5.3.book.html#x1-52" target=_blank>5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
 								\[
-									y = 5x e^{4x} + c_1 e^{3x} + c_2 e^{4x}
+									y = (5x + c_1) e^{4x} + c_2 e^{3x}
 								\]
 							</div>
 							<div class="reading-exercise">
-								Verify \( y = 5x e^{4x} + c_1 e^{3x} + c_2 e^{4x} \) is a solution of <a href="#x1-7r4">(5.4.4)</a> 
+								Verify \( y = (5x + c_1) e^{4x} + c_2 e^{3x} \) is a solution of <a href="#x1-7r4">(5.4.4)</a> 
 							</div> 
 						</li>
 					</ol>	
@@ -352,38 +352,51 @@
 
 
 				<details class="solution">
-
+					<summary>Solution</summary>
 					<ol>
 						<li>
 							<div>
-								The complementary equation for <a href="#x1-7r4">(5.4.4)</a> is
+								The complementary equation for <a href="#x1-10r6">(5.4.6)</a> is
 								\begin {equation*} 
-									\frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=0 
+									\frac{d^2y}{dx^2}-8\frac{dy}{dx}+16y=0 
 								\end {equation*}
-
-								We notice right away that this is the same as <a href="#x1-5r3">(5.4.3)</a> from Example <a href="#x1-31">5.4.1</a> which we already solved and found a fundamental set of solutions
-								\[
-									\{ y_1, y_2 \} = \{ e^{3x}, e^{4x} \}
-								\]
 							</div>
+							<div class="reading-exercise">
+								Differentiate and substitute \( y = e^{rx} \) to find and solve the characteristic equation
+							</div> 	
+							<div>
+								We obtain the characteristic equation
+								\[
+									r^2 -8r + 16 = 0
+								\]
+								
+							</div>	
+						
+							<div class="reading-exercise">
+								Use the method in Example <a href="sec5.2.book.html#x1-132" target=_blank>5.2.2</a> to find a fundamental set of solutions  
+							</div> 
+
+							<div>
+								Solving the characteristic equation and using variation of parameters we have a fundamental set of solutions
+								\[
+									y_1 = e^{4x}
+									\quad
+									y_2 = x e^{4x}
+								\]
+							</div>	
 						</li>	
 			
 						<li>
 							<div>
 								Now we will try to find a particular solution for the nonhomogeneous equation by guessing a solution based on the forcing function
 								\[
-									\frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y 
-										= \underset{f(x)}{\underbrace{5e^{4x}}} 
+								\frac{d^2y}{dx^2}-8\frac{dy}{dx}+16y
+										= \underset{f(x)}{\underbrace{2e^{4x}}} 
 								\]
 							</div>	
 							<div>
-								Now if we approach this problem the same way we did in Example <a href="#x1-31">5.4.1</a>, we might just notice that since the forcing function is \( f(x) = 5e^{4x} \) then a reasonable guess for a solution might be \( y = Ae^{4x}\), however, this is where we run into an issue. While guessing  like this worked in the past, it won't work here, since \(e^{4x}\) is actually a solution of the complementary equation. Let's try it to find out what happens if we were to use \(  Ae^{4x}\)
-								\begin{align*}
-									\frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y = & 5e^{4x} \\
-									\overset{\frac{d^2y}{dx^2} }{\overbrace{\Big( 16 A e^{4x} \Big)}} - 7 \overset{\frac{dy}{dx} }{\overbrace{\Big( 4 A e^{4x} \Big)}} + 12 \overset{y }{\overbrace{\Big( Ae^{4x} \Big)}} = & 5e^{4x}  \\
-									\underset{0}{\underbrace{\big( 16 A \big) e^{2x} - \big( 28 A \big) e^{2x} + \big( 12 A \big) e^{2x}}} = & 5e^{4x} \\
-								\end{align*}
-								Since \(e^{4x}\) is a solution of the complementary equation, then the entire left side of the equation simplified to zero. Therefore this guess will not help us find a particular solution No problem, just as we have done many times in the past, we will just update our guess to \( y = ue^{4x}\) where \(u\) is some function of \(x\) to be determined.
+								While the forcing function \( f(x) = 2e^{4x} \) is 
+								we learned in Example <a href="#x1-62">5.4.2</a> that we can't guess a solution of the form \(y=A e^{4x} \) since \(e^{4x} \) is a solution to the complementary equation. As it turns out, even guessing a solution of the form \(y=A x e^{4x} \) also won't work since \(xe^{4x} \) is also a solution to the complementary equation. No problem, we can use the same strategy again and guess \( y = ue^{4x}\) where \(u\) is some function of \(x\) to be determined.
 							</div>
 
 							<div class="reading-exercise">
@@ -399,89 +412,75 @@
 							</div>	
 							
 							<div>	
-								Substituinge into the nonhomogeneous equation <a href="#x1-7r4">(5.4.4)</a> 
+								Substituinge into the nonhomogeneous equation <a href="#x1-10r6">(5.4.6)</a> 
 
-								\begin{array}{rrrrr}
+								
+
+								\begin{array}{rrllr}
 									\displaystyle
 									\frac{d^2y}{dx^2} 
 										&=& \displaystyle\frac{d^2u}{dx^2}e^{4x} 
 											+ 8\displaystyle\frac{du}{dx}e^{4x}& 
 											+ 16\,ue^{4x}& \\
 									\displaystyle
-									-7\frac{dy}{dx} 
-										&=& -7\displaystyle\frac{du}{dx}e^{4x}& 
-											- 28\,ue^{4x}& \\
-									+ \quad\quad\quad\quad\quad   12y
+									-8\frac{dy}{dx} 
+										&=& -8\displaystyle\frac{du}{dx}e^{4x}& 
+											- 32\,ue^{4x}& \\
+									+ \quad\quad\quad\quad\quad   16y
 										&=& & 
-											+12\,ue^{4x}& \\	
+											+16\,ue^{4x}& \\	
 									\hline	
 									\underbrace{
 									\displaystyle
-									\frac{d^2y}{dx^2} -7\frac{dy}{dx} + 12y}
+									\frac{d^2y}{dx^2} -8\frac{dy}{dx} + 16y}
 										&=& \displaystyle\frac{d^2u}{dx^2}e^{4x} 
-											+ \displaystyle\frac{du}{dx}e^{4x}& 
+											+ \,0\,\displaystyle\frac{du}{dx}e^{4x}& 
 											+ \,0\, ue^{4x}& \\	
-									5e^{4x} 
+									2e^{4x} 
 										&=& \displaystyle\frac{d^2u}{dx^2}e^{4x} 
-											+ \displaystyle\frac{du}{dx}e^{4x}& 
+											& & 
 											\\				
 								\end{array}
 								Cancelling out the \( e^{4x}\) we obtain a new equation
 
-								<a id="x1-8r5"></a>
-								\begin{align} \label {eq:5.4.5}
-									\frac{d^2u}{dx^2} + \frac{du}{dx} = & \underset{f(x)}{\underbrace{5} } 
-								\end{align}
-
-								Now to solve this equation we will again guess! Since the forcing function \(f(x)=5\) is just a constant we might think to guess a constant like we did in Example <a href="sec5.3.book.html#x1-101" target=_blank>5.3.1</a> but that equation had the function \(y\) in it whereas this one only has derivatives, so we need to guess the antiderivative of a constant \(\int c dx = cx \) which is just a linear function so a simple linear function is the best guess, so we will try \(u=Ax\) 
-							</div>	
-							<div class="reading-exercise">
-								Differentiating \( u=Ax\) twice
-							</div> 
-							<div>		
-								Differentiating we obtain 
-								\begin{align*}
-									\frac{du}{dx} = A 
-									\quad\text{and}\quad
-									y = 0
+								
+								\begin{align*} 
+									\frac{d^2u}{dx^2} = & 2 
 								\end{align*}
-								Substituting in to <a href="#x1-8r5">(5.4.5)</a>
 
-								\begin{array}{clclc}
-									\underbrace{\displaystyle\frac{d^2u}{dx^2}} &+& \underbrace{\displaystyle\frac{du}{dx}} &=& 5 \\
-									0 &+& A &=& 5
-								\end{array}
-							</div>	
-							
-							<div>	
-								Therefore \( A = 5 \) and we have our function \(u=5x\) which yields our particular solution \( y = ue^{4x} \)
-								\[
-									y = 5x e^{4x}
-								\]
-							</div>	
+								Now this equation is integrable! So we can just find the antiderivative twice.
+							</div>
 							<div class="reading-exercise">
-								Verify \( y = 5x e^{4x} \) is a particular solution of <a href="#x1-7r4">(5.4.4)</a> 
+								Antidifferentiate \( \frac{d^2u}{dx^2} = 2 \) twice
+							</div> 	
+							<div>
+								So we obtain \(u = x^2 + c_1x + c_2\) and select a simple \(u\) with \(c_1=0\) and \(c_2=0\) and use \(u = x^2\) therefore we have our particular solution \(y=ue^{4x}\)
+
+								\begin{align*} 
+									y=x^2e^{4x}
+								\end{align*}
+
+							
+							</div>	
+		
+
+							<div class="reading-exercise">
+								Verify \( y=x^2e^{4x} \) is a particular solution of <a href="#x1-10r6">(5.4.6)</a>  
 							</div> 
 						</li>
 						<li>
 							<div>
-								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \{ e^{3x}, e^{4x} \}\) and a particular solution to the nonhomogeneous equation \( y_p = 5x e^{4x} \), then we can use Theorem&nbsp;<a href="sec5.3.book.html#x1-52" target=_blank>5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
+								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \{ e^{4x}, xe^{4x} \}\) and a particular solution to the nonhomogeneous equation \( y_p = x^2e^{4x} \), then we can use Theorem&nbsp;<a href="sec5.3.book.html#x1-52" target=_blank>5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
 								\[
-									y = 5x e^{4x} + c_1 e^{3x} + c_2 e^{4x}
+									y = ( x^2 + c_1 + c_2 x ) e^{4x}
 								\]
 							</div>
 							<div class="reading-exercise">
-								Verify \( y = 5x e^{4x} + c_1 e^{3x} + c_2 e^{4x} \) is a solution of <a href="#x1-7r4">(5.4.4)</a> 
+								Verify \( y = ( x^2 + c_1 + c_2 x ) e^{4x} \) is a solution of <a href="#x1-7r4">(5.4.4)</a> 
 							</div> 
 						</li>
 					</ol>
-										
-					<summary>Solution</summary>
-					Since the characteristic polynomial of the complementary equation 
-					\begin {equation} \label {eq:5.4.7} \frac{d^2y}{dx^2}-8\frac{dy}{dx}+16y=0 
-					\end {equation}
-					<a id="x1-11r7"></a>
-					is \(p(r)=r^2-8r+16=(r-4)^2\), both \(y_1=e^{4x}\) and \(y_2=xe^{4x}\) are solutions of <a href="#x1-11r7">(5.4.7)</a>. Therefore <a href="#x1-10r6">(5.4.6)</a> does not have a solution of the form \(y_p=Ae^{4x}\) or \(y_p=Axe^{4x}\). As in Example&nbsp;<a href="#x1-62">5.4.2</a>, we look for solutions of <a href="#x1-10r6">(5.4.6)</a> in the form \(y=ue^{4x}\), where \(u\) is a function to be determined. Substituting from <a href="#x1-8r5">(5.4.5)</a> into <a href="#x1-10r6">(5.4.6)</a> and canceling the common factor \(e^{4x}\) yields \[ (\frac{d^2u}{dx^2}+8\frac{du}{dx}+16u)-8(\frac{du}{dx}+4u)+16u=2\] or \[ \frac{d^2u}{dx^2}=2\] Integrating twice and taking the constants of integration to be zero shows that \(u_p=x^2\) is a particular solution of this equation, so \(y_p=x^2e^{4x}\) is a particular solution of <a href="#x1-7r4">(5.4.4)</a>. Therefore \[ y=e^{4x}(x^2+c_1+c_2x) \] is the general solution.
+					
 				</details>
 			</div>
 
@@ -489,32 +488,123 @@
 			<br>
 			<br>
 
-			<div class="indent" id="787f4d9e-ffca-435f-92f8-b0bf48647305">
-				
-				The preceding examples illustrate the following facts concerning the form of a particular solution \(y_p\) of a constant coefficient equation \[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=ke^{\alpha x}\] where \(k\) is a nonzero constant:
-				<ol style="list-style-type: lower-alpha">
-					<li> If \(e^{\alpha x}\) isn’t a solution of the complementary equation 
-					\begin {equation} \label {eq:5.4.8} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0 
-					\end {equation} <a id="x1-13r8"></a> then \(y_p=Ae^{\alpha x}\), where \(A\) is a constant. (See Example&nbsp;<a href="#x1-31">5.4.1</a>). </li>
-					<li> If \(e^{\alpha x}\) is a solution of <a href="#x1-13r8">(5.4.8)</a> but \(xe^{\alpha x}\) is not, then \(y_p=Axe^{\alpha x}\), where \(A\) is a constant. (See Example&nbsp;<a href="#x1-62">5.4.2</a>.) </li>
-					<li> If both \(e^{\alpha x}\) and \(xe^{\alpha x}\) are solutions of <a href="#x1-13r8">(5.4.8)</a>, then \(y_p=Ax^2e^{\alpha x}\), where \(A\) is a constant. (See Example&nbsp;<a href="#x1-93">5.4.3</a>.) </li>
+			<div class="theorem" id="787f4d9e-ffca-435f-92f8-b0bf48647305">
+				<strong>Summary</strong>
+				<div>
+					Examples <a href="#x1-31">5.4.1</a>, <a href="#x1-62">5.4.2</a>, and <a href="#x1-93">5.4.3</a>illustrate the form of a particular solution \(y_p\) of a constant coefficient equation 
+
+					<a id="x1-13r8"></a>
+					\begin {equation} \label {eq:5.4.8} 
+						a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=ke^{\alpha x} 
+					\end {equation} 
+
+					With complementary equation
+
+					\begin {equation}  
+						a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0
+					\end {equation}
+				</div>	
+
+				<ol>
+					<li> 
+						If \(e^{\alpha x}\) isn’t a solution of the complementary equation (5.4.8) then \(y_p=Ae^{\alpha x}\)
+					</li>
+					<li> 
+						If \(e^{\alpha x}\) is a solution of <a href="#x1-13r8">(5.4.7)</a> but \(xe^{\alpha x}\) is not, then \(y_p=Axe^{\alpha x}\)
+					</li>
+					<li> 
+						If both \(e^{\alpha x}\) and \(xe^{\alpha x}\) are solutions of <a href="#x1-13r8">(5.4.7)</a>, then \(y_p=Ax^2e^{\alpha x}\)
+					</li>
 				</ol>
+
+				<div>
+					We won't apply these as formulas but instead always show the work as we did in the examples
+				</div>	
 			
 			</div>
 
-			<div id="82609843-a5a2-48f9-be40-a3393c750731">
-				See Exercise&nbsp;<span class="ptmb8t-">30</span> for the proofs of these facts. 
-			</div>
 		</details>
 		
+		<!---->
 		<details id="497cd290-d8a4-4d25-8386-cb523b8aeafdakslj;58-1">
-			<summary>Undetermined Coefficients \( e^{\alpha x} (Ax^2 + Bx + C)\)</summary>
+			<summary>Exponential Polynomials \( e^{\alpha x} \, P(x) \)</summary>
 
 
 			<div class="indent" id="4808f2b5-e93d-4ecd-857e-77f4b89e0c59">
-				In all three cases you can just substitute the appropriate form for \(y_p\) and its derivatives directly into \[ a\frac{d^2y_p}{dx^2}+b\frac{dy_p}{dx}+cy_p=ke^{\alpha x}\] and solve for the constant \(A\), as we did in Example&nbsp;<a href="#x1-31">5.4.1</a>. (See Exercises&nbsp;<span class="ptmb8t-">31</span>–<span class="ptmb8t-">33</span>.) However, if the equation is \[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=k e^{\alpha x}G(x)\] where \(G\) is a polynomial of degree greater than zero, we recommend that you use the substitution \(y=ue^{\alpha x}\) as we did in Examples&nbsp;<a href="#x1-62">5.4.2</a>and <a href="#x1-93">5.4.3</a>. The equation for \(u\) will turn out to be 
-				\begin {equation} \label {eq:5.4.9} a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{\alpha}\frac{du}{dx}+p(\alpha )u=G(x) 
-				\end {equation} <a id="x1-16r9"></a> where \(p(r)=ar^2+br+c\) is the characteristic polynomial of the complementary equation and \(\left. \frac{dp}{dx} \right|_{r}=2ar+b\) (Exercise&nbsp;<span class="ptmb8t-">30</span>); however, you shouldn’t memorize this since it’s easy to derive the equation for \(u\) in any particular case. Note, however, that if \(e^{\alpha x}\) is a solution of the complementary equation then \(p(\alpha )=0\), so <a href="#x1-16r9">(5.4.9)</a> reduces to \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{\alpha}\frac{du}{dx}=G(x)\] while if both \(e^{\alpha x}\) and \(xe^{\alpha x}\) are solutions of the complementary equation then \(p(r)=a(r-\alpha )^2\) and \(\left. \frac{dp}{dx} \right|_{r}=2a(r-\alpha )\), so \(p(\alpha )=\left. \frac{dp}{dx} \right|_{\alpha}=0\) and <a href="#x1-16r9">(5.4.9)</a> reduces to \[ a\frac{d^2u}{dx^2}=G(x)\] 
+				<div>	
+					Examples <a href="#x1-31">5.4.1</a>, <a href="#x1-62">5.4.2</a>, and <a href="#x1-93">5.4.3</a> covered the basic cases of solving equations with an exponential forcing function:
+					
+					\[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=ke^{\alpha x}\] 
+				</div>
+				<div>	
+					However, we still have to determine what to do if the forcing function is the product of an exponential and a polynomial \( P(x) \)
+					
+					\[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=k e^{\alpha x}\,P(x)\] 
+				</div>
+				<div>
+					We will stick with the same stragey we used in Examples	<a href="#x1-62">5.4.2</a>, and <a href="#x1-93">5.4.3</a> where we seek solutions of the form \(y=ue^{\alpha x}\)
+				</div>
+				<div class="reading-exercise">
+					Differentiate \(y=ue^{\alpha x}\) twice
+				</div> 
+				<div>	
+					Differentiating we obtain:
+					\begin{align*}
+						\frac{dy}{dx} =& \frac{du}{dx}e^{\alpha x} + \alpha ue^{4x} \\ \\
+						\frac{d^2y}{dx^2} =& \frac{d^2u}{dx^2}e^{\alpha x} + 2\alpha \frac{du}{dx}e^{\alpha x} + \alpha^2 ue^{\alpha x} \\
+					\end{align*}
+				</div>
+				<div>	
+					Substituinge into the nonhomogeneous equation 
+
+					\begin{array}{rrrrr}
+						\displaystyle
+						a\frac{d^2y}{dx^2} 
+							&=& a\displaystyle\frac{d^2u}{dx^2}e^{\alpha x} 
+								+ 2a\alpha\displaystyle\frac{du}{dx}e^{\alpha x}& 
+								+ a\alpha^2 \,ue^{\alpha x}& \\
+						\displaystyle
+						+b\frac{dy}{dx} 
+							&=& +b \displaystyle\frac{du}{dx}e^{\alpha x}& 
+								+b \alpha \,ue^{\alpha x}& \\
+						+ \quad\quad\quad\quad\quad   cy
+							&=& & 
+								+c\,ue^{4x}& \\	
+						\hline	
+						\underbrace{
+						\displaystyle
+						a\frac{d^2y}{dx^2} +b\frac{dy}{dx} + cy}
+							& \\	
+						ke^{\alpha x} \, P(x)
+							&=& a\displaystyle\frac{d^2u}{dx^2}e^{\alpha x} 
+								+ (2a \alpha + b)\displaystyle\frac{du}{dx}e^{\alpha x}& 
+								+ (a \alpha^2 + b \alpha + c) ue^{\alpha x}& \\				
+					\end{array}
+					Cancelling out the \( e^{\alpha x}\) we obtain a new equation
+
+					
+					\begin{align*} 
+						k \, P(x) = & 
+							\frac{d^2u}{dx^2}e^{\alpha x} 
+								+ (2a \alpha + b) \frac{du}{dx}e^{\alpha x} 
+								+ (a \alpha^2 + b \alpha + c) ue^{\alpha x}
+					\end{align*}
+
+					Now this equation is integrable! So we can just find the antiderivative twice.
+				</div>
+				<div>	
+					fixme
+				</div>
+				<div>
+					The equation for \(u\) will turn out to be 
+
+					<a id="x1-16r9"></a>
+					\begin {equation} \label {eq:5.4.9} 
+						a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{\alpha}\frac{du}{dx}+p(\alpha )u=G(x) 
+					\end {equation}  
+				
+					where \(p(r)=ar^2+br+c\) is the characteristic polynomial of the complementary equation and \(\left. \frac{dp}{dx} \right|_{r}=2ar+b\) (Exercise&nbsp;<span class="ptmb8t-">30</span>); however, you shouldn’t memorize this since it’s easy to derive the equation for \(u\) in any particular case. Note, however, that if \(e^{\alpha x}\) is a solution of the complementary equation then \(p(\alpha )=0\), so <a href="#x1-16r9">(5.4.9)</a> reduces to \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{\alpha}\frac{du}{dx}=G(x)\] while if both \(e^{\alpha x}\) and \(xe^{\alpha x}\) are solutions of the complementary equation then \(p(r)=a(r-\alpha )^2\) and \(\left. \frac{dp}{dx} \right|_{r}=2a(r-\alpha )\), so \(p(\alpha )=\left. \frac{dp}{dx} \right|_{\alpha}=0\) and <a href="#x1-16r9">(5.4.9)</a> reduces to \[ a\frac{d^2u}{dx^2}=G(x)\] 
+				</div>
 			</div>
 			<div class="example" id="x1-174" style="--ex-number: 4">
 				<div> 
