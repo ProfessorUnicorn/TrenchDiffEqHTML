@@ -306,6 +306,7 @@
 								
 								\begin{align}
 									y = x \big(A\cos 2x + B\sin 2x \big) 
+									=Ax \cos 2x + Bx \sin 2x
 								\end{align}
 							</div>	
 
@@ -317,8 +318,8 @@
 								After differentiating twice we find 
 								
 								\begin{align*}
-									\frac{dy}{dx} = & \big( 2Bx + A \big) \cos 2x + \big( B - 2Ax \big) \sin 2x \\
-									\frac{d^2y}{dx^2} = & \big( 4B - 4Ax \big) \cos 2x - \big( 4A + 4Bx \big) \sin 2x \\
+									\frac{dy}{dx} = & \big( A + 2Bx \big) \cos 2x + \big( B - 2Ax \big) \sin 2x \\
+									\frac{d^2y}{dx^2} = & \big( 4B - 4Ax \big) \cos 2x + \big( -4A - 4Bx \big) \sin 2x \\
 								\end{align*}
 								
 								Then substituting into the nonhomogeneous equation <a href="#x1-9r5">(5.5.5)</a> 
@@ -341,10 +342,10 @@
 							<br>
 							<div>	
 
-								So we obtain the equation 
+								Our equation simplifies to 
 
 								\begin{align*}
-									8\cos 2x+12\sin 2x = {4B}\, \cos 2x - \, {4A}\, \sin 2x 
+									\underbrace{8}\cos 2x+\overbrace{12}\sin 2x = \underbrace{{4B}}\, \cos 2x - \, \overbrace{{4A}}\, \sin 2x 
 								\end{align*}
 							</div>
 							<br>
@@ -368,25 +369,25 @@
 								\right.	
 								\end{align*}
 
-								Therefore we have our particular solution \( y = x \big(A\cos 2x + B\sin 2x \big) \)
+								Therefore we have our particular solution \( y = Ax \cos 2x + B x\sin 2x \)
 								
-								\[y = x \big( 2\sin 2x -3\cos 2x \big) \]
+								\[y =  2x \sin 2x -3x \cos 2x \]
 							</div>
 
 							<div class="reading-exercise">
-								Verify \( y = x \big( 2\sin 2x -3\cos 2x \big) \) is a solution of <a href="#x1-9r5">(5.5.5)</a>
+								Verify \( y = 2x \sin 2x -3 \cos 2x \) is a solution of <a href="#x1-9r5">(5.5.5)</a>
 							</div> 
 							
 						</li>
 						<li>
 							<div>
-								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \{ \cos 2x, \sin 2x \}\) and a particular solution to the nonhomogeneous equation \( y_p = x \big( 2\sin 2x -3\cos 2x \big) \), then we can use Theorem&nbsp;<a href="sec5.3.book.html#x1-52" target=_blank>5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
+								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \{ \cos 2x, \sin 2x \}\) and a particular solution to the nonhomogeneous equation \( y_p =  2x \sin 2x -3x \cos 2x \), then we can use Theorem&nbsp;<a href="sec5.3.book.html#x1-52" target=_blank>5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
 								\[
-									y = x \big( 2\sin 2x -3\cos 2x \big) + c_1 \cos 2x + c_2 \sin 2x
+									y =  (c_1 -3x) \cos 2x + (c_2 + 2x)\sin 2x
 								\]
 							</div>
 							<div class="reading-exercise">
-								Verify \( y = x \big( 2\sin 2x -3\cos 2x \big) + c_1 \cos 2x + c_2 \sin 2x \) is a solution of <a href="#x1-9r5">(5.5.5)</a>
+								Verify \( y =  (c_1 -3x) \cos 2x + (c_2 + 2x)\sin 2x \) is a solution of <a href="#x1-9r5">(5.5.5)</a>
 							</div> 
 						</li>	
 					</ol>	
@@ -460,10 +461,22 @@
 								\]
 							</div>	
 							<div>
+								We start by identifying the forcing function \( f(x) = (20x + 16)\cos x+10\sin x \) to help us formulate a reasonable guess for a solution. We won't be able to guess a linear combination of cosine and sine
+								\[
+									y =  A\cos x + B\sin x
+								\]
+								Since there is not way to obtain the \(20x\) term from that guess, so we may be tempted to consider just tacking on an extra factor of \(x\) like we did in Example 5.5.2
+								\[
+									y =  Ax\cos x + Bx\sin x
+								\]
+							</div>	
+							<div>
+
 								Now if we approach this problem the same way we did in Example 5.5.1, we might just notice that since the forcing function is \( f(x) = 8\cos 2x+12\sin 2x \) then a reasonable guess for a solution might be \( y = A\cos 2x+B\sin 2x \), however, this is where we run into an issue. While guessing like this worked in the past, it won't work here, since \(\cos 2x \) and \(\sin 2x \) are actually both solutions of the complementary equation. Let's try it to find out what happens if we were to use 
 								\[
 									y =  A\cos 2x + B\sin 2x
 								\]
+
 							</div>
 							<div class="reading-exercise">
 								Differentiate \(y = A\cos 2x + B\sin 2x \) twice
@@ -491,6 +504,7 @@
 								
 								\begin{align}
 									y = x \big(A\cos 2x + B\sin 2x \big) 
+									= Ax \cos 2x + Bx \sin 2x
 								\end{align}
 							</div>	
 
