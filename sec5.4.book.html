@@ -57,7 +57,7 @@
 		
 
 		<details id="497cd290-d8a4-4d25-8386-cb523b8aeafdakslj;58-2">
-			<summary>Exponentials \( e^{r  x}\)</summary>	
+			<summary>Exponentials Examples \( e^{r  x}\)</summary>	
 
 			<!--Example 1-->
 			<div class="example" id="x1-31" style="--ex-number: 1">
@@ -525,7 +525,7 @@
 
 		</details>
 		
-		<!---->
+		<!--Exponential Polynomials-->
 		<details id="497cd290-d8a4-4d25-8386-cb523b8aeafdakslj;58-1">
 			<summary>Exponential Polynomials \( e^{r  x} \, P(x) \)</summary>
 
@@ -539,7 +539,7 @@
 				<div>	
 					However, we still have to determine what to do if the forcing function is the product of an exponential and a polynomial \( P(x) \)
 					
-					\[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=k e^{r  x}\,P(x)\] 
+					\[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy= e^{r  x}\,P(x)\] 
 				</div>
 				<div>
 					We will stick with the same stragey we used in Examples	<a href="#x1-62">5.4.2</a>, and <a href="#x1-93">5.4.3</a> where we seek solutions of the form \(y=ue^{r  x}\)
@@ -575,7 +575,7 @@
 						\displaystyle
 						a\frac{d^2y}{dx^2} +b\frac{dy}{dx} + cy}
 							& \\	
-						ke^{r  x} \, P(x)
+						e^{r  x} \, P(x)
 							&=& {\small a}\displaystyle\frac{d^2u}{dx^2}e^{r  x} 
 								+ {\small (2a r  + b)}\displaystyle\frac{du}{dx}e^{r  x}& 
 								+ {\small (a r ^2 + b r  + c)} ue^{r  x}& \\				
@@ -584,28 +584,48 @@
 
 					
 					\begin{align*} 
-						k \, P(x) = & 
-							\frac{d^2u}{dx^2} 
-								+ (2a r  + b) \frac{du}{dx} 
-								+ (a r ^2 + b r  + c) u
+						\, P(x) = & 
+							a\frac{d^2u}{dx^2} 
+								+ \underset{p'(r)}{\underbrace{(2a r  + b)}} \frac{du}{dx} 
+								+ \underset{p(r)}{\underbrace{(a r ^2 + b r  + c)}} u
 					\end{align*}
 
-					Now this equation is integrable! So we can just find the antiderivative twice.
+					And we recognize \(p(r) = a r ^2 + b r  + c\) as the characteristic polynomial which is the coefficient of \(u\) and its derivative \(p'(r) = 2 a r + b \) as the coefficient of \(du/dx\) so the equation for \(u\) will take on the form 
 				</div>
-				<div>	
-					fixme
-				</div>
+				
 				<div>
-					The equation for \(u\) will turn out to be 
-
 					<a id="x1-16r9"></a>
 					\begin {equation} \label {eq:5.4.9} 
-						a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{r }\frac{du}{dx}+p(r  )u=G(x) 
+						a\frac{d^2u}{dx^2}+ p'(r) \frac{du}{dx} + p(r) u = P(x) 
 					\end {equation}  
+
+					
 				
-					where \(p(r)=ar^2+br+c\) is the characteristic polynomial of the complementary equation and \(\left. \frac{dp}{dx} \right|_{r}=2ar+b\) (Exercise&nbsp;<span class="ptmb8t-">30</span>); however, you shouldn’t memorize this since it’s easy to derive the equation for \(u\) in any particular case. Note, however, that if \(e^{r  x}\) is a solution of the complementary equation then \(p(r  )=0\), so <a href="#x1-16r9">(5.4.9)</a> reduces to \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{r }\frac{du}{dx}=G(x)\] while if both \(e^{r  x}\) and \(xe^{r  x}\) are solutions of the complementary equation then \(p(r)=a(r-r  )^2\) and \(\left. \frac{dp}{dx} \right|_{r}=2a(r-r  )\), so \(p(r  )=\left. \frac{dp}{dx} \right|_{r }=0\) and <a href="#x1-16r9">(5.4.9)</a> reduces to \[ a\frac{d^2u}{dx^2}=G(x)\] 
+					However, we won't memorize this as a formula but instead apply it as a process to help us come up with the equation for \(u\) in any particular case. 
+				</div>
+				<br>
+				<br>
+				<div>	
+					Note, however, that if \(e^{r  x}\) is a solution of the complementary equation then \(p(r  )=0\) so <a href="#x1-16r9">(5.4.9)</a> reduces to 
+					
+					\[ 
+						a\frac{d^2u}{dx^2}+ p'(r) \frac{du}{dx}=P(x)\] 
+					
+					
+					Whereas if both \(e^{r  x}\) and \(xe^{r  x}\) are solutions of the complementary equation then \(p(r)=a(r-r  )^2 = 0\) and \(p'(r)=2a(r-r  )= 0\) so <a href="#x1-16r9">(5.4.9)</a> reduces to 
+					
+					\[ a\frac{d^2u}{dx^2}=P(x)\] 
 				</div>
 			</div>
+
+		</details>
+
+		<!--Exponential Polynomial Examples-->
+		<details id="497cd290-d8a4-4d25-8386-cb523b8aeaffdasdakslj;58-1">
+			<summary>Exponential Polynomial Examples \( e^{r  x} \, P(x) \)</summary>
+
+
+			<!--Example 4-->
 			<div class="example" id="x1-174" style="--ex-number: 4">
 				<div> 
 					<a id="x1-18r10"></a> Find a particular solution of 
@@ -632,6 +652,7 @@
 				</details>
 			</div>
 
+			<!--Example 5-->
 			<div class="example" id="x1-205" style="--ex-number: 5">
 				<div> 
 					<a id="x1-21r12"></a> Find a particular solution of 
@@ -655,6 +676,7 @@
 				</details>
 			</div>
 
+			<!--Example 6-->
 			<div class="example" id="x1-236" style="--ex-number: 6">
 				<div> 
 					<a id="x1-24r14"></a> Find a particular solution of 
@@ -671,7 +693,9 @@
 					which does not contain \(u\) or \(\frac{du}{dx}\) because \(e^{-x/2}\) and \(xe^{-x/2}\) are both solutions of the complementary equation. (See Exercise&nbsp;<span class="ptmb8t-">30</span>.) To obtain a particular solution of <a href="#x1-25r15">(5.4.15)</a> we integrate twice, taking the constants of integration to be zero; thus, \[ \frac{du_p}{dx}=-2x+6x^2+12x^3\quad \mbox{ and } \quad u_p=-x^2+2x^3+3x^4=x^2(-1+2x+3x^2)\] Therefore \[ y_p=u_pe^{-x/2}=x^2e^{-x/2}(-1+2x+3x^2) \] is a particular solution of <a href="#x1-24r14">(5.4.14)</a>.
 				</details>
 			</div>
-		</details>
+		</details>		
+
+
 
 		<details id="9da4a7c1-35c7-4b12-b306-5e7c93fc3727">
 			<summary>Summary</summary>
