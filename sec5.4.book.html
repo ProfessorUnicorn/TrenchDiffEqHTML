@@ -56,8 +56,9 @@
 		</details>
 		
 
+		<!--Exponential Example 1 2 3 -->
 		<details id="497cd290-d8a4-4d25-8386-cb523b8aeafdakslj;58-2">
-			<summary>Exponentials Examples \( e^{r  x}\)</summary>	
+			<summary>Exponential Examples \( e^{r  x}\)</summary>	
 
 			<!--Example 1-->
 			<div class="example" id="x1-31" style="--ex-number: 1">
@@ -249,7 +250,7 @@
 							</div>	
 							
 							<div>	
-								Substituinge into the nonhomogeneous equation <a href="#x1-7r4">(5.4.4)</a> 
+								Substituting into the nonhomogeneous equation <a href="#x1-7r4">(5.4.4)</a> 
 
 								\begin{array}{rrrrr}
 									\displaystyle
@@ -412,7 +413,7 @@
 							</div>	
 							
 							<div>	
-								Substituinge into the nonhomogeneous equation <a href="#x1-10r6">(5.4.6)</a> 
+								Substituting into the nonhomogeneous equation <a href="#x1-10r6">(5.4.6)</a> 
 
 								
 
@@ -491,7 +492,7 @@
 			<div class="theorem" id="787f4d9e-ffca-435f-92f8-b0bf48647305">
 				<strong>Summary</strong>
 				<div>
-					Examples <a href="#x1-31">5.4.1</a>, <a href="#x1-62">5.4.2</a>, and <a href="#x1-93">5.4.3</a>illustrate the form of a particular solution \(y_p\) of a constant coefficient equation 
+					Examples <a href="#x1-31">5.4.1</a>, <a href="#x1-62">5.4.2</a>, and <a href="#x1-93">5.4.3</a> illustrate the form of a particular solution \(y_p\) of a constant coefficient equation 
 
 					<a id="x1-13r8"></a>
 					\begin {equation} \label {eq:5.4.8} 
@@ -555,7 +556,7 @@
 					\end{align*}
 				</div>
 				<div>	
-					Substituinge into the nonhomogeneous equation 
+					Substituting into the nonhomogeneous equation 
 
 					\begin{array}{rrrrr}
 						\displaystyle
@@ -627,96 +628,742 @@
 
 			<!--Example 4-->
 			<div class="example" id="x1-174" style="--ex-number: 4">
-				<div> 
-					<a id="x1-18r10"></a> Find a particular solution of 
-					\begin {equation} \label {eq:5.4.10} \frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y=e^{3x}(-1+2x+x^2) 
+				<div>
+					Given the differential equation
+					<a id="x1-18r10"></a>
+					\begin {equation} \label {eq:5.4.10} 
+						\frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y=(x^2+2x-1) e^{3x}
 					\end {equation} 
-				</div>
+				</div>	 
+			
+				<ol>
+					<li>
+						Solve the complementary equation
+					</li>	
+					<li>
+						Find a particular solution
+					</li>
+					<li>
+						Find the general solution
+					</li>
+				</ol>	
 
 				<details class="solution">
 					<summary>Solution</summary>
-					Substituting \[ y=ue^{3x},\quad \frac{dy}{dx}=\frac{du}{dx}e^{3x}+3ue^{3x},\mbox {\quad and } \frac{d^2y}{dx^2}=\frac{d^2u}{dx^2}e^{3x}+6\frac{du}{dx}e^{3x}+9ue^{3x} \] into <a href="#x1-18r10">(5.4.10)</a> and canceling \(e^{3x}\) yields \[ (\frac{d^2u}{dx^2}+6\frac{du}{dx}+9u)-3(\frac{du}{dx}+3u)+2u=-1+2x+x^2\] or 
-					\begin {equation} \label {eq:5.4.11} \frac{d^2u}{dx^2}+3\frac{du}{dx}+2u=-1+2x+x^2 
-					\end {equation}
-					<a id="x1-19r11"></a>
-					As in Exercise&nbsp;<span class="ptmb8t-">2</span>, in order to guess a form for a particular solution of <a href="#x1-19r11">(5.4.11)</a>, we note that substituting a second degree polynomial \(u_p=A+Bx+Cx^2\) for \(u\) in the left side of <a href="#x1-19r11">(5.4.11)</a> produces another second degree polynomial with coefficients that depend upon \(A\), \(B\), and \(C\); thus, \[ \mbox { if \quad }u_p=A+Bx+Cx^2\quad \mbox{ then \quad } \frac{du_p}{dx}=B+2Cx\mbox {\quad and } \quad \frac{d^2u_p}{dx^2}=2C\] If \(u_p\) is to satisfy <a href="#x1-19r11">(5.4.11)</a>, we must have
+					<ol>
+						<li>
+							<div>
+								The complementary equation for <a href="#x1-18r10">(5.4.10)</a> is
+								\begin {equation*} 
+									\frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y=0 
+								\end {equation*}
+							</div>
+							<div class="reading-exercise">
+								Differentiate and substitute \( y = e^{rx} \) to find and solve the characteristic equation
+							</div> 	
+							<div>
+								We obtain the characteristic equation
+								\[
+									r^2 -3r + 2 = 0
+								\]
+								
+							</div>	
+						
+							<div class="reading-exercise">
+								Use the method in Example <a href="sec5.2.book.html#x1-132" target=_blank>5.2.2</a> to find a fundamental set of solutions  
+							</div> 
 
-					<div class="eqnarray" id="33a26359-5e3c-45e3-8c63-f60e98ee266a">
-						\begin {eqnarray*} \frac{d^2u_p}{dx^2}+3\frac{du_p}{dx}+2u_p&amp;=&amp;2C+3(B+2Cx)+2(A+Bx+Cx^2)\\ &amp;=&amp;(2C+3B+2A)+(6C+2B)x+2Cx^2=-1+2x+x^2 
-						\end {eqnarray*} 
-					</div>
+							<div>
+								\[
+									y_1 = e^{x}
+									\quad
+									y_2 = e^{2x}
+								\]
+							</div>	
+						</li>	
+			
+						<li>
+							<div>
+								Now we will try to find a particular solution for the nonhomogeneous equation by guessing a solution based on the forcing function
+								\[
+								\frac{d^2y}{dx^2}-3\frac{dy}{dx}+2y 
+										= \underset{f(x)}{\underbrace{(x^2+2x-1)e^{3x}}} 
+								\]
+							</div>	
+							<div>
+								Since the forcing function \( f(x) = (x^2+2x-1)e^{3x} \) is an exponential multiplied by a polynomial, we will seek solutions of the form \( y = u e^{3x}\) where \(u\) is some function of \(x\) to be determined.
+							</div>
 
-					Equating coefficients of like powers of \(x\) on the two sides of the last equality yields \[ 
-					\begin {array}{rcr} 2C&amp;=&amp;1\phantom {.}\\ 2B+6C&amp;=&amp;2\phantom {.}\\ 2A+3B+2C&amp;=&amp; -1 
-					\end {array} \] Solving these equations for \(C\), \(B\), and \(A\) (in that order) yields \(C=1/2,B=-1/2,A=-1/4\). Therefore \[ u_p=-{1\over 4}(1+2x-2x^2) \] is a particular solution of <a href="#x1-19r11">(5.4.11)</a>, and \[ y_p=u_pe^{3x}=-{e^{3x}\over 4}(1+2x-2x^2) \] is a particular solution of <a href="#x1-18r10">(5.4.10)</a>.
+							<div class="reading-exercise">
+								Differentiate \( y= ue^{3x} \) twice
+							</div> 
+							<div>
+								Differentiating we obtain:
+								\begin{align*}
+									\frac{dy}{dx} =& \frac{du}{dx}e^{3x} + 3ue^{3x} \\ \\
+									\frac{d^2y}{dx^2} =& \frac{d^2u}{dx^2}e^{3x} + 6\frac{du}{dx}e^{3x} + 9ue^{3x} \\
+								\end{align*}
+
+							</div>	
+							
+							<div>	
+								Substituting into the nonhomogeneous equation <a href="#x1-18r10">(5.4.10)</a> 
+
+								
+
+								\begin{array}{rrrrr}
+									\displaystyle
+									\frac{d^2y}{dx^2} 
+										&=& \displaystyle\frac{d^2u}{dx^2}e^{3x} 
+											+ 6\displaystyle\frac{du}{dx}e^{3x}& 
+											+ 9\,ue^{3x}& \\
+									\displaystyle
+									-3\frac{dy}{dx} 
+										&=& -3\displaystyle\frac{du}{dx}e^{3x}& 
+											- 9\,ue^{3x}& \\
+									+ \quad\quad\quad\quad\quad   2y
+										&=& & 
+											+2\,ue^{3x}& \\	
+									\hline	
+									\underbrace{
+									\displaystyle
+									\frac{d^2y}{dx^2} -3\frac{dy}{dx} + 2y}
+										&=&  \\	
+											(x^2+2x-1)e^{3x} 
+										&=& \displaystyle\frac{d^2u}{dx^2}e^{3x} 
+											+ \,3\,\displaystyle\frac{du}{dx}e^{3x}& 
+											+ \,2\, ue^{3x}& \\				
+								\end{array}
+								Cancelling out the \( e^{3x}\) we obtain a new equation
+
+								<a id="x1-19r11"></a>
+								\begin{align} \label {eq:5.4.11}
+									\frac{d^2u}{dx^2} + \,3\frac{du}{dx} + \,2u 
+										= & \, x^2+2x-1
+								\end{align}
+
+								Now to solve this equation we will again guess! Since the forcing function \(f(x)=x^2+2x-1\) is a quadratic polynomial we will guess an arbitrary quadratic polynomial \( u = Ax^2 + Bx + C \) like we did in Example <a href="sec5.3.book.html#x1-172" target=_blank>5.3.2</a>  
+							</div>
+							<div class="reading-exercise">
+								Differentiate \( u = Ax^2 + Bx + C\) twice
+							</div> 
+
+							<div>	
+								After differentiating we obtain \( du/dx = 2Ax + B\) and \(d^2u/dx^2 = 2A \) which we substitute into the nonhomogeneous equation in \(u\) <a href="#x1-19r11">(5.4.11)</a> 
+
+								\begin{align*}
+									\frac{d^2u}{dx^2} + \,3\frac{du}{dx} + \,2u 
+										= & \, x^2+2x-1 \\
+									\overset{\frac{d^2u}{dx^2} }{\overbrace{\Big( 2A \Big)}} + 3 \overset{\frac{du}{dx} }{\overbrace{\Big( 2Ax + B \Big)}} + 2 \overset{u }{\overbrace{\Big( Ax^2 + Bx + C \Big)}} = & x^2+2x-1 \\
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Distribute and collect all the like terms
+							</div> 
+
+							<div>	
+								Expanding out all the terms, and rearranging them we obtain:
+								
+								\begin{align*}
+									\big( 2A   \big)x^2
+									+ \big( 6A + 2B \big)x
+									+ \big( 2A + 3 B + 2 C \big)  = & x^2 + 2x - 1 \\
+								\end{align*}
+							</div>	
+
+							<div>	
+								Equating the coefficients on both sides of the equation to obtain a system of equations:
+								
+								\begin{align*}
+								\left\{
+									\begin{array}{r r r}
+										2A + 3 B + 2C &=& -1 \\
+										6A + 2B &=& 2 \\
+										2A &=& 1 
+									\end{array}
+								\right.			
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Solve the system for \(A,B,\) and \(C\)
+							</div> 
+
+							<div>	
+								Substituting \(2A=1\) into the first two equations we obtain 
+							</div>
+
+							<div>	
+								
+								\begin{align*}
+								\left\{
+									\begin{array}{r l}
+										3B + 2C =&-2 \\
+										2B =&-1 \\
+									\end{array}
+								\right. 		
+								\end{align*}
+							</div>		
+							
+							<div>	
+								Substituting \(B=-1/2\) we obtain \(C=-1/4.\) Now we can substitute the values we obtained for \(A,B,\) and \(C\) in the arbitrary quadratic polynomial \( u = Ax^2 + Bx + C\) to obtain the particular solution
+								\[
+									u = \frac{1}{2} x^2 - \frac{1}{2} x - \frac{1}{4}
+								\]
+							</div>	
+
+							<div class="reading-exercise">
+								Verify \( u = \frac{1}{2} x^2 - \frac{1}{2} x - \frac{1}{4} \) is a solution of <a href="#x1-19r11">(5.4.11)</a>
+							</div> 
+							<div>	
+								Factoring \(u\) we obtain: 
+								\[
+									u = \frac{1}{4} (2 x^2 - 2 x - 1)
+								\]
+
+								And finally substituting \(u\) to obtain our particular solution \( y = u e ^{3x} \)
+
+								\[
+									y = \frac{1}{4} (2 x^2 - 2 x - 1) e ^{3x}
+								\]
+								
+							</div>	
+							<div class="reading-exercise">
+								Verify \( y = \frac{1}{4} (2 x^2 - 2 x - 1) e ^{3x} \) is a solution of <a href="#x1-18r10">(5.4.10)</a>
+							</div> 
+						</li>
+						
+						<li>
+							<div>
+								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \{ e^{x}, e^{2x} \}\) and a particular solution to the nonhomogeneous equation \( y_p = \frac{1}{4} (2 x^2 - 2 x - 1) e ^{3x} \), then we can use Theorem&nbsp;<a href="sec5.3.book.html#x1-52" target=_blank>5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
+								\[
+									y = \frac{1}{4} (2 x^2 - 2 x - 1) e ^{3x} + c_1 e^x + c_2 e^{2x}
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \( y = \frac{1}{4} (2 x^2 - 2 x - 1) e ^{3x} + c_1 e^x + c_2 e^{2x} \) is a solution of <a href="#x1-18r10">(5.4.10)</a> 
+							</div> 
+						</li>
+					</ol>
 				</details>
 			</div>
 
 			<!--Example 5-->
 			<div class="example" id="x1-205" style="--ex-number: 5">
-				<div> 
-					<a id="x1-21r12"></a> Find a particular solution of 
-					\begin {equation} \label {eq:5.4.12} \frac{d^2y}{dx^2}-4\frac{dy}{dx}+3y=e^{3x}(6+8x+12x^2) 
-					\end {equation} 
-				</div>
+				<div>
+					Given the differential equation
+					<a id="x1-21r12"></a> 
+					\begin {equation} \label {eq:5.4.12} 
+						\frac{d^2y}{dx^2} - 4 \frac{dy}{dx} + 3y = (12x^2 + 8x + 6) e^{3x}
+					\end {equation}  
+				</div>	 
+			
+				<ol>
+					<li>
+						Solve the complementary equation
+					</li>	
+					<li>
+						Find a particular solution
+					</li>
+					<li>
+						Find the general solution
+					</li>
+				</ol>	
 
 				<details class="solution">
 					<summary>Solution</summary>
-					Substituting \[ y=ue^{3x},\quad \frac{dy}{dx}=\frac{du}{dx}e^{3x}+3ue^{3x},\mbox {\quad and } \frac{d^2y}{dx^2}=\frac{d^2u}{dx^2}e^{3x}+6\frac{du}{dx}e^{3x}+9ue^{3x} \] into <a href="#x1-21r12">(5.4.12)</a> and canceling \(e^{3x}\) yields \[ (\frac{d^2u}{dx^2}+6\frac{du}{dx}+9u)-4(\frac{du}{dx}+3u)+3u=6+8x+12x^2\] or 
-					\begin {equation} \label {eq:5.4.13} \frac{d^2u}{dx^2}+2\frac{du}{dx}=6+8x+12x^2 
-					\end {equation}
-					<a id="x1-22r13"></a>
-					There’s no \(u\) term in this equation, since \(e^{3x}\) is a solution of the complementary equation for <a href="#x1-21r12">(5.4.12)</a>. (See Exercise&nbsp;<span class="ptmb8t-">30</span>.) Therefore <a href="#x1-22r13">(5.4.13)</a> does not have a particular solution of the form \(u_p=A+Bx+Cx^2\) that we used successfully in Example&nbsp;<a href="#x1-174">5.4.4</a>, since with this choice of \(u_p\), \[ \frac{d^2u_p}{dx^2}+2\frac{du_p}{dx}=2C+(B+2Cx) \] can’t contain the last term (\(12x^2\)) on the right side of <a href="#x1-22r13">(5.4.13)</a>. Instead, let’s try \(u_p=Ax+Bx^2+Cx^3\) on the grounds that \[ \frac{du_p}{dx}=A+2Bx+3Cx^2\quad \mbox{ and } \quad \frac{d^2u_p}{dx^2}=2B+6Cx \] together contain all the powers of \(x\) that appear on the right side of <a href="#x1-22r13">(5.4.13)</a>.
+					<ol>
+						<li>
+							<div>
+								The complementary equation for <a href="#x1-21r12">(5.4.12)</a> is
+								\begin {equation*} 
+									\frac{d^2y}{dx^2} - 4 \frac{dy}{dx} + 3y = 0 
+								\end {equation*}
+							</div>
+							<div class="reading-exercise">
+								Differentiate and substitute \( y = e^{rx} \) to find and solve the characteristic equation
+							</div> 	
+							<div>
+								We obtain the characteristic equation
+								\[
+									r^2 -4r + 3 = 0
+								\]
+								
+							</div>	
+						
+							<div class="reading-exercise">
+								Use the method in Example <a href="sec5.2.book.html#x1-132" target=_blank>5.2.2</a> to find a fundamental set of solutions  
+							</div> 
 
-					<br />
+							<div>
+								\[
+									y_1 = e^{3x}
+									\quad
+									y_2 = e^{x}
+								\]
+							</div>	
+						</li>	
+			
+						<li>
+							<div>
+								Now we will try to find a particular solution for the nonhomogeneous equation by guessing a solution based on the forcing function
+								\[
+								\frac{d^2y}{dx^2} - 4 \frac{dy}{dx} + 3y 
+										= \underset{f(x)}{\underbrace{(12x^2 + 8x + 6) e^{3x}}} 
+								\]
+							</div>	
+							<div>
+								Now if we approach this problem the same way we did in Example <a href="#x1-174">5.4.4</a>, we might just notice that since the forcing function is \( f(x) = (12x^2+8x+6)e^{3x} \) then a reasonable guess for a solution might be
+								\( y = u e^{3x}\), however, this is where we run into an issue, just like we experienced in Example <a href="#x1-62">5.4.2</a>. While guessing like this worked in the past, it won't work here, since \( e^{3x}\) is actually a solution of the complementary equation. Let's try it to find out what happens if we were to use \( y = u e^{3x}\)
+							</div>
+							<div class="reading-exercise">
+								Differentiate \( y = u e^{3x}\) twice
+							</div> 
+							<div>
+								Differentiating \( y = u e^{3x}\) we obtain
+								\begin{align*}
+									\frac{dy}{dx} = & \frac{du}{dx} e^{3x} + 3u e^{3x} \\ \\
+									\frac{d^2y}{dx^2} = & \frac{d^2u}{dx^2} e^{3x} + 6\, \frac{du}{dx} e^{3x} + 9u e^{3x} \\
+								\end{align*}
+							</div>
+							<div>	
+								Substituting into the nonhomogeneous equation <a href="#x1-21r12">(5.4.12)</a> 
 
-					Substituting these expressions in place of \(\frac{du}{dx}\) and \(\frac{d^2u}{dx^2}\) in <a href="#x1-22r13">(5.4.13)</a> yields \[ (2B+6Cx)+2(A+2Bx+3Cx^2)=(2B+2A)+(6C+4B)x+6Cx^2=6+8x+12x^2\] Comparing coefficients of like powers of \(x\) on the two sides of the last equality shows that \(u_p\) satisfies <a href="#x1-22r13">(5.4.13)</a> if \[ 
-					\begin {array}{rcr} 6C&amp;=&amp;12\phantom {.}\\ 4B+6C&amp;=&amp;8\phantom {.}\\ 2A+2B\phantom {+6u_2}&amp;=&amp;6 
-					\end {array} \] Solving these equations successively yields \(C=2\), \(B=-1\), and \(A=4\). Therefore \[ u_p=x(4-x+2x^2) \] is a particular solution of <a href="#x1-22r13">(5.4.13)</a>, and \[ y_p=u_pe^{3x}=xe^{3x}(4-x+2x^2) \] is a particular solution of <a href="#x1-21r12">(5.4.12)</a>.
+								
+
+								\begin{array}{rrrrr}
+									\displaystyle
+									\frac{d^2y}{dx^2} 
+										&=& \displaystyle\frac{d^2u}{dx^2}e^{3x} 
+											+ 6\displaystyle\frac{du}{dx}e^{3x}& 
+											+ 9\,ue^{3x}& \\
+									\displaystyle
+									-4\frac{dy}{dx} 
+										&=& -4\displaystyle\frac{du}{dx}e^{3x}& 
+											- 12\,ue^{3x}& \\
+									+ \quad\quad\quad\quad\quad   3y
+										&=& & 
+											+3\,ue^{3x}& \\	
+									\hline	
+									\underbrace{
+									\displaystyle
+									\frac{d^2y}{dx^2} -4\frac{dy}{dx} + 3y}
+										&=& \displaystyle\frac{d^2u}{dx^2}e^{3x} 
+										+ \,2\,\displaystyle\frac{du}{dx}e^{3x}& 
+										+ \,0\, ue^{3x}& \\		
+											(12x^2+8x+6)e^{3x} 
+										&=& \displaystyle\frac{d^2u}{dx^2}e^{3x} 
+											+ \,2\,\displaystyle\frac{du}{dx}e^{3x}& 
+											& \\				
+								\end{array}
+								Cancelling out the \( e^{3x}\) we obtain a new equation
+
+								<a id="x1-19r13"></a>
+								\begin{align} 
+									\frac{d^2u}{dx^2} + \,2\,\displaystyle\frac{du}{dx} 
+										= & \, \underset{f(x)}{\underbrace{12x^2+8x+6}}
+								\end{align}
+
+								So far so good... just as before we now have an equation in \(u\) and we will again guess! Since the forcing function \(f(x)=12x^2+8x+6\) is a quadratic polynomial we will guess an arbitrary quadratic polynomial \( u = Ax^2 + Bx + C \) like we did in Example <a href="sec5.3.book.html#x1-172" target=_blank>5.3.2</a>  
+							</div>
+
+							<div class="reading-exercise">
+								Differentiate \( u = Ax^2 + Bx + C\) twice
+							</div> 
+
+							<div>	
+								After differentiating we obtain \( du/dx = 2Ax + B\) and \(d^2u/dx^2 = 2A \) which we substitute into the nonhomogeneous equation in \(u\) <a href="#x1-19r13">(5.4.13)</a> 
+
+								\begin{align*}
+									\frac{d^2u}{dx^2} + \,2\,\displaystyle\frac{du}{dx} 
+										= & \, 12x^2+8x+6 \\
+									\overset{\frac{d^2u}{dx^2} }{\overbrace{\Big( 2A \Big)}} + 2 \overset{\frac{du}{dx} }{\overbrace{\Big( 2Ax + B \Big)}} = &  \, 12x^2+8x+6 \\
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Distribute and collect all the like terms
+							</div> 
+
+							<div>	
+								Expanding out all the terms, and rearranging them we obtain:
+								
+								\begin{align*}
+									\big( 4A \big)x
+									+ \big( 2A + 2B \big)  = & 12x^2+8x+6 \\
+								\end{align*}
+							</div>	
+
+							<div>	
+								Normally at this point we would simply equate the coefficients to obtain a system of equations but since there are no \(x^2\) terms present on the left side, then there is no choice for \(A\) and \(B\) that would create a polynomial equal to the right side. This is actually due to the fact that our guess original was \(y=ue^{3x}\) while \(e^{3x}\) was already a solution to the complementary equation. Although at first it appeared to work out, once we got the  to the \(u\) equation that is where re ran into trouble.
+							</div>
+							<div>	
+								With the \(u\) equation we guessed a quadratic polynomial \( u = Ax^2 + Bx + C\) but differentiating and substituting into <a href="#x1-19r13">(5.4.13)</a> resulted in no \(x^2\) terms so if instead we guess a cubic polynomial then that should work so we will guess \( u = Ax^3 + Bx^2 + Cx + D\) instead
+							</div>
+							<div class="reading-exercise">
+								Differentiate \( u = Ax^3 + Bx^2 + Cx + D\) twice
+							</div> 
+							<div>	
+								After differentiating we obtain \( du/dx = 3A x^2 + 2B x + C \) and \(d^2u/dx^2 = 6A x + 2B \) which we substitute into the nonhomogeneous equation in \(u\) <a href="#x1-19r13">(5.4.13)</a> 
+
+								\begin{align*}
+									\frac{d^2u}{dx^2} + \,2\,\displaystyle\frac{du}{dx} 
+										= & \, 12x^2+8x+6 \\
+									\overset{\frac{d^2u}{dx^2} }{\overbrace{\Big( 6A x + 2B \Big)}} + 2 \overset{\frac{du}{dx} }{\overbrace{\Big( 3A x^2 + 2B x + C \Big)}} = &  \, 12x^2+8x+6 \\
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Distribute and collect all the like terms
+							</div> 
+
+							<div>	
+								Expanding out all the terms, and rearranging them we obtain:
+								
+								\begin{align*}
+									\big( 6A \big)x^2
+									+ \big( 6A + 4B \big)x
+									+ \big( 2B + 2C \big)  = & 12x^2+8x+6 \\
+								\end{align*}
+							</div>	
+
+							<div>	
+								Equating the coefficients we obtain the system of equations
+							</div>
+
+							<div>	
+								\begin{align*}
+								\left\{
+									\begin{array}{r r r}
+										2B + 2C &=& 6 \\
+										6A + 4 B &=& 8 \\
+										6A &=& 12 
+									\end{array}
+								\right.			
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Solve the system for \(A,B,\) and \(C\)
+							</div> 
+
+							<div>	
+								The last equation yields \(A=2\) and substituting that into the second equation we obtain 
+							</div>
+
+							<div>	
+								
+								\begin{align*}
+								\left\{
+									\begin{array}{r r}
+										2B + 2C &=& 6 \\
+										4 B &=& -4 \\
+									\end{array}
+								\right. 		
+								\end{align*}
+							</div>		
+							
+							<div>	
+								Resulting in \(B=-1\) and substituting that into the first equation, we obtain \(C = 4.\) Now we can substitute the values we obtained for \(A,B,\) and \(C\) in the arbitrary cubic polynomial \( u = Ax^3 + Bx^2 + Cx + D\) to obtain a particular solution
+								\[
+									u = 2 x^3 - x^2 + 4x + D
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \( u = 2 x^3 - x^2 + 4x + D \) is a solution of \( \frac{d^2u}{dx^2} + 2 \frac{du}{dx} 
+								= 12x^2+8x+6\)
+							</div> 
+							<div>	
+								Since \(D\) is still arbitrary and we only need one particular solution, we'll select \(D = 0\) so we have
+								\[
+									u = 2 x^3 - x^2 + 4x
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \( u = 2 x^3 - x^2 + 4x \) is a solution of \( \frac{d^2u}{dx^2} + 2 \frac{du}{dx} 
+								= 12x^2+8x+6\)
+							</div> 
+							<div>		
+								Finally substituting back to get our particular solution \( y = u e^{3x} \)
+								\[
+								y = x (2 x^2 - x + 4) e^{3x}
+								\]
+							</div>	
+
+							<div class="reading-exercise">
+								Verify \( y = x (2 x^2 - x + 4) e^{3x} \) is a solution of <a href="#x1-21r12">(5.4.12)</a>
+							</div> 
+
+							
+						</li>
+						
+						<li>
+							<div>
+								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \{ e^{3x}, e^{x} \}\) and a particular solution to the nonhomogeneous equation \( y_p = x (2 x^2 - x + 4) e^{3x} \), then we can use Theorem&nbsp;<a href="sec5.3.book.html#x1-52" target=_blank>5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
+								\[
+									y = \big[
+										x (2 x^2 - x + 4) + c_1 
+										\big] e^{3x} + c_2 e^x 
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \( y = \big[
+								x (2 x^2 - x + 4) + c_1 
+								\big] e^{3x} + c_2 e^x \) is a solution of <a href="#x1-21r12">(5.4.12)</a>
+							</div> 
+						</li>
+					</ol>
 				</details>
 			</div>
 
 			<!--Example 6-->
 			<div class="example" id="x1-236" style="--ex-number: 6">
-				<div> 
-					<a id="x1-24r14"></a> Find a particular solution of 
-					\begin {equation} \label {eq:5.4.14} 4\frac{d^2y}{dx^2}+4\frac{dy}{dx}+y=e^{-x/2}(-8+48x+144x^2) 
-					\end {equation} 
-				</div>
+				<div>
+					Given the differential equation
+					<a id="x1-24r14"></a> 
+					\begin {equation} \label {eq:5.4.14} 
+						4\frac{d^2y}{dx^2} + 4\frac{dy}{dx} + y = ( 144x^2 + 48x -8) e^{-\frac{1}{2}x}
+					\end {equation}  
+				</div>	 
+			
+				<ol>
+					<li>
+						Solve the complementary equation
+					</li>	
+					<li>
+						Find a particular solution
+					</li>
+					<li>
+						Find the general solution
+					</li>
+				</ol>	
 
 				<details class="solution">
 					<summary>Solution</summary>
-					Substituting \[ y=ue^{-x/2},\quad \frac{dy}{dx}=\frac{du}{dx}e^{-x/2}-{1\over 2}ue^{-x/2},\quad \mbox{ and } \quad \frac{d^2y}{dx^2}=\frac{d^2u}{dx^2}e^{-x/2}-\frac{du}{dx}e^{-x/2}+{1\over 4}ue^{-x/2} \] into <a href="#x1-24r14">(5.4.14)</a> and canceling \(e^{-x/2}\) yields \[ 4\left (\frac{d^2u}{dx^2}-\frac{du}{dx}+{u\over 4}\right )+4\left (\frac{du}{dx}-{u\over 2}\right )+u=4\frac{d^2u}{dx^2}=-8+48x+144x^2\] or 
-					\begin {equation} \label {eq:5.4.15} \frac{d^2u}{dx^2}=-2+12x+36x^2 
-					\end {equation}
-					<a id="x1-25r15"></a>
-					which does not contain \(u\) or \(\frac{du}{dx}\) because \(e^{-x/2}\) and \(xe^{-x/2}\) are both solutions of the complementary equation. (See Exercise&nbsp;<span class="ptmb8t-">30</span>.) To obtain a particular solution of <a href="#x1-25r15">(5.4.15)</a> we integrate twice, taking the constants of integration to be zero; thus, \[ \frac{du_p}{dx}=-2x+6x^2+12x^3\quad \mbox{ and } \quad u_p=-x^2+2x^3+3x^4=x^2(-1+2x+3x^2)\] Therefore \[ y_p=u_pe^{-x/2}=x^2e^{-x/2}(-1+2x+3x^2) \] is a particular solution of <a href="#x1-24r14">(5.4.14)</a>.
+					<ol>
+						<li>
+							<div>
+								The complementary equation for <a href="#x1-24r14">(5.4.14)</a> is
+								\begin {equation*} 
+									4\frac{d^2y}{dx^2} + 4\frac{dy}{dx} + y = 0 
+								\end {equation*}
+							</div>
+							<div class="reading-exercise">
+								Differentiate and substitute \( y = e^{rx} \) to find and solve the characteristic equation
+							</div> 	
+							<div>
+								We obtain the characteristic equation
+								\[
+									4r^2 -4r + 1 = 0
+								\]
+								
+							</div>	
+						
+							<div class="reading-exercise">
+								Use the method in Example <a href="sec5.2.book.html#x1-132" target=_blank>5.2.2</a> to find a fundamental set of solutions  
+							</div> 
+
+							<div>
+								\[
+									y_1 = x e^{-\frac{1}{2}x}
+									\quad
+									y_2 = e^{-\frac{1}{2}x}
+								\]
+							</div>	
+						</li>	
+			
+						<li>
+							<div>
+								Now we will try to find a particular solution for the nonhomogeneous equation by guessing a solution based on the forcing function
+								\[
+
+								4\frac{d^2y}{dx^2} + 4\frac{dy}{dx} + y 
+										= \underset{f(x)}{\underbrace{( 144x^2 + 48x -8) e^{-\frac{1}{2}x}}} 
+								\]
+							</div>	
+							<div>
+								Now since the forcing function is \( f(x) = ( 144x^2 + 48x -8)e^{-\frac{1}{2}x} \) then a reasonable guess for a solution might be
+								\( y = u e^{-\frac{1}{2}x}\), however, this is where we run into an issue, just like we experienced in Example <a href="#x1-62">5.4.2</a>. While guessing like this worked in the past, it won't work here, since \( e^{-\frac{1}{2}x}\) is actually a solution of the complementary equation. Let's try it to find out what happens if we were to use \( y = u e^{-\frac{1}{2}x}\)
+							</div>
+							<div class="reading-exercise">
+								Differentiate \( y = u e^{-\frac{1}{2}x}\) twice
+							</div> 
+							<div>
+								Differentiating \( y = u e^{-\frac{1}{2}x}\) we obtain
+								\begin{align*}
+									\frac{dy}{dx} = & \frac{du}{dx} e^{-\frac{1}{2}x} -\frac{1}{2} u e^{-\frac{1}{2}x} \\ \\
+									\frac{d^2y}{dx^2} = & \frac{d^2u}{dx^2} e^{-\frac{1}{2}x} - \frac{du}{dx} e^{-\frac{1}{2}x} + \frac{1}{4}u e^{-\frac{1}{2}x} \\
+								\end{align*}
+							</div>
+							<div>	
+								Substituting into the nonhomogeneous equation <a href="#x1-24r14">(5.4.14)</a>
+
+								
+
+								\begin{array}{rrrrr}
+									\displaystyle
+									4\frac{d^2y}{dx^2} 
+										&=& 4\displaystyle\frac{d^2u}{dx^2}e^{-\frac{1}{2}x} 
+											- 4\displaystyle\frac{du}{dx}e^{-\frac{1}{2}x}& 
+											+ \,ue^{-\frac{1}{2}x}& \\
+									\displaystyle
+									+4\frac{dy}{dx} 
+										&=& 4\displaystyle\frac{du}{dx}e^{-\frac{1}{2}x}& 
+											- 2\,ue^{-\frac{1}{2}x}& \\
+									+ \quad\quad\quad\quad\quad   y
+										&=& & 
+											+\,ue^{-\frac{1}{2}x}& \\	
+									\hline	
+									\underbrace{
+									\displaystyle
+									4\frac{d^2y}{dx^2} +4\frac{dy}{dx} + y}
+										&=& 4 \displaystyle\frac{d^2u}{dx^2}e^{-\frac{1}{2}x} 
+										+ \,0\,\displaystyle\frac{du}{dx}e^{-\frac{1}{2}x}& 
+										+ \,0\, ue^{-\frac{1}{2}x}& \\		
+											(144x^2 + 48x -8)e^{-\frac{1}{2}x} 
+										&=& 4 \displaystyle\frac{d^2u}{dx^2}e^{-\frac{1}{2}x}
+											\quad\quad\quad\quad\quad \, \, 
+											&  
+											&  \\				
+								\end{array}
+								Cancelling out the \( 4e^{-\frac{1}{2}x}\) we obtain a new equation
+
+								<a id="x1-19r13"></a>
+								\begin{align} 
+									\frac{d^2u}{dx^2}  
+										= & \, 36x^2 + 12x -2
+								\end{align}
+
+								Now this equation is integrable! So we can just find the antiderivative twice.
+							</div>
+							<div class="reading-exercise">
+								Antidifferentiate \( \frac{d^2u}{dx^2}  
+								= \, 36x^2 + 12x -2 \) twice
+							</div> 	
+							<div>
+								So we obtain \(u = 3x^4 + 2x^3 - x^2 + c_1x + c_2\) and select a simple \(u\) with \(c_1=0\) and \(c_2=0\) and use \(u = 3x^4 + 2x^3 - x^2\) therefore we have our particular solution \(y=ue^{-\frac{1}{2}x}\)
+
+								\begin{align*} 
+									y= x^2 (3x^2 + 2x - 1) e^{-\frac{1}{2}x}
+								\end{align*}
+
+							
+							</div>	
+		
+
+							<div class="reading-exercise">
+								Verify \( x^2 (3x^2 + 2x - 1) e^{-\frac{1}{2}x} \) is a particular solution of <a href="#x1-24r14">(5.4.14)</a>  
+								 
+							</div>
+
+							
+						</li>
+						
+						<li>
+							<div>
+								Now that we have a fundamental set of solutions to the complementary equation \( \{ y_1, y_2\} = \{ x e^{-\frac{1}{2}x}, e^{-\frac{1}{2}x} \}\) and a particular solution to the nonhomogeneous equation \( y_p = x^2 (3x^2 + 2x - 1) e^{-\frac{1}{2}x}  \), then we can use Theorem&nbsp;<a href="sec5.3.book.html#x1-52" target=_blank>5.3.2</a> to find the general solution \( y = y_p + c_1 y_1 + c_2 y_2 \)
+								\[
+									y = \big[
+										x^2 (3x^2 + 2x - 1) + c_1 x + c_2 
+										\big] e^{-\frac{1}{2}x}
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \( y = \big[
+								x^2 (3x^2 + 2x - 1) + c_1 x + c_2 
+								\big] e^{-\frac{1}{2}x} \) is a solution of <a href="#x1-21r12">(5.4.12)</a>
+							</div> 
+						</li>
+
+					</ol>
+
+					
 				</details>
-			</div>
-		</details>		
-
-
-
-		<details id="9da4a7c1-35c7-4b12-b306-5e7c93fc3727">
-			<summary>Summary</summary>
-
-			<div id="0def9a87-fec0-438a-92f7-c9eab3db92a8">
 				
-				The preceding examples illustrate the following facts concerning particular solutions of a constant coefficient equation of the form \[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=e^{r  x}G(x)\] where \(G\) is a polynomial (see Exercise&nbsp;<span class="ptmb8t-">30</span>):
+				
+			</div>
+
+			<br>
+			<br>
+			<br>
+
+
+			<div class="theorem" id="787f4d9e-ffca-435f-92f8-b0fdasbf48647305">
+				<strong>Summary</strong>
+				<div>
+					Examples <a href="#x1-174">5.4.4</a>, <a href="#x1-205">5.4.5</a>, and <a href="#x1-236">5.4.6</a> illustrate the form of a particular solution \(y_p\) of a constant coefficient equation 
+
+					<a id="x1-13r8"></a>
+					\begin {equation}
+						a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy= \, e^{r  x} \, P(x)
+					\end {equation} 
+
+					With complementary equation
+
+					\begin {equation}  
+						a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0
+					\end {equation}
+				</div>	
+
 				<ol>
-					<li> If \(e^{r  x}\) isn’t a solution of the complementary equation 
-					\begin {equation} \label {eq:5.4.16} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0 
-					\end {equation} <a id="x1-27r16"></a> then \(y_p=e^{r  x}Q(x)\), where \(Q\) is a polynomial of the same degree as \(G\). (See Example&nbsp;<a href="#x1-174">5.4.4</a>). </li>
-					<li> If \(e^{r  x}\) is a solution of <a href="#x1-27r16">(5.4.16)</a> but \(xe^{r  x}\) is not, then \(y_p=xe^{r  x}Q(x)\), where \(Q\) is a polynomial of the same degree as \(G\). (See Example&nbsp;<a href="#x1-205">5.4.5</a>.) </li>
-					<li> If both \(e^{r  x}\) and \(xe^{r  x}\) are solutions of <a href="#x1-27r16">(5.4.16)</a>, then \(y_p=x^2e^{r  x}Q(x)\), where \(Q\) is a polynomial of the same degree as \(G\). (See Example&nbsp;<a href="#x1-236">5.4.6</a>.) </li>
+					<li> 
+						If \(e^{r  x}\) isn’t a solution of the complementary equation (5.4.17) then \(y_p= G(x) \, e^{r  x} \)
+					</li>
+					<li> 
+						If \(e^{r  x}\) is a solution of <a href="#x1-27r16">(5.4.16)</a> but \(xe^{r  x}\) is not, then \(y_p= x \, G(x) \, e^{r  x}  \)
+					</li>
+					<li> 
+						If both \(e^{r  x}\) and \(xe^{r  x}\) are solutions of <a href="#x1-27r16">(5.4.16)</a>, then \(y_p= x^2 \, G(x) \, e^{r  x}  \)
+					</li>
 				</ol>
+
+				<div>
+					where \(G(x)\) is a polynomial of the same degree as \(P(x)\). Note that we won't apply these as formulas but instead always show the work as we did in the examples
+				</div>	
 			
 			</div>
 
+			<br>
+			<br>
+			<br>
+
 			<div class="indent" id="10e05740-b9a6-429c-8be2-8765e5e4132d">
-				In all three cases, you can just substitute the appropriate form for \(y_p\) and its derivatives directly into \[ a\frac{d^2y_p}{dx^2}+b\frac{dy_p}{dx}+cy_p=e^{r  x}G(x)\] and solve for the coefficients of the polynomial \(Q\). However, if you try this you will see that the computations are more tedious than those that you encounter by making the substitution \(y=ue^{r  x}\) and finding a particular solution of the resulting equation for \(u\). (See Exercises&nbsp;<span class="ptmb8t-">34</span>-<span class="ptmb8t-">36</span>.) In Case&nbsp;<span class="ptmb8t-">(a)</span> the equation for \(u\) will be of the form \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{r }\frac{du}{dx}+p(r  )u=G(x)\] with a particular solution of the form \(u_p=Q(x)\), a polynomial of the same degree as \(G\), whose coefficients can be found by the method used in Example&nbsp;<a href="#x1-174">5.4.4</a>. In Case&nbsp;<span class="ptmb8t-">(b)</span> the equation for \(u\) will be of the form \[ a\frac{d^2u}{dx^2}+\left. \frac{dp}{dx} \right|_{r }\frac{du}{dx}=G(x) \] (no \(u\) term on the left), with a particular solution of the form \(u_p=xQ(x)\), where \(Q\) is a polynomial of the same degree as \(G\) whose coefficients can be found by the method used in Example&nbsp;<a href="#x1-205">5.4.5</a>. In Case&nbsp;<span class="ptmb8t-">(c)</span> the equation for \(u\) will be of the form \[ a\frac{d^2u}{dx^2}=G(x) \] with a particular solution of the form \(u_p=x^2Q(x)\) that can be obtained by integrating \(G(x)/a\) twice and taking the constants of integration to be zero, as in Example&nbsp;<a href="#x1-236">5.4.6</a>. 
+				<div>
+					Note that in all three cases, we sought solutions of the form \(y=ue^{rx}\) but which then reduced the differential equation in \(y\) to another differential equation in \(u\) where we could then guess a polynomial function. However, you could also solve them by substituting the appropriate form for \(y_p\) and its derivatives directly into 
+				
+					\[ a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=e^{r  x} \, P(x)\] 
+				
+					However, if you try this method you will find out that the computations are more tedious than those we encountered in the examples.
+				</div>
+				<br>
+				<br>
+				<br>
+				<div>
+					In Case&nbsp;<span class="ptmb8t-">a.)</span> if \(e^{r  x}\) isn’t a solution of the complementary equation 
+					the equation for \(u\) will be of the form 
+					
+					\[ a\frac{d^2u}{dx^2}+ p'(r) \frac{du}{dx}+p(r  )u= \, P(x)\] 
+					
+					with a particular solution of the form \(u_p=G(x)\), a polynomial of the same degree as \(P(x)\), whose coefficients can be found by the method used in Example&nbsp;<a href="#x1-174">5.4.4</a>. 
+				</div>
+				<br>
+				<br>
+				<br>
+				<div>	
+					In Case&nbsp;<span class="ptmb8t-">b.)</span> the equation for \(u\) will be of the form 
+					
+					\[ a\frac{d^2u}{dx^2}+  p'(r) \frac{du}{dx}= \, P(x) \] 
+					
+					(no \(u\) term on the left), with a particular solution of the form \(u_p=xG(x)\), where \(G(x)\) is a polynomial of the same degree as \(P(x)\) whose coefficients can be found by the method used in Example&nbsp;<a href="#x1-205">5.4.5</a>. 
+				</div>
+				<div>
+					In Case&nbsp;<span class="ptmb8t-">c.)</span> the equation for \(u\) will be of the form 
+					
+					\[ a\frac{d^2u}{dx^2}=\, P(x) \] 
+					
+					with a particular solution of the form \(u_p=x^2 G(x)\) that can be obtained by integrating \(P(x)/a\) twice and taking the constants of integration to be zero, as in Example&nbsp;<a href="#x1-236">5.4.6</a>.
+				</div> 
 			</div>
-		</details>
+
+		</details>		
+
+
 
 		<details class="removed" id="573296b3-8843-4c17-9b66-9a2688b2c11d">
 			<summary>Using the Principle of Superposition</summary>
