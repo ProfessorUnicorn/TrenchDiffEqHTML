@@ -1102,7 +1102,7 @@
 
 								Thus we obtain the system of equations
 
-								\begin{align*}
+								\begin{align}
 								\left\{
 									\begin{array}{r r r}
 										-6A + 21B - 7C + 3D &=& -34 \\
@@ -1111,7 +1111,7 @@
 										3A - 21C &=& 0 \\
 									\end{array}
 								\right.			
-								\end{align*}
+								\end{align}
 							</div> 	
 							<div class="reading-exercise">
 								Solve \( \left\{
@@ -1293,7 +1293,7 @@
 								\end{align*}
 							</div> 
 							<div>
-								Substituting into the nonhomogeneous equation <a href="#x1-24r16">(5.5.16)</a> 
+								Substituting into the nonhomogeneous equation <a href="#x1-29r20">(5.5.20)</a>
 
 								\begin{array}{rrrrr}
 									\displaystyle
@@ -1316,7 +1316,7 @@
 							<br> 
 							<div>
 								Cancelling the \( e^{-x} \) factor we obtain the following equation
-								<a id="x1-12r17"></a>
+								<a id="x1-12r21"></a>
 								\begin{align}
 									\frac{d^2u}{dx^2}  + 4u  
 										= (6-16x)\cos 2x-(8x+8)\sin 2x
@@ -1378,7 +1378,7 @@
 								\end{align*}
 							</div> 
 							<div>
-								Substituting into the nonhomogeneous equation <a href="#x1-12r17">(5.5.17)</a> 
+								Substituting into the nonhomogeneous equation <a href="#x1-12r21">(5.5.21)</a> 
 
 								\begin{array}{rrrrr}
 									\displaystyle
@@ -1460,8 +1460,8 @@
 							</div>
 							
 							<div class="reading-exercise">
-								Verify \( u =  \big( x^2 + x \big) \cos 2x + \big( -2x^2 + x \big)\sin 2x \) is a solution of <a href="#">(5.5.20)</a>
-							</div> 																								 
+								Verify \( u =  \big( x^2 + x \big) \cos 2x + \big( -2x^2 + x \big)\sin 2x \) is a solution of <a href="#x1-12r21">(5.5.21)</a>
+							</div> 									
 
 							<div>
 								Now we can substitute \(u\) back to determine our particular solution \(y = ue^{-x}\)
@@ -1470,7 +1470,7 @@
 								\]
 							</div>
 							<div class="reading-exercise">
-								Verify \( y = \Big[ \big( x^2 + x \big) \cos 2x + \big( -2x^2 + x \big)\sin 2x \Big] \, e^{-x} \) is a solution of <a href="#">(5.5.19)</a>
+								Verify \( y = \Big[ \big( x^2 + x \big) \cos 2x + \big( -2x^2 + x \big)\sin 2x \Big] \, e^{-x} \) is a solution of <a href="#x1-29r20">(5.5.20)</a>
 							</div> 	
 							
 						</li>
@@ -1494,20 +1494,411 @@
 			<summary>Principle of Superposition</summary>
 
 			<div id="c2619a75-5473-4029-a972-a31531737ba4">
-				The next example shows how to combine the method of undetermined coefficients and Theorem&nbsp;<span class="ptmb8t-">5.3.3</span>, the principle of superposition. 
+				The next example shows how to combine the <span class="vocab">method of undetermined coefficients</span> and Theorem&nbsp;<a href="sec5.3.book.html#x1-263-" target=_blank>5.3.3</a> the <span class="vocab">principle of superposition</span>. 
 			</div>
+
+			<!--Example 7-->
 			<div class="example" id="x1-307" style="--ex-number: 7">
 				<div> 
-					<a id="x1-31r17"></a> Find a particular solution of 
-					\begin {equation} \label {eq:5.5.23} \frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=4e^{2x}+5e^{4x} 
+					
+					Given the differential equation
+
+					<a id="x1-31r17"></a>
+					\begin {equation} \label {eq:5.5.23} 
+						\frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=4e^{2x}+5e^{4x} 
 					\end {equation} 
-				</div>
+				</div> 
+				
+				<ol>
+					<li>
+						Solve the complementary equation
+					</li>	
+					<li>
+						Split the differential equation into two separate differential equations using the principle of superposition 
+					</li>	
+					<li>
+						Find the particular solution for the first of the two separate differential equations 
+					</li>
+					<li>
+						Find the particular solution for the second of the two separate differential equations 
+					</li>
+					<li>
+						Use the principle of superposition to find a particular solution for <a href="#x1-31r17">(5.5.23)</a>
+					</li>
+				</ol>	
 
 				<details class="solution">
 					<summary>Solution</summary>
-					In Example&nbsp;<a href="sec5.4.book.html#x1-31">5.4.1</a>we found that \(y_{p_1}=2e^{2x}\) is a particular solution of \[ \frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=4e^{2x}\] and in Example&nbsp;<a href="sec5.4.book.html#x1-62">5.4.2</a>we found that \(y_{p_2}=5xe^{4x}\) is a particular solution of \[ \frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=5e^{4x}\] Therefore the principle of superposition implies that \(y_p=2e^{2x}+5xe^{4x}\) is a particular solution of <a href="#x1-31r17">(5.5.23)</a>.
+
+
+					<ol>
+						<!--Part 1-->
+						<li>
+							<div class="reading-exercise">
+								Solve the complementary equation \(\frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=0\)
+							</div> 
+							<div>
+								Solving the complementary equation we obtain a fundamental set
+								\[
+									y_1 = e^{3x}
+									\quad
+									y_2 = e^{4x}
+								\]
+							</div>	
+							<br>
+							<div>
+								You may wish to reread Example <a href="sec5.4.book.html#x1-31" target=_blank>5.4.1</a>
+							</div>								
+
+						</li>	
+
+						<!--Part 2-->					
+						<li>
+							Notice the forcing function on <a href="#x1-31r17">(5.5.23)</a> can be split into two:
+
+							\begin{align*}
+								\frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y=
+									\overset{f(x)}{
+									\overbrace{
+									\underset{f_1(x)}{\underbrace{4e^{2x}}}+\underset{f_2(x)}{\underbrace{5e^{4x}}}
+									}}
+							\end{align*}
+
+							<a id="x1-29r24"></a><a id="x1-29r25"></a>
+							Therefore we can split the differential equation into two equations as <a href="#x1-29r24">(5.5.24)</a> and <a href="#x1-30r25">(5.5.25)</a>:
+							\begin{align}  \label {eq:5.3.24}
+								\frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y = & \overset{f_1(x)}{\overbrace{4e^{2x}}}\\ \label {eq:5.3.25}
+								\frac{d^2y}{dx^2}-7\frac{dy}{dx}+12y =  & \overset{f_2(x)}{\overbrace{5e^{4x}}} 
+							\end{align}
+							
+						</li>	
+
+						<!--Part 3-->
+						<li>
+							<div>
+								To find a particular solution of <a href="#x1-29r24">(5.5.24)</a> notice the forcing function is an exponential functions with an exponent with coefficient of two and since this is not already a solution of the complementary equation then we guess the same type of function:
+								\[
+									y=Ae^{2x}
+								\]
+							</div>	
+
+							<div class="reading-exercise">
+								Differentiate \(y=Ae^{2x}\) twice and substitute into <a href="#x1-29r24">(5.5.24)</a> and solve for \(A\)
+							</div> 
+							<div>
+								Substituting into <a href="#x1-29r24">(5.5.24)</a> and solving we get \(A=2\) thus we obtain the particular solution
+								\[
+									y = 2e^{2x}
+								\]
+							</div>	
+							<div class="reading-exercise">
+								Verify \( y = 2e^{2x} \) is a solution of <a href="#x1-29r24">(5.5.24)</a>
+							</div> 
+							<div>
+								You may wish to reread Example <a href="sec5.4.book.html#x1-31" target=_blank>5.4.1</a>
+							</div>	
+							
+							 
+						</li>	
+
+						<!--Part 4-->
+						<li>
+							<div>
+								To find a particular solution of <a href="#x1-29r25">(5.5.25)</a> notice the forcing function is an exponential functions with an exponent with coefficient of four however since \(e^{4x}\) is already a solution of the complementary equation then we guess:
+								\[
+									y=ue^{4x}
+								\]
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y=ue^{4x}\) twice and substitute into <a href="#x1-29r24">(5.5.24)</a> and simplify to obtain a new equation in \(u\)
+							</div> 
+							<div>
+								Substituting into <a href="#x1-29r25">(5.5.25)</a> and simplifying we get
+								\[
+									\frac{d^2u}{dx^2} + \frac{du}{dx} = 5 
+								\]
+							</div>
+							<div>
+								Guess a linear term \(u=Ax\)
+							</div>
+							<div class="reading-exercise">
+								Differentiate  \(u=Ax\) twice and substitute in to find solve for A and find \(u\) and then substitute back to find \(y\)
+							</div> 
+							<div>
+								Solving we obtain \(A=5\) so \(u=5x\) and substituting it back in to \(y=ue^{4x}\) we obtain the solution
+								\[
+									y=5xe^{4x}
+								\]
+							</div>
+
+							<div class="reading-exercise">
+								Verify \( y=5xe^{4x} \) is a solution of <a href="#x1-29r25">(5.5.25)</a>
+							</div> 
+							<div>
+								You may wish to reread Example <a href="sec5.4.book.html#x1-62" target=_blank>5.4.2</a>
+							</div>	
+							
+							 
+						</li>							
+
+
+						<li>
+							<div>
+								Since 
+								\( y = 2e^{2x} \) is a particular solution of <a href="#x1-29r24">(5.5.24)</a> and \( y = 5xe^{4x} \) is a particular solution of <a href="#x1-29r25">(5.5.25)</a>
+								then from the principle of superposition (Theorem <a href="#x1-263" target=_blank >5.3.3</a>) the particular solution of <a href="#x1-31r17">(5.5.23)</a> is their sum
+								\[
+									y =  2e^{2x} + 5xe^{4x} 
+								\]
+							</div>	
+							<div class="reading-exercise">
+								Verify \( y = 2e^{2x} + 5xe^{4x}  \) is a solution of <a href="#x1-31r17">(5.5.23)</a> 
+							</div> 
+						</li>					
+					</ol>	
+					
+					<br>
+					It might also be worth rereading Examples <a href="sec5.4.book.html#x1-31" target=_blank>5.4.1</a> and <a href="sec5.4.book.html#x1-62" target=_blank>5.4.2</a> where we solved <a href="#x1-29r24">(5.5.24)</a> and <a href="#x1-29r24">(5.5.25)</a> previously.
+					
 				</details>
 			</div>
+
+			<!--Example 8-->
+			<div class="example" id="x1-308" style="--ex-number: 8">
+				<div> 
+					Given the differential equation
+
+					<a id="x1-31r26"></a>
+					\begin {equation} \label {eq:5.5.26} 
+						\frac{d^2y}{dx^2}-2\frac{dy}{dx}+y = 5\cos 2x+10\sin 2x 
+					\end {equation} 
+				</div> 
+				
+				<ol>
+					<li>
+						Solve the complementary equation
+					</li>	
+					<li>
+						Split the differential equation into two separate differential equations using the principle of superposition 
+					</li>	
+					<li>
+						Find the particular solution for the first of the two separate differential equations 
+					</li>
+					<li>
+						Find the particular solution for the second of the two separate differential equations 
+					</li>
+					<li>
+						Use the principle of superposition to find a particular solution for <a href="#x1-31r26">(5.5.26)</a>
+					</li>
+				</ol>	
+
+				<details class="solution">
+					<summary>Solution</summary>
+
+
+					<ol>
+						<!--Part 1-->
+						<li>
+							<div class="reading-exercise">
+								Solve the complementary equation \(\frac{d^2y}{dx^2}-2\frac{dy}{dx}+y=0\)
+							</div> 
+							<div>
+								Solving the complementary equation we obtain a fundamental set
+								\[
+									y_1 = e^{x}
+									\quad
+									y_2 = xe^{x}
+								\]
+							</div>	
+							<br>
+							<div>
+								You may wish to reread Example <a href="#x1-61">5.5.1</a>
+							</div>	
+						</li>	
+
+						<!--Part 2-->					
+						<li>
+							Notice the forcing function on <a href="#x1-31r26">(5.5.26)</a> can be split into two:
+
+							\begin{align*}
+								\frac{d^2y}{dx^2}-2\frac{dy}{dx}+y = 
+									\overset{f(x)}{
+									\overbrace{
+									\underset{f_1(x)}{\underbrace{5\cos 2x}}
+									+\underset{f_2(x)}{\underbrace{10\sin 2x}}
+									}}
+							\end{align*}
+
+							<a id=x1-31r27"></a><a id="x1-31r28"></a>
+							Therefore we can split the differential equation into two equations as <a href="#x1-31r27">(5.5.27)</a> and <a href="#x1-31r28">(5.5.28)</a>:
+							\begin{align}  \label {eq:5.3.27}
+								\frac{d^2y}{dx^2}-2\frac{dy}{dx}+y = & \overset{f_1(x)}{\overbrace{5\cos 2x}}\\ \label {eq:5.3.28}
+								\frac{d^2y}{dx^2}-2\frac{dy}{dx}+y =  & \overset{f_2(x)}{\overbrace{10\sin 2x}} 
+							\end{align}
+							
+						</li>	
+
+						<!--Part 3-->
+						<li>
+							<div>
+								To find a particular solution of <a href="#x1-31r27">(5.5.27)</a> notice the forcing function \(f_1(x) = 5\cos 2x\) is a cosine with argument \(2x\) so we guess a linear combination of sines and cosines with the same argument:
+								\[
+									y=A\cos 2x + B \sin 2x
+								\]
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \( y=A\cos 2x + B \sin 2x \) twice
+							</div> 
+
+							<div>	
+								Substituting our guess \( y=A\cos 2x + B \sin 2x \) and its derivatives into <a href="#x1-31r27">(5.5.27)</a> we obtain:
+
+								\begin{array}{rrrrr}
+									\displaystyle
+									\frac{d^2y}{dx^2} 
+										&=& -4A\cos 2x& - 4B\sin 2x& \\
+									\displaystyle
+									-2\frac{dy}{dx} 
+										&=& -4B\cos 2x& + 4A\sin 2x& \\
+									+ \quad\quad\quad\quad\quad   y
+										&=& A\cos 2x& + B\sin 2x& \\	
+									\hline	
+									\underbrace{
+									\displaystyle
+									\frac{d^2y}{dx^2} -2\frac{dy}{dx} + y}
+										&=& & \\
+									5\cos 2x \quad \quad
+										&=& \underset{5}{\underbrace{{\small (-3A - 4B)}}}\cos 2x& + \underset{0}{\underbrace{{\small (4A-3B)}}}\sin 2x& \\			
+								\end{array}
+							</div>	
+
+
+							<div>	
+								Equating the coefficients on both sides of the equation to obtain a system of equations:
+								
+								\begin{align*}
+								\left\{
+									\begin{array}{r r r}
+										-3A - 4B &=& 5 \\
+										4A - 3B &=& 0 \\
+									\end{array}
+								\right.			
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Solve the system for \(A\) and \(B\)
+							</div> 
+
+							<div>	
+								Solving the system we find \(A = -3/5\) and \(B = -4/5\) and substituting into  \(y = A\cos 2x + B\sin 2x \) we obtain a particular solution of <a href="#x1-31r27">(5.5.27)</a>
+								\[
+									y = -\frac{3}{5} \cos 2x - \frac{4}{5} \sin 2x
+								\] 
+							</div>
+
+							<div class="reading-exercise">
+								Verify \(  y = -\frac{3}{5} \cos 2x - \frac{4}{5} \sin 2x \) is a solution of <a href="#x1-31r27">(5.5.27)</a>
+							</div> 
+							 
+						</li>	
+
+						<!--Part 4-->
+						<li>
+							<div>
+								To find a particular solution of <a href="#x1-31r28">(5.5.28)</a> notice the forcing function \(f_2(x) = 10\sin 2x\) is a sine with argument \(2x\) so again we guess a linear combination of sines and cosines with the same argument:
+								\[
+									y=A\cos 2x + B \sin 2x
+								\]
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \( y=A\cos 2x + B \sin 2x \) twice
+							</div> 
+
+							<div>	
+								Substituting our guess \( y=A\cos 2x + B \sin 2x \) and its derivatives into <a href="#x1-31r27">(5.5.27)</a> we obtain:
+
+								\begin{array}{rrrrr}
+									\displaystyle
+									\frac{d^2y}{dx^2} 
+										&=& -4A\cos 2x& - 4B\sin 2x& \\
+									\displaystyle
+									-2\frac{dy}{dx} 
+										&=& -4B\cos 2x& + 4A\sin 2x& \\
+									+ \quad\quad\quad\quad\quad   y
+										&=& A\cos 2x& + B\sin 2x& \\	
+									\hline	
+									\underbrace{
+									\displaystyle
+									\frac{d^2y}{dx^2} -2\frac{dy}{dx} + y}
+										&=& & \\
+									10\sin 2x \quad \quad
+										&=& \underset{0}{\underbrace{{\small (-3A - 4B)}}}\cos 2x& + \underset{10}{\underbrace{{\small (4A-3B)}}}\sin 2x& \\			
+								\end{array}
+							</div>	
+
+
+							<div>	
+								Equating the coefficients on both sides of the equation to obtain a system of equations:
+								
+								\begin{align*}
+								\left\{
+									\begin{array}{r r r}
+										-3A - 4B &=& 0 \\
+										4A - 3B &=& 10 \\
+									\end{array}
+								\right.			
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Solve the system for \(A\) and \(B\)
+							</div> 
+
+							<div>	
+								Solving the system we find \(A = 8/5\) and \(B = -6/5\) and substituting into  \(y = A\cos 2x + B\sin 2x \) we obtain a particular solution of <a href="#x1-31r28">(5.5.28)</a>
+								\[
+									y = \frac{8}{5} \cos 2x - \frac{6}{5} \sin 2x
+								\] 
+							</div>
+
+							<div class="reading-exercise">
+								Verify \(  y =  \frac{8}{5} \cos 2x - \frac{6}{5} \sin 2x \) is a solution of <a href="#x1-31r28">(5.5.28)</a>
+							</div> 
+							 
+						</li>							
+
+
+						<li>
+							<div>
+								Since we have particular solutions for <a href="#x1-31r27">(5.5.27)</a> and <a href="#x1-31r28">(5.5.28)</a> respectively:
+
+								\[ y = -\frac{3}{5} \cos 2x - \frac{4}{5} \sin 2x \] 
+								\[ y =  \frac{8}{5} \cos 2x - \frac{6}{5} \sin 2x \]
+								
+								The principle of superposition (Theorem <a href="#x1-263" target=_blank >5.3.3</a>) tells is that a particular solution of <a href="#x1-31r26">(5.5.26)</a> is their sum
+								\begin{align*}
+									y 
+									= & \Big(-\underbrace{\frac{3}{5} \cos 2x} - \overbrace{\frac{4}{5} \sin 2x} \Big)
+										+ \Big(\underbrace{\frac{8}{5} \cos 2x} - \overbrace{\frac{6}{5} \sin 2x} \Big) \\
+									\Longrightarrow
+									y= & \left(-\frac{3}{5} \cos 2x + \frac{8}{5} \cos 2x \right)
+										+ \left( - \frac{4}{5} \sin 2x - \frac{6}{5} \sin 2x \right) \\
+									\Longrightarrow	
+									y= &	\cos 2x -2\sin 2x
+								\end{align*}
+							</div>
+
+							<div class="reading-exercise">
+								Verify \( y = \cos 2x -2\sin 2x \) is a solution of <a href="#x1-31r26">(5.5.26)</a>
+							</div> 
+						</li>					
+					</ol>	
+					
+					<br>
+					Comparing with Example <a href="#x1-61">5.5.1</a> we also got the same answer there when solving it without using the principle of superposition. This exercise demonstrates that the principle of superposition works but you don't need to split up equations with sines and cosines alone, but you can if there are different types of terms in the forcing function.
+				</details>
+			</div>
+
+
 		</details>
 
 		<nav class="ex">
