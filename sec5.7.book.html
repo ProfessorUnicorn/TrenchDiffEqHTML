@@ -29,87 +29,223 @@
 			5.7 Variation of Parameters 
 		</div>
 
+		<!--Variation of Parameters-->
 		<details id="a">
 			<summary>Variation of Parameters</summary>
 
 			<div id="cb904246-e263-4f19-9adb-d2c537964a68">
-				In this section we give a method called <span class="vocab">variation of parameters</span> for finding a particular solution of \begin {equation} \label {eq:5.7.1} P_0(x) \frac{d^2y}{dx^2} +P_1(x) \frac{dy}{dx} +P_2(x)y=F(x) \end {equation} <a id="x1-2r1"></a> if we know a fundamental set \(\{y_1,y_2\}\) of solutions of the complementary equation 
-				\begin {equation} \label {eq:5.7.2} P_0(x) \frac{d^2y}{dx^2} +P_1(x) \frac{dy}{dx} +P_2(x)y=0 
-				\end {equation} <a id="x1-3r2"></a> Having found a particular solution \(y_p\) by this method, we can write the general solution of <a href="#x1-2r1">(5.7.1)</a> as \[ y=y_p+c_1y_1+c_2y_2\] 
+				In this section we give a method called <span class="vocab">variation of parameters</span> for finding a particular solution of 
+				
+				<a id="x1-2r1"></a>
+				\begin {equation} \label {eq:5.7.1} 
+					P_0(x) \frac{d^2y}{dx^2} +P_1(x) \frac{dy}{dx} +P_2(x)y=F(x) 
+				\end {equation}  
+				
+				If we know a fundamental set \(\{y_1,y_2\}\) of solutions of the complementary equation 
+
+				<a id="x1-3r2"></a>
+				\begin {equation} \label {eq:5.7.2} 
+					P_0(x) \frac{d^2y}{dx^2} +P_1(x) \frac{dy}{dx} +P_2(x)y=0 
+				\end {equation}  
+			
+				Having found a particular solution \(y_p\) by this method, we can write the general solution of <a href="#x1-2r1">(5.7.1)</a> as 
+				
+				\[ y=y_p+c_1y_1+c_2y_2\] 
 			</div>
 			<div class="indent" id="d43e059b-5a75-4813-a4b4-2977b05d4d5c">
-				Since we need only one nontrivial solution of <a href="#x1-3r2">(5.7.2)</a> to find the general solution of <a href="#x1-2r1">(5.7.1)</a> by reduction of order, it’s natural to ask why we’re interested in variation of parameters, which requires two linearly independent solutions of <a href="#x1-3r2">(5.7.2)</a> to achieve the same goal. Here’s the answer: 
+				Since we need only one nontrivial solution of the complementary equation <a href="#x1-3r2">(5.7.2)</a> to find the general solution of <a href="#x1-2r1">(5.7.1)</a> by <span class="vocab">reduction of order</span>, it’s natural to ask why we’re interested in <span class="vocab">variation of parameters</span>, which requires two linearly independent solutions of <a href="#x1-3r2">(5.7.2)</a> to achieve the same goal. Here’s the answer: 
 			</div>
 			<ul class="itemize1" id="6b1c9c7d-710a-49c1-9bb7-4abb0d1535a5">
-				<li class="itemize"> If we already know two linearly independent solutions of <a href="#x1-3r2">(5.7.2)</a> then variation of parameters will probably be simpler than reduction of order. </li>
-				<li class="itemize"> Variation of parameters generalizes naturally to a method for finding particular solutions of higher order linear equations (Section&nbsp;9.4) and linear systems of equations (Section&nbsp;10.7), while reduction of order doesn’t. </li>
-				<li class="itemize"> Variation of parameters is a powerful theoretical tool used by researchers in differential equations. Although a detailed discussion of this is beyond the scope of this book, you can get an idea of what it means from Exercises&nbsp;<span class="ptmb8t-">37</span>–<span class="ptmb8t-">39</span>. </li>
+				<li class="itemize"> 
+						If we already know two linearly independent solutions of <a href="#x1-3r2">(5.7.2)</a> then variation of parameters will probably be simpler than reduction of order. 
+				</li>
+				<li class="itemize"> 
+						Variation of parameters generalizes naturally to a method for finding particular solutions of higher order linear equations (Section&nbsp;<a href="sec9.4.book.html" target=_blank>9.4</a>) and linear systems of equations (Section&nbsp;10.7), while reduction of order doesn’t. 
+				</li>
+				<li class="itemize"> 
+					Variation of parameters is a powerful theoretical tool used by researchers in differential equations. Although a detailed discussion of this is beyond the scope of this book, you can get an idea of what it means from Exercises&nbsp;<span class="ptmb8t-">37</span>–<span class="ptmb8t-">39</span> 
+				</li>
 			</ul>
+
 			<div class="indent" id="1e16af64-c704-4a16-ae26-ffbb12334935">
 				We’ll now derive the method. As usual, we consider solutions of <a href="#x1-2r1">(5.7.1)</a> and <a href="#x1-3r2">(5.7.2)</a> on an interval \((a,b)\) where \(P_0\), \(P_1\), \(P_2\), and \(F\) are continuous and \(P_0\) has no zeros. Suppose that \(\{y_1,y_2\}\) is a fundamental set of solutions of the complementary equation <a href="#x1-3r2">(5.7.2)</a>. We look for a particular solution of <a href="#x1-2r1">(5.7.1)</a> in the form 
 				\begin {equation} \label {eq:5.7.3} y_p=u_1y_1+u_2y_2 
-				\end {equation} <a id="x1-4r3"></a> where \(u_1\) and \(u_2\) are functions to be determined so that \(y_p\) satisfies <a href="#x1-2r1">(5.7.1)</a>. You may not think this is a good idea, since there are now two unknown functions to be determined, rather than one. However, since \(u_1\) and \(u_2\) have to satisfy only one condition (that \(y_p\) is a solution of <a href="#x1-2r1">(5.7.1)</a>), we can impose a second condition that produces a convenient simplification, as follows. 
+				\end {equation} <a id="x1-4r3"></a> where \(u_1\) and \(u_2\) are functions to be determined so that \(y_p\) satisfies <a href="#x1-2r1">(5.7.1)</a>. You may not think this is a good idea, since there are now two unknown functions to be determined, rather than one. However, since \(u_1\) and \(u_2\) have to satisfy only one condition, that \(y_p\) is a solution of <a href="#x1-2r1">(5.7.1)</a>, we can impose a second condition that produces a convenient simplification, as follows. 
 			</div>
 			<div class="indent" id="7153d893-f22e-41af-a6c8-6f6517dd011f">
-				Differentiating <a href="#x1-4r3">(5.7.3)</a> yields \begin {equation} \label {eq:5.7.4} \frac{dy_p}{dx} =u_1 \frac{dy_1}{dx} +u_2 \frac{dy_2}{dx} + \frac{du_1}{dx} y_1+ \frac{du_2}{dx} y_2 \end {equation} <a id="x1-5r4"></a> As our second condition on \(u_1\) and \(u_2\) we require that \begin {equation} \label {eq:5.7.5} \frac{du_1}{dx} y_1+ \frac{du_2}{dx} y_2=0 \end {equation} <a id="x1-6r5"></a> Then <a href="#x1-5r4">(5.7.4)</a> becomes \begin {equation} \frac{dy_p}{dx} =u_1 \frac{dy_1}{dx} +u_2 \frac{dy_2}{dx} ; \label {eq:5.7.6} \end {equation} <a id="x1-7r6"></a> that is, <a href="#x1-6r5">(5.7.5)</a> permits us to differentiate \(y_p\) (once!) as if \(u_1\) and \(u_2\) are constants. Differentiating <a href="#x1-5r4">(5.7.4)</a> yields \begin {equation} \label {eq:5.7.7} \frac{d^2y_p}{dx^2} =u_1 \frac{d^2y}{dx^2} _1+u_2 \frac{d^2y}{dx^2} _2+ \frac{du_1}{dx} \frac{dy_1}{dx} + \frac{du_2}{dx} \frac{dy_2}{dx} \end {equation} <a id="x1-8r7"></a> (There are no terms involving \( \frac{d^2u_1}{dx^2} \) and \( \frac{d^2u_2}{dx^2} \) here, as there would be if we hadn’t required <a href="#x1-6r5">(5.7.5)</a>.) Substituting <a href="#x1-4r3">(5.7.3)</a>, <a href="#x1-7r6">(5.7.6)</a>, and <a href="#x1-8r7">(5.7.7)</a> into <a href="#x1-2r1">(5.7.1)</a> and collecting the coefficients of \(u_1\) and \(u_2\) yields \[ u_1(P_0 \frac{d^2y}{dx^2} _1+P_1 \frac{dy_1}{dx} +P_2y_1)+u_2(P_0 \frac{d^2y}{dx^2} _2+P_1 \frac{dy_2}{dx} +P_2y_2) +P_0( \frac{du_1}{dx} \frac{dy_1}{dx} + \frac{du_2}{dx} \frac{dy_2}{dx} )=F\] As in the derivation of the method of reduction of order, the coefficients of \(u_1\) and \(u_2\) here are both zero because \(y_1\) and \(y_2\) satisfy the complementary equation. Hence, we can rewrite the last equation as \begin {equation} \label {eq:5.7.8} P_0( \frac{du_1}{dx} \frac{dy_1}{dx} + \frac{du_2}{dx} \frac{dy_2}{dx} )=F \end {equation} <a id="x1-9r8"></a> Therefore \(y_p\) in <a href="#x1-4r3">(5.7.3)</a> satisfies <a href="#x1-2r1">(5.7.1)</a> if \begin {equation} \label {eq:5.7.9} 
-				\begin {array}{rcl} \frac{du_1}{dx} y_1+ \frac{du_2}{dx} y_2 &amp;=&amp; 0 \\ \frac{du_1}{dx} \frac{dy_1}{dx} + \frac{du_2}{dx} \frac{dy_2}{dx} &amp;=&amp; \displaystyle {F\over P_0} 
-				\end {array} \end {equation} <a id="x1-10r9"></a> where the first equation is the same as <a href="#x1-6r5">(5.7.5)</a> and the second is from <a href="#x1-9r8">(5.7.8)</a>. 
+				Differentiating <a href="#x1-4r3">(5.7.3)</a> yields 
+				
+				<a id="x1-5r4"></a>
+				\begin {equation} \label {eq:5.7.4} 
+					\frac{dy_p}{dx} 
+						= u_1 \frac{dy_1}{dx} 
+						+ u_2 \frac{dy_2}{dx} 
+						+ \underbrace{\frac{du_1}{dx} y_1 + \frac{du_2}{dx} y_2} 
+				\end {equation}  
+				
+				As our second condition on \(u_1\) and \(u_2\) we require that 
+				
+				<a id="x1-6r5"></a> 
+				\begin {equation} \label {eq:5.7.5} 
+					\frac{du_1}{dx} y_1+ \frac{du_2}{dx} y_2=0 
+				\end {equation} 
+				
+				Then <a href="#x1-5r4">(5.7.4)</a> becomes 
+				
+				<a id="x1-7r6"></a> 
+				\begin {equation} \label {eq:5.7.6}
+					\frac{dy_p}{dx} =u_1 \frac{dy_1}{dx} +u_2 \frac{dy_2}{dx} 
+				\end {equation} 
+				
+				that is, <a href="#x1-6r5">(5.7.5)</a> permits us to differentiate \(y_p\) (once!) as if \(u_1\) and \(u_2\) are constants. Differentiating <a href="#x1-5r4">(5.7.4)</a> yields 
+				
+				<a id="x1-8r7"></a> 
+				\begin {equation} \label {eq:5.7.7} 
+					\frac{d^2y_p}{dx^2} 
+						= u_1 \frac{d^2y}{dx^2} _1
+						+ u_2 \frac{d^2y}{dx^2} _2
+						+ \frac{du_1}{dx} \frac{dy_1}{dx} 
+						+ \frac{du_2}{dx} \frac{dy_2}{dx} 
+				\end {equation} 
+				
+				Note that there are no terms involving \( \frac{d^2u_1}{dx^2} \) and \( \frac{d^2u_2}{dx^2} \) here, as there would be if we hadn’t required <a href="#x1-6r5">(5.7.5)</a>. 
+				
+				Substituting <a href="#x1-4r3">(5.7.3)</a>, <a href="#x1-7r6">(5.7.6)</a>, and <a href="#x1-8r7">(5.7.7)</a> into <a href="#x1-2r1">(5.7.1)</a> and collecting the coefficients of \(u_1\) and \(u_2\) yields 
+				
+				\[ 
+					u_1 \underset{0}{\underbrace{\Big(P_0 \frac{d^2y}{dx^2} _1+P_1 \frac{dy_1}{dx} +P_2y_1\Big)}}
+					+ u_2 \underset{0}{\underbrace{\Big(P_0 \frac{d^2y}{dx^2} _2+P_1 \frac{dy_2}{dx} +P_2y_2\Big)}} 
+					+ P_0\Big( \frac{du_1}{dx} \frac{dy_1}{dx} + \frac{du_2}{dx} \frac{dy_2}{dx} \Big)
+					= F
+				\] 
+				
+				As in the derivation of the method of reduction of order, the coefficients of \(u_1\) and \(u_2\) here are both zero because \(y_1\) and \(y_2\) satisfy the complementary equation. Hence, we can rewrite the last equation as 
+				
+				<a id="x1-9r8"></a>
+				\begin {equation} \label {eq:5.7.8} 
+					P_0 \Big( \frac{du_1}{dx} \frac{dy_1}{dx} + \frac{du_2}{dx} \frac{dy_2}{dx} \Big) = F 
+				\end {equation}  
+				
+				
+				Therefore \(y_p\) in <a href="#x1-4r3">(5.7.3)</a> satisfies <a href="#x1-2r1">(5.7.1)</a> if 
+				
+				<a id="x1-10r9"></a> 
+				\begin{align*}
+					\left\{
+					\begin{array}{rrl}	\label {eq:5.7.9} 
+						\displaystyle\frac{du_1}{dx} y_1+ \frac{du_2}{dx} y_2 &=& 0 \nonumber \\ \nonumber \\
+						\displaystyle\frac{du_1}{dx} \frac{dy_1}{dx} + \frac{du_2}{dx} \frac{dy_2}{dx} &=& \displaystyle\frac{F}{P_0}
+					\end{array}
+					\right.
+				\end{align*}	
+
+				where the first equation is the same as <a href="#x1-6r5">(5.7.5)</a> and the second is from <a href="#x1-9r8">(5.7.8)</a>
 			</div>
 			<div class="indent" id="425d2c02-6f12-4eb2-8173-ba26af01e209">
-				We’ll now show that you can always solve <a href="#x1-10r9">(5.7.9)</a> for \( \frac{du_1}{dx} \) and \( \frac{du_2}{dx} \). (The method that we use here will always work, but simpler methods usually work when you’re dealing with specific equations.) To obtain \( \frac{du_1}{dx} \), multiply the first equation in <a href="#x1-10r9">(5.7.9)</a> by \( \frac{dy_2}{dx} \) and the second equation by \(y_2\). This yields 
-			</div>
-			<div class="eqnarray" id="efc7ed99-4d62-4536-bf3f-b7b71af536e2">
+				We’ll now show that you can always solve <a href="#x1-10r9">(5.7.9)</a> for \( \displaystyle \frac{du_1}{dx} \) and \( \displaystyle  \frac{du_2}{dx} \). 
+			</div>	
+			<div class="indent" id="425d2c02-6f12-4eb2-8173-ba26af01e20fads9">
+				The method that we use here will always work, but simpler methods usually work when you’re dealing with specific equations. To obtain \( \displaystyle \frac{du_1}{dx} \), multiply the first equation in <a href="#x1-10r9">(5.7.9)</a> by \( \displaystyle \frac{dy_2}{dx} \) and the second equation by \(y_2\). This yields
 				
-				\begin {eqnarray*} \frac{du_1}{dx} y_1 \frac{dy_2}{dx} + \frac{du_2}{dx} y_2 \frac{dy_2}{dx} &amp;=&amp; 0 \\ \frac{du_1}{dx} \frac{dy_1}{dx} y_2+ \frac{du_2}{dx} \frac{dy_2}{dx} y_2 &amp;=&amp; {Fy_2\over P_0} 
-				\end {eqnarray*} 
+				\begin{array}{rrrll}
+					\displaystyle\frac{du_1}{dx} \frac{dy_2}{dx} y_1 
+					&+& \displaystyle\frac{du_2}{dx} \frac{dy_2}{dx} y_2 
+					= & 0 \nonumber \\ \nonumber \\
+					- \quad\quad \Big(\,\,
+					\displaystyle\frac{du_1}{dx} \frac{dy_1}{dx} y_2 
+					&+& \displaystyle\frac{du_2}{dx} \frac{dy_2}{dx} y_2 
+					= & \displaystyle\frac{Fy_2}{P_0} \,\, \Big) \\
+					\hline
+					\frac{du_1}{dx} \left( \frac{dy_2}{dx} y_1 - \frac{dy_1}{dx} y_2 \right) &+& \Big( \, 0 \, \Big) \, y_2 = & -\frac{Fy_2}{P_0} \nonumber \\ \nonumber \\
+				\end{array}
+
 			</div>
+
 			<div class="indent" id="db27cdd2-f9b0-4880-85e8-b430341b1e08">
-				Subtracting the second equation from the first yields \begin {equation} \label {eq:5.7.10} \frac{du_1}{dx} (y_1 \frac{dy_2}{dx} - \frac{dy_1}{dx} y_2)=-{Fy_2\over P_0} \end {equation} <a id="x1-11r10"></a> Since \(\{y_1,y_2\}\) is a fundamental set of solutions of <a href="#x1-3r2">(5.7.2)</a> on \((a,b)\), Theorem&nbsp;<span class="ptmb8t-">5.1.6</span> implies that the Wronskian \(y_1 \frac{dy_2}{dx} - \frac{dy_1}{dx} y_2\) has no zeros on \((a,b)\). Therefore we can solve <a href="#x1-11r10">(5.7.10)</a> for \( \frac{du_1}{dx} \), to obtain \begin {equation} \label {eq:5.7.11} \frac{du_1}{dx} =-{Fy_2\over P_0(y_1 \frac{dy_2}{dx} - \frac{dy_1}{dx} y_2)} \end {equation} <a id="x1-12r11"></a> We leave it to you to start from <a href="#x1-10r9">(5.7.9)</a> and show by a similar argument that 
-				\begin {equation} \label {eq:5.7.12} \frac{du_2}{dx} ={Fy_1\over P_0(y_1 \frac{dy_2}{dx} - \frac{dy_1}{dx} y_2)} 
-				\end {equation} <a id="x1-13r12"></a> 
+				Subtracting the second equation from the first yields 
+				
+				<a id="x1-11r10"></a>
+				\begin {align} \label {eq:5.7.10} 
+					\frac{du_1}{dx} \,  \underbrace{\Big(y_1 \frac{dy_2}{dx} 
+					- \frac{dy_1}{dx} y_2 \Big)} = & -{Fy_2\over P_0} \\
+					\frac{du_1}{dx} \underbrace{\left|
+					\begin{array}{cc}
+					y_1 & y_2 \nonumber \\
+					\displaystyle\frac{dy_1}{dx} & \displaystyle\frac{dy_2}{dx} \\
+					\end{array}
+					\right|} = & -{Fy_2\over P_0} \\
+					\frac{du_1}{dx} \, W[y_1,y_2] = & -{Fy_2\over P_0}  \\
+				\end {align} 
+				
+				
+				Since \(\{y_1,y_2\}\) is a fundamental set of solutions of <a href="#x1-3r2">(5.7.2)</a> on \((a,b)\), Theorem&nbsp;<span class="ptmb8t-">5.1.6</span> implies that the Wronskian \(W[y_1,y_2]\) has no zeros on \((a,b)\). Therefore we can solve <a href="#x1-11r10">(5.7.10)</a> for \( \displaystyle\frac{du_1}{dx} \), to obtain 
+
+				<a id="x1-12r11"></a>
+				\begin {align} \label {eq:5.7.11}
+					\frac{du_1}{dx}  = & -\frac{Fy_2}{P_0 \, W[y_1,y_2]} \\
+				\end {align} 		
+				
+				We leave it to you to start from <a href="#x1-10r9">(5.7.9)</a> and show by a similar argument that 
+				<a id="x1-13r12"></a> 
+				\begin {equation} \label {eq:5.7.12} 
+					\frac{du_2}{dx} ={Fy_1\over P_0 \, \, W[y_1,y_2]} 
+				\end {equation} 
 			</div>
 			<div class="indent" id="21637ec6-f255-4e2f-bfda-56f4c758fea9">
-				We can now obtain \(u_1\) and \(u_2\) by integrating \( \frac{du_1}{dx} \) and \( \frac{du_2}{dx} \). The constants of integration can be taken to be zero, since any choice of \(u_1\) and \(u_2\) in <a href="#x1-4r3">(5.7.3)</a> will suffice. 
+				We can now obtain \(u_1\) and \(u_2\) by integrating \( \displaystyle\frac{du_1}{dx} \) and \( \displaystyle\frac{du_2}{dx} \). The constants of integration can be taken to be zero, since any choice of \(u_1\) and \(u_2\) in <a href="#x1-4r3">(5.7.3)</a> will suffice. 
 			</div>
 			<div class="indent" id="837cda37-4b72-4613-8b1c-86f383c36589">
-				You should not memorize <a href="#x1-12r11">(5.7.11)</a> and <a href="#x1-13r12">(5.7.12)</a>. On the other hand, you don’t want to re-derive the whole procedure for every specific problem. We recommend the a compromise: 
+				We will not memorize <a href="#x1-12r11">(5.7.11)</a> and <a href="#x1-13r12">(5.7.12)</a> to apply as formulas. On the other hand, you don’t want to re-derive the whole procedure for every specific problem. We recommend the a compromise: 
 			</div>
 			<ol style="list-style: lower-alpha" id="61e16f66-0159-462b-84ad-ab052aacf841">
 				<li>
 					<div>
-						Write 
-						\begin {equation} \label {eq:5.7.13} y_p=u_1y_1+u_2y_2 
-						\end {equation} <a id="x1-15r13"></a> to remind yourself of what you’re doing. 
+						Write \(y_p\) to get oriented 
+						<a id="x1-15r13"></a> 
+						\begin {equation} \label {eq:5.7.13} 
+							y_p=u_1y_1+u_2y_2 
+						\end {equation} 
 					</div>
 				</li>
 				<li>
 					<div>
-						Write the system \begin {equation} \label {eq:5.7.14} 
-						\begin {array}{rcl} \frac{du_1}{dx} y_1+ \frac{du_2}{dx} y_2 &amp;=&amp; 0 \\ \frac{du_1}{dx} \frac{dy_1}{dx} + \frac{du_2}{dx} \frac{dy_2}{dx} &amp;=&amp; \displaystyle {F\over P_0} 
-						\end {array} \end {equation} <a id="x1-17r14"></a> for the specific problem you’re trying to solve. 
+						Write the system for the specific problem we are trying to solve
+
+						<a id="x1-17r14"></a>
+						\begin{align}\label {eq:5.7.14}
+							\left\{
+							\begin{array}{rrl} 
+								\displaystyle\frac{du_1}{dx} y_1+ \frac{du_2}{dx} y_2 &=& 0 \\ \\
+								\displaystyle\frac{du_1}{dx} \frac{dy_1}{dx} + \frac{du_2}{dx} \frac{dy_2}{dx} &=& \displaystyle\frac{F}{P_0}
+							\end{array}
+							\right.
+						\end{align}	
 					</div>
 				</li>
 				<li>
 					<div>
-						Solve <a href="#x1-17r14">(5.7.14)</a> for \( \frac{du_1}{dx} \) and \( \frac{du_2}{dx} \) by any convenient method. 
+						Solve <a href="#x1-17r14">(5.7.14)</a> for \( \displaystyle\frac{du_1}{dx} \) and \( \displaystyle\frac{du_2}{dx} \) by any convenient method
 					</div>
 				</li>
 				<li>
 					<div>
-						Obtain \(u_1\) and \(u_2\) by integrating \( \frac{du_1}{dx} \) and \( \frac{du_2}{dx} \), taking the constants of integration to be zero. 
+						Obtain \(u_1\) and \(u_2\) by integrating \( \displaystyle\frac{du_1}{dx} \) and \( \displaystyle \frac{du_2}{dx} \), taking the constants of integration to be zero
 					</div>
 				</li>
 				<li>
 					<div>
-						Substitute \(u_1\) and \(u_2\) into <a href="#x1-15r13">(5.7.13)</a> to obtain \(y_p\). 
+						Substitute \(u_1\) and \(u_2\) into <a href="#x1-15r13">(5.7.13)</a> to obtain \(y_p\)
 					</div>
 				</li>
 			</ol>
 		</details>
+
+		<!--Variation of Parameters Examples-->
 		<details id="b">
 			<summary>Variation of Parameters Examples</summary>
 
 
+			<!--Example 1-->
 			<div class="example" id="x1-211" style="--ex-number: 1">
 				
 				<div> Find a particular solution \(y_p\) of 
@@ -131,6 +267,7 @@
 				</details>
 			</div>
 
+			<!--Example 2-->
 			<div class="example" id="x1-232" style="--ex-number: 2">
 				
 				<div> Find a particular solution \(y_p\) of 
@@ -160,6 +297,7 @@
 				</details>
 			</div>
 
+			<!--Example 3-->
 			<div class="example" id="x1-273" style="--ex-number: 3">
 				
 				<div> Find a particular solution of 
@@ -201,6 +339,7 @@
 				</details>
 			</div>
 
+			<!--Example 4-->
 			<div class="example" id="x1-304" style="--ex-number: 4">
 				
 				<div> Solve the initial value problem 
@@ -255,6 +394,7 @@
 				</details>
 			</div>
 
+			<!--Figure-->
 			<figure class="figure" id="3100d55e-a931-4ea6-8e12-37b93fe17f9d">
 				<div id="-y-x-overxx-overx-">
 					<img height="264" src="EPS/fig050701.png" width="409" /> <a id="x1-34r1"></a> 
@@ -264,6 +404,7 @@
 			</figure>
 		</details>
 
+		<!--Comparison of Methods-->
 		<details id="c">
 			<summary>Comparison of Methods</summary>
 
