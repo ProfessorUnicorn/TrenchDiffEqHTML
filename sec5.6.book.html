@@ -28,35 +28,136 @@
 			5.6 Reduction of Order 
 		</div>
 
+		<!--Reduction of Order-->
 		<details id="ccdb8a02-f0b0-475a-aa16-69ddd657fa8b">
 			<summary>Reduction of Order</summary>
 
 			<div id="7add97e1-7c58-4c42-9961-aece9d38d295">
-				In this section we give a method for finding the general solution of \begin {equation} \label {eq:5.6.1} P_0(x)\frac{d^2y}{dx^2}+P_1(x) \frac{dy}{dx} +P_2(x)y=F(x) \end {equation} <a id="x1-2r1"></a> if we know a nontrivial solution \(y_1\) of the complementary equation 
-				\begin {equation} \label {eq:5.6.2} P_0(x)\frac{d^2y}{dx^2}+P_1(x) \frac{dy}{dx} +P_2(x)y=0 
-				\end {equation} <a id="x1-3r2"></a> The method is called <span class="vocab">reduction of order</span> because it reduces the task of solving <a href="#x1-2r1">(5.6.1)</a> to solving a first order equation. Unlike the method of undetermined coefficients, it does not require \(P_0\), \(P_1\), and \(P_2\) to be constants, or \(F\) to be of any special form. 
+				In this section we give a method for finding the general solution of 
+				
+				<a id="x1-2r1"></a> 
+				\begin {equation} \label {eq:5.6.1}
+					 P_0 \frac{d^2y}{dx^2}+P_1  \frac{dy}{dx} +P_2 y=F(x) 
+				\end {equation} 
+				
+				If we know a nontrivial solution \(y_1\) of the complementary equation 
+				
+				<a id="x1-3r2"></a>
+				\begin {equation} \label {eq:5.6.2} 
+					P_0 \frac{d^2y}{dx^2}+P_1  \frac{dy}{dx} +P_2 y=0 
+				\end {equation} 
+				
+				The method is called <span class="vocab">reduction of order</span> because it reduces the task of solving <a href="#x1-2r1">(5.6.1)</a> to solving a first order equation. Unlike the <span class="vocab">method of undetermined coefficients</span>, it does not require \(P_0 \), \(P_1 \), and \(P_2 \) to be constants, or \(F(x)\) to be of any special form. 
 			</div>
+
+			<br>
+			<br>
+			<br>
+
 			<div class="indent" id="aa46d5ae-6fcd-47ca-b857-d45cf95314ad">
-				By now you shouldn’t be surprised that we look for solutions of <a href="#x1-2r1">(5.6.1)</a> in the form \begin {equation} \label {eq:5.6.3} y=uy_1 \end {equation} <a id="x1-4r3"></a> where \(u\) is to be determined so that \(y\) satisfies <a href="#x1-2r1">(5.6.1)</a>. Substituting <a href="#x1-4r3">(5.6.3)</a> and \[ \begin {array}{rcl} \frac{dy}{dx} &amp;=&amp; \frac{du}{dx} y_1+u \frac{dy_1}{dx} \\ \frac{d^2y}{dx^2}&amp;=&amp; \frac{d^2u}{dx^2} y_1+2 \frac{du}{dx} \frac{dy_1}{dx} +u \frac{d^2y_1}{dx^2} \end {array}\] into <a href="#x1-2r1">(5.6.1)</a> yields \[ P_0(x)(\frac{d^2u}{dx^2} y_1+2 \frac{du}{dx} \frac{dy_1}{dx} +u \frac{d^2y_1}{dx^2} )+P_1(x)( \frac{du}{dx} y_1+u \frac{dy_1}{dx} )+P_2(x)uy_1=F(x)\] Collecting the coefficients of \(u\), \( \frac{du}{dx} \), and \(\frac{d^2u}{dx^2} \) yields \begin {equation} \label {eq:5.6.4} (P_0y_1)\frac{d^2u}{dx^2} +(2P_0 \frac{dy_1}{dx} +P_1y_1) \frac{du}{dx} +(P_0 \frac{d^2y_1}{dx^2} +P_1 \frac{dy_1}{dx} +P_2y_1) u=F \end {equation} <a id="x1-5r4"></a> However, the coefficient of \(u\) is zero, since \(y_1\) satisfies <a href="#x1-3r2">(5.6.2)</a>. Therefore <a href="#x1-5r4">(5.6.4)</a> reduces to 
-				\begin {equation} \label {eq:5.6.5} Q_0(x)\frac{d^2u}{dx^2} +Q_1(x) \frac{du}{dx} =F 
-				\end {equation} <a id="x1-6r5"></a> with \[ Q_0=P_0y_1 \quad \mbox{ and } \quad Q_1=2P_0 \frac{dy_1}{dx} +P_1y_1\] (It isn’t worthwhile to memorize the formulas for \(Q_0\) and \(Q_1\)!) Since <a href="#x1-6r5">(5.6.5)</a> is a linear first order equation in \( \frac{du}{dx} \), we can solve it for \( \frac{du}{dx} \) by variation of parameters as in Section&nbsp;1.2, integrate the solution to obtain \(u\), and then obtain \(y\) from <a href="#x1-4r3">(5.6.3)</a>. 
+				By now you shouldn’t be surprised that we look for solutions of <a href="#x1-2r1">(5.6.1)</a> in the form 
+				
+				\begin {equation} \label {eq:5.6.3} 
+					y=uy_1 
+				\end {equation} <a id="x1-4r3"></a> 
+				
+				where \(u\) is some function of \(x\) to be determined and \(y_1\) satisfies the complementary equation <a href="#x1-3r2">(5.6.2)</a> so we have 
+				\begin {equation*}
+					P_0 \frac{d^2y_1}{dx^2}+P_1  \frac{dy_1}{dx} +P_2 y_1=0 
+				\end {equation*} 
 			</div>
+			<div class="reading-exercise" id=readingexercise1432>
+				Differentiate \( y=uy_1  \) twice
+			</div> 	
+			<div>	
+				Differentiating \( y=uy_1  \) we obtain:
 
+				\begin{align*}
+					\frac{dy}{dx} = & \frac{du}{dx} y_1+u \frac{dy_1}{dx} \\ \\
+					\frac{d^2y}{dx^2} = & \frac{d^2u}{dx^2} y_1+2 \frac{du}{dx} \frac{dy_1}{dx} +u \frac{d^2y_1}{dx^2} 
+				\end{align*}
+				
+			</div> 	
+			<div>
+				Substituting into <a href="#x1-2r1">(5.6.1)</a>
+				\begin{array}{rrrrrr}
+					P_0  \displaystyle\frac{d^2y}{dx^2} &=&  {\small P_0  y_1} \displaystyle\frac{d^2u}{dx^2}  &+& {\small 2P_0   \displaystyle\frac{dy_1}{dx} } \, \displaystyle\frac{du}{dx}  &+&  P_0 \displaystyle\frac{d^2y_1}{dx^2} \, u \\
+					P_1 \frac{dy}{dx} &=& & & {\small P_1  y_1} \displaystyle\frac{du}{dx}  &+&  P_1  \displaystyle \frac{dy_1}{dx} \, u \\
+					+ \quad\quad\quad\quad\quad\quad\quad\quad P_2 y &=& & & & & P_2  y_1 \, u  \\
+					\hline
+					\underset{F(x) }{\underbrace{{\small P_0 \displaystyle \frac{d^2y}{dx^2} + P_1 \frac{dy}{dx} + P_2 y}}} &=&  \Big({\small P_0  y_1}\Big) \displaystyle\frac{d^2u}{dx^2}  &+&  \left( {\small 2P_0   \displaystyle\frac{dy_1}{dx} + P_1  y_1} \right) \, \displaystyle \frac{du}{dx} &+& \underset{0}{\underbrace{{\small \Big(P_0  \displaystyle\frac{d^2y_1}{dx^2} + P_1  \frac{dy_1}{dx} + P_2  y_1 \Big)}}} u  \\
+				\end{array} 
 
+				We obtain the equation:
+
+				<a id="x1-5r4"></a> 
+				\begin{align}  \label {eq:5.6.4} 
+					\underset{Q_0(x)}{\underbrace{\Big({\small P_0  y_1}\Big)}} \frac{d^2u}{dx^2} 
+					+ \underset{Q_1(x)}{\underbrace{\left( {\small 2P_0 \frac{dy_1}{dx}+P_1 y_1} \right)}}\,\frac{du}{dx} 
+					= F(x) \\
+				\end{align}
+				
+				Since the coefficients of \(\displaystyle \frac{d^2u}{dx^2}\) and \(\displaystyle \frac{u}{dx}\) were both functions of \(x\), we'll replace them with \(Q_0(x)\) and \(Q_1(x)\) to simplify the expression but we will not memorize these as formulas.
+
+				<a id="x1-6r5"></a> 
+				\begin{align}  \label {eq:5.6.5} 
+					Q_0(x) \frac{d^2u}{dx^2} 
+					+ Q_1(x) \,\frac{du}{dx} 
+					= F(x) \\
+				\end{align}
+
+				In this simplified form, it may appear that <a href="#x1-6r5">(5.6.5)</a> is still second order, however, as only the first and second derivatives of \(u\) are present, and not \(u\) itself, this equation can be recast as a first order linear equation using a change of variables. 
+			</div>
+			<div>
+				Letting \(z=\displaystyle\frac{du}{dx}\) and \(\displaystyle\frac{dz}{dx}=\displaystyle\frac{d^2u}{dx^2}\) then we can write <a href="#x1-6r5">(5.6.5)</a> as a linear differential equation
+
+				\begin{align*} 
+					Q_0(x) \frac{dz}{dx} 
+					+ Q_1(x) \,z
+					= F(x) \\
+				\end{align*}
+
+				Therefore we can solve it using the techniques from Section <a href="sec1.2.book.html" target=_blank>1.2</a> and antidifferentiation.
+
+			</div> 	
 		</details>
-		
+
+		<!--Reduction of Order Examples-->
 		<details id="ccdb8a02-f0b0-475a-aa16-69ddd657fa8bfdas">
 			<summary>Reduction of Order Examples</summary>
 
+			<!--Example 1-->
 			<div class="example" id="x1-71" style="--ex-number: 1">
+				<div>
+					Consider the differential equation
+
+					<a id="x1-9r6"></a> 
+					\begin {equation} \label {eq:5.6.6} 
+						x\frac{d^2y}{dx^2}-(2x+1) \frac{dy}{dx} +(x+1)y=x^2 
+					\end {equation}
+
+					
+				</div>		
+
 				<ol>
 					<li>
-						Find the general solution of \begin {equation} \label {eq:5.6.6} x\frac{d^2y}{dx^2}-(2x+1) \frac{dy}{dx} +(x+1)y=x^2 \end {equation} <a id="x1-9r6"></a> given that \(y_1=e^x\) is a solution of the complementary equation 
-						\begin {equation} \label {eq:5.6.7} x\frac{d^2y}{dx^2}-(2x+1) \frac{dy}{dx} +(x+1)y=0 
-						\end {equation} <a id="x1-10r7"></a> 
+						Verify that \(y_1=e^x\) is a solution of the complementary equation
+					</li>	
+					<li>
+						Use <span class="vocab-repeat">reduction of order</span> to simplify <a href="#x1-9r6">(5.6.6)</a> into a linear first order equation in \({du}/{dx}\) 		
 					</li>
 					<li>
-						As a byproduct of <span class="ptmb8t-">(a)</span>, find a fundamental set of solutions of <a href="#x1-10r7">(5.6.7)</a>. 
+						Convert the equation in \({du}/{dx}\) to a first order equation in \(z\) using the substitution \(z = {du}/{dx} \) then solve for \(z\)	
+					</li>
+					<li>
+						Substitute back to solve for \(u\) then substitute back again to solve for \(y\) in general
+					</li>	
+
+					<li>
+						Find 4 simple particular solutions of <a href="#x1-9r6">(5.6.6)</a> 
+					</li>
+					<li>
+						Find a fundamental set of solutions of the complementary equation
 					</li>
 				</ol>
 			
@@ -64,47 +165,783 @@
 					<summary>Solution</summary>
 
 					<ol>
+						<!--Part 1-->
 						<li>
-							If \(y=ue^x\), then \( \frac{dy}{dx} = \frac{du}{dx} e^x+ue^x\) and \(\frac{d^2y}{dx^2}=\frac{d^2u}{dx^2} e^x+2 \frac{du}{dx} e^x+ue^x\), so
-							<div class="eqnarray" id="0d3427b0-46be-4e6e-bacd-d89fdebef8ab">
-								\begin {eqnarray*}
-									x\frac{d^2y}{dx^2}-(2x+1) \frac{dy}{dx} +(x+1)y&amp;=&amp;x(\frac{d^2u}{dx^2} e^x+2 \frac{du}{dx} e^x+ue^x)\\ &amp;&amp;-(2x+1)( \frac{du}{dx} e^x+ue^x)+(x+1)ue^x\\ &amp;=&amp;(x\frac{d^2u}{dx^2} - \frac{du}{dx} )e^x 
-								\end {eqnarray*} 
+							<div>	
+								We wish to verify that \(y_1=e^x\) is a solution to the complementary equation:
+
+								<a id="x1-10r7"></a> 
+								\begin {equation} \label {eq:5.6.7} 
+									x\frac{d^2y}{dx^2}-(2x+1) \frac{dy}{dx} +(x+1)y=0 
+								\end {equation} 
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(y_1=e^x\) twice
+							</div> 
+							<div>	
+								Differentiating \(y_1=e^x\) we obtain
+
+								\[
+									\frac{d y_1}{dx} = e^x
+									\quad \text{and} \quad
+									\frac{d^2 y_1}{dx^2} = e^x
+								\]
+							</div>
+							<div>	
+								Substituting  \(y_1=e^x\) and its derivatives in to <a href="#x1-10r7">(5.6.7)</a>
+
+								\begin{align*} 
+									x\frac{d^2y_1}{dx^2}-(2x+1) \frac{dy_1}{dx} +(x+1)y_1 \overset{?}{=} & 0 \\
+									xe^x-(2x+1) e^x +(x+1)e^x \overset{?}{=} & 0 \\
+									\Big( x-(2x+1) +(x+1) \Big) e^x \overset{?}{=} & 0 \\
+									\underset{0}{\underbrace{\Big( x-2x-1 + x+1 \Big)}} e^x {=} & 0 \quad \checkmark \\
+								\end{align*} 
+
+								Therefore \(y_1=e^x\) is a solution to the complementary equation <a href="#x1-10r7">(5.6.7)</a>
+							</div>
+							<br>
+							<br>
+							<br>
+						</li>
+						<!--Part 2-->
+						<li>
+							<div>	
+								To use <span class="vocab">reduction of order</span> we will seek solutions of <a href="#x1-9r6">(5.6.6)</a> of the form \(y = uy_1\) where \(y_1\) is a solution to the complementary equation.
+								Since  \(y_1=e^x\) is a solution to the complementary equation <a href="#x1-10r7">(5.6.7)</a> we seek solutions of the form 
+								\[y = ue^x\]
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(y = ue^x\) twice
+							</div> 
+							<div>	
+								Differentiating \(y=ue^x\) we obtain
+								\[
+									\frac{dy}{dx} = \Big(\frac{du}{dx} +u \Big)e^x
+									\quad \text{and} \quad
+									\frac{d^2y}{dx^2}= \Big(\frac{d^2u}{dx^2} + 2 \frac{du}{dx} + u \Big) e^x
+								\]
+							</div>
+							<div class="reading-exercise">
+								Substitute  \(y = ue^x\) and its derivatives in to <a href="#x1-9r6">(5.6.6)</a>
 							</div>
 
-							Therefore \(y=ue^x\) is a solution of <a href="#x1-9r6">(5.6.6)</a> if and only if \[ (x\frac{d^2u}{dx^2} - \frac{du}{dx} )e^x=x^2\] which is a first order equation in \( \frac{du}{dx} \). We rewrite it as \begin {equation} \label {eq:5.6.8} \frac{d^2u}{dx^2} -{ \frac{du}{dx} \over x}=xe^{-x} \end {equation} <a id="x1-12r8"></a> To focus on how we apply variation of parameters to this equation, we temporarily write \(z= \frac{du}{dx} \), so that <a href="#x1-12r8">(5.6.8)</a> becomes \begin {equation} \label {eq:5.6.9} \frac{dz}{dx} -{z\over x}=xe^{-x}\end {equation} <a id="x1-13r9"></a> We leave it to you to show (by separation of variables) that \(z_1=x\) is a solution of the complementary equation \[ \frac{dz}{dx} -{z\over x}=0 \] for <a href="#x1-13r9">(5.6.9)</a>. By applying variation of parameters as in Section&nbsp;1.2, we can now see that every solution of <a href="#x1-13r9">(5.6.9)</a> is of the form \[ z=vx\quad \mbox{ where } \quad \frac{dv}{dx} x=xe^{-x}, \quad \mbox{ so } \quad \frac{dv}{dx} =e^{-x} \quad \mbox{ and } \quad v=-e^{-x}+C_1\] Since \( \frac{du}{dx} =z=vx\), \(u\) is a solution of <a href="#x1-12r8">(5.6.8)</a> if and only if \[ \frac{du}{dx} =vx=-xe^{-x}+C_1x\] Integrating this yields \[ u=(x+1)e^{-x}+{C_1\over 2}x^2+C_2\] Therefore the general solution of <a href="#x1-9r6">(5.6.6)</a> is 
-							<a id="x1-14r10"></a> 
-							\begin {equation} \label {eq:5.6.10}
-								y=ue^x=x+1+{C_1\over 2}x^2e^x+C_2e^x 
-							\end {equation}
+							<div>	
+								Substituting  \(y = ue^x\) and its derivatives in to <a href="#x1-9r6">(5.6.6)</a>
+
+								\begin{array}{rrrrrr}
+									 x   \displaystyle\frac{d^2y}{dx^2} &=&  {\small  x   e^x} \displaystyle\frac{d^2u}{dx^2}  &+& {\small 2 x \, e^x } \, \displaystyle\frac{du}{dx}  &+&   x \, ue^x \\
+									-(2x+1) \displaystyle\frac{dy}{dx} &=& & & {\small -(2x+1) \, e^x} \displaystyle\frac{du}{dx}  &+&  -(2x+1) \, ue^x \\
+									+ \quad\quad\quad (x+1) y &=& & & & & (x+1) \, ue^x  \\
+									\hline
+									\underset{x^2 }{\underbrace{{\tiny  x  \displaystyle \frac{d^2y}{dx^2} -(2x+1) \frac{dy}{dx} + (x+1) y}}} &=&  
+											\Big({\small x e^x}\Big) \displaystyle\frac{d^2u}{dx^2}  &+&  
+										\underset{-1}{\underbrace{
+											{\small \Big(  2 x -(2x+1) \Big)e^x } }}
+											\, \displaystyle \frac{du}{dx} &+& 
+										\underset{0}{\underbrace{
+											{\small \Big(x -(2x+1) + (x+1) \Big)} 
+										}} ue^x  \\
+								\end{array} 
+							</div>
+
+							<div class="reading-exercise">
+								Simplify \(\Big(  2 x -(2x+1) \Big)\) and \( \Big(x -(2x+1) + (x+1) \Big) \) 
+							</div>
+
+							<div>
+								Thus we obtain the equation
+								\begin{align*} 
+									x e^x \frac{d^2u}{dx^2} - e^x  \frac{du}{dx} = x^2
+								\end{align*} 
+							</div>
+							<div class="reading-exercise">
+								Rewrite \( x e^x \frac{d^2u}{dx^2} - e^x  \frac{du}{dx} = x^2 \) in standard linear form and identify \(p(x)\) and \(f(x)\)
+							</div>
+							<div>	
+
+								Divding by \(x e^x\) to get it into <span class="vocab">standard linear form</span> <a href="sec2.1.book.html#x1-2r1" target=_blank>(2.1.1)</a>
+
+								<a id="x1-12r8"></a>
+								\begin{align} \label {eq:5.6.8}
+									\frac{d^2u}{dx^2} - \frac{1}{x}\frac{du}{dx} = xe^{-x}
+								\end{align} 
+
+							</div>
+						</li>	
+						<!--Part 3-->
+						<li>
+							<div>
+								Although <a href="#x1-12r8">(5.6.8)</a> appears to be a second order equation, since the dependent varible \(u\) is not present in the equation, we can actually use the substitution \(z = {du}/{dx} \) to rewrite it more clearly as a first order equation with only the first derivative present.
+							</div>
+							<div>	
+								Letting \(z = \displaystyle \frac{du}{dx}\) and differentiating both sides
+								\begin{align*} 
+									\frac{dz}{dx} 
+										= \frac{d}{dx}\left(\frac{du}{dx}\right)
+										= \frac{d^2u}{dx^2}
+								\end{align*} 
+
+								Now substituting into <a href="#x1-12r8">(5.6.8)</a>
+
+								<a id="x1-13r9"></a>
+								\begin{align} \label {eq:5.6.9}
+									\underset{dz/dx}{\underbrace{\frac{d^2u}{dx^2}}} - \frac{1}{x} \underset{z}{\underbrace{\frac{du}{dx}}} = & xe^{-x} \nonumber \\
+									\frac{dz}{dx} - \frac{1}{x} z = & xe^{-x}
+								\end{align} 
+							</div>
+							<div>	
+								To solve <a href="#x1-13r9">(5.6.9)</a> we will first solve the complementary equation
+
+								\begin{align*}
+									\frac{dz}{dx} - \frac{1}{x} z = & 0
+								\end{align*} 
+							</div>
+							<div class="reading-exercise">
+								Find the general solution of \( \frac{dz}{dx} - \frac{1}{x} z = 0 \) using <span class="vocab-repeat">separation of variables</span>. Review Sections <a href="sec2.1.book.html">2.1</a> and <a href="sec2.2.book.html">2.1</a> for examples. 
+							</div>
+							<div>	
+								Using <span class="vocab">separation of variables</span>, we find the general solution \(z = cx\) and now we apply <span class="vocab">variation of parameters</span> to solve <a href="#x1-13r9">(5.6.9)</a>
+							</div>
+							<div>
+								To implement <span class="vocab-repeat">variation of parameters</span> we choose a particlar solution so letting \(c=1\) we select \(z_1 = x\) as the particlar solution of the complementary equation. Now we seek solutions of the nonhomogeneous equation <a href="#x1-13r9">(5.6.9)</a> of the form \(z = vz_1 = vx\) where \(v\) is some function of \(x\) to be determined.
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(z = vx\) then substitute into <a href="#x1-13r9">(5.6.9)</a> and simplify into an integrable differential equation
+							</div>
+							<div>	
+								After differentiating \(z = vx\) and substitute into <a href="#x1-13r9">(5.6.9)</a> we obtain:
+
+								\begin{align*}
+									\frac{d}{dx}\Big( vx \Big) - \frac{1}{x} \Big( vx \Big) = & xe^{-x}
+									\Longrightarrow
+									\frac{dv}{dx} = e^{-x}
+								\end{align*} 
+							</div>
+							<div class="reading-exercise">
+								Antdifferentiate \(e^{-x}\) 
+							</div>
+							<div>
+								So we can find \(v\) by finding the antiderivative:
+								\begin{align*}
+									v = c-e^{-x}
+								\end{align*}
+								Substituting back into \(z = vx\) we obtain the one-parameter family that is the solution of 
+								<a href="#x1-13r9">(5.6.9)</a>
+								\begin{align*}
+									z = x\Big(c-e^{-x} \Big)
+								\end{align*}
+							</div>
+						</li>	
+						<!--Part 4-->
+						<li>
+							<div>	
+								We found the general solution \(z\) but now we recall the substitution we made in the beginning  \(z = {du}/{dx}\) so we can substitute back:
+								\begin{align*}
+									\frac{du}{dx} = x\Big(c-e^{-x} \Big)
+								\end{align*}
+								And now we can find \(u\) again by finding the antiderivative. 
+							</div>
+							<div class="reading-exercise">
+								Antdifferentiate \( xe^{-x} \) using IBP 
+							</div>
+							<div class="reading-exercise">
+								Antdifferentiate \( cx \) using the power rule
+							</div>
+							<div>	
+								Finding the antiderivative and simplifying arbitrary constants we have \(u\)
+								\begin{align*}
+									u = c_1 + c_2x^2 + (x + 1)e^{-x}
+								\end{align*}
+							</div>
+							<div>	
+								Finally substituting back to \( y = ue^{x}\) we have 
+								\begin{align*}
+									y = \Big( c_1 + c_2x^2 + (x + 1)e^{-x} \Big) e^x
+								\end{align*}
+
+								Which we will distribute to simplify:
+
+								<a id="x1-14r10"></a> 
+								\begin{align} \label {eq:5.6.10}
+									y = x + 1 + (c_1 + c_2x^2)e^x  
+								\end{align}
+
+								So for any arbitrary constants \(c_1\) and \(c_2\) <a href="#x1-14r10">(5.6.10)</a> is a solution of <a href="#x1-9r6">(5.6.6)</a> 
+							</div>
+							<div class="reading-exercise">
+								Verify <a href="#x1-14r10">(5.6.10)</a> is a solution of <a href="#x1-9r6">(5.6.6)</a>
+							</div>	
 						</li>
 						<li>
-							By letting \(C_1=C_2=0\) in <a href="#x1-14r10">(5.6.10)</a>, we see that \(y_{p_1}=x+1\) is a solution of <a href="#x1-9r6">(5.6.6)</a>. By letting \(C_1=2\) and \(C_2=0\), we see that \(y_{p_2}=x+1+x^2e^x\) is also a solution of <a href="#x1-9r6">(5.6.6)</a>. Since the difference of two solutions of <a href="#x1-9r6">(5.6.6)</a> is a solution of <a href="#x1-10r7">(5.6.7)</a>, \(y_2=y_{p_1}-y_{p_2}=x^2e^x\) is a solution of <a href="#x1-10r7">(5.6.7)</a>. Since \(y_2/y_1\) is nonconstant and we already know that \(y_1=e^x\) is a solution of <a href="#x1-9r6">(5.6.6)</a>, Theorem&nbsp;<span class="ptmb8t-">5.1.6</span> implies that \(\{e^x,x^2e^x\}\) is a fundamental set of solutions of <a href="#x1-10r7">(5.6.7)</a>.
+							<div>	
+								From <a href="#x1-14r10">(5.6.10)</a> we have a general form of the solution \(y\) so we select constants to obtain a simple particular solution. Letting \(c_1=0\) and \(c_2=0\) we obtain a particular solution
+
+								\[
+									y_{p_1} = x + 1
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \(y_{p_1}  = x + 1 \) is a solution of <a href="#x1-9r6">(5.6.6)</a>
+							</div>		
+
+							<div>
+								Letting \(c_1=1\) and \(c_2=0\) we obtain another particular solution
+
+								\[
+									y_{p_2} = x + 1 + e^x 
+								\]
+
+							</div>
+							<div class="reading-exercise">
+								Verify \( y_{p_2} = x + 1 + e^x \) is a solution of <a href="#x1-9r6">(5.6.6)</a>
+							</div>	
+
+							<div>
+								Letting \(c_1=0\) and \(c_2=1\) we obtain another particular solution
+
+								\[
+									y_{p_3} = x + 1 + x^2 e^x 
+								\]
+
+							</div>
+							<div class="reading-exercise">
+								Verify \( y_{p_3} = x + 1 + x^2 e^x \) is a solution of <a href="#x1-9r6">(5.6.6)</a>
+							</div>	
+
+							<div>
+								Letting \(c_1=1\) and \(c_2=1\) we obtain another particular solution
+
+								\[
+									y_{p_4} = x + 1 + e^x  + x^2 e^x 
+								\]
+
+							</div>
+							<div class="reading-exercise">
+								Verify \( y_{p_4} = x + 1 + e^x + x^2 e^x \) is a solution of <a href="#x1-9r6">(5.6.6)</a> 
+							</div>	
 						</li>
+						<li>
+							<div>	
+								We can use the <span class="vocab">principle of superposition</span> to find a fundamental set of solutions to the complementary equation <a href="#x1-10r7">(5.6.7)</a>. Recall our nonhomogeneous equation <a href="#x1-9r6">(5.6.6)</a> with forcing function \(f(x) = x^2\)
+								
+								\begin {equation*} 
+									x\frac{d^2y}{dx^2}-(2x+1) \frac{dy}{dx} +(x+1)y=\underset{f(x)}{\underbrace{x^2}}  
+								\end {equation*}
+							</div>	
+							<div>
+								We can always obtain zero by subtracting a forcing function from itself
+								\[
+								f(x) - f(x) = x^2 - x^2 = 0
+								\]
+
+								Therefore we can rewrite the right side of the complementary equation as this
+
+								\begin {equation*}
+									x\frac{d^2y}{dx^2}-(2x+1) \frac{dy}{dx} +(x+1)y=\underset{x^2 - x^2}{\underbrace{0}} 
+								\end {equation*} 
+
+								Thus by the <span class="vocab">principle of superposition</span> subtracting any two solutions of <a href="#x1-9r6">(5.6.6)</a> yields a solution of the complementary equation <a href="#x1-10r7">(5.6.7)</a> 
+							</div>	
+							<br>
+							<br>
+							<br>
+							<div>	
+								For instance subtracting \(y_{p_1}\) from \(y_{p_2}\) yields the solution we were given to begin with:
+								\[
+									y_{p_2} - y_{p_1}
+									=
+									(x + 1 + e^x) - (x+1)
+									=
+									e^x
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \( e^x \) is a solution of <a href="#x1-10r7">(5.6.7)</a> 
+							</div>		
+							<br>
+							<br>
+							<br>
+							<div>
+								Subtracting any other two solutions works as well, so we just need to obtain two linearly independent solutions. Subtracting \(y_{p_1}\) from \(y_{p_3}\) works 	
+
+								\[
+									y_{p_3} - y_{p_1}
+									=
+									(x + 1 + x^2e^x) - (x+1)
+									= 
+									x^2 e^x
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \( x^2 e^x \) is a solution of <a href="#x1-10r7">(5.6.7)</a> 
+							</div>	
+							<div class="reading-exercise">
+								Find the Wronskian of the two solutions \(W[e^x, x^2 e^x](x)\) 
+							</div>	
+							<div>
+								Since the ratio of the solutions \(x^2 e^x / e^x = x^2\) is nonconstant, then they are linearly independent. Therefore from Theorem&nbsp;<a href="sec5.1.book.html#80b7bc20-8e17-45e7-b6c1-c556422a8596" target=_blank>5.1.6</a> we have found a fundamental set of solutions of <a href="#x1-10r7">(5.6.7)</a>
+								\[
+								 \{ e^x, x^2 e^x\}
+								 \]
+							</div>							
+						</li>	
 					</ol>
 				</details>
 			</div>
 
-			<div class="indent" id="bc23b1cf-1793-4cfc-b174-720a1930352b">
-				Although <a href="#x1-14r10">(5.6.10)</a> is a correct form for the general solution of <a href="#x1-9r6">(5.6.6)</a>, it’s silly to leave the arbitrary coefficient of \(x^2e^x\) as \(C_1/2\) where \(C_1\) is an arbitrary constant. Moreover, it’s sensible to make the subscripts of the coefficients of \(y_1=e^x\) and \(y_2=x^2e^x\) consistent with the subscripts of the functions themselves. Therefore we rewrite <a href="#x1-14r10">(5.6.10)</a> as \[ y=x+1+c_1e^x+c_2x^2e^x \] by simply renaming the arbitrary constants. We’ll also do this in the next two examples, and in the answers to the exercises. 
-			</div>
-
+			<!--Example 2-->
 			<div class="example" id="x1-152" style="--ex-number: 2">
+				<div>
+					Consider the differential equation
+
+					
+					\begin {equation*} 
+						x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y
+						=x^2+1					
+					\end {equation*}
+
+					
+				</div>		
+
 				<ol>
 					<li>
-						Find the general solution of \[ x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=x^2+1\] given that \(y_1=x\) is a solution of the complementary equation 
-						<a id="x1-17r11"></a>
-						\begin {equation}
-							\label {eq:5.6.11} x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=0 
-						\end {equation}
-						As a byproduct of this result, find a fundamental set of solutions of <a href="#x1-17r11">(5.6.11)</a>. 
+						Verify that \(y_1=x\) is a solution of the complementary equation
+					</li>	
+					<li>
+						Use <span class="vocab-repeat">reduction of order</span> to simplify into a linear first order equation in \({du}/{dx}\) 		
 					</li>
 					<li>
-						Solve the initial value problem 
+						Convert the equation in \({du}/{dx}\) to a first order equation in \(z\) using the substitution \(z = {du}/{dx} \) then solve for \(z\)	
+					</li>
+					<li>
+						Substitute back to solve for \(u\) then substitute back again to solve for \(y\) in general
+					</li>	
+
+					<li>
+						Find 4 simple particular solutions of the nonhomogeneous equation
+					</li>
+					<li>
+						Find a fundamental set of solutions of the complementary equation
+					</li>
+					<li>
+						Solve the IVP
 						<a id="x1-19r12"></a> 
-						\begin {equation}
-							\label {eq:5.6.12} x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=x^2+1, \quad y(1)=2,\; \left. \frac{dy}{dx} \right| _{1}=-3 
+						\begin {equation} \label {eq:5.6.12} 
+							x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=x^2+1 \quad y(1)=2
+							\quad
+							\left. \frac{dy}{dx} \right| _{1}=-3 
 						\end {equation}
+					</li>	
+				</ol>
+			
+				<details class="solution">
+					<summary>Solution</summary>
+
+					<ol>
+						<!--Part 1-->
+						<li>
+							<div>	
+								We wish to verify that \(y_1=x\) is a solution to the complementary equation:
+
+								<a id="x1-17r11"></a>
+								\begin {equation}
+									\label {eq:5.6.11} x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=0 
+								\end {equation}
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(y_1=x\) twice
+							</div> 
+							<div>	
+								Differentiating \(y_1=x\) we obtain
+
+								\[
+									\frac{d y_1}{dx} = 1
+									\quad \text{and} \quad
+									\frac{d^2 y_1}{dx^2} = 0
+								\]
+							</div>
+							<div>	
+								Substituting  \(y_1=x\) and its derivatives in to our equation
+
+								\begin{align*}
+								
+									x^2\frac{d^2y_1}{dx^2}+x \frac{dy_1}{dx} -y_1 \overset{?}{=} & 0 \\
+									x^2\cdot 0+x \cdot 1 - x \overset{?}{=} & 0 \\
+									x - x = & 0 \quad \checkmark \\
+								\end{align*} 
+
+								Therefore \(y_1=x\) is a solution to the complementary equation <a href="#x1-17r11">(5.6.12)</a>
+							</div>
+							<br>
+							<br>
+							<br>
+						</li>
+						<!--Part 2-->
+						<li>
+							<div>	
+								To use <span class="vocab">reduction of order</span> we will seek solutions of the form \(y = uy_1\) where \(y_1\) is a solution to the complementary equation.
+								Since  \(y_1=x\) is a solution to the complementary equation <a href="#x1-17r11">(5.6.12)</a> we seek solutions of the form 
+								\[y = ux\]
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(y = ux\) twice
+							</div> 
+							<div>	
+								Differentiating \(y=ux\) we obtain
+								\[
+									\frac{dy}{dx} = x\frac{du}{dx} +u 
+									\quad \text{and} \quad
+									\frac{d^2y}{dx^2}= x\frac{d^2u}{dx^2} + 2 \frac{du}{dx} 
+								\]
+							</div>
+							<div class="reading-exercise">
+								Substitute  \(y = ue^x\) and its derivatives in to \( x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=x^2+1 \)
+							</div>
+
+							<div>	
+								Substituting  \(y = ux\) and its derivatives in to our equation
+
+								\begin{array}{rrrrrr}
+									x^2 \displaystyle\frac{d^2y}{dx^2} &=& {\small x^3 } \displaystyle\frac{d^2u}{dx^2} 
+										&+&	{\small 2x^2 } \, \displaystyle\frac{du}{dx}  
+										& & \\
+									x \displaystyle\frac{dy}{dx} 
+										&=& 
+										& & {\small x^2 } \displaystyle\frac{du}{dx}  
+										&+& ux \\
+									+ \quad\quad\quad -y &=& & & & & -ux \\
+									\hline
+									\underset{x^2+1}{\underbrace{{\small  x^2 \displaystyle\frac{d^2y}{dx^2} + x \frac{dy}{dx} - y}}} &=&  
+											\Big({\small x^3}\Big) \displaystyle\frac{d^2u}{dx^2}  &+&  
+										\underset{x^2}{\underbrace{
+											{\small \Big( 2x^2+x^2 \Big)} }}
+											\, \displaystyle \frac{du}{dx} &+& 
+										\underset{0}{\underbrace{
+											{\small ux-ux } 
+										}} \\
+								\end{array} 
+							</div>
+
+							<div>
+								Thus we obtain the equation
+								\begin{align*} 
+									x^3 \frac{d^2u}{dx^2} + 3x^2  \frac{du}{dx} = x^2 + 1
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Rewrite \( x^3 \frac{d^2u}{dx^2} + 3x^2  \frac{du}{dx} = x^2 + 1 \) in standard linear form and identify \(p(x)\) and \(f(x)\)
+							</div>
+							<div>	
+
+								Divding by \(x^3\) to get it into <span class="vocab">standard linear form</span> <a href="sec2.1.book.html#x1-2r1" target=_blank>(2.1.1)</a>
+
+								<a id="x1-20r13"></a> 
+								\begin{align} \label {eq:5.6.13}
+									\frac{d^2u}{dx^2} + \frac{3}{x} \frac{du}{dx} = \frac{x^2 + 1}{x^3}
+								\end{align} 
+
+							</div>
+						</li>	
+						<!--Part 3-->
+						<li>
+							<div>
+								Although <a href="#x1-20r13">(5.6.13)</a> appears to be a second order equation, since the dependent varible \(u\) is not present in the equation, we can actually use the substitution \(z = {du}/{dx} \) to rewrite it more clearly as a first order equation with only the first derivative present.
+							</div>
+							<div>									
+								Let \(z = \displaystyle \frac{du}{dx}\) differentiate both sides \( \displaystyle \frac{dz}{dx} 
+								= \frac{d}{dx}\left(\frac{du}{dx}\right)
+								= \frac{d^2u}{dx^2} \) and substitute into <a href="#x1-20r13">(5.6.13)</a>
+
+								<a id="x1-21r14"></a> 
+								\begin{align} \label {eq:5.6.14}
+									\underset{dz/dx}{\underbrace{\frac{d^2u}{dx^2}}} 
+									+ \frac{3}{x} \underset{z}{\underbrace{\frac{du}{dx}}} =&  \frac{x^2 + 1}{x^3} \nonumber \\
+									\frac{dz}{dx} + \frac{3}{x} z = & \frac{x^2 + 1}{x^3}
+								\end{align} 
+							</div>
+							<div>	
+								To solve <a href="#x1-21r14">(5.6.14)</a> we will first solve the complementary equation
+
+								\begin{align*}
+									\frac{dz}{dx} + \frac{3}{x} z = & 0
+								\end{align*} 
+							</div>
+							<div class="reading-exercise">
+								Find the general solution of \( \frac{dz}{dx} + \frac{3}{x} z = 0 \) using <span class="vocab-repeat">separation of variables</span>. Review Sections <a href="sec2.1.book.html">2.1</a> and <a href="sec2.2.book.html">2.1</a> for examples. 
+							</div>
+							<div>	
+								Using <span class="vocab">separation of variables</span>, we find the general solution \(z = c/x^3\) and now we apply <span class="vocab">variation of parameters</span> to solve <a href="#x1-21r14">(5.6.14)</a>
+							</div>
+							<div>
+								To implement <span class="vocab-repeat">variation of parameters</span> we choose a particlar solution so letting \(c=1\) we select \(z_1 = 1/x^3\) as the particlar solution of the complementary equation. Now we seek solutions of the nonhomogeneous equation <a href="#x1-21r14">(5.6.14)</a> of the form \(z = vz_1 = v/x^3\) where \(v\) is some function of \(x\) to be determined.
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(z = v/x^3\) then substitute into <a href="#x1-21r14">(5.6.14)</a> and simplify into an integrable differential equation
+							</div>
+							<div>	
+								After differentiating \(z = v/x^3\) and substitute into <a href="#x1-21r14">(5.6.14)</a> we obtain:
+
+								\begin{align*}
+									\frac{d}{dx}\Big( \frac{v}{x^3} \Big) + \frac{3}{x} \Big( \frac{v}{x^3} \Big) = & \frac{x^2+1}{x^3}
+									\Longrightarrow
+									\frac{dv}{dx} = x^2 + 1
+								\end{align*} 
+							</div>
+							<div class="reading-exercise">
+								Antdifferentiate \(x^2 + 1\) 
+							</div>
+							<div>
+								So we can find \(v\) by finding the antiderivative:
+								\begin{align*}
+									v = \frac{1}{3}x^3 + x + c
+								\end{align*}
+								Substituting back into \(z = v/x^3\) we obtain the one-parameter family that is the solution of 
+								
+								\begin{align*}
+									z = \frac{1}{3} + \frac{1}{x^2} + \frac{c}{x^3}
+								\end{align*}
+							</div>
+						</li>	
+						<!--Part 4-->
+						<li>
+							<div>	
+								We found the general solution \(z\) but now we recall the substitution we made in the beginning  \(z = {du}/{dx}\) so we can substitute back:
+								\begin{align*}
+									\frac{du}{dx} = \frac{1}{3} + \frac{1}{x^2} + \frac{c}{x^3}
+								\end{align*}
+								And now we can find \(u\) again by finding the antiderivative. 
+							</div>
+							<div class="reading-exercise">
+								Antdifferentiate \(\frac{1}{3} + \frac{1}{x^2} + \frac{c}{x^3} \) using the power rule 
+							</div>
+						
+							<div>	
+								Finding the antiderivative and simplifying arbitrary constants we have \(u\)
+								\begin{align*}
+									u = \frac{1}{3}x - \frac{1}{x} + \frac{c_1}{x^2} + c_2
+								\end{align*}
+							</div>
+							<div>	
+								Finally substituting back to \( y = ux\) we have 
+
+								<a id="x1-22r15"></a> 
+								\begin{align} \label {eq:5.6.15}
+									y = \frac{1}{3}x^2 - 1 + \frac{c_1}{x} + c_2x
+								\end{align}
+
+								So for any arbitrary constants \(c_1\) and \(c_2\) <a href="#x1-22r15">(5.6.15)</a> is a solution of our original differential equation
+							</div>
+							<div class="reading-exercise">
+								Verify <a href="#x1-22r15">(5.6.15)</a> is a solution of \( x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=x^2+1 \)
+							</div>	
+						</li>
+						<li>
+							<div>	
+								From <a href="#x1-22r15">(5.6.15)</a> we have a general form of the solution \(y\) so we select constants to obtain a simple particular solution. Letting \(c_1=0\) and \(c_2=0\) we obtain a particular solution
+
+								\[
+									y_{p_1} = \frac{1}{3}x^2 - 1
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \(y_{p_1}  = \frac{1}{3}x^2 - 1\) is a solution of \( x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=x^2+1 \)
+							</div>		
+
+							<div>
+								Letting \(c_1=1\) and \(c_2=0\) we obtain another particular solution
+
+								\[
+									y_{p_2} = \frac{1}{3}x^2 - 1 + \frac{1}{x}
+								\]
+
+							</div>
+							<div class="reading-exercise">
+								Verify \( y_{p_2} = \frac{1}{3}x^2 - 1 + \frac{1}{x} \) is a solution of\( x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=x^2+1 \)
+							</div>	
+
+							<div>
+								Letting \(c_1=0\) and \(c_2=1\) we obtain another particular solution
+
+								\[
+									y_{p_3} = \frac{1}{3}x^2 - 1 + x
+								\]
+
+							</div>
+							<div class="reading-exercise">
+								Verify \( y_{p_3} = \frac{1}{3}x^2 - 1 + x \) is a solution of \( x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=x^2+1 \)
+							</div>	
+
+							<div>
+								Letting \(c_1=1\) and \(c_2=1\) we obtain another particular solution
+
+								\[
+									y_{p_4} = \frac{1}{3}x^2 - 1 + \frac{1}{x} + x 
+								\]
+
+							</div>
+							<div class="reading-exercise">
+								Verify \( y_{p_4} = \frac{1}{3}x^2 - 1 + \frac{1}{x} + x  \) is a solution of \( x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=x^2+1 \)
+							</div>	
+						</li>
+						<li>
+							<div>	
+								
+								We can use the <span class="vocab">principle of superposition</span> to find a fundamental set of solutions to the complementary equation <a href="#x1-17r11">(5.6.12)</a>. Recall our nonhomogeneous equation with forcing function \(f(x) = x^2 + 1\)
+								
+								\begin {equation*} 
+									x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y
+									=\underset{f(x)}{\underbrace{x^2+1}}					
+								\end {equation*}
+							</div>	
+							<div>
+								We can always obtain zero by subtracting a forcing function from itself
+								\[
+								f(x) - f(x) = (x^2+1) - (x^2+1) = 0
+								\]
+
+								Therefore we can rewrite the right side of the complementary equation as this
+
+								\begin {equation*}
+									x\frac{d^2y}{dx^2}-(2x+1) \frac{dy}{dx} +(x+1)y=\underset{x^2 - x^2}{\underbrace{0}} 
+								\end {equation*} 
+
+								Thus by the <span class="vocab">principle of superposition</span> subtracting any two particular solutions of our differential equation yields a solution of the complementary equation <a href="#x1-17r11">(5.6.12)</a>
+							</div>	
+							<br>
+							<br>
+							<br>
+							<div>	
+								For instance subtracting \(y_{p_1}\) from \(y_{p_2}\) yields the solution we were given to begin with:
+								\[
+									y_{p_2} - y_{p_1}
+									=
+									\left(\frac{1}{3}x^2 - 1 + \frac{1}{x}\right) - \left(\frac{1}{3}x^2 - 1\right)
+									=
+									\frac{1}{x}
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \( 1/x \) is a solution of <a href="#x1-17r11">(5.6.12)</a> 
+							</div>		
+							<br>
+							<br>
+							<br>
+							<div>
+								Subtracting any other two solutions works as well, so we just need to obtain two linearly independent solutions. Subtracting \(y_{p_1}\) from \(y_{p_3}\) works 	
+
+								\[
+									y_{p_3} - y_{p_1}
+									=
+									\left(\frac{1}{3}x^2 - 1 + x\right) - \left(\frac{1}{3}x^2 - 1\right)
+									= 
+									x
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \( x \) is a solution of <a href="#x1-17r11">(5.6.12)</a> 
+							</div>	
+							<div class="reading-exercise">
+								Find the Wronskian of the two solutions \(W[x, 1/x ](x)\) 
+							</div>	
+							<div>
+								Since the ratio of the solutions \(x / (1/x) = x^2\) is nonconstant, then they are linearly independent. Therefore from Theorem&nbsp;<a href="sec5.1.book.html#80b7bc20-8e17-45e7-b6c1-c556422a8596" target=_blank>5.1.6</a> we have found a fundamental set of solutions of <a href="#x1-17r11">(5.6.12)</a>
+								\[
+								 \left\{ x, \frac{1}{x}\right\}
+								 \]
+							</div>							
+						</li>
+						<li>
+							<div>
+								We will not solve the IVP <a href="#x1-19r12">(5.6.11)</a> 
+								
+								\begin {equation*} 
+									x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=x^2+1 
+									\quad y(1)=2
+									\quad
+									\left. \frac{dy}{dx} \right| _{1}=-3 
+								\end {equation*}
+
+								Since we already found the solution of the differential equation, we just need to apply the initial conditions so we start by differentiating <a href="#x1-22r15">(5.6.15)</a>
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(y = \frac{1}{3}x^2 - 1 + \frac{c_1}{x} + c_2x\)
+							</div>	
+							<div>	
+								Differentiating <a href="#x1-22r15">(5.6.15)</a> we obtain
+								\begin{align} 
+									y = \frac{1}{3}x^2 - 1 + \frac{c_1}{x} + c_2x
+									\Longrightarrow
+									\frac{dy}{dx} = \frac{2}{3}x + \frac{c_1}{x^2} + c_2
+								\end{align}
+							</div>	
+							<div class="reading-exercise">
+								Evaluate \(y = \frac{1}{3}x^2 - 1 + \frac{c_1}{x} + c_2x\) at the initial condition \(y(1)=2\) 
+							</div>	
+							<div class="reading-exercise">
+								Evaluate \(\frac{dy}{dx} = \frac{2}{3}x + \frac{c_1}{x^2} + c_2\) at the initial condition \(\left. \frac{dy}{dx} \right| _{1}=-3\) 
+							</div>	
+							
+							<div>
+								Evaluating \(y\) and its derivative at the initial conditions, we obtain the system of equations
+								\begin{align}
+									\left\{
+									\begin{array}{rrr}
+										-c_1 + c_2 &=& \displaystyle\frac{8}{3} \\
+										c_1 + c_2 &=& -\displaystyle\frac{11}{3} \\ 
+									\end{array}
+									\right.
+								\end{align}	
+							</div>
+							<div class="reading-exercise">
+								Solve for \(c_1\) and \(c_2\) \( \left\{
+									\begin{array}{rrr}
+										-c_1 + c_2 &=& \displaystyle\frac{8}{3} \\
+										c_1 + c_2 &=& -\displaystyle\frac{11}{3} \\ 
+									\end{array}
+									\right. \)
+							</div>	
+							<div>
+								Adding the equations together, we find \(c_2 = -1/2\) and substituting back \(c_1 = -19/6\) so we have the particular solution to the IVP <a href="#x1-19r12">(5.6.11)</a>
+								\[
+									y = \frac{1}{3}x^2 - 1 -\frac{19}{6x} -\frac{1}{2}x
+								\]
+							</div>		
+							<div class="reading-exercise">
+								Verify \(y = \frac{1}{3}x^2 - 1 -\frac{19}{6x} -\frac{1}{2}x\) is a solution of \( x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=x^2+1 \)
+							</div>		
+
+						</li>		
+					</ol>
+				</details>
+			</div>
+
+			<!--Example 3-->
+			<div class="example" id="x1-253" style="--ex-number: 3">
+				<div>
+					Consider the differential equation
+
+					<a id="x1-26r18"></a> 
+					\begin {equation}
+						\label {eq:5.6.18} x^2\frac{d^2y}{dx^2}-3x \frac{dy}{dx} +3y=0 
+					\end {equation} 
+				</div>		
+
+				<ol>
+					<li>
+						Verify that \(y_1=x\) is a solution of <a href="#x1-26r18">(5.6.18)</a>
+					</li>	
+					<li>
+						Use <span class="vocab-repeat">reduction of order</span> to simplify <a href="#x1-26r18">(5.6.18)</a> into a linear first order equation in \({du}/{dx}\) 		
+					</li>
+					<li>
+						Convert the equation in \({du}/{dx}\) to a first order equation in \(z\) using the substitution \(z = {du}/{dx} \) then solve for \(z\)	
+					</li>
+					<li>
+						Substitute back to solve for \(u\) then substitute back again to solve for \(y\) in general
+					</li>	
+
+					<li>
+						Find a fundamental set of solutions 
 					</li>
 				</ol>
 			
@@ -112,75 +949,196 @@
 					<summary>Solution</summary>
 
 					<ol>
+						<!--Part 1-->
 						<li>
-							If \(y=ux\), then \( \frac{dy}{dx} = \frac{du}{dx} x+u\) and \(\frac{d^2y}{dx^2}=\frac{d^2u}{dx^2} x+2 \frac{du}{dx} \), so
-			
-							<div class="eqnarray" id="38b99141-da2c-4e34-8c6f-b52d1ef88e3d">
-								\begin {eqnarray*}
-									x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y&amp;=&amp;x^2(\frac{d^2u}{dx^2} x+2 \frac{du}{dx} )+x( \frac{du}{dx} x+u)-ux\\ &amp;=&amp;x^3\frac{d^2u}{dx^2} +3x^2 \frac{du}{dx} 
-								\end {eqnarray*} 
+							<div>	
+								We wish to verify that \(y_1=x\) is a solution to <a href="#x1-26r18">(5.6.18)</a>
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(y_1=x\) twice
+							</div> 
+							<div>	
+								Differentiating \(y_1=x\) we obtain
+
+								\[
+									\frac{d y_1}{dx} = 1
+									\quad \text{and} \quad
+									\frac{d^2 y_1}{dx^2} = 0
+								\]
+							</div>
+							<div>	
+								Substituting  \(y_1=x\) and its derivatives in to our equation
+
+								\begin{align*}
+								
+									x^2\frac{d^2y_1}{dx^2} -3x \frac{dy_1}{dx} + 3y_1 \overset{?}{=} & 0 \\
+									x^2\cdot 0 - 3x \cdot 1 +3 x \overset{?}{=} & 0 \\
+									-3x + 3x = & 0 \quad \checkmark \\
+								\end{align*} 
+
+								Therefore \(y_1=x\) is a solution to <a href="#x1-26r18">(5.6.18)</a>
+							</div>
+							<br>
+							<br>
+							<br>
+						</li>
+						<!--Part 2-->
+						<li>
+							<div>	
+								To use <span class="vocab">reduction of order</span> we will seek solutions of <a href="#x1-26r18">(5.6.18)</a> of the form \(y = uy_1\) where \(y_1\) is a solution to the complementary equation, which is the same as <a href="#x1-26r18">(5.6.18)</a> in this case so we seek solutions of the form 
+								\[y = ux\]
+							</div>
+							<div>	
+								Differentiating \(y=ux\) we obtain
+								\[
+									\frac{dy}{dx} = x\frac{du}{dx} +u 
+									\quad \text{and} \quad
+									\frac{d^2y}{dx^2}= x\frac{d^2u}{dx^2} + 2 \frac{du}{dx} 
+								\]
+							</div>
+							<div class="reading-exercise">
+								Substitute  \(y = ux\) and its derivatives in to <a href="#x1-26r18">(5.6.18)</a>
 							</div>
 
-							Therefore \(y=ux\) is a solution of <a href="#x1-19r12">(5.6.12)</a> if and only if \[ x^3\frac{d^2u}{dx^2} +3x^2 \frac{du}{dx} =x^2+1\] which is a first order equation in \( \frac{du}{dx} \). We rewrite it as \begin {equation} \label {eq:5.6.13} \frac{d^2u}{dx^2} +{3\over x} \frac{du}{dx} ={1\over x}+{1\over x^3} \end {equation} <a id="x1-20r13"></a> To focus on how we apply variation of parameters to this equation, we temporarily write \(z= \frac{du}{dx} \), so that <a href="#x1-20r13">(5.6.13)</a> becomes \begin {equation} \label {eq:5.6.14} \frac{dz}{dx} +{3\over x}z={1\over x}+{1\over x^3} \end {equation} <a id="x1-21r14"></a> We leave it to you to show by separation of variables that \(z_1=1/x^3\) is a solution of the complementary equation \[ \frac{dz}{dx} +{3\over x}z=0 \] for <a href="#x1-21r14">(5.6.14)</a>. By variation of parameters, every solution of <a href="#x1-21r14">(5.6.14)</a> is of the form \[ z={v\over x^3}\quad \mbox{ where } \quad { \frac{dv}{dx} \over x^3}={1\over x}+{1\over x^3}, \quad \mbox{ so } \quad \frac{dv}{dx} =x^2+1 \quad \mbox{ and } \quad v={x^3\over 3}+x+C_1\] Since \( \frac{du}{dx} =z=v/x^3\), \(u\) is a solution of <a href="#x1-21r14">(5.6.14)</a> if and only if \[ \frac{du}{dx} ={v\over x^3}={1\over 3}+{1\over x^2}+{C_1\over x^3}\] Integrating this yields \[ u={x\over 3}-{1\over x}-{C_1\over 2x^2}+C_2\] Therefore the general solution of <a href="#x1-19r12">(5.6.12)</a> is 
-							<a id="x1-22r15"></a> 
-							\begin {equation}
-								\label {eq:5.6.15} y=ux={x^2\over 3}-1-{C_1\over 2x}+C_2x 
-							\end {equation}
-							Reasoning as in the solution of Example&nbsp;<a href="#x1-71">5.6.1</a><span class="ptmb8t-">(a)</span>, we conclude that \(y_1=x\) and \(y_2=1/x\) form a fundamental set of solutions for <a href="#x1-17r11">(5.6.11)</a>. 
+							<div>	
+								Substituting  \(y = ux\) and its derivatives in to our equation
 
-							<br>
-							As we explained above, we rename the constants in <a href="#x1-22r15">(5.6.15)</a> and rewrite it as 
-							<a id="x1-23r16"></a> 
-							\begin {equation}
-								\label {eq:5.6.16} y={x^2\over 3}-1+c_1x+{c_2\over x} 
-							\end {equation}
-						</li>
-						<li>
-							Differentiating <a href="#x1-23r16">(5.6.16)</a> yields 
-							<a id="x1-24r17"></a>
-							\begin {equation}
-								\label {eq:5.6.17} \frac{dy}{dx} ={2x\over 3}+c_1-{c_2\over x^2} 
-							\end {equation}
-							Setting \(x=1\) in <a href="#x1-23r16">(5.6.16)</a> and <a href="#x1-24r17">(5.6.17)</a> and imposing the initial conditions \(y(1)=2\) and \(\left. \frac{dy}{dx} \right| _{1}=-3\) yields
-
-							<div class="eqnarray" id="a2ae8666-549a-49f3-94a4-2d49711a5941">
-								\begin {eqnarray*}
-									c_1+c_2&amp;=&amp; \phantom {-}{8\over 3} \\ c_1-c_2&amp;=&amp; -{11\over 3} 
-								\end {eqnarray*} 
+								\begin{array}{rrrrrr}
+									x^2 \displaystyle\frac{d^2y}{dx^2} &=& {\small x^3 } \displaystyle\frac{d^2u}{dx^2} 
+										&+&	{\small 2x^2 } \, \displaystyle\frac{du}{dx}  
+										& & \\
+									-3x \displaystyle\frac{dy}{dx} 
+										&=& 
+										& & {\small -3x^2 } \displaystyle\frac{du}{dx}  
+										&+& -3ux \\
+									+ \quad\quad\quad 3y &=& & & & & 3ux \\
+									\hline
+									\underset{0}{\underbrace{{\small  x^2 \displaystyle\frac{d^2y}{dx^2} - 3x \frac{dy}{dx} + 3y}}} &=&  
+											\Big({\small x^3}\Big) \displaystyle\frac{d^2u}{dx^2}  &+&  
+										\underset{-x^2}{\underbrace{
+											{\small \Big( 2x^2-3x^2 \Big)} }}
+											\, \displaystyle \frac{du}{dx} &+& 
+										\underset{0}{\underbrace{
+											{\small 3ux-3ux } 
+										}} \\
+								\end{array} 
 							</div>
 
-							Solving these equations yields \(c_1=-1/2\), \(c_2=19/6\). Therefore the solution of <a href="#x1-19r12">(5.6.12)</a> is \[ y={x^2\over 3}-1-{x\over 2}+{19\over 6x}\] 
+							<div>
+								Thus we obtain the equation
+								\begin{align*} 
+									x^3 \frac{d^2u}{dx^2} - x^2  \frac{du}{dx} = 0
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Rewrite \( x^3 \frac{d^2u}{dx^2} - x^2  \frac{du}{dx} = 0 \) in standard linear form and identify \(p(x)\) and \(f(x)\)
+							</div>
+							<div>	
 
-							<br>
-							Using reduction of order to find the general solution of a homogeneous linear second order equation leads to a homogeneous linear first order equation in \( \frac{du}{dx} \) that can be solved by separation of variables. The next example illustrates this. 
+								Divding by \(x^3\) to get it into <span class="vocab">standard linear form</span> <a href="sec2.1.book.html#x1-2r1" target=_blank>(2.1.1)</a>
+
+								\begin{align*} 
+									\frac{d^2u}{dx^2} - \frac{1}{x} \frac{du}{dx} = 0
+								\end{align*} 
+
+							</div>
+						</li>	
+						<!--Part 3-->
+						<li>
+							<div>
+								Although the equation appears to be a second order equation, since the dependent varible \(u\) is not present in the equation, we can actually use the substitution \(z = {du}/{dx} \) to rewrite it more clearly as a first order equation with only the first derivative present.
+							</div>
+							<div>	
+								Leting \(z = \displaystyle \frac{du}{dx}\) and differentiating both sides
+								\begin{align*} 
+									\frac{dz}{dx} 
+										= \frac{d}{dx}\left(\frac{du}{dx}\right)
+										= \frac{d^2u}{dx^2}
+								\end{align*} 
+
+								Now substituting into our equation
+
+								
+								\begin{align*}
+									\underset{dz/dx}{\underbrace{\frac{d^2u}{dx^2}}} - \frac{1}{x} \underset{z}{\underbrace{\frac{du}{dx}}} = & 0 \nonumber \\
+									\frac{dz}{dx} - \frac{1}{x} z = & 0
+								\end{align*} 
+							</div>
+				
+							<div class="reading-exercise">
+								Find the general solution of \( \frac{dz}{dx} - \frac{1}{x} z = 0 \) using <span class="vocab-repeat">separation of variables</span>. Review Sections <a href="sec2.1.book.html">2.1</a> and <a href="sec2.2.book.html">2.1</a> for examples. 
+							</div>
+							<div>	
+								Using <span class="vocab">separation of variables</span>, we find the general solution \(z = cx\)
+							</div>
+						</li>	
+						<!--Part 4-->
+						<li>
+							<div>	
+								We found the general solution \(z\) but now we recall the substitution we made in the beginning  \(z = {du}/{dx}\) so we can sbstitute back:
+								\begin{align*}
+									\frac{du}{dx} = cx
+								\end{align*}
+								And now we can find \(u\) again by finding the antiderivative. 
+							</div>
+							<div class="reading-exercise">
+								Antdifferentiate \( cx \) using the power rule
+							</div>
+							<div>	
+								Finding the antiderivative we have \(u\)
+								\begin{align*}
+									u = c_1 + c_2x^2
+								\end{align*}
+							</div>
+							<div>	
+								Finally substituting back to \( y = ux\) we have 
+								\begin{align*}
+									y = c_1x + c_2x^3
+								\end{align*}
+
+								So for any arbitrary constants \(c_1\) and \(c_2\) then \( y = c_1x + c_2x^3 \) is a solution of <a href="#x1-26r18">(5.6.18)</a> 
+							</div>
+							<div class="reading-exercise">
+								Verify \( y = c_1x + c_2x^3 \) is a solution of <a href="#x1-26r18">(5.6.18)</a>
+							</div>	
 						</li>
+						<li>
+							<div>	
+								We have a general form of the solution \(y\) so we select constants to obtain a simple particular solution. Letting \(c_1=1\) and \(c_2=0\) we obtain a particular solution
+
+								\[
+									y_{p_1} = x
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \(y_{p_1}  = x \) is a solution of <a href="#x1-26r18">(5.6.18)</a>
+							</div>		
+
+							<div>
+								Letting \(c_1=0\) and \(c_2=1\) we obtain another particular solution
+
+								\[
+									y_{p_2} = x^3
+								\]
+
+							</div>
+							<div class="reading-exercise">
+								Verify \( y_{p_2} = x^3 \) is a solution of <a href="#x1-26r18">(5.6.18)</a>
+							</div>
+							<div class="reading-exercise">
+								Find the Wronskian of the two solutions \(W[x, x^3](x)\) 
+							</div>
+							<div>
+								Since the ratio of the solutions \(x^3 / x = x^2\) is nonconstant, then they are linearly independent. Therefore from Theorem&nbsp;<a href="sec5.1.book.html#80b7bc20-8e17-45e7-b6c1-c556422a8596" target=_blank>5.1.6</a> we have found a fundamental set of solutions of <a href="#x1-26r18">(5.6.18)</a>
+								\[
+								 \{ x, x^3 \}
+								 \]
+							</div>			
+						</li>	
 					</ol>
 				</details>
 			</div>
 
-			<div class="example" id="x1-253" style="--ex-number: 3">
-				
-				Find the general solution and a fundamental set of solutions of 
-				<a id="x1-26r18"></a> 
-				\begin {equation}
-					\label {eq:5.6.18} x^2\frac{d^2y}{dx^2}-3x \frac{dy}{dx} +3y=0 
-				\end {equation} 
-				given that \(y_1=x\) is a solution.
-				
-			
-				<details class="solution">
-					<summary>Solution</summary>
-					If \(y=ux\) then \( \frac{dy}{dx} = \frac{du}{dx} x+u\) and \(\frac{d^2y}{dx^2}=\frac{d^2u}{dx^2} x+2 \frac{du}{dx} \), so
-					<div class="eqnarray" id="08528ca3-dbc2-40c2-b176-6527cdc204c5">					
-						\begin {eqnarray*} 
-							x^2\frac{d^2y}{dx^2}-3x \frac{dy}{dx} +3y&amp;=&amp;x^2(\frac{d^2u}{dx^2} x+2 \frac{du}{dx} )-3x( \frac{du}{dx} x+u)+3ux\\ &amp;=&amp;x^3\frac{d^2u}{dx^2} -x^2 \frac{du}{dx} 
-						\end {eqnarray*} 
-					</div>
-				
-					Therefore \(y=ux\) is a solution of <a href="#x1-26r18">(5.6.18)</a> if and only if \[ x^3\frac{d^2u}{dx^2} -x^2 \frac{du}{dx} =0\] Separating the variables \( \frac{du}{dx} \) and \(x\) yields \[ {\frac{d^2u}{dx^2} \over \frac{du}{dx} }={1\over x}\] so \[ \ln | \frac{du}{dx} |=\ln |x|+k,\quad \mbox{ or, equivalently, } \quad \frac{du}{dx} =C_1x\] Therefore \[ u={C_1\over 2}x^2+C_2\] so the general solution of <a href="#x1-26r18">(5.6.18)</a> is \[ y=ux={C_1\over 2}x^3+C_2x\] which we rewrite as \[ y=c_1x+c_2x^3\] Therefore \(\{x,x^3\}\) is a fundamental set of solutions of <a href="#x1-26r18">(5.6.18)</a>. 
-				
-				</details>
-			</div>
 		</details>
 
 		<nav class="ex">
