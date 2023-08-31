@@ -26,11 +26,11 @@
 
 	<body>
 		<div id="64049763-8c77-4e08-994a-9ec9e1f6bf2b" class="section-title">
-			6.2 Spring Problems II 
+			6.2 Spring II - Damped 
 		</div>
 
 		<details id="afd63e83-ffab-4fb1-a152-7c43a83a1b95">
-			<summary>Free Vibrations With Damping</summary>
+			<summary>Damping</summary>
 
 			<div id="4abd1399-1f9a-49ae-a5c8-54036a74bd41">
 				In this section we consider the motion of an object in a spring–mass system with damping. We start with unforced motion, so the equation of motion is
@@ -45,10 +45,6 @@
 				\end {equation} 
 				In Section&nbsp;5.2 we saw that the form of the solution of <a href="#x1-2r1">(6.2.1)</a> depends upon whether \(c^2-4mk\) is positive, negative, or zero. We’ll now consider these three cases. 
 			</div>
-		</details>
-
-		<details id="cc72b541-48f4-4ee3-af79-9bfd1c760608">
-			<summary>Underdamped Motion</summary>
 
 			<div id="252fd855-990f-433f-9988-fb22c343e8dd">
 				We say the motion is <span class="vocab">underdamped</span> if \(c&lt;\sqrt {4mk}\). In this case \(r_1\) and \(r_2\) in <a href="#x1-3r2">(6.2.2)</a> are complex conjugates, which we write as \[ r_1=-{c\over 2m}-i\omega _1\quad \mbox{ and } \quad r_2=-{c\over 2m}+i\omega _1\] where \[ \omega _1={\sqrt {4mk-c^2}\over 2m}\] The general solution of <a href="#x1-2r1">(6.2.1)</a> in this case is \[ y=e^{-ct/2m}(c_1\cos \omega _1 t+c_2\sin \omega _1 t)\] By the method used in Section&nbsp;6.1 to derive the amplitude–phase form of the displacement of an object in simple harmonic motion, we can rewrite this equation as 
@@ -61,18 +57,11 @@
 				</div>
 				<figcaption class="caption"><span class="id">Figure&nbsp;6.2.1</span><span class="content">Underdamped motion</span></figcaption>
 			</figure>
-		</details>
 
-		<details id="014f300c-bc0e-4abe-8357-c8173e735e49">
-			<summary>Overdamped Motion</summary>
-		
+					
 			<div id="bb857b1a-206f-42fd-9b8b-ba9bac19d6da">
 				We say the motion is <span class="vocab">overdamped</span> if \(c&gt;\sqrt {4mk}\). In this case the zeros \(r_1\) and \(r_2\) of the characteristic polynomial are real, with \(r_1&lt;r_2&lt;0\) (see <a href="#x1-3r2">(6.2.2)</a>), and the general solution of <a href="#x1-2r1">(6.2.1)</a> is \[ y=c_1e^{r_1t}+c_2e^{r_2t}\] Again \(\lim _{t\to \infty }y(t)=0\) as in the underdamped case, but the motion isn’t oscillatory, since \(y\) can’t equal zero for more than one value of \(t\) unless \(c_1=c_2=0\). (Exercise&nbsp;<span class="ptmb8t-">23</span>.) 
 			</div>
-		</details>
-
-		<details id="0902ab58-1434-4f48-ae14-7223992bf0e1">
-			<summary>Critically Damped Motion</summary>
 
 			<div id="d749bdb1-a2c4-4dd1-8b07-5dbe9952bcdc">
 				We say the motion is <span class="vocab">critically damped</span> if \(c=\sqrt {4mk}\). In this case \(r_1=r_2=-c/2m\) and the general solution of <a href="#x1-2r1">(6.2.1)</a> is \[ y=e^{-ct/2m}(c_1+c_2t)\] 
@@ -80,6 +69,14 @@
 			<div class="indent" id="8acb64e5-b439-4adb-8485-6e0bf38cf7b4">
 				Again \(\lim _{t\to \infty }y(t)=0\) and the motion is nonoscillatory, since \(y\) can’t equal zero for more than one value of \(t\) unless \(c_1=c_2=0\). (Exercise&nbsp;<span class="ptmb8t-">22</span>). 
 			</div>
+
+		</details>
+
+
+		<details id="0902ab58-1434-4f48-ae14-7223992bf0e1">
+			<summary>Damped Free Motion</summary>
+
+
 
 			<div class="example" id="x1-61" style="--ex-number: 1">
 				<div>
@@ -176,7 +173,7 @@
 		</details>
 
 		<details id="d9ef6735-b76d-4eac-80e9-bdfea9dbc9c1">
-			<summary>Forced Vibrations With Damping</summary>
+			<summary>Damped Forced Motion</summary>
 
 			<div id="d46f03ec-6e98-45a8-b051-e42031a4f319">
 				Now we consider the motion of an object in a spring-mass system with damping, under the influence of a periodic forcing function \(F(t)=F_0\cos \omega t\), so that the equation of motion is \begin {equation} \label {eq:6.2.11} m\frac{d^2y}{dx^2}+c\frac{dy}{dx}+ky=F_0\cos \omega t \end {equation} <a id="x1-21r11"></a> In Section&nbsp;6.1 we considered this equation with \(c=0\) and found that the resulting displacement \(y\) assumed arbitrarily large values in the case of resonance (that is, when \(\omega =\omega _0=\sqrt {k/m}\)). Here we’ll see that in the presence of damping the displacement remains bounded for all \(t\), and the initial conditions have little effect on the motion as \(t\to \infty \). In fact, we’ll see that for large \(t\) the displacement is closely approximated by a function of the form 
