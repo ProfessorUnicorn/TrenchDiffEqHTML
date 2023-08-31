@@ -327,6 +327,12 @@
 				</details>
 			</div>
 
+		</details>
+
+		<!--Constant Coefficients-->
+		<details id="b">
+			<summary>Constant Coefficients</summary>
+
 			<!--Example 3-->
 			<div class="example" id="x1-273" style="--ex-number: 3">
 				
@@ -432,17 +438,95 @@
 				<figcaption class="caption"><span class="id">Figure&nbsp;5.7.1</span><span class="content"> \(y=\displaystyle {2\ln (x+1)\over x-1}+{3x+1\over x^2-1}\) </span></figcaption>
 				<!-- tex4ht:label?: x1-34r1  -->
 			</figure>
-		</details>
+		</details>	
+		
+
+		<!--IVPs-->
+		<details id="b">
+			<summary>IVPs</summary>
+
+			<!--Example 4-->
+			<div class="example" id="x1-304" style="--ex-number: 4">
+				
+				<div> Solve the initial value problem 
+				\begin {equation} \label {eq:5.7.21} (x^2-1) \frac{d^2y}{dx^2} +4x \frac{dy}{dx} +2y={2\over x+1}, \quad y(0)=-1,\quad \left. \frac{dy}{dx} \right| _{0}=-5 
+				\end {equation} <a id="x1-31r21"></a> given that \[ y_1={1\over x-1}\quad \mbox { and }\quad y_2={1\over x+1} \] are solutions of the complementary equation \[ (x^2-1) \frac{d^2y}{dx^2} +4x \frac{dy}{dx} +2y=0\] 
+			</div>
+
+				<details class="solution">
+					<summary>Solution</summary>
+					We first use variation of parameters to find a particular solution of \[ (x^2-1) \frac{d^2y}{dx^2} +4x \frac{dy}{dx} +2y={2\over x+1} \] on \((-1,1)\) in the form \[ y_p={u_1\over x-1}+{u_2\over x+1}\] where
+
+					<div class="eqnarray" id="75d53d73-f4d0-4ae8-8445-e93697f7092c">
+						
+						\begin {eqnarray} \phantom {-}{ \frac{du_1}{dx} \over \phantom {(}x-1\phantom {)^2}}+{ \frac{du_2}{dx} \over \phantom {(}x+1\phantom {)^2}}&amp;=&amp;0\label {eq:5.7.22}\\ -{ \frac{du_1}{dx} \over (x-1)^2}-{ \frac{du_2}{dx} \over (x+1)^2}&amp;=&amp;{2\over (x+1)(x^2-1)}.\nonumber 
+						\end {eqnarray} 
+					</div>
+					Multiplying the first equation by \(1/(x-1)\) and adding the result to the second equation yields 
+					\begin {equation} \label {eq:5.7.23} \left [{1\over x^2-1}-{1\over (x+1)^2}\right ] \frac{du_2}{dx} ={2\over (x+1)(x^2-1)} 
+					\end {equation}
+					<a id="x1-32r22"></a>
+					Since \[ \left [{1\over x^2-1}-{1\over (x+1)^2}\right ]={(x+1)-(x-1)\over (x+1)(x^2-1)} ={2\over (x+1)(x^2-1)}\] <a href="#x1-32r22">(5.7.23)</a> implies that \( \frac{du_2}{dx} =1\). From (<span class="ptmb8t-">5.7.22</span>), \[ \frac{du_1}{dx} =-{x-1\over x+1} \frac{du_2}{dx} =-{x-1\over x+1}\] Integrating and taking the constants of integration to be zero yields
+					<div class="eqnarray" id="73db0576-133b-457a-9297-2b3c6bf54be2">
+						
+						\begin {eqnarray*} u_1&amp;=&amp;-\int {x-1\over x+1}\,dx=-\int {x+1-2\over x+1}\,dx \\ &amp;=&amp;\int \left [{2\over x+1}-1\right ]\,dx=2\ln (x+1)-x 
+						\end {eqnarray*} 
+					</div>
+					and \[ u_2=\int \,dx=x\] Therefore
+					<div class="eqnarray" id="98b4f98d-4216-436c-ad04-614d430ded87">
+						
+						\begin {eqnarray*} y_p&amp;=&amp;{u_1\over x-1}+{u_2\over x+1}=\left [2\ln (x+1)-x\right ]{1\over x-1} +x{1\over x+1} \\ &amp;=&amp;{2\ln (x+1)\over x-1}+x\left [{1\over x+1}-{1\over x-1}\right ] ={2\ln (x+1)\over x-1}-{2x\over (x+1)(x-1)} 
+						\end {eqnarray*} 
+					</div>
+
+					However, since \[ {2x\over (x+1)(x-1)}=\left [{1\over x+1}+{1\over x-1}\right ] \] is a solution of the complementary equation, we redefine \[ y_p={2\ln (x+1)\over x-1}\] Therefore the general solution of <a href="#x1-33r23">(5.7.24)</a> is 
+					\begin {equation} \label {eq:5.7.24} y={2\ln (x+1)\over x-1}+{c_1\over x-1}+{c_2\over x+1} 
+					\end {equation}
+					<a id="x1-33r23"></a>
+					Differentiating this yields \[ \frac{dy}{dx} ={2\over x^2-1}-{2\ln (x+1)\over (x-1)^2}-{c_1\over (x-1)^2}-{c_2\over (x+1)^2}\] Setting \(x=0\) in the last two equations and imposing the initial conditions \(y(0)=-1\) and \(\left. \frac{dy}{dx} \right| _{0}=-5\) yields the system
+					<div class="eqnarray" id="4d446693-8c12-4a96-be3a-a36e4e80b1c9">
+						
+						\begin {eqnarray*} -c_1+c_2&amp;=&amp;-1\phantom {.}\\ -2-c_1-c_2&amp;=&amp;-5 
+						\end {eqnarray*} 
+					</div>
+					The solution of this system is \(c_1=2,\,c_2=1\). Substituting these into
+					<a href="#x1-33r23">(5.7.24)</a> yields
+					<div class="eqnarray" id="88ddd0ad-310e-47d9-ba5f-27b1674004cc">
+						
+						\begin {eqnarray*} y&amp;=&amp;{2\ln (x+1)\over x-1}+{2\over x-1}+{1\over x+1}\\ &amp;=&amp;{2\ln (x+1)\over x-1}+{3x+1\over x^2-1} 
+						\end {eqnarray*} 
+					</div>
+					as the solution of <a href="#x1-31r21">(5.7.21)</a>. Figure&nbsp;<a href="#-y-x-overxx-overx-">5.7.1</a> is a graph of the solution.
+				</details>
+			</div>
+
+			<!--Figure-->
+			<figure class="figure" id="3100d55e-a931-4ea6-8e12-37b93fe17f9d">
+				<div id="-y-x-overxx-overx-">
+					<img height="264" src="EPS/fig050701.png" width="409" /> <a id="x1-34r1"></a> 
+				</div>
+				<figcaption class="caption"><span class="id">Figure&nbsp;5.7.1</span><span class="content"> \(y=\displaystyle {2\ln (x+1)\over x-1}+{3x+1\over x^2-1}\) </span></figcaption>
+				<!-- tex4ht:label?: x1-34r1  -->
+			</figure>
+		</details>			
 
 		<!--Comparison of Methods-->
 		<details id="c">
 			<summary>Comparison of Methods</summary>
 
 			<div id="19ab7e8e-0295-4912-9c43-935015f6d0c2">
-				We’ve now considered three methods for solving nonhomogeneous linear equations: undetermined coefficients, reduction of order, and variation of parameters. It’s natural to ask which method is best for a given problem. The method of undetermined coefficients should be used for constant coefficient equations with forcing functions that are linear combinations of polynomials multiplied by functions of the form \(e^{\alpha x}\), \(e^{\lambda x}\cos \omega x\), or \(e^{\lambda x}\sin \omega x\). Although the other two methods can be used to solve such problems, they will be more difficult except in the most trivial cases, because of the integrations involved. 
-			</div>
-			<div class="indent" id="3272f0b9-4f4c-434d-b8e3-fe3c65c80bd2">
-				If the equation isn’t a constant coefficient equation or the forcing function isn’t of the form just specified, the method of undetermined coefficients does not apply and the choice is necessarily between the other two methods. The case could be made that reduction of order is better because it requires only one solution of the complementary equation while variation of parameters requires two. However, variation of parameters will probably be easier if you already know a fundamental set of solutions of the complementary equation. 
+				<div>
+					We’ve now considered three methods for solving nonhomogeneous linear equations: <span class="vocab">undetermined coefficients</span>, <span class="vocab">reduction of order</span>, and <span class="vocab">variation of parameters</span>. It’s natural to ask which method is best for a given problem. 
+				</div>
+				<div>
+					The method of <span class="vocab">undetermined coefficients</span> could be used for constant coefficient equations with forcing functions that are linear combinations of polynomials multiplied by functions of the form of a polynomial \(P(x) = a_0 + a_1 x + a_2 x^2 + \cdots +a_n x^n\), an exponential \(e^{r x}\), a sine  or cosine \(\sin \omega x\) or \(\cos \omega x\), or any of those multiplied together \(P(x)e^{r x}\), \(e^{r x}\cos \omega x\) or \(e^{r x}\sin \omega x\), P(x)\(e^{r x}\cos \omega x\) or P(x)\(e^{r x}\sin \omega x\). Although the other two methods can be used to solve such problems, they will be more difficult except in the most trivial cases, because of the integrations involved. 
+				</div>
+				<div>	
+					If the equation isn’t a <span class="vocab-repeat">constant coefficient</span> equation or the <span class="vocab-repeat">forcing function</span> isn’t of the form specified, the method of undetermined coefficients does not apply and the choice between <span class="vocab">reduction of order</span> and <span class="vocab">variation of parameters</span>
+				</div>	
+				<div>	
+					The case could be made that reduction of order is better because it requires only one solution of the complementary equation while variation of parameters requires two. However, variation of parameters will probably be easier if you already know a fundamental set of solutions of the complementary equation.
+				</div>	
 			</div>
 		</details>
 
