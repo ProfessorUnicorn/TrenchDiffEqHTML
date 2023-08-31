@@ -38,14 +38,14 @@
 				<a id="x1-2r1"></a> 
 				\begin {equation} \label {eq:5.5.1} 
 					a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy
-						=\Big( P(x)\cos \omega x+Q(x)\sin \omega x \Big) \, e^{\lambda x}  
+						=\Big( P(x)\cos \omega x+Q(x)\sin \omega x \Big) \, e^{r x}  
 				\end {equation} 
 				
-				Where \(\lambda \) and \(\omega \) are real numbers, \(\omega \ne 0\), and \(P(x) \) and \(Q(x) \) are polynomials. We want to find a particular solution of <a href="#x1-2r1">(5.5.1)</a>. As in Section&nbsp;<a href="sec5.4.book.html">5.4</a>, the procedure that we will use is called the <span class="vocab">method of undetermined coefficients</span>. 
+				Where \(r \) and \(\omega \) are real numbers, \(\omega \ne 0\), and \(P(x) \) and \(Q(x) \) are polynomials. We want to find a particular solution of <a href="#x1-2r1">(5.5.1)</a>. As in Section&nbsp;<a href="sec5.4.book.html">5.4</a>, the procedure that we will use is called the <span class="vocab">method of undetermined coefficients</span>. 
 			</div>
 
 			<div id="8c7afc80-48c3-4a75-8f44-b45249ed9ace">
-				We begin with the case where \(\lambda =0\) in <a href="#x1-2r1">(5.5.1)</a>; thus, we we want to find a particular solution of 
+				We begin with the case where \(r =0\) in <a href="#x1-2r1">(5.5.1)</a>; thus, we we want to find a particular solution of 
 				\begin {equation} \label {eq:5.5.2} a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=P(x)\cos \omega x+Q(x)\sin \omega x 
 				\end {equation} <a id="x1-3r2"></a> where \(P(x)\) and \(Q(x)\) are polynomials. 
 			</div>
@@ -58,7 +58,7 @@
 				\end {eqnarray*} 
 			</div>
 			<div class="indent" id="29cbd94c-beb6-4cf0-8574-5e2e7d6b6ce3">
-				This implies that if \[ y_p=A(x)\cos \omega x+B(x)\sin \omega x \] where \(A\) and \(B\) are polynomials, then \[ a\frac{d^2y_p}{dx^2}+b\frac{dy_p}{dx}+cy_p=F(x)\cos \omega x+G(x)\sin \omega x\] where \(F\) and \(G\) are polynomials with coefficients that can be expressed in terms of the coefficients of \(A\) and \(B\). This suggests that we try to choose \(A\) and \(B\) so that \(F=P\) and \(G=Q\), respectively. Then \(y_p\) will be a particular solution of <a href="#x1-3r2">(5.5.2)</a>. The next theorem tells us how to choose the proper form for \(y_p\). For the proof see Exercise&nbsp;<span class="ptmb8t-">37</span>. 
+				This implies that if \[ y_p=A(x)\cos \omega x+B(x)\sin \omega x \] where \(A(x)\) and \(B(x)\) are polynomials, then \[ a\frac{d^2y_p}{dx^2}+b\frac{dy_p}{dx}+cy_p=F(x)\cos \omega x+G(x)\sin \omega x\] where \(F(x)\) and \(G(x)\) are polynomials with coefficients that can be expressed in terms of the coefficients of \(A\) and \(B\). This suggests that we try to choose \(A(x)\) and \(B(x)\) so that \(F(x)=P(x)\) and \(G(x)=Q(x)\), respectively. Then \(y_p\) will be a particular solution of <a href="#x1-3r2">(5.5.2)</a>. The next theorem tells us how to choose the proper form for \(y_p\).
 			</div>
 			<div class="theorem" id="139c643b-6017-4295-9d4c-cb45c1c20192">
 				<div>
@@ -66,13 +66,14 @@
 					<a id="x1-5r3"></a>
 					\begin {equation}
 						\label {eq:5.5.3} y_p=A(x)\cos \omega x+B(x)\sin \omega x 
-					\end {equation} where \[ A(x)=A_0+A_1x+\cdots +A_kx^k \quad \mbox{ and } \quad B(x)=B_0+B_1x+\cdots +B_kx^k\] provided that \(\cos \omega x\) and \(\sin \omega x\) are not solutions of the complementary equation. The solutions of \[ a(\frac{d^2y}{dx^2}+\omega ^2y)=P(x)\cos \omega x+Q(x)\sin \omega x \] \((\)for which \(\cos \omega x\) and \(\sin \omega x\) are solutions of the complementary equation\()\) are of the form <a href="#x1-5r3">(5.5.3)</a>, where \[ A(x)=A_0x+A_1x^2+\cdots +A_kx^{k+1} \quad \mbox{ and } \quad B(x)=B_0x+B_1x^2+\cdots +B_kx^{k+1}\] 
+					\end {equation} where \[ A(x)=A_0+A_1x+\cdots +A_kx^k \quad \mbox{ and } \quad B(x)=B_0+B_1x+\cdots +B_kx^k\] provided that \(\cos \omega x\) and \(\sin \omega x\) are not solutions of the complementary equation. The solutions of 
+					
+					\[ a\left(\frac{d^2y}{dx^2}+\omega ^2y\right)=P(x)\cos \omega x+Q(x)\sin \omega x \] 
+					
+					\((\)for which \(\cos \omega x\) and \(\sin \omega x\) are solutions of the complementary equation\()\) are of the form <a href="#x1-5r3">(5.5.3)</a>, where \[ A(x)=A_0x+A_1x^2+\cdots +A_kx^{k+1} \quad \mbox{ and } \quad B(x)=B_0x+B_1x^2+\cdots +B_kx^{k+1}\] 
 				</div>
 			</div>
 
-			<div class="indent" id="e372f764-62d0-4311-aeba-c91260925fb1">
-				For an analog of this theorem that’s applicable to <a href="#x1-2r1">(5.5.1)</a>, see Exercise&nbsp;<span class="ptmb8t-">38</span>. 
-			</div>
 
 		</details>
 		
