@@ -70,7 +70,7 @@
 			<div class="indent" id="1e16af64-c704-4a16-ae26-ffbb12334935">
 				We’ll now derive the method. As usual, we consider solutions of <a href="#x1-2r1">(5.7.1)</a> and <a href="#x1-3r2">(5.7.2)</a> on an interval \((a,b)\) where \(P_0\), \(P_1\), \(P_2\), and \(F\) are continuous and \(P_0\) has no zeros. Suppose that \(\{y_1,y_2\}\) is a fundamental set of solutions of the complementary equation <a href="#x1-3r2">(5.7.2)</a>. We look for a particular solution of <a href="#x1-2r1">(5.7.1)</a> in the form 
 				\begin {equation} \label {eq:5.7.3} y_p=u_1y_1+u_2y_2 
-				\end {equation} <a id="x1-4r3"></a> where \(u_1\) and \(u_2\) are functions to be determined so that \(y_p\) satisfies <a href="#x1-2r1">(5.7.1)</a>. You may not think this is a good idea, since there are now two unknown functions to be determined, rather than one. However, since \(u_1\) and \(u_2\) have to satisfy only one condition, that \(y_p\) is a solution of <a href="#x1-2r1">(5.7.1)</a>, we can impose a second condition that produces a convenient simplification, as follows. 
+				\end {equation} <a id="x1-4r3"></a> where \(u_1\) and \(u_2\) are functions to be determined so that \(y_p\) satisfies <a href="#x1-2r1">(5.7.1)</a>. You may not think this is a good idea, since there are now two unknown functions to be determined, rather than one. However, since \(u_1\) and \(u_2\) have to satisfy only one condition, that \(y_p\) is a solution of <a href="#x1-2r1">(5.7.1)</a>, we will impose a second condition that produces a convenient simplification, as follows. 
 			</div>
 			<div class="indent" id="7153d893-f22e-41af-a6c8-6f6517dd011f">
 				Differentiating <a href="#x1-4r3">(5.7.3)</a> yields 
@@ -80,7 +80,7 @@
 					\frac{dy_p}{dx} 
 						= u_1 \frac{dy_1}{dx} 
 						+ u_2 \frac{dy_2}{dx} 
-						+ \underbrace{\frac{du_1}{dx} y_1 + \frac{du_2}{dx} y_2} 
+						+ \underset{\text{set}=0}{\underbrace{\frac{du_1}{dx} y_1 + \frac{du_2}{dx} y_2}} 
 				\end {equation}  
 				
 				As our second condition on \(u_1\) and \(u_2\) we require that 
@@ -195,49 +195,78 @@
 				We can now obtain \(u_1\) and \(u_2\) by integrating \( \displaystyle\frac{du_1}{dx} \) and \( \displaystyle\frac{du_2}{dx} \). The constants of integration can be taken to be zero, since any choice of \(u_1\) and \(u_2\) in <a href="#x1-4r3">(5.7.3)</a> will suffice. 
 			</div>
 			<div class="indent" id="837cda37-4b72-4613-8b1c-86f383c36589">
-				We will not memorize <a href="#x1-12r11">(5.7.11)</a> and <a href="#x1-13r12">(5.7.12)</a> to apply as formulas. On the other hand, you don’t want to re-derive the whole procedure for every specific problem. We recommend the a compromise: 
+				We will not memorize <a href="#x1-12r11">(5.7.11)</a> and <a href="#x1-13r12">(5.7.12)</a> to apply as formulas. As we learn the method we will start by deriving the two equations ourselves: 
 			</div>
-			<ol style="list-style: lower-alpha" id="61e16f66-0159-462b-84ad-ab052aacf841">
-				<li>
-					<div>
-						Write \(y_p\) to get oriented 
-						<a id="x1-15r13"></a> 
-						\begin {equation} \label {eq:5.7.13} 
-							y_p=u_1y_1+u_2y_2 
-						\end {equation} 
-					</div>
-				</li>
-				<li>
-					<div>
-						Write the system for the specific problem we are trying to solve
+			<div class="stepbox" id="61e16f66-0159-462b-84ad-ab052aacf841">
+				<ol  >
+					<li>
+						<div>
+							Establish a fundamental set of solutions to the complementary equation \(\{y_1,y_2\}\) and the write \(y_p\) as 
+							<a id="x1-15r13"></a> 
+							\begin {equation} \label {eq:5.7.13} 
+								y_p=u_1y_1+u_2y_2 
+							\end {equation} 
+						</div>
+					</li>
+					
+					<li>
+						<div>
+							Differentiate <a href="#x1-15r13">(5.7.13)</a> using the product rule and set the \(u\) derivatives to zero to obtain
+							\begin {equation*} 
+								\frac{dy_p}{dx}=u_1\frac{dy_1}{dx}+u_2\frac{dy_2}{dx}+ \underset{\frac{du_1}{dx} y_1+ \frac{du_2}{dx} y_2 = 0}{\underbrace{\displaystyle\frac{du_1}{dx}y_1+\frac{du_2}{dx}y_2}} 
+							\end {equation*} 
+						</div>
+					</li>
 
-						<a id="x1-17r14"></a>
-						\begin{align}\label {eq:5.7.14}
-							\left\{
-							\begin{array}{rrl} 
-								\displaystyle\frac{du_1}{dx} y_1+ \frac{du_2}{dx} y_2 &=& 0 \\ \\
-								\displaystyle\frac{du_1}{dx} \frac{dy_1}{dx} + \frac{du_2}{dx} \frac{dy_2}{dx} &=& \displaystyle\frac{F}{P_0}
-							\end{array}
-							\right.
-						\end{align}	
-					</div>
-				</li>
-				<li>
-					<div>
-						Solve <a href="#x1-17r14">(5.7.14)</a> for \( \displaystyle\frac{du_1}{dx} \) and \( \displaystyle\frac{du_2}{dx} \) by any convenient method
-					</div>
-				</li>
-				<li>
-					<div>
-						Obtain \(u_1\) and \(u_2\) by integrating \( \displaystyle\frac{du_1}{dx} \) and \( \displaystyle \frac{du_2}{dx} \), taking the constants of integration to be zero
-					</div>
-				</li>
-				<li>
-					<div>
-						Substitute \(u_1\) and \(u_2\) into <a href="#x1-15r13">(5.7.13)</a> to obtain \(y_p\)
-					</div>
-				</li>
-			</ol>
+					<li>
+						<div>
+							Differentiate \(\frac{dy_p}{dx}\) using the product rule to obtain
+							\begin {equation*} 
+								\frac{d^2y_p}{dx^2}
+									=\frac{du_1}{dx}\frac{dy_1}{dx}+\frac{du_2}{dx}\frac{dy_2}{dx} 
+									+ u_1\frac{d^2y_1}{dx^2}+u_2\frac{d^2y_2}{dx^2} 
+							\end {equation*} 
+						</div>
+					</li>
+
+					<li>
+						<div>
+							Substitute \(y_p ,\) \({dy_p}/{dx},\) and \({d^2y_p}/{dx^2}
+							,\) into the differential equation and simplify to obtain the system of two equations and two unknowns (the \(u\) derivatives
+
+							<a id="x1-17r14"></a>
+							\begin{align}\label {eq:5.7.14}
+								\left\{
+								\begin{array}{rrl} 
+									\displaystyle\frac{du_1}{dx} y_1+ \frac{du_2}{dx} y_2 &=& 0 \\ \\
+									\displaystyle\frac{du_1}{dx} \frac{dy_1}{dx} + \frac{du_2}{dx} \frac{dy_2}{dx} &=& \displaystyle\frac{F}{P_0}
+								\end{array}
+								\right.
+							\end{align}	
+						</div>
+					</li>
+					<li>
+						<div>
+							Solve the system <a href="#x1-17r14">(5.7.14)</a> for \( \displaystyle\frac{du_1}{dx} \) and \( \displaystyle\frac{du_2}{dx} \) using sbstitution and elimination
+						</div>
+					</li>
+					<li>
+						<div>
+							Obtain \(u_1\) and \(u_2\) by finding the antiderivatives \( \displaystyle\frac{du_1}{dx} \) and \( \displaystyle \frac{du_2}{dx} \) (taking the constants of integration to be zero)
+						</div>
+					</li>
+					<li>
+						<div>
+							Substitute \(u_1\) and \(u_2\) into <a href="#x1-15r13">(5.7.13)</a> to obtain \(y_p\)
+						</div>
+					</li>
+					<li>
+						<div>
+							Check if any terms of \(y_p\) are linearly dependent on \(y_1\) or \(y_2\) and if so, remove from \(y_p\)
+						</div>
+					</li>
+				</ol>
+			</div>
 		</details>
 
 		<!--Variation of Parameters Examples-->
