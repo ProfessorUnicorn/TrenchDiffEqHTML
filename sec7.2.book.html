@@ -165,75 +165,77 @@
 			<div class="indent" id="926213d3-1ae9-44dd-bf05-6f35f2f93fd2">
 				To simplify finding the coefficients, we introduce some notation for products: \[ \prod ^s_{j=r}b_j=b_rb_{r+1}\cdots b_s\quad \mbox {if} \quad s\ge r\] Thus, \[ \prod ^7_{j=2}b_j=b_2b_3b_4b_5b_6b_7\] \[ \prod ^4_{j=0}(2j+1)=(1)(3)(5)(7)(9)=945\] and \[ \prod ^2_{j=2}j^2=2^2=4\] We define \[ \prod ^s_{j=r}b_j=1\quad \mbox {if}\quad s &lt; r\] no matter what the form of \(b_j\). 
 			</div>
-			<div class="example" id="x1-182" style="--ex-number: 2">
-				<div>
-					Find the power series in \(x\) for the general solution of 
-					<a id="x1-19r15"></a>
-					\begin {equation}
-						\label {eq:7.2.17} (1+2x^2)y''+6xy'+2y=0 
-					\end {equation}
-				</div>
-
-				<details class="solution">
-					<summary>Solution</summary>
-					Here \[ Ly=(1+2x^2)y''+6xy'+2y\] If \[ y=\sum _{n=0}^\infty a_nx^n \] then \[ y'=\sum _{n=1}^\infty na_nx^{n-1}\quad \mbox { and }\quad y''=\sum _{n=2}^\infty n(n-1)a_nx^{n-2}\] so
-
-					<div class="eqnarray" id="4af8c0b9-a452-4682-8730-7cf2639425cb">
-						\begin {eqnarray*}
-							Ly&amp;=&amp;(1+2x^2) \sum ^\infty _{n=2}n(n-1)a_nx^{n-2}+ 6x \sum ^\infty _{n=1}na_nx^{n-1} +2 \sum ^\infty _{n=0}a_nx^n\\ &amp;=&amp;\sum _{n=2}^\infty n(n-1)a_nx^{n-2}+\sum _{n=0}^\infty \left [2n(n-1)+6n+2\right ]a_nx^n\\ &amp;=&amp;\sum _{n=2}^\infty n(n-1)a_nx^{n-2}+2\sum _{n=0}^\infty (n+1)^2a_nx^n 
-						\end {eqnarray*} 
-					</div>
-					<div class="indent" id="22d32d37-ef6d-4310-b151-742c9bab307b">
-						To collect coefficients of \(x^n\), we shift the summation index in the first sum. This yields \[ Ly=\sum _{n=0}^\infty (n+2)(n+1)a_{n+2}x^n+2\sum _{n=0}^\infty (n+1)^2a_nx^n =\sum _{n=0}^\infty b_nx^n\] with \[ b_n=(n+2)(n+1)a_{n+2}+2(n+1)^2a_n,\quad n\ge 0\] To obtain solutions of <a href="#x1-19r15">(7.2.17)</a>, we set \(b_n=0\) for \(n\ge 0\). This is equivalent to the recurrence relation 
-						<a id="x1-20r16"></a> 
-						\begin {equation}
-							\label {eq:7.2.18} a_{n+2}=-2{n+1\over n+2}a_n,\quad n\ge 0 
-						\end {equation} 
-						Since the indices on the left and right differ by two, we write <a href="#x1-20r16">(7.2.18)</a> separately for \(n=2m\) and \(n=2m+1\), as in Example&nbsp;<a href="#x1-111">7.2.1</a>. This yields 
-					</div>
-					<div class="eqnarray" id="e4e74194-4c6c-4884-8e34-91bb1ec46269">
-						\begin {eqnarray}
-							a_{2m+2}&amp;=&amp;-2 {2m+1\over 2m+2}a_{2m}=-{2m+1\over m+1}a_{2m},\quad m \ge 0,\label {eq:7.2.19}\\
-							{\mbox {and}}\nonumber \\
-							a_{2m+3}&amp;=&amp;-2{2m+2\over 2m+3}a_{2m+1}=-4{m+1\over 2m+3}a_{2m+1},\quad m\ge 0. \label {eq:7.2.20} 
-						\end {eqnarray} 
-					</div>
-					<div class="indent" id="6d75f856-e00a-4763-8452-739517a2032a">
-						Computing the coefficients of even powers of \(x\) from (<span class="ptmb8t-">7.2.19</span>) yields 
-					</div>
-					<div class="eqnarray" id="c6a0eaba-444c-41b5-992a-cee594afbc55">
-						\begin {eqnarray*}
-							a_2&amp;=&amp;-{1\over 1}a_0,\\[5pt] a_4&amp;=&amp;-{3\over 2}a_2=\left (-{3\over 2}\right )\left (-{1\over 1}\right )a_0 ={1\cdot 3\over 1\cdot 2}a_0, \\[5pt] a_6&amp;=&amp;-{5\over 3}a_4= -{5\over 3}\left (1\cdot 3\over 1\cdot 2\right )a_0 =-{1\cdot 3\cdot 5\over 1\cdot 2\cdot 3}a_0, \\[5pt] a_8&amp;=&amp;-{7\over 4}a_6=-{7\over 4} \left (-{1\cdot 3\cdot 5\over 1\cdot 2\cdot 3}\right )a_0= {1\cdot 3\cdot 5\cdot 7\over 1\cdot 2\cdot 3\cdot 4}a_0.\\ 
-						\end {eqnarray*} 
-					</div>
-					<div class="indent" id="4dfb936e-5c1a-4cfb-a47b-30af79648487">
-						In general, 
-						<a id="x1-21r17"></a>
-						\begin {equation} \label {eq:7.2.21} a_{2m}=(-1)^m{\prod _{j=1}^m(2j-1)\over m!}a_0,\quad m\ge 0 
-						\end {equation} 
-						(Note that <a href="#x1-21r17">(7.2.21)</a> is correct for \(m=0\) because we defined \(\prod _{j=1}^0b_j=1\) for any&nbsp;\(b_j\).) 
-					</div>
-					<div class="indent" id="ffd3a9f3-190b-4fcb-8e50-7eeb8c12886f">
-						Computing the coefficients of odd powers of \(x\) from (<span class="ptmb8t-">7.2.20</span>) yields 
-					</div>
-					<div class="eqnarray" id="a817c4e2-cca0-467f-83bf-38652ad0a94e">
-						\begin {eqnarray*}
-							a_3&amp;=&amp;-4\,{1\over 3}a_1, \\[5pt] a_5&amp;=&amp;-4\,{2\over 5}a_3=-4\,{2\over 5}\left (-4{1\over 3}\right )a_1 =4^2{1\cdot 2\over 3\cdot 5}a_1, \\[5pt] a_7&amp;=&amp;-4\,{3\over 7}a_5=-4\,{3\over 7}\left ( 4^2{1\cdot 2\over 3\cdot 5}\right )a_1= -4^3{1\cdot 2\cdot 3\over 3\cdot 5\cdot 7}a_1,\\[5pt] a_9&amp;=&amp;-4\, {4\over 9}a_7=-4\, {4\over 9}\left ( 4^3{1\cdot 2\cdot 3\over 3\cdot 5\cdot 7}\right )a_1= 4^4{1\cdot 2\cdot 3\cdot 4\over 3\cdot 5\cdot 7\cdot 9}a_1 
-						\end {eqnarray*} 
-					</div>
-					<div class="indent" id="a1e2e247-13bf-476e-8409-829d3ea97548">
-						In general, 
-						<a id="x1-22r18"></a>
-						\begin {equation}
-							\label {eq:7.2.22} a_{2m+1}={(-1)^m4^m m!\over \prod _{j=1}^m(2j+1)}a_1,\quad m\ge 0 
-						\end {equation} 
-						From <a href="#x1-21r17">(7.2.21)</a> and <a href="#x1-22r18">(7.2.22)</a>, \[ y=a_0 \sum ^\infty _{m=0}(-1)^m {\prod _{j=1}^m(2j-1)\over m!}x^{2m} +a_1 \sum ^\infty _{m=0}(-1)^m {4^mm!\over \prod _{j=1}^m(2j+1)} x^{2m+1}\] is the power series in \(x\) for the general solution of <a href="#x1-19r15">(7.2.17)</a>. Since \(P_0(x)=1+2x^2\) has no real zeros, Theorem&nbsp;<span class="ptmb8t-">5.1.1</span> implies that every solution of <a href="#x1-19r15">(7.2.17)</a> is defined on \((-\infty ,\infty )\). However, since \(P_0(\pm i/\sqrt 2)=0\), Theorem<a href="#x1-61">7.2.1</a> implies only that the power series converges in \((-1/\sqrt 2,1/\sqrt 2)\) for any choice of \(a_0\) and \(a_1\).
-					</div>
-					<div class="indent" id="3de72000-6174-4b06-b54b-c24ae8869770">
-						The results in Examples<a href="#x1-111">7.2.1</a> and <a href="#x1-182">7.2.2</a> are consequences of the following general theorem.
-					</div>
-				</details>
+		</div>
+		
+		<div class="example" id="x1-182" style="--ex-number: 2">
+			<div>
+				Find the power series in \(x\) for the general solution of 
+				<a id="x1-19r15"></a>
+				\begin {equation}
+					\label {eq:7.2.17} (1+2x^2)y''+6xy'+2y=0 
+				\end {equation}
 			</div>
+
+			<details class="solution">
+				<summary>Solution</summary>
+				Here \[ Ly=(1+2x^2)y''+6xy'+2y\] If \[ y=\sum _{n=0}^\infty a_nx^n \] then \[ y'=\sum _{n=1}^\infty na_nx^{n-1}\quad \mbox { and }\quad y''=\sum _{n=2}^\infty n(n-1)a_nx^{n-2}\] so
+
+				<div class="eqnarray" id="4af8c0b9-a452-4682-8730-7cf2639425cb">
+					\begin {eqnarray*}
+						Ly&amp;=&amp;(1+2x^2) \sum ^\infty _{n=2}n(n-1)a_nx^{n-2}+ 6x \sum ^\infty _{n=1}na_nx^{n-1} +2 \sum ^\infty _{n=0}a_nx^n\\ &amp;=&amp;\sum _{n=2}^\infty n(n-1)a_nx^{n-2}+\sum _{n=0}^\infty \left [2n(n-1)+6n+2\right ]a_nx^n\\ &amp;=&amp;\sum _{n=2}^\infty n(n-1)a_nx^{n-2}+2\sum _{n=0}^\infty (n+1)^2a_nx^n 
+					\end {eqnarray*} 
+				</div>
+				<div class="indent" id="22d32d37-ef6d-4310-b151-742c9bab307b">
+					To collect coefficients of \(x^n\), we shift the summation index in the first sum. This yields \[ Ly=\sum _{n=0}^\infty (n+2)(n+1)a_{n+2}x^n+2\sum _{n=0}^\infty (n+1)^2a_nx^n =\sum _{n=0}^\infty b_nx^n\] with \[ b_n=(n+2)(n+1)a_{n+2}+2(n+1)^2a_n,\quad n\ge 0\] To obtain solutions of <a href="#x1-19r15">(7.2.17)</a>, we set \(b_n=0\) for \(n\ge 0\). This is equivalent to the recurrence relation 
+					<a id="x1-20r16"></a> 
+					\begin {equation}
+						\label {eq:7.2.18} a_{n+2}=-2{n+1\over n+2}a_n,\quad n\ge 0 
+					\end {equation} 
+					Since the indices on the left and right differ by two, we write <a href="#x1-20r16">(7.2.18)</a> separately for \(n=2m\) and \(n=2m+1\), as in Example&nbsp;<a href="#x1-111">7.2.1</a>. This yields 
+				</div>
+				<div class="eqnarray" id="e4e74194-4c6c-4884-8e34-91bb1ec46269">
+					\begin {eqnarray}
+						a_{2m+2}&amp;=&amp;-2 {2m+1\over 2m+2}a_{2m}=-{2m+1\over m+1}a_{2m},\quad m \ge 0,\label {eq:7.2.19}\\
+						{\mbox {and}}\nonumber \\
+						a_{2m+3}&amp;=&amp;-2{2m+2\over 2m+3}a_{2m+1}=-4{m+1\over 2m+3}a_{2m+1},\quad m\ge 0. \label {eq:7.2.20} 
+					\end {eqnarray} 
+				</div>
+				<div class="indent" id="6d75f856-e00a-4763-8452-739517a2032a">
+					Computing the coefficients of even powers of \(x\) from (<span class="ptmb8t-">7.2.19</span>) yields 
+				</div>
+				<div class="eqnarray" id="c6a0eaba-444c-41b5-992a-cee594afbc55">
+					\begin {eqnarray*}
+						a_2&amp;=&amp;-{1\over 1}a_0,\\[5pt] a_4&amp;=&amp;-{3\over 2}a_2=\left (-{3\over 2}\right )\left (-{1\over 1}\right )a_0 ={1\cdot 3\over 1\cdot 2}a_0, \\[5pt] a_6&amp;=&amp;-{5\over 3}a_4= -{5\over 3}\left (1\cdot 3\over 1\cdot 2\right )a_0 =-{1\cdot 3\cdot 5\over 1\cdot 2\cdot 3}a_0, \\[5pt] a_8&amp;=&amp;-{7\over 4}a_6=-{7\over 4} \left (-{1\cdot 3\cdot 5\over 1\cdot 2\cdot 3}\right )a_0= {1\cdot 3\cdot 5\cdot 7\over 1\cdot 2\cdot 3\cdot 4}a_0.\\ 
+					\end {eqnarray*} 
+				</div>
+				<div class="indent" id="4dfb936e-5c1a-4cfb-a47b-30af79648487">
+					In general, 
+					<a id="x1-21r17"></a>
+					\begin {equation} \label {eq:7.2.21} a_{2m}=(-1)^m{\prod _{j=1}^m(2j-1)\over m!}a_0,\quad m\ge 0 
+					\end {equation} 
+					(Note that <a href="#x1-21r17">(7.2.21)</a> is correct for \(m=0\) because we defined \(\prod _{j=1}^0b_j=1\) for any&nbsp;\(b_j\).) 
+				</div>
+				<div class="indent" id="ffd3a9f3-190b-4fcb-8e50-7eeb8c12886f">
+					Computing the coefficients of odd powers of \(x\) from (<span class="ptmb8t-">7.2.20</span>) yields 
+				</div>
+				<div class="eqnarray" id="a817c4e2-cca0-467f-83bf-38652ad0a94e">
+					\begin {eqnarray*}
+						a_3&amp;=&amp;-4\,{1\over 3}a_1, \\[5pt] a_5&amp;=&amp;-4\,{2\over 5}a_3=-4\,{2\over 5}\left (-4{1\over 3}\right )a_1 =4^2{1\cdot 2\over 3\cdot 5}a_1, \\[5pt] a_7&amp;=&amp;-4\,{3\over 7}a_5=-4\,{3\over 7}\left ( 4^2{1\cdot 2\over 3\cdot 5}\right )a_1= -4^3{1\cdot 2\cdot 3\over 3\cdot 5\cdot 7}a_1,\\[5pt] a_9&amp;=&amp;-4\, {4\over 9}a_7=-4\, {4\over 9}\left ( 4^3{1\cdot 2\cdot 3\over 3\cdot 5\cdot 7}\right )a_1= 4^4{1\cdot 2\cdot 3\cdot 4\over 3\cdot 5\cdot 7\cdot 9}a_1 
+					\end {eqnarray*} 
+				</div>
+				<div class="indent" id="a1e2e247-13bf-476e-8409-829d3ea97548">
+					In general, 
+					<a id="x1-22r18"></a>
+					\begin {equation}
+						\label {eq:7.2.22} a_{2m+1}={(-1)^m4^m m!\over \prod _{j=1}^m(2j+1)}a_1,\quad m\ge 0 
+					\end {equation} 
+					From <a href="#x1-21r17">(7.2.21)</a> and <a href="#x1-22r18">(7.2.22)</a>, \[ y=a_0 \sum ^\infty _{m=0}(-1)^m {\prod _{j=1}^m(2j-1)\over m!}x^{2m} +a_1 \sum ^\infty _{m=0}(-1)^m {4^mm!\over \prod _{j=1}^m(2j+1)} x^{2m+1}\] is the power series in \(x\) for the general solution of <a href="#x1-19r15">(7.2.17)</a>. Since \(P_0(x)=1+2x^2\) has no real zeros, Theorem&nbsp;<span class="ptmb8t-">5.1.1</span> implies that every solution of <a href="#x1-19r15">(7.2.17)</a> is defined on \((-\infty ,\infty )\). However, since \(P_0(\pm i/\sqrt 2)=0\), Theorem<a href="#x1-61">7.2.1</a> implies only that the power series converges in \((-1/\sqrt 2,1/\sqrt 2)\) for any choice of \(a_0\) and \(a_1\).
+				</div>
+				<div class="indent" id="3de72000-6174-4b06-b54b-c24ae8869770">
+					The results in Examples<a href="#x1-111">7.2.1</a> and <a href="#x1-182">7.2.2</a> are consequences of the following general theorem.
+				</div>
+			</details>
+		</div>
 
 		<div class="theorem" id="x1-232">
 			<span class="head">Theorem&nbsp;7.2.2</span>
