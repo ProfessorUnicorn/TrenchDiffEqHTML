@@ -278,54 +278,526 @@
 			<!--Example 1-->
 			<div class="example" id="x1-211" style="--ex-number: 1">
 				
-				<div> Find a particular solution \(y_p\) of 
-				\begin {equation} \label {eq:5.7.15} x^2 \frac{d^2y}{dx^2} -2x \frac{dy}{dx} +2y=x^{9/2} 
-				\end {equation} <a id="x1-22r15"></a> given that \(y_1=x\) and \(y_2=x^2\) are solutions of the complementary equation \[ x^2 \frac{d^2y}{dx^2} -2x \frac{dy}{dx} +2y=0\] Then find the general solution of <a href="#x1-22r15">(5.7.15)</a>. 
-			</div>
+				<div> 
+					Consider the differential equation
+					<a id="x1-22r15"></a>
+					\begin {equation} \label {eq:5.7.15} x^2 
+						\frac{d^2y}{dx^2} -2x \frac{dy}{dx} +2y=x^{9/2} 
+					\end {equation}
+				</div>
+				<ol>
+					<li>
+						Verify that \(y_1=x\) and \(y_2=x^2\) are solutions of the complementary equation
+					</li>	
+					<li>
+						Find the first equation in the system by differentiating \(y_p\) and setting the \(u\) derivative terms to zero
+					</li>
+					<li>
+						Find the second equation in the system by substituting \(y_p,\) \(dy_p/dx,\) and \(d^2y_p/dx^2\) into 
+						<a href="#x1-22r15">(5.7.15)</a>
+					</li>
+					<li>
+						Write the system of equations as a system for \(du_1/dx\) and \(du_2/dx\)
+					</li>
+					<li>
+						Find the antiderivatives to find \(u_1\) and \(u_2\) 
+					</li>
+					<li>
+						Find the particular solution \(y_p\) and the general solution
+					</li>
+				</ol>					
 
 				<details class="solution">
 					<summary>Solution</summary>
-					We set \[ y_p=u_1x+u_2x^2\] where
 
-					<div class="eqnarray" id="b79c83cb-9022-429c-b63a-05995c95139d">
-						
-						\begin {eqnarray*} \frac{du_1}{dx} x+\phantom {2} \frac{du_2}{dx} x^2&amp;=&amp;0\\ \frac{du_1}{dx} \phantom {x}+2 \frac{du_2}{dx} x\phantom {^2}&amp;=&amp;{x^{9/2}\over x^2}=x^{5/2} 
-						\end {eqnarray*} 
-					</div>
+					<ol>
+						<!--Part 1-->
+						<li>
+							<div>	
+								We wish to verify that \(y_1=x\) is a solution of the complementary equation:
 
-					From the first equation, \( \frac{du_1}{dx} =- \frac{du_2}{dx} x\). Substituting this into the second equation yields \( \frac{du_2}{dx} x=x^{5/2}\), so \( \frac{du_2}{dx} =x^{3/2}\) and therefore \( \frac{du_1}{dx} =- \frac{du_2}{dx} x=-x^{5/2}\). Integrating and taking the constants of integration to be zero yields \[ u_1=-{2\over 7}x^{7/2}\mbox {\quad and \quad }u_2={2\over 5}x^{5/2}\] Therefore \[ y_p=u_1x+u_2x^2 =-{2\over 7}x^{7/2}x+{2\over 5}x^{5/2}x^2={4\over 35}x^{9/2}\] and the general solution of <a href="#x1-22r15">(5.7.15)</a> is \[ y={4\over 35}x^{9/2}+c_1x+c_2x^2\]
+								\begin {equation*}
+									\frac{d^2y}{dx^2} -2x \frac{dy}{dx} +2y=0 
+								\end {equation*} 
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(y_1=x\) twice
+							</div> 
+							<div>	
+								Differentiating \(y_1=x\) we obtain
+
+								\[
+									\frac{d y_1}{dx} = 1
+									\quad \text{and} \quad
+									\frac{d^2 y_1}{dx^2} = 0
+								\]
+							</div>
+							<div>	
+								Substituting  \(y_1=x\) and its derivatives in to the complementary equation
+
+								\begin{align*} 
+									x^2\frac{d^2y_1}{dx^2} -2x \frac{dy_1}{dx} +2y_1 \overset{?}{=} & 0 \\
+									x^2\Big( 0 \Big) -2x \Big( 1 \Big) +2 \Big( x \Big) \overset{?}{=} & 0 \\
+									\underset{0}{\underbrace{-2x + 2x}} = 0 \quad \checkmark
+								\end{align*} 
+
+								Therefore \(y_1=x\) is a solution to the complementary equation
+							</div>
+							<br>
+							<div>	
+								Now we wish to verify that \(y_2=x^2\) is a solution of the complementary equation:
+
+								\begin {equation*}
+									\frac{d^2y}{dx^2} -2x \frac{dy}{dx} +2y=0 
+								\end {equation*} 
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(y_2=x^2\) twice
+							</div> 
+							<div>	
+								Differentiating \(y_2=x^2\) we obtain
+
+								\[
+									\frac{d y_2}{dx} = 2x
+									\quad \text{and} \quad
+									\frac{d^2 y_2}{dx^2} = 2
+								\]
+							</div>
+							<div>	
+								Substituting  \(y_2=x^2\) and its derivatives in to the complementary equation
+
+								\begin{align*} 
+									x^2\frac{d^2y_2}{dx^2} -2x \frac{dy_2}{dx} +2y_2 \overset{?}{=} & 0 \\
+									x^2\Big( 2 \Big) -2x \Big( 2x \Big) +2 \Big( x^2 \Big) \overset{?}{=} & 0 \\
+									\underset{0}{\underbrace{2x^2 - 4x^2 + 2x^2}} = 0 \quad \checkmark
+								\end{align*} 
+
+								Therefore \(y_2=x^2\) is a solution to the complementary equation
+							</div>
+							<br>
+							<br>
+						</li>	
+						<!--Part 2-->
+						<li>
+							<div>
+								We will
+								find the first equation in the system using <span class="vocab">variation of parameters</span> by differentiating \(y_p=u_1y_1 + u_2y_2\) and setting the \(u\) derivative terms to zero. We start with the particular solution 
+								\[
+									y_p=u_1 x + u_2 x^2
+								\]
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y_p=u_1 x + u_2 x^2\) and set the \(u\) derivatives equal to zero
+							</div> 
+							<div>
+								Differentiating \(y_p\) we obtain
+								\[
+									\frac{dy_p}{dx}=u_1 + 2u_2 x + 
+									\underset{0}{\underbrace{x \frac{du_1}{dx} + x^2 \frac{du_2}{dx} }}
+								\]
+								And setting the \(u\) derivatives equal to zero we obtain the first equation in the system of equations
+								\[
+									x \frac{du_1}{dx} + x^2 \frac{du_2}{dx} = 0
+								\]
+							</div>	
+						</li>
+						<!--Part 3-->
+						<li>
+							<div>
+								Now we will find the second equation in the system by substituting \(y_p,\) \(dy_p/dx,\) and \(d^2y_p/dx^2\) into <a href="#x1-22r15">(5.7.15)</a>
+							</div>		
+							<div>
+								We have \(y_p\) and \(dy_p/dx\)
+								\begin{align*}
+									y_p = & u_1 x + u_2 x^2 \\
+									\frac{dy_p}{dx} = & u_1 + 2u_2 x \\
+								\end{align*}
+							</div>	
+
+							<div class="reading-exercise">
+								Differentiate \(\displaystyle\frac{dy_p}{dx}=u_1 + 2u_2 x\) 
+							</div>
+							<div>
+								Differentiating \(dy_p/dx\) we obtain
+								\[
+									\frac{d^2y_p}{dx^2}=
+									\frac{du_1}{dx} + 2x\frac{du_2}{dx} + 2u_2 
+								\]
+								And now we substitute \(y_p,\) \(dy_p/dx,\) and \(d^2y_p/dx^2\) into <a href="#x1-22r15">(5.7.15)</a>
+							</div>
+							<div>
+								\begin{array}{rrrrrrrr}
+									x^2 \displaystyle\frac{d^2y_p}{dx^2} &=& x^2 \displaystyle\frac{du_1}{dx} &+& 2x^3 \displaystyle\frac{du_2}{dx} & & & & &+& 2\,u_2x^2 \\
+									-2 \displaystyle\frac{dy_p}{dx} &=& && && &-& 2\,u_1 x &-& 4\,u_2x^2 \\
+									+\quad\quad\quad 2y_p &=& && && &+& 2\,u_1 x &+& 2\,u_2x^2 \\
+									\hline
+									\underbrace{{\small x^2 \displaystyle\frac{d^2y_p}{dx^2} -2x\frac{dy_p}{dx} 2y}} &=& x^2 \displaystyle\frac{du_1}{dx} &+& 2x^3 \displaystyle\frac{du_2}{dx} & & &+& 0\,u_1x &+& 0\,u_2x^2 \\
+									x^{9/2} \quad\quad &=& x^2 \displaystyle\frac{du_1}{dx} &+& 2x^3 \displaystyle\frac{du_2}{dx} & & & & & & \\
+								\end{array}
+							</div>	 
+							<div class="reading-exercise">
+								Divide \( x^{9/2} = x^2 \displaystyle\frac{du_1}{dx} +2x^3\frac{du_2}{dx}\) by \(x^2\) 
+							</div>
+							<div>
+								Dividing by \(x^2\) to simplify we obtain the second equation in our system of equations:
+								\[
+									\frac{du_1}{dx} + 2x\frac{du_2}{dx} = x^{5/2}
+								\]
+							</div>	
+
+						</li>	
+						<!--Part 4-->
+						<li>
+							<div>
+								Write the system of equations as a system and solve using substitution and elimination
+								\begin{align*}
+									\left\{
+										\begin{array}{rrr}
+											x \displaystyle\frac{du_1}{dx} &+& x^2 \displaystyle\frac{du_2}{dx} &=& 0 
+											\quad\quad\quad\quad (1) \\
+											\displaystyle\frac{du_1}{dx} &+& 2x \displaystyle\frac{du_2}{dx} &=& x^{5/2} \quad\quad\quad\quad (2)
+										\end{array}
+									\right.	
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Solve the system for \(\displaystyle\frac{du_1}{dx}\) and \(\displaystyle\frac{du_2}{dx}\)
+							</div>
+							<div>
+								Solving the first equation (1) for \(\displaystyle\frac{du_1}{dx}\)
+								\[
+									\frac{du_1}{dx} = -x \frac{du_2}{dx} \quad\quad\quad\quad (3)
+								\]
+								Substituting in to the second equation (2)
+								\begin{align*}
+									\underbrace{\frac{du_1}{dx}} + 2x \frac{du_2}{dx} =& x^{5/2} \\
+									-x \frac{du_2}{dx} + 2x \frac{du_2}{dx} =& x^{5/2} \\
+									x \frac{du_2}{dx} =& x^{5/2}
+									\Longrightarrow
+									\frac{du_2}{dx} = x^{3/2}
+								\end{align*}
+							</div>	
+							<div>
+								Now substituting this into the third equation (3)
+								\begin{align*}
+									\frac{du_1}{dx} = & -x \underbrace{\frac{du_2}{dx}} \\
+									\frac{du_1}{dx} = & -x \cdot x^{3/2}
+									\Longrightarrow
+									\frac{du_1}{dx} = -x^{5/2}
+								\end{align*}
+							</div>	
+							<div>
+								So we have found \(du_1/dx\) and \(du_2/dx\)
+								\[
+								\frac{du_1}{dx} = -x^{5/2} \quad \quad \frac{du_2}{dx} = x^{3/2}
+								\]
+							</div>	
+						</li>
+						<!--Part 5-->
+						<li>
+							<div>
+								Having found \(du_1/dx\) and \(du_2/dx\) we now simplfy antidifferentiate to find \(u_1\) and \(u_2\)
+							</div>		
+							<div class="reading-exercise">
+								Antidifferentiate \(-x^{5/2} \)
+							</div>
+							<div class="reading-exercise">
+								Antidifferentiate \( x^{3/2} \)
+							</div>
+							<div>
+								Finding the antiderivatives and taking the constants of integration to be zero we obtain \(u_1\) and \(u_2\)
+								\begin{array}{rccrcl}
+									\displaystyle\frac{du_1}{dx} &=& -x^{5/2}	&\quad&  \displaystyle\frac{du_2}{dx} &=& x^{3/2} \\
+									\int \displaystyle\frac{du_1}{dx} dx &=& -\int x^{5/2}dx	&\quad&  \int \displaystyle\frac{du_2}{dx} dx &=& \int x^{3/2}dx \\
+									u_1 &=& -\displaystyle\frac{2}{7} x^{7/2}	&\quad&  u_2 &=& \displaystyle\frac{2}{5} x^{5/2} \\
+								\end{array}
+							</div>	
+						</li>	
+						<!--Part 5-->
+						<li>
+							<div> 
+								Substituting back \(y_p = u_1 x + u_2 x^2 \) we obtain the particular solution:
+								\begin{align*}
+									y_p = & -\frac{2}{7} x^{7/2} \cdot x + \frac{2}{5} x^{5/2} \cdot x^2 \\
+									= & -\frac{2}{7} x^{9/2} + \frac{2}{5} x^{9/2} \\
+									= & \frac{4}{35} x^{9/2} \\
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Verify \(y_p=\frac{4}{35} x^{9/2}\) is a solution of <a href="#x1-22r15">(5.7.15)</a>
+							</div>
+							<div>
+								Finally we have the general solution \(y = y_p + c_1 y_1 + c_2 y_2 \)
+								\[
+									y = \frac{4}{35} x^{9/2} + c_1 x + c_2 x^2
+								\]
+							</div>	
+							<div class="reading-exercise">
+								Verify \(y=\frac{4}{35} x^{9/2} + c_1 x + c_2 x^2\) is a solution of <a href="#x1-22r15">(5.7.15)</a>
+							</div>
+						</li>
+					</ol>	
+
+					
 				</details>
 			</div>
 
 			<!--Example 2-->
 			<div class="example" id="x1-232" style="--ex-number: 2">
-				
-				<div> Find a particular solution \(y_p\) of 
-				\begin {equation} \label {eq:5.7.16} (x-1) \frac{d^2y}{dx^2} -x \frac{dy}{dx} +y=(x-1)^2 
-				\end {equation} <a id="x1-24r16"></a> given that \(y_1=x\) and \(y_2=e^x\) are solutions of the complementary equation \[ (x-1) \frac{d^2y}{dx^2} -x \frac{dy}{dx} +y=0\] Then find the general solution of <a href="#x1-24r16">(5.7.16)</a>. 
-			</div>
+				<div> 
+					Consider the differential equation
+					<a id="x1-24r16"></a>
+					\begin {equation} \label {eq:5.7.16} 
+						(x-1) \frac{d^2y}{dx^2} -x \frac{dy}{dx} +y=(x-1)^2 
+					\end {equation} 
+				</div>
+				<ol>
+					<li>
+						Verify that \(y_1=x\) and \(y_2=e^x\) are solutions of the complementary equation
+					</li>	
+					<li>
+						Find the first equation in the system by differentiating \(y_p\) and setting the \(u\) derivative terms to zero
+					</li>
+					<li>
+						Find the second equation in the system by substituting \(y_p,\) \(dy_p/dx,\) and \(d^2y_p/dx^2\) into 
+						<a href="#x1-24r16">(5.7.16)</a>
+					</li>
+					<li>
+						Write the system of equations as a system for \(du_1/dx\) and \(du_2/dx\)
+					</li>
+					<li>
+						Find the antiderivatives to find \(u_1\) and \(u_2\) 
+					</li>
+					<li>
+						Find the particular solution \(y_p\) and the general solution
+					</li>
+				</ol>					
 
 				<details class="solution">
 					<summary>Solution</summary>
-					We set \[ y_p=u_1x+u_2e^x\] where
 
-					<div class="eqnarray" id="627c37ab-ae72-4d07-a02c-21b6b00516d1">
-						
-						\begin {eqnarray*} \frac{du_1}{dx} x+ \frac{du_2}{dx} e^x&amp;=&amp;0\\ \frac{du_1}{dx} \phantom {x}+ \frac{du_2}{dx} e^x&amp;=&amp;{(x-1)^2\over x-1}=x-1 
-						\end {eqnarray*} 
-					</div>
+					<ol>
+						<!--Part 1-->
+						<li>
+							<div>	
+								We wish to verify that \(y_1=x\) and \(y_2=e^x\) is a solution of the complementary equation:
 
-					<div>
-						Subtracting the first equation from the second yields \(- \frac{du_1}{dx} (x-1)=x-1\), so \( \frac{du_1}{dx} =-1\). From this and the first equation, \( \frac{du_2}{dx} =-xe^{-x} \frac{du_1}{dx} =xe^{-x}\). Integrating and taking the constants of integration to be zero yields \[ u_1=-x \quad \mbox{ and } \quad u_2=-(x+1)e^{-x}\] Therefore \[ y_p=u_1x+u_2e^x =(-x)x+(-(x+1)e^{-x})e^x=-x^2-x-1\] so the general solution of <a href="#x1-24r16">(5.7.16)</a> is \begin {equation} \label {eq:5.7.17} y=y_p+c_1x+c_2e^x=-x^2-x-1+c_1x+c_2e^x = -x^2-1+(c_1-1)x+c_2e^x \end {equation} <a id="x1-25r17"></a> However, since \(c_1\) is an arbitrary constant, so is \(c_1-1\); therefore, we improve the appearance of this result by renaming the constant and writing the general solution as 
-						\begin {equation} \label {eq:5.7.18} y= -x^2-1+c_1x+c_2e^x 
-						\end {equation} <a id="x1-26r18"></a> 
-					</div>
+								\begin {equation*}
+									(x-1) \frac{d^2y}{dx^2} -x \frac{dy}{dx} +y = 0
+								\end {equation*} 
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(y_1=x\) twice and substitute into the complementary equation
+							</div> 
+							<div class="reading-exercise">
+								Differentiate \(y_2=e^x\) twice and substitute into the complementary equation
+							</div> 						
+							<div>	
+								Substituting \(y_1=x\) and \(y_2=e^x\) into the complementary equation you can verify that they are solutions
+							</div>
+						</li>	
+						<!--Part 2-->
+						<li>
+							<div>
+								We will
+								find the first equation in the system using <span class="vocab">variation of parameters</span> by differentiating \(y_p=u_1y_1 + u_2y_2\) and setting the \(u\) derivative terms to zero. We start with the particular solution 
+								\[
+									y_p=u_1 x + u_2 e^x
+								\]
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y_p=u_1 x + u_2 e^x\) and set the \(u\) derivatives equal to zero
+							</div> 
+							<div>
+								Differentiating \(y_p\) we obtain
+								\[
+									\frac{dy_p}{dx}= u_1 + u_2 e^x + 
+									\underset{0}{\underbrace{x \frac{du_1}{dx} + e^x \frac{du_2}{dx} }}
+								\]
+								And setting the \(u\) derivatives equal to zero we obtain the first equation in the system of equations
+								\[
+									x \frac{du_1}{dx} + e^x \frac{du_2}{dx} = 0
+								\]
+							</div>	
+						</li>
+						<!--Part 3-->
+						<li>
+							<div>
+								Now we will find the second equation in the system by substituting \(y_p,\) \(dy_p/dx,\) and \(d^2y_p/dx^2\) into <a href="#x1-24r16">(5.7.16)</a>
+							</div>		
+							<div>
+								We have \(y_p\) and \(dy_p/dx\)
+								\begin{align*}
+									y_p = & u_1 x + u_2 e^x \\
+									\frac{dy_p}{dx} = & u_1 + u_2 e^x \\
+								\end{align*}
+							</div>	
 
-					<div>
-						There’s nothing <em>wrong</em> with leaving the general solution of <a href="#x1-24r16">(5.7.16)</a> in the form <a href="#x1-25r17">(5.7.17)</a>; however, we think you’ll agree that <a href="#x1-26r18">(5.7.18)</a> is preferable. We can also view the transition from <a href="#x1-25r17">(5.7.17)</a> to <a href="#x1-26r18">(5.7.18)</a> differently. In this example the particular solution \(y_p=-x^2-x-1\) contained the term \(-x\), which satisfies the complementary equation. We can drop this term and redefine \(y_p=-x^2-1\), since \(-x^2-x-1\) is a solution of <a href="#x1-24r16">(5.7.16)</a> and \(x\) is a solution of the complementary equation; hence, \(-x^2-1=(-x^2-x-1)+x\) is also a solution of <a href="#x1-24r16">(5.7.16)</a>. In general, it’s always legitimate to drop linear combinations of \(\{y_1,y_2\}\) from particular solutions obtained by variation of parameters. (See Exercise&nbsp;<span class="ptmb8t-">36</span> for a general discussion of this question.) We’ll do this in the following examples and in the answers to exercises that ask for a particular solution. Therefore, don’t be concerned if your answer to such an exercise differs from ours only by a solution of the complementary equation. 
-					</div>
-				</details>
-			</div>
+							<div class="reading-exercise">
+								Differentiate \(\displaystyle\frac{dy_p}{dx}=u_1 + u_2 e^x\) 
+							</div>
+							<div>
+								Differentiating \(dy_p/dx\) we obtain
+								\[
+									\frac{d^2y_p}{dx^2}=
+									\frac{du_1}{dx} + e^x \frac{du_2}{dx} + u_2 e^x 
+								\]
+								And now we substitute \(y_p,\) \(dy_p/dx,\) and \(d^2y_p/dx^2\) into <a href="#x1-24r16">(5.7.16)</a>
+							</div>
+							<div>
+								\begin{array}{rrrrrrrr}
+									x \displaystyle\frac{d^2y_p}{dx^2} &=& x \displaystyle\frac{du_1}{dx} &+& x e^x \displaystyle\frac{du_2}{dx} & & & & & & &+& u_2 x e^x \\
+									-1 \displaystyle\frac{d^2y_p}{dx^2} &=& - \displaystyle\frac{du_1}{dx} &-&  e^x \displaystyle\frac{du_2}{dx} & & & & &-& u_2 e^x \\
+									-x \displaystyle\frac{dy_p}{dx} &=& && && &-& u_1 x & & &-& u_2 x e^x \\
+									+\quad\quad\quad y_p &=& && && &+& u_1 x &+& u_2 e^x \\
+									\hline
+									\underbrace{{\small (x-1) \displaystyle\frac{d^2y_p}{dx^2} -x \displaystyle\frac{dy_p}{dx} +y_p }} &=& {\small (x-1)} \displaystyle\frac{du_1}{dx} &+& {\small (x-1) e^x } \displaystyle\frac{du_2}{dx} & & &+& 0\,u_1x &+& 0\,u_2 e^x &+& 0 \, u_2 x e^x \\
+									(x-1)^2 \quad\quad &=& {\small (x-1)} \displaystyle\frac{du_1}{dx} &+& {\small (x-1) e^x } \displaystyle\frac{du_2}{dx} & & & & & & \\
+								\end{array}
+							</div>	 
+							<div class="reading-exercise">
+								Divide \( (x-1)^2 = (x-1) \displaystyle\frac{du_1}{dx} + (x-1) e^x \displaystyle\frac{du_2}{dx} \) by \((x-1)\) 
+							</div>
+							<div>
+								Dividing by \((x-1)\) to simplify we obtain the second equation in our system of equations:
+								\[
+									\frac{du_1}{dx} + e^x \frac{du_2}{dx} = x-1
+								\]
+							</div>	
+
+						</li>	
+						<!--Part 4-->
+						<li>
+							<div>
+								Write the system of equations as a system and solve using substitution and elimination
+								\begin{align*}
+									\left\{
+										\begin{array}{rrr}
+											x \displaystyle\frac{du_1}{dx} &+& e^x \displaystyle\frac{du_2}{dx} &=& 0 \quad\quad\quad\quad (1) \\
+											\displaystyle\frac{du_1}{dx} &+& e^x \displaystyle\frac{du_2}{dx} &=& x-1 \quad\quad\quad\quad (2) \\
+										\end{array}
+									\right.	
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Solve the system for \(\displaystyle\frac{du_1}{dx}\) and \(\displaystyle\frac{du_2}{dx}\)
+							</div>
+							<div>
+								Subtracting the first equation (1) from the second (2) 
+								\begin{array}{rrrrl}
+									\displaystyle\frac{du_1}{dx} &+& e^x \displaystyle\frac{du_2}{dx} &=& x-1  \\
+								- \quad\quad \Big(	\quad\quad\quad x \displaystyle\frac{du_1}{dx} &+& e^x \displaystyle\frac{du_2}{dx} &=& 0 \quad\quad\quad \Big)  \\
+								\hline
+								(1-x)\displaystyle\frac{du_1}{dx} & & &=& x-1  \\
+								\end{array}
+							</div>	
+							<div class="reading-exercise">
+								Solve \((1-x)\displaystyle\frac{du_1}{dx} = x-1 \) for \( \displaystyle\frac{du_1}{dx} \)
+							</div>
+							<div>
+								Dividing by \((1-x)\) and simplifying we obtain
+								\[
+									\frac{du_1}{dx} = -1
+								\]
+							</div>
+							<div>
+								Substituting that back in to the first equation (1)
+								\begin{align*}
+									x \underbrace{\frac{du_1}{dx}} + e^x \frac{du_2}{dx} = & 0 \\
+									x \cdot -1 + e^x \frac{du_2}{dx} = & 0 \\
+									-x + e^x \frac{du_2}{dx} = & 0
+									\Longrightarrow
+									\frac{du_2}{dx} = xe^{-x} \\
+								\end{align*}
+
+							</div>
+							<div>
+								So we have found \(du_1/dx\) and \(du_2/dx\)
+								\[
+								\frac{du_1}{dx} = -1 \quad \quad \frac{du_2}{dx} = xe^{-x}
+								\]
+							</div>	
+						</li>
+						<!--Part 5-->
+						<li>
+							<div>
+								Having found \(du_1/dx\) and \(du_2/dx\) we now simplfy antidifferentiate to find \(u_1\) and \(u_2\)
+							</div>		
+							<div class="reading-exercise">
+								Antidifferentiate \(-1 \)
+							</div>
+							<div class="reading-exercise">
+								Antidifferentiate \( xe^{-x} \) using IBP (Example <a href="sec2.4.book.html#x1-41" target=_blank>2.4.1</a>)
+							</div>
+							<div>
+								Finding the antiderivatives and taking the constants of integration to be zero we obtain \(u_1\) and \(u_2\)
+								\begin{array}{rccrcl}
+									\displaystyle\frac{du_1}{dx} &=& -1	&\quad&  \displaystyle\frac{du_2}{dx} &=& xe^{-x} \\
+									\int \displaystyle\frac{du_1}{dx} dx &=& -\int dx	&\quad&  \int \displaystyle\frac{du_2}{dx} dx &=& \int xe^{-x} dx \\
+									u_1 &=& -x	&\quad&  u_2 &=& -(x+1) e^{-x} \\
+								\end{array}
+							</div>	
+						</li>	
+						<!--Part 5-->
+						<li>
+							<div> 
+								Substituting back \(y_p = u_1 x + u_2 e^x \) we obtain the particular solution:
+								\begin{align*}
+									y_p = & -x \cdot x -(x+1) e^{-x} \cdot e^x \\
+									= & -x^2 - (x+1) \\
+									= & -x^2 - x - 1\\
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Verify \(y_p=-x^2 - x - 1\) is a solution of <a href="#x1-24r16">(5.7.16)</a>
+							</div>
+							<div>
+								And we have the general solution \(y = y_p + c_1 y_1 + c_2 y_2 \)
+								\[
+									y = -x^2 - x - 1 + c_1 x + c_2 x^2
+								\]
+							</div>	
+							<div class="reading-exercise">
+								Verify \(y= -x^2 - x - 1 + c_1 x + c_2 x^2\) is a solution of <a href="#x1-24r16">(5.7.16)</a>
+							</div>
+							<div>
+								Although this does express the general solution, it is not simplified. Notice there are two \(x\) terms, so we simplify them:
+
+								\begin{align}
+									y = & -x^2 - x - 1 + c_1 x + c_2 x^2 \nonumber \\
+									y = & -x^2 - 1 + \underset{c_1}{\underbrace{(c_1 -1 )}}x + c_2 x^2 \nonumber \\
+									y = & -x^2 - 1 + c_1x + c_2 x^2 							
+								\end{align}
+
+								So we have our simplified general solution!
+
+							</div>	
+							<div class="reading-exercise">
+								Verify \(y=  -x^2 - 1 + c_1x + c_2 x^2 \) is a solution of <a href="#x1-24r16">(5.7.16)</a>
+							</div>
+							<div>
+								The reason it was unsimplified to begin with was that our particular solution contained terms that were linearly depdendent with the solutions to the complementary equation:
+
+								\begin{align*}
+									y_p = & -x^2 - \underbrace{x} - 1\\
+									y_p = & -x^2 - y_1 - 1\\
+								\end{align*}
+
+								So to simplify our particular solution we will also exclude any terms that are linearly depdendent with the solutions to the complementary equation. Thus our simplified particular solution is
+
+								\begin{align}
+									y_p = & -x^2 - 1\\
+								\end{align}
+
+							</div>
+							<div class="reading-exercise">
+								Verify \(y=  -x^2 - 1 \) is a solution of <a href="#x1-24r16">(5.7.16)</a>
+							</div>
+						</li>
+					</ol>	
+			</div>	
+
+			</details>
 
 		</details>
 
@@ -336,108 +808,268 @@
 			<!--Example 3-->
 			<div class="example" id="x1-273" style="--ex-number: 3">
 				
-				<div> Find a particular solution of 
-				\begin {equation} \label {eq:5.7.19} \frac{d^2y}{dx^2} +3 \frac{dy}{dx} +2y={1\over 1+e^x} 
-				\end {equation} <a id="x1-28r19"></a> Then find the general solution. 
-			</div>
+				<div> 
+					Consider the differential equation
 
-				<details class="solution">
-					<summary>Solution</summary>
-					<div>
-						The characteristic polynomial of the complementary equation 
-						\begin {equation} \label {eq:5.7.20} \frac{d^2y}{dx^2} +3 \frac{dy}{dx} +2y=0 
-						\end {equation} <a id="x1-29r20"></a> is \(p(r)=r^2+3r+2=(r+1)(r+2)\), so \(y_1=e^{-x}\) and \(y_2=e^{-2x}\) form a fundamental set of solutions of <a href="#x1-29r20">(5.7.20)</a>. We look for a particular solution of <a href="#x1-28r19">(5.7.19)</a> in the form \[ y_p=u_1e^{-x}+u_2e^{-2x}\] where 
-					</div>
-					<div class="eqnarray" id="647bc9ca-27b5-45a5-b281-56b40acf20b9">
-						
-						\begin {eqnarray*} \phantom {-} \frac{du_1}{dx} e^{-x}+\phantom {2} \frac{du_2}{dx} e^{-2x}&amp;=&amp;0\\ - \frac{du_1}{dx} e^{-x}-2 \frac{du_2}{dx} e^{-2x}&amp;=&amp;{1\over 1+e^x} 
-						\end {eqnarray*} 
-					</div>
-					<div>
-						Adding these two equations yields \[ - \frac{du_2}{dx} e^{-2x}={1\over 1+e^x},\quad \mbox{ so } \quad \frac{du_2}{dx} =-{e^{2x}\over 1+e^x}\] From the first equation, \[ \frac{du_1}{dx} =- \frac{du_2}{dx} e^{-x}={e^x\over 1+e^x}\] Integrating by means of the substitution \(v=e^x\) and taking the constants of integration to be zero yields \[ u_1=\int {e^x\over 1+e^x}\,dx=\int {dv\over 1+v} =\ln (1+v)=\ln (1+e^x) \] and 
-					</div>
-					<div class="eqnarray" id="4c865880-f79c-4bf3-aeed-a6817c1f6321">
-						
-						\begin {eqnarray*} u_2&amp;=&amp;-\int {e^{2x}\over 1+e^x}\,dx=-\int {v\over 1+v}\,dv =\int \left [{1\over 1+v}-1\right ]\,dv \\ &amp;=&amp;\ln (1+v)-v=\ln (1+e^x)-e^x 
-						\end {eqnarray*} 
-					</div>
-					<div>
-						Therefore 
-					</div>
-					<div class="eqnarray" id="f19dcbee-91ca-4030-afc7-fe35fe08026a">
-						
-						\begin {eqnarray*} y_p&amp;=&amp;u_1e^{-x}+u_2e^{-2x}\\ &amp;=&amp;[\ln (1+e^x)]e^{-x}+\left [\ln (1+e^x)-e^x\right ]e^{-2x} 
-						\end {eqnarray*} 
-					</div>
-					<div>
-						so \[ y_p=\left (e^{-x}+e^{-2x}\right )\ln (1+e^x)-e^{-x}\] Since the last term on the right satisfies the complementary equation, we drop it and redefine \[ y_p=\left (e^{-x}+e^{-2x}\right )\ln (1+e^x)\] The general solution of <a href="#x1-28r19">(5.7.19)</a> is \[ y=y_p+c_1e^{-x}+c_2e^{-2x}=\left (e^{-x}+e^{-2x}\right )\ln (1+e^x) +c_1e^{-x}+c_2e^{-2x}\] 
-					</div>
-				</details>
-			</div>
-
-			<!--Example 4-->
-			<div class="example" id="x1-304" style="--ex-number: 4">
-				
-				<div> Solve the initial value problem 
-				\begin {equation} \label {eq:5.7.21} (x^2-1) \frac{d^2y}{dx^2} +4x \frac{dy}{dx} +2y={2\over x+1}, \quad y(0)=-1,\quad \left. \frac{dy}{dx} \right| _{0}=-5 
-				\end {equation} <a id="x1-31r21"></a> given that \[ y_1={1\over x-1}\quad \mbox { and }\quad y_2={1\over x+1} \] are solutions of the complementary equation \[ (x^2-1) \frac{d^2y}{dx^2} +4x \frac{dy}{dx} +2y=0\] 
-			</div>
-
-				<details class="solution">
-					<summary>Solution</summary>
-					We first use variation of parameters to find a particular solution of \[ (x^2-1) \frac{d^2y}{dx^2} +4x \frac{dy}{dx} +2y={2\over x+1} \] on \((-1,1)\) in the form \[ y_p={u_1\over x-1}+{u_2\over x+1}\] where
-
-					<div class="eqnarray" id="75d53d73-f4d0-4ae8-8445-e93697f7092c">
-						
-						\begin {eqnarray} \phantom {-}{ \frac{du_1}{dx} \over \phantom {(}x-1\phantom {)^2}}+{ \frac{du_2}{dx} \over \phantom {(}x+1\phantom {)^2}}&amp;=&amp;0\label {eq:5.7.22}\\ -{ \frac{du_1}{dx} \over (x-1)^2}-{ \frac{du_2}{dx} \over (x+1)^2}&amp;=&amp;{2\over (x+1)(x^2-1)}.\nonumber 
-						\end {eqnarray} 
-					</div>
-					Multiplying the first equation by \(1/(x-1)\) and adding the result to the second equation yields 
-					\begin {equation} \label {eq:5.7.23} \left [{1\over x^2-1}-{1\over (x+1)^2}\right ] \frac{du_2}{dx} ={2\over (x+1)(x^2-1)} 
-					\end {equation}
-					<a id="x1-32r22"></a>
-					Since \[ \left [{1\over x^2-1}-{1\over (x+1)^2}\right ]={(x+1)-(x-1)\over (x+1)(x^2-1)} ={2\over (x+1)(x^2-1)}\] <a href="#x1-32r22">(5.7.23)</a> implies that \( \frac{du_2}{dx} =1\). From (<span class="ptmb8t-">5.7.22</span>), \[ \frac{du_1}{dx} =-{x-1\over x+1} \frac{du_2}{dx} =-{x-1\over x+1}\] Integrating and taking the constants of integration to be zero yields
-					<div class="eqnarray" id="73db0576-133b-457a-9297-2b3c6bf54be2">
-						
-						\begin {eqnarray*} u_1&amp;=&amp;-\int {x-1\over x+1}\,dx=-\int {x+1-2\over x+1}\,dx \\ &amp;=&amp;\int \left [{2\over x+1}-1\right ]\,dx=2\ln (x+1)-x 
-						\end {eqnarray*} 
-					</div>
-					and \[ u_2=\int \,dx=x\] Therefore
-					<div class="eqnarray" id="98b4f98d-4216-436c-ad04-614d430ded87">
-						
-						\begin {eqnarray*} y_p&amp;=&amp;{u_1\over x-1}+{u_2\over x+1}=\left [2\ln (x+1)-x\right ]{1\over x-1} +x{1\over x+1} \\ &amp;=&amp;{2\ln (x+1)\over x-1}+x\left [{1\over x+1}-{1\over x-1}\right ] ={2\ln (x+1)\over x-1}-{2x\over (x+1)(x-1)} 
-						\end {eqnarray*} 
-					</div>
-
-					However, since \[ {2x\over (x+1)(x-1)}=\left [{1\over x+1}+{1\over x-1}\right ] \] is a solution of the complementary equation, we redefine \[ y_p={2\ln (x+1)\over x-1}\] Therefore the general solution of <a href="#x1-33r23">(5.7.24)</a> is 
-					\begin {equation} \label {eq:5.7.24} y={2\ln (x+1)\over x-1}+{c_1\over x-1}+{c_2\over x+1} 
-					\end {equation}
-					<a id="x1-33r23"></a>
-					Differentiating this yields \[ \frac{dy}{dx} ={2\over x^2-1}-{2\ln (x+1)\over (x-1)^2}-{c_1\over (x-1)^2}-{c_2\over (x+1)^2}\] Setting \(x=0\) in the last two equations and imposing the initial conditions \(y(0)=-1\) and \(\left. \frac{dy}{dx} \right| _{0}=-5\) yields the system
-					<div class="eqnarray" id="4d446693-8c12-4a96-be3a-a36e4e80b1c9">
-						
-						\begin {eqnarray*} -c_1+c_2&amp;=&amp;-1\phantom {.}\\ -2-c_1-c_2&amp;=&amp;-5 
-						\end {eqnarray*} 
-					</div>
-					The solution of this system is \(c_1=2,\,c_2=1\). Substituting these into
-					<a href="#x1-33r23">(5.7.24)</a> yields
-					<div class="eqnarray" id="88ddd0ad-310e-47d9-ba5f-27b1674004cc">
-						
-						\begin {eqnarray*} y&amp;=&amp;{2\ln (x+1)\over x-1}+{2\over x-1}+{1\over x+1}\\ &amp;=&amp;{2\ln (x+1)\over x-1}+{3x+1\over x^2-1} 
-						\end {eqnarray*} 
-					</div>
-					as the solution of <a href="#x1-31r21">(5.7.21)</a>. Figure&nbsp;<a href="#-y-x-overxx-overx-">5.7.1</a> is a graph of the solution.
-				</details>
-			</div>
-
-			<!--Figure-->
-			<figure class="figure" id="3100d55e-a931-4ea6-8e12-37b93fe17f9d">
-				<div id="-y-x-overxx-overx-">
-					<img height="264" src="EPS/fig050701.png" width="409" /> <a id="x1-34r1"></a> 
+					<a id="x1-28r19"></a>
+					\begin {equation} \label {eq:5.7.19} 
+						\frac{d^2y}{dx^2} +3 \frac{dy}{dx} +2y={1\over 1+e^x} 
+					\end {equation}   
 				</div>
-				<figcaption class="caption"><span class="id">Figure&nbsp;5.7.1</span><span class="content"> \(y=\displaystyle {2\ln (x+1)\over x-1}+{3x+1\over x^2-1}\) </span></figcaption>
-				<!-- tex4ht:label?: x1-34r1  -->
-			</figure>
+				<ol>
+					<li>
+						Solve the complementary equation
+					</li>	
+					<li>
+						Find the first equation in the system by differentiating \(y_p\) and setting the \(u\) derivative terms to zero
+					</li>
+					<li>
+						Find the second equation in the system by substituting \(y_p,\) \(dy_p/dx,\) and \(d^2y_p/dx^2\) into 
+						<a href="#x1-28r19">(5.7.19)</a>
+					</li>
+					<li>
+						Write the system of equations as a system for \(du_1/dx\) and \(du_2/dx\)
+					</li>
+					<li>
+						Find the antiderivatives to find \(u_1\) and \(u_2\) 
+					</li>
+					<li>
+						Find the particular solution \(y_p\) and the general solution
+					</li>
+				</ol>					
+
+				<details class="solution">
+
+					<summary>Solution</summary>
+
+					<ol>
+						<!--Part 1-->
+						<li>
+							<div>	
+								We wish to solve the complementary equation:
+
+								\begin {equation}
+									\frac{d^2y}{dx^2} +3 \frac{dy}{dx} +2y = 0
+								\end {equation} 
+							</div>
+							<div class="reading-exercise">
+								Find the characteristic equation (Section <a href="sec5.2.book.html" target=_blank >5.2</a>)
+							</div> 
+							<div class="reading-exercise">
+								Solve the complementary equation (Section <a href="sec5.2.book.html" target=_blank >5.2</a>)
+							</div> 					
+							<div>	
+								Solving the characteristic equation we find a fundamental set of solutions to the complementary equation:
+								\[
+									y_1 = e^{-x} \quad \quad y_2 = e^{-2x}
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \(y_1 = e^{-x}\) is a solution to the complementary equation
+							</div> 	
+							<div class="reading-exercise">
+								Verify \(y_2 = e^{-2x}\) is a solution to the complementary equation
+							</div> 	
+						</li>	
+						<!--Part 2-->
+						<li>
+							<div>
+								We will
+								find the first equation in the system using <span class="vocab">variation of parameters</span> by differentiating \(y_p=u_1y_1 + u_2y_2\) and setting the \(u\) derivative terms to zero. We start with the particular solution 
+								\[
+									y_p=u_1 e^{-x} + u_2 e^{-2x}
+								\]
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y_p=u_1 e^{-x} + u_2 e^{-2x}\) and set the \(u\) derivatives equal to zero
+							</div> 
+							<div>
+								Differentiating \(y_p\) we obtain
+								\[
+									\frac{dy_p}{dx}= -u_1 e^{-x} -2 u_2 e^{-2x} + 
+									\underset{0}{\underbrace{e^{-x} \frac{du_1}{dx} + e^{-2x} \frac{du_2}{dx} }}
+								\]
+								And setting the \(u\) derivatives equal to zero we obtain the first equation in the system of equations
+								\[
+									e^{-x} \frac{du_1}{dx} + e^{-2x} \frac{du_2}{dx} = 0
+								\]
+							</div>	
+						</li>
+						<!--Part 3-->
+						<li>
+							<div>
+								Now we will find the second equation in the system by substituting \(y_p,\) \(dy_p/dx,\) and \(d^2y_p/dx^2\) into <a href="#x1-24r16">(5.7.16)</a>
+							</div>		
+							<div>
+								We have \(y_p\) and \(dy_p/dx\)
+								\begin{align*}
+									y_p = & u_1 e^{-x} + u_2 e^{-2x} \\
+									\frac{dy_p}{dx} = & -u_1 e^{-x} -2 u_2 e^{-2x} \\
+								\end{align*}
+							</div>	
+
+							<div class="reading-exercise">
+								Differentiate \(\displaystyle\frac{dy_p}{dx}=-u_1 e^{-x} -2 u_2 e^{-2x}\) 
+							</div>
+							<div>
+								Differentiating \(dy_p/dx\) we obtain
+								\[
+									\frac{d^2y_p}{dx^2}=
+									- e^{-x} \frac{du_1}{dx} -2  e^{-2x} \frac{du_2}{dx}
+									+u_1 e^{-x} +4 u_2 e^{-2x}
+								\]
+								And now we substitute \(y_p,\) \(dy_p/dx,\) and \(d^2y_p/dx^2\) into <a href="#x1-28r19">(5.7.19)</a>
+							</div>
+							<div>
+								\begin{array}{rrrrrrrr}
+									\displaystyle\frac{d^2y_p}{dx^2} &=& -e^{-x} \displaystyle\frac{du_1}{dx} &-& 2e^{-2x}
+										\displaystyle\frac{du_2}{dx} &+& u_1 e^{-x} &+& 4u_2 e^{-2x} \\
+									3\displaystyle\frac{dy_p}{dx} &=& & & &-& 3 \, u_1 e^{-x} &-& 6 \, u_2 e^{-2x} \\
+									+\quad\quad2y_p &=& & & &+& 2 \, u_1 e^{-x} &+& 2 \, u_2 e^{-2x} \\
+									\hline
+									\underbrace{{\small \displaystyle\frac{d^2y_p}{dx^2} +3 \displaystyle\frac{dy_p}{dx} +2y_p }} &=& {\small -e^{-x}} \displaystyle\frac{du_1}{dx} &+& {\small -2e^{-2x} } \displaystyle\frac{du_2}{dx} &+& 0\,u_1 e^{-x} &+& 0\,u_2 e^{-2x} \\
+									\displaystyle\frac{1}{1+e^x} \quad\quad &=& {\small -e^{-x}} \displaystyle\frac{du_1}{dx} &+& {\small -2e^{-2x} } \displaystyle\frac{du_2}{dx} & & & & & & \\
+								\end{array}
+							</div>	 
+							<div>
+								Thus we obtain the second equation in our system of equations:
+								\[
+								-e^{-x} \frac{du_1}{dx}-2e^{-2x} \frac{du_2}{dx}  = \frac{1}{1+e^x}
+								\]
+							</div>	
+
+						</li>	
+						<!--Part 4-->
+						<li>
+							<div>
+								Write the system of equations as a system and solve using substitution and elimination
+								\begin{align*}
+									\left\{
+										\begin{array}{rrrcc}
+											e^{-x} \displaystyle\frac{du_1}{dx} &+& e^{-2x} \displaystyle\frac{du_2}{dx} &=& 0 \quad\quad\quad\quad &(1) \\
+											-e^{-x} \displaystyle\frac{du_1}{dx} &-& 2e^{-2x} \displaystyle\frac{du_2}{dx} &=& \displaystyle\frac{1}{1+e^x} \quad\quad\quad\quad &(2) \\
+										\end{array}
+									\right.	
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Solve the system for \(\displaystyle\frac{du_1}{dx}\) and \(\displaystyle\frac{du_2}{dx}\)
+							</div>
+							<div>
+								Adding the equations together we can solve for \(\displaystyle\frac{du_2}{dx}\)
+								
+								\begin{array}{rrrc}
+									e^{-x} \displaystyle\frac{du_1}{dx} &+& e^{-2x} \displaystyle\frac{du_2}{dx} &=& 0 \\
+									+ \quad\quad\quad\quad -e^{-x} \displaystyle\frac{du_1}{dx} &-& 2e^{-2x} \displaystyle\frac{du_2}{dx} &=& \displaystyle\frac{1}{1+e^x} \\
+									\hline
+									&& -e^{-2x} \displaystyle\frac{du_2}{dx} &=& \displaystyle\frac{1}{1+e^x} \\
+								\end{array}
+							</div>	
+					
+							<div>
+								Multiplying by \(-e^{2x}\) we obtain
+								\[
+								\frac{du_2}{dx} = -\frac{e^{2x}}{1+e^x}
+								\]
+							</div>
+							<div>
+								Substituting that back in to the first equation (1)
+								\begin{align*}
+									e^{-x} \frac{du_1}{dx} + e^{-2x} \underbrace{\frac{du_2}{dx}} =& 0 \\
+									e^{-x} \frac{du_1}{dx} + e^{-2x} \cdot \frac{-e^{2x}}{1+e^x} =& 0 \\
+									e^{-x} \frac{du_1}{dx} - \frac{1}{1+e^x} =& 0 \\
+									\Longrightarrow
+									\frac{du_1}{dx} = \frac{e^{x}}{1+e^x}  \\
+								\end{align*}
+
+							</div>
+							<div>
+								So we have found \(du_1/dx\) and \(du_2/dx\)
+								\[
+								\frac{du_1}{dx} = \frac{e^{x}}{1+e^x} \quad \quad \frac{du_2}{dx} = -\frac{e^{2x}}{1+e^x}
+								\]
+							</div>	
+						</li>
+						<!--Part 5-->
+						<li>
+							<div>
+								Having found \(du_1/dx\) and \(du_2/dx\) we now simplfy antidifferentiate to find \(u_1\) and \(u_2\)
+							</div>		
+							<div class="reading-exercise">
+								Antidifferentiate \(\displaystyle\frac{e^{x}}{1+e^x} \) using substitution
+							</div>
+							<div class="reading-exercise">
+								Antidifferentiate \(  -\displaystyle\frac{e^{2x}}{1+e^x} \) using substitution
+							</div>
+							<div>
+								Finding the antiderivatives and taking the constants of integration to be zero we obtain \(u_1\) and \(u_2\)
+								\begin{array}{rccrcl}
+									\displaystyle\frac{du_1}{dx} &=&  \displaystyle\frac{e^{x}}{1+e^x}	&\quad&  \displaystyle\frac{du_2}{dx} &=& -\displaystyle\frac{e^{2x}}{1+e^x} \\
+									\displaystyle \int \frac{du_1}{dx} dx &=&  \displaystyle\int \frac{e^{x}}{1+e^x} dx	&\quad&  \displaystyle \int \frac{du_2}{dx} dx &=& -\displaystyle \int \frac{e^{2x}}{1+e^x} dx \\
+									u_1 &=& \ln(1+e^x)	&\quad&  u_2 &=& -e^x+\ln(1+e^x) \\
+								\end{array}
+							</div>	
+						</li>	
+						<!--Part 5-->
+						<li>
+							<div> 
+								Substituting back \(y_p = u_1 x + u_2 e^x \) we obtain the particular solution:
+								\begin{align*}
+									y_p = & e^{-x}\ln(1+e^x) + e^{-2x} \cdot \Big( -e^x + \ln (1+e^x) \Big) \\
+									= & e^{-x}\ln(1+e^x)   + e^{-2x}\ln (1+e^x) -e^{-x} \\
+									= & \big( e^{-x} + e^{-2x} \big) \ln (1+e^x) -e^{-x}
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Verify \(y_p=\big( e^{-x} + e^{-2x} \big) \ln (1+e^x) -e^{-x}\) is a solution of <a href="#x1-28r19">(5.7.19)</a>
+							</div>
+							<div>
+								And we have the general solution \(y = y_p + c_1 y_1 + c_2 y_2 \)
+								\[
+									y = \big( e^{-x} + e^{-2x} \big) \ln (1+e^x) -e^{-x} + c_1 e^{-x} + c_2 e^{-2x}
+								\]
+							</div>	
+							<div class="reading-exercise">
+								Verify \(y = \big( e^{-x} + e^{-2x} \big) \ln (1+e^x) -e^{-x} + c_1 e^{-x} + c_2 e^{-2x}\) is a solution of <a href="#x1-28r19">(5.7.19)</a>
+							</div>
+							<div>
+								Again, this does express the general solution, it is not simplified. Notice there are two \(x\) terms, so we simplify them:
+
+								\begin{align*}
+									y = & \big( e^{-x} + e^{-2x} \big) \ln (1+e^x) -e^{-x} + c_1 e^{-x} + c_2 e^{-2x} \\
+									y = & \big( e^{-x} + e^{-2x} \big) \ln (1+e^x) + \underset{c_1}{\underbrace{(c_1-1 )}} e^{-x} + c_2 e^{-2x} \\
+									y = & \big( e^{-x} + e^{-2x} \big) \ln (1+e^x) + c_1 e^{-x} + c_2 e^{-2x} \\							
+								\end{align*}
+
+								So we have our simplified general solution!
+
+							</div>	
+							<div class="reading-exercise">
+								Verify \(y=  \big( e^{-x} + e^{-2x} \big) \ln (1+e^x) + c_1 e^{-x} + c_2 e^{-2x} \) is a solution of  <a href="#x1-28r19">(5.7.19)</a>
+							</div>
+							<div>
+								Again it was unsimplified to begin with was that our particular solution contained terms that were linearly depdendent with the solutions to the complementary equation:
+
+								\begin{align*}
+									y_p=&\big( e^{-x} + e^{-2x} \big) \ln (1+e^x) -\underbrace{e^{-x}} \\
+									y_p=&\big( e^{-x} + e^{-2x} \big) \ln (1+e^x) -y_1 \\
+								\end{align*}
+
+								So to simplify our particular solution we will also exclude any terms that are linearly depdendent with the solutions to the complementary equation. Thus our simplified particular solution is
+
+								\begin{align*}
+									y_p=&\big( e^{-x} + e^{-2x} \big) \ln (1+e^x) \\
+								\end{align*}
+
+							</div>
+							<div class="reading-exercise">
+								Verify \(\big( e^{-x} + e^{-2x} \big) \ln (1+e^x)\) is a solution of <a href="#x1-28r19">(5.7.19)</a>
+							</div>
+						</li>
+					</ol>	
+				</detail>
+			</div>		
+
 		</details>	
 		
 
@@ -447,57 +1079,379 @@
 
 			<!--Example 4-->
 			<div class="example" id="x1-304" style="--ex-number: 4">
-				
-				<div> Solve the initial value problem 
-				\begin {equation} \label {eq:5.7.21} (x^2-1) \frac{d^2y}{dx^2} +4x \frac{dy}{dx} +2y={2\over x+1}, \quad y(0)=-1,\quad \left. \frac{dy}{dx} \right| _{0}=-5 
-				\end {equation} <a id="x1-31r21"></a> given that \[ y_1={1\over x-1}\quad \mbox { and }\quad y_2={1\over x+1} \] are solutions of the complementary equation \[ (x^2-1) \frac{d^2y}{dx^2} +4x \frac{dy}{dx} +2y=0\] 
-			</div>
+				<div> 
+					Consider the IVP
+					<a id="x1-31r21"></a>
+					\begin {equation} \label {eq:5.7.21} 
+						(x^2-1) \frac{d^2y}{dx^2} +4x \frac{dy}{dx} +2y={2\over x+1}
+						\quad y(0)=-1
+						\quad \left. \frac{dy}{dx} \right|_{0}=-5 
+					\end {equation}  
+				</div>
+				<ol>
+					<li>
+						Verify that \(y_1=1/(x-1)\) and \(y_2=1/(x+1)\) are solutions of the complementary equation
+					</li>	
+					<li>
+						Find the first equation in the system by differentiating \(y_p\) and setting the \(u\) derivative terms to zero
+					</li>
+					<li>
+						Find the second equation in the system by substituting \(y_p,\) \(dy_p/dx,\) and \(d^2y_p/dx^2\) into 
+						<a href="#x1-31r21">(5.7.21)</a>
+					</li>
+					<li>
+						Write the system of equations as a system for \(du_1/dx\) and \(du_2/dx\)
+					</li>
+					<li>
+						Find the antiderivatives to find \(u_1\) and \(u_2\) 
+					</li>
+					<li>
+						Find the particular solution \(y_p\) and the general solution
+					</li>
+				</ol>					
 
 				<details class="solution">
 					<summary>Solution</summary>
-					We first use variation of parameters to find a particular solution of \[ (x^2-1) \frac{d^2y}{dx^2} +4x \frac{dy}{dx} +2y={2\over x+1} \] on \((-1,1)\) in the form \[ y_p={u_1\over x-1}+{u_2\over x+1}\] where
 
-					<div class="eqnarray" id="75d53d73-f4d0-4ae8-8445-e93697f7092c">
-						
-						\begin {eqnarray} \phantom {-}{ \frac{du_1}{dx} \over \phantom {(}x-1\phantom {)^2}}+{ \frac{du_2}{dx} \over \phantom {(}x+1\phantom {)^2}}&amp;=&amp;0\label {eq:5.7.22}\\ -{ \frac{du_1}{dx} \over (x-1)^2}-{ \frac{du_2}{dx} \over (x+1)^2}&amp;=&amp;{2\over (x+1)(x^2-1)}.\nonumber 
-						\end {eqnarray} 
-					</div>
-					Multiplying the first equation by \(1/(x-1)\) and adding the result to the second equation yields 
-					\begin {equation} \label {eq:5.7.23} \left [{1\over x^2-1}-{1\over (x+1)^2}\right ] \frac{du_2}{dx} ={2\over (x+1)(x^2-1)} 
-					\end {equation}
-					<a id="x1-32r22"></a>
-					Since \[ \left [{1\over x^2-1}-{1\over (x+1)^2}\right ]={(x+1)-(x-1)\over (x+1)(x^2-1)} ={2\over (x+1)(x^2-1)}\] <a href="#x1-32r22">(5.7.23)</a> implies that \( \frac{du_2}{dx} =1\). From (<span class="ptmb8t-">5.7.22</span>), \[ \frac{du_1}{dx} =-{x-1\over x+1} \frac{du_2}{dx} =-{x-1\over x+1}\] Integrating and taking the constants of integration to be zero yields
-					<div class="eqnarray" id="73db0576-133b-457a-9297-2b3c6bf54be2">
-						
-						\begin {eqnarray*} u_1&amp;=&amp;-\int {x-1\over x+1}\,dx=-\int {x+1-2\over x+1}\,dx \\ &amp;=&amp;\int \left [{2\over x+1}-1\right ]\,dx=2\ln (x+1)-x 
-						\end {eqnarray*} 
-					</div>
-					and \[ u_2=\int \,dx=x\] Therefore
-					<div class="eqnarray" id="98b4f98d-4216-436c-ad04-614d430ded87">
-						
-						\begin {eqnarray*} y_p&amp;=&amp;{u_1\over x-1}+{u_2\over x+1}=\left [2\ln (x+1)-x\right ]{1\over x-1} +x{1\over x+1} \\ &amp;=&amp;{2\ln (x+1)\over x-1}+x\left [{1\over x+1}-{1\over x-1}\right ] ={2\ln (x+1)\over x-1}-{2x\over (x+1)(x-1)} 
-						\end {eqnarray*} 
-					</div>
+					<ol>
+						<!--Part 1-->
+						<li>
+							<div>	
+								We wish to verify that \(y_1=\displaystyle\frac{1}{x-1}\) and \(y_2=\displaystyle\frac{1}{x+1}\) are solutions of the complementary equation:
 
-					However, since \[ {2x\over (x+1)(x-1)}=\left [{1\over x+1}+{1\over x-1}\right ] \] is a solution of the complementary equation, we redefine \[ y_p={2\ln (x+1)\over x-1}\] Therefore the general solution of <a href="#x1-33r23">(5.7.24)</a> is 
-					\begin {equation} \label {eq:5.7.24} y={2\ln (x+1)\over x-1}+{c_1\over x-1}+{c_2\over x+1} 
-					\end {equation}
-					<a id="x1-33r23"></a>
-					Differentiating this yields \[ \frac{dy}{dx} ={2\over x^2-1}-{2\ln (x+1)\over (x-1)^2}-{c_1\over (x-1)^2}-{c_2\over (x+1)^2}\] Setting \(x=0\) in the last two equations and imposing the initial conditions \(y(0)=-1\) and \(\left. \frac{dy}{dx} \right| _{0}=-5\) yields the system
-					<div class="eqnarray" id="4d446693-8c12-4a96-be3a-a36e4e80b1c9">
-						
-						\begin {eqnarray*} -c_1+c_2&amp;=&amp;-1\phantom {.}\\ -2-c_1-c_2&amp;=&amp;-5 
-						\end {eqnarray*} 
-					</div>
-					The solution of this system is \(c_1=2,\,c_2=1\). Substituting these into
-					<a href="#x1-33r23">(5.7.24)</a> yields
-					<div class="eqnarray" id="88ddd0ad-310e-47d9-ba5f-27b1674004cc">
-						
-						\begin {eqnarray*} y&amp;=&amp;{2\ln (x+1)\over x-1}+{2\over x-1}+{1\over x+1}\\ &amp;=&amp;{2\ln (x+1)\over x-1}+{3x+1\over x^2-1} 
-						\end {eqnarray*} 
-					</div>
-					as the solution of <a href="#x1-31r21">(5.7.21)</a>. Figure&nbsp;<a href="#-y-x-overxx-overx-">5.7.1</a> is a graph of the solution.
-				</details>
+								\begin {equation*}
+									(x^2-1) \frac{d^2y}{dx^2} +4x \frac{dy}{dx} +2y= 0
+								\end {equation*} 
+							</div>
+							<div class="reading-exercise">
+								Verify \(y_1=\displaystyle\frac{1}{x-1}\) is a solution to the complementary equation
+							</div> 
+							<div class="reading-exercise">
+								Verify \(y_2=\displaystyle\frac{1}{x+1}\) is a solution to the complementary equation
+							</div> 				
+							<div>	
+								Differentiating and substituting \(y_1=1/(x-1)\) and \(y_2=1/(x+1)\) into the complementary equation you can verify that they are solutions
+							</div>
+						</li>	
+						<!--Part 2-->
+						<li>
+							<div>
+								We will
+								find the first equation in the system using <span class="vocab">variation of parameters</span> by differentiating \(y_p=u_1y_1 + u_2y_2\) and setting the \(u\) derivative terms to zero. We start with the particular solution 
+								\[
+									y_p= \frac{u_1}{x-1} + \frac{u_2}{x+1}
+								\]
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(\displaystyle\frac{u_1}{x-1} \) using the quotient rule
+							</div> 
+							<div class="reading-exercise">
+								Differentiate \(\displaystyle\frac{u_2}{x+1} \) using the quotient rule
+							</div> 
+							<div class="reading-exercise">
+								Differentiate \(y_p= \displaystyle \frac{u_1}{x-1} + \frac{u_2}{x+1}\) and set the \(u\) derivatives equal to zero
+							</div> 
+							<div>
+								Differentiating \(y_p\) we obtain
+								\[
+									\frac{dy_p}{dx}= 
+
+									-\frac{u_1}{(x-1)^2} - \frac{u_2}{(x+1)^2}
+									+
+									\underset{0}{\underbrace{\frac{1}{x-1} \frac{du_1}{dx}  + \frac{1}{x+1}\frac{du_2}{dx}}}
+								\]
+								And setting the \(u\) derivatives equal to zero we obtain the first equation in the system of equations
+								\[
+									\frac{1}{x-1} \frac{du_1}{dx}  + \frac{1}{x+1}\frac{du_2}{dx} = 0
+								\]
+							</div>	
+						</li>
+						<!--Part 3-->
+						<li>
+							<div>
+								Now we will find the second equation in the system by substituting \(y_p,\) \(dy_p/dx,\) and \(d^2y_p/dx^2\) into <a href="#x1-31r21">(5.7.21)</a>
+							</div>		
+							<div>
+								We have \(y_p\) and \(dy_p/dx\)
+								\begin{align*}
+									y_p = & \frac{u_1}{x-1} + \frac{u_2}{x+1} \\
+									\frac{dy_p}{dx} = & -\frac{u_1}{(x-1)^2} - \frac{u_2}{(x+1)^2} \\
+								\end{align*}
+							</div>	
+
+							<div class="reading-exercise">
+								Differentiate \(\displaystyle \frac{dy_p}{dx} = -\frac{u_1}{(x-1)^2} - \frac{u_2}{(x+1)^2}\) 
+							</div>
+							<div>
+								Differentiating \(dy_p/dx\) we obtain
+								\[
+									\frac{d^2y_p}{dx^2}=
+									-\frac{1}{(x-1)^2} \frac{du_1}{dx}  
+									- \frac{1}{(x+1)^2} \frac{du_2}{dx}
+									+\frac{2u_1}{(x-1)^3} 
+									+ \frac{2u_2}{(x+1)^3}
+								\]
+								And now we substitute \(y_p,\) \(dy_p/dx,\) and \(d^2y_p/dx^2\) into <a href="#x1-31r21">(5.7.21)</a>
+							</div>
+							<div>
+								\begin{array}{rrrrrrrr}
+									x^2 \displaystyle\frac{d^2y_p}{dx^2} 
+									&=& -\displaystyle\frac{x^2}{(x-1)^2} \frac{du_1}{dx} 
+									&-& \displaystyle\frac{x^2}{(x+1)^2} \frac{du_2}{dx} 
+									&+& \displaystyle\frac{2u_1 x^2}{(x-1)^3}
+									&+& \displaystyle\frac{2u_2 x^2}{(x+1)^3} \\
+
+									-1 \displaystyle\frac{d^2y_p}{dx^2} 
+									&=& \displaystyle\frac{1}{(x-1)^2} \frac{du_1}{dx} 
+									&+& \displaystyle\frac{1}{(x+1)^2} \frac{du_2}{dx} 
+									&-& \displaystyle\frac{2u_1}{(x-1)^3}
+									&-& \displaystyle\frac{2u_2}{(x+1)^3} \\
+
+									+4x \displaystyle\frac{dy_p}{dx} 
+									&=& 
+									& &  
+									&-& \displaystyle\frac{4u_1 x}{(x-1)^2}
+									&-& \displaystyle\frac{4u_2 x}{(x+1)^2} \\
+
+									+ \quad\quad \quad\quad \quad\quad  2 dy_p
+									&=& 
+									& &  
+									&+& \displaystyle\frac{2u_1 }{(x-1)}
+									&+& \displaystyle\frac{2u_2 }{(x+1)} \\
+
+									\hline
+
+									\underset{\frac{2}{x+1}}{\underbrace{{\scriptsize (x^2-1) \displaystyle\frac{d^2y_p}{dx^2} + 4x \displaystyle\frac{dy_p}{dx} + 2y_p}}}
+									&=& {\small \displaystyle\frac{1-x^2}{(x-1)^2} } \frac{du_1}{dx}
+									&+& {\small \displaystyle\frac{1-x^2}{(x+1)^2} } \frac{du_2}{dx} 
+									&+& \Big( \cdots \Big) u_1
+									&+& \Big( \cdots \Big) u_2 \\
+
+								\end{array}
+							</div>	 
+							<div>
+								Adding up all the \(u_1\) terms and \(u_2\) terms will take a bit of effort so we'll do that now. We'll start by writing all 4 of the \(u_1\) terms and getting a common denominator:
+								\begin{align*}
+									& 
+									\underbrace{\frac{2u_1 x^2}{(x-1)^3} 
+									- \frac{2u_1}{(x-1)^3}} 
+									- \frac{4u_1 x}{(x-1)^2} 
+									+ \frac{2u_1 }{(x-1)} \\ \\
+									= &
+									\quad
+									\frac{2u_1 x^2 - 2u_1}{(x-1)^3}  
+									- \frac{4u_1 x (x-1)}{(x-1)^2(x-1)} 
+									+ \frac{2u_1 (x-1)^2}{(x-1)(x-1)^2} \\ \\
+									= &
+									\quad
+									\frac{2u_1 x^2 - 2u_1}{(x-1)^3}  
+									- \frac{4u_1 x (x-1)}{(x-1)^3} 
+									+ \frac{2u_1 (x-1)^2}{(x-1)^3} \\ \\
+									= &
+									\quad
+									\frac{2u_1 x^2 - 2u_1 - 4u_1 x (x-1) + 2u_1 (x-1)^2}{(x-1)^3} \\
+									= &
+									\quad
+									\frac{2u_1 x^2 - 2u_1 - 4u_1 x^2 + 4u_1x + 2u_1 (x^2 - 2x + 1)}{(x-1)^2} \\
+									= &
+									\quad
+									\frac{-2u_1 x^2 - 2u_1 + \overbrace{4u_1x} + 2u_1 x^2 - \overbrace{4u_1 x} + 2u_1 }{(x-1)^2} \\
+									= &
+									\quad
+									\frac{-\overbrace{2u_1 x^2 + 2u_1 x^2} - \overbrace{2u_1  + 2u_1} }{(x-1)^2} \\
+									= &
+									\quad
+									\frac{ 0 }{(x-1)^2} \\
+								\end{align*}
+
+								So all the \(u_1\) terms add up to zero. Now you will show that all the \(u_2\) terms add up to zero.
+
+							</div>	
+
+							<div class="reading-exercise">
+								Simplify \(
+									\displaystyle\frac{2u_2 x^2}{(x+1)^3}
+									+\frac{2u_2}{(x+1)^3}
+									+ \frac{4u_2 x}{(x+1)^2}
+									+\frac{2u_2 }{(x+1)}
+								\)
+							</div>
+							<div>
+								Since all the \(u_1\) terms added to zero and all the \(u_2\) terms added to zero, then we obtain the equation:
+								\[
+									\frac{1-x^2}{(x-1)^2}\frac{du_1}{dx} + \frac{1-x^2}{(x+1)^2}  \frac{du_2}{dx} =\frac{2}{x+1}
+								\]
+								Which we divide by \((1-x^2)\) to write it more simply as
+								\[
+									\frac{1}{(x-1)^2}\frac{du_1}{dx} + \frac{1}{(x+1)^2}  \frac{du_2}{dx} =\frac{2}{(x+1)(1-x^2)}
+								\]
+
+							</div>	
+
+						</li>	
+						<!--Part 4-->
+						<li>
+							<div>
+								Write the system of equations as a system and solve using substitution and elimination
+								\begin{align*}
+									\left\{
+										\begin{array}{rrrrcrr}
+											\displaystyle\frac{1}{x-1} \frac{du_1}{dx}  &+& \displaystyle \frac{1}{x+1}\frac{du_2}{dx} &=& 0 \quad\quad\quad &(1) \\
+											\displaystyle\frac{1}{(x-1)^2}\frac{du_1}{dx} &+& \displaystyle\frac{1}{(x+1)^2}  \frac{du_2}{dx} &=& \displaystyle\frac{2}{(x+1)(1-x^2)} \quad\quad\quad &(2) \\
+										\end{array}
+									\right.	
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Solve the system for \(\displaystyle\frac{du_1}{dx}\) and \(\displaystyle\frac{du_2}{dx}\)
+							</div>
+							<div>
+								Multiplying the first equation (1) by \(-1/(x-1)\) we obtain a third equation
+								\[
+									-\frac{1}{(x-1)^2} \frac{du_1}{dx}  - \frac{1}{(x+1)(x-1)}\frac{du_2}{dx} = 0 \quad\quad\quad (3)
+								\]
+
+								Now adding the second and third equations
+
+								\begin{array}{rrrrcrr}
+									\displaystyle\frac{1}{(x-1)^2}\frac{du_1}{dx} &+& \displaystyle\frac{1}{(x+1)^2}  \frac{du_2}{dx} &=& \displaystyle\frac{2}{(x+1)(1-x^2)}  \\
+									+ \quad\quad\quad -\displaystyle\frac{1}{(x-1)^2} \frac{du_1}{dx}  &-& \displaystyle \frac{1}{(x+1)(x-1)}\frac{du_2}{dx} &=& 0\\
+									\hline
+									&& {\small \Bigg[ \displaystyle\frac{1}{(x+1)^2}-\displaystyle \frac{1}{(x+1)(x-1)} \Bigg]}   \displaystyle \frac{du_2}{dx} &=& {\small \displaystyle\frac{2}{(x+1)(1-x^2)}}  \\
+								\end{array}
+
+							</div>
+							<div>
+								So we obtain the equation
+								\[
+									\Bigg[ \frac{1}{(x+1)^2}-\frac{1}{(x+1)(x-1)} \Bigg] \frac{du_2}{dx} = \frac{2}{(x+1)(1-x^2)}
+								\]
+								Which we can simplify by
+							</div>
+							<div class="reading-exercise">
+								Simplify \(\displaystyle\frac{1}{(x+1)^2}-\displaystyle\frac{1}{(x+1)(x-1)} \)
+							</div>
+							<div>
+								So we obtain the equation
+								\[
+									\Bigg[ \frac{1}{(x+1)^2}-\frac{1}{(x+1)(x-1)} \Bigg] \frac{du_2}{dx} = \frac{2}{(x+1)(1-x^2)}
+								\]
+								Which we can simplify by
+							</div>		
+							<div>
+								Subtracting the first equation (1) from the second (2) 
+								\begin{array}{rrrrl}
+									\displaystyle\frac{du_1}{dx} &+& e^x \displaystyle\frac{du_2}{dx} &=& x-1  \\
+								- \quad\quad \Big(	\quad\quad\quad x \displaystyle\frac{du_1}{dx} &+& e^x \displaystyle\frac{du_2}{dx} &=& 0 \quad\quad\quad \Big)  \\
+								\hline
+								(1-x)\displaystyle\frac{du_1}{dx} & & &=& x-1  \\
+								\end{array}
+							</div>	
+							<div class="reading-exercise">
+								Solve \((1-x)\displaystyle\frac{du_1}{dx} = x-1 \) for \( \displaystyle\frac{du_1}{dx} \)
+							</div>
+							<div>
+								Dividing by \((1-x)\) and simplifying we obtain
+								\[
+									\frac{du_1}{dx} = -1
+								\]
+							</div>
+							<div>
+								Substituting that back in to the first equation (1)
+								\begin{align*}
+									x \underbrace{\frac{du_1}{dx}} + e^x \frac{du_2}{dx} = & 0 \\
+									x \cdot -1 + e^x \frac{du_2}{dx} = & 0 \\
+									-x + e^x \frac{du_2}{dx} = & 0
+									\Longrightarrow
+									\frac{du_2}{dx} = xe^{-x} \\
+								\end{align*}
+
+							</div>
+							<div>
+								So we have found \(du_1/dx\) and \(du_2/dx\)
+								\[
+								\frac{du_1}{dx} = -1 \quad \quad \frac{du_2}{dx} = xe^{-x}
+								\]
+							</div>	
+						</li>
+						<!--Part 5-->
+						<li>
+							<div>
+								Having found \(du_1/dx\) and \(du_2/dx\) we now simplfy antidifferentiate to find \(u_1\) and \(u_2\)
+							</div>		
+							<div class="reading-exercise">
+								Antidifferentiate \(-1 \)
+							</div>
+							<div class="reading-exercise">
+								Antidifferentiate \( xe^{-x} \) using IBP (Example <a href="sec2.4.book.html#x1-41" target=_blank>2.4.1</a>)
+							</div>
+							<div>
+								Finding the antiderivatives and taking the constants of integration to be zero we obtain \(u_1\) and \(u_2\)
+								\begin{array}{rccrcl}
+									\displaystyle\frac{du_1}{dx} &=& -1	&\quad&  \displaystyle\frac{du_2}{dx} &=& xe^{-x} \\
+									\int \displaystyle\frac{du_1}{dx} dx &=& -\int dx	&\quad&  \int \displaystyle\frac{du_2}{dx} dx &=& \int xe^{-x} dx \\
+									u_1 &=& -x	&\quad&  u_2 &=& -(x+1) e^{-x} \\
+								\end{array}
+							</div>	
+						</li>	
+						<!--Part 5-->
+						<li>
+							<div> 
+								Substituting back \(y_p = u_1 x + u_2 e^x \) we obtain the particular solution:
+								\begin{align*}
+									y_p = & -x \cdot x -(x+1) e^{-x} \cdot e^x \\
+									= & -x^2 - (x+1) \\
+									= & -x^2 - x - 1\\
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Verify \(y_p=-x^2 - x - 1\) is a solution of <a href="#x1-31r21">(5.7.21)</a>
+							</div>
+							<div>
+								And we have the general solution \(y = y_p + c_1 y_1 + c_2 y_2 \)
+								\[
+									y = -x^2 - x - 1 + c_1 x + c_2 x^2
+								\]
+							</div>	
+							<div class="reading-exercise">
+								Verify \(y= -x^2 - x - 1 + c_1 x + c_2 x^2\) is a solution of <a href="#x1-31r21">(5.7.21)</a>
+							</div>
+							<div>
+								Although this does express the general solution, it is not simplified. Notice there are two \(x\) terms, so we simplify them:
+
+								\begin{align*}
+									y = & -x^2 - x - 1 + c_1 x + c_2 x^2 \\
+									y = & -x^2 - 1 + \underset{c_1}{\underbrace{(c_1 -1 )}}x + c_2 x^2 \\
+									y = & -x^2 - 1 + c_1x + c_2 x^2 \\									
+								\end{align*}
+
+								So we have our simplified general solution!
+
+							</div>	
+							<div class="reading-exercise">
+								Verify \(y=  -x^2 - 1 + c_1x + c_2 x^2 \) is a solution of <a href="#x1-31r21">(5.7.21)</a>
+							</div>
+							<div>
+								The reason it was unsimplified to begin with was that our particular solution contained terms that were linearly depdendent with the solutions to the complementary equation:
+
+								\begin{align*}
+									y_p = & -x^2 - \underbrace{x} - 1\\
+									y_p = & -x^2 - y_1 - 1\\
+								\end{align*}
+
+								So to simplify our particular solution we will also exclude any terms that are linearly depdendent with the solutions to the complementary equation. Thus our simplified particular solution is
+
+								\begin{align*}
+									y_p = & -x^2 - 1\\
+								\end{align*}
+
+							</div>
+							<div class="reading-exercise">
+								Verify \(y=  -x^2 - 1 \) is a solution of <a href="#x1-31r21">(5.7.21)</a>
+							</div>
+						</li>
+					</ol>					
+				
 			</div>
 
 			<!--Figure-->
