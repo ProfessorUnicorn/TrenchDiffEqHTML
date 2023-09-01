@@ -1106,6 +1106,10 @@
 					<li>
 						Find the particular solution \(y_p\) and the general solution
 					</li>
+					<li>
+						Solve the IVP <a href="#x1-31r21">(5.7.21)</a>
+					</li>
+
 				</ol>					
 
 				<details class="solution">
@@ -1220,8 +1224,8 @@
 									\hline
 
 									\underset{\frac{2}{x+1}}{\underbrace{{\scriptsize (x^2-1) \displaystyle\frac{d^2y_p}{dx^2} + 4x \displaystyle\frac{dy_p}{dx} + 2y_p}}}
-									&=& {\small \displaystyle\frac{1-x^2}{(x-1)^2} } \frac{du_1}{dx}
-									&+& {\small \displaystyle\frac{1-x^2}{(x+1)^2} } \frac{du_2}{dx} 
+									&=& {\small \displaystyle-\frac{(x^2-1)}{(x-1)^2} } \frac{du_1}{dx}
+									&+& {\small \displaystyle-\frac{(x^2-1)}{(x+1)^2} } \frac{du_2}{dx} 
 									&+& \Big( \cdots \Big) u_1
 									&+& \Big( \cdots \Big) u_2 \\
 
@@ -1277,11 +1281,11 @@
 							<div>
 								Since all the \(u_1\) terms added to zero and all the \(u_2\) terms added to zero, then we obtain the equation:
 								\[
-									\frac{1-x^2}{(x-1)^2}\frac{du_1}{dx} + \frac{1-x^2}{(x+1)^2}  \frac{du_2}{dx} =\frac{2}{x+1}
+									-\frac{(x^2-1)}{(x-1)^2}\frac{du_1}{dx} - \frac{(x^2-1)}{(x+1)^2}  \frac{du_2}{dx} =\frac{2}{x+1}
 								\]
-								Which we divide by \((1-x^2)\) to write it more simply as
+								Which we divide by \((x^2-1)\) to write it more simply as
 								\[
-									\frac{1}{(x-1)^2}\frac{du_1}{dx} + \frac{1}{(x+1)^2}  \frac{du_2}{dx} =\frac{2}{(x+1)(1-x^2)}
+									-\frac{1}{(x-1)^2}\frac{du_1}{dx} - \frac{1}{(x+1)^2}  \frac{du_2}{dx} = \frac{2}{(x+1)(x^2-1)}
 								\]
 
 							</div>	
@@ -1295,7 +1299,7 @@
 									\left\{
 										\begin{array}{rrrrcrr}
 											\displaystyle\frac{1}{x-1} \frac{du_1}{dx}  &+& \displaystyle \frac{1}{x+1}\frac{du_2}{dx} &=& 0 \quad\quad\quad &(1) \\
-											\displaystyle\frac{1}{(x-1)^2}\frac{du_1}{dx} &+& \displaystyle\frac{1}{(x+1)^2}  \frac{du_2}{dx} &=& \displaystyle\frac{2}{(x+1)(1-x^2)} \quad\quad\quad &(2) \\
+											\displaystyle-\frac{1}{(x-1)^2}\frac{du_1}{dx} &-& \displaystyle\frac{1}{(x+1)^2}  \frac{du_2}{dx} &=& \displaystyle\frac{2}{(x+1)(x^2-1)} \quad\quad\quad &(2) \\
 										\end{array}
 									\right.	
 								\end{align*}
@@ -1304,71 +1308,56 @@
 								Solve the system for \(\displaystyle\frac{du_1}{dx}\) and \(\displaystyle\frac{du_2}{dx}\)
 							</div>
 							<div>
-								Multiplying the first equation (1) by \(-1/(x-1)\) we obtain a third equation
+								Multiplying the first equation (1) by \(1/(x-1)\) we obtain a third equation
 								\[
-									-\frac{1}{(x-1)^2} \frac{du_1}{dx}  - \frac{1}{(x+1)(x-1)}\frac{du_2}{dx} = 0 \quad\quad\quad (3)
+									\frac{1}{(x-1)^2} \frac{du_1}{dx}  + \frac{1}{(x+1)(x-1)}\frac{du_2}{dx} = 0 \quad\quad\quad (3)
 								\]
 
 								Now adding the second and third equations
 
 								\begin{array}{rrrrcrr}
-									\displaystyle\frac{1}{(x-1)^2}\frac{du_1}{dx} &+& \displaystyle\frac{1}{(x+1)^2}  \frac{du_2}{dx} &=& \displaystyle\frac{2}{(x+1)(1-x^2)}  \\
-									+ \quad\quad\quad -\displaystyle\frac{1}{(x-1)^2} \frac{du_1}{dx}  &-& \displaystyle \frac{1}{(x+1)(x-1)}\frac{du_2}{dx} &=& 0\\
+									\displaystyle-\frac{1}{(x-1)^2}\frac{du_1}{dx} &-& \displaystyle\frac{1}{(x+1)^2}  \frac{du_2}{dx} &=& \displaystyle\frac{2}{(x+1)(x^2-1)}  \\
+									+ \quad\quad\quad \displaystyle\frac{1}{(x-1)^2} \frac{du_1}{dx}  &+& \displaystyle \frac{1}{(x+1)(x-1)}\frac{du_2}{dx} &=& 0\\
 									\hline
-									&& {\small \Bigg[ \displaystyle\frac{1}{(x+1)^2}-\displaystyle \frac{1}{(x+1)(x-1)} \Bigg]}   \displaystyle \frac{du_2}{dx} &=& {\small \displaystyle\frac{2}{(x+1)(1-x^2)}}  \\
+									&& {\small \Bigg[ \displaystyle\ \frac{1}{(x+1)(x-1)} - \frac{1}{(x+1)^2} \Bigg]}   \displaystyle \frac{du_2}{dx} &=& {\small \displaystyle\frac{2}{(x+1)(x^2-1)}}  \\
 								\end{array}
 
 							</div>
 							<div>
 								So we obtain the equation
 								\[
-									\Bigg[ \frac{1}{(x+1)^2}-\frac{1}{(x+1)(x-1)} \Bigg] \frac{du_2}{dx} = \frac{2}{(x+1)(1-x^2)}
+									\Bigg[ \frac{1}{(x+1)(x-1)} - \frac{1}{(x+1)^2} \Bigg] \frac{du_2}{dx} = \frac{2}{(x+1)(x^2-1)}
 								\]
-								Which we can simplify by
 							</div>
 							<div class="reading-exercise">
-								Simplify \(\displaystyle\frac{1}{(x+1)^2}-\displaystyle\frac{1}{(x+1)(x-1)} \)
+								Simplify \(\displaystyle \frac{1}{(x+1)(x-1)} - \frac{1}{(x+1)^2} \)
 							</div>
 							<div>
-								So we obtain the equation
-								\[
-									\Bigg[ \frac{1}{(x+1)^2}-\frac{1}{(x+1)(x-1)} \Bigg] \frac{du_2}{dx} = \frac{2}{(x+1)(1-x^2)}
-								\]
-								Which we can simplify by
-							</div>		
-							<div>
-								Subtracting the first equation (1) from the second (2) 
-								\begin{array}{rrrrl}
-									\displaystyle\frac{du_1}{dx} &+& e^x \displaystyle\frac{du_2}{dx} &=& x-1  \\
-								- \quad\quad \Big(	\quad\quad\quad x \displaystyle\frac{du_1}{dx} &+& e^x \displaystyle\frac{du_2}{dx} &=& 0 \quad\quad\quad \Big)  \\
-								\hline
-								(1-x)\displaystyle\frac{du_1}{dx} & & &=& x-1  \\
-								\end{array}
-							</div>	
-							<div class="reading-exercise">
-								Solve \((1-x)\displaystyle\frac{du_1}{dx} = x-1 \) for \( \displaystyle\frac{du_1}{dx} \)
-							</div>
-							<div>
-								Dividing by \((1-x)\) and simplifying we obtain
-								\[
-									\frac{du_1}{dx} = -1
-								\]
-							</div>
-							<div>
-								Substituting that back in to the first equation (1)
+								Simplifying
 								\begin{align*}
-									x \underbrace{\frac{du_1}{dx}} + e^x \frac{du_2}{dx} = & 0 \\
-									x \cdot -1 + e^x \frac{du_2}{dx} = & 0 \\
-									-x + e^x \frac{du_2}{dx} = & 0
+									\Bigg[ \frac{(x+1)}{(x+1)^2(x-1)} - \frac{(x-1)}{(x+1)^2(x-1)} \Bigg] \frac{du_2}{dx} = & \frac{2}{(x+1)(x^2-1)} \\
+									\frac{2}{(x+1)^2(x-1)}  \frac{du_2}{dx} = & \frac{2}{(x+1)(x+1)(x-1)} \\
+									\frac{du_2}{dx} = & 1 \\
+								\end{align*}
+								
+							</div>		
+							<div class="reading-exercise">
+								Substitute \({du_2}/{dx} = 1 \) into the first equation (1) and solve for \({du_1}/{dx}\)
+							</div>
+							<div>
+								Substituting  \({du_2}/{dx} = 1 \) back in to the first equation (1)
+								\begin{align*}
+									\frac{1}{x-1} \frac{du_1}{dx} + \frac{1}{x+1} \underset{1}{\underbrace{\frac{du_2}{dx}}} =& 0 \\
+									\frac{1}{x-1} \frac{du_1}{dx} =& -\frac{1}{x+1} 
 									\Longrightarrow
-									\frac{du_2}{dx} = xe^{-x} \\
+									\frac{du_1}{dx} = \frac{1-x}{x+1} \\
 								\end{align*}
 
 							</div>
 							<div>
 								So we have found \(du_1/dx\) and \(du_2/dx\)
 								\[
-								\frac{du_1}{dx} = -1 \quad \quad \frac{du_2}{dx} = xe^{-x}
+								\frac{du_1}{dx} = \frac{1-x}{x+1} \quad \quad \frac{du_2}{dx} = 1
 								\]
 							</div>	
 						</li>
@@ -1378,76 +1367,229 @@
 								Having found \(du_1/dx\) and \(du_2/dx\) we now simplfy antidifferentiate to find \(u_1\) and \(u_2\)
 							</div>		
 							<div class="reading-exercise">
-								Antidifferentiate \(-1 \)
+								Antidifferentiate \(1 \)
 							</div>
 							<div class="reading-exercise">
-								Antidifferentiate \( xe^{-x} \) using IBP (Example <a href="sec2.4.book.html#x1-41" target=_blank>2.4.1</a>)
+								Antidifferentiate \( \displaystyle \frac{1-x}{x+1} \) using substitution 
 							</div>
 							<div>
 								Finding the antiderivatives and taking the constants of integration to be zero we obtain \(u_1\) and \(u_2\)
 								\begin{array}{rccrcl}
-									\displaystyle\frac{du_1}{dx} &=& -1	&\quad&  \displaystyle\frac{du_2}{dx} &=& xe^{-x} \\
-									\int \displaystyle\frac{du_1}{dx} dx &=& -\int dx	&\quad&  \int \displaystyle\frac{du_2}{dx} dx &=& \int xe^{-x} dx \\
-									u_1 &=& -x	&\quad&  u_2 &=& -(x+1) e^{-x} \\
+									\displaystyle\frac{du_1}{dx} &=& \displaystyle \frac{1-x}{x+1} 	&\quad&  
+									\displaystyle\frac{du_2}{dx} &=& 1 \\
+									\displaystyle\int \frac{du_1}{dx} dx &=&  \displaystyle \int \left(\frac{1}{x+1} - \frac{x}{x+1}\right)dx	&\quad&  
+									\displaystyle \int \frac{du_2}{dx} dx &=& \displaystyle \int dx \\
+									u_1 &=& -x + 2 \ln (x+1)	&\quad&  
+									u_2 &=& x \\
 								\end{array}
 							</div>	
 						</li>	
 						<!--Part 5-->
 						<li>
 							<div> 
-								Substituting back \(y_p = u_1 x + u_2 e^x \) we obtain the particular solution:
+								Substituting back \(y_p = u_1/(x-1) + u_2/(x+1) \) we obtain the particular solution:
 								\begin{align*}
-									y_p = & -x \cdot x -(x+1) e^{-x} \cdot e^x \\
-									= & -x^2 - (x+1) \\
-									= & -x^2 - x - 1\\
+									y_p = & \frac{u_1}{x-1} + \frac{u_2}{x+1} \\
+									= & \frac{-x + 2 \ln (x+1)}{x-1} + \frac{x}{x+1} \\
+									= & \frac{ 2 \ln (x+1)}{x-1} + \underbrace{\frac{x}{x+1} - \frac{x}{x-1}}  \\
+									= & \frac{ 2 \ln (x+1)}{x-1} - \frac{2x}{(x-1)(x+1)} \\
 								\end{align*}
 							</div>	
 							<div class="reading-exercise">
-								Verify \(y_p=-x^2 - x - 1\) is a solution of <a href="#x1-31r21">(5.7.21)</a>
+								Simplify \(\displaystyle\frac{x}{x+1} - \displaystyle\frac{x}{x-1}\)
+							</div>
+							<div class="reading-exercise">
+								Verify \(y_p= \displaystyle \frac{ 2 \ln (x+1)}{x-1} - \frac{2x}{(x-1)(x+1)}\) is a solution of <a href="#x1-31r21">(5.7.21)</a>
 							</div>
 							<div>
-								And we have the general solution \(y = y_p + c_1 y_1 + c_2 y_2 \)
+								And we have a general solution \(y = y_p + c_1 y_1 + c_2 y_2 \)
 								\[
-									y = -x^2 - x - 1 + c_1 x + c_2 x^2
+									y = \frac{ 2 \ln (x+1)}{x-1} - \frac{2x}{(x-1)(x+1)} + \frac{c_1}{x-1} + \frac{c_2}{x+1}
 								\]
 							</div>	
 							<div class="reading-exercise">
-								Verify \(y= -x^2 - x - 1 + c_1 x + c_2 x^2\) is a solution of <a href="#x1-31r21">(5.7.21)</a>
+								Verify \(y_p= \displaystyle \frac{ 2 \ln (x+1)}{x-1} - \frac{2x}{(x-1)(x+1)} + \frac{c_1}{x-1} + \frac{c_2}{x+1}\) is a solution of <a href="#x1-31r21">(5.7.21)</a>
 							</div>
 							<div>
-								Although this does express the general solution, it is not simplified. Notice there are two \(x\) terms, so we simplify them:
+								Although this does express the general solution, we suspect it may not be simplified, since the \(-2x/{(x-1)(x+1)}\) term contains both \((x-1)\) and  \((x+1)\) factors in the denominator. To find out we'll use <span class="vocab">PFD</span> (Example <a href=sec2.2.book.html#x1-325 target=_blank>2.2.5</a>) to break it up.
 
 								\begin{align*}
-									y = & -x^2 - x - 1 + c_1 x + c_2 x^2 \\
-									y = & -x^2 - 1 + \underset{c_1}{\underbrace{(c_1 -1 )}}x + c_2 x^2 \\
-									y = & -x^2 - 1 + c_1x + c_2 x^2 \\									
+									\frac{-2x}{(x-1)(x+1)} = \frac{A}{x-1} + \frac{B}{x-1}									
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Use PFD \(\displaystyle\frac{-2x}{(x-1)(x+1)} = \frac{A}{x-1} + \frac{B}{x-1}\) to determine \(A\) and 
+								\(B\)
+							</div>	
+							<div>
+								From PFD we determine
+								\begin{align*}
+									\frac{-2x}{(x-1)(x+1)} = -\frac{1}{x-1} - \frac{1}{x+1}									
 								\end{align*}
 
-								So we have our simplified general solution!
+								And substituting back into our general solution we obtain:
+
+								\begin{align*}
+									y 
+									= & 
+										\frac{ 2 \ln (x+1)}{x-1}  
+										-\frac{1}{x-1} 
+										- \frac{1}{x+1} 
+										+ \frac{c_1}{x-1} 
+										+ \frac{c_2}{x+1} \\
+								\end{align*}
+
+								Which we can rearrange and simplified by combining the like terms:
+
+								\begin{align*}
+									y 
+									= & 
+										\frac{ 2 \ln (x+1)}{x-1}  
+										+ \underset{\displaystyle\frac{c_1 - 1}{x-1}}{\underbrace{\left( \frac{c_1}{x-1} 
+										-\frac{1}{x-1} \right)}} 
+										+ \underset{ \displaystyle\frac{c_2-1}{x+1} }{ \underbrace{\left(\frac{c_2}{x+1}
+										- \frac{1}{x+1} \right)}} \\
+									= & 
+										\frac{ 2 \ln (x+1)}{x-1}
+										\quad+\quad \frac{c_1-1}{x-1}
+										\quad+\quad \frac{c_2-1}{x+1}
+								\end{align*}
+
+								And since every term of the expression \({-2x}/{(x-1)(x+1)} \) was linearly dedendent on solutions to the complementary equation, then they fully simplify out of the general solution, so our general solution is finally:
+
+								\begin{align*}
+									y 
+									= & 
+										\frac{ 2 \ln (x+1)}{x-1}
+										\quad+\quad \frac{\overset{c_1}{\overbrace{c_1-1}}}{x-1}
+										\quad+\quad \frac{\overset{c_2}{\overbrace{c_2-1}}}{x+1} \\
+									= & 
+										\frac{ 2 \ln (x+1)}{x-1}
+										\quad+\quad \frac{c_1}{x-1}
+										\quad+\quad \frac{c_2}{x+1}	
+								\end{align*}
+								
+								So we finally have our simplified general solution!
 
 							</div>	
 							<div class="reading-exercise">
-								Verify \(y=  -x^2 - 1 + c_1x + c_2 x^2 \) is a solution of <a href="#x1-31r21">(5.7.21)</a>
+								Verify \(y=  \displaystyle \frac{ 2 \ln (x+1)}{x-1}
+								+ \frac{c_1}{x-1}
+								+ \frac{c_2}{x+1} \) is a solution of <a href="#x1-31r21">(5.7.21)</a>
 							</div>
 							<div>
-								The reason it was unsimplified to begin with was that our particular solution contained terms that were linearly depdendent with the solutions to the complementary equation:
+								Just as we encountered before, the reason our general solution was unsimplified was that our particular solution was also unsimplified as it contained terms that were linearly depdendent with the solutions to the complementary equation:
 
 								\begin{align*}
-									y_p = & -x^2 - \underbrace{x} - 1\\
-									y_p = & -x^2 - y_1 - 1\\
+									y_p 
+									= & \frac{ 2 \ln (x+1)}{x-1} - \frac{2x}{(x-1)(x+1)} \\
+									= & \frac{ 2 \ln (x+1)}{x-1} - \underset{y_1}{\underbrace{\frac{1}{x-1}}} - \underset{y_2}{\underbrace{\frac{1}{x+1}}} \\
+									= & \frac{ 2 \ln (x+1)}{x-1} - \underbrace{\quad y_1 \quad - \quad  y_2} \\
 								\end{align*}
 
 								So to simplify our particular solution we will also exclude any terms that are linearly depdendent with the solutions to the complementary equation. Thus our simplified particular solution is
 
 								\begin{align*}
-									y_p = & -x^2 - 1\\
+									y_p 
+									= & \frac{ 2 \ln (x+1)}{x-1} 
 								\end{align*}
 
 							</div>
 							<div class="reading-exercise">
-								Verify \(y=  -x^2 - 1 \) is a solution of <a href="#x1-31r21">(5.7.21)</a>
+								Verify \(y_p= \displaystyle\frac{ 2 \ln (x+1)}{x-1} \) is a solution of <a href="#x1-31r21">(5.7.21)</a>
 							</div>
 						</li>
+						<li>
+							<div>
+								Now that we have a general solution to the IVP <a href="#x1-31r21">(5.7.21)</a> we simply apply the initial conditions:
+								\begin{align*}
+									y(0)=-1
+									\quad \left. \frac{dy}{dx} \right|_{0}=-5 
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(\displaystyle \frac{d}{dx} \left( \frac{\ln (x+1)}{x-1} \right) \) 
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(\displaystyle \frac{d}{dx} \left( \frac{1}{x-1} \right) \) 
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(\displaystyle \frac{d}{dx} \left( \frac{1}{x+1} \right) \) 
+							</div>
+							<div class="reading-exercise">
+								Differentiate the general solution \(y = \displaystyle \frac{ 2 \ln (x+1)}{x-1} + \frac{c_1}{x-1} + \frac{c_2}{x+1} \) 
+							</div>
+							<div>
+								
+								\begin{align*}
+									y
+										= & \frac{ 2 \ln (x+1)}{x-1} + \frac{c_1}{x-1} + \frac{c_2}{x+1}\\ \\	 
+									\frac{dy}{dx}
+										= & \frac{2}{x^2-1} - \frac{2\ln (x+1)}{(x-1)^2} - \frac{c_1}{(x-1)^2} - \frac{c_2}{(x+1)^2}	
+								\end{align*}
+								Applying the initial condition \( y(0)=-1 \) yields
+								\begin{align*}
+									\underbrace{y(0)}
+										= & \frac{ 2 \ln (0+1)}{0-1} + \frac{c_1}{0-1} + \frac{c_2}{0+1}\\ 
+									-1
+										= & -2 \ln (1) -c_1 + c_2 \\
+									-1 = &	-c_1 + c_2
+								\end{align*}
+								Applying the initial condition \( \left. \displaystyle \frac{dy}{dx} \right|_{0}=-5 \) yields
+								\begin{align*}	 
+									\left.\frac{dy}{dx} \right|_{0}
+										= & \frac{2}{0^2-1} - \frac{2\ln (0+1)}{(0-1)^2} - \frac{c_1}{(0-1)^2} - \frac{c_2}{(0+1)^2} \\
+									-5
+										= & -2 -2\ln (1) - c_1  - c_2 \\
+									3
+										= & c_1  + c_2 \\			
+								\end{align*}
+
+							</div>	
+							<div>
+								So we obtain the system of equations
+								\begin{align*}
+									\left\{
+									\begin{array}{rrrrr}
+										-c_1 &+& c_2 &=& -1 \\
+										c_1  &+& c_2 &=& 3
+									\end{array}
+									\right.
+								\end{align*}	
+							</div>
+							<div class="reading-exercise">
+								Solve the system \( \left\{
+									\begin{array}{rrrrr}
+										-c_1 &+& c_2 &=& -1 \\
+										c_1  &+& c_2 &=& 3
+									\end{array}
+									\right.\)
+							</div>
+							<div>	
+								Adding them together yields \(c_2 = 1\) and substituting back in yields \(c_1 = 2\) so we have the solution to the IVP
+								\begin{align*}
+									y
+										= & \frac{ 2 \ln (x+1)}{x-1} + \frac{2}{x-1} + \frac{1}{x+1}
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Verify \(y= \displaystyle \frac{ 2 \ln (x+1)}{x-1} + \frac{2}{x-1} + \frac{1}{x+1}\) is a solution of <a href="#x1-31r21">(5.7.21)</a>
+							</div>
+							<div class="reading-exercise">
+								Simplify \(  \displaystyle\frac{2}{x-1} + \frac{1}{x+1} \)
+							</div>
+							<div>	
+								Which we can still simplify by combing the last two terms so our final simplified answer is
+								\begin{align*}
+									y
+										= & \frac{ 2 \ln (x+1)}{x-1} + \frac{3x+1}{x^2-1}
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Verify \(y= \displaystyle\frac{ 2 \ln (x+1)}{x-1} + \frac{3x+1}{x^2-1}\) is a solution of <a href="#x1-31r21">(5.7.21)</a>
+							</div>
+
+						</li>	
 					</ol>					
 				
 			</div>
