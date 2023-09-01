@@ -153,20 +153,20 @@
 					If we recall from calculus that \[ \sum _{m=0}^\infty (-1)^m{(x-x_0)^{2m}\over (2m)!}=\cos (x-x_0) \quad \mbox{ and } \quad \sum _{m=0}^\infty (-1)^m{(x-x_0)^{2m+1}\over (2m+1)!}=\sin (x-x_0)\] then <a href="#x1-16r13">(7.2.15)</a> becomes \[ y=a_0\cos (x-x_0)+a_1\sin (x-x_0)\] which should look familiar. 
 				</div>
 			</details>
-
-			<div class="indent" id="098d79b5-ddfd-4ae7-8826-3eb1a3c76440">
-				Equations like <a href="#x1-13r10">(7.2.10)</a>, (<span class="ptmb8t-">7.2.11</span>), and (<span class="ptmb8t-">7.2.12</span>), which define a given coefficient in the sequence \(\{a_n\}\) in terms of one or more coefficients with lesser indices are called <span class="vocab">recurrence relations</span>. When we use a recurrence relation to compute terms of a sequence we’re computing <span class="vocab">recursively</span>. 
-			</div>
-			<div class="indent" id="4ea2de17-981a-403d-8bc0-8a7f02741a22">
-				In the remainder of this section we consider the problem of finding power series solutions in \(x-x_0\) for equations of the form 
-				\begin {equation} \label {eq:7.2.16} \left (1+\alpha (x-x_0)^2\right )y''+\beta (x-x_0) y'+\gamma y=0 
-				\end {equation} <a id="x1-17r14"></a> Many important equations that arise in applications are of this form with \(x_0=0\), including Legendre’s equation <a href="#x1-3r2">(7.2.2)</a>, Airy’s equation <a href="#x1-4r3">(7.2.3)</a>, <span class="vocab">Chebyshev’s equation</span>, \[ (1-x^2)y''-xy'+\alpha ^2 y=0\] and <span class="vocab">Hermite’s equation</span>, \[ y''-2xy'+2\alpha y=0\] Since \[ P_0(x)=1+\alpha (x-x_0)^2 \] in <a href="#x1-17r14">(7.2.16)</a>, the point \(x_0\) is an ordinary point of <a href="#x1-17r14">(7.2.16)</a>, and Theorem&nbsp;<a href="#x1-61">7.2.1</a> implies that the solutions of <a href="#x1-17r14">(7.2.16)</a> can be written as power series in \(x-x_0\) that converge on the interval \((x_0-1/\sqrt |\alpha |,x_0+1/\sqrt |\alpha |)\) if \(\alpha \ne 0\), or on \((-\infty ,\infty )\) if \(\alpha =0\). We’ll see that the coefficients in these power series can be obtained by methods similar to the one used in Example&nbsp;<a href="#x1-111">7.2.1</a>.
-			</div>
-			<div class="indent" id="926213d3-1ae9-44dd-bf05-6f35f2f93fd2">
-				To simplify finding the coefficients, we introduce some notation for products: \[ \prod ^s_{j=r}b_j=b_rb_{r+1}\cdots b_s\quad \mbox {if} \quad s\ge r\] Thus, \[ \prod ^7_{j=2}b_j=b_2b_3b_4b_5b_6b_7\] \[ \prod ^4_{j=0}(2j+1)=(1)(3)(5)(7)(9)=945\] and \[ \prod ^2_{j=2}j^2=2^2=4\] We define \[ \prod ^s_{j=r}b_j=1\quad \mbox {if}\quad s &lt; r\] no matter what the form of \(b_j\). 
-			</div>
 		</div>
-		
+
+		<div class="indent" id="098d79b5-ddfd-4ae7-8826-3eb1a3c76440">
+			Equations like <a href="#x1-13r10">(7.2.10)</a>, (<span class="ptmb8t-">7.2.11</span>), and (<span class="ptmb8t-">7.2.12</span>), which define a given coefficient in the sequence \(\{a_n\}\) in terms of one or more coefficients with lesser indices are called <span class="vocab">recurrence relations</span>. When we use a recurrence relation to compute terms of a sequence we’re computing <span class="vocab">recursively</span>. 
+		</div>
+		<div class="indent" id="4ea2de17-981a-403d-8bc0-8a7f02741a22">
+			In the remainder of this section we consider the problem of finding power series solutions in \(x-x_0\) for equations of the form 
+			\begin {equation} \label {eq:7.2.16} \left (1+\alpha (x-x_0)^2\right )y''+\beta (x-x_0) y'+\gamma y=0 
+			\end {equation} <a id="x1-17r14"></a> Many important equations that arise in applications are of this form with \(x_0=0\), including Legendre’s equation <a href="#x1-3r2">(7.2.2)</a>, Airy’s equation <a href="#x1-4r3">(7.2.3)</a>, <span class="vocab">Chebyshev’s equation</span>, \[ (1-x^2)y''-xy'+\alpha ^2 y=0\] and <span class="vocab">Hermite’s equation</span>, \[ y''-2xy'+2\alpha y=0\] Since \[ P_0(x)=1+\alpha (x-x_0)^2 \] in <a href="#x1-17r14">(7.2.16)</a>, the point \(x_0\) is an ordinary point of <a href="#x1-17r14">(7.2.16)</a>, and Theorem&nbsp;<a href="#x1-61">7.2.1</a> implies that the solutions of <a href="#x1-17r14">(7.2.16)</a> can be written as power series in \(x-x_0\) that converge on the interval \((x_0-1/\sqrt |\alpha |,x_0+1/\sqrt |\alpha |)\) if \(\alpha \ne 0\), or on \((-\infty ,\infty )\) if \(\alpha =0\). We’ll see that the coefficients in these power series can be obtained by methods similar to the one used in Example&nbsp;<a href="#x1-111">7.2.1</a>.
+		</div>
+		<div class="indent" id="926213d3-1ae9-44dd-bf05-6f35f2f93fd2">
+			To simplify finding the coefficients, we introduce some notation for products: \[ \prod ^s_{j=r}b_j=b_rb_{r+1}\cdots b_s\quad \mbox {if} \quad s\ge r\] Thus, \[ \prod ^7_{j=2}b_j=b_2b_3b_4b_5b_6b_7\] \[ \prod ^4_{j=0}(2j+1)=(1)(3)(5)(7)(9)=945\] and \[ \prod ^2_{j=2}j^2=2^2=4\] We define \[ \prod ^s_{j=r}b_j=1\quad \mbox {if}\quad s &lt; r\] no matter what the form of \(b_j\). 
+		</div>
+
 		<div class="example" id="x1-182" style="--ex-number: 2">
 			<div>
 				Find the power series in \(x\) for the general solution of 
