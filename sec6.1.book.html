@@ -30,8 +30,9 @@
 			6.1 Springs I - Undamped
 		</div>
 
+		<!--Equation of Motion-->
 		<details id="details-1">
-			<summary>Spring–Mass Systems</summary>
+			<summary>Equation of Motion</summary>
 
 			<div id="b2218b98-230a-4397-afb5-f8c849210627">
 				We consider the motion of an object of mass \(m\), suspended from a spring of negligible mass. We say that the <span class="vocab">spring–mass system</span> is in <span class="vocab">equilibrium</span> when the object is at rest and the forces acting on it sum to zero. The position of the object in this case is the <span class="vocab">equilibrium position</span>. We define \(y\) to be the displacement of the object from its equilibrium position (Figure&nbsp;<a href="#-a-y-b-y-c-y-">6.1.1</a>), measured positive upward. 
@@ -91,10 +92,10 @@
 				<a id="x1-4r1"></a>
 				\begin {align} \label {eq:6.1.1} 
 					m a = & \quad F_g + F_d + F_s + F_1  \nonumber \\
-					m \ddot{y} = & -mg-c \dot{y} + k \Delta L + F_1 
+					m \ddot{y} = & -mg-c \dot{y} + F_s + F_1 
 				\end {align} 
 				
-				To write this as a solvable differential equation, we must now relate \(F_s=k \Delta L\) to \(y\). In the absence of external forces the object stretches the spring by an amount \(\Delta l\) to assume its equilibrium position (Figure&nbsp;<a href="#-a-natural-length-of-spring-b-spring-stretched-by-mass-">6.1.3</a>). 
+				To write this as a solvable differential equation, we must now relate \(F_s\) to \(y\). In the absence of external forces the object stretches the spring by an amount \(\Delta l\) to assume its equilibrium position (Figure&nbsp;<a href="#-a-natural-length-of-spring-b-spring-stretched-by-mass-">6.1.3</a>). 
 			</div>
 			<figure class="figure" id="dcb5b123-df90-40e9-a24b-19c283552aa4">
 				<div id="-a-natural-length-of-spring-b-spring-stretched-by-mass-">
@@ -110,71 +111,214 @@
 				
 				Since the sum of the forces acting on the object is then zero, Hooke’s Law implies that \(mg=k\Delta l\). If the object is displaced \(y\) units from its equilibrium position, the total change in the length of the spring is \(\Delta L=\Delta l-y\), so Hooke’s law implies that 
 				
-				\[ F_s=k\Delta L=k\Delta l-ky\] 
+				\[ F_s = k\Delta L = k(\Delta l-y) = k\Delta l-ky\] 
 				
 				Substituting this into <a href="#x1-4r1">(6.1.1)</a> yields 
 				
-				\[ m\frac{d^2y}{dx^2}=-mg-c \frac{dy}{dx} +k\Delta L-ky+F\] 
+				\[ m \ddot{y} =-mg - c \dot{y} + k\Delta l- ky + F_1 \] 
 				
 				Since \(mg=k\Delta l\) this can be written as 
 
+				\begin {align} 
+					m \ddot{y} =& -mg - c \dot{y} + k\Delta l- ky + F_1 \nonumber \\
+					m \ddot{y} =& -mg - c \dot{y} + mg- ky + F_1 \nonumber \\
+					m \ddot{y} =& - c \dot{y} - ky + F_1 \nonumber \\
+				\end {align} 
+
+				And finally collecting all the \(y\) and derivative terms on the left we have
+
 				<a id="x1-5r2">
-				\begin {equation} \label {eq:6.1.2} 
-					m\frac{d^2y}{dx^2}+c \frac{dy}{dx} +ky=F 
-				\end {equation} 
-				</a> We call this <span class="vocab">the equation of motion</span>. 
+				\begin {align} \label {eq:6.1.2} 
+					m \ddot{y} + c \frac{dy}{dx} +ky = & F_1 \\
+				\end {align} 
+
+				</a> We call <a href="#x1-5r2">(6.1.2)</a> the <span class="vocab">equation of motion</span>
 			</div>
 
 		</details>
 
+		<!--Undamped Free Motion-->
 		<details id="details-2">
 			<summary>Undamped Free Motion</summary>
 
 			<div id="676e9bdc-eeb6-4643-9d86-7f37531cac46">
-				Throughout the rest of this section we’ll consider spring–mass systems without damping; that is, \(c=0\). We’ll consider systems with damping in the next section. 
+				Throughout the rest of this section we’ll consider spring–mass systems without damping, that is, when \(c=0\) so the equation of motion <a href="#x1-5r2">(6.1.2)</a> becomes
+
+				\begin {align*} 
+					m \ddot{y} +ky = & F_1 \\
+				\end {align*} 
+
 			</div>
 			<div class="indent" id="1fb97d45-da2f-4959-ae84-2419b33a6c32">
-				We first consider the case where the motion is also free; that is, \(F\)=0. We begin with an example. 
+				We first consider the case where there is no external force acting on the object (i.e. the motion free), that is, when \(F_1=0\) so the equation of motion <a href="#x1-5r2">(6.1.2)</a> becomes
+				\begin {align*} 
+					m \ddot{y} +ky = & 0 \\
+				\end {align*}  
 			</div>
 
+			<!--Undamped Free Motion Example 1-->
 			<div class="example" id="x1-71" style="--ex-number: 1">
 				
 				<div> An object stretches a spring 6 inches in equilibrium. 
 			</div>
 
 				<ol>
-					<li> Set up the equation of motion and find its general solution. </li>
-					<li> Find the displacement of the object for \(t&gt;0\) if it’s initially displaced 18 inches above equilibrium and given a downward velocity of 3 ft/s. </li>
+					<li> Set up the equation of motion to model this problem</li>
+					<li> Solve the equation to find its general solution</li>
+					<li> 
+						Set up an IVP if the object is initially displaced 18 inches above equilibrium and given a downward velocity of 3 ft/s
+					</li>
+					<li> Solve the IVP </li>
 				</ol>
 
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
 						<li>
-							Setting \(c=0\) and \(F=0\) in <a href="#x1-5r2">(6.1.2)</a> yields the equation of motion \[ m\frac{d^2y}{dx^2}+ky=0\] which we rewrite as 
-							\begin {equation} \label {eq:6.1.3} \frac{d^2y}{dx^2}+{k\over m}y=0 
-							\end {equation}
-							<a id="x1-10r3"></a>
-							Although we would need the weight of the object to obtain \(k\) from the equation \(mg=k\Delta l\) we can obtain \(k/m\) from \(\Delta l\) alone; thus, \(k/m=g/\Delta l\). Consistent with the units used in the problem statement, we take \(g=32\) ft/s\(^2\). Although \(\Delta l\) is stated in inches, we must convert it to feet to be consistent with this choice of \(g\); that is, \(\Delta l =1/2\) ft. Therefore \[ {k\over m}={32\over 1/2}=64 \] and <a href="#x1-10r3">(6.1.3)</a> becomes 
-							\begin {equation} \label {eq:6.1.4} \frac{d^2y}{dx^2}+64y=0 
-							\end {equation}
-							<a id="x1-11r4"></a>
-							The characteristic equation of <a href="#x1-11r4">(6.1.4)</a> is \[ r^2+64=0\] which has the zeros \(r=\pm 8i\). Therefore the general solution of <a href="#x1-11r4">(6.1.4)</a> is 
-							\begin {equation} \label {eq:6.1.5} y=c_1\cos 8t+c_2\sin 8t 
-							\end {equation}
-							<a id="x1-12r5"></a>
-						</li>
+							<div>
+								Again setting \(c=0\) for no damping and \(F_1=0\) for no external forces in <a href="#x1-5r2">(6.1.2)</a> the equation of motion for this sitution is
+
+								\begin {align*} 
+									m \ddot{y} +ky = & 0 \\
+								\end {align*}  
+
+								Which we can simplify by dividing by \(m\) to obtain
+								
+								<a id="x1-10r3"></a>
+								\begin {align} \label {eq:6.1.3}
+									\ddot{y} + \frac{k}{m} y = & 0 \\
+								\end {align}  
+							</div>	
+							<div>
+								We know \(\Delta l = 6\) inches and \(g=32\) ft/s\(^2\) so we can use \(mg=k \Delta l\) to find \(k/m\)
+
+								\begin {align*} 
+									mg = & k \Delta l \\
+									g = & \frac{k}{m} \Delta l 
+									\Longrightarrow
+									\frac{k}{m} = \frac{g}{\Delta l}
+								\end {align*}  
+
+								Before substituting in the values note that \(g=32\) ft/s\(^2\) so we convert 18 inches to feet
+
+								\begin {align*} 
+									6 \,\text{in} 
+									\left(\frac{1\, \text{ft}}{12 \, \text{in}}\right)
+									= \frac{6}{12}\, \text{ft} 
+									= \frac{1}{2}\, \text{ft}
+								\end {align*}  
+
+								Substituting in the values we obtain \(k/m\)
+
+								\begin {align*} 
+									\frac{k}{m} = \frac{g}{\Delta l}
+									=
+									\frac{32}{1/2}
+									= 64
+								\end {align*}  
+							</div>	
+							<div>
+								Finally substituting this back in to <a href="#x1-10r3">(6.1.3)</a> we obtain the equation to model this problem
+								<a id="x1-11r4"></a>
+								\begin {equation} \label {eq:6.1.4} 
+									\ddot{y} + 64y = 0 
+								\end {equation}
+						</li>	
 						<li>
-							The initial upward displacement of 18 inches is positive and must be expressed in feet. The initial downward velocity is negative; thus, \[ y(0)={3\over 2}\quad \mbox{ and } \quad \left. \frac{dy}{dx} \right|_{0}=-3\] Differentiating <a href="#x1-12r5">(6.1.5)</a> yields 
-							\begin {equation} \label {eq:6.1.6} \frac{dy}{dx} =-8c_1\sin 8t+8c_2\cos 8t 
-							\end {equation}
-							<a id="x1-13r6"></a>
-							Setting \(t=0\) in <a href="#x1-12r5">(6.1.5)</a> and <a href="#x1-13r6">(6.1.6)</a> and imposing the initial conditions shows that \(c_1=3/2\) and \(c_2=-3/8\). Therefore \[ y={3\over 2}\cos 8t-{3\over 8}\sin 8t\] where \(y\) is in feet (Figure&nbsp;<a href="#-y-over-t-over-t-">6.1.4</a>).
-						</li>
+							<div>
+								We recognize <a href="#x1-11r4">(6.1.4)</a> as a second order constant coefficient differential equation (Section <a href="sec5.2.book.html" target=_blank>5.2</a>) which we can solve by guessing solutions of the form \(y=e^{rt}\)
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y=e^{rt}\) twice 
+							</div>
+							<div class="reading-exercise">
+								Substitute into <a href="#x1-11r4">(6.1.4)</a> and find the characteristic equation
+							</div>
+							<div>
+								We solve the characteristic equation and find
+								\begin {align*} 
+									r^2 + 64 = & 0 \\
+									r = & \pm 8i \\
+								\end {align*} 
+
+								So we obtain \(y=e^{8it}\) and \(y=e^{-8it}\) which results in  the general solution of
+
+								<a id="x1-12r5"></a>
+								\begin {equation} \label {eq:6.1.5} 
+									y=c_1\cos 8t+c_2\sin 8t 
+								\end {equation}
+							</div>	
+							<div class="reading-exercise">
+								Verify \(y=c_1\cos 8t+c_2\sin 8t \) is a solution of <a href="#x1-11r4">(6.1.4)</a>
+							</div>
+						</li>	
+
+						<li>
+							<div>
+								We already found the equation <a href="#x1-11r4">(6.1.4)</a> for the IVP
+								\begin {equation*}
+									\ddot{y} + 64y = 0 
+								\end {equation*}
+							</div>	
+							<div>
+								The initial conditions are given in the problem statement. The object is initially displaced 18 inches above equilibrium, meaning \(y(0)=18\) inches and the object is initially given a downward velocity of 3 ft/s meaning \(\dot{y}(0)=-3\)
+							</div>	
+							<div>
+								Again we will convert the inches to feet:
+								\begin {align*} 
+									18 \,\text{in} 
+									\left(\frac{1\, \text{ft}}{12 \, \text{in}}\right)
+									= \frac{18}{12}\, \text{ft} 
+									= \frac{3}{2}\, \text{ft}
+								\end {align*}  
+								So we have our IVP
+								\begin {equation*}
+									\ddot{y} + 64y = 0 
+									\quad y(0)=\frac{3}{2}
+									\quad \dot{y}(0) = -3
+								\end {equation*}
+						</li>	
+						<li>
+							<div>
+								To solve the IVP, we already solved the equation and found the general solution <a href="#x1-12r5">(6.1.5)</a>
+								\begin {equation*} 
+									y=c_1\cos 8t+c_2\sin 8t 
+								\end {equation*}
+
+								Now we simply apply the initial conditions.
+							</div>	
+							<div class="reading-exercise">
+								Evaluate \( y=c_1\cos 8t+c_2\sin 8t  \) at the initial condition \(y(0)=\frac{3}{2}\)
+							</div>
+
+							<div class="reading-exercise">
+								Differentiate \( y=c_1\cos 8t+c_2\sin 8t  \)
+							</div>
+							<div>
+								Differentiating <a href="#x1-12r5">(6.1.5)</a> we obtain
+								<a id="x1-13r6"></a>
+								\begin {align}  \label {eq:6.1.6}
+									\dot{y} = & 8 c_2\cos 8t -8 c_1\sin 8t \\
+								\end {align}  
+							</div>	
+
+							<div class="reading-exercise">
+								Evaluate \( \dot{y} = 8 c_2\cos 8t -8 c_1\sin 8t  \) at the initial condition \( \dot{y}(0) = -3\)
+							</div>
+
+							<div>
+								Evaluating <a href="#x1-12r5">(6.1.5)</a> and <a href="#x1-13r6">(6.1.6)</a> at the initial conditions we obtain \(c_1=3/2\) and \(c_2=-3/8\) so we obtain the particular solution
+								\begin {equation*} 
+									y= \frac{3}{2} \cos 8t - \frac{3}{8} \sin 8t 
+								\end {equation*}
+								The equation which describes the displacement of the object in feet.
+							</div>	
+						</li>	
 					</ol>
 				</details>
 			</div>
 
+			
 			<figure class="figure" id="9ad40c88-ba7b-481f-8740-c2935bc7bb2c">
 				<div id="-y-over-t-over-t-">
 					<img height="264" src="EPS/fig060104.png" width="409" /> <a id="x1-14r4"></a> 
@@ -182,77 +326,476 @@
 				<figcaption class="caption"><span class="id">Figure&nbsp;6.1.4</span><span class="content"> \(y=\displaystyle {}{3\over 2}\cos 8t-{3\over 8}\sin 8t\) </span></figcaption>
 				<!-- tex4ht:label?: x1-14r4  -->
 			</figure>
+			<br>
+			<br>
+			<br>
+			<br>
 
+
+			<!--Undamped Free Motion Generic-->
 			<div class="indent" id="4488a66d-6f72-4cbb-acd8-02b80881c3a3">
-				We’ll now consider the equation \[ m\frac{d^2y}{dx^2}+ky=0 \] where \(m\) and \(k\) are arbitrary positive numbers. Dividing through by \(m\) and defining \(\omega _0=\sqrt {k/m}\) yields \[ \frac{d^2y}{dx^2}+\omega _0^2y=0\] The general solution of this equation is \begin {equation} \label {eq:6.1.7} y=c_1\cos \omega _0t+c_2\sin \omega _0t \end {equation} <a id="x1-15r7"></a> We can rewrite this in a more useful form by defining \begin {equation} \label {eq:6.1.8} R=\sqrt {c_1^2+c_2^2} \end {equation} <a id="x1-16r8"></a> and \begin {equation} \label {eq:6.1.9} c_1=R\cos \phi \mbox {\quad and \quad }c_2=R\sin \phi \end {equation} <a id="x1-17r9"></a> Substituting from <a href="#x1-17r9">(6.1.9)</a> into <a href="#x1-15r7">(6.1.7)</a> and applying the identity \[ \cos \omega _0t\cos \phi +\sin \omega _0t\sin \phi =\cos (\omega _0t-\phi ) \] yields 
-				\begin {equation} \label {eq:6.1.10} y=R\cos (\omega _0t-\phi ) 
-				\end {equation} <a id="x1-18r10"></a> 
-			</div>
-			<div class="indent" id="51ed5dce-1b1f-4241-aa7e-d7c104650eac">
+				We’ll now consider undamped free motion where \(m\) and \(k\) are arbitrary positive numbers.
 				
-				From <a href="#x1-16r8">(6.1.8)</a> and <a href="#x1-17r9">(6.1.9)</a> we see that the \(R\) and \(\phi \) can be interpreted as polar coordinates of the point with rectangular coordinates \((c_1,c_2)\) (Figure&nbsp;<a href="#-r-cc-em-cr-em-cr-">6.1.5</a>). Given \(c_1\) and \(c_2\), we can compute \(R\) from <a href="#x1-16r8">(6.1.8)</a>. From <a href="#x1-16r8">(6.1.8)</a> and <a href="#x1-17r9">(6.1.9)</a>, we see that \(\phi \) is related to \(c_1\) and \(c_2\) by \[ \cos \phi ={c_1\over \sqrt {c_1^2+c_2^2}}\quad \mbox{ and } \quad \sin \phi = {c_2\over \sqrt {c_1^2+c_2^2}}\] There are infinitely many angles \(\phi \), differing by integer multiples of \(2\pi \), that satisfy these equations. We will always choose \(\phi \) so that \(-\pi \le \phi &lt;\pi \).
-			
+				\[ m \ddot{y} + ky = 0 \]
+
+				As we did in Example <a href="#x1-71">6.1.1</a> we'll start by dividing by  \(m\) to obtain
+
+				\[ \ddot{y} + \frac{k}{m}y = 0 \]
+
+				Now we will rename the constant \({k}/{m}\) to \(\omega_0^2\)
+
+				\[ \ddot{y} + \omega_0^2 \, y = 0 \]
 			</div>
+			<div class="reading-exercise">
+				Solve \(\ddot{y} + \omega_0^2 \, y = 0 \)
+			</div>
+			<div>	
+
+				We can solve this equation the same way we did in Example <a href="#x1-71">6.1.1</a> to obtain the general solution
+				
+				<a id="x1-15r7"></a> 
+				\begin {equation} \label {eq:6.1.7} 
+					y=c_1\cos \omega _0t+c_2\sin \omega _0 t 
+				\end {equation} 
+			</div>
+			<div class="reading-exercise">
+				Verify \(y=c_1\cos \omega _0t+c_2\sin \omega _0 t \) is a solution of \(\ddot{y} + \omega_0^2 \, y = 0 \)
+			</div>
+			<div>
+				Now if we define
+				<a id="x1-16r8"></a>
+				\begin {equation} \label {eq:6.1.8} 
+					R=\sqrt {c_1^2+c_2^2} 
+			   	\end {equation} 
+			   
+			</div>	
+			<div>
+				Then we can make the substitution 
+				<a id="x1-17r9"></a>
+				\begin {equation} \label {eq:6.1.9} 
+					c_1=R\cos \theta \quad\quad c_2=R\sin \theta 
+				\end {equation}  
+			</div>
+			<div class="reading-exercise">
+				Substitute \(c_1=R\cos \theta\) and \(c_2=R\sin \theta\) into <a href="#x1-16r8">(6.1.8)</a> and verify \(R=\sqrt {c_1^2+c_2^2}\)
+			</div>
+
+			<div>
+				Substitution \(c_1=R\cos \theta\) and \(c_2=R\sin \theta\) into <a href="#x1-15r7">(6.1.7)</a> we obtain
+				\begin {align*} 
+					y = & \overset{c_1}{\overbrace{R\cos \theta}} \cos \omega _0t + \overset{c_2}{\overbrace{R\sin \theta}} \sin \omega _0 t \\
+					y = & R \Big(  \cos \omega _0t \cos \theta +  \sin \omega _0 t \sin \theta \Big) \\
+				\end {align*} 
+
+				Which we can simplify by applying the trig identity
+				\[
+					\cos(\alpha - \beta) = \cos \alpha \cos \beta + \sin \alpha \sin \beta
+				\]
+				with \(\alpha =  \omega _0 t \) and \(\beta = \theta \) so we can rewrite <a href="#x1-15r7">(6.1.7)</a> as
+
+				<a id="x1-18r10"></a> 
+				\begin {align} \label {eq:6.1.10}
+				y = & R \cos \left(\omega _0 t - \theta \right)
+				\end {align} 
+				
+			</div>
+
+
+			<div class="indent" id="51ed5dce-1b1f-4241-aa7e-d7c104650eac">
+				But notice that <a href="#x1-16r8">(6.1.8)</a> and <a href="#x1-17r9">(6.1.9)</a> are simply the polar coordinates  \((R,\theta)\)  for a point \((c_1,c_2)\) so given \(c_1\) and \(c_2\), we can compute \(R\) from <a href="#x1-16r8">(6.1.8)</a>
+			</div>	
+			
 			<figure class="figure" id="a2a99875-649f-4225-971e-496846d04524">
 				<div id="-r-cc-em-cr-em-cr-">
 					<img height="264" src="EPS/fig060105.png" width="409" /> <a id="x1-19r5"></a> 
 				</div>
-				<figcaption class="caption"><span class="id">Figure&nbsp;6.1.5</span><span class="content"> \(R= \sqrt {c_1^2+c_2^2}\); \(c_1=R\cos \phi \); \(c_2=R\sin \phi \) </span></figcaption>
+				<figcaption class="caption"><span class="id">Figure&nbsp;6.1.5</span><span class="content"> \(R= \sqrt {c_1^2+c_2^2}\) &nbsp;&nbsp; \(c_1=R\cos \theta \) &nbsp;&nbsp; \(c_2=R\sin \theta \) </span></figcaption>
 				<!-- tex4ht:label?: x1-19r5  -->
 			</figure>
-			<div class="indent" id="43d77bdc-abcc-4034-87e5-49be7272686f">
-				The motion described by <a href="#x1-15r7">(6.1.7)</a> or <a href="#x1-18r10">(6.1.10)</a> is <span class="vocab">simple harmonic motion</span>. We see from either of these equations that the motion is periodic, with period \[ T=2\pi /\omega _0\] This is the time required for the object to complete one full cycle of oscillation (for example, to move from its highest position to its lowest position and back to its highest position). Since the highest and lowest positions of the object are \(y=R\) and \(y=-R\), we say that \(R\) is the <span class="vocab">amplitude</span> of the oscillation. The angle \(\phi \) in <a href="#x1-18r10">(6.1.10)</a> is the <span class="vocab">phase angle</span>. It’s measured in radians. Equation&nbsp;<a href="#x1-18r10">(6.1.10)</a> is the <span class="vocab">amplitude–phase form</span> of the displacement. If \(t\) is in seconds then \(\omega _0\) is in radians per second (rad/s); it’s the <span class="vocab">frequency</span> of the motion. It is also called the <span class="vocab">natural frequency</span> of the spring–mass system without damping. 
+			<br>
+			<br>
+			<br>
+			<div class="reading-exercise">
+				Solve <a href="#x1-17r9">(6.1.9)</a> for \( \sin \theta\) and \( \cos \theta\)
 			</div>
 
-			<div class="example" id="x1-202" style="--ex-number: 2">
-				
-				<div> We found the displacement of the object in Example&nbsp;<a href="#x1-71">6.1.1</a>to be \[ y={3\over 2}\cos 8t-{3\over 8}\sin 8t\] Find the frequency, period, amplitude, and phase angle of the motion. 
+			<div class="reading-exercise">
+				Substitute <a href="#x1-16r8">(6.1.8)</a> into the expressions for \( \sin \theta\) and \( \cos \theta\)
 			</div>
+				
+			<div>
+				Rearranging <a href="#x1-16r8">(6.1.8)</a> and <a href="#x1-17r9">(6.1.9)</a> we have a relationship between  \(\theta \) and the constants \(c_1\) and \(c_2\)
+				
+				\[ 
+					\cos \theta ={c_1\over \sqrt {c_1^2+c_2^2}}\quad \mbox{ and } \quad \sin \theta = {c_2\over \sqrt {c_1^2+c_2^2}}
+				\] 
+				
+				
+				There are infinitely many angles \(\theta \), differing by integer multiples of \(2\pi \), that satisfy these equations. We will always choose \(\theta \) 
+				in the interval \([-\pi,\pi)\) i.e. \(-\pi \le \theta &lt;\pi \)
+			
+			</div>
+
+			<br>
+			<br>
+			<br>
+
+			<div class="indent" id="43d77bdc-abcc-4034-87e5-49be7272686f">
+				The motion described by <a href="#x1-15r7">(6.1.7)</a> and <a href="#x1-18r10">(6.1.10)</a> is called <span class="vocab">simple harmonic motion</span> which is periodic, with period 
+				
+				\[ T=\frac{2\pi}{\omega _0}\] 
+				
+				This is the time required for the object to complete one full cycle of oscillation (for example, to move from its highest position to its lowest position and back to its highest position). Since the highest and lowest positions of the object are \(y=R\) and \(y=-R\), we say that \(R\) is the <span class="vocab">amplitude</span> of the oscillation. The angle \(\theta \) in <a href="#x1-18r10">(6.1.10)</a> is the <span class="vocab">phase angle</span> and is measured in radians. We call&nbsp;<a href="#x1-18r10">(6.1.10)</a> the <span class="vocab">amplitude–phase form</span> of the displacement. When \(t\) is in seconds and \(\omega _0\) is in radians per second then \(\omega _0\) is the <span class="vocab">frequency</span> of the motion; it is also called the <span class="vocab">natural frequency</span> of the spring–mass system without damping. 
+			</div>
+
+
+			<!--Undamped Free Motion Example 2-->
+			<div class="example" id="x1-202" style="--ex-number: 2">
+				<div> 
+					Consider the equation 
+					\begin {equation*} 
+						y= \frac{3}{2} \cos 8t - \frac{3}{8} \sin 8t 
+					\end {equation*}
+				</div>
+				<ol>
+					<li>Identify \( c_1,\)  \(c_2,\) and \( \omega _0 \)</li>
+					<li>Find the frequency, period, and amplitude</li>
+					<li>Find the phase angle</li>
+				</ol>	
+				
+				
 
 				<details class="solution">
 					<summary>Solution</summary>
-					The frequency is \(\omega _0=8\) rad/s, and the period is \(T=2\pi /\omega _0=\pi /4\) s. Since \(c_1=3/2\) and \(c_2=-3/8\), the amplitude is \[ R=\sqrt {c^2_1+c^2_2}=\sqrt {\left ({3\over 2}\right )^2+\left ({3\over 8}\right )^2} ={3\over 8}\sqrt {17}\] The phase angle is determined by 
-					\begin {equation} \label {eq:6.1.11} \cos \phi ={{3\over 2}\over {3\over 8}\sqrt {17}}={4\over \sqrt {17}} 
-					\end {equation}
-					<a id="x1-21r11"></a>
-					and 
-					\begin {equation} \label {eq:6.1.12} \sin \phi ={-{3\over 8}\over {3\over 8}\sqrt {17}}=-{1\over \sqrt {17}} 
-					\end {equation}
-					<a id="x1-22r12"></a>
-					Using a calculator, we see from <a href="#x1-21r11">(6.1.11)</a> that \[ \phi \approx \pm .245\mbox { rad}\] Since \(\sin \phi &lt;0\) (see <a href="#x1-22r12">(6.1.12)</a>), the minus sign applies here; that is, \[ \phi \approx -.245\mbox { rad}\]
+
+					<ol>
+						<li>
+							<div>
+								Comparing our equation with <a href="#x1-15r7">(6.1.7)</a>
+								\begin {align*} 
+									y = & c_1\cos \omega _0 t + c_2\sin \omega _0 t \\
+									y= & \frac{3}{2} \cos 8t - \frac{3}{8} \sin 8t 
+								\end {align*} 
+
+								We have 
+								\[
+									c_1 = \frac{3}{2} 
+									\quad
+									c_2 = - \frac{3}{8} 
+									\quad
+									\omega _0 = 8
+								\]
+							</div>	
+							
+						</li>
+						<li>
+							<div>
+								The frequency is \[\omega _0=8 \quad \text{rad/s} \]
+							</div>		
+							<div>
+								The period is 
+								\[ T=\frac{2\pi}{ \omega _0}
+								=\frac{2\pi}{ 8}
+								=\frac{\pi}{ 4} \]
+							</div>	
+							<div>
+								The amplitude is 
+								\[ R=\sqrt {c^2_1+c^2_2}=\sqrt {\left ({3\over 2}\right )^2+\left (-{3\over 8}\right )^2} 
+								=\sqrt {153\over 64}
+								={3\over 8}\sqrt {17}\]
+							</div>	
+							 
+						</li>
+						<li>
+							<div>
+								The phase angle is determined by 
+
+								<a id="x1-21r11"></a>
+								\begin {align} \label {eq:6.1.11} 
+									\cos \theta 
+									= & \frac{c_1}{R} \nonumber \\
+									= & {{3\over 2}\over {3\over 8}\sqrt {17}} \nonumber \\
+									= & {4\over \sqrt {17}}
+									\Longrightarrow
+									\theta = \cos^{-1} \left({4\over \sqrt {17}} \right)
+									\approx 0.24498
+								\end {align}
+								
+								and 
+
+								<a id="x1-22r12"></a>
+								\begin {align} \label {eq:6.1.12} 
+									\sin \theta
+									= & \frac{c_2}{R} \nonumber \\
+									= & {-{3\over 8}\over {3\over 8}\sqrt {17}} \nonumber \\
+									= & -{1\over \sqrt {17}}
+									\Longrightarrow
+									\theta = \sin^{-1} \left(-{1\over \sqrt {17}} \right)
+									\approx -0.24498
+								\end {align}
+
+								Since cosine is positive and sine is negative, that puts the angle \(\theta\) in quadrant IV so the angle is \( \theta = \sin^{-1} \left(-{1 / \sqrt {17}} \right)
+								\approx -0.24498\) radians
+							</div>
+							
+						 </li>
+				
+					</ol>	
 				</details>
 			</div>
 
+			<!--Undamped Free Motion Example 3-->
 			<div class="example" id="x1-233" style="--ex-number: 3">
 				
-				<div> The natural length of a spring is 1 m. An object is attached to it and the length of the spring increases to 102 cm when the object is in equilibrium. Then the object is initially displaced downward 1 cm and given an upward velocity of 14 cm/s. Find the displacement for \(t&gt;0\). Also, find the natural frequency, period, amplitude, and phase angle of the resulting motion. Express the answers in cgs units. 
+				<div> The natural length of a spring is 1 m. An object is attached to it and the length of the spring increases to 102 cm when the object is in equilibrium. 
 			</div>
+
+				<ol>
+					<li> Set up the equation of motion to model this problem</li>
+					<li> Solve the equation to find its general solution</li>
+					<li> 
+						Set up an IVP if the object is initially displaced downward 1 cm and given an upward velocity of 14 cm/s						
+					</li>
+					<li> Solve the IVP </li>
+					<li>Identify \( c_1,\)  \(c_2,\) and \( \omega _0 \)</li>
+					<li>Find the frequency, period, and amplitude</li>
+					<li>Find the phase angle</li>
+				</ol>
 
 				<details class="solution">
 					<summary>Solution</summary>
-					In cgs units \(g=980\) cm/s\(^2\). Since \(\Delta l=2\) cm, \(\omega _0^2=g/\Delta l=490\). Therefore \[ \frac{d^2y}{dx^2}+490y=0, \quad y(0)=-1,\quad \left. \frac{dy}{dx} \right|_{0}=14\] The general solution of the differential equation is \[ y=c_1\cos 7\sqrt {10}t+c_2\sin 7\sqrt {10}t\] so \[ \frac{dy}{dx} =7\sqrt {10}\left (-c_1\sin 7\sqrt {10}t+c_2\cos 7\sqrt {10}t\right )\] Substituting the initial conditions into the last two equations yields \(c_1=-1\) and \(c_2=2/\sqrt {10}\). Hence, \[ y=-\cos 7\sqrt {10}t+{2\over \sqrt {10}}\sin 7\sqrt {10}t\] The frequency is \(7\sqrt {10}\) rad/s, and the period is \(T=2\pi /(7\sqrt {10})\) s. The amplitude is \[ R=\sqrt {c_1^2+c_2^2}=\sqrt {(-1)^2+\left ({2\over \sqrt {10}}\right )^2}= \sqrt {{7\over 5}}\mbox { cm}\] The phase angle is determined by \[ \cos \phi ={c_1\over R}=-\sqrt {{5\over 7}}\quad \mbox{ and } \quad \sin \phi = {c_2\over R}=\sqrt {{2\over 7}}\] Therefore \(\phi \) is in the second quadrant and \[ \phi =\cos ^{-1}\left (-\sqrt {{5\over 7}}\right )\approx 2.58\mbox { rad}\]
+					<ol>
+						<li>
+							<div>
+								Again setting \(c=0\) for no damping and \(F_1=0\) for no external forces in <a href="#x1-5r2">(6.1.2)</a> the equation of motion for this sitution is
+
+								\begin {align*} 
+									m \ddot{y} +ky = & 0 \\
+								\end {align*}  
+
+								Which again we simplify by dividing by \(m\) to obtain
+								
+								\begin {align*} 
+									\ddot{y} + \frac{k}{m} y = & 0 \\
+								\end {align*}  
+							</div>	
+							<div>
+								Since the natural length of the spring is 1 m and it is stretched to 102 cm, then we have \(\Delta l = 2\) cm and \(g=980\) cm/s\(^2\) so just as in Example <a href="#x1-71">6.1.2</a> we can use \(mg=k \Delta l\) to find \(k/m\)
+
+								\begin {align*} 
+									mg = & k \Delta l
+									\Longrightarrow
+									\frac{k}{m} = \frac{g}{\Delta l}
+									= \frac{980}{2}
+									= 490
+								\end {align*}  
+							</div>	
+							<div>
+								Finally substituting this back in we obtain the equation to model this problem
+								
+								\begin {equation*}  
+									\ddot{y} + 490y = 0 
+								\end {equation*}
+						</li>	
+						<li>
+							<div>
+								We recognize this as a second order constant coefficient differential equation (Section <a href="sec5.2.book.html" target=_blank>5.2</a>) which we can solve by guessing solutions of the form \(y=e^{rt}\)
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y=e^{rt}\) twice 
+							</div>
+							<div class="reading-exercise">
+								Substitute into \(\ddot{y} + 490y = 0\) and find the characteristic equation
+							</div>
+							<div>
+								We solve the characteristic equation and find
+								\begin {align*} 
+									r^2 + 490 = & 0 \\
+									r = & \pm 7i \sqrt{10} \\
+								\end {align*} 
+
+								So we obtain \(y=e^{7i \sqrt{10}t}\) and \(y=e^{-7i \sqrt{10}t}\) which results in  the general solution of
+
+								
+								\begin {equation*} 
+									y=c_1\cos 7 \sqrt{10}t+c_2\sin 7 \sqrt{10}t 
+								\end {equation*}
+							</div>	
+							<div class="reading-exercise">
+								Verify \(y=c_1\cos 7 \sqrt{10}t+c_2\sin 7 \sqrt{10}t \) is a solution of \(\ddot{y} + 490y = 0 \)
+							</div>
+						</li>	
+
+						<li>
+							<div>
+								We already found the equation for our IVP
+								\begin {equation*}
+									\ddot{y} + 490y = 0 
+								\end {equation*}
+							</div>	
+							<div>
+								The initial conditions are given in the problem statement. The object is initially displaced 1 cm below equilibrium, meaning \(y(0)=-1\) cm and the object is initially given an upward velocity of 14 ft/s meaning \(\dot{y}(0)=14\) so we have our IVP
+								\begin {equation*}
+									\ddot{y} + 490y = 0 
+									\quad y(0)=-1
+									\quad \dot{y}(0) = 14
+								\end {equation*}
+						</li>	
+						<li>
+							<div>
+								To solve the IVP, we already solved the equation and found the general solution 
+								\begin {equation*} 
+									y=c_1\cos 7 \sqrt{10}t+c_2\sin 7 \sqrt{10}t 
+								\end {equation*}
+
+								Now we simply apply the initial conditions.
+							</div>	
+							<div class="reading-exercise">
+								Evaluate \( y=c_1\cos 7 \sqrt{10}t+c_2\sin 7 \sqrt{10}t   \) at the initial condition \(y(0)=-1\)
+							</div>
+
+							<div class="reading-exercise">
+								Differentiate \( y=c_1\cos 7 \sqrt{10}t+c_2\sin 7 \sqrt{10}t   \)
+							</div>
+							<div>
+								Differentiating we obtain
+								\begin {align*}  
+									\dot{y} = & 7 \sqrt{10} c_2 \cos 7 \sqrt{10}t - 7 \sqrt{10} c_1 \cos 7 \sqrt{10}t \\
+									= & 7 \sqrt{10} \Big( c_2 \cos 7 \sqrt{10}t - c_1 \cos 7 \sqrt{10}t \Big) \\
+								\end {align*}  
+							</div>	
+
+							<div class="reading-exercise">
+								Evaluate \( \dot{y} = 7 \sqrt{10} \Big( c_2 \cos 7 \sqrt{10}t - c_1 \cos 7 \sqrt{10}t \Big) \) at the initial condition \( \dot{y}(0) = 14 \)
+							</div>
+
+							<div>
+								Evaluating \(y\) and  \(\dot{y}\) at the initial conditions we obtain \(c_1=-1\) and \(c_2=2/\sqrt{10}\)  so we obtain the particular solution
+
+								\begin {equation*} 
+									y= -\cos 7 \sqrt{10}t + \frac{2}{\sqrt{10}}\sin 7 \sqrt{10}t 
+								\end {equation*}
+
+								The equation which describes the displacement of the object in cm.
+							</div>	
+						</li>	
+						<li>
+							<div>
+								Comparing our equation with <a href="#x1-15r7">(6.1.7)</a>
+								\begin {align*} 
+									y = & c_1\cos \omega _0 t + c_2\sin \omega _0 t \\
+									y= & -\cos 7 \sqrt{10}t + \frac{2}{\sqrt{10}}\sin 7 \sqrt{10}t
+								\end {align*} 
+
+								We have 
+								\[
+									c_1 = -1
+									\quad
+									c_2 = \frac{2}{\sqrt{10}}
+									\quad
+									\omega _0 = 7 \sqrt{10}
+								\]
+							</div>	
+							
+						</li>
+						<li>
+							<div>
+								The frequency is \[\omega _0=7 \sqrt{10} \quad \text{rad/s} \]
+							</div>		
+							<div>
+								The period is 
+								\[ T=\frac{2\pi}{ \omega _0}
+								=\frac{2\pi}{ 7 \sqrt{10}}
+								\]
+							</div>	
+							<div>
+								The amplitude is 
+								\[ R=\sqrt {c^2_1+c^2_2}=\sqrt {\left ({-1}\right )^2+\left (-{\frac{2}{\sqrt{10}}}\right )^2} 
+								=\sqrt {1 + \frac{2}{5}}
+								=\sqrt {7\over 5}
+								\]
+							</div>	
+							 
+						</li>
+						<li>
+							<div>
+								The phase angle is determined by 
+
+								
+								\begin {align*} 
+									\cos \theta 
+									= & \frac{c_1}{R} \nonumber \\
+									= & {{-1} \div \sqrt {7\over 5} } \nonumber \\
+									= & -\sqrt {5\over 7}
+									\Longrightarrow
+									\theta = \cos^{-1} \left(-\sqrt {5\over 7} \right)
+									\approx 2.57765
+								\end {align*}
+								
+								and 
+
+								\begin {align*} 
+									\sin \theta
+									= & \frac{c_2}{R} \nonumber \\
+									= & \frac{2}{\sqrt{10}} \div \sqrt {7\over 5}   \nonumber \\
+									= &  \sqrt {\frac{2}{7}}
+									\Longrightarrow
+									\theta = \sin^{-1} \left(\sqrt {\frac{2}{7}} \right)
+									\approx 0.56394
+								\end {align*}
+
+								Since cosine is negative and sine is positive, that puts the angle \(\theta\) in quadrant II so the angle is \( \theta = \cos^{-1} \left({  - \sqrt {5}/ \sqrt {7}} \right)
+								\approx 2.57765 \) radians
+							</div>
+							
+						 </li>
+					</ol>
 				</details>
 			</div>
+
+
 		</details>
 
+		<!--Undamped Forced Motion-->
 		<details id="details-3">
 			<summary>Undamped Forced Motion</summary>
 
 			<div id="dc0ca0c9-e4b2-4cfb-bd97-0a1168e1b91e">
-				In many mechanical problems a device is subjected to periodic external forces. For example, soldiers marching in cadence on a bridge cause periodic disturbances in the bridge, and the engines of a propeller driven aircraft cause periodic disturbances in its wings. In the absence of sufficient damping forces, such disturbances – even if small in magnitude – can cause structural breakdown if they are at certain critical frequencies. To illustrate, this we’ll consider the motion of an object in a spring–mass system without damping, subject to an external force \[ F(t)=F_0\cos \omega t \] where \(F_0\) is a constant. In this case the equation of motion <a href="#x1-5r2">(6.1.2)</a> is \[ m\frac{d^2y}{dx^2}+ky=F_0\cos \omega t\] which we rewrite as 
-				\begin {equation} \label {eq:6.1.13} \frac{d^2y}{dx^2}+\omega _0^2y={F_0\over m}\cos \omega t 
-				\end {equation} <a id="x1-24r13"></a> with \(\omega _0=\sqrt {k/m}\). We’ll see from the next two examples that the solutions of <a href="#x1-24r13">(6.1.13)</a> with \(\omega \ne \omega _0\) behave very differently from the solutions with \(\omega =\omega _0\). 
+				In many mechanical problems a device is subjected to periodic external forces. For example, soldiers marching in cadence on a bridge cause periodic disturbances in the bridge, and the engines of a propeller driven aircraft cause periodic disturbances in its wings. In the absence of sufficient damping forces, such disturbances, even if small in magnitude, can cause structural breakdown if they are at certain critical frequencies. To illustrate, this we’ll consider the motion of an object in a spring–mass system without damping, subject to an external force \(F_1\) where \(F_0\) is a constant:
+				
+				\[ F_1=F_0\cos \omega t \]
+				
+				
+				 In this case the equation of motion <a href="#x1-5r2">(6.1.2)</a> is 
+				
+				\[ m \ddot{y} + ky = F_0\cos \omega t \] 
+				
+				which we divide by \(m\) and rewrite as 
+
+				\[ \ddot{y} + \frac{k}{m}y = \frac{F_0}{m}\cos \omega t \] 
+
+				And then finally rename the constant \(k/m\) to \(\omega _0^2\) so we have
+
+				<a id="x1-24r13"></a> 
+				\begin {equation} \label {eq:6.1.13} 
+					\ddot{y} + \omega _0^2y = {F_0\over m} \cos \omega t 
+				\end {equation} 
+				
+				The next two examples illustrate that the solutions of <a href="#x1-24r13">(6.1.13)</a> with \(\omega \ne \omega _0\) behave very differently from the solutions with \(\omega =\omega _0\)
 			</div>
 
+				<!--Undamped Free Motion Example 4-->
 				<div class="example" id="x1-254" style="--ex-number: 4">
 					<div>
-						Solve the initial value problem 
+						Given that \(\omega \ne \omega _0\) solve the IVP 
+
 						<a id="x1-26r14"></a>
-						\begin {equation} 
-							\label {eq:6.1.14} 
-							\frac{d^2y}{dx^2}+\omega _0^2y={F_0\over m}\cos \omega t, \quad y(0)=0,\quad \left. \frac{dy}{dx} \right|_{0}=0 
+						\begin {equation} \label {eq:6.1.14} 
+							\ddot{y} + \omega _0^2 y = {F_0\over m}\cos \omega t
+							\quad y(0)=0
+							\quad \left. \frac{dy}{dx} \right|_{0}=0 
 						\end {equation} 
-						given that \(\omega \ne \omega _0\). 
+					
 					</div>
 
 					<details class="solution">
@@ -271,28 +814,34 @@
 				<div class="indent" id="eb4ffded-8f7c-4aa0-ab82-51689f062a91">
 					It is revealing to write this in a different form. We start with the trigonometric identities 
 				</div>
+
 				<div class="eqnarray" id="d5d84bd4-319c-460e-b924-50b2b008be61">
 					\begin {eqnarray*} 
 					\cos (\alpha -\beta )&amp;=&amp;\cos \alpha \cos \beta +\sin \alpha \sin \beta \\ \cos (\alpha +\beta )&amp;=&amp;\cos \alpha \cos \beta -\sin \alpha \sin \beta 
 					\end {eqnarray*}
 				</div>
+
 				<div class="indent" id="5c970724-0529-45ab-b4c7-8027f466cb0b">
 					Subtracting the second identity from the first yields \begin {equation} \label {eq:6.1.17} \cos (\alpha -\beta )-\cos (\alpha +\beta )=2\sin \alpha \sin \beta \end {equation} <a id="x1-29r17"></a> Now let \begin {equation} \label {eq:6.1.18} \alpha -\beta =\omega t\quad \mbox{ and } \quad \alpha +\beta =\omega _0t\end {equation} <a id="x1-30r18"></a> so that \begin {equation} \label {eq:6.1.19} \alpha ={(\omega _0+\omega )t\over 2}\quad \mbox{ and } \quad \beta ={(\omega _0-\omega )t\over 2} \end {equation} <a id="x1-31r19"></a> Substituting <a href="#x1-30r18">(6.1.18)</a> and <a href="#x1-31r19">(6.1.19)</a> into <a href="#x1-29r17">(6.1.17)</a> yields \[ \cos \omega t-\cos \omega _0t= 2\sin {(\omega _0-\omega )t\over 2}\sin {(\omega _0+\omega )t\over 2}\] and substituting this into <a href="#x1-28r16">(6.1.16)</a> yields \begin {equation} \label {eq:6.1.20} y=R(t)\sin {(\omega _0+\omega )t\over 2} \end {equation} <a id="x1-32r20"></a> where 
 					\begin {equation} \label {eq:6.1.21} R(t)={2F_0\over m(\omega _0^2-\omega ^2)} \sin {(\omega _0-\omega )t\over 2} 
 					\end {equation} <a id="x1-33r21"></a> 
 				</div>
+
 				<div class="indent" id="ee3591a2-76ce-46b3-ac2f-b53fff5587c0">
 					From <a href="#x1-32r20">(6.1.20)</a> we can regard \(y\) as a sinusoidal variation with frequency \((\omega _0+\omega )/2\) and variable amplitude \(|R(t)|\). In Figure&nbsp;<a href="#-undamped-oscillation-with-beats-">6.1.6</a> the dashed curve above the \(t\) axis is \(y=|R(t)|\), the dashed curve below the \(t\) axis is \(y=-|R(t)|\), and the displacement \(y\) appears as an oscillation bounded by them. The oscillation of \(y\) for \(t\) on an interval between successive zeros of \(R(t)\) is called a <span class="vocab">beat</span>. 
 				</div>
+
 				<figure class="figure" id="40844d1b-030a-4943-bc82-cafffb4e6b5f">
 					<div id="-undamped-oscillation-with-beats-">
 						<img height="264" src="EPS/fig060106.png" width="409" /> <a id="x1-34r6"></a> 
 					</div>
 					<figcaption class="caption"><span class="id">Figure&nbsp;6.1.6</span><span class="content">Undamped oscillation with beats</span></figcaption>
 				</figure>
+
 				<div class="indent" id="472fef90-4970-4793-ba4f-e64fe2ea3294">
 					You can see from <a href="#x1-32r20">(6.1.20)</a> and <a href="#x1-33r21">(6.1.21)</a> that \[ |y(t)|\le {2|F_0|\over m|\omega _0^2-\omega ^2|}\] moreover, if \(\omega +\omega _0\) is sufficiently large compared with \(\omega -\omega _0\), then \(|y|\) assumes values close to (perhaps equal to) this upper bound during each beat. However, the oscillation remains bounded for all \(t\). (This assumes that the spring can withstand deflections of this size and continue to obey Hooke’s law.) The next example shows that this isn’t so if \(\omega =\omega _0\). 
 				</div>
+
 				<div class="example" id="x1-355" style="--ex-number: 5">
 					<div> 
 						Find the general solution of 
@@ -318,6 +867,7 @@
 				<div class="indent" id="4bff3d1d-9438-4be9-b0ae-d44c5126a8b4">
 					This phenomenon of unbounded displacements of a spring–mass system in response to a periodic forcing function at its natural frequency is called <span class="vocab">resonance</span>. More complicated mechanical structures can also exhibit resonance–like phenomena. For example, rhythmic oscillations of a suspension bridge by wind forces or of an airplane wing by periodic vibrations of reciprocating engines can cause damage or even failure if the frequencies of the disturbances are close to critical frequencies determined by the parameters of the mechanical system in question. 
 				</div>
+
 				<figure class="figure" id="3b5072ec-cfa7-4cb2-a7e9-a08c265859ac">
 					<div id="-unbounded-displacement-due-to-resonance-">
 						<img height="264" src="EPS/fig060107.png" width="409" /> <a id="x1-39r7"></a> 
@@ -326,6 +876,7 @@
 					<!-- tex4ht:label?: x1-39r7  -->
 				</figure>
 			</summary>
+
 		</details>
 
 		<nav class="ex">
