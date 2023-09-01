@@ -801,87 +801,97 @@
 				<details class="solution">
 					<summary>Solution</summary>
 
-					<div>
-						We recognize <a href="#eq2415">(2.4.15)</a> as a Bernoulli equation <a href="#x1-3r2">(2.4.2)</a>.
-					</div>
+					<ol>
+						<li>
+							<div>
+								We recognize <a href="#eq2415">(2.4.15)</a> as a Bernoulli equation <a href="#x1-3r2">(2.4.2)</a>.
+							</div>
 
-					<div id="re-4-1" class="reading-exercise">
-						Identify \( p(x) \), \(f(x)\), and \(r\)
-					</div>
+							<div id="re-4-1" class="reading-exercise">
+								Identify \( p(x) \), \(f(x)\), and \(r\)
+							</div>
 
-					<div id="re-4-2" class="reading-exercise">
-						Solve the "complementary equation"
-					</div>
+							<div id="re-4-2" class="reading-exercise">
+								Solve the "complementary equation"
+							</div>
 
-					<div>
-						The general solution is \( y = ce^{\frac{1}{2} x^2} \). Choosing \( c = 1 \) we will use \( y_1 = e^{\frac{1}{2} x^2} \) and seek solutions of the form \( y = ue^{\frac{1}{2} x^2} \).
-					</div>
+							<div>
+								The general solution is \( y = ce^{\frac{1}{2} x^2} \). Choosing \( c = 1 \) we will use \( y_1 = e^{\frac{1}{2} x^2} \) and seek solutions of the form \( y = ue^{\frac{1}{2} x^2} \).
+							</div>
 
-					<div id="re-4-3" class="reading-exercise">
-						Differentiate \( y = ue^{\frac{1}{2} x^2} \)
-					</div>
+							<div id="re-4-3" class="reading-exercise">
+								Differentiate \( y = ue^{\frac{1}{2} x^2} \)
+							</div>
 
-					<div>
-						Substituting \( y = e^{\frac{1}{2} x^2} \) and its derivative into <a href="#eq2415">(2.4.15)</a>, we obtain
+							<div>
+								Substituting \( y = e^{\frac{1}{2} x^2} \) and its derivative into <a href="#eq2415">(2.4.15)</a>, we obtain
 
-						\begin{equation}
-							\frac{du}{dx} e^{\frac{1}{2} x^2} + xue^{\frac{1}{2} x^2} - xue^{\frac{1}{2} x^2} = x(ue^{\frac{1}{2} x^2})^{\frac{3}{2}}
-						\end{equation}
-					</div>
+								\begin{equation}
+									\frac{du}{dx} e^{\frac{1}{2} x^2} + xue^{\frac{1}{2} x^2} - xue^{\frac{1}{2} x^2} = x(ue^{\frac{1}{2} x^2})^{\frac{3}{2}}
+								\end{equation}
+							</div>
 
-					<div id="re-4-4" class="reading-exercise">
-						Simplify and separate the variables from <a href="#eq2415">(2.4.16)</a>
-					</div>
+							<div id="re-4-4" class="reading-exercise">
+								Simplify and separate the variables from <a href="#eq2415">(2.4.16)</a>
+							</div>
 
-					<div>
-						Now we antidifferentiate to find \(u\).
+							<div>
+								Now we antidifferentiate to find \(u\).
 
-						\begin{align*}
-							\int \frac{1}{u} du &= \int xe^{\frac{1}{4} x^2} dx \\
-							\ln |u| &= 2e^{\frac{1}{4} x^2} + c \\
-							u &= ce^{2e^{\frac{1}{4} x^2}}
-						\end{align*}
+								\begin{align*}
+									\int \frac{1}{u} du &= \int xe^{\frac{1}{4} x^2} dx \\
+									\ln |u| &= 2e^{\frac{1}{4} x^2} + c \\
+									u &= ce^{2e^{\frac{1}{4} x^2}}
+								\end{align*}
 
-						Substituting back in to \( y = ue^{\frac{1}{2} x^2} \)
+								Substituting back in to \( y = ue^{\frac{1}{2} x^2} \)
 
-						\begin{align*}
-							y = ce^{2e^{\frac{1}{4} x^2}} \cdot e^{\frac{1}{2} x^2} \\
-							y = ce^{x^2 e^{\frac{1}{4} x^2}}
-						\end{align*}
+								\begin{align*}
+									y = ce^{2e^{\frac{1}{4} x^2}} \cdot e^{\frac{1}{2} x^2} \\
+									y = ce^{x^2 e^{\frac{1}{4} x^2}}
+								\end{align*}
 
-						Applying the initial condition,
+								Applying the initial condition,
 
-						\begin{align*}
-							y(1) &= ce^{1^2 \cdot e^{\frac{1}{4} \cdot 1^2}} \\
-							4 &= ce^{\sqrt[4]{e}} \\
-							\frac{4}{e^{-\sqrt[4]{e}}} &= c \\
-						\end{align*}
+								\begin{align*}
+									y(1) &= ce^{1^2 \cdot e^{\frac{1}{4} \cdot 1^2}} \\
+									4 &= ce^{\sqrt[4]{e}} \\
+									\frac{4}{e^{-\sqrt[4]{e}}} &= c \\
+								\end{align*}
 
-						Substituting in our constant, we have our particular solution.
+								Substituting in our constant, we have our particular solution.
 
-						\begin{align*}
-							y = \frac{4}{e^{-\sqrt[4]{e}}} e^{x^2 e^{\frac{1}{4} x^2}} \\
-							y = 4e^{x^2 e^{\frac{1}{4} x^2} - \sqrt[4]{e}}
-						\end{align*}
+								\begin{align*}
+									y = \frac{4}{e^{-\sqrt[4]{e}}} e^{x^2 e^{\frac{1}{4} x^2}} \\
+									y = 4e^{x^2 e^{\frac{1}{4} x^2} - \sqrt[4]{e}}
+								\end{align*}
+							</div>
+						</li>
+						<li>
+							Graphing our particular solution, we find:
+							<figure class="figure" id="fig244">
+								<iframe src="https://www.desmos.com/calculator/vn0yxxjzsj?embed" width="400" height="400" frameborder=0></iframe>
+								<figcaption class="caption">
+									<span class="id">Figure&nbsp;2.4.4</span>
+									<span class="content">
+										A graph of the particular solution, \( y = 4e^{x^2 e^{\frac{1}{4} x^2} - \sqrt[4]{e}} \)
+									</span>
+								</figcaption>
+							</figure>
 
-						Graphing our particular solution, we find:
-						<figure class="figure" id="fig244">
-							<iframe src="https://www.desmos.com/calculator/vn0yxxjzsj?embed" width="400" height="400" frameborder=0></iframe>
-						</figure>
+							We can check our answer by comparing to the slope field in Figure&nbsp;<a href='#fig245'>2.4.5</a>.
 
-						We can check our answer by comparing to the slope field in Figure&nbsp;<a href='#fig245'>2.4.5</a>.
-
-						<figure class="figure" id="fig245">
-							<img id="x1-6r1" height="264" src="EPS/fig02045.png" width="409" />
-							<figcaption class="caption">
-								<span class="id">Figure&nbsp;2.4.5</span>
-								<span class="content">
-									A direction field and <span class="vocab">integral curves</span> for \(\displaystyle \frac{dy}{dx} - xy = xy^{3/2} \)
-								</span>
-							</figcaption>
-						</figure>
-
-					</div>
+							<figure class="figure" id="fig245">
+								<img id="x1-6r1" height="264" src="EPS/fig02045.png" width="409" />
+								<figcaption class="caption">
+									<span class="id">Figure&nbsp;2.4.5</span>
+									<span class="content">
+										A direction field and <span class="vocab">integral curves</span> for \(\displaystyle \frac{dy}{dx} - xy = xy^{3/2} \)
+									</span>
+								</figcaption>
+							</figure>
+						</li>
+					</ol>
 				</details>
 			</div>
 		</details>
