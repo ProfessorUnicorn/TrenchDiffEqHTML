@@ -79,8 +79,7 @@
 				\end{align*}
 			</div>
 			<div id="x1-2b">
-				Now we substitute \( y = uy_1\) and \( \frac{dy}{dx} = y_1\frac{du}{dx} + u\frac{dy_1}{dx}\) into the
-				<span class="vocab">Bernoulli equation</span> <a href="#x1-3r2">(2.4.2)</a> and simplify. By using the fact that \( y_1 \) is a solution to the "complementary" equation <a href="#x1-2r1">(2.4.1)</a>, we can use the fact that \( \frac{dy_1}{dx} + p(x)y_1=0\) and then <span class="vocab">transform</span> the <span class="vocab">Bernoulli equation</span> into a <span class="vocab">separable</span> equation in \( u\)
+				Now we substitute \( y = uy_1\) and \( \frac{dy}{dx} = y_1\frac{du}{dx} + u\frac{dy_1}{dx}\) into the <span class="vocab">Bernoulli equation</span> <a href="#x1-3r2">(2.4.2)</a> and simplify. By using the fact that \( y_1 \) is a solution to the "complementary" equation <a href="#x1-2r1">(2.4.1)</a>, we can use the fact that \( \frac{dy_1}{dx} + p(x)y_1=0\) and then <span class="vocab">transform</span> the <span class="vocab">Bernoulli equation</span> into a <span class="vocab">separable</span> equation in \( u\)
 
 				\begin{align*}
 					\frac{dy}{dx} + p(x)y = & f(x)y^r \nonumber \\
@@ -211,14 +210,7 @@
 			</div>
 
 			<div class="indent" id="f9fbfb60-66fc-42ee-babf-a0fdd8247348">
-				Figure&nbsp;
-				<a href="#x1-2r1">
-					2.4.1
-					<!-- tex4ht:ref: eq:2.4.1  -->
-				</a>
-				shows direction field and some
-				<span class="vocab">integral curves</span>
-				of <a href="#x1-5r3">(2.4.3)</a>.
+				Figure&nbsp;<a href="#x1-2r1">2.4.1</a> shows direction field and some <span class="vocab">integral curves</span> of <a href="#x1-5r3">(2.4.3)</a>.
 			</div>
 			<figure class="figure" id="243dca68-08b9-41cd-80c2-dadf7d0449cc">
 				<div id="-a-direction-field-and-integral-curves-for-yyxy-">
@@ -227,9 +219,7 @@
 				<figcaption class="caption">
 					<span class="id">Figure&nbsp;2.4.1</span>
 					<span class="content">
-						A direction field and
-						<span class="vocab">integral curves</span>
-						for \(\displaystyle \frac{dy}{dx} -y=xy^{2}\)
+						A direction field and <span class="vocab">integral curves</span> for \(\displaystyle \frac{dy}{dx} -y=xy^{2}\)
 					</span>
 				</figcaption>
 			</figure>
@@ -239,12 +229,11 @@
 	
 		<details id="bf4395f6-f417-45ab-ada7-04bd745d0a8b">
 			<summary>
-				Other Transformations
+				Nonlinear Homogeneous
 			</summary>
 		
 			<div id="17884ccb-68a8-4e70-9e29-7cf82f1dcfe0">
 				We showed how the nonlinear Bernoulli equation can be transformed into a separable equation by the substitution \(y=uy_1\) where \(y_1\) is a solution to the "complementary equation". Now let's discover a sufficient condition for transforming other nonlinear first order differential equations:
-
 
 				<a id="x1-7r4"></a>
 				\begin {equation} \label {eq:2.4.4} 
@@ -300,10 +289,7 @@
 
 			</div>
 		
-		</details>
 
-		<details id="973da0d2-03ad-47f6-9ba2-e87019b50f82">
-			<summary>Nonlinear Homogeneous</summary>
 			
 			<div id="x1-8">
 				We will consider <span class="vocab">homogeneous nonlinear equations</span>, the most widely studied class of equations for which this substitution works. Other types of equations appear in Exercises&nbsp;<span class="ptmb8t-">44</span>–<span class="ptmb8t-">51</span>.
@@ -466,6 +452,12 @@
 					</span>
 				</figcaption>
 			</figure>
+		</details>
+
+		<details id="973da0d2-03ad-47f6-9ba2-e87019b50f82">
+			<summary>
+				Nonlinear Homogeneous IVPs
+			</summary>
 
 			<!-- Example 3 -->
 			<div class="example" id="x1-143" style="--ex-number: 3">
@@ -789,6 +781,121 @@
 				exercises.
 			</div>
 		</details>
+
+		<details id="973da0d2-03ad-47f6-9ba2-e87019b50f82-2">
+			<summary>
+				Bernoulli IVPs
+			</summary>
+
+			<div class="example" id="ex-number-4" style="--ex-number: 4">
+				<div>
+					Solve the IVP
+
+					<a id="eq2415"></a>
+					\begin{equation}
+						\label{eq:2.4.15}
+						\frac{dy}{dx} - xy = xy^{3/2} \quad y(1)=4
+					\end{equation}
+				</div>
+
+				<details class="solution">
+					<summary>Solution</summary>
+
+					<ol>
+						<li>
+							<div>
+								We recognize <a href="#eq2415">(2.4.15)</a> as a Bernoulli equation <a href="#x1-3r2">(2.4.2)</a>.
+							</div>
+
+							<div id="re-4-1" class="reading-exercise">
+								Identify \( p(x) \), \(f(x)\), and \(r\)
+							</div>
+
+							<div id="re-4-2" class="reading-exercise">
+								Solve the "complementary equation"
+							</div>
+
+							<div>
+								The general solution is \( y = ce^{\frac{1}{2} x^2} \). Choosing \( c = 1 \) we will use \( y_1 = e^{\frac{1}{2} x^2} \) and seek solutions of the form \( y = ue^{\frac{1}{2} x^2} \).
+							</div>
+
+							<div id="re-4-3" class="reading-exercise">
+								Differentiate \( y = ue^{\frac{1}{2} x^2} \)
+							</div>
+
+							<div>
+								Substituting \( y = e^{\frac{1}{2} x^2} \) and its derivative into <a href="#eq2415">(2.4.15)</a>, we obtain
+
+								\begin{equation}
+									\frac{du}{dx} e^{\frac{1}{2} x^2} + xue^{\frac{1}{2} x^2} - xue^{\frac{1}{2} x^2} = x(ue^{\frac{1}{2} x^2})^{\frac{3}{2}}
+								\end{equation}
+							</div>
+
+							<div id="re-4-4" class="reading-exercise">
+								Simplify and separate the variables from <a href="#eq2415">(2.4.16)</a>
+							</div>
+
+							<div>
+								Now we antidifferentiate to find \(u\).
+
+								\begin{align*}
+									\int \frac{1}{u} du &= \int xe^{\frac{1}{4} x^2} dx \\
+									\ln |u| &= 2e^{\frac{1}{4} x^2} + c \\
+									u &= ce^{2e^{\frac{1}{4} x^2}}
+								\end{align*}
+
+								Substituting back in to \( y = ue^{\frac{1}{2} x^2} \)
+
+								\begin{align*}
+									y = ce^{2e^{\frac{1}{4} x^2}} \cdot e^{\frac{1}{2} x^2} \\
+									y = ce^{x^2 e^{\frac{1}{4} x^2}}
+								\end{align*}
+
+								Applying the initial condition,
+
+								\begin{align*}
+									y(1) &= ce^{1^2 \cdot e^{\frac{1}{4} \cdot 1^2}} \\
+									4 &= ce^{\sqrt[4]{e}} \\
+									\frac{4}{e^{-\sqrt[4]{e}}} &= c \\
+								\end{align*}
+
+								Substituting in our constant, we have our particular solution.
+
+								\begin{align*}
+									y = \frac{4}{e^{-\sqrt[4]{e}}} e^{x^2 e^{\frac{1}{4} x^2}} \\
+									y = 4e^{x^2 e^{\frac{1}{4} x^2} - \sqrt[4]{e}}
+								\end{align*}
+							</div>
+						</li>
+						<li>
+							Graphing our particular solution, we find:
+							<figure class="figure" id="fig244">
+								<iframe src="https://www.desmos.com/calculator/vn0yxxjzsj?embed" width="400" height="400" frameborder=0></iframe>
+								<figcaption class="caption">
+									<span class="id">Figure&nbsp;2.4.4</span>
+									<span class="content">
+										A graph of the particular solution, \( y = 4e^{x^2 e^{\frac{1}{4} x^2} - \sqrt[4]{e}} \)
+									</span>
+								</figcaption>
+							</figure>
+
+							We can check our answer by comparing to the slope field in Figure&nbsp;<a href='#fig245'>2.4.5</a>.
+
+							<figure class="figure" id="fig245">
+								<img id="x1-6r1" height="264" src="EPS/fig02045.png" width="409" />
+								<figcaption class="caption">
+									<span class="id">Figure&nbsp;2.4.5</span>
+									<span class="content">
+										A direction field and <span class="vocab">integral curves</span> for \(\displaystyle \frac{dy}{dx} - xy = xy^{3/2} \)
+									</span>
+								</figcaption>
+							</figure>
+						</li>
+					</ol>
+				</details>
+			</div>
+		</details>
+
 
 		<!-- Exercises -->
 		<nav class = "ex">
