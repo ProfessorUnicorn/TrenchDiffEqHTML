@@ -34,7 +34,7 @@
 			<summary>Spring–Mass Systems</summary>
 
 			<div id="b2218b98-230a-4397-afb5-f8c849210627">
-				We consider the motion of an object of mass \(m\), suspended from a spring of negligible mass. We say that the spring–mass system is in <span class="vocab">equilibrium</span> when the object is at rest and the forces acting on it sum to zero. The position of the object in this case is the <span class="vocab">equilibrium position</span>. We define \(y\) to be the displacement of the object from its equilibrium position (Figure&nbsp;<a href="#-a-y-b-y-c-y-">6.1.1</a>), measured positive upward. 
+				We consider the motion of an object of mass \(m\), suspended from a spring of negligible mass. We say that the <span class="vocab">spring–mass system</span> is in <span class="vocab">equilibrium</span> when the object is at rest and the forces acting on it sum to zero. The position of the object in this case is the <span class="vocab">equilibrium position</span>. We define \(y\) to be the displacement of the object from its equilibrium position (Figure&nbsp;<a href="#-a-y-b-y-c-y-">6.1.1</a>), measured positive upward. 
 			</div>
 
 			<figure class="figure" id="5a714b39-5d7f-4031-b16c-e0d723a9534f">
@@ -43,17 +43,12 @@
 					<div id="-a-y-b-y-c-y-"> <img height="264" src="EPS/fig060101.png" width="409" /> <a id="x1-2r1"></a> 
 				</div>
 					<figcaption class="caption"><span class="id">Figure&nbsp;6.1.1</span><span class="content">
-							<span class="ptmb8t-">(a)</span>\(y&gt;0\)<span class="ptmb8t-">(b)</span>\(y=0\), <span class="ptmb8t-">(c)</span>\(y&lt;0\)
+							<span class="ptmb8t-">(a)</span>\(y&gt;0\)<span class="ptmb8t-">&nbsp;(b)</span>\(y=0\) <span class="ptmb8t-">&nbsp;(c)</span>\(y&lt;0\)
 						</span>
 					</figcaption>
 					<!-- tex4ht:label?: x1-2r1  -->
 				</div>
-				<div class="minipage" id="-a-spring-mass-system-with-damping-">
-					
-					<img height="278" src="EPS/fig060102.png" width="409" /> <a id="x1-3r2"></a> <figcaption class="caption"><span class="id">Figure&nbsp;6.1.2</span><span class="content">A spring – mass system with damping</span></figcaption>
-					<!-- tex4ht:label?: x1-3r2  -->
-				
-				</div>
+
 			</figure>
 
 			<div class="indent" id="f8cb8a52-3431-4613-967a-86bffc559f2e">
@@ -61,22 +56,45 @@
 			</div>
 
 			<ul class="itemize1" id="28db85df-2a42-477f-baba-192718abedb2">
-				<li class="itemize">The force \(-mg\), due to gravity. </li>
+				<li class="itemize">The force \(F_g=-mg\), due to <span class="vocab">gravity</span></li>
 				<li class="itemize">
-					A force \(F_s\) exerted by the spring resisting change in its length. The <span class="vocab">natural length</span> of the spring is its length with no mass attached. We assume that the spring obeys <span class="vocab">Hooke’s law</span>: If the length of the spring is changed by an amount \(\Delta L\) from its natural length, then the spring exerts a force \(F_s=k\Delta L\), where \(k\) is a positive number called the <span class="vocab">spring constant</span>. If the spring is stretched then \(\Delta L&gt;0\) and \(F_s&gt;0\), so the spring force is upward, while if the spring is compressed then \(\Delta L&lt;0\) and \(F_s&lt;0\), so the spring force is downward.
+					A force \(F_s=k\Delta L\) exerted by the spring resisting change in its <span class="vocab">natural length</span> (its length with no mass attached) governed by <span class="vocab">Hooke’s law</span>, where \(k\) is a positive number called the <span class="vocab">spring constant</span>. If the spring is stretched then \(\Delta L&gt;0\) and \(F_s&gt;0\), so the spring force is upward, while if the spring is compressed then \(\Delta L&lt;0\) and \(F_s&lt;0\), so the spring force is downward
 				</li>
 				<li class="itemize">
-					A <span class="vocab">damping force</span>\(F_d=-c \frac{dy}{dx} \) that resists the motion with a force proportional to the velocity of the object. It may be due to air resistance or friction in the spring. However, a convenient way to visualize a damping force is to assume that the object is rigidly attached to a piston with negligible mass immersed in a cylinder (called a <span class="vocab">dashpot</span>) filled with a viscous liquid (Figure<a href="#-a-spring-mass-system-with-damping-">6.1.2</a>). As the piston moves, the liquid exerts a damping force. We say that the motion is <span class="vocab">undamped</span> if \(c=0\), or <span class="vocab">damped</span> if \(c&gt;0\).
+					A <span class="vocab">damping force</span> \(F_d=-c \dot{y} \) that resists the motion with a force proportional to the velocity of the object. It may be due to air resistance or friction in the spring. However, a convenient way to visualize a damping force is to assume that the object is rigidly attached to a piston with negligible mass immersed in a cylinder (called a <span class="vocab">dashpot</span>) filled with a viscous liquid (Figure<a href="#-a-spring-mass-system-with-damping-">&nbsp;6.1.2</a>). As the piston moves, the liquid exerts a damping force. We say that the motion is <span class="vocab">undamped</span> if \(c=0\), or <span class="vocab">damped</span> if \(c&gt;0\)
 				</li>
 				<li class="itemize">
-					An external force \(F\), other than the force due to gravity, that may vary with \(t\), but is independent of displacement and velocity. We say that the motion is <span class="vocab">free</span> if \(F\equiv 0\), or <span class="vocab">forced</span> if \(F\not \equiv 0\).
+					An external force \(F_1\), other than the force due to gravity, that may vary with \(t\), but is independent of displacement and velocity. We say that the motion is <span class="vocab">free</span> if \(F\equiv 0\), or <span class="vocab">forced</span> if \(F\not \equiv 0\).
 				</li>
 			</ul>
 
+
+			<figure class="figure" id="5a714b39-5d7f-4031-b16c-e0d723a9534f">
+
+
+				<div class="minipage" id="-a-spring-mass-system-with-damping-">
+					
+					<img height="278" src="EPS/fig060102.png" width="409" /> <a id="x1-3r2"></a> <figcaption class="caption"><span class="id">Figure&nbsp;6.1.2</span><span class="content">&nbsp;A spring–mass system with damping</span></figcaption>
+					<!-- tex4ht:label?: x1-3r2  -->
+				
+				</div>
+			</figure>
+		
+			<br>
+			<br>
+			<br>
+
 			<div class="indent" id="8ba19a79-a86b-449a-ae64-e4fc83537d6f">
-				From Newton’s second law of motion, \begin {equation} \label {eq:6.1.1} m\frac{d^2y}{dx^2}=-mg+F_d+F_s+F=-mg-c \frac{dy}{dx} +F_s+F \end {equation} <a id="x1-4r1"></a> We must now relate \(F_s\) to \(y\). In the absence of external forces the object stretches the spring by an amount \(\Delta l\) to assume its equilibrium position (Figure&nbsp;<a href="#-a-natural-length-of-spring-b-spring-stretched-by-mass-">6.1.3</a>). Since the sum of the forces acting on the object is then zero, Hooke’s Law implies that \(mg=k\Delta l\). If the object is displaced \(y\) units from its equilibrium position, the total change in the length of the spring is \(\Delta L=\Delta l-y\), so Hooke’s law implies that \[ F_s=k\Delta L=k\Delta l-ky\] Substituting this into <a href="#x1-4r1">(6.1.1)</a> yields \[ m\frac{d^2y}{dx^2}=-mg-c \frac{dy}{dx} +k\Delta L-ky+F\] Since \(mg=k\Delta l\) this can be written as 
-				\begin {equation} \label {eq:6.1.2} m\frac{d^2y}{dx^2}+c \frac{dy}{dx} +ky=F 
-				\end {equation} <a id="x1-5r2"></a> We call this <span class="vocab">the equation of motion</span>. 
+				From Newton’s second law of motion \(\sum F = ma \) and rewriting \(a\) as \(\ddot{y}\) the second time derivative of position:
+				
+				
+				<a id="x1-4r1"></a>
+				\begin {align} \label {eq:6.1.1} 
+					m a = & \quad F_g + F_d + F_s + F_1  \nonumber \\
+					m \ddot{y} = & -mg-c \dot{y} + k \Delta L + F_1 
+				\end {align} 
+				
+				To write this as a solvable differential equation, we must now relate \(F_s=k \Delta L\) to \(y\). In the absence of external forces the object stretches the spring by an amount \(\Delta l\) to assume its equilibrium position (Figure&nbsp;<a href="#-a-natural-length-of-spring-b-spring-stretched-by-mass-">6.1.3</a>). 
 			</div>
 			<figure class="figure" id="dcb5b123-df90-40e9-a24b-19c283552aa4">
 				<div id="-a-natural-length-of-spring-b-spring-stretched-by-mass-">
@@ -87,7 +105,14 @@
 					</span>
 				</figcaption>
 				<!-- tex4ht:label?: x1-6r3  -->
-			</figure>
+			</figure>			
+			<div>
+				
+				Since the sum of the forces acting on the object is then zero, Hooke’s Law implies that \(mg=k\Delta l\). If the object is displaced \(y\) units from its equilibrium position, the total change in the length of the spring is \(\Delta L=\Delta l-y\), so Hooke’s law implies that \[ F_s=k\Delta L=k\Delta l-ky\] Substituting this into <a href="#x1-4r1">(6.1.1)</a> yields \[ m\frac{d^2y}{dx^2}=-mg-c \frac{dy}{dx} +k\Delta L-ky+F\] Since \(mg=k\Delta l\) this can be written as 
+				\begin {equation} \label {eq:6.1.2} m\frac{d^2y}{dx^2}+c \frac{dy}{dx} +ky=F 
+				\end {equation} <a id="x1-5r2"></a> We call this <span class="vocab">the equation of motion</span>. 
+			</div>
+
 		</details>
 
 		<details id="details-2">
