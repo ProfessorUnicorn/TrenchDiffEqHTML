@@ -151,10 +151,12 @@ nav.book :nth-child(3) { justify-self: flex-end; }
 nav.ex { font-size: small; text-align: center; margin: 0.7rem }
 
 .theorem .head { font-weight: bold; }
-.theorem { margin-bottom: 2em; margin-top: 8em; background: #f7f7f7; border-radius: 8px; border: 1px solid #cecdcd; padding: 8px; }
+.theorem { margin-bottom: 2em; margin-top: 2em; background: #f7f7f7; border-radius: 8px; border: 1px solid #cecdcd; padding: 8px; }
 .theorem > ol { list-style-type: none; }
 .theorem > ol li::before { font-weight: bold; content: counter(list-item, lower-alpha) '.)'; }
 .theorem.roman > ol li::before { content: counter(list-item, lower-roman) '.)'; }
+
+div.example + .theorem, div.theorem + .theorem { margin-top: 8em; }
 
 .stepbox .head { font-weight: bold; }
 .stepbox { margin-bottom: 2em; margin-top: 8em; }
