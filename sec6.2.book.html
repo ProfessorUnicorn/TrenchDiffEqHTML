@@ -29,68 +29,158 @@
 			6.2 Spring II - Damped 
 		</div>
 
+		<!--Damping-->
 		<details id="afd63e83-ffab-4fb1-a152-7c43a83a1b95">
 			<summary>Damping</summary>
 
 			<div id="4abd1399-1f9a-49ae-a5c8-54036a74bd41">
 				In this section we consider the motion of an object in a spring–mass system with damping. We start with unforced motion, so the equation of motion is
+
 				<a id="x1-2r1"></a>
 				\begin {equation} \label {eq:6.2.1}
-					m\frac{d^2y}{dx^2}+c\frac{dy}{dx}+ky=0
+					m \ddot{y} + c \dot{y} + ky = 0
 				\end {equation}
-				Now suppose the object is displaced from equilibrium and given an initial velocity. Intuition suggests that if the damping force is sufficiently weak the resulting motion will be oscillatory, as in the undamped case considered in the previous section, while if it’s sufficiently strong the object may just move slowly toward the equilibrium position without ever reaching it. We’ll now confirm these intuitive ideas mathematically. The characteristic equation of <a href="#x1-2r1">(6.2.1)</a> is \[ mr^2+cr+k=0\] The roots of this equation are 
-				<a id="x1-3r2"></a>
-				\begin {equation} \label {eq:6.2.2}
-					r_1={-c-\sqrt {c^2-4mk}\over 2m}\quad \mbox{ and } \quad r_2= {-c+\sqrt {c^2-4mk}\over 2m} 
-				\end {equation} 
-				In Section&nbsp;5.2 we saw that the form of the solution of <a href="#x1-2r1">(6.2.1)</a> depends upon whether \(c^2-4mk\) is positive, negative, or zero. We’ll now consider these three cases. 
+
+				Now suppose the object is displaced from equilibrium and given an initial velocity. Intuition suggests that if the damping force is sufficiently weak the resulting motion will be oscillatory, as in the undamped case considered in Section <a href="sec6.1.book.html" target=_blank>6.1</a>, while if it’s sufficiently strong the object may just move slowly toward the equilibrium position without ever reaching it. We’ll now confirm these intuitive ideas mathematically. 
+			</div>	
+			<div class="reading-exercise">
+				Substitute \(y=e^{rt}\) into <a href="#x1-2r1">(6.2.1)</a> and find the characteristic equation
 			</div>
+			<div id="4abd1399-1f9a-49ae-a5fdasc8-54036a74bd41">
+				<div>
+					The characteristic equation of <a href="#x1-2r1">(6.2.1)</a> is 
+					
+					\[ mr^2+cr+k=0\] 
+				</div>
+				<div class="reading-exercise">
+					Find the roots of \( mr^2+cr+k=0\) using the quadratic formula
+				</div>
+				<div>
+					The roots of \( mr^2+cr+k=0\) are 
+
+					<a id="x1-3r2"></a>
+					\begin {equation} \label {eq:6.2.2}
+						r_1={-c-\sqrt {c^2-4mk}\over 2m}\quad \mbox{ and } \quad r_2= {-c+\sqrt {c^2-4mk}\over 2m} 
+					\end {equation} 
+
+					In Section&nbsp;<a href="sec5.2.book.html" target=_blank>5.2</a> we found that the form of the solution of <a href="#x1-2r1">(6.2.1)</a> depends upon whether the discriminant \(c^2-4mk\) is positive, negative, or zero. 
+				</div> 
+			</div>
+			<br>
+			<br>
+			<br>
+			<div id="4f6fe2a6-39d7-4164-9480-d837038852b962">
+				We’ll now consider these three cases:
+				<div>
+					<strong>Case 1:</strong> \(c^2-4mk&gt;0\), so the characteristic equation has two distinct real roots, and we say the motion is <span class="vocab">overdamped</span>
+				</div>
+				<div>
+					<strong>Case 2:</strong> \(c^2-4mk=0\), so the characteristic equation has a repeated real root, and we say the motion is <span class="vocab">critically damped</span>
+				</div>
+				<div>
+					<strong>Case 3:</strong> \(c^2-4mk&lt;0\), so the characteristic equation has complex roots, and we say the motion is <span class="vocab">underdamped</span>
+				</div>
+				
+			</div>
+
+			<br>
+			<br>
+			<br>
 
 			<div id="252fd855-990f-433f-9988-fb22c343e8dd">
-				We say the motion is <span class="vocab">underdamped</span> if \(c&lt;\sqrt {4mk}\). In this case \(r_1\) and \(r_2\) in <a href="#x1-3r2">(6.2.2)</a> are complex conjugates, which we write as \[ r_1=-{c\over 2m}-i\omega _1\quad \mbox{ and } \quad r_2=-{c\over 2m}+i\omega _1\] where \[ \omega _1={\sqrt {4mk-c^2}\over 2m}\] The general solution of <a href="#x1-2r1">(6.2.1)</a> in this case is \[ y=e^{-ct/2m}(c_1\cos \omega _1 t+c_2\sin \omega _1 t)\] By the method used in Section&nbsp;6.1 to derive the amplitude–phase form of the displacement of an object in simple harmonic motion, we can rewrite this equation as 
-				\begin {equation} \label {eq:6.2.3} y=Re^{-ct/2m}\cos (\omega _1 t-\phi ) 
-				\end {equation} <a id="x1-4r3"></a> where \[ R=\sqrt {c_1^2+c_2^2},\quad R\cos \phi =c_1,\mbox {\quad and \quad } R\sin \phi =c_2\] The factor \(Re^{-ct/2m}\) in <a href="#x1-4r3">(6.2.3)</a> is called the <span class="vocab">time–varying amplitude</span> of the motion, the quantity \(\omega _1\) is called the <span class="vocab">frequency</span>, and \(T=2\pi /\omega _1\) (which is the period of the cosine function in <a href="#x1-4r3">(6.2.3)</a> is called the <span class="vocab">quasi–period</span>. A typical graph of <a href="#x1-4r3">(6.2.3)</a> is shown in Figure<a href="#-underdamped-motion-">6.2.1</a>. As illustrated in that figure, the graph of \(y\) oscillates between the dashed exponential curves \(y=\pm Re^{-ct/2m}\).
-			</div>
-			<figure class="figure" id="044eaeed-7c19-4be1-9321-9aa6fa7a2845">
-				<div id="-underdamped-motion-">
-					<img height="264" src="EPS/fig060201.png" width="409" /> <a id="x1-5r1"></a> 
+				<div>
+					<strong>Case 1:</strong>
+
+					<div id="bb857b1a-206f-42fd-9b8b-ba9bac19d6da">
+						We say the motion is <span class="vocab">overdamped</span> if \(c&gt;\sqrt {4mk}\). In this case the zeros \(r_1\) and \(r_2\) of the characteristic polynomial are real, with \(r_1&lt;r_2&lt;0\) and the general solution of <a href="#x1-2r1">(6.2.1)</a> is 
+						
+						\[ y=c_1e^{r_1t}+c_2e^{r_2t}\] 
+						
+						The motion isn't oscillatory since \(y\) can’t equal zero for more than one value of \(t\) unless \(c_1=c_2=0\).
+
+						Also the \(\lim _{t\to \infty }y(t)=0\) since \(r_1&lt;r_2&lt;0\)
+					</div>
+
 				</div>
-				<figcaption class="caption"><span class="id">Figure&nbsp;6.2.1</span><span class="content">Underdamped motion</span></figcaption>
-			</figure>
+				<br>
+				<div>
+					<strong>Case 2:</strong> 
+
+					<div id="d749bdb1-a2c4-4dd1-8b07-5dbe9952bcdc">
+						We say the motion is <span class="vocab">critically damped</span> if \(c=\sqrt {4mk}\). In this case \(r_1=r_2=-c/2m\) and the general solution of <a href="#x1-2r1">(6.2.1)</a> is \[ y=e^{-ct/2m}(c_1+c_2t)\] 
+					</div>
+					<div class="indent" id="8acb64e5-b439-4adb-8485-6e0bf38cf7b4">
+						Again \(\lim _{t\to \infty }y(t)=0\) and the motion is nonoscillatory, since \(y\) can’t equal zero for more than one value of \(t\) unless \(c_1=c_2=0\). 
+					</div>
+				</div>
+				<br>
+				<div>
+					<strong>Case 3:</strong>
+
+					We say the motion is <span class="vocab">underdamped</span> if \(c&lt;\sqrt {4mk}\). In this case \(r_1\) and \(r_2\) in <a href="#x1-3r2">(6.2.2)</a> are complex conjugates, which we write as 
+				
+					\[ r_1=-{c\over 2m}-i\omega _1\quad \mbox{ and } \quad r_2=-{c\over 2m}+i\omega _1\] 
+					
+					where \[ \omega _1={\sqrt {4mk-c^2}\over 2m}\] 
+					
+					The general solution of <a href="#x1-2r1">(6.2.1)</a> in this case is 
+					
+					\[ y=e^{-ct/2m}(c_1\cos \omega _1 t+c_2\sin \omega _1 t)\] 
+					
+					By the method used in Section&nbsp;<a href="sec6.1.book.html" target=_blank>6.1</a> to derive the <span class="vocab">amplitude–phase</span> form of the displacement of an object in <span class="vocab">simple harmonic motion</span>, we can rewrite this equation as 
+					
+					<a id="x1-4r3"></a> 
+					\begin {equation} \label {eq:6.2.3} 
+						y=Re^{-ct/2m}\cos (\omega _1 t-\phi ) 
+					\end {equation} 
+					
+					where 
+					
+					\[ R=\sqrt {c_1^2+c_2^2},\quad R\cos \phi =c_1,\mbox {\quad and \quad } R\sin \phi =c_2\] 
+					
+					The factor \(Re^{-ct/2m}\) in <a href="#x1-4r3">(6.2.3)</a> is called the <span class="vocab">time–varying amplitude</span> of the motion, the quantity \(\omega _1\) is called the <span class="vocab">frequency</span>, and \(T=2\pi /\omega _1\) (which is the period of the cosine function in <a href="#x1-4r3">(6.2.3)</a> is called the <span class="vocab">quasi–period</span>). 
+					
+					A typical graph of <a href="#x1-4r3">(6.2.3)</a> is shown in Figure<a href="#-underdamped-motion-">6.2.1</a>. As illustrated in that figure, the graph of \(y\) oscillates between the dashed exponential curves \(y=\pm Re^{-ct/2m}\) and \(\lim _{t\to \infty }y(t)=0\)
+
+					<figure class="figure" id="044eaeed-7c19-4be1-9321-9aa6fa7a2845">
+						<div id="-underdamped-motion-">
+							<img height="264" src="EPS/fig060201.png" width="409" /> <a id="x1-5r1"></a> 
+						</div>
+						<figcaption class="caption"><span class="id">Figure&nbsp;6.2.1</span><span class="content">&nbsp;Underdamped motion</span></figcaption>
+					</figure>
+
+				</div>
+
+				
+			</div>
+			
 
 					
-			<div id="bb857b1a-206f-42fd-9b8b-ba9bac19d6da">
-				We say the motion is <span class="vocab">overdamped</span> if \(c&gt;\sqrt {4mk}\). In this case the zeros \(r_1\) and \(r_2\) of the characteristic polynomial are real, with \(r_1&lt;r_2&lt;0\) (see <a href="#x1-3r2">(6.2.2)</a>), and the general solution of <a href="#x1-2r1">(6.2.1)</a> is \[ y=c_1e^{r_1t}+c_2e^{r_2t}\] Again \(\lim _{t\to \infty }y(t)=0\) as in the underdamped case, but the motion isn’t oscillatory, since \(y\) can’t equal zero for more than one value of \(t\) unless \(c_1=c_2=0\). (Exercise&nbsp;<span class="ptmb8t-">23</span>.) 
-			</div>
+			
 
-			<div id="d749bdb1-a2c4-4dd1-8b07-5dbe9952bcdc">
-				We say the motion is <span class="vocab">critically damped</span> if \(c=\sqrt {4mk}\). In this case \(r_1=r_2=-c/2m\) and the general solution of <a href="#x1-2r1">(6.2.1)</a> is \[ y=e^{-ct/2m}(c_1+c_2t)\] 
-			</div>
-			<div class="indent" id="8acb64e5-b439-4adb-8485-6e0bf38cf7b4">
-				Again \(\lim _{t\to \infty }y(t)=0\) and the motion is nonoscillatory, since \(y\) can’t equal zero for more than one value of \(t\) unless \(c_1=c_2=0\). (Exercise&nbsp;<span class="ptmb8t-">22</span>). 
-			</div>
+			
 
 		</details>
 
-
+		<!--Damped Free Motion-->
 		<details id="0902ab58-1434-4f48-ae14-7223992bf0e1">
 			<summary>Damped Free Motion</summary>
 
 
-
+			<!--Example 1-->
 			<div class="example" id="x1-61" style="--ex-number: 1">
 				<div>
 					Suppose a 64 lb weight stretches a spring 6 inches in equilibrium and a dashpot provides a damping force of \(c\) lb for each ft/sec of velocity.
 				</div>
 				<ol>
 					<li>
-						Write the equation of motion of the object and determine the value of \(c\) for which the motion is critically damped. 
+						Set up the equation of motion of the object and determine the value for the damping factor when the motion is critically damped and then finally write the equation of motion when the motion is critically damped 
+					</li>	
+					<li>
+						Set up and solve the IVP for critically damped motion if the object is initially displaced 1 foot above equilibrium and given an upward velocity of 20 ft/s
 					</li>
 					<li>
-						Find the displacement \(y\) for \(t&gt;0\) if the motion is critically damped and the initial conditions are \(y(0)=1\) and \(\left. \frac{dy}{dx} \right|_{0}=20\). 
-					</li>
-					<li>
-							Find the displacement \(y\) for \(t&gt;0\) if the motion is critically damped and the initial conditions are \(y(0)=1\) and \(\left. \frac{dy}{dx} \right|_{0}=-20\). 
+						Set up and solve the IVP for critically damped motion if the object is initially displaced 1 foot above equilibrium and given a downward velocity of 20 ft/s
 					</li>
 				</ol>
 			
@@ -99,20 +189,187 @@
 
 					<ol>
 						<li>
-							Here \(m=2\) slugs and \(k=64/.5=128\) lb/ft. Therefore the equation of motion <a href="#x1-2r1">(6.2.1)</a> is 
-							\begin {equation} \label {eq:6.2.4} 2\frac{d^2y}{dx^2}+c\frac{dy}{dx}+128y=0 
-							\end {equation} <a id="x1-10r4"></a> The characteristic equation is \[ 2r^2+cr+128=0\] which has roots \[ r={-c\pm \sqrt {c^2-8\cdot 128}\over 4}\] Therefore the damping is critical if \[ c=\sqrt {8\cdot 128}=32\mbox { lb--sec/ft}\]
-						</li>
+							<div>
+								From <a href="#x1-2r1">(6.2.1)</a> the equation of motion is
+								\begin {equation*} 
+									m \ddot{y} + c \dot{y} + ky = 0
+								\end {equation*}
+								We need to calculate \(m\) and \(k\) and we will do so using weight as \(mg\) and Hooke's Law \(mg=k \Delta l\) 
+							</div>
+							<div>
+								Here \(mg=64\) and using \(g=32\) we have \(m=2\)
+							</div>
+							<div>
+								Also \(\Delta l\)  is given as 6 inches so converting to feet \(\Delta l = 1/2 \) ft and then using Hooke's Law \(mg=k \Delta l\) we can solve for \(k\)
+
+								\[
+								k = \frac{mg}{\Delta l} = \frac{64}{1/2} = 128
+								\]
+							</div>
+							
+							<div>
+								Substituting in the values \(m=2\) and \(k=123\) we obtain the equation of motion
+								<a id="x1-10r4"></a>
+								\begin {equation} \label {eq:6.2.4} 
+									2 \ddot{y} + c \dot{y} + 128y = 0
+								\end {equation} 
+							</div>	
+		
+							
+							<div class="reading-exercise">
+								Substitute \(y=e^{rt}\) into <a href="#x1-10r4">(6.2.4)</a> and find the characteristic equation
+							</div>
+							<div>
+								The characteristic equation for <a href="#x1-10r4">(6.2.4)</a> is 
+								\[
+									2r^2 + cr + 128 = 0
+								\] 
+							</div>
+							<div class="reading-exercise">
+								Use the quadratic formula to solve \(2r^2 + cr + 128 = 0\) for \(r\)
+							</div>
+							<div>
+								The roots of which are
+								\begin{align*}
+									r = \frac{-c \pm \sqrt{c^2-4\cdot(2)\cdot(128)}}{2\cdot(2)}
+									= \frac{-c \pm \sqrt{c^2-1024}}{4}
+								\end{align*}
+								The discriminant is \( c^2-1024 \) and when \( c^2-1024 = 0 \) we say the motion is  <span class="vocab">critically damped</span>. Therefore the motion is critically damped when \(c^2=1024\) or when \(c=32\)
+							</div>
+							<div>
+								Therefore the equation of motion <a href="#x1-10r4">(6.2.4)</a> when the motion is <span class="vocab">critically damped</span> is given by
+
+								\begin {align*} 
+									2 \ddot{y} + 32 \dot{y} + 128y = 0
+								\end {align*} 
+
+								Which can be simplified by dividing by \(2\) 
+
+								\begin {align*} 
+									\ddot{y} + 16 \dot{y} + 64y = 0
+								\end {align*} 
+							</div>	
+						</li>	
 						<li>
-							Setting \(c=32\) in <a href="#x1-10r4">(6.2.4)</a> and cancelling the common factor \(2\) yields \[ \frac{d^2y}{dx^2}+16y+64y=0\] The characteristic equation is \[ r^2+16r+64y=(r+8)^2=0\] Hence, the general solution is \begin {equation} \label {eq:6.2.5} y=e^{-8t}(c_1+c_2t)\end {equation} <a id="x1-11r5"></a> Differentiating this yields 
-							\begin {equation} \label {eq:6.2.6} \frac{dy}{dx}=-8y+c_2e^{-8t} 
-							\end {equation} <a id="x1-12r6"></a> Imposing the initial conditions \(y(0)=1\) and \(\left. \frac{dy}{dx} \right|_{0}=20\) in the last two equations shows that \(1=c_1\) and \(20=-8+c_2\). Hence, the solution of the initial value problem is \[ y=e^{-8t}(1+28t)\] Therefore the object approaches equilibrium from above as \(t\to \infty \). There’s no oscillation.
-						</li>
+							<div>
+								We already have the equation of motion for this critically damped system and including the initial conditions where the object is initially displaced 1 foot above equilibrium and given an upward velocity of 20 ft/s, thus we have the IVP
+								\begin {align*} 
+									\ddot{y} + 16 \dot{y} + 64y = 0
+									\quad y(0)=1
+									\quad \dot{y}(0)=20
+								\end {align*} 
+							</div>
+							<div class="reading-exercise">
+								Substitute \(y=e^{rt}\) into \(\ddot{y} + 16 \dot{y} + 64y = 0\) and find the characteristic equation
+							</div>
+							<div>
+								The characteristic equation is 
+								\[
+									r^2 + 16r + 64 = 0
+								\] 
+								Which factors
+								\begin {align*} 
+									(r+8)(r+8)=&0 
+									\Longrightarrow
+									r=-8
+								\end {align*} 
+								So we get the real repeated root of \(-8\) meaning on solution is \(y=e^{-8t}\) and we can find the other solution using <span class="vocab">variation of parameters</span> with \(y=ue^{-8t}\) as in Section <a href="sec5.2.book.html" target=_blank>5.2</a>.
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(y=ue^{-8t}\) twice and substitute into \(\ddot{y} + 16 \dot{y} + 64y = 0\) to find \(y\)
+							</div>
+
+							<div>
+								We find \(u=t\) so \(y=te^{8t}\) to obtain our general solution
+								<a id="x1-11r5"></a> 
+								\begin {align}  \label {eq:6.2.5}
+									y = (c_1 + c_2 t) e^{-8t}
+								\end {align} 
+							</div>
+							<div class="reading-exercise">
+								Verify \(y = (c_1 + c_2 t) e^{-8t}\) is a solution to \(\ddot{y} + 16 \dot{y} + 64y = 0\)
+							</div>
+							<div>
+								Now to obtain our paricular solution we apply the initial conditions \( y(0)=1 \) and \( \dot{y}(0)=20 \)
+							</div>
+							<div class="reading-exercise">
+								Evaluate \(y = (c_1 + c_2 t) e^{-8t}\) at the initial condition \(y(0)=1\)
+							</div>
+							<div>
+								From \(y(0)=1\) we obtain \(c_1 = 1\) and to find \(c_2\) we will need to find \(\dot{y}\)
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(y = (c_1 + c_2 t) e^{-8t}\)
+							</div>
+							<div>
+								Differentiating <a href="#x1-11r5">(6.2.5)</a> we obtain
+								\begin{align}
+									\dot{y}
+									=\Big( -8c_1 + (1-8t) c_2 \Big) e^{-8t}
+								\end{align}
+							</div>
+							<div class="reading-exercise">
+								Evaluate \(\dot{y}
+								=\Big( -8c_1 + (1-8t) c_2 \Big) e^{-8t}\) at the initial condition \(\dot{y}(0)=20\)
+							</div>
+							<div>
+								From \(\dot{y}(0)=20\) we obtain \(-8c_1 + c_2  = 20\) and substituting \(c_1 = 1\) we find \(c_2=28\) so that our particular solution is
+								\begin {align*} 
+									y = (1+28t)e^{-8t}
+								\end {align*} 
+							</div>
+							<div class="reading-exercise">
+								Verify \(y = (1+28t)e^{-8t}\) is a solution to \(\ddot{y} + 16 \dot{y} + 64y = 0\)
+							</div>
+							<div>
+								Notice that the motion of this equation is exponential
+								and there is no oscillation and taking the limit as \(t \to \infty\) the object approaches equilibrium from above.
+							</div>
+							<br>	
+						</li>	
 						<li>
-							Imposing the initial conditions \(y(0)=1\) and \(\left. \frac{dy}{dx} \right|_{0}=-20\) in <a href="#x1-11r5">(6.2.5)</a> and <a href="#x1-12r6">(6.2.6)</a> yields \(1=c_1\) and \(-20=-8+c_2\). Hence, the solution of this initial value problem is \[ y=e^{-8t}(1-12t)\] Therefore the object moves downward through equilibrium just once, and then approaches equilibrium from below as \(t\to \infty \). Again, there’s no oscillation. The solutions of these two initial value problems are graphed in Figure<a href="#-a-yett-em-b-yett-">6.2.2</a>.
+							<div>
+								We already have the equation of motion for this critically damped system and including the initial conditions where the object is initially displaced 1 foot above equilibrium and given a downward velocity of 20 ft/s thus we have the IVP
+								\begin {align*} 
+									\ddot{y} + 16 \dot{y} + 64y = 0
+									\quad y(0)=1
+									\quad \dot{y}(0)=-20
+								\end {align*} 
+							</div>
+
+							<div class="reading-exercise">
+								Solve \(\ddot{y} + 16 \dot{y} + 64y = 0\)
+							</div>
+				
+							<div>
+								Solving we have our general solution
+								\begin {align*} 
+									y = (c_1 + c_2 t) e^{-8t}
+								\end {align*} 
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(y = (c_1 + c_2 t) e^{-8t}\)
+							</div>
+							
+							<div>
+								Now to obtain our paricular solution we apply the initial conditions \( y(0)=1 \) and \( \dot{y}(0)=-20 \)
+							</div>
+							<div>
+								From \(y(0)=1\) we obtain \(c_1 = 1\) and from \(\dot{y}(0)=20\) we obtain \(-8c_1 + c_2  = -20\) and substituting \(c_1 = 1\) we find \(c_2=-12\) so that our particular solution is
+								\begin {align*} 
+									y = (1 - 12t)e^{-8t}
+								\end {align*} 
+							</div>
+							<div class="reading-exercise">
+								Verify \(y = (1-12t)e^{-8t}\) is a solution to \(\ddot{y} + 16 \dot{y} + 64y = 0\)
+							</div>						
 						</li>
 					</ol>
 				</details>
+			</div>
+
+			<div id="7ba77c9c-c260-4061-adfdasbf-f88570934dee">
+				The solutions of these two IVPs are graphed in Figure<a href="#-a-yett-em-b-yett-">6.2.2</a>
 			</div>
 			
 			<figure class="figure" id="7ba77c9c-c260-4061-adbf-f88570934dee">
@@ -124,43 +381,273 @@
 					</span>
 				</figcaption>
 			</figure>
+			<br>
+			<br>
+			<br>
 
+			<!--Example 2-->
 			<div class="example" id="x1-142" style="--ex-number: 2">
 				<div>
-					Find the displacement of the object in Example&nbsp;<a href="#x1-61">6.2.1</a>if the damping constant is \(c=4\) lb–sec/ft and the initial conditions are \(y(0)=1.5\) ft and \(\left. \frac{dy}{dx} \right|_{0}=-3\) ft/sec.
+					Set up and solve the IVP for the motion if the objectin Example <a href="#x1-61">6.2.1<a> if the damping constant is \(c=4\) and the object is initially displaced 1.5 feet above equilibrium and given an downward velocity of 3 ft/s then find the frequency, period, amplitude and phase angle.
 				</div>
 				<details class="solution">
 					<summary>Solution</summary>
-					With \(c=4\), the equation of motion <a href="#x1-10r4">(6.2.4)</a> becomes 
-					\begin {equation} \label {eq:6.2.7} \frac{d^2y}{dx^2}+2\frac{dy}{dx}+64y=0 
-					\end {equation}
-					<a id="x1-15r7"></a>
-					after cancelling the common factor 2. The characteristic equation \[ r^2+2r+64=0 \] has complex conjugate roots \[ r={-2\pm \sqrt {4-4\cdot 64}\over 2}=-1\pm 3\sqrt 7i\] Therefore the motion is underdamped and the general solution of <a href="#x1-15r7">(6.2.7)</a> is \[ y=e^{-t}(c_1\cos 3\sqrt 7t+c_2\sin 3\sqrt 7t)\] Differentiating this yields \[ \frac{dy}{dx}=-y+3\sqrt 7e^{-t}(-c_1\sin 3\sqrt 7t+c_2\cos 3\sqrt 7t)\] Imposing the initial conditions \(y(0)=1.5\) and \(\left. \frac{dy}{dx} \right|_{0}=-3\) in the last two equations yields \(1.5=c_1\) and \(-3=-1.5+3\sqrt 7c_2\). Hence, the solution of the initial value problem is 
-					\begin {equation} \label {eq:6.2.8} y=e^{-t}\bigg ({3\over 2}\cos 3\sqrt 7t-{1\over 2\sqrt 7} \sin 3\sqrt 7t\bigg ) 
-					\end {equation}
-					<a id="x1-16r8"></a>
-					The amplitude of the function in parentheses is \[ R=\sqrt {\bigg ({3\over 2}\bigg )^2+\bigg ({1\over 2\sqrt 7}\bigg )^2} =\sqrt {{9\over 4}+{1\over 4\cdot 7}} =\sqrt {64\over 4\cdot 7}={4\over \sqrt 7}\] Therefore we can rewrite <a href="#x1-16r8">(6.2.8)</a> as \[ y={4\over \sqrt 7}e^{-t}\cos (3\sqrt 7t-\phi )\] where \[ \cos \phi ={3\over 2R}={3\sqrt 7\over 8}\quad \mbox{ and } \quad \sin \phi =-{1\over 2\sqrt 7R}= -{1\over 8}\] Therefore \(\phi \cong -.125\) radians.
+					<div>
+						Substituting \(c=4\) for the damping constant into the equation of motion <a href="#x1-10r4">(6.2.4)</a> becomes
+
+						\begin {align*} 
+							2 \ddot{y} + 4 \dot{y} + 128y = 0
+						\end {align*} 
+
+						Which can be simplified by dividing by \(2\) 
+
+						<a id="x1-15r7"></a>
+						\begin {align} \label {eq:6.2.7}
+							\ddot{y} + 2 \dot{y} + 64y = 0
+						\end {align} 
+
+						And including the initial conditions that the object is initially displaced 1.5 feet above equilibrium and given an downward velocity of 3 ft/s we have the IVP
+
+						\begin {align*} 
+							\ddot{y} + 2 \dot{y} + 64y = 0
+							\quad y(0)=\frac{3}{2}
+							\quad \dot{y}(0)=-3
+						\end {align*} 
+
+					</div>
+					<div class="reading-exercise">
+						Find and solve the characteristic equation for <a href="#x1-15r7">(6.2.7)</a> 
+					</div>			
+					<div>
+						The characteristic equation has complex conjugate roots 
+						
+						\begin {align*} 
+							r
+							= & {-2\pm \sqrt {4-4\cdot (1)\cdot (64)}\over 2} \\
+							= & {-2\pm \sqrt {-252}\over 2} = {-2\pm 6i \sqrt {7}\over 2}  \\
+							= & -1\pm 3\sqrt 7i
+						\end {align*} 
+						
+						Since the discriminant is less than zero we call the motion <span class="vocab">underdamped</span>. And from Section <a href="sec5.2.book.html" target=_blank>5.2</a> the general solution of <a href="#x1-15r7">(6.2.7)</a> is given by
+						
+						\[ y= e^{-t} (c_1\cos 3\sqrt 7t+c_2\sin 3\sqrt 7t)\]
+					</div>
+					<div class="reading-exercise">
+						Verify \(y =  e^{-t}  (c_1\cos 3\sqrt 7t+c_2\sin 3\sqrt 7t) \) is a solution to <a href="#x1-15r7">(6.2.7)</a> 
+					</div> 	
+					<div class="reading-exercise">
+						Evaluate \(y = e^{-t}  (c_1\cos 3\sqrt 7t+c_2\sin 3\sqrt 7t)\) at the initial condition \( y(0)=1.5 \) 
+					</div> 
+					<div>
+						From  \( y(0)=3/2 \) we obtain \(c_1=3/2\) and to obtain \(c_2\) we need to find \(\dot{y}\)
+						
+					</div>	
+					<div class="reading-exercise">
+						Differentiate \(y =  e^{-t} (c_1\cos 3\sqrt 7t+c_2\sin 3\sqrt 7t) \) 
+					</div> 	
+					<div>
+						Differentiating \(y =  e^{-t}  (c_1\cos 3\sqrt 7t+c_2\sin 3\sqrt 7t) \) we obtain
+						\begin {align*} 
+							\dot{y} 
+								=  e^{-t}  \Big( 
+									(3 \sqrt{7} c_2 - c_1) \cos 3 \sqrt{7} t 
+									- (3 \sqrt{7} c_1 + c_2) \sin 3 \sqrt{7} t \Big)
+						\end {align*} 
+
+						Applying the initial condition \(\dot{y}(0)=-3\) we obtain
+						\begin {align*} 
+							3 \sqrt{7} c_2 - c_1 =& -3	\\
+							3 \sqrt{7} c_2 - \frac{3}{2} =& -3	
+							\Longrightarrow c_2 = -\frac{1}{2 \sqrt{7}}
+							\\		
+						\end {align*} 
+					
+						
+					</div>	
+					<div>
+						Substituting back in we obtain the particular solution
+						<a id="x1-16r8"></a>
+						\begin{align} \label {eq:6.2.8}
+							y= e^{-t} \left( \frac{3}{2} \cos 3\sqrt 7t -\frac{1}{2 \sqrt{7}} \sin 3\sqrt 7t\right)
+						\end{align}
+					</div>	
+					<div class="reading-exercise">
+						Verify \(y= e^{-t} \left( \frac{3}{2} \cos 3\sqrt 7t -\frac{1}{2 \sqrt{7}} \sin 3\sqrt 7t\right)\) is a solution to <a href="#x1-15r7">(6.2.7)</a> 
+					</div> 	
+					
+
+					<div>
+						The frequency is \[\omega _0=3 \sqrt{7} \quad \text{rad/s} \]
+					</div>		
+					<div>
+						The period is 
+						\[ T=\frac{2\pi}{ \omega _0}
+						=\frac{2\pi}{ 3 \sqrt{7}}
+						\]
+					</div>	
+					<div>
+						The amplitude is 
+						\[ R=\sqrt {c^2_1+c^2_2}=\sqrt {\left ({3\over 2}\right )^2+\left (-\frac{1}{2 \sqrt{7}}\right )^2} 
+						=\sqrt {64\over 4 \cdot 7}
+						=\sqrt {16\over 7}
+						={4\over \sqrt7}
+						\]
+					</div>	
+					<div>
+						The phase angle is determined by 
+
+						<a id="x1-21r11"></a>
+						\begin {align*} \label {eq:6.1.11} 
+							\cos \theta 
+							= & \frac{c_1}{R} \nonumber \\
+							= & {3\over 2} \div {4\over \sqrt{7}} \nonumber \\
+							= & {3\sqrt{7}\over 8} 
+							\Longrightarrow
+							\theta = \cos^{-1} \left( {3\sqrt{7}\over 8} \right)
+							\approx 0.12533
+						\end {align*}
+						
+						and 
+
+						<a id="x1-22r12"></a>
+						\begin {align*} \label {eq:6.1.12} 
+							\sin \theta
+							= & \frac{c_2}{R} \nonumber \\
+							= & -{1 \over 2\sqrt {7}} \div {4\over \sqrt{7}} \nonumber \\
+							= & -{1\over 8}
+							\Longrightarrow
+							\theta = \sin^{-1} \left( -{1\over 8} \right)
+							\approx -0.12533
+						\end {align*}
+
+						Since cosine is positive and sine is negative, that puts the angle \(\theta\) in quadrant IV so the angle is \( \theta = \sin^{-1} \left(- 1 / 8 \right)
+						\approx -0.12533\) radians
+					</div>
+					<div>
+				
+					</div>	
+
+
+					And we can rewrite <a href="#x1-16r8">(6.2.8)</a> as
+
+					\[ y
+						={4\over \sqrt 7}e^{-t}\cos \Big(3\sqrt 7t-\theta \Big) 
+						={4\over \sqrt 7}e^{-t}\cos \Bigg( 3\sqrt 7t - 
+						\sin^{-1} \left( - \frac{1}{8} \right) \Bigg)
+					\] 
+					
 				</details>
 			</div>
+			<br>
+			<br>
+			<br>
 
+			<!--Example 3-->
 			<div class="example" id="x1-173" style="--ex-number: 3">
 				<div>
-					Let the damping constant in Example 1 be \(c=40\) lb–sec/ft. Find the displacement \(y\) for \(t&gt;0\) if \(y(0)=1\) and \(\left. \frac{dy}{dx} \right|_{0}=1\).
+					Set up and solve the IVP for the motion if the objectin Example <a href="#x1-61">6.2.1<a> if the damping constant is \(c=40\) and the object is initially displaced 1 foot above equilibrium and given an upward velocity of 1 ft/s 
 				</div>
-				
 				<details class="solution">
 					<summary>Solution</summary>
-					With \(c=40\), the equation of motion <a href="#x1-10r4">(6.2.4)</a> reduces to 
-					\begin {equation} \label {eq:6.2.9} \frac{d^2y}{dx^2}+20\frac{dy}{dx}+64y=0 
-					\end {equation}
-					<a id="x1-18r9"></a>
-					after cancelling the common factor 2. The characteristic equation \[ r^2+20r+64=(r+16)(r+4)=0 \] has the roots \(r_1=-4\) and \(r_2=-16\). Therefore the general solution of <a href="#x1-18r9">(6.2.9)</a> is 
-					\begin {equation} \label {eq:6.2.10} y=c_1e^{-4t}+c_2e^{-16t} 
-					\end {equation}
-					<a id="x1-19r10"></a>
-					Differentiating this yields \[ \frac{dy}{dx}=-4e^{-4t}-16c_2e^{-16t}\] The last two equations and the initial conditions \(y(0)=1\) and \(\left. \frac{dy}{dx} \right|_{0}=1\) imply that \[ 
-					\begin {array}{rlrl} c_1&amp;+&amp;c_2&amp;=1\\ -4c_1&amp;-&amp;16c_2&amp;=1 
-					\end {array} \] The solution of this system is \(c_1=17/12\), \(c_2=-5/12\). Substituting these into <a href="#x1-19r10">(6.2.10)</a> yields \[ y={17\over 12}e^{-4t}-{5\over 12}e^{-16t} \] as the solution of the given initial value problem (Figure&nbsp;<a href="#-y-overet-overet-">6.2.3</a>).
+					<div>
+						Substituting \(c=40\) for the damping constant into the equation of motion <a href="#x1-10r4">(6.2.4)</a> becomes
+			
+						\begin {align*} 
+							2 \ddot{y} + 40 \dot{y} + 128y = 0
+						\end {align*} 
+			
+						Which can be simplified by dividing by \(2\) 
+			
+						<a id="x1-18r9"></a>
+						\begin {align} \label {eq:6.2.9}
+							\ddot{y} + 20 \dot{y} + 64y = 0
+						\end {align} 
+			
+						And including the initial conditions that the object is initially displaced 1 foot above equilibrium and given an upward velocity of 1 ft/s we have the IVP
+			
+						\begin {align*} 
+							\ddot{y} + 20 \dot{y} + 64y = 0
+							\quad y(0)=1
+							\quad \dot{y}(0)=1
+						\end {align*} 
+			
+					</div>
+					<div class="reading-exercise">
+						Find and solve the characteristic equation for <a href="#x1-18r9">(6.2.9)</a> 
+					</div>		
+					<div class="reading-exercise">
+						Find the discriminant of the characteristic equation
+					</div>		
+					<div>
+						The characteristic equation has distinct real roots 
+						
+						\begin {align*} 
+							r^2 + 20r + 64 = & 0 \\						
+							(r+4)(r+16) = & 0 \\
+							r = -4 \quad r = -16 &						
+						\end {align*} 
+						
+						Since the discriminant \(20^2-4\cdot64 = 400-256 = 144\) is greater than zero we call the motion <span class="vocab">overdamped</span>. And from Section <a href="sec5.2.book.html" target=_blank>5.2</a> the general solution of <a href="#x1-18r9">(6.2.9)</a> is given by
+						
+						<a id="x1-19r10"></a>
+						\begin {align} \label {eq:6.2.10}
+							y=  c_1 e^{-4t} + c_2 e^{-16t}						
+						\end {align} 
+					</div>
+					<div class="reading-exercise">
+						Verify \(y =   c_1 e^{-4t} + c_2 e^{-16t} \) is a solution to <a href="#x1-18r9">(6.2.9)</a> 
+					</div> 	
+					<div class="reading-exercise">
+						Evaluate \(y = c_1 e^{-4t} + c_2 e^{-16t}\) at the initial condition \( y(0)=1 \) 
+					</div> 
+					<div>
+						From  \( y(0)=1 \) we obtain \(c_1 + c_2 = 1\) and to obtain now we need to find \(\dot{y}\)
+						
+					</div>	
+					<div class="reading-exercise">
+						Differentiate \(y =  c_1 e^{-4t} + c_2 e^{-16t} \) 
+					</div> 	
+					<div>
+						Differentiating \(y =  c_1 e^{-4t} + c_2 e^{-16t} \) we obtain
+						\begin {align*} 
+							\dot{y} 
+								=  -4c_1 e^{-4t} -16 c_2 e^{-16t}
+						\end {align*} 
+			
+						Applying the initial condition \(\dot{y}(0)=1\) we obtain
+						\begin {align*} 
+							-4c_1 - 16c_2 = 1
+						\end {align*} 
+					
+						So we have the sytem of equations
+						\begin{align*}
+							\left\{
+								\begin{array}{ccc}
+									c_1 &+& c_2 &=& 1 \\
+									-4c_1 &-& 16c_2 &=& 1
+								\end{array}
+							\right.
+						\end{align*}
+					</div>
+					<div class="reading-exercise">
+						Solve the system \(\left\{
+							\begin{array}{ccc}
+								c_1 &+& c_2 &=& 1 \\
+								-4c_1 &-& 16c_2 &=& 1
+							\end{array}
+						\right.\)
+					</div> 		
+
+					<div>
+						Solving the system we obtain \(c_1 = 17/12\) and \(c_2 = -5/12\) and substituting back in we obtain the particular solution
+						
+						\begin{align*} 
+							y =  \frac{17}{12} e^{-4t} - \frac{5}{12} c_2 e^{-16t} 
+						\end{align*}
+					</div>	
+					<div class="reading-exercise">
+						Verify \(y= \frac{17}{12} e^{-4t} - \frac{5}{12} c_2 e^{-16t} \) is a solution to <a href="#x1-18r9">(6.2.9)</a> 
+					</div> 	
 				</details>
 			</div>
 
@@ -172,40 +659,180 @@
 			</figure>
 		</details>
 
+		<!--Damped Forced Motion-->
 		<details id="d9ef6735-b76d-4eac-80e9-bdfea9dbc9c1">
 			<summary>Damped Forced Motion</summary>
 
 			<div id="d46f03ec-6e98-45a8-b051-e42031a4f319">
-				Now we consider the motion of an object in a spring-mass system with damping, under the influence of a periodic forcing function \(F(t)=F_0\cos \omega t\), so that the equation of motion is \begin {equation} \label {eq:6.2.11} m\frac{d^2y}{dx^2}+c\frac{dy}{dx}+ky=F_0\cos \omega t \end {equation} <a id="x1-21r11"></a> In Section&nbsp;6.1 we considered this equation with \(c=0\) and found that the resulting displacement \(y\) assumed arbitrarily large values in the case of resonance (that is, when \(\omega =\omega _0=\sqrt {k/m}\)). Here we’ll see that in the presence of damping the displacement remains bounded for all \(t\), and the initial conditions have little effect on the motion as \(t\to \infty \). In fact, we’ll see that for large \(t\) the displacement is closely approximated by a function of the form 
-				\begin {equation} \label {eq:6.2.12} y=R\cos (\omega t-\phi ) 
-				\end {equation} <a id="x1-22r12"></a> where the amplitude \(R\) depends upon \(m\), \(c\), \(k\), \(F_0\), and \(\omega \). We’re interested in the following question: ___________________________________________________________________________ 
+				Now we consider the motion of an object in a spring-mass system with damping, under the influence of a periodic forcing function \(F(t)=F_0\cos \omega t\), so that the equation of motion is 
+				
+				<a id="x1-21r11"></a> 
+				\begin {equation} \label {eq:6.2.11} 
+					m \ddot{y} + c \dot{y} + ky = F_0\cos \omega t 
+				\end {equation} 
+				
+				In Section <a href="sec6.1.book.html" target=_blank>6.1</a> we considered the equation of motion with \(c=0\) and found that the resulting displacement \(y\) assumed arbitrarily large values in the case of resonance (that is, when \(\omega =\omega _0=\sqrt {k/m}\)). Here we’ll find that in the presence of damping the displacement remains bounded for all \(t\), and the initial conditions have little effect on the motion as \(t\to \infty \). In fact, we’ll find that for large \(t\) the displacement is closely approximated by a function of the form 
+				
+				
+				<a id="x1-22r12"></a> 
+				\begin {equation} \label {eq:6.2.12} 
+					y=R\cos (\omega t-\theta ) 
+				\end {equation} 
+				
+				
+				where the amplitude \(R\) depends upon \(m\), \(c\), \(k\), \(F_0\), and \(\omega \). We’re interested in the following question: 
 			</div>
+			
 
-			<div id="313986a8-a44c-4b4e-a291-a3af864129aa">
+			<div class=stepline id="313986a8-a44c-4b4e-a291-a3af864129aa">
 				<strong>Question</strong>: Assuming that \(m\), \(c\), \(k\), and \(F_0\) are held constant, what value of \(\omega \) produces the largest amplitude \(R\) in <a href="#x1-22r12">(6.2.12)</a>, and what is this largest amplitude?
 			</div>
 
 			<div class="indent" id="1856cdaa-5f87-43db-ab36-06bb72f769d0">
-				To answer this question, we must solve <a href="#x1-21r11">(6.2.11)</a> and determine \(R\) in terms of \(F_0,\omega _0,\omega \), and \(c\). We can obtain a particular solution of <a href="#x1-21r11">(6.2.11)</a> by the method of undetermined coefficients. Since \(\cos \omega t\) does not satisfy the complementary equation \[ m\frac{d^2y}{dx^2}+c\frac{dy}{dx}+ky=0\] we can obtain a particular solution of <a href="#x1-21r11">(6.2.11)</a> in the form \begin {equation} \label {eq:6.2.13} y_p=A\cos \omega t+B\sin \omega t \end {equation} <a id="x1-23r13"></a> Differentiating this yields \[ \frac{y_p}{dx}=\quad \omega (-A\sin \omega t+B\cos \omega t) \] and \[ \frac{d^2y_p}{dx^2}=-\omega ^2(A\cos \omega t+B\sin \omega t)\] From the last three equations, \[ m\frac{d^2y}{dx^2}_p+c\frac{dy_p}{dx}+ky_p=(-m\omega ^2A+c\omega B+kA)\cos \omega t+ (-m\omega ^2 B-c\omega A+kB)\sin \omega t\] so \(y_p\) satisfies <a href="#x1-21r11">(6.2.11)</a> if \[ 
-				\begin {array}{lll} (k-m\omega ^2) A+\quad c\omega B &amp;=&amp;F_0\\ -c\omega A\quad +(k-m\omega ^2)B&amp;=&amp;0 
-				\end {array} \] 
+				To answer this question, we must solve <a href="#x1-21r11">(6.2.11)</a> and determine \(R\) in terms of \(F_0,\omega _0,\omega \), and \(c\). To solve <a href="#x1-21r11">(6.2.11)</a> we first solve the complementary equation:
+
+				\[ m \ddot{y} + c \dot{y} + ky =0\] 
+
+				Since \(\cos \omega t\) does not satisfy the complementary equation we can obtain a particular solution of <a href="#x1-21r11">(6.2.11)</a> by the method of undetermined coefficients in the form 
+				
+				<a id="x1-23r13"></a>
+				\begin {equation} \label {eq:6.2.13} 
+					y_p=A\cos \omega t+B\sin \omega t 
+				\end {equation} 
+
+			</div>
+			<div class="reading-exercise">
+				Differentiate \(y_p=A\cos \omega t+B\sin \omega t\) twice
+			</div> 	
+			<div id="1856cdaa-5f87-43db-ab36-06bb72f769d0fdas">	
+				Differentiating <a href="#x1-23r13">(6.2.13)</a> yields
+
+				\begin{align*}
+					\dot{y}_p = & \quad\, \omega (B\cos \omega t -A\sin \omega t) \\ \\
+					\ddot{y}_p = & -\omega ^2(A\cos \omega t+B\sin \omega t)
+				\end{align*}
+
+				Substituting \(y_p,\) \(\dot{y}_p,\) and \(\ddot{y}_p\) into the equation of motion <a href="#x1-21r11">(6.2.11)</a>
+
+				\begin{array}{rrr}
+					m\ddot{y}_p &=&  -m \omega ^2 A\cos \omega t &-& m \omega^2 B \sin \omega t \\
+					c\dot{y}_p &=&  c \omega B \cos \omega t &-& c \omega A \sin \omega t \\
+					+ \quad\quad\quad k y_p &=& k A \cos \omega t &+& k B \sin \omega t \\
+					\hline
+					\underset{\displaystyle F_0 \cos \omega t}{\underbrace{{\small m\ddot{y}_p + c\dot{y}_p + k y_p}}} &=&  {\small( kA + c \omega B -m \omega ^2 A )} \cos \omega t &+& {\small( kB - c \omega A  -m \omega^2 B )} \sin \omega t \\
+				\end{array}
+
+				Therefore we obtain the equation
+				\begin{align*}
+					( kA + c \omega B -m \omega ^2 A )  \cos \omega t + ( kB - c \omega A  -m \omega^2 B ) \sin \omega t = F_0 \cos \omega t
+				\end{align*}
+				
+				Equating the coefficients we obtain the system of equations
+
+				\begin{align*}
+					\left\{
+						\begin{array}{ccc}
+							kA + c \omega B -m \omega ^2 A &=& F_0 \\
+							kB - c \omega A  -m \omega^2 B &=& 0
+						\end{array}
+					\right.
+				\end{align*}
+			</div>
+			<div class="reading-exercise">
+				Solve the system \(\left\{
+					\begin{array}{ccc}
+						kA + c \omega B -m \omega ^2 A &=& F_0 \\
+						kB - c \omega A  -m \omega^2 B &=& 0
+					\end{array}
+				\right.\)
+			</div> 	
+			<div>	
+				\begin{align*}
+					\left\{
+						\begin{array}{ccc}
+							kA + c \omega B -m \omega ^2 A &=& F_0 \\
+							kB - c \omega A  -m \omega^2 B &=& 0
+						\end{array}
+					\right.
+					\longrightarrow
+					\left\{
+						\begin{array}{rrrr}
+							(k -m \omega^2 )A &+& c \omega B&=& F_0 \\
+							- c \omega A &+& (k  -m \omega^2 )B &=& 0
+						\end{array}
+					\right.
+				\end{align*}
+
+				Solving for \(A\) and \(B\) we obtain
+				\begin{align*}
+					A = \frac{ ( k - m \omega^2 ) F_0 }{ ( k - m \omega^2 )^2 - c^2 \omega^2 }
+					\quad \quad
+					B = \frac{ c \omega F_0 }{ ( k - m \omega^2 )^2 - c^2 \omega^2 }
+				\end{align*}
+
+				Sbstituting into <a href="#x1-23r13">(6.2.13)</a>  we obtain
+
+				\begin {align*} 
+					y_p = & A\cos \omega t+B\sin \omega t \\
+					y_p = & \overset{A}{\overbrace{\frac{ ( k - m \omega^2 ) F_0 }{ ( k - m \omega^2 )^2 - c^2 \omega^2 }}}\cos \omega t 
+						+ \overset{B}{\overbrace{\frac{ c \omega F_0 }{ ( k - m \omega^2 )^2 - c^2 \omega^2 }}} \sin \omega t \\
+					y_p = & \frac{F_0 }{ ( k - m \omega^2 )^2 - c^2 \omega^2 }  ( k - m \omega^2 )  \cos \omega t 
+						+ \frac{ F_0 }{ ( k - m \omega^2 )^2 - c^2 \omega^2 } c \omega \sin \omega t \\
+					y_p = & \frac{F_0 }{ ( k - m \omega^2 )^2 - c^2 \omega^2 } 
+						\Big[  ( k - m \omega^2 ) \cos \omega t + c \omega \sin \omega t \Big]\\		
+				\end {align*} 
+
+
+				
+			
 			</div>
 			<div class="indent" id="6b91eb1d-ebc2-4b9e-92ad-aed352c16768">
-				Solving for \(A\) and \(B\) and substituting the results into <a href="#x1-23r13">(6.2.13)</a> yields \[ y_p={F_0\over (k-m\omega ^2)^2+c^2\omega ^2} \left [(k-m\omega ^2)\cos \omega t+c\omega \sin \omega t\right ]\] which can be written in amplitude–phase form as \begin {equation} \label {eq:6.2.14} y_p={F_0\over \sqrt {(k-m\omega ^2)^2+c^2\omega ^2}} \cos (\omega t-\phi ) \end {equation} <a id="x1-24r14"></a> where 
-				\begin {equation} \label {eq:6.2.15} \cos \phi ={k-m\omega ^2\over \sqrt {(k-m\omega ^2)^2+c^2\omega ^2}}\quad \mbox{ and } \quad \sin \phi ={c\omega \over \sqrt {(k-m\omega ^2)^2+c^2\omega ^2}} 
-				\end {equation} <a id="x1-25r15"></a> 
+				Which can be written in amplitude–phase form as 
+				
+				<a id="x1-24r14"></a>
+				\begin {equation} \label {eq:6.2.14} 
+					y_p={F_0\over \sqrt {(k-m\omega ^2)^2+c^2\omega ^2}} \cos (\omega t-\theta )
+				\end {equation}  
+					
+				where 
+				
+				<a id="x1-25r15"></a>
+				\begin {equation} \label {eq:6.2.15} 
+					\cos \theta ={k-m\omega ^2\over \sqrt {(k-m\omega ^2)^2+c^2\omega ^2}}\quad \mbox{ and } \quad \sin \theta ={c\omega \over \sqrt {(k-m\omega ^2)^2+c^2\omega ^2}} 
+				\end {equation}  
 			</div>
 			<div class="indent" id="abd8139d-27f4-4303-85e7-964a399220bb">
-				To compare this with the undamped forced vibration that we considered in Section&nbsp;6.1 it’s useful to write \begin {equation} \label {eq:6.2.16} k-m\omega ^2=m\bigg ({k\over m}-\omega ^2\bigg )= m(\omega _0^2-\omega ^2) \end {equation} <a id="x1-26r16"></a> where \(\omega _0=\sqrt {k/m}\) is the natural angular frequency of the undamped simple harmonic motion of an object with mass \(m\) on a spring with constant \(k\). Substituting <a href="#x1-26r16">(6.2.16)</a> into <a href="#x1-24r14">(6.2.14)</a> yields 
-				\begin {equation} \label {eq:6.2.17} y_p={F_0\over \sqrt {m^2(\omega ^2_0-\omega ^2)^2+ c^2\omega ^2}}\cos (\omega t-\phi ) 
-				\end {equation} <a id="x1-27r17"></a> 
+				To compare this with the undamped forced vibration that we considered in Section&nbsp;<a href="sec6.1.book.html" target=_blank>6.1</a> it’s useful to write 
+
+				<a id="x1-26r16"></a> 
+				\begin {equation} \label {eq:6.2.16} 
+					k-m\omega ^2=m\bigg ({k\over m}-\omega ^2\bigg )= m(\omega _0^2-\omega ^2) 
+				\end {equation} 
+				
+				where \(\omega _0=\sqrt {k/m}\) is the natural angular frequency of the undamped simple harmonic motion of an object with mass \(m\) on a spring with constant \(k\). Substituting <a href="#x1-26r16">(6.2.16)</a> into <a href="#x1-24r14">(6.2.14)</a> yields 
+				
+				<a id="x1-27r17"></a> 
+				\begin {equation} \label {eq:6.2.17} 
+					y_p={F_0\over \sqrt {m^2(\omega ^2_0-\omega ^2)^2+ c^2\omega ^2}}\cos (\omega t-\theta ) 
+				\end {equation} 
 			</div>
 			<div class="indent" id="4dff4798-78d7-4a94-bf98-8d5ca4969651">
-				The solution of an initial value problem \[ m\frac{d^2y}{dx^2}+c\frac{dy}{dx}+ky=F_0\cos \omega t, \quad y(0)=y_0,\quad \left. \frac{dy}{dx} \right|_{0}=v_0\] is of the form \(y=y_c+y_p\), where \(y_c\) has one of the three forms 
+				The solution of an IVP 
+				
+				\[ 
+					m \ddot{y} + c \dot{y} + ky = F_0 \cos \omega t 
+					\quad y(0)=y_0
+					\quad \dot{y}(0) = v_0
+				\] 
+				
+				is of the form \(y=y_c+y_p\), where \(y_c\) has one of the three forms 
 			</div>
 			<div class="eqnarray" id="38db67a1-f71b-414b-8073-f01a17fe49c0">
 				
-				\begin {eqnarray*} y_c&amp;=&amp;e^{-ct/2m}(c_1\cos \omega _1t+c_2\sin \omega _1t),\\ y_c&amp;=&amp;e^{-ct/2m}(c_1+c_2t),\\ y_c&amp;=&amp;c_1e^{r_1t}+c_2e^{r_2t}\,(r_1,r_2&lt;0) 
+				\begin {eqnarray*} 
+					y_c&amp;=&amp;e^{-ct/2m}(c_1\cos \omega _1t+c_2\sin \omega _1t)\\ 
+					y_c&amp;=&amp;e^{-ct/2m}(c_1+c_2t)\\ 
+					y_c&amp;=&amp;c_1e^{r_1t}+c_2e^{r_2t}\quad(r_1,r_2&lt;0) 
 				\end {eqnarray*} 
 			</div>
 			<div class="indent" id="82258520-4dad-4c8a-a091-a19f5e42f449">
@@ -213,16 +840,22 @@
 			</div>
 			<div class="indent" id="f4d4832f-bc51-4a07-b221-af3eac25fb2d">
 				The amplitude of \(y_p\) in <a href="#x1-27r17">(6.2.17)</a> is \begin {equation} \label {eq:6.2.18} R={F_0\over \sqrt {m^2(\omega ^2_0-\omega ^2)^2+c^2\omega ^2}} \end {equation} <a id="x1-28r18"></a> which is finite for all \(\omega \); that is, the presence of damping precludes the phenomenon of resonance that we encountered in studying undamped vibrations under a periodic forcing function. We’ll now find the value \(\omega _{\max }\) of \(\omega \) for which \(R\) is maximized. This is the value of \(\omega \) for which the function \[ \rho (\omega )=m^2(\omega ^2_0-\omega ^2)^2+c^2\omega ^2 \] in the denominator of <a href="#x1-28r18">(6.2.18)</a> attains its minimum value. By rewriting this as 
+				
 				<a id="x1-29r19"></a>
 				\begin {equation}
 					\label {eq:6.2.19} \rho (\omega )=m^2(\omega ^4_0+\omega ^4)+ (c^2-2m^2\omega ^2_0)\omega ^2 
 				\end {equation} 
-				 you can see that \(\rho \) is a strictly increasing function of \(\omega ^2\) if \[ c\ge \sqrt {2m^2\omega ^2_0}=\sqrt {2mk}\] (Recall that \(\omega ^2_0=k/m\)). Therefore \(\omega _{\max }=0\) if this inequality holds. From <a href="#x1-25r15">(6.2.15)</a>, you can see that \(\phi =0\) if \(\omega =0\). In this case, <a href="#x1-24r14">(6.2.14)</a> reduces to \[ y_p={F_0\over \sqrt {m^2\omega ^4_0}}={F_0\over k}\] which is consistent with Hooke’s law: if the mass is subjected to a constant force \(F_0\), its displacement should approach a constant \(y_p\) such that \(ky_p=F_0\). Now suppose \(c&lt;\sqrt {2mk}\). Then, from <a href="#x1-29r19">(6.2.19)</a>, \[ \frac{d\rho}{d\omega} =2\omega (2m^2\omega ^2+c^2-2m^2\omega ^2_0)\] and \(\omega _{\max }\) is the value of \(\omega \) for which the expression in parentheses equals zero; that is, \[ \omega _{\max }=\sqrt {\omega ^2_0-{c^2\over 2m^2}} =\sqrt {{k\over m}\left (1-{c^2\over 2km}\right )}\] (To see that \(\rho (\omega _{\max })\) is the minimum value of \(\rho (\omega )\), note that \(\frac{d\rho}{d\omega} &lt;0\) if \(\omega &lt;\omega _{\max }\) and \(\frac{d\rho}{d\omega} &gt;0\) if \(\omega &gt;\omega _{\max }\).) Substituting \(\omega =\omega _{\max }\) in <a href="#x1-28r18">(6.2.18)</a> and simplifying shows that the maximum amplitude \(R_{\max }\) is \[ R_{\max }={2mF_0\over c\sqrt {4mk-c^2}} \quad \mbox{ if } \quad c&lt; \sqrt {2mk}\] We summarize our results as follows. 
+
+				 we find that \(\rho \) is a strictly increasing function of \(\omega ^2\) if \[ c\ge \sqrt {2m^2\omega ^2_0}=\sqrt {2mk}\] (Recall that \(\omega ^2_0=k/m\)). Therefore \(\omega _{\max }=0\) if this inequality holds. From <a href="#x1-25r15">(6.2.15)</a>, you can see that \(\phi =0\) if \(\omega =0\). In this case, <a href="#x1-24r14">(6.2.14)</a> reduces to \[ y_p={F_0\over \sqrt {m^2\omega ^4_0}}={F_0\over k}\] which is consistent with Hooke’s law: if the mass is subjected to a constant force \(F_0\), its displacement should approach a constant \(y_p\) such that \(ky_p=F_0\). Now suppose \(c&lt;\sqrt {2mk}\). Then, from <a href="#x1-29r19">(6.2.19)</a>, \[ \frac{d\rho}{d\omega} =2\omega (2m^2\omega ^2+c^2-2m^2\omega ^2_0)\] and \(\omega _{\max }\) is the value of \(\omega \) for which the expression in parentheses equals zero; that is, \[ \omega _{\max }=\sqrt {\omega ^2_0-{c^2\over 2m^2}} =\sqrt {{k\over m}\left (1-{c^2\over 2km}\right )}\] (To see that \(\rho (\omega _{\max })\) is the minimum value of \(\rho (\omega )\), note that \(\frac{d\rho}{d\omega} &lt;0\) if \(\omega &lt;\omega _{\max }\) and \(\frac{d\rho}{d\omega} &gt;0\) if \(\omega &gt;\omega _{\max }\).) Substituting \(\omega =\omega _{\max }\) in <a href="#x1-28r18">(6.2.18)</a> and simplifying shows that the maximum amplitude \(R_{\max }\) is \[ R_{\max }={2mF_0\over c\sqrt {4mk-c^2}} \quad \mbox{ if } \quad c&lt; \sqrt {2mk}\] We summarize our results as follows. 
 			</div>
 			<div class="theorem" id="x1-301">
 				<div>
 					<span class="head">Theorem&nbsp;6.2.1</span>
-					Suppose we consider the amplitude \(R\) of the steady state component of the solution of \[ m\frac{d^2y}{dx^2}+c\frac{dy}{dx}+ky=F_0\cos \omega t \] as a function of \(\omega \).
+					Suppose we consider the amplitude \(R\) of the steady state component of the solution of 
+					
+					\[ m \ddot{y} + c \dot{y} + ky = F_0\cos \omega t \] 
+					
+					as a function of \(\omega \).
 					<br class="newline" />
 					(a) If \(c \ge \sqrt {2mk}\), the maximum amplitude is \(R_{\max }=F_0/k\) and it’s attained when \(\omega = \omega _{\max }=0\).
 					<br class="newline" />
