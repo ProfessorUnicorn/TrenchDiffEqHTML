@@ -74,7 +74,7 @@
 		</div>
 		<div class="indent" id="5af47ebe-8aa2-4141-a279-0abb47c36617">
 			
-			A complete proof of the convolution theorem is beyond the scope of this book. However, we’ll assume that \(f\ast g\) has a Laplace transform and verify the conclusion of the theorem in a purely computational way. By the definition of the Laplace transform, \[ {\cal L}(f\ast g)=\int _0^\infty e^{-st}(f\ast g)(t)\,dt=\int _0^\infty e^{-st} \int _0^t f(\tau )g(t-\tau )\,d\tau \,dt\] This iterated integral equals a double integral over the region shown in Figure<a href="#-">8.6.1</a>. Reversing the order of integration yields 
+			A complete proof of the convolution theorem is beyond the scope of this book. However, we’ll assume that \(f\ast g\) has a Laplace transform and verify the conclusion of the theorem in a purely computational way. By the definition of the Laplace transform, \[ {\cal L}(f\ast g)=\int _0^\infty e^{-st}(f\ast g)(t)\,dt=\int _0^\infty e^{-st} \int _0^t f(\tau )g(t-\tau )\,d\tau \,dt\] This iterated integral equals a double integral over the region shown in Figure&nbsp;<a href="#-">8.6.1</a>. Reversing the order of integration yields 
 			\begin {equation} \label {eq:8.6.6} {\cal L}(f*g)=\int _0^\infty f(\tau )\int ^\infty _\tau e^{-st}g(t-\tau )\, dt \,d\tau 
 			\end {equation} <a id="x1-9r6"></a> However, the substitution \(x=t-\tau \) shows that
 		
@@ -95,11 +95,11 @@
 		<div class="indent" id="98ad8152-9db1-4c52-8ac2-ea6c865f283c">
 			&nbsp; 
 		</div>
-		<figure class="figure" id="89e43eb8-120c-4c9f-8ad4-abe6242dc208">
+		<figure id="89e43eb8-120c-4c9f-8ad4-abe6242dc208">
 			<div id="-">
 				<img height="264" src="EPS/fig080601.png" width="409" /> <a id="x1-10r1"></a> 
 			</div>
-			<figcaption class="caption"><span class="id">Figure&nbsp;8.6.1</span><span class="content"></span></figcaption>
+			<figcaption><span class="id">Figure&nbsp;8.6.1</span><span class="content"></span></figcaption>
 			<!-- tex4ht:label?: x1-10r1  -->
 		</figure>
 		<div class="newtheorem" id="313eff73-874e-4592-9847-6341302d83e5">
@@ -282,7 +282,7 @@
 									</div>
 									<div class="indent" id="cf9407c0-2222-4a73-abdb-451404620b6a">
 										
-										It is useful to note from <a href="#x1-26r14">(8.6.14)</a> that \(y\) is of the form \[ y=v+h\] where \[ v(t)=k_0y_1(t)+k_1y_2(t) \] depends on the initial conditions and is independent of the forcing function, while \[ h(t)=\int _0^tw(\tau )f(t-\tau )\, d\tau \] depends on the forcing function and is independent of the initial conditions. If the zeros of the characteristic polynomial \[ p(s)=as^2+bs+c \] of the complementary equation have negative real parts, then \(y_1\) and \(y_2\) both approach zero as \(t\to \infty \), so \(\lim _{t\to \infty }v(t)=0\) for any choice of initial conditions. Moreover, the value of \(h(t)\) is essentially independent of the values of \(f(t-\tau )\) for large \(\tau \), since \(\lim _{\tau \to \infty }w(\tau )=0\). In this case we say that \(v\) and \(h\) are <span class="vocab">transient</span> and <span class="vocab">steady state components</span>, respectively, of the solution \(y\) of <a href="#x1-25r13">(8.6.13)</a>. These definitions apply to the initial value problem of Example&nbsp;<a href="#x1-164">8.6.4</a>, where the zeros of \[ p(s)=s^2+2s+2=(s+1)^2+1 \] are \(-1\pm i\). From <a href="#x1-18r10">(8.6.10)</a>, we see that the solution of the general initial value problem of Example&nbsp;<a href="#x1-164">8.6.4</a> is \(y=v+h\), where \[ v(t)=e^{-t}\left ((k_1+k_0)\sin t+k_0\cos t\right ) \] is the transient component of the solution and \[ h(t)=\int _0^t f(t-\tau )e^{-\tau }\sin \tau \,d\tau \] is the steady state component. The definitions don’t apply to the initial value problems considered in Examples<a href="#x1-122">8.6.2</a> and
+										It is useful to note from <a href="#x1-26r14">(8.6.14)</a> that \(y\) is of the form \[ y=v+h\] where \[ v(t)=k_0y_1(t)+k_1y_2(t) \] depends on the initial conditions and is independent of the forcing function, while \[ h(t)=\int _0^tw(\tau )f(t-\tau )\, d\tau \] depends on the forcing function and is independent of the initial conditions. If the zeros of the characteristic polynomial \[ p(s)=as^2+bs+c \] of the complementary equation have negative real parts, then \(y_1\) and \(y_2\) both approach zero as \(t\to \infty \), so \(\lim _{t\to \infty }v(t)=0\) for any choice of initial conditions. Moreover, the value of \(h(t)\) is essentially independent of the values of \(f(t-\tau )\) for large \(\tau \), since \(\lim _{\tau \to \infty }w(\tau )=0\). In this case we say that \(v\) and \(h\) are <span class="vocab">transient</span> and <span class="vocab">steady state components</span>, respectively, of the solution \(y\) of <a href="#x1-25r13">(8.6.13)</a>. These definitions apply to the initial value problem of Example&nbsp;<a href="#x1-164">8.6.4</a>, where the zeros of \[ p(s)=s^2+2s+2=(s+1)^2+1 \] are \(-1\pm i\). From <a href="#x1-18r10">(8.6.10)</a>, we see that the solution of the general initial value problem of Example&nbsp;<a href="#x1-164">8.6.4</a> is \(y=v+h\), where \[ v(t)=e^{-t}\left ((k_1+k_0)\sin t+k_0\cos t\right ) \] is the transient component of the solution and \[ h(t)=\int _0^t f(t-\tau )e^{-\tau }\sin \tau \,d\tau \] is the steady state component. The definitions don’t apply to the initial value problems considered in Examples&nbsp;<a href="#x1-122">8.6.2</a> and
 										<a href="#x1-143">
 											8.6.3
 											<!-- tex4ht:ref: example:8.6.3  -->

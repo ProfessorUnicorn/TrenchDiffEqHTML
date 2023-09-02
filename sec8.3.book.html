@@ -94,7 +94,7 @@
 				is \(y=y_0e^{at}\). We’ll now obtain this result by using the Laplace transform. 
 			</div>
 			<div class="indent" id="a726ea5e-66e0-4398-bd36-e396f447bf4c">
-				Let \(Y(s)={\cal L}(y)\) be the Laplace transform of the unknown solution of <a href="#x1-6r3">(8.3.3)</a>. Taking Laplace transforms of both sides of <a href="#x1-6r3">(8.3.3)</a> yields \[ {\cal L}(\dot{y})={\cal L}(ay)\] which, by Theorem<a href="#x1-21">8.3.1</a>, can be rewritten as \[ s{\cal L}(y)-y(0)=a{\cal L}(y)\] or \[ sY(s)-y_0=aY(s)\] Solving for \(Y(s)\) yields \[ Y(s)={y_0\over s-a}\] so \[ y={\cal L}^{-1}(Y(s))={\cal L}^{-1}\left ({y_0\over s-a}\right )=y_0{\cal L}^{-1}\left ({1\over s-a}\right )=y_0e^{at}\] which agrees with the known result.
+				Let \(Y(s)={\cal L}(y)\) be the Laplace transform of the unknown solution of <a href="#x1-6r3">(8.3.3)</a>. Taking Laplace transforms of both sides of <a href="#x1-6r3">(8.3.3)</a> yields \[ {\cal L}(\dot{y})={\cal L}(ay)\] which, by Theorem&nbsp;<a href="#x1-21">8.3.1</a>, can be rewritten as \[ s{\cal L}(y)-y(0)=a{\cal L}(y)\] or \[ sY(s)-y_0=aY(s)\] Solving for \(Y(s)\) yields \[ Y(s)={y_0\over s-a}\] so \[ y={\cal L}^{-1}(Y(s))={\cal L}^{-1}\left ({y_0\over s-a}\right )=y_0{\cal L}^{-1}\left ({1\over s-a}\right )=y_0e^{at}\] which agrees with the known result.
 			</div>
 			<div class="indent" id="faf12a25-86a0-4169-ad1f-f5433110bf2c">
 				We need the next theorem to solve second order differential equations using the Laplace transform. 
@@ -110,7 +110,7 @@
 			</div>
 
 			<div id="00447519-6518-4c23-8ec6-dde9b13b7f2b">
-				<strong>Proof</strong> Theorem<a href="#x1-21">8.3.1</a> implies that \({\cal L}(f')\) exists and satisfies <a href="#x1-8r4">(8.3.4)</a> for \(s&gt;s_0\). To prove that \({\cal L}(f'')\) exists and satisfies <a href="#x1-9r5">(8.3.5)</a> for \(s&gt;s_0\), we first apply Theorem<a href="#x1-21">8.3.1</a> to \(g=f'\). Since \(g\) satisfies the hypotheses of Theorem<a href="#x1-21">8.3.1</a>, we conclude that \({\cal L}(g')\) is defined and satisfies \[ {\cal L}(g')=s{\cal L}(g)-g(0) \] for \(s&gt;s_0\). However, since \(g'=f''\), this can be rewritten as \[ {\cal L}(f'')=s{\cal L}(f')-f'(0)\] Substituting <a href="#x1-8r4">(8.3.4)</a> into this yields <a href="#x1-9r5">(8.3.5)</a>.
+				<strong>Proof</strong> Theorem&nbsp;<a href="#x1-21">8.3.1</a> implies that \({\cal L}(f')\) exists and satisfies <a href="#x1-8r4">(8.3.4)</a> for \(s&gt;s_0\). To prove that \({\cal L}(f'')\) exists and satisfies <a href="#x1-9r5">(8.3.5)</a> for \(s&gt;s_0\), we first apply Theorem&nbsp;<a href="#x1-21">8.3.1</a> to \(g=f'\). Since \(g\) satisfies the hypotheses of Theorem&nbsp;<a href="#x1-21">8.3.1</a>, we conclude that \({\cal L}(g')\) is defined and satisfies \[ {\cal L}(g')=s{\cal L}(g)-g(0) \] for \(s&gt;s_0\). However, since \(g'=f''\), this can be rewritten as \[ {\cal L}(f'')=s{\cal L}(f')-f'(0)\] Substituting <a href="#x1-8r4">(8.3.4)</a> into this yields <a href="#x1-9r5">(8.3.5)</a>.
 			</div>
 		</details>
 
@@ -138,7 +138,7 @@
 						\label {eq:8.3.7} {\cal L}(\ddot{y})-6{\cal L}(\dot{y})+5{\cal L}(y)={3\over s-2} 
 					\end {equation}
 
-					Now denote \({\cal L}(y)=Y(s)\). Theorem<a href="#x1-72">8.3.2</a> and the initial conditions in <a href="#x1-11r6">(8.3.6)</a> imply that \[ {\cal L}(\dot{y})=sY(s)-y(0)=sY(s)-2 \] and \[ {\cal L}(\ddot{y})=s^2Y(s)-\dot{y}(0)-sy(0)=s^2Y(s)-3-2s\] Substituting from the last two equations into <a href="#x1-12r7">(8.3.7)</a> yields \[ \left (s^2Y(s)-3-2s\right )-6\left (sY(s)-2\right )+5Y(s)={3\over s-2}\] Therefore 
+					Now denote \({\cal L}(y)=Y(s)\). Theorem&nbsp;<a href="#x1-72">8.3.2</a> and the initial conditions in <a href="#x1-11r6">(8.3.6)</a> imply that \[ {\cal L}(\dot{y})=sY(s)-y(0)=sY(s)-2 \] and \[ {\cal L}(\ddot{y})=s^2Y(s)-\dot{y}(0)-sy(0)=s^2Y(s)-3-2s\] Substituting from the last two equations into <a href="#x1-12r7">(8.3.7)</a> yields \[ \left (s^2Y(s)-3-2s\right )-6\left (sY(s)-2\right )+5Y(s)={3\over s-2}\] Therefore 
 					<a id="x1-13r8"></a>
 					\begin {equation} 
 					\label {eq:8.3.8} (s^2-6s+5)Y(s)={3\over s-2}+(3+2s)+6(-2) 
@@ -180,14 +180,14 @@
 				</details>
 			</div>
 
-			<figure class="figure" id="x1-21r1">
+			<figure id="x1-21r1">
 				<img height="264" src="EPS/fig080301.png" width="409" /> 
-				<figcaption class="caption"><span class="id">Figure&nbsp;8.3.1</span><span class="content"> \(y=\displaystyle {{4\over 3}e^{-t/2}-8e^{-t}+{8\over 3}e^{-2t}}\) </span></figcaption>
+				<figcaption><span class="id">Figure&nbsp;8.3.1</span><span class="content"> \(y=\displaystyle {{4\over 3}e^{-t/2}-8e^{-t}+{8\over 3}e^{-2t}}\) </span></figcaption>
 			</figure>
 
-			<figure class="figure" id="x1-22r2">
+			<figure id="x1-22r2">
 				<img height="264" src="EPS/fig080302.png" width="409" /> 
-				<figcaption class="caption"><span class="id">Figure&nbsp;8.3.2</span><span class="content"> \(y=\displaystyle {{1\over 2}-{7\over 2}e^{-t}\cos t-{5\over 2}e^{-t}\sin t}\) </span></figcaption>
+				<figcaption><span class="id">Figure&nbsp;8.3.2</span><span class="content"> \(y=\displaystyle {{1\over 2}-{7\over 2}e^{-t}\cos t-{5\over 2}e^{-t}\sin t}\) </span></figcaption>
 			</figure>
 			
 			<div class="example" id="x1-234" style="--ex-number: 4">
@@ -201,10 +201,10 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					The characteristic polynomial is \[ p(s)=s^2+2s+2=(s+1)^2+1 \] and \[ F(s)={\cal L}(1)={1\over s}\] so <a href="#x1-18r13">(8.3.13)</a> becomes \[ \left [(s+1)^2+1\right ] Y(s)={1\over s}+1\cdot (1-3s)+2(-3)\] Solving for \(Y(s)\) yields \[ Y(s)={1-s(5+3s)\over s\left [(s+1)^2+1\right ]}\] In Example&nbsp;<span class="ptmb8t-">8.2.8</span> we found the inverse transform of this function to be \[ y={1\over 2}-{7\over 2}e^{-t}\cos t-{5\over 2}e^{-t}\sin t \] (Figure<a href="#x1-22r2">8.3.2</a>), which is therefore the solution of <a href="#x1-24r15">(8.3.15)</a>.
+					The characteristic polynomial is \[ p(s)=s^2+2s+2=(s+1)^2+1 \] and \[ F(s)={\cal L}(1)={1\over s}\] so <a href="#x1-18r13">(8.3.13)</a> becomes \[ \left [(s+1)^2+1\right ] Y(s)={1\over s}+1\cdot (1-3s)+2(-3)\] Solving for \(Y(s)\) yields \[ Y(s)={1-s(5+3s)\over s\left [(s+1)^2+1\right ]}\] In Example&nbsp;<span class="ptmb8t-">8.2.8</span> we found the inverse transform of this function to be \[ y={1\over 2}-{7\over 2}e^{-t}\cos t-{5\over 2}e^{-t}\sin t \] (Figure&nbsp;<a href="#x1-22r2">8.3.2</a>), which is therefore the solution of <a href="#x1-24r15">(8.3.15)</a>.
 
 					<div>
-						<strong>Remark</strong> In our examples we applied Theorems<a href="#x1-21">8.3.1</a> and <a href="#x1-72">8.3.2</a> without verifying that the unknown function \(y\) satisfies their hypotheses. This is characteristic of the formal manipulative way in which the Laplace transform is used to solve differential equations. Any doubts about the validity of the method for solving a given equation can be resolved by verifying that the resulting function \(y\) is the solution of the given problem.
+						<strong>Remark</strong> In our examples we applied Theorems&nbsp;<a href="#x1-21">8.3.1</a> and <a href="#x1-72">8.3.2</a> without verifying that the unknown function \(y\) satisfies their hypotheses. This is characteristic of the formal manipulative way in which the Laplace transform is used to solve differential equations. Any doubts about the validity of the method for solving a given equation can be resolved by verifying that the resulting function \(y\) is the solution of the given problem.
 					</div>
 				</details>
 			</div>

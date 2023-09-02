@@ -1,423 +1,433 @@
 <!DOCTYPE html><html lang="en-US" xml:lang="en-US"><head>
-  <title>1.1 Applications Leading to Differential Equations</title>
-  <meta charset="utf-8">
-  <meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <link href="combined.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="niceties.js"></script>
-  <meta content="Trench_DiffEQ_Book.tex" name="src">
-  <script>window.MathJax = {
-      tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(1.1.' + tag + ')' } }
-    }; </script>
-  <script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-  
-  <style type="text/css">
-    :root {
-      --section-number: "1.1"
-    }
-  </style>
+	<title>1.1 Applications Leading to Differential Equations</title>
+	<meta charset="utf-8">
+	<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<link href="combined.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="niceties.js"></script>
+	<meta content="Trench_DiffEQ_Book.tex" name="src">
+	<script>window.MathJax = {
+			tex: { packages: { '[+]': ['tagformat'] }, tags: "ams", tagformat: { tag: (tag) => '(1.1.' + tag + ')' } }
+		}; </script>
+	<script async="async" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+	
+	<style type="text/css">
+		:root {
+			--section-number: "1.1"
+		}
+	</style>
 </head>
 
 <body>
-  <div id="e646ea1a-58a1-4403-954f-a8e0a8005ca5" class="section-title">
-    1.1 Applications Leading to Differential Equations
-  </div>
+	<div id="e646ea1a-58a1-4403-954f-a8e0a8005ca5" class="section-title">
+		1.1 Applications Leading to Differential Equations
+	</div>
 
-  <details id="7c672ab4-71c3-418c-9c50-fa558bff94f3">
-    <summary>Mathematical Models</summary>
+	<details id="7c672ab4-71c3-418c-9c50-fa558bff94f3">
+		<summary>Mathematical Models</summary>
 
-    <div id="8c9641a7-78ed-4435-83ea-623f11ccef77">
-      In order to apply mathematical methods to a physical or “real life” problem, we must formulate the problem in mathematical terms; that is, we must construct a <span class="vocab">mathematical model</span> for the problem. Many physical problems concern relationships between changing quantities. Since <span class="vocab">rates of change</span> are represented mathematically by <span class="vocab">derivatives</span>, mathematical models often involve equations relating an unknown function and one or more of its derivatives. Such equations are <span class="vocab">differential equations</span>.
-    </div>
-    <div class="indent" id="233e3015-1e31-45e2-8640-64c8d52be946"> 
-      The mathematical model for an applied problem is almost always simpler than the actual situation
-      being studied, since simplifying assumptions are usually required to obtain a mathematical problem that can be solved. For example, in modeling the motion of a falling object, we might neglect air resistance and the gravitational pull of celestial bodies other than Earth, or in modeling population growth we might assume that the population grows continuously rather than in discrete steps.
-    </div>
-    <div class="indent" id="9443652d-41ef-4af9-ade4-6cc54c808265"> A good mathematical model has two important properties:
-    </div>
-    <ol class="itemize1" id="1442044d-44e1-465a-81fc-cdd424d35a46">
-      <li class="itemize">
-        It’s sufficiently simple so that the mathematical problem can be solved.
-      </li>
-      <li class="itemize">
-        It represents the actual situation sufficiently well so that the solution to the mathematical
-        problem predicts the outcome of the real problem to within a useful degree of accuracy. If results predicted by the model don’t agree with physical observations, the underlying assumptions of the model must be revised until satisfactory agreement is obtained.</li>
-    </ol>
-    
-  </details>
+		<div id="8c9641a7-78ed-4435-83ea-623f11ccef77">
+			In order to apply mathematical methods to a physical or “real life” problem, we must formulate the problem in mathematical terms; that is, we must construct a <span class="vocab">mathematical model</span> for the problem. Many physical problems concern relationships between changing quantities. Since <span class="vocab">rates of change</span> are represented mathematically by <span class="vocab">derivatives</span>, mathematical models often involve equations relating an unknown function and one or more of its derivatives. Such equations are <span class="vocab">differential equations</span>.
+		</div>
+		<div class="indent" id="233e3015-1e31-45e2-8640-64c8d52be946"> 
+			The mathematical model for an applied problem is almost always simpler than the actual situation
+			being studied, since simplifying assumptions are usually required to obtain a mathematical problem that can be solved. For example, in modeling the motion of a falling object, we might neglect air resistance and the gravitational pull of celestial bodies other than Earth, or in modeling population growth we might assume that the population grows continuously rather than in discrete steps.
+		</div>
+		<div class="indent" id="9443652d-41ef-4af9-ade4-6cc54c808265"> A good mathematical model has two important properties:
+		</div>
+		<ol class="itemize1" id="1442044d-44e1-465a-81fc-cdd424d35a46">
+			<li class="itemize">
+				It’s sufficiently simple so that the mathematical problem can be solved.
+			</li>
+			<li class="itemize">
+				It represents the actual situation sufficiently well so that the solution to the mathematical
+				problem predicts the outcome of the real problem to within a useful degree of accuracy. If results predicted by the model don’t agree with physical observations, the underlying assumptions of the model must be revised until satisfactory agreement is obtained.</li>
+		</ol>
+		
+	</details>
 
-  <details id="1a5f8393-ad10-4878-a8ec-a7817abdb02d">
-    <summary>Derivative Notation</summary>
-    <div class="indent" id="14d8c299-467f-4e69-8f66-4b1ddc0c2f28"> 
-      <span class="vocab">Differential notation</span> (<span class="vocab">Leibniz notation</span>) clearly identifies the variable we are differentiating with respect to and thus is the preferred and primary notation we will be using. First derivatives using <span class="vocab">differential notation</span>:
-      \[ {dy\over dx} \quad \text{or} \quad {dy\over dt} \quad \text{or} \quad {dy\over d\theta} \]
-      Second derivatives using <span class="vocab">differential notation</span>:
-      \[ {d^2y\over dx^2} \quad \text{or} \quad {d^2y\over dt^2} \quad \text{or} \quad {d^2y\over d\theta^2} \]
-    </div>    
-    <div class="indent" id="4ec6d557-45c8-4bcc-b20f-6eceefcb0474"> 
-      <span class="vocab">Prime notation</span> (<span class="vocab">Lagrange notation</span>) is often used but does not specify the variable we are differentiating with respect to so there is some ambiguity. For instance,
-      \[ y'={dy\over dx} \quad\text{  or  }\quad \displaystyle y'={dy\over dt} \quad\text{  or  }\quad \displaystyle y'={dy\over d\theta} \]
-      Remember <span class="vocab">prime notation</span> is ambiguous, so the variable we intending to differentiate with respect to could be \(x\), \(t\), \(\theta\) or any other independent variable. Because of this ambiguity, we will restrict usage of this notation in this class to only cases where it is explicitly clear what the independent variable is and/or where it is extremely convenient for the computations.
-    </div>
-    <div class="indent" id="7f5a1594-7452-4e7b-999a-984d6d7dbfed"> 
-      As real-life applications frequently involve <span class="vocab">derivatives</span> with respect to time \(t\), a short-hand called <span class="vocab">dot notation</span> <span class="vocab">(Newton notation)</span> is often used.
-      \[ \dot{y}={dy\over dt} \quad \text{or} \quad \ddot{y}={d^2y\over dt^2} \]
-    </div>
-  </details>
+	<details id="1a5f8393-ad10-4878-a8ec-a7817abdb02d">
+		<summary>Derivative Notation</summary>
+		<div class="indent" id="14d8c299-467f-4e69-8f66-4b1ddc0c2f28"> 
+			<span class="vocab">Differential notation</span> (<span class="vocab">Leibniz notation</span>) clearly identifies the variable we are differentiating with respect to and thus is the preferred and primary notation we will be using. First derivatives using <span class="vocab">differential notation</span>:
+			\[ {dy\over dx} \quad \text{or} \quad {dy\over dt} \quad \text{or} \quad {dy\over d\theta} \]
+			Second derivatives using <span class="vocab">differential notation</span>:
+			\[ {d^2y\over dx^2} \quad \text{or} \quad {d^2y\over dt^2} \quad \text{or} \quad {d^2y\over d\theta^2} \]
+		</div>    
+		<div class="indent" id="4ec6d557-45c8-4bcc-b20f-6eceefcb0474"> 
+			<span class="vocab">Prime notation</span> (<span class="vocab">Lagrange notation</span>) is often used but does not specify the variable we are differentiating with respect to so there is some ambiguity. For instance,
+			\[ y'={dy\over dx} \quad\text{  or  }\quad \displaystyle y'={dy\over dt} \quad\text{  or  }\quad \displaystyle y'={dy\over d\theta} \]
+			Remember <span class="vocab">prime notation</span> is ambiguous, so the variable we intending to differentiate with respect to could be \(x\), \(t\), \(\theta\) or any other independent variable. Because of this ambiguity, we will restrict usage of this notation in this class to only cases where it is explicitly clear what the independent variable is and/or where it is extremely convenient for the computations.
+		</div>
+		<div class="indent" id="7f5a1594-7452-4e7b-999a-984d6d7dbfed"> 
+			As real-life applications frequently involve <span class="vocab">derivatives</span> with respect to time \(t\), a short-hand called <span class="vocab">dot notation</span> <span class="vocab">(Newton notation)</span> is often used.
+			\[ \dot{y}={dy\over dt} \quad \text{or} \quad \ddot{y}={d^2y\over dt^2} \]
+		</div>
+	</details>
 
 
-  <details id="9927ad6d-fb99-4497-9d94-fe958b23fe1a">
-    <summary>Population Growth and Decay</summary>
-  
-    <div id="f99bfd76-6e95-4b26-84df-801a682c781b">
-      Although the number of members of a population (people in a given country, bacteria in a laboratory culture,
-      wildflowers in a forest, etc.) at any given time \(t\) is a discrete value and must be an integer (<em>you cannot have half of a person</em>), models that use differential equations to describe the growth and decay of populations usually rest on the simplifying assumption that the number of members of the population can be regarded as a continuous differentiable function \(P=P(t)\) of time. In most models it is assumed that the differential equation takes the form 
-      <a id="x1-2r1"></a>
-      \begin {equation} \label {eq:1.1.1} 
-        \dot{P}=a(P)P(t)
-      \end {equation}
-      where \(a=a(P)\) is a continuous function of \(P\) that represents the rate of
-      change of population per unit time per individual. In the <span class="vocab">Malthusian model</span>, it
-      is assumed that \(a(P)\) is a constant, so (<a href="#x1-2r1">1.1.1</a>) becomes 
-      <a id="x1-3r2"></a> 
-      \begin {equation} \label {eq:1.1.2}
-        \dot{P}=aP
-      \end {equation}
-      This model assumes that the numbers of births and deaths per unit time are both proportional to the population. The constants of proportionality are the <span class="vocab">birth rate</span>
-      (births per unit time per individual) and the <span class="vocab">death rate</span> (deaths per unit time per individual) and \(a\) is the birth rate minus the death rate. 
-    </div> 
-    <div id="28eaae6e-2fd5-4b4d-89c0-985a14bb327c"> 
-      From calculus, recall a function whose derivative is proportional to the original function as in <a href="#x1-3r2">(1.1.2)</a>. Ignoring the constant or proportionality, what function is actually equal to its derivative?
-      \[\dot{P} = P\]
-      Of course, exponential functions! \(\displaystyle \frac{d}{dt} \Big( e^t \Big) = e^t\) and including the proportionality constant \(a\), the function \(P(t) = e^{at}\) satisfies <a href="#x1-3r2">(1.1.2)</a>. 
-      
-      <div class="reading-exercise" id="b197ff1d-fa55-4739-bbfb-1acdad17d675">
-        Show \(P = e^{at}\) is a solution to <a href="#x1-3r2">(1.1.2)</a> by differentiating and substituting
-      </div>  
-      
-      In fact, the function still satisfies (<a href="#x1-3r2">1.1.2</a>) when we include an <span class="vocab">arbitrary constant</span> factor
-      <a id="x1-4r3"></a> 
-      \begin {equation} \label {eq:1.1.3}
-        P = ce^{at}
-      \end {equation} 
-    </div>
-    <div class="reading-exercise" id="b197ff1d-fa55-4739-bbfb-1acdad17d6756">
-      Show \(P = ce^{at}\) is a solution to <a href="#x1-3r2">(1.1.2)</a> by differentiating and substituting
-    </div>    
-    <div id="fa10e7cb-8500-405e-9416-23ec863913f4">   
-      If an equation (<a href="#x1-4r3">1.1.3</a>) represents all possible solutions then we call it the <span class="vocab">general solution</span> (the <span class="vocab">arbitrary constant</span> \(c\) represents infinitely many possible solutions). 
-      
-      The Malthusian model <a href="#x1-3r2">(1.1.2)</a> is used to model population growth and states that a population’s rate of growth is proportional to its initial population. Taking the initial population at time \( t = 0 \) to be \( P(0) = P_0 \) as the <span class="vocab">initial condition</span>, we can solve for the constant \(c \) to obtain a <span class="vocab">particular solution</span>
+	<details id="9927ad6d-fb99-4497-9d94-fe958b23fe1a">
+		<summary>Population Growth and Decay</summary>
+	
+		<div id="f99bfd76-6e95-4b26-84df-801a682c781b">
+			Although the number of members of a population (people in a given country, bacteria in a laboratory culture,
+			wildflowers in a forest, etc.) at any given time \(t\) is a discrete value and must be an integer (<em>you cannot have half of a person</em>), models that use differential equations to describe the growth and decay of populations usually rest on the simplifying assumption that the number of members of the population can be regarded as a continuous differentiable function \(P=P(t)\) of time. In most models it is assumed that the differential equation takes the form 
+			<a id="x1-2r1"></a>
+			\begin {equation} \label {eq:1.1.1} 
+				\dot{P}=a(P)P(t)
+			\end {equation}
+			where \(a=a(P)\) is a continuous function of \(P\) that represents the rate of
+			change of population per unit time per individual. In the <span class="vocab">Malthusian model</span>, it
+			is assumed that \(a(P)\) is a constant, so (<a href="#x1-2r1">1.1.1</a>) becomes 
+			<a id="x1-3r2"></a> 
+			\begin {equation} \label {eq:1.1.2}
+				\dot{P}=aP
+			\end {equation}
+			This model assumes that the numbers of births and deaths per unit time are both proportional to the population. The constants of proportionality are the <span class="vocab">birth rate</span>
+			(births per unit time per individual) and the <span class="vocab">death rate</span> (deaths per unit time per individual) and \(a\) is the birth rate minus the death rate. 
+		</div> 
+		<div id="28eaae6e-2fd5-4b4d-89c0-985a14bb327c"> 
+			From calculus, recall a function whose derivative is proportional to the original function as in <a href="#x1-3r2">(1.1.2)</a>. Ignoring the constant or proportionality, what function is actually equal to its derivative?
+			\[\dot{P} = P\]
+			Of course, exponential functions! \(\displaystyle \frac{d}{dt} \Big( e^t \Big) = e^t\) and including the proportionality constant \(a\), the function \(P(t) = e^{at}\) satisfies <a href="#x1-3r2">(1.1.2)</a>. 
+			
+			<div class="reading-exercise" id="b197ff1d-fa55-4739-bbfb-1acdad17d675">
+				Show \(P = e^{at}\) is a solution to <a href="#x1-3r2">(1.1.2)</a> by differentiating and substituting
+			</div>  
+			
+			In fact, the function still satisfies (<a href="#x1-3r2">1.1.2</a>) when we include an <span class="vocab">arbitrary constant</span> factor
+			<a id="x1-4r3"></a> 
+			\begin {equation} \label {eq:1.1.3}
+				P = ce^{at}
+			\end {equation} 
+		</div>
+		<div class="reading-exercise" id="b197ff1d-fa55-4739-bbfb-1acdad17d6756">
+			Show \(P = ce^{at}\) is a solution to <a href="#x1-3r2">(1.1.2)</a> by differentiating and substituting
+		</div>    
+		<div id="fa10e7cb-8500-405e-9416-23ec863913f4">   
+			If an equation (<a href="#x1-4r3">1.1.3</a>) represents all possible solutions then we call it the <span class="vocab">general solution</span> (the <span class="vocab">arbitrary constant</span> \(c\) represents infinitely many possible solutions). 
+			
+			The Malthusian model <a href="#x1-3r2">(1.1.2)</a> is used to model population growth and states that a population’s rate of growth is proportional to its initial population. Taking the initial population at time \( t = 0 \) to be \( P(0) = P_0 \) as the <span class="vocab">initial condition</span>, we can solve for the constant \(c \) to obtain a <span class="vocab">particular solution</span>
 
-      \[ P=P_0e^{at}\]
+			\[ P=P_0e^{at}\]
 
-      <div class="reading-exercise" id="b197ff1d-fa55-4739-bbfb-1acdad17d6757">
-        Evaluate (<a href="#x1-4r3">1.1.3</a>) at the <span class="vocab-repeat">initial condition</span> \( P(0) = P_0 \) and solve for \( c \)
-      </div>
+			<div class="reading-exercise" id="b197ff1d-fa55-4739-bbfb-1acdad17d6757">
+				Evaluate (<a href="#x1-4r3">1.1.3</a>) at the <span class="vocab-repeat">initial condition</span> \( P(0) = P_0 \) and solve for \( c \)
+			</div>
 
-    </div>
-    <div id="9a0b21cb-96de-4191-b2e6-bb2730b90afc">
-      While \( P=P_0e^{at} \) is the solution to the Malthusian model <a href="#x1-3r2">(1.1.2)</a> with initial population \( P_0 \), it is only a mathematical model and it cannot model a real-life situation perfectly forever. For instance, whenever the birth rate minus the death rate is a positive value \( a \), then the function grows exponentially forever:
-        
-        \begin{align*}
-            \lim_{t \to \infty}P
-            & =\lim_{t \to \infty}P_0e^{at} \\
-            & =P_0\lim_{t \to \infty}e^{at} \\
-            & =P_0 e^{\infty} \\
-            & =\infty
-        \end{align*}
+		</div>
+		<div id="9a0b21cb-96de-4191-b2e6-bb2730b90afc">
+			While \( P=P_0e^{at} \) is the solution to the Malthusian model <a href="#x1-3r2">(1.1.2)</a> with initial population \( P_0 \), it is only a mathematical model and it cannot model a real-life situation perfectly forever. For instance, whenever the birth rate minus the death rate is a positive value \( a \), then the function grows exponentially forever:
+				
+				\begin{align*}
+						\lim_{t \to \infty}P
+						& =\lim_{t \to \infty}P_0e^{at} \\
+						& =P_0\lim_{t \to \infty}e^{at} \\
+						& =P_0 e^{\infty} \\
+						& =\infty
+				\end{align*}
 
-      But there are other variables that limit a population's growth that are not being accounted for. This model only models the population growth accurately for range of time when the resources of the population needed to reproduce (food, water, air, shelter, etc.) are effectively infinite.
-    </div>
-    <div class="reading-exercise" id="66fc7339-e552-443b-8120-5717fb4f4d99">
-      For \(a &lt; 0\), use the limit laws to show the \(\lim _{t\to \infty }P= 0 \) in the Malthusian model
-    </div>
-    <div class="indent" id="4378dc66-99b6-4592-a5c8-54becf17027b"> 
-      In general populations do not have infinite resources. This flaw in the Malthusian model suggests the need for a model that accounts for limitations of space and resources that tend to oppose the rate of population growth as the population increases. Perhaps the most famous model of this kind is the <span class="vocab">Verhulst model</span>, where <a href="#x1-3r2">(1.1.2)</a> is replaced by 
-      
-      <a id="x1-5r4"></a>
-      
-      \begin {equation} \label {eq:1.1.4} 
-        \dot{P}=aP(1-\alpha P)
-      \end {equation} 
+			But there are other variables that limit a population's growth that are not being accounted for. This model only models the population growth accurately for range of time when the resources of the population needed to reproduce (food, water, air, shelter, etc.) are effectively infinite.
+		</div>
+		<div class="reading-exercise" id="66fc7339-e552-443b-8120-5717fb4f4d99">
+			For \(a &lt; 0\), use the limit laws to show the \(\lim _{t\to \infty }P= 0 \) in the Malthusian model
+		</div>
+		<div class="indent" id="4378dc66-99b6-4592-a5c8-54becf17027b"> 
+			In general populations do not have infinite resources. This flaw in the Malthusian model suggests the need for a model that accounts for limitations of space and resources that tend to oppose the rate of population growth as the population increases. Perhaps the most famous model of this kind is the <span class="vocab">Verhulst model</span>, where <a href="#x1-3r2">(1.1.2)</a> is replaced by 
+			
+			<a id="x1-5r4"></a>
+			
+			\begin {equation} \label {eq:1.1.4} 
+				\dot{P}=aP(1-\alpha P)
+			\end {equation} 
 
-      where \(\alpha\) is a positive constant and the ratio of the rate of change of the population to the population itself, \( \dot{P}/P \) is approximately \( a \) making this model approximately exponential. 
-      As the population grows larger, the rate of change of population will decrease, which accounts for the depleting resources of a growing population. 
-    </div>
-    <div class="indent" id="35375884-e6ac-40d3-9578-046cb127709a"> 
-      Equation&nbsp;<a href="#x1-5r4">(1.1.4)</a> is also referred to as the <span class="vocab">logistic equation</span> and for an initial population \( P(0)=P_0 \gt 0 \) the solution is
-      \[ 
-        P ={P_0\over \alpha P_0+(1-\alpha P_0)e^{-at}}
-      \]
-    </div>
-    <div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384123">
-      Verify \( P \) is a solution for <a href="#x1-5r4">(1.1.4)</a> by differentiating and substituting
-    </div>
-    <div  id="9e90a6da-5334-4272-b9e2-92ea65091384123-2">
-      The solution to the Malthusian model <a href="#x1-3r2">(1.1.2)</a> grows exponentially forever but the solution to the Verhulst model <a href="#x1-5r4">(1.1.4)</a> does not. Interestingly, the Verhulst model converges to the value \( 1 / \alpha \) meaning it is completely independent of the initial population.
-    </div>
-    <div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384">
-      Use the limit laws to show \(\lim _{t\to \infty }P(t)=1/\alpha \) in the Verhulst model
-    </div>
-    <div class="indent" id="efa005ae-b2d1-41d0-b0f5-09b02aa53490"> Figure&nbsp;<a href="#-solutions-of-the-logistic-equation-">1.1.1<!-- tex4ht:ref: figure:1.1.1  --></a>
-      shows typical graphs of population \(P = \displaystyle {P_0\over \alpha P_0+(1-\alpha P_0)e^{-at}}\) versus time \(t\) for various initial population \(P_0\) values
-    </div>
-    <figure class="figure" id="05f95a3f-7fdc-421c-967d-5146866ceb3e">
-      <div id="-solutions-of-the-logistic-equation-"><img height="264" src="EPS/fig010101.png" width="409"> <a id="x1-6r1"></a></div>
-      <figcaption class="caption"><span class="id">Figure&nbsp;1.1.1 </span><span class="content">Solutions of the logistic
-          equation </span></figcaption><!-- tex4ht:label?: x1-6r1  -->
-    </figure>
-  </details>
-  
-  <details id="2bec25b6-9dd1-4765-b540-965fdc5e5653">
-    <summary>Newton’s Law of Cooling</summary>
+			where \(\alpha\) is a positive constant and the ratio of the rate of change of the population to the population itself, \( \dot{P}/P \) is approximately \( a \) making this model approximately exponential. 
+			As the population grows larger, the rate of change of population will decrease, which accounts for the depleting resources of a growing population. 
+		</div>
+		<div class="indent" id="35375884-e6ac-40d3-9578-046cb127709a"> 
+			Equation&nbsp;<a href="#x1-5r4">(1.1.4)</a> is also referred to as the <span class="vocab">logistic equation</span> and for an initial population \( P(0)=P_0 \gt 0 \) the solution is
+			\[ 
+				P ={P_0\over \alpha P_0+(1-\alpha P_0)e^{-at}}
+			\]
+		</div>
+		<div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384123">
+			Verify \( P \) is a solution for <a href="#x1-5r4">(1.1.4)</a> by differentiating and substituting
+		</div>
+		<div  id="9e90a6da-5334-4272-b9e2-92ea65091384123-2">
+			The solution to the Malthusian model <a href="#x1-3r2">(1.1.2)</a> grows exponentially forever but the solution to the Verhulst model <a href="#x1-5r4">(1.1.4)</a> does not. Interestingly, the Verhulst model converges to the value \( 1 / \alpha \) meaning it is completely independent of the initial population.
+		</div>
+		<div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384">
+			Use the limit laws to show \(\lim _{t\to \infty }P(t)=1/\alpha \) in the Verhulst model
+		</div>
+		<div class="indent" id="efa005ae-b2d1-41d0-b0f5-09b02aa53490">
+			Figure&nbsp;<a href="#x1-6r1">1.1.1</a> shows typical graphs of population \(P = \displaystyle {P_0\over \alpha P_0+(1-\alpha P_0)e^{-at}}\) versus time \(t\) for various initial population \(P_0\) values
+		</div>
+		<figure id="x1-6r1">
+			<img height="264" src="EPS/fig010101.png" />
+			<figcaption>
+				<span class="id">Figure&nbsp;1.1.1</span>
+				<span class="content">Solutions of the logistic equation </span>
+			</figcaption>
+		</figure>
+	</details>
+	
+	<details id="2bec25b6-9dd1-4765-b540-965fdc5e5653">
+		<summary>Newton’s Law of Cooling</summary>
 
-    <div id="805a5886-1f2d-4ebe-b8e7-b282d17819e9">
-      According to <span class="vocab">Newton’s law of cooling</span>, the temperature of an object changes at a rate proportional to the difference between the temperature of the object and the temperature of the surroundings. Thus, if \(A=A(t)\) is the temperature of the surroundings and \(T=T(t)\) is the temperature of the object at time \(t\) then 
-      <a id="x1-7r5"></a>
-      \begin {equation} \label {eq:1.1.5}
-        \dot{T} = -k(T-A)
-      \end {equation} where \(k\) is a positive constant and the minus sign indicates that the temperature of the object increases with time if it’s less than the temperature of the surroundings and the temperature of the object decreases with time if it’s greater than the temperature of the surroundings.
-    </div>  
-    <div id="805a5886-1f2d-4ebe-b8e7-b282d17819e910">
-      Assuming that the temperature of the surroundings \( A(t) \)  is constant, and for an initial temperature of the object at time \( t=0 \) of \( T(0) = T_0 \) the solution of <a href="#x1-7r5">(1.1.5)</a> is
+		<div id="805a5886-1f2d-4ebe-b8e7-b282d17819e9">
+			According to <span class="vocab">Newton’s law of cooling</span>, the temperature of an object changes at a rate proportional to the difference between the temperature of the object and the temperature of the surroundings. Thus, if \(A=A(t)\) is the temperature of the surroundings and \(T=T(t)\) is the temperature of the object at time \(t\) then 
+			<a id="x1-7r5"></a>
+			\begin {equation} \label {eq:1.1.5}
+				\dot{T} = -k(T-A)
+			\end {equation} where \(k\) is a positive constant and the minus sign indicates that the temperature of the object increases with time if it’s less than the temperature of the surroundings and the temperature of the object decreases with time if it’s greater than the temperature of the surroundings.
+		</div>  
+		<div id="805a5886-1f2d-4ebe-b8e7-b282d17819e910">
+			Assuming that the temperature of the surroundings \( A(t) \)  is constant, and for an initial temperature of the object at time \( t=0 \) of \( T(0) = T_0 \) the solution of <a href="#x1-7r5">(1.1.5)</a> is
 
-      <a id="x1-8r6"></a>
-      \begin {equation} \label {eq:1.1.6}
-        T =A+(T_0-A)e^{-kt}
-      \end {equation}
-    </div>
-    <div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384456">
-      Verify <a href="#x1-8r6">(1.1.6)</a> is a solution for <a href="#x1-7r5">(1.1.5)</a> by differentiating and substituting
-    </div>
-    <div id="9e90a6da-5334-4272-b9e2-92ea65091384456-2">    
-      Interestingly, Newton's Law of Cooling suggests that the object's temperature converges to the value \( A \) of the surroundings meaning it is completely independent of the initial temperature.
-    </div>
-    <div class="reading-exercise" id="3494f2cc-68d7-4b67-94dc-3a7a9ebe9f64">
-      Use the limit laws to show the \(\lim _{t\to \infty }T= A \) in <a href="#x1-8r6">(1.1.6)</a> and describe in words what is physically happening in this limit and explain why it makes sense
-    </div>
+			<a id="x1-8r6"></a>
+			\begin {equation} \label {eq:1.1.6}
+				T =A+(T_0-A)e^{-kt}
+			\end {equation}
+		</div>
+		<div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384456">
+			Verify <a href="#x1-8r6">(1.1.6)</a> is a solution for <a href="#x1-7r5">(1.1.5)</a> by differentiating and substituting
+		</div>
+		<div id="9e90a6da-5334-4272-b9e2-92ea65091384456-2">    
+			Interestingly, Newton's Law of Cooling suggests that the object's temperature converges to the value \( A \) of the surroundings meaning it is completely independent of the initial temperature.
+		</div>
+		<div class="reading-exercise" id="3494f2cc-68d7-4b67-94dc-3a7a9ebe9f64">
+			Use the limit laws to show the \(\lim _{t\to \infty }T= A \) in <a href="#x1-8r6">(1.1.6)</a> and describe in words what is physically happening in this limit and explain why it makes sense
+		</div>
 
-    <div class="indent" id="3bb266be-3c70-476d-8761-c5f4f231be20"> Figure&nbsp;<a href="#-temperature-according-to-newtons-law-of-cooling-">1.1.2<!-- tex4ht:ref: figure:1.1.2  --></a> shows
-      typical graphs of \(T\) versus \(t\) for various values of \(T_0\).
-    </div>
-    <figure class="figure" id="8986f95e-7c6d-4968-9b61-03fc34461867">
-      <div id="-temperature-according-to-newtons-law-of-cooling-"><img height="264" src="EPS/fig010102.png" width="409"> <a id="x1-9r2"></a></div>
-      <figcaption class="caption"><span class="id">Figure&nbsp;1.1.2 </span><span class="content">Temperature according to
-          Newton’s Law of Cooling </span></figcaption><!-- tex4ht:label?: x1-9r2  -->
-    </figure>
-    
-    <div class="indent" id="6c50a456-0fc0-4fb9-9773-8be99b3c179d"> 
-      <p>
-        Previously we assumed that the temperature of the surroundings remains constant. This is reasonable in some situations such as a cup of hot coffee cooling down in a room, since, for one thing, the coffee cools down relatively quickly (in a few minutes) and also the cup of coffee is relatively small compared to the room, so the heat emitted by the cooling coffee does not heat up the room much. But, can you think of other situations where this model would not not apply? 
-      </p> 
-      <p> 
-        For instance, what if the time it takes an object to cool down is measured in much larger time intervals, say it takes days to cool the object down. Now if you placed the object outside during summer, and it takes several days to cool down, is it reasonable to assume the temperature of the surroundings would remain constant throughout that entire time? Or would the temperature vary? It would likely be cooler at night and warmer in the day, right? 
-      </p> 
-      <p>
-        Or what if the object is extremely hot and relatively large compared to the surroundings? For instance, what if you boiled a large pot of soup and place it directly into the refrigerator in your kitchen. The temperature of the surroundings inside the fridge is quite cold, but the pot of boiling soup is emitting heat and heating up the fridge. If you did this at home and opened your fridge after a few minutes, you would find that the fridge has warmed up a little from the temperature of the boiled soup. These are just a couple of examples where we can imagine the temperature of the surroundings not to remain constant. 
-      </p> 
-      <div class="reading-exercise" id="3494f2cc-68d7-4b67-94dc-3a7a9ebe9f65">
-        Describe another example in real life where an object is cooling down but the temperature of the surroundings would not remain constant
-      </div>
-    </div>
-    <div class="indent" id="6c50a456-0fc0-4fb9-9773-8be99b3c179de">
-      Let's consider a model that accounts for the heat exchanged between the object and the surroundings, such as the soup in the fridge. Let \( T=T(t) \) be the temperature of the object and let \( A=A(t) \) the temperature of the surroundings continuous changing functions. Let \( T(0)=T_0 \) be the initial temperature of the object and let \( A(0)=A_0 \) be the initial temperature of the surroundings. Again, we assume that \( T(t) \) and \( A(t) \) are related by Newton's law of cooling (<a href="#x1-7r5">1.1.5</a>) which states that the temperature of the object changes at a rate proportional to the difference between the temperature of the object and the temperature of the surroundings
+		<div class="indent" id="3bb266be-3c70-476d-8761-c5f4f231be20">
+			Figure&nbsp;<a href="#x1-9r2">1.1.2</a> shows typical graphs of \(T\) versus \(t\) for various values of \(T_0\).
+		</div>
+		<figure id="x1-9r2">
+			<img height="264" src="EPS/fig010102.png" />
+			<figcaption>
+				<span class="id">Figure&nbsp;1.1.2</span>
+				<span class="content">Temperature according to Newton’s Law of Cooling</span>
+			</figcaption>
+		</figure>
+		
+		<div class="indent" id="6c50a456-0fc0-4fb9-9773-8be99b3c179d"> 
+			<p>
+				Previously we assumed that the temperature of the surroundings remains constant. This is reasonable in some situations such as a cup of hot coffee cooling down in a room, since, for one thing, the coffee cools down relatively quickly (in a few minutes) and also the cup of coffee is relatively small compared to the room, so the heat emitted by the cooling coffee does not heat up the room much. But, can you think of other situations where this model would not not apply? 
+			</p> 
+			<p> 
+				For instance, what if the time it takes an object to cool down is measured in much larger time intervals, say it takes days to cool the object down. Now if you placed the object outside during summer, and it takes several days to cool down, is it reasonable to assume the temperature of the surroundings would remain constant throughout that entire time? Or would the temperature vary? It would likely be cooler at night and warmer in the day, right? 
+			</p> 
+			<p>
+				Or what if the object is extremely hot and relatively large compared to the surroundings? For instance, what if you boiled a large pot of soup and place it directly into the refrigerator in your kitchen. The temperature of the surroundings inside the fridge is quite cold, but the pot of boiling soup is emitting heat and heating up the fridge. If you did this at home and opened your fridge after a few minutes, you would find that the fridge has warmed up a little from the temperature of the boiled soup. These are just a couple of examples where we can imagine the temperature of the surroundings not to remain constant. 
+			</p> 
+			<div class="reading-exercise" id="3494f2cc-68d7-4b67-94dc-3a7a9ebe9f65">
+				Describe another example in real life where an object is cooling down but the temperature of the surroundings would not remain constant
+			</div>
+		</div>
+		<div class="indent" id="6c50a456-0fc0-4fb9-9773-8be99b3c179de">
+			Let's consider a model that accounts for the heat exchanged between the object and the surroundings, such as the soup in the fridge. Let \( T=T(t) \) be the temperature of the object and let \( A=A(t) \) the temperature of the surroundings continuous changing functions. Let \( T(0)=T_0 \) be the initial temperature of the object and let \( A(0)=A_0 \) be the initial temperature of the surroundings. Again, we assume that \( T(t) \) and \( A(t) \) are related by Newton's law of cooling (<a href="#x1-7r5">1.1.5</a>) which states that the temperature of the object changes at a rate proportional to the difference between the temperature of the object and the temperature of the surroundings
 
-      \begin{equation*}
-        \dot{T} = -k\Big(T(t)-A(t)\Big)
-      \end{equation*}
+			\begin{equation*}
+				\dot{T} = -k\Big(T(t)-A(t)\Big)
+			\end{equation*}
 
-      Now let's assume that the change in heat of the object as its temperature changes from \( T_0 \) to \( T \) is \( \tau (T-T_0) \) where \( \tau \) is some positive constant. And we'll assume that the change in heat of the surroundings as its temperature changes from \( A_0 \) to \( A \) is \( a(A-A_0) \) where \( a \) is some positive constant. The positive constants \( \tau \) and \( a \) are dependent on the physical properties of the object and the medium and must be determined experimentally in the lab.
-      <p>
-        Assuming the <span class="vocab">conservation of energy</span>, that is, the total heat between the object and the surroundings remains constant, then these two values would add to zero:
+			Now let's assume that the change in heat of the object as its temperature changes from \( T_0 \) to \( T \) is \( \tau (T-T_0) \) where \( \tau \) is some positive constant. And we'll assume that the change in heat of the surroundings as its temperature changes from \( A_0 \) to \( A \) is \( a(A-A_0) \) where \( a \) is some positive constant. The positive constants \( \tau \) and \( a \) are dependent on the physical properties of the object and the medium and must be determined experimentally in the lab.
+			<p>
+				Assuming the <span class="vocab">conservation of energy</span>, that is, the total heat between the object and the surroundings remains constant, then these two values would add to zero:
 
-        \begin{equation*}
-          \tau(T-T_0) + a(A-A_0) = 0
-        \end{equation*}
+				\begin{equation*}
+					\tau(T-T_0) + a(A-A_0) = 0
+				\end{equation*}
 
-        <div class="reading-exercise" id="4005a35f-82db-4abb-b55d-7e57c0ed782a">
-          Solve \( \tau(T-T_0) + a(A-A_{0}) = 0 \) for \(A\)
-        </div> 
+				<div class="reading-exercise" id="4005a35f-82db-4abb-b55d-7e57c0ed782a">
+					Solve \( \tau(T-T_0) + a(A-A_{0}) = 0 \) for \(A\)
+				</div> 
 
-        Solving this equation for \( A \), we obtain an expression for a function that models the temperature of the surroundings
+				Solving this equation for \( A \), we obtain an expression for a function that models the temperature of the surroundings
 
-        \begin{equation*}
-          A = -\frac{\tau}{a}(T-T_0) + A_0
-        \end{equation*}         
+				\begin{equation*}
+					A = -\frac{\tau}{a}(T-T_0) + A_0
+				\end{equation*}         
  
-    </div>
-    <div id="4005a35f-82db-4abb-b55d-7e57c0ed782b">
-      <div class="reading-exercise">
-        Substitute \( A(t) = -\frac{\tau}{a}(T-T_0) + A_0 \) into (<a href="#x1-7r5">1.1.5</a>) and simplify by combining and factoring the dependent variables \( T \) and combining and factoring the rest of the constants together.
-      </div>  
+		</div>
+		<div id="4005a35f-82db-4abb-b55d-7e57c0ed782b">
+			<div class="reading-exercise">
+				Substitute \( A(t) = -\frac{\tau}{a}(T-T_0) + A_0 \) into (<a href="#x1-7r5">1.1.5</a>) and simplify by combining and factoring the dependent variables \( T \) and combining and factoring the rest of the constants together.
+			</div>  
 
-      Substituting this into Newton's Law of Cooling (<a href="#x1-7r5">1.1.5</a>) and simplifying results in the differential equation for the temperature of the object:
+			Substituting this into Newton's Law of Cooling (<a href="#x1-7r5">1.1.5</a>) and simplifying results in the differential equation for the temperature of the object:
 
-      \[ \dot{T}=-k\left (1+{\tau\over a}\right )T +k\left (A_{0}+{\tau\over a}T_0\right ) \]
+			\[ \dot{T}=-k\left (1+{\tau\over a}\right )T +k\left (A_{0}+{\tau\over a}T_0\right ) \]
 
-      The solution of which yields the function \( T(t) \) which describes the temperature of the object:
+			The solution of which yields the function \( T(t) \) which describes the temperature of the object:
 
-      \[ 
-        T ={\tau T_0+aA_{0}\over \tau + a }+{a(T_0-A_{0})\over \tau+a}e^{-k(1+\tau/a)t}
-      \]
-      </P>
-      Now what happens to the temperature of the object according to this model over time? Calculate the limit to find out!
-    </div>
-   
-    <div class="reading-exercise" id="84d1aee1-26c4-4f53-8eff-6b8a552e7461">
-      Use the limit laws to show \(\lim _{t\to \infty }T = \displaystyle \frac{\tau T_0 + a A_0 }{\tau + a}\)
-    </div>            
-  </details>
+			\[ 
+				T ={\tau T_0+aA_{0}\over \tau + a }+{a(T_0-A_{0})\over \tau+a}e^{-k(1+\tau/a)t}
+			\]
+			</P>
+			Now what happens to the temperature of the object according to this model over time? Calculate the limit to find out!
+		</div>
+	 
+		<div class="reading-exercise" id="84d1aee1-26c4-4f53-8eff-6b8a552e7461">
+			Use the limit laws to show \(\lim _{t\to \infty }T = \displaystyle \frac{\tau T_0 + a A_0 }{\tau + a}\)
+		</div>            
+	</details>
 
-  <details class="removed" id="6f9765ef-65fc-4c27-9f94-cc4e9fda0599">
-    <summary>Glucose Absorption by the Body</summary>
+	<details class="removed" id="6f9765ef-65fc-4c27-9f94-cc4e9fda0599">
+		<summary>Glucose Absorption by the Body</summary>
 
-    <div id="75e2c9ed-9855-4e2a-840a-19eb08c572f5">Glucose is absorbed by the body at a rate proportional to the amount of glucose present in the
-      bloodstream. Let \(\lambda \)
-      denote the (positive) constant of proportionality. Suppose there are \(G_0\) units of glucose in the bloodstream
-      when \(t=0\),
-      and let \(G=G(t)\) be the number of units in the bloodstream at time \(t&gt;0\). Then, since the glucose being
-      absorbed by the body is
-      leaving the bloodstream, \(G\) satisfies the equation \begin {equation} \label {eq:1.1.7} G'=-\lambda G\end
-      {equation}<a id="x1-10r7"></a> From calculus you know that if \(c\) is any constant then \begin {equation} \label
-      {eq:1.1.8} G=ce^{-\lambda t} \end {equation}<a id="x1-11r8"></a>
-      satisfies (<a href="#x1-10r7">1.1.7<!-- tex4ht:ref: eq:1.1.7  --></a>), so (<a href="#x1-10r7">1.1.7<!-- tex4ht:ref: eq:1.1.7  --></a>) has infinitely many solutions. Setting \(t=0\) in (<a href="#x1-11r8">1.1.8<!-- tex4ht:ref: eq:1.1.8  --></a>) and requiring that \(G(0)=G_0\) yields \(c=G_0\),
-      so
-      \[ G(t)=G_0e^{-\lambda t}\]
-    </div>
-    <div class="indent" id="167168b9-1ca9-4133-9d71-fc03be5fa1c3"> Now let’s complicate matters by injecting glucose intravenously at a constant rate of \(r\) units
-      of glucose per unit
-      of time. Then the rate of change of the amount of glucose in the bloodstream per unit time is \begin {equation}
-      \label {eq:1.1.9} G'=-\lambda G+r\end {equation}<a id="x1-12r9"></a> where the first term
-      on the right is due to the absorption of the glucose by the body and the second term is due to the injection. After
-      you’ve studied Section&nbsp;2.1, you’ll be able to show (Exercise&nbsp;2.1.&nbsp;<span class="ptmb8t-">43</span>) that the solution
-      of (<a href="#x1-12r9">1.1.9<!-- tex4ht:ref: eq:1.1.9  --></a>) that satisfies \(G(0)=G_0\)
-      is
-      \[ G={r\over \lambda }+\left (G_0-{r\over \lambda }\right )e^{-\lambda t}\]
-      Graphs of this function are similar to those in Figure&nbsp;<a href="#-temperature-according-to-newtons-law-of-cooling-">1.1.2<!-- tex4ht:ref: figure:1.1.2  --></a>. (Why?)
-    </div>
-  </details>
+		<div id="75e2c9ed-9855-4e2a-840a-19eb08c572f5">Glucose is absorbed by the body at a rate proportional to the amount of glucose present in the
+			bloodstream. Let \(\lambda \)
+			denote the (positive) constant of proportionality. Suppose there are \(G_0\) units of glucose in the bloodstream
+			when \(t=0\),
+			and let \(G=G(t)\) be the number of units in the bloodstream at time \(t&gt;0\). Then, since the glucose being
+			absorbed by the body is
+			leaving the bloodstream, \(G\) satisfies the equation
+			<a id="x1-10r7"></a>
+			\begin {equation}
+				\label {eq:1.1.7}
+				G'=-\lambda G\end
+			{equation}
+			
+			From calculus you know that if \(c\) is any constant then
+			<a id="x1-11r8"></a>
+			\begin {equation}
+				\label{eq:1.1.8} 
+				G=ce^{-\lambda t}
+			\end {equation}
+			satisfies <a href="#x1-10r7">(1.1.7)</a>, so <a href="#x1-10r7">(1.1.7)</a> has infinitely many solutions. Setting \(t=0\) in <a href="#x1-11r8">(1.1.8)</a> and requiring that \(G(0)=G_0\) yields \(c=G_0\), so
+			\[ G(t)=G_0e^{-\lambda t}\]
+		</div>
+		<div class="indent" id="167168b9-1ca9-4133-9d71-fc03be5fa1c3"> 
+			Now let’s complicate matters by injecting glucose intravenously at a constant rate of \(r\) units of glucose per unit of time. Then the rate of change of the amount of glucose in the bloodstream per unit time is 
+			<a id="x1-12r9"></a>
+			\begin {equation}
+				\label {eq:1.1.9} 
+				G'=-\lambda G+r
+			\end {equation}
+			where the first term on the right is due to the absorption of the glucose by the body and the second term is due to the injection. After you’ve studied Section&nbsp;2.1, you’ll be able to show (Exercise&nbsp;2.1.&nbsp;<span class="ptmb8t-">43</span>) that the solution of <a href="#x1-12r9">(1.1.9)</a> that satisfies \(G(0)=G_0\) is
+			\[ G={r\over \lambda }+\left (G_0-{r\over \lambda }\right )e^{-\lambda t}\]
+			Graphs of this function are similar to those in Figure&nbsp;<a href="#x1-9r2">1.1.2</a>. (Why?)
+		</div>
+	</details>
 
-  <details class="removed" id="239e7127-47d4-49f9-9aa3-4d685ebbda8b">
-    <summary>Spread of Epidemics</summary>
+	<details class="removed" id="239e7127-47d4-49f9-9aa3-4d685ebbda8b">
+		<summary>Spread of Epidemics</summary>
 
-    <div id="68ca6fa0-3821-4259-9e43-a8a938584160">One model for the spread of epidemics assumes that the number of people infected changes at a rate
-      proportional
-      to the product of the number of people already infected and the number of people who are susceptible, but not yet
-      infected. Therefore, if \(S\) denotes the total population of susceptible people and \(I=I(t)\) denotes the number
-      of infected people at time \(t\), then \(S-I\) is the number of people who are susceptible, but not yet infected.
-      Thus,
-      \[ I'=rI(S-I)\]
-      where \(r\) is a positive constant. Assuming that \(I(0)=I_0\), the solution of this equation is
-      \[ I={SI_0\over I_0+(S-I_0)e^{-rSt}} \]
-      (Exercise&nbsp;2.2.&nbsp;<span class="ptmb8t-">29</span>). Graphs of this function are similar to those in Figure&nbsp;<a href="#-solutions-of-the-logistic-equation-">1.1.1<!-- tex4ht:ref: figure:1.1.1  --></a>. (Why?) Since \(\lim
-      _{t\to \infty }I(t)=S\), this model
-      predicts that all the susceptible people eventually become infected.
-    </div>
-  </details>
-
-
-  <details id="1294514e-865f-45e1-ac4a-096f5ee1f320">
-    <summary>Newton’s Second Law of Motion</summary>
-    <div class="indent" id="8ee2ae14-d087-4700-afad-b36c2889b932"> 
-      According to <span class="vocab">Newton’s second law of motion</span>, the instantaneous acceleration \(a\) of an object with constant mass \(m\) is related to the force \(F\) acting on the object by the equation 
-      \[F=ma\] 
-      Recall that acceleration is the first derivative of velocity, so Newton’s 2nd law could be written as a first order differential equation with velocity \( v \) as the dependent variable
-      \[F=m \dot{v} \] 
-    </div>
-    <div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384789">
-      Rewrite \( F=m \dot{v} \) using <span class="vocab">differential notation</span> (<span class="vocab">Newton notation</span>)
-    </div>
-    <div id="9e90a6da-5334-4272-b9e2-92ea65091384789-2">
-      We'll assume the motion of the object is along a vertical line on the \(y-\)axis. For instance, suppose you are tossing a ball directly upward and \(y(t)\) represent the position of the ball measured positive upward. Recall that velocity is the first derivative of position and acceleration is the second derivative of position, so Newton’s 2nd law could be written as a second order differential equation with position \( y \) as the dependent variable
-      \[F=m \ddot{y} \] 
-    </div>  
-    <div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384101">
-      Rewrite \( F=m \ddot{y} \) using <span class="vocab">differential notation</span> (<span class="vocab">Newton notation</span>)
-    </div> 
-    <div class="indent" id="8724d562-f8e9-47f2-93f2-916e7d5b3941">
-      For simplicity, we'll assume that the mass is one, \(m=1\), and the differential equation further simplifies:      
-      \[ F = \ddot{y} \] 
-    </div>  
-    <div class="indent" id="8724d562-f8e9-47f2-93f2-916e7d5b3942">
-      To further develop the differential equation portraying Newton’s 2nd law, we will want to expand upon what the forces \( F \) could be. In general there are 3 types of forces that may act on the object:
-      <ol id="ad6a72e1-7485-434a-b36b-d9f2ee6a65fc">
-        <li>
-          A force such as <span class="vocab">gravity</span> that depends only on the position \(y(t)\), which we write as a function of \(y\) written as \(-p(y)\), where \(p(y)&gt;0\) if \(y\ge 0\)
-        </li>  
-        <li> 
-          A force such as <span class="vocab">air resistance</span> that depends on the position \(y(t)\) and velocity  \(v(t)\) of the object, which we write as \(-q \left( y, \dot{y} \right) \dot{y} \) where \( q \ge 0 \) and we have one \( \dot{y} \) factored out to indicate that the resistive force is always in the direction opposite to the velocity 
-        </li>  
-        <li> 
-          Any <span class="vocab">external force</span> \(f=f(t)\) that is separate from the object and depends only on time \(t\) (such as a towline from a helicopter)
-        </li>  
-      </ol> 
-        Thus the 3 possible forces are \( -p(y) \), \( q(y, \dot{y})\dot{y} \), and \( f(t) \), and thus the total force is given as the sum of all three
-        
-        \begin{equation*}
-            F = -p(y) + q\left(y,\dot{y}\right)\dot{y} + f(t)
-        \end{equation*}
-    </div>
-    <div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384121">
-      Rewrite \( q\left(y,\dot{y}\right)\dot{y} \) using <span class="vocab">differential notation</span> (<span class="vocab">Newton notation</span>)
-    </div> 
-    <div class="indent" id="b87b5372-94a8-470b-8189-dd0f7909caa2"> Then Newton’s second law \( F = \ddot{y} \) can be written as the second order differential equation \( \ddot{y}=-q(y,\dot{y})\dot{y}-p(y)+f(t) \) which is more commonly written as
-      \[ \ddot{y}+q(y,\dot{y})\dot{y}+p(y)=f(t)\]
-    </div>
-    <div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384131">
-      Rewrite \( \ddot{y}+q(y,\dot{y})\dot{y}+p(y)=f(t) \) using <span class="vocab">differential notation</span> (<span class="vocab">Newton notation</span>)
-    </div> 
-  </details>
-
-  <details class="removed" id="e286c4d8-0d42-4a7b-85e4-35e5cbf1335a">
-    <summary>Interacting Species: Competition</summary>
-    <div id="8ef42a0e-4e2f-42ef-a39d-76cb7c8358de">
-      Let \(P=P(t)\) and \(Q=Q(t)\) be the populations of two species at time \(t\), and assume that
-      each population would grow exponentially if
-      the other didn’t exist. In the absence of competition we would have 
-      
-      <a id="x1-16r10"></a> 
-      \begin {equation} \label {eq:1.1.10}
-      \dot{P}=aP \quad \mbox{  and  } \quad \dot{Q}=bQ
-      \end {equation}
-
-      where \(a\) and \(b\) are positive constants.
-      One way to model the effect of competition is to assume that the growth rate per individual of each
-      population is reduced by an amount proportional to the other population, so (<a href="#x1-16r10">1.1.10<!-- tex4ht:ref: eq:1.1.10  --></a>) is replaced by
-    </div>
-    <div class="eqnarray" id="81d513c2-603a-4115-987e-cfca7473d5ba">
-      \begin {eqnarray*} \dot{P}&amp;=&amp;\phantom {-}aP-\alpha Q\\ \dot{Q}&amp;=&amp;-\beta P+bQ\end
-      {eqnarray*}
-    </div>
-    
-    <div class="indent" id="ac872766-3c58-45e2-96fe-7218de14edb5">
-       where \(\alpha \) and \(\beta \) are positive constants. (Since negative population doesn’t make
-      sense, this system works only
-      while \(P\) and \(Q\) are both positive.) Now suppose \(P(0)=P_0&gt;0\) and \(Q(0)=Q_0&gt;0\). It can be shown
-      (Exercise&nbsp;10.4.&nbsp;<span class="ptmb8t-">42</span>) that there’s a positive
-      constant \(\rho \) such that if \((P_0,Q_0)\) is above the line \(L\) through the origin with slope \(\rho \), then
-      the species with population \(P\) becomes
-      extinct in finite time, but if \((P_0,Q_0)\) is below \(L\), the species with population \(Q\) becomes extinct in
-      finite time. Figure&nbsp;<a href="#-populations-of-competing-species-">1.1.3<!-- tex4ht:ref: figure:1.1.3  --></a>
-      illustrates this. The curves shown there are given parametrically by \(P=P(t), Q=Q(t),\ t&gt;0\). The arrows
-      indicate direction along the
-      curves with increasing time \(t\) 
-    </div>
-    <figure class="figure" id="79130ca0-3570-40e6-bfe3-cbe8599c44e1">
-      <div id="-populations-of-competing-species-"><img height="264" src="EPS/fig010103.png" width="409"> <a id="x1-17r3"></a></div>
-      <figcaption class="caption"><span class="id">Figure&nbsp;1.1.3 </span><span class="content">Populations of competing
-          species </span></figcaption><!-- tex4ht:label?: x1-17r3  -->
-    </figure>
-  </details>
-
-  <nav class = "book">
-    <a href="sec0.0.html">Back (Chapter 0)</a>
-
-    <a href="sec1.0.html">Chapter 1</a>
-
-    <a href="sec1.2.book.html">Next (1.2)</a>
-  </div>
+		<div id="68ca6fa0-3821-4259-9e43-a8a938584160">One model for the spread of epidemics assumes that the number of people infected changes at a rate
+			proportional
+			to the product of the number of people already infected and the number of people who are susceptible, but not yet
+			infected. Therefore, if \(S\) denotes the total population of susceptible people and \(I=I(t)\) denotes the number
+			of infected people at time \(t\), then \(S-I\) is the number of people who are susceptible, but not yet infected.
+			Thus,
+			\[ I'=rI(S-I)\]
+			where \(r\) is a positive constant. Assuming that \(I(0)=I_0\), the solution of this equation is
+			\[ I={SI_0\over I_0+(S-I_0)e^{-rSt}} \]
+			(Exercise&nbsp;2.2.&nbsp;<span class="ptmb8t-">29</span>). Graphs of this function are similar to those in Figure&nbsp;<a href="#x1-6r1">1.1.1</a>. (Why?) Since \(\lim
+			_{t\to \infty }I(t)=S\), this model
+			predicts that all the susceptible people eventually become infected.
+		</div>
+	</details>
 
 
+	<details id="1294514e-865f-45e1-ac4a-096f5ee1f320">
+		<summary>Newton’s Second Law of Motion</summary>
+		<div class="indent" id="8ee2ae14-d087-4700-afad-b36c2889b932"> 
+			According to <span class="vocab">Newton’s second law of motion</span>, the instantaneous acceleration \(a\) of an object with constant mass \(m\) is related to the force \(F\) acting on the object by the equation 
+			\[F=ma\] 
+			Recall that acceleration is the first derivative of velocity, so Newton’s 2nd law could be written as a first order differential equation with velocity \( v \) as the dependent variable
+			\[F=m \dot{v} \] 
+		</div>
+		<div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384789">
+			Rewrite \( F=m \dot{v} \) using <span class="vocab">differential notation</span> (<span class="vocab">Newton notation</span>)
+		</div>
+		<div id="9e90a6da-5334-4272-b9e2-92ea65091384789-2">
+			We'll assume the motion of the object is along a vertical line on the \(y-\)axis. For instance, suppose you are tossing a ball directly upward and \(y(t)\) represent the position of the ball measured positive upward. Recall that velocity is the first derivative of position and acceleration is the second derivative of position, so Newton’s 2nd law could be written as a second order differential equation with position \( y \) as the dependent variable
+			\[F=m \ddot{y} \] 
+		</div>  
+		<div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384101">
+			Rewrite \( F=m \ddot{y} \) using <span class="vocab">differential notation</span> (<span class="vocab">Newton notation</span>)
+		</div> 
+		<div class="indent" id="8724d562-f8e9-47f2-93f2-916e7d5b3941">
+			For simplicity, we'll assume that the mass is one, \(m=1\), and the differential equation further simplifies:      
+			\[ F = \ddot{y} \] 
+		</div>  
+		<div class="indent" id="8724d562-f8e9-47f2-93f2-916e7d5b3942">
+			To further develop the differential equation portraying Newton’s 2nd law, we will want to expand upon what the forces \( F \) could be. In general there are 3 types of forces that may act on the object:
+			<ol id="ad6a72e1-7485-434a-b36b-d9f2ee6a65fc">
+				<li>
+					A force such as <span class="vocab">gravity</span> that depends only on the position \(y(t)\), which we write as a function of \(y\) written as \(-p(y)\), where \(p(y)&gt;0\) if \(y\ge 0\)
+				</li>  
+				<li> 
+					A force such as <span class="vocab">air resistance</span> that depends on the position \(y(t)\) and velocity  \(v(t)\) of the object, which we write as \(-q \left( y, \dot{y} \right) \dot{y} \) where \( q \ge 0 \) and we have one \( \dot{y} \) factored out to indicate that the resistive force is always in the direction opposite to the velocity 
+				</li>  
+				<li> 
+					Any <span class="vocab">external force</span> \(f=f(t)\) that is separate from the object and depends only on time \(t\) (such as a towline from a helicopter)
+				</li>  
+			</ol> 
+				Thus the 3 possible forces are \( -p(y) \), \( q(y, \dot{y})\dot{y} \), and \( f(t) \), and thus the total force is given as the sum of all three
+				
+				\begin{equation*}
+						F = -p(y) + q\left(y,\dot{y}\right)\dot{y} + f(t)
+				\end{equation*}
+		</div>
+		<div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384121">
+			Rewrite \( q\left(y,\dot{y}\right)\dot{y} \) using <span class="vocab">differential notation</span> (<span class="vocab">Newton notation</span>)
+		</div> 
+		<div class="indent" id="b87b5372-94a8-470b-8189-dd0f7909caa2"> Then Newton’s second law \( F = \ddot{y} \) can be written as the second order differential equation \( \ddot{y}=-q(y,\dot{y})\dot{y}-p(y)+f(t) \) which is more commonly written as
+			\[ \ddot{y}+q(y,\dot{y})\dot{y}+p(y)=f(t)\]
+		</div>
+		<div class="reading-exercise" id="9e90a6da-5334-4272-b9e2-92ea65091384131">
+			Rewrite \( \ddot{y}+q(y,\dot{y})\dot{y}+p(y)=f(t) \) using <span class="vocab">differential notation</span> (<span class="vocab">Newton notation</span>)
+		</div> 
+	</details>
 
-</body></html>
+	<details class="removed" id="e286c4d8-0d42-4a7b-85e4-35e5cbf1335a">
+		<summary>Interacting Species: Competition</summary>
+		<div id="8ef42a0e-4e2f-42ef-a39d-76cb7c8358de">
+			Let \(P=P(t)\) and \(Q=Q(t)\) be the populations of two species at time \(t\), and assume that
+			each population would grow exponentially if
+			the other didn’t exist. In the absence of competition we would have 
+			
+			<a id="x1-16r10"></a> 
+			\begin {equation} \label {eq:1.1.10}
+			\dot{P}=aP \quad \mbox{  and  } \quad \dot{Q}=bQ
+			\end {equation}
+
+			where \(a\) and \(b\) are positive constants. One way to model the effect of competition is to assume that the growth rate per individual of each population is reduced by an amount proportional to the other population, so <a href="#x1-16r10">(1.1.10)</a> is replaced by
+		</div>
+		<div class="eqnarray" id="81d513c2-603a-4115-987e-cfca7473d5ba">
+			\begin {eqnarray*} \dot{P}&amp;=&amp;\phantom {-}aP-\alpha Q\\ \dot{Q}&amp;=&amp;-\beta P+bQ\end
+			{eqnarray*}
+		</div>
+		
+		<div class="indent" id="ac872766-3c58-45e2-96fe-7218de14edb5">
+			where \(\alpha \) and \(\beta \) are positive constants. (Since negative population doesn’t make
+			sense, this system works only while \(P\) and \(Q\) are both positive.) Now suppose \(P(0)=P_0&gt;0\) and \(Q(0)=Q_0&gt;0\). It can be shown
+			(Exercise&nbsp;10.4.&nbsp;<span class="ptmb8t-">42</span>) that there’s a positive
+			constant \(\rho \) such that if \((P_0,Q_0)\) is above the line \(L\) through the origin with slope \(\rho \), then
+			the species with population \(P\) becomes
+			extinct in finite time, but if \((P_0,Q_0)\) is below \(L\), the species with population \(Q\) becomes extinct in
+			finite time. Figure&nbsp;<a href="#x1-17r3">1.1.3</a>
+			illustrates this. The curves shown there are given parametrically by \(P=P(t), Q=Q(t),\ t&gt;0\). The arrows
+			indicate direction along the
+			curves with increasing time \(t\) 
+		</div>
+		<figure id="x1-17r3">
+			<img height="264" src="EPS/fig010103.png" />
+			<figcaption>
+				<span class="id">Figure&nbsp;1.1.3</span>
+				<span class="content">Populations of competing species</span>
+			</figcaption>
+		</figure>
+	</details>
+
+	<nav class = "book">
+		<a href="sec0.0.html">Back (Chapter 0)</a>
+
+		<a href="sec1.0.html">Chapter 1</a>
+
+		<a href="sec1.2.book.html">Next (1.2)</a>
+	</div>
+	</body>
+</html>

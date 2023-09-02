@@ -114,7 +114,7 @@
 			<a id="x1-12r8"></a>
 			By solving this system directly, you can verify that it has only the trivial solution \(c_1=c_2=c_3=0\); however, for our purposes it’s more useful to recall from linear algebra that a homogeneous linear system of \(n\) equations in \(n\) unknowns has only the trivial solution if its determinant is nonzero. Since the determinant of <a href="#x1-12r8">(9.1.8)</a> is \[ \left | \begin {array}{rrr}1&amp;1&amp;1\\2&amp;3&amp;-1\\2&amp;6&amp;2 \end {array}\right |= \left | 
 			\begin {array}{rrr}1&amp;0&amp;0\\2&amp;1&amp;-3\\2&amp;4&amp;0 
-			\end {array}\right |=12\] it follows that <a href="#x1-12r8">(9.1.8)</a> has only the trivial solution, so \(\{y_1,y_2,y_3\}\) is linearly independent on \((0,\infty )\). Now Theorem<a href="#x1-72">9.1.2</a> implies that \[ y=c_1x^2+c_2x^3+{c_3\over x} \] is the general solution of
+			\end {array}\right |=12\] it follows that <a href="#x1-12r8">(9.1.8)</a> has only the trivial solution, so \(\{y_1,y_2,y_3\}\) is linearly independent on \((0,\infty )\). Now Theorem&nbsp;<a href="#x1-72">9.1.2</a> implies that \[ y=c_1x^2+c_2x^3+{c_3\over x} \] is the general solution of
 			<a href="#x1-9r5">(9.1.5)</a> on \((0,\infty )\). To see that this is also true on \((-\infty ,0)\), assume that <a href="#x1-10r6">(9.1.6)</a> holds on \((-\infty ,0)\). Setting \(x=-1\) in <a href="#x1-11r7">(9.1.7)</a> yields
 
 			<div class="eqnarray" id="646d035a-1cfd-4794-977e-9ed5f94c5210">
@@ -160,14 +160,14 @@
 				</div>
 				<div id="956ce517-6164-4c8d-9a4b-5b955d0c19b8">
 					
-					We can use the method used in Examples<a href="#x1-81">9.1.1</a> and
+					We can use the method used in Examples&nbsp;<a href="#x1-81">9.1.1</a> and
 					<a href="#x1-132">
 						9.1.2
 						<!-- tex4ht:ref: example:9.1.2  -->
 					</a>
 					to test \(n\) solutions \(\{y_1,y_2,\dots ,y_n\}\) of any \(n\)th order equation \(Ly=0\) for linear independence on an interval \((a,b)\) on which the equation is normal. Thus, if \(c_1\), \(c_2\) ,…, \(c_n\) are constants such that \[ c_1y_1+c_2y_2+\cdots +c_ny_n=0,\quad a&lt;x&lt;b\] then differentiating \(n-1\) times leads to the \(n\times n\) system of equations \begin {equation} \label {eq:9.1.13} \begin {array}{rcl} c_1y_1(x)+c_2y_2(x)+&amp;\cdots &amp;+c_ny_n(x)=0\\ c_1y_1'(x)+c_2y_2'(x)+&amp;\cdots &amp;+c_ny_n'(x)=0\\ \phantom {c_1y_1^{(n)}(x)+c_2y_2^{(n-1)}(x)}&amp;\vdots &amp; \phantom {\cdots +c_ny_n^{(n-1)(x)}=q}\\ c_1y_1^{(n-1)}(x)+c_2y_2^{(n-1)}(x)+&amp;\cdots &amp;+c_ny_n^{(n-1)}(x) =0 \end {array} \end {equation} <a id="x1-18r13"></a> for \(c_1\), \(c_2\), …, \(c_n\). For a fixed \(x\), the determinant of this system is \[ W(x)=\left | 
 					\begin {array}{cccc} y_1(x)&amp;y_2(x)&amp;\cdots&amp;y _n(x)\\ y'_1(x)&amp;y'_2(x)&amp;\cdots&amp;y _n'(x)\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ y_1^{(n-1)}(x)&amp;y_2^{(n-1)}(x)&amp;\cdots&amp;y _n^{(n-1)}(x) 
-					\end {array}\right |\] We call this determinant the <span class="vocab">vocab</span> of \(\{y_1,y_2,\dots ,y_n\}\). If \(W(x)\ne 0\) for some \(x\) in \((a,b)\) then the system <a href="#x1-18r13">(9.1.13)</a> has only the trivial solution \(c_1=c_2=\cdots =c_n=0\), and Theorem<a href="#x1-72">9.1.2</a> implies that \[ y=c_1y_1+c_2y_2+\cdots +c_ny_n \] is the general solution of \(Ly=0\) on \((a,b)\).
+					\end {array}\right |\] We call this determinant the <span class="vocab">vocab</span> of \(\{y_1,y_2,\dots ,y_n\}\). If \(W(x)\ne 0\) for some \(x\) in \((a,b)\) then the system <a href="#x1-18r13">(9.1.13)</a> has only the trivial solution \(c_1=c_2=\cdots =c_n=0\), and Theorem&nbsp;<a href="#x1-72">9.1.2</a> implies that \[ y=c_1y_1+c_2y_2+\cdots +c_ny_n \] is the general solution of \(Ly=0\) on \((a,b)\).
 				
 				</div>
 				<div class="indent" id="c8be882e-b9ae-4e64-941f-85e4f23e19bf">
@@ -262,7 +262,7 @@
 						\end {array}\right |=240e^{-x}\] from <a href="#x1-17r12">(9.1.12)</a>.
 
 						<div id="d812fadd-b0d3-4931-9cb9-d21f0b1be65d">
-							<span class="ptmrc8t-"> R <span class="small-caps">EMARK</span></span> :&nbsp;Under the assumptions of Theorem<a href="#x1-224">9.1.4</a>, it isn’t necessary to obtain a formula for \(W(x)\). Just evaluate \(W(x)\) at a convenient point in \((a,b)\), as we did in Examples<a href="#x1-81">9.1.1</a> and
+							<span class="ptmrc8t-"> R <span class="small-caps">EMARK</span></span> :&nbsp;Under the assumptions of Theorem&nbsp;<a href="#x1-224">9.1.4</a>, it isn’t necessary to obtain a formula for \(W(x)\). Just evaluate \(W(x)\) at a convenient point in \((a,b)\), as we did in Examples&nbsp;<a href="#x1-81">9.1.1</a> and
 							<a href="#x1-132">
 								9.1.2
 								<!-- tex4ht:ref: example:9.1.2  -->
@@ -284,7 +284,7 @@
 						<div id="dca861c3-c804-41af-80a0-c30c4747fb1f">
 							<span class="ptmb8t-">Proof</span> Since \(\alpha _{1}\), \(\alpha _{2}\), …, \(\alpha _{n}\) are not all zero, <a href="#x1-20r14">(9.1.14)</a> implies that \[ \left | \begin {array}{ccccccc} y_{1}(c)&amp;y_{1}'(c)&amp;\cdots&amp;y _{1}^{(n-1)}(c)\\ y_{2}(c)&amp;y_{2}'(c)&amp;\cdots&amp;y _{2}^{(n-1)}(c)\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ y_{n}(c)&amp;y_{n}'(c)&amp;\cdots&amp;y _{n}^{(n-1)}(c)\\ \end {array}\right |=0\] so \[ \left | 
 							\begin {array}{cccccc} y_{1}(c)&amp;y_{2}(c)&amp;\cdots&amp; y_{n}(c)\\ y_{1}'(c)&amp;y_{2}'(c)&amp;\cdots&amp; y_{n}'(c)\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ y_{1}^{(n-1)}(c)&amp;y_{2}^{(n-1)}(c)(c)&amp;\cdots&amp; y_{n}^{(n-1)}(c)(c)\\ 
-							\end {array}\right |=0 \] and Theorem<a href="#x1-224">9.1.4</a> implies the stated conclusion.
+							\end {array}\right |=0 \] and Theorem&nbsp;<a href="#x1-224">9.1.4</a> implies the stated conclusion.
 						
 						</div>
 						<div id="53bb2b2a-9159-42f2-bf4f-5b2af9f24d27">
@@ -319,7 +319,7 @@
 						</div>
 						<div class="indent" id="f6be20cd-b46c-441e-af56-d090f566e656">
 							
-							We’ll apply Theorems<a href="#x1-326">9.1.6</a> and
+							We’ll apply Theorems&nbsp;<a href="#x1-326">9.1.6</a> and
 							<a href="#x1-337">
 								9.1.7
 								<!-- tex4ht:ref: thmtype:9.1.7  -->
