@@ -42,7 +42,7 @@
 						\begin {equation}
 							\label {eq:7.1.1} \sum _{n=0}^\infty a_n(x-x_0)^n 
 						\end {equation} 
-						where \(x_0\) and \(a_0\), \(a_1,\) …, \(a_n,\) …are constants\(,\) is called a <span class="vocab">power series in</span>\(x-x_0.\) We say that the power series <a href="#x1-3r1">(7.1.1)</a><span class="vocab">converges</span> for a given \(x\) if the limit \[ \lim _{N\to \infty } \sum _{n=0}^Na_n(x-x_0)^n \] exists\(; \) otherwise, we say that the power series <span class="vocab">diverges</span> for the given \(x.\) 
+						where \(x_0\) and \(a_0\), \(a_1,\) …, \(a_n,\) …are constants\(,\) is called a <span class="vocab">power series in</span> \(x-x_0.\) We say that the power series <a href="#x1-3r1">(7.1.1)</a> <span class="vocab">converges</span> for a given \(x\) if the limit \[ \lim _{N\to \infty } \sum _{n=0}^Na_n(x-x_0)^n \] exists\(; \) otherwise, we say that the power series <span class="vocab">diverges</span> for the given \(x.\) 
 					</div>
 				</dd>
 			</dl>
@@ -73,7 +73,7 @@
 				Recall from calculus that a series of constants \(\sum _{n=0}^\infty \alpha _n\) is said to <span class="vocab">converge absolutely</span> if the series of absolute values \(\sum _{n=0}^\infty |\alpha _n|\) converges. It can be shown that a power series \(\sum _{n=0}^\infty a_n(x-x_0)^n\) with a positive radius of convergence \(R\) converges absolutely in its open interval of convergence; that is, the series \[ \sum _{n=0}^\infty |a_n||x-x_0|^n \] of absolute values converges if \(|x-x_0|&lt;R\). However, if \(R&lt;\infty \), the series may fail to converge absolutely at an endpoint \(x_0\pm R\), even if it converges there. 
 			</div>
 			<div class="indent" id="3ad6834e-53b8-4485-ae1c-00bc8f731358">
-				The next theorem provides a useful method for determining the radius of convergence of a power series. It’s derived in calculus by applying the ratio test to the corresponding series of absolute values. For related theorems see Exercises&nbsp;<span class="ptmb8t-">2</span> and <span class="ptmb8t-">4</span>. 
+				The next theorem provides a useful method for determining the radius of convergence of a power series. It’s derived in calculus by applying the ratio test to the corresponding series of absolute values.
 			</div>
 			<div class="theorem" id="x1-83">
 				<span class="head">Theorem&nbsp;7.1.3</span>
@@ -112,35 +112,141 @@
 			<summary>Taylor Series</summary>
 		
 			<div id="dc810944-0719-427c-8938-a482a2f7c568">
-				If a function \(f\) has derivatives of all orders at a point \(x=x_0\), then the <span class="vocab">Taylor series</span> of \(f\) about \(x_0\) is defined by \[ \sum _{n=0}^\infty {f^{(n)}(x_0)\over n!}(x-x_0)^n\] In the special case where \(x_0=0\), this series is also called the <span class="vocab">Maclaurin series</span> of \(f\). 
+				<div>
+					If a function \(f\) has derivatives of all orders at a point \(x=x_0\), then the <span class="vocab">Taylor series</span> of \(f\) about \(x_0\) is defined by 
+					
+					\begin{align} 
+						\sum _{n=0}^\infty {f^{(n)}(x_0)\over n!}(x-x_0)^n
+					\end{align}	
+				</div>
+				<div class="reading-exercise">
+					Expand the Taylor series formula to calculate the first 8 terms
+				</div>
+
+				<div>
+					In the special case where \(x_0=0\), this series is also called the <span class="vocab">Maclaurin series</span> of \(f\)
+
+					\begin{align} 
+						\sum _{n=0}^\infty {f^{(n)}(0)\over n!} x^n
+					\end{align}	
+				</div>	
+				<div class="reading-exercise">
+					Expand the Maclaurin series formula to calculate the first 10 terms
+				</div>
+
+				<div class="reading-exercise">
+					Find the first 4 terms of the Maclaurin series expansion for \(e^x\)
+				</div>
+				<div class="reading-exercise">
+					Write the Maclaurin series for \(e^x\) in sigma notation
+				</div>
+
+				<div class="reading-exercise">
+					Find the first 6 terms of the Maclaurin series expansion for \(\cos x\)
+				</div>
+				<div class="reading-exercise">
+					Write the Maclaurin series for \(\cos x\) in sigma notation
+				</div>
+
+				<div class="reading-exercise">
+					Find the first 6 terms of the Maclaurin series expansion for \(\sin x\)
+				</div>
+				<div class="reading-exercise">
+					Write the Maclaurin series for \(\sin x\) in sigma notation
+				</div>
+
+				<div class="reading-exercise">
+					Find the first 4 terms of the Maclaurin series expansion for \(\displaystyle \frac{1}{1-x}\)
+				</div>
+				<div class="reading-exercise">
+					Write the Maclaurin series for \(\displaystyle \frac{1}{1-x}\) in sigma notation
+				</div>
+
+				<div class="reading-exercise">
+					Find the first 5 terms of the Maclaurin series expansion for \( \ln x \)
+				</div>
+				<div class="reading-exercise">
+					Write the Maclaurin series for \(\ln x\) in sigma notation
+				</div>
+
+				<div class="reading-exercise">
+					Find the first 5 terms of the Maclaurin series expansion for \( \tan^{-1} x \)
+				</div>
+				<div class="reading-exercise">
+					Write the Maclaurin series for \(\tan^{-1} x\) in sigma notation
+				</div>
+
 			</div>
+		
 			<div class="indent" id="034c0a8b-eba9-4f5c-963f-fa64a3ab481b">
-				Taylor series for most of the common elementary functions converge to the functions on their open intervals of convergence. For example, you are probably familiar with the following Maclaurin series: 
+				Taylor series for most of the common elementary functions converge to the functions on their open intervals of convergence. From calclus, you probably worked with the following Maclaurin series: 
+				\begin{align}
+					e^x = & \sum _{n=0}^\infty {x^n\over n!} \\
+					\sin x = & \sum _{n=0}^\infty (-1)^n {x^{2n+1}\over (2n+1)!} \\
+					\cos x = & \sum _{n=0}^\infty (-1)^n {x^{2n}\over (2n)!}  \nonumber \\
+					{1\over 1-x} = & \sum _{n=0}^\infty x^n  \nonumber \\
+					\ln x = & \sum_{n=0}^{\infty}{ (-1)^{n+1}\frac{x^n}{n} }  \nonumber \\	
+					\tan^{-1} x = & \sum_{n=0}^{\infty}{(-1)^n \frac{x^{2n+1}}{2n+1}}  \nonumber
+				\end{align}
 			</div>
-			<div class="eqnarray" id="d89e3e2c-eeb5-4089-961c-a97dcca19885">
-				\begin {eqnarray}
-					e^x&amp;=&amp;\sum _{n=0}^\infty {x^n\over n!},\quad -\infty &lt;x&lt;\infty ,\label {eq:7.1.2}\\ \sin x&amp;=&amp;\sum _{n=0}^\infty (-1)^n {x^{2n+1}\over (2n+1)!},\quad -\infty &lt;x&lt;\infty , \label {eq:7.1.3}\\ \cos x&amp;=&amp;\sum _{n=0}^\infty (-1)^n {x^{2n}\over (2n)!},\quad -\infty &lt;x&lt;\infty , \label {eq:7.1.4}\\ {1\over 1-x}&amp;=&amp;\sum _{n=0}^\infty x^n,\quad -1&lt;x&lt;1.\label {eq:7.1.5} 
-				\end {eqnarray} 
+			<div >
+				For the following Reading Exercises, calculate \(L\) using the ratio test, find the radius of convergence \(R\), and the open interval of convergence using Example <a href="#x1-91">7.1.1</a>
 			</div>
+			
+		
+			<div class="reading-exercise">
+				Calculate \(L\) and \(R\) for the series \( \displaystyle \sum _{n=0}^\infty {x^{n}\over n!}\) 
+				<!--L=0 R=infinity Interval (-infinity,infinity)-->
+			</div>
+			<div class="reading-exercise">
+				Calculate \(L\) and \(R\) for the series \( \displaystyle \sum _{n=0}^\infty (-1)^n {x^{2n+1}\over (2n+1)!}\) 
+				<!--L=0 R=infinity Interval (-infinity,infinity)-->
+			</div>
+			<div class="reading-exercise">
+				Calculate \(L\) and \(R\) for the series \( \displaystyle \sum _{n=0}^\infty (-1)^n {x^{2n}\over (2n)!}\) 
+				<!--L=0 R=infinity Interval (-infinity,infinity)-->
+			</div>
+			<div class="reading-exercise">
+				Calculate \(L\) and \(R\) for the series \( \displaystyle \sum _{n=0}^\infty x^n  \) 
+				<!--L=1 R=1 Interval (-1,1)-->
+			</div>
+			<div class="reading-exercise">
+				Calculate \(L\) and \(R\) for the series \( \displaystyle \sum_{n=0}^{\infty}{ (-1)^{n+1}\frac{x^n}{n} }\)
+				<!--L=1 R=1 Interval (-1,1)-->
+			</div>
+			<div class="reading-exercise">
+				Calculate \(L\) and \(R\) for the series \( \displaystyle \sum_{n=0}^{\infty}{(-1)^n \frac{x^{2n+1}}{2n+1}} \)
+				<!--L=1 R=1 Interval (-1,1)-->
+			</div>
+
 		</details>
+
+
 		<details id="f7ce5d52-3c90-4d7b-9740-9c94b8860c4f">
 			<summary>Differentiation of Power Series</summary>
 
 			<div id="6c383e12-bf4c-464d-8518-bee9f73faf5f">
-				A power series with a positive radius of convergence defines a function \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \] on its open interval of convergence. We say that the series <span class="vocab">represents</span>\(f\) on the open interval of convergence. A function \(f\) represented by a power series may be a familiar elementary function as in (<span class="ptmb8t-">7.1.2</span>)–(<span class="ptmb8t-">7.1.5</span>); however, it often happens that \(f\) isn’t a familiar function, so the series actually <span class="vocab">defines</span>\(f\). 
+				A power series with a positive radius of convergence defines a function 
+				
+				\[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \] 
+				
+				on its open interval of convergence. We say that the series <span class="vocab">represents</span> \(f\) on the open interval of convergence. A function \(f\) represented by a power series may be a familiar elementary function, however, it often happens that \(f\) isn’t a familiar function, so the series actually <span class="vocab">defines</span> \(f\). 
 			</div>
 			<div class="indent" id="12afc254-51f2-4866-a9e4-837416eb41a4">
 				The next theorem shows that a function represented by a power series has derivatives of all orders on the open interval of convergence of the power series, and provides power series representations of the derivatives. 
 			</div>
 			<div class="theorem" id="x1-104">
 				<span class="head">Theorem&nbsp;7.1.4</span>
-				A power series \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \] with positive radius of convergence \(R\) has derivatives of all orders in its open interval of convergence\(,\) and successive derivatives can be obtained by repeatedly differentiating term by term; that is,
+				A power series \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \] with positive radius of convergence \(R\) has derivatives of all orders in its open interval of convergence\(,\) and successive derivatives can be obtained by repeatedly differentiating term by term:
 
-				<div class="eqnarray">
-					\begin {eqnarray}
-						f'(x)&amp;=&amp;\displaystyle {\sum _{n=1}^\infty na_n(x-x_0)^{n-1}}\label {eq:7.1.6},\\[10pt] f''(x)&amp;=&amp;\displaystyle {\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}},\label {eq:7.1.7}\\ &amp;\vdots &amp;\nonumber \\ f^{(k)}(x)&amp;=&amp;\displaystyle {\sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k}}\label {eq:7.1.8} 
-					\end {eqnarray} 
-				</div>
+				\begin{align} \label {eq:7.1.6}
+					f'(x) = & {\sum _{n=1}^\infty na_n(x-x_0)^{n-1}} \\
+					f''(x) = & {\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}} \\
+					f'''(x) = & {\sum _{n=3}^\infty n(n-1)(n-2)a_n(x-x_0)^{n-3}} \nonumber \\
+					\vdots \, & \nonumber \\
+					f^{(k)}(x) = & \sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k}
+				\end{align}
+
 				<div class="indent">
 					Moreover, all of these series have the same radius of convergence \(R\). 
 				</div>
@@ -148,7 +254,11 @@
 
 			<div class="example" id="x1-112" style="--ex-number: 2">
 				<div>
-					Let \(f(x)=\sin x\). From (<span class="ptmb8t-">7.1.3</span>), \[ f(x)=\sum _{n=0}^\infty (-1)^n {x^{2n+1}\over (2n+1)!}\] From (<span class="ptmb8t-">7.1.6</span>), \[ f'(x)=\sum _{n=0}^\infty (-1)^n{d\over dx}\left [x^{2n+1}\over (2n+1)!\right ]= \sum _{n=0}^\infty (-1)^n {x^{2n}\over (2n)!}\] which is the series (<span class="ptmb8t-">7.1.4</span>) for \(\cos x\).
+					Let \(f(x)=\sin x\). From (<span class="ptmb8t-">7.1.5</span>), 
+					
+					\[ f(x)=\sum _{n=0}^\infty (-1)^n {x^{2n+1}\over (2n+1)!}\] 
+					
+					From (<span class="ptmb8t-">7.1.6</span>), \[ f'(x)=\sum _{n=0}^\infty (-1)^n{d\over dx}\left [x^{2n+1}\over (2n+1)!\right ]= \sum _{n=0}^\infty (-1)^n {x^{2n}\over (2n)!}\] which is the series (<span class="ptmb8t-">7.1.4</span>) for \(\cos x\).
 				</div>
 			</div>
 		</details>
@@ -161,15 +271,28 @@
 			</div>
 			<div class="theorem" id="x1-125">
 				<span class="head">Theorem&nbsp;7.1.5</span>
-				If the power series \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \] has a positive radius of convergence, then 
+				If the power series 
+				
+				\[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \] 
+				
+				has a positive radius of convergence, then 
+
 				<a id="x1-13r2"></a>
-				\begin {equation} \label {eq:7.1.9} a_n={f^{(n)}(x_0)\over n!}; 
+				\begin {equation} \label {eq:7.1.9} a_n={f^{(n)}(x_0)\over n!} 
 				\end {equation} 
-				that is, \(\sum _{n=0}^\infty a_n(x-x_0)^n\) is the Taylor series of \(f\) about \(x_0\).
+				that is, \(\sum _{n=0}^\infty a_n(x-x_0)^n\) is the Taylor series of \(f\) about \(x_0\)
 			</div>
 
 			<div class="indent" id="56a84d92-57f7-4881-8eb0-3ab52bfe2461">
-				This result can be obtained by setting \(x=x_0\) in (<span class="ptmb8t-">7.1.8</span>), which yields \[ f^{(k)}(x_0)=k(k-1)\cdots 1\cdot a_k=k!a_k\] This implies that \[ a_k={f^{(k)}(x_0)\over k!}\] Except for notation, this is the same as <a href="#x1-13r2">(7.1.9)</a>. 
+				This result can be obtained by setting \(x=x_0\) in (<span class="ptmb8t-">7.1.8</span>), which yields 
+				
+				\[ f^{(k)}(x_0)=k(k-1)\cdots 1\cdot a_k=k!a_k\] 
+				
+				This implies that 
+				
+				\[ a_k={f^{(k)}(x_0)\over k!}\] 
+				
+				Except for notation, this is the same as <a href="#x1-13r2">(7.1.9)</a>. 
 			</div>
 			<div class="indent" id="9cfefb4b-2ebf-4fff-85bd-aa1048ef8059">			
 				The next theorem lists two important properties of power series that follow from Theorem&nbsp;<a href="#x1-125">7.1.5</a>.
@@ -179,10 +302,18 @@
 
 				<ol>
 					<li>
-						If \[ \sum _{n=0}^\infty a_n(x-x_0)^n=\sum _{n=0}^\infty b_n(x-x_0)^n \] for all \(x\) in an open interval that contains \(x_0,\) then \(a_n=b_n\) for \(n=0\), \(1\), \(2\), …. 
+						If 
+						
+						\[ \sum _{n=0}^\infty a_n(x-x_0)^n=\sum _{n=0}^\infty b_n(x-x_0)^n \] 
+						
+						for all \(x\) in an open interval that contains \(x_0,\) then \(a_n=b_n\) for \(n=0\), \(1\), \(2\), …. 
 					</li>
 					<li>
-						If \[ \sum _{n=0}^\infty a_n(x-x_0)^n=0 \] for all \(x\) in an open interval that contains \(x_0,\) then \(a_n=0\) for \(n=0\), \(1\), \(2\), …. 
+						If 
+						
+						\[ \sum _{n=0}^\infty a_n(x-x_0)^n=0 \] 
+						
+						for all \(x\) in an open interval that contains \(x_0,\) then \(a_n=0\) for \(n=0\), \(1\), \(2\), …. 
 					</li>
 				</ol>
 			</div>
@@ -195,7 +326,11 @@
 			<summary>Taylor Polynomials</summary>
 		
 			<div id="2c3a3619-101f-47a2-a4cc-3f17f87f1b67">			
-				If \(f\) has \(N\) derivatives at a point \(x_0\), we say that \[ T_N(x)=\sum _{n=0}^N{f^{(n)}(x_0)\over n!}(x-x_0)^n \] is the \(N\)-th Taylor polynomial of \(f\) about \(x_0\). This definition and Theorem&nbsp;<a href="#x1-125">7.1.5</a> imply that if \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n\] where the power series has a positive radius of convergence\(,\) then the Taylor polynomials of \(f\) about \(x_0\) are given by \[ T_N(x)=\sum _{n=0}^N a_n(x-x_0)^n\] In numerical applications, we use the Taylor polynomials to approximate \(f\) on subintervals of the open interval of convergence of the power series. For example, (<span class="ptmb8t-">7.1.2</span>) implies that the Taylor polynomial \(T_N\) of \(f(x)=e^x\) is \[ T_N(x)=\sum _{n=0}^N{x^n\over n!}\] The solid curve in Figure&nbsp;<a href="#-approximation-of-yex-by-taylor-polynomials-about-x-">7.1.1</a> is the graph of \(y=e^x\) on the interval \([0,5]\). The dotted curves in Figure&nbsp;<a href="#-approximation-of-yex-by-taylor-polynomials-about-x-">7.1.1</a> are the graphs of the Taylor polynomials \(T_1\), …, \(T_6\) of \(y=e^x\) about \(x_0=0\). From this figure, we conclude that the accuracy of the approximation of \(y=e^x\) by its Taylor polynomial \(T_N\) improves as \(N\) increases.
+				If \(f\) has \(N\) derivatives at a point \(x_0\), we say that 
+				
+				\[ T_N(x)=\sum _{n=0}^N{f^{(n)}(x_0)\over n!}(x-x_0)^n \] 
+				
+				is the \(N\)-th Taylor polynomial of \(f\) about \(x_0\). This definition and Theorem&nbsp;<a href="#x1-125">7.1.5</a> imply that if \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n\] where the power series has a positive radius of convergence\(,\) then the Taylor polynomials of \(f\) about \(x_0\) are given by \[ T_N(x)=\sum _{n=0}^N a_n(x-x_0)^n\] In numerical applications, we use the Taylor polynomials to approximate \(f\) on subintervals of the open interval of convergence of the power series. For example, (<span class="ptmb8t-">7.1.2</span>) implies that the Taylor polynomial \(T_N\) of \(f(x)=e^x\) is \[ T_N(x)=\sum _{n=0}^N{x^n\over n!}\] The solid curve in Figure&nbsp;<a href="#-approximation-of-yex-by-taylor-polynomials-about-x-">7.1.1</a> is the graph of \(y=e^x\) on the interval \([0,5]\). The dotted curves in Figure&nbsp;<a href="#-approximation-of-yex-by-taylor-polynomials-about-x-">7.1.1</a> are the graphs of the Taylor polynomials \(T_1\), …, \(T_6\) of \(y=e^x\) about \(x_0=0\). From this figure, we conclude that the accuracy of the approximation of \(y=e^x\) by its Taylor polynomial \(T_N\) improves as \(N\) increases.
 			</div>
 			<figure id="4bcc49ad-8c85-4dcf-885b-771519f8bb52">
 				<div id="-approximation-of-yex-by-taylor-polynomials-about-x-">
@@ -209,12 +344,24 @@
 			<summary>Shifting the Summation Index</summary>
 		
 			<div id="d830b380-5b96-449e-950a-5bbe41ef7a1d">
-				In Definition&nbsp;<a href="#x1-2r1">7.1.1</a> of a power series in \(x-x_0\), the \(n\)-th term is a constant multiple of \((x-x_0)^n\). This isn’t true in (<span class="ptmb8t-">7.1.6</span>), (<span class="ptmb8t-">7.1.7</span>), and (<span class="ptmb8t-">7.1.8</span>), where the general terms are constant multiples of \((x-x_0)^{n-1}\), \((x-x_0)^{n-2}\), and \((x-x_0)^{n-k}\), respectively. However, these series can all be rewritten so that their \(n\)-th terms are constant multiples of \((x-x_0)^n\). For example, letting \(n=k+1\) in the series in (<span class="ptmb8t-">7.1.6</span>) yields \begin {equation} \label {eq:7.1.10} f'(x)=\sum _{k=0}^\infty (k+1)a_{k+1}(x-x_0)^k \end {equation} <a id="x1-18r3"></a> where we start the new summation index \(k\) from zero so that the first term in <a href="#x1-18r3">(7.1.10)</a> (obtained by setting \(k=0\)) is the same as the first term in (<span class="ptmb8t-">7.1.10</span>) (obtained by setting \(n=1\)). However, the sum of a series is independent of the symbol used to denote the summation index, just as the value of a definite integral is independent of the symbol used to denote the variable of integration. Therefore we can replace \(k\) by \(n\) in <a href="#x1-18r3">(7.1.10)</a> to obtain 
+				In Definition&nbsp;<a href="#x1-2r1">7.1.1</a> of a power series in \(x-x_0\), the \(n\)-th term is a constant multiple of \((x-x_0)^n\). This isn’t true in (<span class="ptmb8t-">7.1.6</span>), (<span class="ptmb8t-">7.1.7</span>), and (<span class="ptmb8t-">7.1.8</span>), where the general terms are constant multiples of \((x-x_0)^{n-1}\), \((x-x_0)^{n-2}\), and \((x-x_0)^{n-k}\), respectively. However, these series can all be rewritten so that their \(n\)-th terms are constant multiples of \((x-x_0)^n\). For example, letting \(n=k+1\) in the series in (<span class="ptmb8t-">7.1.6</span>) yields 
+				
+				<a id="x1-18r3"></a> 
+				\begin {align} \label {eq:7.1.10} 
+					f'(x) = & {\sum _{n=1}^\infty na_n(x-x_0)^{n-1}} \nonumber \\
+					= & {\sum _{k+1=1}^\infty \overbrace{(k+1)}a_{\underbrace{k+1}}(x-x_0)^{\overbrace{k+1}-1}} \nonumber \\
+					= & \sum _{k=0}^\infty (k+1)a_{k+1}(x-x_0)^k 
+				\end {align} 
+				
+				where we start the new summation index \(k\) from zero so that the first term in <a href="#x1-18r3">(7.1.10)</a> (obtained by setting \(k=0\)) is the same as the first term in (<span class="ptmb8t-">7.1.10</span>) (obtained by setting \(n=1\)). However, the sum of a series is independent of the symbol used to denote the summation index, just as the value of a definite integral is independent of the symbol used to denote the variable of integration. Therefore we can replace \(k\) by \(n\) in <a href="#x1-18r3">(7.1.10)</a> to obtain 
+
+
 				<a id="x1-19r4"></a>
-				\begin {equation}
-					\label {eq:7.1.11} 
-					f'(x)=\sum _{n=0}^\infty (n+1)a_{n+1}(x-x_0)^n 
-				\end {equation}
+				\begin{align} \label {eq:7.1.11} 
+					f'(x)= & \sum _{n=0}^\infty (n+1)a_{n+1}(x-x_0)^n
+				\end{align}
+
+
 				where the general term is a constant multiple of \((x-x_0)^n\).
 			</div>
 
@@ -226,7 +373,17 @@
 				<span class="head">Shifting the Summation Index in a Power Series</span>
 			
 				<div id="d662ce33-a28d-4ff1-adc0-97b9b0dcc8f8">
-					For any integer \(k\), the power series \[ \sum _{n=n_0}^\infty b_n(x-x_0)^{n-k} \] can be rewritten as \[ \sum _{n=n_0-k}^\infty b_{n+k}(x-x_0)^n\] that is, replacing \(n\) by \(n+k\) in the general term and subtracting \(k\) from the lower limit of summation leaves the series unchanged. <br class="newline" /> 
+					For any integer \(k\), the power series 
+					
+					\[ \sum _{n=n_0}^\infty b_n(x-x_0)^{n-k} \] can be rewritten as 
+					
+					\[ 
+					\sum _{n+k=n_0}^\infty b_{n+k}(x-x_0)^{(n+k)-k}
+					=
+					\sum _{n=n_0-k}^\infty b_{n+k}(x-x_0)^n
+					\] 
+					
+					that is, replacing \(n\) by \(n+k\) in the general term and subtracting \(k\) from the lower limit of summation leaves the series unchanged. <br class="newline" /> 
 				</div>
 			</div>
 
@@ -249,10 +406,24 @@
 
 					<ol>
 						<li>
-							Replacing \(n\) by \(n+2\) in the general term and subtracting \(2\) from the lower limit of summation yields \[ \sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}= \sum _{n=0}^\infty (n+2)(n+1)a_{n+2}(x-x_0)^n\]
+							Replacing \(n\) by \(n+2\) in the general term and subtracting \(2\) from the lower limit of summation yields 
+
+							\begin {align*} 
+								& \sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2} \\
+								= & \sum _{n+2=2}^\infty (n+2)(n+2-1)a_{n+2}(x-x_0)^{(n+2)-2} \\
+								= & \sum _{n=0}^\infty (n+2)(n+1)a_{n+2}(x-x_0)^{n} \\
+							\end {align*} 
+
 						</li>
 						<li>
-							Replacing \(n\) by \(n+k\) in the general term and subtracting \(k\) from the lower limit of summation yields \[ \sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k}= \sum _{n=0}^\infty (n+k)(n+k-1)\cdots (n+1)a_{n+k}(x-x_0)^n\]
+							Replacing \(n\) by \(n+k\) in the general term and subtracting \(k\) from the lower limit of summation yields 
+							
+							\begin {align*} 
+								& \sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k} \\
+								= & \sum _{n+k=k}^\infty (n+k)(n+k-1)\cdots (n+k-k+1)a_{n+k}(x-x_0)^{n+k-k} \\
+								= & \sum _{n=0}^\infty (n+k)(n+k-1)\cdots (n+1)a_{n+k}(x-x_0)^{n} \\
+							\end {align*} 
+
 						</li>
 					</ol>
 				</details>
@@ -266,7 +437,44 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					From Theorem&nbsp;<a href="#x1-104">7.1.4</a> with \(x_0=0\), \[ f''(x)=\sum _{n=2}^\infty n(n-1)a_nx^{n-2}\] Therefore \[ xf''(x)=\sum _{n=2}^\infty n(n-1)a_nx^{n-1}\] Replacing \(n\) by \(n+1\) in the general term and subtracting \(1\) from the lower limit of summation yields \[ xf''(x)=\sum _{n=1}^\infty (n+1)na_{n+1}x^n\] We can also write this as \[ xf''(x)=\sum _{n=0}^\infty (n+1)na_{n+1}x^n\] since the first term in this last series is zero. (We’ll see later that sometimes it’s useful to include zero terms at the beginning of a series.)
+					Differentiating \( \displaystyle f(x)=\sum _{n=0}^\infty a_nx^n\) twice:
+
+					\begin {align*} 
+						f(x) = & \sum _{n=0}^\infty a_nx^n \\
+						f'(x) = & \sum _{n=0}^\infty a_n \frac{d}{dx}\Big( x^n \Big)	
+						= \sum _{n=1}^\infty n a_nx^{n-1}   \\
+						f''(x) = & \sum _{n=1}^\infty n a_n \frac{d}{dx}\Big( x^{n-1} \Big)
+						= \sum _{n=2}^\infty n (n-1) a_nx^{n-2} \\
+					\end {align*} 
+
+					Now multiplying \(x \cdot f''(x)\)
+
+					\begin {align*} 
+						f''(x) = & \sum _{n=2}^\infty n (n-1) a_nx^{n-2} \\
+						x \cdot f''(x) = & x \cdot \sum _{n=2}^\infty n (n-1) a_nx^{n-2} \\
+						= & \sum _{n=2}^\infty n (n-1) a_n x^{n-2} \cdot x \\
+						= & \sum _{n=2}^\infty n (n-1) a_n x^{n-2} \cdot x^1 \\
+						= & \sum _{n=2}^\infty n (n-1) a_n x^{n-2 + 1} \\
+						= & \sum _{n=2}^\infty n (n-1) a_n x^{n-1} \\
+					\end {align*} 
+
+					Now notice that the power on \(x\) is \(n-1\) so we simply replace the index \(n\) with \(n+1\)
+
+					\begin {align*} 
+						x \cdot f''(x) = & \sum _{n=2}^\infty n (n-1) a_n x^{n-1} \\
+						= & \sum _{n+1=2}^\infty (n+1) (n+1-1) a_{n+1} x^{n+1-1} \\
+						= & \sum _{n=1}^\infty (n+1) (n) a_{n+1} x^{n} \\
+						= & \sum _{n=1}^\infty n (n+1) a_{n+1} x^{n} \\
+					\end {align*} 
+
+					Starting this sum at \(n=0\) would yield the same result since the \(n=0\) term is zero
+
+					\begin {align*} 
+						x \cdot f''(x) = & \sum _{n=1}^\infty n (n+1) a_{n+1} x^{n} \\ \\
+						x \cdot f''(x) = & \sum _{n=0}^\infty n (n+1) a_{n+1} x^{n} \\
+					\end {align*} 
+				
+					It is often useful to include zero terms at the beginning of a series so we can simplify and combine them with other series
 				</details>
 			</div>
 		</details>
@@ -298,21 +506,26 @@
 			</div>
 
 			<div class="example" id="x1-246" style="--ex-number: 6">
-				<div>
-					Suppose \[ y=\sum _{n=0}^\infty a_n x^n \] on an open interval \(I\) that contains the origin.
-				</div>
+				
 			
 				<ol>
 					<li>
-						Express \[ (2-x)\frac{d^2y}{dx^2}+2y \] as a power series in \(x\) on \(I\). 
+						Differentiate the power series twice 
+						\begin{align*}
+							y=\sum _{n=0}^\infty a_n x^n
+						\end{align*}
 					</li>
 					<li>
-						Use the result of <span class="ptmb8t-">(a)</span> to find necessary and sufficient conditions on the coefficients \(\{a_n\}\) for \(y\) to be a solution of the homogeneous equation 
+						Express as a single power series 
+						\[ (2-x)\frac{d^2y}{dx^2}+2y \] 
+					</li>
+					<li>
+						Find conditions on the coefficients \( \{a_n\} \) so that the power series \(y\) is a solution of the homogeneous equation 
+
 						<a id="x1-27r6"></a>
 						\begin {equation}
 							\label {eq:7.1.13} (2-x)\frac{d^2y}{dx^2}+2y=0 
 						\end {equation} 
-						on \(I\). 
 					</li>
 				</ol>
 
@@ -321,18 +534,131 @@
 
 					<ol>
 						<li>
-							From (<span class="ptmb8t-">7.1.4</span>) with \(x_0=0\), \[ \frac{d^2y}{dx^2}=\sum _{n=2}^\infty n(n-1)a_nx^{n-2}\] Therefore \begin {equation} \label {eq:7.1.14} \begin {array}{rcl} (2-x)\frac{d^2y}{dx^2}+2y&amp;=&amp;2\frac{d^2y}{dx^2}-x\frac{dy}{dx}+2y\\ &amp;=&amp;\displaystyle {\sum _{n=2}^\infty 2n(n-1)a_nx^{n-2} -\sum _{n=2}^\infty n(n-1)a_nx^{n-1} +\sum _{n=0}^\infty 2a_n x^n} \end {array} \end {equation} <a id="x1-28r7"></a> To combine the three series we shift indices in the first two to make their general terms constant multiples of \(x^n\); thus, \begin {equation} \label {eq:7.1.15} \sum _{n=2}^\infty 2n(n-1)a_nx^{n-2}=\sum _{n=0}^\infty 2(n+2)(n+1)a_{n+2}x^n \end {equation} <a id="x1-29r8"></a> and \begin {equation} \label {eq:7.1.16} \sum _{n=2}^\infty n(n-1)a_nx^{n-1}=\sum _{n=1}^\infty (n+1)na_{n+1}x^n =\sum _{n=0}^\infty (n+1)na_{n+1}x^n \end {equation} <a id="x1-30r9"></a> where we added a zero term in the last series so that when we substitute from <a href="#x1-29r8">(7.1.15)</a> and <a href="#x1-30r9">(7.1.16)</a> into <a href="#x1-28r7">(7.1.14)</a> all three series will start with \(n=0\); thus, 
-							<a id="x1-31r10"></a>
-							\begin {equation}
-								\label {eq:7.1.17} (2-x)\frac{d^2y}{dx^2}+2y=\sum _{n=0}^\infty [2(n+2)(n+1)a_{n+2}-(n+1)na_{n+1}+2a_n]x^n 
-							\end {equation}
-						</li>
+							<div>
+								Differentiating \( \displaystyle y=\sum _{n=0}^\infty a_nx^n\) twice:
+
+								\begin {align*} 
+									y 
+									= & \sum _{n=0}^\infty a_nx^n \\
+
+									\frac{dy}{dx} 
+									= & \sum _{n=0}^\infty a_n \frac{d}{dx}\Big( x^n \Big)	
+									= \sum _{n=0}^\infty n a_nx^{n-1} 
+									= \sum _{n=1}^\infty n a_nx^{n-1}   \\
+
+									\frac{d^2y}{dx^2} 
+									= & \sum _{n=1}^\infty n a_n \frac{d}{dx}\Big( x^{n-1} \Big)
+									= \sum _{n=1}^\infty n (n-1) a_nx^{n-2} 
+									= \sum _{n=2}^\infty n (n-1) a_nx^{n-2} \\
+								\end {align*} 
+							</div>	
+						</li>						
 						<li>
-							From <a href="#x1-31r10">(7.1.17)</a> we see that \(y\) satisfies <a href="#x1-27r6">(7.1.13)</a> on \(I\) if 
-							<a id="x1-32r11"></a>
-							\begin {equation} \label {eq:7.1.18} 2(n+2)(n+1)a_{n+2}-(n+1)na_{n+1}+2a_n=0,\quad n=0,1,2, \dots 
-							\end {equation}
-							Conversely, Theorem&nbsp;<a href="#x1-146">7.1.6</a>&nbsp;<span class="ptmb8t-">(b)</span> implies that if \(y=\sum _{n=0}^\infty a_nx^n\) satisfies <a href="#x1-27r6">(7.1.13)</a> on \(I\), then <a href="#x1-32r11">(7.1.18)</a> holds.
+							<div>
+								Substituting them in to \( \displaystyle (2-x)\frac{d^2y}{dx^2}+2y\) we obtain
+
+								\begin {align*} 
+									(2-x) \overset{\frac{d^2y}{dx^2}}{\overbrace{\sum _{n=2}^\infty n (n-1) a_nx^{n-2}}} + 2\overset{y}{\overbrace{\sum _{n=0}^\infty a_nx^n}} \\
+									2\sum _{n=2}^\infty n (n-1) a_nx^{n-2} - x\sum _{n=2}^\infty n (n-1) a_nx^{n-2} + 2\sum _{n=0}^\infty a_nx^n \\
+									\sum _{n=2}^\infty 2n (n-1) a_nx^{n-2} - \sum _{n=2}^\infty n (n-1) a_nx^{n-2}\cdot x^1 + \sum _{n=0}^\infty 2 a_nx^n \\
+									\sum _{n=2}^\infty 2n (n-1) a_n \underbrace{x^{n-2}} - \sum _{n=2}^\infty n (n-1) a_n\underbrace{x^{n-1}} + \sum _{n=0}^\infty 2 a_nx^n \\
+								\end {align*} 
+							</div>
+							<div>
+								Now we rewrite all the series to be multiples of \(x^n\) by shifting the indices by replacing the first one with \(n+2\) and the second one with \(n+1\)
+
+								<a id="x1-28r7"></a> 
+								\begin {align} 
+									\sum _{n=2}^\infty 2n (n-1) a_nx^{n-2} 
+									& - \sum _{n=2}^\infty n (n-1) a_nx^{n-1} 
+									+ \sum _{n=0}^\infty 2 a_nx^n \nonumber \\
+									\sum _{n+2=2}^\infty 2(n+2) (n+2-1) a_{n+2} x^{n+2-2} 
+									& - \sum _{n+1=2}^\infty (n+1) (n+1-1) a_{n+1}x^{n+1-1} 
+									+ \sum _{n=0}^\infty 2 a_nx^n \nonumber \\
+									\sum _{n=0}^\infty 2(n+2) (n+1) a_{n+2} x^{n} 
+									& - \sum _{n=1}^\infty (n+1) (n) a_{n+1}x^{n} 
+									+ \sum _{n=0}^\infty 2 a_nx^n \nonumber \\
+									\sum _{n=0}^\infty 2(n+1)(n+2) a_{n+2} x^{n} 
+									& - \sum _{n=1}^\infty n(n+1) a_{n+1}x^{n} 
+									+ \sum _{n=0}^\infty 2 a_nx^n 
+								\end {align} 
+							</div>
+							<div>
+								We would like to combine all three series but that requires that the indices match. The first and third ones match as they start at \(n=0\) and go to infinity, but the second one starts at \(n=1\) but conveniently if we start it at \(n=0\) instead that is equivalent since the \(n=0\) term is actually zero so then we can combine all of them into one series.
+
+								<a id="x1-29r8"></a>
+								
+								\begin {align} 
+									& \sum _{n=0}^\infty 2(n+1)(n+2) a_{n+2} x^{n} 
+									- \sum _{n=1}^\infty n(n+1) a_{n+1}x^{n} 
+									+ \sum _{n=0}^\infty 2 a_nx^n \nonumber \\
+									& \sum _{n=0}^\infty 2(n+1)(n+2) a_{n+2} x^{n} 
+									- \sum _{n=0}^\infty n(n+1) a_{n+1}x^{n} 
+									+ \sum _{n=0}^\infty 2 a_nx^n  \\
+									& \sum _{n=0}^\infty 
+										\Big[ 
+										2(n+1)(n+2) a_{n+2} x^{n} 
+										- n(n+1) a_{n+1}x^{n} 
+										+ 2 a_nx^n
+										\Big]  \nonumber \\
+									& \sum _{n=0}^\infty 
+										\Big[ 
+										2(n+1)(n+2) a_{n+2} 
+										- n(n+1) a_{n+1}
+										+ 2 a_n
+										\Big] x^{n} \\	
+								\end {align} 
+							</div>
+							<div>
+								We have expressed \( \displaystyle (2-x)\frac{d^2y}{dx^2}+2y \) as a single power series 
+
+								<a id="x1-30r9"></a>
+								\[ 
+									(2-x)\frac{d^2y}{dx^2}+2y 
+									=
+									\sum _{n=0}^\infty 
+											\Big[ 
+											2(n+1)(n+2) a_{n+2} 
+											- n(n+1) a_{n+1}
+											+ 2 a_n
+											\Big] x^{n}
+								\]
+
+							</div>
+	
+						</li>	
+						<li>
+							<div>
+								We would like to find conditions on the coefficients \( \{a_n\} \) so that the power series \( y=\sum _{n=0}^\infty a_n x^n\) is a solution to the homogeneous equation <a href="#x1-27r6">(7.1.3)</a>
+
+								\begin {equation*}
+									(2-x)\frac{d^2y}{dx^2}+2y=0 
+								\end {equation*}  
+							</div>
+							<div>
+								Since we already have a power series representation for \( \displaystyle (2-x)\frac{d^2y}{dx^2}+2y,\) then we just equate the coefficients to zero to obtain the equation
+
+								\begin {align} 
+									\underbrace{ (2-x)\frac{d^2y}{dx^2}+2y} \quad = & 0 \nonumber \\				 
+									\sum _{n=0}^\infty 
+										\Big[ 
+										\underbrace{
+										2(n+1)(n+2) a_{n+2} 
+										- n(n+1) a_{n+1}
+										+ 2 a_n}
+										\Big] x^{n} = & 0 \nonumber \\
+									2(n+1)(n+2) a_{n+2} 
+										- n(n+1) a_{n+1}
+										+ 2 a_n = & 0	
+								\end {align} 
+
+								Which is the conditions on the coefficients \( \{a_n\} \)
+								\[
+									2(n+1)(n+2) a_{n+2} 
+										- n(n+1) a_{n+1}
+										+ 2 a_n = 0
+								\]
+							</div>
 						</li>
 					</ol>
 				</details>
