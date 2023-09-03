@@ -29,7 +29,7 @@
 		</div>
 
 		<details id="284c971f-def2-41e2-a3e5-2130b1b57c9a">
-			<summary>Power Series</summary>
+			<summary>Interval of Convergence</summary>
 
 			<div id="ac1a40fb-0334-44b5-81ba-410bebc1ff68">
 				Many applications give rise to differential equations with solutions that can’t be expressed in terms of elementary functions such as polynomials, rational functions, exponential and logarithmic functions, and trigonometric functions. The solutions of some of the most important of these equations can be expressed in terms of power series. We’ll study such equations in this chapter. In this section we review relevant properties of power series. We’ll omit proofs, which can be found in any standard calculus text. 
@@ -37,12 +37,14 @@
 			<dl class="trivlist" id="x1-2r1">
 				<dt class="trivlist"></dt>
 				<dd class="trivlist">
-					<div class="indent"><span class="ptmb8t-">Definition</span> <span class="ptmb8t-">7.1.1</span>&nbsp; An infinite series of the form 
+					<div class="theorem"><span class="ptmb8t-">Definition</span> <span class="ptmb8t-">7.1.1</span>&nbsp; An infinite series of the form 
+
 						<a id="x1-3r1"></a>
-						\begin {equation}
-							\label {eq:7.1.1} \sum _{n=0}^\infty a_n(x-x_0)^n 
+						\begin {equation} \label {eq:7.1.1} 
+							\sum _{n=0}^\infty a_n(x-x_0)^n 
 						\end {equation} 
-						where \(x_0\) and \(a_0\), \(a_1,\) …, \(a_n,\) …are constants\(,\) is called a <span class="vocab">power series in</span> \(x-x_0.\) We say that the power series <a href="#x1-3r1">(7.1.1)</a> <span class="vocab">converges</span> for a given \(x\) if the limit \[ \lim _{N\to \infty } \sum _{n=0}^Na_n(x-x_0)^n \] exists\(; \) otherwise, we say that the power series <span class="vocab">diverges</span> for the given \(x.\) 
+
+						where \(x_0\) and \(a_0\), \(a_1,\) …, \(a_n,\) …are constants\(,\) is called a <span class="vocab">power series in</span> \(x-x_0.\) We say that the power series <a href="#x1-3r1">(7.1.1)</a> <span class="vocab"> converges</span> for a given \(x\) if the limit \[ \lim _{N\to \infty } \sum _{n=0}^Na_n(x-x_0)^n \] exists\(; \) otherwise, we say that the power series <span class="vocab">diverges</span> for the given \(x.\) 
 					</div>
 				</dd>
 			</dl>
@@ -51,23 +53,42 @@
 			</div>
 			<div class="theorem roman" id="x1-42">
 				<span class="head">Theorem&nbsp;7.1.2</span>
-				For any power series \[ \sum _{n=0}^\infty a_n(x-x_0)^n\] exactly one of the these statements is true:
+				\[ \sum _{n=0}^\infty a_n(x-x_0)^n\] 
+				For any power series exactly one of the these statements is true:
 
 				<ol>
 					<li>
-						The power series converges only for \(x=x_0.\) 
+						The power series converges only for \(x=x_0\) 
 					</li>
 					<li>
-						The power series converges for all values of \(x.\) 
+						The power series converges for all values of \(x\)
 					</li>
 					<li>
-						There’s a positive number \(R\) such that the power series converges if \(|x-x_0|&lt;R\) and diverges if \(|x-x_0|&gt;R.\) 
+						There’s a positive number \(R\) such that the power series converges if \(|x-x_0|&lt;R\) and diverges if \(|x-x_0|&gt;R\) 
 					</li>
 				</ol>
 			</div>
 
 			<div class="indent" id="d9dc5306-e6aa-45ba-a054-5289421b663a">
-				In case&nbsp;(iii) we say that \(R\) is the <span class="vocab">radius of convergence</span> of the power series. For convenience, we include the other two cases in this definition by defining \(R=0\) in case&nbsp;(i) and \(R=\infty \) in case&nbsp;(ii). We define the <span class="vocab">open interval of convergence</span> of \(\sum _{n=0}^\infty a_n(x-x_0)^n\) to be \[ (x_0-R,x_0+R)\quad \mbox { if }\quad 0&lt;R&lt;\infty ,\quad \mbox { or }\quad (-\infty ,\infty ) \quad \mbox { if }\quad R=\infty \] If \(R\) is finite, no general statement can be made concerning convergence at the endpoints \(x=x_0\pm R\) of the open interval of convergence; the series may converge at one or both points, or diverge at both. 
+				<div>
+					In case&nbsp;(i) we say that the readius is zero, \(R=0,\) and there is no <span class="vocab">interval of convergence</span> as the series converges only at the single point \(x=x_0\) 
+				</div>	
+
+				<div>
+					In case&nbsp;(ii) we say that the readius is infinity, \(R=\infty,\) and the open <span class="vocab">interval of convergence</span> is the entire real number line 
+					
+					\[(-\infty, \infty ) \] 
+				</div>	
+
+				<div>
+					In case&nbsp;(iii) we say that \(R\) is the <span class="vocab">radius of convergence</span> and the open <span class="vocab">interval of convergence</span> is 
+					
+					\[(x_0 - R, x_0 + R ) \]
+				
+					Note that no general statement can be made concerning convergence at the endpoints \(x=x_0\pm R\) of the open interval of convergence; the series may converge at one or both points, or diverge at both. 
+				</div>	
+
+				
 			</div>
 			<div class="indent" id="016bdab8-988d-4a69-aab0-a211baadab43">
 				Recall from calculus that a series of constants \(\sum _{n=0}^\infty \alpha _n\) is said to <span class="vocab">converge absolutely</span> if the series of absolute values \(\sum _{n=0}^\infty |\alpha _n|\) converges. It can be shown that a power series \(\sum _{n=0}^\infty a_n(x-x_0)^n\) with a positive radius of convergence \(R\) converges absolutely in its open interval of convergence; that is, the series \[ \sum _{n=0}^\infty |a_n||x-x_0|^n \] of absolute values converges if \(|x-x_0|&lt;R\). However, if \(R&lt;\infty \), the series may fail to converge absolutely at an endpoint \(x_0\pm R\), even if it converges there. 
@@ -77,12 +98,17 @@
 			</div>
 			<div class="theorem" id="x1-83">
 				<span class="head">Theorem&nbsp;7.1.3</span>
+				<strong>Ratio Test</strong>
 				Suppose there’s an integer \(N\) such that \(a_n\ne 0\) if \(n\ge N\) and \[ \lim _{n\to \infty }\left |a_{n+1}\over a_n\right |=L\] where \(0\le L\le \infty\). Then the radius of convergence of \(\sum _{n=0}^\infty a_n(x-x_0)^n\) is \(R=1/ L,\) which should be interpreted to mean that \(R=0\) if \(L=\infty\), or \(R=\infty \) if \(L=0\).
 			</div>
 
+			<br>
+			<br>
+			<br>
+
 			<div class="example" id="x1-91" style="--ex-number: 1">
 				<div>
-					Find the radius of convergence of the series:
+					Find the radius and interval of convergence of the series:
 				</div>
 				<ol>
 					<li>\[ \sum _{n=0}^\infty n!x^n \]</li>
@@ -94,52 +120,176 @@
 					<summary>Solution</summary>
 
 					<ol>
+						<!--Part 1-->
 						<li>
-							Here \(a_n=n!\), so \[ \lim _{n\to \infty }\left |a_{n+1}\over a_n\right |=\lim _{n\to \infty } {(n+1)!\over n!}=\lim _{n\to \infty }(n+1)=\infty \] Hence, \(R=0\).
+							<div>
+								Comparing our series with the definition <a href="#x1-3r1">(7.1.1)</a>
+								\begin{align*}
+									\sum _{n=0}^\infty a_n(x-x_0)^n 
+									= \sum _{n=0}^\infty\underset{a_n}{\underbrace{n!}} \underset{x-x_0}{\underbrace{(x-0)}}^n
+									= \sum _{n=0}^\infty {n!}x^n
+								\end{align*}
+								We can identify \(a_n=n!\) and \( x_0 = 0 \)
+
+								\begin{align*}
+									L
+									= & \lim _{n\to \infty }\left |a_{n+1}\over a_n\right | \\
+									= & \lim _{n\to \infty }\left |(n+1)!\over n!\right | \\
+									= & \lim _{n\to \infty }  { (n+1)!\over n! } \\
+									= & \lim _{n\to \infty } {(n+1) \cdot n!\over n!} \\
+									= & \lim _{n\to \infty } (n+1) \\
+									= & \infty
+								\end{align*}
+
+								\(L=\infty\) so \(R=\dfrac{1}{L}=\dfrac{1}{\infty}=0\) 
+							</div>	
+							<div>
+								Since the radius is \(0\) there is no interval of convergence, so this series \(\sum _{n=0}^\infty n!x^n\) converges only at the single point \(x=0\)
+							</div>	
 						</li>
+						<!--Part 2-->
 						<li>
-							Here \(a_n=(1)^n/n!\) for \(n\ge N=10\), so \[ \lim _{n\to \infty }\left |a_{n+1}\over a_n\right |=\lim _{n\to \infty } {n!\over (n+1)!}=\lim _{n\to \infty }{1\over n+1}=0\] Hence, \(R=\infty \).
+							<div>
+								Comparing our series with the definition <a href="#x1-3r1">(7.1.1)</a>
+								\begin{align*}
+									\sum _{n=0}^\infty a_n(x-x_0)^n 
+									= \sum _{n=0}^\infty\underset{a_n}{\underbrace{\frac{(-1)^n}{n!}}} \underset{x-x_0}{\underbrace{(x-0)}}^n
+									= \sum _{n=10}^\infty \frac{(-1)^n}{n!} {x^n}
+								\end{align*}
+								We can identify \(\displaystyle a_n=\frac{(-1)^n}{n!}\) and \( x_0 = 0 \)
+
+								\begin{align*}
+									L
+									= & \lim _{n\to \infty }\left |a_{n+1}\over a_n\right | \\
+									= & \lim _{n\to \infty }\left | \frac{(-1)^{n+1}}{(n+1)!} \div \frac{(-1)^n}{n!}  \right| \\
+									= & \lim _{n\to \infty }\left | \frac{(-1)^{n}(-1)^{1}}{(n+1)\cdot n!} \cdot \frac{n!}{(-1)^n} \right| \\
+									= & \lim _{n\to \infty }\left | \frac{-1}{(n+1)} \right| \\
+									= & \lim _{n\to \infty }  \frac{1}{(n+1)} \\
+									= & \lim _{n\to \infty }  \frac{1}{(n+1)} \cdot \frac{1/n}{1/n} \\
+									= & \lim _{n\to \infty }  \frac{1/n}{(1+1/n)} \\
+									= &  \frac{0}{(1+0)} = \frac{0}{(1)} = 0  \\
+								\end{align*}
+
+								\(L=0 \) so \(R=\dfrac{1}{L}=\dfrac{1}{0}=\infty\) 
+							</div>	
+							<div>
+								Since the radius is \(\infty\) then the interval of convergence is the entire number line \((-\infty,\infty)\)
+							</div>	
 						</li>
+						<!--Part 3-->
 						<li>
-							Here \(a_n=2^nn^2\), so \[ \lim _{n\to \infty }\left |a_{n+1}\over a_n\right |=\lim _{n\to \infty } {2^{n+1}(n+1)^2\over 2^nn^2}=2\lim _{n\to \infty }\left (1+{1\over n}\right )^2=2\] Hence, \(R=1/2\).
-						</li>
+							<div>
+								Comparing our series with the definition <a href="#x1-3r1">(7.1.1)</a>
+								\begin{align*}
+									\sum _{n=0}^\infty a_n(x-x_0)^n 
+									= \sum _{n=0}^\infty\underset{a_n}{\underbrace{2^n n^2}} \underset{x-x_0}{\underbrace{(x-1)}}^n
+									= \sum _{n=0}^\infty 2^n n^2 (x-1)^n
+								\end{align*}
+								We can identify \(a_n=2^n n^2\) and \( x_0 = 1 \)
+
+								\begin{align*}
+									L
+									= & \lim _{n\to \infty }\left |a_{n+1}\over a_n\right | \\
+									= & \lim _{n\to \infty }\left | 2^{n+1} (n+1)^2\over 2^n \, n^2 \right | \\
+									= & \lim _{n\to \infty }{ 2^{n+1} (n+1)^2\over 2^n \, n^2 } \\
+									= & \lim _{n\to \infty }{ 2^{n} \, 2^{1} (n+1)^2\over 2^n \, n^2 } \\
+									= & 2 \lim _{n\to \infty }{ \left( {n+1\over n} \right)^2 } \\
+									= & 2 \left( \lim _{n\to \infty} \Big( 1 + {1\over n} \Big)\right)^2 \\
+									= & 2  \big( 1 + 0 \big)^2 \\
+									= & 2  \big( 1 \big)^2  = 2\\
+								\end{align*}
+
+								\(L=2\) so \(R=\dfrac{1}{L}=\dfrac{1}{2}\) 
+							</div>	
+							<div>
+								Since the radius is \(1/2\) and \(x_0 = 1\) then the interval of convergence is \((x_0-R,x_0+R)\)
+
+								\begin{align*}
+									& \left(1-\dfrac{1}{2},1+\dfrac{1}{2}\right)
+									= \left(\dfrac{1}{2},\dfrac{3}{2}\right) \\
+								\end{align*}
+
+							</div>	
+						</li>												
 					</ol>
 				</details>
 			</div>
-		</details>
-
-		<details id="57c55678-c998-4ebc-a793-c916c8a94a71">
-			<summary>Taylor Series</summary>
+			<br>
+			<br>
+			<br>
+			<br>
 		
+			<!--Taylor series-->
 			<div id="dc810944-0719-427c-8938-a482a2f7c568">
 				<div>
 					If a function \(f\) has derivatives of all orders at a point \(x=x_0\), then the <span class="vocab">Taylor series</span> of \(f\) about \(x_0\) is defined by 
 					
 					\begin{align} 
 						\sum _{n=0}^\infty {f^{(n)}(x_0)\over n!}(x-x_0)^n
+						= {f(x_0)} 
+						+ {f'(x_0)}(x-x_0)
+						+ {f''(x_0)\over 2!}(x-x_0)^2
+						+ \cdots
 					\end{align}	
 				</div>
 				<div class="reading-exercise">
-					Expand the Taylor series formula to calculate the first 8 terms
+					Expand the Taylor series formula to calculate the first 5 terms
 				</div>
 
+				<br>
+				<br>
+
+				<!--Maclaurin series-->
 				<div>
 					In the special case where \(x_0=0\), this series is also called the <span class="vocab">Maclaurin series</span> of \(f\)
 
 					\begin{align} 
 						\sum _{n=0}^\infty {f^{(n)}(0)\over n!} x^n
+						= {f(0)} 
+						+ {f'(0)}x
+						+ {f''(0)\over 2!}x^2
+						+ \cdots
 					\end{align}	
 				</div>	
-				<div class="reading-exercise">
-					Expand the Maclaurin series formula to calculate the first 10 terms
-				</div>
+
 
 				<div class="reading-exercise">
-					Find the first 4 terms of the Maclaurin series expansion for \(e^x\)
+					Expand the Maclaurin series formula to calculate the first 7 terms
 				</div>
-				<div class="reading-exercise">
-					Write the Maclaurin series for \(e^x\) in sigma notation
-				</div>
+
+
+				<div>
+					For instance we can express \(f(x)=e^x\) as a Maclaurin series by finding the first several derivatives and evaluating them at \(x=0\)
+					\begin{align*} 
+						f(x) = & e^x \quad\quad\quad f(0) = e^0 = 1 \\
+						f'(x) = & e^x \quad\quad\quad f'(0) = e^0 = 1 \\
+						f''(x) = & e^x \quad\quad\quad f''(0) = e^0 = 1 \\
+						f'''(x) = & e^x \quad\quad\quad f'''(0) = e^0 = 1 \\
+					\end{align*}			
+
+					And substituting them into the formula (7.1.3)
+
+					\begin{align*} 
+						1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
+					\end{align*}	
+
+					Which we can write in sigma notation
+
+					\begin{align*} 
+						\sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
+					\end{align*}	
+
+					Thus we have the Maclaurin series form for  \(e^x\)
+
+					\begin{align*} 
+						e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} 
+					\end{align*}	
+
+				</div>	
+
+
+				
+			
 
 				<div class="reading-exercise">
 					Find the first 6 terms of the Maclaurin series expansion for \(\cos x\)
@@ -178,6 +328,7 @@
 
 			</div>
 		
+			<!--Taylor series for most of the common elementary functions-->
 			<div class="indent" id="034c0a8b-eba9-4f5c-963f-fa64a3ab481b">
 				Taylor series for most of the common elementary functions converge to the functions on their open intervals of convergence. From calclus, you probably worked with the following Maclaurin series: 
 				\begin{align}
@@ -189,7 +340,9 @@
 					\tan^{-1} x = & \sum_{n=0}^{\infty}{(-1)^n \frac{x^{2n+1}}{2n+1}}  \nonumber
 				\end{align}
 			</div>
-			<div >
+
+			<!--Reading Exercises-->
+			<div>
 				For the following Reading Exercises, calculate \(L\) using the ratio test, find the radius of convergence \(R\), and the open interval of convergence using Example <a href="#x1-91">7.1.1</a>
 			</div>
 			
@@ -222,6 +375,7 @@
 		</details>
 
 
+		<!--Differentiation of Power Series-->
 		<details id="f7ce5d52-3c90-4d7b-9740-9c94b8860c4f">
 			<summary>Differentiation of Power Series</summary>
 
@@ -235,16 +389,28 @@
 			<div class="indent" id="12afc254-51f2-4866-a9e4-837416eb41a4">
 				The next theorem shows that a function represented by a power series has derivatives of all orders on the open interval of convergence of the power series, and provides power series representations of the derivatives. 
 			</div>
+
+			<!--Theorem-->
 			<div class="theorem" id="x1-104">
 				<span class="head">Theorem&nbsp;7.1.4</span>
-				A power series \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \] with positive radius of convergence \(R\) has derivatives of all orders in its open interval of convergence\(,\) and successive derivatives can be obtained by repeatedly differentiating term by term:
+				A power series \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \] with positive radius of convergence \(R\) has derivatives of all orders in its open interval of convergence\(,\) and successive derivatives can be obtained by repeatedly differentiating term by term and simplifying out the zero terms by changing the starting index
 
 				\begin{align} \label {eq:7.1.6}
-					f'(x) = & {\sum _{n=1}^\infty na_n(x-x_0)^{n-1}} \\
-					f''(x) = & {\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}} \\
-					f'''(x) = & {\sum _{n=3}^\infty n(n-1)(n-2)a_n(x-x_0)^{n-3}} \nonumber \\
-					\vdots \, & \nonumber \\
-					f^{(k)}(x) = & \sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k}
+					f'(x) 
+					= & \sum _{n=0}^\infty a_n \frac{d}{dx} \Big( (x-x_0)^n \Big) \nonumber \\ 
+					= & \sum _{n=0}^\infty a_n \Big( n (x-x_0)^{n-1} \Big) \nonumber \\
+					= & {\sum _{n=0}^\infty n \, a_n(x-x_0)^{n-1}} \nonumber \\
+					= & {\sum _{n=1}^\infty n \, a_n(x-x_0)^{n-1}} \\ \nonumber \\
+					f''(x) = & {\sum _{n=1}^\infty n \, a_n \frac{d}{dx} \Big( (x-x_0)^{n-1} \Big) } \nonumber \\
+					= & {\sum _{n=1}^\infty n \, a_n \Big( (n-1) (x-x_0)^{n-2} \Big) } \nonumber \\
+					= & {\sum _{n=1}^\infty n (n-1) a_n (x-x_0)^{n-2} } \nonumber \\
+					= & {\sum _{n=2}^\infty n (n-1) a_n (x-x_0)^{n-2} } \\ \nonumber \\
+					f'''(x) = & {\sum _{n=2}^\infty n (n-1) a_n \frac{d}{dx} \Big( (x-x_0)^{n-2} \Big)}\nonumber \\
+					= & {\sum _{n=2}^\infty n (n-1) a_n \Big( (n-2)(x-x_0)^{n-3} \Big)} \nonumber \\
+					= & {\sum _{n=2}^\infty n (n-1) (n-2) a_n (x-x_0)^{n-3} } \nonumber \\
+					= & {\sum _{n=3}^\infty n (n-1) (n-2) a_n (x-x_0)^{n-3} } \nonumber \\ \nonumber \\
+					\vdots \, & \nonumber \nonumber \\ \nonumber \\
+					f^{(k)}(x) = & \sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k} \nonumber
 				\end{align}
 
 				<div class="indent">
@@ -252,17 +418,116 @@
 				</div>
 			</div>
 
+			<br>
+			<br>
+			<br>
+			<br>
 			<div class="example" id="x1-112" style="--ex-number: 2">
-				<div>
-					Let \(f(x)=\sin x\). From (<span class="ptmb8t-">7.1.5</span>), 
+				
+				<ol>
+					<li>
+						Find the Maclaurin series representation for \(\sin x\)
+					</li>
+					<li>
+						Differentiate the Maclaurin series for \(\sin x\) term-by-term 
+					</li>
+					<li>
+						Find the Maclaurin series representation for \(\cos x\) and verify it is the same result as the term-by-term differentiation  
+					</li>
+				
+				</ol>	
+				<details class=solution>
 					
-					\[ f(x)=\sum _{n=0}^\infty (-1)^n {x^{2n+1}\over (2n+1)!}\] 
-					
-					From (<span class="ptmb8t-">7.1.6</span>), \[ f'(x)=\sum _{n=0}^\infty (-1)^n{d\over dx}\left [x^{2n+1}\over (2n+1)!\right ]= \sum _{n=0}^\infty (-1)^n {x^{2n}\over (2n)!}\] which is the series (<span class="ptmb8t-">7.1.4</span>) for \(\cos x\).
-				</div>
+					<summary>Solution</summary>
+					<ol>	
+						<li>
+							<div>
+								We can express \(f(x)=\sin x\) as a Maclaurin series by finding the first several derivatives and evaluating them at \(x=0\)
+								\begin{array}{rrlrrrr} 
+									f(x) &=& \sin x  &\quad& f(0) &=& \sin 0 = 0 \\
+									f^{'}(x) &=& \cos x &\quad& f^{'}(0) &=& \cos 0 = 1 \\
+									f^{''}(x) &=& -\sin x &\quad& f^{''}(0) &=& -\sin 0 = 0 \\
+									f^{'''}(x) &=& -\cos x &\quad& f^{'''}(0) &=& -\cos 0 = -1 \\
+									f^{^{IV}}(x) &=& \sin x &\quad& f^{^{IV}}(0) &=& \sin 0 = 0 \\
+									f^{^{V}}(x) &=& \cos x &\quad& f^{^{V}}(0) &=& \cos 0 = 1 \\
+									f^{^{VI}}(x) &=& -\sin x &\quad& f^{^{VI}}(0) &=& -\sin 0 = 0 \\
+									f^{^{VII}}(x) &=& -\cos x &\quad& f^{^{VII}}(0) &=& -\cos 0 = -1 \\
+								\end{array}			
+			
+								And substituting them into the formula (7.1.3) 
+
+								\begin{align*} 
+									 & \sum _{n=0}^\infty {f^{(n)}(0)\over n!} x^n \\
+									= & \underset{0}{\underbrace{{f(0)}}} 
+									+ {f^{'}(0)}x
+									+ \underset{0}{\underbrace{ {f^{''}(0)\over 2!}}} x^2
+									+ {f^{'''}(0)\over 3!}x^3
+									+ \underset{0}{\underbrace{{f^{^{IV}}(0)\over 4!}}}x^4
+									+ \cdots \\
+									= & 
+									{f^{'}(0)}x
+									+ {f^{'''}(0)\over 3!}x^3
+									+ {f^{^{V}}(0)\over 5!}x^5
+									+ {f^{^{VII}}(0)\over 7!}x^7
+									+ \cdots \\
+									= & 
+									x
+									- {1\over 3!}x^3
+									+ {1\over 5!}x^5
+									- {1\over 7!}x^7
+									+ \cdots \\
+								\end{align*}	
+
+								Notice that terms of the Maclaurin series expansion of sine are alternating so they 
+
+								Since all the even derivatives of sine evaluated to zero, the Maclaurin series expansion contains only the odd terms, and we can write it in sigma notation iterating through the odd values as
+
+								\begin{align*} 
+									\sum_{n=0}^{\infty} \frac{x^{2n+1}}{(2n+1)!} 
+									= & 
+									x
+									- {1\over 3!}x^3
+									+ {1\over 5!}x^5
+									- {1\over 7!}x^7
+									+ \cdots \\
+								\end{align*}	
+			
+								Which we can write in sigma notation
+			
+								\begin{align*} 
+									\sum_{n=0}^{\infty} \frac{x^n}{n!} 
+									= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
+								\end{align*}	
+			
+								Thus we have the Maclaurin series form for  \(e^x\)
+			
+								\begin{align*} 
+									e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} 
+								\end{align*}	
+			
+							</div>	
+						</li>
+						<li>
+							Differentiate the Maclaurin series for \(\sin x\) term-by-term 
+						</li>
+						<li>
+							Find the Maclaurin series representation for \(\cos x\) and verify it is the same result as the term-by-term differentiation  
+						</li>
+						<li>
+							<div>
+								Let \(f(x)=\sin x\). From (<span class="ptmb8t-">7.1.5</span>), 
+								
+								\[ f(x)=\sum _{n=0}^\infty (-1)^n {x^{2n+1}\over (2n+1)!}\] 
+								
+								From (<span class="ptmb8t-">7.1.6</span>), \[ f'(x)=\sum _{n=0}^\infty (-1)^n{d\over dx}\left [x^{2n+1}\over (2n+1)!\right ]= \sum _{n=0}^\infty (-1)^n {x^{2n}\over (2n)!}\] which is the series (<span class="ptmb8t-">7.1.4</span>) for \(\cos x\).
+							</div>
+						</li>
+					</ol>
+				</details>	
 			</div>
 		</details>
 
+		<!--Uniqueness of Power Series-->
 		<details id="e5bc08b2-0620-4420-a16d-74472fcbfc36">
 			<summary>Uniqueness of Power Series</summary>
 		
@@ -322,6 +587,7 @@
 			</div>
 		</details>
 
+		<!--Taylor Polynomials-->
 		<details id="a1851a0c-d19d-42cc-ae7b-72269ca07013">
 			<summary>Taylor Polynomials</summary>
 		
@@ -340,6 +606,7 @@
 			</figure>
 		</details>
 
+		<!--Shifting the Summation Index-->
 		<details id="4d06a841-f7f9-423a-a8b7-c57f6dfe2539">
 			<summary>Shifting the Summation Index</summary>
 		
@@ -479,6 +746,7 @@
 			</div>
 		</details>
 
+		<!--Linear Combinations of Power Series-->
 		<details id="4f688639-7283-4d06-b8b1-59288c16e10b">
 			<summary>Linear Combinations of Power Series</summary>
 			
