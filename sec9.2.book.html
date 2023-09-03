@@ -101,6 +101,7 @@
 				<figcaption><span class="id">Figure&nbsp;9.2.1</span><span class="content">\(y=4e^x-e^{2x}+e^{3x}\)</span></figcaption>
 				<!-- tex4ht:label?: x1-11r1  -->
 			</figure>
+		</details>
 			<div class="indent" id="9c2678b1-fe43-4292-8b6f-0db0cb36f490">
 				Now we consider the case where the characteristic polynomial <a href="#x1-3r2">(9.2.2)</a> does not have \(n\) distinct real zeros. For this purpose it is useful to define what we mean by a factorization of a polynomial operator. We begin with an example. 
 			</div>
@@ -153,6 +154,7 @@
 					\begin {array}{rrr}1&amp;0&amp;1\\0&amp;1&amp;1\\ -1&amp;0&amp;1 
 					\end {array}\right |=2\] \(\{\cos x,\sin x,e^x\}\) is linearly independent and \[ y=c_1\cos x+c_2\sin x+c_3e^x \] is the general solution of <a href="#x1-19r10">(9.2.10)</a>. 
 				</div>
+			</details>
 				<div class="newtheorem" id="9e70933f-a319-4e54-8b10-5d0bea29e1c1">
 					
 					<div><span class="head"> <span class="ex-number">Example&nbsp;9.2.4</span></span> <a id="x1-204"></a> Find the general solution of 
@@ -174,7 +176,7 @@
 					, it can be shown that <a href="#x1-21r11">(9.2.11)</a> can be written as \[ (D^2+4)(D+2)(D-2)y=0 \] or \[ (D^2+4)(D-2)(D+2)y=0 \] or \[ (D-2)(D+2)(D^2+4)y=0\] Therefore \(y\) is a solution of <a href="#x1-21r11">(9.2.11)</a> if it’s a solution of any of the three equations \[ (D-2)y=0,\quad (D+2)y=0, \quad (D^2+4)y=0\] Hence, \(\{e^{2x},e^{-2x},\cos 2x,\sin 2x\}\) is a set of solutions of <a href="#x1-21r11">(9.2.11)</a>. The Wronskian of this set is \[ W(x)=\left | \begin {array}{rrrr} e^{2x}&amp;e^{-2x}&amp;\cos 2x&amp;\sin 2x\\ 2e^{2x}&amp;-2e^{-2x}&amp;-2\sin 2x&amp;2\cos 2x\\ 4e^{2x}&amp;4e^{-2x}&amp;-4\cos 2x&amp;-4\sin 2x\\ 8e^{2x}&amp;-8e^{-2x}&amp;8\sin 2x&amp;-8\cos 2x\\ \end {array}\right |\] Since \[ W(0)=\left | 
 					\begin {array}{rrrr} 1&amp;1&amp;1&amp;0\\ 2&amp;-2&amp;0&amp;2\\ 4&amp;4&amp;-4&amp;0\\ 8&amp;-8&amp;0&amp;-8\\ 
 					\end {array}\right |=-512\] \(\{e^{2x},e^{-2x},\cos 2x,\sin 2x\}\) is linearly independent, and \[ y_1=c_1e^{2x}+c_2e^{-2x}+c_3\cos 2x+c_4\sin 2x \] is the general solution of <a href="#x1-21r11">(9.2.11)</a>.
-
+				</details>
 					<div class="indent" id="04dec64d-0595-4849-8bca-5a00f0b52214">
 						It is known from algebra that every polynomial \[ p(r)=a_0r^n+a_1r^{n-1}+\cdots +a_n \] with real coefficients can be factored as \[ p(r)=a_0p_1(r)p_2(r)\cdots p_k(r)\] where no pair of the polynomials \(p_1\), \(p_2\), …, \(p_k\) has a commom factor and each is either of the form \begin {equation} \label {eq:9.2.12} p_j(r)=(r-r_j)^{m_j} \end {equation} <a id="x1-22r12"></a> where \(r_j\) is real and \(m_j\) is a positive integer, or 
 						\begin {equation} \label {eq:9.2.13} p_j(r)=\left [(r-\lambda _j)^2+\omega _j^2\right ]^{m_j} 
@@ -217,7 +219,7 @@
 					<details class="solution">
 						<summary>Solution</summary>
 						&nbsp;The characteristic polynomial of <a href="#x1-30r18">(9.2.18)</a> is \[ p(r)=r^3+3r^2+3r+1=(r+1)^3\] Therefore <a href="#x1-30r18">(9.2.18)</a> can be written as \[ (D+1)^3y=0\] so Theorem&nbsp;<a href="#x1-251">9.2.1</a> implies that the general solution of <a href="#x1-30r18">(9.2.18)</a> is \[ y=e^{-x}(c_1+c_2x+c_3x^2). \]
-
+					</details>
 						<div class="indent" id="cf1926e6-bea3-4760-a9b2-1f4bbf5f0b82">
 							The proof of the next theorem is sketched in Exercise&nbsp;<span class="ptmb8t-">41</span>. 
 						</div>
@@ -246,7 +248,7 @@
 						<details class="solution">
 							<summary>Solution</summary>
 							&nbsp;The characteristic polynomial of <a href="#x1-33r19">(9.2.19)</a> is \[ p(r)=(r^2+4r+13)^3=\left ((r+2)^2+9\right )^3\] Therefore <a href="#x1-33r19">(9.2.19)</a> can be be written as \[ [(D+2)^2+9]^3y=0\] so Theorem&nbsp;<a href="#x1-312">9.2.2</a> implies that the general solution of <a href="#x1-33r19">(9.2.19)</a> is \[ y=(a_1+a_2x+a_3x^2)e^{-2x}\cos 3x +(b_1+b_2x+b_3x^2)e^{-2x}\sin 3x\]
-
+						</details>
 							<div class="newtheorem" id="1d625431-b047-45cd-8725-97db8c9efbb5">
 								
 								<div><span class="head"> <span class="ex-number">Example&nbsp;9.2.7</span></span> <a id="x1-347"></a> Find the general solution of 
@@ -270,6 +272,7 @@
 								<div class="indent" id="2659662a-1e2c-4ddf-a393-8b4083615e7e">
 									Therefore <a href="#x1-35r20">(9.2.20)</a> can be written as \[ [(D+1)^2+1](D+2)Dy=0\] Fundamental sets of solutions of \[ \left [(D+1)^2+1\right ] y=0,\quad (D+2) y=0,\mbox {\quad and \quad } Dy=0\] are given by \[ \{e^{-x}\cos x,e^{-x}\sin x\},\quad \{e^{-2x}\},\quad \mbox{ and } \quad \{1\}\] respectively. Therefore the general solution of <a href="#x1-35r20">(9.2.20)</a> is \[ y=e^{-x}(c_1\cos x+c_2\sin x)+c_3e^{-2x}+c_4\] 
 								</div>
+							</details>
 								<div class="newtheorem" id="638c709d-e0cc-448b-9d70-43887546982a">
 									
 									<div><span class="head"> <span class="ex-number">Example&nbsp;9.2.8</span></span> <a id="x1-368"></a> Find a fundamental set of solutions of 
@@ -286,7 +289,7 @@
 									&nbsp;A fundamental set of solutions of <a href="#x1-37r21">(9.2.21)</a> can be obtained by combining fundamental sets of solutions of \[ \begin {array}{c} \displaystyle \left [(D+1)^2+1\right ]^2 y=0,\quad (D-1)^3 y=0,\\ \displaystyle (D+1)y=0,\quad \mbox { and } \quad D^2y=0 \end {array} \] Fundamental sets of solutions of these equations are given by \[ 
 									\begin {array}{c} \displaystyle \{e^{-x}\cos x, xe^{-x}\cos x, e^{-x}\sin x, xe^{-x}\sin x\},\quad \{e^x, xe^x, x^2e^x\},\\ \displaystyle \{e^{-x}\},\mbox { and } \{1,x\} 
 									\end {array} \] respectively. These ten functions form a fundamental set of solutions of <a href="#x1-37r21">(9.2.21)</a>.
-
+								</details>
 									<nav class="ex">
 										<a href="sec9.2.ex.html">9.2 Exercises</a>
 									</nav>
@@ -296,13 +299,7 @@
 
 										<a href="sec9.0.html">Chapter 9</a>
 
-										<a href="sec10.0.html">Next (Chapter 10)</a>
-									</nav></details
-								></details
-							></details
-						></details
-					></details
-				></details
-			></details
-		>	</body>
+										<a href="sec9.3.book.html">Next (9.3)</a>
+									</nav>
+								</body>
 </html>
