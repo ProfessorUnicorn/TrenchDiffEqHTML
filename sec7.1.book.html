@@ -553,7 +553,7 @@
 									+ \cdots \\
 								\end{align*}	
 
-								Notice again that terms of the Maclaurin series expansion of sine are alternating so we will include a \((-1)^n\) factor and since all the odd derivatives of cosine evaluated to zero, the Maclaurin series expansion contains only the even terms, and we can write it in sigma notation iterating through the odd values using \(2n\)
+								Notice again that terms of the Maclaurin series expansion of sine are alternating so we will include a \((-1)^n\) factor and since all the odd derivatives of cosine evaluated to zero, the Maclaurin series expansion contains only the even terms, and we can write it in sigma notation iterating through the even values using \(2n\)
 
 								
 
@@ -928,7 +928,7 @@
 						Calculate the Maclaurin series for \(e^{-x}\)
 					</li>
 					<li>
-						Find the Maclaurin series for \(\cosh x\) as a linear combination
+						Find the Maclaurin series for hyberbolic cosine \(\cosh x\)
 					</li>
 				</ol>	
 			
@@ -946,18 +946,6 @@
 								\end{align*}	
 			
 							</div>	
-							<div>
-
-							</div>
-							<div>
-								
-							</div>
-							<div>
-								
-							</div>
-							<div>
-								
-							</div>
 						</li>
 						<li>
 							<div class="reading-exercise">
@@ -994,27 +982,110 @@
 
 								Sbstituting in the Maclaurin series form for \(e^{x}\) and \(e^{-x}\): 
 
+								<a id="x1-23r5"></a>
+								\begin{align} \label {eq:7.1.12}
+									\cosh x 
+									= & \frac{1}{2} \overset{e^x}{\overbrace{\sum_{n=0}^{\infty} \frac{x^n}{n!}}} + \frac{1}{2} \overset{e^{-x}}{\overbrace{\sum_{n=0}^{\infty} (-1)^n \frac{x^n}{n!}}} \nonumber \\
+									= & \sum_{n=0}^{\infty} \frac{1}{2} \cdot \frac{x^n}{n!} + \sum_{n=0}^{\infty} \frac{1}{2} \cdot (-1)^n \frac{x^n}{n!} \nonumber \\
+									= & \sum_{n=0}^{\infty} \Bigg[ \frac{1}{2} \cdot \frac{x^n}{n!} +  \frac{1}{2} \cdot (-1)^n \frac{x^n}{n!} \Bigg] \nonumber \\
+									= & \sum_{n=0}^{\infty} \frac{1}{2} \Big[  1 +  (-1)^n \Big]\frac{x^n}{n!} 
+								\end{align}
+
+								Now writing out the first few terms, we look for a pattern
+
 								\begin{align*} 
 									\cosh x 
-									= & \frac{1}{2} \overset{e^x}{\overbrace{\sum_{n=0}^{\infty} \frac{x^n}{n!}}} + \frac{1}{2} \overset{e^{-x}}{\overbrace{\sum_{n=0}^{\infty} (-1)^n \frac{x^n}{n!}}}\\
-									= & \sum_{n=0}^{\infty} \frac{1}{2} \cdot \frac{x^n}{n!} + \sum_{n=0}^{\infty} \frac{1}{2} \cdot (-1)^n \frac{x^n}{n!}\\
-									= & \sum_{n=0}^{\infty} \Bigg[ \frac{1}{2} \cdot \frac{x^n}{n!} +  \frac{1}{2} \cdot (-1)^n \frac{x^n}{n!} \Bigg] \\
 									= & \sum_{n=0}^{\infty} \frac{1}{2} \Big[  1 +  (-1)^n \Big]\frac{x^n}{n!}  \\
-
+									= & 
+									\frac{1}{2} 
+									\left\{ 
+									\Big[  1 +  (-1)^0 \Big]\frac{x^0}{0!}
+									+
+									\Big[  1 +  (-1)^1 \Big]\frac{x^1}{1!}
+									+
+									\Big[  1 +  (-1)^2 \Big]\frac{x^2}{2!}
+									+ \cdots \right\} \\
+									= & 
+									\frac{1}{2} 
+									\left\{
+									\big(  1 + 1 \big) \frac{x^0}{0!}
+									+
+									\big(  1 - 1 \big) \frac{x^1}{1!}
+									+
+									\big(  1 + 1 \big) \frac{x^2}{2!}
+									+
+									\big(  1 - 1 \big) \frac{x^3}{3!}
+									+ \cdots \right\}  \\
+									= & 
+									\frac{1}{2} 
+									\left\{
+									\big(  2 \big) \frac{x^0}{0!}
+									+
+									\big(  0 \big) \frac{x^1}{1!}
+									+
+									\big(  2 \big) \frac{x^2}{2!}
+									+
+									\big(  0 \big) \frac{x^3}{3!}
+									+
+									\big(  2 \big) \frac{x^4}{4!}
+									+ \cdots \right\}  \\
+									= & 
+									\big(  1 \big) \frac{x^0}{0!}
+									+
+									\big(  0 \big) \frac{x^1}{1!}
+									+
+									\big(  1 \big) \frac{x^2}{2!}
+									+
+									\big(  0 \big) \frac{x^3}{3!}
+									+
+									\big(  1 \big) \frac{x^4}{4!}
+									+ \cdots  \\
+									= & 
+									\frac{x^0}{0!}
+									+
+									\frac{x^2}{2!}
+									+
+									\frac{x^4}{4!}
+									+
+									\frac{x^6}{6!}
+									+ \cdots  \\
 								\end{align*}
+
+								Notice again that terms of the Maclaurin series expansion of hyperbolic cosine contain only the even terms since the odd terms all became zero, so we write it in sigma notation iterating through the even values using \(2n\)
+								
+								\[ \frac{x^0}{0!}
+								+
+								\frac{x^2}{2!}
+								+
+								\frac{x^4}{4!}
+								+
+								\frac{x^6}{6!}
+								+ \cdots=\sum _{n=0}^\infty {x^{2n}\over (2n)!}\] 
+
+								Thus we have the Maclaurin series form for \(\cosh x\)
+
+								\[ \cosh x=\sum _{n=0}^\infty {x^{2n}\over (2n)!}\] 
+
+								which is valid on \((-\infty ,\infty )\), since this is the open interval of convergence of the Maclaurin series for \(e^x\) and \(e^{-x}\)
 			
 							</div>	
-						</li>
-						<li>
-							By definition, \[ \cosh x={1\over 2}e^x+{1\over 2}e^{-x}\] Since \[ e^x=\sum _{n=0}^\infty {x^n\over n!}\quad \mbox { and }\quad e^{-x}=\sum _{n=0}^\infty (-1)^n {x^n\over n!}\] it follows that 
-							<a id="x1-23r5"></a>
-							\begin {equation}
-								\label {eq:7.1.12} \cosh x=\sum _{n=0}^\infty {1\over 2}[1+(-1)^n]{x^n\over n!} 
-							\end {equation}
-							Since \[ {1\over 2}[1+(-1)^n]=\left \{ 
-							\begin {array}{cl}1&amp;\mbox { if } n=2m,\mbox { an even integer},\\ 0&amp;\mbox { if }n=2m+1,\mbox { an odd integer} 
-							\end {array}\right. \]
-							we can rewrite <a href="#x1-23r5">(7.1.12)</a> more simply as \[ \cosh x=\sum _{m=0}^\infty {x^{2m}\over (2m)!}\] This result is valid on \((-\infty ,\infty )\), since this is the open interval of convergence of the Maclaurin series for \(e^x\) and \(e^{-x}\).
+							<div>
+								For the following Reading Exercises, calculate \(L\) using the ratio test, find the radius of convergence \(R\), and the open interval of convergence using Example <a href="#x1-91">7.1.1</a>
+							</div>
+							
+						
+							<div class="reading-exercise">
+								Calculate \(L\) and \(R\) for the series \( e^x = \displaystyle \sum _{n=0}^\infty {x^{n}\over n!}\) 
+								<!--L=0 R=infinity Interval (-infinity,infinity)-->
+							</div>
+							<div class="reading-exercise">
+								Calculate \(L\) and \(R\) for the series \( e^{-1} = \displaystyle \sum _{n=0}^\infty (-1)^n {x^{n}\over n!}\) 
+								<!--L=0 R=infinity Interval (-infinity,infinity)-->
+							</div>
+							<div class="reading-exercise">
+								Calculate \(L\) and \(R\) for the series \( \cosh x = \displaystyle \sum _{n=0}^\infty {x^{2n}\over (2n)!} \) 
+								<!--L=0 R=infinity Interval (-infinity,infinity)-->
+							</div>
 						</li>
 					</ol>	
 
@@ -1022,6 +1093,7 @@
 				</details>
 			</div>
 
+			<!--Example 6-->
 			<div class="example" id="x1-246" style="--ex-number: 6">
 				
 			
@@ -1051,22 +1123,18 @@
 
 					<ol>
 						<li>
+							<div class="reading-exercise">
+								Differentiate \( \displaystyle f(x)=\sum _{n=0}^\infty a_nx^n\) twice and show all the steps as in the examples above
+							</div>
 							<div>
 								Differentiating \( \displaystyle y=\sum _{n=0}^\infty a_nx^n\) twice:
-
+			
 								\begin {align*} 
-									y 
-									= & \sum _{n=0}^\infty a_nx^n \\
-
-									\frac{dy}{dx} 
-									= & \sum _{n=0}^\infty a_n \frac{d}{dx}\Big( x^n \Big)	
-									= \sum _{n=0}^\infty n a_nx^{n-1} 
-									= \sum _{n=1}^\infty n a_nx^{n-1}   \\
-
-									\frac{d^2y}{dx^2} 
-									= & \sum _{n=1}^\infty n a_n \frac{d}{dx}\Big( x^{n-1} \Big)
-									= \sum _{n=1}^\infty n (n-1) a_nx^{n-2} 
-									= \sum _{n=2}^\infty n (n-1) a_nx^{n-2} \\
+									y = & \sum _{n=0}^\infty a_n \, x^n \\
+									\frac{dy}{dx} = & \sum _{n=0}^\infty a_n \frac{d}{dx}\Big( x^n \Big)	
+									= \sum _{n=1}^\infty n \, a_n \, x^{n-1}   \\
+									\frac{d^2y}{dx^2} = & \sum _{n=1}^\infty n \, a_n \frac{d}{dx}\Big( x^{n-1} \Big)
+									= \sum _{n=2}^\infty n \, (n-1) \, a_n \, x^{n-2} \\
 								\end {align*} 
 							</div>	
 						</li>						
@@ -1163,7 +1231,7 @@
 										2(n+1)(n+2) a_{n+2} 
 										- n(n+1) a_{n+1}
 										+ 2 a_n}
-										\Big] x^{n} = & 0 \nonumber \\
+										\Big] x^{n} = & 0 \\
 									2(n+1)(n+2) a_{n+2} 
 										- n(n+1) a_{n+1}
 										+ 2 a_n = & 0	
@@ -1181,52 +1249,136 @@
 				</details>
 			</div>
 
+
+			<!--Example 7-->
 			<div class="example" id="x1-337" style="--ex-number: 7">
 				<div>
-					Suppose \[ y=\sum _{n=0}^\infty a_n (x-1)^n \] on an open interval \(I\) that contains \(x_0=1\). Express the function 
+					Represent 
 					<a id="x1-34r12"></a>
 					\begin {equation}
 						\label {eq:7.1.19} (1+x)\frac{d^2y}{dx^2}+2(x-1)^2\frac{dy}{dx}+3y 
 					\end {equation}
-					as a power series in \(x-1\) on \(I\).
+
+					as a power series in \(x-1\) where 
+
+					\[ y=\sum _{n=0}^\infty a_n (x-1)^n \] 
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-					Since we want a power series in \(x-1\), we rewrite the coefficient of \(\frac{d^2y}{dx^2}\) in <a href="#x1-34r12">(7.1.19)</a> as \(1+x=2+(x-1)\), so <a href="#x1-34r12">(7.1.19)</a> becomes \[ 2\frac{d^2y}{dx^2}+(x-1)\frac{d^2y}{dx^2}+2(x-1)^2\frac{dy}{dx}+3y\] From (<span class="ptmb8t-">7.1.6</span>) and (<span class="ptmb8t-">7.1.7</span>) with \(x_0=1\), \[ \frac{dy}{dx}=\sum _{n=1}^\infty na_n(x-1)^{n-1}\quad \mbox { and }\quad \frac{d^2y}{dx^2}=\sum _{n=2}^\infty n(n-1)a_n(x-1)^{n-2}\] Therefore
+					<div>
+						<div>
+							Since we want a power series in \(x-1\), we rewrite the coefficient of \(\displaystyle \frac{d^2y}{dx^2}\) in <a href="#x1-34r12">(7.1.19)</a> as 
 
-					<div class="eqnarray" id="c099750b-308e-470b-93b1-30db2fe3a124">
-						\begin {eqnarray*}
-							2\frac{d^2y}{dx^2}&amp;=&amp;\sum _{n=2}^\infty 2n(n-1)a_n(x-1)^{n-2},\\ (x-1)\frac{d^2y}{dx^2}&amp;=&amp;\sum _{n=2}^\infty n(n-1)a_n(x-1)^{n-1},\\ 2(x-1)^2\frac{dy}{dx}&amp;=&amp;\sum _{n=1}^\infty 2na_n(x-1)^{n+1},\\ 3y&amp;=&amp;\sum _{n=0}^\infty 3a_n (x-1)^n 
-						\end {eqnarray*} 
-					</div>
-					<div class="indent" id="35ab982f-b397-4428-9040-3d76735127db">
-						Before adding these four series we shift indices in the first three so that their general terms become constant multiples of \((x-1)^n\). This yields 
-					</div>
-					<div class="eqnarray" id="e4855057-6c72-46a9-8ef9-75da93fb2d65">
-						\begin {eqnarray}
-							2\frac{d^2y}{dx^2}&amp;=&amp;\sum _{n=0}^\infty 2(n+2)(n+1)a_{n+2}(x-1)^n,\label {eq:7.1.20}\\ (x-1)\frac{d^2y}{dx^2}&amp;=&amp;\sum _{n=0}^\infty (n+1)na_{n+1}(x-1)^n, \label {eq:7.1.21}\\ 2(x-1)^2\frac{dy}{dx}&amp;=&amp;\sum _{n=1}^\infty 2(n-1)a_{n-1}(x-1)^n,\label {eq:7.1.22}\\ 3y&amp;=&amp;\sum _{n=0}^\infty 3a_n (x-1)^n, \label {eq:7.1.23} 
-						\end {eqnarray} 
-					</div>
-					<div class="indent" id="2330da2d-34c2-4daf-80af-692dbbd2e156">
-						where we added initial zero terms to the series in (<span class="ptmb8t-">7.1.21</span>) and (<span class="ptmb8t-">7.1.22</span>). Adding (<span class="ptmb8t-">7.1.20</span>)–(<span class="ptmb8t-">7.1.23</span>) yields 
-					</div>
-					<div class="eqnarray" id="4744401d-0996-40ea-bdfe-4d556e13fc1b">
-						\begin {eqnarray*}
-							(1+x)\frac{d^2y}{dx^2}+2(x-1)^2\frac{dy}{dx}+3y&amp;=&amp;2\frac{d^2y}{dx^2}+(x-1)\frac{d^2y}{dx^2}+2(x-1)^2\frac{dy}{dx}+3y\\[5pt] &amp;=&amp;\sum _{n=0}^\infty b_n (x-1)^n 
-						\end {eqnarray*} 
-					</div>
-					<div class="indent" id="0c497483-a4d6-481f-9b4f-2563466ed104">
-						where 
-					</div>
-					<div class="eqnarray" id="6fe5536c-409c-4f60-9f5c-c9548bbebe6a">
-						\begin {eqnarray}
-							b_0&amp;=&amp;4a_2+3a_0, \label {eq:7.1.24}\\ b_n&amp;=&amp;2(n+2)(n+1)a_{n+2}+(n+1)na_{n+1}+2(n-1)a_{n-1}+3a_n,\, n\ge 1\label {eq:7.1.25} 
-						\end {eqnarray} 
-					</div>
-					<div class="indent" id="df7ab4d6-f336-42ff-ba49-0da9fae67e89">
-						The formula (<span class="ptmb8t-">7.1.24</span>) for \(b_0\) can’t be obtained by setting \(n=0\) in (<span class="ptmb8t-">7.1.25</span>), since the summation in (<span class="ptmb8t-">7.1.22</span>) begins with \(n=1\), while those in (<span class="ptmb8t-">7.1.20</span>), (<span class="ptmb8t-">7.1.21</span>), and (<span class="ptmb8t-">7.1.23</span>) begin with \(n=0\). 
-					</div>
+							\begin{align*}
+								& (1+x)\frac{d^2y}{dx^2} \\
+								& (\underbrace{1+1}+x-1)\frac{d^2y}{dx^2} \\
+								& (2+x-1)\frac{d^2y}{dx^2} \\
+								& 2\frac{d^2y}{dx^2} + (x-1)\frac{d^2y}{dx^2} \\
+							\end{align*}
+							
+							Therefore <a href="#x1-34r12">(7.1.19)</a> can be written as
+							
+							\[ 2\frac{d^2y}{dx^2}+(x-1)\frac{d^2y}{dx^2}+2(x-1)^2\frac{dy}{dx}+3y \tag{19}\] 
+						</div>
+						<div class="reading-exercise">
+							Differentiate \( \displaystyle y=\sum _{n=0}^\infty a_n (x-1)^n\) twice and show all the steps as in the examples above
+						</div>
+						<div>
+							Differentiating \( \displaystyle y=\sum _{n=0}^\infty a_n (x-1)^n\) twice:
+
+							\begin {align*} 
+								y = & \sum _{n=0}^\infty a_n \, (x-1)^n \\
+								\frac{dy}{dx} = & \sum _{n=0}^\infty a_n \frac{d}{dx}\Big((x-1)^n  \Big)	
+								= \sum _{n=1}^\infty n \, a_n \, (x-1)^{n-1}   \\
+								\frac{d^2y}{dx^2}  = & \sum _{n=1}^\infty n \, a_n \frac{d}{dx}\Big( (x-1)^{n-1} \Big)
+								= \sum _{n=2}^\infty n \, (n-1) \, a_n \, (x-1)^{n-2} \\
+							\end {align*} 
+						</div>	
+						<div>
+							Now we want to substitute in to (7.1.9) but in order to add up the series on the right we will first rewrite each one so that the general term is a constant multiple of \((x-1)\) and adding in zero terms as needed to get the series to start at the same initial index. So to start replacing \(n\) with \(n+2\) on the first term
+
+							\begin{align} 
+								2\dfrac{d^2y}{dx^2} = & \sum _{n=2}^\infty 2n \, (n-1) \, a_n \, (x-1)^{n-2} \nonumber \\
+								= & \sum _{n+2=2}^\infty 2(n+2) (n+2-1) \, a_{n+2} \, (x-1)^{n+2-2} \nonumber \\
+								= & \sum _{n=0}^\infty 2(n+2) (n+1) \, a_{n+2} \, (x-1)^{n} \nonumber \\
+								= & \sum _{n=0}^\infty 2 (n+1) (n+2) \, a_{n+2} \, (x-1)^{n} 
+							\end{align}
+
+							Now replacing \(n\) with \(n+1\) on the second term and adding in a zero term
+
+							\begin{align} 
+								(x-1)\dfrac{d^2y}{dx^2} = & \displaystyle\sum _{n=2}^\infty n \, (n-1) \, a_n \, (x-1)^{n-1} \nonumber \\
+								= & \displaystyle\sum _{n+1=2}^\infty (n+1) (n+1-1) \, a_{n+1} \, (x-1)^{n+1-1} \nonumber \\
+								= & \displaystyle\sum _{n=1}^\infty (n+1) (n) \, a_{n+1} \, (x-1)^{n} \nonumber \\
+								= & \displaystyle\sum _{n=0}^\infty n(n+1) \, a_{n+1} \, (x-1)^{n} 
+							\end{align}
+
+							Now replacing \(n\) with \(n-1\) on the third term and adding in a zero term
+
+							\begin{align} 
+								2(x-1)^2\dfrac{dy}{dx} = & \displaystyle\sum _{n=1}^\infty 2n \,  a_n \, (x-1)^{n+1} \nonumber \\
+								= & \displaystyle\sum _{n-1=1}^\infty 2(n-1) \,  a_{n-1} \, (x-1)^{n-1+1} \nonumber \\
+								= & \displaystyle\sum _{n=2}^\infty 2(n-1) \,  a_{n-1} \, (x-1)^{n} \nonumber \\
+								= & \displaystyle\sum _{n=1}^\infty 2(n-1) \,  a_{n-1} \, (x-1)^{n} 
+							\end{align}
+
+							And the fourth term is already in terms of \((x-1)^{n}\)
+							\begin{align} 
+								3y = & \displaystyle\sum _{n=0}^\infty 3 a_n \, (x-1)^{n} 
+							\end{align}
+
+							Substituting in to (7.1.9) above we obtain
+
+							\begin{array}{rrllrrr}
+								2\dfrac{d^2y}{dx^2} &=& \displaystyle \sum _{n=0}^\infty 2 (n+1) (n+2) \, a_{n+2} \, (x-1)^{n}  \\
+								(x-1)\dfrac{d^2y}{dx^2} &=& \displaystyle \sum _{n=0}^\infty n(n+1) \, a_{n+1} \, (x-1)^{n} \\
+								2(x-1)^2\dfrac{dy}{dx} &=&  \displaystyle \sum _{n=1}^\infty 2(n-1) \,  a_{n-1} \, (x-1)^{n} \\
+								+ \quad\quad\quad\quad  3y &=& \displaystyle \sum _{n=0}^\infty 3 a_n \, (x-1)^{n} \\
+								\hline
+								{\small 2\dfrac{d^2y}{dx^2} + (x-1)\dfrac{d^2y}{dx^2} + 2(x-1)^2\dfrac{dy}{dx} 3y}  &=& \displaystyle \sum _{n=0}^\infty 2 (n+1) (n+2) \, a_{n+2} \, (x-1)^{n} \\
+								& & \quad + \displaystyle \sum _{n=0}^\infty n(n+1) \, a_{n+1} \, (x-1)^{n} \\
+								& & \quad + \displaystyle \sum _{n=1}^\infty 2(n-1) \,  a_{n-1} \, (x-1)^{n} \\
+								& & \quad + \displaystyle \sum _{n=0}^\infty 3 a_n \, (x-1)^{n} \\
+							\end{array}
+
+							But we still can't combine all the series into one since they all do not have the same initial index, we we will expand out the \(n=0\) term on each so that all the series start at \(n=1\)
+						</div>	
+						<div>
+							\( \displaystyle { 2\dfrac{d^2y}{dx^2} + (x-1)\dfrac{d^2y}{dx^2} + 2(x-1)^2\dfrac{dy}{dx} 3y}\)
+
+							\begin{array}{rrcclll}
+								&=& { 2 (1) (2) a_{2} (x-1)^{0}} &+& \displaystyle \sum _{n=1}^\infty & 2 (n+1) (n+2) \, a_{n+2} \, (x-1)^{n} \\
+								& & \quad + \, { 0(1) a_{1} (x-1)^{0}} &+& \displaystyle \sum _{n=1}^\infty & n(n+1) \, a_{n+1} \, (x-1)^{n} \\
+								& & \quad &+& \, \displaystyle \sum _{n=1}^\infty & 2(n-1) \,  a_{n-1} \, (x-1)^{n} \\
+								& & \quad + \, { 3 a_0 (x-1)^{0}} &+& \displaystyle \sum _{n=1}^\infty & 3 a_n \, (x-1)^{n} \\ \\ 
+
+								&=& { 4 a_{2}  + 3 a_0} &+& \displaystyle \sum _{n=1}^\infty  & \Bigg\{ 2 (n+1) (n+2) \, a_{n+2} \, (x-1)^{n} \\
+								& & \quad & & & \quad + \, n(n+1) \, a_{n+1} \, (x-1)^{n} \\ \\
+								& & \quad & & & \quad + \, 2(n-1) \,  a_{n-1} \, (x-1)^{n} \\
+								& & \quad & & & \quad + \, 3 a_n \, (x-1)^{n} \Bigg\} \\ \\
+							\end{array}
+						</div>
+						<br>
+						<div>	
+							So we have represented the expression (7.1.19) as a power series
+						</div>
+						<div>
+							\( \displaystyle { 2\dfrac{d^2y}{dx^2} + (x-1)\dfrac{d^2y}{dx^2} + 2(x-1)^2\dfrac{dy}{dx} 3y}\)
+
+							\[
+							=
+							{4 a_{2}  + 3 a_0} + \displaystyle \sum _{n=1}^\infty  
+								\Bigg\{ 2 (n+1) (n+2) \, a_{n+2} 
+								+ n(n+1) \, a_{n+1}\, 
+								+ 2(n-1) \,  a_{n-1}
+								+ 3 a_n 
+								\Bigg\} (x-1)^{n} \\
+							\]
+								
+						</div>	
+			
+					</div>	
 				</details>
 			</div>
 		</details>
