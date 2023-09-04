@@ -292,14 +292,14 @@
 			
 
 				<div class="reading-exercise">
-					Find the first 6 terms of the Maclaurin series expansion for \(\cos x\)
+					Find the first 8 terms of the Maclaurin series expansion for \(\cos x\)
 				</div>
 				<div class="reading-exercise">
 					Write the Maclaurin series for \(\cos x\) in sigma notation
 				</div>
 
 				<div class="reading-exercise">
-					Find the first 6 terms of the Maclaurin series expansion for \(\sin x\)
+					Find the first 8 terms of the Maclaurin series expansion for \(\sin x\)
 				</div>
 				<div class="reading-exercise">
 					Write the Maclaurin series for \(\sin x\) in sigma notation
@@ -396,21 +396,21 @@
 				A power series \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \] with positive radius of convergence \(R\) has derivatives of all orders in its open interval of convergence\(,\) and successive derivatives can be obtained by repeatedly differentiating term by term and simplifying out the zero terms by changing the starting index
 
 				\begin{align} \label {eq:7.1.6}
-					f'(x) 
+					f^{'}(x) 
 					= & \sum _{n=0}^\infty a_n \frac{d}{dx} \Big( (x-x_0)^n \Big) \nonumber \\ 
 					= & \sum _{n=0}^\infty a_n \Big( n (x-x_0)^{n-1} \Big) \nonumber \\
 					= & {\sum _{n=0}^\infty n \, a_n(x-x_0)^{n-1}} \nonumber \\
 					= & {\sum _{n=1}^\infty n \, a_n(x-x_0)^{n-1}} \\ \nonumber \\
-					f''(x) = & {\sum _{n=1}^\infty n \, a_n \frac{d}{dx} \Big( (x-x_0)^{n-1} \Big) } \nonumber \\
+					f^{''}(x) = & {\sum _{n=1}^\infty n \, a_n \frac{d}{dx} \Big( (x-x_0)^{n-1} \Big) } \nonumber \\
 					= & {\sum _{n=1}^\infty n \, a_n \Big( (n-1) (x-x_0)^{n-2} \Big) } \nonumber \\
 					= & {\sum _{n=1}^\infty n (n-1) a_n (x-x_0)^{n-2} } \nonumber \\
 					= & {\sum _{n=2}^\infty n (n-1) a_n (x-x_0)^{n-2} } \\ \nonumber \\
-					f'''(x) = & {\sum _{n=2}^\infty n (n-1) a_n \frac{d}{dx} \Big( (x-x_0)^{n-2} \Big)}\nonumber \\
+					f^{'''}(x) = & {\sum _{n=2}^\infty n (n-1) a_n \frac{d}{dx} \Big( (x-x_0)^{n-2} \Big)}\nonumber \\
 					= & {\sum _{n=2}^\infty n (n-1) a_n \Big( (n-2)(x-x_0)^{n-3} \Big)} \nonumber \\
 					= & {\sum _{n=2}^\infty n (n-1) (n-2) a_n (x-x_0)^{n-3} } \nonumber \\
 					= & {\sum _{n=3}^\infty n (n-1) (n-2) a_n (x-x_0)^{n-3} } \nonumber \\ \nonumber \\
 					\vdots \, & \nonumber \nonumber \\ \nonumber \\
-					f^{(k)}(x) = & \sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k} \nonumber
+					f^{^{(k)}}(x) = & \sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k}
 				\end{align}
 
 				<div class="indent">
@@ -422,6 +422,8 @@
 			<br>
 			<br>
 			<br>
+
+			<!--Example 2-->
 			<div class="example" id="x1-112" style="--ex-number: 2">
 				
 				<ol>
@@ -432,7 +434,7 @@
 						Differentiate the Maclaurin series for \(\sin x\) term-by-term 
 					</li>
 					<li>
-						Find the Maclaurin series representation for \(\cos x\) and verify it is the same result as the term-by-term differentiation  
+						Find the Maclaurin series representation for \(\cos x\) and verify it is the same  
 					</li>
 				
 				</ol>	
@@ -443,12 +445,12 @@
 						<li>
 							<div>
 								We can express \(f(x)=\sin x\) as a Maclaurin series by finding the first several derivatives and evaluating them at \(x=0\)
-								\begin{array}{rrlrrrr} 
+								\begin{array}{rrrlrrr} 
 									f(x) &=& \sin x  &\quad& f(0) &=& \sin 0 &=&  0 \\
 									f^{'}(x) &=& \cos x &\quad& f^{'}(0) &=& \cos 0 &=&  1 \\
 									f^{''}(x) &=& -\sin x &\quad& f^{''}(0) &=& -\sin 0 &=&  0 \\
 									f^{'''}(x) &=& -\cos x &\quad& f^{'''}(0) &=& -\cos 0 &=&  -1 \\
-									f^{^{IV}}(x) &=& \sin x &\quad& f^{^{IV}}(0) &=& \sin 0 &=&  0 \\
+									f^{''''}(x) &=& \sin x &\quad& f^{''''}(0) &=& \sin 0 &=&  0 \\
 									f^{^{V}}(x) &=& \cos x &\quad& f^{^{V}}(0) &=& \cos 0 &=&  1 \\
 									f^{^{VI}}(x) &=& -\sin x &\quad& f^{^{VI}}(0) &=& -\sin 0 &=&  0 \\
 									f^{^{VII}}(x) &=& -\cos x &\quad& f^{^{VII}}(0) &=& -\cos 0 &=&  -1 \\
@@ -478,62 +480,118 @@
 									+ \cdots \\
 								\end{align*}	
 
-								Notice that terms of the Maclaurin series expansion of sine are alternating so they 
-
-								Since all the even derivatives of sine evaluated to zero, the Maclaurin series expansion contains only the odd terms, and we can write it in sigma notation iterating through the odd values as
+								Notice that terms of the Maclaurin series expansion of sine are alternating so we will include a \((-1)^n\) factor and since all the even derivatives of sine evaluated to zero, the Maclaurin series expansion contains only the odd terms, and we can write it in sigma notation iterating through the odd values using \(2n+1\)
 
 								\begin{align*} 
-									\sum_{n=0}^{\infty} \frac{x^{2n+1}}{(2n+1)!} 
-									= & 
 									x
 									- {1\over 3!}x^3
 									+ {1\over 5!}x^5
 									- {1\over 7!}x^7
-									+ \cdots \\
+									+ \cdots
+									=
+									\sum_{n=0}^{\infty} \frac{(-1)^n \, x^{2n+1}}{(2n+1)!}
+									\\
 								\end{align*}	
 			
-								Which we can write in sigma notation
+								Thus we have the Maclaurin series form for \(\sin x\)
 			
 								\begin{align*} 
-									\sum_{n=0}^{\infty} \frac{x^n}{n!} 
-									= 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
-								\end{align*}	
-			
-								Thus we have the Maclaurin series form for  \(e^x\)
-			
-								\begin{align*} 
-									e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} 
+									\sin x = \sum_{n=0}^{\infty} \frac{(-1)^n \, x^{2n+1}}{(2n+1)!}
 								\end{align*}	
 			
 							</div>	
 						</li>
 						<li>
-							Differentiate the Maclaurin series for \(\sin x\) term-by-term 
-						</li>
-						<li>
-							Find the Maclaurin series representation for \(\cos x\) and verify it is the same result as the term-by-term differentiation  
+							<div>
+							We will now differentiate it term-by-term:
+
+							\begin{align*} 
+									\sin x = & \sum_{n=0}^{\infty} \frac{(-1)^n \, x^{2n+1}}{(2n+1)!} \\
+									\frac{d}{dx} \Big( \sin x \Big) = & \sum_{n=0}^{\infty} \frac{(-1)^n }{(2n+1)!} \frac{d}{dx} \Big( x^{2n+1} \Big)\\
+									 \cos x = & \sum_{n=0}^{\infty} \frac{(-1)^n }{(2n+1)!} (2n+1 )\Big( x^{2n} \Big)\\
+									 \cos x = & \sum_{n=0}^{\infty} \frac{(-1)^n \cdot (2n+1 )\cdot  x^{2n}  }{(2n+1) \cdot (2n)!} \\
+									 \cos x = & \sum_{n=0}^{\infty} \frac{(-1)^n \,  x^{2n}  }{ (2n)!} \\
+								\end{align*}
+							</div>	
 						</li>
 						<li>
 							<div>
-								Let \(f(x)=\sin x\). From (<span class="ptmb8t-">7.1.5</span>), 
+								We will now find the Maclaurin series representation for \(\cos x\) and verify it is the same result. Let \(g(x)=\cos x\) and now we will 
+								find the first several derivatives and evaluate them at \(x=0\)
+								\begin{array}{rrrlrrr} 
+									g(x) &=& \cos x  &\quad& g(0) &=& \cos 0 &=&  1 \\
+									g^{'}(x) &=& -\sin x &\quad& g^{'}(0) &=& -\sin 0 &=&  0 \\
+									g^{''}(x) &=& -\cos x &\quad& g^{''}(0) &=& -\cos 0 &=&  -1 \\
+									g^{'''}(x) &=& \sin x &\quad& g^{'''}(0) &=& \sin 0 &=&  0 \\
+									g^{''''}(x) &=& \cos x &\quad& g^{''''}(0) &=& \cos 0 &=&  1 \\
+									g^{^{V}}(x) &=& -\sin x &\quad& g^{^{V}}(0) &=& -\sin 0 &=&  0 \\
+									g^{^{VI}}(x) &=& -\cos x &\quad& g^{^{VI}}(0) &=& -\cos 0 &=&  -1 \\
+									g^{^{VII}}(x) &=& \sin x &\quad& f^{^{VII}}(0) &=& \sin 0 &=&  0 \\
+								\end{array}			
+			
+								And substituting them into the formula (7.1.3) 
+
+								\begin{align*} 
+									 & \sum _{n=0}^\infty {f^{(n)}(0)\over n!} x^n \\
+									= & {f(0)}
+									+ \underset{0}{\underbrace{ {f^{'}(0)} }} x
+									+ {f^{''}(0)\over 2!} x^2
+									+ \underset{0}{\underbrace{ {f^{'''}(0)\over 3!} }} x^3
+									+ {f^{^{IV}}(0)\over 4!} x^4
+									+ \cdots \\
+									= & 
+									{f(0)}x
+									+ {f^{''}(0)\over 2!}x^2
+									+ {f^{''''}(0)\over 4!}x^4
+									+ {f^{^{VI}}(0)\over 6!}x^6
+									+ \cdots \\
+									= & 
+									1
+									- {1\over 2!}x^2
+									+ {1\over 4!}x^4
+									- {1\over 6!}x^6
+									+ \cdots \\
+								\end{align*}	
+
+								Notice again that terms of the Maclaurin series expansion of sine are alternating so we will include a \((-1)^n\) factor and since all the odd derivatives of cosine evaluated to zero, the Maclaurin series expansion contains only the even terms, and we can write it in sigma notation iterating through the odd values using \(2n\)
+
 								
-								\[ f(x)=\sum _{n=0}^\infty (-1)^n {x^{2n+1}\over (2n+1)!}\] 
-								
-								From (<span class="ptmb8t-">7.1.6</span>), \[ f'(x)=\sum _{n=0}^\infty (-1)^n{d\over dx}\left [x^{2n+1}\over (2n+1)!\right ]= \sum _{n=0}^\infty (-1)^n {x^{2n}\over (2n)!}\] which is the series (<span class="ptmb8t-">7.1.4</span>) for \(\cos x\).
-							</div>
+
+								\begin{align*} 
+									1
+									- {1\over 2!}x^2
+									+ {1\over 4!}x^4
+									- {1\over 6!}x^6
+									+ \cdots 
+									=
+									\sum_{n=0}^{\infty} \frac{(-1)^n \, x^{2n}}{(2n)!}
+									\\
+								\end{align*}	
+			
+								Thus we have the Maclaurin series form for  \(\cos x\)
+			
+								\begin{align*} 
+									\cos x = \sum_{n=0}^{\infty} \frac{(-1)^n \, x^{2n}}{(2n)!}
+								\end{align*}	
+			
+								Which matches our term-by-term differentiation exactly
+							</div>	
 						</li>
 					</ol>
 				</details>	
 			</div>
-		</details>
 
-		<!--Uniqueness of Power Series-->
-		<details id="e5bc08b2-0620-4420-a16d-74472fcbfc36">
-			<summary>Uniqueness of Power Series</summary>
+			<br>
+			<br>
+			<hr>
+			<br>
+			<br>
 		
 			<div id="04bc8abd-919f-4de0-b066-c88269f9c92a">
-				The next theorem shows that if \(f\) is <span class="vocab">defined</span> by a power series in \(x-x_0\) with a positive radius of convergence, then the power series is the Taylor series of \(f\) about \(x_0\). 
+				The next theorem shows that if \(f\) is <span class="vocab">defined</span> by a power series in \(x-x_0\) with a positive radius of convergence, then the power series is the Taylor series of \(f\) about \(x_0\) 
 			</div>
+
+			<!--Theorem-->
 			<div class="theorem" id="x1-125">
 				<span class="head">Theorem&nbsp;7.1.5</span>
 				If the power series 
@@ -543,22 +601,33 @@
 				has a positive radius of convergence, then 
 
 				<a id="x1-13r2"></a>
-				\begin {equation} \label {eq:7.1.9} a_n={f^{(n)}(x_0)\over n!} 
+				\begin {equation} \label {eq:7.1.9} 
+					a_n={f^{(n)}(x_0)\over n!} 
 				\end {equation} 
+				
 				that is, \(\sum _{n=0}^\infty a_n(x-x_0)^n\) is the Taylor series of \(f\) about \(x_0\)
 			</div>
 
 			<div class="indent" id="56a84d92-57f7-4881-8eb0-3ab52bfe2461">
+				
 				This result can be obtained by setting \(x=x_0\) in (<span class="ptmb8t-">7.1.8</span>), which yields 
 				
-				\[ f^{(k)}(x_0)=k(k-1)\cdots 1\cdot a_k=k!a_k\] 
+				\begin{align*}
+					f^{(k)}(x) = & \sum _{n=k}^\infty n(n-1)\cdots (n-k+1) \, a_n(x-x_0)^{n-k} \\
+					f^{(k)}(x_0) = & \sum _{n=k}^\infty n(n-1)\cdots (n-k+1) \, a_n\underset{0}{\underbrace{(x_0-x_0)}}^{n-k} \\
+					= & k(k-1)\cdots (k-k+1) \,  a_k \\
+					= & k(k-1)\cdots 1 \,  a_k \\
+					= & k! \, a_k 
+				\end{align*}
 				
-				This implies that 
+				Solving for \(a_k\) we obtain 
 				
 				\[ a_k={f^{(k)}(x_0)\over k!}\] 
 				
-				Except for notation, this is the same as <a href="#x1-13r2">(7.1.9)</a>. 
+				Which is the same expression as <a href="#x1-13r2">(7.1.9)</a>
 			</div>
+			<br>
+			<br>
 			<div class="indent" id="9cfefb4b-2ebf-4fff-85bd-aa1048ef8059">			
 				The next theorem lists two important properties of power series that follow from Theorem&nbsp;<a href="#x1-125">7.1.5</a>.
 			</div>
@@ -567,36 +636,65 @@
 
 				<ol>
 					<li>
-						If 
+						<div>
+						If two series are equal for all \(x\) in an open interval that contains \(x_0,\) 
 						
 						\[ \sum _{n=0}^\infty a_n(x-x_0)^n=\sum _{n=0}^\infty b_n(x-x_0)^n \] 
 						
-						for all \(x\) in an open interval that contains \(x_0,\) then \(a_n=b_n\) for \(n=0\), \(1\), \(2\), …. 
+						Then \(a_n=b_n\) for \(n=0\), \(1\), \(2\), \(\dots\)
+						</div>
 					</li>
 					<li>
-						If 
+						<div>
+						If a series is equal to zero for all \(x\) in an open interval that contains \(x_0,\)
 						
 						\[ \sum _{n=0}^\infty a_n(x-x_0)^n=0 \] 
 						
-						for all \(x\) in an open interval that contains \(x_0,\) then \(a_n=0\) for \(n=0\), \(1\), \(2\), …. 
+						Then \(a_n=0\) for \(n=0\), \(1\), \(2\), \(\dots\)
+						</div>
 					</li>
 				</ol>
 			</div>
 			<div class="indent" id="86e7f0a5-1e3a-434b-8851-de6d07468790">
 				To obtain <span class="ptmb8t-">(a)</span> we observe that the two series represent the same function \(f\) on the open interval; hence, Theorem&nbsp;<a href="#x1-125">7.1.5</a> implies that \[ a_n=b_n={f^{(n)}(x_0)\over n!},\quad n=0,1,2, \dots \]<span class="ptmb8t-">(b)</span> can be obtained from <span class="ptmb8t-">(a)</span> by taking \(b_n=0\) for \(n=0\), \(1\), \(2\), ….
 			</div>
-		</details>
 
-		<!--Taylor Polynomials-->
-		<details id="a1851a0c-d19d-42cc-ae7b-72269ca07013">
-			<summary>Taylor Polynomials</summary>
+
+			<br>
+			<br>
+			<hr>
+			<br>
+			<br>
+
+
+			<!--Taylor Polynomials-->
 		
 			<div id="2c3a3619-101f-47a2-a4cc-3f17f87f1b67">			
 				If \(f\) has \(N\) derivatives at a point \(x_0\), we say that 
 				
 				\[ T_N(x)=\sum _{n=0}^N{f^{(n)}(x_0)\over n!}(x-x_0)^n \] 
 				
-				is the \(N\)-th Taylor polynomial of \(f\) about \(x_0\). This definition and Theorem&nbsp;<a href="#x1-125">7.1.5</a> imply that if \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n\] where the power series has a positive radius of convergence\(,\) then the Taylor polynomials of \(f\) about \(x_0\) are given by \[ T_N(x)=\sum _{n=0}^N a_n(x-x_0)^n\] In numerical applications, we use the Taylor polynomials to approximate \(f\) on subintervals of the open interval of convergence of the power series. For example, (<span class="ptmb8t-">7.1.2</span>) implies that the Taylor polynomial \(T_N\) of \(f(x)=e^x\) is \[ T_N(x)=\sum _{n=0}^N{x^n\over n!}\] The solid curve in Figure&nbsp;<a href="#-approximation-of-yex-by-taylor-polynomials-about-x-">7.1.1</a> is the graph of \(y=e^x\) on the interval \([0,5]\). The dotted curves in Figure&nbsp;<a href="#-approximation-of-yex-by-taylor-polynomials-about-x-">7.1.1</a> are the graphs of the Taylor polynomials \(T_1\), …, \(T_6\) of \(y=e^x\) about \(x_0=0\). From this figure, we conclude that the accuracy of the approximation of \(y=e^x\) by its Taylor polynomial \(T_N\) improves as \(N\) increases.
+				is the \(N\)-th <span class="vocab">Taylor polynomial</span> of \(f\) about \(x_0\). This definition and Theorem&nbsp;<a href="#x1-125">7.1.5</a> imply that if 
+				
+				\[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n\] 
+				
+				where the power series has a positive radius of convergence\(,\) then the Taylor polynomials of \(f\) about \(x_0\) are given by 
+				
+				\[ T_N(x)=\sum _{n=0}^N a_n(x-x_0)^n\] 
+				
+				In numerical applications, we use the Taylor polynomials to approximate \(f\) on subintervals of the open interval of convergence of the power series. For example, the the Taylor series formula (<span class="ptmb8t-">7.1.2</span>) implies that the Taylor polynomial \(T_N (x) \) of \(f(x)=e^x\) is 
+				
+				\begin{align*}
+					T_N(x) = & \sum _{n=0}^N{x^n\over n!} \\
+					T_1(x) = & \sum _{n=0}^1{x^n\over n!} = {x^0\over 0!} + {x^1\over 1!}
+					= 1 + x \\
+					T_2(x) = & \sum _{n=0}^2{x^n\over n!} = 1 + x  + {x^2\over 2!} \\
+					T_3(x) = & \sum _{n=0}^3{x^n\over n!} = 1 + x   + {x^2\over 2!} + {x^3\over 3!}  \\
+					T_4(x) = & \sum _{n=0}^4{x^n\over n!} = 1 + x   + {x^2\over 2!} + {x^3\over 3!} + {x^4\over 4!}  \\
+					T_5(x) = & \sum _{n=0}^5{x^n\over n!} =  1 + x   + {x^2\over 2!} + {x^3\over 3!} + {x^4\over 4!} + {x^5\over 5!}  \\
+				\end{align*} 
+				
+				The solid curve in Figure&nbsp;<a href="#-approximation-of-yex-by-taylor-polynomials-about-x-">7.1.1</a> is the graph of \(y=e^x\) on the interval \([0,5]\). The dotted curves in Figure&nbsp;<a href="#-approximation-of-yex-by-taylor-polynomials-about-x-">7.1.1</a> are the graphs of the Taylor polynomials \(T_1 (x) \), \(T_2 (x) ,\) \(T_3 (x) ,\) \(T_4 (x) ,\) \(T_5 (x) ,\) and \(T_6 (x) \) of \(y=e^x\) about \(x_0=0\). From this figure, we conclude that the accuracy of the approximation of \(y=e^x\) by its Taylor polynomial \(T_N (x) \) improves as \(N\) increases.
 			</div>
 			<figure id="4bcc49ad-8c85-4dcf-885b-771519f8bb52">
 				<div id="-approximation-of-yex-by-taylor-polynomials-about-x-">
@@ -611,60 +709,85 @@
 			<summary>Shifting the Summation Index</summary>
 		
 			<div id="d830b380-5b96-449e-950a-5bbe41ef7a1d">
-				In Definition&nbsp;<a href="#x1-2r1">7.1.1</a> of a power series in \(x-x_0\), the \(n\)-th term is a constant multiple of \((x-x_0)^n\). This isn’t true in (<span class="ptmb8t-">7.1.6</span>), (<span class="ptmb8t-">7.1.7</span>), and (<span class="ptmb8t-">7.1.8</span>), where the general terms are constant multiples of \((x-x_0)^{n-1}\), \((x-x_0)^{n-2}\), and \((x-x_0)^{n-k}\), respectively. However, these series can all be rewritten so that their \(n\)-th terms are constant multiples of \((x-x_0)^n\). For example, letting \(n=k+1\) in the series in (<span class="ptmb8t-">7.1.6</span>) yields 
+				In Definition&nbsp;<a href="#x1-2r1">7.1.1</a> of a power series in \(x-x_0\), the \(n\)-th term is a constant multiple of \((x-x_0)^n\). This isn’t true in the expressions for the derivatives of the power series in (<span class="ptmb8t-">7.1.6</span>), (<span class="ptmb8t-">7.1.7</span>) and (<span class="ptmb8t-">7.1.8</span>) where the general terms are constant multiples of \((x-x_0)^{n-1}\), \((x-x_0)^{n-2}\) and \((x-x_0)^{n-k}\) respectively, and shown below for reference. 
+				
+
+				\begin{align*} 
+					f^{'}(x) 
+						= & {\sum _{n=1}^\infty n \, a_n(x-x_0)^{n-1}} \tag{6} \\ \\
+					f^{''}(x) 
+						= & {\sum _{n=2}^\infty n \, (n-1) \, a_n (x-x_0)^{n-2} } \tag{7} \\ \\
+					f^{^{(k)}}(x) 
+						= & \sum _{n=k}^\infty n \, (n-1) \, \cdots (n-k+1)a_n(x-x_0)^{n-k} \tag{8} \\ \\	
+				\end{align*}
+				
+				
+				
+				However, these series can all be rewritten so that their \(n\)-th terms are constant multiples of \((x-x_0)^n\). For example, letting \(n=k+1\) in the series in (<span class="ptmb8t-">7.1.6</span>) yields 
 				
 				<a id="x1-18r3"></a> 
 				\begin {align} \label {eq:7.1.10} 
-					f'(x) = & {\sum _{n=1}^\infty na_n(x-x_0)^{n-1}} \nonumber \\
-					= & {\sum _{k+1=1}^\infty \overbrace{(k+1)}a_{\underbrace{k+1}}(x-x_0)^{\overbrace{k+1}-1}} \nonumber \\
-					= & \sum _{k=0}^\infty (k+1)a_{k+1}(x-x_0)^k 
+					f'(x) = & {\sum _{n=1}^\infty n \, a_n(x-x_0)^{n-1}} \nonumber \tag{6} \\
+					= & {\sum _{k+1=1}^\infty \overbrace{(k+1)} \, a_{\underbrace{k+1}}(x-x_0)^{\overbrace{k+1}-1}} \nonumber \\
+					= & \sum _{k=0}^\infty (k+1) \, a_{k+1}(x-x_0)^k 
 				\end {align} 
 				
-				where we start the new summation index \(k\) from zero so that the first term in <a href="#x1-18r3">(7.1.10)</a> (obtained by setting \(k=0\)) is the same as the first term in (<span class="ptmb8t-">7.1.10</span>) (obtained by setting \(n=1\)). However, the sum of a series is independent of the symbol used to denote the summation index, just as the value of a definite integral is independent of the symbol used to denote the variable of integration. Therefore we can replace \(k\) by \(n\) in <a href="#x1-18r3">(7.1.10)</a> to obtain 
+				where we start the new summation index \(k\) from zero so that the first term in <a href="#x1-18r3">(7.1.10)</a> (obtained by setting \(k=0\)) is the same as the first term in (<span class="ptmb8t-">7.1.6</span>) (obtained by setting \(n=1\) ). However, the sum of a series is independent of the symbol used to denote the summation index, just as the value of a definite integral is independent of the symbol used to denote the variable of integration. Therefore we can replace \(k\) by \(n\) in <a href="#x1-18r3">(7.1.10)</a> to obtain an expression for (7.1.6) where the general term is a constant multiple of \((x-x_0)^n\)
 
 
 				<a id="x1-19r4"></a>
 				\begin{align} \label {eq:7.1.11} 
-					f'(x)= & \sum _{n=0}^\infty (n+1)a_{n+1}(x-x_0)^n
+					f'(x)= & \sum _{n=0}^\infty (n+1) \, a_{n+1}(x-x_0)^n
 				\end{align}
 
 
-				where the general term is a constant multiple of \((x-x_0)^n\).
+				
 			</div>
 
 			<div class="indent" id="dd2fe79b-836c-43ba-be4c-a14ad022dc7d">
-				It isn’t really necessary to introduce the intermediate summation index \(k\). We can obtain <a href="#x1-19r4">(7.1.11)</a> directly from (<span class="ptmb8t-">7.1.6</span>) by replacing \(n\) by \(n+1\) in the general term of (<span class="ptmb8t-">7.1.6</span>) and subtracting \(1\) from the lower limit of (<span class="ptmb8t-">7.1.6</span>). More generally, we use the following procedure for shifting indices. 
+				<div>
+				It isn’t really necessary to introduce the intermediate summation index \(k\). We can obtain <a href="#x1-19r4">(7.1.11)</a> directly from (<span class="ptmb8t-">7.1.6</span>) by replacing \(n\) by \(n+1\) in the general term of (<span class="ptmb8t-">7.1.6</span>) and subtracting \(1\) from the lower limit of (<span class="ptmb8t-">7.1.6</span>). 
+				</div>
+
+				
+				<div>
+				More generally, we use the following procedure for shifting indices. 
+				</div>
 			</div>
 
 			<div class="stepbox" id="db233a52-bd97-499d-ad14-bc65693321a3">
 				<span class="head">Shifting the Summation Index in a Power Series</span>
 			
 				<div id="d662ce33-a28d-4ff1-adc0-97b9b0dcc8f8">
-					For any integer \(k\), the power series 
+					For any integer \(k\), a power series can be rewritten by replacing \(n\) by \(n+k\) in the general term and subtracting \(k\) from the lower limit of summation leaves the series unchanged. 
+
+					\begin{align*} 
+						& \sum _{n=n_0}^\infty b_n \, (x-x_0)^{n-k} \\
+						= & \sum _{n+k=n_0}^\infty b_\underbrace{{n+k}} \, (x-x_0)^{\overbrace{n+k}-k} \\
+						= & \sum _{n=n_0-k}^\infty b_{n+k} \, (x-x_0)^{n} \\
+					\end{align*}
+
+
 					
-					\[ \sum _{n=n_0}^\infty b_n(x-x_0)^{n-k} \] can be rewritten as 
-					
-					\[ 
-					\sum _{n+k=n_0}^\infty b_{n+k}(x-x_0)^{(n+k)-k}
-					=
-					\sum _{n=n_0-k}^\infty b_{n+k}(x-x_0)^n
-					\] 
-					
-					that is, replacing \(n\) by \(n+k\) in the general term and subtracting \(k\) from the lower limit of summation leaves the series unchanged. <br class="newline" /> 
+					<br class="newline" /> 
 				</div>
 			</div>
 
+
+			<!--Example 3-->
 			<div class="example" id="x1-203" style="--ex-number: 3">
 				<div>
-					Rewrite the following power series from (<span class="ptmb8t-">7.1.7</span>) and (<span class="ptmb8t-">7.1.8</span>) so that the general term in each is a constant multiple of \((x-x_0)^n\):
+					Rewrite the following power series from (<span class="ptmb8t-">7.1.7</span>) and (<span class="ptmb8t-">7.1.8</span>) so that the general term in each is a constant multiple of \((x-x_0)^n\)
 				</div>
 				
 				<ol>
 					<li>
-						\[ \sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2} \]
+						
+						\[ f^{''}(x) 
+						= \sum _{n=2}^\infty n \, (n-1) \, a_n(x-x_0)^{n-2} \tag{7} \]
 					</li>
 					<li>
-						\[ \sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k} \]
+						\[ f^{^{(k)}}(x) = \sum _{n=k}^\infty n \, (n-1) \cdots (n-k+1) \, a_n(x-x_0)^{n-k} \tag{8}\]
 					</li>
 				</ol>
 
@@ -673,103 +796,229 @@
 
 					<ol>
 						<li>
-							Replacing \(n\) by \(n+2\) in the general term and subtracting \(2\) from the lower limit of summation yields 
-
-							\begin {align*} 
-								& \sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2} \\
-								= & \sum _{n+2=2}^\infty (n+2)(n+2-1)a_{n+2}(x-x_0)^{(n+2)-2} \\
-								= & \sum _{n=0}^\infty (n+2)(n+1)a_{n+2}(x-x_0)^{n} \\
-							\end {align*} 
+							<div>
+								Now we'll rewrite (<span class="ptmb8t-">7.1.7</span>) so that the \(n\)-th term is a constant multiple of \((x-x_0)^n\) by repacing the index variable \(n\) with \(n+2\) in the general term and subtracting \(2\) from the lower limit of summation yields
+			
+								\begin{align*} 
+									f^{''}(x) 
+										= & {\sum _{n=2}^\infty n \, (n-1) \,  a_n (x-x_0)^{n-2} } \tag{7} \\ \\
+										= & {\sum _{n+2=2}^\infty \overbrace{(n+2)} \, (\overbrace{n+2}-1) a_\underbrace{{n+2}} (x-x_0)^{\overbrace{n+2}-2} } \\ \\	
+										= & {\sum _{n=0}^\infty (n+2) \, (n+1) \, a_{n+2} (x-x_0)^{n} } \\ \\
+								\end{align*}
+			
+							</div>
 
 						</li>
 						<li>
-							Replacing \(n\) by \(n+k\) in the general term and subtracting \(k\) from the lower limit of summation yields 
-							
-							\begin {align*} 
-								& \sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k} \\
-								= & \sum _{n+k=k}^\infty (n+k)(n+k-1)\cdots (n+k-k+1)a_{n+k}(x-x_0)^{n+k-k} \\
-								= & \sum _{n=0}^\infty (n+k)(n+k-1)\cdots (n+1)a_{n+k}(x-x_0)^{n} \\
-							\end {align*} 
+							<div>
+								Now we'll rewrite (<span class="ptmb8t-">7.1.8</span>) so that the \(n\)-th term is a constant multiple of \((x-x_0)^n\) by repacing the index variable \(n\) with \(n+k\) in the general term and subtracting \(k\) from the lower limit of summation yields
+			
+								\begin{align*} 
+								f^{^{(k)}}(x) 
+									= & \sum _{n=k}^\infty n \, (n-1) \cdots (n-k+1) \, a_n(x-x_0)^{n-k} \tag{8} \\ \\
+									= & \sum _{n+k=k}^\infty \overbrace{(n+k)} \, (\overbrace{n+k}-1) \cdots (n+k-k+1) \, a_\underbrace{{n+k}} (x-x_0)^{\overbrace{n+k}-k} \\ \\
+									= & \sum _{n=0}^\infty (n+k) \, (n+k-1) \cdots (n+1) \, a_{n+k} (x-x_0)^{n} \\ \\
+								\end{align*}
+			
+							</div>
 
 						</li>
 					</ol>
 				</details>
 			</div>
 
+			<br>
+			<br>
 			
+			<!--Example 4-->
 			<div class="example" id="x1-214" style="--ex-number: 4">
 				<div>
-					Given that \[ f(x)=\sum _{n=0}^\infty a_nx^n\] write the function \(xf''\) as a power series in which the general term is a constant multiple of&nbsp;\(x^n\).
+					Write the function \(x \cdot f^{''}(x)\) as a power series in which the general term is a constant multiple of&nbsp;\(x^n\) with index starting at \(n=1\) 
+					
+					\[ f(x)=\sum _{n=0}^\infty a_nx^n\] 
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
+					<div class="reading-exercise">
+						Differentiate \( \displaystyle f(x)=\sum _{n=0}^\infty a_nx^n\) twice and show all the steps as in the examples above
+					</div>
 					Differentiating \( \displaystyle f(x)=\sum _{n=0}^\infty a_nx^n\) twice:
 
 					\begin {align*} 
 						f(x) = & \sum _{n=0}^\infty a_nx^n \\
-						f'(x) = & \sum _{n=0}^\infty a_n \frac{d}{dx}\Big( x^n \Big)	
-						= \sum _{n=1}^\infty n a_nx^{n-1}   \\
-						f''(x) = & \sum _{n=1}^\infty n a_n \frac{d}{dx}\Big( x^{n-1} \Big)
-						= \sum _{n=2}^\infty n (n-1) a_nx^{n-2} \\
+						f^{'}(x) = & \sum _{n=0}^\infty a_n \frac{d}{dx}\Big( x^n \Big)	
+						= \sum _{n=1}^\infty n \, a_nx^{n-1}   \\
+						f^{''}(x) = & \sum _{n=1}^\infty n a_n \frac{d}{dx}\Big( x^{n-1} \Big)
+						= \sum _{n=2}^\infty n \, (n-1) \, a_nx^{n-2} \\
 					\end {align*} 
 
-					Now multiplying \(x \cdot f''(x)\)
+					Now multiplying \(x \cdot f^{''}(x)\)
 
 					\begin {align*} 
-						f''(x) = & \sum _{n=2}^\infty n (n-1) a_nx^{n-2} \\
-						x \cdot f''(x) = & x \cdot \sum _{n=2}^\infty n (n-1) a_nx^{n-2} \\
-						= & \sum _{n=2}^\infty n (n-1) a_n x^{n-2} \cdot x \\
-						= & \sum _{n=2}^\infty n (n-1) a_n x^{n-2} \cdot x^1 \\
-						= & \sum _{n=2}^\infty n (n-1) a_n x^{n-2 + 1} \\
-						= & \sum _{n=2}^\infty n (n-1) a_n x^{n-1} \\
+						f^{''}(x) = & \sum _{n=2}^\infty n \, (n-1) \, a_nx^{n-2} \\
+						x \cdot f^{''}(x) = & x \cdot \sum _{n=2}^\infty n \, (n-1) \, a_n \, x^{n-2} \\
+						= & \sum _{n=2}^\infty n (n-1) a_n \, x^{n-2} \cdot x^1 \\
+						= & \sum _{n=2}^\infty n (n-1) a_n \, x^{n-2 + 1} \\
+						= & \sum _{n=2}^\infty n (n-1) a_n \, x^{n-1} \\
 					\end {align*} 
 
 					Now notice that the power on \(x\) is \(n-1\) so we simply replace the index \(n\) with \(n+1\)
 
 					\begin {align*} 
-						x \cdot f''(x) = & \sum _{n=2}^\infty n (n-1) a_n x^{n-1} \\
-						= & \sum _{n+1=2}^\infty (n+1) (n+1-1) a_{n+1} x^{n+1-1} \\
-						= & \sum _{n=1}^\infty (n+1) (n) a_{n+1} x^{n} \\
-						= & \sum _{n=1}^\infty n (n+1) a_{n+1} x^{n} \\
+						x \cdot f^{''}(x) = & \sum _{n=2}^\infty n \, (n-1) \, a_n \, x^{n-1} \\
+						= & \sum _{n+1=2}^\infty \overbrace{(n+1)}\, (\overbrace{n+1}-1) \, a_\underbrace{{n+1}} \, x^{\overbrace{n+1}-1} \\
+						= & \sum _{n=1}^\infty (n+1) \, (n) \, a_{n+1} \, x^{n} \\
+						= & \sum _{n=1}^\infty n \, (n+1) \, a_{n+1} x^{n} \\
 					\end {align*} 
 
 					Starting this sum at \(n=0\) would yield the same result since the \(n=0\) term is zero
 
 					\begin {align*} 
-						x \cdot f''(x) = & \sum _{n=1}^\infty n (n+1) a_{n+1} x^{n} \\ \\
-						x \cdot f''(x) = & \sum _{n=0}^\infty n (n+1) a_{n+1} x^{n} \\
+						x \cdot f^{''}(x) = & \sum _{n=1}^\infty n \, (n+1) \, a_{n+1} \, x^{n} 
+						= \sum _{n=0}^\infty n \, (n+1) \, a_{n+1} \, x^{n} \\
 					\end {align*} 
 				
 					It is often useful to include zero terms at the beginning of a series so we can simplify and combine them with other series
 				</details>
 			</div>
-		</details>
 
-		<!--Linear Combinations of Power Series-->
-		<details id="4f688639-7283-4d06-b8b1-59288c16e10b">
-			<summary>Linear Combinations of Power Series</summary>
 			
+			<br>
+			<br>
+			<hr>
+			<br>
+			<br>
+
+			<!--Linear Combination-->
 			<div id="4a8f3988-4a7a-4de2-be31-4165421bc12d">
-				If a power series is multiplied by a constant, then the constant can be placed inside the summation; that is, \[ c\sum _{n=0}^\infty a_n(x-x_0)^n=\sum _{n=0}^\infty ca_n(x-x_0)^n\] Two power series \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n\quad \mbox { and }\quad g(x)=\sum _{n=0}^\infty b_n(x-x_0)^n \] with positive radii of convergence can be added term by term at points common to their open intervals of convergence; thus, if the first series converges for \(|x-x_0|&lt;R_1\) and the second converges for \(|x-x_0|&lt;R_2\), then \[ f(x)+g(x)=\sum _{n=0}^\infty (a_n+b_n)(x-x_0)^n \] for \(|x-x_0|&lt;R\), where \(R\) is the smaller of \(R_1\) and \(R_2\). More generally, linear combinations of power series can be formed term by term; for example, \[ c_1f(x)+c_2f(x)=\sum _{n=0}^\infty (c_1a_n+c_2b_n)(x-x_0)^n\] 
+				If a power series is multiplied by a constant, then the constant can be moved inside the summation. That is, 
+				
+				\[ c\sum _{n=0}^\infty a_n(x-x_0)^n=\sum _{n=0}^\infty c \, a_n(x-x_0)^n\] 
+				
+				Two power series with positive radii of convergence can be added term by term at points common to their open intervals of convergence.
+				
+				\[ f(x)=\sum _{n=0}^\infty a_n \, (x-x_0)^n\quad \mbox { and }\quad g(x)=\sum _{n=0}^\infty b_n \, (x-x_0)^n \] 
+				
+				Suppose the first series \(f(x)\) converges for \(|x-x_0|&lt;R_1\) and the second series \(g(x)\) converges for \(|x-x_0|&lt;R_2\), then adding them together
+				
+				\begin{align*}
+				f(x) + g(x) = & \overset{f(x)}{\overbrace{\sum _{n=0}^\infty a_n \, (x-x_0)^n}} + \overset{g(x)}{\overbrace{\sum _{n=0}^\infty b_n \, (x-x_0)^n }} \\
+				= & \sum _{n=0}^\infty \Big( a_n \, (x-x_0)^n + b_n \, (x-x_0)^n \Big) \\
+				= & \sum _{n=0}^\infty \big( a_n  + b_n  \big) \, (x-x_0)^n \\
+				\end{align*}
+				
+				The new series converges for \(|x-x_0|&lt;R\), where \(R\) is the smaller of \(R_1\) and \(R_2\). More generally, linear combinations of power series can be formed term by term: 
+
+				\begin{align*}
+				c_1 \, f(x) + c_2 \, g(x) = & c_1 \, \overset{f(x)}{\overbrace{\sum _{n=0}^\infty a_n \, (x-x_0)^n}} + c_2 \, \overset{g(x)}{\overbrace{\sum _{n=0}^\infty b_n \, (x-x_0)^n }} \\
+				= & \sum _{n=0}^\infty c_1 \, a_n \, (x-x_0)^n + \sum _{n=0}^\infty c_2 \, b_n \, (x-x_0)^n \\
+				= & \sum _{n=0}^\infty \Big( c_1 \, a_n \, (x-x_0)^n + c_2 \, b_n \, (x-x_0)^n \Big) \\
+				= & \sum _{n=0}^\infty \big( c_1 \, a_n  + c_2 \, b_n  \big) \, (x-x_0)^n \\
+				\end{align*}
 			</div>
 
+			<!--Example 5-->
 			<div class="example" id="x1-225" style="--ex-number: 5">
-				<div>
-					Find the Maclaurin series for \(\cosh x\) as a linear combination of the Maclaurin series for \(e^x\) and \(e^{-x}\).
-				</div>
+				<ol>
+					<li>
+						Calculate the Maclaurin series for \(e^x\)
+					</li>
+					<li>
+						Calculate the Maclaurin series for \(e^{-x}\)
+					</li>
+					<li>
+						Find the Maclaurin series for \(\cosh x\) as a linear combination
+					</li>
+				</ol>	
 			
 				<details class="solution">
 					<summary>Solution</summary>
-					By definition, \[ \cosh x={1\over 2}e^x+{1\over 2}e^{-x}\] Since \[ e^x=\sum _{n=0}^\infty {x^n\over n!}\quad \mbox { and }\quad e^{-x}=\sum _{n=0}^\infty (-1)^n {x^n\over n!}\] it follows that 
-					<a id="x1-23r5"></a>
-					\begin {equation}
-						\label {eq:7.1.12} \cosh x=\sum _{n=0}^\infty {1\over 2}[1+(-1)^n]{x^n\over n!} 
-					\end {equation}
-					Since \[ {1\over 2}[1+(-1)^n]=\left \{ 
-					\begin {array}{cl}1&amp;\mbox { if } n=2m,\mbox { an even integer},\\ 0&amp;\mbox { if }n=2m+1,\mbox { an odd integer} 
-					\end {array}\right. \]
-					we can rewrite <a href="#x1-23r5">(7.1.12)</a> more simply as \[ \cosh x=\sum _{m=0}^\infty {x^{2m}\over (2m)!}\] This result is valid on \((-\infty ,\infty )\), since this is the open interval of convergence of the Maclaurin series for \(e^x\) and \(e^{-x}\).
+					<ol>
+						<li>
+							
+			
+							<div>
+								We already calculated the Maclaurin series form for  \(e^x\)
+			
+								\begin{align*} 
+									e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} 
+								\end{align*}	
+			
+							</div>	
+							<div>
+
+							</div>
+							<div>
+								
+							</div>
+							<div>
+								
+							</div>
+							<div>
+								
+							</div>
+						</li>
+						<li>
+							<div class="reading-exercise">
+								Calculate the first four derivatives of \(f(x)=e^{-x}\) and evaluate at \(x=0\)
+							</div>
+							<div class="reading-exercise">
+								Expand the Maclaurin series formula (7.1.3) to calculate the first five terms
+							</div>
+							<div class="reading-exercise">
+								Substitute the values in to represent the first five terms of the Maclaurin series for \(e^{-x}\) and then write the series in sigma notation
+							</div>
+							<div>
+								The Maclaurin series form for \(e^{-x}\) is
+			
+								\begin{align*} 
+									e^{-x} = \sum_{n=0}^{\infty} (-1)^n \frac{x^n}{n!} 
+								\end{align*}	
+			
+							</div>	
+						</li>
+						<li>
+							<div>
+								By definition 
+			
+								\begin{align*} 
+									\cosh x = \frac{e^{x} + e^{-x}}{2}
+								\end{align*}	
+
+								Which we can rewrite as 
+
+								\begin{align*} 
+									\cosh x = \frac{1}{2}e^{x} + \frac{1}{2}e^{-x}
+								\end{align*}
+
+								Sbstituting in the Maclaurin series form for \(e^{x}\) and \(e^{-x}\): 
+
+								\begin{align*} 
+									\cosh x 
+									= & \frac{1}{2} \overset{e^x}{\overbrace{\sum_{n=0}^{\infty} \frac{x^n}{n!}}} + \frac{1}{2} \overset{e^{-x}}{\overbrace{\sum_{n=0}^{\infty} (-1)^n \frac{x^n}{n!}}}\\
+									= & \sum_{n=0}^{\infty} \frac{1}{2} \cdot \frac{x^n}{n!} + \sum_{n=0}^{\infty} \frac{1}{2} \cdot (-1)^n \frac{x^n}{n!}\\
+									= & \sum_{n=0}^{\infty} \Bigg[ \frac{1}{2} \cdot \frac{x^n}{n!} +  \frac{1}{2} \cdot (-1)^n \frac{x^n}{n!} \Bigg] \\
+									= & \sum_{n=0}^{\infty} \frac{1}{2} \Big[  1 +  (-1)^n \Big]\frac{x^n}{n!}  \\
+
+								\end{align*}
+			
+							</div>	
+						</li>
+						<li>
+							By definition, \[ \cosh x={1\over 2}e^x+{1\over 2}e^{-x}\] Since \[ e^x=\sum _{n=0}^\infty {x^n\over n!}\quad \mbox { and }\quad e^{-x}=\sum _{n=0}^\infty (-1)^n {x^n\over n!}\] it follows that 
+							<a id="x1-23r5"></a>
+							\begin {equation}
+								\label {eq:7.1.12} \cosh x=\sum _{n=0}^\infty {1\over 2}[1+(-1)^n]{x^n\over n!} 
+							\end {equation}
+							Since \[ {1\over 2}[1+(-1)^n]=\left \{ 
+							\begin {array}{cl}1&amp;\mbox { if } n=2m,\mbox { an even integer},\\ 0&amp;\mbox { if }n=2m+1,\mbox { an odd integer} 
+							\end {array}\right. \]
+							we can rewrite <a href="#x1-23r5">(7.1.12)</a> more simply as \[ \cosh x=\sum _{m=0}^\infty {x^{2m}\over (2m)!}\] This result is valid on \((-\infty ,\infty )\), since this is the open interval of convergence of the Maclaurin series for \(e^x\) and \(e^{-x}\).
+						</li>
+					</ol>	
+
+					
 				</details>
 			</div>
 
