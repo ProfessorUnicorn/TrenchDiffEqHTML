@@ -51,7 +51,7 @@
 				For simplicity, in this section we'll assume that the surroundings is maintained at a constant temperature \( A\). This is another example of building a simple mathematical model for a physical phenomenon. Like most mathematical models it has its limitations. For example, it's reasonable to assume that the temperature of a room remains approximately constant if the cooling object is a cup of coffee, but perhaps not if it's cooling a huge cauldron of molten metal. (More on this in Exercise <span class="ptmb8t-">17</span>.)
 			</div>
 			<div class="indent" id="35525f4f-4392-415e-b94b-9eee871fae6c123">
-				Notice the constant solution for <a href="#x1-2r1">(4.2.1)</a> which is \( T=A\), or the temperature of the object is the same temperature as the surroundings. Well assume this is not the case. With \(T \ne A\) then <a href="#x1-2r1">(4.2.1)</a> is separable
+				Notice the constant solution for <a href="#x1-2r1">(4.2.1)</a> which is \( T=A\), or the temperature of the object is the same temperature as the surroundings. We'll assume this is not the case. With \(T \ne A\) then <a href="#x1-2r1">(4.2.1)</a> is separable
 
 				\begin{align*}
 					\frac{dT}{dt} = & -k(T-A) \\
@@ -64,7 +64,7 @@
 					e^{\ln \left| T-A \right|}  = & e^{-kt + c} \\
 					\left| T-A \right|  = & ce^{-kt} \\
 					T-A  = & ce^{-kt} \\
-					T  = & A + ce^{-kt} \\			
+					T  = & A + ce^{-kt} \\
 				\end{align*}
 
 				Notice our one-parameter family \( T  = A + ce^{-kt} \) includes the constant solution \( T=A\) when we set \(c=0\), therefore our general solution is just the one-parameter family
@@ -76,7 +76,7 @@
 				Verify \( T = A \) is a solution of <a href="#x1-2r1">(4.2.1)</a>
 			</div> 	
 			<div id="x1-3" class="reading-exercise">
-				Verify \( T = ce^{-kt} \) is a solution of <a href="#x1-2r1">(4.2.1)</a>
+				Verify \( T = A + ce^{-kt} \) is a solution of <a href="#x1-2r1">(4.2.1)</a>
 			</div> 	
 
 			<div class="indent" id="3b203701-97a4-4ce8-a6ed-cbc85d08a398">
@@ -112,6 +112,7 @@
 					<li>
 						Set up and solve an IVP using the Newton's Law of cooling
 					</li>
+					<li class="skip"></li>
 					<li>
 						Calculate the <span class="vocab">decay constant</span> and substitute it in to the particular solution to the IVP
 					</li>
@@ -161,9 +162,12 @@
 									e^{\ln \left| T-25 \right|}  = & e^{-kt + c} \\
 									\left| T-25 \right|  = & ce^{-kt} \\
 									T-25  = & ce^{-kt} \\
-									T  = & 25 + ce^{-kt} \\						
+									T  = & 25 + ce^{-kt} \\
 								\end{align*}
-
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 								Then applying our initial condition, we find \( c \)
 
 								\begin{align*}
@@ -197,11 +201,11 @@
 									\frac{175}{375} = & e^{-4k} \\
 									\ln \left( \frac{175/25}{375/25} \right) = & \ln e^{-4k} \\
 									\ln \left( \frac{7}{15} \right) = & -4k \\	
-									k = & - \frac{1}{4} \ln \left( \frac{7}{15} \right) \\	
-									k = & \frac{1}{4} \ln \left( \frac{15}{7} \right) \\				
+									k = & - \frac{1}{4} \ln \left( \frac{7}{15} \right) \\
+									k = & \frac{1}{4} \ln \left( \frac{15}{7} \right) \\
 								\end{align*}
 
-								Substituting in the the temperature decay constant \( k\)
+								Substituting in the temperature decay constant \( k\)
 
 								\begin{equation*}  
 									T = 25 + 375e^{-\frac{t}{4} \ln \left( \frac{15}{7} \right)} 
@@ -210,7 +214,7 @@
 							</div>	
 
 							<div id="x1-6" class="reading-exercise">
-								Verify \( T = 25 + 375e^{-\frac{t}{4} \ln \left( \frac{15}{7} \right)} \) is a solution of \( \dot{T} = -k(T-25^\circ\text{C}) \)
+								Verify \( T = 25 + 375e^{-\frac{t}{4} \ln \left( \frac{15}{7} \right)} \) is a solution of \( \dot{T} = -\frac{1}{4} \ln \left( \frac{15}{7} \right)(T-25^\circ\text{C}) \)
 							</div> 	
 
 							<div>
@@ -263,6 +267,7 @@
 					<li>
 						Set up and solve an IVP using Newton's Law of cooling
 					</li>
+					<li class="skip"></li>
 					<li>
 						Calculate the <span class="vocab"> decay constant</span> and substitute it in to the particular solution to the IVP
 					</li>
@@ -314,7 +319,8 @@
 							<div id="x1-10" class="reading-exercise">
 								Apply the initial condition \( T(0) = 60^\circ\text{F} \) to \(T= -20 + ce^{-kt} \) and solve for \( c\)
 							</div> 
-
+						</li>
+						<li class="continued">
 							<div>
 								Applying the initial condition \( T(0) = 60^\circ\text{F} \) we can solve for \( c \)
 
@@ -352,7 +358,7 @@
 									k = & - \frac{1}{2} \ln \left( \frac{7}{8} \right) =\frac{1}{2} \ln \left( \frac{8}{7} \right) \\	
 								\end{align*}
 
-								Substituting in the the temperature decay constant \(k\)
+								Substituting in the temperature decay constant \(k\)
 
 								\begin{equation*}  
 									T = -20 + 80 e^{-\frac{t}{2} \ln \left( \frac{8}{7} \right)} 
@@ -422,12 +428,13 @@
 					<li>
 						Set up and solve an IVP to model the mixing
 					</li>
+					<li class="skip"></li>
 					<li>
 						Use the result from (Part 1) to solve the original problem
 					</li>
 				</ol>
 
-				<figure id="d5866732-b4e5-47b5-a763-ec214f38ee77">
+				<figure id="d5866732-b4e5-47b5-a763-ec214f38ee77" class="no-solution">
 					<div id="-a-mixing-problem-">
 						<img height="264" src="EPS/fig040203.png" width="409" />
 						<a id="x1-13r3"></a>
@@ -495,7 +502,9 @@
 
 							<div id="x1-13" class="reading-exercise">
 								Solve \( \dot{Q} + \frac{1}{150}Q = 2 \) using separation of variables
-							</div> 	
+							</div>
+						</li>
+						<li class="continued">
 
 							<div>
 								Separating variables, we find
@@ -611,12 +620,14 @@
 					<li>
 						Set up and solve an IVP to model the mixing
 					</li>
+					<li class="skip"></li>
+					<li class="skip"></li>
 					<li>
 						Use the result from (Part 1) to solve the original problem
 					</li>
 				</ol>
 
-				<figure id="51ce7fdc-dd22-4188-becc-bcf0abe88974">
+				<figure id="51ce7fdc-dd22-4188-becc-bcf0abe88974" class="no-solution">
 					<div id="-another-mixing-problem-">
 						<img height="264" src="EPS/fig040205.png" width="409" />
 						<a id="x1-18r5"></a>
@@ -695,6 +706,9 @@
 										= & \frac{Q}{t + 100} \,\, \frac{ \text{L} }{ \text{min} }	
 								\end{align}
 							</div>	
+						</li>
+						<li class="continued">
+
 							<div>
 								With both the rate in and the rate out, we can substitute into  <a href="#x1-19r7">(4.2.7)</a>
 
@@ -722,11 +736,12 @@
 							</div>
 							<div id="x1-17" class="reading-exercise">
 								Separate the variables \( \dot{Q} + \left(  \frac{1}{t+100} \right) Q = 0 \)
-							</div> 		
+							</div>
+
 							<div>
 								After separating the variables we get:
 								\begin{align*}
-									\int \frac{1}{Q} dQ = &  -  \int \frac{1}{t+100} dt \\				  						
+									\int \frac{1}{Q} dQ = &  -  \int \frac{1}{t+100} dt \\
 								\end{align*}
 							</div>	
 							<div id="x1-18" class="reading-exercise">
@@ -735,16 +750,14 @@
 							<div>
 								Then we find the antiderivatives on both sides and solve for \(Q \) to obtain the solution to our complementary equation.
 								\begin{align*}
-									Q = &  \frac{c}{t+100} \\		  						
+									Q = &  \frac{c}{t+100} \\
 								\end{align*}
-								We will use <span class="vocab">variation of parameters</span> with and  now select a simple particular solution so using \(c=1\) we will select \( Q_1 = \frac{1}{t+100} \) and seek solutions of the form \(Q=uQ_1 = u \cdot \left(\frac{1}{t+100} \right) = \frac{u}{t+100} \) where \( u = u(t) \) is some unknown function of \(t\)
+								We will use <span class="vocab">variation of parameters</span> and now select a simple particular solution so using \(c=1\) we will select \( Q_1 = \frac{1}{t+100} \) and seek solutions of the form \(Q=uQ_1 = u \cdot \left(\frac{1}{t+100} \right) = \frac{u}{t+100} \) where \( u = u(t) \) is some unknown function of \(t\)
 							</div>	
 							<div id="x1-19" class="reading-exercise">
 								Differentiate \( \frac{u}{t+100} \) using the quotient rule
 							</div> 	
 
-							<div>
-							</div>	
 							<div>
 								and then substitute back into the nonhomogeneous equation <a href="#x1-22r10">(4.2.10)</a> and separate variables
 
@@ -764,6 +777,10 @@
 									\frac{du}{dt} = &  t+100 \nonumber \\
 
 								\end{align}
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 
 								Now we find the antiderivative on both sides
 
