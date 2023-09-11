@@ -36,9 +36,9 @@
 
 	
 
-		<!--Linear Homogeneous Equations-->
+		<!--Homogeneous Linear Equations-->
 		<details id="54f23eb8-7365-45fc-ad4f-e14b44acf04d">
-			<summary>Linear Homogeneous Equations</summary>
+			<summary>Homogeneous Linear Equations</summary>
 		
 			<div id="d645654c-c987-442a-b5eb-abf6685bc698">
 				A second order differential equation is said to be <span class="vocab">linear</span> if it can be written as 
@@ -59,14 +59,14 @@
 				it’s natural to expect similarities between methods of solving <a href="#x1-2r1">(5.1.1)</a> and <a href="#x1-3r2">(5.1.2)</a>. However, solving <a href="#x1-2r1">(5.1.1)</a> is more difficult than solving <a href="#x1-3r2">(5.1.2)</a>. For example, while Theorem&nbsp; <span class="ptmb8t-">2.1.1</span> and Theorem&nbsp; <span class="ptmb8t-">2.1.2</span> give general solutions of all first order linear equations <a href="#x1-3r2">(5.1.2)</a>, <em>there are no formulas for the general solution of <a href="#x1-2r1">(5.1.1)</a></em>. Therefore we must be content to solve only linear second order equations of special forms.
 			</div>
 			<div class="indent" id="43af8b13-63ec-4e0d-8870-9e2002119e3b">
-				In Section&nbsp;2.1 we used <span class="vocab">variation of parameters</span> by considering the homogeneous equation \(\frac{dy}{dx}+p(x)y=0\) first, and then used a simple nontrivial solution to find the general solution of the nonhomogeneous equation \(\frac{dy}{dx}+p(x)y=f(x)\). Although the progression from the homogeneous to the nonhomogeneous case isn’t that simple for second order equation, it’s still necessary to solve the homogeneous equation first
+				In Section&nbsp;2.1 we used <span class="vocab">variation of parameters</span> by considering the homogeneous equation \({dy}/{dx}+p(x)y=0\) first, and then used a simple nontrivial solution to find the general solution of the nonhomogeneous equation \({dy}/{dx}+p(x)y=f(x)\). Although the progression from the homogeneous to the nonhomogeneous case isn’t that simple for second order equation, it’s still necessary to solve the homogeneous equation 
 				
 				<a id="x1-4r3"></a>
 				\begin {equation} \label {eq:5.1.3} 
 					\frac{d^2y}{dx^2} +p(x)\frac{dy}{dx}+q(x)y=0 
 				\end {equation}
 				
-				in order to solve the nonhomogeneous equation <a href="#x1-2r1">(5.1.1)</a>. This section is devoted to verifying solutions to linear homogeneous second order equations <a href="#x1-4r3">(5.1.3)</a> as well as some other important techniques such as using the Wronskian to determine whether or not two solutions are linearly independent.
+				first in order to solve the nonhomogeneous equation <a href="#x1-2r1">(5.1.1)</a>. This section is devoted to verifying solutions to linear homogeneous second order equations <a href="#x1-4r3">(5.1.3)</a> as well as some other important techniques such as using the Wronskian to determine whether or not two solutions are linearly independent.
 			</div>
 	
 
@@ -99,9 +99,9 @@
 			</div>
 		</details>
 
-		<!--Linear Homogeneous Examples-->
+		<!--Verifying Solutions-->
 		<details id="54f23eb8-7365-45fc-ad4f-e14b44acf04drew">	
-			<summary>Linear Homogeneous Examples</summary>
+			<summary>Verifying Solutions</summary>
 			
 			<div class="indent" id="ba67d92f-5f10-4f37-8a5f-f2c2e5a91673">
 				The next three examples illustrate concepts that we’ll develop later in this section. You shouldn’t be concerned with how to <em>find</em> the given solutions of the equations in these examples. This will be explained in later sections.
@@ -1223,12 +1223,13 @@
 				While we have found \(c_1\) it is worth noting that these expressions are fairly complicated to read and write and one common practice is to instead write them in terms of determinants which makes it more readable. As a reminder the definition of a determinant is:
 
 				\begin {equation*} 
-					\left|
+					\det
+					\left(
 						\begin{array}{cc}
 							A & B \\
 							C & D
 						\end{array}
-					\right|
+					\right)
 					= AD - CB
 				\end {equation*}
 
@@ -1238,19 +1239,21 @@
 					c_1 =
 						\left. \\[40pt]
 						\frac{\,
-							\left|
+							\det
+							\left(
 								\begin{array}{cc}
 									\, k_0 & y_2   \\
 									\, k_1 & \displaystyle \frac{dy_2}{dx}  
 								\end{array}
-							\right|
+							\right)
 							\,}{\,
-							\left|
+							\det	
+							\left(
 								\begin{array}{cc}
 									y_1   & y_2   \\
 									\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}  
 								\end{array}
-							\right|
+							\right)
 							\,} 
 							\,
 							\right|_{x_0}
@@ -1264,12 +1267,13 @@
 
 				\begin {equation*} 
 					W(x) = 
-					\left|
+					\det
+					\left(
 						\begin{array}{cc}
 							y_1   & y_2   \\
 							\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}
 						\end{array}
-					\right|
+					\right)
 					=  y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2
 				\end {equation*}
 
@@ -1278,12 +1282,13 @@
 				\begin {equation*} 
 					W(x_0) = 
 					\left. \\[20pt]
-					\left|
+					\det
+					\left(
 						\begin{array}{cc}
 							y_1   & y_2   \\
 							\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}
 						\end{array}
-					\right|
+					\right)
 					\,\,
 					\right|_{x_0}
 					=  \left. \\[15pt] \left[ 
@@ -1298,13 +1303,15 @@
 				\begin {equation*} 
 					c_1 =
 						\frac{1}{W(x_0)}
+						\cdot
 							\left. \\[20pt]
-							\left|
+							\det
+							\left(
 								\begin{array}{cc}
 									\, k_0 & y_2 \\
 									\, k_1 & \displaystyle \frac{dy_2}{dx}
 								\end{array}
-							\right|
+							\right)
 							\,\,
 							\right|_{x_0}
 				\end {equation*}
@@ -1385,19 +1392,21 @@
 					c_2 =
 						\left. \\[40pt]
 						\frac{\,
-							\left|
+							\det
+							\left(
 								\begin{array}{cc}
 									\, y_1 & k_0 \,    \\
 									\, \displaystyle \frac{dy_1}{dx} & k_1 \,  
 								\end{array}
-							\right|
+							\right)
 							\,}{\,
-							\left|
+								\det
+							\left(
 								\begin{array}{cc}
 									y_1   & y_2   \\
 									\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}  
 								\end{array}
-							\right|
+							\right)
 							\,} 
 							\,
 							\right|_{x_0}
@@ -1410,14 +1419,15 @@
 
 				\begin {equation*} 
 					c_2 =
-						\frac{1}{W(x_0)}
+						\frac{1}{W(x_0)} \cdot
 							\left. \\[20pt]
-							\left|
+							\det
+							\left(
 								\begin{array}{cc}
 									\, y_1 & k_0 \,    \\
 									\, \displaystyle \frac{dy_1}{dx} & k_1 \,  
 								\end{array}
-							\right|
+							\right)
 							\,\,
 							\right|_{x_0}
 				\end {equation*}
@@ -1444,12 +1454,13 @@
 				<a id="x1-46r25"></a>
 				\begin{equation} \label{5.1.25}
 					W(x) = 
-						\left|
+						\det
+						\left(
 							\begin{array}{cc}
 								y_1   & y_2   \\
 								\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}  
 							\end{array}
-						\right|
+						\right)
 					=y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2 \ne 0
 				\end{equation}
 
@@ -1472,25 +1483,28 @@
 				\begin{align} 
 					c_1 = & 
 						\frac{1}{W(x_0)}
+								\cdot
 								\left. \\[20pt]
-								\left|
+								\det
+								\left(
 									\begin{array}{cc}
 										\, k_0 & y_2 \\
 										\, k_1 & \displaystyle \frac{dy_2}{dx}
 									\end{array}
-								\right|
+								\right)
 								\,\,
 								\right|_{x_0}
 					\quad\quad\quad			
 					c_2 = 
 						\frac{1}{W(x_0)}
+							\cdot
 							\left. \\[20pt]
-							\left|
+							\left(
 								\begin{array}{cc}
 									\, y_1 & k_0 \,    \\
 									\, \displaystyle \frac{dy_1}{dx} & k_1 \,  
 								\end{array}
-							\right|
+							\right)
 							\,\,
 							\right|_{x_0} \\ \nonumber \\
 				\end{align} 
@@ -1565,12 +1579,13 @@
 					<a id="x1-50r28"></a>
 					\begin {equation} \label {eq:5.1.28}
 						W(x) = 
-						\left|
-									\begin{array}{cc}
-										y_1   & y_2   \\
-										\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}  
-									\end{array}
-								\right|
+						\det
+						\left(
+							\begin{array}{cc}
+								y_1   & y_2   \\
+								\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}  
+							\end{array}
+						\right)
 						=y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2 
 					\end {equation}
 					
@@ -1623,15 +1638,17 @@
 							- \underset{0}{\underbrace{q y_1 y_2 + q y_1 y_2}} \\	
 						= & 
 							- p \Big( y_1 \frac{dy_2}{dx} 
-								- \frac{dy_1}{dx} y_2 \Big)
-						= 
+								- \frac{dy_1}{dx} y_2 \Big) \\
+						= & 
 							- p 
-							\left|
+							\cdot
+							\det
+							\left(
 								\begin{array}{cc}
 									y_1   & y_2   \\
 									\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}  
 								\end{array}
-							\right| \\
+							\right) \\
 						= &
 							- p \, W \\	
 					\end{align*}
@@ -1726,7 +1743,7 @@
 			<!--Example 5-->
 			<div class="example" id="x1-535" style="--ex-number: 5">
 				<div>
-					Verify <span class="vocab">Abel’s formula</span> <a href="#x1-51r29">(5.1.29)</a> for Examples&nbsp;<a href="#x1-61">5.1.1</a>,
+					Verify <span class="vocab">Abel's formula</span> <a href="#x1-51r29">(5.1.29)</a> for Examples&nbsp;<a href="#x1-61">5.1.1</a>,
 					<a href="#x1-142">5.1.2</a>, and
 					<a href="#x1-233">5.1.3</a>
 				</div>
@@ -1757,6 +1774,226 @@
 							\quad \quad 
 							y_1=x^2
 							\quad y_2=1/x^2
+						\]
+					</li>
+				</ol>
+
+				<details class="solution" id="c1a1da63-10d2-4a75-ae84-af58cd259569">
+					<summary>Solution</summary>
+
+					<ol>
+						<li>
+							<div>
+								In Example <a href="#x1-61">5.1.1</a> we already identified \( p(x) \equiv 0 \) using linear standard form <a href="#x1-2r1">(5.1.1)</a> then <span class="vocab">Abel's formula</span> <a href="#x1-51r29">(5.1.29)</a> will evaluate to a constant:
+
+								\[
+									W(x)= \underset{\text{constant}}{\underbrace{W(x_0)}}  \cdot e^{- \underset{\text{constant}}{\underbrace{\displaystyle\int ^x_{x_0}\overset{p(t)}{\overbrace{0}}\, dt }} }
+								\]	
+
+								So we will verify Abel’s formula by showing that the Wronskian <a href="#x1-50r28">(5.1.28)</a> is also constant.
+									\begin {equation*}
+										W(x) = 
+										\det
+										\left(
+											\begin{array}{cc}
+												y_1   & y_2   \\
+												\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}  
+											\end{array}
+										\right)
+										=y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2 
+									\end {equation*}
+							</div>
+							<div>
+								From Example <a href="#x1-61">5.1.1</a> we have the solutions and their derivatives
+								
+								\begin{align*}
+									\begin{array}{rccrcc}
+											y_1 &=& e^x  			\quad & \quad  y_2 &=& e^{-x}  \\
+											\displaystyle \frac{y_1}{dx} &=& e^x  \quad & \quad  \displaystyle \frac{y_2}{dx} &=& -e^{-x}  
+									\end{array}
+								\end{align*}
+
+								Substituting them in to the Wronskian <a href="#x1-50r28">(5.1.28)</a> we obtain:
+
+								\begin {align*}
+									W(x) = 
+									\det
+									\left(
+										\begin{array}{cc}
+											e^x  & e^{-x}  \\
+											e^x  & -e^{-x}  
+										\end{array}
+									\right)
+										= & e^x(-e^{-x}) - e^xe^{-x} \\
+										= & -e^{x-x } - e^{x-x} \\
+										= & -2e^{0}
+										= -2 
+								\end{align*}
+
+								\(W(x) = -2 \) <em>is</em> constant so Abel’s formula is verified
+
+							</div>	
+							
+						</li>
+						<li>
+							<div>
+								In Example <a href="#x1-142">5.1.2</a> we already identified \( p(x) \equiv 0 \) using linear standard form <a href="#x1-2r1">(5.1.1)</a> then <span class="vocab">Abel's formula</span> <a href="#x1-51r29">(5.1.29)</a> will evaluate to a constant:
+
+								\[
+									W(x)= \underset{\text{constant}}{\underbrace{W(x_0)}}  \cdot  e^{- \underset{\text{constant}}{\underbrace{\displaystyle\int ^x_{x_0}\overset{p(t)}{\overbrace{0}}\, dt }} }
+								\]	
+
+								So we will verify Abel’s formula by showing that the Wronskian <a href="#x1-50r28">(5.1.28)</a> is also constant.
+									\begin {equation*}
+										W(x) = 
+										\det
+										\left(
+											\begin{array}{cc}
+												y_1   & y_2   \\
+												\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}  
+											\end{array}
+										\right)
+										=y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2 
+									\end {equation*}
+							</div>
+							<div>
+								In Example <a href="#x1-142">5.1.2</a> we have the solutions and their derivatives
+								
+								\begin{align*}
+									\begin{array}{rccrcc}
+											y_1 &=& \cos\omega x  			\quad & \quad  y_2 &=& \sin\omega x  \\
+											\displaystyle \frac{y_1}{dx} &=& -\omega\sin\omega x  \quad & \quad  \displaystyle \frac{y_2}{dx} &=& \omega\cos\omega x  
+									\end{array}
+								\end{align*}
+
+								Substituting them in to the Wronskian <a href="#x1-50r28">(5.1.28)</a> we obtain:
+
+								
+								\begin {align*}
+									W(x) = & 
+									\det 
+									\left(  \\[15pt]
+												\begin{array}{cc}
+													\cos\omega x  & \sin\omega x  \\
+													-\omega\sin\omega x & \omega\cos\omega x  
+												\end{array}
+											\right) \\
+										= & \big(\cos\omega x\big)\big(\omega\cos\omega x\big) - \big(\sin\omega x\big)\big(-\omega\sin\omega x\big) \\
+										= & \omega\cos^2\omega x + \omega\sin^2\omega x \\
+										= & \omega \big( \underset{1}{\underbrace{\cos^2\omega x + \sin^2\omega x}} \big)
+										= \omega 
+								\end{align*}
+
+								\(W(x) = \omega \) <em>is</em> constant so Abel’s formula is verified
+
+							</div>	
+							
+						</li>	
+						<li>
+							<div>
+								In Example <a href="#x1-233">5.1.3</a> we already identified \( p(x) = 1/x \) using linear standard form <a href="#x1-2r1">(5.1.1)</a> and since \(p(x)\) is undefined at \( x = 0 \) 
+								we only consider solutions on intervals that don't contain zero so \((-\infty ,0)\) and \((0,\infty )\). Then <span class="vocab">Abel's formula</span> <a href="#x1-51r29">(5.1.29)</a> yields:
+
+								\begin{align*}
+									W(x)
+									= & W(x_0) \cdot e^{- \displaystyle\int ^x_{x_0}\overset{p(t)}{\overbrace{\frac{1}{t}} \, dt } } \\
+									= & W(x_0) \cdot e^{- \displaystyle \left.\\[10pt] \ln \left| t \right| \, \right|_{x_0}^x } \\
+									= & W(x_0) \cdot e^{-  \displaystyle \big( \ln \left| x \right| - \ln \left| x_0 \right| \big) } \\
+									= & W(x_0) \cdot e^{ \displaystyle \big(  \ln \left| x_0 \right|  - \ln \left| x \right| \big) } \\
+									= & W(x_0) \cdot e^{ \displaystyle  \ln \left| x_0/x \right| } \\
+									= & W(x_0) \cdot \left| \frac{x_0}{x} \right| \\	
+									= & W(x_0) \cdot \frac{x_0}{x} \\						
+								\end{align*}	
+
+								Since both \( x \) and \(x_0\) must be in either  \((-\infty ,0)\) or \((0,\infty )\) so they are either both positive or both negative so the ratio \( {x_0}/{x} \) is always positive.
+
+								We will now show that the Wronskian <a href="#x1-50r28">(5.1.28)</a> also equals \(W(x_0) \cdot \displaystyle \frac{x_0}{x}  \)
+									\begin {equation*}
+										W(x) = 
+										\det
+										\left(
+											\begin{array}{cc}
+												y_1   & y_2   \\
+												\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}  
+											\end{array}
+										\right)
+										=y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2 
+									\end {equation*}
+							</div>
+							<div>
+								In Example <a href="#x1-233">5.1.3</a> we have the solutions and their derivatives
+								
+								\begin{align*}
+									\begin{array}{rccrcc}
+											y_1 &=& x^2  			\quad & \quad  y_2 &=& \displaystyle \frac{1}{x^2}  \\
+											\displaystyle \frac{y_1}{dx} &=& 2x  \quad & \quad  \displaystyle \frac{y_2}{dx} &=& - \displaystyle \frac{2}{x^3}  
+									\end{array}
+								\end{align*}
+
+								Substituting them in to the Wronskian <a href="#x1-50r28">(5.1.28)</a> we obtain:
+
+								\begin {align}
+									W(x) = 
+									\det
+									\left(  \\[15pt]
+												\begin{array}{rr}
+													\, x^2 & \displaystyle \frac{1}{x^2} \,  \nonumber \\
+													\, 2x 	& - \displaystyle \frac{2}{x^3} \,  
+												\end{array}
+											\right)
+										= & x^2 \left( - \frac{2}{x^3} \right) - 2x \left( \frac{1}{x^2} \right) \nonumber \\
+										= & - \frac{2}{x}  - \frac{2}{x}  
+										= - \frac{4}{x} 
+								\end{align}
+
+								Now according to Abel’s formula
+
+								\begin {align*}
+									\underbrace{W(x)} \overset{?}{=} & \underbrace{W(x_0)} \cdot \frac{x_0}{x}  \\
+									- \frac{4}{x}  \overset{?}{=} & - \frac{4}{x_0} \cdot \frac{x_0}{x} \\
+									- \frac{4}{x}  = & - \frac{4}{x} \quad \checkmark
+								\end{align*}
+
+
+								As we have \( W(x) = W(x_0) \cdot \displaystyle \frac{x_0}{x} \) Abel’s formula <em>is</em> verified
+							</div>	
+						</li>	
+					</ol>
+				</details>
+			</div>
+			<br>
+
+			<!--Example 6-->
+			<div class="example" id="x1-5356" style="--ex-number: 6">
+				<div>
+					Use <span class="vocab">Abel's formula</span> <a href="#x1-51r29">(5.1.29)</a> to write and solve a differential equation for \(y_2\) given \(y_1\) from Examples&nbsp;<a href="#x1-61">5.1.1</a>,
+					<a href="#x1-142">5.1.2</a>, and
+					<a href="#x1-233">5.1.3</a>
+				</div>
+
+				<ol>
+					<li>
+						Example <a href="#x1-61">5.1.1</a> 
+						\[	
+							\frac{d^2y}{dx^2}-y=0 
+							\quad \quad 
+							y_1=e^x 
+						\]
+					</li>
+					<li>
+						Example <a href="#x1-142">5.1.2</a> 
+						\[
+							\frac{d^2y}{dx^2}+\omega ^2y=0
+							\quad \quad
+							y_1=\cos \omega x
+						\]
+					</li>
+					<li>
+						Example <a href="#x1-233">5.1.3</a>
+						\[
+							x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}-4y=0
+							\quad \quad 
+							y_1=x^2
 						\]
 					</li>
 				</ol>
