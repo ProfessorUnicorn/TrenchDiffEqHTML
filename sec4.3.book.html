@@ -20,7 +20,7 @@
 		<script
 			async="async"
 			id="MathJax-script"
-			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+			src="mathjax-3-es5-tex-chtml-full.js"
 			type="text/javascript"
 		></script>
 		<style type="text/css">
@@ -192,17 +192,17 @@
 						</li>
 						<li class="continued">
 							<div>	
-								Case (1) If the object is move downward, then the velocity is negative (\(v\le 0\)). Since the resisting force is opposite, the resisting force is upward, which is positive (\(F_1 \ge 0\)) so our resisting force can be represented as:
+								Case (1) If the object is moving downward, then the velocity is negative (\(v\le 0\)). Since the resisting force is opposite, the resisting force is upward, which is positive (\(F_1 \ge 0\)) so our resisting force can be represented as:
 								
 								\begin{align*}
 									\left|  F_1 \right| = & k \left| v \right| \\
-									+ F_1 = & k \left( - v \right) \\	
-									F_1 = & -k v \\		
+									+ F_1 = & k \left( - v \right) \\
+									F_1 = & -k v \\
 								\end{align*} 
 							</div>
 
 							<div>
-								Case (2): if the object is move upward, then the velocity is positive (\(v \ge 0\)). Since the resisting force is opposite, the resisting force is downward, which is negative (\(F_1 \le 0\)) so our resisting force can be represented as:
+								Case (2): if the object is moving upward, then the velocity is positive (\(v \ge 0\)). Since the resisting force is opposite, the resisting force is downward, which is negative (\(F_1 \le 0\)) so our resisting force can be represented as:
 								
 								\begin{align*}
 									\left|  F_1 \right| = & k \left| v \right| \\
@@ -511,11 +511,67 @@
 					<ol>
 						<li>
 							<div>
-								We assume that the only forces acting on the object are <span class="vocab">gravity</span> and <span class="vocab">resistance</span> from the medium, therefore the total force is given as: \(F = -mg + F_1\), where \(-mg\) is the force due to gravity and \(F_1\) is the resisting force. With given \(m=10 \, kg\) and known \(g=9.8 \, {m}/{s^2}\), we can calculate as \(-mg = -98\) so we have the force due to gravity.
+								We assume that the only forces acting on the object are <span class="vocab">gravity</span> and <span class="vocab">resistance</span>
+								from the medium, therefore the total force is given as:
+								
+								\begin{equation*}
+									F = -mg + F_1
+								\end{equation*}
+								
+								The force due to <span class="vocab">gravity</span> is \(-mg\) and the force due to <span class="vocab">resistance</span> from the medium is \(F_1\). It is given that the magnitude of the force due to resistance \(\left| F_1 \right|\) is proportional to the square of the speed of the object. Recall that the speed of an object is \(\left| v \right|\), the absolute value of its velocity \(v\). Thus where \(k\) is the positive constant of proportionality we have the equation:
+								
+								\begin{equation*}
+									\left|  F_1 \right| = k \left| v \right|^2
+								\end{equation*} 
+								
+								Now we will simplify the absolute value bars by considering two cases: Case (1) the object is moving downward, and Case (2) the object is moving upward.
+							</div>
+
+						</li>
+						<li class="continued">
+							<div>	
+								Case (1) If the object is moving downward, then the velocity is negative (\(v\le 0\)). Since the resisting force is opposite, the resisting force is upward, which is positive (\(F_1 \ge 0\)) so our resisting force can be represented as:
+								
+								\begin{align*}
+									\left|  F_1 \right| = & k \left| v \right|^2 \\
+									+ F_1 = & k \left| - v \right|^2 \\
+									+ F_1 = & + k v^2 \\
+								\end{align*} 
+							</div>
+
+							<div>
+								Case (2): if the object is moving upward, then the velocity is positive (\(v \ge 0\)). Since the resisting force is opposite, the resisting force is downward, which is negative (\(F_1 \le 0\)) so our resisting force can be represented as:
+								
+								\begin{align*}
+									\left|  F_1 \right| = & k \left| v \right|^2 \\
+									- F_1 = & k \left| + v \right|^2 \\
+									- F_1 = & kv^2 \\
+									F_1 = & -k v^2 \\
+								\end{align*} 
+								
+								In this case, \( v \le 0 \), our resisting force can be represented as
+								\[
+									F = -mg + kv^2
+								\]
+
+							</div>
+							<div>
+								From Newton's second law of motion, \(F=ma=m\dot{v}\), substituting this into <a href="#x1-7r5">(4.3.5)</a> yields a first order differential equation
+
+								\[
+									m\dot{v} = -mg + kv^2 
+								\]
+							</div>
+
+						</li>
+
+						<li class="continued">
+							<div>
+								With given \(m=10 \, kg\) and known \(g=9.8 \, {m}/{s^2}\), we can calculate as \(-mg = -98\) so we have the force due to gravity.
 							</div>
 
 							<div>	
-								The force due to the <span class="vocab">resistance</span> from the medium is \(F_1\) and given as proportional to the square of the speed, so \(F_1=k \left|v \right|^2 = kv^2\) where \(k\) is the constant of proportionality. With the speed given as  \(2 \, {m}/{s}\) with a resistance of \(8 \, N\), then we can calculate the proportionality constant \(k\):
+								The force due to the <span class="vocab">resistance</span> from the medium is \(F_1\) and given as proportional to the square of the speed, so \(F_1= +kv^2\) where \(k\) is the constant of proportionality. With the speed given as  \(2 \, {m}/{s}\) with a resistance of \(8 \, N\), then we can calculate the proportionality constant \(k\):
 
 								\begin{align*}
 									F_1 = & kv^2 \\
@@ -524,7 +580,7 @@
 									k = & 2 \\		
 								\end{align*}
 
-								Thus we have the resisting force \(F_1= kv^2 = 2v^2\) so our total force can be expressed:
+								Thus we have the resisting force \(F_1= +kv^2 = +2v^2\) so our total force can be expressed:
 
 								<a id="x1-15r9"></a>
 								\begin{equation} \label{eq:4.3.9}
