@@ -2002,6 +2002,7 @@
 					<summary>Solution</summary>
 
 					<ol>
+						<!--Part 1-->
 						<li>
 							<div>
 								We have been given one solution \(y_1=e^x \) and we will use it to find a second solution \(y_2\) using <span class="vocab">Abel's formula</span> <a href="#x1-51r29">(5.1.29)</a>
@@ -2060,227 +2061,277 @@
 									e^x \displaystyle\frac{dy_2}{dx} - e^x y_2 = c
 								\end{align*}
 
-								Which we simplify by writing in linear standard form fixme (2.1.1)
-								 taking the arbitary constant \(c=1\) and just writing \(y_2\) as \(y\)
-								
+								Which we simplify by writing in linear standard form <a href="sec2.1.book.html" target=_blank>(2.1.1)</a> by multiplying by \(e^{-x}\) and taking the arbitary constant as \(c=1\) and just writing \(y_2\) as \(y\)
+
+								\begin{align*}
+									\frac{dy}{dx} - y = e^{-x}
+								\end{align*}
+
+								Thus we have a nonhomogeneous linear first order equation which we can solve using the same method of Section <a href="sec2.1.book.html" target=_blank>2.1</a> Example <a href="sec2.1.book.html#x1-305" target=_blank>2.1.5</a> and <a href="sec2.1.book.html#x1-346" target=_blank>2.1.6</a>
+
 							</div>
+							<div class="reading-exercise">
+								Solve the homogeneous equation \({dy}/{dx} - y = 0\) using separation of variables.
+							</div> 	
 							<div>	
-
-								
-
-								Which we will substitute the given \(y_1=e^x \) and its derivative \(dy_1/dx=e^x \) into while leaving \(y_2\) and \(dy_2/dx \) so we can write a first order linear equation to solve for \(y_2\)
-							</div>
-
-							<div>		
-								We start by identifying \( p(x) \) 
-								
-							</div>
-							<div>			
-								Now substitute \(y_1=e^x \) and \(p(x)\) into Abel's formula <a href="#x1-51r29">(5.1.29)</a> and simplifying the constant \( W(x_0) = c \) and throughout to \(c=1\)				
+								Solving the homogeneous equation we obtain \(y_1 = e^x\)
 								\begin{align*}
-									W[y_1,y_2](x) = & \underbrace{W(x_0)}  \cdot e^{- {\displaystyle\int ^x_{x_0} p(t) \, dt } } \\
-									\det
-									\left(
-										\begin{array}{cc}
-											y_1   & y_2   \\
-											\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}  
-										\end{array}
-									\right)
-									= & \, c  \cdot e^{- {\displaystyle\int ^x_{x_0} p(t) \, dt } } \\
-									\det
-									\left(
-										\begin{array}{cc}
-											e^x   & y_2   \\
-											e^x  & \displaystyle \frac{dy_2}{dx}  
-										\end{array}
-									\right)
-									= & \, e^{- {\displaystyle\int ^x_{x_0} 0 \, dt } } 
-									= \, e^{- c } = c \\		
-									e^x \frac{dy_2}{dx} - e^x y_2
-									& = 1 \\
-									\frac{dy_2}{dx} - y_2
-									& = e^{-x}								\\																	
-								\end{align*}
-
-
-								Thus we have obtained a differential equation to find \(y_2\) which is a first order linear equation so we can solve the same way we did in chapter 2 by first solving the complementary equation
-								\begin{align*}
-									\frac{dy}{dx} - y = & 0 \\
-									\frac{dy}{dx} = & y \\
-									\int \frac{1}{y} dy = & \int dx \\
-									\ln y = & \, x \\
-									y = & \, e^x \\
-								\end{align*}
-
-								And then using variation of parameters to seek solutions of the form \(y_2=u e^x\)
-								\begin{align*}
-									\frac{dy_2}{dx} - y_2 = & \,  e^{-x} \\	
+									\frac{dy}{dx} - y = 0 
+									\Longrightarrow
+									y_1 = e^x
 								\end{align*}
 							</div>
+							<div class="reading-exercise">
+								Use variation of parameters to seek a solution of the form \(y=u y_1 = u e^x\) to the nonhomogeneous equation \({dy}/{dx} - y = e^{-x}\) 
+							</div> 
+
+							<div class="reading-exercise">
+								Differentiate \(y = u e^x\) 
+							</div> 
+
 							<div>	
-
-								So we will verify Abel’s formula by showing that the Wronskian <a href="#x1-50r28">(5.1.28)</a> is also constant.
-									\begin {equation*}
-										W(x) = 
-										\left|
-											\begin{array}{cc}
-												y_1   & y_2   \\
-												\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}  
-											\end{array}
-										\right|
-										=y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2 
-									\end {equation*}
-							</div>
-							<div>
-								From Example <a href="#x1-61">5.1.1</a> we have the solutions and their derivatives
-								
+								Substituting \(y = u e^x\) and its derivative into the nonhomogeneous equation we obtain
 								\begin{align*}
-									\begin{array}{rccrcc}
-											y_1 &=& e^x  			\quad & \quad  y_2 &=& e^{-x}  \\
-											\displaystyle \frac{y_1}{dx} &=& e^x  \quad & \quad  \displaystyle \frac{y_2}{dx} &=& -e^{-x}  
-									\end{array}
+									\overset{\frac{dy}{dx}}{\overbrace{e^x \frac{du}{dx} + u e^x}} - \overset{y}{\overbrace{u e^x}} = & e^{-x} \\
+									e^x \frac{du}{dx} = & e^{-x} 
+									\Longrightarrow
+									\frac{du}{dx} = e^{-2x} \\
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Antdifferentiate \(\displaystyle\frac{du}{dx} = e^{-2x}\) using substitution
+							</div> 
+							<div>	
+								Antidifferentiating and substituting back to find \(y = u e^x \)
+								\begin{align*}
+									\frac{du}{dx} = e^{-2x}
+									\Longrightarrow
+									u = & -\frac{1}{2}e^{-2x} \\
+									ue^{x} = & -\frac{1}{2}e^{-2x}e^{x} \\
+									y = & -\frac{1}{2}e^{-x} \\
 								\end{align*}
 
-								Substituting them in to the Wronskian <a href="#x1-50r28">(5.1.28)</a> we obtain:
-
-								\begin {align*}
-									W(x) = 
-									\left|
-												\begin{array}{cc}
-													e^x  & e^{-x}  \\
-													e^x  & -e^{-x}  
-												\end{array}
-											\right|
-										= & e^x(-e^{-x}) - e^xe^{-x} \\
-										= & -e^{x-x } - e^{x-x} \\
-										= & -2e^{0}
-										= -2 
-								\end{align*}
-
-								\(W(x) = -2 \) <em>is</em> constant so Abel’s formula is verified
-
-							</div>	
-							
-						</li>
-						<li>
-							<div>
-								In Example <a href="#x1-142">5.1.2</a> we already identified \( p(x) \equiv 0 \) using linear standard form <a href="#x1-2r1">(5.1.1)</a> then <span class="vocab">Abel's formula</span> <a href="#x1-51r29">(5.1.29)</a> will evaluate to a constant:
-
+								Changing the constant factor to \(1\) to simplify we obtain \(y_2 = e^{-x}\) a second solution thus have a fundamental set of solutions
 								\[
-									W(x)= \underset{\text{constant}}{\underbrace{W(x_0)}}  \cdot  e^{- \underset{\text{constant}}{\underbrace{\displaystyle\int ^x_{x_0}\overset{p(t)}{\overbrace{0}}\, dt }} }
-								\]	
-
-								So we will verify Abel’s formula by showing that the Wronskian <a href="#x1-50r28">(5.1.28)</a> is also constant.
-									\begin {equation*}
-										W(x) = 
-										\left|
-													\begin{array}{cc}
-														y_1   & y_2   \\
-														\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}  
-													\end{array}
-												\right|
-										=y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2 
-									\end {equation*}
+									\big\{
+										y_1, y_2
+									\big\}
+									=
+									\Big\{
+										e^{x}, e^{-x}
+									\Big\}
+								\]
 							</div>
-							<div>
-								In Example <a href="#x1-142">5.1.2</a> we have the solutions and their derivatives
-								
-								\begin{align*}
-									\begin{array}{rccrcc}
-											y_1 &=& \cos\omega x  			\quad & \quad  y_2 &=& \sin\omega x  \\
-											\displaystyle \frac{y_1}{dx} &=& -\omega\sin\omega x  \quad & \quad  \displaystyle \frac{y_2}{dx} &=& \omega\cos\omega x  
-									\end{array}
-								\end{align*}
-
-								Substituting them in to the Wronskian <a href="#x1-50r28">(5.1.28)</a> we obtain:
-
-								
-								\begin {align*}
-									W(x) = &  
-									\left|  \\[15pt]
-												\begin{array}{cc}
-													\cos\omega x  & \sin\omega x  \\
-													-\omega\sin\omega x & \omega\cos\omega x  
-												\end{array}
-											\right| \\
-										= & \big(\cos\omega x\big)\big(\omega\cos\omega x\big) - \big(\sin\omega x\big)\big(-\omega\sin\omega x\big) \\
-										= & \omega\cos^2\omega x + \omega\sin^2\omega x \\
-										= & \omega \big( \underset{1}{\underbrace{\cos^2\omega x + \sin^2\omega x}} \big)
-										= \omega 
-								\end{align*}
-
-								\(W(x) = \omega \) <em>is</em> constant so Abel’s formula is verified
-
-							</div>	
-							
-						</li>	
+						</li>
+						<!--Part 2-->
 						<li>
 							<div>
-								In Example <a href="#x1-233">5.1.3</a> we already identified \( p(x) = 1/x \) using linear standard form <a href="#x1-2r1">(5.1.1)</a> and since \(p(x)\) is undefined at \( x = 0 \) 
-								we only consider solutions on intervals that don't contain zero so \((-\infty ,0)\) and \((0,\infty )\). Then <span class="vocab">Abel's formula</span> <a href="#x1-51r29">(5.1.29)</a> yields:
+								We have been given one solution \(y_1=\cos \omega x \) and we will use it to find a second solution \(y_2\) using <span class="vocab">Abel's formula</span> <a href="#x1-51r29">(5.1.29)</a>
+
+									\begin{align*}
+										W(x) = & W(x_0) \cdot e^{- {\displaystyle\int ^x_{x_0} p(t) \, dt } }
+									\end{align*}	
+									
+								Again the left side of Abel's formula is the <span class="vocab">Wronskian</span> determinant and is given by Equation <a href="#x1-50r28">(5.1.28)</a> and the right side contains the factor \(W(x_0)\) which we rewrite as some arbitrary constant \(W(x_0) = c\)
+								so we can rewrite Abel's formula as
 
 								\begin{align*}
-									W(x)
-									= & W(x_0) \cdot e^{- \displaystyle\int ^x_{x_0}\overset{p(t)}{\overbrace{\frac{1}{t}} \, dt } } \\
-									= & W(x_0) \cdot e^{- \displaystyle \left.\\[10pt] \ln \left| t \right| \, \right|_{x_0}^x } \\
-									= & W(x_0) \cdot e^{-  \displaystyle \big( \ln \left| x \right| - \ln \left| x_0 \right| \big) } \\
-									= & W(x_0) \cdot e^{ \displaystyle \big(  \ln \left| x_0 \right|  - \ln \left| x \right| \big) } \\
-									= & W(x_0) \cdot e^{ \displaystyle  \ln \left| x_0/x \right| } \\
-									= & W(x_0) \cdot \left| \frac{x_0}{x} \right| \\	
-									= & W(x_0) \cdot \frac{x_0}{x} \\						
-								\end{align*}	
+									y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2 = & \, c \, \cdot \, e^{- {\displaystyle\int ^x_{x_0} p(t) \, dt } }
+								\end{align*}
 
-								Since both \( x \) and \(x_0\) must be in either  \((-\infty ,0)\) or \((0,\infty )\) so they are either both positive or both negative so the ratio \( {x_0}/{x} \) is always positive.
+								Differentiating the given \(y_1=\cos \omega x \) we obtain \(dy_1/dx= - \omega \sin \omega x \) so the left side becomes
 
-								We will now show that the Wronskian <a href="#x1-50r28">(5.1.28)</a> also equals \(W(x_0) \cdot \displaystyle \frac{x_0}{x}  \)
-									\begin {equation*}
-										W(x) = 
-										\left|
-													\begin{array}{cc}
-														y_1   & y_2   \\
-														\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}  
-													\end{array}
-												\right|
-										=y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2 
-									\end {equation*}
-							</div>
-							<div>
-								In Example <a href="#x1-233">5.1.3</a> we have the solutions and their derivatives
+								\begin{align*}
+									y_1 \frac{dy_2}{dx} - \frac{dy_1}{dx} y_2 
+									=
+									\big( \cos \omega x \big) \frac{dy_2}{dx} - \big(- \omega \sin \omega x \big) \, y_2 
+								\end{align*}
+
+								From linear standard form <a href="#x1-2r1">(5.1.1)</a> we know \( p(t)\equiv 0 \) so the right side becomes an arbitrary constant
+
+								\begin{align*}
+									c \, \cdot \, e^{- {\displaystyle\int ^x_{x_0} \, 0  \, dt } }
+									=
+									c \, \cdot \, e^{- k }
+									= c
+								\end{align*}
 								
+								Finally we obtain a first order equation for \(y_2\)
+
 								\begin{align*}
-									\begin{array}{rccrcc}
-											y_1 &=& x^2  			\quad & \quad  y_2 &=& \displaystyle \frac{1}{x^2}  \\
-											\displaystyle \frac{y_1}{dx} &=& 2x  \quad & \quad  \displaystyle \frac{y_2}{dx} &=& - \displaystyle \frac{2}{x^3}  
-									\end{array}
+									\big( \cos \omega x \big) \frac{dy_2}{dx} + \big( \omega \sin \omega x \big) \, y_2 = c
 								\end{align*}
 
-								Substituting them in to the Wronskian <a href="#x1-50r28">(5.1.28)</a> we obtain:
+								Which we simplify by writing in linear standard form <a href="sec2.1.book.html" target=_blank>(2.1.1)</a> by dividing by \(\cos \omega x\) and taking the arbitary constant as \(c=1\) and just writing \(y_2\) as \(y\)
 
-								\begin {align}
-									W(x) = 
-									\left|  \\[15pt]
-												\begin{array}{rr}
-													\, x^2 & \displaystyle \frac{1}{x^2} \,  \nonumber \\
-													\, 2x 	& - \displaystyle \frac{2}{x^3} \,  
-												\end{array}
-											\right|
-										= & x^2 \left( - \frac{2}{x^3} \right) - 2x \left( \frac{1}{x^2} \right) \nonumber \\
-										= & - \frac{2}{x}  - \frac{2}{x}  
-										= - \frac{4}{x} 
-								\end{align}
-
-								Now according to Abel’s formula
-
-								\begin {align*}
-									\underbrace{W(x)} \overset{?}{=} & \underbrace{W(x_0)} \cdot \frac{x_0}{x}  \\
-									- \frac{4}{x}  \overset{?}{=} & - \frac{4}{x_0} \cdot \frac{x_0}{x} \\
-									- \frac{4}{x}  = & - \frac{4}{x} \quad \checkmark
+								\begin{align*}
+									\frac{dy}{dx} + \big( \omega \tan \omega x \big) \, y = & \sec \omega x
 								\end{align*}
 
+								Again we have a nonhomogeneous linear first order equation which we can solve using the same method of Section <a href="sec2.1.book.html" target=_blank>2.1</a> Example <a href="sec2.1.book.html#x1-305" target=_blank>2.1.5</a> and <a href="sec2.1.book.html#x1-346" target=_blank>2.1.6</a>
 
-								As we have \( W(x) = W(x_0) \cdot \displaystyle \frac{x_0}{x} \) Abel’s formula <em>is</em> verified
-							</div>	
+							</div>
+							<div class="reading-exercise">
+								Solve the homogeneous equation \({dy}/{dx} + \big( \omega \tan \omega x \big) \, y = 0\) using separation of variables.
+							</div> 	
+							<div>	
+								Solving the homogeneous equation we obtain \(y_1 =  \cos \omega x\)
+								\begin{align*}
+									\frac{dy}{dx} + \big( \omega \tan \omega x \big) \, y = 0 
+									\Longrightarrow
+									y_1 = \cos \omega x
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Use variation of parameters to seek a solution of the form \(y=u y_1 = u \cos \omega x\) to the nonhomogeneous equation \({dy}/{dx} + \big( \omega \tan \omega x \big) \, y = \, \sec \omega x\) 
+							</div> 
+
+							<div class="reading-exercise">
+								Differentiate \(y =  u \cos \omega x\) 
+							</div> 
+
+							<div>	
+								Substituting \(y =  u \cos \omega x\) and its derivative into the nonhomogeneous equation we obtain
+								\begin{align*}
+									\overset{\frac{dy}{dx}}{\overbrace{\big( \cos \omega x \big) \frac{du}{dx} - u \big(\omega \sin \omega x \big) }} + \big( \omega \tan \omega x \big) \,  \overset{y}{\overbrace{\big(u \cos \omega x\big)}}  = & \, \sec \omega x \\
+									\big( \cos \omega x \big) \frac{du}{dx} - u \, \omega \, \big( \sin \omega x \big) 
+									+ u \, \omega \, \big( \sin \omega x \big) = & \, \sec \omega x \\
+									\big( \cos \omega x \big) \frac{du}{dx} = & \, \sec \omega x \\
+									\Longrightarrow
+									\frac{du}{dx} = & \, \sec^2 \omega x \\
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Antdifferentiate \(\displaystyle\frac{du}{dx} = \sec^2 \omega x\) using substitution
+							</div> 
+							<div>	
+								Antidifferentiating and substituting back to find \(y = u e^x \)
+								\begin{align*}
+									\frac{du}{dx} = \sec^2 \omega x
+									\Longrightarrow
+									u = & \frac{1}{\omega}\tan \omega x \\
+									u \cos \omega x = & \frac{1}{\omega}\tan \omega x \cos \omega x \\
+									y = & \frac{1}{\omega}\sin \omega x \\
+								\end{align*}
+
+								Changing the constant factor to \(1\) to simplify we obtain \(y_2 = \sin \omega x \) a second solution thus have a fundamental set of solutions
+								\[
+									\big\{
+										y_1, y_2
+									\big\}
+									=
+									\Big\{
+										\cos \omega x, \sin \omega x
+									\Big\}
+								\]
+							</div>
 						</li>	
+						<!--Part 3-->
+						<li>
+							<div>
+								We have been given one solution \(y_1= x^2 \) and we will use it to find a second solution \(y_2\) using <span class="vocab">Abel's formula</span> <a href="#x1-51r29">(5.1.29)</a>
+
+									\begin{align*}
+										W(x) = & W(x_0) \cdot e^{- {\displaystyle\int ^x_{x_0} p(t) \, dt } }
+									\end{align*}	
+									
+								Again the left side of Abel's formula is the <span class="vocab">Wronskian</span> determinant and is given by Equation <a href="#x1-50r28">(5.1.28)</a> and the right side contains the factor \(W(x_0)\) which we rewrite as some arbitrary constant \(W(x_0) = c\)
+								so we can rewrite Abel's formula as
+
+								\begin{align*}
+									y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2 = & \, c \, \cdot \, e^{- {\displaystyle\int ^x_{x_0} p(t) \, dt } }
+								\end{align*}
+
+								Differentiating the given \(y_1= x^2\) we obtain \(dy_1/dx= 2x \) so the left side becomes
+
+								\begin{align*}
+									y_1 \frac{dy_2}{dx} - \frac{dy_1}{dx} y_2 
+									=
+									x^2 \frac{dy_2}{dx} - \big(2x\big) y_2 
+								\end{align*}
+
+								From linear standard form <a href="#x1-2r1">(5.1.1)</a> we know \( p(t)= 1/t \) and selecting \(x_0=1\) so the right side simplifies to a simple function of \(x\)
+
+								\begin{align*}
+									c \, \cdot \, e^{- {\displaystyle\int ^x_{1} \, \frac{1}{t}  \, dt } }
+									=
+									c \, \cdot \, e^{- \displaystyle \left. \ln t \right|^x_1}
+									=
+									c \, \cdot \, e^{\displaystyle \ln x^{-1}}
+									=	
+									\frac{c}{x} 
+								\end{align*}
+								
+								Finally we obtain a first order equation for \(y_2\)
+
+								\begin{align*}
+									x^2 \frac{dy_2}{dx} - \big(2x\big) y_2 = \frac{c}{x} 
+								\end{align*}
+
+								Which we simplify by writing in linear standard form <a href="sec2.1.book.html" target=_blank>(2.1.1)</a> by dividing by \(x^2\) and taking the arbitary constant as \(c=1\) and just writing \(y_2\) as \(y\)
+
+								\begin{align*}
+									\frac{dy}{dx} - \left(\frac{2}{x}\right) \, y = &  \frac{1}{x^3} 
+								\end{align*}
+
+								Again we have a nonhomogeneous linear first order equation which we can solve using the same method of Section <a href="sec2.1.book.html" target=_blank>2.1</a> Example <a href="sec2.1.book.html#x1-305" target=_blank>2.1.5</a> and <a href="sec2.1.book.html#x1-346" target=_blank>2.1.6</a>
+
+							</div>
+							<div class="reading-exercise">
+								Solve the homogeneous equation \({dy}/{dx} - \big( 2/x \big) \, y = 0\) using separation of variables.
+							</div> 	
+							<div>	
+								Solving the homogeneous equation we obtain \(y_1 =  x^2\)
+								\begin{align*}
+									\frac{dy}{dx} - \left(\frac{2}{x}\right) \, y = \, y = 0 
+									\Longrightarrow
+									y_1 = x^2
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Use variation of parameters to seek a solution of the form \(y=u y_1 = u x^2\) to the nonhomogeneous equation \({dy}/{dx} - \big( 2/x \big) \, y = \, 1 / x^3\) 
+							</div> 
+
+							<div class="reading-exercise">
+								Differentiate \(y =  u x^2\) 
+							</div> 
+
+							<div>	
+								Substituting \(y =   u x^2\) and its derivative into the nonhomogeneous equation we obtain
+								\begin{align*}
+									\overset{\frac{dy}{dx}}{\overbrace{\big( x^2 \big) \frac{du}{dx} + 2u x^2 }} - \left(\frac{2}{x}\right) \,  \overset{y}{\overbrace{\big(u x^2 \big)}}  = & \, \frac{1}{x^3} \\
+									\big( x^2 \big) \frac{du}{dx} + 2u x^2  - 2u x^2  = & \, \frac{1}{x^3}  \\
+									\big( x^2 \big) \frac{du}{dx}   = & \, \frac{1}{x^3}  \\
+									\Longrightarrow
+									\frac{du}{dx}   = & \, \frac{1}{x^5}  \\
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Antdifferentiate \(\displaystyle\frac{du}{dx} = \frac{1}{x^5}\) using power rule
+							</div> 
+							<div>	
+								Antidifferentiating and substituting back to find \(y = u x^2 \)
+								\begin{align*}
+									\frac{du}{dx} = \frac{1}{x^5}
+									\Longrightarrow
+
+									u = & -\frac{1}{4} x^{-4} \\
+									ux^2 = & -\frac{1}{4} x^{-4}x^2 \\
+									y = & -\frac{1}{4} x^{-2} \\
+								\end{align*}
+
+								Changing the constant factor to \(1\) to simplify we obtain \(y_2 = x^{-2} = 1/x^2 \) a second solution thus have a fundamental set of solutions
+								\[
+									\big\{
+										y_1, y_2
+									\big\}
+									=
+									\Bigg\{
+										x^2, \frac{1}{x^2}
+									\Bigg\}
+								\]
+							</div>
+						</li>												
 					</ol>
 				</details>
 			</div>
