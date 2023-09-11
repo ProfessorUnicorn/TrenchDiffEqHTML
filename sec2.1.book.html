@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang = "en-US" xml:lang = "en-US">
+<html lang="en-US" xml:lang="en-US">
 	<head>
 		<title>2.1 Linear First Order Equations</title>
-		<meta charset = "utf-8" />
-		<meta content = "TeX4ht (https://tug.org/tex4ht/)" name = "generator" />
-		<meta content = "width = device-width,initial-scale = 1" name = "viewport" />
-		<link href = "combined.css" rel = "stylesheet" type = "text/css" />
-		<script type = "text/javascript" src = "niceties.js"></script>
-		<meta content = "Trench_DiffEQ_Book.tex" name = "src" />
+		<meta charset="utf-8" />
+		<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator" />
+		<meta content="width=device-width,initial-scale=1" name="viewport" />
+		<link href="combined.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="niceties.js"></script>
+		<meta content="Trench_DiffEQ_Book.tex" name="src" />
 		<script>
 			window.MathJax = {
 				tex: {
@@ -18,32 +18,32 @@
 			};
 		</script>
 		<script
-			async = "async"
-			id = "MathJax-script"
-			src = "mathjax-3-es5-tex-chtml-full"
-			type = "text/javascript"
+			async="async"
+			id="MathJax-script"
+			src="mathjax-3-es5-tex-chtml-full.js"
+			type="text/javascript"
 		></script>
-		<style type = "text/css">
+		<style type="text/css">
 			:root {
 				--section-number: "2.1";
 			}
 		</style>
 	</head>
 	<body>
-		<div id = "3b16c290-0807-4286-b6ff-a049770e8742" class="section-title">
+		<div id="3b16c290-0807-4286-b6ff-a049770e8742" class="section-title">
 			2.1 Linear First Order Equations
 		</div>
 
 		<details id="x1-1">
 			<summary>Linear Standard Form</summary>
 
-			<div id = "fbccb180-cac4-4668-a490-9ff35c7b6ec2">
+			<div id="fbccb180-cac4-4668-a490-9ff35c7b6ec2">
 				A first order differential equation is said to be
 				<span class="vocab">linear</span>
 				if it can be written in <span class="vocab">standard form</span> as
 			</div>
-			<div id = "36984c87-662f-4453-bfaf-64b0511e2074">
-				<a id = "x1-2r1"></a>
+			<div id="36984c87-662f-4453-bfaf-64b0511e2074">
+				<a id="x1-2r1"></a>
 				\begin {equation} \label {eq:2.1.1}  
 					\frac{dy}{dx}  + p(x)y = f(x)
 				\end {equation}
@@ -52,11 +52,11 @@
 				<span class="vocab">nonlinear</span>. 
 			</div>
 			<div id="x1-2">
-				We say that a first order linear equation <a href = "#x1-2r1">(2.1.1)</a> is
+				We say that a first order linear equation <a href="#x1-2r1">(2.1.1)</a> is
 				<span class="vocab">homogeneous</span>
 				if \(f(x) \equiv 0\):
 				\[  \frac{dy}{dx}  + p(x)y = 0\] 
-				Otherwise for any \( f(x) \not\equiv 0 \) <a href = "#x1-2r1">(2.1.1)</a> is
+				Otherwise for any \( f(x) \not\equiv 0 \) <a href="#x1-2r1">(2.1.1)</a> is
 				<span class="vocab">nonhomogeneous</span>. 
 			</div>
 			<div id="x1-3">
@@ -66,11 +66,11 @@
 				Any other solution is
 				<span class="vocab">nontrivial</span>. 
 			</div>
-			<div class = "example" id = "x1-31" style = "--ex-number: 1">
+			<div class="example" id="x1-31" style="--ex-number: 1">
 				<div>
 					Rewrite the linear first order differential equations in <span class="vocab">standard form</span>, identify \( p(x) \) and \( f(x) \), and state whether the equation is <span class="vocab">homogeneous</span> or <span class="vocab">nonhomogeneous</span>
 				</div>
-				<div class = "eqnarray">
+				<div class="eqnarray">
 					\begin {eqnarray*} x^2 \frac{dy}{dx}  + 3y&amp; = &amp;x^2 \\ 
 					x \frac{dy}{dx} -8x^2y&amp; = &amp;\sin x \\ 
 					x \frac{dy}{dx}  + (\ln x)y&amp; = &amp;0 \\  
@@ -78,10 +78,10 @@
 					\end {eqnarray*}
 				</div>
 
-				<details class = "solution">
+				<details class="solution">
 					<summary>Solution</summary>
 					<div>
-						Rearranging the equations into <span class="vocab">standard form</span> <a href = "#x1-2r1">(2.1.1)</a>, we can readily identify \( p(x) \) and \( f(x)\):
+						Rearranging the equations into <span class="vocab">standard form</span> <a href="#x1-2r1">(2.1.1)</a>, we can readily identify \( p(x) \) and \( f(x)\):
 						\begin{align*}
 							\frac{dy}{dx} + \overset{p(x)=\frac{3}{x^2}}{\overbrace{\frac{3}{x^2} }}y = & \overset{f(x)=1}{\overbrace{1}} \\ \\
 							\frac{dy}{dx} - \overset{p(x)=-8x}{\overbrace{8x }}y = & \overset{f(x)=\frac{\sin x}{x}}{\overbrace{\frac{\sin x}{x}}} \\ \\
@@ -95,24 +95,24 @@
 			</div>
 
 			<div class="reading-exercise">
-				Rewrite \( 5 \frac{dy}{dx} = 10\frac{y}{x} - 7x^{12} \) in <span class="vocab">standard form</span> <a href = "#x1-2r1">(2.1.1)</a> and identify \( p(x) \) and \( f(x)\)
+				Rewrite \( 5 \frac{dy}{dx} = 10\frac{y}{x} - 7x^{12} \) in <span class="vocab">standard form</span> <a href="#x1-2r1">(2.1.1)</a> and identify \( p(x) \) and \( f(x)\)
 			</div>
 
 			<div class="reading-exercise">
-				Rewrite \( 2x \frac{dy}{dx} - 4x^3y + e^x = 6e^x \) in <span class="vocab">standard form</span> <a href = "#x1-2r1">(2.1.1)</a> and identify \( p(x) \) and \( f(x)\)
+				Rewrite \( 2x \frac{dy}{dx} - 4x^3y + e^x = 6e^x \) in <span class="vocab">standard form</span> <a href="#x1-2r1">(2.1.1)</a> and identify \( p(x) \) and \( f(x)\)
 			</div>
 
 
-			<div class = "example" id = "x1-42" style = "--ex-number: 2">
+			<div class="example" id="x1-42" style="--ex-number: 2">
 				<div>
-					Explain how the following first order equations cannot be written in the linear standard form <a href = "#x1-2r1">(2.1.1)</a> and thus are nonlinear
+					Explain how the following first order equations cannot be written in the linear standard form <a href="#x1-2r1">(2.1.1)</a> and thus are nonlinear
 					\begin{align*}
 						x\frac{dy}{dx} + 3y^2 = & 2x \\
 						y\frac{dy}{dx} = & 3 \\
 						\frac{dy}{dx} + xe^y = & 12 \\
 					\end{align*}
 				</div>
-				<details class = "solution">
+				<details class="solution">
 					<summary>Solution</summary>
 					The linear standard form is: \( \displaystyle \frac{dy}{dx}  + p(x)y = f(x) \).
 					The following equations cannot be written in this form.
@@ -142,53 +142,53 @@
 
 		</details>
 
-		<details id = "65027fca-e3a9-4ad7-90a8-1889301cfefe">
+		<details id="65027fca-e3a9-4ad7-90a8-1889301cfefe">
 			<summary>Intervals of Validity of One–Parameter Families</summary>
 
-			<div id = "a952783b-21b6-40ba-852b-83f9793a1a63">
+			<div id="a952783b-21b6-40ba-852b-83f9793a1a63">
 				<div>
 					Consider the simple linear first order equation: 
-					<a id = "x1-5r2"></a>
+					<a id="x1-5r2"></a>
 					\begin {equation} \label {eq:2.1.2}  
 						\frac{dy}{dx}  = {1\over x^2}
 						\end {equation}
 				</div>
 				<div class="reading-exercise">
-					Show the work to find the antiderivative of <a href = "#x1-5r2">(2.1.2)</a> using integral notation
+					Show the work to find the antiderivative of <a href="#x1-5r2">(2.1.2)</a> using integral notation
 				</div>
 
 				<div>		
-					Since <a href = "#x1-5r2">(2.1.2)</a> is <span class="vocab">integrable</span> we can immediately find the antiderivative
+					Since <a href="#x1-5r2">(2.1.2)</a> is <span class="vocab">integrable</span> we can immediately find the antiderivative
 
-					<a id = "x1-6r3"></a>
+					<a id="x1-6r3"></a>
 					\begin {equation} \label {eq:2.1.3} 
 						y = -{1\over x} + c
 					\end {equation}
 				</div>
 				
-				<div id = "9db45e43-ce09-49a4-b9ec-7ccfb32983e910">
-					We call the <span class="vocab">arbitrary constant</span> of integration \(c\) a <span class="vocab">parameter</span> and we say that <a href = "#x1-6r3">(2.1.3)</a> defines a <span class="vocab">one–parameter family</span> of functions. Since <a href = "#x1-6r3">(2.1.3)</a> is undefined at \( x=0 \) then the only open intervals where the solution is valid are \( (-\infty,0) \) and \( (0,\infty). \) Every function defined by <a href = "#x1-6r3">(2.1.3)</a> is a solution of <a href = "#x1-5r2">(2.1.2)</a> and valid on the intervals \( (-\infty,0) \) and \( (0,\infty) \) and
-					in this case where every solution of <a href = "#x1-5r2">(2.1.2)</a> is of the form of <a href = "#x1-6r3">(2.1.3)</a> for some choice of \(c\), we say that <a href = "#x1-6r3">(2.1.3)</a> is the <span class="vocab">general solution</span>. (When there are other solutions to the differential equation that are not part of the one-parameter family, then those solutions are called <span class="vocab">singular solutions</span>.)
+				<div id="9db45e43-ce09-49a4-b9ec-7ccfb32983e910">
+					We call the <span class="vocab">arbitrary constant</span> of integration \(c\) a <span class="vocab">parameter</span> and we say that <a href="#x1-6r3">(2.1.3)</a> defines a <span class="vocab">one–parameter family</span> of functions. Since <a href="#x1-6r3">(2.1.3)</a> is undefined at \( x=0 \) then the only open intervals where the solution is valid are \( (-\infty,0) \) and \( (0,\infty). \) Every function defined by <a href="#x1-6r3">(2.1.3)</a> is a solution of <a href="#x1-5r2">(2.1.2)</a> and valid on the intervals \( (-\infty,0) \) and \( (0,\infty) \) and
+					in this case where every solution of <a href="#x1-5r2">(2.1.2)</a> is of the form of <a href="#x1-6r3">(2.1.3)</a> for some choice of \(c\), we say that <a href="#x1-6r3">(2.1.3)</a> is the <span class="vocab">general solution</span>. (When there are other solutions to the differential equation that are not part of the one-parameter family, then those solutions are called <span class="vocab">singular solutions</span>.)
 				</div>
 			</div>
-			<div id = "9db45e43-ce09-49a4-b9ec-7ccfb32983e9">
+			<div id="9db45e43-ce09-49a4-b9ec-7ccfb32983e9">
 				<div>
-					Although <a href = "#x1-5r2">(2.1.2)</a> was a simple differential equation, the same is true for all first order linear differential equations
-					<a id = "x1-7r4"></a>
+					Although <a href="#x1-5r2">(2.1.2)</a> was a simple differential equation, the same is true for all first order linear differential equations
+					<a id="x1-7r4"></a>
 					\begin {equation} \label {eq:2.1.4}  
 						\frac{dy}{dx}  + p(x)y = f(x)
 					\end {equation}
 				
-					That is, if \(p(x)\) and \(f(x)\) are continuous on some open interval \((a,b)\) then there’s a unique formula \(y = y(x,c)\) analogous to <a href = "#x1-6r3">(2.1.3)</a> that defines a <span class="vocab">one–parameter family</span> of functions as a function of \(x\) and a <span class="vocab">parameter</span> \(c\) that has the these properties:
+					That is, if \(p(x)\) and \(f(x)\) are continuous on some open interval \((a,b)\) then there’s a unique formula \(y = y(x,c)\) analogous to <a href="#x1-6r3">(2.1.3)</a> that defines a <span class="vocab">one–parameter family</span> of functions as a function of \(x\) and a <span class="vocab">parameter</span> \(c\) that has the these properties:
 				</div>
 			</div>
-			<ul class = "itemize1" id = "51f7c875-688d-4c65-ab77-10e640a71ae7">
-				<li class = "itemize">
-					For each value of \(c\) in the open interval \((a,b),\) the resulting function \( y=y(x) \) is a solution of <a href = "#x1-7r4">(2.1.4)</a> on 
+			<ul class="itemize1" id="51f7c875-688d-4c65-ab77-10e640a71ae7">
+				<li class="itemize">
+					For each value of \(c\) in the open interval \((a,b),\) the resulting function \( y=y(x) \) is a solution of <a href="#x1-7r4">(2.1.4)</a> on 
 					\((a,b),\) referred to as the <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>)
 				</li>
 				<li>
-					If \( y = y(x) \) is a solution of <a href = "#x1-7r4">(2.1.4)</a> on \((a,b)\) then it can be obtained from the equation representing the <span class="vocab">one-parameter family</span> by choosing \( c \) appropriately
+					If \( y = y(x) \) is a solution of <a href="#x1-7r4">(2.1.4)</a> on \((a,b)\) then it can be obtained from the equation representing the <span class="vocab">one-parameter family</span> by choosing \( c \) appropriately
 				</li>
 				<li>
 					We call \( y = y(x,c) \) the <span class="vocab">general solution</span> and for a particular value of \( c \) substituted in then \( y=y(x) \) is a <span class="vocab">particular solution</span>
@@ -197,7 +197,7 @@
 			<br>
 			<br>
 			<br>
-			<div id = "ca24c9f8-c9e5-413c-824e-e2623c0a27a8">
+			<div id="ca24c9f8-c9e5-413c-824e-e2623c0a27a8">
 				So far we have only considered first order linear differential equations in the form:
 
 				\begin{equation*}
@@ -205,14 +205,14 @@
 				\end{equation*}
 
 				However, first order linear differential equations could also be of the form:
-				<a id = "x1-8r5"></a>
+				<a id="x1-8r5"></a>
 				\begin {equation} \label {eq:2.1.5} 
 				P_0(x) \frac{dy}{dx}  + P_1(x)y = F(x) 
 				\end{equation}
 				
 				which has a general solution provided \(P_0(x)\),
 				\(P_1(x)\), and \(F(x)\) are all continuous on an open interval \((a,b)\) on which
-				and \(P_0(x) \) has no zeros, since in this case we can rewrite it in the form of <a href = "#x1-7r4">(2.1.4)</a> by dividing by \( P_0(x) \):
+				and \(P_0(x) \) has no zeros, since in this case we can rewrite it in the form of <a href="#x1-7r4">(2.1.4)</a> by dividing by \( P_0(x) \):
 			
 				\begin {equation*} 
 					\frac{dy}{dx}  + \underset{p(x)}{\underbrace{\frac{P_1(x)}{P_0(x)}}}y = \underset{f(x)}{\underbrace{\frac{F(x)}{P_0(x)}}} 
@@ -222,17 +222,17 @@
 			</div>
 		</details>
 
-		<details id = "b76bd2be-798f-4cc6-a59f-5532755b112f">
+		<details id="b76bd2be-798f-4cc6-a59f-5532755b112f">
 			<summary>Homogeneous Linear First Order Equations</summary>
 		
-			<div id = "6c48b395-9de5-4413-8788-6b6c2aae0712">
+			<div id="6c48b395-9de5-4413-8788-6b6c2aae0712">
 				We begin with the problem of finding the general solution of a homogeneous linear first order equation. The next example recalls a familiar result from calculus.
 			</div>
-			<div class = "example" id = "x1-93" style = "--ex-number: 3"> 
+			<div class="example" id="x1-93" style="--ex-number: 3"> 
 				<ol>
 					<li>
 						Let \(a\) be a constant. Find the general solution: 
-						<a id = "x1-11r6"></a>
+						<a id="x1-11r6"></a>
 						\begin {equation} \label{eq:2.1.6}
 							\frac{dy}{dx} - ay = 0
 						\end {equation}
@@ -245,14 +245,14 @@
 					</li>	
 				</ol>	
 
-				<details class = "solution">
+				<details class="solution">
 					<summary>Solution</summary>
 
 					<ol>
 						<li>
-							<div id = "49041906-b291-46f5-bd97-daaf2ba9e787">
+							<div id="49041906-b291-46f5-bd97-daaf2ba9e787">
 								<div>
-									First notice <a href = "#x1-11r6">(2.1.6)</a> has a <span class="vocab">trivial solution</span> \( y(x) \equiv 0 \) which we can verify by substitution:
+									First notice <a href="#x1-11r6">(2.1.6)</a> has a <span class="vocab">trivial solution</span> \( y(x) \equiv 0 \) which we can verify by substitution:
 									\begin{align*} 	
 										\frac{dy}{dx} - ay = & 0 \\
 										\frac{d}{dx} \Big( 0 \Big) - a \Big( 0 \Big) = & 0 \quad \checkmark \\
@@ -284,29 +284,29 @@
 										\left| y \right| = & ce^{ax} \\ 
 									\end{align*}
 									The function \( e^{ax} \) is exponential with horizontal asymptote at \(y=0\) so for a given and \(a\) the function is always positive or always negative, so we can further simplify our result to
-									<a id = "x1-13r7"></a>
+									<a id="x1-13r7"></a>
 									\begin {equation} \label {eq:2.1.7} 
 										y = ce^{ax} 
 									\end{equation}
 								</div>
 							</div>
 
-							<div id = "ce719b94-df58-478e-a922-50605943faa4">
-								This shows us that every <span class="vocab">nontrivial</span> solution of <a href = "#x1-11r6">(2.1.6)</a> is of the form of <a href = "#x1-13r7">(2.1.7)</a> for some nonzero constant \(c\) and since selecting \(c=0\) yields the <span class="vocab">trivial solution</span>, then <em>all</em> solutions of <a href = "#x1-11r6">(2.1.6)</a>, both trivial and nontrivial, are of the form of <a href = "#x1-13r7">(2.1.7)</a>, meaning it is our <span class="vocab">general solution</span>. 
+							<div id="ce719b94-df58-478e-a922-50605943faa4">
+								This shows us that every <span class="vocab">nontrivial</span> solution of <a href="#x1-11r6">(2.1.6)</a> is of the form of <a href="#x1-13r7">(2.1.7)</a> for some nonzero constant \(c\) and since selecting \(c=0\) yields the <span class="vocab">trivial solution</span>, then <em>all</em> solutions of <a href="#x1-11r6">(2.1.6)</a>, both trivial and nontrivial, are of the form of <a href="#x1-13r7">(2.1.7)</a>, meaning it is our <span class="vocab">general solution</span>. 
 							</div>
 						</li>
 						<li>
 							<div class="reading-exercise">
-								Differentiate <a href = "#x1-13r7">(2.1.7)</a> with respect to \( x \)
+								Differentiate <a href="#x1-13r7">(2.1.7)</a> with respect to \( x \)
 							</div>
 							<div>	
-								Differentiating <a href = "#x1-13r7">(2.1.7)</a> we obtain
+								Differentiating <a href="#x1-13r7">(2.1.7)</a> we obtain
 								\begin{align*} 	
 									\frac{dy}{dx}  = a ce^{ax}	
 								\end{align*}
 							</div>
 							<div>	
-								Substituting into <a href = "#x1-11r6">(2.1.6)</a> we obtain
+								Substituting into <a href="#x1-11r6">(2.1.6)</a> we obtain
 								\begin{align*} 	
 									\frac{dy}{dx} - ay = & 0 \\
 									\overset{\frac{dy}{dx}}{\overbrace{ a ce^{ax}  }} - a \overset{y}{\overbrace{\left(ce^{ax}\right)}} \overset{?}{=} & 0 \\
@@ -316,7 +316,7 @@
 						</li>
 						<li>
 							<div>
-								We already have the general solution <a href = "#x1-13r7">(2.1.7)</a> and we evaluate it at our  initial condition \(y(x_0) = y_0\) and solve for the constant
+								We already have the general solution <a href="#x1-13r7">(2.1.7)</a> and we evaluate it at our  initial condition \(y(x_0) = y_0\) and solve for the constant
 								\begin{align*} 	
 									y(x) = & ce^{ax}  \\
 									\underset{y_0}{\underbrace{y(x_0)}} = & ce^{ax_0} \\
@@ -326,7 +326,7 @@
 							</div>
 
 							<div class="reading-exercise">
-								Substitute \( c = y_0 e^{-ax_0} \) into <a href = "#x1-13r7">(2.1.7)</a> and simplify
+								Substitute \( c = y_0 e^{-ax_0} \) into <a href="#x1-13r7">(2.1.7)</a> and simplify
 							</div>
 							<div>
 								Substituting \( c = y_0 e^{-ax_0} \) and simplifying yields the <span class="vocab">particular solution</span> of our IVP
@@ -336,7 +336,7 @@
 								Which is defined on all \(x\) so the IOV is \((-\infty,\infty)\)
 							</div>
 							<div class="reading-exercise">
-								Verify \( y = y_0 e^{a\left(x-x_0\right)} \) is a solution of <a href = "#x1-11r6">(2.1.6)</a> by differentiating and substituting
+								Verify \( y = y_0 e^{a\left(x-x_0\right)} \) is a solution of <a href="#x1-11r6">(2.1.6)</a> by differentiating and substituting
 							</div>
 							
 						</li>
@@ -345,26 +345,26 @@
 			</div>
 
 			<div id="c2383f44-2ac2-48c9-a11c-093176c7bc8f">
-				Figure&nbsp;<a href = "#-solutions-of-yay-y-">2.1.1</a>
+				Figure&nbsp;<a href="#-solutions-of-yay-y-">2.1.1</a>
 				shows the graphs of this function with \(x_{0} = 0\), \(y_{0} = 1\), and
 				various values of \(a\).
 			</div>
-			<figure class = "figure" id = "ae823a2c-c7db-4457-b8b6-22c611ae0715">
-				<div id = "-solutions-of-yay-y-">
-					<img height = "264" src = "EPS/fig020101.png" width = "409" />
-					<a id = "x1-14r1"></a>
+			<figure class="figure" id="ae823a2c-c7db-4457-b8b6-22c611ae0715">
+				<div id="-solutions-of-yay-y-">
+					<img height="264" src="EPS/fig020101.png" width="409" />
+					<a id="x1-14r1"></a>
 				</div>
-				<figcaption class = "caption">
-					<span class = "id">Figure&nbsp;2.1.1</span>
-					<span class = "content">Solutions of \( \displaystyle \frac{dy}{dx} -ay = 0 \quad y(0) = 1\)</span>
+				<figcaption class="caption">
+					<span class="id">Figure&nbsp;2.1.1</span>
+					<span class="content">Solutions of \( \displaystyle \frac{dy}{dx} -ay = 0 \quad y(0) = 1\)</span>
 				</figcaption>
 			</figure>
 
-			<div class = "example" id = "x1-154" style = "--ex-number: 4">
+			<div class="example" id="x1-154" style="--ex-number: 4">
 				<ol>
 					<li>
 						Find the general solution of 
-							<a id = "x1-17r8"></a>
+							<a id="x1-17r8"></a>
 							\begin {equation} \label{eq:2.1.8}
 								x \frac{dy}{dx}  + y = 0
 							\end {equation}
@@ -374,29 +374,29 @@
 					</li>
 					<li>
 						Solve the initial value problem 
-						<a id = "x1-19r9"></a>
+						<a id="x1-19r9"></a>
 						\begin {equation} \label {eq:2.1.9}
 							x \frac{dy}{dx}  + y = 0\quad y(1) = 3
 						\end {equation}
 					</li>	
 				</ol>	
 
-				<details class = "solution" id = "a2411096-b000-4ed0-a4db-ee4e496cc999">
+				<details class="solution" id="a2411096-b000-4ed0-a4db-ee4e496cc999">
 					<summary>Solution</summary>
 
 					<ol>
 						<li>
 							<div>
-								First notice <a href = "#x1-17r8">(2.1.8)</a> has a <span class="vocab">trivial solution</span> \( y(x) \equiv 0 \) which we can verify by substitution:
+								First notice <a href="#x1-17r8">(2.1.8)</a> has a <span class="vocab">trivial solution</span> \( y(x) \equiv 0 \) which we can verify by substitution:
 								\begin{align*} 	
 									x\frac{dy}{dx} + y = & 0 \\
 									x\frac{d}{dx} \Big( 0 \Big) + \Big( 0 \Big) = & 0 \quad \checkmark \\
 								\end{align*}
 							</div>
 							<div>
-								Next divide <a href = "#x1-17r8">(2.1.8)</a> by \( x \) to rewrite in standard form <a href = "#x1-2r1">(2.1.1)</a>
+								Next divide <a href="#x1-17r8">(2.1.8)</a> by \( x \) to rewrite in standard form <a href="#x1-2r1">(2.1.1)</a>
 
-								<a id = "x1-20r10"></a>
+								<a id="x1-20r10"></a>
 								\begin {equation} \label {eq:2.1.10}  
 									\frac{dy}{dx}  + \frac{1}{x} y = 0
 								\end {equation}
@@ -424,13 +424,13 @@
 							</div>
 							<div>
 								Since \( x \) is never zero on our intervals \((-\infty ,0)\) and \((0,\infty )\), and \( y \) is never zero since we assumed it, this expression is either always positive or always negative so we can further simplify
-									<a id = "x1-21r11"></a>
+									<a id="x1-21r11"></a>
 									\begin {equation} \label {eq:2.1.11} 
 										y = \frac{c}{x} 
 									\end{equation}
 							</div>
 							<div>
-								This shows us that every <span class="vocab">nontrivial</span> solution of <a href = "#x1-20r10">(2.1.10)</a> is of the form of <a href = "#x1-21r11">(2.1.11)</a> for some nonzero constant \(c\) and since selecting \(c=0\) yields the <span class="vocab">trivial solution</span>, then <em>all</em> solutions of <a href = "#x1-20r10">(2.1.10)</a>, both trivial and nontrivial, are of the form of <a href = "#x1-21r11">(2.1.11)</a>, meaning it is our <span class="vocab">general solution</span>. 
+								This shows us that every <span class="vocab">nontrivial</span> solution of <a href="#x1-20r10">(2.1.10)</a> is of the form of <a href="#x1-21r11">(2.1.11)</a> for some nonzero constant \(c\) and since selecting \(c=0\) yields the <span class="vocab">trivial solution</span>, then <em>all</em> solutions of <a href="#x1-20r10">(2.1.10)</a>, both trivial and nontrivial, are of the form of <a href="#x1-21r11">(2.1.11)</a>, meaning it is our <span class="vocab">general solution</span>. 
 							</div>
 						</li>
 						<li>
@@ -440,7 +440,7 @@
 									\frac{dy}{dx} = & \frac{d}{dx} \Bigg( \frac{c}{x} \Bigg) = c\frac{d}{dx} \Big( x^{-1} \Big)	
 									= -cx^{-2} = -\frac{c}{x^2} \\		
 								\end{align*}
-								And substituting the general solution <a href = "#x1-21r11">(2.1.11)</a> and its derivative into <a href = "#x1-20r10">(2.1.10)</a>.
+								And substituting the general solution <a href="#x1-21r11">(2.1.11)</a> and its derivative into <a href="#x1-20r10">(2.1.10)</a>.
 								
 								\begin{align*} 	 
 									\frac{dy}{dx}  + \frac{1}{x} y = & 0 \\
@@ -451,46 +451,46 @@
 						</li>
 						<li>
 							<div>
-								We already have the general solution <a href = "#x1-21r11">(2.1.11)</a> and we evaluate it at our  initial condition \(y(1) = 3\) to solve for the constant
+								We already have the general solution <a href="#x1-21r11">(2.1.11)</a> and we evaluate it at our  initial condition \(y(1) = 3\) to solve for the constant
 								\begin{align*} 	
 									y(x) = & \frac{c}{x}  \\
 									\underset{3}{\underbrace{y(1)}} = & \frac{c}{1} \\
 									c = & 3 \\
 								\end{align*}
 
-								Substituting \( c = 3 \) into <a href = "#x1-21r11">(2.1.11)</a> yields the <span class="vocab">particular solution</span> of our IVP <a href = "#x1-19r9">(2.1.9)</a>
+								Substituting \( c = 3 \) into <a href="#x1-21r11">(2.1.11)</a> yields the <span class="vocab">particular solution</span> of our IVP <a href="#x1-19r9">(2.1.9)</a>
 								\begin{align*} 	
 									y = \frac{3}{x}  \\
 								\end{align*}
 
-								With \( x = 1 \) as our initial value then the <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>) for this solution is \((0,\infty )\) since it is the largest interval on which <a href = "#x1-21r11">(2.1.11)</a> is defined that contains our initial \( x \) value 
+								With \( x = 1 \) as our initial value then the <span class="vocab">interval of validity</span> (<span class="vocab">IOV</span>) for this solution is \((0,\infty )\) since it is the largest interval on which <a href="#x1-21r11">(2.1.11)</a> is defined that contains our initial \( x \) value 
 							</div>
 							<div class="reading-exercise">
-								Verify \( y = 3/x \) is a solution of <a href = "#x1-17r8">(2.1.8)</a> by differentiating and substituting
+								Verify \( y = 3/x \) is a solution of <a href="#x1-17r8">(2.1.8)</a> by differentiating and substituting
 							</div>
 						</li>
 					</ol>
 				</details>
 			</div>
 
-			<div id = "69c319c8-4b53-4a44-ad41-01d844f8ac40">
-				Figure&nbsp;<a href = "#-solutions-of-xyy-on-and-">2.1.2</a>
+			<div id="69c319c8-4b53-4a44-ad41-01d844f8ac40">
+				Figure&nbsp;<a href="#-solutions-of-xyy-on-and-">2.1.2</a>
 				shows the graphs of some solutions corresponding to various values of \(c\)
-				<figure class = "figure" id = "ad82ebea-b75a-4539-a69c-9952bb753a04">
-					<div id = "-solutions-of-xyy-on-and-">
-						<a id = "x1-22r2"></a>
-						<img height = "264" src = "EPS/fig020102.png" width = "409" />
+				<figure class="figure" id="ad82ebea-b75a-4539-a69c-9952bb753a04">
+					<div id="-solutions-of-xyy-on-and-">
+						<a id="x1-22r2"></a>
+						<img height="264" src="EPS/fig020102.png" width="409" />
 					</div>
-					<figcaption class = "caption">
-						<span class = "id">Figure&nbsp;2.1.2</span>
-						<span class = "content">
+					<figcaption class="caption">
+						<span class="id">Figure&nbsp;2.1.2</span>
+						<span class="content">
 							Solutions of \(x \displaystyle \frac{dy}{dx}  + y = 0\) on \((0,\infty )\) and \((-\infty ,0)\)
 						</span>
 					</figcaption>
 				</figure>
 			</div>
 
-			<div id = "c8582efa-4ba5-4629-b14e-ced68cd5939998">
+			<div id="c8582efa-4ba5-4629-b14e-ced68cd5939998">
 				<div>
 					A note on simplifying arbitrary constants. As a reminder, they are arbitrary, and every opportunity where we can simplify them, we should. It is common to use \( c, C, k, K \) to represent arbitrary constants but other letters may be used and subscripts may be used, such as \( k_1, k_2, k_3, \dots \) 
 				</div>
@@ -500,20 +500,20 @@
 	
 			</div>
 
-			<div class = "theorem" id = "c8582efa-4ba5-4629-b14e-ced68cd59398">
+			<div class="theorem" id="c8582efa-4ba5-4629-b14e-ced68cd59398">
 				<div>
-					<a id = "x1-thm12"></a>
-					<span class = "head">Theorem&nbsp;2.1.1</span></span>
+					<a id="x1-thm12"></a>
+					<span class="head">Theorem&nbsp;2.1.1</span></span>
 					Given \(p(x)\) continuous on \((a,b)\) then the homogeneous first order linear differential equation
 
-					<a id = "x1-24r12"></a>
+					<a id="x1-24r12"></a>
 					\begin {equation} \label {eq:2.1.12}  
 						\frac{dy}{dx}  + p(x)y = 0
 					\end {equation}
 					
 					always has a general solution of 
 
-					<a id = "x1-24r1213"></a>
+					<a id="x1-24r1213"></a>
 					\begin {equation} \label {eq:2.1.13}  
 						y(x) = ce^{-P(x)}
 					\end {equation}
@@ -522,7 +522,7 @@
 					\(x_0\) any point in \((a,b)\) 
 
 		
-					<a id = "x1-25r1314"></a>
+					<a id="x1-25r1314"></a>
 					\begin {equation} \label{eq:2.1.14} 
 						P(x) = \int^x_{x_0} p(t) dt 
 					\end {equation}
@@ -531,46 +531,46 @@
 			</div>
 
 			<div class="reading-exercise" id="x1-5">
-				Differentiate <a href = "#x1-25r1314">(2.1.14)</a> with respect to \(x \) using the Fundamental Theorem of Calculus
+				Differentiate <a href="#x1-25r1314">(2.1.14)</a> with respect to \(x \) using the Fundamental Theorem of Calculus
 			</div>   
 			<div class="reading-exercise" id="x1-6">
-				Differentiate <a href = "#x1-24r1213">(2.1.13)</a> with respect to \(x \) using the chain rule
+				Differentiate <a href="#x1-24r1213">(2.1.13)</a> with respect to \(x \) using the chain rule
 			</div>   
 			<div class="reading-exercise" id="x1-7">
-				Show that  <a href = "#x1-24r1213">(2.1.13)</a> is a solution of <a href = "#x1-24r12">(2.1.12)</a> by substituting and simplifying
+				Show that  <a href="#x1-24r1213">(2.1.13)</a> is a solution of <a href="#x1-24r12">(2.1.12)</a> by substituting and simplifying
 			</div>
 
-			<div id = "c8582efa-4ba5-4629-b14e-ced68cd5939998-2">
-				As a reminder while Theorem 2.1.1 guarantees the existence and uniqueness of a solution for all homogeneous first order linear differential equations <a href = "#x1-24r12">(2.1.12)</a> we will not apply the theorem as a formula, but instead we will solve using <span class="vocab">separation of variables</span> although there are other techniques that work including <span class="vocab">integrating factors</span> (Section 2.6 Exercise 30)
+			<div id="c8582efa-4ba5-4629-b14e-ced68cd5939998-2">
+				As a reminder while Theorem 2.1.1 guarantees the existence and uniqueness of a solution for all homogeneous first order linear differential equations <a href="#x1-24r12">(2.1.12)</a> we will not apply the theorem as a formula, but instead we will solve using <span class="vocab">separation of variables</span> although there are other techniques that work including <span class="vocab">integrating factors</span> (Section 2.6 Exercise 30)
 			</div>
 		</details>
 
 
-		<details id = "c4957e1f-6e04-46b4-a12f-36838ea8045f">
+		<details id="c4957e1f-6e04-46b4-a12f-36838ea8045f">
 			<summary>Nonhomogeneous Linear First Order Equations</summary>
 		
-			<div id = "e3cecd47-79ca-4517-970f-932221e78071">
+			<div id="e3cecd47-79ca-4517-970f-932221e78071">
 				In Examples <a href="#x1-93">2.1.3</a> and <a href="#x1-154">2.1.4</a>, 
 				we rewrote homogeneous linear equations so that one side depended on only \( y \) and its derivative and the other side only depended on \(x\) and then found the antiderivative on both sides. This method is called <span class="vocab">separation of variables</span> and 
-				can be used to solve all homogeneous linear equations <a href = "#x1-5r2">(2.1.2)</a> but now we would like to solve nonhomogeneous equations:
+				can be used to solve all homogeneous linear equations <a href="#x1-5r2">(2.1.2)</a> but now we would like to solve nonhomogeneous equations:
 				
-				<a id = "x1-28r15"></a>
+				<a id="x1-28r15"></a>
 				\begin {equation} \label{eq:2.1.15}  
 					\frac{dy}{dx} + p(x)y = f(x)
 				\end {equation}
 				
-				To solve nonhomogeneous equations <a href = "#x1-28r15">(2.1.15)</a> we will first solve the corresponding homogeneous equation, which we call the <span class="vocab">complementary equation</span>
+				To solve nonhomogeneous equations <a href="#x1-28r15">(2.1.15)</a> we will first solve the corresponding homogeneous equation, which we call the <span class="vocab">complementary equation</span>
 				\[  \frac{dy}{dx}  + p(x)y = 0 \] 
 
 				We then use a method called <span class="vocab">variation of parameters</span> to seek solutions of the form \( y = u y_1 \) where \( y_1 = y_1 (x) \) is a nontrivial solution of the <span class="vocab">complementary equation</span> and \( u = u(x) \) is some function of \( x \) to be determined. Since \( y_1 \) is a solution of the <span class="vocab">complementary equation</span>, then we know and will use the fact that 
 
-				<a id = "x1-28r16"></a>
+				<a id="x1-28r16"></a>
 				\begin{equation} \label{eq:2.1.16}  
 					\frac{dy_1}{dx}  + p(x)y_1 = 0
 				\end{equation}
 			</div>
 			<div id="67f7fd67-56b0-47d1-a2a0-fdf04d3d6fa9">
-				To implement <span class="vocab">variation of parameters</span>, we will differentiate \( y = uy_1 \) and then substitute back into our nonhomogeneous equation <a href = "#x1-28r15">(2.1.15)</a> to solve. We differentiate using the <span class="vocab">product rule</span> to get an expression for the derivative in terms of \( u \) and \( y_1 \):
+				To implement <span class="vocab">variation of parameters</span>, we will differentiate \( y = uy_1 \) and then substitute back into our nonhomogeneous equation <a href="#x1-28r15">(2.1.15)</a> to solve. We differentiate using the <span class="vocab">product rule</span> to get an expression for the derivative in terms of \( u \) and \( y_1 \):
 
 				\begin{align*}
 					\frac{dy}{dx} = &  \frac{d}{dx} \Big( u  \cdot  y_1 \Big) = y_1\frac{du}{dx} + u\frac{dy_1}{dx} 
@@ -578,9 +578,9 @@
 			</div>
 			<div id="99961d6a-f258-4d34-aec6-475abc8b36da">
 
-				Substituting \( y = uy_1 \) and its derivative into <a href = "#x1-28r15">(2.1.15)</a> then simplifying the equation it transforms into an <span class="vocab">integrable</span> equation <a href = "#x1-28r17">(2.1.17)</a>:
+				Substituting \( y = uy_1 \) and its derivative into <a href="#x1-28r15">(2.1.15)</a> then simplifying the equation it transforms into an <span class="vocab">integrable</span> equation <a href="#x1-28r17">(2.1.17)</a>:
 
-				<a id = "x1-28r17"></a>
+				<a id="x1-28r17"></a>
 				\begin{align}
 					\frac{dy}{dx} + p(x)y = & f(x) \nonumber \\
 					\overset{\frac{dy}{dx}}{\overbrace{y_1\frac{du}{dx} + u\frac{dy_1}{dx}}} + p(x) \overset{y}{\overbrace{u \cdot y_1}} = & f(x) \nonumber \\	
@@ -593,7 +593,7 @@
 				
 			</div>
 
-			<div id = "7384f551-3a81-42b1-bb8f-ba58b26f1d6a">
+			<div id="7384f551-3a81-42b1-bb8f-ba58b26f1d6a">
 				Now we simply find the antiderivative to obtain \( u \), which introduces a <span class="vocab">arbitrary constant</span> of integration. Finally, multiply the result \( u \) by \(y_1\) to get \( y = uy_1 \):
 				
 
@@ -605,11 +605,11 @@
 			</div>
 
 
-			<div class = "example" id = "x1-305" style = "--ex-number: 5">
+			<div class="example" id="x1-305" style="--ex-number: 5">
 				<ol>
 					<li>
 						Solve the complimentary equation
-						<a id = "x1-31r18"></a>
+						<a id="x1-31r18"></a>
 
 						\begin {equation} \label {eq:2.1.18}
 							\frac{dy}{dx} + 2y = x^3e^{-2x}
@@ -632,13 +632,13 @@
 					</li>		
 				</ol>
 
-				<details class = "solution" id = "d3337b7c-0e16-49c6-9ba1-5a2720c898a9">
+				<details class="solution" id="d3337b7c-0e16-49c6-9ba1-5a2720c898a9">
 					<summary>Solution</summary>
 
 					<ol>
 						<li>
 							<div>
-								To solve the nonhomogeneous <a href = "#x1-31r18">(2.1.18)</a>, we will always first solve the complementary homogeneous equation:
+								To solve the nonhomogeneous <a href="#x1-31r18">(2.1.18)</a>, we will always first solve the complementary homogeneous equation:
 
 								\begin{align*}
 									\frac{dy}{dx} + 2y = & 0	
@@ -652,7 +652,7 @@
 						<li>
 
 							<div>
-								Using <span class="vocab">separation of variables</span> we find \( y = ce^{-2x} \) as the <span class="vocab-repeat">general solution</span> of the <span class="vocab-repeat">complementary equation</span>. Now when using <span class="vocab">variation of parameters</span>, we will select \( y_1 \) as any simple <span class="vocab-repeat">particular solution</span> of the complementary equation, so we choose \( c = 1 \) and use \( y_1 = e^{-2x} \) to seek solutions of <a href = "#x1-31r18">(2.1.18)</a> of the form: 
+								Using <span class="vocab">separation of variables</span> we find \( y = ce^{-2x} \) as the <span class="vocab-repeat">general solution</span> of the <span class="vocab-repeat">complementary equation</span>. Now when using <span class="vocab">variation of parameters</span>, we will select \( y_1 \) as any simple <span class="vocab-repeat">particular solution</span> of the complementary equation, so we choose \( c = 1 \) and use \( y_1 = e^{-2x} \) to seek solutions of <a href="#x1-31r18">(2.1.18)</a> of the form: 
 								\[ y = u \cdot y_1 = u \cdot e^{-2x} \]
 							</div>
 
@@ -672,9 +672,9 @@
 							
 
 							<div>
-								We now substitute this into <a href = "#x1-31r18">(2.1.18)</a> and simplify the equation which transforms it into an <span class="vocab-repeat">integrable</span> equation
+								We now substitute this into <a href="#x1-31r18">(2.1.18)</a> and simplify the equation which transforms it into an <span class="vocab-repeat">integrable</span> equation
 				
-								<a id = "x1-32r19"></a>
+								<a id="x1-32r19"></a>
 								\begin{align}
 									\frac{dy}{dx} + 2y = & x^3 e^{-2x} \nonumber \\
 									\overset{\frac{dy}{dx}}{\overbrace{ \left( \frac{du}{dx} - 2 u \right) e^{-2x} }} + 2\overset{y}{\overbrace{ue^{-2x}}} = & x^3 e^{-2x} \nonumber \\	
@@ -685,7 +685,7 @@
 								\end{align}
 
 
-								Now we simply find the antiderivative of <a href = "#x1-32r19">(2.1.19)</a> to obtain \( u \)
+								Now we simply find the antiderivative of <a href="#x1-32r19">(2.1.19)</a> to obtain \( u \)
 								
 								\begin{align*}	
 									\int du = & \int x^3 dx \Longrightarrow	
@@ -693,7 +693,7 @@
 								\end{align*}
 
 
-								Then multiply the result by \(y_1 = e^{-2x} \) to get the <span class="vocab-repeat">general solution</span> of <a href = "#x1-31r18">(2.1.18)</a>
+								Then multiply the result by \(y_1 = e^{-2x} \) to get the <span class="vocab-repeat">general solution</span> of <a href="#x1-31r18">(2.1.18)</a>
 								
 								\begin{align*}	
 									y = ue^{-2x} = & \left( k + \frac{1}{4} x^4 \right)e^{-2x} \\	
@@ -714,7 +714,7 @@
 								\end{align*}
 							</div>
 							<div class="reading-exercise">
-								Verify \( y  =  \frac{1}{4} \left( c +  x^4 \right)e^{-2x} \) is a solution of <a href = "#x1-31r18">(2.1.18)</a> by differentiating and substituting
+								Verify \( y  =  \frac{1}{4} \left( c +  x^4 \right)e^{-2x} \) is a solution of <a href="#x1-31r18">(2.1.18)</a> by differentiating and substituting
 							</div> 
 						</li>
 						<li>
@@ -734,7 +734,7 @@
 								Which is defined for all \( x \) so the IOV is \((-\infty ,\infty)\)
 							</div>
 							<div class="reading-exercise">
-								Verify \( y  =  \frac{1}{4} \left( 3 +  x^4 \right)e^{-2x} \) is a solution of <a href = "#x1-31r18">(2.1.18)</a> by differentiating and substituting
+								Verify \( y  =  \frac{1}{4} \left( 3 +  x^4 \right)e^{-2x} \) is a solution of <a href="#x1-31r18">(2.1.18)</a> by differentiating and substituting
 							</div> 
 						</li>	
 					</ol>
@@ -745,23 +745,23 @@
 			</div>
 
 				
-			<div id = "41828579-53fa-42a7-a81d-be4250230e3d">
-				Figure&nbsp;<a href = "#-a-direction-field-and-integral-curves-for-yyxex-">2.1.3</a>
+			<div id="41828579-53fa-42a7-a81d-be4250230e3d">
+				Figure&nbsp;<a href="#-a-direction-field-and-integral-curves-for-yyxex-">2.1.3</a>
 				shows a direction field and some <span class="vocab">integral curves</span>
-				for <a href = "#x1-31r18">(2.1.18)</a>
+				for <a href="#x1-31r18">(2.1.18)</a>
 			</div>
 
-			<figure class = "figure" id = "b0081066-48c2-4ff5-811f-6076441330c5">
+			<figure class="figure" id="b0081066-48c2-4ff5-811f-6076441330c5">
 				<div
-					class = "noindent"
-					id = "-a-direction-field-and-integral-curves-for-yyxex-"
+					class="noindent"
+					id="-a-direction-field-and-integral-curves-for-yyxex-"
 				>
-					<img height = "264" src = "EPS/fig020103.png" width = "409" />
-					<a id = "x1-33r3"></a>
+					<img height="264" src="EPS/fig020103.png" width="409" />
+					<a id="x1-33r3"></a>
 				</div>
-				<figcaption class = "caption">
-					<span class = "id">Figure&nbsp;2.1.3</span>
-					<span class = "content">
+				<figcaption class="caption">
+					<span class="id">Figure&nbsp;2.1.3</span>
+					<span class="content">
 						A direction field and
 						<span class="vocab">integral curves</span>
 						for \( \displaystyle \frac{dy}{dx}  + 2y = x^{2}e^{-2x}\)
@@ -769,11 +769,11 @@
 				</figcaption>
 			</figure>
 
-			<div class = "example" id = "x1-346" style = "--ex-number: 6">
+			<div class="example" id="x1-346" style="--ex-number: 6">
 				<ol>
 					<li>
 						Solve the complimentary equation
-						<a id = "x1-36r20"></a>
+						<a id="x1-36r20"></a>
 						\begin {equation} \label {eq:2.1.20}
 							\frac{dy}{dx}  + (\cot x) y = x \csc x
 						\end {equation}
@@ -786,7 +786,7 @@
 						\end {equation*}
 					</li>
 					<li>
-						<a id = "x1-38r21"></a>
+						<a id="x1-38r21"></a>
 						Solve the IVP 
 						
 						\begin {equation} \label {eq:2.1.21}
@@ -796,20 +796,20 @@
 					</li>
 				</ol>
 
-				<details class = "solution" id = "2495665c-1d66-4955-b579-333ab13fae0d">
+				<details class="solution" id="2495665c-1d66-4955-b579-333ab13fae0d">
 					<summary>Solution</summary>
 
 					<ol>
 						<li>	
 							<div>
-								Notice <a href = "#x1-36r20">(2.1.20)</a> is in standard form <a href = "#x1-28r15">(2.1.15)</a> with \( p(x)=\cot x \) and \( f(x)=x\csc x \)
+								Notice <a href="#x1-36r20">(2.1.20)</a> is in standard form <a href="#x1-28r15">(2.1.15)</a> with \( p(x)=\cot x \) and \( f(x)=x\csc x \)
 
 								\begin{align}
 									\frac{dy}{dx} + \overset{p(x)}{\overbrace{(\cot x)}}y = & \overset{f(x)}{\overbrace{x\csc x}} \nonumber \\
 									\frac{dy}{dx} + \frac{\cos x}{\sin x}y = & \frac{x}{\sin x} 
 								\end{align}
 
-								First we’ll take note of points of discontinuity: <a href = "#x1-36r20">(2.1.20)</a> is discontinuous when \( \sin x = 0 \), which occurs at \( x=\dots,0,\pi,2\pi,\dots\), therefore the 
+								First we’ll take note of points of discontinuity: <a href="#x1-36r20">(2.1.20)</a> is discontinuous when \( \sin x = 0 \), which occurs at \( x=\dots,0,\pi,2\pi,\dots\), therefore the 
 								open intervals for possible solutions are \( \dots \), \( (0,\pi) \), \( (\pi,2\pi) \), \( \dots \), or \( \Big(k\pi,(k+1)\pi \Big) \) where \( k \) is any integer.
 							</div>
 							<div class="reading-exercise"> 
@@ -817,9 +817,9 @@
 							</div>
 
 							<div>
-								To solve the nonhomogeneous <a href = "#x1-36r20">(2.1.20)</a>, we will always first solve the complementary homogeneous equation:
+								To solve the nonhomogeneous <a href="#x1-36r20">(2.1.20)</a>, we will always first solve the complementary homogeneous equation:
 	
-								<a id = "x1-32r22"></a>
+								<a id="x1-32r22"></a>
 								\begin{align*}
 									\frac{dy}{dx}  + (\cot x) y = & 0	
 								\end{align*}
@@ -831,7 +831,7 @@
 						<li>
 
 							<div>
-								Using <span class="vocab">separation of variables</span> we find \( y = \frac{c}{\sin x} \) as the <span class="vocab-repeat">general solution</span> of the <span class="vocab-repeat">complementary equation</span>. Now when using <span class="vocab">variation of parameters</span>, we will select \( y_1 \) as any simple <span class="vocab-repeat">particular solution</span> of the complementary equation, so we choose \( c = 1 \) and use \( y_1 = \frac{1}{\sin x} \) to seek solutions of <a href = "#x1-36r20">(2.1.20)</a> of the form: 
+								Using <span class="vocab">separation of variables</span> we find \( y = \frac{c}{\sin x} \) as the <span class="vocab-repeat">general solution</span> of the <span class="vocab-repeat">complementary equation</span>. Now when using <span class="vocab">variation of parameters</span>, we will select \( y_1 \) as any simple <span class="vocab-repeat">particular solution</span> of the complementary equation, so we choose \( c = 1 \) and use \( y_1 = \frac{1}{\sin x} \) to seek solutions of <a href="#x1-36r20">(2.1.20)</a> of the form: 
 								\[ y = u \cdot y_1 = \frac{u}{\sin x} \]
 							</div>
 
@@ -843,7 +843,7 @@
 								Differentiating \( y = \frac{u}{\sin x} \) using the
 								<span class="vocab">quotient rule</span> gives us:
 	
-								<a id = "x1-32r23"></a>
+								<a id="x1-32r23"></a>
 								\begin{align} \label{eq:2.1.23}
 									\frac{dy}{dx} 
 										= & \frac{1}{\sin^2 x} 
@@ -853,9 +853,9 @@
 
 
 							<div>
-								We now substitute into <a href = "#x1-36r20">(2.1.20)</a> and simplify the equation which transforms it into an <span class="vocab-repeat">integrable</span> equation 
+								We now substitute into <a href="#x1-36r20">(2.1.20)</a> and simplify the equation which transforms it into an <span class="vocab-repeat">integrable</span> equation 
 				
-								<a id = "x1-32r24"></a>
+								<a id="x1-32r24"></a>
 								\begin{align}
 									\frac{dy}{dx} + 2y = & x^3 e^{-2x} \nonumber \\
 									\overset{ \frac{dy}{dx} }{\overbrace{ \frac{1}{\sin^2 x} 
@@ -867,16 +867,16 @@
 								\end{align}
 	
 	
-								Now we simply find the antiderivative of <a href = "#x1-32r24">(2.1.24)</a> to obtain \( u \):
+								Now we simply find the antiderivative of <a href="#x1-32r24">(2.1.24)</a> to obtain \( u \):
 								
 								\begin{align*}	
 									\int du = & \int x dx \Longrightarrow	
 									u = k + \frac{1}{2} x^2 \\	
 								\end{align*}
 	
-								Then multiply the result by \(y_1 = \displaystyle \frac{1}{\sin x} = \csc x \) to get the <span class="vocab-repeat">general solution</span> of <a href = "#x1-36r20">(2.1.20)</a>
+								Then multiply the result by \(y_1 = \displaystyle \frac{1}{\sin x} = \csc x \) to get the <span class="vocab-repeat">general solution</span> of <a href="#x1-36r20">(2.1.20)</a>
 
-								<a id = "x1-32r25"></a>
+								<a id="x1-32r25"></a>
 								\begin{align}	\label{eq:2.1.25}
 									y = \frac{u}{\sin x} = u \csc x = & \left( k + \frac{1}{2} x^2 \right) \csc x  
 									= \frac{1}{2} \left( c + x^2 \right) \csc x  \\	
@@ -886,12 +886,12 @@
 							</div>
 							
 							<div class="reading-exercise">
-								Verify \( y = \frac{1}{2} \left( c + x^2 \right) \csc x  \) is a solution of <a href = "#x1-36r20">(2.1.20)</a> by differentiating and substituting
+								Verify \( y = \frac{1}{2} \left( c + x^2 \right) \csc x  \) is a solution of <a href="#x1-36r20">(2.1.20)</a> by differentiating and substituting
 							</div> 
 						</li>
 						<li>
 							<div>
-								We already found the <span class="vocab">general solution</span> <a href = "#x1-32r25">(2.1.25)</a> now we evaluate it at our <span class="vocab">initial condition</span> \( y\left( \frac{\pi}{2} \right) = 1\) to solve for the constant \( c \)
+								We already found the <span class="vocab">general solution</span> <a href="#x1-32r25">(2.1.25)</a> now we evaluate it at our <span class="vocab">initial condition</span> \( y\left( \frac{\pi}{2} \right) = 1\) to solve for the constant \( c \)
 
 								\begin{align*}
 									y(x) =&  \frac{1}{2} \left( c + x^2 \right) \csc x	\\
@@ -904,7 +904,7 @@
 							</div>
 
 							<div>
-								Substituting \( c = \frac{8-\pi^2}{8} \) yields the <span class="vocab">particular solution</span> of our IVP <a href = "#x1-38r21">(2.1.21)</a>
+								Substituting \( c = \frac{8-\pi^2}{8} \) yields the <span class="vocab">particular solution</span> of our IVP <a href="#x1-38r21">(2.1.21)</a>
 								\begin{align*}
 									y(x) = \frac{1}{2}  \left( 2 - \frac{\pi^2}{4} + x^2 \right) \csc x
 									=  \frac{1}{8} \left( 8 - \pi^2 + 4x^2 \right) \csc x \\	
@@ -915,7 +915,7 @@
 								Since our initial condition is \( x = \frac{\pi}{2} \) then the <span class="vocab-repeat">IOV</span> is \((0,\pi )\) 
 							</div> 
 							<div class="reading-exercise">
-								Verify \( y = \frac{1}{8} \left( 8 - \pi^2 + 4x^2 \right) \csc x  \) is a solution of <a href = "#x1-36r20">(2.1.20)</a> by differentiating and substituting
+								Verify \( y = \frac{1}{8} \left( 8 - \pi^2 + 4x^2 \right) \csc x  \) is a solution of <a href="#x1-36r20">(2.1.20)</a> by differentiating and substituting
 							</div> 
 
 						</li>
@@ -925,33 +925,33 @@
 			</div>
 
 			<div id="6abc9caa-1f40-4c05-8167-da22440ea33a">
-				Figure&nbsp;<a href = "#-solution-of-y-xyx-x-y-">2.1.4</a>
+				Figure&nbsp;<a href="#-solution-of-y-xyx-x-y-">2.1.4</a>
 				shows its graph.
-				<figure class = "figure" id = "bef523b6-be8b-4c2a-b1e8-166ad929c0c4">
-					<div id = "-solution-of-y-xyx-x-y-">
-						<img height = "264" src = "EPS/fig020104.png" width = "409" />
-						<a id = "x1-43r4"></a>
+				<figure class="figure" id="bef523b6-be8b-4c2a-b1e8-166ad929c0c4">
+					<div id="-solution-of-y-xyx-x-y-">
+						<img height="264" src="EPS/fig020104.png" width="409" />
+						<a id="x1-43r4"></a>
 					</div>
-					<figcaption class = "caption">
-						<span class = "id">Figure&nbsp;2.1.4</span>
-						<span class = "content">
+					<figcaption class="caption">
+						<span class="id">Figure&nbsp;2.1.4</span>
+						<span class="content">
 							Solution of \( \displaystyle \frac{dy}{dx}  + (\cot x)y = x\csc x \quad y\left( \frac{\pi}{2} \right) = 1\)
 						</span>
 					</figcaption>
 				</figure>
 			</div>
 
-			<div class = "stepbox"  id = "def4d167-1758-49e5-b147-dfd39480dee9">
+			<div class="stepbox"  id="def4d167-1758-49e5-b147-dfd39480dee9">
 				<div>
 					<span class="vocab">Variation of Parameters for First Order Linear Equations</span>
 
-					<a id = "x1-44r26"></a>
+					<a id="x1-44r26"></a>
 					\begin {equation} \label {eq:2.1.26}  
 						\frac{dy}{dx}  + p(x)y = f(x) 
 					\end {equation} 
 				</div>
 				<div>
-					Summary of the Steps To Solve <a href = "#x1-44r26">(2.1.26)</a>
+					Summary of the Steps To Solve <a href="#x1-44r26">(2.1.26)</a>
 				</div>	
 				<ol>
 					<li>
@@ -961,7 +961,7 @@
 						Express \( y \) as a product \( y = u \cdot y_1 \) and calculate its derivative \( \frac{d}{dx} \Big( u \cdot y_1  \Big) \) using product, quotient, and/or chain rules
 					</li>
 					<li>
-						Substitute \( uy_1 \) and \( \frac{d}{dx} \Big( u \cdot y_1  \Big) \) into the nonhomogeneous <a href = "#x1-44r26">(2.1.26)</a> and simplify to transform into an integrable equation
+						Substitute \( uy_1 \) and \( \frac{d}{dx} \Big( u \cdot y_1  \Big) \) into the nonhomogeneous <a href="#x1-44r26">(2.1.26)</a> and simplify to transform into an integrable equation
 					</li>
 					<li>
 						Find the antiderivative \( u \) including the constant of integration, and multiply result by \( y_1 \) to get \( y = uy_1 \)
@@ -971,19 +971,19 @@
 
 		</details>
 
-		<details id = "e9f51d3f-267f-4ed2-8093-22252ae60f7d">
+		<details id="e9f51d3f-267f-4ed2-8093-22252ae60f7d">
 			<summary>Solutions in Integral Form</summary>
 		
-			<div id = "6511c919-5d8e-4490-ba66-7aec7e6c544b">
+			<div id="6511c919-5d8e-4490-ba66-7aec7e6c544b">
 				Sometimes the integrals that arise in solving a linear first order
 				equation can’t be evaluated in terms of elementary functions. In this case
 				the <em>solution must be left in terms of an integral</em>.
 			</div>
-			<div class = "example" id = "x1-517" style = "--ex-number: 7">
+			<div class="example" id="x1-517" style="--ex-number: 7">
 				<ol>
 					<li>
 						Solve the complimentary equation
-						<a id = "x1-54r27"></a>
+						<a id="x1-54r27"></a>
 						\begin {equation} \label {eq:2.1.27}
 							\frac{dy}{dx} -2xy = 1
 						\end {equation}
@@ -995,7 +995,7 @@
 						\end {equation*}
 					</li>
 					<li>
-						<a id = "x1-54r28"></a>
+						<a id="x1-54r28"></a>
 						Solve the initial value problem 
 						\begin {equation} \label {eq:2.1.28}
 							\frac{dy}{dx} - 2xy = 1 \quad y(0) = y_0
@@ -1003,17 +1003,17 @@
 					</li>
 				</ol>
 			
-				<details class = "solution" id = "f5886c88-8865-4046-9ea4-b32dc6d5bab6">
+				<details class="solution" id="f5886c88-8865-4046-9ea4-b32dc6d5bab6">
 					<summary>Solution</summary>
 
 					<ol>
 						<li>
-							<div class = "stepline" >
+							<div class="stepline" >
 								1. Solve the complementary homogeneous equation \( \displaystyle \frac{dy}{dx} + p(x)y = 0 \) and select a simple particular solution as \( y_1 \)	
 							</div>
 
 							<div>
-								To solve the nonhomogeneous <a href = "#x1-54r27">(2.1.27)</a>, we will always first solve the complementary homogeneous equation:
+								To solve the nonhomogeneous <a href="#x1-54r27">(2.1.27)</a>, we will always first solve the complementary homogeneous equation:
 	
 								\begin{align*}
 									\frac{dy}{dx} - 2xy = & 0	
@@ -1031,12 +1031,12 @@
 						</li>
 						<li>
 
-							<div class = "stepline" >
+							<div class="stepline" >
 								2. Express \( y \) as a product \( y = u \cdot y_1 \) and calculate its derivative \( \frac{d}{dx} \Big( u \cdot y_1  \Big) \) using product, quotient, and/or chain rules	
 							</div>
 
 							<div>
-								We seek solutions of <a href = "#x1-31r18">(2.1.18)</a> of the form: 
+								We seek solutions of <a href="#x1-31r18">(2.1.18)</a> of the form: 
 								\[ y = u \cdot y_1 = u \cdot e^{x^2} \]
 							</div>
 	
@@ -1053,7 +1053,7 @@
 								\end{align*}
 							</div>
 
-							<div class = "stepline" >
+							<div class="stepline" >
 								3. Substitute \( uy_1 \) and \( \frac{d}{dx} \Big( u \cdot y_1  \Big) \) into the nonhomogeneous and simplify to transform into an integrable equation	
 							</div>
 
@@ -1067,7 +1067,7 @@
 								\end{align*}
 							</div>
 
-							<div class = "stepline"  >
+							<div class="stepline"  >
 								4.  Find the antiderivative \( u \) including the constant of integration, and multiply result by \( y_1 \) to get \( y = uy_1 \)	
 							</div>
 
@@ -1087,40 +1087,40 @@
 								\end{align*}
 	
 	
-								where \( x_0 \) is some initial \(x-\)value which we can choose conveniently to evaluate the definite integral to zero in the case of an IVP, so we use \(x_0 = 0\) from <a href = "#x1-54r28">(2.1.28)</a> in this case. We explicitly write out the "\( + c \)" here in front of the integral to make it more clear that we are "done" simplifying the integral for now as it will stay in this form for our general solution.
+								where \( x_0 \) is some initial \(x-\)value which we can choose conveniently to evaluate the definite integral to zero in the case of an IVP, so we use \(x_0 = 0\) from <a href="#x1-54r28">(2.1.28)</a> in this case. We explicitly write out the "\( + c \)" here in front of the integral to make it more clear that we are "done" simplifying the integral for now as it will stay in this form for our general solution.
 							</div>
 
 							<div class="reading-exercise">
 								Differentiate \( u = c + \displaystyle \int_{0}^x e^{-t^2} dt\) using the <span class="vocab">Fundamental Theorem of Calculus</span> to verify \( \displaystyle  \frac{du}{dx} = e^{-x^2} \) 
 							</div> 
 							<div>	
-								Then multiply the result by \(y_1 = e^{x^2} \) to get the <span class="vocab">general solution</span> \( y \) of <a href = "#x1-54r27">(2.1.27)</a>
+								Then multiply the result by \(y_1 = e^{x^2} \) to get the <span class="vocab">general solution</span> \( y \) of <a href="#x1-54r27">(2.1.27)</a>
 								
-								<a id = "x1-55r29"></a>
+								<a id="x1-55r29"></a>
 								\begin{align}	\label {eq:2.1.29}
 									y = ue^{x^2} = & e^{x^2}\left( c + \int_{0}^x e^{-t^2} dt \right) \\	
 								\end{align}
 							</div>
 							<div class="reading-exercise">
-								Verify <a href = "#x1-54r29">(2.1.29)</a> is a solution of <a href = "#x1-54r27">(2.1.27)</a> by differentiating and substituting
+								Verify <a href="#x1-54r29">(2.1.29)</a> is a solution of <a href="#x1-54r27">(2.1.27)</a> by differentiating and substituting
 							</div> 
 						</li>
 						<li>
-							We already found the general solution <a href = "#x1-54r29">(2.1.29)</a> now we evaluate it at our  initial condition \( y(0) = y_0 \) to solve for the constant \( c \)
+							We already found the general solution <a href="#x1-54r29">(2.1.29)</a> now we evaluate it at our  initial condition \( y(0) = y_0 \) to solve for the constant \( c \)
 							\begin{align*} 	
 								y(x) = & e^{x^2}\left( c + \int_{0}^x e^{-t^2} dt \right)  \\
 								\underset{y_0}{\underbrace{y(0)}} = & e^{\left(0^2\right)}\Bigg( c + \underset{0}{\underbrace{\int_{0}^0 e^{-t^2} dt}} \Bigg) \\
 								y_0 = & 1 \left( c + 0 \right) = c
 							\end{align*}
 
-							Substituting \( c = y_0 \) yields the <span class="vocab">particular solution</span> of our IVP <a href = "#x1-54r28">(2.1.28)</a>:
+							Substituting \( c = y_0 \) yields the <span class="vocab">particular solution</span> of our IVP <a href="#x1-54r28">(2.1.28)</a>:
 
-							<a id = "x1-56r30"></a>
+							<a id="x1-56r30"></a>
 							\begin{align} \label {eq:2.1.30}
 								y = & e^{x^2}\left( y_0 + \int_{0}^x e^{-t^2} dt \right)
 							\end{align}
 							<div class="reading-exercise">
-								Verify <a href = "#x1-56r30">(2.1.30)</a> is a solution of <a href = "#x1-54r27">(2.1.27)</a> by differentiating and substituting
+								Verify <a href="#x1-56r30">(2.1.30)</a> is a solution of <a href="#x1-54r27">(2.1.27)</a> by differentiating and substituting
 							</div> 
 						</li>
 					</ol>
@@ -1129,25 +1129,25 @@
 
 
 			<div>
-				Figure&nbsp;<a href = "#-solutions-of-yxy-yy-">2.1.5</a> shows graphs
-				of <a href = "#x1-56r30">(2.1.30)</a> for several values of \(y_0\).
+				Figure&nbsp;<a href="#-solutions-of-yxy-yy-">2.1.5</a> shows graphs
+				of <a href="#x1-56r30">(2.1.30)</a> for several values of \(y_0\).
 	
-				<figure class = "figure" id = "17e761ef-cbb7-4e1c-8011-25ced4d4ad98">
-					<div id = "-solutions-of-yxy-yy-">
-						<a id = "x1-57r5"></a>
-						<img height = "264" src = "EPS/fig020105.png" width = "409" />
+				<figure class="figure" id="17e761ef-cbb7-4e1c-8011-25ced4d4ad98">
+					<div id="-solutions-of-yxy-yy-">
+						<a id="x1-57r5"></a>
+						<img height="264" src="EPS/fig020105.png" width="409" />
 					</div>
-					<figcaption class = "caption">
-						<span class = "id">Figure&nbsp;2.1.5</span>
-						<span class = "content">Solutions of \( \displaystyle \frac{dy}{dx} -2xy = 1 \quad y(0) = y_{0}\)</span>
+					<figcaption class="caption">
+						<span class="id">Figure&nbsp;2.1.5</span>
+						<span class="content">Solutions of \( \displaystyle \frac{dy}{dx} -2xy = 1 \quad y(0) = y_{0}\)</span>
 					</figcaption>
 				</figure>
 			</div>
-			<div id = "5af3d00b-9729-4cda-a131-45d613c9153e">
-				A note about solutions in the form of an integral. Comparing to our experience in calculus, a general solution in the form of an integral <a href = "#x1-56r30">(2.1.30)</a> may seem incomplete, almost like we still have more steps to do; while this may have been true in calculus class, it is important to realize that a solution in the form or a definite integral is perfectly valid and can be easily analyzed using numerical methods. For instance, for any specific value of \( x \) this definite integral will evaluate to a number \( y(x) \) forming an ordered pair \( \big( x, y(x) \big) \) and we could always use a calculator or spreadsheet to make a table of those ordered pairs and simply plot the points on a graph which would be a graph of the solution. While we won’t be studying numerical methods in this class, hopefully you could imagine someone doing so and can be okay with sometimes having answers in the form of an integral.
+			<div id="5af3d00b-9729-4cda-a131-45d613c9153e">
+				A note about solutions in the form of an integral. Comparing to our experience in calculus, a general solution in the form of an integral <a href="#x1-56r30">(2.1.30)</a> may seem incomplete, almost like we still have more steps to do; while this may have been true in calculus class, it is important to realize that a solution in the form or a definite integral is perfectly valid and can be easily analyzed using numerical methods. For instance, for any specific value of \( x \) this definite integral will evaluate to a number \( y(x) \) forming an ordered pair \( \big( x, y(x) \big) \) and we could always use a calculator or spreadsheet to make a table of those ordered pairs and simply plot the points on a graph which would be a graph of the solution. While we won’t be studying numerical methods in this class, hopefully you could imagine someone doing so and can be okay with sometimes having answers in the form of an integral.
 			</div>
-			<div class="reading-exercise" id = "e9fe5315-e5b9-407b-8313-74ad23134284">
-				Using a calculator or spreadsheet generate a table of 20 ordered pairs for <a href = "#x1-56r30">(2.1.30)</a>, plot them on a graph, and connect them with a smooth curve
+			<div class="reading-exercise" id="e9fe5315-e5b9-407b-8313-74ad23134284">
+				Using a calculator or spreadsheet generate a table of 20 ordered pairs for <a href="#x1-56r30">(2.1.30)</a>, plot them on a graph, and connect them with a smooth curve
 			</div>
 
 		</details>
@@ -1155,44 +1155,44 @@
 
 
 
-		<details id = "4454b728-c934-46b0-b7ef-ca7e5afcc726">
+		<details id="4454b728-c934-46b0-b7ef-ca7e5afcc726">
 			<summary>Existence and Uniqueness</summary>
 
 			<div id="x-1-581">
-				We already know from Theorem <a href = "#x1-thm12">2.1.1</a> that there exists a unique solution <a href = "#x1-24r1213">(2.1.13)</a> for every homogeneous first order linear differential equation <a href = "#x1-24r12">(2.1.12)</a>. Theorem 2.1.2 completes this section with the guarantees the existence and uniqueness of solutions for every nonhomogeneous first order linear differential equations.
+				We already know from Theorem <a href="#x1-thm12">2.1.1</a> that there exists a unique solution <a href="#x1-24r1213">(2.1.13)</a> for every homogeneous first order linear differential equation <a href="#x1-24r12">(2.1.12)</a>. Theorem 2.1.2 completes this section with the guarantees the existence and uniqueness of solutions for every nonhomogeneous first order linear differential equations.
 			</div>	
 
-			<div class = "theorem" id = "x1-582">
+			<div class="theorem" id="x1-582">
 				<div>
-					<span class = "head">Theorem&nbsp;2.1.2</span>
+					<span class="head">Theorem&nbsp;2.1.2</span>
 					Suppose \(p(x)\) and \(f(x)\) are continuous on an open interval \((a,b)\)
 					and let \(y_1 = y_1(x) \) be any nontrivial particular solution of the complementary homogeneous equation. Then:
 				</div>
 				<ol>
 					<li>
-						The general solution of the nonhomogeneous <a href = "#x1-60r31">(2.1.31)</a> on \((a,b)\) is given by <a href = "#x1-61r32">(2.1.32)</a>
-						<a id = "x1-60r31"></a>
+						The general solution of the nonhomogeneous <a href="#x1-60r31">(2.1.31)</a> on \((a,b)\) is given by <a href="#x1-61r32">(2.1.32)</a>
+						<a id="x1-60r31"></a>
 						\begin {equation} \label {eq:2.1.31}  
 							\frac{dy}{dx}  + p(x)y = f(x) 
 						\end {equation}
 						
-						<a id = "x1-61r32"></a>
+						<a id="x1-61r32"></a>
 						\begin {equation} \label {eq:2.1.32} 
 							y = y_1 \left (c  + \int \frac{f(x)}{y_1(x)} dx \right )
 						\end {equation}
 					</li>
 					<li>
 						If \(x_0\) is an arbitrary point in \((a,b)\) and \(y_0 = y(x_0)\) is an
-						arbitrary real number, then the IVP <a href = "#x1-61r33">(2.1.33)</a> has the unique solution <a href = "#x1-61r34">(2.1.34)</a> on \((a,b)\) 
+						arbitrary real number, then the IVP <a href="#x1-61r33">(2.1.33)</a> has the unique solution <a href="#x1-61r34">(2.1.34)</a> on \((a,b)\) 
 						
-						<a id = "x1-61r33"></a>
+						<a id="x1-61r33"></a>
 						\begin {equation} \label {eq:2.1.33}  
 							\frac{dy}{dx}  + p(x)y = f(x) 
 							\quad 
 							y(x_0) = y_0 
 						\end {equation}
 							
-						<a id = "x1-61r34"></a>
+						<a id="x1-61r34"></a>
 						\begin {equation} \label {eq:2.1.34}  
 							y = y_1 \left( 
 								{y_0\over y_1(x_0)} + \int^x_{x_0} {f(t)\over{y_1(t)}} dt
@@ -1201,27 +1201,27 @@
 					</li>
 				</ol>	
 			</div>
-			<div class="reading-exercise" id = "41ebacda-6bb3-475a-9647-b8c82204dc5b">
-				Use the <span class="vocab">Fundamental Theorem of Calculus</span> to differentiate <a href = "#x1-61r32">(2.1.32)</a> and use the solution to the complementary equation \( y_1 \) to substitute and show that <a href = "#x1-61r32">(2.1.32)</a> is a solution of <a href = "#x1-60r31">(2.1.31)</a>
+			<div class="reading-exercise" id="41ebacda-6bb3-475a-9647-b8c82204dc5b">
+				Use the <span class="vocab">Fundamental Theorem of Calculus</span> to differentiate <a href="#x1-61r32">(2.1.32)</a> and use the solution to the complementary equation \( y_1 \) to substitute and show that <a href="#x1-61r32">(2.1.32)</a> is a solution of <a href="#x1-60r31">(2.1.31)</a>
 			</div> 
-			<div class="reading-exercise" id = "21e0decf-1af8-4617-af82-c16aeb92b2fa">
-				Differentiate \( u = \frac{y}{y_1} \) using the quotient rule and use the solution to the complementary equation \( y_1 \) and <a href = "#x1-60r31">(2.1.31)</a> to substitute to show that \( \frac{du}{dx} = \frac{f(x)}{y_1(x)} \)
+			<div class="reading-exercise" id="21e0decf-1af8-4617-af82-c16aeb92b2fa">
+				Differentiate \( u = \frac{y}{y_1} \) using the quotient rule and use the solution to the complementary equation \( y_1 \) and <a href="#x1-60r31">(2.1.31)</a> to substitute to show that \( \frac{du}{dx} = \frac{f(x)}{y_1(x)} \)
 			</div> 
-			<div class="reading-exercise" id = "7408bc0e-4cf8-4510-9d74-5bbbb57edb23">
-				Evaluate <a href = "#x1-61r34">(2.1.34)</a> at \( x = x_0 \) to verify \( y( x_0 ) = y_0 \). Next evaluate <a href = "#x1-61r32">(2.1.32)</a> at \( x = x_0 \) and solve for \( c \) to show that \( c = \frac{y(x_0)}{y_1(x_0)} \)
+			<div class="reading-exercise" id="7408bc0e-4cf8-4510-9d74-5bbbb57edb23">
+				Evaluate <a href="#x1-61r34">(2.1.34)</a> at \( x = x_0 \) to verify \( y( x_0 ) = y_0 \). Next evaluate <a href="#x1-61r32">(2.1.32)</a> at \( x = x_0 \) and solve for \( c \) to show that \( c = \frac{y(x_0)}{y_1(x_0)} \)
 			</div> 
 		</details>
 
-		<nav class = "ex">
-			<a href = "sec2.1.ex.html">2.1 Exercises</a>
+		<nav class="ex">
+			<a href="sec2.1.ex.html">2.1 Exercises</a>
 		</nav>
 
-		<nav class = "book">
+		<nav class="book">
 			<a href="sec1.0.html">Back (Chapter 1)</a>
 
-			<a href = "sec2.0.html">Chapter 2</a>
+			<a href="sec2.0.html">Chapter 2</a>
 
-			<a href = "sec2.2.book.html">Next (2.2)</a>
+			<a href="sec2.2.book.html">Next (2.2)</a>
 		</div>
 	</body>
 </html>
