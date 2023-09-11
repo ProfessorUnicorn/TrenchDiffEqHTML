@@ -120,11 +120,12 @@
 
 				<ol>
 					<li>
-						Determine where a solutions exists for IVPs of <a href="#x1-7r4">(5.1.4)</a> 	    
+						Determine where a solutions exists for IVPs of <a href="#x1-7r4">(5.1.4)</a>
 					</li>	
-					<li>						
+					<li>
 						Verify that \(y_1=e^x\) and \(y_2=e^{-x}\) are solutions of <a href="#x1-7r4">(5.1.4)</a> on \((-\infty ,\infty )\)
 					</li>
+					<li class="skip"></li>
 					<li>
 						Verify that \(y=c_1e^x+c_2e^{-x}\) is a solution of <a href="#x1-7r4">(5.1.4)</a> on \((-\infty ,\infty )\)
 					</li>
@@ -149,14 +150,6 @@
 							<div>
 								Using linear standard form <a href="#x1-2r1">(5.1.1)</a> we can identify  \(p(x) = 0\) and \(q(x) = -1\) which are both constant functions and continuous everywhere \((-\infty ,\infty )\) therefore Theorem&nbsp;<a href="#x1-51">5.1.1</a> indicates that every IVP for <a href="#x1-7r4">(5.1.4)</a> has a unique solution on \((-\infty ,\infty )\)
 							</div>
-							<div>
-							</div>	
-							<div>
-							</div>	
-							<div>
-							</div>	
-							<div>
-							</div>	
 						</li>	
 						<li>
 							<div>
@@ -183,11 +176,13 @@
 									\frac{d^2 y}{dx^2} - y = & 0 \\	
 									\underset{e^x}{\underbrace{\frac{d^2y_1}{dx^2}}}  - \underset{e^x}{\underbrace{y_1}} \overset{?}{=} & 0 \\
 									e^x - e^x = & 0 \quad \checkmark
-								\end{align*} 								
+								\end{align*}
 							</div>	
 							<div class="reading-exercise">
 								Differentiate \( y_2 = e^{-x} \) twice
-							</div> 	
+							</div>
+						</li>
+						<li class="continued">
 							<div>
 								Now we'll verify \(y_2\) is a solution. Differentiating:
  
@@ -228,10 +223,12 @@
 							</div> 
 							<div>
 								<a id="x1-13r7"></a>
-								\begin{align}
+								\begin{align} \label {eq:5.1.7} 
 									\frac{dy}{dx} 
 									= & \frac{d}{dx} \left( c_1e^x+c_2e^{-x} \right)
-									= c_1 e^x - c_2e^{-x}  \nonumber \\  \nonumber \\
+									= c_1 e^x - c_2e^{-x}  \nonumber \\
+									\nonumber \\
+									\tag{7}
 								\frac{d^2y}{dx^2} 
 									= & \frac{d}{dx} \left( c_1 e^x - c_2e^{-x} \right)	
 									= c_1 e^x +  c_2e^{-x}  
@@ -351,6 +348,7 @@
 					<li>
 						Verify that \(y_1=\cos \omega x\) and \(y_2=\sin \omega x\) are solutions of <a href="#x1-15r8">(5.1.8)</a> on \((-\infty ,\infty )\)
 					</li>
+					<li class="skip"></li>
 					<li>
 						Verify that \(y=c_1\cos \omega x+c_2\sin \omega x\) is a solution of <a href="#x1-15r8">(5.1.8)</a> on \((-\infty ,\infty )\)
 					</li>
@@ -402,11 +400,13 @@
 									\underset{-\omega^2 \cos \omega x}{\underbrace{\frac{d^2y_1}{dx^2}}}  
 										+ \omega^2 \underset{\cos \omega x}{\underbrace{y_1}} \overset{?}{=} & 0 \\
 										-\omega^2 \cos \omega x + \omega^2 \cos \omega x = & 0 \quad \checkmark
-								\end{align*} 								
+								\end{align*}
 							</div>	
 							<div class="reading-exercise">
 								Differentiate \( y_2 = \sin \omega x \) twice
-							</div> 	
+							</div>
+						</li>
+						<li class="continued">
 							<div>
 								Now we'll verify \(y_2\) is a solution. Differentiating:
  
@@ -451,9 +451,11 @@
 								\begin{align} \label {eq:5.1.11}
 									\frac{dy}{dx} 
 									= & \frac{d}{dx} \left( c_1 \cos \omega x + c_2 \sin \omega x \right) \nonumber  \\
-									= & - \omega c_1  \sin \omega x + c_2 \omega \cos \omega x  \nonumber \\  \nonumber \\
+									= & - \omega c_1  \sin \omega x + c_2 \omega \cos \omega x  \nonumber \\
+									  \nonumber \\
 								\frac{d^2y}{dx^2} 
 									= & \frac{d}{dx} \Big( - \omega c_1  \sin \omega x + c_2 \omega \cos \omega x \Big)	 \nonumber  \\
+									\tag{11}
 									= & - \omega^2 c_1  \cos \omega x - \omega^2 c_2 \sin \omega 
 								\end{align} 
 								
@@ -562,10 +564,12 @@
 					<li>
 						Verify that \(y_1=x^2\) is a solution of <a href="#x1-24r13">(5.1.13)</a> on \((-\infty ,\infty )\) and \(y_2=1/x^2\) is a solution of <a href="#x1-24r13">(5.1.13)</a> on \((-\infty ,0)\) and \((0,\infty )\)
 					</li>
+					<li class="skip"></li>
 					<li>
 						Verify that if \(c_1\) and \(c_2\) are any constants then
 						\(y = c_1 x^2 + c_2/x^2 \) is a solution of <a href="#x1-24r13">(5.1.13)</a> on \((-\infty ,0)\) and \((0,\infty )\)
 					</li>
+					<li class="skip"></li>
 					<li>
 						Solve the IVP 
 
@@ -576,6 +580,8 @@
 							\quad \left.\frac{dy}{dx}\right|_{1}=0
 						\end {equation}
 					</li>
+					<li class="skip"></li>
+					<li class="skip"></li>
 					<li>
 						Solve the IVP 
 						
@@ -586,12 +592,15 @@
 							\quad \left.\frac{dy}{dx}\right|_{-1}=0
 						\end {equation}
 					</li>
+					<li class="skip"></li>
+					<li class="skip"></li>
 				</ol>
 
 				<details class="solution" id="ac9b3a00-5b58-4d10-889b-eefc35d85843">
 					<summary>Solution</summary>
 
 					<ol>
+						<!-- Part 1 -->
 						<li>
 							<div>
 								First notice that <a href="#x1-24r13">(5.1.13)</a> is not in linear standard form <a href="#x1-2r1">(5.1.1)</a> but is actually in the form of <a href="#x1-22r12">(5.1.12)</a> with \( P_0(x) = x^2 \), \( P_1(x) = x \), and \( P_2(x) = -4 \), which are are all continuous everywhere \((-\infty ,\infty )\) however, we can only consider intervals where \( P_0(x) = x^2 \) has no zeros since rewriting <a href="#x1-24r13">(5.1.13)</a> in linear standard form requires dividing by \( P_0(x) \) so we obtain \( p(x) = P_1(x)/P_0(x) \) and \( q(x) = P_2(x)/P_0(x) \):
@@ -606,6 +615,7 @@
 								Then Theorem&nbsp;<a href="#x1-51">5.1.1</a> says that any IVP of <a href="#x1-24r13">(5.1.13)</a> has a unique solution on \((0,\infty )\) or on \((-\infty ,0)\) depending on the \( x \) value of the initial condition.
 							</div>
 						</li>	
+						<!-- Part 2 -->
 						<li>
 							<div>
 								Start by checking for discontinuities in \(y_1 = x^2\) and \(y_2 = 1/x^2.\) Since \(y_1\) is a parabola it is defined everywhere with domain \((-\infty ,\infty ).\) As for \(y_2 = 1/x^2\) it is a rational function and undefined at \( x = 0 \) so its domain is \((-\infty ,0 )\) and \((0,\infty )\) 
@@ -633,11 +643,13 @@
 									x^2 \frac{d^2y}{dx^2} + x \frac{dy}{dx} - 4 y = & 0 \\
 									x^2 \underset{2}{\underbrace{\frac{d^2y1}{dx^2}}} + x \underset{2x}{\underbrace{\frac{dy1}{dx}}} - 4 \underset{x^2}{\underbrace{y1}} = & 0 \\
 									2x^2 + 2x^2 - 4 x^2 = & 0 \quad \checkmark
-								\end{align*} 								
+								\end{align*}
 							</div>	
 							<div class="reading-exercise">
 								Differentiate \( y_2 = 1/x^2 \) twice
-							</div> 	
+							</div>
+						</li>
+						<li class="continued">
 							<div>
 								Now we'll verify \(y_2\) is a solution. Differentiating:
  
@@ -664,6 +676,7 @@
 							</div>	
 						
 						</li>
+						<!-- Part 3 -->
 						<li>
 							<div>
 								Start by checking for discontinuities. Since <a href="#x1-31r16">(5.1.16)</a> is just the sum of \( y_1 = x^2 \) and \( y_2 = 1/x^2 \) it also has a discontinuity at \( x = 0 \) so the domain is \((-\infty ,0 )\) and \((0,\infty )\) 
@@ -689,7 +702,11 @@
 									= & \frac{d}{dx} \Big( 2 c_1 x - \frac{2c_2}{x^3} \Big)	 \nonumber  \\
 									= & 2 c_1 + \frac{6c_2}{x^4} 
 								\end{align} 
-								
+							</div>
+						
+						</li>
+						<li class="continued">
+							<div>
 								Substituting <a href="#x1-31r16">(5.1.16)</a> and <a href="#x1-32r17">(5.1.17)</a> into <a href="#x1-24r13">(5.1.13)</a>
 							</div>
 							<div>
@@ -716,7 +733,9 @@
 							</div>	
 							<div>
 								Therefore \( \displaystyle y = c_1 x^2 + \frac{c_2}{x^2} \) is a solution of <a href="#x1-24r13">(5.1.13)</a> on \((-\infty ,0 )\) and \((0,\infty )\)  								
-							</div>	
+							</div>
+						</li>
+						<li class="continued">
 							<div>
 								<figure>
 									<div
@@ -732,6 +751,7 @@
 								</figure>								
 							</div>	
 						</li>
+						<!-- Part 4 -->
 						<li>
 							<div>
 								In Part 3 we already verified \( \displaystyle y = c_1 x^2 + \frac{c_2}{x^2} \) is a solution of <a href="#x1-24r13">(5.1.13)</a> and we computed its derivative so we have:
@@ -755,8 +775,10 @@
 									\left.\frac{dy}{dx}\right|_{1} = & 2 c_1 \cdot 1 - \frac{2c_2}{1^3}   \\
 									0							   = & 2 c_1 	     - 2c_2   \\
 									0							   = &   c_1 	     - c_2   \\
-								\end{align*} 								
-							</div>	
+								\end{align*}
+							</div>
+						</li>
+						<li class="continued">
 							<div>
 								And we obtain a system of equations which we can solve by adding them together to find \(c_1\) then substituting that back to find \(c_2\)
 								\begin{align*}
@@ -786,8 +808,8 @@
 										c_2 = & 1 \\
 										c_1 = & 1 \\
 									\end{array}
-								\right.									 		
-							\end{align*}								
+								\right.
+							\end{align*}
 							</div>	
 
 							<div>
@@ -798,26 +820,25 @@
 							</div>	
 							<div class="reading-exercise">
 								Verify \( y=  x^2 + \frac{1}{x^2} \) is a solution to <a href="#x1-24r13">(5.1.13)</a> 
-							</div> 
-							<div>
-								<figure>
-									<div
-									>
-										<iframe src="https://www.desmos.com/calculator/rgbyh3sm0j?embed" width="400" height="250" frameborder="0"></iframe>
-									</div>
-									<figcaption>
-										<span class="id">Figure&nbsp;5.1.1(b)</span>
-										<span class="content">
-											Unique solution
-											\( \displaystyle y = x^2 + \frac{1}{x^2} \)
-											of <a href="#x1-28r14">(5.1.14)</a> on \((0,\infty )\) 
-										</span>
-									</figcaption>
-								</figure>								
-							</div>	
+							</div>
+						</li>
+						<li class="continued">
+							<figure>
+								<div>
+									<iframe src="https://www.desmos.com/calculator/3ukvrkyjx9?embed" width="400" height="250" frameborder="0"></iframe>
+								</div>
+								<figcaption>
+									<span class="id">Figure&nbsp;5.1.1(b)</span>
+									<span class="content">
+										Unique solution
+										\( \displaystyle y = x^2 + \frac{1}{x^2} \)
+										of <a href="#x1-28r14">(5.1.14)</a> on \((0,\infty )\) 
+									</span>
+								</figcaption>
+							</figure>
+						</li>
 						
 
-						</li>
 						<li>
 							<div>
 								Again in Part 3 we already verified \( \displaystyle y = c_1 x^2 + \frac{c_2}{x^2} \) is a solution of <a href="#x1-24r13">(5.1.13)</a> and we computed its derivative so we have:
@@ -860,8 +881,8 @@
 										c_1 = & 1 \\
 										c_2 = & 1 \\
 									\end{array}
-								\right.									 		
-							\end{align*}								
+								\right.
+							\end{align*}
 							</div>	
 
 							<div>
@@ -870,25 +891,24 @@
 								\[
 									y=  x^2 + \frac{1}{x^2}
 								\]
-							</div>	
-							<div>
-								<figure>
-									<div
-									>
-										<iframe src="https://www.desmos.com/calculator/nrjm8eb71x?embed" width="400" height="250" frameborder="0"></iframe>
-									</div>
-									<figcaption>
-										<span class="id">Figure&nbsp;5.1.1(c)</span>
-										<span class="content">
-											Unique solution
-											\( \displaystyle y = x^2 + \frac{1}{x^2} \)
-											of <a href="#x1-30r15">(5.1.15)</a> on \( (-\infty ,0 )\) 
-										</span>
+							</div>
+						</li>
+						<li class="continued">
+							<figure>
+								<div>
+									<iframe src="https://www.desmos.com/calculator/jxlosqvohh?embed" width="400" height="250" frameborder="0"></iframe>
+								</div>
+								<figcaption>
+									<span class="id">Figure&nbsp;5.1.1(c)</span>
+									<span class="content">
+										Unique solution
+										\( \displaystyle y = x^2 + \frac{1}{x^2} \)
+										of <a href="#x1-30r15">(5.1.15)</a> on \( (-\infty ,0 )\) 
+									</span>
 
-									</figcaption>
-								</figure>								
-							</div>								
-						</li>						
+								</figcaption>
+							</figure>
+						</li>
 					</ol>
 
 				</details>
@@ -905,7 +925,7 @@
 				<figure>
 					<div
 					>
-						<iframe src="https://www.desmos.com/calculator/zmnwbbikes?embed" width="400" height="250" frameborder="0"></iframe>
+						<iframe src="https://www.desmos.com/calculator/zfhzhzjm3w?embed" width="400" height="250" frameborder="0"></iframe>
 					</div>
 					<figcaption>
 						<span class="id">Figure&nbsp;5.1.1(d)</span>
@@ -1201,6 +1221,7 @@
 
 				<a id="x1-44r23"></a>
 				\begin {equation} 
+					\label {eq:5.1.23} 
 					c_1 
 					\left(  y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2\right) 
 							 = k_0 \displaystyle\frac{dy_2}{dx} - k_1 y_2 \quad\quad\quad 
@@ -1368,6 +1389,7 @@
 				
 				<a id="x1-45r24"></a>
 				\begin {equation} 
+					\label {eq:5.1.24} 
 					c_2 
 					\left(  y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2 \right) 
 							 = k_1 y_1 - k_0 \displaystyle\frac{dy_1}{dx} \quad\quad\quad 
@@ -1434,17 +1456,9 @@
 
 			</div>	
 
-
-
-
-
 			<br>
 			<br>
-
-			<div class="indent" id="8ee3123e-3632-49c5-a613-55e5485a51f9">
-			
-		</div>
-		<br>
+			<br>
 		<div>		
 
 			</div>
@@ -1452,7 +1466,8 @@
 				By solving the system <a href="#x1-43r22">(5.1.22)</a> we were able to find expressions for both constants \(c_1\) and \(c_2\) in terms any values of \(k_0\) and \(k_1,\) as long as the <span class="vocab">Wronskian</span> is nonzero <a href="#x1-46r25">(5.1.25)</a>
 
 				<a id="x1-46r25"></a>
-				\begin{equation} \label{5.1.25}
+				\begin{equation} 
+					\label{eq:5.1.25}
 					W(x) = 
 						\det
 						\left(
@@ -1466,21 +1481,22 @@
 
 				This means that whenever the <span class="vocab-repeat">Wronskian</span> is nonzero then the IVP  <a href="#x1-42r21">(5.1.21)</a>	
 				
-				\begin{align} 
+				\begin{align*}
 					\frac{d^2y}{dx^2}+p(x)\frac{dy}{dx}+q(x)y= & 0
 						\quad y(x_0)=k_0
-						\quad \left.\frac{dy}{dx}\right|_{x_0}=k_1 \nonumber \\
-				\end{align} 
+						\quad \left.\frac{dy}{dx}\right|_{x_0}=k_1 \\
+				\end{align*} 
 
 				Always has the unique solution 
 
-				\begin{align} 
-					y = & c_1 y_1 + c_2 y_2 \nonumber \\
-				\end{align} 
+				\begin{align*} 
+					y = & c_1 y_1 + c_2 y_2 \\
+				\end{align*} 
 
 				Where \( \{y_1,y_2\} \) represents a fundamental set of solutions and the constants are defined as
 
 				\begin{align} 
+					\label {eq:5.1.26} 
 					c_1 = & 
 						\frac{1}{W(x_0)}
 								\cdot
@@ -1499,7 +1515,7 @@
 						\frac{1}{W(x_0)}
 							\cdot
 							\left. \\[20pt]
-							\left(
+							\det \left(
 								\begin{array}{cc}
 									\, y_1 & k_0 \,    \\
 									\, \displaystyle \frac{dy_1}{dx} & k_1 \,  
@@ -1570,14 +1586,16 @@
 					\(y_2\) be solutions of <a href="#x1-49r27">(5.1.27)</a> on \((a,b)\)
 					
 					<a id="x1-49r27"></a>
-					\begin {equation} \label {eq:5.1.27}
+					\begin {equation}
+						\label {eq:5.1.27}
 						\frac{d^2y}{dx^2}+p(x)\frac{dy}{dx}+q(x)y=0 
 					\end {equation}
 					
 					Define the <span class="vocab">Wronskian</span> determinant of \( \{y_1,y_2\} \) as 
 					
 					<a id="x1-50r28"></a>
-					\begin {equation} \label {eq:5.1.28}
+					\begin {equation}
+						\label {eq:5.1.28}
 						W(x) = 
 						\det
 						\left(
@@ -1592,7 +1610,8 @@
 					Let \(x_0\) be any point in \((a,b).\) Then <span class="vocab">Abel's formula</span> is 
 					
 					<a id="x1-51r29"></a>
-					\begin {equation} \label{eq:5.1.29} 
+					\begin {equation}
+						\label{eq:5.1.29} 
 						W(x)=W(x_0)  \cdot  e^{-\displaystyle \int ^x_{x_0}p(t)\, dt}
 					\end {equation}
 					
@@ -1607,7 +1626,8 @@
 				<div>
 					Differentiating <a href="#x1-50r28">(5.1.28)</a> yields
 					<a id="x1-52r30"></a>
-					\begin {equation} \label {eq:5.1.30}
+					\begin {equation}
+						\label {eq:5.1.30}
 						\frac{dW}{dx}= y_1\frac{d^2y_2}{dx^2}-\frac{d^2y_1}{dx^2}y_2
 					\end {equation}
 				</div>
@@ -1674,6 +1694,9 @@
 				<div class="reading-exercise" >
 					Verify \( y\equiv 0 \) is a solution of \( \frac{dy}{dx}+p(x)y=0 \)
 				</div> 
+			</div>
+			<div id="5f80fb36-94ba-401c-9379-d9b5b08de13b-2">
+
 
 				<div>
 					Now assuming \( y \not \equiv 0 \) we can separate the variables
@@ -1695,7 +1718,9 @@
 				</div>
 				<div class="reading-exercise" >
 					Verify \( y = c e^{- \int^x_{x_0} p(t) dt}\) is a solution of \( \frac{dy}{dx}+p(x)y=0 \)
-				</div> 	
+				</div>
+			</div>
+			<div id="5f80fb36-94ba-401c-9379-d9b5b08de13b-3">
 				<div>
 					And now evaluating the solution at the initial condition \( y(x_0)=W(x_0) \) we obtain
 
@@ -1776,9 +1801,10 @@
 							\quad y_2=1/x^2
 						\]
 					</li>
+					<li class="skip"></li>
 				</ol>
 
-				<details class="solution" id="c1a1da63-10d2-4a75-ae84-af58cd259569">
+				<details class="solution">
 					<summary>Solution</summary>
 
 					<ol>
@@ -1929,10 +1955,16 @@
 											\displaystyle \frac{y_1}{dx} &=& 2x  \quad & \quad  \displaystyle \frac{y_2}{dx} &=& - \displaystyle \frac{2}{x^3}  
 									\end{array}
 								\end{align*}
+							</div>
 
+						</li>
+						<li class="continued">
+							<div>
 								Substituting them in to the Wronskian <a href="#x1-50r28">(5.1.28)</a> we obtain:
 
 								\begin {align}
+									\label {eq:5.1.29} 
+
 									W(x) = 
 									\det
 									\left(  \\[15pt]
@@ -1942,9 +1974,11 @@
 												\end{array}
 											\right)
 										= & x^2 \left( - \frac{2}{x^3} \right) - 2x \left( \frac{1}{x^2} \right) \nonumber \\
+										\tag{29}
 										= & - \frac{2}{x}  - \frac{2}{x}  
 										= - \frac{4}{x} 
 								\end{align}
+							</div>
 
 								Now according to Abel’s formula
 
@@ -1980,6 +2014,8 @@
 							y_1=e^x 
 						\]
 					</li>
+					<li class="skip"></li>
+					<li class="skip"></li>
 					<li>
 						Example <a href="#x1-142">5.1.2</a> 
 						\[
@@ -1988,17 +2024,21 @@
 							y_1=\cos \omega x
 						\]
 					</li>
+					<li class="skip"></li>
+					<li class="skip"></li>
 					<li>
 						Example <a href="#x1-233">5.1.3</a>
 						\[
-							x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}-4y=0
-							\quad \quad 
-							y_1=x^2
+						x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}-4y=0
+						\quad \quad 
+						y_1=x^2
 						\]
 					</li>
+					<li class="skip"></li>
+					<li class="skip"></li>
 				</ol>
 
-				<details class="solution" id="c1a1da63-10d2-4a75-ae84-af58cd259569">
+				<details class="solution">
 					<summary>Solution</summary>
 
 					<ol>
@@ -2037,6 +2077,10 @@
 								\begin{align*}
 									y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2 = & \, c \, \cdot \, e^{- {\displaystyle\int ^x_{x_0} p(t) \, dt } }
 								\end{align*}
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 
 								Differentiating the given \(y_1=e^x \) we obtain \(dy_1/dx=e^x \) so the left side becomes
 
@@ -2061,7 +2105,7 @@
 									e^x \displaystyle\frac{dy_2}{dx} - e^x y_2 = c
 								\end{align*}
 
-								Which we simplify by writing in linear standard form <a href="sec2.1.book.html" target=_blank>(2.1.1)</a> by multiplying by \(e^{-x}\) and taking the arbitary constant as \(c=1\) and just writing \(y_2\) as \(y\)
+								Which we simplify by writing in linear standard form <a href="sec2.1.book.html" target=_blank>(2.1.1)</a> by multiplying by \(e^{-x}\) and taking the arbitrary constant as \(c=1\) and just writing \(y_2\) as \(y\)
 
 								\begin{align*}
 									\frac{dy}{dx} - y = e^{-x}
@@ -2072,7 +2116,10 @@
 							</div>
 							<div class="reading-exercise">
 								Solve the homogeneous equation \({dy}/{dx} - y = 0\) using separation of variables.
-							</div> 	
+							</div>
+						
+						</li>
+						<li class="continued">
 							<div>	
 								Solving the homogeneous equation we obtain \(y_1 = e^x\)
 								\begin{align*}
@@ -2099,7 +2146,7 @@
 								\end{align*}
 							</div>
 							<div class="reading-exercise">
-								Antdifferentiate \(\displaystyle\frac{du}{dx} = e^{-2x}\) using substitution
+								Antidifferentiate \(\displaystyle\frac{du}{dx} = e^{-2x}\) using substitution
 							</div> 
 							<div>	
 								Antidifferentiating and substituting back to find \(y = u e^x \)
@@ -2123,6 +2170,7 @@
 								\]
 							</div>
 						</li>
+
 						<!--Part 2-->
 						<li>
 							<div>
@@ -2155,14 +2203,18 @@
 									c \, \cdot \, e^{- k }
 									= c
 								\end{align*}
-								
+							</div>
+						</li>
+						<li class="continued">
+
+							<div>
 								Finally we obtain a first order equation for \(y_2\)
 
 								\begin{align*}
 									\big( \cos \omega x \big) \frac{dy_2}{dx} + \big( \omega \sin \omega x \big) \, y_2 = c
 								\end{align*}
 
-								Which we simplify by writing in linear standard form <a href="sec2.1.book.html" target=_blank>(2.1.1)</a> by dividing by \(\cos \omega x\) and taking the arbitary constant as \(c=1\) and just writing \(y_2\) as \(y\)
+								Which we simplify by writing in linear standard form <a href="sec2.1.book.html" target=_blank>(2.1.1)</a> by dividing by \(\cos \omega x\) and taking the arbitrary constant as \(c=1\) and just writing \(y_2\) as \(y\)
 
 								\begin{align*}
 									\frac{dy}{dx} + \big( \omega \tan \omega x \big) \, y = & \sec \omega x
@@ -2173,7 +2225,8 @@
 							</div>
 							<div class="reading-exercise">
 								Solve the homogeneous equation \({dy}/{dx} + \big( \omega \tan \omega x \big) \, y = 0\) using separation of variables.
-							</div> 	
+							</div>
+						
 							<div>	
 								Solving the homogeneous equation we obtain \(y_1 =  \cos \omega x\)
 								\begin{align*}
@@ -2189,6 +2242,8 @@
 							<div class="reading-exercise">
 								Differentiate \(y =  u \cos \omega x\) 
 							</div> 
+						</li>
+						<li class="continued">
 
 							<div>	
 								Substituting \(y =  u \cos \omega x\) and its derivative into the nonhomogeneous equation we obtain
@@ -2202,7 +2257,7 @@
 								\end{align*}
 							</div>
 							<div class="reading-exercise">
-								Antdifferentiate \(\displaystyle\frac{du}{dx} = \sec^2 \omega x\) using substitution
+								Antidifferentiate \(\displaystyle\frac{du}{dx} = \sec^2 \omega x\) using substitution
 							</div> 
 							<div>	
 								Antidifferentiating and substituting back to find \(y = u e^x \)
@@ -2261,14 +2316,17 @@
 									=	
 									\frac{c}{x} 
 								\end{align*}
-								
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 								Finally we obtain a first order equation for \(y_2\)
 
 								\begin{align*}
 									x^2 \frac{dy_2}{dx} - \big(2x\big) y_2 = \frac{c}{x} 
 								\end{align*}
 
-								Which we simplify by writing in linear standard form <a href="sec2.1.book.html" target=_blank>(2.1.1)</a> by dividing by \(x^2\) and taking the arbitary constant as \(c=1\) and just writing \(y_2\) as \(y\)
+								Which we simplify by writing in linear standard form <a href="sec2.1.book.html" target=_blank>(2.1.1)</a> by dividing by \(x^2\) and taking the arbitrary constant as \(c=1\) and just writing \(y_2\) as \(y\)
 
 								\begin{align*}
 									\frac{dy}{dx} - \left(\frac{2}{x}\right) \, y = &  \frac{1}{x^3} 
@@ -2279,7 +2337,8 @@
 							</div>
 							<div class="reading-exercise">
 								Solve the homogeneous equation \({dy}/{dx} - \big( 2/x \big) \, y = 0\) using separation of variables.
-							</div> 	
+							</div>
+						
 							<div>	
 								Solving the homogeneous equation we obtain \(y_1 =  x^2\)
 								\begin{align*}
@@ -2295,6 +2354,8 @@
 							<div class="reading-exercise">
 								Differentiate \(y =  u x^2\) 
 							</div> 
+						</li>
+						<li class="continued">
 
 							<div>	
 								Substituting \(y =   u x^2\) and its derivative into the nonhomogeneous equation we obtain
@@ -2307,7 +2368,7 @@
 								\end{align*}
 							</div>
 							<div class="reading-exercise">
-								Antdifferentiate \(\displaystyle\frac{du}{dx} = \frac{1}{x^5}\) using power rule
+								Antidifferentiate \(\displaystyle\frac{du}{dx} = \frac{1}{x^5}\) using power rule
 							</div> 
 							<div>	
 								Antidifferentiating and substituting back to find \(y = u x^2 \)
@@ -2347,7 +2408,7 @@
 					let \(y_1\) and \(y_2\) be solutions of <a href="#x1-59r32">(5.1.32)</a> on \((a,b)\)
 					
 					<a id="x1-59r32"></a>
-					\begin {equation} \label{eq:5.1.32} 
+					\begin {equation} \tag{32} \label{eq:5.1.32} 
 						\frac{d^2y}{dx^2}+p(x)\frac{dy}{dx}+q(x)y=0 
 					\end {equation}
 					
@@ -2376,7 +2437,7 @@
 					let \(y_1\) and \(y_2\) be solutions of <a href="#x1-62r34">(5.1.34)</a> on \((a,b)\)
 					
 					<a id="x1-62r34"></a>
-					\begin {equation} \label{eq:5.1.34} 
+					\begin {equation} \tag{34} \label{eq:5.1.34} 
 						\frac{d^2y}{dx^2}+p(x)\frac{dy}{dx}+q(x)y=0 
 					\end {equation}
 					
@@ -2422,11 +2483,11 @@
 					<span class="head">Theorem&nbsp;5.1.7</span>
 					<a id="x1-687"></a>
 					Suppose \(c\) is in \((a,b)\) and \(\alpha \) and \(\beta \) are real
-					numbers, not both zero. Under the assumptions of Theorem&nbsp;<a href="#x1-687">5.1.7</a>,
+					numbers, not both zero. Under the assumptions of Theorem&nbsp;<a href="#x1-616">5.1.6</a>,
 					suppose \(y_{1}\) and \(y_{2}\) are solutions of <a href="#x1-62r34">(5.1.34)</a> such that 
 					
 					<a id="x1-69r35"></a>
-					\begin {equation} \label {eq:5.1.35} 
+					\begin {equation} \tag{35} \label {eq:5.1.35} 
 						\alpha y_{1}(c)+\beta
 						\left.\frac{dy_1}{dx}\right|_c = 0
 						\quad \text { and } \quad 
