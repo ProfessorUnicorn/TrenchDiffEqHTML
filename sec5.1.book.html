@@ -2004,11 +2004,52 @@
 					<ol>
 						<li>
 							<div>
-								In Example <a href="#x1-61">5.1.1</a> we already identified \( p(x) \equiv 0 \) using linear standard form <a href="#x1-2r1">(5.1.1)</a> then <span class="vocab">Abel's formula</span> <a href="#x1-51r29">(5.1.29)</a> will evaluate to a constant:
+								We have been given one solution \(y_1=e^x \) and we will use it to find a second solution  \(y_2.\) We start by identifying \( p(x) \) 
+								\[ p(x) \equiv 0 \]
+							</div>
+							<div>			
+								Now substitute \(y_1=e^x \) and \(p(x)\) into Abel's formula <a href="#x1-51r29">(5.1.29)</a> and simplifying the constant \( W(x_0) = c \) and throughout to \(c=1\)				
+								\begin{align*}
+									W[y_1,y_2](x) = & \underbrace{W(x_0)}  \cdot e^{- {\displaystyle\int ^x_{x_0} p(t) \, dt } } \\
+									\det
+									\left(
+										\begin{array}{cc}
+											y_1   & y_2   \\
+											\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}  
+										\end{array}
+									\right)
+									= & \, c  \cdot e^{- {\displaystyle\int ^x_{x_0} p(t) \, dt } } \\
+									\det
+									\left(
+										\begin{array}{cc}
+											e^x   & y_2   \\
+											e^x  & \displaystyle \frac{dy_2}{dx}  
+										\end{array}
+									\right)
+									= & \, e^{- {\displaystyle\int ^x_{x_0} 0 \, dt } } 
+									= \, e^{- c } = c \\		
+									e^x \frac{dy_2}{dx} - e^x y_2
+									& = 1 \\
+									\frac{dy_2}{dx} - y_2
+									& = e^{-x}								\\																	
+								\end{align*}
 
-								\[
-									W(x)= \underset{\text{constant}}{\underbrace{W(x_0)}}  \cdot e^{- \underset{\text{constant}}{\underbrace{\displaystyle\int ^x_{x_0}\overset{p(t)}{\overbrace{0}}\, dt }} }
-								\]	
+
+								Thus we have obtained a differential equation to find \(y_2\) which is a first order linear equation so we can solve the same way we did in chapter 2 by first solving the complementary equation
+								\begin{align*}
+									\frac{dy}{dx} - y = & 0 \\
+									\frac{dy}{dx} = & y \\
+									\int \frac{1}{y} dy = & \int dx \\
+									\ln y = & \, x \\
+									y = & \, e^x \\
+								\end{align*}
+
+								And then using variation of parameters to seek solutions of the form \(y_2=u e^x\)
+								\begin{align*}
+									\frac{dy_2}{dx} - y_2 = & \,  e^{-x} \\	
+								\end{align*}
+							</div>
+							<div>	
 
 								So we will verify Abel’s formula by showing that the Wronskian <a href="#x1-50r28">(5.1.28)</a> is also constant.
 									\begin {equation*}
