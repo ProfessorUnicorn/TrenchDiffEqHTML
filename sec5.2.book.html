@@ -71,7 +71,7 @@
 			</div>
 
 			<div class="indent" id="009e8204-9655-4015-bfd6-47e91c57953c">
-				We call this equation the <span class="vocab">characteristic equation</span> of <a href="#x1-2r1">(5.2.1)</a> and we call the quadratic polynomial \(p(r)=ar^2+br+c \) the <span class="vocab">characteristic polynomial</span>. As the characteristic equation is quadratic, the roots are given by the quadratic formula 
+				We call this equation the <span class="vocab">characteristic equation</span> (also <span class="vocab">auxiliary equation</span>) of <a href="#x1-2r1">(5.2.1)</a> and we call the quadratic polynomial \(p(r)=ar^2+br+c \) the <span class="vocab">characteristic polynomial</span>. As the characteristic equation is quadratic, the roots are given by the quadratic formula 
 				
 				<a id="x1-4r3"></a>
 				\begin {equation} \label {eq:5.2.3} 
@@ -89,7 +89,6 @@
 				<div>
 					<strong>Case 3:</strong> \(b^2-4ac&lt;0\), so the characteristic equation has complex roots
 				</div>
-				In each case we’ll start with an example
 			</div>
 		</details>
 
@@ -142,7 +141,7 @@
 									r^2 + 6 r + 5  = & 0 \quad \text{ or } \quad e^{rx} = 0 \\			
 								\end{align*}
 
-								Where \( p(r) = r^2 + 6 r + 5 \) is the <span class="vocab">characteristic polynomial</span> and since \( e^{rx}  \ne 0 \) to solve <a href="#x1-7r4">(5.2.4)</a> we must solve the <span class="vocab">characteristic equation</span> which is always a quadratic equation for second order differential equations so this is always solvable using the quadratic formula <a href="#x1-4r3">(5.2.3)</a> but this one happens to be factorable:
+								Where \( p(r) = r^2 + 6 r + 5 \) is the <span class="vocab">characteristic polynomial</span> and since \( e^{rx}  \ne 0 \) to solve <a href="#x1-7r4">(5.2.4)</a> we must solve the <span class="vocab">characteristic equation</span> which is always a quadratic equation for second order differential equations so this is always solvable using the quadratic formula <a href="#x1-4r3">(5.2.3)</a> but this one also happens to be factorable:
 
 								\begin{align*} 
 									r^2 + 6 r + 5  = & 0 \\ 	
@@ -205,6 +204,14 @@
 									1	= & c_1   + 5  c_2 	\nonumber 
 								\end{align}
 							</div>	
+							<div class="reading-exercise">
+								Solve the system \(\left\{
+									\begin{array}{r l l}
+										c_1 + c_2 &=& 3 \\
+										c_1 + 5c_2 &=& 1 \\
+									\end{array}
+								\right.\)
+							</div>
 							<div>
 								So we obtain the system of equations:
 								And we obtain a system of equations which we can solve by subtracting them to find \(c_2\) then substituting that back to find \(c_1\)
@@ -252,12 +259,14 @@
 								
 								
 							</div>	
+							
+
 							<div class="reading-exercise">
-								Solve the IVP <a href="#x1-7r4">(5.2.4)</a> \( \quad y(0)=2 \quad \left. \frac{dy}{dx} \right|_{0}=-4  \)
+								Verify <a href="#x1-527">(5.2.7)</a> is a of <a href="#x1-9r5">(5.2.5)</a>
 							</div>
 
 							<div class="reading-exercise">
-								Verify <a href="#x1-527">(5.2.7)</a> is a solution of <a href="#x1-9r5">(5.2.5)</a>
+								Solve the IVP with equation <a href="#x1-7r4">(5.2.4)</a> and initial conditions \( \quad y(0)=2 \quad \left. \frac{dy}{dx} \right|_{0}=-4  \)
 							</div>
 						</li>
 					</ol>
@@ -332,7 +341,7 @@
 									r^2 + 6 r + 9  = & 0 \quad \text{ or } \quad e^{rx} = 0 \\			
 								\end{align*}
 
-								Where \( p(r) = r^2 + 6 r + 9 \) is the <span class="vocab">characteristic polynomial</span> and since \( e^{rx}  \ne 0 \) to solve <a href="#x1-15r8">(5.2.8)</a> we must solve the <span class="vocab">characteristic equation</span> which is always a quadratic equation for second order differential equations so this is always solvable using the quadratic formula <a href="#x1-4r3">(5.2.3)</a> but this one happens to be factorable:
+								Where \( p(r) = r^2 + 6 r + 9 \) is the <span class="vocab">characteristic polynomial</span> and since \( e^{rx}  \ne 0 \) to solve <a href="#x1-15r8">(5.2.8)</a> we must solve the <span class="vocab">characteristic equation</span> which is always a quadratic equation for second order differential equations so this is always solvable using the quadratic formula <a href="#x1-4r3">(5.2.3)</a> but again this one happens to be factorable:
 
 								\begin{align*} 
 									r^2 + 6 r + 9  = & 0 \\ 	
@@ -341,12 +350,23 @@
 									r = -3 \quad \text{or} \quad r = & -3 \\				
 								\end{align*}
 
-								Substituting in \(r = -3\) \( y = e^{rx} \) we obtain one solution of 
+								Substituting \(r = -3\) into \( y = e^{rx} \) we obtain one solution of 
 								<a href="#x1-15r8">(5.2.8)</a>
 
 								\[ y_1 = e^{-3x} \] 
 
-								Since the other root was the same repeated root, it will not produce another <span class="vocab">linearly independent</span> solution and as a <span class="vocab">fundamental set</span> for a second order differential equation must have two <span class="vocab-repeat">linearly independent</span> solutions, we will now use <span class="vocab">variation of parameters</span> to find another solution of the form \( y = u y_1 = u \cdot e^{-3x} \)
+								Since the other root was the same repeated root, it will not produce another <span class="vocab">linearly independent</span> solution. For instance, substituting in \(r = -3\) again we obtain 
+								
+								\[ y_2 = e^{-3x} \] 
+
+								But \(y_1\) and \(y_2\) are not <span class="vocab-repeat">linearly independent</span> since their ratio is constant, and in fact, equal to one:
+
+								\begin{align*} 
+									\frac{y_2}{y_1} =&  \frac{e^{-3x}}{e^{-3x}} = 1 \\			
+								\end{align*}
+								
+								Therefore we only have one solution from our <span class="vocab">fundamental set</span> but since a second order differential equation must have two <span class="vocab-repeat">linearly independent</span> solutions to form a 
+								<span class="vocab">fundamental set</span>, we will now use <span class="vocab">variation of parameters</span> to find another solution of the form \( y = u y_1 = u \cdot e^{-3x} \)
 							</div>
 							<div class="reading-exercise">
 								Differentiate \( y = u \cdot e^{-3x} \)
@@ -397,13 +417,13 @@
 									y =& \left( c_1 + c_2 x \right) e^{-3x}	
 								\end{align}
 
-								Now we know that any function of the form <a href="#x1-19r10">(5.2.10)</a> is a solution of <a href="#x1-15r8">(5.2.8)</a>. Notice that substituting \(c_1=0\) and \(c_2=1\) then we get \(y=e^{-3x}\) which is the solution we already found earlier using the <span class="vocab">characteristic equation</span>. In order to obtain a <span class="vocab-repeat">fundamental set</span> we would like another solution of the form <a href="#x1-19r10">(5.2.10)</a> that is <span class="vocab">linearly independent</span> of our known solution, so let \(c_1=1\) and \(c_2=0\) and we have \(y=xe^{-3x}\) and now we just need to verify that \(e^{-3x}\) and \(xe^{-3x}\) are <span class="vocab-repeat">linearly independent</span>
+								Now we know that any function of the form <a href="#x1-19r10">(5.2.10)</a> is a solution of <a href="#x1-15r8">(5.2.8)</a>. Notice that substituting \(c_1=0\) and \(c_2=1\) then we get \(y=e^{-3x}\) which is the solution we already found earlier using the <span class="vocab">characteristic equation</span>. In order to obtain a <span class="vocab-repeat">fundamental set</span> we would like another solution of the form <a href="#x1-19r10">(5.2.10)</a> that is <span class="vocab">linearly independent</span> of our known solution, so we let \(c_1=1\) and \(c_2=0\) to obtain a the solution \(y_2=xe^{-3x}\) and now we just need to verify that \(e^{-3x}\) and \(xe^{-3x}\) are <span class="vocab-repeat">linearly independent</span>
 
 								\begin{align*}
-									\frac{xe^{-3x}}{e^{-3x}} = x	
+									\frac{y_2}{y_1} = \frac{xe^{-3x}}{e^{-3x}} = x	
 								\end{align*}
 
-								Since their ratio is non constant then they are <span class="vocab-repeat">linearly independent</span> thus \( \{ e^{-3x} ,xe^{-3x}  \}\) is a <span class="vocab">fundamental set</span> of solutions for <a href="#x1-15r8">(5.2.8)</a> and thus the <span class="vocab">general solution</span> is \( y = c_1 e^{-3x} + c_2 x e^{-3x} \) which is the same as <a href="#x1-19r10">(5.2.10)</a>
+								Since their ratio is non constant then they are <span class="vocab-repeat">linearly independent</span> thus \( \{ e^{-3x} ,xe^{-3x}  \}\) is a <span class="vocab">fundamental set</span> of solutions for <a href="#x1-15r8">(5.2.8)</a> and thus the <span class="vocab">general solution</span> is \( y = c_1 e^{-3x} + c_2 x e^{-3x} \) which is the same solution we got earlier in equation <a href="#x1-19r10">(5.2.10)</a>
 
 
 							
@@ -411,7 +431,7 @@
 						</li>
 						<li> 
 							<div>
-								We already found the general solution <a href="#x1-19r10">(5.2.10)</a> and now we apply the initial conditions to find the constants \(c_1\) and \(c_2\) to solve the IVP <a href="#x1-15r8">(5.2.8)</a>. Starting with \( y(0)=3 \)
+								We already found the general solution <a href="#x1-19r10">(5.2.10)</a> and now we apply the initial conditions to find the constants \(c_1\) and \(c_2\) to solve the IVP <a href="#x1-17r9">(5.2.9)</a>. Starting with \( y(0)=3 \)
 
 								\begin{align*} 
 									y(x)  = & \left( c_1 + c_2 x \right) e^{-3x}		 \\
@@ -443,7 +463,7 @@
 								\end{align}
 							</div>								
 							<div>
-								Substituting \( c_1 = 3 \) and \( c_2 = 8 \) into <a href="#x1-19r10">(5.2.10)</a> we obtain the particular solution of the IVP  <a href="#x1-15r8">(5.2.8)</a>
+								Substituting \( c_1 = 3 \) and \( c_2 = 8 \) into <a href="#x1-19r10">(5.2.10)</a> we obtain the particular solution of the IVP <a href="#x1-17r9">(5.2.9)</a>
 
 								\begin{equation*}
 									y  = (3 + 8x) e^{-3x} 
@@ -452,7 +472,10 @@
 								
 							</div>	
 							<div class="reading-exercise">
-								Solve the IVP <a href="#x1-15r8">(5.2.8)</a> \( \quad y(0)=2 \quad \left. \frac{dy}{dx} \right|_{0}=-4  \)
+								Verify \(y  = (3 + 8x) e^{-3x}\) is a solution of <a href="#x1-15r8">(5.2.8)</a>
+							</div> 
+							<div class="reading-exercise">
+								Solve the IVP <a href="#x1-15r8">(5.2.8)</a> with initial conditions \( \quad y(0)=2 \quad \left. \frac{dy}{dx} \right|_{0}=-4  \)
 							</div> 
 						</li>	
 					</ol>
@@ -466,6 +489,10 @@
 				<figcaption> <span class="id">Figure&nbsp;5.2.2</span> <span class="content">\(y=e^{-3x}(3+8x)\)</span></figcaption>
 			</figure>
 
+			<br>
+			<br>
+			<br>
+			<hr>
 			<br>
 			<br>
 			<br>
@@ -494,7 +521,7 @@
 				is a solution of <a href="#x1-21r12">(5.2.12)</a>. 
 				
 				
-				Letting \(c_1=1\) and \(c_2=0\) here yields the solution \(y_1=e^{r_1x}\) that we already knew. Letting \(c_1=0\) and \(c_2=1\) yields the second solution \(y_2=xe^{r_1x}\). Since \(y_2/y_1=x\) is nonconstant, <span class="ptmb8t-">5.1.6</span> implies that \(\{y_1,y_2\}\) is a fundamental set of solutions of <a href="#x1-21r12">(5.2.12)</a>, and <a href="#x1-22r13">(5.2.13)</a> is the general solution. 
+				Letting \(c_1=1\) and \(c_2=0\) here yields the solution \(y_1=e^{r_1x}\) that we already knew. Letting \(c_1=0\) and \(c_2=1\) yields the second solution \(y_2=xe^{r_1x}\). Since \(y_2/y_1=x\) is nonconstant, <span class="ptmb8t-">5.1.6</span> implies that \(\{y_1,y_2\}\) is a fundamental set of solutions of <a href="#x1-21r12">(5.2.12)</a>, and <a href="#x1-22r13">(5.2.13)</a> is the general solution. Although this is true in general but we will still always use <span class="vocab">variation of parameters</span> to show the work to find the second solution in the case of repeated roots.
 			</div>
 		</details>
 
@@ -523,19 +550,354 @@
 					<summary>Solution</summary>
 					<ol>
 						<li>
-							The characteristic polynomial of <a href="#x1-25r14">(5.2.14)</a> is \[ p(r)=r^2+4r+13=r^2+4r+4+9=(r+2)^2+9\] The roots of the characteristic equation are \(r_1=-2+3i\) and \(r_2=-2-3i\). By analogy with Case&nbsp;1, it’s reasonable to expect that \(e^{(-2+3i)x}\) and \(e^{(-2-3i)x}\) are solutions of <a href="#x1-25r14">(5.2.14)</a>. This is true (see Exercise&nbsp; <span class="ptmb8t-">34</span>); however, there are difficulties here, since you are probably not familiar with exponential functions with complex arguments, and even if you are, it’s inconvenient to work with them, since they are complex–valued. We’ll take a simpler approach, which we motivate as follows: the exponential notation suggests that \[ e^{(-2+3i)x}=e^{-2x}e^{3ix}\quad \mbox{ and } \quad e^{(-2-3i)x}=e^{-2x}e^{-3ix}\] so even though we haven’t defined \(e^{3ix}\) and \(e^{-3ix}\), it’s reasonable to expect that every linear combination of \(e^{(-2+3i)x}\) and \(e^{(-2-3i)x}\) can be written as \(y=ue^{-2x}\), where \(u\) depends upon \(x\). To determine \(u\), we note that if \(y=ue^{-2x}\) then \[ \frac{dy}{dx}=\frac{du}{dx}e^{-2x}-2ue^{-2x}\mbox {\quad and \quad } \frac{d^2y}{dx^2}=\frac{d^2u}{dx^2}e^{-2x}-4\frac{du}{dx}e^{-2x}+4ue^{-2x}\] so
-							<div class="eqnarray" id="1c463357-999c-497a-8f3b-f709a0e17e4c"> 
-							\begin {eqnarray*} \frac{d^2y}{dx^2}+4\frac{dy}{dx}+13y&amp;=&amp;e^{-2x}\left [(\frac{d^2u}{dx^2}-4\frac{du}{dx}+4u)+4(\frac{du}{dx}-2u)+13u\right ]\\ &amp;=&amp;e^{-2x}\left [\frac{d^2u}{dx^2}-(4-4)\frac{du}{dx}+(4-8+13)u\right ]=e^{-2x}(\frac{d^2u}{dx^2}+9u) 
-							\end {eqnarray*} 
-							</div> Therefore \(y=ue^{-2x}\) is a solution of <a href="#x1-25r14">(5.2.14)</a> if and only if \[ \frac{d^2u}{dx^2}+9u=0\] From Example&nbsp; <span class="ptmb8t-">5.1.2</span>, the general solution of this equation is \[ u=c_1\cos 3x +c_2\sin 3x\] Therefore any function of the form 
-							<a id="x1-28r16"></a>
-							\begin {equation} \label {eq:5.2.16} y=e^{-2x}(c_1\cos 3x+c_2\sin 3x) 
-							\end {equation}
-							is a solution of <a href="#x1-25r14">(5.2.14)</a>. Letting \(c_1=1\) and \(c_2=0\) yields the solution \(y_1=e^{-2x}\cos 3x\). Letting \(c_1=0\) and \(c_2=1\) yields the second solution \(y_2=e^{-2x}\sin 3x\). Since \(y_2/y_1=\tan 3x\) is nonconstant, <span class="ptmb8t-">5.1.6</span> implies that \(\{y_1,y_2\}\) is a fundamental set of solutions of <a href="#x1-25r14">(5.2.14)</a>, and <a href="#x1-28r16">(5.2.16)</a> is the general solution.
-						</li>
-						<li>
-							Imposing the condition \(y(0)=2\) in <a href="#x1-28r16">(5.2.16)</a> shows that \(c_1=2\). Differentiating <a href="#x1-28r16">(5.2.16)</a> yields \[ \frac{dy}{dx}=-2e^{-2x}(c_1\cos 3x+c_2\sin 3x) +3e^{-2x}(-c_1\sin 3x +c_2\cos 3x)\] and imposing the initial condition \(\left. \frac{dy}{dx} \right|_{0}=-3\) here yields \(-3=-2c_1+3c_2=-4+3c_2\), so \(c_2=1/3\). Therefore the solution of <a href="#x1-27r15">(5.2.15)</a> is \[ y=e^{-2x}(2\cos 3x+ {1\over 3}\sin 3x)\] Figure&nbsp; <a href="#x1-29r3">5.2.3</a> is a graph of this function.
-						</li>
+							<div>
+								We start by seeking solutions of the form \( y=e^{rx} \)
+
+								\[
+									y=e^{rx}
+									\Longrightarrow 
+									\frac{dy}{dx}=re^{rx}
+									\Longrightarrow 
+									\frac{d^2y}{dx^2}=r^2e^{rx}
+								\] 								
+
+								Substituting these in we obtain:
+
+								\begin{align*} 
+									\frac{d^2y}{dx^2} + 4 \frac{dy}{dx}  + 13 y  = &  0 \\
+									\Big( r^2 e^{rx} \Big) + 4 \Big( r e^{rx} \Big) + 13 \Big( e^{rx} \Big) = & 0 \\
+									\left( r^2 + 4 r + 13 \right)  e^{rx} = & 0 \\	
+									r^2 + 4 r + 13  = & 0 \quad \text{ or } \quad e^{rx} = 0 \\			
+								\end{align*}
+
+								Where \( p(r) = r^2 + 4 r + 13 \) is the <span class="vocab">characteristic polynomial</span> and since \( e^{rx}  \ne 0 \) to solve <a href="#x1-15r8">(5.2.8)</a> we must solve the <span class="vocab">characteristic equation</span> which is always a quadratic equation for second order differential equations so this is always solvable using the quadratic formula <a href="#x1-4r3">(5.2.3)</a>:
+
+								\begin{align*} 
+									r= & \frac{-(4)\pm\sqrt{(4)^2-4\cdot(1)\cdot(13)}}{2\cdot(1)} \\
+									r= & \frac{-4\pm\sqrt{4\cdot(4-13)}}{2} = \frac{-4\pm\sqrt{4\cdot(-9)}}{2} \\		
+									r= & \frac{-4\pm\sqrt{-36}}{2} = \frac{-4\pm6i}{2} = -2 \pm 3i\\	
+									r= & -2 + 3i \quad \text{or} \quad r= -2 - 3i\\	
+								\end{align*}
+
+								Substituting \(r =  -2 + 3i \) and \(r =  -2 - 3i \) into \( y = e^{rx} \) we obtain solutions of <a href="#x1-25r14">(5.2.14)</a>
+
+								\[ 
+								y_1 = e^{( -2 + 3i)x} 
+								\quad \text{or} \quad
+								y_2 = e^{( -2 - 3i)x} 
+								\]
+							</div>
+							<div>	
+								So we have two distinct solutions, just as in Example <a href="#x1-51">5.2.1</a>
+								and we can check them exactly the same way, by differentiating and substituting
+							</div>
+							<div class="reading-exercise">
+								Differentiate \( y_1 = e^{( -2 + 3i)x} \)  twice
+							</div> 
+							<div>
+								Differentiating \( y_1 = e^{( -2 + 3i)x} \) we obtain
+								\begin{align*}
+									\frac{dy_1}{dx} = & ( -2 + 3i)e^{( -2 + 3i)x} \\
+									\frac{d^2y_1}{dx^2} = & ( -2 + 3i)^2 e^{( -2 + 3i)x} \\
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Simplify \(( -2 + 3i)^2\) by distributing and using \(i^2=-1\)
+							</div> 
+							<div>
+								Substituting \(y_1,\) \(dy_1/dx,\) and \(d^2y_1/dx^2\) back into <a href="#x1-25r14">(5.2.14)</a> 
+								\begin{align*}
+									\begin{array}{rrrrr}
+										\displaystyle\frac{d^2y_1}{dx^2} &=& &\Big(& -&5& - &12i& &\Big)& e^{( -2 + 3i)x} \\
+										4\displaystyle\frac{dy_1}{dx} &=& &\Big(& -&8& + &12i& &\Big)& e^{( -2 + 3i)x} \\
+										+ \quad\quad\quad 13y_1 &=& &\Big(& -&13&  & & &\Big)& e^{( -2 + 3i)x} \\
+										\hline
+										{\small \displaystyle\frac{d^2y_1}{dx^2} + 4\frac{dy_1}{dx} + 13y_1} &=& &\Big(& &0& + &0i& &\Big)& e^{( -2 + 3i)x} \\
+									\end{array}
+								\end{align*}
+
+								So we find that \(y_1 = e^{( -2 + 3i)x} \) does satisfy equation  <a href="#x1-25r14">(5.2.14)</a>
+								
+								\begin{align*}
+									\frac{d^2y_1}{dx^2} + 4\frac{dy_1}{dx} + 13y_1 = 0
+								\end{align*}
+
+							</div>
+							<div class="reading-exercise">
+								Differentiate \( y_2 = e^{( -2 - 3i)x} \) twice
+							</div> 
+							<div class="reading-exercise">
+								Simplify \(( -2 - 3i)^2\) by distributing and using \(i^2=-1\)
+							</div> 
+							<div class="reading-exercise">
+								Substitute \( y_2 = e^{( -2 - 3i)x} \) and its two derivatives back into <a href="#x1-25r14">(5.2.14)</a> to verify
+							</div> 
+
+							<div>
+								Going through the same steps with \( y_2 = e^{( -2 - 3i)x} \) yields that both are solutions to <a href="#x1-25r14">(5.2.14)</a> so we might just be tempted to say we found our fundamental set of solutions and have the general solution:
+								\[
+									y = c_1 e^{( -2 + 3i)x} + c_2 e^{( -2 - 3i)x}
+								\]
+								However, while the answer may seem simple enough on first inspection, further reflection reminds us that this function is much different from all others we have encountered so far in that it is a function of complex variables, something we really haven't ever studied at all up to this point in school. You probably remember studying complex numebers themselves and the basic arithematic operations on them, which we used for verifying that \( y_1 = e^{( -2 + 3i)x} \) and \( y_2 = e^{( -2 - 3i)x} \) were even solutions of our equation, but you probably have never worked with functions of complex variables as this topic is typically reserved for a more advanced class. In general we prefer to work with real-valued functions (the only kind we have ever worked with) so we will instead do a little bit of work to translate this complex solution into real values. To start we'll split up the exponential into the real and imaginary parts, starting with \( y_1 = e^{( -2 + 3i)x} \):
+								\begin{align*} 
+									y_1 =& e^{( -2 + 3i)x} = e^{-2x}e^{3ix}\\
+								\end{align*}
+							</div>
+							<div>	
+
+								The first factor \(e^{-2x}\) is familiar enough as it is a typical solution we have encountered the the previous cases. However, the second factor \(e^{3ix}\) is not clearly defined to us since we have not really studied complex-valued functions before. Although \(e^{3ix}\) is unfamiliar, we will use a familiar technique of <span class="vocab">Taylor series</span> expansions from Calculus to grasp it. Recall the <span class="vocab">Maclaurin series</span> of a function \(f(x)\) is defined by 
+								
+								\begin{align*} 
+									\sum _{n=0}^\infty {f^{(n)}(0)\over n!}x^n
+									= {f(0)} 
+									+ {f^{'}(0)} \, x
+									+ {f^{''}(0)\over 2!} \, x^2
+									+ \cdots
+								\end{align*}	
+								Now let's expand \(f(x) = e^{3ix}\) using this method. To start we will need several derivatives, so let's calculate the first seven derivatives
+							</div>
+							
+							<div class="reading-exercise">
+								Differentiate \(f(x) = e^{3ix}\) seven times and simplify using \(i^2=-1\)
+							</div> 	
+							<div class="reading-exercise">
+								Evaluate \(f(x) = e^{3ix}\) and its seven derivatives at \(x=0\)
+							</div> 	
+
+							<div>	
+								\begin{array}{ccrccr}
+									f(x) &=& e^{3ix} \quad & \quad & \quad f(0) &=& 1 \\
+									f^{'}(x) &=& 3ie^{3ix} \quad & \quad & \quad f^{'}(0) &=& 3i \\
+									f^{''}(x) &=& -9e^{3ix} \quad & \quad & \quad f^{''}(0) &=& -9 \\
+									f^{'''}(x) &=& -27i e^{3ix} \quad & \quad & \quad f^{'''}(0) &=& -27i \\
+									f^{''''}(x) &=& 81 e^{3ix} \quad & \quad & \quad f^{''''}(0) &=& 81 \\
+									f^{^V}(x) &=& 243i e^{3ix} \quad & \quad & \quad f^{^V}(0) &=& 243i \\
+									f^{^{VI}}(x) &=& -729 e^{3ix} \quad & \quad & \quad f^{^{VI}}(0) &=& -729 \\
+									f^{^{VII}}(x) &=& -2187i e^{3ix} \quad & \quad & \quad f^{^{VII}}(0) &=& -2187i \\
+								\end{array}
+
+							</div>
+							<div class="reading-exercise">
+								Expand the <span class="vocab-repeat">Maclaurin series</span> formula \(\displaystyle \sum _{n=0}^\infty {f^{(n)}(0)\over n!}x^n\) to eight terms
+							</div> 	
+							<div>	
+								Expanding the <span class="vocab-repeat">Maclaurin series</span> to eight terms we obtain
+								\begin{align*}
+									\sum _{n=0}^\infty {f^{(n)}(0)\over n!}x^n
+									= & {f(0)} 
+									+ {f^{'}(0)} \, x
+									+ {f^{''}(0)\over 2!} \, x^2
+									+ {f^{'''}(0)\over 3!} \, x^3
+									+ {f^{''''}(0)\over 4!} \, x^4 \\
+									& 
+									+ {f^{^{V}}(0)\over 5!} \, x^5
+									+ {f^{^{VI}}(0)\over 6!} \, x^6
+									+ {f^{^{VII}}(0)\over 7!} \, x^7
+									+ \cdots
+								\end{align*}
+
+							</div>
+							<div class="reading-exercise">
+								Substitute in the coefficients into the <span class="vocab-repeat">Maclaurin series</span> expansion
+							</div>
+							<div>	
+								Substituting in the coefficients we calculated from differentiating \(f(x) = e^{3ix}\) and evaluating them at \(x=0\) we obtain the series expansion for \(e^{3ix}\) and grouping the real terms together and imaginary terms together we are able to rewrite our function in terms of sine and cosine
+
+								\begin{align*}
+									e^{3ix}
+									= & 1
+									+ 3i\, x
+									- {9\over 2!} \, x^2
+									- {27i\over 3!} \, x^3
+									+ {81\over 4!} \, x^4
+									+ {243i\over 5!} \, x^5
+									- {729\over 6!} \, x^6
+									- {2187i\over 7!} \, x^7
+									+ \cdots \\
+									= & \underset{\cos(3x)}{\underbrace{\left( 1
+									- {9\over 2!} \, x^2
+									+ {81\over 4!} \, x^4
+									- {729\over 6!} \, x^6
+									+ \cdots \right)}}
+									+ i \underset{\sin(3x)}{\underbrace{\left( 3\, x
+									- {27\over 3!} \, x^3
+									+ {243\over 5!} \, x^5
+									- {2187\over 7!} \, x^7
+									+ \cdots \right)}} \\
+								\end{align*}
+
+							</div>
+
+							<div class="reading-exercise">
+								Differentiate \(\sin 3x\) and \(\cos 3x\) six times
+							</div>
+							<div class="reading-exercise">
+								Write out seven terms of the <span class="vocab-repeat">Maclaurin series</span> expansion of \(\sin 3x\) and \(\cos 3x\)
+							</div>
+							<div>	
+								Interestingly we have stumbled upon a way to convert exponentials with imaginary arguments into to sines and cosines with real arguments with the identity:
+								\[
+								e^{3ix} = \cos 3x + i \sin 3x
+								\]
+								And, in fact, this is a famous identity, known as <span class="vocab">Euler's formula</span>:
+								\[
+								e^{ix} = \cos x + i \sin x
+								\]
+							</div>
+							<div>	
+								Substituting \(e^{3ix} = \cos 3x + i \sin 3x\) back in to our solutions so we have
+								\begin{align*} 
+									y_1 =& e^{( -2 + 3i)x} = e^{-2x}e^{3ix} = \big( \cos 3x + i \sin 3x \big) e^{-2x} \\
+									y_2 =& e^{( -2 - 3i)x} = e^{-2x}e^{-3ix} = \big( \cos 3x - i \sin 3x \big) e^{-2x}  \\
+								\end{align*}
+							</div>
+							<div>	
+								And again we can check them exactly the same way, by differentiating and substituting
+							</div>
+							<div class="reading-exercise">
+								Differentiate \( y_1 = \big( \cos 3x + i \sin 3x \big) e^{-2x} \)  twice
+							</div> 
+							<div>
+								Differentiating \( y_1 = \big( \cos 3x + i \sin 3x \big) e^{-2x} \) we obtain
+								\begin{align*}
+									\frac{dy_1}{dx} = & \Big( (-2+3i)\cos 3x + (-3-2i)\sin 3x \Big) e^{-2x} \\
+									\frac{d^2y_1}{dx^2} = & \Big( (-5-12i)\cos 3x + (12-5i)\sin 3x \Big) e^{-2x}  \\
+								\end{align*}
+							</div>
+							<div class="reading-exercise">
+								Simplify \(( -2 + 3i)^2\) by distributing and using \(i^2=-1\)
+							</div> 
+							<div>
+								Substituting \(y_1,\) \(dy_1/dx,\) and \(d^2y_1/dx^2\) back into <a href="#x1-25r14">(5.2.14)</a> 
+								\begin{align*}
+									\begin{array}{rrrrrrl}
+										\displaystyle\frac{d^2y_1}{dx^2} &=& &\Big(& &(-5-12i)\cos 3x &+& &(+12-5i)\sin 3x &\Big)& e^{-2x} \\
+										4\displaystyle\frac{dy_1}{dx} &=& &\Big(& &(-8+12i)\cos 3x &+& &(-12-8i)\sin 3x &\Big)& e^{-2x} \\
+										+ \quad\quad\quad y_1 &=& &\Big(& &(-8+12i)\cos 3x &+& &(-12-8i)\sin 3x &\Big)& e^{-2x} \\
+										\hline
+										{\small \displaystyle\frac{d^2y_1}{dx^2} + 4\frac{dy_1}{dx} + 13y_1} &=& &\Big(& & 0 \cos 3x &+& & \quad\quad\quad\quad 0 \sin 3x &\Big)& e^{-2x} \\
+									\end{array}
+								\end{align*}
+
+								So we find that \( y_1 = \big( \cos 3x + i \sin 3x \big) e^{-2x} \) does satisfy equation  <a href="#x1-25r14">(5.2.14)</a>
+								
+								\begin{align*}
+									\frac{d^2y_1}{dx^2} + 4\frac{dy_1}{dx} + 13y_1 = 0
+								\end{align*}
+
+							</div>
+							<div class="reading-exercise">
+								Differentiate \( y_2 = \big( \cos 3x - i \sin 3x \big) e^{-2x} \) twice
+							</div> 
+							
+							<div class="reading-exercise">
+								Substitute \( y_2 = \big( \cos 3x - i \sin 3x \big) e^{-2x} \) and its two derivatives back into <a href="#x1-25r14">(5.2.14)</a> to verify
+							</div> 
+
+							<div>
+								Going through the same steps with \( y_2 = \big( \cos 3x - i \sin 3x \big) e^{-2x} \) yields that both are solutions to <a href="#x1-25r14">(5.2.14)</a> so we might just be tempted to say we found our fundamental set of solutions
+								\[
+									y_1 = \big( \cos 3x + i \sin 3x \big) e^{-2x} 
+									\quad
+									y_2 = \big( \cos 3x - i \sin 3x \big) e^{-2x} 
+								\]
+								However we still have a couple of simplification issues we need to resolve since to start with, we still have an imaginary number \(i\) present in the solutions, although at least it is just as a constant multiplier and not as an argument on the exponential nor on the trig functions. Additionally, both solutions \(y_1\) and \(y_2\) have \(\cos 3x\) and \(\sin 3x\) terms, which implies we might be able to simplify them, and in fact, we can.
+							</div> 
+							<div>
+								Now from Theorem <a href="sec5.1.book.html#x1-332">5.1.2</a>, we know that since \(y_1\) and \(y_2\) are solutions of the homogeneous equation <a href="#x1-25r14">(5.2.14)</a> then any linear combination \(y=c_1y_1+c_2y_2 \) is also a solution. Thus adding \(y_1 + y_2\) and dividing by \(2\) we obtain one solution
+								\[
+								\frac{y_1 + y_2}{2} = e^{-2x} \cos 3x
+								\]
+							</div> 
+							<div class="reading-exercise">
+								Verify \(y = e^{-2x} \cos 3x\) is a solution to <a href="#x1-25r14">(5.2.14)</a> 
+							</div>
+							<div>	
+								And subtracting \(y_1 - y_2\) and dividing by \(2i\) we obtain another solution
+								\[
+								\frac{y_1 - y_2}{2i} = e^{-2x} \sin 3x
+								\]
+							</div> 
+							<div class="reading-exercise">
+								Verify \(y = e^{-2x} \sin 3x\) is a solution to <a href="#x1-25r14">(5.2.14)</a> 
+							</div>
+							<div>	
+								Therefore we have finally obtained a simplified fundamental set of solutions
+								\[
+								\big\{
+									y_1, y_2
+								\big\}
+								=
+								\Big\{
+									e^{-2x} \cos 3x,  e^{-2x} \sin 3x
+								\Big\}
+								\]
+								Which are definitely linearly indepdent since their ratio is non constant
+								\begin{align*}
+									\frac{y_2}{y_1} = \frac{ e^{-2x} \sin 3x}{ e^{-2x} \cos 3x} =  \tan 3x
+								\end{align*}
+								
+							</div> 
+							<div>
+								Thus we have the general solution:
+								<a id="x1-28r16"></a>
+								\begin{align} \label {eq:5.2.16}
+									y = \Big( c_1 \cos 3x + c_2 \sin 3x \Big) e^{-2x}
+								\end{align}
+							</div> 
+							<div class="reading-exercise">
+								Verify \(y = \Big( c_1 \cos 3x + c_2 \sin 3x \Big) e^{-2x}\) is a solution to <a href="#x1-25r14">(5.2.14)</a> 
+							</div>
+
+						
+							<div>
+								We already found <a href="#x1-28r16">(5.2.16)</a> the general solution <a href="#x1-25r14">(5.2.14)</a> and now we apply the initial conditions to find the constants \(c_1\) and \(c_2\) to solve the IVP <a href="#x1-27r15">(5.2.15)</a>. Starting with \( y(0)=2 \)
+
+								\begin{align*} 
+									y(x)  = & \Big( c_1 \cos 3x + c_2 \sin 3x \Big) e^{-2x}	 \\
+									y(0)  = & \Big( c_1 \cos 0 + c_2 \sin 0 \Big) e^{0}	 \\	
+									2  = & (c_1 + 0) \cdot 1
+									\Longrightarrow	c_1 = 2 \\			
+								\end{align*}
+
+								So we obtain the equation \( c_1 = 2 \) and now the other initial condition is at the derivative of our general solution <a href="#x1-28r16">(5.2.16)</a>
+							</div>
+							<div class="reading-exercise">
+								Differentiate <a href="#x1-28r16">(5.2.16)</a> using product rule
+							</div>
+							<div>	
+								\begin{align*}
+									y  = & \Big( c_1 \cos 3x + c_2 \sin 3x \Big) e^{-2x}	\nonumber  \\
+									\frac{dy}{dx}  = & \frac{d}{dx} \Bigg( \big( c_1 \cos 3x + c_2 \sin 3x \big) e^{-2x} \Bigg)	\nonumber  \\
+									\frac{dy}{dx}	= &  \Bigg( \big( -2c_1+3c_2 \big) \cos 3x + \big( -3c_1-2c_2 \big) \sin 3x \Bigg) e^{-2x}	\\	
+								\end{align*}
+							
+								Now we can apply the initial condition \( \left. \displaystyle \frac{dy}{dx} \right|_{0}=-3  \) to obtain the equation
+
+								\begin{align}  
+									-3	= & -2c_1+3c_2 	\nonumber \\
+								\end{align}
+
+								Substituting in \( c_1 = 2 \) we obtain \( c_2 = 1/3 \) and substituting into <a href="#x1-28r16">(5.2.16)</a> we obtain the particular solution of the IVP <a href="#x1-27r15">(5.2.15)</a> 
+
+								\begin{equation*}
+									y = \Big( 2 \cos 3x + \frac{1}{3} \sin 3x \Big) e^{-2x}
+								\end{equation*}
+								
+								
+							</div>	
+							<div class="reading-exercise">
+								Verify \(y  = \Big( 2 \cos 3x + \frac{1}{3} \sin 3x \Big) e^{-2x}\) is a solution of <a href="#x1-25r14">(5.2.14)</a>
+							</div> 
+							<div class="reading-exercise">
+								Solve the IVP <a href="#x1-25r14">(5.2.14)</a> with initial conditions \( \quad y(0)=2 \quad \left. \frac{dy}{dx} \right|_{0}=-4  \)
+							</div> 
+							<div>	
+								Figure&nbsp; <a href="#x1-29r3">5.2.3</a> is a graph of this function.
+								
+							</div>
+						</li>	
+
 					</ol>
 				</details>
 			</div>
@@ -544,10 +906,14 @@
 				<img height="264" src="EPS/fig050203.png" width="409" />
 				<figcaption> 
 					<span class="id">Figure&nbsp;5.2.3</span> 
-					<span class="content"> \(\displaystyle {y=e^{-2x}(2\cos 3x+ {1\over 3}\sin 3x)}\) </span>
+					<span class="content"> \(\displaystyle {y= \left(2\cos 3x+ {1\over 3}\sin 3x\right) e^{-2x} }\) </span>
 				</figcaption>
 			</figure>
 
+			<br>
+			<br>
+			<br>
+			<hr>
 			<br>
 			<br>
 			<br>
@@ -584,85 +950,49 @@
 			<div class="indent" id="978b4808-6fff-44b4-80b7-69699aaaeed6">
 				As in Example&nbsp;<a href="#x1-233">5.2.3</a>, it’s reasonable to to expect that the solutions of \(a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0\) are linear combinations of \(e^{(\lambda +i\omega )x}\) and \(e^{(\lambda -i\omega )x}\). Again, the exponential notation suggests that 
 				
+				
 				\[ 
 					e^{(\lambda +i\omega )x}=e^{\lambda x}e^{i\omega x}
 					\quad \mbox{ and } \quad 
 					e^{(\lambda -i\omega )x}=e^{\lambda x}e^{-i\omega x}
 				\] 
 				
-				so even though we haven’t defined \(e^{i\omega x}\) and \(e^{-i\omega x}\), it’s reasonable to expect that every linear combination of \(e^{(\lambda +i\omega )x}\) and \(e^{(\lambda -i\omega )x}\) can be written as \(y=ue^{\lambda x}\), where \(u\) depends upon \(x\). To determine \(u\) we first observe that since \(r_1=\lambda +i\omega \) and \(r_2=\lambda -i\omega \) are the roots of the characteristic equation, \(p\) must be of the form 
-				
-				\[ 
-					\begin {array}{ccl} 
-						p(r)&amp;=&amp;a(r-r_1)(r-r_2)\\ 
-						&amp;=&amp;a(r-\lambda -i\omega )(r-\lambda +i\omega )\\ 
-						&amp;=&amp; a \left [(r-\lambda )^2+\omega ^2\right ]\\ 
-						&amp;=&amp;a(r^2-2\lambda r +\lambda ^2+\omega ^2) 
-					\end {array} 
-				\] 
-				
-				Therefore \(a\frac{d^2y}{dx^2}+b\frac{dy}{dx}+cy=0\) can be written as 
-				
-				\[ 
-					a\left [\frac{d^2y}{dx^2}-2\lambda \frac{dy}{dx}+(\lambda ^2+\omega ^2)y\right ]=0
-				\] 
-				
-				Since \(a\ne 0\) this equation has the same solutions as 
-				
+				Then we will use <span class="vocab">Euler's formula</span> to rewrite the exponential function of imaginary arguments as a trig functions with real arguments
+
 				<a id="x1-31r18"></a> 
-				\begin {equation} \label {eq:5.2.18} 
-					\frac{d^2y}{dx^2}-2\lambda \frac{dy}{dx}+(\lambda ^2+\omega ^2)y=0 
-				\end {equation}
+				\begin{align} \label {eq:5.2.18} 
+				e^{i \omega x} = \cos \omega x + i \sin  \omega x
+				\end{align}
+				Then finally we will use Theorem <a href="sec5.1.book.html#x1-332">5.1.2</a> to rewrite the solutions as linear combinations thus simplifying to a fundamental set
+
 				
-				To determine \(u\) we note that if \(y=ue^{\lambda x}\) then 
-				
-				\[ 
-					\frac{dy}{dx}
-					=\frac{du}{dx}e^{\lambda x}+\lambda ue^{\lambda x}\quad \mbox{ and } 
-					\quad 
-					\frac{d^2y}{dx^2}
-					=\frac{d^2u}{dx^2}e^{\lambda x}+2\lambda \frac{du}{dx}e^{\lambda x}+\lambda ^2ue^{\lambda x}
-				
-				\] 
-				
-				Substituting these expressions into <a href="#x1-31r18">(5.2.18)</a> and dropping the common factor \(e^{\lambda x}\) yields 
-				
-				\[ 
-					\left(\frac{d^2u}{dx^2}+2\lambda \frac{du}{dx}+\lambda ^2 u\right)
-					-2\lambda \left(\frac{du}{dx}+\lambda u\right) 
-					+\left(\lambda ^2+\omega ^2\right)u=0
-				\] 
-				
-				which simplifies to 
-				
-				\[ 
-					\frac{d^2u}{dx^2}+\omega ^2 u=0
-				\] 
-				
+				\[
+				\big\{
+					y_1, y_2
+				\big\}
+				=
+				\Big\{
+					e^{\lambda x} \cos \omega x,  e^{\lambda x} \sin \omega x
+				\Big\}
+				\]
+
 				From Example&nbsp; <span class="ptmb8t-">5.1.2</span>, the general solution of this equation is 
-				
-				\[ 
-					u=c_1\cos \omega x +c_2\sin \omega x
-				\] 
-				
-				Therefore any function of the form 
+
 				
 				<a id="x1-32r19"></a> 
 				\begin {equation}
 					\label {eq:5.2.19}
-					y=e^{\lambda x}(c_1\cos \omega x+c_2\sin \omega x) 
+					y= \big( c_1\cos \omega x+c_2\sin \omega x \big) e^{\lambda x}
 				\end {equation} 
 				
-				is a solution of <a href="#x1-31r18">(5.2.18)</a>. Letting \(c_1=1\) and \(c_2=0\) here yields the solution \(y_1=e^{\lambda x}\cos \omega x\). Letting \(c_1=0\) and \(c_2=1\) yields a second solution \(y_2=e^{\lambda x}\sin \omega x\). Since \(y_2/y_1=\tan \omega x\) is nonconstant, so Theorem&nbsp; <span class="ptmb8t-">5.1.6</span> implies that \(\{y_1,y_2\}\) is a fundamental set of solutions of <a href="#x1-31r18">(5.2.18)</a>, and <a href="#x1-32r19">(5.2.19)</a> is the general solution. 
+				Letting \(c_1=1\) and \(c_2=0\) here yields the solution \(y_1=e^{\lambda x}\cos \omega x\). Letting \(c_1=0\) and \(c_2=1\) yields a second solution \(y_2=e^{\lambda x}\sin \omega x\). Since \(y_2/y_1=\tan \omega x\) is nonconstant, so Theorem&nbsp; <span class="ptmb8t-">5.1.6</span> implies that \(\{y_1,y_2\}\) is a fundamental set of solutions and <a href="#x1-32r19">(5.2.19)</a> is the general solution. 
 			</div>
-		</details>
 
-		<details id="a42072eb-83b8-497a-8446-25479dd9fef2">
-			<summary>Summary</summary>
-
-			<div id="8e36019a-c7ed-4de7-b3bf-f42c0fe0323e">
-				The next theorem summarizes the results of this section. 
-			</div>
+			<br>
+			<br>
+			<hr>
+			<br>
+			
 			<div class="theorem" id="x1-331">
 				<div>
 					<span class="head">Theorem&nbsp;5.2.1</span> Let \(p(r)=ar^2+br+c\) be the characteristic polynomial of 
@@ -676,14 +1006,15 @@
 						If \(p(r)=0\) has <em>distinct real roots</em> \(r_1\) and \(r_2,\) then the general solution of <a href="#x1-34r20">(5.2.20)</a> is \[ y=c_1e^{r_1x}+c_2e^{r_2x}\]
 					</li>
 					<li>
-						If \(p(r)=0\) has a <em>repeated root</em> \(r_1,\) then the general solution of <a href="#x1-34r20">(5.2.20)</a> is \[ y=e^{r_1x}(c_1+c_2x)\]
+						If \(p(r)=0\) has a <em>repeated root</em> \(r_1,\) then the general solution of <a href="#x1-34r20">(5.2.20)</a> is \[ y=(c_1+c_2x) e^{r_1x} \]
 					</li>
 					<li>
-						If \(p(r)=0\) has <em>complex conjugate roots</em> \(r_1=\lambda +i\omega \) and \(r_2=\lambda -i\omega \) \( (\omega &gt;0),\) then the general solution of <a href="#x1-34r20">(5.2.20)</a> is \[ y=e^{\lambda x}(c_1\cos \omega x+c_2\sin \omega x)\]
+						If \(p(r)=0\) has <em>complex conjugate roots</em> \(r_1=\lambda +i\omega \) and \(r_2=\lambda -i\omega \) \( (\omega &gt;0),\) then the general solution of <a href="#x1-34r20">(5.2.20)</a> is \[ y= (c_1\cos \omega x+c_2\sin \omega x) e^{\lambda x} \]
 					</li>
 				</ul>
-			</div>
+			</div>			
 		</details>
+
 
 		<nav class="ex">
 			<a href="sec5.2.ex.html">5.2 Exercises</a>
