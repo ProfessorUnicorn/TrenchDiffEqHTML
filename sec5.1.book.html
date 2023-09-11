@@ -1966,7 +1966,7 @@
 			<!--Example 6-->
 			<div class="example" id="x1-5356" style="--ex-number: 6">
 				<div>
-					Use <span class="vocab">Abel's formula</span> <a href="#x1-51r29">(5.1.29)</a> to write and solve a differential equation for \(y_2\) given \(y_1\) from Examples&nbsp;<a href="#x1-61">5.1.1</a>,
+					Assuming only one solution \(y_1\) for a second order equation is given, use <span class="vocab-repeat">Abel's formula</span> to write and solve a first order equation for \(y_2\) for Examples&nbsp;<a href="#x1-61">5.1.1</a>,
 					<a href="#x1-142">5.1.2</a>, and
 					<a href="#x1-233">5.1.3</a>
 				</div>
@@ -2004,8 +2004,76 @@
 					<ol>
 						<li>
 							<div>
-								We have been given one solution \(y_1=e^x \) and we will use it to find a second solution  \(y_2.\) We start by identifying \( p(x) \) 
-								\[ p(x) \equiv 0 \]
+								We have been given one solution \(y_1=e^x \) and we will use it to find a second solution \(y_2\) using <span class="vocab">Abel's formula</span> <a href="#x1-51r29">(5.1.29)</a>
+
+									\begin{align*}
+										W(x) = & W(x_0) \cdot e^{- {\displaystyle\int ^x_{x_0} p(t) \, dt } }
+									\end{align*}	
+									
+								The left side of Abel's formula is the <span class="vocab">Wronskian</span> determinant of a fundamental set of solutions \( \{y_1,y_2\} \) and is given by Equation <a href="#x1-50r28">(5.1.28)</a>
+
+								\begin {equation*}
+									W(x) = 
+									\det
+									\left(
+										\begin{array}{cc}
+											y_1   & y_2   \\
+											\displaystyle \frac{dy_1}{dx}   & \displaystyle \frac{dy_2}{dx}  
+										\end{array}
+									\right)
+									=y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2 
+								\end {equation*}	
+
+								So we can rewrite Abel's formula as
+
+								\begin{align*}
+									y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2 = & \, \underset{c}{\underbrace{W(x_0)}} \cdot e^{- {\displaystyle\int ^x_{x_0} p(t) \, dt } }
+								\end{align*}
+								
+								And the right side of Abel's formula contains a factor \(W(x_0)\) which is the <span class="vocab-repeat">Wronskian</span> determinant evaluated at some initial value \(x_0\) and as such we will consider it some arbitrary constant \(W(x_0) = c\)
+								so we can rewrite Abel's formula as
+
+								\begin{align*}
+									y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2 = & \, c \, \cdot \, e^{- {\displaystyle\int ^x_{x_0} p(t) \, dt } }
+								\end{align*}
+
+								Differentiating the given \(y_1=e^x \) we obtain \(dy_1/dx=e^x \) so the left side becomes
+
+								\begin{align*}
+									y_1 \displaystyle\frac{dy_2}{dx} - \displaystyle\frac{dy_1}{dx} y_2 
+									=
+									e^x \displaystyle\frac{dy_2}{dx} - e^x y_2 
+								\end{align*}
+
+								From linear standard form <a href="#x1-2r1">(5.1.1)</a> we know \( p(t)\equiv 0 \) so the right side becomes an arbitrary constant
+
+								\begin{align*}
+									c \, \cdot \, e^{- {\displaystyle\int ^x_{x_0} \, 0  \, dt } }
+									=
+									c \, \cdot \, e^{- k }
+									= c
+								\end{align*}
+								
+								Finally we obtain a first order equation for \(y_2\)
+
+								\begin{align*}
+									e^x \displaystyle\frac{dy_2}{dx} - e^x y_2 = c
+								\end{align*}
+
+								Which we simplify by writing in linear standard form fixme (2.1.1)
+								 taking the arbitary constant \(c=1\) and just writing \(y_2\) as \(y\)
+								
+							</div>
+							<div>	
+
+								
+
+								Which we will substitute the given \(y_1=e^x \) and its derivative \(dy_1/dx=e^x \) into while leaving \(y_2\) and \(dy_2/dx \) so we can write a first order linear equation to solve for \(y_2\)
+							</div>
+
+							<div>		
+								We start by identifying \( p(x) \) 
+								
 							</div>
 							<div>			
 								Now substitute \(y_1=e^x \) and \(p(x)\) into Abel's formula <a href="#x1-51r29">(5.1.29)</a> and simplifying the constant \( W(x_0) = c \) and throughout to \(c=1\)				
