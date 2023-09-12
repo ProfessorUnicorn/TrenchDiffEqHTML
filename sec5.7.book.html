@@ -130,14 +130,15 @@
 				Therefore \(y_p\) in <a href="#x1-4r3">(5.7.3)</a> satisfies <a href="#x1-2r1">(5.7.1)</a> if 
 				
 				<a id="x1-10r9"></a> 
-				\begin{align*}
+				\begin{align}
+					\label {eq:5.7.9} 
 					\left\{
-					\begin{array}{rrl}	\label {eq:5.7.9} 
-						\displaystyle\frac{du_1}{dx} y_1+ \frac{du_2}{dx} y_2 &=& 0 \nonumber \\ \nonumber \\
+					\begin{array}{rrl}	
+						\displaystyle\frac{du_1}{dx} y_1+ \frac{du_2}{dx} y_2 &=& 0 \\  \\
 						\displaystyle\frac{du_1}{dx} \frac{dy_1}{dx} + \frac{du_2}{dx} \frac{dy_2}{dx} &=& \displaystyle\frac{F}{P_0}
 					\end{array}
 					\right.
-				\end{align*}	
+				\end{align}
 
 				where the first equation is the same as <a href="#x1-6r5">(5.7.5)</a> and the second is from <a href="#x1-9r8">(5.7.8)</a>
 			</div>
@@ -165,15 +166,16 @@
 				Subtracting the second equation from the first yields 
 				
 				<a id="x1-11r10"></a>
-				\begin {align} \label {eq:5.7.10} 
+				\begin {align} 
 					\frac{du_1}{dx} \,  \underbrace{\Big(y_1 \frac{dy_2}{dx} 
-					- \frac{dy_1}{dx} y_2 \Big)} = & -{Fy_2\over P_0} \\
+					- \frac{dy_1}{dx} y_2 \Big)} = & -{Fy_2\over P_0} \nonumber \\
 					\frac{du_1}{dx} \underbrace{\left|
 					\begin{array}{cc}
 					y_1 & y_2 \nonumber \\
 					\displaystyle\frac{dy_1}{dx} & \displaystyle\frac{dy_2}{dx} \\
 					\end{array}
 					\right|} = & -{Fy_2\over P_0} \\
+					\label {eq:5.7.10}
 					\frac{du_1}{dx} \, W[y_1,y_2] = & -{Fy_2\over P_0}  \\
 				\end {align} 
 				
@@ -286,7 +288,8 @@
 				<ol>
 					<li>
 						Verify that \(y_1=x\) and \(y_2=x^2\) are solutions of the complementary equation
-					</li>	
+					</li>
+					<li class="skip"></li>
 					<li>
 						Find the first equation in the system by differentiating \(y_p\) and setting the \(u\) derivative terms to zero
 					</li>
@@ -352,6 +355,8 @@
 							<div class="reading-exercise">
 								Differentiate \(y_2=x^2\) twice
 							</div> 
+						</li>
+						<li class="continued">
 							<div>	
 								Differentiating \(y_2=x^2\) we obtain
 
@@ -552,7 +557,7 @@
 				<ol>
 					<li>
 						Verify that \(y_1=x\) and \(y_2=e^x\) are solutions of the complementary equation
-					</li>	
+					</li>
 					<li>
 						Find the first equation in the system by differentiating \(y_p\) and setting the \(u\) derivative terms to zero
 					</li>
@@ -560,16 +565,19 @@
 						Find the second equation in the system by substituting \(y_p,\) \(dy_p/dx,\) and \(d^2y_p/dx^2\) into 
 						<a href="#x1-24r16">(5.7.16)</a>
 					</li>
+					<li class="skip"></li>
 					<li>
 						Write the system of equations as a system for \(du_1/dx\) and \(du_2/dx\)
 					</li>
+					<li class="skip"></li>
 					<li>
 						Find the antiderivatives to find \(u_1\) and \(u_2\) 
 					</li>
 					<li>
 						Find the particular solution \(y_p\) and the general solution
 					</li>
-				</ol>					
+					<li class="skip"></li>
+				</ol>
 
 				<details class="solution">
 					<summary>Solution</summary>
@@ -629,7 +637,7 @@
 									y_p = & u_1 x + u_2 e^x \\
 									\frac{dy_p}{dx} = & u_1 + u_2 e^x \\
 								\end{align*}
-							</div>	
+							</div>
 
 							<div class="reading-exercise">
 								Differentiate \(\displaystyle\frac{dy_p}{dx}=u_1 + u_2 e^x\) 
@@ -640,6 +648,10 @@
 									\frac{d^2y_p}{dx^2}=
 									\frac{du_1}{dx} + e^x \frac{du_2}{dx} + u_2 e^x 
 								\]
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 								And now we substitute \(y_p,\) \(dy_p/dx,\) and \(d^2y_p/dx^2\) into <a href="#x1-24r16">(5.7.16)</a>
 							</div>
 							<div>
@@ -692,6 +704,8 @@
 							<div class="reading-exercise">
 								Solve \((1-x)\displaystyle\frac{du_1}{dx} = x-1 \) for \( \displaystyle\frac{du_1}{dx} \)
 							</div>
+						</li>
+						<li class="continued">
 							<div>
 								Dividing by \((1-x)\) and simplifying we obtain
 								\[
@@ -736,7 +750,7 @@
 								\end{array}
 							</div>	
 						</li>	
-						<!--Part 5-->
+						<!--Part 6-->
 						<li>
 							<div> 
 								Substituting back \(y_p = u_1 x + u_2 e^x \) we obtain the particular solution:
@@ -764,7 +778,8 @@
 								\begin{align}
 									y = & -x^2 - x - 1 + c_1 x + c_2 x^2 \nonumber \\
 									y = & -x^2 - 1 + \underset{c_1}{\underbrace{(c_1 -1 )}}x + c_2 x^2 \nonumber \\
-									y = & -x^2 - 1 + c_1x + c_2 x^2 							
+									\label{eq:5.7.17}
+									y = & -x^2 - 1 + c_1x + c_2 x^2
 								\end{align}
 
 								So we have our simplified general solution!
@@ -773,6 +788,9 @@
 							<div class="reading-exercise">
 								Verify \(y=  -x^2 - 1 + c_1x + c_2 x^2 \) is a solution of <a href="#x1-24r16">(5.7.16)</a>
 							</div>
+						
+						</li>
+						<li class="continued">
 							<div>
 								The reason it was unsimplified to begin with was that our particular solution contained terms that were linearly dependent with the solutions to the complementary equation:
 
@@ -784,6 +802,7 @@
 								So to simplify our particular solution we will also exclude any terms that are linearly dependent with the solutions to the complementary equation. Thus our simplified particular solution is
 
 								\begin{align}
+									\label{eq:5.7.18}
 									y_p = & -x^2 - 1\\
 								\end{align}
 
@@ -817,7 +836,7 @@
 				<ol>
 					<li>
 						Solve the complementary equation
-					</li>	
+					</li>
 					<li>
 						Find the first equation in the system by differentiating \(y_p\) and setting the \(u\) derivative terms to zero
 					</li>
@@ -828,13 +847,15 @@
 					<li>
 						Write the system of equations as a system for \(du_1/dx\) and \(du_2/dx\)
 					</li>
+					<li class="skip"></li>
 					<li>
 						Find the antiderivatives to find \(u_1\) and \(u_2\) 
 					</li>
 					<li>
 						Find the particular solution \(y_p\) and the general solution
 					</li>
-				</ol>					
+					<li class="skip"></li>
+				</ol>
 
 				<details class="solution">
 
@@ -847,6 +868,7 @@
 								We wish to solve the complementary equation:
 
 								\begin {equation}
+									\label{eq:5.7.20}
 									\frac{d^2y}{dx^2} +3 \frac{dy}{dx} +2y = 0
 								\end {equation} 
 							</div>
@@ -970,6 +992,8 @@
 								\frac{du_2}{dx} = -\frac{e^{2x}}{1+e^x}
 								\]
 							</div>
+						</li>
+						<li class="continued">
 							<div>
 								Substituting that back in to the first equation (1)
 								\begin{align*}
@@ -1008,7 +1032,7 @@
 								\end{array}
 							</div>	
 						</li>	
-						<!--Part 5-->
+						<!--Part 6-->
 						<li>
 							<div> 
 								Substituting back \(y_p = u_1 x + u_2 e^x \) we obtain the particular solution:
@@ -1045,6 +1069,8 @@
 							<div class="reading-exercise">
 								Verify \(y=  \big( e^{-x} + e^{-2x} \big) \ln (1+e^x) + c_1 e^{-x} + c_2 e^{-2x} \) is a solution of  <a href="#x1-28r19">(5.7.19)</a>
 							</div>
+						</li>
+						<li class="continued">
 							<div>
 								Again it was unsimplified to begin with was that our particular solution contained terms that were linearly dependent with the solutions to the complementary equation:
 
@@ -1098,15 +1124,18 @@
 						<a href="#x1-31r21">(5.7.21)</a>
 					</li>
 					<li class="skip"></li>
+					<li class="skip"></li>
 					<li>
 						Write the system of equations as a system for \(du_1/dx\) and \(du_2/dx\)
 					</li>
+					<li class="skip"></li>
 					<li>
 						Find the antiderivatives to find \(u_1\) and \(u_2\) 
 					</li>
 					<li>
 						Find the particular solution \(y_p\) and the general solution
 					</li>
+					<li class="skip"></li>
 					<li class="skip"></li>
 					<li>
 						Solve the IVP <a href="#x1-31r21">(5.7.21)</a>
@@ -1283,6 +1312,8 @@
 									+\frac{2u_2 }{(x+1)}
 								\)
 							</div>
+						</li>
+						<li class="continued">
 							<div>
 								Since all the \(u_1\) terms added to zero and all the \(u_2\) terms added to zero, then we obtain the equation:
 								\[
@@ -1328,6 +1359,8 @@
 								\end{array}
 
 							</div>
+						</li>
+						<li class="continued">
 							<div>
 								So we obtain the equation
 								\[
@@ -1415,6 +1448,8 @@
 							<div class="reading-exercise">
 								Verify \(y_p= \displaystyle \frac{ 2 \ln (x+1)}{x-1} - \frac{2x}{(x-1)(x+1)} + \frac{c_1}{x-1} + \frac{c_2}{x+1}\) is a solution of <a href="#x1-31r21">(5.7.21)</a>
 							</div>
+						</li>
+						<li class="continued">
 							<div>
 								Although this does express the general solution, we suspect it may not be simplified, since the \(-2x/{(x-1)(x+1)}\) term contains both \((x-1)\) and  \((x+1)\) factors in the denominator. To find out we'll use <span class="vocab">PFD</span> (Example <a href=sec2.2.book.html#x1-325 target=_blank>2.2.5</a>) to break it up.
 
