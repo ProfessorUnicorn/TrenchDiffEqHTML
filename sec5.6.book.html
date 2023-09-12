@@ -77,7 +77,7 @@
 					\frac{d^2y}{dx^2} = & \frac{d^2u}{dx^2} y_1+2 \frac{du}{dx} \frac{dy_1}{dx} +u \frac{d^2y_1}{dx^2} 
 				\end{align*}
 				
-			</div> 	
+			</div>
 			<div>
 				Substituting into <a href="#x1-2r1">(5.6.1)</a>
 				\begin{array}{rrrrrr}
@@ -96,7 +96,9 @@
 					+ \underset{Q_1(x)}{\underbrace{\left( {\small 2P_0 \frac{dy_1}{dx}+P_1 y_1} \right)}}\,\frac{du}{dx} 
 					= F(x) \\
 				\end{align}
-				
+			</div>
+			<div id="p1-56">
+
 				Since the coefficients of \(\displaystyle \frac{d^2u}{dx^2}\) and \(\displaystyle \frac{u}{dx}\) were both functions of \(x\), we'll replace them with \(Q_0(x)\) and \(Q_1(x)\) to simplify the expression but we will not memorize these as formulas.
 
 				<a id="x1-6r5"></a> 
@@ -108,7 +110,7 @@
 
 				In this simplified form, it may appear that <a href="#x1-6r5">(5.6.5)</a> is still second order, however, as only the first and second derivatives of \(u\) are present, and not \(u\) itself, this equation can be recast as a first order linear equation using a change of variables. 
 			</div>
-			<div>
+			<div id="p1-57">
 				Letting \(z=\displaystyle\frac{du}{dx}\) and \(\displaystyle\frac{dz}{dx}=\displaystyle\frac{d^2u}{dx^2}\) then we can write <a href="#x1-6r5">(5.6.5)</a> as a linear differential equation
 
 				\begin{align*} 
@@ -119,7 +121,7 @@
 
 				Therefore we can solve it using the techniques from Section <a href="sec1.2.book.html" target=_blank>1.2</a> and antidifferentiation.
 
-			</div> 	
+			</div>
 		</details>
 
 		<!--Reduction of Order Examples-->
@@ -136,7 +138,6 @@
 						x\frac{d^2y}{dx^2}-(2x+1) \frac{dy}{dx} +(x+1)y=x^2 
 					\end {equation}
 
-					
 				</div>		
 
 				<ol>
@@ -146,19 +147,21 @@
 					<li>
 						Use <span class="vocab-repeat">reduction of order</span> to simplify <a href="#x1-9r6">(5.6.6)</a> into a linear first order equation in \({du}/{dx}\) 		
 					</li>
+					<li class="skip"></li>
 					<li>
 						Convert the equation in \({du}/{dx}\) to a first order equation in \(z\) using the substitution \(z = {du}/{dx} \) then solve for \(z\)	
 					</li>
+					<li class="skip"></li>
 					<li>
 						Substitute back to solve for \(u\) then substitute back again to solve for \(y\) in general
-					</li>	
-
+					</li>
 					<li>
 						Find 4 simple particular solutions of <a href="#x1-9r6">(5.6.6)</a> 
 					</li>
 					<li>
 						Find a fundamental set of solutions of the complementary equation
 					</li>
+					<li class="skip"></li>
 				</ol>
 			
 				<details class="solution">
@@ -247,6 +250,8 @@
 							<div class="reading-exercise">
 								Simplify \(\Big(  2 x -(2x+1) \Big)\) and \( \Big(x -(2x+1) + (x+1) \Big) \) 
 							</div>
+						</li>
+						<li class="continued">
 
 							<div>
 								Thus we obtain the equation
@@ -299,6 +304,8 @@
 							<div class="reading-exercise">
 								Find the general solution of \( \frac{dz}{dx} - \frac{1}{x} z = 0 \) using <span class="vocab-repeat">separation of variables</span>. Review Sections <a href="sec2.1.book.html">2.1</a> and <a href="sec2.2.book.html">2.1</a> for examples. 
 							</div>
+						</li>
+						<li class="continued">
 							<div>	
 								Using <span class="vocab">separation of variables</span>, we find the general solution \(z = cx\) and now we apply <span class="vocab">variation of parameters</span> to solve <a href="#x1-13r9">(5.6.9)</a>
 							</div>
@@ -372,6 +379,7 @@
 								Verify <a href="#x1-14r10">(5.6.10)</a> is a solution of <a href="#x1-9r6">(5.6.6)</a>
 							</div>	
 						</li>
+						<!-- Part 5-->
 						<li>
 							<div>	
 								From <a href="#x1-14r10">(5.6.10)</a> we have a general form of the solution \(y\) so we select constants to obtain a simple particular solution. Letting \(c_1=0\) and \(c_2=0\) we obtain a particular solution
@@ -420,6 +428,7 @@
 								Verify \( y_{p_4} = x + 1 + e^x + x^2 e^x \) is a solution of <a href="#x1-9r6">(5.6.6)</a> 
 							</div>	
 						</li>
+						<!-- Part 6-->
 						<li>
 							<div>	
 								We can use the <span class="vocab">principle of superposition</span> to find a fundamental set of solutions to the complementary equation <a href="#x1-10r7">(5.6.7)</a>. Recall our nonhomogeneous equation <a href="#x1-9r6">(5.6.6)</a> with forcing function \(f(x) = x^2\)
@@ -444,7 +453,8 @@
 							</div>	
 							<br>
 							<br>
-							<br>
+						</li>
+						<li class="continued">
 							<div>	
 								For instance subtracting \(y_{p_1}\) from \(y_{p_2}\) yields the solution we were given to begin with:
 								\[
@@ -505,9 +515,8 @@
 						x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y
 						=x^2+1					
 					\end {equation*}
-
 					
-				</div>		
+				</div>
 
 				<ol>
 					<li>
@@ -516,19 +525,22 @@
 					<li>
 						Use <span class="vocab-repeat">reduction of order</span> to simplify into a linear first order equation in \({du}/{dx}\) 		
 					</li>
+					<li class="skip"></li>
 					<li>
 						Convert the equation in \({du}/{dx}\) to a first order equation in \(z\) using the substitution \(z = {du}/{dx} \) then solve for \(z\)	
 					</li>
+					<li class="skip"></li>
 					<li>
 						Substitute back to solve for \(u\) then substitute back again to solve for \(y\) in general
-					</li>	
-
+					</li>
 					<li>
 						Find 4 simple particular solutions of the nonhomogeneous equation
 					</li>
+					<li class="skip"></li>
 					<li>
 						Find a fundamental set of solutions of the complementary equation
 					</li>
+					<li class="skip"></li>
 					<li>
 						Solve the IVP
 						<a id="x1-19r12"></a> 
@@ -537,7 +549,8 @@
 							\quad
 							\left. \frac{dy}{dx} \right| _{1}=-3 
 						\end {equation}
-					</li>	
+					</li>
+					<li class="skip"></li>
 				</ol>
 			
 				<details class="solution">
@@ -627,7 +640,8 @@
 										}} \\
 								\end{array} 
 							</div>
-
+						</li>
+						<li class="continued">
 							<div>
 								Thus we obtain the equation
 								\begin{align*} 
@@ -678,6 +692,8 @@
 							<div>	
 								Using <span class="vocab">separation of variables</span>, we find the general solution \(z = c/x^3\) and now we apply <span class="vocab">variation of parameters</span> to solve <a href="#x1-21r14">(5.6.14)</a>
 							</div>
+						</li>
+						<li class="continued">
 							<div>
 								To implement <span class="vocab-repeat">variation of parameters</span> we choose a particular solution so letting \(c=1\) we select \(z_1 = 1/x^3\) as the particular solution of the complementary equation. Now we seek solutions of the nonhomogeneous equation <a href="#x1-21r14">(5.6.14)</a> of the form \(z = vz_1 = v/x^3\) where \(v\) is some function of \(x\) to be determined.
 							</div>
@@ -741,6 +757,7 @@
 								Verify <a href="#x1-22r15">(5.6.15)</a> is a solution of \( x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=x^2+1 \)
 							</div>	
 						</li>
+						<!--Part 5-->
 						<li>
 							<div>	
 								From <a href="#x1-22r15">(5.6.15)</a> we have a general form of the solution \(y\) so we select constants to obtain a simple particular solution. Letting \(c_1=0\) and \(c_2=0\) we obtain a particular solution
@@ -764,7 +781,8 @@
 							<div class="reading-exercise">
 								Verify \( y_{p_2} = \frac{1}{3}x^2 - 1 + \frac{1}{x} \) is a solution of\( x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=x^2+1 \)
 							</div>	
-
+						</li>
+						<li class="continued">
 							<div>
 								Letting \(c_1=0\) and \(c_2=1\) we obtain another particular solution
 
@@ -789,6 +807,7 @@
 								Verify \( y_{p_4} = \frac{1}{3}x^2 - 1 + \frac{1}{x} + x  \) is a solution of \( x^2\frac{d^2y}{dx^2}+x \frac{dy}{dx} -y=x^2+1 \)
 							</div>	
 						</li>
+						<!--Part 6-->
 						<li>
 							<div>	
 								
@@ -812,11 +831,12 @@
 								\end {equation*} 
 
 								Thus by the <span class="vocab">principle of superposition</span> subtracting any two particular solutions of our differential equation yields a solution of the complementary equation <a href="#x1-17r11">(5.6.12)</a>
-							</div>	
+							</div>
 							<br>
 							<br>
-							<br>
-							<div>	
+						</li>
+						<li class="continued">
+							<div>
 								For instance subtracting \(y_{p_1}\) from \(y_{p_2}\) yields the solution we were given to begin with:
 								\[
 									y_{p_2} - y_{p_1}
@@ -856,6 +876,7 @@
 								 \]
 							</div>							
 						</li>
+						<!--Part 7-->
 						<li>
 							<div>
 								We will not solve the IVP <a href="#x1-19r12">(5.6.11)</a> 
@@ -886,7 +907,8 @@
 							<div class="reading-exercise">
 								Evaluate \(\frac{dy}{dx} = \frac{2}{3}x + \frac{c_1}{x^2} + c_2\) at the initial condition \(\left. \frac{dy}{dx} \right| _{1}=-3\) 
 							</div>	
-							
+						</li>
+						<li class="continued">
 							<div>
 								Evaluating \(y\) and its derivative at the initial conditions, we obtain the system of equations
 								\begin{align}
@@ -941,10 +963,11 @@
 				<ol>
 					<li>
 						Verify that \(y_1=x\) is a solution of <a href="#x1-26r18">(5.6.18)</a>
-					</li>	
+					</li>
 					<li>
 						Use <span class="vocab-repeat">reduction of order</span> to simplify <a href="#x1-26r18">(5.6.18)</a> into a linear first order equation in \({du}/{dx}\) 		
 					</li>
+					<li class="skip"></li>
 					<li>
 						Convert the equation in \({du}/{dx}\) to a first order equation in \(z\) using the substitution \(z = {du}/{dx} \) then solve for \(z\)	
 					</li>
@@ -1035,7 +1058,8 @@
 										}} \\
 								\end{array} 
 							</div>
-
+						</li>
+						<li class="continued">
 							<div>
 								Thus we obtain the equation
 								\begin{align*} 
