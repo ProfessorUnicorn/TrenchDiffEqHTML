@@ -223,12 +223,12 @@
 							</div> 
 							<div>
 								<a id="x1-13r7"></a>
-								\begin{align} \label {eq:5.1.7} 
+								\begin{align}
 									\frac{dy}{dx} 
 									= & \frac{d}{dx} \left( c_1e^x+c_2e^{-x} \right)
 									= c_1 e^x - c_2e^{-x}  \nonumber \\
 									\nonumber \\
-									\tag{7}
+									\label {eq:5.1.7} 
 								\frac{d^2y}{dx^2} 
 									= & \frac{d}{dx} \left( c_1 e^x - c_2e^{-x} \right)	
 									= c_1 e^x +  c_2e^{-x}  
@@ -380,7 +380,7 @@
 								Now calculate the second derivatives of both \(y_1\) and \(y_2\) and then substitute them into <a href="#x1-15r8">(5.1.8)</a> to verify. 
 							</div>
 							<div class="reading-exercise">
-								Differentiate \( y_1 = \cos \omega x \) twice using chain rule
+								Differentiate \( y_1 = \cos \omega x \) twice using the chain rule
 							</div> 	
 							<div>
 								We’ll start with \(y_1\). Differentiating:
@@ -448,14 +448,14 @@
 							</div> 
 							<div>
 								<a id="x1-21r11"></a>
-								\begin{align} \label {eq:5.1.11}
+								\begin{align} 
 									\frac{dy}{dx} 
 									= & \frac{d}{dx} \left( c_1 \cos \omega x + c_2 \sin \omega x \right) \nonumber  \\
 									= & - \omega c_1  \sin \omega x + c_2 \omega \cos \omega x  \nonumber \\
 									  \nonumber \\
 								\frac{d^2y}{dx^2} 
 									= & \frac{d}{dx} \Big( - \omega c_1  \sin \omega x + c_2 \omega \cos \omega x \Big)	 \nonumber  \\
-									\tag{11}
+									\label {eq:5.1.11}
 									= & - \omega^2 c_1  \cos \omega x - \omega^2 c_2 \sin \omega 
 								\end{align} 
 								
@@ -1963,8 +1963,7 @@
 								Substituting them in to the Wronskian <a href="#x1-50r28">(5.1.28)</a> we obtain:
 
 								\begin {align}
-									\label {eq:5.1.29} 
-
+									
 									W(x) = 
 									\det
 									\left(  \\[15pt]
@@ -1974,7 +1973,7 @@
 												\end{array}
 											\right)
 										= & x^2 \left( - \frac{2}{x^3} \right) - 2x \left( \frac{1}{x^2} \right) \nonumber \\
-										\tag{29}
+										
 										= & - \frac{2}{x}  - \frac{2}{x}  
 										= - \frac{4}{x} 
 								\end{align}
