@@ -34,76 +34,249 @@
 
 			<div id="dead7972-e773-4c00-9bad-e9767088445f">
 				We’ll now consider the nonhomogeneous linear second order equation 
-				\begin {equation} \label {eq:5.3.1} \frac{d^2y}{dx^2}+p(x) \frac{dy}{dx}+q(x)y=f(x) 
-				\end {equation} <a id="x1-2r1"></a> where the forcing function \(f\) isn’t identically zero. The next theorem, an extension of Theorem&nbsp;<span class="ptmb8t-">5.1.1</span>, gives sufficient conditions for existence and uniqueness of solutions of IVPs for <a href="#x1-2r1">(5.3.1)</a>. We omit the proof, which is beyond the scope of this book. 
+
+				<a id="x1-2r1"></a>
+				\begin {equation} \label {eq:5.3.1} 
+					\frac{d^2y}{dx^2}+p(x) \frac{dy}{dx}+q(x)y=f(x) 
+				\end {equation}  
+				
+				where the forcing function \(f(x)\) isn’t identically zero. The next theorem, an extension of Theorem&nbsp;<a href="sec5.1.book.html#x1-51" target=_blank>5.1.1</a>, gives sufficient conditions for existence and uniqueness of solutions of IVPs for <a href="#x1-2r1">(5.3.1)</a>. We omit the proof, which is beyond the scope of this book. 
 			</div>
 
 			<div class="theorem" id="x1-31">
 				<div>
-					<span class="head">Theorem&nbsp;5.3.1</span> Suppose \(p,\) \(,q\) and \(f\) are continuous on an open interval \((a,b),\) let \(x_0\) be any point in \((a,b),\) and let \(k_0\) and \(k_1\) be arbitrary real numbers. Then the IVP \[ \frac{d^2y}{dx^2}+p(x) \frac{dy}{dx}+q(x)y=f(x), \quad y(x_0)=k_0,\quad \left. \frac{dy}{dx} \right| _{x_0}=k_1 \] has a unique solution on \((a,b)\). 
+					<span class="head">Theorem&nbsp;5.3.1</span> Suppose \(p(x),\) \(q(x),\) and \(f(x)\) are continuous on an open interval \((a,b),\) let \(x_0\) be any point in \((a,b),\) and let \(k_0\) and \(k_1\) be arbitrary real numbers. Then the IVP has a unique solution on \((a,b)\) 
+					
+					\[ 
+						\frac{d^2y}{dx^2}+p(x) \frac{dy}{dx}+q(x)y=f(x) 
+						\quad y(x_0)=k_0
+						\quad \left. \frac{dy}{dx} \right| _{x_0}=k_1 
+					\] 
+					
+					
 				</div>
 			</div>
 
 			<div class="indent" id="998892c5-a28f-4c1c-b30f-878fdc9d5ab3">
-				To find the general solution of <a href="#x1-2r1">(5.3.1)</a> on an interval \((a,b)\) where \(p\), \(q\), and \(f\) are continuous, it’s necessary to find the general solution of the associated homogeneous equation 
-				\begin {equation} \label {eq:5.3.2} \frac{d^2y}{dx^2}+p(x) \frac{dy}{dx}+q(x)y=0 
-				\end {equation} <a id="x1-4r2"></a> on \((a,b)\). We call <a href="#x1-4r2">(5.3.2)</a> the <span class="vocab">complementary equation</span> for <a href="#x1-2r1">(5.3.1)</a>. 
+				To find the general solution of <a href="#x1-2r1">(5.3.1)</a> on an interval \((a,b)\) where \(p(x),\) \(q(x),\) and \(f(x)\) are continuous, it’s necessary to find the general solution of the associated homogeneous equation, which we call the <span class="vocab">complementary equation</span> 
+
+				<a id="x1-4r2"></a> 
+				\begin {equation} \label {eq:5.3.2} 
+					\frac{d^2y}{dx^2}+p(x) \frac{dy}{dx}+q(x)y=0 
+				\end {equation} 
 			</div>
 			<div class="indent" id="3df22083-73c3-446c-9910-9720d9bfacd5">
-				The next theorem shows how to find the general solution of <a href="#x1-2r1">(5.3.1)</a> if we know one solution \(y_p\) of <a href="#x1-2r1">(5.3.1)</a> and a fundamental set of solutions of <a href="#x1-4r2">(5.3.2)</a>. We call \(y_p\) a <span class="vocab">particular solution</span> of <a href="#x1-2r1">(5.3.1)</a>; it can be any solution that we can find, one way or another. 
+				The next theorem shows how to find the general solution of <a href="#x1-2r1">(5.3.1)</a> if we know one <span class="vocab">particular solution</span> \(y_p\) of <a href="#x1-2r1">(5.3.1)</a> and a fundamental set of solutions of the complementary equation <a href="#x1-4r2">(5.3.2)</a>. The <span class="vocab-repeat">particular solution</span> \(y_p\) can be any solution that we can find, one way or another. 
 			</div>
 			<div class="theorem" id="x1-52">
 				<div>
 					<span class="head">Theorem&nbsp;5.3.2</span>
-					Suppose \(p\), \(q\), and \(f\) are continuous on \((a,b)\). Let \(y_p\) be a particular solution of
+					Suppose \(p(x),\) \(q(x),\) and \(f(x)\) are continuous on \((a,b)\). Let \(y_p\) be a particular solution on \((a,b)\) of the equation
+
+
 					<a id="x1-6r3"></a>
 					\begin {equation}
 						\label {eq:5.3.3}
 						\frac{d^2y}{dx^2}+p(x) \frac{dy}{dx}+q(x)y=f(x)
 					\end {equation}
-					on \((a,b)\), and let \(\{y_1,y_2\}\) be a fundamental set of solutions of the complementary equation \begin {equation} \label {eq:5.3.4} \frac{d^2y}{dx^2}+p(x) \frac{dy}{dx}+q(x)y=0 \end {equation} <a id="x1-7r4"></a> on \((a,b)\). Then \(y\) is a solution of <a href="#x1-6r3">(5.3.3)</a> on \((a,b)\) if and only if 
-					\begin {equation} \label {eq:5.3.5} y=y_p+c_1y_1+c_2y_2 
-					\end {equation} <a id="x1-8r5"></a> where \(c_1\) and \(c_2\) are constants. 
+
+					Let \(\{y_1,y_2\}\) be a fundamental set of solutions on on \((a,b)\) of the complementary equation 
+					
+					<a id="x1-7r4"></a> 
+					\begin {equation} \label {eq:5.3.4} 
+						\frac{d^2y}{dx^2}+p(x) \frac{dy}{dx}+q(x)y=0
+					\end {equation}
+					
+					Then \(y\) is a solution of <a href="#x1-6r3">(5.3.3)</a> on \((a,b)\) if and only if 
+
+					<a id="x1-8r5"></a> 
+					\begin {equation} \label {eq:5.3.5} 
+						y=y_p+c_1y_1+c_2y_2 
+					\end {equation} 
 				</div>
 			</div>
 			
+			
 			<div id="2ac32a6c-8c94-4466-966d-3539e7d26036">
-				<span class="ptmb8t-">Proof</span> We first show that \(y\) in <a href="#x1-8r5">(5.3.5)</a> is a solution of <a href="#x1-6r3">(5.3.3)</a> for any choice of the constants \(c_1\) and \(c_2\). Differentiating <a href="#x1-8r5">(5.3.5)</a> twice yields \[ \frac{dy}{dx}= \frac{dy_p}{dx}+c_1 \frac{dy_1}{dx}+c_2 \frac{dy_2}{dx}\quad \mbox{ and } \quad \frac{d^2y}{dx^2}= \frac{d^2y_p}{dx^2}+ c_1 \frac{d^2y_1}{dx^2}+c_2 \frac{d^2y_2}{dx^2}\] so 
+				<div class="reading-exercise">
+					Rewrite <a href="#x1-7r4">(5.3.4)</a> with \(y_1\) substituted in for \(y\)
+				</div> 	
+
+				<div class="reading-exercise">
+					Rewrite <a href="#x1-7r4">(5.3.4)</a> with \(y_2\) substituted in for \(y\)
+				</div>
+				
+				<div>
+					Since \(\{y_1,y_2\}\) is a fundamental set we have
+
+					\begin{align*}
+						\frac{d^2y_1}{dx^2}+p(x) \frac{dy_1}{dx}+q(x)y_1 = & 0 \\ \\
+						\frac{d^2y_2}{dx^2}+p(x) \frac{dy_2}{dx}+q(x)y_2 = & 0 \\
+					\end{align*}
+				</div>
+
+				<div class="reading-exercise">
+					Differentiate \( y=y_p+c_1y_1+c_2y_2 \) twice
+				</div> 	
+
+				<div>
+					Differentiating <a href="#x1-8r5">(5.3.5)</a> twice yields 
+					
+					\begin{align*}
+						\frac{dy}{dx} = & \frac{dy_p}{dx}+c_1 \frac{dy_1}{dx}+c_2 \frac{dy_2}{dx} \\ \\
+						\frac{d^2y}{dx^2} = & \frac{d^2y_p}{dx^2}+ c_1 \frac{d^2y_1}{dx^2}+c_2 \frac{d^2y_2}{dx^2}
+					\end{align*}
+					
+				</div>
+				<div class="reading-exercise">
+					Verify \( y=y_p+c_1y_1+c_2y_2 \) is a solution to <a href="#x1-6r3">(5.3.3)</a> by substituting \( y=y_p+c_1y_1+c_2y_2 \) and its derivatives into <a href="#x1-6r3">(5.3.3)</a> and simplifying
+				</div> 
+				<div>
+					\begin{align*}
+						\begin{array}{rrrrrrr}
+							\dfrac{d^2y}{dx^2} 
+								&=& \dfrac{d^2y_p}{dx^2} 
+								&+& \dfrac{d^2y_1}{dx^2} \, c_1 
+								&+& \dfrac{d^2y_2}{dx^2} \, c_2 \\
+							p(x) \frac{dy}{dx} 
+								&=& \dfrac{dy_p}{dx} 
+								&+& \dfrac{dy_1}{dx} \, c_1 
+								&+& \dfrac{dy_2}{dx} \, c_2  \\
+							+ \quad\quad\quad\quad q(x) y
+								&=& y_p
+								&+& y_1 \, c_1 
+								&+& y_2 \, c_2  \\	
+							\hline	
+							{\small \dfrac{d^2y}{dx^2} + p(x) \dfrac{dy}{dx} + q(x) y}
+								&=& f(x)
+								&+& 0 \, c_1 
+								&+& 0 \, c_2 \\	
+						\end{array}
+					\end{align*}
+
+					Therefore we have found
+					\[
+						\frac{d^2y}{dx^2} + p(x) \frac{dy}{dx} + q(x) y
+						=f(x)	
+					\]
+					So we have shown that \(y_p\) satisfies <a href="#x1-6r3">(5.3.3)</a>
+				</div>
+				<div>
+					Now we’ll show that every solution of <a href="#x1-6r3">(5.3.3)</a> has the form <a href="#x1-8r5">(5.3.5)</a> for some choice of the constants \(c_1\) and \(c_2\). Suppose \(y\) is a solution of <a href="#x1-6r3">(5.3.3)</a>. We’ll show that \(y-y_p\) is a solution of <a href="#x1-7r4">(5.3.4)</a>, and therefore of the form \(y-y_p=c_1y_1+c_2y_2\), which implies <a href="#x1-8r5">(5.3.5)</a>. 
+				</div>
+				<div class="reading-exercise">
+					Differentiate \(y-y_p\) twice
+				</div> 
+				<div>
+					Differentiating \(y-y_p\) twice yields 
+					
+					\begin{align*}
+						\frac{d}{dx} \Big( y-y_p \Big) = & \frac{dy}{dx} - \frac{dy_p}{dx} \\ \\
+						\frac{d^2}{dx^2} \Big( y-y_p \Big) = & \frac{d}{dx} \Big( \frac{dy}{dx} - \frac{dy_p}{dx} \Big)
+						= \frac{d^2y}{dx^2} - \frac{d^2y_p}{dx^2}
+					\end{align*}
+					
+				</div>	
+
+				<div class="reading-exercise"> 
+					Verify \( y-y_p \) is a solution to <a href="#x1-7r4">(5.3.4)</a> by substituting \( y-y_p \) and its derivatives into <a href="#x1-7r4">(5.3.4)</a> and simplifying
+				</div> 
+				<div>
+					\begin{align*}
+						\begin{array}{rrrrrrr}
+							\dfrac{d^2}{dx^2} \Big( y-y_p \Big)
+								&=& \dfrac{d^2y}{dx^2} 
+								&-& \dfrac{d^2y_p}{dx^2}
+								\\
+							p(x) \dfrac{d}{dx} \Big( y-y_p \Big)
+								&=& p(x) \dfrac{dy}{dx} 
+								&-& p(x) \dfrac{dy_p}{dx} 
+								\\
+							+ \quad\quad\quad\quad q(x) \Big( y-y_p \Big)
+								&=& y
+								&-& y_p \\	
+							\hline	
+							{\small \dfrac{d^2}{dx^2} \Big( y-y_p \Big) + p(x) \dfrac{d}{dx} \Big( y-y_p \Big) + q(x) \Big( y-y_p \Big)}
+								&=& f(x)
+								&-& f(x) 
+								\\	
+						\end{array}
+					\end{align*}
+
+					Therefore we have found
+					\[
+						\frac{d^2}{dx^2} \Big( y-y_p \Big) + p(x) \frac{d}{dx} \Big( y-y_p \Big) + q(x) \Big( y-y_p \Big) = 0	
+					\]
+					So we have shown that \( y-y_p = c_1 y_1 + c_2 y_2\) satisfies <a href="#x1-7r4">(5.3.4)</a>
+				</div>
+				<div>
+					 
+				</div>
+				<div>
+					 
+				</div>
+
+				
+				
 			</div>
-			<div class="eqnarray" id="7c5d294c-b988-427a-bb65-ff0e582947e1">
-				\begin {eqnarray*}
-					\frac{d^2y}{dx^2}+p(x) \frac{dy}{dx}+q(x)y&amp;=&amp;( \frac{d^2y_p}{dx^2}+c_1 \frac{d^2y_1}{dx^2}+c_2 \frac{d^2y_2}{dx^2}) +p(x)( \frac{dy_p}{dx}+c_1 \frac{dy_1}{dx}+c_2 \frac{dy_2}{dx})\\&amp;&amp;\; +q(x)(y_p+c_1y_1+c_2y_2)\\ &amp;=&amp;( \frac{d^2y_p}{dx^2}+p(x) \frac{dy_p}{dx}+q(x)y_p)+c_1( \frac{d^2y_1}{dx^2}+p(x) \frac{dy_1}{dx}+q(x)y_1)\\ &amp;&amp;\; +c_2( \frac{d^2y_2}{dx^2}+p(x) \frac{dy_2}{dx}+q(x)y_2)\\ &amp;=&amp; f+c_1\cdot 0+c_2\cdot 0=f 
-				\end {eqnarray*}
-			</div>
+
 			<div class="indent" id="cc3d66f7-19f2-4398-88f0-73652d30dd15">
-				since \(y_p\) satisfies <a href="#x1-6r3">(5.3.3)</a> and \(y_1\) and \(y_2\) satisfy <a href="#x1-7r4">(5.3.4)</a>. 
+				
 			</div>
 			<div class="indent" id="686f0f5b-6297-4081-a936-2446366ff63a">
-				Now we’ll show that every solution of <a href="#x1-6r3">(5.3.3)</a> has the form <a href="#x1-8r5">(5.3.5)</a> for some choice of the constants \(c_1\) and \(c_2\). Suppose \(y\) is a solution of <a href="#x1-6r3">(5.3.3)</a>. We’ll show that \(y-y_p\) is a solution of <a href="#x1-7r4">(5.3.4)</a>, and therefore of the form \(y-y_p=c_1y_1+c_2y_2\), which implies <a href="#x1-8r5">(5.3.5)</a>. To see this, we compute 
+				
 			</div>
 			<div class="eqnarray" id="e649588c-3601-4c36-976a-d76cf62d5f65">
-				\begin {eqnarray*}
-					\frac{d^2}{dx^2} (y-y_p) + p(x) \frac{d}{dx}(y-y_p)+q(x)(y-y_p)&amp;=&amp;( \frac{d^2y}{dx^2}- \frac{d^2y_p}{dx^2})+p(x)( \frac{dy}{dx}- \frac{dy_p}{dx})\\ &amp;&amp; +q(x)(y-y_p)\\ &amp;=&amp;( \frac{d^2y}{dx^2}+p(x) \frac{dy}{dx}+q(x)y)\\ &amp;&amp; -( \frac{d^2y_p}{dx^2}+p(x) \frac{dy_p}{dx}+q(x)y_p)\\ &amp;=&amp;f(x)-f(x)=0 
-				\end {eqnarray*} 
+				
 			</div>
 			<div class="indent" id="b7e1ed99-a449-434f-82d4-4a856ea7b0af">
-				since \(y\) and \(y_p\) both satisfy <a href="#x1-6r3">(5.3.3)</a>.
+				
 			</div>
+
+			
+
 			<div class="indent" id="be60f67d-4c25-41fe-afab-0458b8ce5a6f">
-				We say that <a href="#x1-8r5">(5.3.5)</a> is the <span class="vocab">general solution</span> of <a href="#x1-6r3">(5.3.3)</a> on \((a,b)\). 
+				We say that <a href="#x1-8r5">(5.3.5)</a> is the <span class="vocab">general solution</span> of <a href="#x1-6r3">(5.3.3)</a> on \((a,b)\) 
 			</div>
+
+			<br>
+			<br>
+			<br>
+			<hr>
+			<br>
+			<br>
+			<br>
+
 			<div class="indent" id="a9e2195d-0384-4abc-9d3d-30072cc412db">
-				If \(P_0\), \(P_1\), and \(F\) are continuous and \(P_0\) has no zeros on \((a,b)\), then Theorem&nbsp;<a href="#x1-52">5.3.2</a>
-				implies that the general solution of
-				\begin {equation} \label {eq:5.3.6} P_0(x) \frac{d^2y}{dx^2}+P_1(x) \frac{dy}{dx}+P_2(x)y=F(x) 
-				\end {equation} <a id="x1-9r6"></a> on \((a,b)\) is \(y=y_p+c_1y_1+c_2y_2\), where \(y_p\) is a particular solution of <a href="#x1-9r6">(5.3.6)</a> on \((a,b)\) and \(\{y_1,y_2\}\) is a fundamental set of solutions of \[ P_0(x) \frac{d^2y}{dx^2}+P_1(x) \frac{dy}{dx}+P_2(x)y=0 \] on \((a,b)\). To see this, we rewrite <a href="#x1-9r6">(5.3.6)</a> as \[ \frac{d^2y}{dx^2}+{P_1(x)\over P_0(x)} \frac{dy}{dx}+{P_2(x)\over P_0(x)}y={F(x)\over P_0(x)} \] and apply Theorem&nbsp;<a href="#x1-52">5.3.2</a> with \(p=P_1/P_0\), \(q=P_2/P_0\), and \(f=F/P_0\).
+				If \(P_0 (x)\), \(P_1 (x)\), and \(F (x)\) are continuous and \(P_0\) has no zeros on \((a,b)\), then Theorem&nbsp;<a href="#x1-52">5.3.2</a>
+				implies that the general solution on \((a,b)\) of
+
+				<a id="x1-9r6"></a>
+				\begin {equation} \label {eq:5.3.6} 
+					P_0(x) \frac{d^2y}{dx^2}+P_1(x) \frac{dy}{dx}+P_2(x)y=F(x) 
+				\end {equation} 
+				
+				 is \(y=y_p+c_1y_1+c_2y_2\), where \(y_p\) is a particular solution of <a href="#x1-9r6">(5.3.6)</a> on \((a,b)\) and \(\{y_1,y_2\}\) is a fundamental set of solutions on \((a,b)\) of the complementary equation
+				 
+				 \[ P_0(x) \frac{d^2y}{dx^2}+P_1(x) \frac{dy}{dx}+P_2(x)y=0 \] 
+				 
+				To show this, we divide by \(P_0 (x)\) and rewrite <a href="#x1-9r6">(5.3.6)</a> as 
+				
+				\[ 
+					\frac{d^2y}{dx^2}+{P_1(x)\over P_0(x)} \frac{dy}{dx}+{P_2(x)\over P_0(x)}y={F(x)\over P_0(x)} 
+				\] 
+				
+				and apply Theorem&nbsp;<a href="#x1-52">5.3.2</a> with \(p(x)=P_1(x)/P_0(x)\), \(q(x)=P_2(x)/P_0(x)\), and \(f(x)=F(x)/P_0(x)\)
 			
 			</div>
+
+			<br>
+			<br>
 			<div class="indent" id="3fad5108-3889-4cdf-91f5-9b43f23874e1">
-				To avoid awkward wording in examples and exercises, we won’t specify the interval \((a,b)\) when we ask for the general solution of a specific linear second order equation, or for a fundamental set of solutions of a homogeneous linear second order equation. Let’s agree that this always means that we want the general solution (or a fundamental set of solutions, as the case may be) on every open interval on which \(p\), \(q\), and \(f\) are continuous if the equation is of the form <a href="#x1-6r3">(5.3.3)</a>, or on which \(P_0\), \(P_1\), \(P_2\), and \(F\) are continuous and \(P_0\) has no zeros, if the equation is of the form <a href="#x1-9r6">(5.3.6)</a>. We leave it to you to identify these intervals in specific examples and exercises. 
+				To avoid awkward wording in examples and exercises, we won’t specify the interval \((a,b)\) when we ask for the general solution of a specific linear second order equation, or for a fundamental set of solutions of a homogeneous linear second order equation. Let’s agree that this always means that we want the general solution (or a fundamental set of solutions, as the case may be) on every open interval on which \(p(x)\), \(q(x)\), and \(f(x)\) are continuous if the equation is of the form <a href="#x1-6r3">(5.3.3)</a>, or on which \(P_0(x),\) \(P_1(x),\) \(P_2(x),\) and \(F(x)\) are continuous and \(P_0(x)\) has no zeros, if the equation is of the form <a href="#x1-9r6">(5.3.6)</a>. We leave it to you to identify these intervals in specific examples and exercises. 
 			</div>
 			<div class="indent" id="9f33e7a0-d488-430c-88b4-5469472669a6">
-				For completeness, we point out that if \(P_0\), \(P_1\), \(P_2\), and \(F\) are all continuous on an open interval \((a,b)\), but \(P_0\) <em>does</em> have a zero in \((a,b)\), then <a href="#x1-9r6">(5.3.6)</a> may fail to have a general solution on \((a,b)\) in the sense just defined. Exercises&nbsp;<span class="ptmb8t-">42</span>–<span class="ptmb8t-">44</span> illustrate this point for a homogeneous equation. 
+				For completeness, we point out that if \(P_0(x),\) \(P_1(x),\) \(P_2(x),\) and \(F(x)\) are all continuous on an open interval \((a,b)\), but \(P_0(x)\) <em>does</em> have a zero in \((a,b)\), then <a href="#x1-9r6">(5.3.6)</a> may fail to have a general solution on \((a,b)\) in the sense just defined. Exercises&nbsp;<span class="ptmb8t-">42</span>–<span class="ptmb8t-">44</span> illustrate this point for a homogeneous equation. 
 			</div>
 			<div class="indent" id="071b0709-ce81-420e-b286-c62553bd7fc5">
 				In this section we to limit ourselves to applications of Theorem&nbsp;<a href="#x1-52">5.3.2</a>
