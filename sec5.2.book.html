@@ -57,10 +57,11 @@
 				Substituting into <a href="#x1-2r1">(5.2.1)</a>
 				
 				<a id="x1-3r2"></a> 
-				\begin{align} \label{eq:5.2.2}
+				\begin{align} 
 					a \frac{d^2y}{dx^2}  +  b \frac{dy}{dx}  + c y  = & 0\nonumber \\
 					a \Big( r^2e^{rx} \Big) + b \Big( re^{rx} \Big) + c \Big( e^{rx} \Big) = & 0 \nonumber \\
 					ar^2e^{rx} + bre^{rx} + ce^{rx} = & 0 \nonumber \\	
+					\label{eq:5.2.2}
 					\big( ar^2 + br + c \big) e^{rx} = & 0 \\
 					ar^2 + br + c = 0 \quad \text{or} & \quad e^{rx} = 0 \nonumber
 				\end{align}
@@ -74,7 +75,8 @@
 				We call this equation the <span class="vocab">characteristic equation</span> (also <span class="vocab">auxiliary equation</span>) of <a href="#x1-2r1">(5.2.1)</a> and we call the quadratic polynomial \(p(r)=ar^2+br+c \) the <span class="vocab">characteristic polynomial</span>. As the characteristic equation is quadratic, the roots are given by the quadratic formula 
 				
 				<a id="x1-4r3"></a>
-				\begin {equation} \label {eq:5.2.3} 
+				\begin {equation} 
+					\label {eq:5.2.3} 
 					r={-b\pm \sqrt {b^2-4ac}\over 2a} 
 				\end {equation} 
 			</div>
@@ -99,14 +101,15 @@
 			<div class="example" id="x1-51" style="--ex-number: 1">
 				
 				<ol>
-					<li> 
+					<li>
 						<a id="x1-7r4"></a> 
 						Find the general solution
 						\begin {equation} \label {eq:5.2.4} 
 							\frac{d^2y}{dx^2}+6\frac{dy}{dx}+5y=0 
 						\end {equation} 
-					</li>	
-					<li> 
+					</li>
+					<li class="skip"></li>
+					<li>
 						Solve the IVP 
 
 						<a id="x1-9r5"></a> 
@@ -116,6 +119,7 @@
 							\quad \left. \frac{dy}{dx} \right|_{0}=-1 
 						\end {equation} 
 					</li>
+					<li class="skip"></li>
 				</ol>
 				<details class="solution">
 					<summary>Solution</summary>
@@ -130,7 +134,7 @@
 									\frac{dy}{dx}=re^{rx}
 									\Longrightarrow 
 									\frac{d^2y}{dx^2}=r^2e^{rx}
-								\] 								
+								\]
 
 								Substituting these in we obtain:
 
@@ -155,6 +159,8 @@
 
 								\[ y_1 = e^{-x} \quad \text{ and } \quad y_2 = e^{-5x} \] 
 							</div>
+						</li>
+						<li class="continued">
 							<div>
 								Now we would like to know if \( \{ y_1, y_2 \} = \{ e^{-x}, e^{-5x}\} \) is a <span class="vocab">fundamental set</span> so we check if they are <span class="vocab">linearly independent</span>:
 
@@ -212,6 +218,9 @@
 									\end{array}
 								\right.\)
 							</div>
+						
+						</li>
+						<li class="continued">
 							<div>
 								So we obtain the system of equations:
 								And we obtain a system of equations which we can solve by subtracting them to find \(c_2\) then substituting that back to find \(c_1\)
@@ -305,6 +314,8 @@
 						\end {equation} 
 					</li>
 					<li class="skip"></li>
+					<li class="skip"></li>
+					<li class="skip"></li>
 					<li> 
 						Solve the IVP 
 
@@ -315,11 +326,13 @@
 							\quad \left. \frac{dy}{dx} \right|_{0}=-1 
 						\end {equation} 
 					</li>
+					<li class="skip"></li>
 				</ol>
 
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
+						<!-- Part 1 -->
 						<li>
 							<div>
 								We start by seeking solutions of the form \( y=e^{rx} \)
@@ -354,6 +367,10 @@
 								<a href="#x1-15r8">(5.2.8)</a>
 
 								\[ y_1 = e^{-3x} \] 
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 
 								Since the other root was the same repeated root, it will not produce another <span class="vocab">linearly independent</span> solution. For instance, substituting in \(r = -3\) again we obtain 
 								
@@ -409,11 +426,16 @@
 									\int \Big( \frac{du}{dx} \Big) dx = & \int \Big( c \Big) dx \nonumber \\
 									u =& c_1 + c_2 x \nonumber \\
 								\end{align}
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 
 								So we have found \(u\) and we multiply by \( e^{-3x}\) to get \(y\)
 
 								<a id="x1-19r10"></a> 
 								\begin{align}
+									\label{eq:5.2.10}
 									y =& \left( c_1 + c_2 x \right) e^{-3x}	
 								\end{align}
 
@@ -425,10 +447,9 @@
 
 								Since their ratio is non constant then they are <span class="vocab-repeat">linearly independent</span> thus \( \{ e^{-3x} ,xe^{-3x}  \}\) is a <span class="vocab">fundamental set</span> of solutions for <a href="#x1-15r8">(5.2.8)</a> and thus the <span class="vocab">general solution</span> is \( y = c_1 e^{-3x} + c_2 x e^{-3x} \) which is the same solution we got earlier in equation <a href="#x1-19r10">(5.2.10)</a>
 
-
-							
 							</div>
 						</li>
+						<!-- Part 2 -->
 						<li> 
 							<div>
 								We already found the general solution <a href="#x1-19r10">(5.2.10)</a> and now we apply the initial conditions to find the constants \(c_1\) and \(c_2\) to solve the IVP <a href="#x1-17r9">(5.2.9)</a>. Starting with \( y(0)=3 \)
@@ -446,11 +467,17 @@
 								Differentiate <a href="#x1-19r10">(5.2.10)</a>
 							</div> 	
 							<div>	
-								\begin{align}  \label{eq:5.2.11}
+								\begin{align}  
+									\label{eq:5.2.11}
 									y  = & \left( c_1 + c_2 x \right) e^{-3x}	\nonumber  \\
 									\frac{dy}{dx}  = & \frac{d}{dx} \Big( c_1e^{-x} + c_2e^{-5x} \Big)	\nonumber  \\
+									\tag{11}
 									\frac{dy}{dx}	= & \Big( c_2  - 9 - 3c_2 x \Big) e^{-3x}  	\\	
 								\end{align}
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 							
 								Now we can apply the initial condition \( \left. \displaystyle \frac{dy}{dx} \right|_{0}=-1  \)
 
@@ -461,7 +488,7 @@
 									\Longrightarrow c_2 = 8	
 									\nonumber 
 								\end{align}
-							</div>								
+							</div>
 							<div>
 								Substituting \( c_1 = 3 \) and \( c_2 = 8 \) into <a href="#x1-19r10">(5.2.10)</a> we obtain the particular solution of the IVP <a href="#x1-17r9">(5.2.9)</a>
 
@@ -532,23 +559,35 @@
 			<div class="example" id="x1-233" style="--ex-number: 3">
 				<ol>
 					<li>
-						<a id="x1-25r14"></a> Find the general solution of 
-					\begin {equation} \label {eq:5.2.14} 
-						\frac{d^2y}{dx^2} + 4 \frac{dy}{dx} + 13 y = 0 
-					\end {equation}
-				</li>
+						<a id="x1-25r14"></a> 
+						Find the general solution of 
+						\begin {equation} \label {eq:5.2.14} 
+							\frac{d^2y}{dx^2} + 4 \frac{dy}{dx} + 13 y = 0 
+						\end {equation}
+					</li>
+					<li class="skip"></li>
+					<li class="skip"></li>
+					<li class="skip"></li>
+					<li class="skip"></li>
+					<li class="skip"></li>
+					<li class="skip"></li>
+					<li class="skip"></li>
+					<li class="skip"></li>
+					<li class="skip"></li>
 					<li>
-						<a id="x1-27r15"></a> Solve the initial value problem 
-					\begin {equation} \label {eq:5.2.15} 
-						\frac{d^2y}{dx^2}+4\frac{dy}{dx}+13y=0 
-						\quad y(0)=2
-						\quad \left. \frac{dy}{dx} \right|_{0}=-3 
-					\end {equation}
-				</li>
+						<a id="x1-27r15"></a> 
+						Solve the initial value problem 
+						\begin {equation} \label {eq:5.2.15} 
+							\frac{d^2y}{dx^2}+4\frac{dy}{dx}+13y=0 
+							\quad y(0)=2
+							\quad \left. \frac{dy}{dx} \right|_{0}=-3 
+						\end {equation}
+					</li>
 				</ol>
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
+						<!-- Part 1 -->
 						<li>
 							<div>
 								We start by seeking solutions of the form \( y=e^{rx} \)
@@ -593,7 +632,9 @@
 							</div>
 							<div class="reading-exercise">
 								Differentiate \( y_1 = e^{( -2 + 3i)x} \)  twice
-							</div> 
+							</div>
+						</li>
+						<li class="continued">
 							<div>
 								Differentiating \( y_1 = e^{( -2 + 3i)x} \) we obtain
 								\begin{align*}
@@ -633,6 +674,8 @@
 								Substitute \( y_2 = e^{( -2 - 3i)x} \) and its two derivatives back into <a href="#x1-25r14">(5.2.14)</a> to verify
 							</div> 
 
+						</li>
+						<li class="continued">
 							<div>
 								Going through the same steps with \( y_2 = e^{( -2 - 3i)x} \) yields that both are solutions to <a href="#x1-25r14">(5.2.14)</a> so we might just be tempted to say we found our fundamental set of solutions and have the general solution:
 								\[
@@ -664,6 +707,8 @@
 								Evaluate \(f(x) = e^{3ix}\) and its seven derivatives at \(x=0\)
 							</div> 	
 
+						</li>
+						<li class="continued">
 							<div>	
 								\begin{array}{ccrccr}
 									f(x) &=& e^{3ix} \quad & \quad & \quad f(0) &=& 1 \\
@@ -695,11 +740,12 @@
 									+ {f^{^{VII}}(0)\over 7!} \, x^7
 									+ \cdots
 								\end{align*}
-
 							</div>
 							<div class="reading-exercise">
 								Substitute in the coefficients into the <span class="vocab-repeat">Maclaurin series</span> expansion
 							</div>
+						</li>
+						<li class="continued">
 							<div>	
 								Substituting in the coefficients we calculated from differentiating \(f(x) = e^{3ix}\) and evaluating them at \(x=0\) we obtain the series expansion for \(e^{3ix}\) and grouping the real terms together and imaginary terms together we are able to rewrite our function in terms of sine and cosine
 
@@ -734,6 +780,9 @@
 							<div class="reading-exercise">
 								Write out seven terms of the <span class="vocab-repeat">Maclaurin series</span> expansion of \(\sin 3x\) and \(\cos 3x\)
 							</div>
+						
+						</li>
+						<li class="continued">
 							<div>	
 								Interestingly we have stumbled upon a way to convert exponentials with imaginary arguments into to sines and cosines with real arguments with the identity:
 								\[
@@ -767,6 +816,9 @@
 							<div class="reading-exercise">
 								Simplify \(( -2 + 3i)^2\) by distributing and using \(i^2=-1\)
 							</div> 
+						</li>
+						<li class="continued">
+
 							<div>
 								Substituting \(y_1,\) \(dy_1/dx,\) and \(d^2y_1/dx^2\) back into <a href="#x1-25r14">(5.2.14)</a> 
 								\begin{align*}
@@ -778,7 +830,8 @@
 										{\small \displaystyle\frac{d^2y_1}{dx^2} + 4\frac{dy_1}{dx} + 13y_1} &=& &\Big(& & 0 \cos 3x &+& & \quad\quad\quad\quad 0 \sin 3x &\Big)& e^{-2x} \\
 									\end{array}
 								\end{align*}
-
+							</div>
+							<div>
 								So we find that \( y_1 = \big( \cos 3x + i \sin 3x \big) e^{-2x} \) does satisfy equation  <a href="#x1-25r14">(5.2.14)</a>
 								
 								\begin{align*}
@@ -793,6 +846,9 @@
 							<div class="reading-exercise">
 								Substitute \( y_2 = \big( \cos 3x - i \sin 3x \big) e^{-2x} \) and its two derivatives back into <a href="#x1-25r14">(5.2.14)</a> to verify
 							</div> 
+						
+						</li>
+						<li class="continued">
 
 							<div>
 								Going through the same steps with \( y_2 = \big( \cos 3x - i \sin 3x \big) e^{-2x} \) yields that both are solutions to <a href="#x1-25r14">(5.2.14)</a> so we might just be tempted to say we found our fundamental set of solutions
@@ -821,6 +877,9 @@
 							<div class="reading-exercise">
 								Verify \(y = e^{-2x} \sin 3x\) is a solution to <a href="#x1-25r14">(5.2.14)</a> 
 							</div>
+						</li>
+						<li class="continued">
+
 							<div>	
 								Therefore we have finally obtained a simplified fundamental set of solutions
 								\[
@@ -848,6 +907,8 @@
 							<div class="reading-exercise">
 								Verify \(y = \Big( c_1 \cos 3x + c_2 \sin 3x \Big) e^{-2x}\) is a solution to <a href="#x1-25r14">(5.2.14)</a> 
 							</div>
+						</li>
+						<li class="continued">
 
 						
 							<div>
@@ -871,7 +932,11 @@
 									\frac{dy}{dx}  = & \frac{d}{dx} \Bigg( \big( c_1 \cos 3x + c_2 \sin 3x \big) e^{-2x} \Bigg)	\nonumber  \\
 									\frac{dy}{dx}	= &  \Bigg( \big( -2c_1+3c_2 \big) \cos 3x + \big( -3c_1-2c_2 \big) \sin 3x \Bigg) e^{-2x}	\\	
 								\end{align*}
-							
+							</div>
+						</li>
+						<!-- Part 2-->
+						<li>
+							<div>
 								Now we can apply the initial condition \( \left. \displaystyle \frac{dy}{dx} \right|_{0}=-3  \) to obtain the equation
 
 								\begin{align}  
