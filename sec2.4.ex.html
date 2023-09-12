@@ -38,7 +38,7 @@
 
 		<div class="grouping" id="17ec767a-9b64-472d-8053-a1dde401bdee">
 			<div class="instructions">
-				Solve and construct a direction field and plot some integral curves
+				Solve the Bernoulli equation by first solving the "complementary" equation followed by variation of parameters and construct a direction field and plot some integral curves
 			</div>
 			
 			<div class="exercise">
@@ -106,9 +106,13 @@
 			</div>
 		</div>
 
+		<div class="stepline">
+			Part 2: Bernoulli IVPs
+		</div>  
+
 		<div class="grouping" id="d93a4c19-4637-4c6a-95fa-3d9a161e11de">
 			<div class="instructions">
-				Solve the IVP, find the IOV, and graph the solution
+				Solve the Bernouli equation by first solving the "complementary" equation followed by variation of parameters and then solve the IVP, find the IOV, and graph the solution
 			</div>
 
 			<div class="exercise">
@@ -176,12 +180,12 @@
 		</div>
 
 		<div class="stepline">
-			Part 2: Nonlinear Homogeneous
+			Part 3: Nonlinear Homogeneous
 		</div>  
 
 		<div class="grouping" id="cb477cce-4aca-4c44-8494-83734d5f8261">
 			<div class="instructions">
-				Solve and construct a direction field and plot some integral curves
+				Solve the Nonlinear homogeneous equation by first rewriting the equation as a function of \(y/x\) and then applying the substitution \(y=ux\) and construct a direction field and plot some integral curves
 			</div>
 
 			<div class="exercise">
@@ -297,9 +301,13 @@
 			</div>
 		</div>
 
+		<div class="stepline">
+			Part 4: Nonlinear Homogeneous IVPs
+		</div> 
+
 		<div class="grouping" id="ccd4e5d7-81a6-4508-9e23-964c19289e03">
 			<div class="instructions">
-				Solve the IVP, find the IOV, and graph the solution
+				Solve the Nonlinear homogeneous equation by first rewriting the equation as a function of \(y/x\) and then applying the substitution \(y=ux\) then solve the IVP, find the IOV, and graph the solution
 			</div>
 
 			<div class="exercise">
@@ -358,7 +366,64 @@
 		</div>
 
 		<div class="stepline">
-			Part 3: Challenge
+			Part 5: Riccati Equations
+		</div> 
+		<div class="grouping" id="c8619aea-95ef-4a31-9bd1-2fa9f8cb6440">
+			<div class="instructions">
+				A generalized Riccati equation is of the form
+				\[ \frac{dy}{dx} = P(x)+Q(x)y+R(x)y^2  \]
+				<ol>
+					
+					<li>
+						Identify \(P(x),\) \(Q(x),\) and \(R(x)\) for the Riccati equation and plot a direction field with some integral curves
+					</li>
+					<li>
+						Verify that \(y_1\) is a solution of the Riccati equation and identify it on the direction field
+					</li>
+					<li>
+						Apply the substitution \(y = z + y_1\) to convert the Riccati equation to a Bernoulli equation and idenity \(p(x),\) \(f(x),\) and \(r\)  
+					</li>
+					<li>
+						Solve the Bernoulli equation by first solving the "complementary" equation followed by variation of parameters then substitute back at the end to find \(y\)
+					</li>
+				</ol>
+			</div>
+
+			<div class="removed">
+				<span class="ex-number">56.</span>
+				<div class="ex-body">
+					<a id="x1-7156"></a>
+					\(\displaystyle \frac{dy}{dx} = 1+x - (1+2x)y+xy^2 \quad\)   \(y_1=1\)
+				</div>
+			</div>
+
+			<div class="exercise">
+				<span class="ex-number">57.</span>
+				<div class="ex-body">
+					<a id="x1-7257"></a>
+					\(\displaystyle \frac{dy}{dx} = e^{2x}+(1-2e^x)y+y^2 \quad\)   \(y_1=e^x\)
+				</div>
+			</div>
+
+			<div class="exercise">
+				<span class="ex-number">58.</span>
+				<div class="ex-body">
+					<a id="x1-7358"></a>
+					\(\displaystyle x \frac{dy}{dx} =2-x+(2x-2)y-xy^2 \quad\)   \(y_1=1\)
+				</div>
+			</div>
+
+			<div class="exercise">
+				<span class="ex-number">59.</span>
+				<div class="ex-body">
+					<a id="x1-7459"></a>
+					\(\displaystyle x \frac{dy}{dx} = x^3+(1-2x^2)y+xy^2 \quad\)   \(y_1=x\)
+				</div>
+			</div>
+		</div>
+
+		<div class="stepline">
+			Part 6: Challenge
 		</div> 
 
 		<div class="exercise">
@@ -630,10 +695,9 @@
 			</div>
 		</div>
 
-		<div class="exercise">
+		<div class="removed">
 			<span class="ex-number">55.</span>
 			<div class="ex-body">
-				<a id="x1-7055"></a>
 				A generalized
 				<span class="vocab">Riccati equation</span>
 				is of the form 
@@ -648,44 +712,7 @@
 			</div>
 		</div>
 
-		<div class="grouping" id="c8619aea-95ef-4a31-9bd1-2fa9f8cb6440">
-			<div class="instructions">
-				Given that \(y_1\) is a solution of the given equation, use the method
-				suggested by Exercise <a href="#x1-7055">55</a> to find other solutions.
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">56.</span>
-				<div class="ex-body">
-					<a id="x1-7156"></a>
-					\(\displaystyle \frac{dy}{dx} = 1+x - (1+2x)y+xy^2 \quad\)   \(y_1=1\)
-				</div>
-			</div>
-
-			<div class="exercise">
-				<span class="ex-number">57.</span>
-				<div class="ex-body">
-					<a id="x1-7257"></a>
-					\(\displaystyle \frac{dy}{dx} = e^{2x}+(1-2e^x)y+y^2 \quad\)   \(y_1=e^x\)
-				</div>
-			</div>
-
-			<div class="exercise">
-				<span class="ex-number">58.</span>
-				<div class="ex-body">
-					<a id="x1-7358"></a>
-					\(\displaystyle x \frac{dy}{dx} =2-x+(2x-2)y-xy^2 \quad\)   \(y_1=1\)
-				</div>
-			</div>
-
-			<div class="exercise">
-				<span class="ex-number">59.</span>
-				<div class="ex-body">
-					<a id="x1-7459"></a>
-					\(\displaystyle x \frac{dy}{dx} = x^3+(1-2x^2)y+xy^2 \quad\)   \(y_1=x\)
-				</div>
-			</div>
-		</div>
 
 		<nav class="ex">
 			<a href="sec2.4.book.html">Back</a>
