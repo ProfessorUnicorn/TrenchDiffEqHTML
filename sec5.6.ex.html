@@ -303,28 +303,8 @@
 			</div>
 		</div>
 
-
 		<div class="stepline">
-			Part 4: Challenge
-		</div>
-
-		<div class="exercise" id="x1-3736">
-			<span class="ex-number">36.</span>
-			<div class="ex-body">
-				Suppose \( \displaystyle p_1\) and \( \displaystyle p_2\) are continuous on \( \displaystyle (a,b)\). Let \( \displaystyle y_1\) be a solution of \[ \frac{d^2y}{dx^2} +p_1(x) \frac{dy}{dx} +p_2(x)y=0 {\tag A} \] that has no zeros on \( \displaystyle (a,b)\), and let \( \displaystyle x_0\) be in \( \displaystyle (a,b)\). Use reduction of order to show that \( \displaystyle y_1\) and \[ y_2(x)=y_1(x)\int ^x_{x_0}{1\over y^2_1(t)} \exp \left (-\int ^t_{x_0}p_1(s)\, ds\right )\,dt \] form a fundamental set of solutions of (A) on \( \displaystyle (a,b)\). (<strong>Note</strong>: This exercise is related to Exercise&nbsp;<span class="ptmb8t-">9</span>.) 
-			</div>
-		</div>
-
-		<div class="exercise" id="x1-3837">
-			<span class="ex-number">37.</span>
-			<div class="ex-body">
-				The nonlinear first order equation \[ \frac{dy}{dx} +y^2+p(x)y+q(x)=0 {\tag A} \] is a <span class="vocab">Riccati equation</span>. (See Exercise&nbsp;2.4.&nbsp;<span class="ptmb8t-">55</span>.) Assume that \( \displaystyle p\) and \( \displaystyle q\) are continuous.
-				<ol>
-					<li> Show that \( \displaystyle y\) is a solution of (A) if and only if \( \displaystyle y={ \frac{dz}{dx} /z}\), where \[ \frac{d^2z}{dx^2} +p(x) \frac{dz}{dx} +q(x)z=0. {\tag B} \] </li>
-					<li> Show that the general solution of (A) is \[ y={c_1 \frac{dz_1}{dx} +c_2 \frac{dz_2}{dx} \over c_1z_1+c_2z_2}, {\tag C} \] where \( \displaystyle \{z_1,z_2\}\) is a fundamental set of solutions of (B) and \( \displaystyle c_1\) and \( \displaystyle c_2\) are arbitrary constants. </li>
-					<li> Does the formula (C) imply that the first order equation (A) has a two–parameter family of solutions? Explain your answer. </li>
-				</ol>
-			</div>
+			Part 4: Riccati equations
 		</div>
 
 		<div class="exercise" id="x1-4238">
@@ -358,6 +338,89 @@
 			</div>
 		</div>
 
+
+		<div class="stepline">
+			Part 5: Challenge
+		</div>
+
+		<div class="exercise">
+			<span class="ex-number">55.</span>
+			<div class="ex-body">
+				<a id="x1-7055"></a>
+				A generalized
+				<span class="vocab">Riccati equation</span>
+				is of the form 
+				
+				\[ \frac{dy}{dx} = P(x)+Q(x)y+R(x)y^2 {\tag A} \] 
+				
+				(If \(R\equiv -1\),
+				(A) is a
+				<span class="vocab">Riccati equation</span>.) Let \(y_1\) be a known solution and \(y\) an arbitrary solution of (A).
+				Let \(z=y-y_1\). Show that \(z\) is a solution of a Bernoulli equation with
+				\(n=2\).
+			</div>
+		</div>
+
+		<div class="grouping" id="c8619aea-95ef-4a31-9bd1-2fa9f8cb6440">
+			<div class="instructions">
+				Given that \(y_1\) is a solution of the given equation, use the method
+				suggested by Exercise <a href="#x1-7055">55</a> to find other solutions.
+			</div>
+
+			<div class="exercise">
+				<span class="ex-number">56.</span>
+				<div class="ex-body">
+					<a id="x1-7156"></a>
+					\(\displaystyle \frac{dy}{dx} = 1+x - (1+2x)y+xy^2 \quad\)   \(y_1=1\)
+				</div>
+			</div>
+
+			<div class="exercise">
+				<span class="ex-number">57.</span>
+				<div class="ex-body">
+					<a id="x1-7257"></a>
+					\(\displaystyle \frac{dy}{dx} = e^{2x}+(1-2e^x)y+y^2 \quad\)   \(y_1=e^x\)
+				</div>
+			</div>
+
+			<div class="exercise">
+				<span class="ex-number">58.</span>
+				<div class="ex-body">
+					<a id="x1-7358"></a>
+					\(\displaystyle x \frac{dy}{dx} =2-x+(2x-2)y-xy^2 \quad\)   \(y_1=1\)
+				</div>
+			</div>
+
+			<div class="exercise">
+				<span class="ex-number">59.</span>
+				<div class="ex-body">
+					<a id="x1-7459"></a>
+					\(\displaystyle x \frac{dy}{dx} = x^3+(1-2x^2)y+xy^2 \quad\)   \(y_1=x\)
+				</div>
+			</div>
+		</div>
+
+
+		<div class="exercise" id="x1-3736">
+			<span class="ex-number">36.</span>
+			<div class="ex-body">
+				Suppose \( \displaystyle p_1\) and \( \displaystyle p_2\) are continuous on \( \displaystyle (a,b)\). Let \( \displaystyle y_1\) be a solution of \[ \frac{d^2y}{dx^2} +p_1(x) \frac{dy}{dx} +p_2(x)y=0 {\tag A} \] that has no zeros on \( \displaystyle (a,b)\), and let \( \displaystyle x_0\) be in \( \displaystyle (a,b)\). Use reduction of order to show that \( \displaystyle y_1\) and \[ y_2(x)=y_1(x)\int ^x_{x_0}{1\over y^2_1(t)} \exp \left (-\int ^t_{x_0}p_1(s)\, ds\right )\,dt \] form a fundamental set of solutions of (A) on \( \displaystyle (a,b)\). (<strong>Note</strong>: This exercise is related to Exercise&nbsp;<span class="ptmb8t-">9</span>.) 
+			</div>
+		</div>
+
+		<div class="exercise" id="x1-3837">
+			<span class="ex-number">37.</span>
+			<div class="ex-body">
+				The nonlinear first order equation \[ \frac{dy}{dx} +y^2+p(x)y+q(x)=0 {\tag A} \] is a <span class="vocab">Riccati equation</span>. (See Exercise&nbsp;2.4.&nbsp;<span class="ptmb8t-">55</span>.) Assume that \( \displaystyle p\) and \( \displaystyle q\) are continuous.
+				<ol>
+					<li> Show that \( \displaystyle y\) is a solution of (A) if and only if \( \displaystyle y={ \frac{dz}{dx} /z}\), where \[ \frac{d^2z}{dx^2} +p(x) \frac{dz}{dx} +q(x)z=0. {\tag B} \] </li>
+					<li> Show that the general solution of (A) is \[ y={c_1 \frac{dz_1}{dx} +c_2 \frac{dz_2}{dx} \over c_1z_1+c_2z_2}, {\tag C} \] where \( \displaystyle \{z_1,z_2\}\) is a fundamental set of solutions of (B) and \( \displaystyle c_1\) and \( \displaystyle c_2\) are arbitrary constants. </li>
+					<li> Does the formula (C) imply that the first order equation (A) has a two–parameter family of solutions? Explain your answer. </li>
+				</ol>
+			</div>
+		</div>
+
+	
 		<div class="exercise" id="x1-5040">
 			<span class="ex-number">40.</span>
 			<div class="ex-body">
