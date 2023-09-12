@@ -872,6 +872,140 @@
 			</div>
 		</details>
 
+		<details id="973da0d2-03ad-47f6-9ba2-e87019b50f82-2">
+			<summary>
+				Riccati Equations
+			</summary>
+
+			<div> 
+				A generalized <span class="vocab">Riccati equation</span> is of the form
+				\[ \frac{dy}{dx} = P(x)+Q(x)y+R(x)y^2  \]
+				Some Riccati equations can be transformed into Bernoulli equations using the substitution \(y=z+y_1\) where \(z\) is some function of \(x\) and \(y_1\) is a known particular solution to the Riccati equation.
+			</div>	
+
+			<div class="example" id="ex-number-5" style="--ex-number: 5">
+				<div>
+					\[
+						\frac{dy}{dx} = 1+x - (1+2x)y+xy^2 \quad  y_1=1
+					\]
+				</div>
+				<ol>					
+					<li>
+						Identify \(P(x),\) \(Q(x),\) and \(R(x)\) for the Riccati equation and plot a direction field with some integral curves
+					</li>
+					<li>
+						Verify that \(y_1\) is a solution of the Riccati equation and identify it on the direction field
+					</li>
+					<li>
+						Apply the substitution \(y = z + y_1\) to convert the Riccati equation to a Bernoulli equation and idenity \(p(x),\) \(f(x),\) and \(r\)  
+					</li>
+					<li>
+						Solve the Bernoulli equation by first solving the "complementary" equation followed by variation of parameters then substitute back at the end to find \(y\)
+					</li>
+				</ol>
+
+				<details class="solution">
+					<summary>Solution</summary>
+
+					<ol>					
+						<li>
+							\[
+								\frac{dy}{dx} = \overset{P(x)}{\overbrace{1+x}} - \overset{Q(x)}{\overbrace{(1+2x)}}y + \overset{R(x)}{\overbrace{x}} y^2 
+							\]
+
+							<figure id="fig245">
+								<img id="x1-6r1" height="264" src="EPS/fig02046.png" width="409" />
+								<figcaption>
+									<span class="id">Figure&nbsp;2.4.6</span>
+									<span class="content">
+										A direction field and <span class="vocab">integral curves</span> for \(\displaystyle \frac{dy}{dx} = 1+x - (1+2x)y+xy^2 \)
+									</span>
+								</figcaption>
+							</figure>
+						</li>
+						<li>
+							Substituting in \(y_1=1\) and \(dy_1/dx=0\) into our Riccati equation 
+							\begin{align*}
+								\frac{dy_1}{dx} \overset{?}{=} & 1+x - (1+2x)y_1+xy_1^2 \\
+								0 \overset{?}{=} & 1+x - (1+2x)\cdot(1)+x\cdot(1)^2 \\
+								0 \overset{?}{=} & 1+x - 1 - 2x + x \\
+								0 \overset{?}{=} & \underbrace{1 - 1} + \underbrace{x - 2x + x} \\
+								0 = & \quad 0 \quad + \quad 0 \quad \checkmark
+							\end{align*}
+						</li>
+						<li>
+							Substituting \(y_1=1\) and differentiating \(y = z + y_1\)
+							\begin{align*}
+								y = & \, z + 1 \\ \\
+								\frac{dy}{dx} = & \frac{d}{dx} \Big( z + 1 \Big) = \frac{dz}{dx} \\
+							\end{align*}
+
+							We will now convert the Riccati equation to a Bernoulli equation in \(z\)
+							
+							\begin{align*}
+								\frac{dy}{dx} = & 1+x - (1+2x)y+xy^2 \\
+								\frac{dz}{dx} = & 1+x - (1+2x)\cdot (z+1)+x \cdot (z+1)^2 \\
+								\frac{dz}{dx} = & \Big( 1 -1 \Big) + \Big( x  - 2x + x \Big) + \Big( 2xz - 2xz \Big) - z + xz^2 \\
+								\frac{dz}{dx} = & - z + xz^2 \\
+								\frac{dz}{dx} \, + \, & \, z \, = \,  xz^2 \\
+							\end{align*}
+
+							Now our equation matches the Bernoulli form <a href='#x1-3r2'>2.4.2</a> with \(p(x)=1,\) \(f(x) = x,\) and \(r=2\)
+
+
+							\begin{align*}
+								\frac{dz}{dx} \, + \, & \, z \, = \,  xz^2 \\
+							\end{align*}
+
+						</li>
+						<li>
+							<div>
+								Now we will solve the Bernoulli equation by first solving the "complementary" equation
+
+								\begin{align*}
+									\frac{dz}{dx} \, + \, & \, z \, = \,  0 \\
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Solve \( {dz}/{dx} \, + \, \, z \, = \,  0\) by separating variables
+							</div>
+							<div>
+								Solving we obtain \(z_1 = e^{-x}\) and using variation of parameters we seek solutions of the Bernouli equation in \(z\) of the form \(z = uz_1 = ue^{-x}\)
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(z = ue^{-x}\) using product rule
+							</div>
+							<div>
+								Substituting \(z = ue^{-x}\) and its derivative into the Bernouli equation
+
+								\begin{align*}
+									\frac{dz}{dx} \, + \, & \, z \, = \,  xz^2 \\
+									\overbrace{e^{-x}\frac{du}{dx} - ue^{-x}} \, + \, & \, \overbrace{ ue^{-x} } \, = \,  x \big(ue^{-x}\big)^2 \\
+									e^{-x}\frac{du}{dx} \, = \,   u^2 \, x \, e^{-2x} \\
+									\frac{du}{dx} \, = \,   u^2 \, x \, e^{-x} \\
+									\frac{1}{u^2} \frac{du}{dx} \, = \, x \, e^{-x} \\
+									\int \frac{1}{u^2} du \, = \, \int x \, e^{-x} \, dx \\
+									\int u^{-2} du \, = \, \int (-x) \, e^{-x} \, d(-x) \\
+									\int u^{-2} du \, = \, \int w \, e^{w} \, dw \\
+									-u^{-1} \, = \, w \, e^{w} - \int e^{w} dw \\
+									-\frac{1}{u} \, = \, ( w -1 ) e^{w} + c \\
+									u \, = \, \frac{-1}{( w -1 ) e^{w} + c} \\
+									u \, = \, \frac{-1}{( -x -1 ) e^{-x} + c} \\
+									u \, = \, \frac{1}{(x +1 ) e^{-x} + c} \\
+									ue^{-x} \, = \, \frac{e^{-x}}{(x +1 ) e^{-x} + c} \\
+									z \, = \, \frac{1}{(x +1 ) + ce^{x}} \\
+									z + 1\, = \, \frac{1}{(x +1 ) + ce^{x}} + 1 \\
+									y \, = \, \frac{(x +2 ) + ce^{x}}{(x +1 ) + ce^{x}} \\
+								\end{align*}
+							</div>	
+
+							
+						</li>
+					</ol>
+				</details>
+			</div>
+		</details>		
+
 
 		<!-- Exercises -->
 		<nav class = "ex">
