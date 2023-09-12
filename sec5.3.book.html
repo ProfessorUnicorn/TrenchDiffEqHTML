@@ -94,10 +94,7 @@
 						y=y_p+c_1y_1+c_2y_2 
 					\end {equation} 
 				</div>
-			</div>
-			
-			
-			<div id="2ac32a6c-8c94-4466-966d-3539e7d26036">
+
 				<div class="reading-exercise">
 					Rewrite <a href="#x1-7r4">(5.3.4)</a> with \(y_1\) substituted in for \(y\)
 				</div> 	
@@ -105,6 +102,11 @@
 				<div class="reading-exercise">
 					Rewrite <a href="#x1-7r4">(5.3.4)</a> with \(y_2\) substituted in for \(y\)
 				</div>
+			</div>
+			
+			
+			<div id="2ac32a6c-8c94-4466-966d-3539e7d26036">
+
 				
 				<div>
 					Since \(\{y_1,y_2\}\) is a fundamental set we have
@@ -161,6 +163,8 @@
 					\]
 					So we have shown that \(y_p\) satisfies <a href="#x1-6r3">(5.3.3)</a>
 				</div>
+			</div>
+			<div id="be60f67d-4c25-41fe-afab-0458b8ce5a6f">
 				<div>
 					Now we’ll show that every solution of <a href="#x1-6r3">(5.3.3)</a> has the form <a href="#x1-8r5">(5.3.5)</a> for some choice of the constants \(c_1\) and \(c_2\). Suppose \(y\) is a solution of <a href="#x1-6r3">(5.3.3)</a>. We’ll show that \(y-y_p\) is a solution of <a href="#x1-7r4">(5.3.4)</a>, and therefore of the form \(y-y_p=c_1y_1+c_2y_2\), which implies <a href="#x1-8r5">(5.3.5)</a>. 
 				</div>
@@ -209,34 +213,10 @@
 					\]
 					So we have shown that \( y-y_p = c_1 y_1 + c_2 y_2\) satisfies <a href="#x1-7r4">(5.3.4)</a>
 				</div>
+
 				<div>
-					 
+					We say that <a href="#x1-8r5">(5.3.5)</a> is the <span class="vocab">general solution</span> of <a href="#x1-6r3">(5.3.3)</a> on \((a,b)\) 
 				</div>
-				<div>
-					 
-				</div>
-
-				
-				
-			</div>
-
-			<div class="indent" id="cc3d66f7-19f2-4398-88f0-73652d30dd15">
-				
-			</div>
-			<div class="indent" id="686f0f5b-6297-4081-a936-2446366ff63a">
-				
-			</div>
-			<div class="eqnarray" id="e649588c-3601-4c36-976a-d76cf62d5f65">
-				
-			</div>
-			<div class="indent" id="b7e1ed99-a449-434f-82d4-4a856ea7b0af">
-				
-			</div>
-
-			
-
-			<div class="indent" id="be60f67d-4c25-41fe-afab-0458b8ce5a6f">
-				We say that <a href="#x1-8r5">(5.3.5)</a> is the <span class="vocab">general solution</span> of <a href="#x1-6r3">(5.3.3)</a> on \((a,b)\) 
 			</div>
 
 			<br>
@@ -466,6 +446,7 @@
 						<li>
 							Find a particular solution
 						</li>
+						<li class="skip"></li>
 						<li>
 							Find the general solution
 						</li>
@@ -549,7 +530,9 @@
 							</div>	
 							<div class="reading-exercise">
 								Distribute the \( - 2\Big( 2Ax + B \Big) \) and collect all the like terms
-							</div> 
+							</div>
+						</li>
+						<li class="continued">
 
 							<div>	
 								Expanding out all the terms, and rearranging them we obtain:
@@ -724,13 +707,13 @@
 								\]
 							</div>	
 							<div>
-								Although we don't have methods to solve this equation yet since we have only solved constant coefficient equations so far, we did already verify the solutions to this equation in Example <a href="sec5.1.book.html#x1-233" target=_blank>5.1.3<a> so we already have a fundamental set of solutions:
+								Although we don't have methods to solve this equation yet since we have only solved constant coefficient equations so far, we did already verify the solutions to this equation in Example <a href="sec5.1.book.html#x1-233" target=_blank>5.1.3</a> so we already have a fundamental set of solutions:
 								\[
 									\{y_1,y_2\} = \left\{x^2, \frac{1}{x^2} \right\}
 								\]
 							</div>	
 
-						</li>	
+						</li>
 						<li>
 							<div>
 								Now we will try to find a particular solution for <a href="#x1-25r13">(5.3.13)</a> by guessing a solution based on the forcing function
@@ -1085,6 +1068,7 @@
 					<li>
 						Find a particular solution
 					</li>
+					<li class="skip"></li>
 					<li>
 						Find the general solution
 					</li>
@@ -1154,13 +1138,16 @@
 									\big( 18A \big) e^{3x} = & 6e^{3x} \\
 									A \, e^{3x} = & \frac{1}{3}e^{3x} \\
 								\end{align*}
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 
 								Again equating the coefficients we obtain \( A = \frac{1}{3} \) and substituting the value in the arbitrary exponential function \( y = Ae^{3x} \) to obtain the particular solution 
 
 								\[
 									y = \frac{1}{3}e^{3x}
 								\]
-
 
 							</div>	
 							<div class="reading-exercise">
@@ -1202,74 +1189,82 @@
 				<details class="solution">
 					<summary>Solution</summary>
 
-					<div>
-						Notice that the forcing function consists of sines and cosines
-					
-						\[
-							\frac{d^2y}{dx^2} + \frac{dy}{dx} = 
-								\underset{f(x)}{\underbrace{-8 \cos 2x + 6 \sin 2x}} 
-						\]
+					<ol>
+						<li>
+							<div>
+								Notice that the forcing function consists of sines and cosines
+							
+								\[
+									\frac{d^2y}{dx^2} + \frac{dy}{dx} = 
+										\underset{f(x)}{\underbrace{-8 \cos 2x + 6 \sin 2x}} 
+								\]
 
-						Thus we will guess a linear combination of of sine and cosine of the same argument as a particular solution:
-						\[
-							y = A \cos 2x + B \sin 2x
-						\]
-						Differentiating:
-						\[
-							\frac{dy}{dx} = -2A \sin 2x + 2B \cos 2x
-						\]
-						Differentiating again:
-						\[
-							\frac{d^2y}{dx^2} = -4A \cos 2x - 4B \sin 2x
-						\]
-					</div>	
+								Thus we will guess a linear combination of of sine and cosine of the same argument as a particular solution:
+								\[
+									y = A \cos 2x + B \sin 2x
+								\]
+								Differentiating:
+								\[
+									\frac{dy}{dx} = -2A \sin 2x + 2B \cos 2x
+								\]
+								Differentiating again:
+								\[
+									\frac{d^2y}{dx^2} = -4A \cos 2x - 4B \sin 2x
+								\]
+							</div>	
 
-					<div>
-						Substituting back into the equation:
-						\begin{array}{rlrr}
-								\displaystyle \frac{d^2y}{dx^2} & = & -4A \, \cos 2x & -4B \, \sin 2x \\
-								+ \quad\quad
-								\displaystyle\frac{dy}{dx} 	  & = & 2B \, \cos 2x & -2A \, \sin 2x \\
-								\hline
-								\underset{f(x)}{
-								\underbrace{\displaystyle\frac{d^2y}{dx^2} + \frac{dy}{dx}}} 
-												  & = & \underset{-8}{\underbrace{(-4A+2B)}} \, \cos 2x & +  \underset{6}{\underbrace{(-2A-4B)}} \, \sin 2x \\							  
-						\end{array}
-
-						Now equating the result with the forcing function \( f(x) = -8 \cos 2x + 6 \sin 2x\) we obtain a system of equations:
-							\begin{align*}
-								\left\{
-								\begin{array}{rlr}
-									-4A+2B	&=& -8 \\	
-									-2A-4B	&=& 6 \\				  
+							<div>
+								Substituting back into the equation:
+								\begin{array}{rlrr}
+										\displaystyle \frac{d^2y}{dx^2} & = & -4A \, \cos 2x & -4B \, \sin 2x \\
+										+ \quad\quad
+										\displaystyle\frac{dy}{dx} 	  & = & 2B \, \cos 2x & -2A \, \sin 2x \\
+										\hline
+										\underset{f(x)}{
+										\underbrace{\displaystyle\frac{d^2y}{dx^2} + \frac{dy}{dx}}} 
+														& = & \underset{-8}{\underbrace{(-4A+2B)}} \, \cos 2x & +  \underset{6}{\underbrace{(-2A-4B)}} \, \sin 2x \\							  
 								\end{array}
-								\right.
-							\end{align*}	
+							</div>
 
-						Which we can solve by multiplying the first equation by two and then adding the equations together to obtain \(A\)
-						\begin{align*}
-								\begin{array}{rlr}
-									-8A+4B	&=& -16 \\	
-									+ \quad\quad
-									-2A-4B	&=& 6 \\	
-									\hline	
-									-10A	&=& -10 \\	
-									A	&=& 1 \\		  
-								\end{array}
-							\end{align*}
+						</li>
+						<li>
+							<div>
+								Now equating the result with the forcing function \( f(x) = -8 \cos 2x + 6 \sin 2x\) we obtain a system of equations:
+									\begin{align*}
+										\left\{
+										\begin{array}{rlr}
+											-4A+2B	&=& -8 \\	
+											-2A-4B	&=& 6 \\				  
+										\end{array}
+										\right.
+									\end{align*}	
 
-						And finally substituting \(A=1\) back in to either equation we can obtain \(B=-2\) so we have the particular solution:
-						\[
-							y = \cos 2x -2 \sin 2x
-						\]
-					</div>
-					<div class="reading-exercise">
-						Verify \( y = \cos 2x -2 \sin 2x \) is a solution of \(\frac{d^2y}{dx^2} + \frac{dy}{dx} = -8 \cos 2x + 6 \sin 2x\) 
-					</div> 	
+								Which we can solve by multiplying the first equation by two and then adding the equations together to obtain \(A\)
+								\begin{align*}
+										\begin{array}{rlr}
+											-8A+4B	&=& -16 \\	
+											+ \quad\quad
+											-2A-4B	&=& 6 \\	
+											\hline	
+											-10A	&=& -10 \\	
+											A	&=& 1 \\		  
+										\end{array}
+									\end{align*}
+
+								And finally substituting \(A=1\) back in to either equation we can obtain \(B=-2\) so we have the particular solution:
+								\[
+									y = \cos 2x -2 \sin 2x
+								\]
+							</div>
+							<div class="reading-exercise">
+								Verify \( y = \cos 2x -2 \sin 2x \) is a solution of \(\frac{d^2y}{dx^2} + \frac{dy}{dx} = -8 \cos 2x + 6 \sin 2x\) 
+							</div>
+						</li>
+					</ol>
 
 				</details>
 			</div>
-		</details>			
+		</details>
 
 		<nav class="ex">
 			<a href="sec5.3.ex.html">5.3 Exercises</a>

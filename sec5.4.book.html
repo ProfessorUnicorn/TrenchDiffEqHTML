@@ -197,6 +197,7 @@
 						Find a particular solution
 					</li>
 					<li class="skip"></li>
+					<li class="skip"></li>
 					<li>
 						Find the general solution
 					</li>
@@ -240,7 +241,9 @@
 
 							<div class="reading-exercise">
 								Differentiate \( y= ue^{4x} \) twice
-							</div> 
+							</div>
+						</li>
+						<li class="continued">
 							<div>
 								Differentiating we obtain:
 								\begin{align*}
@@ -248,9 +251,7 @@
 									\frac{d^2y}{dx^2} =& \frac{d^2u}{dx^2}e^{4x} + 8\frac{du}{dx}e^{4x} + 16ue^{4x} \\
 								\end{align*}
 
-							</div>	
-						</li>
-						<li class="continued">
+							</div>
 							<div>	
 								Substituting into the nonhomogeneous equation <a href="#x1-7r4">(5.4.4)</a> 
 
@@ -289,9 +290,11 @@
 								Now to solve this equation we will again guess! Since the forcing function \(f(x)=5\) is just a constant we might think to guess a constant like we did in Example <a href="sec5.3.book.html#x1-101" target=_blank>5.3.1</a> but that equation had the function \(y\) in it whereas this one only has derivatives, so we need to guess the antiderivative of a constant \(\int c dx = cx \) which is just a linear function so a simple linear function is the best guess, so we will try \(u=Ax\) 
 							</div>	
 							<div class="reading-exercise">
-								Differentiating \( u=Ax\) twice
+								Differentiate \( u=Ax\) twice
 							</div> 
-							<div>		
+						</li>
+						<li class="continued">
+							<div>
 								Differentiating we obtain 
 								\begin{align*}
 									\frac{du}{dx} = A 
@@ -348,10 +351,11 @@
 					<li>
 						Find a particular solution
 					</li>
+					<li class="skip"></li>
 					<li>
 						Find the general solution
 					</li>
-				</ol>					
+				</ol>
 
 
 				<details class="solution">
@@ -442,8 +446,13 @@
 									2e^{4x} 
 										&=& \displaystyle\frac{d^2u}{dx^2}e^{4x} 
 											& & 
-											\\				
+											\\
 								\end{array}
+							</div>
+
+						</li>
+						<li class="continued">
+							<div>
 								Cancelling out the \( e^{4x}\) we obtain a new equation
 
 								
@@ -651,6 +660,7 @@
 						Find a particular solution
 					</li>
 					<li class="skip"></li>
+					<li class="skip"></li>
 					<li>
 						Find the general solution
 					</li>
@@ -740,6 +750,11 @@
 											+ \,3\,\displaystyle\frac{du}{dx}e^{3x}& 
 											+ \,2\, ue^{3x}& \\				
 								\end{array}
+							</div>
+
+						</li>
+						<li class="continued">
+							<div>
 								Cancelling out the \( e^{3x}\) we obtain a new equation
 
 								<a id="x1-19r11"></a>
@@ -748,8 +763,6 @@
 										= & \, x^2+2x-1
 								\end{align}
 							</div>
-						</li>
-						<li class="continued">
 							<div>
 								Now to solve this equation we will again guess! Since the forcing function \(f(x)=x^2+2x-1\) is a quadratic polynomial we will guess an arbitrary quadratic polynomial \( u = Ax^2 + Bx + C \) like we did in Example <a href="sec5.3.book.html#x1-172" target=_blank>5.3.2</a>  
 							</div>
@@ -797,6 +810,8 @@
 								Solve the system for \(A,B,\) and \(C\)
 							</div> 
 
+						</li>
+						<li class="continued">
 							<div>	
 								Substituting \(2A=1\) into the first two equations we obtain 
 							</div>
@@ -873,6 +888,9 @@
 					<li>
 						Find a particular solution
 					</li>
+					<li class="skip"></li>
+					<li class="skip"></li>
+					<li class="skip"></li>
 					<li class="skip"></li>
 					<li>
 						Find the general solution
@@ -963,6 +981,10 @@
 											+ \,2\,\displaystyle\frac{du}{dx}e^{3x}& 
 											& \\				
 								\end{array}
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 								Cancelling out the \( e^{3x}\) we obtain a new equation
 
 								<a id="x1-19r13"></a>
@@ -976,9 +998,7 @@
 
 							<div class="reading-exercise">
 								Differentiate \( u = Ax^2 + Bx + C\) twice
-							</div> 
-						</li>
-						<li class="continued">
+							</div>
 
 							<div>	
 								After differentiating we obtain \( du/dx = 2Ax + B\) and \(d^2u/dx^2 = 2A \) which we substitute into the nonhomogeneous equation in \(u\) <a href="#x1-19r13">(5.4.13)</a> 
@@ -1000,7 +1020,9 @@
 									\big( 4A \big)x
 									+ \big( 2A + 2B \big)  = & 12x^2+8x+6 \\
 								\end{align*}
-							</div>	
+							</div>
+						</li>
+						<li class="continued">
 
 							<div>	
 								Normally at this point we would simply equate the coefficients to obtain a system of equations but since there are no \(x^2\) terms present on the left side, then there is no choice for \(A\) and \(B\) that would create a polynomial equal to the right side. This is actually due to the fact that our guess original was \(y=ue^{3x}\) while \(e^{3x}\) was already a solution to the complementary equation. Although at first it appeared to work out, once we got the  to the \(u\) equation that is where re ran into trouble.
@@ -1023,7 +1045,8 @@
 							<div class="reading-exercise">
 								Distribute and collect all the like terms
 							</div> 
-
+						</li>
+						<li class="continued">
 							<div>	
 								Expanding out all the terms, and rearranging them we obtain:
 								
@@ -1052,6 +1075,8 @@
 							<div class="reading-exercise">
 								Solve the system for \(A,B,\) and \(C\)
 							</div> 
+						</li>
+						<li class="continued">
 
 							<div>	
 								The last equation yields \(A=2\) and substituting that into the second equation we obtain 
@@ -1139,6 +1164,7 @@
 					<li>
 						Find a particular solution
 					</li>
+					<li class="skip"></li>
 					<li>
 						Find the general solution
 					</li>
@@ -1230,8 +1256,12 @@
 										&=& 4 \displaystyle\frac{d^2u}{dx^2}e^{-\frac{1}{2}x}
 											\quad\quad\quad\quad\quad \, \, 
 											&  
-											&  \\				
+											&  \\
 								\end{array}
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 								Cancelling out the \( 4e^{-\frac{1}{2}x}\) we obtain a new equation
 
 								<a id="x1-19r13"></a>
