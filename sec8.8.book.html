@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang='en-US' xml:lang='en-US'>
+	<head>
+		<title>8.8 A Brief Table of Laplace Transforms</title>
+		<meta charset="utf-8" />
+		<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator" />
+		<meta content="width=device-width,initial-scale=1" name="viewport" />
+		<link rel="stylesheet" type="text/css" href="combined.css" />
+		<script type="text/javascript" src="niceties.js"></script>
+		<script>
+			window.MathJax = {
+				tex: {
+					packages: { "[+]": ["tagformat"] },
+					tags: "ams",
+					tagformat: { tag: (tag) => "(8.8." + tag + ")" },
+				},
+			};
+		</script>
+
+		<script async="async" id="MathJax-script" src="mathjax-3-es5-tex-chtml-full.js" type="text/javascript"></script>
+		<style type="text/css">
+			:root {
+				--section-number: "8.8";
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="section-title">
+			8.8 A Brief Table of Laplace Transforms
+		</div>
+		
+		<table class='tabular center sticky-header'>
+			<thead>
+				<tr>
+					<th scope='col' style="border-bottom: 2px solid black">\(f(t)\)</th>
+					<th scope='col' style=" border-bottom: 2px solid black">\(F(s)\)</th>
+					<td>&nbsp;</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td> 1 </td>
+					<td> \(\displaystyle {{1\over s}}\) </td>
+					<td> \((s &gt; 0)\)</td>
+				</tr>
+				<tr>
+					<td> \(t^n\) </td>
+					<td> \(\displaystyle {{n!\over s^{n+1}}}\) <br> <br> (\(n = \mbox { integer } &gt; 0\)) </td>
+					<td> \((s &gt; 0)\)</td>
+				</tr>
+				<tr>
+					<td> \(t^p,\; p &gt; -1\) </td>
+					<td> \(\displaystyle {{\Gamma (p+1) \over s^{(p+1)}}}\) </td>
+					<td> \((s&gt;0)\) </td>
+				</tr>
+				<tr>
+					<td> \(e^{at}\) </td>
+					<td> \(\displaystyle {{1 \over s-a}}\) </td>
+					<td> \((s &gt; a)\)</td>
+				</tr>
+				<tr>
+					<td> \(t^ne^{at}\) </td>
+					<td> \(\displaystyle {{n! \over (s-a)^{n+1}}}\) <br> <br>  (\(n= \mbox { integer } &gt; 0\))</td>
+					<td> \((s &gt; 0)\) </td>
+				</tr>
+				<tr>
+					<td> \(\cos \omega t\)
+					</td>
+					<td> \(\displaystyle {{s \over s^2+\omega ^2}}\) </td>
+					<td> \((s &gt; 0)\) </td>
+				</tr>
+				<tr>
+					<td> \(\sin \omega t\)
+					</td>
+					<td> \(\displaystyle {{\omega \over s^2+\omega ^2}}\) </td>
+					<td> \((s &gt; 0)\) </td>
+				</tr>
+				<tr>
+					<td> \(e^{\lambda t} \cos \omega t\) </td>
+					<td> \(\displaystyle {{s - \lambda \over (s-\lambda )^2+\omega ^2}}\) </td>
+					<td> \((s &gt; \lambda )\) </td>
+				</tr>
+				<tr>
+					<td> \(e^{\lambda t} \sin \omega t\) </td>
+					<td> \(\displaystyle {{\omega \over (s-\lambda )^2+\omega ^2}}\) </td>
+					<td> \((s &gt; \lambda )\) </td>
+				</tr>
+				<tr>
+					<td> \(\cosh bt\) </td>
+					<td> \(\displaystyle {{s \over s^2-b^2}}\) </td>
+					<td> \((s &gt; |b|)\) </td>
+				</tr>
+				<tr>
+					<td> \(\sinh bt\) </td>
+					<td> \(\displaystyle {{b \over s^2-b^2}}\) </td>
+					<td> \((s &gt; |b|)\)
+					</td>
+				</tr>
+				<tr>
+					<td> \(t \cos \omega t\)
+					</td>
+					<td> \(\displaystyle {{s^2-\omega ^2 \over (s^2+\omega ^2)^2}}\) </td>
+					<td> \((s&gt;0)\) </td>
+				</tr>
+	
+				<tr>
+					<td> \(t \sin \omega t\) </td>
+					<td> \(\displaystyle {{2\omega s \over (s^2+\omega ^2)^2}}\) </td>
+					<td> \((s&gt;0)\) </td>
+				</tr>
+				<tr>
+					<td> \(\sin \omega t -\omega t\cos \omega t \) </td>
+					<td> \(\displaystyle {{2\omega ^3\over (s^2+\omega ^2)^2}}\) </td>
+					<td> \((s&gt;0)\)</td>
+				</tr>
+				<tr>
+					<td> \(\omega t - \sin \omega t \) </td>
+					<td> \(\displaystyle {{\omega ^3 \over s^2(s^2+\omega ^2)^2}}\) </td>
+					<td> \((s&gt;0)\) </td>
+				</tr>
+				<tr>
+					<td> \(\displaystyle {{1 \over t} \sin \omega t }\) </td>
+					<td> \(\displaystyle {\arctan \left ({\omega \over s}\right )}\) </td>
+					<td> \((s&gt;0)\)</td>
+				</tr>
+				<tr>
+					<td> \(e^{at}f(t)\) </td>
+					<td> \(F(s-a)\) </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td> \(t^kf(t)\) </td>
+					<td> \(\displaystyle {{(-1)^kF^{(k)}(s)}}\) </td>
+					<td></td>
+				</tr>
+				<tr>
+					<td> \(f(\omega t)\)
+					</td>
+					<td> \(\displaystyle {{1\over \omega } F\left ({s \over \omega }\right ), \quad \omega &gt; 0}\) </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td> \(u(t-\tau )\) </td>
+					<td> \(\displaystyle {{e^{-\tau s} \over s}}\) </td>
+					<td> \((s&gt;0)\) </td>
+				</tr>
+				<tr>
+					<td> \(u(t-\tau )f(t-\tau )\, (\tau &gt; 0)\) </td>
+					<td> \(e^{-\tau s}F(s)\) </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td> \(\displaystyle {\int ^t_o f(\tau )g(t-\tau )\, d\tau }\) </td>
+					<td> \(F(s) \cdot G(s)\) </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td> \(\delta (t-a)\) </td>
+					<td> \(e^{-as}\) </td>
+					<td> \((s&gt;0)\) </td>
+				</tr>
+			</tbody>
+		</table>
+
+		
+		<nav class="book">
+			<a href="sec8.3.book.html">Back (8.3)</a>
+
+			<a href="sec8.0.html">Chapter 8</a>
+
+			<a href="sec9.0.html">Next (Chapter 9)</a>
+		</nav>
+	</body>
+
+</html>

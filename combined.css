@@ -49,6 +49,11 @@ td.center, table.center td { text-align: center; margin: auto; }
 td p:first-child{ margin-top:0em; }
 td p:last-child{ margin-bottom:0em; }
 
+table.sticky-header, table.tabular.sticky-header { position: relative; border-collapse: separate; }
+table.sticky-header thead tr { position: sticky; top: 0; background: white; z-index: 100; }
+table.sticky-header thead tr th, table.sticky-header thead tr td { border-bottom: 2px solid black }
+table.sticky-header tbody tr th, table.sticky-header tbody tr td { border-bottom: 1px solid black }
+
 .vocab { font-weight: bold; }
 a { text-decoration: none; }
 .removed { display: none; }
