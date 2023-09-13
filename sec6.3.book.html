@@ -39,7 +39,7 @@
 				\]
 			</div>
 
-			<div class="indent" id="c4d0ac58-cceb-46ec-aea8-75cc3efc292f">
+			<div id="c4d0ac58-cceb-46ec-aea8-75cc3efc292f">
 				Nothing happens while the switch is open (dashed line in Figure <a href="#x1-2r1">6.3.1</a>). When the switch is closed (solid line in Figure <a href="#x1-2r1">6.3.1</a>) we say that the <span class="vocab">circuit is closed</span>. Differences in electrical potential in a closed circuit cause current to flow in the circuit. The battery or generator in Figure <a href="#x1-2r1">6.3.1</a> creates a difference in electrical potential \(E=E(t)\) between its two terminals, which we’ve marked arbitrarily as positive and negative. (We could just as well interchange the markings.) We’ll say that \(E(t)&gt;0\) if the potential at the positive terminal is greater than the potential at the negative terminal, \(E(t)&lt;0\) if the potential at the positive terminal is less than the potential at the negative terminal, and \(E(t)=0\) if the potential is the same at the two terminals. We call \(E\) the <span class="vocab">impressed voltage</span>.
 			</div>
 
@@ -51,11 +51,11 @@
 				</figcaption>
 			</figure>
 
-			<div class="indent" id="81b52a82-ee59-4c6a-801c-89afb0e879cf">
+			<div id="81b52a82-ee59-4c6a-801c-89afb0e879cf">
 				At any time \(t\), the same current flows in all points of the circuit. We denote current by \(I=I(t)\). We say that \(I(t)&gt;0\) if the direction of flow is around the circuit from the positive terminal of the battery or generator back to the negative terminal, as indicated by the arrows in Figure <a href="#x1-2r1">6.3.1</a> \(I(t)&lt;0\) if the flow is in the opposite direction, and \(I(t)=0\) if no current flows at time \(t\).
 			</div>
 
-			<div class="indent" id="5de77b21-a652-4bb5-a4b9-c8332bf29535">
+			<div id="5de77b21-a652-4bb5-a4b9-c8332bf29535">
 				Differences in potential occur at the resistor, induction coil, and capacitor in Figure&nbsp;<a href="#x1-2r1">6.3.1</a>. Note that the two sides of each of these components are also identified as positive and negative. The <span class="vocab">voltage drop across</span> each component is defined to be the potential on the positive side of the component minus the potential on the negative side. This terminology is somewhat misleading, since “drop” suggests a decrease even though changes in potential are signed quantities and therefore may be increases. Nevertheless, we’ll go along with tradition and call them voltage drops. The voltage drop across the resistor in Figure&nbsp;<a href="#x1-2r1">6.3.1</a> is given by 
 				
 				<a id="x1-3r1"></a>
@@ -73,7 +73,7 @@
 				where \(L\) is a positive constant, the <span class="vocab">inductance</span> of the coil.
 			</div>
 
-			<div class="indent" id="3ecd077d-d825-43bb-812f-23473060a288">
+			<div id="3ecd077d-d825-43bb-812f-23473060a288">
 				A capacitor stores electrical charge \(Q=Q(t)\), which is related to the current in the circuit by the equation 
 				
 				<a id="x1-5r3"></a>
@@ -86,15 +86,19 @@
 				\end {equation} <a id="x1-6r4"></a> where \(C\) is a positive constant, the <span class="vocab">capacitance</span> of the capacitor. 
 			</div>
 
-			<div class="indent" id="80cb0f1c-8509-4eed-9b87-556c75a5aa67">
+			<div id="80cb0f1c-8509-4eed-9b87-556c75a5aa67">
 				Table <a href="#x1-7r1">6.3.1</a> names the units for the quantities that we’ve discussed. The units are defined so that
 			</div>
 
 			<div class="eqnarray" id="0aa47358-8a9a-48b5-a936-034d6b97ebc2">
 				\begin {eqnarray*}
-					1\mbox {\,volt}&amp;=&amp;1\mbox {\,ampere}\cdot 1\mbox {\,ohm}\\ &amp;=&amp;1\mbox {\,henry}\cdot 1\,\mbox {ampere}/\mbox {second}\\ &amp;=&amp;1\mbox {\,coulomb}/\mbox {\,farad}\\ \\ 1\mbox {\,ampere}&amp;=&amp;1\mbox {\,coulomb}/\mbox {second} 
+					1\, \mbox {volt}&amp;=&amp;1\, \mbox {ampere} \cdot 1\, \mbox {ohm}\\
+					&amp;=&amp;1\, \mbox {henry}\cdot 1\, \mbox {ampere} / \mbox {second}\\
+					&amp;=&amp;1\, \mbox {coulomb} / \mbox {farad}\\ \\
+					1\, \mbox {ampere}&amp;=&amp;1\, \mbox {coulomb}/\mbox {second} 
 				\end {eqnarray*} 
 			</div>
+
 			<table class="tabular" id="x1-7r1">
 				<caption>Table 6.3.1. Electrical Units</caption>
 				<thead>
@@ -137,7 +141,8 @@
 					</tr>
 				</tbody>
 			</table>
-			<div class="indent" id="e0b9155b-2452-4eb7-a6e4-1da8317d161b">
+
+			<div id="e0b9155b-2452-4eb7-a6e4-1da8317d161b">
 				According to <span class="vocab">Kirchoff’s law</span>, the sum of the voltage drops in a closed \(RLC\) circuit equals the impressed voltage. Therefore, from <a href="#x1-3r1">(6.3.1)</a>, <a href="#x1-4r2">(6.3.2)</a>, and <a href="#x1-6r4">(6.3.4)</a>, \begin {equation} \label {eq:6.3.5} L\dot{I}+RI+{1\over C}Q=E(t)\end {equation} <a id="x1-8r5"></a> This equation contains two unknowns, the current \(I\) in the circuit and the charge \(Q\) on the capacitor. However, <a href="#x1-5r3">(6.3.3)</a> implies that \(\dot{Q}=I\), so <a href="#x1-8r5">(6.3.5)</a> can be converted into the second order equation 
 
 				<a id="x1-9r6"></a>
@@ -147,7 +152,8 @@
 
 				in \(Q\). To find the current flowing in an \(RLC\) circuit, we solve <a href="#x1-9r6">(6.3.6)</a> for \(Q\) and then differentiate the solution to obtain \(I\). 
 			</div>
-			<div class="indent" id="c8726354-9617-4aac-b7f2-07db5e3e05a3">
+
+			<div id="c8726354-9617-4aac-b7f2-07db5e3e05a3">
 				In Sections&nbsp;6.1 and 6.2 we encountered the equation 
 				<a id="x1-10r7"></a>
 				\begin {equation}
@@ -155,6 +161,7 @@
 				\end {equation} 
 				in connection with spring-mass systems. Except for notation this equation is the same as <a href="#x1-9r6">(6.3.6)</a>. The correspondence between electrical and mechanical quantities connected with <a href="#x1-9r6">(6.3.6)</a> and <a href="#x1-10r7">(6.3.7)</a> is shown in Table <a href="#x1-11r2">6.3.2</a>.
 			</div>
+
 			<table class="tabular" id="x1-11r2">
 				<caption>Table 6.3.2. Electrical and Mechanical Units </caption>
 				<colgroup>
@@ -216,7 +223,7 @@
 				</tbody>
 			</table>
 
-			<div class="indent" id="7b5ca37b-13a8-4648-8ab5-6b18b5c38035">
+			<div id="7b5ca37b-13a8-4648-8ab5-6b18b5c38035">
 				The equivalence between <a href="#x1-9r6">(6.3.6)</a> and <a href="#x1-10r7">(6.3.7)</a> is an example of how mathematics unifies fundamental similarities in diverse physical phenomena. Since we’ve already studied the properties of solutions of <a href="#x1-10r7">(6.3.7)</a> in Sections&nbsp;6.1 and 6.2, we can obtain results concerning solutions of <a href="#x1-9r6">(6.3.6)</a> by simply changing notation, according to Table <a href="#x1-7r1">6.3.1</a>.
 			</div>
 		</details>
@@ -271,13 +278,13 @@
 				</div>
 				
 			</div>
-			<div class="indent" id="b3d97335-f6a2-4417-9768-5f27816d16d2">
+			<div id="b3d97335-f6a2-4417-9768-5f27816d16d2">
 				Actual \(RLC\) circuits are usually underdamped, so the case we’ve just considered is the most important. However, for completeness we’ll consider the other two possibilities. 
 			</div>
 			<br>
 			<br>
 			<br>
-			<div class="indent" id="e09d391d-f266-49e4-afdd-ab69dd08daeb">
+			<div id="e09d391d-f266-49e4-afdd-ab69dd08daeb">
 				<strong>Case 1.</strong> The oscillation is <span class="vocab">overdamped</span> if \(R&gt;\sqrt {4L/C}\). In this case, the zeros \(r_1\) and \(r_2\) of the characteristic polynomial are real, with \(r_1&lt;r_2&lt;0\), and the general solution of <a href="#x1-12r8">(6.3.8)</a> is 
 				<a id="x1-15r11"></a>
 				\begin {equation} 
@@ -287,18 +294,15 @@
 			<br>
 			<br>
 			<br>
-
-
 		
-		
-			<div class="indent" id="b81a160c-9a79-4b8d-8a4a-d289ae39b195">
+			<div id="b81a160c-9a79-4b8d-8a4a-d289ae39b195">
 				<strong>Case 2.</strong> The oscillation is <span class="vocab">critically damped</span> if \(R=\sqrt {4L/C}\). In this case, \(r_1=r_2=-R/2L\) and the general solution of <a href="#x1-12r8">(6.3.8)</a> is 
 				<a id="x1-16r12"></a>
 				\begin {equation} 
 					\label {eq:6.3.12} Q=e^{-Rt/2L}(c_1+c_2t) 
 				\end {equation} 
 			</div>
-			<div class="indent" id="b69fb07f-84d5-4201-ad45-a46979a91c1e">
+			<div id="b69fb07f-84d5-4201-ad45-a46979a91c1e">
 				If \(R\ne 0\), the exponentials in <a href="#x1-14r10">(6.3.10)</a>, <a href="#x1-15r11">(6.3.11)</a>, and <a href="#x1-16r12">(6.3.12)</a> are negative, so the solution of any homogeneous initial value problem 
 				
 				\[ 
@@ -313,7 +317,7 @@
 			<br>
 			<br>
 
-			<div class="indent" id="510bb866-3422-4847-83cd-0950e93c7170">
+			<div id="510bb866-3422-4847-83cd-0950e93c7170">
 				<strong>Case 3.</strong> The oscillation is <span class="vocab">underdamped</span> if \(R&lt;\sqrt {4L/C}\). In this case, \(r_1\) and \(r_2\) in <a href="#x1-13r9">(6.3.9)</a> are complex conjugates, which we write as \[ r_1=-{R\over 2L}+i\omega _1\quad \mbox{ and } \quad r_2=-{R\over 2L}-i\omega _1\] where \[ \omega _1={\sqrt {4L/C-R^2}\over 2L}\] The general solution of <a href="#x1-12r8">(6.3.8)</a> is \[ Q=e^{-Rt/2L}(c_1\cos \omega _1 t+c_2\sin \omega _1 t)\] which we can write as 
 
 
@@ -368,7 +372,7 @@
 				</details>
 			</div>
 
-			<div class="indent" id="07d57e4b-ee41-4bee-9a61-aa248025e5dc">
+			<div id="07d57e4b-ee41-4bee-9a61-aa248025e5dc">
 				The characteristic equation of <a href="#x1-18r13">(6.3.13)</a> is \[ r^2+200r+50000=0\] which has complex zeros \(r=-100\pm 200i\). Therefore the general solution of <a href="#x1-18r13">(6.3.13)</a> is \begin {equation} \label {eq:6.3.15} Q=e^{-100t}(c_1\cos 200t+c_2\sin 200t) \end {equation} <a id="x1-20r15"></a> Differentiating this and collecting like terms yields 
 				<a id="x1-21r16"></a> 
 				\begin {equation}
