@@ -24,254 +24,438 @@
 		<div id="cfb4a7d6-1273-4230-9645-21a253ef694a" class="section-title">
 			 10.1 Introduction to Systems of Differential Equations 
 		</div>
-		<div id="1c5a7373-1621-4ebb-adc0-09887fded921">
-			 Many physical situations are modelled by systems of \(n\) differential equations in \(n\) unknown functions, where \(n\ge 2\). The next three examples illustrate physical problems that lead to systems of differential equations. In these examples and throughout this chapter we’ll denote the independent variable by \(t\). 
-		</div>
-		<div class="newtheorem" id="13dcf22d-13b2-4829-ac05-3dba6cb93021">
-			
-			<div
-				><span class="head"> <span class="ex-number">Example&nbsp;10.1.1</span></span><a id="x1-21"></a> Tanks \(T_1\) and \(T_2\) contain 100 gallons and 300 gallons of salt solutions, respectively. Salt solutions are simultaneously added to both tanks from external sources, pumped from each tank to the other, and drained from both tanks (Figure&nbsp;<a href="#-">10.1.1<!-- tex4ht:ref: figure:10.1.1  --></a>). A solution with \(1\) pound of salt per gallon is pumped into \(T_1\) from an external source at \(5\)&nbsp;gal/min, and a solution with \(2\) pounds of salt per gallon is pumped into \(T_2\) from an external source at \(4\)&nbsp;gal/min. The solution from \(T_1\) is pumped into \(T_2\) at 2 gal/min, and the solution from \(T_2\) is pumped into \(T_1\) at \(3\) gal/min. \(T_1\) is drained at \(6\)&nbsp;gal/min and \(T_2\) is drained at 3&nbsp;gal/min. Let \(Q_1(t)\) and \(Q_2(t)\) be the number of pounds of salt in \(T_1\) and \(T_2\), respectively, at time \(t&gt;0\). Derive a system of differential equations for \(Q_1\) and \(Q_2\). Assume that both mixtures are well stirred.
-			
-		</div>
-		</div>
-		<div class="indent" id="cf065bc2-810a-4b42-8e4d-cef8f9704db7">
-			 
-		</div>
-		<figure id="9e2d553b-e514-47c5-9410-9825a10add4b">
-			<div id="-">
-				 <img height="264" src="EPS/fig100101.png" width="409" /> <a id="x1-3r1"></a> 
+
+		<details id="d1">
+			<summary>Introduction</summary>
+				
+			<div id="1c5a7373-1621-4ebb-adc0-09887fded921">
+				Many physical situations are modelled by systems of \(n\) differential equations in \(n\) unknown functions, where \(n\ge 2\). The next three examples illustrate physical problems that lead to systems of differential equations. In these examples and throughout this chapter we’ll denote the independent variable by \(t\). 
 			</div>
-			<figcaption><span class="id">Figure&nbsp;10.1.1 </span><span class="content"> </span></figcaption>
-			<!-- tex4ht:label?: x1-3r1  -->
-		</figure>
-		<div id="65eaedfe-e8da-4813-8f5d-f8f2c990fb47"><span class="ptmb8t-">Solution </span>&nbsp;As in Section&nbsp;4.2, let rate in and rate out denote the rates (lb/min) at which salt enters and leaves a tank; thus, 
-		</div>
-		<div class="eqnarray" id="02f256ab-8d4e-4572-ba3f-4b64410eaa34">
-			 
-			 \begin  {eqnarray*} Q_1'&amp;=&amp;(\mbox {rate in})_1-(\mbox {rate out})_1,\\ Q_2'&amp;=&amp;(\mbox {rate in})_2-(\mbox {rate out})_2 
-			 \end {eqnarray*} 
-		</div>
-		<div class="indent" id="55f75e7a-46bd-426d-821d-46ca50f3458e">
-			 Note that the volumes of the solutions in \(T_1\) and \(T_2\) remain constant at 100&nbsp;gallons and 300&nbsp;gallons, respectively. 
-		</div>
-		<div class="indent" id="ddf869d6-ebb5-46dc-b102-e2d08b7a0428">
-			
-			\(T_1\) receives salt from the external source at the rate of \[ \mbox {(1 lb/gal) }\times \mbox { (5~gal/min)}=\mbox { 5 lb/min}\] and from \(T_2\) at the rate of \[ \mbox {(lb/gal in }T_2)\times \mbox { (3~gal/min) }={1\over 300}Q_2\times 3\\={1\over 100}Q_2 \mbox { lb/min}\] Therefore \begin {equation} \label {eq:10.1.1} \mbox {(rate in)}_1= 5+{1\over 100}Q_2\end {equation}<a id="x1-4r1"></a> Solution leaves \(T_1\) at the rate of 8&nbsp;gal/min, since 6&nbsp;gal/min are drained and 2&nbsp;gal/min are pumped to \(T_2\); hence, \begin {equation} \label {eq:10.1.2} (\mbox {rate out})_1=(\mbox { lb/gal in T}_1)\times \mbox {(8~gal/min) } ={1\over 100}Q_1\times 8={2\over 25}Q_1 \end {equation}<a id="x1-5r2"></a> Eqns.&nbsp;(<a href="#x1-4r1">10.1.1<!-- tex4ht:ref: eq:10.1.1  --></a>) and (<a href="#x1-5r2">10.1.2<!-- tex4ht:ref: eq:10.1.2  --></a>) imply that 
-			\begin  {equation} \label {eq:10.1.3} Q_1'=5+{1\over 100}Q_2-{2\over 25}Q_1 
-			\end {equation}<a id="x1-6r3"></a>
-		
-		</div>
-		<div class="indent" id="ff41f6c7-ed1c-4e70-8cb0-24d96aa32319">
-			
-			\(T_2\) receives salt from the external source at the rate of \[ \mbox {(2 lb/gal) }\times \mbox { (4~gal/min)}=\mbox { 8 lb/min}\] and from \(T_1\) at the rate of \[ \mbox {(lb/gal in }T_1)\times \mbox { (2~gal/min) }={1\over 100}Q_1\times 2\\={1\over 50}Q_1 \mbox { lb/min}\] Therefore \begin {equation} \label {eq:10.1.4} \mbox {(rate in)}_2= 8+{1\over 50}Q_1\end {equation}<a id="x1-7r4"></a> Solution leaves \(T_2\) at the rate of \(6\)&nbsp;gal/min, since \(3\)&nbsp;gal/min are drained and \(3\)&nbsp;gal/min are pumped to \(T_1\); hence, \begin {equation} \label {eq:10.1.5} (\mbox {rate out})_2=(\mbox { lb/gal in T}_2)\times \mbox {(6~gal/min) } ={1\over 300}Q_2\times 6={1\over 50}Q_2 \end {equation}<a id="x1-8r5"></a> Eqns.&nbsp;(<a href="#x1-7r4">10.1.4<!-- tex4ht:ref: eq:10.1.4  --></a>) and (<a href="#x1-8r5">10.1.5<!-- tex4ht:ref: eq:10.1.5  --></a>) imply that 
-			\begin  {equation} \label {eq:10.1.6} Q_2'=8+{1\over 50}Q_1-{1\over 50}Q_2 
-			\end {equation}<a id="x1-9r6"></a>
-		
-		</div>
-		<div class="indent" id="7c3e218a-ffc3-483f-be02-9f4d824bfb0c">
-			
-			We say that (<a href="#x1-6r3">10.1.3<!-- tex4ht:ref: eq:10.1.3  --></a>) and (<a href="#x1-9r6">10.1.6<!-- tex4ht:ref: eq:10.1.6  --></a>) form a<span class="vocab">system of two first order equations in two unknowns</span>, and write them together as
-		
-		</div>
-		<div class="eqnarray" id="88c0f099-1168-4a6f-a117-86608cd235d8">
-			 
-			 \begin  {eqnarray*} Q_1'&amp;=&amp;\displaystyle {5-{2\over 25}Q_1+{1\over 100}Q_2}\\ Q_2'&amp;=&amp;\displaystyle {8+{1\over 50}Q_1-{1\over 50}Q_2}. \quad 
-			 \end {eqnarray*} 
-		</div>
-		<div class="newtheorem" id="68562b55-98c0-4d78-8f4a-63179a08c996">
-			
-			<div
-				><span class="head"> <span class="ex-number">Example&nbsp;10.1.2</span></span><a id="x1-102"></a> A mass \(m_1\) is suspended from a rigid support on a spring \(S_1\) and a second mass \(m_2\) is suspended from the first on a spring \(S_2\) (Figure&nbsp;<a href="#-1">10.1.2<!-- tex4ht:ref: figure:10.1.2  --></a>). The springs obey Hooke’s law, with spring constants \(k_1\) and \(k_2\). Internal friction causes the springs to exert damping forces proportional to the rates of change of their lengths, with damping constants \(c_1\) and \(c_2\). Let \(y_1=y_1(t)\) and \(y_2=y_2(t)\) be the displacements of the two masses from their equilibrium positions at time \(t\), measured positive upward. Derive a system of differential equations for \(y_1\) and \(y_2\), assuming that the masses of the springs are negligible and that vertical external forces \(F_1\) and \(F_2\) also act on the objects.
-			
-		</div>
-		</div>
-		<div class="indent" id="87c3b871-fc08-4efc-a84b-eafbc8c87aa4">
-			 
-		</div>
-		<div id="a5704d71-ddce-4b02-bcbc-46ffdde74bf4"><span class="ptmb8t-">Solution </span>&nbsp;In equilibrium, \(S_1\) supports both \(m_1\) and \(m_2\) and \(S_2\) supports only \(m_2\). Therefore, if \(\Delta \ell _1\) and \(\Delta \ell _2\) are the elongations of the springs in equilibrium then 
-			 \begin  {equation} \label {eq:10.1.7} (m_1+m_2)g=k_1\Delta \ell _1\quad \mbox { and }\quad m_2g=k_2\Delta \ell _2 
-			 \end {equation}<a id="x1-11r7"></a> 
-		</div>
-		<figure id="9dba18a3-3016-4a0d-ad6b-b2bd22f53939">
-			<div id="-1">
-				 <img height="264" src="EPS/fig100102.png" width="409" /> <a id="x1-12r2"></a> 
+			<div class="example" id="x1-21" style="--ex-number: 1">
+				
+				<div>
+					Tanks \(T_1\) and \(T_2\) contain 100 gallons and 300 gallons of salt solutions, respectively. Salt solutions are simultaneously added to both tanks from external sources, pumped from each tank to the other, and drained from both tanks (Figure&nbsp;<a href="#x1-3r1">10.1.1</a>). A solution with \(1\) pound of salt per gallon is pumped into \(T_1\) from an external source at \(5\)&nbsp;gal/min, and a solution with \(2\) pounds of salt per gallon is pumped into \(T_2\) from an external source at \(4\)&nbsp;gal/min. The solution from \(T_1\) is pumped into \(T_2\) at 2 gal/min, and the solution from \(T_2\) is pumped into \(T_1\) at \(3\) gal/min. \(T_1\) is drained at \(6\)&nbsp;gal/min and \(T_2\) is drained at 3&nbsp;gal/min. Let \(Q_1(t)\) and \(Q_2(t)\) be the number of pounds of salt in \(T_1\) and \(T_2\), respectively, at time \(t&gt;0\). Derive a system of differential equations for \(Q_1\) and \(Q_2\). Assume that both mixtures are well stirred.
+				</div>
+				
+				<figure id="x1-3r1">
+					<img height="264" src="EPS/fig100101.png" />
+					<figcaption>
+						<span class="id">Figure&nbsp;10.1.1</span>
+					</figcaption>
+				</figure>
+
+				<details class="solution">
+					<summary>Solution</summary>
+					As in Section&nbsp;4.2, let rate in and rate out denote the rates (lb/min) at which salt enters and leaves a tank; thus, 
+
+					<div class="eqnarray">
+						\begin {eqnarray*}
+							Q_1'&amp;=&amp;(\mbox {rate in})_1-(\mbox {rate out})_1,\\
+							Q_2'&amp;=&amp;(\mbox {rate in})_2-(\mbox {rate out})_2 
+						\end {eqnarray*} 
+					</div>
+					<div>
+						Note that the volumes of the solutions in \(T_1\) and \(T_2\) remain constant at 100&nbsp;gallons and 300&nbsp;gallons, respectively. 
+					</div>
+					<div>
+						\(T_1\) receives salt from the external source at the rate of
+						\[ \mbox {(1 lb/gal) }\times \mbox { (5~gal/min)}=\mbox { 5 lb/min}\]
+						and from \(T_2\) at the rate of
+						\[ \mbox {(lb/gal in }T_2)\times \mbox { (3~gal/min) }={1\over 300}Q_2\times 3\\={1\over 100}Q_2 \mbox { lb/min}\]
+						Therefore
+						
+						<a id="x1-4r1"></a> 
+						\begin {equation}
+							\label {eq:10.1.1}
+							\mbox {(rate in)}_1= 5+{1\over 100}Q_2
+						\end {equation}
+
+						Solution leaves \(T_1\) at the rate of 8&nbsp;gal/min, since 6&nbsp;gal/min are drained and 2&nbsp;gal/min are pumped to \(T_2\); hence,
+						<a id="x1-5r2"></a>
+						\begin {equation}
+							\label {eq:10.1.2}
+							(\mbox {rate out})_1=(\mbox { lb/gal in T}_1)\times \mbox {(8~gal/min) } ={1\over 100}Q_1\times 8={2\over 25}Q_1
+						\end {equation}
+						Equations&nbsp;<a href="#x1-4r1">(10.1.1)</a> and <a href="#x1-5r2">(10.1.2)</a> imply that 
+
+						<a id="x1-6r3"></a>
+						\begin {equation}
+							\label {eq:10.1.3}
+							Q_1'=5+{1\over 100}Q_2-{2\over 25}Q_1 
+						\end {equation}
+					</div>
+					<div>
+						\(T_2\) receives salt from the external source at the rate of
+						\[ \mbox {(2 lb/gal) }\times \mbox { (4~gal/min)}=\mbox { 8 lb/min}\]
+						and from \(T_1\) at the rate of
+						\[
+							\mbox {(lb/gal in }T_1)\times \mbox { (2~gal/min) }={1\over 100}Q_1\times 2\\
+							={1\over 50}Q_1 \mbox { lb/min}
+						\]
+						Therefore
+						<a id="x1-7r4"></a> 
+						\begin {equation} 
+							\label {eq:10.1.4} 
+							\mbox {(rate in)}_2= 8+{1\over 50}Q_1
+						\end {equation}
+						Solution leaves \(T_2\) at the rate of \(6\)&nbsp;gal/min, since \(3\)&nbsp;gal/min are drained and \(3\)&nbsp;gal/min are pumped to \(T_1\); hence, 
+						<a id="x1-8r5"></a>
+						\begin {equation} 
+							\label {eq:10.1.5} 
+							(\mbox {rate out})_2=(\mbox { lb/gal in T}_2)\times \mbox {(6~gal/min) } ={1\over 300}Q_2\times 6={1\over 50}Q_2 
+						\end {equation}
+						Equations&nbsp;<a href="#x1-7r4">(10.1.4)</a> and <a href="#x1-8r5">(10.1.5)</a> imply that 
+						<a id="x1-9r6"></a>
+						\begin {equation} 
+							\label {eq:10.1.6} 
+							Q_2'=8+{1\over 50}Q_1-{1\over 50}Q_2 
+						\end {equation}
+					</div>
+					<div>
+						We say that <a href="#x1-6r3">(10.1.3)</a> and <a href="#x1-9r6">(10.1.6)</a> form a <span class="vocab">system of two first order equations in two unknowns</span>, and write them together as
+					</div>
+					<div class="eqnarray">
+						\begin {eqnarray*} 
+							Q_1'&amp;=&amp;\displaystyle {5-{2\over 25}Q_1+{1\over 100}Q_2}\\ 
+							Q_2'&amp;=&amp;\displaystyle {8+{1\over 50}Q_1-{1\over 50}Q_2}
+						\end {eqnarray*} 
+					</div>
+				</details>
 			</div>
-			<figcaption><span class="id">Figure&nbsp;10.1.2 </span><span class="content"> </span></figcaption>
-			<!-- tex4ht:label?: x1-12r2  -->
-		</figure>
-		<div class="indent" id="d42705db-6972-4eba-a962-426f92de30bb">
-			 Let \(H_1\) be the Hooke’s law force acting on \(m_1\), and let \(D_1\) be the damping force on \(m_1\). Similarly, let \(H_2\) and \(D_2\) be the Hooke’s law and damping forces acting on \(m_2\). According to Newton’s second law of motion, \begin {equation} \label {eq:10.1.8} \begin {array}{ccl} m_1y_1''=-m_1g+H_1+D_1+F_1,\\ m_2y_2''=-m_2g+H_2+D_2+F_2 \end {array} \end {equation}<a id="x1-13r8"></a> When the displacements are \(y_1\) and \(y_2\), the change in length of \(S_1\) is \(-y_1+\Delta \ell _1\) and the change in length of \(S_2\) is \(-y_2+y_1+\Delta \ell _2\). Both springs exert Hooke’s law forces on \(m_1\), while only \(S_2\) exerts a Hooke’s law force on \(m_2\). These forces are in directions that tend to restore the springs to their natural lengths. Therefore \begin {equation} \label {eq:10.1.9} H_1=k_1(-y_1+\Delta \ell _1)-k_2(-y_2+y_1+\Delta \ell _2)\quad \mbox { and }\quad H_2=k_2(-y_2+y_1+\Delta \ell _2) \end {equation}<a id="x1-14r9"></a> When the velocities are \(y_1'\) and \(y_2'\), \(S_1\) and \(S_2\) are changing length at the rates \(-y_1'\) and \(-y_2'+y_1'\), respectively. Both springs exert damping forces on \(m_1\), while only \(S_2\) exerts a damping force on \(m_2\). Since the force due to damping exerted by a spring is proportional to the rate of change of length of the spring and in a direction that opposes the change, it follows that 
-			 \begin  {equation} \label {eq:10.1.10} D_1=-c_1y_1'+c_2(y_2'-y_1')\quad \mbox { and }\quad D_2=-c_2(y_2'-y_1') 
-			 \end {equation}<a id="x1-15r10"></a> 
-		</div>
-		<div class="indent" id="17e3f109-8d5e-479a-87c9-cc145757bd33">
+
+			<div class="example" id="x1-102" style="--ex-number: 2">
+				<div>
+					A mass \(m_1\) is suspended from a rigid support on a spring \(S_1\) and a second mass \(m_2\) is suspended from the first on a spring \(S_2\) (Figure&nbsp;<a href="#x1-12r2">10.1.2</a>). The springs obey Hooke’s law, with spring constants \(k_1\) and \(k_2\). Internal friction causes the springs to exert damping forces proportional to the rates of change of their lengths, with damping constants \(c_1\) and \(c_2\). Let \(y_1=y_1(t)\) and \(y_2=y_2(t)\) be the displacements of the two masses from their equilibrium positions at time \(t\), measured positive upward. Derive a system of differential equations for \(y_1\) and \(y_2\), assuming that the masses of the springs are negligible and that vertical external forces \(F_1\) and \(F_2\) also act on the objects.
+				</div>
+
+				<figure id="x1-12r2">
+					<img height="264" src="EPS/fig100102.png" />
+					<figcaption>
+						<span class="id">Figure&nbsp;10.1.2</span>
+					</figcaption>
+				</figure>
+
+				<details class="solution">
+					<summary>Solution</summary>
+					In equilibrium, \(S_1\) supports both \(m_1\) and \(m_2\) and \(S_2\) supports only \(m_2\). Therefore, if \(\Delta \ell _1\) and \(\Delta \ell _2\) are the elongations of the springs in equilibrium then 
+					<a id="x1-11r7"></a> 
+					\begin {equation}
+						\label {eq:10.1.7}
+						(m_1+m_2)g=k_1\Delta \ell _1\quad \mbox { and }\quad m_2g=k_2\Delta \ell _2 
+					\end {equation}
 			
-			From (<a href="#x1-13r8">10.1.8<!-- tex4ht:ref: eq:10.1.8  --></a>), (<a href="#x1-14r9">10.1.9<!-- tex4ht:ref: eq:10.1.9  --></a>), and (<a href="#x1-15r10">10.1.10<!-- tex4ht:ref: eq:10.1.10  --></a>), \begin {equation} \label {eq:10.1.11} \begin {array}{ccl} m_1y_1''&amp;=&amp;-m_1g+k_1(-y_1+\Delta \ell _1)-k_2(-y_2+y_1+\Delta \ell _2)\\ &amp;\mbox {}&amp;-c_1y_1'+c_2(y_2'-y_1')+F_1\\ &amp;=&amp;-(m_1g-k_1\Delta \ell _1+k_2\Delta \ell _2)-k_1y_1+k_2(y_2-y_1)\\ &amp;\mbox {}&amp;-c_1y_1'+c_2(y_2'-y_1')+F_1 \end {array} \end {equation}<a id="x1-16r11"></a> and \begin {equation} \label {eq:10.1.12} 
-			\begin  {array}{ccl} m_2y_2''&amp;=&amp;-m_2g+k_2(-y_2+y_1+\Delta \ell _2)-c_2(y_2'-y_1')+F_2\\ &amp;=&amp;-(m_2g-k_2\Delta \ell _2)-k_2(y_2-y_1)-c_2(y_2'-y_1')+F_2 
-			\end {array} \end {equation}<a id="x1-17r12"></a> From (<a href="#x1-11r7">10.1.7<!-- tex4ht:ref: eq:10.1.7  --></a>), \[ m_1g-k_1\Delta \ell _1+k_2\Delta \ell _2=-m_2g+k_2\Delta \ell _2=0\] Therefore we can rewrite (<a href="#x1-16r11">10.1.11<!-- tex4ht:ref: eq:10.1.11  --></a>) and (<a href="#x1-17r12">10.1.12<!-- tex4ht:ref: eq:10.1.12  --></a>) as
-		
-		</div>
-		<div class="eqnarray" id="2e132313-2010-4cef-a824-00f8eff9fc14">
-			 
-			 \begin  {eqnarray*} m_1y_1''&amp;=&amp;-(c_1+c_2)y_1'+c_2y_2'-(k_1+k_2)y_1+k_2y_2+F_1\\ m_2y_2''&amp;=&amp;c_2y_1'-c_2y_2'+k_2y_1-k_2y_2+F_2. \quad 
-			 \end {eqnarray*} 
-		</div>
-		<div class="newtheorem" id="f55a25bb-0d0e-4624-8cf2-e5fd222f900c">
+					Let \(H_1\) be the Hooke’s law force acting on \(m_1\), and let \(D_1\) be the damping force on \(m_1\). Similarly, let \(H_2\) and \(D_2\) be the Hooke’s law and damping forces acting on \(m_2\). According to Newton’s second law of motion,
+					<a id="x1-13r8"></a> 
+					\begin {equation}
+						\label {eq:10.1.8} 
+						\begin {array}{ccl}
+							m_1y_1''=-m_1g+H_1+D_1+F_1\\
+							m_2y_2''=-m_2g+H_2+D_2+F_2 
+						\end {array} 
+					\end {equation}
+
+					When the displacements are \(y_1\) and \(y_2\), the change in length of \(S_1\) is \(-y_1+\Delta \ell _1\) and the change in length of \(S_2\) is \(-y_2+y_1+\Delta \ell _2\). Both springs exert Hooke’s law forces on \(m_1\), while only \(S_2\) exerts a Hooke’s law force on \(m_2\). These forces are in directions that tend to restore the springs to their natural lengths. Therefore 
+					<a id="x1-14r9"></a> 
+					\begin {equation} 
+						\label {eq:10.1.9} 
+						H_1=k_1(-y_1+\Delta \ell _1)-k_2(-y_2+y_1+\Delta \ell _2)\quad \mbox { and }\quad H_2=k_2(-y_2+y_1+\Delta \ell _2) 
+					\end {equation}
+
+					When the velocities are \(y_1'\) and \(y_2'\), \(S_1\) and \(S_2\) are changing length at the rates \(-y_1'\) and \(-y_2'+y_1'\), respectively. Both springs exert damping forces on \(m_1\), while only \(S_2\) exerts a damping force on \(m_2\). Since the force due to damping exerted by a spring is proportional to the rate of change of length of the spring and in a direction that opposes the change, it follows that 
+					<a id="x1-15r10"></a> 
+					\begin {equation} 
+						\label {eq:10.1.10} 
+						D_1=-c_1y_1'+c_2(y_2'-y_1')\quad \mbox { and }\quad D_2=-c_2(y_2'-y_1') 
+					\end {equation}
 			
-			<div
-				><span class="head"> <span class="ex-number">Example&nbsp;10.1.3</span></span><a id="x1-183"></a> Let \({\bf X}={\bf X}(t)=x(t)\,{\bf i}+y(t)\,{\bf j}+z(t)\,{\bf k}\) be the position vector at time \(t\) of an object with mass \(m\), relative to a rectangular coordinate system with origin at Earth’s center (Figure&nbsp;<a href="#-2">10.1.3<!-- tex4ht:ref: figure:10.1.3  --></a>). According to Newton’s law of gravitation, Earth’s gravitational force \({\bf F}={\bf F}(x,y,z)\) on the object is inversely proportional to the square of the distance of the object from Earth’s center, and directed toward the center; thus, \begin {equation} \label {eq:10.1.13} {\bf F}={K\over \|{\bf X}\|^2}\left (-{{\bf X} \over \|{\bf X}\|}\right )=-K{x\,{\bf i}+y\,{\bf j}+z\,{\bf k}\over \mbox {}\left (x^2+y^2+z^2\right )^{3/2}} \end {equation}<a id="x1-19r13"></a> where \(K\) is a constant. To determine \(K\), we observe that the magnitude of \(\bf F\) is \[ \|{\bf F}\|=K{\|{\bf X}\|\over \|{\bf X}\|^3}={K\over \|{\bf X}\|^2} ={K\over (x^2+y^2+z^2)}\] Let \(R\) be Earth’s radius. Since \(\|{\bf F}\|=mg\) when the object is at Earth’s surface, \[ mg = {K\over R^2},\quad \mbox { so }\quad K=mgR^2\] Therefore we can rewrite (<a href="#x1-19r13">10.1.13<!-- tex4ht:ref: eq:10.1.13  --></a>) as \[ {\bf F}=-mgR^2{x\,{\bf i}+y\,{\bf j}+z\,{\bf k}\over \mbox {}\left (x^2+y^2+z^2\right )^{3/2}}\] Now suppose \(\bf F\) is the only force acting on the object. According to Newton’s second law of motion, \({\bf F}=m{\bf X}''\); that is, \[ m(x''\,{\bf i}+y''\,{\bf j}+z''\,{\bf k})= -mgR^2{x\,{\bf i}+y\,{\bf j}+z\,{\bf k}\over \left (x^2+y^2+z^2\right )^{3/2}}\] Cancelling the common factor \(m\) and equating components on the two sides of this equation yields the system \begin {equation} \label {eq:10.1.14} 
-				\begin  {array}{rcl} x''&amp;=&amp;-\displaystyle {gR^2x\over (x^2+y^2+z^2)^{3/2}}\\ y''&amp;=&amp;-\displaystyle {gR^2y\over (x^2+y^2+z^2)^{3/2}}\\ z''&amp;=&amp;-\displaystyle {gR^2z\over (x^2+y^2+z^2)^{3/2}} 
-				\end {array} \end {equation}<a id="x1-20r14"></a>
-			
-		</div>
-		</div>
-		<div class="indent" id="4b9f5cba-e271-4eaf-8fc4-d8fed0189e76">
-			 
-		</div>
-		<figure id="5494ecd4-63e9-4833-a391-fca2cfe069e7">
-			<div id="-2">
-				 <img height="264" src="EPS/fig100103.png" width="409" /> <a id="x1-21r3"></a> 
+					From <a href="#x1-13r8">(10.1.8)</a>, <a href="#x1-14r9">(10.1.9)</a>, and <a href="#x1-15r10">(10.1.10)</a>,
+					<a id="x1-16r11"></a> 
+					\begin {equation} 
+						\label {eq:10.1.11} 
+						\begin {array}{ccl} 
+							m_1y_1''&amp;=&amp;-m_1g+k_1(-y_1+\Delta \ell _1)-k_2(-y_2+y_1+\Delta \ell _2)\\ 
+							&amp;\mbox {}&amp;-c_1y_1'+c_2(y_2'-y_1')+F_1\\ 
+							&amp;=&amp;-(m_1g-k_1\Delta \ell _1+k_2\Delta \ell _2)-k_1y_1+k_2(y_2-y_1)\\ 
+							&amp;\mbox {}&amp;-c_1y_1'+c_2(y_2'-y_1')+F_1 
+						\end {array}
+					\end {equation}
+					
+					and 
+					
+					<a id="x1-17r12"></a>
+					\begin {equation} 
+						\label {eq:10.1.12} 
+						\begin {array}{ccl} 
+							m_2y_2''&amp;=&amp;-m_2g+k_2(-y_2+y_1+\Delta \ell _2)-c_2(y_2'-y_1')+F_2\\ 
+							&amp;=&amp;-(m_2g-k_2\Delta \ell _2)-k_2(y_2-y_1)-c_2(y_2'-y_1')+F_2 
+						\end {array} 
+					\end {equation}
+
+					From <a href="#x1-11r7">(10.1.7)</a>, 
+					
+					\[ m_1g-k_1\Delta \ell _1+k_2\Delta \ell _2=-m_2g+k_2\Delta \ell _2=0\] 
+					
+					Therefore we can rewrite <a href="#x1-16r11">(10.1.11)</a> and <a href="#x1-17r12">(10.1.12)</a> as
+
+					<div class="eqnarray" id="2e132313-2010-4cef-a824-00f8eff9fc14">
+						\begin {eqnarray*} 
+							m_1y_1''&amp;=&amp;-(c_1+c_2)y_1'+c_2y_2'-(k_1+k_2)y_1+k_2y_2+F_1\\ 
+							m_2y_2''&amp;=&amp;c_2y_1'-c_2y_2'+k_2y_1-k_2y_2+F_2
+						\end {eqnarray*} 
+					</div>
+				</details>
 			</div>
-			<figcaption><span class="id">Figure&nbsp;10.1.3 </span><span class="content"> </span></figcaption>
-			<!-- tex4ht:label?: x1-21r3  -->
-		</figure>
-		<div id="97113dfe-d791-4b91-b6fa-a9a110613d04">
-			<span id="textcolor1">Rewriting Higher Order Systems as First Order Systems</span>
-		</div>
-		<div class="indent" id="2b019d0b-43ba-41cd-824f-ceececf5bbf3">
-			 
-		</div>
-		<div id="7feffa46-f18d-42c3-a6a7-47bc347af2cf">
-			
-			A system of the form \begin {equation} \label {eq:10.1.15} 
-			\begin  {array}{ccl} y_1'&amp;=&amp;g_1(t,y_1,y_2,\dots ,y_n)\\ y_2'&amp;=&amp;g_2(t,y_1,y_2,\dots ,y_n)\\ &amp;\vdots &amp;\\ y_n'&amp;=&amp;g_n(t,y_1,y_2,\dots ,y_n) 
-			\end {array} \end {equation}<a id="x1-22r15"></a> is called a<span class="vocab">first order system</span>, since the only derivatives occurring in it are first derivatives. The derivative of each of the unknowns may depend upon the independent variable and all the unknowns, but not on the derivatives of other unknowns. When we wish to emphasize the number of unknown functions in (<a href="#x1-22r15">10.1.15<!-- tex4ht:ref: eq:10.1.15  --></a>) we will say that (<a href="#x1-22r15">10.1.15<!-- tex4ht:ref: eq:10.1.15  --></a>) is an \(n\times n\) system.
+
+			<div class="example" id="x1-183" style="--ex-number: 3">
+				<div>
+					Let \({\bf X}={\bf X}(t)=x(t)\,{\bf i}+y(t)\,{\bf j}+z(t)\,{\bf k}\) be the position vector at time \(t\) of an object with mass \(m\), relative to a rectangular coordinate system with origin at Earth’s center (Figure&nbsp;<a href="#x1-21r3">10.1.3</a>). According to Newton’s law of gravitation, Earth’s gravitational force \({\bf F}={\bf F}(x,y,z)\) on the object is inversely proportional to the square of the distance of the object from Earth’s center, and directed toward the center; thus, 
+					
+					<a id="x1-19r13"></a> 
+					\begin {equation} 
+						\label {eq:10.1.13} 
+						{\bf F}={K\over \|{\bf X}\|^2}\left (-{{\bf X} \over \|{\bf X}\|}\right )=-K{x\,{\bf i}+y\,{\bf j}+z\,{\bf k}\over \mbox {}\left (x^2+y^2+z^2\right )^{3/2}} 
+					\end {equation}
+
+					where \(K\) is a constant. To determine \(K\), we observe that the magnitude of \(\bf F\) is \[ \|{\bf F}\|=K{\|{\bf X}\|\over \|{\bf X}\|^3}={K\over \|{\bf X}\|^2} ={K\over (x^2+y^2+z^2)}\] Let \(R\) be Earth’s radius. Since \(\|{\bf F}\|=mg\) when the object is at Earth’s surface, \[ mg = {K\over R^2},\quad \mbox { so }\quad K=mgR^2\] Therefore we can rewrite <a href="#x1-19r13">(10.1.13)</a> as \[ {\bf F}=-mgR^2{x\,{\bf i}+y\,{\bf j}+z\,{\bf k}\over \mbox {}\left (x^2+y^2+z^2\right )^{3/2}}\] Now suppose \(\bf F\) is the only force acting on the object. According to Newton’s second law of motion, \({\bf F}=m{\bf X}''\); that is, 
+					
+					\[ m(x''\,{\bf i}+y''\,{\bf j}+z''\,{\bf k})= -mgR^2{x\,{\bf i}+y\,{\bf j}+z\,{\bf k}\over \left (x^2+y^2+z^2\right )^{3/2}}\] 
+					
+					Cancelling the common factor \(m\) and equating components on the two sides of this equation yields the system 
+					
+					<a id="x1-20r14"></a>
+					\begin {equation} 
+						\label {eq:10.1.14} 
+						\begin {array}{rcl} 
+							x''&amp;=&amp;-\displaystyle {gR^2x\over (x^2+y^2+z^2)^{3/2}}\\ 
+							y''&amp;=&amp;-\displaystyle {gR^2y\over (x^2+y^2+z^2)^{3/2}}\\ 
+							z''&amp;=&amp;-\displaystyle {gR^2z\over (x^2+y^2+z^2)^{3/2}} 
+						\end {array} 
+					\end {equation}
+				</div>
+			</div>
+
+			<figure id="x1-21r3">
+				<img height="264" src="EPS/fig100103.png" />
+				<figcaption>
+					<span class="id">Figure&nbsp;10.1.3 </span>
+				</figcaption>
+			</figure>
+
+		</details>
+
+
+		<details id="97113dfe-d791-4b91-b6fa-a9a110613d04">
+			<summary>Rewriting Higher Order Systems as First Order Systems</summary>
 		
-		</div>
-		<div class="indent" id="603f3458-4a9d-44b4-8bff-13a0308ee5b7">
-			 Systems involving higher order derivatives can often be reformulated as first order systems by introducing additional unknowns. The next two examples illustrate this. 
-		</div>
-		<div class="newtheorem" id="cc75c336-8fbc-43bc-93df-b0f89f4573b6">
-			
-			<div
-				><span class="head"> <span class="ex-number">Example&nbsp;10.1.4</span></span><a id="x1-234"></a> Rewrite the system \begin {equation} \label {eq:10.1.16} 
-				\begin  {array}{rcl} m_1y_1''&amp;=&amp;-(c_1+c_2)y_1'+c_2y_2'-(k_1+k_2)y_1+k_2y_2+F_1\\ m_2y_2''&amp;=&amp;c_2y_1'-c_2y_2'+k_2y_1-k_2y_2+F_2 
-				\end {array} \end {equation}<a id="x1-24r16"></a> derived in Example&nbsp;<a href="#x1-102">10.1.2<!-- tex4ht:ref: example:10.1.2  --></a> as a system of first order equations.
-			
-		</div>
-		</div>
-		<div class="indent" id="0f0efd25-1715-40cf-be43-a471ff3be968">
-			 
-		</div>
-		<div id="a4951ddc-98ab-4899-a324-809aaa94d572">
-			<span class="ptmb8t-">Solution </span>&nbsp; If we define \(v_1=y_1'\) and \(v_2=y_2'\), then \(v_1'=y_1''\) and \(v_2'=y_2''\), so (<a href="#x1-24r16">10.1.16<!-- tex4ht:ref: eq:10.1.16  --></a>) becomes \[ \begin {array}{rcl} m_1v_1'&amp;=&amp;-(c_1+c_2)v_1+c_2v_2-(k_1+k_2)y_1+k_2y_2+F_1\\ m_2v_2'&amp;=&amp;c_2v_1-c_2v_2+k_2y_1-k_2y_2+F_2 \end {array} \] Therefore \(\{y_1,y_2,v_1,v_2\}\) satisfies the \(4\times 4\) first order system \begin {equation} \label {eq:10.1.17} 
-			\begin  {array}{rcl} y_1'&amp;=&amp;v_1\\ y_2'&amp;=&amp;v_2\\ v_1'&amp;=&amp;\displaystyle {1\over m_1}\left [-(c_1+c_2)v_1+c_2v_2-(k_1+k_2)y_1+k_2y_2+F_1\right ]\\ v_2'&amp;=&amp;\displaystyle {1\over m_2}\left [c_2v_1-c_2v_2+k_2y_1-k_2y_2+F_2\right ] 
-			\end {array} \end {equation}<a id="x1-25r17"></a>
 		
-		</div>
-		<div id="103d2939-aa2e-49aa-b46c-69f49a10377d">
-			<span class="ptmrc8t-">R<span class="small-caps">EMARK</span></span
-			>:&nbsp; The difference in form between (<a href="#x1-22r15">10.1.15<!-- tex4ht:ref: eq:10.1.15  --></a>) and (<a href="#x1-25r17">10.1.17<!-- tex4ht:ref: eq:10.1.17  --></a>), due to the way in which the unknowns are <em>denoted</em> in the two systems, isn’t important; (<a href="#x1-25r17">10.1.17<!-- tex4ht:ref: eq:10.1.17  --></a>) is a first order system, in that each equation in (<a href="#x1-25r17">10.1.17<!-- tex4ht:ref: eq:10.1.17  --></a>) expresses the first derivative of one of the unknown functions in a way that does not involve derivatives of any of the other unknowns.
+			<div id="7feffa46-f18d-42c3-a6a7-47bc347af2cf">
+				A system of the form
+
+				<a id="x1-22r15"></a> 
+				\begin {equation}
+					\label {eq:10.1.15} 
+					\begin {array}{ccl} 
+						y_1'&amp;=&amp;g_1(t,y_1,y_2,\dots ,y_n)\\ 
+						y_2'&amp;=&amp;g_2(t,y_1,y_2,\dots ,y_n)\\ 
+						&amp;\vdots &amp;\\ 
+						y_n'&amp;=&amp;g_n(t,y_1,y_2,\dots ,y_n) 
+					\end {array} 
+				\end {equation}
+
+				is called a <span class="vocab">first order system</span>, since the only derivatives occurring in it are first derivatives. The derivative of each of the unknowns may depend upon the independent variable and all the unknowns, but not on the derivatives of other unknowns. When we wish to emphasize the number of unknown functions in <a href="#x1-22r15">(10.1.15)</a> we will say that <a href="#x1-22r15">(10.1.15)</a> is an \(n\times n\) system.
+			</div>
+			<div id="603f3458-4a9d-44b4-8bff-13a0308ee5b7">
+				Systems involving higher order derivatives can often be reformulated as first order systems by introducing additional unknowns. The next two examples illustrate this. 
+			</div>
+
+			<div class="example" id="x1-234" style="--ex-number: 4">
+				<div>
+					Rewrite the system 
+					<a id="x1-24r16"></a> 
+					\begin {equation} 
+						\label {eq:10.1.16} 
+						\begin {array}{rcl} 
+							m_1y_1''&amp;=&amp;-(c_1+c_2)y_1'+c_2y_2'-(k_1+k_2)y_1+k_2y_2+F_1\\ 
+							m_2y_2''&amp;=&amp;c_2y_1'-c_2y_2'+k_2y_1-k_2y_2+F_2 
+						\end {array} 
+					\end {equation}
+					derived in Example&nbsp;<a href="#x1-102">10.1.2</a> as a system of first order equations.
+				</div>
+
+				<details class="solution">
+					<summary>Solution</summary>
+					
+					If we define \(v_1=y_1'\) and \(v_2=y_2'\), then \(v_1'=y_1''\) and \(v_2'=y_2''\), so <a href="#x1-24r16">(10.1.16)</a> becomes 
+					\[ 
+						\begin {array}{rcl} 
+							m_1v_1'&amp;=&amp;-(c_1+c_2)v_1+c_2v_2-(k_1+k_2)y_1+k_2y_2+F_1\\ 
+							m_2v_2'&amp;=&amp;c_2v_1-c_2v_2+k_2y_1-k_2y_2+F_2 
+						\end {array} 
+					\]
+						
+					Therefore \(\{y_1,y_2,v_1,v_2\}\) satisfies the \(4\times 4\) first order system 
+					
+					<a id="x1-25r17"></a>
+					\begin {equation} 
+						\label {eq:10.1.17} 
+						\begin {array}{rcl} 
+							y_1'&amp;=&amp;v_1\\ 
+							y_2'&amp;=&amp;v_2\\ 
+							v_1'&amp;=&amp;\displaystyle {1\over m_1}\left [-(c_1+c_2)v_1+c_2v_2-(k_1+k_2)y_1+k_2y_2+F_1\right ]\\ 
+							v_2'&amp;=&amp;\displaystyle {1\over m_2}\left [c_2v_1-c_2v_2+k_2y_1-k_2y_2+F_2\right ] 
+						\end {array} 
+					\end {equation}
+
+					<div>
+						<strong>Remark</strong>>: The difference in form between <a href="#x1-22r15">(10.1.15)</a> and <a href="#x1-25r17">(10.1.17)</a>, due to the way in which the unknowns are <em>denoted</em> in the two systems, isn’t important; <a href="#x1-25r17">(10.1.17)</a> is a first order system, in that each equation in <a href="#x1-25r17">(10.1.17)</a> expresses the first derivative of one of the unknown functions in a way that does not involve derivatives of any of the other unknowns.
+					</div>
+				</details>
+			</div>
+
+			<div class="example" id="x1-265" style="--ex-number: 5">
+				<div>
+					 Rewrite the system
+					 \[ 
+						\begin {array}{ccc} 
+							x''&amp;=&amp;f(t,x,x',y,y',y'')\\
+							y'''&amp;=&amp;g(t,x,x',y,y'y'') 
+						\end {array} 
+					\] 
+					as a first order system.
+				</div>
+
+				<details class="solution">
+					<summary>Solution</summary>
+					We regard \(x\), \(x'\), \(y\), \(y'\), and \(y''\) as unknown functions, and rename them 
+					\[ x=x_1,\; x'=x_2,\quad y=y_1,\quad y'=y_2,\quad y''=y_3\] 
+					
+					These unknowns satisfy the system 
+					\[ 
+						\begin {array}{ccl} 
+							x_1'&amp;=&amp;x_2\\
+							x_2'&amp;=&amp;f(t,x_1,x_2,y_1,y_2,y_3) \\
+							y_1'&amp;=&amp;y_2\\
+							y_2'&amp;=&amp;y_3\\ 
+							y_3'&amp;=&amp;g(t,x_1,x_2,y_1,y_2,y_3). 
+						\end {array} 
+					\]
+				</details>
+			</div>
+		</details>
+
+		<details id="5b73367e-2e7d-408a-83aa-89f9eb069bb0">
+			<summary>Rewriting Scalar Differential Equations as Systems</summary>
 		
-		</div>
-		<div class="newtheorem" id="e71f8590-a34f-4a39-addd-37b30217daa2">
-			
-			<div
-				><span class="head"> <span class="ex-number">Example&nbsp;10.1.5</span></span><a id="x1-265"></a> Rewrite the system \[ 
-				\begin  {array}{ccc} x''&amp;=&amp;f(t,x,x',y,y',y'')\\y'''&amp;=&amp;g(t,x,x',y,y'y'') 
-				\end {array} \] as a first order system.
-			
-		</div>
-		</div>
-		<div class="indent" id="5a6d3e7a-5fc9-4d0d-bbeb-cea5c2691e63">
-			 
-		</div>
-		<div id="b916fdf6-ccd2-4bba-83ad-7045d9645ba6"><span class="ptmb8t-">Solution </span>&nbsp;We regard \(x\), \(x'\), \(y\), \(y'\), and \(y''\) as unknown functions, and rename them \[ x=x_1,\; x'=x_2,\quad y=y_1,\quad y'=y_2,\quad y''=y_3\] These unknowns satisfy the system \[ 
-			 \begin  {array}{ccl} x_1'&amp;=&amp;x_2\\x_2'&amp;=&amp;f(t,x_1,x_2,y_1,y_2,y_3) \\y_1'&amp;=&amp;y_2\\y_2'&amp;=&amp;y_3\\ y_3'&amp;=&amp;g(t,x_1,x_2,y_1,y_2,y_3). 
-			 \end {array} \] 
-		</div>
-		<div id="5b73367e-2e7d-408a-83aa-89f9eb069bb0">
-			<span id="textcolor2">Rewriting Scalar Differential Equations as Systems</span>
-		</div>
-		<div class="indent" id="44d76b46-8cec-4032-906d-73a749480f35">
-			 
-		</div>
-		<div id="44d1dec4-78cd-459e-97cf-a4c71aa579b2">
-			 In this chapter we’ll refer to differential equations involving only one unknown function as<span class="vocab">scalar</span>differential equations. Scalar differential equations can be rewritten as systems of first order equations by the method illustrated in the next two examples. 
-		</div>
-		<div class="newtheorem" id="b2539ffd-b441-4648-b5ac-65da7ee05dbc">
-			
-			<div
-				><span class="head"> <span class="ex-number">Example&nbsp;10.1.6</span></span><a id="x1-276"></a> Rewrite the equation 
-				\begin  {equation} \label {eq:10.1.18} y^{(4)}+4y'''+6y''+4y'+y=0 
-				\end {equation}<a id="x1-28r18"></a> as a \(4\times 4\) first order system.
-			
-		</div>
-		</div>
-		<div class="indent" id="4fd49157-9e26-49e7-a1b9-7d65df981206">
-			 
-		</div>
-		<div id="5d49097b-5899-42c4-8ef0-5b0d31bbc063">
-			<span class="ptmb8t-">Solution </span>&nbsp;We regard \(y\), \(y'\), \(y''\), and \(y'''\) as unknowns and rename them \[ y=y_1,\quad y'=y_2,\quad y''=y_3,\quad \mbox{ and } \quad y'''=y_4\] Then \(y^{(4)}=y_4'\), so (<a href="#x1-28r18">10.1.18<!-- tex4ht:ref: eq:10.1.18  --></a>) can be written as \[ y_4'+4y_4+6y_3+4y_2+y_1=0\] Therefore \(\{y_1,y_2,y_3,y_4\}\) satisfies the system
+			<div id="44d1dec4-78cd-459e-97cf-a4c71aa579b2">
+				In this chapter we’ll refer to differential equations involving only one unknown function as <span class="vocab">scalar</span> differential equations. Scalar differential equations can be rewritten as systems of first order equations by the method illustrated in the next two examples. 
+			</div>
+
+			<div class="example" id="x1-276" style="--ex-number: 6">
+				<div>
+					Rewrite the equation 
+					<a id="x1-28r18"></a> 
+					\begin {equation} 
+						\label {eq:10.1.18} 
+						y^{(4)}+4y'''+6y''+4y'+y=0 
+					\end {equation}
+					as a \(4\times 4\) first order system.
+				</div>
+
+				<details class="solution">
+					<summary>Solution</summary>
+					We regard \(y\), \(y'\), \(y''\), and \(y'''\) as unknowns and rename them 
+					
+					\[ y=y_1,\quad y'=y_2,\quad y''=y_3,\quad \mbox{ and } \quad y'''=y_4\] 
+					
+					Then \(y^{(4)}=y_4'\), so <a href="#x1-28r18">(10.1.18)</a> can be written as 
+					\[ y_4'+4y_4+6y_3+4y_2+y_1=0 \] 
+					
+					Therefore \(\{y_1,y_2,y_3,y_4\}\) satisfies the system
 		
-		</div>
-		<div class="eqnarray" id="1f11a49f-ec04-4eb5-a396-fb389666d5c4">
-			 
-			 \begin  {eqnarray*} y_1'&amp;=&amp;y_2\\ y_2'&amp;=&amp;y_3 \\ y_3'&amp;=&amp;y_4\\ y_4'&amp;=&amp;-4y_4-6y_3-4y_2-y_1 
-			 \end {eqnarray*} 
-		</div>
-		<div class="newtheorem" id="32b94850-cbb1-4bdf-8767-293141091df6">
-			
-			<div
-				><span class="head"> <span class="ex-number">Example&nbsp;10.1.7</span></span><a id="x1-297"></a> Rewrite \[ x'''=f(t,x,x',x'') \] as a system of first order equations.
-			
-		</div>
-		</div>
-		<div class="indent" id="6f6e5b0f-89b0-46a1-b863-78e1e59e61d6">
-			 
-		</div>
-		<div id="d253ce93-7afa-4fc5-a52b-33f6a9fa3b6c"><span class="ptmb8t-">Solution </span>&nbsp;We regard \(x\), \(x'\), and \(x''\) as unknowns and rename them \[ x=y_1, \quad x'=y_2,\quad \mbox{ and } \quad x''=y_3\] Then \[ y_1'=x'=y_2,\quad y_2'=x''=y_3,\quad \mbox{ and } \quad y_3'=x'''\] Therefore \(\{y_1,y_2,y_3\}\) satisfies the first order system \[ 
-			 \begin  {array}{ccl} y_1'&amp;=&amp;y_2\\y_2'&amp;=&amp;y_3\\y_3'&amp;=&amp;f(t,y_1,y_2,y_3) 
-			 \end {array} \] 
-		</div>
-		<div class="indent" id="6ec89455-eecb-45f3-88fa-187d5ac24fcb">
-			
-			Since systems of differential equations involving higher derivatives can be rewritten as first order systems by the method used in Examples&nbsp;<a href="#x1-265">10.1.5<!-- tex4ht:ref: example:10.1.5  --></a> –<a href="#x1-297">10.1.7<!-- tex4ht:ref: example:10.1.7  --></a> , we’ll consider only first order systems.
+					<div class="eqnarray">
+						\begin {eqnarray*} 
+							y_1'&amp;=&amp;y_2\\ 
+							y_2'&amp;=&amp;y_3 \\ 
+							y_3'&amp;=&amp;y_4\\ 
+							y_4'&amp;=&amp;-4y_4-6y_3-4y_2-y_1 
+						\end {eqnarray*} 
+					</div>
+				</details>
+			</div>
+
+			<div class="example" id="x1-297" style="--ex-number: 7">
+				<div>
+					Rewrite \[ x'''=f(t,x,x',x'') \] as a system of first order equations.
+				</div>
+
+				<details class="solution">
+					<summary>Solution</summary>
+					We regard \(x\), \(x'\), and \(x''\) as unknowns and rename them 
+					\[ x=y_1, \quad x'=y_2,\quad \mbox{ and } \quad x''=y_3\] 
+					
+					Then 
+					\[ y_1'=x'=y_2,\quad y_2'=x''=y_3,\quad \mbox{ and } \quad y_3'=x'''\] 
+					
+					Therefore \(\{y_1,y_2,y_3\}\) satisfies the first order system 
+					\[ 
+						\begin {array}{ccl} 
+							y_1'&amp;=&amp;y_2\\
+							y_2'&amp;=&amp;y_3\\
+							y_3'&amp;=&amp;f(t,y_1,y_2,y_3) 
+						\end {array} 
+					\] 
+				</details>
+			</div>
+
+			<div id="6ec89455-eecb-45f3-88fa-187d5ac24fcb">
+				Since systems of differential equations involving higher derivatives can be rewritten as first order systems by the method used in Examples&nbsp;<a href="#x1-265">10.1.5</a> – <a href="#x1-297">10.1.7</a>, we’ll consider only first order systems.
+			</div>
+		</details>
+
+		<details id="bc8da3c0-e96d-4145-b955-fa84599bea9a">
+			<summary>Numerical Solution of Systems</summary>
 		
-		</div>
-		<div id="bc8da3c0-e96d-4145-b955-fa84599bea9a">
-			<span id="textcolor3">Numerical Solution of Systems</span>
-		</div>
-		<div class="indent" id="33dfc2cd-0c5b-4cfc-8343-10aae21c29e3">
-			 
-		</div>
-		<div id="072ca7da-a4cc-4abb-9a54-f39481b3919b">
-			 The numerical methods that we studied in Chapter&nbsp;3 can be extended to systems, and most differential equation software packages include programs to solve systems of equations. We won’t go into detail on numerical methods for systems; however, for illustrative purposes we’ll describe the Runge-Kutta method for the numerical solution of the initial value problem 
-		</div>
-		<div class="eqnarray" id="cf09245c-cede-44d1-8665-283b407a739a">
-			 
-			 \begin  {eqnarray*} y_1'&amp;=&amp;g_1(t,y_1,y_2),\quad y_1(t_0)=y_{10},\\ y_2'&amp;=&amp;g_2(t,y_1,y_2),\quad y_2(t_0)=y_{20} 
-			 \end {eqnarray*} 
-		</div>
-		<div class="indent" id="f5137959-5f83-4e0e-8b13-94ab87e57c3a">
-			 at equally spaced points \(t_0\), \(t_1\), …, \(t_n=b\) in an interval \([t_0,b]\). Thus, \[ t_i=t_0+ih,\quad i=0,1,\dots ,n\] where \[ h={b-t_0\over n}\] We’ll denote the approximate values of \(y_1\) and \(y_2\) at these points by \(y_{10},y_{11},\dots ,y_{1n}\) and \(y_{20},y_{21},\dots ,y_{2n}\). The Runge-Kutta method computes these approximate values as follows: given \(y_{1i}\) and \(y_{2i}\), compute 
-		</div>
-		<div class="eqnarray" id="7f4877e2-4112-447f-ac83-028ddfc7b6cd">
-			 
-			 \begin  {eqnarray*} I_{1i}&amp;=&amp;g_1(t_i,y_{1i},y_{2i}),\\ J_{1i}&amp;=&amp;g_2(t_i,y_{1i},y_{2i}),\\ I_{2i}&amp;=&amp;g_1\left (t_i+{h\over 2},y_{1i}+{h\over 2}I_{1i},y_{2i}+{h\over 2}J_{1i}\right ),\\ J_{2i}&amp;=&amp;g_2\left (t_i+{h\over 2},y_{1i}+{h\over 2}I_{1i},y_{2i}+{h\over 2}J_{1i}\right ),\\ I_{3i}&amp;=&amp;g_1\left (t_i+{h\over 2},y_{1i}+{h\over 2}I_{2i},y_{2i}+{h\over 2}J_{2i}\right ),\\ J_{3i}&amp;=&amp;g_2\left (t_i+{h\over 2},y_{1i}+{h\over 2}I_{2i},y_{2i}+{h\over 2}J_{2i}\right ),\\ I_{4i}&amp;=&amp;g_1(t_i+h,y_{1i}+hI_{3i},y_{2i}+hJ_{3i}),\\ J_{4i}&amp;=&amp;g_2(t_i+h,y_{1i}+hI_{3i},y_{2i}+hJ_{3i}) 
-			 \end {eqnarray*} 
-		</div>
-		<div class="indent" id="9c16ecec-e388-46da-bafa-9ca85bd0d48e">
-			 and 
-		</div>
-		<div class="eqnarray" id="16edc642-2f46-4ff0-bff4-8edcea58afb0">
-			 
-			 \begin  {eqnarray*} y_{1,i+1}&amp;=&amp;y_{1i}+{h\over 6}(I_{1i}+2I_{2i}+2I_{3i}+I_{4i}),\\ y_{2,i+1}&amp;=&amp;y_{2i}+{h\over 6}(J_{1i}+2J_{2i}+2J_{3i}+J_{4i}) 
-			 \end {eqnarray*} 
-		</div>
-		<div class="indent" id="cd031c17-aeb6-4f30-9c32-8c4940c79fe0">
-			 for \(i=0\), …, \(n-1\). Under appropriate conditions on \(g_1\) and \(g_2\), it can be shown that the global truncation error for the Runge-Kutta method is \(O(h^4)\), as in the scalar case considered in Section&nbsp;3.3. 
-		</div>
+			<div id="072ca7da-a4cc-4abb-9a54-f39481b3919b">
+				The numerical methods that we studied in Chapter&nbsp;3 can be extended to systems, and most differential equation software packages include programs to solve systems of equations. We won’t go into detail on numerical methods for systems; however, for illustrative purposes we’ll describe the Runge-Kutta method for the numerical solution of the initial value problem 
+			</div>
+			<div class="eqnarray" id="cf09245c-cede-44d1-8665-283b407a739a">
+				\begin {eqnarray*} 
+					y_1'&amp;=&amp;g_1(t,y_1,y_2),\quad y_1(t_0)=y_{10},\\ 
+					y_2'&amp;=&amp;g_2(t,y_1,y_2),\quad y_2(t_0)=y_{20} 
+				\end {eqnarray*} 
+			</div>
+			<div id="f5137959-5f83-4e0e-8b13-94ab87e57c3a">
+				at equally spaced points \(t_0\), \(t_1\), …, \(t_n=b\) in an interval \([t_0,b]\). Thus, 
+				
+				\[ t_i=t_0+ih,\quad i=0,1,\dots ,n\] where \[ h={b-t_0\over n}\] 
+				
+				We’ll denote the approximate values of \(y_1\) and \(y_2\) at these points by \(y_{10},y_{11},\dots ,y_{1n}\) and \(y_{20},y_{21},\dots ,y_{2n}\). The Runge-Kutta method computes these approximate values as follows: given \(y_{1i}\) and \(y_{2i}\), compute 
+			</div>
+			<div class="eqnarray" id="7f4877e2-4112-447f-ac83-028ddfc7b6cd">
+				\begin {eqnarray*} 
+					I_{1i}&amp;=&amp;g_1(t_i,y_{1i},y_{2i}),\\ 
+					J_{1i}&amp;=&amp;g_2(t_i,y_{1i},y_{2i}),\\ 
+					I_{2i}&amp;=&amp;g_1\left (t_i+{h\over 2},y_{1i}+{h\over 2}I_{1i},y_{2i}+{h\over 2}J_{1i}\right ),\\ 
+					J_{2i}&amp;=&amp;g_2\left (t_i+{h\over 2},y_{1i}+{h\over 2}I_{1i},y_{2i}+{h\over 2}J_{1i}\right ),\\ 
+					I_{3i}&amp;=&amp;g_1\left (t_i+{h\over 2},y_{1i}+{h\over 2}I_{2i},y_{2i}+{h\over 2}J_{2i}\right ),\\ 
+					J_{3i}&amp;=&amp;g_2\left (t_i+{h\over 2},y_{1i}+{h\over 2}I_{2i},y_{2i}+{h\over 2}J_{2i}\right ),\\ 
+					I_{4i}&amp;=&amp;g_1(t_i+h,y_{1i}+hI_{3i},y_{2i}+hJ_{3i}),\\ 
+					J_{4i}&amp;=&amp;g_2(t_i+h,y_{1i}+hI_{3i},y_{2i}+hJ_{3i}) 
+				\end {eqnarray*} 
+			</div>
+			<div id="9c16ecec-e388-46da-bafa-9ca85bd0d48e">
+				and 
+			</div>
+			<div class="eqnarray" id="16edc642-2f46-4ff0-bff4-8edcea58afb0">
+				\begin {eqnarray*} 
+					y_{1,i+1}&amp;=&amp;y_{1i}+{h\over 6}(I_{1i}+2I_{2i}+2I_{3i}+I_{4i}),\\ 
+					y_{2,i+1}&amp;=&amp;y_{2i}+{h\over 6}(J_{1i}+2J_{2i}+2J_{3i}+J_{4i}) 
+				\end {eqnarray*} 
+			</div>
+			<div id="cd031c17-aeb6-4f30-9c32-8c4940c79fe0">
+				for \(i=0\), …, \(n-1\). Under appropriate conditions on \(g_1\) and \(g_2\), it can be shown that the global truncation error for the Runge-Kutta method is \(O(h^4)\), as in the scalar case considered in Section&nbsp;3.3. 
+			</div>
+		</details>
 
 		<nav class="ex">
 			<a href="sec10.1.ex.html">10.1 Exercises</a>
@@ -283,6 +467,6 @@
 			<a href="sec10.0.html">Chapter 10</a>
 
 			<a href="sec10.2.book.html">Next (10.2)</a>
-		</nav></body
-	></html
->
+		</nav>
+	</body>
+</html>
