@@ -800,9 +800,9 @@
 								Then solving for \( c_{n+2} \) we obtain
 							
 								
-								\begin {equation} 
+								\begin {equation*} 
 									c_{n+2}=\frac{(n+3)}{2(n+1)} \, c_n
-								\end {equation}
+								\end {equation*}
 
 								Where \(c_0\) and \(c_1\) are arbitrary and then we will use this recurrence relation to calculate the coefficients and since the index differs by two in the recurrence relation we will calculate the odd and even ones separately starting with the evens:
 							</div>
@@ -838,7 +838,7 @@
 								Substituting the coefficients back into our power series representation of \(y\)
 
 								
-								\begin{align}
+								\begin{align*}
 									y 
 									= & \sum _{n=0}^\infty c_n(x-1)^n \\ \nonumber \\
 									= & c_0 + c_1(x-1) + c_2(x-1)^2 + c_3(x-1)^3 + c_4(x-1)^4 + \cdots  \nonumber \\ \nonumber \\
@@ -848,7 +848,7 @@
 									& \quad + \Bigg( c_1(x-1) + c_1(x-1)^3 + \frac{3}{4}c_1(x-1)^5 + \frac{1}{2}c_1(x-1)^7 + \cdots \Bigg)  \nonumber \\ \nonumber \\
 									= & c_0 \Bigg( 1 + \frac{3}{2}(x-1)^2 + \frac{5}{4}(x-1)^4 + \frac{7}{8}(x-1)^6 + \cdots \Bigg) \\
 									& \quad + c_1 \Bigg( (x-1) + (x-1)^3 + \frac{3}{4}(x-1)^5 + \frac{1}{2}(x-1)^7 + \cdots \Bigg)  \nonumber \\ \nonumber \\
-								\end{align}
+								\end{align*}
 							</div>
 
 							<div>
@@ -941,8 +941,7 @@
 				<div>
 					Compute \(c_0\), \(c_1\), …, \(c_7\) in the series solution \(y=\displaystyle \sum _{n=0}^\infty c_nx^n\) of the IVP 
 					<a id="x1-30r23"></a>
-					\begin {equation}
-						\label {eq:7.2.29} 
+					\begin {equation} \label {eq:7.2.29} 
 						(1+2x^2)\dfrac{d^2y}{dx^2}+10x\dfrac{dy}{dx}+8y=0
 						\quad y(0)=2
 						\quad \left. \dfrac{dy}{dx} \right| _{0}=-3 
@@ -951,32 +950,265 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					Since \(\alpha =2\), \(\beta =10\), and \(\gamma =8\) in <a href="#x1-30r23">(7.2.29)</a>, \[ p(n)=2n(n-1)+10n+8=2(n+2)^2\] Therefore \[ a_{n+2}=-2{(n+2)^2\over (n+2)(n+1)}c_n=-2{n+2\over n+1}c_n,\quad n\ge 0\] Writing this equation separately for \(n=2m\) and \(n=2m+1\) yields
 
-					<div class="eqnarray" id="56fcd055-9bea-475e-85e2-9ec9824a9a85">
-						\begin {eqnarray}
-							a_{2m+2}&amp;=&amp;-2{(2m+2)\over 2m+1}a_{2m}=-4{m+1\over 2m+1}a_{2m},\quad m\ge 0\label {eq:7.2.30}\\ {\mbox {and}}\nonumber \\ a_{2m+3}&amp;=&amp;-2{2m+3\over 2m+2}a_{2m+1}=-{2m+3\over m+1}a_{2m+1},\quad m\ge 0. \label {eq:7.2.31} 
-						\end {eqnarray}
-					</div>
+					<ol>
+						<li class="no-part">
+							<div>
+								First we represent \(y\) as a power series in \(x\) and differentiate it twice
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(\displaystyle y = \sum _{n=0}^\infty c_n \, x^n\) twice
+							</div>
+							<div>	
+								\begin {align*}  
+									y = & \sum _{n=0}^\infty c_n \, x^n \\ \\
+									\frac{dy}{dx} = & \sum _{n=1}^\infty  n \, c_n \, x^{n-1} \\ \\
+									\frac{d^2y}{dx^2} = & \sum _{n=2}^\infty  n(n-1) \, c_n \, x^{n-2} \\ \\
+								\end {align*}
+							</div>
+							<div>	
+								Next we compute the terms of the equation <a href="#x1-30r23">(7.2.29)</a>
+								
+								\begin{align*}
+									\frac{d^2y}{dx^2} = & \sum _{n=2}^\infty  n(n-1) \, c_n \, x^{n-2} \\
+									2x^2\frac{d^2y}{dx^2} = & \sum _{n=2}^\infty  2n(n-1) \, c_n \, x^{n} \\
+									10x \frac{dy}{dx} = & \sum _{n=1}^\infty  10n \, c_n \, x^{n} \\
+									8y = & \sum _{n=0}^\infty 8c_n \, x^n
+								\end{align*}
 
-					Starting with \(c_0=y(0)=2\), we compute \(c_2, c_4\), and \(c_6\) from (<span class="ptmb8t-">7.2.30</span>): 
+								Which we'd like to add up into one series, but first we will need to get them all in terms of \(x^n\) so we shift the index on \(d^2y /dx^2\)
 
-					<div class="eqnarray" id="5a8131ba-753b-449b-93dc-b71a09682812">
-						\begin {eqnarray*}
-							c_2&amp;=&amp;-4\,{1\over 1}2=-8,\\ c_4&amp;=&amp;-4\,{2\over 3}(-8)={64\over 3},\\ c_6&amp;=&amp;-4\,{3\over 5}\left (64\over 3\right )=-{256\over 5} 
-						\end {eqnarray*} 
-					</div>
+								\begin{align*}
+									\frac{d^2y}{dx^2} = & \sum _{n+2=2}^\infty  (n+2)(n+2-1) \, c_{n+2} \, x^{n+2-2} \\
+									 = & \sum _{n=0}^\infty  (n+2)(n+1) \, c_{n+2} \, x^{n} \\
+								\end{align*}
 
-					Starting with \(c_1=\left. \dfrac{dy}{dx} \right| _{0}=-3\), we compute \(c_3,c_5\) and \(c_7\) from (<span class="ptmb8t-">7.2.31</span>): 
+								Additionally, we can add on the zero terms at the beginning of the \(\big( 2x^2 \big) \,  d^2y /dx^2 \) and \(\big( 10x \big) \,  dy /dx \) series
 
-					<div class="eqnarray" id="775e0331-5ba1-49c9-9d70-4ef80eb0d1da">
-						\begin {eqnarray*}
-							c_3&amp;=&amp;-{3\over 1}(-3)=9,\\ c_5&amp;=&amp;-{5\over 2}9=-{45\over 2},\\ c_7&amp;=&amp;-{7\over 3}\left (-{45\over 2}\right )={105\over 2} 
-						\end {eqnarray*} 
-					</div>
 
-					Therefore the solution of <a href="#x1-30r23">(7.2.29)</a> is
-					\[ y=2-3x-8x^2+9x^3+{64 \over 3}x^4-{45 \over 2}x^5-{256 \over 5} x^6+{105 \over 2}x^7+\cdots \]
+								\begin{align*}
+									2x^2\frac{d^2y}{dx^2} = & \sum _{n=0}^\infty  2n(n-1) \, c_n \, x^{n} \\
+									10x \frac{dy}{dx} = & \sum _{n=0}^\infty  10n \, c_n \, x^{n} \\
+								\end{align*}
+
+							</div>
+							<div>
+								Now we substitute the power series expressions for \(y,\) \(dy/dx,\) and \(d^2 y/dx^2 \) into <a href="#x1-30r23">(7.2.29)</a>
+
+
+								\begin{align*}
+									\begin{array} {rrrrr}
+										\dfrac{d^2y}{dx^2} &=& &\displaystyle\sum _{n=0}^\infty& (n+2)(n+1) \, c_{n+2} \, &x^{n}& \\
+										2x^2 \dfrac{d^2y}{dx^2} &=& &\displaystyle\sum _{n=0}^\infty& 2n(n-1) \, c_n &x^{n}& \\
+										10x \dfrac{dy}{dx} &=& &\displaystyle\sum _{n=0}^\infty& 10n \, c_n &x^{n}& \\
+										+ \quad\quad\quad 8y &=& &\displaystyle\sum _{n=0}^\infty& 8c_n &x^n& \\
+										\hline
+										{\scriptsize \underset{0}{ \underbrace{(1+2x^2)\dfrac{d^2y}{dx^2} + 10x \dfrac{dy}{dx} + 8y}} } &=& &\displaystyle\sum _{n=0}^\infty& \Big\{ \quad (n+2)(n+1) \, c_{n+2} \, & &  \\
+										& & & &  \quad \underset{ 2(n+2)^2 }{\underbrace{\big( 2n(n-1) + 8n + 8 \big)}} c_{n} \, & \Big \} \, x^{n}&  \\
+									\end{array}
+								\end{align*}
+
+								Now equating the coefficience on both sides yields the following <span class="vocab">recurrence relation</span>, where we 
+								define the coefficients in the sequence \(\{c_n\}\) in terms of one or more other coefficients with lesser indices 
+								
+								\begin {align*}  
+									(n+2)(n+1) \, c_{n+2} + 2 (n+2)^2 \, c_{n} = 0
+								\end {align*}
+
+								Then solving for \( c_{n+2} \) we obtain
+							
+								
+								\begin {equation} 
+									c_{n+2}=-2\frac{(n+2)}{(n+1)} \, c_n
+								\end {equation}
+
+								Where \(c_0\) and \(c_1\) are arbitrary and then we will use the recurrence relation to calculate the coefficients and since the index differs by two in the recurrence relation we will calculate the odd and even ones separately starting with the evens:
+							</div>
+
+							<div>
+								\begin{align*}
+									c_2 & = c_{0+2} = -\frac{(2)(2)}{(1)} \, c_0 = -\frac{{\small (4 \cdot 1)}}{1} \, c_0 = -4 \, c_0 \\
+									c_4 & = c_{2+2} = -\frac{(2)(4)}{(3)} \, c_2 = +\frac{{\small (4 \cdot 2)(4 \cdot 1)}}{3\cdot 1} \, c_0= \frac{32}{3} \, c_0 \\
+									c_6 & = c_{4+2} = -\frac{(2)(6)}{(5)} \, c_4 = - \frac{ {\small (4 \cdot 3)(4 \cdot 2)(4 \cdot 1)} }{5\cdot 3 \cdot 1} \, c_0 = - \frac{128}{5} \, c_0 \\
+								\end{align*}
+
+								Now we'll calculate the odd coefficients:
+
+								\begin{align*}
+									c_3 & = c_{1+2} = -\frac{(2)(3)}{(2)} \, c_1 = -\frac{{\small (2 \cdot 3)}}{2} \, c_1 = -3 \, c_1 \\
+									c_5 & = c_{3+2} = -\frac{(2)(5)}{(4)} \, c_3 = + \frac{{\small (2 \cdot 5)(2 \cdot 3)}}{4\cdot 2}  \, c_1 = \frac{15}{2} \, c_1 \\
+									c_7 & = c_{5+2} = -\frac{(2)(7)}{(6)} \, c_5 =  -\frac{{\small (2 \cdot 7)(2 \cdot 5)(2 \cdot 3)}}{6\cdot 4 \cdot 2} \, c_1 = -\frac{35}{2} \, c_1 \\
+								\end{align*}
+
+
+								We notice that the even indexed constants all depend on \(c_0\) and the odd indexed constants depend on \(c_1\) so we group them accordingly
+
+								\begin{array}{rrrrr}
+									c_0 & & &\quad& c_1 & & \\
+									c_2 &=& - 4 \, c_0  &\quad& c_3 &=& -3 \, c_1 \\
+									c_4 &=& \displaystyle{32\over 3} \, c_0 &\quad& c_5 &=& \dfrac{15}{2} \, c_1  \\
+									c_6 &=& -\displaystyle{128\over 5} \, c_0 &\quad& c_7 &=& -\dfrac{35}{2} \, c_1  \\
+								\end{array}
+							</div>
+
+							<div>
+								Substituting the coefficients back into our power series representation of \(y\)
+
+								\begin{align*}
+									y 
+									= & \sum _{n=0}^\infty c_n \, x^n \\ \nonumber \\ 
+									= & c_0 + c_1 \, x + c_2 \, x^2 + c_3 \, x^3 + c_4 \, x^4 + \cdots  \nonumber \\ \nonumber \\
+
+									= & \Big( c_0 + c_2 \, x^2 + c_4 \, x^4 + c_6 \, x^6 + \cdots \Big) \\
+									&  \quad +  \Big( c_1 \, x + c_3 \, x^3 + c_5 \, x^5 + c_7 \, x^7 + \cdots \Big)  \nonumber \\ \nonumber \\
+
+									= & \Big( c_0 - 4c_0 \, x^2 + \frac{32}{3}c_0 \, x^4 - \frac{128}{5} c_0 \, x^6 + \cdots \Big) \\
+									&  \quad +  \Big( c_1 \, x - 3 c_1 \, x^3 + \frac{15}{2} c_1 \, x^5 - \frac{35}{2} c_1 \, x^7 + \cdots \Big)  \nonumber \\ \nonumber \\
+
+									= & c_0 \Big( 1 - 4 \, x^2 + \frac{32}{3} \, x^4 - \frac{128}{5}  \, x^6 + \cdots \Big) \\
+									&  \quad +  c_1 \Big( x - 3 \, x^3 + \frac{15}{2} \, x^5 - \frac{35}{2} \, x^7 + \cdots \Big)  \nonumber \\ \nonumber \\
+								\end{align*}
+							</div>
+
+							<div>
+								Again we are not able to represent the series solution in terms of familiar elementary functions:
+
+								\begin{align*}
+									y 
+									= & c_0 \, {\small \Big( 1 - 4 \, x^2 + \frac{32}{3} \, x^4 - \frac{128}{5}  \, x^6 + \cdots \Big)}
+									+  c_1 \, {\small \Big( x - 3 \, x^3 + \frac{15}{2} \, x^5 - \frac{35}{2} \, x^7 + \cdots \Big)}
+								\end{align*}
+
+								Now we have our general solution is perfect! Remember that this answer is perfectly acceptable. Do not obsess over finding closed form answers as it is not always possible! In this case we are solving an IVP <a href="#x1-30r23">(7.2.29)</a> so we will apply the initial conditions \(y(0)=2\) and \(\left. dy/dx \right|_{0}=-3 \)
+							</div>
+
+							<div>
+								
+
+								\begin{align*}
+									y(x)
+									= & \, c_0 \, {\small \Big( 1 - 4 \, x^2 + \frac{32}{3} \, x^4 - \frac{128}{5}  \, x^6 + \cdots \Big)}
+									+  c_1 \, {\small \Big( x - 3 \, x^3 + \frac{15}{2} \, x^5 - \frac{35}{2} \, x^7 + \cdots \Big)} \\
+									\underbrace{y(0)} 
+									= & \, c_0 \, {\small \Big( 1 - 4 \cdot 0^2 + \frac{32}{3} \, x^4 - \frac{128}{5} \cdot 0^6 + \cdots \Big)}
+									+  c_1 \, {\small \Big( 0 - 3 \cdot 0^3 + \frac{15}{2} \cdot 0^5 - \frac{35}{2} \cdot 0^7 + \cdots \Big)} \\
+									2 \, \, \, 
+									= & \, c_0  \\
+								\end{align*}
+
+								Then differentiating \(y\)
+
+
+								\begin{align*}
+									\frac{dy}{dx}
+									= & \, c_0 \, {\small \Big( - 8 \, x + \frac{128}{3} \, x^3 - \frac{768}{5}  \, x^5 + \cdots \Big)}
+									+  c_1 \, {\small \Big( 1 - 9 \, x^2 + \frac{75}{2} \, x^4 - \frac{245}{2} \, x^6 + \cdots \Big)} \\
+
+									\underbrace{ \left. \frac{dy}{dx} \right|_{0} }
+									= & \, c_0 \, {\small \Big( - 8 \cdot 0 + \frac{128}{3} \cdot 0^3 - \frac{768}{5}  \cdot 0^5 + \cdots \Big)}
+									+  c_1 \, {\small \Big( 1 - 9 \cdot 0^2 + \frac{75}{2} \cdot 0^4 - \frac{245}{2} \cdot 0^6 + \cdots \Big)} \\
+
+									-3 \, \, \,
+									= &  \, c_1  \\
+
+								\end{align*}
+
+								Substituting back in our constants we have our particular solution
+
+								\begin{align*}
+									y 
+										= & \, \overset{c_0}{\overbrace{2}} \, {\small \Big( 1 - 4 \, x^2 + \frac{32}{3} \, x^4 - \frac{128}{5}  \, x^6 + \cdots \Big)} 
+										- \overset{c_1}{\overbrace{3}} \,  {\small \Big( x - 3 \, x^3 + \frac{15}{2} \, x^5 - \frac{35}{2} \, x^7 + \cdots \Big)} 	\\ 	
+									y 
+										= & \, {\small \Big( 2 - 8 \, x^2 + \frac{64}{3} \, x^4 - \frac{256}{5}  \, x^6 + \cdots \Big)} 
+										+ \,  {\small \Big( -3x + 9 \, x^3 - \frac{45}{2} \, x^5 + \frac{105}{2} \, x^7 + \cdots \Big)} 	\\ 	
+									y 
+										= & \, {\small 
+											2 
+											-3x
+											- 8 \, x^2 
+											+ 9 \, x^3
+											+ \frac{64}{3} \, x^4 
+											- \frac{45}{2} \, x^5 
+											- \frac{256}{5}  \, x^6 
+											+ \frac{105}{2} \, x^7
+											+ \cdots }	\\ 									
+								\end{align*}
+
+					
+
+							</div>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<div>
+
+
+								
+
+								Again we are already done with this problem and both our general solution and particular solution is perfect as is! 
+								
+								
+								However, when we calculated our coefficients it was noticable that a pattern was emerging.
+
+							
+
+								\begin{array}{rrrrr}
+									c_2 &=& -\dfrac{4^1 \cdot 1!}{1}c_0 &\quad& 
+									c_3 &=& - \, \dfrac{3}{1!} \, c_1\\
+									c_4 &=& +\dfrac{4^2 \cdot 2!}{3 \cdot 1} c_0 &\quad& 
+									c_5 &=& + \, \dfrac{5 \cdot 3}{2!} \, c_1\\
+									c_6 &=& - \dfrac{4^3 \cdot 3!}{5 \cdot 3 \cdot 1} c_0 &\quad&  c_7 &=&  - \, \dfrac{7 \cdot 5 \cdot 3}{3!} \, c_1 \\
+									c_8 &=& + \dfrac{4^4 \cdot 4!}{7 \cdot 5 \cdot 3 \cdot 1} c_0 &\quad&  
+									c_9 &=& + \, \dfrac{9 \cdot 7 \cdot 5 \cdot 3}{4!} \, c_1 \\
+									&\vdots& & &  &\vdots& \\
+									c_{2n} &=&  \dfrac{ c_0 \, (-1)^n \, 4^n \, n!}{ {\small \displaystyle \prod_{m=1}^{n} (2m-1)} }    &\quad&  
+									c_{2n+1} &=& c_1 \, \displaystyle \dfrac{(-1)^n}{n!} \,  \displaystyle {\small \displaystyle \prod_{m=1}^{n} (2m-1)} \\
+								\end{array}
+
+								Thus we can rewrite our general solution more campactly as
+
+								\begin{align*}
+									
+
+									y 
+										= & c_0 \, \underbrace{ {\small \Big( 1 - 4 \, x^2 + \frac{32}{3} \, x^4 - \frac{128}{5}  \, x^6 + \cdots \Big)} }
+										+  c_1 \, \underbrace{ {\small \Big( x - 3 \, x^3 + \frac{15}{2} \, x^5 - \frac{35}{2}  \, x^7 + \cdots \Big)} }	\\ 
+
+									y 
+										= & \quad \quad c_0 \, \sum_{n=0}^{\infty} \, \dfrac{ (-1)^n \, 4^n \, n!}{ {\small \displaystyle \prod_{m=1}^{n} (2m-1)} }
+										\quad\quad+\quad\quad  c_1 \, \sum_{n=0}^{\infty} \, \displaystyle \dfrac{(-1)^n}{n!} \,  \displaystyle {\small \displaystyle \prod_{m=1}^{n} (2m-1)} \\
+											
+								\end{align*}
+							</div>
+							<div>
+
+								Again the original solution along with the recurrence relation is just as good as an answer. In fact, with regard to solving an IVP, it was actually more convenient to evaluate at the initial conditions in the expanded form of the solution anyway. But now that we have evaluated to find out constants we could write out particular solution as 
+								
+								\begin{align*}
+									y 
+										= & \,  2 \, \sum_{n=0}^{\infty} \, \dfrac{ (-1)^n \, 4^n \, n!}{ {\small \displaystyle \prod_{m=1}^{n} (2m-1)} }
+										- 3 \, \sum_{n=0}^{\infty} \, \displaystyle \dfrac{(-1)^n}{n!} \,  \displaystyle {\small \displaystyle \prod_{m=1}^{n} (2m-1)} \\
+											
+								\end{align*}
+								
+								
+							
+
+
+					
+
+							</div>
+					
+						
+
+						</li>
+				
+					</ol>
+						
 				</details>
 			</div>
 
