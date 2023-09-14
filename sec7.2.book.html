@@ -866,31 +866,27 @@
 								Even though our solution is great as is, whenever reasonable, we try to represent our series solution in sigma notation. Sometimes simplifying the coefficients makes it difficult to identiy the pattern of the coefficients and it is best to examine unsimplified versions instead.
 							</div>
 							<div>
-								\begin{array}{rrcrr}
-									c_0 &=& \dfrac{1}{1}c_0 = \dfrac{1}{2^0}c_0 &\quad& c_1 &=& \dfrac{1}{1} c_1\\	
-									c_2 &=& \dfrac{3}{2}c_0 = \dfrac{3}{2^1}c_0 &\quad& c_3 &=& \dfrac{2 \cdot 1}{2 \cdot 1} c_1\\
-									c_4 &=& \dfrac{5}{4} c_0 =  \dfrac{5}{2^2} c_0 &\quad& c_5 &=&  \dfrac{3 \cdot 2 \cdot 1}{4 \cdot 2 \cdot 1} c_1\\
-									c_6 &=& \dfrac{7}{8} c_0 = \dfrac{7}{2^3} c_0 &\quad&  c_7 &=& \dfrac{4 \cdot 3 \cdot 2 \cdot 1}{6 \cdot 4 \cdot 2 \cdot 1} c_1\\
-									c_8 &=& \dfrac{9}{16} c_0 = \dfrac{9}{2^4} c_0 &\quad&  c_9 &=& \dfrac{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}{8 \cdot 6 \cdot 4 \cdot 2 \cdot 1} c_1\\
+								\begin{array}{rrcrrc}
+									c_0 &=& \dfrac{1}{1}c_0 = \dfrac{1}{2^0}c_0 &\quad& c_1 &=& \dfrac{1}{1} c_1 = \dfrac{1}{2^0} c_1\\	
+									c_2 &=& \dfrac{3}{2}c_0 = \dfrac{3}{2^1}c_0 &\quad& c_3 &=& \dfrac{2}{2} c_1 = \dfrac{2}{2^1} c_1\\
+									c_4 &=& \dfrac{5}{4} c_0 =  \dfrac{5}{2^2} c_0 &\quad& c_5 &=&  \dfrac{3}{4} c_1 =  \dfrac{3}{2^2} c_1\\
+									c_6 &=& \dfrac{7}{8} c_0 = \dfrac{7}{2^3} c_0 &\quad&  c_7 &=& \dfrac{4}{8} c_1 = \dfrac{4}{2^3} c_1\\
+									c_8 &=& \dfrac{9}{16} c_0 = \dfrac{9}{2^4} c_0 &\quad&  c_9 &=& \dfrac{5}{16} c_1 =  \dfrac{5}{2^4} c_1\\
 									 &\vdots& &\quad&   & \vdots & \\
 
-									c_{2n} &=& {\dfrac{2n+1}{2^n}}  &\quad&  c_{2n+1} &=& c_1 \displaystyle \dfrac{(-1)^n \, 4^n \, n!}{{\small \displaystyle \prod_{m=1}^{n} (2m-1)}}  \\
+									c_{2n} &=& {\dfrac{2n+1}{2^n}}c_0  &\quad&  c_{2n+1} &=&  {\dfrac{n+1}{2^n}}c_1 \\
 								\end{array}
 
-								Thus we can rewrite our solution more campactly as
+								Thus we can rewrite our solution more campactly in sigma notation:
 
 								\begin{align*}
 									y 
-									= & c_0 \, \underbrace{ {\small \Big( 1 - x^2 + \frac{3}{2} x^4 - \frac{5}{2} x^6 + \cdots \Big)} }
-									+  c_1 \, \underbrace{ {\small \Big( x - \frac{4}{3} x^3 + \frac{32}{15} x^5 - \frac{384}{105} x^7 + \cdots \Big)} } \\
-									y 
-									= & c_0 \, \sum_{n=0}^{\infty} {\dfrac{(-1)^n}{n!} {\small \displaystyle \prod_{m=1}^{n} (2m-1)}}
-									\quad + \quad  c_1 \, \sum_{n=0}^{\infty} { \dfrac{(-1)^n \, 4^n \, n!}{{\small \displaystyle \prod_{m=1}^{n} (2m-1)}}  }
+									= & c_0 \, \underbrace{ {\small \Big( 1 + \frac{3}{2}(x-1)^2 + \frac{5}{4}(x-1)^4 + \cdots \Big)} }
+									+  c_1 \, \underbrace{ {\small \Big( (x-1) + (x-1)^3 + \frac{3}{4}(x-1)^5 + \cdots \Big) }} \\
+									y = & \quad \quad c_0 \sum_{n=0}^n {\dfrac{2n+1}{2^n}}(x-1)^{2n} \quad + \quad c_1 \sum_{n=0}^n {\dfrac{n+1}{2^n}} (x-1)^{2n+1} \\
 								\end{align*}
 
-								But the original solution along with the recurrence relation is just as good as an answer.
-					
-
+							
 							</div>
 							
 						</li>
@@ -915,13 +911,9 @@
 						<div id="d3ed571d-876b-4d3d-9281-c67a06061063">
 							
 						</div>
-						<div class="eqnarray" id="0f8b99f7-e277-4b01-8f5c-bcaf1743f1d5">
-							\begin {eqnarray*} 
-								a_{2m+2}&amp;=&amp;-{p(2m)\over (2m+2)(2m+1)}a_{2m}\\&amp;=&amp; {(2m+2)(2m+3)\over 2(2m+2)(2m+1)} a_{2m}={2m+3\over 2(2m+1)}a_{2m},\quad m\ge 0\\ {\mbox {and}}\\ a_{2m+3}&amp;=&amp;-{p(2m+1)\over (2m+3)(2m+2)}a_{2m+1}\\&amp;=&amp; {(2m+3)(2m+4)\over 2 (2m+3)(2m+2)}a_{2m+1}={m+2\over 2(m+1)}a_{2m+1},\quad m\ge 0 
-							\end {eqnarray*} 
-						</div>
+				
 						<div id="2b16f343-8f9b-495a-8323-089aab015cdd">
-							We leave it to you to show that \[ a_{2m}={2m+1\over 2^m}c_0\quad \mbox { and }\quad a_{2m+1}={m+1\over 2^m}c_1,\quad m\ge 0\] which implies that the power series in \(x-1\) for the general solution of <a href="#x1-28r22">(7.2.28)</a> is \[ y=c_0\sum _{m=0}^\infty {2m+1\over 2^m}(x-1)^{2m}+c_1\sum _{m=0}^\infty {m+1\over 2^m}(x-1)^{2m+1}\] 
+						
 						</div>
 					</div>	
 				</details>
@@ -937,7 +929,7 @@
 
 			<!--?-->
 			<div id="3f94c983-be74-4441-bdc1-233c515c802d">
-				In the examples considered so far we were able to obtain closed formulas for coefficients in the power series solutions. In some cases this is impossible, and we must settle for computing a finite number of terms in the series. The next example illustrates this with an initial value problem. 
+				In the examples considered so far we were able to obtain closed formulas for coefficients in the power series solutions. In some cases this is impossible, and we must settle for computing a finite number of terms in the series. The next example illustrates this with an IVP. 
 			</div>
 
 			<br>
@@ -947,10 +939,13 @@
 			<!--Example 4-->
 			<div class="example" id="x1-294" style="--ex-number: 4">
 				<div>
-					Compute \(c_0\), \(c_1\), …, \(c_7\) in the series solution \(y=\sum _{n=0}^\infty c_nx^n\) of the initial value problem 
+					Compute \(c_0\), \(c_1\), …, \(c_7\) in the series solution \(y=\displaystyle \sum _{n=0}^\infty c_nx^n\) of the IVP 
 					<a id="x1-30r23"></a>
 					\begin {equation}
-						\label {eq:7.2.29} (1+2x^2)\dfrac{d^2y}{dx^2}+10x\dfrac{dy}{dx}+8y=0,\quad y(0)=2,\quad \left. \dfrac{dy}{dx} \right| _{0}=-3 
+						\label {eq:7.2.29} 
+						(1+2x^2)\dfrac{d^2y}{dx^2}+10x\dfrac{dy}{dx}+8y=0
+						\quad y(0)=2
+						\quad \left. \dfrac{dy}{dx} \right| _{0}=-3 
 					\end {equation}
 				</div>
 
