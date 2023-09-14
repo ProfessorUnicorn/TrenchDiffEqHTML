@@ -22,368 +22,994 @@
 
 	<body>
 		<div style="display: none" id="9c8732b4-c781-402d-9572-86514f77c697">
-			 \( \newcommand{\place}{\bigskip\hrule\bigskip\noindent} \newcommand{\threecol}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]} \newcommand{\threecolj}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]} \newcommand{\lims}[2]{\,\bigg|_{#1}^{#2}} \newcommand{\twocol}[2]{\left[\begin{array}{l}#1\\#2\end{array}\right]} \newcommand{\ctwocol}[2]{\left[\begin{array}{c}#1\\#2\end{array}\right]} \newcommand{\cthreecol}[3]{\left[\begin{array}{c}#1\\#2\\#3\end{array}\right]} \newcommand{\eqline}[1]{\centerline{\hfill$\displaystyle#1$\hfill}} \newcommand{\twochar}[4]{\left| \begin {array}{cc} #1-\lambda&amp; #2\\#3&amp; #4-\lambda \end{array}\right|} \newcommand{\twobytwo}[4]{\left[ \begin {array}{rr} #1&amp; #2\\#3&amp; #4 \end{array}\right]} \newcommand{\threechar}[9]{\left[ \begin {array}{ccc} #1-\lambda&amp; #2&amp; #3\\#4&amp; #5-\lambda&amp; #6\\#7&amp; #8&amp; #9-\lambda \end{array}\right]} \newcommand{\threebythree}[9]{\left[ \begin {array}{rrr} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9 \end{array}\right]} \newcommand{\solutionpart}[1]{\vskip10pt\noindent\underbar{\color{blue}\sc Solution({\bf #1})\ }} \newcommand{\Cex}{\fbox{\textcolor{red}{C}}\, } \newcommand{\CGex}{\fbox{\textcolor{red}{C/G}}\, } \newcommand{\Lex}{\fbox{\textcolor{red}{L}}\, } \newcommand{\matfunc}[3]{\left[ \begin {array}{cccc}#1_{11}(t)&amp; #1_{12}(t)&amp;\cdots &amp; #1_{1#3}(t)\\#1_{21}(t)&amp; #1_{22}(t)&amp;\cdots&amp; #1_{2#3}(t)\\\vdots&amp; \vdots&amp;\ddots&amp;\vdots\\#1_{#21}(t)&amp; #1_{#22}(t)&amp;\cdots&amp; #1_{#2#3}(t) \end{array}\right]} \newcommand{\col}[2]{\left[\begin{array}{c}#1_1\\#1_2\\\vdots\\#1_#2\end{array}\right]} \newcommand{\colfunc}[2]{\left[\begin{array}{c}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t)\end{array}\right]} \newcommand{\cthreebythree}[9]{\left[ 
-			 \begin  {array}{ccc} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9 
-			 \end{array}\right]} \) 
+			\( 
+				\newcommand{\threecol}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]}
+				\newcommand{\twocol}[2]{\left[\begin{array}{l}#1\\#2\end{array}\right]}
+				\newcommand{\twochar}[4]{\left| \begin {array}{cc} #1-\lambda&amp; #2\\#3&amp; #4-\lambda \end{array}\right|}
+				\newcommand{\twobytwo}[4]{\left[ \begin {array}{rr} #1&amp; #2\\#3&amp; #4 \end{array}\right]}
+				\newcommand{\threebythree}[9]{\left[ \begin {array}{rrr} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9 \end{array}\right]}
+				\newcommand{\matfunc}[3]{\left[ \begin {array}{cccc}#1_{11}(t)&amp; #1_{12}(t)&amp;\cdots &amp; #1_{1#3}(t)\\#1_{21}(t)&amp; #1_{22}(t)&amp;\cdots&amp; #1_{2#3}(t)\\\vdots&amp; \vdots&amp;\ddots&amp;\vdots\\#1_{#21}(t)&amp; #1_{#22}(t)&amp;\cdots&amp; #1_{#2#3}(t) \end{array}\right]}
+				\newcommand{\col}[2]{\left[\begin{array}{c}#1_1\\#1_2\\\vdots\\#1_#2\end{array}\right]}
+				\newcommand{\colfunc}[2]{\left[ \begin {array}{c}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t) \end{array}\right] }
+				\newcommand{\cthreebythree}[9]{\left[ \begin {array}{ccc} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9  \end{array}\right]} 
+			\) 
 		</div>
+
 		<div id="ad3056d6-709f-4f3b-ac58-b1fb2b7334bb" class="section-title">
 			 10.4 Constant Coefficient Homogeneous Systems I 
 		</div>
-		<div id="11bb961b-45d7-4a1a-9672-6c13251357cb">
-			
-			We’ll now begin our study of the homogeneous system 
-			\begin  {equation} \label {eq:10.4.1} {\bf y}'=A{\bf y} 
-			\end {equation}<a id="x1-2r1"></a> where \(A\) is an \(n\times n\) constant matrix. Since \(A\) is continuous on \((-\infty ,\infty )\), Theorem&nbsp;<span class="ptmb8t-">10.2.1</span>implies that all solutions of (<a href="#x1-2r1">10.4.1<!-- tex4ht:ref: eq:10.4.1  --></a>) are defined on \((-\infty ,\infty )\). Therefore, when we speak of solutions of \({\bf y}'=A{\bf y}\), we’ll mean solutions on \((-\infty ,\infty )\).
-		
-		</div>
-		<div class="indent" id="becf279b-6108-4cc6-a259-82b5ad7c9e70">
-			 In this section we assume that all the eigenvalues of \(A\) are real and that \(A\) has a set of \(n\) linearly independent eigenvectors. In the next two sections we consider the cases where some of the eigenvalues of \(A\) are complex, or where \(A\) does not have \(n\) linearly independent eigenvectors. 
-		</div>
-		<div class="indent" id="84a6dad9-edd9-4134-b1d6-fcd7d0483431">
-			
-			In Example&nbsp;<span class="ptmb8t-">10.3.2</span>we showed that the vector functions \[ {\bf y}_1=\twocol {-e^{2t}}{2e^{2t}}\quad \mbox{ and } \quad {\bf y}_2=\twocol {-e^{-t}}{e^{-t}} \] form a fundamental set of solutions of the system \begin {equation} \label {eq:10.4.2} {\bf y}'=\twobytwo {-4}{-3}65 {\bf y} \end {equation}<a id="x1-3r2"></a> but we did not show how we obtained \({\bf y}_1\) and \({\bf y}_2\) in the first place. To see how these solutions can be obtained we write (<a href="#x1-3r2">10.4.2<!-- tex4ht:ref: eq:10.4.2  --></a>) as \begin {equation} \label {eq:10.4.3} \begin {array}{ccc} y_1'&amp;=&amp;-4y_1-3y_2\\y_2'&amp;=&amp;\phantom {-}6y_1+5y_2 \end {array} \end {equation}<a id="x1-4r3"></a> and look for solutions of the form \begin {equation} \label {eq:10.4.4} y_1=x_1e^{\lambda t}\quad \mbox{ and } \quad y_2=x_2e^{\lambda t} \end {equation}<a id="x1-5r4"></a> where \(x_1\), \(x_2\), and \(\lambda \) are constants to be determined. Differentiating (<a href="#x1-5r4">10.4.4<!-- tex4ht:ref: eq:10.4.4  --></a>) yields \[ y_1'=\lambda x_1e^{\lambda t}\quad \mbox { and }\quad y_2'=\lambda x_2e^{\lambda t}\] Substituting this and (<a href="#x1-5r4">10.4.4<!-- tex4ht:ref: eq:10.4.4  --></a>) into (<a href="#x1-4r3">10.4.3<!-- tex4ht:ref: eq:10.4.3  --></a>) and canceling the common factor \(e^{\lambda t}\) yields \[ \begin {array}{ccc}-4x_1-3x_2&amp;=&amp;\lambda x_1 \\ 6 x_1+5x_2&amp;=&amp;\lambda x_2.\end {array} \] For a given \(\lambda \), this is a homogeneous algebraic system, since it can be rewritten as \begin {equation} \label {eq:10.4.5} 
-			\begin  {array}{rcl} (-4-\lambda ) x_1-3 x_2&amp;=&amp;0\\ 6 x_1+(5-\lambda ) x_2&amp;=&amp;0. 
-			\end {array} \end {equation}<a id="x1-6r5"></a> The trivial solution \(x_1=x_2=0\) of this system isn’t useful, since it corresponds to the trivial solution \(y_1\equiv y_2\equiv 0\) of (<a href="#x1-4r3">10.4.3<!-- tex4ht:ref: eq:10.4.3  --></a>), which can’t be part of a fundamental set of solutions of (<a href="#x1-3r2">10.4.2<!-- tex4ht:ref: eq:10.4.2  --></a>). Therefore we consider only those values of \(\lambda \) for which (<a href="#x1-6r5">10.4.5<!-- tex4ht:ref: eq:10.4.5  --></a>) has nontrivial solutions. These are the values of \(\lambda \) for which the determinant of (<a href="#x1-6r5">10.4.5<!-- tex4ht:ref: eq:10.4.5  --></a>) is zero; that is,
-		
-		</div>
-		<div class="eqnarray" id="8b9adc62-9632-4cbd-b420-5f776693a690">
-			 \begin {eqnarray*} \left | 
-			 \begin  {array}{cc}-4-\lambda &amp;-3\\6&amp;5-\lambda 
-			 \end {array}\right |&amp;=&amp; (-4-\lambda )(5-\lambda )+18\\&amp;=&amp;\lambda ^2-\lambda -2\\ &amp;=&amp;(\lambda -2)(\lambda +1)=0\end {eqnarray*} 
-		</div>
-		<div class="indent" id="446a4222-83dd-471c-9ba7-e3a2ad13ddb1">
-			 which has the solutions \(\lambda _1=2\) and \(\lambda _2=-1\). 
-		</div>
-		<div class="indent" id="c48b99b9-aaba-4684-abe0-56489df8af9d">
-			
-			Taking \(\lambda =2\) in (<a href="#x1-6r5">10.4.5<!-- tex4ht:ref: eq:10.4.5  --></a>) yields
-		
-		</div>
-		<div class="eqnarray" id="ecbc46e8-2f4d-46f5-a7a9-bf71be2e1baa">
-			 
-			 \begin  {eqnarray*} -6 x_1-3 x_2&amp;=&amp;0\\ 6 x_1+3 x_2&amp;=&amp;0 
-			 \end {eqnarray*} 
-		</div>
-		<div class="indent" id="b81a63fa-c564-491f-8335-0075dca597f1">
-			
-			which implies that \(x_1=-x_2/2\), where \(x_2\) can be chosen arbitrarily. Choosing \(x_2=2\) yields the solution \(y_1=-e^{2t}\), \(y_2=2e^{2t}\) of (<a href="#x1-4r3">10.4.3<!-- tex4ht:ref: eq:10.4.3  --></a>). We can write this solution in vector form as 
-			\begin  {equation} \label {eq:10.4.6} {\bf y}_1=\twocol {-1}{\phantom {-}2} e^{2t} 
-			\end {equation}<a id="x1-7r6"></a>
-		
-		</div>
-		<div class="indent" id="0d7e10ee-8928-4033-a35a-57f81429788b">
-			
-			Taking \(\lambda =-1\) in (<a href="#x1-6r5">10.4.5<!-- tex4ht:ref: eq:10.4.5  --></a>) yields the system
-		
-		</div>
-		<div class="eqnarray" id="404342ab-f9cb-4d86-b1ba-24591007e66b">
-			 
-			 \begin  {eqnarray*} -3 x_1-3 x_2&amp;=&amp;0\\ \phantom {-}6 x_1+6 x_2&amp;=&amp;0 
-			 \end {eqnarray*} 
-		</div>
-		<div class="indent" id="ea14594e-4bfb-49cd-92b1-dc3e03d9fa5c">
-			
-			so \(x_1=-x_2\). Taking \(x_2=1\) here yields the solution \(y_1=-e^{-t}\), \(y_2=e^{-t}\) of (<a href="#x1-4r3">10.4.3<!-- tex4ht:ref: eq:10.4.3  --></a>). We can write this solution in vector form as 
-			\begin  {equation} \label {eq:10.4.7} {\bf y}_2=\twocol {-1}{\phantom {-}1}e^{-t} 
-			\end {equation}<a id="x1-8r7"></a>
-		
-		</div>
-		<div class="indent" id="3ae2f526-1fdb-4e79-a28f-2787a5c85787">
-			
-			In (<a href="#x1-7r6">10.4.6<!-- tex4ht:ref: eq:10.4.6  --></a>) and (<a href="#x1-8r7">10.4.7<!-- tex4ht:ref: eq:10.4.7  --></a>) the constant coefficients in the arguments of the exponential functions are the eigenvalues of the coefficient matrix in (<a href="#x1-3r2">10.4.2<!-- tex4ht:ref: eq:10.4.2  --></a>), and the vector coefficients of the exponential functions are associated eigenvectors. This illustrates the next theorem.
-		
-		</div>
-		<div class="newtheorem" id="cad723bc-946e-4525-a72e-34f20479e657">
-			
-			<div
-				><span class="head"> <span class="ptmb8t-">Theorem&nbsp;10.4.1</span></span><a id="x1-91"></a> Suppose the \(n\times n\) constant matrix \(A\) has \(n\) real eigenvalues \(\lambda _1,\lambda _2,\ldots ,\lambda _n\) (which need not be distinct) with associated linearly independent eigenvectors \({\bf x}_1,{\bf x}_2,\ldots ,{\bf x}_n\). Then the functions \[ {\bf y}_1={\bf x}_1e^{\lambda _1 t},\, {\bf y}_2={\bf x}_2e^{\lambda _2 t},\, \dots ,\, {\bf y}_n={\bf x}_ne^{\lambda _n t} \] form a fundamental set of solutions of \({\bf y}'=A{\bf y};\) that is, the general solution of this system is \[ {\bf y}=c_1{\bf x}_1e^{\lambda _1 t}+c_2{\bf x}_2e^{\lambda _2 t} +\cdots +c_n{\bf x}_ne^{\lambda _n t}\]
-			
-		</div>
-		</div>
-		<div class="indent" id="3558494d-2a9b-4e74-bc70-75fb352c4628">
-			 
-		</div>
-		<div id="7c06e859-dab3-4e0f-88d4-20b1ef540dcc"><span class="ptmb8t-">Proof </span>Differentiating \({\bf y}_i={\bf x}_ie^{\lambda _it}\) and recalling that \(A{\bf x}_i=\lambda _i{\bf x}_i\) yields \[ {\bf y}_i'=\lambda _i{\bf x}_ie^{\lambda _it}=A{\bf x}_ie^{\lambda _it} =A{\bf y}_i\] This shows that \({\bf y}_i\) is a solution of \({\bf y}'=A{\bf y}\). 
-		</div>
-		<div class="indent" id="9de2ecb8-840a-4cd6-906d-066f1ab793ca">
-			 The Wronskian of \(\{{\bf y}_1,{\bf y}_2,\ldots ,{\bf y}_n\}\) is \[ \left | \begin {array}{cccc} x_{11}e^{\lambda _1 t}&amp; x_{12}e^{\lambda _2 t}&amp;\cdots&amp; x_{1n}e^{\lambda _n t}\\ x_{21}e^{\lambda _1 t}&amp; x_{22}e^{\lambda _2 t}&amp;\cdots&amp; x_{2n}e^{\lambda _n t}\\\vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ x_{n1}e^{\lambda _1 t}&amp; x_{n2}e^{\lambda _2 t}&amp;\cdots&amp; x_{nn}e^{\lambda x_n t} \end {array}\right | =e^{\lambda _1 t}e^{\lambda _2 t}\cdots e^{\lambda _n t} \left | 
-			 \begin  {array}{cccc} x_{11}&amp;x_{12}&amp;\cdots&amp;x _{1n}\cr x_{21}&amp;x_{22}&amp;\cdots&amp;x _{2n}\cr \vdots&amp; \vdots&amp; \ddots&amp; \vdots \cr x_{n1}&amp;x_{n2}&amp;\cdots&amp;x _{nn}\cr 
-			 \end {array}\right |\] Since the columns of the determinant on the right are \({\bf x}_1\), \({\bf x}_2\), …, \({\bf x}_n\), which are assumed to be linearly independent, the determinant is nonzero. Therefore Theorem&nbsp;<span class="ptmb8t-">10.3.3</span>implies that \(\{{\bf y}_1,{\bf y}_2,\ldots ,{\bf y}_n\}\) is a fundamental set of solutions of \({\bf y}'=A{\bf y}\). 
-		</div>
-		<div class="newtheorem" id="466029e5-9ed2-41ca-bc42-78cfa0b7fa03">
-			
-			<div
-				><span class="head"> <span class="ex-number">Example&nbsp;10.4.1</span></span><a id="x1-101"></a><br class="newline" />
-			
-		</div>
-			<dl class="list1">
-				<dt class="list"><span class="ptmb8t-">(a)</span></dt>
-				<dd class="list">
-					<div>
-						 Find the general solution of 
-						 \begin  {equation} \label {eq:10.4.8} {\bf y}'=\twobytwo 2442 {\bf y} 
-						 \end {equation}<a id="x1-12r8"></a> 
-					</div>
-				</dd>
-				<dt class="list"><span class="ptmb8t-">(b)</span></dt>
-				<dd class="list">
-					<div>
-						 Solve the initial value problem \begin {equation} \label {eq:10.4.9} {\bf y}'=\twobytwo 2442 {\bf y},\quad {\bf y}(0)=\left [
-						 \begin  {array}{r}5 \\-1 
-						 \end {array}\right ]\end {equation}<a id="x1-14r9"></a> 
-					</div>
-				</dd>
-			</dl>
-		</div>
-		<div class="indent" id="a4a1a6d2-37bc-49f0-a337-7cb96e1feae8">
-			 
-		</div>
-		<div id="da7e5112-e352-4851-aee4-39da1db3d65d">
-			<span class="underline"
-				><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">a</span><span class="ptmrc8t-">)&nbsp;</span></span
-			>
-			The characteristic polynomial of the coefficient matrix \(A\) in (<a href="#x1-12r8">10.4.8<!-- tex4ht:ref: eq:10.4.8  --></a>) is
-		
-		</div>
-		<div class="eqnarray" id="6dd296ea-6752-4c7f-99a8-4a1db4c4cbdb">
-			 \begin {eqnarray*} \left | 
-			 \begin  {array}{cc} 2-\lambda &amp;4\\4&amp;2-\lambda 
-			 \end {array}\right | &amp;=&amp; (\lambda -2)^2-16\\ &amp;=&amp; (\lambda -2-4)(\lambda -2+4)\\ &amp;=&amp; (\lambda -6)(\lambda +2)\end {eqnarray*} 
-		</div>
-		<div class="indent" id="29fdc35c-948a-4696-82c8-bfa944b1e972">
-			
-			Hence, \(\lambda _1=6\) and \(\lambda _2 =-2\) are eigenvalues of \(A\). To obtain the eigenvectors, we must solve the system \begin {equation} \label {eq:10.4.10} \left [ \begin {array}{cc} 2-\lambda &amp;4\\4&amp;2-\lambda \end {array}\right ] \left [\begin {array}{c} x_1\\x_2\end {array}\right ]= \left [ \begin {array}{c} 0\\0 \end {array}\right ] \end {equation}<a id="x1-15r10"></a> with \(\lambda =6\) and \(\lambda =-2\). Setting \(\lambda =6\) in (<a href="#x1-15r10">10.4.10<!-- tex4ht:ref: eq:10.4.10  --></a>) yields \[ \left [\begin {array}{rr}-4&amp;4\\4&amp;-4 \end {array}\right ]\left [\begin {array}{c} x_1\\x_2\end {array}\right ]=\left [\begin {array}{c} 0\\0\end {array} \right ]\] which implies that \(x_1=x_2\). Taking \(x_2=1\) yields the eigenvector \[ {\bf x}_1=\left [\begin {array}{c} 1\\1\end {array}\right ]\] so \[ {\bf y}_1=\left [\begin {array}{c} 1\\1\end {array}\right ]e^{6t} \] is a solution of (<a href="#x1-12r8">10.4.8<!-- tex4ht:ref: eq:10.4.8  --></a>). Setting \(\lambda =-2\) in (<a href="#x1-15r10">10.4.10<!-- tex4ht:ref: eq:10.4.10  --></a>) yields \[ \left [\begin {array}{rr} 4&amp;4\\4&amp;4\end {array}\right ] \left [\begin {array}{c} x_1\\x_2 \end {array}\right ]=\left [\begin {array}{c} 0\\0\end {array}\right ]\] which implies that \(x_1=-x_2\). Taking \(x_2=1\) yields the eigenvector \[ {\bf x}_2=\left [\begin {array}{r}-1\\1\end {array}\right ]\] so \[ {\bf y}_2=\left [\begin {array}{r}-1\\1\end {array} \right ]e^{-2t} \] is a solution of (<a href="#x1-12r8">10.4.8<!-- tex4ht:ref: eq:10.4.8  --></a>). From Theorem&nbsp;<a href="#x1-91">10.4.1<!-- tex4ht:ref: thmtype:10.4.1  --></a>, the general solution of (<a href="#x1-12r8">10.4.8<!-- tex4ht:ref: eq:10.4.8  --></a>) is \begin {equation} \label {eq:10.4.11} {\bf y}=c_1{\bf y}_1+c_2{\bf y}_2=c_1\left [\begin {array}{r}1\\1 \end {array}\right ]e^{6t}+c_2\left [ 
-			\begin  {array}{r}-1\\1 
-			\end {array}\right ]e^{-2t}\end {equation}<a id="x1-16r11"></a>
-		
-		</div>
-		<div id="8e0840c1-0f3e-4eeb-bb51-2e2a5723b9db">
-			<span class="underline"
-				><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">b</span><span class="ptmrc8t-">)&nbsp;</span></span
-			>
-			To satisfy the initial condition in (<a href="#x1-14r9">10.4.9<!-- tex4ht:ref: eq:10.4.9  --></a>), we must choose \(c_1\) and \(c_2\) in (<a href="#x1-16r11">10.4.11<!-- tex4ht:ref: eq:10.4.11  --></a>) so that \[ c_1\left [\begin {array}{r}1\\1\end {array}\right ]+c_2\left [ \begin {array}{r}-1\\ 1\end {array}\right ]=\left [ 
-			\begin  {array}{r}5\\-1 
-			\end {array}\right ]\] This is equivalent to the system
-		
-		</div>
-		<div class="eqnarray" id="a05f4152-f2cc-4b13-ad82-9e97bbb3c329">
-			 
-			 \begin  {eqnarray*} c_1-c_2&amp;=&amp;\phantom {-}5\\ c_1+c_2&amp;=&amp;-1 
-			 \end {eqnarray*} 
-		</div>
-		<div class="indent" id="183f765b-5960-4ddd-8be2-5827f3c4c6ac">
-			
-			so \(c_1=2, c_2=-3\). Therefore the solution of (<a href="#x1-14r9">10.4.9<!-- tex4ht:ref: eq:10.4.9  --></a>) is \[ {\bf y}=2\left [\begin {array}{r}1\\1\end {array}\right ]e^{6t}-3 \left [ 
-			\begin  {array}{r}-1\\1 
-			\end {array}\right ]e^{-2t}\] or, in terms of components, \[ y_1=2e^{6t}+3e^{-2t},\quad y_2=2e^{6t}-3e^{-2t}\]
-		
-		</div>
-		<div class="newtheorem" id="fa7b55ae-aeac-453a-85cc-0cc4fa0742a8">
-			
-			<div
-				><span class="head"> <span class="ex-number">Example&nbsp;10.4.2</span></span><a id="x1-172"></a> <br class="newline" />
-			
-		</div>
-			<dl class="list1">
-				<dt class="list"><span class="ptmb8t-">(a)</span></dt>
-				<dd class="list">
-					<div>
-						 Find the general solution of \begin {equation} \label {eq:10.4.12} {\bf y}'=\left [ 
-						 \begin  {array}{rrr}3&amp;-1&amp;-1\\-2&amp; 3&amp; 2\\4&amp;-1&amp;-2 
-						 \end {array}\right ]{\bf y}\end {equation}<a id="x1-19r12"></a> 
-					</div>
-				</dd>
-				<dt class="list"><span class="ptmb8t-">(b)</span></dt>
-				<dd class="list">
-					<div>
-						 Solve the initial value problem \begin {equation} \label {eq:10.4.13} {\bf y}'=\left [ \begin {array}{rrr}3&amp;-1&amp;-1\\-2&amp;3&amp; 2\\4&amp;-1&amp;-2 \end {array} \right ]{\bf y},\quad {\bf y}(0)=\left [ 
-						 \begin  {array}{r}2\\ -1\\8 
-						 \end {array}\right ]\end {equation}<a id="x1-21r13"></a> 
-					</div>
-				</dd>
-			</dl>
-		</div>
-		<div class="indent" id="53044157-0d72-4c2f-b8b6-0f80aaf1b7df">
-			 
-		</div>
-		<div id="ba879334-6661-49b7-85e6-f4dd2ce8fa86">
-			<span class="underline"
-				><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">a</span><span class="ptmrc8t-">)&nbsp;</span></span
-			>
-			The characteristic polynomial of the coefficient matrix \(A\) in (<a href="#x1-19r12">10.4.12<!-- tex4ht:ref: eq:10.4.12  --></a>) is \[ \left |\begin {array}{ccc}3-\lambda&amp; -1&amp;-1\\-2&amp;3-\lambda&amp; 2\\4 &amp;-1&amp;-2-\lambda \end {array}\right |=-(\lambda -2)(\lambda -3)(\lambda +1)\] Hence, the eigenvalues of \(A\) are \(\lambda _1=2\), \(\lambda _2=3\), and \(\lambda _3=-1\). To find the eigenvectors, we must solve the system \begin {equation} \label {eq:10.4.14} \left [ \begin {array}{ccc}3-\lambda &amp;-1&amp;-1\\-2&amp;3-\lambda &amp; 2\\4&amp;-1&amp; -2-\lambda \end {array}\right ]\left [ \begin {array}{c} x_1\\x_2\\x_3 \end {array} \right ]=\left [\begin {array}{r}0\\0\\0\end {array}\right ] \end {equation}<a id="x1-22r14"></a> with \(\lambda =2\), \(3\), \(-1\). With \(\lambda =2\), the augmented matrix of (<a href="#x1-22r14">10.4.14<!-- tex4ht:ref: eq:10.4.14  --></a>) is \[ \left [ \begin {array}{rrrcr} 1&amp;-1&amp;-1&amp;\vdots&amp; 0\\-2&amp; 1&amp;2&amp;\vdots&amp; 0\\4&amp;-1&amp;-4&amp;\vdots&amp; 0 \end {array}\right ]\] which is row equivalent to \[ \left [ \begin {array}{rrrcr} 1&amp;0&amp;-1&amp;\vdots&amp; 0\\0&amp;1&amp;0&amp; \vdots&amp; 0\\0&amp;0&amp;0&amp;\vdots&amp; 0 \end {array}\right ]\] Hence, \(x_1=x_3\) and \(x_2=0\). Taking \(x_3=1\) yields \[ {\bf y}_1=\left [\begin {array}{rrr}1\\0\\1\end {array}\right ]e^{2t} \] as a solution of (<a href="#x1-19r12">10.4.12<!-- tex4ht:ref: eq:10.4.12  --></a>). With \(\lambda =3\), the augmented matrix of (<a href="#x1-22r14">10.4.14<!-- tex4ht:ref: eq:10.4.14  --></a>) is \[ \left [ \begin {array}{rrrcr}0&amp;-1&amp;-1&amp;\vdots&amp; 0\\-2&amp; 0&amp; 2&amp;\vdots&amp; 0\\4&amp;-1&amp;-5&amp;\vdots&amp; 0 \end {array}\right ]\] which is row equivalent to \[ \left [ \begin {array}{rrrcr} 1&amp;0&amp;-1&amp;\vdots&amp; 0\\0&amp;1&amp;1&amp; \vdots&amp; 0\\0&amp;0&amp;0&amp;\vdots&amp; 0 \end {array}\right ]\] Hence, \(x_1=x_3\) and \(x_2=-x_3\). Taking \(x_3=1\) yields \[ {\bf y}_2=\left [\begin {array}{r}1\\-1\\1\end {array} \right ]e^{3t} \] as a solution of (<a href="#x1-19r12">10.4.12<!-- tex4ht:ref: eq:10.4.12  --></a>). With \(\lambda =-1\), the augmented matrix of (<a href="#x1-22r14">10.4.14<!-- tex4ht:ref: eq:10.4.14  --></a>) is \[ \left [ \begin {array}{rrrcr} 4&amp;-1&amp;-1&amp;\vdots&amp; 0\\-2&amp;4&amp; 2&amp;\vdots&amp; 0\\4&amp;-1&amp;-1&amp;\vdots&amp; 0 \end {array}\right ]\] which is row equivalent to \[ \left [ \begin {array}{rrrcr} 1&amp;0&amp;-{1\over 7}&amp;\vdots&amp; 0\\0&amp;1&amp; {3\over 7}&amp;\vdots&amp; 0\\0&amp;0&amp;0&amp;\vdots&amp; 0 \end {array}\right ]\] Hence, \(x_1=x_3/7\) and \(x_2=-3x_3/7\). Taking \(x_3=7\) yields \[ {\bf y}_3=\left [\begin {array}{r}1\\-3\\7\end {array} \right ]e^{-t} \] as a solution of (<a href="#x1-19r12">10.4.12<!-- tex4ht:ref: eq:10.4.12  --></a>). By Theorem&nbsp;<a href="#x1-91">10.4.1<!-- tex4ht:ref: thmtype:10.4.1  --></a>, the general solution of (<a href="#x1-19r12">10.4.12<!-- tex4ht:ref: eq:10.4.12  --></a>) is \[ {\bf y}=c_1\left [\begin {array}{r}1\\0\\1\end {array}\right ]e^{2t} +c_2\left [\begin {array}{r}1\\-1\\1\end {array}\right ] e^{3t}+c_3 \left [\begin {array}{r}1\\-3\\7\end {array}\right ]e^{-t}\] which can also be written as \begin {equation} \label {eq:10.4.15} {\bf y}=\left [ \begin {array}{crc}e^{2t}&amp;e^{3t}&amp;e^{-t} \\0&amp;-e^{3t}&amp; -3e^{-t}\\e^{2t}&amp;e^{3t}&amp;\phantom {-}7e^{-t} \end {array} \right ]\left [ 
-			\begin  {array}{c} c_1\\c_2\\c_3 
-			\end {array}\right ]\end {equation}<a id="x1-23r15"></a>
-		
-		</div>
-		<div id="854ed154-8b40-4b0b-9b3d-3d9fb84acbed">
-			<span class="underline"
-				><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">b</span><span class="ptmrc8t-">)&nbsp;</span></span
-			>
-			To satisfy the initial condition in (<a href="#x1-21r13">10.4.13<!-- tex4ht:ref: eq:10.4.13  --></a>) we must choose \(c_1\), \(c_2\), \(c_3\) in (<a href="#x1-23r15">10.4.15<!-- tex4ht:ref: eq:10.4.15  --></a>) so that \[ \left [\begin {array}{rrr}1&amp;1&amp;1\\0&amp;-1&amp;-3\\ 1&amp;1&amp;7\end {array}\right ] \left [ \begin {array}{c} c_1\\c_2\\c_3 \end {array}\right ]= \left [ 
-			\begin  {array}{r}2\\-1\\8 
-			\end {array}\right ]\] Solving this system yields \(c_1=3\), \(c_2=-2\), \(c_3=1\). Hence, the solution of (<a href="#x1-21r13">10.4.13<!-- tex4ht:ref: eq:10.4.13  --></a>) is
-		
-		</div>
-		<div class="eqnarray" id="d5dc29fd-8e4d-461a-a4e8-6e4f359e46ca">
-			 \begin {eqnarray*} {\bf y}&amp;=&amp;\left [ \begin {array}{ccc}e^{2t}&amp;e^{3t}&amp; e^{-t}\\0&amp;-e^{3t} &amp;-3e^{-t}\\e^{2t}&amp;e^{3t}&amp;7e^{-t} \end {array} \right ] \left [ \begin {array}{r}3\\-2\\1 \end {array}\right ]\\ &amp;=&amp;3\left [\begin {array}{r}1\\0\\1\end {array}\right ]e^{2t}-2 \left [\begin {array}{r}1\\-1\\1\end {array}\right ] e^{3t}+\left [ 
-			 \begin  {array}{r}1\\-3\\7 
-			 \end {array} \right ]e^{-t}\end {eqnarray*} 
-		</div>
-		<div class="newtheorem" id="2633a6d9-a9ca-4b7b-b3cf-4ee112dd1d5e">
-			
-			<div
-				><span class="head"> <span class="ex-number">Example&nbsp;10.4.3</span></span><a id="x1-243"></a>Find the general solution of \begin {equation} \label {eq:10.4.16} {\bf y}'=\left [
-				\begin  {array}{rrr}-3&amp;2&amp;2\\ 2&amp;-3&amp;2\\2&amp;2&amp;-3 
-				\end {array}\right ]{\bf y}\end {equation}<a id="x1-25r16"></a>
-			
-		</div>
-		</div>
-		<div class="indent" id="105324ca-9129-4e2e-8ea2-321d272c3e71">
-			 
-		</div>
-		<div id="acb8d1d2-7668-4226-840c-ea622d5609e3">
-			<span class="ptmb8t-">Solution </span>&nbsp;The characteristic polynomial of the coefficient matrix \(A\) in (<a href="#x1-25r16">10.4.16<!-- tex4ht:ref: eq:10.4.16  --></a>) is \[ \left |\begin {array}{ccc}-3-\lambda&amp; 2&amp;2\\2&amp;-3-\lambda&amp; 2\\2&amp;2 &amp;-3-\lambda \end {array}\right |=-(\lambda -1)(\lambda +5)^2\] Hence, \(\lambda _1=1\) is an eigenvalue of multiplicity \(1\), while \(\lambda _2=-5\) is an eigenvalue of multiplicity \(2\). Eigenvectors associated with \(\lambda _1=1\) are solutions of the system with augmented matrix \[ \left [ \begin {array}{rrrcr}-4&amp;2&amp;2&amp;\vdots&amp; 0\\ 2 &amp;-4&amp;2&amp;\vdots&amp; 0\\2&amp;2&amp;-4&amp; \vdots&amp; 0 \end {array}\right ]\] which is row equivalent to \[ \left [ \begin {array}{rrrcr} 1&amp;0&amp;-1&amp;\vdots&amp; 0\\0&amp;1&amp;-1 &amp;\vdots&amp; 0 \\0&amp;0&amp;0&amp;\vdots&amp; 0 \end {array}\right ]\] Hence, \(x_1=x_2=x_3\), and we choose \(x_3=1\) to obtain the solution \begin {equation} \label {eq:10.4.17} {\bf y}_1=\left [\begin {array}{r}1\\1\\1 \end {array}\right ]e^t \end {equation}<a id="x1-26r17"></a> of (<a href="#x1-25r16">10.4.16<!-- tex4ht:ref: eq:10.4.16  --></a>). Eigenvectors associated with \(\lambda _2=-5\) are solutions of the system with augmented matrix \[ \left [ \begin {array}{rrrcr} 2&amp;2&amp;2&amp;\vdots&amp; 0\\2&amp;2&amp;2&amp;\vdots&amp; 0 \\2&amp;2&amp;2&amp;\vdots&amp; 0 \end {array}\right ]\] Hence, the components of these eigenvectors need only satisfy the single condition \[ x_1+x_2+x_3=0\] Since there’s only one equation here, we can choose \(x_2\) and \(x_3\) arbitrarily. We obtain one eigenvector by choosing \(x_2=0\) and \(x_3=1\), and another by choosing \(x_2=1\) and \(x_3=0\). In both cases \(x_1=-1\). Therefore \[ \left [\begin {array}{r}-1\\0\\1\end {array}\right ]\quad \mbox { and }\quad \left [ \begin {array}{r}-1\\1\\0 \end {array}\right ] \] are linearly independent eigenvectors associated with \(\lambda _2= -5\), and the corresponding solutions of (<a href="#x1-25r16">10.4.16<!-- tex4ht:ref: eq:10.4.16  --></a>) are \[ {\bf y}_2=\left [\begin {array}{r}-1\\0\\1\end {array} \right ]e^{-5t}\quad \mbox { and }\quad {\bf y}_3=\left [\begin {array}{r}-1\\1\\ 0\end {array}\right ]e^{-5t}\] Because of this and (<a href="#x1-26r17">10.4.17<!-- tex4ht:ref: eq:10.4.17  --></a>), Theorem&nbsp;<a href="#x1-91">10.4.1<!-- tex4ht:ref: thmtype:10.4.1  --></a> implies that the general solution of (<a href="#x1-25r16">10.4.16<!-- tex4ht:ref: eq:10.4.16  --></a>) is \[ {\bf y}=c_1\left [\begin {array}{r}1\\1\\ 1\end {array}\right ]e^t+c_2 \left [\begin {array}{r}-1\\0\\1\end {array}\right ] e^{-5t}+c_3\left [ 
-			\begin  {array}{r}-1\\1\\0 
-			\end {array} \right ]e^{-5t}\]
-		
-		</div>
-		<div id="8d8640c3-6029-4a33-a9be-0cc5200480b4">
-			<span id="textcolor1">Geometric Properties of Solutions when \(n=2\)</span>
-		</div>
-		<div class="indent" id="7ce3cce5-2ccd-42e1-a36a-5aca44f46655">
-			 
-		</div>
-		<div id="7d6736ec-bdad-49e1-b729-3200a85f92ac">
-			
-			We’ll now consider the geometric properties of solutions of a \(2\times 2\) constant coefficient system \begin {equation} \label {eq:10.4.18} \twocol {y_1'}{y_2'}=\left [ 
-			\begin  {array}{cc}a_{11}&amp;a_{12}\\a_{21}&amp;a_{22} 
-			\end {array}\right ]\twocol {y_1}{y_2}\end {equation}<a id="x1-27r18"></a> It is convenient to think of a “\(y_1\)-\(y_2\) plane," where a point is identified by rectangular coordinates \((y_1,y_2)\). If \({\bf y}=\displaystyle {\twocol {y_1}{y_2}}\) is a non-constant solution of (<a href="#x1-27r18">10.4.18<!-- tex4ht:ref: eq:10.4.18  --></a>), then the point \((y_1(t),y_2(t))\) moves along a curve \(C\) in the \(y_1\)-\(y_2\) plane as \(t\) varies from \(-\infty \) to \(\infty \). We call \(C\) the<span class="vocab">trajectory</span>of \(\bf y\). (We also say that \(C\) is a trajectory of the system (<a href="#x1-27r18">10.4.18<!-- tex4ht:ref: eq:10.4.18  --></a>).) I’s important to note that \(C\) is the trajectory of infinitely many solutions of (<a href="#x1-27r18">10.4.18<!-- tex4ht:ref: eq:10.4.18  --></a>), since if \(\tau \) is any real number, then \({\bf y}(t-\tau )\) is a solution of (<a href="#x1-27r18">10.4.18<!-- tex4ht:ref: eq:10.4.18  --></a>) (Exercise&nbsp;<span class="ptmb8t-">28</span>(b)), and \((y_1(t-\tau ),y_2(t-\tau ))\) also moves along \(C\) as \(t\) varies from \(-\infty \) to \(\infty \). Moreover, Exercise&nbsp;<span class="ptmb8t-">28(c) </span>implies that distinct trajectories of (<a href="#x1-27r18">10.4.18<!-- tex4ht:ref: eq:10.4.18  --></a>) can’t intersect, and that two solutions \({\bf y}_1\) and \({\bf y}_2\) of (<a href="#x1-27r18">10.4.18<!-- tex4ht:ref: eq:10.4.18  --></a>) have the same trajectory if and only if \({\bf y}_2(t)={\bf y}_1(t-\tau )\) for some \(\tau \).
-		
-		</div>
-		<div class="indent" id="7e7e00ba-03da-4491-8043-c2c1e4b5a79e">
-			
-			From Exercise&nbsp;<span class="ptmb8t-">28(a)</span>, a trajectory of a nontrivial solution of (<a href="#x1-27r18">10.4.18<!-- tex4ht:ref: eq:10.4.18  --></a>) can’t contain \((0,0)\), which we define to be the trajectory of the trivial solution \({\bf y}\equiv 0\). More generally, if \({\bf y}=\displaystyle {\twocol {k_1}{k_2}}\ne {\bf 0}\) is a constant solution of (<a href="#x1-27r18">10.4.18<!-- tex4ht:ref: eq:10.4.18  --></a>) (which could occur if zero is an eigenvalue of the matrix of (<a href="#x1-27r18">10.4.18<!-- tex4ht:ref: eq:10.4.18  --></a>)), we define the trajectory of \(\bf y\) to be the single point \((k_1,k_2)\).
-		
-		</div>
-		<div class="indent" id="d3f2b061-cbb1-4440-8d1b-feddefe8ea26">
-			
-			To be specific, this is the question: What do the trajectories look like, and how are they traversed? In this section we’ll answer this question, assuming that the matrix \[ A=\left [\begin {array}{cc}a_{11}&amp;a_{12}\\a_{21}&amp;a_{22} \end {array}\right ] \] of (<a href="#x1-27r18">10.4.18<!-- tex4ht:ref: eq:10.4.18  --></a>) has real eigenvalues \(\lambda _1\) and \(\lambda _2\) with associated linearly independent eigenvectors \({\bf x}_1\) and \({\bf x}_2\). Then the general solution of (<a href="#x1-27r18">10.4.18<!-- tex4ht:ref: eq:10.4.18  --></a>) is 
-			\begin  {equation} \label {eq:10.4.19} {\bf y}= c_1{\bf x}_1 e^{\lambda _1 t}+c_2{\bf x}_2e^{\lambda _2 t} 
-			\end {equation}<a id="x1-28r19"></a> We’ll consider other situations in the next two sections.
-		
-		</div>
-		<div class="indent" id="f9bf5c07-96fc-428e-8076-e8583417339d">
-			
-			We leave it to you (Exercise&nbsp;<span class="ptmb8t-">35</span>) to classify the trajectories of (<a href="#x1-27r18">10.4.18<!-- tex4ht:ref: eq:10.4.18  --></a>) if zero is an eigenvalue of \(A\). We’ll confine our attention here to the case where both eigenvalues are nonzero. In this case the simplest situation is where \(\lambda _1=\lambda _2\ne 0\), so (<a href="#x1-28r19">10.4.19<!-- tex4ht:ref: eq:10.4.19  --></a>) becomes \[ {\bf y}=(c_1{\bf x}_1+c_2{\bf x}_2)e^{\lambda _1 t}\] Since \({\bf x}_1\) and \({\bf x}_2\) are linearly independent, an arbitrary vector \(\bf x\) can be written as \({\bf x}=c_1{\bf x}_1+c_2{\bf x}_2\). Therefore the general solution of (<a href="#x1-27r18">10.4.18<!-- tex4ht:ref: eq:10.4.18  --></a>) can be written as \({\bf y}={\bf x}e^{\lambda _1 t}\) where \(\bf x\) is an arbitrary \(2\)-vector, and the trajectories of nontrivial solutions of (<a href="#x1-27r18">10.4.18<!-- tex4ht:ref: eq:10.4.18  --></a>) are half-lines through (but not including) the origin. The direction of motion is away from the origin if \(\lambda _1&gt;0\) (Figure&nbsp;<a href="#-trajectories-of-a-system-with-a-repeated-positive-eigenvalue-">10.4.1<!-- tex4ht:ref: figure:10.4.1  --></a>), toward it if \(\lambda _1&lt;0\) (Figure&nbsp;<a href="#-trajectories-of-a-system-with-a-repeated-negative-eigenvalue-">10.4.2<!-- tex4ht:ref: figure:10.4.2  --></a>). (In these and the next figures an arrow through a point indicates the direction of motion along the trajectory through the point.)
-		
-		</div>
 
-		<figure id="78b4ee9d-c7b1-43ae-9048-78331c696acd">
-			<div class="minipage">
+		<details id="details-1">
+			<summary>Introduction</summary>
+			<div id="11bb961b-45d7-4a1a-9672-6c13251357cb">
+				We’ll now begin our study of the homogeneous system 
 				
-				<div id="-trajectories-of-a-system-with-a-repeated-positive-eigenvalue-"> <img height="264" src="EPS/fig100401.png" width="409" /><a id="x1-29r1"></a> 
-			</div>
-				<figcaption><span class="id">Figure&nbsp;10.4.1 </span><span class="content">Trajectories of a \(2\times 2\) system with a repeated positive eigenvalue </span></figcaption
-				><!-- tex4ht:label?: x1-29r1  -->
-			</div>
-			<div class="minipage" id="-trajectories-of-a-system-with-a-repeated-negative-eigenvalue-">
+				<a id="x1-2r1"></a> 
+				\begin {equation} 
+					\label {eq:10.4.1} 
+					{\bf y}'=A{\bf y} 
+				\end {equation}
 				
-				<img height="264" src="EPS/fig100402.png" width="409" /> <a id="x1-30r2"></a> <figcaption><span class="id">Figure&nbsp;10.4.2 </span><span class="content">Trajectories of a \(2\times 2\) system with a repeated negative eigenvalue </span></figcaption
-				><!-- tex4ht:label?: x1-30r2  -->
-			
+				where \(A\) is an \(n\times n\) constant matrix. Since \(A\) is continuous on \((-\infty ,\infty )\), Theorem&nbsp;<span class="ptmb8t-">10.2.1</span> implies that all solutions of <a href="#x1-2r1">(10.4.1)</a> are defined on \((-\infty ,\infty )\). Therefore, when we speak of solutions of \({\bf y}'=A{\bf y}\), we’ll mean solutions on \((-\infty ,\infty )\).
 			</div>
-		</figure>
-		<div class="indent" id="55c65e2d-f5bd-45c4-afa6-466378d02f00">
-			 Now suppose \(\lambda _2&gt;\lambda _1\), and let \(L_1\) and \(L_2\) denote lines through the origin parallel to \({\bf x}_1\) and \({\bf x}_2\), respectively. By a half-line of \(L_1\) (or \(L_2\)), we mean either of the rays obtained by removing the origin from \(L_1\) (or \(L_2\)). 
-		</div>
-		<div class="indent" id="07b34302-244d-4724-a60d-6784cf103937">
-			
-			Letting \(c_2=0\) in (<a href="#x1-28r19">10.4.19<!-- tex4ht:ref: eq:10.4.19  --></a>) yields \({\bf y}=c_1{\bf x}_1e^{\lambda _1 t}\). If \(c_1\ne 0\), the trajectory defined by this solution is a half-line of \(L_1\). The direction of motion is away from the origin if \(\lambda _1&gt;0\), toward the origin if \(\lambda _1&lt;0\). Similarly, the trajectory of \({\bf y}=c_2{\bf x}_2e^{\lambda _2 t}\) with \(c_2\ne 0\) is a half-line of \(L_2\).
-		
-		</div>
-		<div class="indent" id="bbd15c26-34c2-400a-a82a-0dc8754e3319">
-			
-			Henceforth, we assume that \(c_1\) and \(c_2\) in (<a href="#x1-28r19">10.4.19<!-- tex4ht:ref: eq:10.4.19  --></a>) are both nonzero. In this case, the trajectory of (<a href="#x1-28r19">10.4.19<!-- tex4ht:ref: eq:10.4.19  --></a>) can’t intersect \(L_1\) or \(L_2\), since every point on these lines is on the trajectory of a solution for which either \(c_1=0\) or \(c_2=0\). (Remember: distinct trajectories can’t intersect!). Therefore the trajectory of (<a href="#x1-28r19">10.4.19<!-- tex4ht:ref: eq:10.4.19  --></a>) must lie entirely in one of the four open sectors bounded by \(L_1\) and \(L_2\), but do not any point on \(L_1\) or \(L_2\). Since the initial point \((y_1(0),y_2(0))\) defined by \[ {\bf y}(0)=c_1{\bf x}_1+c_2{\bf x}_2 \] is on the trajectory, we can determine which sector contains the trajectory from the signs of \(c_1\) and \(c_2\), as shown in Figure&nbsp;<a href="#-four-open-sectors-bounded-by-l-and-l-">10.4.3<!-- tex4ht:ref: figure:10.4.3  --></a>.
-		
-		</div>
-		<div class="indent" id="31455ff4-aa03-4b1d-806d-7bcca01801e2">
-			
-			The direction of \({\bf y}(t)\) in (<a href="#x1-28r19">10.4.19<!-- tex4ht:ref: eq:10.4.19  --></a>) is the same as that of \begin {equation} \label {eq:10.4.20} e^{-\lambda _2 t}{\bf y}(t)= c_1{\bf x}_1e^{-(\lambda _2-\lambda _1)t}+c_2{\bf x}_2 \end {equation}<a id="x1-31r20"></a> and of 
-			\begin  {equation} \label {eq:10.4.21} e^{-\lambda _1 t}{\bf y}(t)=c_1{\bf x}_1+c_2{\bf x}_2e^{(\lambda _2-\lambda _1)t} 
-			\end {equation}<a id="x1-32r21"></a> Since the right side of (<a href="#x1-31r20">10.4.20<!-- tex4ht:ref: eq:10.4.20  --></a>) approaches \(c_2{\bf x}_2\) as \(t\to \infty \), the trajectory is asymptotically parallel to \(L_2\) as \(t\to \infty \). Since the right side of (<a href="#x1-32r21">10.4.21<!-- tex4ht:ref: eq:10.4.21  --></a>) approaches \(c_1{\bf x}_1\) as \(t\to -\infty \), the trajectory is asymptotically parallel to \(L_1\) as \(t\to -\infty \).
-		
-		</div>
-		<div class="indent" id="43d70605-d3e2-4329-80f9-85c0e5bfed68">
-			
-			The shape and direction of traversal of the trajectory of (<a href="#x1-28r19">10.4.19<!-- tex4ht:ref: eq:10.4.19  --></a>) depend upon whether \(\lambda _1\) and \(\lambda _2\) are both positive, both negative, or of opposite signs. We’ll now analyze these three cases.
-		
-		</div>
-		<div class="indent" id="95ee1955-579e-4094-a043-108eb3dd1d7c">
-			 Henceforth \(\|{\bf u}\|\) denote the length of the vector \(\bf u\). 
-		</div>
-		<figure id="1c9f5e8b-50bc-44e5-9b87-b8b8e4386a34">
-			<div class="minipage">
+
+			<div id="becf279b-6108-4cc6-a259-82b5ad7c9e70">
+				In this section we assume that all the eigenvalues of \(A\) are real and that \(A\) has a set of \(n\) linearly independent eigenvectors. In the next two sections we consider the cases where some of the eigenvalues of \(A\) are complex, or where \(A\) does not have \(n\) linearly independent eigenvectors. 
+			</div>
+
+			<div id="84a6dad9-edd9-4134-b1d6-fcd7d0483431">
+				In Example&nbsp;<span class="ptmb8t-">10.3.2</span> we showed that the vector functions 
+				\[ {\bf y}_1=\twocol {-e^{2t}}{2e^{2t}}\quad \mbox{ and } \quad {\bf y}_2=\twocol {-e^{-t}}{e^{-t}} \] 
 				
-				<div id="-four-open-sectors-bounded-by-l-and-l-"> <img height="264" src="EPS/fig100403.png" width="409" /><a id="x1-33r3"></a> 
-			</div>
-				<figcaption><span class="id">Figure&nbsp;10.4.3 </span><span class="content">Four open sectors bounded by \(L_1\) and \(L_2\) </span></figcaption
-				><!-- tex4ht:label?: x1-33r3  -->
-			</div>
-			<div class="minipage" id="-two-positive-eigenvalues-motion-away-from-origin-">
+				form a fundamental set of solutions of the system 
+				<a id="x1-3r2"></a> 
+				\begin {equation} 
+					\label {eq:10.4.2} 
+					{\bf y}'=\twobytwo {-4}{-3}65 {\bf y} 
+				\end {equation}
+
+				but we did not show how we obtained \({\bf y}_1\) and \({\bf y}_2\) in the first place. To see how these solutions can be obtained we write <a href="#x1-3r2">(10.4.2)</a> as
 				
-				<img height="264" src="EPS/fig100404.png" width="409" /> <a id="x1-34r4"></a> <figcaption><span class="id">Figure&nbsp;10.4.4 </span><span class="content">Two positive eigenvalues; motion away from origin </span></figcaption
-				><!-- tex4ht:label?: x1-34r4  -->
-			
-			</div>
-		</figure>
-		<div id="ddf24625-20d0-4963-8993-e43016f83273">
-			<span id="textcolor2">Case 1: \(\lambda _2&gt;\lambda _1&gt;0\)</span>
-		</div>
-		<div class="indent" id="df2cb8d8-f72e-4001-a7e1-edc00da015be">
-			 
-		</div>
-		<div id="11c1f411-19b1-4ddb-9c2f-4dd06e03c808">
-			
-			Figure&nbsp;<a href="#-two-positive-eigenvalues-motion-away-from-origin-">10.4.4<!-- tex4ht:ref: figure:10.4.4  --></a> shows some typical trajectories. In this case, \(\lim _{t\to -\infty }\|{\bf y}(t)\|=0\), so the trajectory is not only asymptotically parallel to \(L_1\) as \(t\to -\infty \), but is actually asymptotically tangent to \(L_1\) at the origin. On the other hand, \(\lim _{t\to \infty }\|{\bf y}(t)\|=\infty \) and \[ \lim _{t\to \infty }\left \|{\bf y}(t)-c_2{\bf x}_2e^{\lambda _2 t}\right \|=\lim _{t\to \infty }\|c_1{\bf x_1}e^{\lambda _1t}\|=\infty \] so, although the trajectory is asymptotically parallel to \(L_2\) as \(t\to \infty \), it’s not asymptotically tangent to \(L_2\). The direction of motion along each trajectory is away from the origin.
-		
-		</div>
-		<div id="b01e7500-f1a0-4f41-99b0-480563a9a6dc">
-			<span id="textcolor3">Case 2: \(0&gt;\lambda _2&gt;\lambda _1\)</span>
-		</div>
-		<div class="indent" id="067c14e6-ed40-4607-8a5b-abe9713b2993">
-			 
-		</div>
-		<div id="5b872249-c515-408b-a0dd-c3440b54d883">
-			
-			Figure&nbsp;<a href="#-two-negative-eigenvalues-motion-toward-the-origin-">10.4.5<!-- tex4ht:ref: figure:10.4.5  --></a> shows some typical trajectories. In this case, \(\lim _{t\to \infty }\|{\bf y}(t)\|=0\), so the trajectory is asymptotically tangent to \(L_2\) at the origin as \(t\to \infty \). On the other hand, \(\lim _{t\to -\infty }\|{\bf y}(t)\|=\infty \) and \[ \lim _{t\to -\infty }\left \|{\bf y}(t)-c_1{\bf x}_1e^{\lambda _1 t}\right \|=\lim _{t\to -\infty }\|c_2{\bf x}_2e^{\lambda _2t}\|=\infty \] so, although the trajectory is asymptotically parallel to \(L_1\) as \(t\to -\infty \), it’s not asymptotically tangent to it. The direction of motion along each trajectory is toward the origin.
-		
-		</div>
-		<figure id="d763bdec-06a9-41f6-a59e-26ca25bc1875">
-			<div class="minipage">
+				<a id="x1-4r3"></a>
+				\begin {equation}
+					\label {eq:10.4.3} 
+					\begin {array}{ccc} 
+						y_1'&amp;=&amp;-4y_1-3y_2\\
+						y_2'&amp;=&amp;\phantom {-}6y_1+5y_2 
+					\end {array} 
+				\end {equation}
 				
-				<div id="-two-negative-eigenvalues-motion-toward-the-origin-"> <img height="264" src="EPS/fig100405.png" width="409" /><a id="x1-35r5"></a> 
-			</div>
-				<figcaption><span class="id">Figure&nbsp;10.4.5 </span><span class="content">Two negative eigenvalues; motion toward the origin </span></figcaption
-				><!-- tex4ht:label?: x1-35r5  -->
-			</div>
-			<div class="minipage" id="-eigenvalues-of-different-signs-">
+				and look for solutions of the form 
 				
-				<img height="264" src="EPS/fig100406.png" width="409" /> <a id="x1-36r6"></a> <figcaption><span class="id">Figure&nbsp;10.4.6 </span><span class="content">Eigenvalues of different signs </span></figcaption
-				><!-- tex4ht:label?: x1-36r6  -->
+				<a id="x1-5r4"></a> 
+				\begin {equation} 
+					\label {eq:10.4.4} 
+					y_1=x_1e^{\lambda t}\quad \mbox{ and } \quad y_2=x_2e^{\lambda t} 
+				\end {equation}
+				
+				where \(x_1\), \(x_2\), and \(\lambda \) are constants to be determined. Differentiating <a href="#x1-5r4">(10.4.4)</a> yields 
+				\[
+					y_1'=\lambda x_1e^{\lambda t}\quad \mbox { and }\quad y_2'=\lambda x_2e^{\lambda t}
+				\]
+				
+				Substituting this and <a href="#x1-5r4">(10.4.4)</a> into <a href="#x1-4r3">(10.4.3)</a> and canceling the common factor \(e^{\lambda t}\) yields
+				
+				\[
+					\begin {array}{ccc}
+						-4x_1-3x_2&amp;=&amp;\lambda x_1 \\ 
+						6 x_1+5x_2&amp;=&amp;\lambda x_2
+					\end {array}
+				\] 
+				
+				For a given \(\lambda \), this is a homogeneous algebraic system, since it can be rewritten as 
+				
+				<a id="x1-6r5"></a> 
+				\begin {equation}
+					\label {eq:10.4.5} 
+					\begin {array}{rcl} 
+						(-4-\lambda ) x_1-3 x_2&amp;=&amp;0\\ 
+						6 x_1+(5-\lambda ) x_2&amp;=&amp;0
+					\end {array} 
+				\end {equation}
+
+				The trivial solution \(x_1=x_2=0\) of this system isn’t useful, since it corresponds to the trivial solution \(y_1\equiv y_2\equiv 0\) of <a href="#x1-4r3">(10.4.3)</a>, which can’t be part of a fundamental set of solutions of <a href="#x1-3r2">(10.4.2)</a>. Therefore we consider only those values of \(\lambda \) for which <a href="#x1-6r5">(10.4.5)</a> has nontrivial solutions. These are the values of \(\lambda \) for which the determinant of <a href="#x1-6r5">(10.4.5)</a> is zero; that is,
+			</div>
+			<div class="eqnarray" id="8b9adc62-9632-4cbd-b420-5f776693a690">
+				\begin {eqnarray*}
+					\left | 
+						\begin {array}{cc}
+							-4-\lambda &amp;-3\\
+							6&amp;5-\lambda 
+						\end {array}
+					\right |&amp;=&amp; (-4-\lambda )(5-\lambda )+18\\
+					&amp;=&amp;\lambda ^2-\lambda -2\\ 
+					&amp;=&amp;(\lambda -2)(\lambda +1)=0
+				\end {eqnarray*} 
+			</div>
+			<div id="446a4222-83dd-471c-9ba7-e3a2ad13ddb1">
+				which has the solutions \(\lambda _1=2\) and \(\lambda _2=-1\). 
+			</div>
+			<div id="c48b99b9-aaba-4684-abe0-56489df8af9d">
+				Taking \(\lambda =2\) in <a href="#x1-6r5">(10.4.5)</a> yields
+			</div>
+			<div class="eqnarray" id="ecbc46e8-2f4d-46f5-a7a9-bf71be2e1baa">
+				\begin {eqnarray*} 
+					-6 x_1-3 x_2&amp;=&amp;0\\ 
+					6 x_1+3 x_2&amp;=&amp;0 
+				\end {eqnarray*} 
+			</div>
+			<div id="b81a63fa-c564-491f-8335-0075dca597f1">
+				which implies that \(x_1=-x_2/2\), where \(x_2\) can be chosen arbitrarily. Choosing \(x_2=2\) yields the solution \(y_1=-e^{2t}\), \(y_2=2e^{2t}\) of <a href="#x1-4r3">(10.4.3)</a>. We can write this solution in vector form as 
+				<a id="x1-7r6"></a>
+				\begin {equation} 
+					\label {eq:10.4.6} 
+					{\bf y}_1=\twocol {-1}{\phantom {-}2} e^{2t} 
+				\end {equation}
+			</div>
+			<div id="0d7e10ee-8928-4033-a35a-57f81429788b">
+				Taking \(\lambda =-1\) in <a href="#x1-6r5">(10.4.5)</a> yields the system
+			</div>
+			<div class="eqnarray" id="404342ab-f9cb-4d86-b1ba-24591007e66b">
+				\begin {eqnarray*} 
+					-3 x_1-3 x_2&amp;=&amp;0\\ 
+					\phantom {-}6 x_1+6 x_2&amp;=&amp;0 
+				\end {eqnarray*} 
+			</div>
+			<div id="ea14594e-4bfb-49cd-92b1-dc3e03d9fa5c">
+				so \(x_1=-x_2\). Taking \(x_2=1\) here yields the solution \(y_1=-e^{-t}\), \(y_2=e^{-t}\) of <a href="#x1-4r3">(10.4.3)</a>. We can write this solution in vector form as 
+				<a id="x1-8r7"></a>
+				\begin {equation} 
+					\label {eq:10.4.7} 
+					{\bf y}_2=\twocol {-1}{\phantom {-}1}e^{-t} 
+				\end {equation}
+			</div>
+			<div id="3ae2f526-1fdb-4e79-a28f-2787a5c85787">
+				In <a href="#x1-7r6">(10.4.6)</a> and <a href="#x1-8r7">(10.4.7)</a> the constant coefficients in the arguments of the exponential functions are the eigenvalues of the coefficient matrix in <a href="#x1-3r2">(10.4.2)</a>, and the vector coefficients of the exponential functions are associated eigenvectors. This illustrates the next theorem.
+			</div>
+			<div class="theorem" id="x1-91">
+				<span class="head">Theorem&nbsp;10.4.1</span>
+				Suppose the \(n\times n\) constant matrix \(A\) has \(n\) real eigenvalues \(\lambda _1,\lambda _2,\ldots ,\lambda _n\) (which need not be distinct) with associated linearly independent eigenvectors \({\bf x}_1,{\bf x}_2,\ldots ,{\bf x}_n\). Then the functions 
+				\[ {\bf y}_1={\bf x}_1e^{\lambda _1 t},\, {\bf y}_2={\bf x}_2e^{\lambda _2 t},\, \dots ,\, {\bf y}_n={\bf x}_ne^{\lambda _n t} \]
+				form a fundamental set of solutions of \({\bf y}'=A{\bf y};\) that is, the general solution of this system is 
+				\[ {\bf y}=c_1{\bf x}_1e^{\lambda _1 t}+c_2{\bf x}_2e^{\lambda _2 t} +\cdots +c_n{\bf x}_ne^{\lambda _n t}\]
+			</div>
+
+			<div id="7c06e859-dab3-4e0f-88d4-20b1ef540dcc">
+				<strong>Proof</strong>
+				Differentiating \({\bf y}_i={\bf x}_ie^{\lambda _it}\) and recalling that \(A{\bf x}_i=\lambda _i{\bf x}_i\) yields
+				\[ {\bf y}_i'=\lambda _i{\bf x}_ie^{\lambda _it}=A{\bf x}_ie^{\lambda _it} =A{\bf y}_i\]
+				
+				This shows that \({\bf y}_i\) is a solution of \({\bf y}'=A{\bf y}\). 
+			</div>
+			<div id="9de2ecb8-840a-4cd6-906d-066f1ab793ca">
+				The Wronskian of \(\{{\bf y}_1,{\bf y}_2,\ldots ,{\bf y}_n\}\) is
+				\[
+					\left | 
+						\begin {array}{cccc} 
+							x_{11}e^{\lambda _1 t}&amp; x_{12}e^{\lambda _2 t}&amp;\cdots&amp; x_{1n}e^{\lambda _n t}\\ 
+							x_{21}e^{\lambda _1 t}&amp; x_{22}e^{\lambda _2 t}&amp;\cdots&amp; x_{2n}e^{\lambda _n t}\\
+							\vdots&amp; \vdots&amp; \ddots&amp; \vdots \\
+							x_{n1}e^{\lambda _1 t}&amp; x_{n2}e^{\lambda _2 t}&amp;\cdots&amp; x_{nn}e^{\lambda x_n t} 
+						\end {array}
+					\right | =e^{\lambda _1 t}e^{\lambda _2 t}\cdots e^{\lambda _n t} \left | 
+						\begin {array}{cccc} 
+							x_{11}&amp;x_{12}&amp;\cdots&amp;x _{1n}\cr x_{21}&amp;x_{22}&amp;\cdots&amp;x _{2n}\cr \vdots&amp; \vdots&amp; \ddots&amp; \vdots \cr x_{n1}&amp;x_{n2}&amp;\cdots&amp;x _{nn}\cr 
+						\end {array}
+					\right |
+				\]
+				
+				Since the columns of the determinant on the right are \({\bf x}_1\), \({\bf x}_2\), …, \({\bf x}_n\), which are assumed to be linearly independent, the determinant is nonzero. Therefore Theorem&nbsp;<span class="ptmb8t-">10.3.3</span> implies that \(\{{\bf y}_1,{\bf y}_2,\ldots ,{\bf y}_n\}\) is a fundamental set of solutions of \({\bf y}'=A{\bf y}\). 
+			</div>
+
+			<div class="example" id="x1-101" style="--ex-number: 1">
+				<ol>
+					<li>
+						Find the general solution of 
+						<a id="x1-12r8"></a> 
+						\begin {equation} 
+							\label {eq:10.4.8} 
+							{\bf y}'=\twobytwo 2442 {\bf y} 
+						\end {equation}
+					</li>
+					<li>
+						Solve the initial value problem 
+						
+						<a id="x1-14r9"></a> 
+						\begin {equation} 
+							\label {eq:10.4.9} 
+							{\bf y}'=\twobytwo 2442 {\bf y},\quad {\bf y}(0)=\left [
+								\begin {array}{r}
+									5 \\
+									-1 
+								\end {array}
+							\right ]
+						\end {equation}
+					</li>
+				</ol>
+				
+				<details class="solution">
+					<summary>Solution</summary>
+
+					<ol>
+						<li>
+							The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-12r8">(10.4.8)</a> is
+							<div class="eqnarray">
+								\begin {eqnarray*}
+									\left | 
+										\begin {array}{cc}
+											2-\lambda &amp;4\\
+											4&amp;2-\lambda 
+										\end {array}
+									\right | &amp;=&amp; (\lambda -2)^2-16\\
+									&amp;=&amp; (\lambda -2-4)(\lambda -2+4)\\
+									&amp;=&amp; (\lambda -6)(\lambda +2)
+								\end {eqnarray*} 
+							</div>
+
+							Hence, \(\lambda _1=6\) and \(\lambda _2 =-2\) are eigenvalues of \(A\). To obtain the eigenvectors, we must solve the system
+							
+							<a id="x1-15r10"></a> 
+							\begin {equation}
+								\label {eq:10.4.10}
+								\left [
+									\begin {array}{cc}
+										2-\lambda &amp;4\\
+										4&amp;2-\lambda
+									\end {array}
+								\right ] \left [
+									\begin {array}{c} 
+										x_1\\
+										x_2
+									\end {array}
+								\right ]= \left [
+									\begin {array}{c}
+										0\\
+										0
+									\end {array}
+								\right ]
+							\end {equation}
+
+							with \(\lambda =6\) and \(\lambda =-2\). Setting \(\lambda =6\) in <a href="#x1-15r10">(10.4.10)</a> yields
+							\[
+								\left [
+									\begin {array}{rr}
+										-4&amp;4\\
+										4&amp;-4
+									\end {array}
+								\right ]\left [
+									\begin {array}{c}
+										x_1\\
+										x_2
+									\end {array}
+								\right ]=\left [
+									\begin {array}{c}
+										0\\
+										0
+									\end {array}
+								\right ]
+							\]
+							
+							which implies that \(x_1=x_2\). Taking \(x_2=1\) yields the eigenvector
+							\[
+								{\bf x}_1=\left [
+									\begin {array}{c}
+										1\\
+										1
+									\end {array}
+								\right ]
+							\]
+							
+							so
+							\[
+								{\bf y}_1=\left [
+									\begin {array}{c}
+										1\\
+										1
+									\end {array}
+								\right ]e^{6t}
+							\] is a solution of <a href="#x1-12r8">(10.4.8)</a>. Setting \(\lambda =-2\) in <a href="#x1-15r10">(10.4.10)</a> yields
+							
+							\[
+								\left [
+									\begin {array}{rr}
+										4&amp;4\\
+										4&amp;4
+									\end {array}
+								\right ] \left [
+									\begin {array}{c}
+										x_1\\
+										x_2
+									\end {array}
+								\right ]=\left [
+									\begin {array}{c}
+										0\\
+										0
+									\end {array}
+								\right ]
+							\]
+							
+							which implies that \(x_1=-x_2\). Taking \(x_2=1\) yields the eigenvector
+							\[
+								{\bf x}_2=\left [
+									\begin {array}{r}
+										-1\\
+										1
+									\end {array}
+								\right ]
+							\]
+							
+							so
+							\[
+								{\bf y}_2=\left [
+									\begin {array}{r}
+										-1\\
+										1
+									\end {array}
+								\right ]e^{-2t}
+							\]
+							
+							is a solution of <a href="#x1-12r8">(10.4.8)</a>. From Theorem&nbsp;<a href="#x1-91">10.4.1</a>, the general solution of <a href="#x1-12r8">(10.4.8)</a> is
+							
+							<a id="x1-16r11"></a>
+							\begin {equation}
+								\label {eq:10.4.11}
+								{\bf y}=c_1{\bf y}_1+c_2{\bf y}_2=c_1\left [
+									\begin {array}{r}
+										1\\
+										1
+									\end {array}
+								\right ]e^{6t}+c_2\left [ 
+									\begin {array}{r}
+										-1\\
+										1 
+									\end {array}
+								\right ]e^{-2t}
+							\end {equation}
+						</li>
+						<li>
+							To satisfy the initial condition in <a href="#x1-14r9">(10.4.9)</a>, we must choose \(c_1\) and \(c_2\) in <a href="#x1-16r11">(10.4.11)</a> so that
+							\[
+								c_1\left [
+									\begin {array}{r}
+										1\\
+										1
+									\end {array}
+								\right ]+c_2\left [
+									\begin {array}{r}
+										-1\\ 
+										1
+									\end {array}
+								\right ]=\left [ 
+									\begin {array}{r}
+										5\\
+										-1 
+									\end {array}
+								\right ]
+							\]
+							
+							This is equivalent to the system
+							<div class="eqnarray">
+								\begin {eqnarray*}
+									c_1-c_2&amp;=&amp;\phantom {-}5\\ 
+									c_1+c_2&amp;=&amp;-1 
+								\end {eqnarray*} 
+							</div>
+
+							so \(c_1=2, c_2=-3\). Therefore the solution of <a href="#x1-14r9">(10.4.9)</a> is
+							\[
+								{\bf y}=2\left [
+									\begin {array}{r}
+										1\\
+										1
+									\end {array}
+								\right ]e^{6t}-3 \left [ 
+									\begin {array}{r}
+										-1\\
+										1 
+									\end {array}
+								\right ]e^{-2t}
+							\]
+							
+							or, in terms of components,
+							\[ y_1=2e^{6t}+3e^{-2t},\quad y_2=2e^{6t}-3e^{-2t} \]
+						</li>
+					</ol>
+				</details>
+			</div>
+
+			<div class="example" id="x1-172" style="--ex-number: 2">
+				<ol>
+					<li>
+						Find the general solution of 
+						
+						<a id="x1-19r12"></a> 
+						\begin {equation} 
+							\label {eq:10.4.12} 
+							{\bf y}'=\left [ 
+								\begin {array}{rrr}
+									3&amp;-1&amp;-1\\
+									-2&amp; 3&amp; 2\\
+									4&amp;-1&amp;-2 
+								\end {array}
+							\right ]{\bf y}
+						\end {equation}
+					</li>
+					<li>
+						Solve the initial value problem
+						
+						<a id="x1-21r13"></a> 
+						\begin {equation} 
+							\label {eq:10.4.13}
+							{\bf y}'=\left [
+								\begin {array}{rrr}
+									3&amp;-1&amp;-1\\
+									-2&amp;3&amp; 2\\
+									4&amp;-1&amp;-2
+								\end {array}
+							\right ]{\bf y},\quad {\bf y}(0)=\left [ 
+								\begin {array}{r}
+									2\\ 
+									-1\\
+									8 
+								\end {array}
+							\right ]
+						\end {equation}
+					</li>
+				</ol>
+
+				<details class="solution">
+					<summary>Solution</summary>
+
+					<ol>
+						<li>
+							The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-19r12">(10.4.12)</a> is
+							\[
+								\left |
+									\begin {array}{ccc}
+										3-\lambda&amp; -1&amp;-1\\
+										-2&amp;3-\lambda&amp; 2\\
+										4 &amp;-1&amp;-2-\lambda
+									\end {array}
+								\right |=-(\lambda -2)(\lambda -3)(\lambda +1)
+							\]
+							
+							Hence, the eigenvalues of \(A\) are \(\lambda _1=2\), \(\lambda _2=3\), and \(\lambda _3=-1\). To find the eigenvectors, we must solve the system 
+							
+							<a id="x1-22r14"></a> 
+							\begin {equation} 
+								\label {eq:10.4.14} 
+								\left [ 
+									\begin {array}{ccc}
+										3-\lambda &amp;-1&amp;-1\\
+										-2&amp;3-\lambda &amp; 2\\
+										4&amp;-1&amp; -2-\lambda 
+									\end {array}
+								\right ]\left [ 
+									\begin {array}{c} 
+										x_1\\
+										x_2\\
+										x_3 
+									\end {array} 
+								\right ]=\left [
+									\begin {array}{r}
+										0\\
+										0\\
+										0
+									\end {array}
+								\right ] 
+							\end {equation}
+							
+							with \(\lambda =2\), \(3\), \(-1\). With \(\lambda =2\), the augmented matrix of <a href="#x1-22r14">(10.4.14)</a> is 
+							\[
+								\left [ 
+									\begin {array}{rrrcr} 
+										1&amp;-1&amp;-1&amp;\vdots&amp; 0\\
+										-2&amp; 1&amp;2&amp;\vdots&amp; 0\\
+										4&amp;-1&amp;-4&amp;\vdots&amp; 0 
+									\end {array}
+								\right ]
+							\]
+							
+							which is row equivalent to 
+							\[ 
+								\left [ 
+									\begin {array}{rrrcr} 
+										1&amp;0&amp;-1&amp;\vdots&amp; 0\\
+										0&amp;1&amp;0&amp; \vdots&amp; 0\\
+										0&amp;0&amp;0&amp;\vdots&amp; 0 
+									\end {array}
+								\right ]
+							\] 
+							
+							Hence, \(x_1=x_3\) and \(x_2=0\). Taking \(x_3=1\) yields 
+							\[ 
+								{\bf y}_1=\left [
+									\begin {array}{rrr}
+										1\\
+										0\\
+										1
+									\end {array}
+								\right ]e^{2t} 
+							\] 
+							
+							as a solution of <a href="#x1-19r12">(10.4.12)</a>. With \(\lambda =3\), the augmented matrix of <a href="#x1-22r14">(10.4.14)</a> is 
+							
+							\[ 
+								\left [ 
+									\begin {array}{rrrcr}
+										0&amp;-1&amp;-1&amp;\vdots&amp; 0\\
+										-2&amp; 0&amp; 2&amp;\vdots&amp; 0\\
+										4&amp;-1&amp;-5&amp;\vdots&amp; 0 
+									\end {array}
+								\right ]
+							\] 
+							
+							which is row equivalent to 
+							\[
+								\left [ 
+									\begin {array}{rrrcr} 
+										1&amp;0&amp;-1&amp;\vdots&amp; 0\\
+										0&amp;1&amp;1&amp; \vdots&amp; 0\\
+										0&amp;0&amp;0&amp;\vdots&amp; 0 
+									\end {array}
+								\right ]
+							\] 
+							
+							Hence, \(x_1=x_3\) and \(x_2=-x_3\). Taking \(x_3=1\) yields 
+							\[ 
+								{\bf y}_2=\left [
+									\begin {array}{r}
+										1\\
+										-1\\
+										1
+									\end {array} 
+								\right ]e^{3t} 
+							\] 
+							
+							as a solution of <a href="#x1-19r12">(10.4.12)</a>. With \(\lambda =-1\), the augmented matrix of <a href="#x1-22r14">(10.4.14)</a> is 
+							\[ 
+								\left [ 
+									\begin {array}{rrrcr} 
+										4&amp;-1&amp;-1&amp;\vdots&amp; 0\\
+										-2&amp;4&amp; 2&amp;\vdots&amp; 0\\
+										4&amp;-1&amp;-1&amp;\vdots&amp; 0 
+									\end {array}
+								\right ]
+							\] 
+							
+							which is row equivalent to 
+							\[ 
+								\left [ 
+									\begin {array}{rrrcr} 
+										1&amp;0&amp;-{1\over 7}&amp;\vdots&amp; 0\\
+										0&amp;1&amp; {3\over 7}&amp;\vdots&amp; 0\\
+										0&amp;0&amp;0&amp;\vdots&amp; 0 
+									\end {array}
+								\right ]
+							\] 
+							
+							Hence, \(x_1=x_3/7\) and \(x_2=-3x_3/7\). Taking \(x_3=7\) yields 
+							\[ 
+								{\bf y}_3=\left [
+									\begin {array}{r}
+										1\\
+										-3\\
+										7
+									\end {array} 
+								\right ]e^{-t} 
+							\] 
+							
+							as a solution of <a href="#x1-19r12">(10.4.12)</a>. By Theorem&nbsp;<a href="#x1-91">10.4.1</a>, the general solution of <a href="#x1-19r12">(10.4.12)</a> is 
+							
+							\[
+								{\bf y}=c_1\left [
+									\begin {array}{r}
+										1\\
+										0\\
+										1
+									\end {array}
+								\right ]e^{2t} +c_2\left [
+									\begin {array}{r}
+										1\\
+										-1\\
+										1
+									\end {array}
+								\right ] e^{3t}+c_3 \left [
+									\begin {array}{r}
+										1\\
+										-3\\
+										7
+									\end {array}
+								\right ]e^{-t}
+							\] 
+							
+							which can also be written as 
+							
+							<a id="x1-23r15"></a>
+							\begin {equation} 
+								\label {eq:10.4.15} 
+								{\bf y}=\left [ 
+									\begin {array}{crc}
+										e^{2t}&amp;e^{3t}&amp;e^{-t} \\
+										0&amp;-e^{3t}&amp; -3e^{-t}\\
+										e^{2t}&amp;e^{3t}&amp;\phantom {-}7e^{-t} 
+									\end {array} 
+								\right ]\left [ 
+									\begin {array}{c} 
+										c_1\\
+										c_2\\
+										c_3 
+									\end {array}
+								\right ]
+							\end {equation}
+						</li>
+						<li>
+							To satisfy the initial condition in <a href="#x1-21r13">(10.4.13)</a> we must choose \(c_1\), \(c_2\), \(c_3\) in <a href="#x1-23r15">(10.4.15)</a> so that 
+							\[ 
+								\left [
+									\begin {array}{rrr}
+										1&amp;1&amp;1\\
+										0&amp;-1&amp;-3\\ 
+										1&amp;1&amp;7
+									\end {array}
+								\right ] \left [ 
+									\begin {array}{c} 
+										c_1\\
+										c_2\\
+										c_3 
+									\end {array}
+								\right ]= \left [ 
+									\begin {array}{r}
+										2\\
+										-1\\
+										8 
+									\end {array}
+								\right ]
+							\]
+							
+							Solving this system yields \(c_1=3\), \(c_2=-2\), \(c_3=1\). Hence, the solution of <a href="#x1-21r13">(10.4.13)</a> is
+							<div class="eqnarray">
+								\begin {eqnarray*}
+									{\bf y}&amp;=&amp;\left [ 
+										\begin {array}{ccc}
+											e^{2t}&amp;e^{3t}&amp; e^{-t}\\
+											0&amp;-e^{3t} &amp;-3e^{-t}\\
+											e^{2t}&amp;e^{3t}&amp;7e^{-t} 
+										\end {array} 
+									\right ] \left [ 
+										\begin {array}{r}
+											3\\
+											-2\\
+											1 
+										\end {array}
+									\right ]\\ 
+									&amp;=&amp;3\left [
+										\begin {array}{r}
+											1\\
+											0\\
+											1
+										\end {array}
+									\right ]e^{2t}-2 \left [
+										\begin {array}{r}
+											1\\
+											-1\\
+											1
+										\end {array}
+									\right ] e^{3t}+\left [ 
+										\begin {array}{r}
+											1\\
+											-3\\
+											7 
+										\end {array} 
+									\right ]e^{-t}
+								\end {eqnarray*} 
+							</div>
+						</li>
+					</ol>
+				</details>
+			</div>
+			<div class="example" id="x1-243" style="--ex-number: 3">
+				<div>
+					Find the general solution of 
+
+					<a id="x1-25r16"></a>
+					\begin {equation} 
+						\label {eq:10.4.16} 
+						{\bf y}'=\left [
+							\begin {array}{rrr}
+								-3&amp;2&amp;2\\ 
+								2&amp;-3&amp;2\\
+								2&amp;2&amp;-3 
+							\end {array}
+						\right ]{\bf y}
+					\end {equation}
+				</div>
+
+				<details class="solution">
+					<summary>Solution</summary>
+					The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-25r16">(10.4.16)</a> is 
+					\[ 
+						\left |
+							\begin {array}{ccc}
+								-3-\lambda&amp; 2&amp;2\\
+								2&amp;-3-\lambda&amp; 2\\
+								2&amp;2 &amp;-3-\lambda 
+							\end {array}
+						\right |=-(\lambda -1)(\lambda +5)^2
+					\] 
+					
+					Hence, \(\lambda _1=1\) is an eigenvalue of multiplicity \(1\), while \(\lambda _2=-5\) is an eigenvalue of multiplicity \(2\). Eigenvectors associated with \(\lambda _1=1\) are solutions of the system with augmented matrix
+					\[
+						\left [
+							\begin {array}{rrrcr}
+								-4&amp;2&amp;2&amp;\vdots&amp; 0\\ 
+								2 &amp;-4&amp;2&amp;\vdots&amp; 0\\
+								2&amp;2&amp;-4&amp; \vdots&amp; 0 
+							\end {array}
+						\right ]
+					\] 
+					
+					which is row equivalent to 
+					\[ 
+						\left [ 
+							\begin {array}{rrrcr} 
+								1&amp;0&amp;-1&amp;\vdots&amp; 0\\
+								0&amp;1&amp;-1 &amp;\vdots&amp; 0 \\
+								0&amp;0&amp;0&amp;\vdots&amp; 0 
+							\end {array}
+						\right ]
+					\] 
+					
+					Hence, \(x_1=x_2=x_3\), and we choose \(x_3=1\) to obtain the solution 
+					
+					<a id="x1-26r17"></a>
+					\begin {equation} 
+						\label {eq:10.4.17} 
+						{\bf y}_1=\left [
+							\begin {array}{r}
+								1\\
+								1\\
+								1 
+							\end {array}
+						\right ]e^t 
+					\end {equation}
+					
+					of <a href="#x1-25r16">(10.4.16)</a>. Eigenvectors associated with \(\lambda _2=-5\) are solutions of the system with augmented matrix 
+					\[ 
+						\left [ 
+							\begin {array}{rrrcr} 
+								2&amp;2&amp;2&amp;\vdots&amp; 0\\
+								2&amp;2&amp;2&amp;\vdots&amp; 0 \\
+								2&amp;2&amp;2&amp;\vdots&amp; 0 
+							\end {array}
+						\right ]
+					\] 
+					
+					Hence, the components of these eigenvectors need only satisfy the single condition 
+					\[ x_1+x_2+x_3=0\] 
+					
+					Since there’s only one equation here, we can choose \(x_2\) and \(x_3\) arbitrarily. We obtain one eigenvector by choosing \(x_2=0\) and \(x_3=1\), and another by choosing \(x_2=1\) and \(x_3=0\). In both cases \(x_1=-1\). Therefore 
+					\[ 
+						\left [
+							\begin {array}{r}
+								-1\\
+								0\\
+								1
+							\end {array}
+						\right ]\quad \mbox { and }\quad \left [ 
+							\begin {array}{r}
+								-1\\
+								1\\
+								0 
+							\end {array}
+						\right ] 
+					\] 
+					
+					are linearly independent eigenvectors associated with \(\lambda _2= -5\), and the corresponding solutions of <a href="#x1-25r16">(10.4.16)</a> are 
+					
+					\[ 
+						{\bf y}_2=\left [
+							\begin {array}{r}
+								-1\\
+								0\\
+								1
+							\end {array} 
+						\right ]e^{-5t} \quad \mbox { and }\quad {\bf y}_3=\left [
+							\begin {array}{r}
+								-1\\
+								1\\ 
+								0
+							\end {array}
+						\right ]e^{-5t}
+					\] 
+					
+					Because of this and <a href="#x1-26r17">(10.4.17)</a>, Theorem&nbsp;<a href="#x1-91">10.4.1</a> implies that the general solution of <a href="#x1-25r16">(10.4.16)</a> is 
+					\[ 
+						{\bf y}=c_1\left [
+							\begin {array}{r}
+								1\\
+								1\\ 
+								1
+							\end {array}
+						\right ]e^t+c_2 \left [
+							\begin {array}{r}
+								-1\\
+								0\\
+								1
+							\end {array}
+						\right ] e^{-5t}+c_3\left [ 
+							\begin {array}{r}
+								-1\\
+								1\\
+								0 
+							\end {array} 
+						\right ]e^{-5t}
+					\]
 			
 			</div>
-		</figure>
-		<div id="57000f88-1ec2-417e-a2fb-f404eea70114">
-			<span id="textcolor4">Case 3: \(\lambda _2&gt;0&gt;\lambda _1\)</span>
-		</div>
-		<div class="indent" id="59b92c87-e3be-4fc9-8830-0b4f6b6afa6f">
-			 
-		</div>
-		<div id="0d3057b9-2a1b-482b-990a-bdb4f41c03ac">
-			
-			Figure&nbsp;<a href="#-eigenvalues-of-different-signs-">10.4.6<!-- tex4ht:ref: figure:10.4.6  --></a> shows some typical trajectories. In this case, \[ \lim _{t\to \infty }\|{\bf y}(t)\|=\infty \quad \mbox{ and } \quad \lim _{t\to \infty }\left \|{\bf y}(t)-c_2{\bf x}_2e^{\lambda _2 t}\right \|=\lim _{t\to \infty }\|c_1{\bf x}_1e^{\lambda _1t}\|=0\] so the trajectory is asymptotically tangent to \(L_2\) as \(t\to \infty \). Similarly, \[ \lim _{t\to -\infty }\|{\bf y}(t)\|=\infty \quad \mbox{ and } \quad \lim _{t\to -\infty }\left \|{\bf y}(t)-c_1{\bf x}_1e^{\lambda _1 t}\right \|=\lim _{t\to -\infty }\|c_2{\bf x}_2e^{\lambda _2t}\|=0\] so the trajectory is asymptotically tangent to \(L_1\) as \(t\to -\infty \). The direction of motion is toward the origin on \(L_1\) and away from the origin on \(L_2\). The direction of motion along any other trajectory is away from \(L_1\), toward \(L_2\).
+		</details>
+
+		<details id="8d8640c3-6029-4a33-a9be-0cc5200480b4">
+			<summary>Geometric Properties of Solutions when \(n=2\)</summary>
 		
-		</div>
+			<div id="7d6736ec-bdad-49e1-b729-3200a85f92ac">
+				We’ll now consider the geometric properties of solutions of a \(2\times 2\) constant coefficient system 
+				
+				<a id="x1-27r18"></a> 
+				\begin {equation} 
+					\label {eq:10.4.18} \twocol {y_1'}{y_2'}=\left [ 
+						\begin {array}{cc}
+							a_{11}&amp;a_{12}\\
+							a_{21}&amp;a_{22} 
+						\end {array}
+					\right ]\twocol {y_1}{y_2}
+				\end {equation}
+				
+				It is convenient to think of a “\(y_1\)-\(y_2\) plane," where a point is identified by rectangular coordinates \((y_1,y_2)\). If \({\bf y}=\displaystyle {\twocol {y_1}{y_2}}\) is a non-constant solution of <a href="#x1-27r18">(10.4.18)</a>, then the point \((y_1(t),y_2(t))\) moves along a curve \(C\) in the \(y_1\)-\(y_2\) plane as \(t\) varies from \(-\infty \) to \(\infty \). We call \(C\) the <span class="vocab">trajectory</span> of \(\bf y\). (We also say that \(C\) is a trajectory of the system <a href="#x1-27r18">(10.4.18)</a>.) I’s important to note that \(C\) is the trajectory of infinitely many solutions of <a href="#x1-27r18">(10.4.18)</a>, since if \(\tau \) is any real number, then \({\bf y}(t-\tau )\) is a solution of <a href="#x1-27r18">(10.4.18)</a> (Exercise&nbsp;<span class="ptmb8t-">28</span> (b)), and \((y_1(t-\tau ),y_2(t-\tau ))\) also moves along \(C\) as \(t\) varies from \(-\infty \) to \(\infty \). Moreover, Exercise&nbsp;<span class="ptmb8t-">28</span> (c) implies that distinct trajectories of <a href="#x1-27r18">(10.4.18)</a> can’t intersect, and that two solutions \({\bf y}_1\) and \({\bf y}_2\) of <a href="#x1-27r18">(10.4.18)</a> have the same trajectory if and only if \({\bf y}_2(t)={\bf y}_1(t-\tau )\) for some \(\tau \).
+			</div>
+			<div id="7e7e00ba-03da-4491-8043-c2c1e4b5a79e">
+				From Exercise&nbsp;<span class="ptmb8t-">28</span> (a), a trajectory of a nontrivial solution of <a href="#x1-27r18">(10.4.18)</a> can’t contain \((0,0)\), which we define to be the trajectory of the trivial solution \({\bf y}\equiv 0\). More generally, if \({\bf y}=\displaystyle {\twocol {k_1}{k_2}}\ne {\bf 0}\) is a constant solution of <a href="#x1-27r18">(10.4.18)</a> (which could occur if zero is an eigenvalue of the matrix of <a href="#x1-27r18">(10.4.18)</a>), we define the trajectory of \(\bf y\) to be the single point \((k_1,k_2)\).
+			</div>
+			<div id="d3f2b061-cbb1-4440-8d1b-feddefe8ea26">
+				To be specific, this is the question: What do the trajectories look like, and how are they traversed? In this section we’ll answer this question, assuming that the matrix 
+				\[ 
+					A=\left [
+						\begin {array}{cc}
+							a_{11}&amp;a_{12}\\
+							a_{21}&amp;a_{22} 
+						\end {array}
+					\right ] 
+				\] 
+				
+				of <a href="#x1-27r18">(10.4.18)</a> has real eigenvalues \(\lambda _1\) and \(\lambda _2\) with associated linearly independent eigenvectors \({\bf x}_1\) and \({\bf x}_2\). Then the general solution of <a href="#x1-27r18">(10.4.18)</a> is 
+
+				<a id="x1-28r19"></a> 
+				\begin {equation} 
+					\label {eq:10.4.19} 
+					{\bf y}= c_1{\bf x}_1 e^{\lambda _1 t}+c_2{\bf x}_2e^{\lambda _2 t} 
+				\end {equation}
+				
+				We’ll consider other situations in the next two sections.
+			</div>
+			<div id="f9bf5c07-96fc-428e-8076-e8583417339d">
+				We leave it to you (Exercise&nbsp;<span class="ptmb8t-">35</span>) to classify the trajectories of <a href="#x1-27r18">(10.4.18)</a> if zero is an eigenvalue of \(A\). We’ll confine our attention here to the case where both eigenvalues are nonzero. In this case the simplest situation is where \(\lambda _1=\lambda _2\ne 0\), so <a href="#x1-28r19">(10.4.19)</a> becomes 
+				\[ {\bf y}=(c_1{\bf x}_1+c_2{\bf x}_2)e^{\lambda _1 t}\] 
+				
+				Since \({\bf x}_1\) and \({\bf x}_2\) are linearly independent, an arbitrary vector \(\bf x\) can be written as \({\bf x}=c_1{\bf x}_1+c_2{\bf x}_2\). Therefore the general solution of <a href="#x1-27r18">(10.4.18)</a> can be written as \({\bf y}={\bf x}e^{\lambda _1 t}\) where \(\bf x\) is an arbitrary \(2\)-vector, and the trajectories of nontrivial solutions of <a href="#x1-27r18">(10.4.18)</a> are half-lines through (but not including) the origin. The direction of motion is away from the origin if \(\lambda _1&gt;0\) (Figure&nbsp;<a href="#x1-29r1">10.4.1</a>), toward it if \(\lambda _1&lt;0\) (Figure&nbsp;<a href="#x1-30r2">10.4.2</a>). (In these and the next figures an arrow through a point indicates the direction of motion along the trajectory through the point.)
+			</div>
+
+			<figure id="x1-29r1">
+				<img height="264" src="EPS/fig100401.png" />
+				<figcaption>
+					<span class="id">Figure&nbsp;10.4.1</span>
+					<span class="content">Trajectories of a \(2\times 2\) system with a repeated positive eigenvalue</span>
+				</figcaption>
+			</figure>
+
+			<figure id="x1-30r2">
+				<img height="264" src="EPS/fig100402.png" />
+				<figcaption>
+					<span class="id">Figure&nbsp;10.4.2</span>
+					<span class="content">Trajectories of a \(2\times 2\) system with a repeated negative eigenvalue</span>
+				</figcaption>
+			</figure>
+
+			<div id="55c65e2d-f5bd-45c4-afa6-466378d02f00">
+				Now suppose \(\lambda _2&gt;\lambda _1\), and let \(L_1\) and \(L_2\) denote lines through the origin parallel to \({\bf x}_1\) and \({\bf x}_2\), respectively. By a half-line of \(L_1\) (or \(L_2\)), we mean either of the rays obtained by removing the origin from \(L_1\) (or \(L_2\)). 
+			</div>
+			<div id="07b34302-244d-4724-a60d-6784cf103937">
+				Letting \(c_2=0\) in <a href="#x1-28r19">(10.4.19)</a> yields \({\bf y}=c_1{\bf x}_1e^{\lambda _1 t}\). If \(c_1\ne 0\), the trajectory defined by this solution is a half-line of \(L_1\). The direction of motion is away from the origin if \(\lambda _1&gt;0\), toward the origin if \(\lambda _1&lt;0\). Similarly, the trajectory of \({\bf y}=c_2{\bf x}_2e^{\lambda _2 t}\) with \(c_2\ne 0\) is a half-line of \(L_2\).
+			</div>
+			<div id="bbd15c26-34c2-400a-a82a-0dc8754e3319">
+				Henceforth, we assume that \(c_1\) and \(c_2\) in <a href="#x1-28r19">(10.4.19)</a> are both nonzero. In this case, the trajectory of <a href="#x1-28r19">(10.4.19)</a> can’t intersect \(L_1\) or \(L_2\), since every point on these lines is on the trajectory of a solution for which either \(c_1=0\) or \(c_2=0\). (Remember: distinct trajectories can’t intersect!). Therefore the trajectory of <a href="#x1-28r19">(10.4.19)</a> must lie entirely in one of the four open sectors bounded by \(L_1\) and \(L_2\), but do not any point on \(L_1\) or \(L_2\). Since the initial point \((y_1(0),y_2(0))\) defined by 
+				\[ {\bf y}(0)=c_1{\bf x}_1+c_2{\bf x}_2 \] 
+				
+				is on the trajectory, we can determine which sector contains the trajectory from the signs of \(c_1\) and \(c_2\), as shown in Figure&nbsp;<a href="#x1-33r3">10.4.3</a>.
+			</div>
+			<div id="31455ff4-aa03-4b1d-806d-7bcca01801e2">
+				The direction of \({\bf y}(t)\) in <a href="#x1-28r19">(10.4.19)</a> is the same as that of 
+				
+				<a id="x1-31r20"></a> 
+				\begin {equation} 
+					\label {eq:10.4.20} 
+					e^{-\lambda _2 t}{\bf y}(t)= c_1{\bf x}_1e^{-(\lambda _2-\lambda _1)t}+c_2{\bf x}_2 
+				\end {equation}
+				
+				and of 
+				<a id="x1-32r21"></a>
+				\begin {equation} 
+					\label {eq:10.4.21} 
+					e^{-\lambda _1 t}{\bf y}(t)=c_1{\bf x}_1+c_2{\bf x}_2e^{(\lambda _2-\lambda _1)t} 
+				\end {equation}
+				
+				Since the right side of <a href="#x1-31r20">(10.4.20)</a> approaches \(c_2{\bf x}_2\) as \(t\to \infty \), the trajectory is asymptotically parallel to \(L_2\) as \(t\to \infty \). Since the right side of <a href="#x1-32r21">(10.4.21)</a> approaches \(c_1{\bf x}_1\) as \(t\to -\infty \), the trajectory is asymptotically parallel to \(L_1\) as \(t\to -\infty \).
+			</div>
+			<div id="43d70605-d3e2-4329-80f9-85c0e5bfed68">
+				The shape and direction of traversal of the trajectory of <a href="#x1-28r19">(10.4.19)</a> depend upon whether \(\lambda _1\) and \(\lambda _2\) are both positive, both negative, or of opposite signs. We’ll now analyze these three cases.
+			</div>
+			<div id="95ee1955-579e-4094-a043-108eb3dd1d7c">
+				Henceforth \(\|{\bf u}\|\) denote the length of the vector \(\bf u\). 
+			</div>
+			<figure id="x1-33r3">
+				<img height="264" src="EPS/fig100403.png" />
+				<figcaption>
+					<span class="id">Figure&nbsp;10.4.3</span>
+					<span class="content">Four open sectors bounded by \(L_1\) and \(L_2\)</span>
+				</figcaption>
+			</figure>
+
+			<div id="ddf24625-20d0-4963-8993-e43016f83273" class="stepbox">
+				<strong>Case 1: \(\lambda _2&gt;\lambda _1&gt;0\)</strong>
+				Figure&nbsp;<a href="#x1-34r4">10.4.4</a> shows some typical trajectories. In this case, \(\lim _{t\to -\infty }\|{\bf y}(t)\|=0\), so the trajectory is not only asymptotically parallel to \(L_1\) as \(t\to -\infty \), but is actually asymptotically tangent to \(L_1\) at the origin. On the other hand, \(\lim _{t\to \infty }\|{\bf y}(t)\|=\infty \) and
+				\[ \lim _{t\to \infty }\left \|{\bf y}(t)-c_2{\bf x}_2e^{\lambda _2 t}\right \|=\lim _{t\to \infty }\|c_1{\bf x_1}e^{\lambda _1t}\|=\infty \] 
+				
+				so, although the trajectory is asymptotically parallel to \(L_2\) as \(t\to \infty \), it’s not asymptotically tangent to \(L_2\). The direction of motion along each trajectory is away from the origin.
+
+				<figure id="x1-34r4">
+					<img height="264" src="EPS/fig100404.png" />
+					<figcaption>
+						<span class="id">Figure&nbsp;10.4.4</span>
+						<span class="content">Two positive eigenvalues; motion away from origin</span>
+					</figcaption>
+				</figure>
+			</div>
+
+			<div id="b01e7500-f1a0-4f41-99b0-480563a9a6dc" class="stepbox">
+				<strong>Case 2: \(0&gt;\lambda _2&gt;\lambda _1\)</strong>
+				Figure&nbsp;<a href="#x1-35r5">10.4.5</a> shows some typical trajectories. In this case, \(\lim _{t\to \infty }\|{\bf y}(t)\|=0\), so the trajectory is asymptotically tangent to \(L_2\) at the origin as \(t\to \infty \). On the other hand, \(\lim _{t\to -\infty }\|{\bf y}(t)\|=\infty \) and
+				\[ \lim _{t\to -\infty }\left \|{\bf y}(t)-c_1{\bf x}_1e^{\lambda _1 t}\right \|=\lim _{t\to -\infty }\|c_2{\bf x}_2e^{\lambda _2t}\|=\infty \] 
+				
+				so, although the trajectory is asymptotically parallel to \(L_1\) as \(t\to -\infty \), it’s not asymptotically tangent to it. The direction of motion along each trajectory is toward the origin.
+
+				<figure id="x1-35r5">
+					<img height="264" src="EPS/fig100405.png" />
+					<figcaption>
+						<span class="id">Figure&nbsp;10.4.5</span>
+						<span class="content">Two negative eigenvalues; motion toward the origin</span>
+					</figcaption>
+				</figure>
+			</div>
+
+			<div id="57000f88-1ec2-417e-a2fb-f404eea70114" class="stepbox">
+				<strong>Case 3: \(\lambda _2&gt;0&gt;\lambda _1\)</strong>
+				Figure&nbsp;<a href="#x1-36r6">10.4.6</a> shows some typical trajectories. In this case,
+				\[ \lim _{t\to \infty }\|{\bf y}(t)\|=\infty \quad \mbox{ and } \quad \lim _{t\to \infty }\left \|{\bf y}(t)-c_2{\bf x}_2e^{\lambda _2 t}\right \|=\lim _{t\to \infty }\|c_1{\bf x}_1e^{\lambda _1t}\|=0\] 
+				
+				so the trajectory is asymptotically tangent to \(L_2\) as \(t\to \infty \). Similarly,
+				\[ \lim _{t\to -\infty }\|{\bf y}(t)\|=\infty \quad \mbox{ and } \quad \lim _{t\to -\infty }\left \|{\bf y}(t)-c_1{\bf x}_1e^{\lambda _1 t}\right \|=\lim _{t\to -\infty }\|c_2{\bf x}_2e^{\lambda _2t}\|=0\] 
+				
+				so the trajectory is asymptotically tangent to \(L_1\) as \(t\to -\infty \). The direction of motion is toward the origin on \(L_1\) and away from the origin on \(L_2\). The direction of motion along any other trajectory is away from \(L_1\), toward \(L_2\).
+	
+
+				<figure id="x1-36r6">
+					<img height="264" src="EPS/fig100406.png" />
+					<figcaption>
+						<span class="id">Figure&nbsp;10.4.6</span>
+						<span class="content">Eigenvalues of different signs</span>
+					</figcaption>
+				</figure>
+			</div>
+		</details>
 
 		<nav class="ex">
 			<a href="sec10.4.ex.html">10.4 Exercises</a>
@@ -395,6 +1021,6 @@
 			<a href="sec10.0.html">Chapter 10</a>
 
 			<a href="sec10.5.book.html">Next (10.5)</a>
-		</nav></body
-	></html
->
+		</nav>
+	</body>
+</html>

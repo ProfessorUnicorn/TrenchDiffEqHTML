@@ -21,218 +21,845 @@
 	</head>
 
 	<body>
-		<div style="display: none" id="3f83c779-31a6-452a-8914-64c85a326d3c">
-			 \( \newcommand{\place}{\bigskip\hrule\bigskip\noindent} \newcommand{\threecol}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]} \newcommand{\threecolj}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]} \newcommand{\lims}[2]{\,\bigg|_{#1}^{#2}} \newcommand{\twocol}[2]{\left[\begin{array}{l}#1\\#2\end{array}\right]} \newcommand{\ctwocol}[2]{\left[\begin{array}{c}#1\\#2\end{array}\right]} \newcommand{\cthreecol}[3]{\left[\begin{array}{c}#1\\#2\\#3\end{array}\right]} \newcommand{\eqline}[1]{\centerline{\hfill$\displaystyle#1$\hfill}} \newcommand{\twochar}[4]{\left| \begin {array}{cc} #1-\lambda&amp; #2\\#3&amp; #4-\lambda \end{array}\right|} \newcommand{\twobytwo}[4]{\left[ \begin {array}{rr} #1&amp; #2\\#3&amp; #4 \end{array}\right]} \newcommand{\threechar}[9]{\left[ \begin {array}{ccc} #1-\lambda&amp; #2&amp; #3\\#4&amp; #5-\lambda&amp; #6\\#7&amp; #8&amp; #9-\lambda \end{array}\right]} \newcommand{\threebythree}[9]{\left[ \begin {array}{rrr} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9 \end{array}\right]} \newcommand{\solutionpart}[1]{\vskip10pt\noindent\underbar{\color{blue}\sc Solution({\bf #1})\ }} \newcommand{\Cex}{\fbox{\textcolor{red}{C}}\, } \newcommand{\CGex}{\fbox{\textcolor{red}{C/G}}\, } \newcommand{\Lex}{\fbox{\textcolor{red}{L}}\, } \newcommand{\matfunc}[3]{\left[ \begin {array}{cccc}#1_{11}(t)&amp; #1_{12}(t)&amp;\cdots &amp; #1_{1#3}(t)\\#1_{21}(t)&amp; #1_{22}(t)&amp;\cdots&amp; #1_{2#3}(t)\\\vdots&amp; \vdots&amp;\ddots&amp;\vdots\\#1_{#21}(t)&amp; #1_{#22}(t)&amp;\cdots&amp; #1_{#2#3}(t) \end{array}\right]} \newcommand{\col}[2]{\left[\begin{array}{c}#1_1\\#1_2\\\vdots\\#1_#2\end{array}\right]} \newcommand{\colfunc}[2]{\left[\begin{array}{c}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t)\end{array}\right]} \newcommand{\cthreebythree}[9]{\left[ 
-			 \begin  {array}{ccc} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9 
-			 \end{array}\right]} \) 
+		<div style="display: none" id="d855fe68-d22c-454c-a722-47e90c2d1370">
+			\( 
+				\newcommand{\threecol}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]}
+				\newcommand{\twocol}[2]{\left[\begin{array}{l}#1\\#2\end{array}\right]}
+				\newcommand{\twochar}[4]{\left| \begin {array}{cc} #1-\lambda&amp; #2\\#3&amp; #4-\lambda \end{array}\right|}
+				\newcommand{\twobytwo}[4]{\left[ \begin {array}{rr} #1&amp; #2\\#3&amp; #4 \end{array}\right]}
+				\newcommand{\threebythree}[9]{\left[ \begin {array}{rrr} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9 \end{array}\right]}
+				\newcommand{\matfunc}[3]{\left[ \begin {array}{cccc}#1_{11}(t)&amp; #1_{12}(t)&amp;\cdots &amp; #1_{1#3}(t)\\#1_{21}(t)&amp; #1_{22}(t)&amp;\cdots&amp; #1_{2#3}(t)\\\vdots&amp; \vdots&amp;\ddots&amp;\vdots\\#1_{#21}(t)&amp; #1_{#22}(t)&amp;\cdots&amp; #1_{#2#3}(t) \end{array}\right]}
+				\newcommand{\col}[2]{\left[\begin{array}{c}#1_1\\#1_2\\\vdots\\#1_#2\end{array}\right]}
+				\newcommand{\colfunc}[2]{\left[ \begin {array}{c}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t) \end{array}\right] }
+				\newcommand{\cthreebythree}[9]{\left[ \begin {array}{ccc} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9  \end{array}\right]} 
+			\) 
 		</div>
+
 		<div id="6c94df04-af2e-4a95-b79a-04bdcacf3863" class="section-title">
 			 10.7 Variation of Parameters for Nonhomogeneous Linear Systems 
 		</div>
-		<div id="4c5a2151-1701-4896-8719-ae883d3aab7a">
-			 We now consider the nonhomogeneous linear system \[ {\bf y}'= A(t){\bf y}+{\bf f}(t)\] where \(A\) is an \(n\times n\) matrix function and \(\bf f\) is an \(n\)-vector forcing function. Associated with this system is the<span class="vocab">complementary system</span>\({\bf y}'=A(t){\bf y}\). 
-		</div>
-		<div class="indent" id="218afa28-061d-48c9-91fd-c6dba0d52379">
-			 The next theorem is analogous to Theorems&nbsp;<span class="ptmb8t-">5.3.2</span>and<span class="ptmb8t-">9.1.5</span>. It shows how to find the general solution of \({\bf y}'=A(t){\bf y}+{\bf f}(t)\) if we know a particular solution of \({\bf y}'=A(t){\bf y}+{\bf f}(t)\) and a fundamental set of solutions of the complementary system. We leave the proof as an exercise (Exercise&nbsp;<span class="ptmb8t-">21</span>). 
-		</div>
-		<div class="newtheorem" id="3f9107bc-325a-4b45-b88c-1012dffaaf5f">
-			
-			<div
-				><span class="head"> <span class="ptmb8t-">Theorem&nbsp;10.7.1</span></span><a id="x1-21"></a> Suppose the \(n\times n\) matrix function \(A\) and the \(n\)-vector function \(\bf f\) are continuous on \((a,b).\) Let \({\bf y}_p\) be a particular solution of \({\bf y}'=A(t){\bf y}+{\bf f}(t)\) on \((a,b)\), and let \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) be a fundamental set of solutions of the complementary equation \({\bf y}'=A(t){\bf y}\) on \((a,b)\). Then \(\bf y\) is a solution of \({\bf y}'=A(t){\bf y}+{\bf f}(t)\) on \((a,b)\) if and only if \[ {\bf y}={\bf y}_p+c_1{\bf y}_1+c_2{\bf y}_2+\cdots +c_n{\bf y}_n\] where \(c_1,\) \(c_2,\) …, \(c_n\) are constants.
-			
-		</div>
-		</div>
-		<div class="indent" id="533ab6e4-f43f-4fd0-a9ae-887fd92a2605">
+
+		<details id="533ab6e4-f43f-4fd0-a9ae-887fd92a2605">
+			<summary>Introduction</summary>
 			 
-		</div>
-		<div id="0bf9b188-0404-4c1f-8b52-48552e256156">
-			<span id="textcolor1">Finding a Particular Solution of a Nonhomogeneous System</span>
-		</div>
-		<div class="indent" id="ead98196-916e-4951-b3cd-cca7a86ad1ab">
-			 
-		</div>
-		<div id="392c7c6f-507a-4f8f-bf48-67f758131131">
-			
-			We now discuss an extension of the method of variation of parameters to linear nonhomogeneous systems. This method will produce a particular solution of a nonhomogenous system \({\bf y}'=A(t){\bf y}+{\bf f}(t)\) provided that we know a fundamental matrix for the complementary system. To derive the method, suppose \(Y\) is a fundamental matrix for the complementary system; that is, \[ Y=\left [ \begin {array}{cccc} y_{11}&amp;y_{12}&amp;\cdots&amp;y _{1n} \\ y_{21}&amp;y_{22}&amp;\cdots&amp;y _{2n}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ y_{n1}&amp;y_{n2}&amp;\cdots&amp;y _{nn} \\ \end {array} \right ]\] where \[ {\bf y}_1=\left [\begin {array}{c}y_{11}\\y_{21}\\ \vdots \\ y_{n1}\end {array}\right ],\quad {\bf y}_2=\left [\begin {array}{c}y_{12}\\y_{22}\\ \vdots \\ y_{n2}\end {array}\right ],\quad \cdots ,\quad {\bf y}_n=\left [ \begin {array}{c}y_{1n}\\y_{2n}\\ \vdots \\ y_{nn} \end {array}\right ] \] is a fundamental set of solutions of the complementary system. In Section&nbsp;10.3 we saw that \(Y'=A(t)Y\). We seek a particular solution of \begin {equation} \label {eq:10.7.1} {\bf y}'=A(t){\bf y}+{\bf f}(t) \end {equation}<a id="x1-3r1"></a> of the form 
-			\begin  {equation} \label {eq:10.7.2} {\bf y}_p=Y{\bf u} 
-			\end {equation}<a id="x1-4r2"></a> where \(\bf u\) is to be determined. Differentiating (<a href="#x1-4r2">10.7.2<!-- tex4ht:ref: eq:10.7.2  --></a>) yields
-		
-		</div>
-		<div class="eqnarray" id="eebb0b17-25e3-4e25-a528-ff11eba8ed59">
-			 
-			 \begin  {eqnarray*} {\bf y}_p'&amp;=&amp;Y' {\bf u}+Y {\bf u}' \\&amp;=&amp;A Y {\bf u}+Y {\bf u}'\mbox { (since $Y'=AY$)}\\&amp;=&amp; A{\bf y}_p+Y {\bf u}'\mbox { (since $Y{\bf u}={\bf y}_p$)} 
-			 \end {eqnarray*} 
-		</div>
-		<div class="indent" id="2f196faf-906c-4b78-956a-0395f86dc706">
-			
-			Comparing this with (<a href="#x1-3r1">10.7.1<!-- tex4ht:ref: eq:10.7.1  --></a>) shows that \({\bf y}_p=Y{\bf u}\) is a solution of (<a href="#x1-3r1">10.7.1<!-- tex4ht:ref: eq:10.7.1  --></a>) if and only if \[ Y{\bf u}'={\bf f}\] Thus, we can find a particular solution \({\bf y}_p\) by solving this equation for \({\bf u}'\), integrating to obtain \(\bf u\), and computing \(Y{\bf u}\). We can take all constants of integration to be zero, since any particular solution will suffice.
-		
-		</div>
-		<div class="indent" id="f3e68e33-dc11-4d70-ab8b-3dbfa55ee5b4">
-			 Exercise&nbsp;<span class="ptmb8t-">22</span>sketches a proof that this method is analogous to the method of variation of parameters discussed in Sections&nbsp;5.7 and 9.4 for scalar linear equations. 
-		</div>
-		<div class="newtheorem" id="3e0c7875-06e8-4570-884d-c04031fd837c">
-			
-			<div
-				><span class="head"> <span class="ex-number">Example&nbsp;10.7.1</span></span><a id="x1-51"></a> <br class="newline" />
-			
-		</div>
-			<dl class="list1">
-				<dt class="list"><span class="ptmb8t-">(a)</span></dt>
-				<dd class="list">
-					<div>
-						 Find a particular solution of the system \begin {equation} \label {eq:10.7.3} {\bf y}'=\twobytwo 1221{\bf y}+\left [
-						 \begin  {array}{c}2e^{4t}\\e^{4t} 
-						 \end {array}\right ]\end {equation}<a id="x1-7r3"></a> which we considered in Example&nbsp;<span class="ptmb8t-">10.2.1</span>. 
-					</div>
-				</dd>
-				<dt class="list"><span class="ptmb8t-">(b)</span></dt>
-				<dd class="list">
-					<div>
-						
-						Find the general solution of (<a href="#x1-7r3">10.7.3<!-- tex4ht:ref: eq:10.7.3  --></a>).
+			<div id="4c5a2151-1701-4896-8719-ae883d3aab7a">
+				We now consider the nonhomogeneous linear system 
+				\[ {\bf y}'= A(t){\bf y}+{\bf f}(t)\]
+				
+				where \(A\) is an \(n\times n\) matrix function and \(\bf f\) is an \(n\)-vector forcing function. Associated with this system is the <span class="vocab">complementary system</span> \({\bf y}'=A(t){\bf y}\). 
+			</div>
+			<div id="218afa28-061d-48c9-91fd-c6dba0d52379">
+				The next theorem is analogous to Theorems&nbsp;<span class="ptmb8t-">5.3.2</span> and <span class="ptmb8t-">9.1.5</span>. It shows how to find the general solution of \({\bf y}'=A(t){\bf y}+{\bf f}(t)\) if we know a particular solution of \({\bf y}'=A(t){\bf y}+{\bf f}(t)\) and a fundamental set of solutions of the complementary system. We leave the proof as an exercise (Exercise&nbsp;<span class="ptmb8t-">21</span>). 
+			</div>
+			<div class="theorem" id="x1-21">
+				<span class="head">Theorem&nbsp;10.7.1</span>
+				Suppose the \(n\times n\) matrix function \(A\) and the \(n\)-vector function \(\bf f\) are continuous on \((a,b).\) Let \({\bf y}_p\) be a particular solution of \({\bf y}'=A(t){\bf y}+{\bf f}(t)\) on \((a,b)\), and let \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) be a fundamental set of solutions of the complementary equation \({\bf y}'=A(t){\bf y}\) on \((a,b)\). Then \(\bf y\) is a solution of \({\bf y}'=A(t){\bf y}+{\bf f}(t)\) on \((a,b)\) if and only if 
+				\[ {\bf y}={\bf y}_p+c_1{\bf y}_1+c_2{\bf y}_2+\cdots +c_n{\bf y}_n\]
 					
-					</div>
-				</dd>
-			</dl>
-		</div>
-		<div class="indent" id="fe50b448-6110-4da4-9574-d4b49fea8756">
-			 
-		</div>
-		<div id="467aa4b8-351b-4fae-bf68-580a75bbc3b6">
-			<span class="underline"
-				><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">a</span><span class="ptmrc8t-">)&nbsp;</span></span
-			>
-			The complementary system is \begin {equation} \label {eq:10.7.4} {\bf y}'=\twobytwo 1221{\bf y}\end {equation}<a id="x1-9r4"></a> The characteristic polynomial of the coefficient matrix is \[ \left |\begin {array}{cc}1-\lambda&amp; 2\\2&amp;1-\lambda \end {array}\right |= (\lambda +1)(\lambda -3)\] Using the method of Section&nbsp;10.4, we find that \[ {\bf y}_1=\left [\begin {array}{r}e^{3t}\\e^{3t}\end {array}\right ] \quad \mbox{ and } \quad {\bf y}_2=\left [\begin {array}{r}e^{-t}\\-e^{-t}\end {array}\right ] \] are linearly independent solutions of (<a href="#x1-9r4">10.7.4<!-- tex4ht:ref: eq:10.7.4  --></a>). Therefore \[ Y=\left [\begin {array}{rr}e^{3t}&amp;e^{-t}\\e^{3t}&amp;-e^{-t}\end {array}\right ] \] is a fundamental matrix for (<a href="#x1-9r4">10.7.4<!-- tex4ht:ref: eq:10.7.4  --></a>). We seek a particular solution \({\bf y}_p=Y{\bf u}\) of (<a href="#x1-7r3">10.7.3<!-- tex4ht:ref: eq:10.7.3  --></a>), where \(Y{\bf u}'={\bf f}\); that is, \[ \left [\begin {array}{rr}e^{3t}&amp;e^{-t}\\e^{3t}&amp;-e^{-t}\end {array}\right ] \twocol {u_1'}{u_2'} =\left [\begin {array}{c}2e^{4t}\\e^{4t}\end {array}\right ]\] The determinant of \(Y\) is the Wronskian \[ \left |\begin {array}{rr}e^{3t}&amp;e^{-t}\\e^{3t}&amp;-e^{-t}\end {array}\right | =-2e^{2t}\] By Cramer’s rule, \[ \begin {array}{ccccccl} u_1'&amp;=&amp;-\displaystyle {1\over 2e^{2t}} \left | \begin {array}{cr}2e^{4t}&amp;e^{-t}\\e^{4t}&amp;-e^{-t} \end {array}\right |&amp;=&amp;\displaystyle {3e^{3t}\over 2e^{2t}}&amp;= &amp;\displaystyle {3\over 2}e^t,\\ u_2'&amp;=&amp;-\displaystyle {1\over 2e^{2t}} \left | \begin {array}{rr}e^{3t}&amp;2e^{4t}\\e^{3t}&amp;e^{4t} \end {array}\right |&amp;=&amp;\displaystyle {e^{7t}\over 2e^{2t}}&amp;=&amp;\displaystyle {1\over 2}e^{5t}\end {array} \] Therefore \[ {\bf u}'={1\over 2}\left [\begin {array}{c}3e^t\\e^{5t}\end {array}\right ]\] Integrating and taking the constants of integration to be zero yields \[ {\bf u}={1\over 10}\left [\begin {array}{c}15e^t\\e^{5t}\end {array}\right ]\] so \[ {\bf y}_p=Y{\bf u}= \displaystyle {1\over 10}\left [\begin {array}{rr}e^{3t}&amp;e^{-t}\\ e^{3t}&amp;-e^{-t}\end {array}\right ] \left [\begin {array}{c}15e^t\\e^{5t}\end {array}\right ] =\phantom {0} \displaystyle {1\over 5}\left [ 
-			\begin  {array}{c}8e^{4t}\\7e^{4t} 
-			\end {array}\right ] \] is a particular solution of (<a href="#x1-7r3">10.7.3<!-- tex4ht:ref: eq:10.7.3  --></a>).
+				where \(c_1,\) \(c_2,\) …, \(c_n\) are constants.
+			</div>
+		</details>
+
+		<details id="0bf9b188-0404-4c1f-8b52-48552e256156">
+			<summary>Finding a Particular Solution of a Nonhomogeneous System</summary>
 		
-		</div>
-		<div id="2f89dc44-a5f2-43b5-8481-a97236444907">
-			<span class="underline"
-				><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">b</span><span class="ptmrc8t-">)&nbsp;</span></span
-			>
-			From Theorem&nbsp;<a href="#x1-21">10.7.1<!-- tex4ht:ref: thmtype:10.7.1  --></a>, the general solution of (<a href="#x1-7r3">10.7.3<!-- tex4ht:ref: eq:10.7.3  --></a>) is \begin {equation} \label {eq:10.7.5} {\bf y}={\bf y}_p+c_1{\bf y}_1+c_2{\bf y}_2= {1\over 5}\left [\begin {array}{c}8e^{4t}\\7e^{4t} \end {array}\right ] +c_1\left [\begin {array}{r}e^{3t}\\e^{3t}\end {array}\right ] +c_2\left [\begin {array}{r}e^{-t}\\-e^{-t}\end {array}\right ]\end {equation}<a id="x1-10r5"></a> which can also be written as \[ {\bf y}= {1\over 5}\left [\begin {array}{c}8e^{4t}\\7e^{4t}\end {array}\right ] +\left [ 
-			\begin  {array}{rr}e^{3t}&amp;e^{-t}\\e^{3t}&amp;-e^{-t} 
-			\end {array}\right ] {\bf c}\] where \(\bf c\) is an arbitrary constant vector.
-		
-		</div>
-		<div class="indent" id="78cc1fff-d0bf-410f-b7a1-c8ff1e814487">
+			<div id="392c7c6f-507a-4f8f-bf48-67f758131131">
+				We now discuss an extension of the method of variation of parameters to linear nonhomogeneous systems. This method will produce a particular solution of a nonhomogenous system \({\bf y}'=A(t){\bf y}+{\bf f}(t)\) provided that we know a fundamental matrix for the complementary system. To derive the method, suppose \(Y\) is a fundamental matrix for the complementary system; that is, 
+				\[ Y=\left [ 
+					\begin {array}{cccc} 
+						y_{11}&amp;y_{12}&amp;\cdots&amp;y _{1n} \\ 
+						y_{21}&amp;y_{22}&amp;\cdots&amp;y _{2n}\\ 
+						\vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ 
+						y_{n1}&amp;y_{n2}&amp;\cdots&amp;y _{nn}
+					\end {array}
+				\right ]\]
+				
+				where 
+				\[ {\bf y}_1=\left [
+					\begin {array}{c}
+						y_{11}\\
+						y_{21}\\ 
+						\vdots \\ 
+						y_{n1}
+					\end {array}
+				\right ],\quad {\bf y}_2=\left [
+					\begin {array}{c}
+						y_{12}\\
+						y_{22}\\ 
+						\vdots \\ 
+						y_{n2}
+					\end {array}
+				\right ],\quad \cdots ,\quad {\bf y}_n=\left [ 
+					\begin {array}{c}
+						y_{1n}\\
+						y_{2n}\\ 
+						\vdots \\ 
+						y_{nn} 
+					\end {array}
+				\right ] \]
+				
+				is a fundamental set of solutions of the complementary system. In Section&nbsp;10.3 we saw that \(Y'=A(t)Y\). We seek a particular solution of 
+				<a id="x1-3r1"></a>
+				\begin {equation} 
+					\label {eq:10.7.1} {\bf y}'=A(t){\bf y}+{\bf f}(t) 
+				\end {equation}
+				
+				of the form 
+				<a id="x1-4r2"></a>
+				\begin {equation} 
+					\label {eq:10.7.2} {\bf y}_p=Y{\bf u} 
+				\end {equation}
+				
+				where \(\bf u\) is to be determined. Differentiating <a href="#x1-4r2">(10.7.2)</a> yields
 			
-			Writing (<a href="#x1-10r5">10.7.5<!-- tex4ht:ref: eq:10.7.5  --></a>) in terms of coordinates yields
-		
-		</div>
-		<div class="eqnarray" id="29c346e5-be18-4689-90cb-556a709fb255">
-			 
-			 \begin  {eqnarray*} y_1&amp;=&amp;{8\over 5}e^{4t}+c_1e^{3t}+c_2e^{-t}\\ y_2&amp;=&amp;{7\over 5}e^{4t}+c_1e^{3t}-c_2e^{-t} 
-			 \end {eqnarray*} 
-		</div>
-		<div class="indent" id="41aca7f9-9e32-4bfc-98a1-5b2e183cd9a5">
-			 so our result is consistent with Example&nbsp;<span class="ptmb8t-">10.2.1</span>. __. 
-		</div>
-		<div class="indent" id="0d615fde-4719-4572-b521-b62aa015a638">
-			 If \(A\) isn’t a constant matrix, it’s usually difficult to find a fundamental set of solutions for the system \({\bf y}'=A(t){\bf y}\). It is beyond the scope of this text to discuss methods for doing this. Therefore, in the following examples and in the exercises involving systems with variable coefficient matrices we’ll provide fundamental matrices for the complementary systems without explaining how they were obtained. 
-		</div>
-		<div class="newtheorem" id="9cc9c071-b2bc-45d6-a4bf-b56b0b1b613e">
-			
-			<div
-				><span class="head"> <span class="ex-number">Example&nbsp;10.7.2</span></span><a id="x1-112"></a> Find a particular solution of \begin {equation} \label {eq:10.7.6} {\bf y}'=\left [\begin {array}{cc}2&amp;2e^{-2t}\\2e^{2t}&amp;4 \end {array}\right ]{\bf y}+\twocol 11\end {equation}<a id="x1-12r6"></a> given that \[ Y=\left [ 
-				\begin  {array}{cc} e^{4t}&amp;-1\\e^{6t}&amp;e^{2t} 
-				\end {array}\right ] \] is a fundamental matrix for the complementary system.
-			
-		</div>
-		</div>
-		<div class="indent" id="c42d1e0b-2181-4c84-8356-e09fded1b097">
-			 
-		</div>
-		<div id="a1a934f1-5e67-46e6-b6d7-48a864157fa8">
-			<span class="ptmb8t-">Solution </span>&nbsp;We seek a particular solution \({\bf y}_p=Y{\bf u}\) of (<a href="#x1-12r6">10.7.6<!-- tex4ht:ref: eq:10.7.6  --></a>) where \(Y{\bf u}'={\bf f}\); that is, \[ \left [\begin {array}{cc} e^{4t}&amp;-1\\e^{6t}&amp;e^{2t}\end {array}\right ] \twocol {u_1'}{u_2'}=\twocol 11\] The determinant of \(Y\) is the Wronskian \[ \left |\begin {array}{cc} e^{4t}&amp;-1\\e^{6t}&amp;e^{2t}\end {array}\right |=2e^{6t}\] By Cramer’s rule, \[ \begin {array}{cccccll} u_1'&amp;=&amp;\displaystyle {1\over 2e^{6t}}\left | \begin {array}{cc}1&amp;-1\\1&amp;e^{2t} \end {array}\right |&amp;=&amp;\displaystyle {e^{2t}+1\over 2e^{6t}}&amp;=&amp;\displaystyle {e^{-4t}+e^{-6t}\over 2} \\ u_2'&amp;=&amp;\displaystyle {1\over 2e^{6t}}\left |\begin {array}{cc}e^{4t}&amp;1\\e^{6t}&amp;1 \end {array}\right |&amp;=&amp;\displaystyle {e^{4t}-e^{6t}\over 2e^{6t}}&amp;=&amp;\displaystyle {e^{-2t}-1\over 2}\end {array} \] Therefore \[ {\bf u}'={1\over 2}\left [\begin {array}{c}e^{-4t}+e^{-6t}\\e^{-2t}-1\end {array}\right ]\] Integrating and taking the constants of integration to be zero yields \[ {\bf u}=-{1\over 24}\left [\begin {array}{c}3e^{-4t}+2e^{-6t}\\6e^{-2t}+12t \end {array}\right ]\] so \[ {\bf y}_p=Y{\bf u}= -\displaystyle {1\over 24}\left [\begin {array}{cc}e^{4t}&amp;-1\\e^{6t}&amp;e^{2t}\end {array}\right ] \left [\begin {array}{c}3e^{-4t}+2e^{-6t}\\6e^{-2t}+12t\end {array}\right ] =\displaystyle {1\over 24}\left [ 
-			\begin  {array}{c}4e^{-2t}+12t-3\\-3e^{2t}(4t+1)-8 
-			\end {array}\right ] \] is a particular solution of (<a href="#x1-12r6">10.7.6<!-- tex4ht:ref: eq:10.7.6  --></a>).
-		
-		</div>
-		<div class="newtheorem" id="815db05e-7714-47f6-afb3-80783c2af98d">
-			
-			<div
-				><span class="head"> <span class="ex-number">Example&nbsp;10.7.3</span></span><a id="x1-133"></a> Find a particular solution of \begin {equation} \label {eq:10.7.7} {\bf y}'=-{2\over t^2 }\left [\begin {array}{cc}t&amp;-3t^2\\1&amp;-2t \end {array}\right ]{\bf y} +t^2\twocol 11\end {equation}<a id="x1-14r7"></a> given that \[ Y=\left [ 
-				\begin  {array}{cc}2t&amp;3t^2\\1&amp;2t 
-				\end {array}\right ] \] is a fundamental matrix for the complementary system on \((-\infty ,0)\) and \((0,\infty )\).
-			
-		</div>
-		</div>
-		<div class="indent" id="95bc27bd-19d3-487d-ae50-c5ff3846ec89">
-			 
-		</div>
-		<div id="9b942226-39c9-4a3d-9cc5-35cf895007c7">
-			<span class="ptmb8t-">Solution </span>&nbsp;We seek a particular solution \({\bf y}_p=Y{\bf u}\) of (<a href="#x1-14r7">10.7.7<!-- tex4ht:ref: eq:10.7.7  --></a>) where \(Y{\bf u}'={\bf f}\); that is, \[ \left [\begin {array}{cc}2t&amp;3t^2\\1&amp;2t\end {array}\right ]\twocol {u_1'}{u_2'} =\twocol {t^2}{t^2}\] The determinant of \(Y\) is the Wronskian \[ \left |\begin {array}{cc}2t&amp;3t^2\\1&amp;2t\end {array}\right |=t^2\] By Cramer’s rule, \[ \begin {array}{ccccccl} u_1'&amp;=&amp;\displaystyle {1\over t^2}\left | \begin {array}{cc}t^2&amp;3t^2\\t^2&amp;2t \end {array}\right |&amp;=&amp;\displaystyle {2t^3-3t^4\over t^2}&amp;=&amp;2t-3t^2, \\ u_2'&amp;=&amp;\displaystyle {1\over t^2}\left | \begin {array}{cc}2t&amp;t^2\\1&amp;t^2 \end {array}\right |&amp;=&amp;\displaystyle {2t^3-t^2\over t^2}&amp;=&amp;2t-1\end {array} \] Therefore \[ {\bf u}'=\left [\begin {array}{c}2t-3t^2\\2t-1\end {array}\right ]\] Integrating and taking the constants of integration to be zero yields \[ {\bf u}=\left [\begin {array}{c}t^2-t^3\\t^2-t \end {array}\right ]\] so \[ {\bf y}_p=Y{\bf u}= \left [\begin {array}{cc}2t&amp;3t^2\\1&amp;2t\end {array}\right ] \left [ \begin {array}{c}t^2-t^3\\t^2-t \end {array}\right ] =\left [ 
-			\begin  {array}{c}t^3(t-1)\\t^2(t-1) 
-			\end {array}\right ] \] is a particular solution of (<a href="#x1-14r7">10.7.7<!-- tex4ht:ref: eq:10.7.7  --></a>).
-		
-		</div>
-		<div class="newtheorem" id="8f32f44b-eb73-44fb-8dd8-6893c1d38cfa">
-			
-			<div
-				><span class="head"> <span class="ex-number">Example&nbsp;10.7.4</span></span><a id="x1-154"></a> <br class="newline" />
-			
-		</div>
-			<dl class="list1">
-				<dt class="list"><span class="ptmb8t-">(a)</span></dt>
-				<dd class="list">
-					<div>
-						 Find a particular solution of \begin {equation} \label {eq:10.7.8} {\bf y}'=\threebythree 2{-1}{-1}10{-1}1{-1}0{\bf y}+\left [
-						 \begin  {array}{c}e^{t}\\0\\e^{-t} 
-						 \end {array}\right ]\end {equation}<a id="x1-17r8"></a> 
-					</div>
-				</dd>
-				<dt class="list"><span class="ptmb8t-">(b)</span></dt>
-				<dd class="list">
-					<div>
+				<div class="eqnarray" id="eebb0b17-25e3-4e25-a528-ff11eba8ed59">
+					\begin {eqnarray*} 
+						{\bf y}_p'&amp;=&amp;Y' {\bf u}+Y {\bf u}' \\
+						&amp;=&amp;A Y {\bf u}+Y {\bf u}'\mbox { (since $Y'=AY$)}\\
+						&amp;=&amp; A{\bf y}_p+Y {\bf u}'\mbox { (since $Y{\bf u}={\bf y}_p$)} 
+					\end {eqnarray*} 
+				</div>
+			</div>
+			<div id="2f196faf-906c-4b78-956a-0395f86dc706">
+				
+				Comparing this with <a href="#x1-3r1">(10.7.1)</a> shows that \({\bf y}_p=Y{\bf u}\) is a solution of <a href="#x1-3r1">(10.7.1)</a> if and only if 
+				\[ Y{\bf u}'={\bf f}\]
+				
+				Thus, we can find a particular solution \({\bf y}_p\) by solving this equation for \({\bf u}'\), integrating to obtain \(\bf u\), and computing \(Y{\bf u}\). We can take all constants of integration to be zero, since any particular solution will suffice.
+			</div>
+			<div id="f3e68e33-dc11-4d70-ab8b-3dbfa55ee5b4">
+				Exercise&nbsp;<span class="ptmb8t-">22</span> sketches a proof that this method is analogous to the method of variation of parameters discussed in Sections&nbsp;5.7 and 9.4 for scalar linear equations. 
+			</div>
+
+			<div class="example" id="x1-51" style="--ex-number: 1">
+				<ol>
+					<li>
+						Find a particular solution of the system 
+						<a id="x1-7r3"></a>
+						\begin {equation} 
+							\label {eq:10.7.3} 
+							{\bf y}'=\twobytwo 1221{\bf y}+\left [
+								\begin {array}{c}
+									2e^{4t}\\
+									e^{4t} 
+								\end {array}
+							\right ]
+						\end {equation}
 						
-						Find the general solution of (<a href="#x1-17r8">10.7.8<!-- tex4ht:ref: eq:10.7.8  --></a>).
+						which we considered in Example&nbsp;<span class="ptmb8t-">10.2.1</span>. 
+					</li>
+					<li>
+						Find the general solution of <a href="#x1-7r3">(10.7.3)</a>.
+					</li>
+				</ol>
+
+				<details class="solution">
+					<summary>Solution</summary>
+						<ol>
+							<li>
+								The complementary system is 
+								<a id="x1-9r4"></a>
+								\begin {equation} 
+									\label {eq:10.7.4} {\bf y}'=\twobytwo 1221{\bf y}
+								\end {equation}
+								
+								The characteristic polynomial of the coefficient matrix is 
+								\[ \left |
+									\begin {array}{cc}
+										1-\lambda&amp; 2\\
+										2&amp;1-\lambda 
+									\end {array}
+								\right |= (\lambda +1)(\lambda -3)\]
+								
+								Using the method of Section&nbsp;10.4, we find that 
+								\[ {\bf y}_1=\left [
+									\begin {array}{r}
+										e^{3t}\\
+										e^{3t}
+									\end {array}
+								\right ] \quad \mbox{ and } \quad {\bf y}_2=\left [
+									\begin {array}{r}
+										e^{-t}\\
+										-e^{-t}
+									\end {array}
+								\right ] \]
+								
+								are linearly independent solutions of <a href="#x1-9r4">(10.7.4)</a>. Therefore 
+								\[ Y=\left [
+									\begin {array}{rr}
+										e^{3t}&amp;e^{-t}\\
+										e^{3t}&amp;-e^{-t}
+									\end {array}
+								\right ] \] 
+								
+								is a fundamental matrix for <a href="#x1-9r4">(10.7.4)</a>. We seek a particular solution \({\bf y}_p=Y{\bf u}\) of <a href="#x1-7r3">(10.7.3)</a>, where \(Y{\bf u}'={\bf f}\); that is, 
+								\[ \left [
+									\begin {array}{rr}
+										e^{3t}&amp;e^{-t}\\
+										e^{3t}&amp;-e^{-t}
+									\end {array}
+								\right ] \twocol {u_1'}{u_2'} =\left [
+									\begin {array}{c}
+										2e^{4t}\\
+										e^{4t}
+									\end {array}
+								\right ]\]
+								
+								The determinant of \(Y\) is the Wronskian 
+								\[ \left |
+									\begin {array}{rr}
+										e^{3t}&amp;e^{-t}\\
+										e^{3t}&amp;-e^{-t}
+									\end {array}
+								\right | =-2e^{2t}\]
+								
+								By Cramer’s rule, 
+								\[ 
+									\begin {array}{ccccccl} 
+										u_1'&amp;=&amp;-\displaystyle {1\over 2e^{2t}} \left | 
+										\begin {array}{cr}
+											2e^{4t}&amp;e^{-t}\\
+											e^{4t}&amp;-e^{-t} 
+										\end {array}
+									\right |&amp;=&amp;\displaystyle {3e^{3t}\over 2e^{2t}}&amp;= &amp;\displaystyle {3\over 2}e^t,\\ 
+									u_2'&amp;=&amp;-\displaystyle {1\over 2e^{2t}} \left | 
+										\begin {array}{rr}
+											e^{3t}&amp;2e^{4t}\\
+											e^{3t}&amp;e^{4t} 
+										\end {array}
+									\right |&amp;=&amp;\displaystyle {e^{7t}\over 2e^{2t}}&amp;=&amp;\displaystyle {1\over 2}e^{5t}
+									\end {array} 
+								\]
+								
+								Therefore 
+								\[ {\bf u}'={1\over 2}\left [
+									\begin {array}{c}
+										3e^t\\
+										e^{5t}
+									\end {array}
+								\right ]\]
+								
+								Integrating and taking the constants of integration to be zero yields 
+								\[ {\bf u}={1\over 10}\left [
+									\begin {array}{c}
+										15e^t\\
+										e^{5t}
+									\end {array}
+								\right ]\]
+								
+								so 
+								\[ {\bf y}_p=Y{\bf u}= \displaystyle {1\over 10}\left [
+									\begin {array}{rr}
+										e^{3t}&amp;e^{-t}\\ 
+										e^{3t}&amp;-e^{-t}
+									\end {array}
+								\right ] \left [
+									\begin {array}{c}
+										15e^t\\
+										e^{5t}
+									\end {array}
+								\right ] =\phantom {0} \displaystyle {1\over 5}\left [ 
+									\begin {array}{c}
+										8e^{4t}\\
+										7e^{4t} 
+									\end {array}
+								\right ] \]
+								
+								is a particular solution of <a href="#x1-7r3">(10.7.3)</a>.
+							</li>
+							<li>
+								From Theorem&nbsp;<a href="#x1-21">10.7.1</a>, the general solution of <a href="#x1-7r3">(10.7.3)</a> is 
+								<a id="x1-10r5"></a>
+								\begin {equation} 
+									\label {eq:10.7.5} 
+									{\bf y}={\bf y}_p+c_1{\bf y}_1+c_2{\bf y}_2= {1\over 5}\left [
+										\begin {array}{c}
+											8e^{4t}\\
+											7e^{4t} 
+										\end {array}
+									\right ] +c_1\left [
+										\begin {array}{r}
+											e^{3t}\\
+											e^{3t}
+										\end {array}
+									\right ] +c_2\left [
+										\begin {array}{r}
+											e^{-t}\\
+											-e^{-t}
+										\end {array}
+									\right ]
+								\end {equation}
+								
+								which can also be written as 
+								\[ {\bf y}= {1\over 5}\left [
+									\begin {array}{c}
+										8e^{4t}\\
+										7e^{4t}
+									\end {array}
+								\right ] +\left [ 
+									\begin {array}{rr}
+										e^{3t}&amp;e^{-t}\\
+										e^{3t}&amp;-e^{-t} 
+									\end {array}
+								\right ] {\bf c}\]
+								
+								where \(\bf c\) is an arbitrary constant vector.
+
+								<br>
+								Writing <a href="#x1-10r5">(10.7.5)</a> in terms of coordinates yields
+								<div class="eqnarray" id="29c346e5-be18-4689-90cb-556a709fb255">
+									\begin {eqnarray*} 
+										y_1&amp;=&amp;{8\over 5}e^{4t}+c_1e^{3t}+c_2e^{-t}\\ 
+										y_2&amp;=&amp;{7\over 5}e^{4t}+c_1e^{3t}-c_2e^{-t} 
+									\end {eqnarray*} 
+								</div>
+								so our result is consistent with Example&nbsp;<span class="ptmb8t-">10.2.1</span>.
+							</li>
+						</ol>
+				</details>
+			</div>
+			<div id="0d615fde-4719-4572-b521-b62aa015a638">
+				If \(A\) isn’t a constant matrix, it’s usually difficult to find a fundamental set of solutions for the system \({\bf y}'=A(t){\bf y}\). It is beyond the scope of this text to discuss methods for doing this. Therefore, in the following examples and in the exercises involving systems with variable coefficient matrices we’ll provide fundamental matrices for the complementary systems without explaining how they were obtained. 
+			</div>
+			<div class="example" id="x1-112" style="--ex-number: 2">
+				<div>
+					Find a particular solution of 
+					<a id="x1-12r6"></a>
+					\begin {equation} 
+						\label {eq:10.7.6} 
+						{\bf y}'=\left [
+							\begin {array}{cc}
+								2&amp;2e^{-2t}\\
+								2e^{2t}&amp;4 
+							\end {array}
+						\right ]{\bf y}+\twocol 11
+					\end {equation} given that 
+					\[ Y=\left [ 
+						\begin {array}{cc} 
+							e^{4t}&amp;-1\\
+							e^{6t}&amp;e^{2t} 
+						\end {array}
+					\right ] \]
 					
-					</div>
-				</dd>
-			</dl>
-		</div>
-		<div class="indent" id="b71d613b-7561-41b3-a246-5a588878f34f">
-			 
-		</div>
-		<div id="27311069-f910-47c3-805f-36a24a0a733d">
-			<span class="underline"
-				><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">a</span><span class="ptmrc8t-">)&nbsp;</span></span
-			>
-			The complementary system for (<a href="#x1-17r8">10.7.8<!-- tex4ht:ref: eq:10.7.8  --></a>) is \begin {equation} \label {eq:10.7.9} {\bf y}'=\threebythree 2{-1}{-1}10{-1}1{-1}0{\bf y} \end {equation}<a id="x1-19r9"></a> The characteristic polynomial of the coefficient matrix is \[ \left |\begin {array}{ccc}2-\lambda&amp; -1&amp;-1\\1&amp;-\lambda&amp; -1\\1&amp;-1&amp;-\lambda \end {array}\right |= -\lambda (\lambda -1)^2\] Using the method of Section&nbsp;10.4, we find that \[ {\bf y}_1=\left [\begin {array}{c}1\\1\\1\end {array}\right ],\quad {\bf y}_2=\left [ \begin {array}{c}e^t\\e^t\\0 \end {array}\right ], \quad \mbox{ and } \quad {\bf y}_3=\left [ \begin {array}{c}e^t\\0\\e^t \end {array}\right ] \] are linearly independent solutions of (<a href="#x1-19r9">10.7.9<!-- tex4ht:ref: eq:10.7.9  --></a>). Therefore \[ Y=\left [\begin {array}{ccc}1&amp;e^t&amp;e^t\\1&amp;e^t&amp;0\\1&amp;0&amp;e^t\end {array}\right ] \] is a fundamental matrix for (<a href="#x1-19r9">10.7.9<!-- tex4ht:ref: eq:10.7.9  --></a>). We seek a particular solution \({\bf y}_p=Y{\bf u}\) of (<a href="#x1-17r8">10.7.8<!-- tex4ht:ref: eq:10.7.8  --></a>), where \(Y{\bf u}'={\bf f}\); that is, \[ \left [\begin {array}{ccc}1&amp;e^t&amp;e^t\\1&amp;e^t&amp;0\\1&amp;0&amp;e^t\end {array}\right ] \threecol {u_1'}{u_2'}{u_3'}= \left [\begin {array}{c}e^t\\0\\e^{-t}\end {array}\right ]\] The determinant of \(Y\) is the Wronskian \[ \left |\begin {array}{ccc}1&amp;e^t&amp;e^t\\1&amp;e^t&amp;0\\1&amp;0&amp;e^t\end {array}\right | =-e^{2t}\] Thus, by Cramer’s rule, \[ \begin {array}{cccccll} u_1'&amp;=&amp;-\displaystyle {1\over e^{2t}}\left | \begin {array}{ccc}e^t&amp;e^t&amp;e^t\\0&amp;e^t&amp;0\\e^{-t}&amp;0&amp;e^t \end {array}\right |&amp;=&amp;-\displaystyle {e^{3t}-e^t\over e^{2t}}&amp;=&amp;e^{-t}-e^t\\ u_2'&amp;=&amp;-\displaystyle {1\over e^{2t}}\left | \begin {array}{ccc}1&amp;e^t&amp;e^t\\1&amp;0&amp;0\\1&amp;e^{-t}&amp;e^t \end {array}\right |&amp;=&amp;-\displaystyle {1-e^{2t}\over e^{2t}}&amp;=&amp;1-e^{-2t}\\ u_3'&amp;=&amp;-\displaystyle {1\over e^{2t}}\left | \begin {array}{ccc}1&amp;e^t&amp;e^t\\1&amp;e^t&amp;0\\1&amp;0&amp;e^{-t} \end {array}\right |&amp;=&amp;\displaystyle {e^{2t}\over e^{2t}}&amp;=&amp;1\end {array} \] Therefore \[ {\bf u}'=\left [\begin {array}{c}e^{-t}-e^t\\1-e^{-2t}\\1\end {array}\right ]\] Integrating and taking the constants of integration to be zero yields \[ {\bf u}=\left [\begin {array}{c}-e^t-e^{-t}\\\displaystyle {e^{-2t}\over 2}+t \\t\end {array}\right ]\] so \[ \begin {array}{ccccl} {\bf y}_p=Y{\bf u}&amp;=&amp; \left [ \begin {array}{ccc}1&amp;e^t&amp;e^t\\1&amp;e^t&amp;0\\1&amp;0&amp;e^t \end {array}\right ] \left [ \begin {array}{c}-e^t-e^{-t}\\\displaystyle {e^{-2t}\over 2}+t\\t \end {array}\right ] &amp;=&amp;\left [ 
-			\begin  {array}{c}e^t(2t-1)-\displaystyle {e^{-t}\over 2}\\[5pt]e^t(t-1)-\displaystyle {e^{-t} \over 2}\\[5pt]e^t(t-1)-\displaystyle {e^{-t}} 
-			\end {array}\right ] \end {array} \] is a particular solution of (<a href="#x1-17r8">10.7.8<!-- tex4ht:ref: eq:10.7.8  --></a>).
-		
-		</div>
-		<div id="bd810697-26af-4ba5-9ed8-b0896b569cdd">
-			<span class="underline"
-				><span class="ptmrc8t-">S<span class="small-caps">OLUTION</span>(</span><span class="ptmb8t-">a</span><span class="ptmrc8t-">)&nbsp;</span></span
-			>
-			From Theorem&nbsp;<a href="#x1-21">10.7.1<!-- tex4ht:ref: thmtype:10.7.1  --></a> the general solution of (<a href="#x1-17r8">10.7.8<!-- tex4ht:ref: eq:10.7.8  --></a>) is \[ {\bf y}={\bf y}_p+c_1{\bf y}_1+c_2{\bf y}_2+c_3{\bf y}_3= \left [ \begin {array}{c}e^t(2t-1)-\displaystyle {e^{-t}\over 2}\\[5pt]e^t(t-1)-\displaystyle {e^{-t} \over 2}\\[5pt]e^t(t-1)-\displaystyle {e^{-t}} \end {array}\right ]+ c_1\left [\begin {array}{c}1\\1\\1\end {array}\right ]+ c_2\left [\begin {array}{c}e^t\\e^t\\0\end {array}\right ] +c_3\left [\begin {array}{c}e^t\\0\\e^t\end {array}\right ]\] which can be written as \[ {\bf y}={\bf y}_p+Y{\bf c}= \left [ \begin {array}{c}e^t(2t-1)-\displaystyle {e^{-t}\over 2}\\[5pt]e^t(t-1)-\displaystyle {e^{-t} \over 2}\\[5pt]e^t(t-1)-\displaystyle {e^{-t}} \end {array}\right ]+ \left [ 
-			\begin  {array}{ccc}1&amp;e^t&amp;e^t\\1&amp;e^t&amp;0\\1&amp;0&amp;e^t 
-			\end {array}\right ]{\bf c} \] where \(\bf c\) is an arbitrary constant vector.
-		
-		</div>
-		<div class="newtheorem" id="bf7db357-ef7a-4ffc-b78b-75d3945c5a49">
+					is a fundamental matrix for the complementary system.
+				</div>
 			
-			<div
-				><span class="head"> <span class="ex-number">Example&nbsp;10.7.5</span></span><a id="x1-205"></a> Find a particular solution of \begin {equation} \label {eq:10.7.10} {\bf y}'={1\over 2} \left [\begin {array}{ccc}3&amp;e^{-t}&amp;-e^{2t}\\0&amp;6&amp;0\\-e^{-2t}&amp;e^{-3t}&amp;-1 \end {array}\right ] {\bf y}+\left [\begin {array}{c}1\\e^t\\e^{-t}\end {array}\right ]\end {equation}<a id="x1-21r10"></a> given that \[ Y=\left [ 
-				\begin  {array}{ccc}e^t&amp;0&amp;e^{2t}\\0&amp;e^{3t}&amp;e^{3t}\\e^{-t}&amp;1&amp;0 
-				\end {array}\right ] \] is a fundamental matrix for the complementary system.
-			
-		</div>
-		</div>
-		<div class="indent" id="fc4075b6-bb79-4eb3-8a10-fc2157f9b6c9">
-			 
-		</div>
-		<div id="b96d1d69-91de-4c37-80be-f6832306ba15">
-			<span class="ptmb8t-">Solution </span>&nbsp;We seek a particular solution of (<a href="#x1-21r10">10.7.10<!-- tex4ht:ref: eq:10.7.10  --></a>) in the form \({\bf y}_p=Y{\bf u}\), where \(Y{\bf u}'={\bf f}\); that is, \[ \left [\begin {array}{ccc}e^t&amp;0&amp;e^{2t}\\0&amp;e^{3t}&amp;e^{3t}\\e^{-t}&amp;1&amp;0 \end {array}\right ]\threecol {u_1'}{u_2'}{u_3'}= \left [\begin {array}{c}1\\e^t\\e^{-t}\end {array}\right ]\] The determinant of \(Y\) is the Wronskian \[ \left |\begin {array}{ccc}e^t&amp;0&amp;e^{2t}\\0&amp;e^{3t}&amp;e^{3t}\\e^{-t}&amp;1&amp;0 \end {array}\right |=-2e^{4t}\] By Cramer’s rule, \[ \begin {array}{ccccccl} u_1'&amp;=&amp;-\displaystyle {1\over 2e^{4t}}\left | \begin {array}{ccc}1&amp;0&amp;e^{2t}\\e^t&amp;e^{3t}&amp;e^{3t} \\e^{-t}&amp;1&amp;0 \end {array}\right |&amp;=&amp;\displaystyle {e^{4t}\over 2e^{4t}}&amp;=&amp;\displaystyle {1\over 2} \\ u_2'&amp;=&amp;-\displaystyle {1\over 2e^{4t}}\left |\begin {array}{ccc}e^t&amp;1&amp;e^{2t}\\0&amp;e^t&amp;e^{3t} \\e^{-t}&amp;e^{-t}&amp;0 \end {array}\right |&amp;=&amp;\displaystyle {e^{3t}\over 2e^{4t}}&amp;=&amp;\displaystyle {1\over 2}e^{-t}\\ u_3'&amp;=&amp;-\displaystyle {1\over 2e^{4t}}\left | \begin {array}{ccc}e^t&amp;0&amp;1\\0&amp;e^{3t}&amp;e^t \\e^{-t}&amp;1&amp;e^{-t} \end {array}\right |&amp;=&amp;-\displaystyle {e^{3t}-2e^{2t}\over 2e^{4t}}&amp;=&amp;\displaystyle {2e^{-2t}-e^{-t} \over 2}\end {array} \] Therefore \[ {\bf u}'={1\over 2}\left [\begin {array}{c}1\\e^{-t}\\2e^{-2t}-e^{-t}\end {array}\right ]\] Integrating and taking the constants of integration to be zero yields \[ {\bf u}={1\over 2}\left [\begin {array}{c}t\\-e^{-t}\\e^{-t}-e^{-2t} \end {array}\right ]\] so \[ {\bf y}_p=Y{\bf u}= {1\over 2}\left [ \begin {array}{ccc}e^t&amp;0&amp;e^{2t}\\0&amp;e^{3t}&amp;e^{3t}\\e^{-t}&amp;1&amp;0 \end {array}\right ] \left [ \begin {array}{c}t\\-e^{-t}\\e^{-t}-e^{-2t} \end {array}\right ]=\displaystyle {1\over 2}\left [ 
-			\begin  {array}{c}e^t(t+1)-1\\ -e^t\\e^{-t}(t-1) 
-			\end {array}\right ] \] is a particular solution of (<a href="#x1-21r10">10.7.10<!-- tex4ht:ref: eq:10.7.10  --></a>).
-		
-		</div>
+				<details class="solution">
+					<summary>Solution</summary>
+					We seek a particular solution \({\bf y}_p=Y{\bf u}\) of <a href="#x1-12r6">(10.7.6)</a> where \(Y{\bf u}'={\bf f}\); that is, 
+					\[ \left [
+						\begin {array}{cc} 
+							e^{4t}&amp;-1\\
+							e^{6t}&amp;e^{2t}
+						\end {array}
+					\right ] \twocol {u_1'}{u_2'}=\twocol 11\]
+					
+					The determinant of \(Y\) is the Wronskian 
+					\[ \left |
+						\begin {array}{cc} 
+							e^{4t}&amp;-1\\
+							e^{6t}&amp;e^{2t}
+						\end {array}
+					\right |=2e^{6t}\]
+					
+					By Cramer’s rule, 
+					\[ 
+						\begin {array}{cccccll} 
+							u_1'&amp;=&amp;\displaystyle {1\over 2e^{6t}}\left | 
+							\begin {array}{cc}
+								1&amp;-1\\
+								1&amp;e^{2t} 
+							\end {array}
+						\right |&amp;=&amp;\displaystyle {e^{2t}+1\over 2e^{6t}}&amp;=&amp;\displaystyle {e^{-4t}+e^{-6t}\over 2} \\ 
+						u_2'&amp;=&amp;\displaystyle {1\over 2e^{6t}}\left |
+							\begin {array}{cc}
+								e^{4t}&amp;1\\
+								e^{6t}&amp;1 
+							\end {array}
+						\right |&amp;=&amp;\displaystyle {e^{4t}-e^{6t}\over 2e^{6t}}&amp;=&amp;\displaystyle {e^{-2t}-1\over 2}
+						\end {array} \]
+					
+					Therefore 
+					\[ {\bf u}'={1\over 2}\left [
+						\begin {array}{c}
+							e^{-4t}+e^{-6t}\\
+							e^{-2t}-1
+						\end {array}
+					\right ]\]
+					
+					Integrating and taking the constants of integration to be zero yields 
+					\[ {\bf u}=-{1\over 24}\left [
+						\begin {array}{c}
+							3e^{-4t}+2e^{-6t}\\
+							6e^{-2t}+12t 
+						\end {array}
+					\right ]\]
+					
+					so 
+					\[ {\bf y}_p=Y{\bf u}= -\displaystyle {1\over 24}\left [
+						\begin {array}{cc}
+							e^{4t}&amp;-1\\
+							e^{6t}&amp;e^{2t}
+						\end {array}
+					\right ] \left [
+						\begin {array}{c}
+							3e^{-4t}+2e^{-6t}\\
+							6e^{-2t}+12t
+						\end {array}
+					\right ] =\displaystyle {1\over 24}\left [ 
+						\begin {array}{c}
+							4e^{-2t}+12t-3\\
+							-3e^{2t}(4t+1)-8 
+						\end {array}
+					\right ] \]
+					
+					is a particular solution of <a href="#x1-12r6">(10.7.6)</a>.
+				</details>
+			</div>
+
+			<div class="example" id="x1-133" style="--ex-number: 3">
+				<div>
+					Find a particular solution of 
+					<a id="x1-14r7"></a>
+					\begin {equation} 
+						\label {eq:10.7.7} 
+						{\bf y}'=-{2\over t^2 }\left [
+							\begin {array}{cc}
+								t&amp;-3t^2\\
+								1&amp;-2t 
+							\end {array}
+						\right ]{\bf y} +t^2\twocol 11
+					\end {equation}
+					
+					given that 
+					\[ Y=\left [ 
+						\begin {array}{cc}
+							2t&amp;3t^2\\
+							1&amp;2t 
+						\end {array}
+					\right ] \]
+					
+					is a fundamental matrix for the complementary system on \((-\infty ,0)\) and \((0,\infty )\).
+				</div>
+
+				<details class="solution">
+					<summary>Solution</summary>
+					We seek a particular solution \({\bf y}_p=Y{\bf u}\) of <a href="#x1-14r7">(10.7.7)</a> where \(Y{\bf u}'={\bf f}\); that is, 
+					\[ \left [
+						\begin {array}{cc}
+							2t&amp;3t^2\\
+							1&amp;2t
+						\end {array}
+					\right ]\twocol {u_1'}{u_2'} =\twocol {t^2}{t^2}\]
+					
+					The determinant of \(Y\) is the Wronskian 
+					\[ \left |
+						\begin {array}{cc}
+							2t&amp;3t^2\\
+							1&amp;2t
+						\end {array}
+					\right |=t^2\]
+					
+					By Cramer’s rule, 
+					\[ 
+						\begin {array}{ccccccl} 
+							u_1'&amp;=&amp;\displaystyle {1\over t^2}\left | 
+							\begin {array}{cc}
+								t^2&amp;3t^2\\
+								t^2&amp;2t 
+							\end {array}
+						\right |&amp;=&amp;\displaystyle {2t^3-3t^4\over t^2}&amp;=&amp;2t-3t^2, \\ 
+						u_2'&amp;=&amp;\displaystyle {1\over t^2}\left | 
+							\begin {array}{cc}
+								2t&amp;t^2\\
+								1&amp;t^2 
+							\end {array}
+						\right |&amp;=&amp;\displaystyle {2t^3-t^2\over t^2}&amp;=&amp;2t-1
+						\end {array}
+					\]
+					
+					Therefore 
+					\[ {\bf u}'=\left [
+						\begin {array}{c}
+							2t-3t^2\\
+							2t-1
+						\end {array}
+					\right ]\]
+					
+					Integrating and taking the constants of integration to be zero yields 
+					\[ {\bf u}=\left [
+						\begin {array}{c}
+							t^2-t^3\\
+							t^2-t 
+						\end {array}
+					\right ]\]
+					
+					so 
+					\[ {\bf y}_p=Y{\bf u}= \left [
+						\begin {array}{cc}
+							2t&amp;3t^2\\
+							1&amp;2t
+						\end {array}
+					\right ] \left [ 
+						\begin {array}{c}
+							t^2-t^3\\
+							t^2-t 
+						\end {array}
+					\right ] =\left [ 
+						\begin {array}{c}
+							t^3(t-1)\\
+							t^2(t-1) 
+						\end {array}
+					\right ] \]
+					
+					is a particular solution of <a href="#x1-14r7">(10.7.7)</a>.
+				</details>
+			</div>
+
+			<div class="example" id="x1-154" style="--ex-number: 4">
+				<ol>
+					<li>
+						Find a particular solution of 
+						<a id="x1-17r8"></a> 
+						\begin {equation} 
+							\label {eq:10.7.8} 
+							{\bf y}'=\threebythree 2{-1}{-1}10{-1}1{-1}0{\bf y}+\left [
+								\begin {array}{c}
+									e^{t}\\
+									0\\
+									e^{-t} 
+								\end {array}
+							\right ]
+						\end {equation}
+					</li>
+					<li>
+						Find the general solution of <a href="#x1-17r8">(10.7.8)</a>.
+					</li>
+				</ol>
+
+				<details class="solution">
+					<summary>Solution</summary>
+					<ol>
+						<li>
+							The complementary system for <a href="#x1-17r8">(10.7.8)</a> is 
+							<a id="x1-19r9"></a>
+							\begin {equation} 
+								\label {eq:10.7.9} {\bf y}'=\threebythree 2{-1}{-1}10{-1}1{-1}0{\bf y} 
+							\end {equation}
+							
+							The characteristic polynomial of the coefficient matrix is 
+							\[ \left |
+								\begin {array}{ccc}
+									2-\lambda&amp; -1&amp;-1\\
+									1&amp;-\lambda&amp; -1\\
+									1&amp;-1&amp;-\lambda 
+								\end {array}
+							\right |= -\lambda (\lambda -1)^2\]
+							
+							Using the method of Section&nbsp;10.4, we find that 
+							\[ {\bf y}_1=\left [
+								\begin {array}{c}
+									1\\
+									1\\
+									1
+								\end {array}
+							\right ],\quad {\bf y}_2=\left [ 
+								\begin {array}{c}
+									e^t\\
+									e^t\\
+									0 
+								\end {array}
+							\right ], \quad \mbox{ and } \quad {\bf y}_3=\left [ 
+								\begin {array}{c}
+									e^t\\
+									0\\
+									e^t 
+								\end {array}
+							\right ] \]
+							
+							are linearly independent solutions of <a href="#x1-19r9">(10.7.9)</a>. Therefore 
+							\[ Y=\left [
+								\begin {array}{ccc}
+									1&amp;e^t&amp;e^t\\
+									1&amp;e^t&amp;0\\
+									1&amp;0&amp;e^t
+								\end {array}
+							\right ] \]
+							
+							is a fundamental matrix for <a href="#x1-19r9">(10.7.9)</a>. We seek a particular solution \({\bf y}_p=Y{\bf u}\) of <a href="#x1-17r8">(10.7.8)</a>, where \(Y{\bf u}'={\bf f}\); that is, 
+							\[ \left [
+								\begin {array}{ccc}
+									1&amp;e^t&amp;e^t\\
+									1&amp;e^t&amp;0\\
+									1&amp;0&amp;e^t
+								\end {array}
+							\right ] \threecol {u_1'}{u_2'}{u_3'}= \left [
+								\begin {array}{c}
+									e^t\\
+									0\\
+									e^{-t}
+								\end {array}
+							\right ]\]
+							
+							The determinant of \(Y\) is the Wronskian 
+							\[ \left |
+								\begin {array}{ccc}
+									1&amp;e^t&amp;e^t\\
+									1&amp;e^t&amp;0\\
+									1&amp;0&amp;e^t
+								\end {array}
+							\right | =-e^{2t}\]
+							
+							Thus, by Cramer’s rule, 
+							\[ 
+								\begin {array}{cccccll} 
+									u_1'&amp;=&amp;-\displaystyle {1\over e^{2t}}\left | 
+									\begin {array}{ccc}
+										e^t&amp;e^t&amp;e^t\\
+										0&amp;e^t&amp;0\\
+										e^{-t}&amp;0&amp;e^t 
+									\end {array}
+								\right |&amp;=&amp;-\displaystyle {e^{3t}-e^t\over e^{2t}}&amp;=&amp;e^{-t}-e^t\\ 
+								u_2'&amp;=&amp;-\displaystyle {1\over e^{2t}}\left | 
+									\begin {array}{ccc}
+										1&amp;e^t&amp;e^t\\
+										1&amp;0&amp;0\\
+										1&amp;e^{-t}&amp;e^t 
+									\end {array}
+								\right |&amp;=&amp;-\displaystyle {1-e^{2t}\over e^{2t}}&amp;=&amp;1-e^{-2t}\\ 
+								u_3'&amp;=&amp;-\displaystyle {1\over e^{2t}}\left | 
+									\begin {array}{ccc}
+										1&amp;e^t&amp;e^t\\
+										1&amp;e^t&amp;0\\
+										1&amp;0&amp;e^{-t} 
+									\end {array}
+								\right |&amp;=&amp;\displaystyle {e^{2t}\over e^{2t}}&amp;=&amp;1
+								\end {array}
+							\]
+							
+							Therefore 
+							\[ {\bf u}'=\left [
+								\begin {array}{c}
+									e^{-t}-e^t\\
+									1-e^{-2t}\\
+									1
+								\end {array}
+							\right ]\]
+							
+							Integrating and taking the constants of integration to be zero yields 
+							\[ {\bf u}=\left [
+								\begin {array}{c}
+									-e^t-e^{-t}\\
+									\displaystyle {e^{-2t}\over 2}+t \\
+									t
+								\end {array}
+							\right ]\]
+							
+							so 
+							\[ 
+								\begin {array}{ccccl} 
+									{\bf y}_p=Y{\bf u}&amp;=&amp; \left [ 
+									\begin {array}{ccc}
+										1&amp;e^t&amp;e^t\\
+										1&amp;e^t&amp;0\\
+										1&amp;0&amp;e^t 
+									\end {array}
+								\right ] \left [ 
+									\begin {array}{c}
+										-e^t-e^{-t}\\
+										\displaystyle {e^{-2t}\over 2}+t\\
+										t 
+									\end {array}
+								\right ] &amp;=&amp;\left [ 
+									\begin {array}{c}
+										e^t(2t-1)-\displaystyle {e^{-t}\over 2}\\ 
+										e^t(t-1)-\displaystyle {e^{-t} \over 2}\\ 
+										e^t(t-1)-\displaystyle {e^{-t}} 
+									\end {array}
+								\right ] 
+								\end {array} 
+							\]
+							
+							is a particular solution of <a href="#x1-17r8">(10.7.8)</a>.
+						</li>
+						<li>
+							From Theorem&nbsp;<a href="#x1-21">10.7.1</a> the general solution of <a href="#x1-17r8">(10.7.8)</a> is 
+							\[ {\bf y}={\bf y}_p+c_1{\bf y}_1+c_2{\bf y}_2+c_3{\bf y}_3= \left [ 
+								\begin {array}{c}
+									e^t(2t-1)-\displaystyle {e^{-t}\over 2}\\ 
+									e^t(t-1)-\displaystyle {e^{-t} \over 2}\\ 
+									e^t(t-1)-\displaystyle {e^{-t}} 
+								\end {array}
+							\right ]+ c_1\left [
+								\begin {array}{c}
+									1\\
+									1\\
+									1
+								\end {array}
+							\right ]+ c_2\left [
+								\begin {array}{c}
+									e^t\\
+									e^t\\
+									0
+								\end {array}
+							\right ] +c_3\left [
+								\begin {array}{c}
+									e^t\\
+									0\\
+									e^t
+								\end {array}
+							\right ]\]
+							
+							which can be written as 
+							\[ {\bf y}={\bf y}_p+Y{\bf c}= \left [ 
+								\begin {array}{c}
+									e^t(2t-1)-\displaystyle {e^{-t}\over 2}\\ 
+									e^t(t-1)-\displaystyle {e^{-t} \over 2}\\ 
+									e^t(t-1)-\displaystyle {e^{-t}} 
+								\end {array}
+							\right ]+ \left [ 
+								\begin {array}{ccc}
+									1&amp;e^t&amp;e^t\\
+									1&amp;e^t&amp;0\\
+									1&amp;0&amp;e^t 
+								\end {array}
+							\right ]{\bf c} \]
+							
+							where \(\bf c\) is an arbitrary constant vector.
+						</li>
+					</ol>
+				</details>
+			</div>
+
+			<div class="example" id="x1-205" style="--ex-number: 5">
+				<div>
+					Find a particular solution of 
+					<a id="x1-21r10"></a>
+					\begin {equation} 
+						\label {eq:10.7.10} 
+						{\bf y}'={1\over 2} \left [
+							\begin {array}{ccc}
+								3&amp;e^{-t}&amp;-e^{2t}\\
+								0&amp;6&amp;0\\
+								-e^{-2t}&amp;e^{-3t}&amp;-1 
+							\end {array}
+						\right ] {\bf y}+\left [
+							\begin {array}{c}
+								1\\
+								e^t\\
+								e^{-t}
+							\end {array}
+						\right ]
+					\end {equation}
+					
+					given that 
+					\[ Y=\left [ 
+						\begin {array}{ccc}
+							e^t&amp;0&amp;e^{2t}\\
+							0&amp;e^{3t}&amp;e^{3t}\\
+							e^{-t}&amp;1&amp;0 
+						\end {array}
+					\right ] \]
+					
+					is a fundamental matrix for the complementary system.
+				</div>
+
+				<details class="solution">
+					<summary>Solution</summary>
+					We seek a particular solution of <a href="#x1-21r10">(10.7.10)</a> in the form \({\bf y}_p=Y{\bf u}\), where \(Y{\bf u}'={\bf f}\); that is, 
+					\[ \left [
+						\begin {array}{ccc}
+							e^t&amp;0&amp;e^{2t}\\
+							0&amp;e^{3t}&amp;e^{3t}\\
+							e^{-t}&amp;1&amp;0 
+						\end {array}
+					\right ]\threecol {u_1'}{u_2'}{u_3'}= \left [
+						\begin {array}{c}
+							1\\
+							e^t\\
+							e^{-t}
+						\end {array}
+					\right ]\]
+					
+					The determinant of \(Y\) is the Wronskian 
+					\[ \left |
+						\begin {array}{ccc}
+							e^t&amp;0&amp;e^{2t}\\
+							0&amp;e^{3t}&amp;e^{3t}\\
+							e^{-t}&amp;1&amp;0 
+						\end {array}
+					\right |=-2e^{4t}\]
+					
+					By Cramer’s rule, 
+					\[ 
+						\begin {array}{ccccccl} 
+							u_1'&amp;=&amp;-\displaystyle {1\over 2e^{4t}}\left | 
+							\begin {array}{ccc}
+								1&amp;0&amp;e^{2t}\\
+								e^t&amp;e^{3t}&amp;e^{3t} \\
+								e^{-t}&amp;1&amp;0 
+							\end {array}
+						\right |&amp;=&amp;\displaystyle {e^{4t}\over 2e^{4t}}&amp;=&amp;\displaystyle {1\over 2} \\ 
+						u_2'&amp;=&amp;-\displaystyle {1\over 2e^{4t}}\left |
+							\begin {array}{ccc}
+								e^t&amp;1&amp;e^{2t}\\
+								0&amp;e^t&amp;e^{3t} \\
+								e^{-t}&amp;e^{-t}&amp;0 
+							\end {array}
+						\right |&amp;=&amp;\displaystyle {e^{3t}\over 2e^{4t}}&amp;=&amp;\displaystyle {1\over 2}e^{-t}\\ 
+						u_3'&amp;=&amp;-\displaystyle {1\over 2e^{4t}}\left | 
+							\begin {array}{ccc}
+								e^t&amp;0&amp;1\\
+								0&amp;e^{3t}&amp;e^t \\
+								e^{-t}&amp;1&amp;e^{-t} 
+							\end {array}
+						\right |&amp;=&amp;-\displaystyle {e^{3t}-2e^{2t}\over 2e^{4t}}&amp;=&amp;\displaystyle {2e^{-2t}-e^{-t} \over 2}
+						\end {array} 
+					\]
+					
+					Therefore 
+					\[ {\bf u}'={1\over 2}\left [
+						\begin {array}{c}
+							1\\
+							e^{-t}\\
+							2e^{-2t}-e^{-t}
+						\end {array}
+					\right ]\]
+					
+					Integrating and taking the constants of integration to be zero yields 
+					\[ {\bf u}={1\over 2}\left [
+						\begin {array}{c}
+							t\\
+							-e^{-t}\\
+							e^{-t}-e^{-2t} 
+						\end {array}
+					\right ]\]
+					
+					so 
+					\[ {\bf y}_p=Y{\bf u}= {1\over 2}\left [ 
+						\begin {array}{ccc}
+							e^t&amp;0&amp;e^{2t}\\
+							0&amp;e^{3t}&amp;e^{3t}\\
+							e^{-t}&amp;1&amp;0 
+						\end {array}
+					\right ] \left [ 
+						\begin {array}{c}
+							t\\
+							-e^{-t}\\
+							e^{-t}-e^{-2t} 
+						\end {array}
+					\right ]=\displaystyle {1\over 2}\left [ 
+						\begin {array}{c}
+							e^t(t+1)-1\\ 
+							-e^t\\
+							e^{-t}(t-1) 
+						\end {array}
+					\right ] \]
+					
+					is a particular solution of <a href="#x1-21r10">(10.7.10)</a>.
+				</details>
+			</div>
+		</details>
 
 		<nav class="ex">
 			<a href="sec10.7.ex.html">10.7 Exercises</a>
