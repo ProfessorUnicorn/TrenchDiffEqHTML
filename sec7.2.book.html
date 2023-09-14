@@ -219,7 +219,7 @@
 					<ol>
 						<li class="no-part">
 							<div>
-								First we represent \(y\) as a power series as in \((x-x_0)\) and differentiate it twice
+								First we represent \(y\) as a power series in \((x-x_0)\) and differentiate it twice
 							</div>
 							<div class="reading-exercise">
 								Differentiate \(\displaystyle y = \sum _{n=0}^\infty c_n(x-x_0)^n\) twice
@@ -343,12 +343,9 @@
 			<br>
 			<br>
 
-		</details>	
 
 
-		<!--Legendre Airy Chebyshev Hermite-->
-		<details id="284c971f-def2-41e2-a3e5-2130b1b57c9afadsfdsa">
-			<summary>Legendre Airy Chebyshev Hermite</summary>				
+			
 
 			<!---->
 			<div id="4ea2de17-981a-403d-8bc0-8a7f02741a22">
@@ -386,8 +383,26 @@
 			<br>
 
 			<!---->
-			<div id="926213d3-1ae9-44dd-bf05-6f35f2f93fd2">
-				To simplify finding the coefficients, we introduce some notation for products: \[ \prod ^s_{j=r}b_j=b_rb_{r+1}\cdots b_s\quad \mbox {if} \quad s\ge r\] Thus, \[ \prod ^7_{j=2}b_j=b_2b_3b_4b_5b_6b_7\] \[ \prod ^4_{j=0}(2j+1)=(1)(3)(5)(7)(9)=945\] and \[ \prod ^2_{j=2}j^2=2^2=4\] We define \[ \prod ^s_{j=r}b_j=1\quad \mbox {if}\quad s &lt; r\] no matter what the form of \(b_j\). 
+			<div class="theorem" id="926213d3-1ae9-44dd-bf05-6f35f2f93fd2">
+				<strong>Product Notation</strong> (<strong>Pi Notation</strong>)
+				To simplify representing coefficients that are products of sequences, we introduce some notation for products: 
+				
+				\[ \prod ^s_{j=r}b_j =
+				\left\{
+					\begin{array}{rlrr}
+						& b_r \cdot  b_{r+1} \cdot  b_{r+2} \cdots b_s &\quad& s\ge r \\
+						& 1  &\quad& s < r \\
+					\end{array}
+				\right.		
+				\] 
+				
+				For instance 
+				
+				\begin{align*} 
+					\prod ^7_{j=2}b_j = & \, b_2 \cdot b_3 \cdot b_4 \cdot b_5 \cdot b_6 \cdot b_7 \\
+					\prod ^4_{j=0}(2j+1) = \, & \underset{(1)}{\underbrace{( {\small 2 \cdot 0+1} )}} \underset{(3)}{\underbrace{( {\small 2 \cdot 1+1 } )}} \underset{(5)}{\underbrace{( {\small 2 \cdot 2+1 } )}} \underset{(7)}{\underbrace{( {\small 2 \cdot 3+1 } )}}  \underset{(9)}{\underbrace{( {\small 2 \cdot 4+1 } )}} \\
+					\prod ^2_{j=2}j^2 = & \, 2^2=4
+				\end{align*}
 			</div>
 
 			<br>
@@ -400,7 +415,8 @@
 					Find the power series in \(x\) for the general solution of 
 					<a id="x1-19r15"></a>
 					\begin {equation}
-						\label {eq:7.2.17} (1+2x^2)\dfrac{d^2y}{dx^2}+6x\dfrac{dy}{dx}+2y=0 
+						\label {eq:7.2.17} 
+							(1+2x^2)\dfrac{d^2y}{dx^2}+6x\dfrac{dy}{dx}+2y=0 
 					\end {equation}
 				</div>
 
@@ -408,73 +424,225 @@
 					<summary>Solution</summary>
 					<ol>
 						<li class="no-part">
-							Here \[ Ly=(1+2x^2)\dfrac{d^2y}{dx^2}+6x\dfrac{dy}{dx}+2y\]
-							If \[ y=\sum _{n=0}^\infty c_nx^n \]
-							then \[ \dfrac{dy}{dx}=\sum _{n=1}^\infty na_nx^{n-1}\quad \mbox { and }\quad \dfrac{d^2y}{dx^2}=\sum _{n=2}^\infty n(n-1)a_nx^{n-2}\]
-							so
+							<div>
+								First we represent \(y\) as a power series in \(x\) and differentiate it twice
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(\displaystyle y = \sum _{n=0}^\infty c_n \, x^n\) twice
+							</div>
+							<div>	
+								\begin {align*}  
+									y = & \sum _{n=0}^\infty c_n \, x^n \\ \\
+									\frac{dy}{dx} = & \sum _{n=1}^\infty  n \, c_n \, x^{n-1} \\ \\
+									\frac{d^2y}{dx^2} = & \sum _{n=2}^\infty  n(n-1) \, c_n \, x^{n-2} \\ \\
+								\end {align*}
+							</div>
+							<div>	
+								Next we compute the terms of the equation <a href="#x1-19r15">(7.2.17)</a>
+								
+								\begin{align*}
+									\frac{d^2y}{dx^2} = & \sum _{n=2}^\infty  n(n-1) \, c_n \, x^{n-2} \\
+									2x^2\frac{d^2y}{dx^2} = & \sum _{n=2}^\infty  2n(n-1) \, c_n \, x^{n} \\
+									6x \frac{dy}{dx} = & \sum _{n=1}^\infty  6n \, c_n \, x^{n} \\
+									2y = & \sum _{n=0}^\infty 2c_n \, x^n
+								\end{align*}
 
-							<div class="eqnarray">
-								\begin {eqnarray*}
-									Ly&amp;=&amp;(1+2x^2) \sum ^\infty _{n=2}n(n-1)a_nx^{n-2}+ 6x \sum ^\infty _{n=1}na_nx^{n-1} +2 \sum ^\infty _{n=0}a_nx^n\\
-									&amp;=&amp;\sum _{n=2}^\infty n(n-1)a_nx^{n-2}+\sum _{n=0}^\infty \left [2n(n-1)+6n+2\right ]a_nx^n\\
-									&amp;=&amp;\sum _{n=2}^\infty n(n-1)a_nx^{n-2}+2\sum _{n=0}^\infty (n+1)^2a_nx^n 
-								\end {eqnarray*} 
+								Which we'd like to add up into one series, but first we will need to get them all in terms of \(x^n\) so we shift the index on \(d^2y /dx^2\)
+
+								\begin{align*}
+									\frac{d^2y}{dx^2} = & \sum _{n+2=2}^\infty  (n+2)(n+2-1) \, c_{n+2} \, x^{n+2-2} \\
+									 = & \sum _{n=0}^\infty  (n+2)(n+1) \, c_{n+2} \, x^{n} \\
+								\end{align*}
+
+								Additionally, we can add on the zero terms at the beginning of the \(\big( 2x^2 \big) \,  d^2y /dx^2 \) and \(\big( 6x \big) \,  dy /dx \) series
+
+
+								\begin{align*}
+									2x^2\frac{d^2y}{dx^2} = & \sum _{n=0}^\infty  2n(n-1) \, c_n \, x^{n} \\
+									6x \frac{dy}{dx} = & \sum _{n=0}^\infty  6n \, c_n \, x^{n} \\
+								\end{align*}
+
 							</div>
 							<div>
-								To collect coefficients of \(x^n\), we shift the summation index in the first sum. This yields
-								\[ Ly=\sum _{n=0}^\infty (n+2)(n+1)a_{n+2}x^n+2\sum _{n=0}^\infty (n+1)^2a_nx^n =\sum _{n=0}^\infty b_nx^n\] with \[ b_n=(n+2)(n+1)a_{n+2}+2(n+1)^2a_n,\quad n\ge 0\]
+								Now we substitute the power series expressions for \(y,\) \(dy/dx,\) and \(d^2 y/dx^2 \) into <a href="#x1-19r15">(7.2.17)</a>
+
+
+								\begin{align*}
+									\begin{array} {rrrrr}
+										\dfrac{d^2y}{dx^2} &=& &\displaystyle\sum _{n=0}^\infty& (n+2)(n+1) \, c_{n+2} \, &x^{n}& \\
+										2x^2 \dfrac{d^2y}{dx^2} &=& &\displaystyle\sum _{n=0}^\infty& 2n(n-1) \, c_n &x^{n}& \\
+										6x \dfrac{dy}{dx} &=& &\displaystyle\sum _{n=0}^\infty& 6n \, c_n &x^{n}& \\
+										+ \quad\quad\quad 2y &=& &\displaystyle\sum _{n=0}^\infty& 2c_n &x^n& \\
+										\hline
+										{\scriptsize \underset{0}{ \underbrace{(1+2x^2)\dfrac{d^2y}{dx^2} + 6x \dfrac{dy}{dx} + 2y}} } &=& &\displaystyle\sum _{n=0}^\infty& \Big\{ \quad (n+2)(n+1) \, c_{n+2} \, & &  \\
+										& & & &  \quad \underset{2(n+1)^2}{\underbrace{\big( 2n(n-1) + 6n + 2 \big)}} c_{n} \, & \Big \} \, x^{n}&  \\
+									\end{array}
+								\end{align*}
+
+								Now equating the coefficience on both sides yields the following <span class="vocab">recurrence relation</span>, where we 
+								define the coefficients in the sequence \(\{c_n\}\) in terms of one or more other coefficients with lesser indices 
+								
+								\begin {align*}  
+									(n+2)(n+1) \, c_{n+2} + 2 (n+1)^2 \, c_{n} = 0
+								\end {align*}
+
+								Then solving for \( c_{n+2} \) we obtain
+							
+								<a id="x1-20r16"></a> 
+								\begin {equation} \label {eq:7.2.18}
+									c_{n+2}=-2\frac{(n+1)}{(n+2)} \, c_n
+								\end {equation}
+
+								Where \(c_0\) and \(c_1\) are arbitrary and then we will use <a href="#x1-20r16">(7.2.18)</a> to calculate the coefficients and since the index differs by two in the recurrence relation we will calculate the odd and even ones separately starting with the evens:
 							</div>
-						</li>
-						<li class="no-part">
-							To obtain solutions of <a href="#x1-19r15">(7.2.17)</a>, we set \(b_n=0\) for \(n\ge 0\). This is equivalent to the recurrence relation 
-							<a id="x1-20r16"></a> 
-							\begin {equation}
-								\label {eq:7.2.18} a_{n+2}=-2{n+1\over n+2}a_n,\quad n\ge 0 
-							\end {equation} 
-							Since the indices on the left and right differ by two, we write <a href="#x1-20r16">(7.2.18)</a> separately for \(n=2m\) and \(n=2m+1\), as in Example&nbsp;<a href="#x1-111">7.2.1</a>. This yields 
-					
-							<div class="eqnarray">
-								\begin {eqnarray}
-									a_{2m+2}&amp;=&amp;-2 {2m+1\over 2m+2}a_{2m}=-{2m+1\over m+1}a_{2m},\quad m \ge 0,\label {eq:7.2.19}\\
-									{\mbox {and}}\nonumber \\
-									a_{2m+3}&amp;=&amp;-2{2m+2\over 2m+3}a_{2m+1}=-4{m+1\over 2m+3}a_{2m+1},\quad m\ge 0. \label {eq:7.2.20} 
-								\end {eqnarray} 
-							</div>
+
 							<div>
-								Computing the coefficients of even powers of \(x\) from (<span class="ptmb8t-">7.2.19</span>) yields 
+								\begin{align*}
+									c_2 & = c_{0+2} = -\frac{(2)(1)}{(2)} \, c_0 = -c_0 \\
+									c_4 & = c_{2+2} = -\frac{(2)(3)}{(4)} \, c_2 = +\frac{3}{2} \, c_0 = \frac{3}{2} \, c_0 \\
+									c_6 & = c_{4+2} = -\frac{(2)(5)}{(6)} \, c_4 = - \frac{5 \cdot 3}{3 \cdot 2} \, c_0 = - \frac{5}{2} \, c_0 \\
+								\end{align*}
+
+								Now we'll calculate the odd coefficients:
+
+								\begin{align*}
+									c_3 & = c_{1+2} = -\frac{(2)(2)}{(3)} \, c_1 = -\frac{{\small (4 \cdot 1)}}{3} \, c_1 = -\frac{4}{3} \, c_1 \\
+									c_5 & = c_{3+2} = -\frac{(2)(4)}{(5)} \, c_3 = +\frac{{\small (4 \cdot 2) \cdot (4 \cdot 1)}}{5 \cdot 3} \, c_1 = \frac{32}{15} \, c_1 \\
+									c_7 & = c_{5+2} = -\frac{(2)(6)}{(7)} \, c_5 = - \frac{{\small (4 \cdot 3) \cdot (4 \cdot 2) \cdot (4 \cdot 1)}}{7 \cdot 5 \cdot 3} \, c_1 = - \frac{384}{105} \, c_1 \\
+								\end{align*}
+
+
+								We notice that the even indexed constants all depend on \(c_0\) and the odd indexed constants depend on \(c_1\) so we group them accordingly
+
+								\begin{array}{rrrrr}
+									c_0 & & &\quad& c_1 & & \\
+									c_2 &=& - \, c_0  &\quad& c_3 &=& -\displaystyle{4\over 3} \, c_1 \\
+									c_4 &=& \displaystyle{3\over 2} \, c_0 &\quad& c_5 &=& \displaystyle{32\over 15} \, c_1  \\
+									c_6 &=& -\displaystyle{5\over 2} \, c_0 &\quad& c_7 &=& -\displaystyle{384\over 105} \, c_1  \\
+								\end{array}
 							</div>
-							<div class="eqnarray">
-								\begin {eqnarray*}
-									c_2&amp;=&amp;-{1\over 1}c_0,\\[5pt] c_4&amp;=&amp;-{3\over 2}c_2=\left (-{3\over 2}\right )\left (-{1\over 1}\right )c_0 ={1\cdot 3\over 1\cdot 2}c_0, \\[5pt] c_6&amp;=&amp;-{5\over 3}c_4= -{5\over 3}\left (1\cdot 3\over 1\cdot 2\right )c_0 =-{1\cdot 3\cdot 5\over 1\cdot 2\cdot 3}c_0, \\[5pt] c_8&amp;=&amp;-{7\over 4}c_6=-{7\over 4} \left (-{1\cdot 3\cdot 5\over 1\cdot 2\cdot 3}\right )c_0= {1\cdot 3\cdot 5\cdot 7\over 1\cdot 2\cdot 3\cdot 4}c_0.\\ 
-								\end {eqnarray*} 
-							</div>
+
 							<div>
-								In general, 
+								Substituting the coefficients back into our power series representation of \(y\)
+
 								<a id="x1-21r17"></a>
-								\begin {equation} \label {eq:7.2.21} a_{2m}=(-1)^m{\prod _{j=1}^m(2j-1)\over m!}c_0,\quad m\ge 0 
-								\end {equation} 
-								(Note that <a href="#x1-21r17">(7.2.21)</a> is correct for \(m=0\) because we defined \(\prod _{j=1}^0b_j=1\) for any&nbsp;\(b_j\).) 
+								<a id="x1-22r18"></a>	
+								\begin{align} \label {eq:7.2.21}
+									y 
+									= & \sum _{n=0}^\infty c_n \, x^n \\ \nonumber \\ \label {eq:7.2.22}
+									= & c_0 + c_1 \, x + c_2 \, x^2 + c_3 \, x^3 + c_4 \, x^4 + \cdots  \nonumber \\ \nonumber \\
+									= & \Big( c_0 + c_2 \, x^2 + c_4 \, x^4 + c_6 \, x^6 + \cdots \Big) \\
+									&  \quad +  \Big( c_1 \, x + c_3 \, x^3 + c_5 \, x^5 + c_7 \, x^7 + \cdots \Big)  \nonumber \\ \nonumber \\
+									= & \Big( c_0 - c_0 \, x^2 + \frac{3}{2}c_0 \, x^4 - \frac{5}{2} c_0 \, x^6 + \cdots \Big) \\
+									&  \quad +  \Big( c_1 \, x - \frac{4}{3} c_1 \, x^3 + \frac{32}{15} c_1 \, x^5 - \frac{384}{105}c_1 \, x^7 + \cdots \Big)  \nonumber \\ \nonumber \\
+									= & c_0 \, \Big( 1 - x^2 + \frac{3}{2} x^4 - \frac{5}{2} x^6 + \cdots \Big) \\
+									&  \quad +  c_1 \, \Big( x - \frac{4}{3} x^3 + \frac{32}{15} x^5 - \frac{384}{105} x^7 + \cdots \Big)  \nonumber \\ \nonumber \\
+								\end{align}
+							</div>
+
+							<div>
+								Now in this case, as is typical in most cases, we are not able to represent the series solution in terms of familiar elementary functions:
+
+								\begin{align*}
+									y 
+									= & c_0 \, {\small \Big( 1 - x^2 + \frac{3}{2} x^4 - \frac{5}{2} x^6 + \cdots \Big)}
+									+  c_1 \, {\small \Big( x - \frac{4}{3} x^3 + \frac{32}{15} x^5 - \frac{384}{105} x^7 + \cdots \Big)}
+								\end{align*}
+
+								Remember that this is okay! As long as we have the the <span class="vocab">recurrence relation</span> <a href="#x1-20r16">(7.2.18)</a> we can use computational techniques to calculate as many coefficients as we wish. When performing these calculations by hand we will generally calculate about five to ten terms.
+							</div>
+							<div>
+								We are done and our solution is perfect! However, when possible, it is nice to represent our series solution in sigma notation, although it is not always possible to do so. In this case, it can be accomplished, but it is a tad tricky since the coefficients are products. To write it more simply we will use <span class="vocab">product notation</span> (<span class="vocab">pi notation</span>) which works pretty much the same as sigma notation except we replace the \(\displaystyle \Sigma\) with a \(\displaystyle \Pi\) to indicate products instead of sums.
+
+							</div>
+							<div>
+								When we calculated our coefficients it was noticable that a pattern of products was emerging.
+
+								
+
+								\begin{array}{rrrrr}
+									c_2 &=& -\dfrac{1}{1!}c_0 &\quad& c_3 &=& -\dfrac{ 4^1 \cdot 1! }{3\cdot 1} c_1\\
+									c_4 &=& +\dfrac{3 \cdot 1}{2!} c_0 &\quad& c_5 &=& +\dfrac{4^2 \cdot 2!}{5 \cdot 3\cdot 1} c_1\\
+									c_6 &=& - \dfrac{5 \cdot 3 \cdot 1}{3!} c_0 &\quad&  c_7 &=& -\dfrac{4^3 \cdot 3!}{7 \cdot 5 \cdot 3\cdot 1}c_1\\
+									c_8 &=& + \dfrac{7 \cdot 5 \cdot 3 \cdot 1}{4!} c_0 &\quad&  c_9 &=& +\dfrac{4^4 \cdot 4!}{9 \cdot 7 \cdot 5 \cdot 3\cdot 1}c_1\\
+									&\vdots& & &  &\vdots& \\
+									c_{2n} &=& c_0 \dfrac{(-1)^n}{n!} {\small \displaystyle \prod_{m=1}^{n} (2m-1)}   &\quad&  c_{2n+1} &=& c_1 \displaystyle \dfrac{(-1)^n \, 4^n \, n!}{{\small \displaystyle \prod_{m=1}^{n} (2m-1)}}  \\
+								\end{array}
+
+								Thus we can rewrite our solution more campactly as
+
+								\begin{align*}
+									y 
+									= & c_0 \, \underbrace{ {\small \Big( 1 - x^2 + \frac{3}{2} x^4 - \frac{5}{2} x^6 + \cdots \Big)} }
+									+  c_1 \, \underbrace{ {\small \Big( x - \frac{4}{3} x^3 + \frac{32}{15} x^5 - \frac{384}{105} x^7 + \cdots \Big)} } \\
+									y 
+									= & c_0 \, \sum_{n=0}^{\infty} {\dfrac{(-1)^n}{n!} {\small \displaystyle \prod_{m=1}^{n} (2m-1)}}
+									\quad + \quad  c_1 \, \sum_{n=0}^{\infty} { \dfrac{(-1)^n \, 4^n \, n!}{{\small \displaystyle \prod_{m=1}^{n} (2m-1)}}  }
+								\end{align*}
+
+								But the original solution along with the recurrence relation is just as good as an answer.
+					
+
+							</div>
+							<div>
+
+					
+							</div>	
+							
+						</li>
+						<li class="no-part">
+							<div id="8b7a40e0-9c04-48d1-a6da-f59389e7c9cd">
+								
+							</div>
+						
+							<div id="158dc9cc-9304-4bbc-b09d-bda1f8d5f294">
+													
+							</div>
+							<div class="eqnarray" id="267dae74-a0a2-402b-a259-ea63a398f1bd">
+								
+							</div>
+							<div id="1fbda931-4fde-4f2b-bfd3-e78bc35d46e0">
+							
+							</div>
+						</li>
+					</ol>
+					<ol>
+						<li class="no-part">
+							
+						</li>
+						<li class="no-part">
+						
+						</li>
+						<li class="no-part">
+				
+
+						</li>
+						<li class="no-part">
+						
+		
+							<div>
+						
+							</div>
+			
+							<div>
+							
+							
 							</div>
 						</li>
 						<li class="no-part">
 							<div>
-								Computing the coefficients of odd powers of \(x\) from (<span class="ptmb8t-">7.2.20</span>) yields 
+							
 							</div>
-							<div class="eqnarray">
-								\begin {eqnarray*}
-									c_3&amp;=&amp;-4\,{1\over 3}c_1, \\[5pt] c_5&amp;=&amp;-4\,{2\over 5}c_3=-4\,{2\over 5}\left (-4{1\over 3}\right )c_1 =4^2{1\cdot 2\over 3\cdot 5}c_1, \\[5pt] c_7&amp;=&amp;-4\,{3\over 7}c_5=-4\,{3\over 7}\left ( 4^2{1\cdot 2\over 3\cdot 5}\right )c_1= -4^3{1\cdot 2\cdot 3\over 3\cdot 5\cdot 7}c_1,\\[5pt] c_9&amp;=&amp;-4\, {4\over 9}c_7=-4\, {4\over 9}\left ( 4^3{1\cdot 2\cdot 3\over 3\cdot 5\cdot 7}\right )c_1= 4^4{1\cdot 2\cdot 3\cdot 4\over 3\cdot 5\cdot 7\cdot 9}c_1 
-								\end {eqnarray*} 
+			
+							<br>
+							<br>
+							<br>
+							<div>
+								
+								
+								Since \(P_0(x)=1+2x^2\) has no real zeros, Theorem&nbsp;<span class="ptmb8t-">5.1.1</span> implies that every solution of <a href="#x1-19r15">(7.2.17)</a> is defined on \((-\infty ,\infty )\). However, since \(P_0(\pm i/\sqrt 2)=0\), Theorem&nbsp;<a href="#x1-61">7.2.1</a> implies only that the power series converges in \((-1/\sqrt 2,1/\sqrt 2)\) for any choice of \(c_0\) and \(c_1\).
 							</div>
 							<div>
-								In general, 
-								<a id="x1-22r18"></a>
-								\begin {equation}
-									\label {eq:7.2.22} a_{2m+1}={(-1)^m4^m m!\over \prod _{j=1}^m(2j+1)}c_1,\quad m\ge 0 
-								\end {equation} 
-								From <a href="#x1-21r17">(7.2.21)</a> and <a href="#x1-22r18">(7.2.22)</a>, \[ y=c_0 \sum ^\infty _{m=0}(-1)^m {\prod _{j=1}^m(2j-1)\over m!}x^{2m} +c_1 \sum ^\infty _{m=0}(-1)^m {4^mm!\over \prod _{j=1}^m(2j+1)} x^{2m+1}\] is the power series in \(x\) for the general solution of <a href="#x1-19r15">(7.2.17)</a>. Since \(P_0(x)=1+2x^2\) has no real zeros, Theorem&nbsp;<span class="ptmb8t-">5.1.1</span> implies that every solution of <a href="#x1-19r15">(7.2.17)</a> is defined on \((-\infty ,\infty )\). However, since \(P_0(\pm i/\sqrt 2)=0\), Theorem&nbsp;<a href="#x1-61">7.2.1</a> implies only that the power series converges in \((-1/\sqrt 2,1/\sqrt 2)\) for any choice of \(c_0\) and \(c_1\).
-							</div>
-							<div>
-								The results in Examples&nbsp;<a href="#x1-111">7.2.1</a> and <a href="#x1-182">7.2.2</a> are consequences of the following general theorem.
 							</div>
 						</li>
 					</ol>
@@ -484,7 +652,22 @@
 			<!--Thm-->
 			<div class="theorem" id="x1-232">
 				<span class="head">Theorem&nbsp;7.2.2</span>
-				The coefficients \(\{a_n\}\) in any solution \(y=\sum _{n=0}^\infty c_n(x-x_0)^n\) of \begin {equation} \label {eq:7.2.23} \left (1+\alpha (x-x_0)^2\right )\dfrac{d^2y}{dx^2}+\beta (x-x_0) \dfrac{dy}{dx}+\gamma y=0 \end {equation} <a id="x1-24r19"></a> satisfy the recurrence relation \begin {equation} \label {eq:7.2.24} a_{n+2}=-{p(n) \over (n+2)(n+1)}a_n,\quad n\ge 0 \end {equation} <a id="x1-25r20"></a> where 
+				The coefficients \(\{c_n\}\) in any solution \(y=\displaystyle \sum _{n=0}^\infty c_n(x-x_0)^n\) of the differential equation
+				
+				<a id="x1-24r19"></a>
+				\begin {equation} \label {eq:7.2.23} 
+					\Big( 1+\alpha (x-x_0)^2 \Big) \dfrac{d^2y}{dx^2}+\beta (x-x_0) \dfrac{dy}{dx}+\gamma y=0 
+				\end {equation}
+				
+				satisfies the recurrence relation 
+				
+				<a id="x1-25r20"></a>
+				\begin {equation} \label {eq:7.2.24}
+					a_{n+2}=-{p(n) \over (n+2)(n+1)}c_n
+					\quad n\ge 0 
+				\end {equation}  
+				
+				where \(p(n)\) is defined as
 				<a id="x1-26r21"></a>
 				\begin {equation}
 					\label {eq:7.2.25} p(n)=\alpha n(n-1) +\beta n+\gamma 
@@ -493,65 +676,274 @@
 			
 				<div class="eqnarray">
 					\begin {eqnarray}
-						a_{2m+2}&amp;=&amp;-{p(2m)\over (2m+2)(2m+1)}a_{2m},\quad m\ge 0\label {eq:7.2.26}\\ {\mbox {and}}\nonumber \\ a_{2m+3}&amp;=&amp;-{p(2m+1)\over (2m+3)(2m+2)}a_{2m+1},\quad m\ge 0, \label {eq:7.2.27} 
+						a_{2m+2}&amp;=&amp;-{p(2m)\over (2m+2)(2m+1)}a_{2m} \quad m\ge 0\label {eq:7.2.26}\\ {\mbox {and}}\nonumber \\ a_{2m+3}&amp;=&amp;-{p(2m+1)\over (2m+3)(2m+2)}a_{2m+1}\quad m\ge 0 \label {eq:7.2.27} 
 					\end {eqnarray}
 				</div>
-				where \(c_0\) and \(c_1\) are arbitrary. 
+				where \(c_0\) and \(c_1\) are arbitrary. Note that we can use this theorem to check our answers but we won't apply it as a formula and instead we will derive the solution for each equation.
 			</div>
+			<div id="6c1d015a-93e7-429d-a357-622ed2b958a8fadsd">
+				
+			</div>	
+			<br>
+			<br>
+			<hr>
+			<br>
+			<br>
 
 			<!--Proof-->
-			<div id="6c1d015a-93e7-429d-a357-622ed2b958a8">
+			<div class = removed id="6c1d015a-93e7-429d-a357-622ed2b958a8">
 				<span class="ptmb8t-">Proof</span>
-				Here \[ Ly=\left (1+\alpha (x-x_0\right )^2)\dfrac{d^2y}{dx^2}+\beta (x-x_0) \dfrac{dy}{dx}+\gamma y\] If \[ y=\sum _{n=0}^\infty c_n(x-x_0)^n\] then \[ \dfrac{dy}{dx}=\sum _{n=1}^\infty na_n(x-x_0)^{n-1} \quad \mbox { and }\quad \dfrac{d^2y}{dx^2}=\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}\] Hence, \[ 
-				\begin {array}{ccl} Ly&amp;=&amp;\displaystyle {\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}+ \sum _{n=0}^\infty \left [\alpha n(n-1) +\beta n+\gamma \right ]a_n(x-x_0)^n}\\ &amp;=&amp;\displaystyle {\sum _{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}+\sum _{n=0}^\infty p(n)a_n(x-x_0)^n} 
-				\end {array} \] from <a href="#x1-26r21">(7.2.25)</a>. To collect coefficients of powers of \(x-x_0\), we shift the summation index in the first sum. This yields \[ Ly=\sum _{n=0}^\infty \left [(n+2)(n+1)a_{n+2}+p(n)a_n\right ](x-x_0)^n\] Thus, \(Ly=0\) if and only if \[ (n+2)(n+1)a_{n+2}+p(n)a_n=0,\quad n\ge 0\] which is equivalent to <a href="#x1-25r20">(7.2.24)</a>. Writing <a href="#x1-25r20">(7.2.24)</a> separately for the cases where \(n=2m\) and \(n=2m+1\) yields (<span class="ptmb8t-">7.2.26</span>) and (<span class="ptmb8t-">7.2.27</span>). 
+				Here let \[ Ly=\left (1+\alpha (x-x_0\right )^2)\dfrac{d^2y}{dx^2}+\beta (x-x_0) \dfrac{dy}{dx}+\gamma y\] If \[ y=\sum _{n=0}^\infty c_n(x-x_0)^n\] then \[ \dfrac{dy}{dx}=\sum _{n=1}^\infty nc_n(x-x_0)^{n-1} \quad \mbox { and }\quad \dfrac{d^2y}{dx^2}=\sum _{n=2}^\infty n(n-1)c_n(x-x_0)^{n-2}\] Hence, \[ 
+				\begin {array}{ccl} Ly&amp;=&amp;\displaystyle {\sum _{n=2}^\infty n(n-1)c_n(x-x_0)^{n-2}+ \sum _{n=0}^\infty \left [\alpha n(n-1) +\beta n+\gamma \right ]c_n(x-x_0)^n}\\ &amp;=&amp;\displaystyle {\sum _{n=2}^\infty n(n-1)c_n(x-x_0)^{n-2}+\sum _{n=0}^\infty p(n)c_n(x-x_0)^n} 
+				\end {array} \] from <a href="#x1-26r21">(7.2.25)</a>. To collect coefficients of powers of \(x-x_0\), we shift the summation index in the first sum. This yields \[ Ly=\sum _{n=0}^\infty \left [(n+2)(n+1)a_{n+2}+p(n)c_n\right ](x-x_0)^n\] Thus, \(Ly=0\) if and only if \[ (n+2)(n+1)a_{n+2}+p(n)c_n=0,\quad n\ge 0\] which is equivalent to <a href="#x1-25r20">(7.2.24)</a>. Writing <a href="#x1-25r20">(7.2.24)</a> separately for the cases where \(n=2m\) and \(n=2m+1\) yields (<span class="ptmb8t-">7.2.26</span>) and (<span class="ptmb8t-">7.2.27</span>). 
 			</div>
-		</details>	
+	
 
-
-		<!--Series Solutions-->
-		<details id="284c971f-def2-41e2-a3e5-2130b1b57c9afafasddsfdsa">
-			<summary>Series Solutions</summary>		
+	
 
 
 			<!--Example 3-->
 			<div class="example" id="x1-273" style="--ex-number: 3">
 				<div>
-					Find the power series in \(x-1\) for the general solution of 
+					Find the power series in \((x-1)\) for the general solution of 
 					<a id="x1-28r22"></a>
 					\begin {equation}
-						\label {eq:7.2.28} (2+4x-2x^2)\dfrac{d^2y}{dx^2}-12(x-1)\dfrac{dy}{dx}-12y=0 
+						\label {eq:7.2.28} 
+						(2+4x-2x^2)\dfrac{d^2y}{dx^2}-12(x-1)\dfrac{dy}{dx}-12y=0 
 					\end {equation}
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-					We must first write the coefficient \(P_0(x)=2+4x-x^2\) in powers of \(x-1\). To do this, we write \(x=(x-1)+1\) in \(P_0(x)\) and then expand the terms, collecting powers of \(x-1\); thus,
+					<ol>
+						<li class="no-part">
+							<div>
+								To find a power series in \((x-1)\) we need to first rewrite \((2+4x-2x^2)\) in terms of powers of \((x-1)\) by replacing all the \(x\)'s with \((x-1)+1\)
 
-					<div class="eqnarray" id="a353355b-9bfd-4d95-824a-202adcb952e4">
-						\begin {eqnarray*}
-							2+4x-2x^2&amp;=&amp;2+4[(x-1)+1]-2[(x-1)+1]^2\\ &amp;=&amp;4-2(x-1)^2 
-						\end {eqnarray*}
-					</div>
-					<div id="d3ed571d-876b-4d3d-9281-c67a06061063">
-						Therefore we can rewrite <a href="#x1-28r22">(7.2.28)</a> as \[ \left (4-2(x-1)^2\right )\dfrac{d^2y}{dx^2}-12(x-1)\dfrac{dy}{dx}-12y=0\] or, equivalently, \[ \left (1-{1\over 2}(x-1)^2\right )\dfrac{d^2y}{dx^2}-3(x-1)\dfrac{dy}{dx}-3y=0\] This is of the form <a href="#x1-24r19">(7.2.23)</a> with \(\alpha =-1/2\), \(\beta =-3\), and \(\gamma =-3\). Therefore, from <a href="#x1-26r21">(7.2.25)</a> \[ p(n)=-{n(n-1)\over 2}-3n-3=-{(n+2)(n+3)\over 2}\] Hence, Theorem&nbsp;<a href="#x1-232">7.2.2</a> implies that
-					</div>
-					<div class="eqnarray" id="0f8b99f7-e277-4b01-8f5c-bcaf1743f1d5">
-						\begin {eqnarray*} 
-							a_{2m+2}&amp;=&amp;-{p(2m)\over (2m+2)(2m+1)}a_{2m}\\&amp;=&amp; {(2m+2)(2m+3)\over 2(2m+2)(2m+1)} a_{2m}={2m+3\over 2(2m+1)}a_{2m},\quad m\ge 0\\ {\mbox {and}}\\ a_{2m+3}&amp;=&amp;-{p(2m+1)\over (2m+3)(2m+2)}a_{2m+1}\\&amp;=&amp; {(2m+3)(2m+4)\over 2 (2m+3)(2m+2)}a_{2m+1}={m+2\over 2(m+1)}a_{2m+1},\quad m\ge 0 
-						\end {eqnarray*} 
-					</div>
-					<div id="2b16f343-8f9b-495a-8323-089aab015cdd">
-						We leave it to you to show that \[ a_{2m}={2m+1\over 2^m}c_0\quad \mbox { and }\quad a_{2m+1}={m+1\over 2^m}c_1,\quad m\ge 0\] which implies that the power series in \(x-1\) for the general solution of <a href="#x1-28r22">(7.2.28)</a> is \[ y=c_0\sum _{m=0}^\infty {2m+1\over 2^m}(x-1)^{2m}+c_1\sum _{m=0}^\infty {m+1\over 2^m}(x-1)^{2m+1}\] 
-					</div>
+								\begin{array}{ccccc} 
+									& & 2 &+& 4x &-& 2x^2 \\
+									&=& 2 &+& 4 \Big( (x-1)+1 \Big) &-& 2 \Big( (x-1)+1 \Big)^2 \\
+									&=& 2 &+& 4(x-1)+4  &-& 2 \Big( (x-1)^2 + 2(x-1) + 1 \Big) \\
+									&=& 6 &+& 4(x-1)  &-& 2(x-1)^2 - 4(x-1) - 2  \\
+									&=& 4 &-& 2(x-1)^2  & &    \\
+								\end{array}
+
+								Thus we can rewrite <a href="#x1-28r22">(7.2.28)</a> as 
+
+								\begin {equation*}
+									4\dfrac{d^2y}{dx^2} - 2(x-1)^2\dfrac{d^2y}{dx^2} -12(x-1)\dfrac{dy}{dx}-12y=0 
+								\end {equation*}
+
+							</div>
+							<div>
+								Now we represent \(y\) as a power series in \((x-1)\) and differentiate it twice
+							</div>
+							<div class="reading-exercise">
+								Differentiate \(\displaystyle y = \sum _{n=0}^\infty c_n(x-1)^n\) twice
+							</div>
+							<div>	
+								\begin {align*}  
+									y = & \sum _{n=0}^\infty c_n(x-1)^n \\ \\
+									\frac{dy}{dx} = & \sum _{n=1}^\infty  n \, c_n \, (x-1)^{n-1} \\ \\
+									\frac{d^2y}{dx^2} = & \sum _{n=2}^\infty  n(n-1) \, c_n \, (x-1)^{n-2} \\ \\
+								\end {align*}
+							</div>
+							<div>	
+								Next we compute the terms of the equation <a href="#x1-28r22">(7.2.28)</a> 
+								
+								\begin{align*}
+									4\frac{d^2y}{dx^2} = & \sum _{n=2}^\infty  4n(n-1) \, c_n \, (x-1)^{n-2} \\
+									-2(x-1)^2\frac{d^2y}{dx^2} = & \sum _{n=2}^\infty  -2n(n-1) \, c_n \, (x-1)^{n} \\
+									-12(x-1) \frac{dy}{dx} = & \sum _{n=1}^\infty -12n \, c_n \, (x-1)^{n} \\
+									-12y = & \sum _{n=0}^\infty -12c_n \, (x-1)^n
+								\end{align*}
+
+								Which we'd like to add up into one series, but first we will need to get them all in terms of \(x^n\) so we shift the index on \(\big(4\big) d^2y /dx^2\)
+
+								\begin{align*}
+									4\frac{d^2y}{dx^2} = & \sum _{n+2=2}^\infty  4(n+2)(n+2-1) \, c_{n+2} \, (x-1)^{n+2-2} \\
+									 = & \sum _{n=0}^\infty  4(n+2)(n+1) \, c_{n+2} \, (x-1)^{n} \\
+								\end{align*}
+
+								Additionally, we can add on the zero terms at the beginning of the \(\big( -2(x-1)^2 \big) \,  d^2y /dx^2 \) and \(\big( -12(x-1) \big) \,  dy /dx \) series
+
+
+								\begin{align*}
+									-2(x-1)^2\frac{d^2y}{dx^2} = & \sum _{n=0}^\infty  -2n(n-1) \, c_n \, (x-1)^{n} \\
+									-12(x-1) \frac{dy}{dx} = & \sum _{n=0}^\infty -12n \, c_n \, (x-1)^{n} \\
+								\end{align*}
+
+							</div>
+							<div>
+								Now we substitute the power series expressions for \(y,\) \(dy/dx,\) and \(d^2 y/dx^2 \) into <a href="#x1-19r15">(7.2.17)</a>
+
+
+								\begin{align*}
+									\begin{array} {rrrrr}
+										4\dfrac{d^2y}{dx^2} &=& &\displaystyle\sum _{n=0}^\infty& 4(n+2)(n+1) \, c_{n+2} \, & (x-1)^{n}& \\
+										-2(x-1)^2 \dfrac{d^2y}{dx^2} &=& &\displaystyle\sum _{n=0}^\infty& -2n(n-1) \, c_n & (x-1)^{n}& \\
+										-12(x-1) \dfrac{dy}{dx} &=& &\displaystyle\sum _{n=0}^\infty& -12n \, c_n & (x-1)^{n}& \\
+										+ \quad\quad\quad -12y &=& &\displaystyle\sum _{n=0}^\infty& -12 \, c_n & (x-1)^n& \\
+										\hline
+										{\tiny \underset{0}{ \underbrace{\big(4-2(x-1)^2\big)\dfrac{d^2y}{dx^2} -12(x-1) \dfrac{dy}{dx} -12y}} } &=& &\displaystyle\sum _{n=0}^\infty& \Big\{ \quad 4 (n+2)(n+1) \, c_{n+2} \, & &  \\
+										& & & &  \quad -\underset{-2(n+2)(n+3)}{\underbrace{\big( 2n(n-1) + 12n + 12 \big)}} c_{n} \, & \Big \} \,  (x-1)^{n}&  \\
+									\end{array}
+								\end{align*}
+
+								Now equating the coefficience on both sides yields the following <span class="vocab">recurrence relation</span>, where we 
+								define the coefficients in the sequence \(\{c_n\}\) in terms of one or more other coefficients with lesser indices 
+								
+								\begin {align*}  
+									4(n+2)(n+1) \, c_{n+2} -2(n+2)(n+3) \, c_{n} = 0
+								\end {align*}
+
+								Then solving for \( c_{n+2} \) we obtain
+							
+								
+								\begin {equation} 
+									c_{n+2}=\frac{(n+3)}{2(n+1)} \, c_n
+								\end {equation}
+
+								Where \(c_0\) and \(c_1\) are arbitrary and then we will use this recurrence relation to calculate the coefficients and since the index differs by two in the recurrence relation we will calculate the odd and even ones separately starting with the evens:
+							</div>
+
+							<div>
+								\begin{align*}
+									c_2 & = c_{0+2} = \frac{(3)}{(2)(1)}c_0 = \frac{3}{2}c_0  \\
+									c_4 & = c_{2+2} = \frac{(5)}{(2)(3)}c_2 = \frac{5}{2 \cdot 3} \cdot \frac{3}{2}c_0 = \frac{5}{4}c_0  \\
+									c_6 & = c_{4+2} = \frac{(7)}{(2)(5)}c_4 = \frac{7}{2 \cdot 5} \cdot \frac{5}{4}c_0 = \frac{7}{8}c_0  \\
+									c_8 & = c_{6+2} = \frac{(9)}{(2)(7)}c_6 = \frac{9}{2 \cdot 7} \cdot \frac{7}{8}c_0 = \frac{9}{16}c_0  \\
+								\end{align*}
+
+								Now we'll calculate the odd coefficients:
+
+								\begin{align*}
+									c_3 & = c_{1+2} = \frac{(4)}{(2)(2)}c_1 = \frac{2}{2}c_1 = c_1  \\
+									c_5 & = c_{3+2} = \frac{(6)}{(2)(4)}c_3 = \frac{3}{4} \cdot \frac{2}{2} c_1 =\frac{3}{4} c_1 \\
+									c_7 & = c_{5+2} = \frac{(8)}{(2)(6)}c_5 = \frac{4}{6} \cdot \frac{3}{4} \cdot \frac{2}{2}c_1 = \frac{1}{2}c_1  \\
+									c_9 & = c_{7+2} = \frac{(10)}{(2)(8)}c_7 = \frac{5}{8} \cdot \frac{4}{6} \cdot \frac{3}{4} \cdot \frac{2}{2}c_1   = \frac{5}{16}c_1  \\
+								\end{align*}
+
+								We notice that the even indexed constants all depend on \(c_0\) and the odd indexed constants depend on \(c_1\) so we group them accordingly
+
+								\begin{array}{rrrrr}
+									c_0 & & &\quad& c_1 & & \\
+									c_2 &=& \displaystyle{3\over 2} c_0 &\quad& c_3 &=& c_1 \\
+									c_4 &=& \displaystyle{5\over 4} c_0 &\quad& c_5 &=& \displaystyle{3\over 4} c_1 \\
+									c_6 &=& \displaystyle{7\over 8} c_0 &\quad& c_7 &=& \displaystyle{1\over 2} c_1  \\
+								\end{array}
+							</div>
+
+							<div>
+								Substituting the coefficients back into our power series representation of \(y\)
+
+								
+								\begin{align}
+									y 
+									= & \sum _{n=0}^\infty c_n(x-1)^n \\ \nonumber \\
+									= & c_0 + c_1(x-1) + c_2(x-1)^2 + c_3(x-1)^3 + c_4(x-1)^4 + \cdots  \nonumber \\ \nonumber \\
+									= & \Big( c_0 + c_2(x-1)^2 + c_4(x-1)^4 + c_6(x-1)^6 + \cdots \Big) \\
+									&  \quad +  \Big( c_1(x-1) + c_3(x-1)^3 + c_5(x-1)^5 + c_7(x-1)^7 + \cdots \Big)  \nonumber \\ \nonumber \\
+									= & \Bigg( c_0 + \frac{3}{2}c_0(x-1)^2 + \frac{5}{4}c_0(x-1)^4 + \frac{7}{8}c_0(x-1)^6 + \cdots \Bigg) \\
+									& \quad + \Bigg( c_1(x-1) + c_1(x-1)^3 + \frac{3}{4}c_1(x-1)^5 + \frac{1}{2}c_1(x-1)^7 + \cdots \Bigg)  \nonumber \\ \nonumber \\
+									= & c_0 \Bigg( 1 + \frac{3}{2}(x-1)^2 + \frac{5}{4}(x-1)^4 + \frac{7}{8}(x-1)^6 + \cdots \Bigg) \\
+									& \quad + c_1 \Bigg( (x-1) + (x-1)^3 + \frac{3}{4}(x-1)^5 + \frac{1}{2}(x-1)^7 + \cdots \Bigg)  \nonumber \\ \nonumber \\
+								\end{align}
+							</div>
+
+							<div>
+								Again in this case, as in most cases, we are not able to represent the series solution in terms of familiar elementary functions:
+
+								\begin{align*}
+									y 
+									= & c_0 \, {\small \Big( 1 + \frac{3}{2}(x-1)^2 + \frac{5}{4}(x-1)^4 + \cdots \Big)}
+									+  c_1 \, {\small \Big( (x-1) + (x-1)^3 + \frac{3}{4}(x-1)^5 + \cdots \Big) }
+								\end{align*}
+
+
+								Again this solutino is great! Paired with the <span class="vocab">recurrence relation</span> we can always compute additional coefficients if we wish.
+						
+								Even though our solution is great as is, whenever reasonable, we try to represent our series solution in sigma notation. Sometimes simplifying the coefficients makes it difficult to identiy the pattern of the coefficients and it is best to examine unsimplified versions instead.
+							</div>
+							<div>
+								\begin{array}{rrcrr}
+									c_0 &=& \dfrac{1}{1}c_0 = \dfrac{1}{2^0}c_0 &\quad& c_1 &=& \dfrac{1}{1} c_1\\	
+									c_2 &=& \dfrac{3}{2}c_0 = \dfrac{3}{2^1}c_0 &\quad& c_3 &=& \dfrac{2 \cdot 1}{2 \cdot 1} c_1\\
+									c_4 &=& \dfrac{5}{4} c_0 =  \dfrac{5}{2^2} c_0 &\quad& c_5 &=&  \dfrac{3 \cdot 2 \cdot 1}{4 \cdot 2 \cdot 1} c_1\\
+									c_6 &=& \dfrac{7}{8} c_0 = \dfrac{7}{2^3} c_0 &\quad&  c_7 &=& \dfrac{4 \cdot 3 \cdot 2 \cdot 1}{6 \cdot 4 \cdot 2 \cdot 1} c_1\\
+									c_8 &=& \dfrac{9}{16} c_0 = \dfrac{9}{2^4} c_0 &\quad&  c_9 &=& \dfrac{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}{8 \cdot 6 \cdot 4 \cdot 2 \cdot 1} c_1\\
+									 &\vdots& &\quad&   & \vdots & \\
+
+									c_{2n} &=& {\dfrac{2n+1}{2^n}}  &\quad&  c_{2n+1} &=& c_1 \displaystyle \dfrac{(-1)^n \, 4^n \, n!}{{\small \displaystyle \prod_{m=1}^{n} (2m-1)}}  \\
+								\end{array}
+
+								Thus we can rewrite our solution more campactly as
+
+								\begin{align*}
+									y 
+									= & c_0 \, \underbrace{ {\small \Big( 1 - x^2 + \frac{3}{2} x^4 - \frac{5}{2} x^6 + \cdots \Big)} }
+									+  c_1 \, \underbrace{ {\small \Big( x - \frac{4}{3} x^3 + \frac{32}{15} x^5 - \frac{384}{105} x^7 + \cdots \Big)} } \\
+									y 
+									= & c_0 \, \sum_{n=0}^{\infty} {\dfrac{(-1)^n}{n!} {\small \displaystyle \prod_{m=1}^{n} (2m-1)}}
+									\quad + \quad  c_1 \, \sum_{n=0}^{\infty} { \dfrac{(-1)^n \, 4^n \, n!}{{\small \displaystyle \prod_{m=1}^{n} (2m-1)}}  }
+								\end{align*}
+
+								But the original solution along with the recurrence relation is just as good as an answer.
+					
+
+							</div>
+							
+						</li>
+						<li class="no-part">
+							<div id="8b7a40e0-9c04-48d1-a6da-f59389e7c9cd">
+								
+							</div>
+						
+							<div id="158dc9cc-9304-4bbc-b09d-bda1f8d5f294">
+													
+							</div>
+							<div class="eqnarray" id="267dae74-a0a2-402b-a259-ea63a398f1bd">
+								
+							</div>
+							<div id="1fbda931-4fde-4f2b-bfd3-e78bc35d46e0">
+							
+							</div>
+						</li>
+					</ol>	
+					<div>
+						
+						<div id="d3ed571d-876b-4d3d-9281-c67a06061063">
+							
+						</div>
+						<div class="eqnarray" id="0f8b99f7-e277-4b01-8f5c-bcaf1743f1d5">
+							\begin {eqnarray*} 
+								a_{2m+2}&amp;=&amp;-{p(2m)\over (2m+2)(2m+1)}a_{2m}\\&amp;=&amp; {(2m+2)(2m+3)\over 2(2m+2)(2m+1)} a_{2m}={2m+3\over 2(2m+1)}a_{2m},\quad m\ge 0\\ {\mbox {and}}\\ a_{2m+3}&amp;=&amp;-{p(2m+1)\over (2m+3)(2m+2)}a_{2m+1}\\&amp;=&amp; {(2m+3)(2m+4)\over 2 (2m+3)(2m+2)}a_{2m+1}={m+2\over 2(m+1)}a_{2m+1},\quad m\ge 0 
+							\end {eqnarray*} 
+						</div>
+						<div id="2b16f343-8f9b-495a-8323-089aab015cdd">
+							We leave it to you to show that \[ a_{2m}={2m+1\over 2^m}c_0\quad \mbox { and }\quad a_{2m+1}={m+1\over 2^m}c_1,\quad m\ge 0\] which implies that the power series in \(x-1\) for the general solution of <a href="#x1-28r22">(7.2.28)</a> is \[ y=c_0\sum _{m=0}^\infty {2m+1\over 2^m}(x-1)^{2m}+c_1\sum _{m=0}^\infty {m+1\over 2^m}(x-1)^{2m+1}\] 
+						</div>
+					</div>	
 				</details>
 			</div>
+
+			
+		</details>	
+			
+
+		<!--IVP-->
+		<details id="284c971f-def2-41e2-a3e5-2130b1b57c9afafasddsfdsa">
+			<summary>IVPs</summary>	
 
 			<!--?-->
 			<div id="3f94c983-be74-4441-bdc1-233c515c802d">
 				In the examples considered so far we were able to obtain closed formulas for coefficients in the power series solutions. In some cases this is impossible, and we must settle for computing a finite number of terms in the series. The next example illustrates this with an initial value problem. 
 			</div>
-			
+
+			<br>
+			<br>
+			<br>
+
 			<!--Example 4-->
 			<div class="example" id="x1-294" style="--ex-number: 4">
 				<div>
@@ -564,7 +956,7 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					Since \(\alpha =2\), \(\beta =10\), and \(\gamma =8\) in <a href="#x1-30r23">(7.2.29)</a>, \[ p(n)=2n(n-1)+10n+8=2(n+2)^2\] Therefore \[ a_{n+2}=-2{(n+2)^2\over (n+2)(n+1)}a_n=-2{n+2\over n+1}a_n,\quad n\ge 0\] Writing this equation separately for \(n=2m\) and \(n=2m+1\) yields
+					Since \(\alpha =2\), \(\beta =10\), and \(\gamma =8\) in <a href="#x1-30r23">(7.2.29)</a>, \[ p(n)=2n(n-1)+10n+8=2(n+2)^2\] Therefore \[ a_{n+2}=-2{(n+2)^2\over (n+2)(n+1)}c_n=-2{n+2\over n+1}c_n,\quad n\ge 0\] Writing this equation separately for \(n=2m\) and \(n=2m+1\) yields
 
 					<div class="eqnarray" id="56fcd055-9bea-475e-85e2-9ec9824a9a85">
 						\begin {eqnarray}
