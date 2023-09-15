@@ -1140,24 +1140,44 @@
 							F(s) = {\cal L} \big\{ f(t) \big\} 
 								= & \underset{\left \{ 
 									\begin {array}{cl}
-										\displaystyle {{1-e^{-s}\over s}}&amp;\, s\ne 0\\ 
+										{{1-e^{-s}\over s}}&amp;\, s\ne 0\\ 
 										1&amp;\, s=0 
 									\end {array}
-								\right. }{\underbrace{\int _0^1 e^{-st} \,dt}} -3 \underset{-\dfrac{3e^{-(s+1)}}{s+1} \,\, s>-1}{\underbrace{\int _1^\infty e^{-(s+1)t} \,dt}} \\
+								\right. }{\underbrace{\int _0^1 e^{-st} \,dt}} -3 \underset{ 
+								\left \{ 
+									\begin {array}{cl}
+										-\frac{3e^{-(s+1)}}{s+1}&amp;\, s > -1, s\ne 0 \\ 
+										-\frac{3}{e}&amp;\, s=0 
+									\end {array}
+								\right. 
+							}{\underbrace{\int _1^\infty e^{-(s+1)t} \,dt}} \\
 						\end{align*}
 
-						fixme
+						Combing them we obtain
+
+
 					</div>	
 					<div>			
-							it follows that \[ F(s)=\left \{ 
-						\begin {array}{rl}\displaystyle {{1-e^{-s}\over s}-3{e^{-(s+1)}\over s+1}},&amp;s&gt;-1,\,s\ne 0,\\ \displaystyle {1-{3\over e}} ,&amp; s=0. 
-						\end {array}\right. \] This is consistent with Theorem&nbsp;<a href="#x1-336">8.1.6</a>, since \[ |f(t)|\le 3e^{-t},\quad t\ge 1\] and therefore \(f\) is of exponential order \(s_0=-1\).
+						\[ 
+							F(s)=
+							\left \{ 
+								\begin {array}{rl}
+									\displaystyle {{1-e^{-s}\over s}-3{e^{-(s+1)}\over s+1}}&amp;s&gt;-1,\,s\ne 0\\ 
+									\displaystyle {1-{3\over e}} &amp; s=0
+								\end {array}
+							\right. 
+						\] 
+						
+						
 					</div>	
 				</details>
 			</div>
 			<div id="2b075114-60e6-48ab-a032-a540aa8f9b8c">
-				<strong>Remark:</strong> In Section&nbsp;8.4 we’ll develop a more efficient method for finding Laplace transforms of piecewise continuous functions.
+				
 			</div>
+			<br>
+			<br>
+			<br>
 			<div class="example" id="x1-3711" style="--ex-number: 11">
 				<div>
 					We stated earlier that \[ \int _0^\infty e^{-st} e^{t^2} dt=\infty \] for all \(s\), so Theorem&nbsp;<a href="#x1-336">8.1.6</a> implies that \(f(t)=e^{t^2}\) is not of exponential order, since \[ \lim _{t\to \infty } {e^{t^2}\over Me^{s_0t}}=\lim _{t\to \infty } {1\over M} e^{t^2-s_0t}=\infty \] so \[ e^{t^2}&gt;Me^{s_0t} \] for sufficiently large values of \(t\), for any choice of \(M\) and \(s_{0}\) (Exercise&nbsp;<span class="ptmb8t-">3</span>).
