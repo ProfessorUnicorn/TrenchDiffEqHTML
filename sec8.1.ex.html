@@ -39,10 +39,13 @@
 						Calculate \({\cal L} \big\{ f(t) \big\} \) by evaluating the improper integral \(\int _0^\infty e^{-st} f(t)\,dt\)
 					</li>
 					<li>
-						Find \({\cal L} \big\{ f(t) \big\} \) by applying a Laplace transforms formula from the table in Section <a href="sec8.8.book.html" target=_blank>8.8</a>
+						Find \({\cal L} \big\{ f(t) \big\} \) by applying Linearity and a Laplace transform formula from the table in Section <a href="sec8.8.book.html" target=_blank>8.8</a>
 					</li>
 					<li>
-						Compare the results from part a. and b.
+						Calculate \({\cal L} \big\{ e^{at}f(t) \big\} \) by applying the First Shifting Theorem
+					</li>
+					<li>
+						Find \({\cal L} \big\{ g(t) \big\} \) by applying Linearity and a Laplace transform formula from the table in Section <a href="sec8.8.book.html" target=_blank>8.8</a>
 					</li>
 				</ol>
 			</div>
@@ -51,7 +54,12 @@
 			<div class="exercise" id="x1-211">
 				<span class="ex-number">1.</span>
 				<div class="ex-body">
-					\(f(t) = t\) 
+					\(
+						f(t) = 2t
+						\quad
+						\quad
+						g(t) = 2t^7
+					\) 
 				</div>
 			</div>
 
@@ -59,7 +67,12 @@
 			<div class="exercise" id="x1-212">
 				<span class="ex-number">2.</span>
 				<div class="ex-body">
-					\(f(t) = te^{-t}\) 
+					\(
+						f(t) = 3te^{-t}
+						\quad
+						\quad
+						g(t) = \pi \, t^{12} e^{-t}
+					\) 
 				</div>
 			</div>
 
@@ -67,7 +80,12 @@
 			<div class="exercise" id="x1-213">
 				<span class="ex-number">3.</span>
 				<div class="ex-body">
-					\(f(t) = \sinh bt\) 
+					\(
+						f(t) = 4\sinh t
+						\quad
+						\quad
+						g(t) = t^3 \sinh t
+					\) 
 				</div>
 			</div>
 
@@ -75,7 +93,12 @@
 			<div class="exercise" id="x1-214">
 				<span class="ex-number">4.</span>
 				<div class="ex-body">
-					\(f(t) = e^{2t}-3e^t\) 
+					\(
+						f(t) = e^{2t}-3e^t
+						\quad
+						\quad
+						g(t) = e^{2t}\cos t -3e^t \sin t
+					\) 
 				</div>
 			</div>
 
@@ -83,114 +106,227 @@
 			<div class="exercise" id="x1-215">
 				<span class="ex-number">5.</span>
 				<div class="ex-body">
-					\(f(t) = t^2\) 
+					\(
+						f(t) = 5t^2
+						\quad
+						\quad
+						g(t) = 5t^2 e^{at}\cos \omega t
+					\) 
+				</div>
+			</div>
+
+			<!--6.-->
+			<div class="exercise" id="x1-216">
+				<span class="ex-number">6.</span>
+				<div class="ex-body">
+					\(
+						f(t) = 6\sin \left(t+ \dfrac{\pi}{4} \right)
+						\quad
+						\quad
+						g(t) =  \dfrac{6}{t}\sin \left(t+ \dfrac{\pi}{4} \right)
+					\) 
+				</div>
+			</div>
+
+			<!--7.-->
+			<div class="exercise" id="x1-217">
+				<span class="ex-number">7.</span>
+				<div class="ex-body">
+					\(
+						f(t) = 7e^{-t/7} 
+						\quad
+						\quad
+						g(t) = 7e^{-t/7} \sin \pi t
+					\) 
+				</div>
+			</div>
+
+			<!--8.-->
+			<div class="exercise" id="x1-218">
+				<span class="ex-number">8.</span>
+				<div class="ex-body">
+					\(
+						f(t) = -8\sin t - t \cos t 
+						\quad
+						\quad
+						g(t) = -8\sqrt{t} \sin t - t^{3/2} \cos t 
+					\) 
 				</div>
 			</div>
 
 		
 
-			<!--102.-->
-			<div class="exercise" id="x1-32">
-				<span class="ex-number">102.</span>
-				<div class="ex-body">
-					Use the table of Laplace transforms to find the Laplace transforms of the following functions. 
-					<ol>
-						<li>
-							\(\cosh t\sin t\) 
-						</li>
-						<li>
-							\(\sin ^2t\) 
-						</li>
-						<li>
-							\(\cos ^2 2t\) 
-						</li>
-						<li>
-							\(\cosh ^2 t\) 
-						</li>
-						<li>
-							\(t\sinh 2t\) 
-						</li>
-						<li>
-							\(\sin t\cos t\) 
-						</li>
-						<li>
-							\(\displaystyle {\sin \left (t+{\pi \over 4}\right )}\) 
-						</li>
-						<li>
-							\(\cos 2t -\cos 3t\) 
-						</li>
-						<li>
-							\(\sin 2t +\cos 4t\) 
-						</li>
-					</ol>
-				</div>
-			</div>
 
 		</div>	
 
 		<div class="stepline"> 
-			Part 2: Piece wise Continuous
+			Part 2: Discontinuities
 		</div>  
 
-		<!--104.-->
-		<div class="exercise" id="x1-54">
-			<span class="ex-number">104.</span>
-			<div class="ex-body">
-				Graph the following piecewise continuous functions and evaluate \(f(t+)\), \(f(t-)\), and \(f(t)\) at each point of discontinuity. 
+		<div class="grouping">
+			<div class="instructions">
 				<ol>
 					<li>
-						\(f(t)=\left \{ 
-									\begin {array}{cl} -t, &amp; 0\le t&lt;2,\\ t-4, &amp; 2\le t&lt;3,\\ 1, &amp; t\ge 3. 
-									\end {array}\right .\) 
+						Graph \(f(t)\) and label each disctontinuity as jump or point
 					</li>
 					<li>
-						\(f(t)=\left \{ 
-										\begin {array}{cl} t^2+2, &amp; 0 \le t&lt;1,\\4, &amp; t=1,\\ t, &amp; t&gt; 1. 
-										\end {array}\right .\) 
+						Show \(f(t)\) is piecewise continuous
 					</li>
 					<li>
-						\(f(t)=\left \{ 
-										\begin {array}{rl} \sin t, &amp; 0\le t&lt;\pi / 2,\\ 2\sin t, &amp;\pi / 2 \le t&lt;\pi ,\\ \cos t, &amp; t\ge \pi . 
-										\end {array}\right .\) 
+						Calculate \({\cal L} \big\{ f(t) \big\} \) by evaluating the improper integral \(\int _0^\infty e^{-st} f(t)\,dt\)
 					</li>
 					<li>
-						\(f(t)=\left \{ 
-										\begin {array}{cl}t, &amp; 0\le t&lt;1,\\ 2, &amp; t=1,\\ 2-t, &amp; 1 \le t&lt;2,\\ 3, &amp; t=2,\\ 6, &amp; t&gt; 2. 
-										\end {array}\right .\) 
+						Graph \(F(s)\) and compare with the graph of \(f(t)\) 
 					</li>
 				</ol>
 			</div>
-		</div>
 
-		<!--105.-->
-		<div class="exercise" id="x1-65">
-			<span class="ex-number">105.</span>
+			<!--24.-->
+			<div class="exercise" id="x1-5424">
+				<span class="ex-number">24.</span>
+				<div class="ex-body">
+					\(
+					f(t)=
+					\left \{ 
+						\begin {array}{cl} 
+							-t &amp; 0\le t&lt;2\\ 
+							t-4 &amp; 2\le t&lt;3\\ 
+							1 &amp; t\ge 3
+						\end {array}
+					\right .
+					\)  
+				</div>
+			</div>
+
+			<!--25.-->
+			<div class="exercise" id="x1-5425">
+				<span class="ex-number">25.</span>
+				<div class="ex-body">
+					\(
+						f(t)=
+						\left \{ 
+							\begin {array}{cl} 
+								t^2+2 &amp; 0 \le t&lt;1\\
+								4 &amp; t=1\\ 
+								t &amp; t&gt; 1 
+							\end {array}\right .
+					\) 
+				</div>
+			</div>			
+
+		<!--26.-->
+		<div class="exercise" id="x1-5426">
+			<span class="ex-number">26.</span>
 			<div class="ex-body">
-				Find the Laplace transform: 
-				<ol>
-					<li>
-						\(f(t)=\left \{ 
-									\begin {array}{rl} e^{-t}, &amp; 0\le t&lt;1,\\ e^{-2t}, &amp; t\ge 1. 
-									\end {array}\right .\) 
-					</li>
-					<li>
-						\(f(t)=\left \{ 
-										\begin {array}{rl} 1, &amp; 0\le t&lt; 4,\\ t, &amp; t\ge 4. 
-										\end {array}\right .\) 
-					</li>
-					<li>
-						\(f(t)=\left \{ 
-										\begin {array}{rl} t, &amp; 0\le t&lt;1,\\ 1, &amp; t\ge 1. 
-										\end {array}\right .\) 
-					</li>
-					<li>
-						\(f(t)=\left \{ 
-										\begin {array}{rl} te^t, &amp; 0\le t&lt;1,\\\phantom {t} e^t, &amp; t\ge 1. 
-										\end {array}\right .\) 
-					</li>
-				</ol>
+				\(
+					f(t)=
+					\left \{ 
+						\begin {array}{cl} 
+							t^2+2, &amp; 0 \le t&lt;1\\
+							4 &amp; t=1\\ 
+							t &amp; t&gt; 1
+						\end {array}\right .
+				\) 
+			</div>
+		</div>						
+
+		<!--27.-->
+		<div class="exercise" id="x1-5427">
+			<span class="ex-number">27.</span>
+			<div class="ex-body">
+				\(
+					f(t)=
+						\left \{ 
+							\begin {array}{rl} 
+								\sin t &amp; 0\le t&lt;\pi / 2\\ 
+								2\sin t &amp;\pi / 2 \le t&lt;\pi\\ 
+								\cos t &amp; t\ge \pi
+							\end {array}
+						\right .
+				\) 
+			</div>
+		</div>	
+		
+		<!--28.-->
+		<div class="exercise" id="x1-5428">
+			<span class="ex-number">28.</span>
+			<div class="ex-body">
+				\(
+					f(t)=
+						\left \{ 
+							\begin {array}{cl}t, &amp; 0\le t&lt;1\\ 
+								2 &amp; t=1\\ 
+								2-t &amp; 1 \le t&lt;2\\ 
+								3 &amp; t=2,\\ 6, &amp; t&gt; 2 
+						\end {array}
+					\right 
+				.\) 
+			</div>
+		</div>	
+
+		<!--29.-->
+		<div class="exercise" id="x1-5429">
+			<span class="ex-number">29.</span>
+			<div class="ex-body">
+				\(
+					f(t)=
+						\left \{ 
+							\begin {array}{rl} 
+								e^{-t} &amp; 0\le t&lt;1\\ 
+								e^{-2t} &amp; t\ge 1
+							\end {array}
+						\right .
+				\) 
 			</div>
 		</div>
+		
+		<!--30.-->
+		<div class="exercise" id="x1-5430">
+			<span class="ex-number">30.</span>
+			<div class="ex-body">
+				\(
+					f(t)=
+						\left \{ 
+							\begin {array}{rl} 
+								1 &amp; 0\le t&lt; 4\\ 
+								t &amp; t\ge 4
+							\end {array}
+						\right .
+				\) 
+			</div>
+		</div>	
+
+		<!--31.-->
+		<div class="exercise" id="x1-5431">
+			<span class="ex-number">31.</span>
+			<div class="ex-body">
+				\(
+					f(t)=
+						\left \{ 
+							\begin {array}{rl} 
+								t &amp; 0\le t&lt;1\\ 
+								1 &amp; t\ge 1
+							\end {array}
+						\right .
+				\) 
+			</div>
+		</div>	
+		
+		<!--32.-->
+		<div class="exercise" id="x1-5432">
+			<span class="ex-number">32.</span>
+			<div class="ex-body">
+				\(
+					f(t)=
+						\left \{ 
+							\begin {array}{rl} 
+								t &amp; 0\le t&lt;1\\ 
+								1 &amp; t\ge 1
+							\end {array}
+						\right .
+				\) 
+			</div>
+		</div>	
 
 
 		<!--Part 3: Challenge-->
@@ -198,6 +334,40 @@
 			Part 3: Challenge
 		</div>  
 
+					<!--102.-->
+					<div class="exercise" id="x1-32">
+						<span class="ex-number">102.</span>
+						<div class="ex-body">
+							Use the table of Laplace transforms to find the Laplace transforms of the following functions. 
+							<ol>
+								<li>
+									\(\cosh t\sin t\) 
+								</li>
+								<li>
+									\(\sin ^2t\) 
+								</li>
+								<li>
+									\(\cos ^2 2t\) 
+								</li>
+								<li>
+									\(\cosh ^2 t\) 
+								</li>
+								<li>
+									\(t\sinh 2t\) 
+								</li>
+								<li>
+									\(\sin t\cos t\) 
+								</li>
+								<li>
+									\(\cos 2t -\cos 3t\) 
+								</li>
+								<li>
+									\(\sin 2t +\cos 4t\) 
+								</li>
+							</ol>
+						</div>
+					</div>
+		
 
 		<!--103.-->
 		<div class="exercise" id="x1-43">
