@@ -1091,17 +1091,65 @@
 							{\cal L} \big\{ f(t) \big\} 
 								= & \int _0^\infty e^{-st} \, f(t)\,dt \\
 								= & \int _0^1 e^{-st} \, f(t)\,dt + \int _1^\infty e^{-st} \, f(t)\,dt \\
+								= & \int _0^1 e^{-st} \cdot 1 \,dt + \int _1^\infty e^{-st} \cdot -3e^{-t}\,dt \\
+								= & \int _0^1 e^{-st} \,dt -3 \int _1^\infty e^{-(s+1)t} \,dt \\
 						\end{align*}
 
+						So now we have two integrals to evaluate. The first integrand is the same one we computed in Example <a href="#x1-51">8.1.1</a> but this one is not an improper integral. When it was improper we considered cases and found we had to require \(s>0\) since it diverges otherwise. For this one it always converges, so we can allow \(s\) to be any value. So for cases we will consider \(s=0\) first, and the integral becomes
+
+						\begin{align*}
+							 \int _0^1 e^{0} \,dt = \int _0^1 \,dt
+							 = t\Big|_0^{1}=1-0=1  \\
+						\end{align*}
+
+						And the other case is simply \(s \ne 0\) and we already found the antiderivative in Example <a href="#x1-51">8.1.1</a> so we will just evaluate it at these different limits of integration
+
+						\begin{align*}
+							\int _0^1 e^{-st} \,dt
+							=  -\frac{1}{s} \big[ e^{-st} \big] \Big|_{0}^{1}
+							=  -\frac{1}{s} \big[ e^{-s} - e^{0} \big]
+							=  \frac{1-e^{-s}}{s} 
+						\end{align*}
+
+						Thus we have
+						\[ \int _0^1e^{-st}\,dt=
+							\left \{ 
+								\begin {array}{cl}
+									\displaystyle {{1-e^{-s}\over s}}&amp;\quad s\ne 0\\ 
+									1&amp;\quad s=0 
+								\end {array}
+							\right. 
+						\] 
+
+						And now we have a new improper integral to evaluate
+
+						\begin{align*}
+							-3\int _1^\infty e^{-(s+1)t} \,dt 
+							= & -3 \cdot -\frac{1}{s+1}\int _1^\infty e^{\overset{w}{\overbrace{-(s+1)t}}} \,\, \overset{dw}{\overbrace{\big(-(s+1)dt\big)}} \\
+							= & \frac{3}{s+1} \lim_{x \to \infty} \left[ e^{-(s+1)t} \right] \Bigg|_{t=1}^{t=x} \\
+							= & \frac{3}{s+1} \lim_{x \to \infty} \left[ e^{-(s+1)x} - e^{-(s+1)1}  \right] \\
+							= & \frac{3}{s+1} \left[ e^{-\infty} - e^{-(s+1)}  \right] \\
+							= & -\frac{3e^{-(s+1)}}{s+1} 
+							\quad\quad\quad
+							s>-1
+						\end{align*}
+
+						Now substituting back in, the Laplace transform \( {\cal L} \big\{ f(t) \big\} \) is the sum of these two integrals
+
+						\begin{align*}
+							F(s) = {\cal L} \big\{ f(t) \big\} 
+								= & \underset{\left \{ 
+									\begin {array}{cl}
+										\displaystyle {{1-e^{-s}\over s}}&amp;\, s\ne 0\\ 
+										1&amp;\, s=0 
+									\end {array}
+								\right. }{\underbrace{\int _0^1 e^{-st} \,dt}} -3 \underset{-\dfrac{3e^{-(s+1)}}{s+1} \,\, s>-1}{\underbrace{\int _1^\infty e^{-(s+1)t} \,dt}} \\
+						\end{align*}
+
+						fixme
 					</div>	
-					<div>
-						Since \(f\) is defined by different formulas on \([0,1)\) and \([1,\infty )\), we write 
-						
-						\[ F(s)=\int _0^\infty e^{-st} f(t)\,dt =\int _0^1e^{-st}(1)\,dt+\int _1^\infty e^{-st}(-3e^{-t})\,dt\] 
-						
-						Since 
-						
-						\[ \int _0^1e^{-st}\,dt=\left \{ \begin {array}{cl}\displaystyle {{1-e^{-s}\over s}},&amp;\quad s\ne 0,\\ 1,&amp;\quad s=0, \end {array}\right. \] and \[ \int _1^\infty e^{-st}(-3e^{-t})\,dt=-3\int _1^\infty e^{-(s+1)t}\,dt=-{3e^{-(s+1)}\over s+1},\quad s&gt;-1\] it follows that \[ F(s)=\left \{ 
+					<div>			
+							it follows that \[ F(s)=\left \{ 
 						\begin {array}{rl}\displaystyle {{1-e^{-s}\over s}-3{e^{-(s+1)}\over s+1}},&amp;s&gt;-1,\,s\ne 0,\\ \displaystyle {1-{3\over e}} ,&amp; s=0. 
 						\end {array}\right. \] This is consistent with Theorem&nbsp;<a href="#x1-336">8.1.6</a>, since \[ |f(t)|\le 3e^{-t},\quad t\ge 1\] and therefore \(f\) is of exponential order \(s_0=-1\).
 					</div>	
