@@ -31,20 +31,31 @@
 		</div>
 
 		<details id="f39669b9-f6b9-4e93-ade3-208a99271ee2">
-			<summary>Definition of the Inverse Laplace Transform</summary>
+			<summary>Inverse Laplace Transform</summary>
 		
 			<div id="90d61cb8-e08f-476b-a2e0-1f000c39bfaa">
-				In Section&nbsp;8.1 we defined the Laplace transform of \(f\) by \[ F(s)={\cal L}(f)=\int _0^\infty e^{-st}f(t)\,dt\] We’ll also say that \(f\) is an <span class="vocab">inverse Laplace Transform</span> of \(F\), and write \[ f={\cal L}^{-1}(F)\] To solve differential equations with the Laplace transform, we must be able to obtain \(f\) from its transform \(F\). There’s a formula for doing this, but we can’t use it because it requires the theory of functions of a complex variable. Fortunately, we can use the table of Laplace transforms to find inverse transforms that we’ll need. 
+				In Section&nbsp;<a href="#sec8.1.book.html" target=_blank>8.1</a> we defined the Laplace transform of \(f(t)\) by 
+				
+				\[ F(s)= {\cal L} \big\{ f(t) \big\} =\int _0^\infty \, e^{-st} \, f(t) \, dt\] 
+				
+				We’ll also say that \(f(t)\) is an <span class="vocab">inverse Laplace Transform</span> of \(F(s)\), and write 
+				
+				\[ f(t)={\cal L}^{-1} \big[ F(s) \big] \] 
+				
+				To solve differential equations with the Laplace transform, we must be able to obtain \(f(t)\) from its transform \(F(s)\). There’s a formula for doing this, but we can’t use it because it requires the theory of functions of a complex variable which is beyond the scope of this course. Instead, we will use the table of Laplace transforms (Section <a href="sec8.8.book.html" target=_blank>8.8</a>) to find the inverse Laplace transforms that we’ll need. 
 			</div>
 
+			<br>
+			<br>
+			<!--Example 1-->
 			<div class="example" id="x1-21" style="--ex-number: 1">
-				Use the table of Laplace transforms to find:
+				<div>&nbsp;Use the table of Laplace transforms (Section <a href="sec8.8.book.html" target=_blank>8.8</a>) to find the <span>inverse Laplace Transforms</span></div>
 				<ol>
-					<li>
-						\[ {\cal L}^{-1}\left ({1\over s^2-1}\right ) \]
+					<li> 
+						\[ {\cal L}^{-1}\left[ {1\over s^2-1}\right] \]
 					</li>
 					<li>
-						\[ {\cal L}^{-1}\left ({s\over s^2+9}\right )\]
+						\[ {\cal L}^{-1}\left[ {s\over s^2+9}\right]\]
 					</li>
 				</ol>
 			
@@ -52,67 +63,357 @@
 					<summary>Solution</summary>
 					<ol>
 						<li>
-							Setting \(b=1\) in the transform pair \[ \sinh bt\leftrightarrow {b\over s^2-b^2} \] shows that \[ {\cal L}^{-1}\left ({1\over s^2-1}\right )=\sinh t\]
+							<div>
+								To find
+								\( \displaystyle {\cal L}^{-1}\left[ {1\over s^2-1}\right] \) 
+								we seek the function \(f(t)\) such that 
+								
+								\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {1\over s^2-1}\] 
+
+								From the table we find the transform pair 
+								
+								\[\displaystyle {\cal L} \big\{ \sinh bt \big\}  = \frac{b}{s^2-b^2} \]
+
+								And setting \(b=1\) in the transform pair we obtain our exact equation
+
+								\[\displaystyle {\cal L} \big\{ \sinh t \big\}  = \frac{1}{s^2-1} \]
+
+								Thus we have
+
+								\[\displaystyle  {\cal L}^{-1}\left[ {1\over s^2-1}\right] = \sinh t \]
+							</div>	
 						</li>
 						<li>
-							Setting \(\omega =3\) in the transform pair \[ \cos \omega t\leftrightarrow {s\over s^2+\omega ^2} \] shows that \[ {\cal L}^{-1}\left ({s\over s^2+9}\right )=\cos 3t\]
+							<div>
+								To find
+								\( \displaystyle {\cal L}^{-1}\left[ {s\over s^2+9}\right] \) 
+								we seek the function \(f(t)\) such that 
+								
+								\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {s\over s^2+9}\] 
+
+								From the table we find the transform pair 
+								
+								\[\displaystyle {\cal L} \big\{ \cos \omega t \big\}  = \frac{s}{s^2+\omega^2} \]
+
+								And setting \(\omega=3\) in the transform pair we obtain our exact equation
+
+								\[\displaystyle {\cal L} \big\{ \cos 3 t \big\}  = \frac{s}{s^2+9} \]
+
+								Thus we have
+
+								\[\displaystyle  {\cal L}^{-1}\left[ {s\over s^2+9}\right] = \cos 3t \]
+							</div>
 						</li>
 					</ol>
 				</details>
 			</div>
 		
 			<div class="indent" id="d9a8c635-e59a-4c4c-aec5-0d07a053e6af">
-				The next theorem enables us to find inverse transforms of linear combinations of transforms in the table. We omit the proof. 
 			</div>
 
+			<!--Linearity Property-->
 			<div class="theorem" id="x1-31">
-				<span class="head">Theorem&nbsp;8.2.1</span> \([\)Linearity Property\(]\) 
-				<br>
-				If \(F_1,\) \(F_2,\) …\(,\) \(F_n\) are Laplace transforms and \(c_1,\) \(c_2,\) …, \(c_n\) are constants\(,\) then \[ {\cal L}^{-1}(c_1F_1+c_2F_2+\cdots +c_nF_n)=c_1{\cal L}^{-1}(F_1)+c_2{\cal L}^{-1}(F_2)+\cdots +c_n{\cal L}^{-1}F_n\]
+				<span class="head">Theorem&nbsp;8.2.1</span>
+				<strong>Linearity Property</strong>
+				
+				<div>
+					Suppose \( F(s) \) and \( G(s) \) Laplace transforms are defined. Then the following properties are true:
+
+					\[
+					{\cal L}^{-1} \big[ F(s) + G(s) \big]
+					={\cal L}^{-1} \big\{ F(s) \big\} + {\cal L}^{-1} \big\{ G(s) \big\}
+					\]
+
+					\[
+					{\cal L}^{-1} \big[ c \cdot F(s) \big]
+					= c \cdot {\cal L}^{-1} \big[ f(x) \big]
+					\]
+
+					Essentially the inverse Laplace transform can break up across terms and constants can be factored out.
+				</div>	 
 			</div>
 
+	
+
+			<br>
+			<br>
+			
+			
+			<!--Example 2-->
 			<div class="example" id="x1-42" style="--ex-number: 2">
 				<div>
-					Find \[ {\cal L}^{-1}\left ({8\over s+5}+{7\over s^2+3}\right )\]
+					<div>&nbsp;Use the table of Laplace transforms (Section <a href="sec8.8.book.html" target=_blank>8.8</a>) to find the <span>inverse Laplace Transform</span></div>
+					\[ {\cal L}^{-1}\left[ {8\over s+5}+{7\over s^2+3}\right ]\]
 				</div>
 				<details class="solution">
 					<summary>Solution</summary>
-					From the table of Laplace transforms in Section&nbsp;8.8„ \[ e^{at}\leftrightarrow {1\over s-a}\quad \mbox { and }\quad \sin \omega t\leftrightarrow {\omega \over s^2+\omega ^2}\] Theorem&nbsp;<a href="#x1-31">8.2.1</a> with \(a=-5\) and \(\omega =\sqrt 3\) yields
-					<div class="eqnarray" id="45a82c33-75b3-40d4-aa9d-05964b250d05">
-						\begin {eqnarray*}
-							{\cal L}^{-1}\left ({8\over s+5}+{7\over s^2+3}\right )&amp;=&amp; 8{\cal L}^{-1}\left ({1\over s+5}\right )+7{\cal L}^{-1}\left ({1\over s^2+3}\right )\\[10pt] &amp;=&amp; 8{\cal L}^{-1}\left ({1\over s+5}\right )+{7\over \sqrt 3}{\cal L}^{-1}\left ({\sqrt 3\over s^2+3}\right )\\[10pt]&amp;=&amp;8e^{-5t}+{7\over \sqrt 3}\sin \sqrt 3t 
-						\end {eqnarray*} 
+					<div>
+						To find
+						\( \displaystyle {\cal L}^{-1}\left[ {8\over s+5}+{7\over s^2+3}\right ] \) 
+						we first apply the <span class="vocab">Linearity Property</span>
+
+						\begin{align*} 
+							{\cal L}^{-1}\left[ {8\over s+5}+{7\over s^2+3}\right ]
+							= & \, 8 \, {\cal L}^{-1}\left[ {1\over s+5}\right ]
+							+ 7 \, {\cal L}^{-1}\left[ {1\over s^2+3}\right ]
+						\end{align*} 
+
+						Now we find the inverse Laplace transforms the same way we did in Example <a href="#x1-21">8.2.1</a> 
 					</div>
+					<br>
+					<hr>
+					<br>
+					<div>
+						First to find
+						\( \displaystyle {\cal L}^{-1}\left[ {1\over s+5}\right] \) 
+						we seek the function \(f(t)\) such that 
+						
+						\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {1\over s+5}\] 
+
+						This one is a little trickier than the previous ones. From the table we find the transform pair 
+						
+						\[\displaystyle {\cal L} \big\{ e^{at} \big\}  = \frac{1}{s-a} \]
+
+						And setting \(a=-5\) 
+						we obtain our exact equation
+
+						\begin{align*}
+							{\cal L} \big\{ e^{-5t} \big\}  = \frac{1}{s+5}
+						\end{align*}
+
+						Thus we have
+
+						\[\displaystyle  {\cal L}^{-1}\left[ {1\over s+5}\right] = e^{-5t}  \]
+					</div>
+					<br>
+					<hr>
+					<br>
+					<div>
+						Now to find
+						\( \displaystyle {\cal L}^{-1}\left[ {1\over s^2+3}\right] \) 
+						we seek the function \(f(t)\) such that 
+						
+						\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {1\over s^2+3}\] 
+
+						From the table we find the transform pair 
+						
+						\[\displaystyle {\cal L} \big\{ \sin \omega \big\}  = \frac{\omega}{s^2+\omega^2} \]
+
+						And setting \(\omega=\sqrt{3}\) in the transform pair gets us close to our equation but not exact:
+
+						\begin{align*}
+							{\cal L} \big\{ \sin \sqrt{3} \big\}  = & \frac{\sqrt{3}}{s^2+3} 
+						\end{align*}
+						
+						However, it is just a constant multiplier on the right side, so we simply divide both sides by \(\sqrt{3}\) and use the 
+						Linearity Property
+						to obtain our exact equation
+
+						\begin{align*}
+							\frac{1}{\sqrt{3}} {\cal L} \big\{ \sin \sqrt{3} \big\}  = & \frac{1}{s^2+3} 
+							\Longrightarrow {\cal L} \left\{  \frac{1}{\sqrt{3}} \sin \sqrt{3} \, \right\}  = \frac{1}{s^2+3}  \\
+						\end{align*}
+
+						
+
+						Thus we have
+
+						\[\displaystyle  {\cal L}^{-1}\left[ {s\over s^2+3}\right] =  \frac{1}{\sqrt{3}} \sin \sqrt{3}  \]
+					</div>
+					<br>
+					<hr>
+					<br>
+					<div>
+						Finally substituting the inverse Laplace transforms back in we obtain our answer
+
+						\begin{align*} 
+							{\cal L}^{-1}\left[ {8\over s+5}+{7\over s^2+3}\right ]
+							= & \, 8 \, \underset{e^{-5t}}{\underbrace{{\cal L}^{-1}\left[ {1\over s+5}\right ]}}
+							+ 7 \, \underset{\frac{1}{\sqrt{3}} \sin \sqrt{3}}{\underbrace{{\cal L}^{-1}\left[ {1\over s^2+3}\right ]}} \\
+							= & \, \quad 8 \, e^{-5t}
+							\quad+\quad \, \frac{7}{\sqrt{3}} \sin \sqrt{3}  
+						\end{align*} 
+						
+					</div>
+					<br>
+
 				</details>
 			</div>
 
+			<br>
+			<br>
+			<!--Example 3-->
 			<div class="example" id="x1-53" style="--ex-number: 3">
 				<div>
-					Find \[ {\cal L}^{-1}\left ({3s+8\over s^2+2s+5}\right )\]
+					<div>&nbsp;Use the table of Laplace transforms (Section <a href="sec8.8.book.html" target=_blank>8.8</a>) to find the <span>inverse Laplace Transform</span></div>
+					\[ {\cal L}^{-1}\left [{3s+8\over s^2+2s+5}\right ]\]
 				</div>
 			
 				<details class="solution">
 					<summary>Solution</summary>
-					Completing the square in the denominator yields \[ {3s+8\over s^2+2s+5}={3s+8\over (s+1)^2+4}\] Because of the form of the denominator, we consider the transform pairs \[ e^{-t}\cos 2t\leftrightarrow {s+1\over (s+1)^2+4} \quad \mbox{ and } \quad e^{-t}\sin 2t\leftrightarrow {2\over (s+1)^2+4}\] and write
-					<div class="eqnarray" id="c75ad6da-1716-481d-9d98-3b2df6a69f8c">
-						\begin {eqnarray*}
-							{\cal L}^{-1}\left ({3s+8\over (s+1)^2+4}\right )&amp;=&amp; {\cal L}^{-1}\left ({3s+3\over (s+1)^2+4}\right )+ {\cal L}^{-1}\left ({5\over (s+1)^2+4}\right )\\[10pt]&amp;=&amp; 3{\cal L}^{-1}\left ({s+1\over (s+1)^2+4}\right )+ {5\over 2}{\cal L}^{-1}\left ({2\over (s+1)^2+4}\right )\\[10pt]&amp;=&amp; e^{-t}(3\cos 2t+{5\over 2}\sin 2t) 
-						\end {eqnarray*} 
+					<div>
+						To find
+						\( \displaystyle {\cal L}^{-1}\left[ {3s+8\over s^2+2s+5} \right] \) 
+						we seek the function \(f(t)\) such that 
+						
+						\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {3s+8\over s^2+2s+5}\] 
+
+						From the table there are no transform pairs that match the equation in the format it is in. So far in Examples <a href="#x1-21">8.2.1</a> and <a href="#x1-42">8.2.2</a> we have been able to recognize transform pairs directly from the table. Sometimes however, such as in this case, it will be necessary to perform algebraic manipulations first.
+					</div>	
+
+			
+					<div>	
+						Since the denominator is a quadratic polynomial \(s^2+2s+5\) we'll try to complete the square on it first.
+
+
+						\begin{align*} 
+							s^2+2s+5 
+							= &  (s^2+2s+ 1) - 1+5  \\
+							= &  (s+ 1)(s+ 1) + 4  \\
+							= &  (s+ 1)^2 +4  \\
+						\end{align*} 
+
+						So we can rewrite our expression as
+
+						\begin{align*} 
+							{3s+8\over s^2+2s+5}
+							=
+							{3s+8\over (s+ 1)^2 +4}
+						\end{align*} 
 					</div>
-					<div id="60ddd8fa-e996-4284-a220-f5730c153936">
-						<strong>Remark</strong> We’ll often write inverse Laplace transforms of specific functions without explicitly stating how they are obtained. In such cases you should refer to the table of Laplace transforms in Section&nbsp;8.8.
+					<br>
+					<hr>
+					<br>
+					<div>	
+
+						So now to find
+						\( \displaystyle {\cal L}^{-1}\left[ {3s+8\over (s+ 1)^2 +4} \right] \) 
+						
+						we seek the function \(f(t)\) such that
+						
+						\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {3s+8\over (s+ 1)^2 +4}\] 
+
+						While it still is not a perfect match it is certainly closer as we identify the following transform pair:
+
+						
+						\[\displaystyle {\cal L} \big\{ e^{at} \cos \omega t \big\}  = \frac{s-a}{(s-a)^2+\omega^2} \]
+
+						Substituting \(a=-1\) and \(\omega=2\) we obtain
+
+						
+						\[\displaystyle {\cal L} \big\{ e^{-t} \cos 2 t \big\}  = \frac{s+1}{(s+1)^2+4} \]
+
+						So we are getting closer but we will still need to further manipulate our expression to get it to match. Since the numerator in one of the Laplace transforms is \(s+1\) we'll go ahead and try to write our expression in terms of \(s+1\) in the numerator by splitting up the \(8\) and then factoring out the \(3\) and then splitting it into two separate terms
+
+						\begin{align*} 
+							{3s+8\over (s+ 1)^2 +4}
+							= &
+							{(3s+3)+5\over (s+ 1)^2 +4}
+							=
+							{3(s+1)+5\over (s+ 1)^2 +4} \\
+							= &
+							{3(s+1)\over (s+ 1)^2 +4}
+							+
+							{5\over (s+ 1)^2 +4} \\
+						\end{align*}
 					</div>
+					<br>
+					<hr>
+					<br>
+					<div>	 
+
+
+						So now to find
+						\( \displaystyle {\cal L}^{-1}\left[ {3(s+1)\over (s+ 1)^2 +4}
+						+
+						{5\over (s+ 1)^2 +4} \right] \) 
+						
+						we can apply the Linearity Property to obtain
+						
+						\begin{align*} 
+							 & \, 3 \, {\cal L}^{-1}\left[  {s+1\over (s+ 1)^2 +4}
+							\right ]
+							+ 5 \, {\cal L}^{-1}\left[ {1\over (s+ 1)^2 +4}\right ]
+						\end{align*} 
+
+						and in fact we have already found the first transform
+
+						\begin{align*} 
+							 {\cal L}^{-1}\left[  {s+1\over (s+ 1)^2 +4}
+							\right ]
+							=
+							e^{-t} \cos 2 t
+						\end{align*} 
+
+						Now what is left is the second term so seek the function \(f(t)\) such that
+						
+						\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {1\over (s+ 1)^2 +4}\] 
+
+						From the table we identify the following transform pair:
+
+						\[\displaystyle {\cal L} \big\{ e^{at} \sin \omega t \big\}  = \frac{\omega}{(s-a)^2+\omega^2} \]
+
+						Substituting \(a=-1\) and \(\omega=2\) we obtain
+
+						\[\displaystyle {\cal L} \big\{ e^{-t} \sin 2 t \big\}  = \frac{2}{(s+1)^2+4} \]
+
+						Which is not our exact equation but pretty close as it is just a constant multiplier just as in Example <a href="#x1-42">8.2.2</a> so we simply divide both sides by \(\sqrt{2}\) and use the 
+						Linearity Property
+						to obtain our exact equation
+
+						\begin{align*}
+							\frac{1}{2} {\cal L} \big\{ e^{-t} \sin 2 t \big\}  = \frac{1}{(s+1)^2+4} 
+							\Longrightarrow {\cal L} \left\{ \, \frac{1}{2} e^{-t} \sin 2 t \right\}  = \frac{1}{(s+1)^2+4}   \\
+						\end{align*}
+						Thus we have
+						
+						\begin{align*} 
+							 {\cal L}^{-1}\left[  {1\over (s+ 1)^2 +4}
+							\right ]
+							=
+							\frac{1}{2} e^{-t} \sin 2 t
+						\end{align*} 
+					</div>	
+					<br>
+					<hr>
+					<br>
+					<div>
+						Finally substituting the inverse Laplace transforms back in we obtain our answer
+
+						\begin{align*} 
+							{\cal L}^{-1}\left[ {3s+8\over s^2+2s+5} \right] 
+							= & \, {\cal L}^{-1}\left[ {3s + 8 \over (s+ 1)^2 +4}  \right] \\
+							= & \, {\cal L}^{-1}\left[ {3(s+1)\over (s+ 1)^2 +4}
+							+
+							{5\over (s+ 1)^2 +4} \right] \\
+							= &
+								\, 3 \, \underset{e^{-t} \cos 2 t}{\underbrace{ {\cal L}^{-1}\left[  {s+1\over (s+ 1)^2 +4}
+								\right ]}}
+								+ 5 \, \underset{\frac{1}{2} e^{-t} \sin 2 t}{\underbrace{ {\cal L}^{-1}\left[ {1\over (s+ 1)^2 +4}\right ] }} \\
+							= &
+								\quad \, 3 \, e^{-t} \cos 2 t
+								\quad+\quad \, \frac{5}{2} e^{-t} \sin 2 t \\	
+							= &
+								\, \left( 3 \, \cos 2 t
+								\, + \, \frac{5}{2} \sin 2 t \right) e^{-t}  \\			
+						\end{align*} 
+						
+					</div>
+
 				</details>
 			</div>
 		</details>
 
 		<details id="9a9f8657-277e-40af-a898-8f1de5c27291">
-			<summary>Inverse Laplace Transforms of Rational Functions</summary>
+			<summary>Rational Functions</summary>
 
 			<div id="dfe95591-91e4-4877-a335-27024d674072">
 				Using the Laplace transform to solve differential equations often requires finding the inverse transform of a rational function \[ F(s)={P(s)\over Q(s)}\] where \(P\) and \(Q\) are polynomials in \(s\) with no common factors. Since it can be shown that \(\lim _{s\to \infty }F(s)=0\) if \(F\) is a Laplace transform, we need only consider the case where \(\mbox {degree}(P)&lt;\mbox {degree}(Q)\). To obtain \({\cal L}^{-1}(F)\), we find the partial fraction expansion of \(F\), obtain inverse transforms of the individual terms in the expansion from the table of Laplace transforms, and use the linearity property of the inverse transform. The next two examples illustrate this. 
 			</div>
 
+			<br>
+			<br>
+			<!--Example 4-->
 			<div class="example" id="x1-64" style="--ex-number: 4">
 				<div>
 					Find the inverse Laplace transform of 
@@ -164,6 +465,7 @@
 				The shortcut employed in the second solution of Example&nbsp;<a href="#x1-64">8.2.4</a> is <span class="vocab">Heaviside’s method</span>. The next theorem states this method formally. For a proof and an extension of this theorem, see Exercise&nbsp;<span class="ptmb8t-">10</span>. 
 			</div>
 
+			<!--Thm-->
 			<div class="theorem" id="x1-122">
 				<span class="head">Theorem&nbsp;8.2.2</span>
 				Suppose 
@@ -175,6 +477,9 @@
 				where \(s_1\), \(s_2,\) …\(,\) \(s_n\) are distinct and \(P\) is a polynomial of degree less than \(n.\) Then \[ F(s)={A_1\over s-s_1}+{A_2\over s-s_2}+\cdots +{A_n\over s-s_n},\] where \(A_i\) can be computed from <a href="#x1-13r6">(8.2.6)</a> by ignoring the factor \(s-s_i\) and setting \(s=s_i\) elsewhere.
 			</div>
 
+			<br>
+			<br>
+			<!--Example 5-->
 			<div class="example" id="x1-145" style="--ex-number: 5">
 				<div>
 					Find the inverse Laplace transform of 
@@ -205,6 +510,9 @@
 				<strong>Remark:</strong> We didn’t “multiply out” the numerator in <a href="#x1-15r7">(8.2.7)</a> before computing the coefficients in <a href="#x1-16r8">(8.2.8)</a>, since it wouldn’t simplify the computations.
 			</div>
 
+			<br>
+			<br>
+			<!--Example 6-->
 			<div class="example" id="x1-176" style="--ex-number: 6">
 				<div>
 					Find the inverse Laplace transform of 
@@ -246,6 +554,9 @@
 				</details>
 			</div>
 
+			<br>
+			<br>
+			<!--Example 7-->
 			<div class="example" id="x1-227" style="--ex-number: 7">
 				<div>
 					Find the inverse Laplace transform of \[ F(s)={s^2-5s+7\over (s+2)^3}\]
@@ -270,6 +581,9 @@
 				</details>
 			</div>
 
+			<br>
+			<br>
+			<!--Example 8-->
 			<div class="example" id="x1-238" style="--ex-number: 8">
 				<div>
 					Find the inverse Laplace transform of 
@@ -317,6 +631,9 @@
 				</details>
 			</div>
 
+			<br>
+			<br>
+			<!--Example 9-->
 			<div class="example" id="x1-289" style="--ex-number: 9">
 				<div>
 					Find the inverse Laplace transform of 
@@ -328,16 +645,8 @@
 										
 				<details class="solution">
 					<summary>Solution</summary>
-					The form for the partial fraction expansion is \[ F(s)={A+Bs\over s^2+1}+{C+Ds\over s^2+4}\] The coefficients \(A\), \(B\), \(C\) and \(D\) can be obtained by finding a common denominator and equating the resulting numerator to the numerator in <a href="#x1-29r17">(8.2.17)</a>. However, since there’s no first power of \(s\) in the denominator of <a href="#x1-29r17">(8.2.17)</a>, there’s an easier way: the expansion of \[ F_1(s)={1\over (s^2+1)(s^2+4)} \] can be obtained quickly by using Heaviside’s method to expand \[ {1\over (x+1)(x+4)}={1\over 3}\left ({1\over x+1}-{1\over x+4}\right ) \] and then setting \(x=s^2\) to obtain \[ {1\over (s^2+1)(s^2+4)}={1\over 3}\left ({1\over s^2+1}-{1\over s^2+4}\right )\] Multiplying this by \(8+3s\) yields \[ F(s)={8+3s\over (s^2+1)(s^2+4)}={1\over 3}\left ({8+3s\over s^2+1}-{8+3s\over s^2+4}\right )\] Therefore \[ {\cal L}^{-1}(F)={8\over 3}\sin t+\cos t-{4\over 3}\sin 2t-\cos 2t\]
+					The form for the partial fraction expansion is \[ F(s)={A+Bs\over s^2+1}+{C+Ds\over s^2+4}\] The coefficients \(A\), \(B\), \(C\) and \(D\) can be obtained by finding a common denominator and equating the resulting numerator to the numerator in <a href="#x1-29r17">(8.2.17)</a>. However, since there’s no first power of \(s\) in the denominator of <a href="#x1-29r17">(8.2.17)</a>, there’s an easier way: the expansion of \[ F_1(s)={1\over (s^2+1)(s^2+4)} \] can be obtained quickly by using Heaviside’s method to expand \[ {1\over (x+1)(x+4)}={1\over 3}\left ({1\over x+1}-{1\over x+4}\right ) \] and then setting \(x=s^2\) to obtain \[ {1\over (s^2+1)(s^2+4)}={1\over 3}\left ({1\over s^2+1}-{1\over s^2+4}\right )\] Multiplying this by \(8+3s\) yields \[ F(s)={8+3s\over (s^2+1)(s^2+4)}={1\over 3}\left ({8+3s\over s^2+1}-{8+3s\over s^2+4}\right )\] Therefore \[ {\cal L}^{-1}(F)={8\over 3}\sin t+\cos t-{8\over 3}\sin 2t-\cos 2t\]
 				</details>
-			</div>
-
-			<div id="e15b637a-9869-4327-b7b9-c9f1b9769088" class="stepbox">
-				<strong>USING TECHNOLOGY</strong>
-
-				<div class="indent" id="4d860f58-c0ec-4851-bedf-71286ef5a2a3">
-					Some software packages that do symbolic algebra can find partial fraction expansions very easily. We recommend that you use such a package if one is available to you, but only after you’ve done enough partial fraction expansions on your own to master the technique. 
-				</div>
 			</div>
 		</details>
 

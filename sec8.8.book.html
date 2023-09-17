@@ -46,14 +46,14 @@
 					<td> \((s &gt; 0)\)</td>
 				</tr>
 				<tr>
-					<td> \(t^n \quad n &gt; 0\) </td>
-					<td> \(\displaystyle {{n!\over s^{n+1}}}\) </td>
+					<td> t </td>
+					<td> \(\displaystyle {{1\over s^s}}\) </td>
 					<td> \((s &gt; 0)\)</td>
 				</tr>
 				<tr>
-					<td> \(t^p \quad p &gt; -1\) </td>
-					<td> \(\displaystyle {{\Gamma (p+1) \over s^{(p+1)}}}\) </td>
-					<td> \((s&gt;0)\) </td>
+					<td> \(t^n \) </td>
+					<td> \(\displaystyle {{n!\over s^{n+1}}}\) </td>
+					<td> \((s &gt; 0)\)</td>
 				</tr>
 				<tr>
 					<td> \(e^{at}\) </td>
@@ -61,7 +61,12 @@
 					<td> \((s &gt; a)\)</td>
 				</tr>
 				<tr>
-					<td> \(t^ne^{at} \quad n &gt; 0 \) </td>
+					<td> \(te^{at}\) </td>
+					<td> \(\displaystyle {{1 \over (s-a)^2}}\) </td>
+					<td> \((s &gt; a)\)</td>
+				</tr>
+				<tr>
+					<td> \(t^ne^{at}  \) </td>
 					<td> \(\displaystyle {{n! \over (s-a)^{n+1}}}\) </td>
 					<td> \((s &gt; 0)\) </td>
 				</tr>
@@ -72,15 +77,15 @@
 					<td> \((s &gt; 0)\) </td>
 				</tr>
 				<tr>
+					<td> \(e^{a t} \cos \omega t\) </td>
+					<td> \(\displaystyle {{s - a \over (s-a )^2+\omega ^2}}\) </td>
+					<td> \((s &gt; a )\) </td>
+				</tr>
+				<tr>
 					<td> \(\sin \omega t\)
 					</td>
 					<td> \(\displaystyle {{\omega \over s^2+\omega ^2}}\) </td>
 					<td> \((s &gt; 0)\) </td>
-				</tr>
-				<tr>
-					<td> \(e^{a t} \cos \omega t\) </td>
-					<td> \(\displaystyle {{s - a \over (s-a )^2+\omega ^2}}\) </td>
-					<td> \((s &gt; a )\) </td>
 				</tr>
 				<tr>
 					<td> \(e^{a t} \sin \omega t\) </td>
@@ -88,28 +93,63 @@
 					<td> \((s &gt; a )\) </td>
 				</tr>
 				<tr>
-					<td> \(\cosh bt\) </td>
-					<td> \(\displaystyle {{s \over s^2-b^2}}\) </td>
-					<td> \((s &gt; |b|)\) </td>
+					<td> \(e^{at}f(t)\) </td>
+					<td> \(F(s-a)\) </td>
+					<td> </td>
 				</tr>
 				<tr>
-					<td> \(\sinh bt\) </td>
-					<td> \(\displaystyle {{b \over s^2-b^2}}\) </td>
-					<td> \((s &gt; |b|)\)
+					<td> \(\cosh \omega t\) </td>
+					<td> \(\displaystyle {{s \over s^2-\omega^2}}\) </td>
+					<td> \((s &gt; |\omega|)\) </td>
+				</tr>
+				<tr>
+					<td> \(\sinh \omega t\) </td>
+					<td> \(\displaystyle {{b \over s^2-\omega^2}}\) </td>
+					<td> \((s &gt; |\omega|)\)
 					</td>
 				</tr>
 				<tr>
 					<td> \(t \cos \omega t\)
 					</td>
-					<td> \(\displaystyle {{s^2-\omega ^2 \over (s^2+\omega ^2)^2}}\) </td>
+					<td> \(\displaystyle {\small - \frac{d}{ds} \left( {{s \over s^2+\omega ^2}} \right) } = {{s^2-\omega ^2 \over (s^2+\omega ^2)^2}}\) </td>
 					<td> \((s&gt;0)\) </td>
 				</tr>
-	
 				<tr>
 					<td> \(t \sin \omega t\) </td>
-					<td> \(\displaystyle {{2\omega s \over (s^2+\omega ^2)^2}}\) </td>
+					<td> \(\displaystyle {\small - \frac{d}{ds} \left( {{\omega \over s^2+\omega ^2}} \right) } = {{2\omega s \over (s^2+\omega ^2)^2}}\) </td>
 					<td> \((s&gt;0)\) </td>
 				</tr>
+				<tr>
+					<td> \(t f(t)\) </td>
+					<td> \(\displaystyle {{- \frac{d}{ds} \Big( F(s) \Big) }}\) </td>
+					<td></td>
+				</tr>
+				<tr>
+					<td> \(t^2 f(t)\) </td>
+					<td> \(\displaystyle {{\frac{d^2}{ds^2} \Big( F(s) \Big) }}\) </td>
+					<td></td>
+				</tr>
+				<tr>
+					<td> \(t^n f(t)\) </td>
+					<td> \(\displaystyle {{(-1)^{n} \frac{d^n}{ds^n} \Big( F(s) \Big) }}\) </td>
+					<td></td>
+				</tr>
+				<tr>
+					<td> \(y(t)\) </td>
+					<td> \(\displaystyle {{Y(s)}} \) </td>
+					<td></td>
+				</tr>
+				<tr>
+					<td> \(\dot{y}(t)\) </td>
+					<td> \(\displaystyle {{sY(s) - y(0)}} \) </td>
+					<td></td>
+				</tr>
+				<tr>
+					<td> \(\ddot{y}(t)\) </td>
+					<td> \(\displaystyle {{s^2 Y(s) - s y(0) - \dot{y}(0)}} \) </td>
+					<td></td>
+				</tr>
+
 				<tr>
 					<td> \(\sin \omega t -\omega t\cos \omega t \) </td>
 					<td> \(\displaystyle {{2\omega ^3\over (s^2+\omega ^2)^2}}\) </td>
@@ -124,16 +164,6 @@
 					<td> \(\displaystyle {{1 \over t} \sin \omega t }\) </td>
 					<td> \(\displaystyle {\arctan \left ({\omega \over s}\right )}\) </td>
 					<td> \((s&gt;0)\)</td>
-				</tr>
-				<tr>
-					<td> \(e^{at}f(t)\) </td>
-					<td> \(F(s-a)\) </td>
-					<td> </td>
-				</tr>
-				<tr>
-					<td> \(t^kf(t)\) </td>
-					<td> \(\displaystyle {{(-1)^kF^{(k)}(s)}}\) </td>
-					<td></td>
 				</tr>
 				<tr>
 					<td> \(f(\omega t)\)
