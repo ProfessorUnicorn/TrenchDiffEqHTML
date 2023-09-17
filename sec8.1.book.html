@@ -611,7 +611,7 @@
 			<!--Example 6-->
 			<div class="example" id="x1-176" style="--ex-number: 6">
 				<div>
-					Find \({\cal L} \big\{ \cosh bt \big\} \) by applying the 
+					Find \({\cal L} \big\{ \cosh \omega t \big\} \) by applying the 
 					<span class="vocab">linearity</span> property (Theorem&nbsp;<a href="#x1-162">8.1.2</a>) of the Laplace transform and the resulting transform pair from Example <a href="#x1-103">8.1.3</a>
 
 					\[ {\cal L}   \big\{ e^{at} \big\} ={1\over s-a} 
@@ -626,48 +626,48 @@
 						We'll start by rewriting the cosh function in terms of exponentials (by definition):
 
 						\[ 
-						\cosh bt
-						={{e^{bt}+e^{-bt}\over 2}
-						=\frac{1}{2}e^{bt} + \frac{1}{2}e^{-bt} 
+						\cosh \omega t
+						={{e^{\omega t}+e^{-\omega t}\over 2}
+						=\frac{1}{2}e^{\omega t} + \frac{1}{2}e^{-\omega t} 
 						}\]
 
 						Now we apply the linearity property of the Laplace transform
 
 						<a id="x1-18r9"></a>
 						\begin {align} \label {eq:8.1.9} 
-							{\cal L} \big\{ \cosh bt \big\} 
-								= & \, {\cal L} \left\{ \frac{1}{2}e^{bt} + \frac{1}{2}e^{-bt} \right\} \nonumber \\
-								= & \, {\cal L} \left\{ \frac{1}{2}e^{bt}  \right\}  + {\cal L} \left\{ \frac{1}{2}e^{-bt} \right\} \nonumber \\
-								= & \, \frac{1}{2} {\cal L} \left\{ e^{bt}  \right\}  + \frac{1}{2} {\cal L} \left\{ e^{-bt} \right\}
+							{\cal L} \big\{ \cosh \omega t \big\} 
+								= & \, {\cal L} \left\{ \frac{1}{2}e^{\omega t} + \frac{1}{2}e^{-\omega t} \right\} \nonumber \\
+								= & \, {\cal L} \left\{ \frac{1}{2}e^{\omega t}  \right\}  + {\cal L} \left\{ \frac{1}{2}e^{-\omega t} \right\} \nonumber \\
+								= & \, \frac{1}{2} {\cal L} \left\{ e^{\omega t}  \right\}  + \frac{1}{2} {\cal L} \left\{ e^{-\omega t} \right\}
 						\end {align}
 
 						Now we apply the given Laplace transform 
 						\( {\cal L}   \big\{ e^{at} \big\} =1 / (s-a) \) to each:
 
 						\[
-						{\cal L} \left\{ e^{bt} \right\} ={1\over s-b}
+						{\cal L} \left\{ e^{\omega t} \right\} ={1\over s-\omega}
 						\quad\quad\quad
-						s>b
+						s>\omega
 						\]
 
 						\[
-						{\cal L} \left\{ e^{-bt} \right\}
-						= {1\over s+b}
+						{\cal L} \left\{ e^{-\omega t} \right\}
+						= {1\over s+\omega}
 						\quad\quad\quad
-						s > -b
+						s > -\omega
 						\]
 
-						Now substituting them back in we can get an expression for \({\cal L} \big\{ \cosh bt \big\} \)
+						Now substituting them back in we can get an expression for \({\cal L} \big\{ \cosh \omega t \big\} \)
 
 						\begin {align*} 
-							{\cal L} \big\{ \cosh bt \big\} 
-								= & \, \frac{1}{2} {\cal L} \left\{ e^{bt}  \right\}  + \frac{1}{2} {\cal L} \left\{ e^{-bt} \right\} \nonumber \\
-								= & \, \frac{1}{2} \left( \frac{1}{s-b} \right) + \frac{1}{2} \left( \frac{1}{s+b} \right) \nonumber \\
-								= & \,  \frac{s+b}{2(s-b)(s+b)} + \frac{s-b}{2(s+b)(s-b)} \nonumber \\
-								= & \,  \frac{2s}{2(s-b)(s+b)} \nonumber \\
-								= & \,  \frac{s}{(s-b)(s+b)} \nonumber \\
-								= & \,  \frac{s}{s^2-b^2} \quad\quad\quad
-								s > \big| b \big| \nonumber \\
+							{\cal L} \big\{ \cosh \omega t \big\} 
+								= & \, \frac{1}{2} {\cal L} \left\{ e^{\omega t}  \right\}  + \frac{1}{2} {\cal L} \left\{ e^{-\omega t} \right\} \nonumber \\
+								= & \, \frac{1}{2} \left( \frac{1}{s-\omega} \right) + \frac{1}{2} \left( \frac{1}{s+\omega} \right) \nonumber \\
+								= & \,  \frac{s+b}{2(s-b)(s+\omega)} + \frac{s-\omega}{2(s+\omega)(s-b)} \nonumber \\
+								= & \,  \frac{2s}{2(s-\omega)(s+b)} \nonumber \\
+								= & \,  \frac{s}{(s-\omega)(s+b)} \nonumber \\
+								= & \,  \frac{s}{s^2-\omega^2} \quad\quad\quad
+								s > \big| \omega \big| \nonumber \\
 						\end {align*}
 
 					</div>	
@@ -733,6 +733,8 @@
 				Recall we observed this pattern earlier in Example <a href="#x1-51">8.1.1</a> and <a href="#x1-82">8.1.2</a> but now that we have formally established it we can use this <span class="vocab">First Shifting Theorem</span> to calculate other Laplace transforms without having to calculate the integral.
 
 			</div>
+
+			<!--Example 7-->
 			<div class="example" id="x1-227" style="--ex-number: 7">
 				<div>
 					Use the <span class="vocab">First Shifting Theorem</span> (Theorem&nbsp;<a href="#x1-193">8.1.3</a>) and the resulting Laplace transform pairs found in Examples <a href="#x1-51">8.1.1</a>, <a href="#x1-82">8.1.2</a>, and <a href="#x1-114">8.1.4</a> to find the following Laplace transforms
@@ -758,24 +760,32 @@
 					<ol>
 						<li>
 							<div>
-								In Example <a href="#x1-51">8.1.1</a> we found 
+								In Example <a href="#x1-51">8.1.1</a> with \(f(t)=1\) we found 
 								
 								\[ 
+									{\cal L} \big\{ f(t) \big\} 
+									=
 									{\cal L} \big\{ 1 \big\} 
 									= \int _0^\infty \, 1 \cdot e^{-st} \, dt
 									= \frac{1}{s} 
 									= F(s) 
 								\]	
 
-								Now applying the <span class="vocab">First Shifting Theorem</span> (Theorem&nbsp;<a href="#x1-193">8.1.3</a>) we can calculate \( {\cal L} \big\{ 1 \cdot e^{at} \big\} \)
+								Now applying the <span class="vocab">First Shifting Theorem</span> (Theorem&nbsp;<a href="#x1-193">8.1.3</a>) we can calculate \( {\cal L} \big\{ f(t) \cdot e^{at} \big\} = {\cal L} \big\{ 1 \cdot e^{at} \big\} \)
 
 								\begin{align*}
 									{\cal L} \big\{ e^{at} \big\} 
 									= & \int _0^\infty \, e^{-st} \cdot e^{at} \, dt \\
 									= & \int _0^\infty \, e^{-(s-a)t} \, dt
-									= \frac{1}{s-a} 
-									= F(s-a) 
+									= \frac{1}{s-a}  \quad\quad s>a
 								\end{align*}
+
+								Notice how the result is the same except shifted by \(a\) so
+
+								\begin{align*}
+									{\cal L} \big\{ 1 \big\} = & \frac{1}{s} = F(s) \\
+									{\cal L} \big\{ e^{at} \big\} = & \frac{1}{s-a} = F(s-a)
+								\end{align*} 
 							</div>
 						</li>
 						<br>
