@@ -77,7 +77,7 @@
 						\end {eqnarray*} 
 					</div>
 
-					<div class="indent" id="6e994a4f-def2-46de-8758-c2f468bec1f0">
+					<div id="6e994a4f-def2-46de-8758-c2f468bec1f0">
 						Since the symbol used for the variable of integration has no effect on the value of a definite integral, we can now replace \(x\) by the more standard \(t\) and write \[ \int _2^\infty e^{-st}(t-1)\,dt =e^{-2s}\int _0^\infty e^{-st}(t+1)\,dt=e^{-2s}{\cal L}(t+1)\] This and <a href="#x1-5r3">(8.4.3)</a> imply that \[ {\cal L}(f)={\cal L}(2t+1)+e^{-2s}{\cal L} (t+1)\] Now we can use the table of Laplace transforms to find that \[ {\cal L}(f)={2\over s^2}+{1\over s} +e^{-2s}\left ({1\over s^2}+{1\over s}\right )\] 
 					</div>
 				</details>
@@ -87,7 +87,7 @@
 				
 				<figcaption>
 					<span class="id">Figure&nbsp;8.4.1</span>
-					<span class="content"> The piecewise continuous function <a href="#x1-3r1">(8.4.1)</a> </span>
+					<span class="content">The piecewise continuous function <a href="#x1-3r1">(8.4.1)</a> </span>
 				</figcaption>
 			</figure>
 
@@ -96,7 +96,7 @@
 				
 				<figcaption>
 					<span class="id">Figure&nbsp;8.4.2</span>
-					<span class="content"> \(y=u(t-\tau )\)</span>
+					<span class="content">\(y=u(t-\tau )\)</span>
 				</figcaption>
 			</figure>
 		</details>
@@ -112,7 +112,7 @@
 				\]
 				that is, the step now occurs at \(t=\tau \) (Figure&nbsp;<a href="#x1-7r2">8.4.2</a>).
 			</div>
-			<div class="indent" id="bb37f016-2c88-4da1-86f5-692509c0d8f7">
+			<div id="bb37f016-2c88-4da1-86f5-692509c0d8f7">
 				The step function enables us to represent piecewise continuous functions conveniently. For example, consider the function \begin {equation} \label {eq:8.4.5} f(t)=\left \{\begin {array}{rl} f_0(t),&amp;0\le t&lt;t_1,\\ f_1(t),&amp;t\ge t_1 \end {array}\right. \end {equation} <a id="x1-9r5"></a> where we assume that \(f_0\) and \(f_1\) are defined on \([0,\infty )\), even though they equal \(f\) only on the indicated intervals. This assumption enables us to rewrite <a href="#x1-9r5">(8.4.5)</a> as 
 				<a id="x1-10r6"></a> 
 				\begin {equation} 
@@ -120,7 +120,7 @@
 				\end {equation} 
 				To verify this, note that if \(t&lt;t_1\) then \(u(t-t_1)=0\) and <a href="#x1-10r6">(8.4.6)</a> becomes \[ f(t)=f_0(t)+(0)\left (f_1(t)-f_0(t)\right )=f_0(t)\] If \(t\ge t_1\) then \(u(t-t_1)=1\) and <a href="#x1-10r6">(8.4.6)</a> becomes \[ f(t)=f_0(t)+(1)\left (f_1(t)-f_0(t)\right )=f_1(t)\] 
 			</div>
-			<div class="indent" id="83fb7e2a-150c-4f7a-b848-875bd9c64076">
+			<div id="83fb7e2a-150c-4f7a-b848-875bd9c64076">
 				We need the next theorem to show how <a href="#x1-10r6">(8.4.6)</a> can be used to find \({\cal L}(f)\). 
 			</div>
 			<div class="theorem" id="x1-111">
@@ -162,12 +162,12 @@
 							{\cal L}(f)&amp;=&amp;{\cal L}(2t+1) +{\cal L}\left (u(t-2)(t-1)\right )\\ &amp;=&amp;{\cal L}(2t+1) +e^{-2s}{\cal L}(t+1)\quad \mbox { (from Theorem 8.4.1})\\ &amp;=&amp;{2\over s^2}+{1\over s}+e^{-2s}\left ({1\over s^2}+{1\over s}\right ) 
 						\end {eqnarray*} 
 					</div>
-					<div class="indent" id="6efc1350-18c6-481e-924d-cc1a8ecad9df">
+					<div id="6efc1350-18c6-481e-924d-cc1a8ecad9df">
 						which is the result obtained in Example&nbsp;<a href="#x1-21">8.4.1</a>. 
 					</div>
 				</details>
 			</div>
-			<div class="indent" id="77dbcdb9-f245-40e3-8d38-408e58764355">
+			<div id="77dbcdb9-f245-40e3-8d38-408e58764355">
 				Formula <a href="#x1-10r6">(8.4.6)</a> can be extended to more general piecewise continuous functions. For example, we can write
 				\[ f(t)=\left \{ 
 					\begin {array}{rl} 
@@ -201,7 +201,7 @@
 					<img height="264" src="EPS/fig080403.png" width="409" />
 					<figcaption>
 						<span class="id">Figure&nbsp;8.4.3</span>
-						<span class="content"> The piecewise continuous function <a href="#x1-15r7">(8.4.7)</a></span>
+						<span class="content">The piecewise continuous function <a href="#x1-15r7">(8.4.7)</a></span>
 					</figcaption>
 				</figure>
 
@@ -215,7 +215,7 @@
 								&amp;&amp;+u(t-5)(t-1-3t) 
 							\end {eqnarray*} 
 						</div>
-						<div class="indent" id="814ef8e2-04f2-4ec4-be2d-c710b4a73cec">
+						<div id="814ef8e2-04f2-4ec4-be2d-c710b4a73cec">
 							or 
 							\[ f(t)=1-2u(t-2)t+u(t-3)(5t-1)-u(t-5)(2t+1)\] Now Theorem&nbsp;<a href="#x1-111">8.4.1</a> implies that
 						</div>
@@ -228,7 +228,7 @@
 						</div>
 				</details>
 			</div>
-			<div class="indent" id="faa4529d-5140-48f7-b53e-6624b1c67b13">
+			<div id="faa4529d-5140-48f7-b53e-6624b1c67b13">
 				The trigonometric identities 
 			</div>
 			<div class="eqnarray" id="3d3159ca-1454-4b25-a0de-3a826d900c0e">
@@ -237,7 +237,7 @@
 					\cos (A+B)&amp;=&amp;\cos A\cos B-\sin A\sin B\label {eq:8.4.9} 
 				\end {eqnarray} 
 			</div>
-			<div class="indent" id="57d56d7b-1aef-4c57-83b6-530169f60fd1">
+			<div id="57d56d7b-1aef-4c57-83b6-530169f60fd1">
 				are useful in problems that involve shifting the arguments of trigonometric functions. We’ll use these identities in the next example. 
 			</div>
 			<div class="example" id="x1-175" style="--ex-number: 5">
@@ -261,7 +261,7 @@
 					<img height="264" src="EPS/fig080404.png" width="409" /> 
 					<figcaption>
 						<span class="id">Figure&nbsp;8.4.4</span>
-						<span class="content"> The piecewise continuous function <a href="#x1-18r8">(8.4.10)</a> </span>
+						<span class="content">The piecewise continuous function <a href="#x1-18r8">(8.4.10)</a> </span>
 					</figcaption>
 				</figure>
 				<details class="solution">
@@ -328,7 +328,7 @@
 							h(t)&amp;=&amp;{\cal L}^{-1}\left (G_0(s)\right )-{\cal L}^{-1}\left (e^{-s}G_1(s)\right )+{\cal L}^{-1}\left (e^{-4s}G_2(s)\right )\\ &amp;=&amp;t-u(t-1)\left [(t-1)+2\right ]+u(t-4)\left [2(t-4)^2+1\right ]\\ &amp;=&amp;t-u(t-1)(t+1)+u(t-4)(2t^2-16t+33) 
 						\end {eqnarray*} 
 					</div>
-					<div class="indent" id="1f59847e-5e5f-420c-b935-a41713339b3c">
+					<div id="1f59847e-5e5f-420c-b935-a41713339b3c">
 						which can also be written as 
 						\[ 
 							h(t)=\left \{ 
@@ -356,7 +356,7 @@
 							h(t)&amp;=&amp;2\cos 2t-u(t-\pi /2)\left [3\cos 3(t-\pi /2)+{1\over 3}\sin 3\left (t-{\pi \over 2}\right )\right ]\\ &amp;&amp;+u(t-\pi )e^{-3(t-\pi )}\left [\cos (t-\pi )-2\sin (t-\pi )\right ] 
 						\end {eqnarray*} 
 					</div>
-					<div class="indent" id="32191d37-9613-4874-8975-914796e3717f">
+					<div id="32191d37-9613-4874-8975-914796e3717f">
 						
 						Using the trigonometric identities (<span class="ptmb8t-">8.4.8</span>) and (<span class="ptmb8t-">8.4.9</span>), we can rewrite this as 
 						<a id="x1-26r11"></a> 
@@ -372,7 +372,7 @@
 						<img height="264" src="EPS/fig080405.png" width="409" /> 
 						<figcaption>
 							<span class="id">Figure&nbsp;8.4.5</span>
-							<span class="content"> The piecewise continuous function <a href="#x1-26r11">(8.4.13)</a></span>
+							<span class="content">The piecewise continuous function <a href="#x1-26r11">(8.4.13)</a></span>
 						</figcaption>
 					</figure>
 				</details>

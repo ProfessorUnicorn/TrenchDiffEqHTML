@@ -41,7 +41,7 @@
 				\end {equation} 
 				where \(a\), \(b\), and \(c\) are constants (\(a\ne 0\)) and \(f\) is piecewise continuous on \([0,\infty )\). Problems of this kind occur in situations where the input to a physical system undergoes instantaneous changes, as when a switch is turned on or off or the forces acting on the system change abruptly. 
 			</div>
-			<div class="indent" id="b5387b21-23fc-4f57-a5ea-134af76f20d7">
+			<div id="b5387b21-23fc-4f57-a5ea-134af76f20d7">
 				It can be shown (Exercises&nbsp;<span class="ptmb8t-">23</span> and <span class="ptmb8t-">24</span>) that the differential equation in <a href="#x1-2r1">(8.5.1)</a> has no solutions on an open interval that contains a jump discontinuity of \(f\). Therefore we must define what we mean by a solution of <a href="#x1-2r1">(8.5.1)</a> on \([0,\infty )\) in the case where \(f\) has jump discontinuities. The next theorem motivates our definition. We omit the proof. 
 			</div>
 			<div class="theorem" id="x1-31">
@@ -64,10 +64,10 @@
 				</ol>
 			</div>
 
-			<div class="indent" id="d955bc7e-6d40-45c1-ab7c-4bb3fa50bd9b">			
+			<div id="d955bc7e-6d40-45c1-ab7c-4bb3fa50bd9b">			
 				We define the function \(y\) of Theorem&nbsp;<a href="#x1-31">8.5.1</a> to be the solution of the initial value problem <a href="#x1-2r1">(8.5.1)</a>.
 			</div>
-			<div class="indent" id="bebf9278-d315-4c6c-8109-da554753395d">
+			<div id="bebf9278-d315-4c6c-8109-da554753395d">
 				We begin by considering initial value problems of the form
 				<a id="x1-8r2"></a>
 				\begin {equation} 
@@ -109,7 +109,7 @@
 					</li>
 				</ol>
 			</div>
-			<div class="indent" id="6f6ee566-1ee4-4969-ab5c-5a4d78a0ef49">
+			<div id="6f6ee566-1ee4-4969-ab5c-5a4d78a0ef49">
 				It is shown in Exercise&nbsp;<span class="ptmb8t-">23</span> that \(\dot{y}\) exists and is continuous at \(t_1\). The next example illustrates this procedure. 
 			</div>
 			<div class="example" id="x1-91" style="--ex-number: 1">
@@ -149,13 +149,13 @@
 						<img height="264" src="EPS/fig080501.png" width="409" />
 						<figcaption>
 							<span class="id">Figure&nbsp;8.5.1</span>
-							<span class="content"> Graph of <a href="#x1-11r4">(8.5.4)</a> </span>
+							<span class="content">Graph of <a href="#x1-11r4">(8.5.4)</a> </span>
 						</figcaption>
 					</figure>
 				</details>
 			</div>
 
-			<div class="indent" id="24d53bec-d7cd-45e3-ae9d-0e6913fbc1f0">
+			<div id="24d53bec-d7cd-45e3-ae9d-0e6913fbc1f0">
 				If \(f_0\) and \(f_1\) are defined on \([0,\infty )\), we can rewrite <a href="#x1-8r2">(8.5.2)</a> as \[ a\ddot{y}+b\dot{y}+cy=f_0(t)+u(t-t_1)\left (f_1(t)-f_0(t)\right ), \quad y(0)=k_0,\quad \dot{y}(0)=k_1\] and apply the method of Laplace transforms. We’ll now solve the problem considered in Example&nbsp;<a href="#x1-91">8.5.1</a> by this method. 
 			</div>
 
@@ -242,7 +242,7 @@
 							&amp;=&amp;{1\over s^2}-{e^{-s}\over s^2} 
 						\end {eqnarray*} 
 					</div>
-					<div class="indent" id="ba5eba95-fa90-4d3c-9774-87cae86e6692">
+					<div id="ba5eba95-fa90-4d3c-9774-87cae86e6692">
 						Since transforming <a href="#x1-18r8">(8.5.8)</a> yields \[ (s^2-1) Y(s)={\cal L}(f)+2-s\] we see that \begin {equation} \label {eq:8.5.9} Y(s)=(1-e^{-s})H(s)+{2-s\over s^2-1} \end {equation} <a id="x1-19r9"></a> where \[ H(s)={1\over s^2(s^2-1)}={1\over s^2-1}-{1\over s^2}\] therefore \begin {equation} \label {eq:8.5.10} h(t)=\sinh t-t\end {equation} <a id="x1-20r10"></a> Since \[ {\cal L}^{-1}\left ({2-s\over s^2-1}\right )=2\sinh t-\cosh t\] we conclude from <a href="#x1-19r9">(8.5.9)</a>, <a href="#x1-20r10">(8.5.10)</a>, and Theorem&nbsp;<span class="ptmb8t-">8.4.1</span> that \[ y=\sinh t-t-u(t-1)\left (\sinh (t-1)-t+1\right )+2\sinh t- \cosh t\] or 
 						<a id="x1-21r11"></a>
 						\begin {equation} 
@@ -286,7 +286,7 @@
 							&amp;=&amp;-{2e^{-{\pi s/ 4}}\over s^2+4}-{se^{-\pi s}\over s^2+4} 
 						\end {eqnarray*} 
 					</div>
-					<div class="indent" id="1d25cc7a-9157-4a3d-b13d-6c5fce4e776a">
+					<div id="1d25cc7a-9157-4a3d-b13d-6c5fce4e776a">
 						Since transforming <a href="#x1-23r12">(8.5.12)</a> yields \[ (s^2+1)Y(s)={\cal L}(f)\] we see that \begin {equation} \label {eq:8.5.13} Y(s)=e^{-{\pi s/ 4}} H_1(s)+e^{-\pi s} H_2(s) \end {equation} <a id="x1-24r13"></a> where \begin {equation} \label {eq:8.5.14} H_1(s)=-{2\over (s^2+1)(s^2+4)}\quad \mbox { and }\quad H_2(s)=-{s \over (s^2+1)(s^2+4)} \end {equation} <a id="x1-25r14"></a> To simplify the required partial fraction expansions, we first write \[ {1\over (x+1)(x+4)}={1\over 3}\left [{1\over x+1}-{1\over x+4}\right ]\] Setting \(x=s^2\) and substituting the result in <a href="#x1-25r14">(8.5.14)</a> yields \[ H_1(s)=-{2\over 3}\left [{1\over s^2+1}-{1\over s^2+4}\right ] \quad \mbox { and }\quad H_2(s)=-{1\over 3}\left [{s\over s^2+1}-{s\over s^2+4}\right ]\] The inverse transforms are \[ h_1(t)=-{2\over 3}\sin t+{1\over 3}\sin 2t \quad \mbox { and }\; h_2(t)=-{1\over 3}\cos t+{1\over 3}\cos 2t\] From <a href="#x1-24r13">(8.5.13)</a> and Theorem&nbsp;8.4.2, 
 						\begin {equation} \label {eq:8.5.15} y=u\left (t-{\pi \over 4}\right ) h_1\left (t-{\pi \over 4}\right )+ u(t-\pi ) h_2(t-\pi ) 
 						\end {equation} <a id="x1-26r15"></a> Since 
@@ -297,7 +297,7 @@
 							&amp;=&amp;-{\sqrt {2}\over 3} (\sin t-\cos t)-{1\over 3}\cos 2t 
 						\end {eqnarray*} 
 					</div>
-					<div class="indent" id="13c2ba19-f620-498b-9618-551bc7e0e2c0">
+					<div id="13c2ba19-f620-498b-9618-551bc7e0e2c0">
 						and 
 					</div>
 					<div class="eqnarray" id="8518c731-f48b-4d5b-b1e7-1eb137a10a19">
@@ -306,7 +306,7 @@
 							&amp;=&amp;{1\over 3}\cos t+{1\over 3}\cos 2t 
 						\end {eqnarray*} 
 					</div>
-					<div class="indent" id="b84a06f4-e672-44c1-9425-482a732ed1e7">
+					<div id="b84a06f4-e672-44c1-9425-482a732ed1e7">
 						<a href="#x1-26r15">(8.5.15)</a> can be rewritten as \[ y=-{1\over 3}u\left (t-{\pi \over 4}\right )\left (\sqrt {2}(\sin t-\cos t)+\cos 2t\right ) + {1\over 3} u(t-\pi ) (\cos t+\cos 2t) \] or 
 						<a id="x1-27r16"></a> 
 						\begin {equation} 
@@ -327,7 +327,7 @@
 				<img height="264" src="EPS/fig080502.png" width="409" />
 				<figcaption>
 					<span class="id">Figure&nbsp;8.5.2</span>
-					<span class="content"> Graph of <a href="#x1-27r16">(8.5.16)</a> </span>
+					<span class="content">Graph of <a href="#x1-27r16">(8.5.16)</a> </span>
 				</figcaption>
 			</figure>
 		</details>
