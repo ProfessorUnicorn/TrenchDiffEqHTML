@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-US" xml:lang="en-US">
 	<head>
-		<title>8.3 Solution of Initial Value Problems</title>
+		<title>8.3 Solution of IVPs</title>
 		<meta charset="utf-8" />
 		<meta content="TeX4ht (https://tug.org/tex4ht/)" name="generator" />
 		<meta content="width=device-width,initial-scale=1" name="viewport" />
@@ -27,188 +27,794 @@
 
 	<body>
 		<div id="f7b8dbe3-fc72-4d78-b56e-6a9d0b7a43b7" class="section-title">
-			8.3 Solution of Initial Value Problems 
+			8.3 Solution of IVPs 
 		</div>
 
 		<details id="129cf29a-6c10-44b2-884d-59fe9d658329">
-			<summary>Laplace Transforms of Derivatives</summary>
+			<summary>Laplace Derivatives</summary>
 		
 			<div id="d4c8e4f7-d205-4017-836c-88144e33e046">
-				In the rest of this chapter we’ll use the Laplace transform to solve initial value problems for constant coefficient second order equations. To do this, we must know how the Laplace transform of \(f'\) is related to the Laplace transform of \(f\). The next theorem answers this question. 
+				In the rest of this chapter we’ll use the Laplace transform to solve IVPs for constant coefficient second order equations. To do this, we must know how the Laplace transform of a functions derivative \(f^{'}(t)\) is related to the Laplace transform of \(f(t)\). The next theorem answers this question. 
 			</div>
 
 			<div class="theorem" id="x1-21">
 				<span class="head">Theorem&nbsp;8.3.1</span>
-				Suppose \(f\) is continuous on \([0,\infty )\) and of exponential order \(s_0\), and \(f'\) is piecewise continuous on \([0,\infty ).\) Then \(f\) and \(f'\) have Laplace transforms for \(s &gt; s_0,\) and 
+				Suppose \(f(t) \) is continuous on \([0,\infty )\) and of exponential order \(s_0\), and \(\dot{f}(t)\) is piecewise continuous on \([0,\infty ).\) Then \(f\) and \(f'\) have Laplace transforms for \(s &gt; s_0,\) and 
 				<a id="x1-3r1"></a>
 				\begin {equation}
-					\label {eq:8.3.1} {\cal L}(f')=s {\cal L}(f)-f(0) 
+					\label {eq:8.3.1}
+					{\cal L} \big\{ \dot{f}(t) \big\}=s \, {\cal L} \big\{ f(t) \big\}-f(0) 
 				\end {equation} 
 			</div>
 
 			<div id="61064941-e82a-4715-8727-1fd5156f9603">
-				<strong>Proof</strong>
 
 				<div class="indent" id="9828719d-f618-42b2-b23f-7850481256fc">
-					We know from Theorem&nbsp;8.1.6 that \({\cal L}(f)\) is defined for \(s&gt;s_0\). We first consider the case where \(f'\) is continuous on \([0,\infty )\). Integration by parts yields
-					<a id="x1-4r2"></a>
-					\begin {equation} 
-						\begin {array}{ccl} \label {eq:8.3.2} 
-							\displaystyle \int ^T_0 e^{-st}f'(t)\,dt &amp;=&amp;\displaystyle e^{-st}f(t)\Big |^T_0+s \displaystyle \int ^T_0e^{-st}f(t)\,dt\\ &amp;=&amp; \displaystyle e^{-sT}f(T)-f(0)+s\int ^T_0 e^{-st}f(t)\,dt 
-						\end {array}
+					We know from Theorem&nbsp;<a href="sec8.1.book.html#x1-336" target=_blank>8.1.6</a>
+					 that \({\cal L} \big\{ f(t) \big\}\) is defined for \(s&gt;s_0\)
+					 
+					 <br>
+					 We first consider the case where \(f^{'}(t)\) is continuous on \([0,\infty )\) and by definition <a href="sec8.1.book.html#x1-336" target=_blank>(8.1.2)</a>
+
+					 <a id="x1-4r2"></a>
+					\begin {equation} \label {eq:8.3.2} 
+						{\cal L} \big\{ \dot{f}(t) \big\}=\int _0^\infty e^{-st} \, \dot{f}(t)\,dt
 					\end {equation}
-					for any \(T&gt;0\). Since \(f\) is of exponential order \(s_0\), \(\lim _{T\to \infty }e^{-sT}f(T)=0\) and the last integral in <a href="#x1-4r2">(8.3.2)</a> converges as \(T\to \infty \) if \(s&gt; s_0\). Therefore 
-				</div>
 
-				<div class="eqnarray" id="27bd6a28-809c-4937-a86f-f4c2099be3a0">
-					\begin {eqnarray*}
-						\int ^\infty _0 e^{-st}f'(t)\,dt&amp;=&amp;-f(0)+s\int ^\infty _0 e^{-st}f(t)\,dt\\ &amp;=&amp;-f(0)+s{\cal L}(f) 
-					\end {eqnarray*} 
-				</div>
-				<div class="indent" id="5dba0d05-ca5a-49ec-baa0-da5841ceae77">
-					which proves <a href="#x1-3r1">(8.3.1)</a>. Now suppose \(T&gt;0\) and \(f'\) is only piecewise continuous on \([0,T]\), with discontinuities at \(t_1 &lt; t_2 &lt;\cdots &lt; t_{n-1}\). For convenience, let \(t_0=0\) and \(t_n=T\). Integrating by parts yields 
-				</div>
+					<br>
 
-				<div class="eqnarray" id="32ee8f3b-6234-40a4-bbcf-68eab84f8bab">
-					\begin {eqnarray*} 
-						\int ^{t_i}_{t_{i-1}}e^{-st}f'(t)\,dt &amp;=&amp; e^{-st}f(t)\Big |^{t_i}_{t_{i-1}}+s\int ^{t_i}_{t_{i-1}}e^{-st}f(t)\,dt\\ &amp;=&amp; e^{-st_i} f(t_i)- e^{-st_{i-1}}f(t_{i-1})+s\int ^{t_i}_{t_{i-1}}e^{-st}f(t)\,dt 
-					\end {eqnarray*} 
+					\begin {array}{rrl} 
+						U &=& e^{-st} 	&\quad\quad&  dV &=& \dot{f}(t) \, dt \\
+						dU &=& -s \, e^{-st} dt	&\quad\quad&  V &=& f(t) \\
+					\end {array}
+
+					<br>
+
+					Now substituting into the IBP formula proves <a href="#x1-3r1">(8.3.1)</a>
+
+					\begin {align*} 
+						{\cal L} \big\{ \dot{f}(t) \big\}
+						= & 
+						\lim_{x \to \infty}
+						\Bigg.\Big[e^{-st}f(t)\Big]\Bigg|_{0}^{x}
+						+s
+						\int _0^\infty e^{-st} \, f(t)\,dt \\
+						= & 
+						\lim_{x \to \infty} \Big( e^{-sx}f(x) \Big) - f(0) 
+						+s
+						\, {\cal L} \big\{ f(t) \big\}\\
+						= & 
+						- f(0) 
+						+s
+						\, {\cal L} \big\{ f(t) \big\}\\
+					\end {align*}
+			
 				</div>
-				<div class="indent" id="a5d37ab3-a1ee-44e6-9c96-88d11079f3b0">
-					Summing both sides of this equation from \(i=1\) to \(n\) and noting that \[ \left (e^{-st_1}f(t_1)-e^{-st_0}f(t_0)\right )+\left (e^{-st_2} f(t_2)-e^{-st_1}f(t_1)\right ) +\cdots +\left (e^{-st_N}f(t_N)-e^{-st_{N-1}}f(t_{N-1})\right ) \] \[ =e^{-st_N}f(t_N)-e^{-st_0}f(t_0)=e^{-sT}f(T)-f(0) \] yields <a href="#x1-4r2">(8.3.2)</a>, so <a href="#x1-3r1">(8.3.1)</a> follows as before. 
-				</div>
+	
 			</div>
 
+			<!--Example 1-->
 			<div class="example" id="x1-51" style="--ex-number: 1">
 				<div>
-					In Example&nbsp;<span class="ptmb8t-">8.1.4</span> we saw that \[ {\cal L}(\cos \omega t)={s\over s^2+\omega ^2}\] Applying <a href="#x1-3r1">(8.3.1)</a> with \(f(t)=\cos \omega t\) shows that \[ {\cal L}(-\omega \sin \omega t)=s {s\over s^2+\omega ^2}-1=- {\omega ^2\over s^2+\omega ^2}\] Therefore \[ {\cal L}(\sin \omega t)={\omega \over s^2+\omega ^2}\] which agrees with the corresponding result obtained in <span class="ptmb8t-">8.1.4</span>.
+					
 				</div>
-			</div>
+				<ol>
+					<li>&nbsp;
+						Use <a href="#x1-3r1">(8.3.1)</a> to calculate the Laplace transform of the derivative of \(
+							f(t) = \cos \omega t
+						\)
+						\[
+							{\cal L} \big\{ \dot{f}(t) \big\}
+						\]
+					</li>
+					<li>&nbsp;
+						Use <a href="#x1-3r1">(8.3.1)</a> to solve the IVP
+						<a id="x1-6r3"></a> 
+							\begin {equation} 
+								\label {eq:8.3.3} 
+								\dot{y}=ay \quad y(0)=y_0 
+							\end {equation} 
+					</li>
+				</ol>
 
-			<div class="indent" id="e0c755da-7e25-47db-87bc-3cd5022be2a2">
-				In Section&nbsp;2.1 we showed that the solution of the initial value problem 
-				<a id="x1-6r3"></a> 
-				\begin {equation} 
-					\label {eq:8.3.3} \dot{y}=ay, \quad y(0)=y_0 
-				\end {equation} 
-				is \(y=y_0e^{at}\). We’ll now obtain this result by using the Laplace transform. 
+				<details class="solution">
+					<summary>Solution</summary>
+					<ol>
+						<li>&nbsp;
+							<div>
+								First note that we already calculated the Laplace transform of \(f(t) = \cos \omega t\) in Example&nbsp;<a href="sec8.1.book.html#x1-114" target=_blank>8.1.4</a>
+	
+								\[ {\cal L} \big\{ \cos \omega t \big\} ={s\over s^2+\omega ^2}\] 
+	
+								Now we'd like to find the Laplace transform of 
+								
+								\[
+								\dot{f}(t) = \frac{d}{dt}\big( \cos \omega t \big) 
+								= - \omega  \sin \omega t 
+								\]
+	
+								To calculate this using the definition <a href="sec8.1.book.html#x1-336" target=_blank>(8.1.2)</a> we would have to calculate the integral
+	
+	
+								\begin {align*} 
+									{\cal L} \big\{ - \omega  \sin \omega t  \big\}= - \omega \int _0^\infty e^{-st} \,   \sin \omega t  \,dt
+								\end {align*}
+	
+								But instead we will use Equation <a href="#x1-3r1">(8.3.1)</a>
+								
+								\begin {align*}  
+									{\cal L} \big\{ \dot{f}(t) \big\}
+									= & \, s \, {\cal L} \big\{ f(t) \big\}-f(0) \\ 
+									{\cal L} \left\{ - \omega  \sin \omega t \right\}
+									= & \, s \, {\cal L} \big\{ \cos \omega t \big\}-\cos 0 \\
+									= & \, s \, \left( {s\over s^2+\omega ^2} \right)-1 \\
+									= & \,  {s^2\over s^2+\omega ^2} - {s^2+\omega ^2\over s^2+\omega ^2} \\ 
+									= & \,  -{\omega ^2\over s^2+\omega ^2} \\ 
+								\end {align*}
+	
+								Now applying linearity we have
+	
+								\begin {align*}  
+									- \omega \, {\cal L} \left\{   \sin \omega t \right\}
+										= & \,  -{\omega ^2\over s^2+\omega ^2} 
+										\Longrightarrow
+									{\cal L} \left\{   \sin \omega t \right\}
+										= \,  {\omega \over s^2+\omega ^2} \\ 		
+								\end {align*}
+	
+								Which agrees with the result we obtained in Example&nbsp;<a href="sec8.1.book.html#x1-114" target=_blank>8.1.4</a> for the Laplace transform of \( \sin \omega t\) 
+
+								
+								
+							</div>
+						</li>
+						<li>&nbsp;
+							<div class="reading-exercise">
+								Solve \(\dot{y}=ay \quad y(0)=y_0\) using separation of variables (Section&nbsp;<a href="sec2.1.book.html" target=_blank>2.1</a>)
+							</div>
+							<div>
+								Solving \(\dot{y}=ay \quad y(0)=y_0\) using using separation of variables and applying the initial condition \(y(0)=y_0 \) we obtain the solution
+								\[
+								y = y_0 e^{at}
+								\]
+							</div>
+							<div>
+								We’ll now obtain this result by using the Laplace transform and applying <a href="#x1-3r1">(8.3.1)</a> but to make the notation easier we'll start by letting capital \(Y(s)\) represent the Laplace transform of \(y\)
+								\[
+								{\cal L} \left\{  y \right\}  = Y(s)
+								\]
+								Now taking the Laplace transform of both sides of <a href="#x1-6r3">(8.3.3)</a> and applying linearity and <a href="#x1-3r1">(8.3.1)</a> we can solve for \(Y(s)\) to obtain
+
+								\begin {align*}  
+									\dot{y} = & ay \tag{3} \\	
+									{\cal L} \big\{  \dot{y} \big\} = & \, {\cal L} \big\{  ay \big\} \\	
+									s \, {\cal L} \big\{  {y} \big\} - y(0) = & \, a \, {\cal L} \big\{  y \big\} \\	
+									s \, Y(s) - y_0 = & \, a \, Y(s) \\	
+									s \, Y(s) -  a \, Y(s) = & \, y_0 \\
+									\big( s -  a \big) Y(s) = & \, y_0 \\	
+									Y(s) = & \, \frac{y_0}{s -  a} \\		
+								\end {align*}
+
+								Finally we take the inverse Laplace transform of both sides to find \(y\)
+
+								\begin {align*}  
+									{\cal L}^{-1} \Big[ Y(s) \Big] = & \, 
+									{\cal L}^{-1} \left[ \frac{y_0}{s -  a} \right]
+									 \\	
+									y = & \, y_0 \, 
+									\underset{e^{at}}{\underbrace{
+									{\cal L}^{-1} \left[ \frac{1}{s -  a} \right]}}		
+									 = \, y_0 \, 
+									e^{at}
+									 \\		
+								\end {align*}
+
+								Which agrees with the previous result!
+
+							</div>
+
+						</li>
+					</ol>
+	
+				</details>
 			</div>
-			<div class="indent" id="a726ea5e-66e0-4398-bd36-e396f447bf4c">
-				Let \(Y(s)={\cal L}(y)\) be the Laplace transform of the unknown solution of <a href="#x1-6r3">(8.3.3)</a>. Taking Laplace transforms of both sides of <a href="#x1-6r3">(8.3.3)</a> yields \[ {\cal L}(\dot{y})={\cal L}(ay)\] which, by Theorem&nbsp;<a href="#x1-21">8.3.1</a>, can be rewritten as \[ s{\cal L}(y)-y(0)=a{\cal L}(y)\] or \[ sY(s)-y_0=aY(s)\] Solving for \(Y(s)\) yields \[ Y(s)={y_0\over s-a}\] so \[ y={\cal L}^{-1}(Y(s))={\cal L}^{-1}\left ({y_0\over s-a}\right )=y_0{\cal L}^{-1}\left ({1\over s-a}\right )=y_0e^{at}\] which agrees with the known result.
-			</div>
+			<br>
+
+		
+
 			<div class="indent" id="faf12a25-86a0-4169-ad1f-f5433110bf2c">
-				We need the next theorem to solve second order differential equations using the Laplace transform. 
+				While <a href="#x1-3r1">(8.3.1)</a> helps us solve first order differential equations using the Laplace transform, in order to solve second order differential equations using the Laplace transform, we will need to know how to find the Laplace transform of the second derivative.
 			</div>
 
 			<div class="theorem" id="x1-72">
 				<span class="head">Theorem&nbsp;8.3.2</span>
-				 Suppose \(f\) and \(f'\) are continuous on \([0,\infty )\) and of exponential order \(s_0,\) and that \(f''\) is piecewise continuous on \([0,\infty ).\) Then \(f\), \(f'\), and \(f''\) have Laplace transforms for \(s &gt; s_0\), \begin {equation} \label {eq:8.3.4} {\cal L}(f')=s {\cal L}(f)-f(0) \end {equation} <a id="x1-8r4"></a> and 
-				 <a id="x1-9r5"></a>
-				\begin {equation} 
-					\label {eq:8.3.5} {\cal L}(f'')=s^2{\cal L}(f)-f'(0)-sf(0) 
+				 Suppose \(f(t)\) and \(\dot{f}(t)\) are continuous on \([0,\infty )\) and of exponential order \(s_0,\) and that \(\ddot{f}(t)\) is piecewise continuous on \([0,\infty ).\) Then \(f(t)\), \(\dot{f}(t)\), and \(\ddot{f}(t)\) have Laplace transforms for \(s &gt; s_0\) 
+				 
+				 <a id="x1-8r4"></a> 
+				 \begin {equation} \label {eq:8.3.4} 
+					 {\cal L} \big\{ \dot{f}(t) \big\}=s \, {\cal L} \big\{ f(t) \big\}-f(0)
 				\end {equation} 
+				
+				And applying this same formula to the second derivative we obtain
+
+				 <a id="x1-9r5"></a>
+				\begin {align} 
+					\label {eq:8.3.5}
+					{\cal L} \big\{ \ddot{f}(t) \big\} =  & \, s \, {\cal L} \big\{ \dot{f}(t) \big\}-\dot{f}(0) \nonumber \\
+					=  & \, s \, \Big[ s \, {\cal L} \big\{ f(t) \big\}-f(0) \Big] -\dot{f}(0) \nonumber \\
+					=  & \, s^2 \, {\cal L} \big\{ f(t) \big\}-s \, f(0)  -\dot{f}(0) 
+				\end {align} 
 			</div>
 
-			<div id="00447519-6518-4c23-8ec6-dde9b13b7f2b">
-				<strong>Proof</strong> Theorem&nbsp;<a href="#x1-21">8.3.1</a> implies that \({\cal L}(f')\) exists and satisfies <a href="#x1-8r4">(8.3.4)</a> for \(s&gt;s_0\). To prove that \({\cal L}(f'')\) exists and satisfies <a href="#x1-9r5">(8.3.5)</a> for \(s&gt;s_0\), we first apply Theorem&nbsp;<a href="#x1-21">8.3.1</a> to \(g=f'\). Since \(g\) satisfies the hypotheses of Theorem&nbsp;<a href="#x1-21">8.3.1</a>, we conclude that \({\cal L}(g')\) is defined and satisfies \[ {\cal L}(g')=s{\cal L}(g)-g(0) \] for \(s&gt;s_0\). However, since \(g'=f''\), this can be rewritten as \[ {\cal L}(f'')=s{\cal L}(f')-f'(0)\] Substituting <a href="#x1-8r4">(8.3.4)</a> into this yields <a href="#x1-9r5">(8.3.5)</a>.
-			</div>
 		</details>
 
 		<details id="b7c8be31-90f5-4d9d-a039-537cd862d5ee">
-			<summary>Solving Second Order Equations with the Laplace Transform</summary>
+			<summary>Laplace IVPs</summary>
 		
 			<div id="453865ad-eff1-4a57-be4d-ef181ee88e0a">
-				We’ll now use the Laplace transform to solve initial value problems for second order equations. 
+				We’ll now use the Laplace transform to solve IVPs for second order equations. 
 			</div>
 
 			<div class="example" id="x1-102" style="--ex-number: 2">
 				<div>
-					Use the Laplace transform to solve the initial value problem 
+					Use the Laplace transform to solve the IVP 
 					<a id="x1-11r6"></a>
 					\begin {equation} 
-						\label {eq:8.3.6} \ddot{y}-6\dot{y}+5y=3e^{2t},\quad y(0)=2, \quad \dot{y}(0)=3 
+						\label {eq:8.3.6} 
+						\ddot{y}-6\dot{y}+5y=3e^{2t}
+						\quad y(0)=2 
+						\quad \dot{y}(0)=3 
 					\end {equation}
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-					Taking Laplace transforms of both sides of the differential equation in <a href="#x1-11r6">(8.3.6)</a> yields \[ {\cal L}(\ddot{y}-6\dot{y}+5y)={\cal L}\left (3e^{2t}\right )={3\over s-2}\] which we rewrite as 
-					<a id="x1-12r7"></a>
-					\begin {equation}
-						\label {eq:8.3.7} {\cal L}(\ddot{y})-6{\cal L}(\dot{y})+5{\cal L}(y)={3\over s-2} 
-					\end {equation}
+					<div>
+						<div>
+							Taking Laplace transforms of both sides of the differential equation in <a href="#x1-11r6">(8.3.6)</a> yields
 
-					Now denote \({\cal L}(y)=Y(s)\). Theorem&nbsp;<a href="#x1-72">8.3.2</a> and the initial conditions in <a href="#x1-11r6">(8.3.6)</a> imply that \[ {\cal L}(\dot{y})=sY(s)-y(0)=sY(s)-2 \] and \[ {\cal L}(\ddot{y})=s^2Y(s)-\dot{y}(0)-sy(0)=s^2Y(s)-3-2s\] Substituting from the last two equations into <a href="#x1-12r7">(8.3.7)</a> yields \[ \left (s^2Y(s)-3-2s\right )-6\left (sY(s)-2\right )+5Y(s)={3\over s-2}\] Therefore 
-					<a id="x1-13r8"></a>
-					\begin {equation} 
-					\label {eq:8.3.8} (s^2-6s+5)Y(s)={3\over s-2}+(3+2s)+6(-2) 
-					\end {equation}
-					so \[ (s-5)(s-1)Y(s)={3+(s-2)(2s-9)\over s-2}\] and \[ Y(s)={3+(s-2)(2s-9)\over (s-2)(s-5)(s-1)}\] Heaviside’s method yields the partial fraction expansion \[ Y(s)=-{1\over s-2}+{1\over 2}{1\over s-5}+{5\over 2}{1\over s-1}\] and taking the inverse transform of this yields \[ y=-e^{2t}+{1\over 2}e^{5t}+{5\over 2}e^t \] as the solution of <a href="#x1-11r6">(8.3.6)</a>.
+							<a id="x1-12r7"></a>
+							\begin {align}  \label {eq:8.3.7}
+								{\cal L} \big\{ \ddot{y}-6\dot{y}+5y \big\} \,
+									= & \, {\cal L} \big\{ 3e^{2t}\big\} \nonumber\\	
+								{\cal L} \big\{ \ddot{y} \big\}
+									\quad
+									- \quad 6 \, {\cal L} \big\{ \dot{y} \big\}
+									\quad+\quad 5 \, {\cal L} \big\{ {y} \big\}
+									\, = & \, 3 \, {\cal L} \big\{ e^{2t}\big\}  \nonumber\\	
+								\Big[ s^2 \, {\cal L} \big\{ y \big\}-s \, y(0)  -\dot{y}(0)  \Big]
+									- 6 \, \Big[ s \, {\cal L} \big\{ y \big\}-y(0) \Big]
+									+ 5 \,  {\cal L} \big\{ {y} \big\}
+									= & \,  3 \left(\frac{1}{s-2} \right)			
+							\end {align}
+
+							Now simplifying and collecting like terms and factoring out \(Y(s)\) we obtain
+
+							<a id="x1-13r8"></a>
+							\begin {align}  \label {eq:8.3.8}
+								\Big[ s^2 \, Y(s) -2s  - 3  \Big]
+									- 6 \, \Big[ s \, Y(s) - 2 \Big]
+									+ 5 \,  Y(s)
+									= & \,  \frac{3}{s-2}  \nonumber\\
+								s^2 \, Y(s) -2s  - 3
+									-6sY(s) +12 
+									+ 5 \,  Y(s)
+									= & \,  \frac{3}{s-2}  \nonumber\\
+								s^2 \, Y(s) -6sY(s) + 5 \,  Y(s) -2s +9
+									= & \,  \frac{3}{s-2}  \nonumber\\
+								\underbrace{\big( s^2 -6s + 5 \big)} Y(s) -(2s -9)
+									= & \,  \frac{3}{s-2}  	
+							\end {align}
+
+							And a good check on the calculations at this point is to note that the polynomial multiplied by \(Y(s)\) should be the characteristic polynomial of the complementary equation. Now solving for \(Y(s)\) and factoring the characteristic polynomial we obtain
+
+
+							\begin {align*}  
+							\big( s^2 -6s + 5 \big) Y(s)
+									= & \,  \frac{3}{s-2} + \frac{(2s-9)(s-2)}{s-2} \\
+								Y(s)
+									= & \,  \frac{3+ (2s-9)(s-2)}{\big( s^2 -6s + 5 \big)\big(s-5 \big)}  \\
+								Y(s)
+									= & \,  \frac{3+ (2s-9)(s-2)}{\big(s-2\big)\big(s-1 \big)\big(s-5 \big)}  \\		
+							\end {align*}
+
+							At this point we have solved for \(Y(s)\) which is the Laplace transform of \(y(t)\) so all we have to do is take the inverse Laplace transform of this expression to find our solution. And hopefully the type of problem is familiar from Section <a href="sec8.2.book.html">8.2</a> so we'll start by splitting up the expression using PFD
+
+							\begin {align*} 
+									\frac{3+ (2s-9)(s-2)}{\big(s-2\big)\big(s-1 \big)\big(s-5 \big)} = & \,  
+									\frac{A}{\big(s-2\big)} + \frac{B}{\big(s-1 \big)} + \frac{C}{\big(s-5 \big)}		
+							\end {align*}
+
+
+						</div>
+						<div class="reading-exercise">
+							Use Heaviside's method to calculate \(A,\) \(B,\) and \(C\)
+						</div>	
+						<div>
+							\begin {align*} 
+									A = & \Bigg. \frac{3+ (2s-9)(s-2)}{\big(s-1 \big)\big(s-5 \big)}  \Bigg|_{s=2}	
+									= \frac{3+ (-5)(0)}{\big(1 \big)\big(-3 \big)} = -1\\ \\
+									B = & \Bigg. \frac{3+ (2s-9)(s-2)}{\big(s-2\big)\big(s-5 \big)}  \Bigg|_{s=1}	
+									= \frac{3+ (-7)(-1)}{\big(-1\big)\big(-4 \big)} = \frac{5}{2} \\ \\
+									C = & \Bigg. \frac{3+ (2s-9)(s-2)}{\big(s-2\big)\big(s-1 \big)}  \Bigg|_{s=5}	
+									= \frac{3+ (1)(3)}{\big(3\big)\big(4 \big)} =\frac{1}{2} \\	
+							\end {align*}
+
+							Substituting back in our coefficients we obtain
+
+							\[ Y(s)=-\left({1\over s-2}\right) + {5\over 2}\left({1\over s-1}\right) 
+							+{1\over 2}\left({1\over s-5}\right)
+							\]
+
+							Finally to obtain \(y(t)\) we just take the inverse Laplace transform to obtain the solution of <a href="#x1-11r6">(8.3.6)</a>.
+
+							\begin {align*} 
+								{\cal L}^{-1} \Big[ Y(s) \Big]
+								= & \, -
+								\underset{e^{2t}}{\underbrace{{\cal L}^{-1} \left[ {1\over s-2} \right]}} + {5\over 2}
+								\underset{e^{t}}{\underbrace{ {\cal L}^{-1} \left[ {1\over s-1} \right]}} +{1\over 2} \underset{e^{5t}}{\underbrace{{\cal L}^{-1} \left[ {1\over s-5} \right]}} \\
+								y(t)
+								= & \, \quad -
+								e^{2t} \quad+\quad {5\over 2}
+								e^{t} \quad+\quad {1\over 2} e^{5t} \\
+							\end {align*}
+
+
+						</div>	
+					</div>
 				</details>
 			</div>
 
+			<br>
+			<br>
+			<hr>
+			<br>
+			<br>
+
 			<div class="indent" id="99899b68-7764-4281-a0b0-def469535074">
-				It isn’t necessary to write all the steps that we used to obtain <a href="#x1-13r8">(8.3.8)</a>. To see how to avoid this, let’s apply the method of Example&nbsp;<a href="#x1-102">8.3.2</a> to the general initial value problem 
-				\begin {equation} \label {eq:8.3.9} a\ddot{y}+b\dot{y}+cy=f(t), \quad y(0)=k_0,\quad \dot{y}(0)=k_1 
-				\end {equation} <a id="x1-14r9"></a> 
-			</div>
-			<div class="indent" id="16679d13-6093-4765-b9db-3f1644e7d190">
-				Taking Laplace transforms of both sides of the differential equation in <a href="#x1-14r9">(8.3.9)</a> yields 
-				<a id="x1-15r10"></a> 
-				\begin {equation}
-					\label {eq:8.3.10} a{\cal L}(\ddot{y})+b{\cal L}(\dot{y})+c{\cal L}(y)=F(s) 
+				
+				To obtain a generic form of <a href="#x1-13r8">(8.3.8)</a>, let’s apply the method of Example&nbsp;<a href="#x1-102">8.3.2</a> to the general IVP
+
+				<a id="x1-14r9"></a>
+				\begin {equation} \label {eq:8.3.9} 
+					a\ddot{y}+b\dot{y}+cy=f(t)
+					\quad y(0)=k_0
+					\quad \dot{y}(0)=k_1 
 				\end {equation} 
-				Now let \(Y(s)={\cal L}(y)\). Theorem&nbsp;<a href="#x1-72">8.3.2</a> and the initial conditions in <a href="#x1-14r9">(8.3.9)</a> imply that \[ {\cal L}(\dot{y})=sY(s)-k_0\quad \mbox{ and } \quad {\cal L}(\ddot{y})=s^2Y(s)-k_1-k_0s\] Substituting these into <a href="#x1-15r10">(8.3.10)</a> yields \begin {equation} \label {eq:8.3.11} a\left (s^2Y(s)-k_1-k_0s\right )+b\left (sY(s)-k_0\right )+cY(s)=F(s) \end {equation} <a id="x1-16r11"></a> The coefficient of \(Y(s)\) on the left is the characteristic polynomial \[ p(s)=as^2+bs+c \] of the complementary equation for <a href="#x1-14r9">(8.3.9)</a>. Using this and moving the terms involving \(k_0\) and \(k_1\) to the right side of <a href="#x1-16r11">(8.3.11)</a> yields \begin {equation} \label {eq:8.3.12} p(s)Y(s)=F(s)+a(k_1+k_0s)+bk_0 \end {equation} <a id="x1-17r12"></a> This equation corresponds to <a href="#x1-13r8">(8.3.8)</a> of Example&nbsp;<a href="#x1-102">8.3.2</a>. Having established the form of this equation in the general case, it is preferable to go directly from the initial value problem to this equation. You may find it easier to remember <a href="#x1-17r12">(8.3.12)</a> rewritten as 
+
+				Taking Laplace transforms of both sides of the differential equation in <a href="#x1-14r9">(8.3.9)</a> and applying Theorem <a href="#x1-72">8.3.2</a> yields
+
+				<a id="x1-15r10"></a> 
+				\begin {align}  \label {eq:8.3.10}
+					{\cal L} \big\{ a \ddot{y}+ b \dot{y}+ c y \big\} \,
+						= & \, {\cal L} \big\{ f(t) \big\} \nonumber\\	
+					a \, {\cal L} \big\{ \ddot{y} \big\}
+						\quad
+						+ \quad b \, {\cal L} \big\{ \dot{y} \big\}
+						\quad+\quad c \, {\cal L} \big\{ {y} \big\}
+						\, = & \, {\cal L} \big\{ f(t) \big\}  \\	
+					a \, \Big[ s^2 \, {\cal L} \big\{ y \big\}-s \, y(0)   - \dot{y}(0)  \Big]
+						+ b \, \Big[ s \, {\cal L} \big\{ y \big\}-y(0) \Big]
+						+ c \,  {\cal L} \big\{ {y} \big\}
+						= & \,  {\cal L} \big\{ f(t) \big\}	 \nonumber		
+				\end {align}
+
+				Now Substituting \({\cal L} \big\{ f(t) \big\}	 = F(s)\) and \({\cal L} \big\{ y(t) \big\}	 = Y(s)\) as well as our initial conditions \(y(0)=k_0\) and \(\dot{y}(0)=k_1 \) we obtain
+
+				<a id="x1-16r11"></a>
+				\begin {align}  \label {eq:8.3.11} 
+					a \, \Big[ s^2 \, Y(s) - k_0 s - k_1  \Big]
+						+ b \, \Big[ s \,  Y(s) - k_0 \Big]
+						+ c \,  Y(s)
+						= & \,  F(s)		\\	
+					a s^2 \, Y(s) - a k_0 s - a k_1  \,
+						+ \,  bs \,  Y(s) - bk_0 \, 
+						+ c \,  Y(s)
+						= & \,  F(s)	 \nonumber	\\
+					a s^2 \, Y(s) +  bs \,  Y(s)   + c \,  Y(s) \,
+						 - a k_0 s - a k_1 
+						 - bk_0 
+						= & \,  F(s)	 \nonumber	\\
+					\underset{p(s)}{\underbrace{\Big( a s^2  +  bs   + c \Big)}}  Y(s) \,
+						- a \big( k_0 s + k_1 \big)
+						- bk_0 
+					   = & \,  F(s)	 \nonumber															
+				\end {align}
+
+				The coefficient of \(Y(s)\) on the left is the characteristic polynomial of the complementary equation for <a href="#x1-14r9">(8.3.9)</a>
+				
+				\[ p(s)=as^2+bs+c \] 
+
+				Substituting this and moving the terms involving \(k_0\) and \(k_1\) to the right side of <a href="#x1-16r11">(8.3.11)</a> yields 
+
+
+				<a id="x1-17r12"></a>
+				\begin {align} 	 \label {eq:8.3.12}	
+					p(s) \,  Y(s) \,
+					 = & \,  F(s) +  a \big( k_0 s + k_1 \big)
+					 + bk_0 	  	  												
+				\end {align}
+
+				This equation corresponds to <a href="#x1-13r8">(8.3.8)</a> of Example&nbsp;<a href="#x1-102">8.3.2</a> but is a general representation. Although we will not apply this directly as a formula as we will opt to show our work (as in Example&nbsp;<a href="#x1-102">8.3.2</a>) we can use this as a check point.It may be easier to think of  <a href="#x1-17r12">(8.3.12)</a> rewritten as
+
 				<a id="x1-18r13"></a>
 				\begin {equation}
-					\label {eq:8.3.13} p(s)Y(s)=F(s)+a\left (\dot{y}(0)+sy(0)\right )+by(0) 
+					\label {eq:8.3.13} 
+					p(s) \, Y(s)= \, F(s)+a \Big( \dot{y}(0) + s \, y(0) \Big) + b y(0) 
 				\end {equation} 
 			</div>
+			
+			<div class="indent" id="16679d13-6093-4765-b9db-3f1644e7d190">
+			</div>
 
+			<br>
+			<br>
+			<hr>
+			<br>
+			<br>
+
+			<!--Example 3-->
 			<div class="example" id="x1-193" style="--ex-number: 3">
 				<div>
-					Use the Laplace transform to solve the initial value problem 
+					Use the Laplace transform to solve the IVP 
 					<a id="x1-20r14"></a>
 					\begin {equation} 
-						\label {eq:8.3.14} 2\ddot{y}+3\dot{y}+y=8e^{-2t}, \quad y(0)=-4,\; \dot{y}(0)=2 
+						\label {eq:8.3.14} 
+						2\ddot{y}+3\dot{y}+y=8e^{-2t}
+						\quad y(0)=-4
+						\quad \dot{y}(0)=2 
 					\end {equation}
 				</div>
 			
 				<details class="solution">
 					<summary>Solution</summary>
-					The characteristic polynomial is \[ p(s)=2s^2+3s+1=(2s+1)(s+1) \] and \[ F(s)={\cal L}(8e^{-2t})={8\over s+2}\] so <a href="#x1-18r13">(8.3.13)</a> becomes \[ (2s+1)(s+1)Y(s)={8\over s+2}+2(2-4s)+3(-4)\] Solving for \(Y(s)\) yields \[ Y(s)={4\left (1-(s+2)(s+1)\right )\over (s+1/2)(s+1)(s+2)}\] Heaviside’s method yields the partial fraction expansion \[ Y(s)={4\over 3}{1\over s+1/2}-{8\over s+1}+{8\over 3}{1\over s+2}\] so the solution of <a href="#x1-20r14">(8.3.14)</a> is \[ y={\cal L}^{-1}(Y(s))={4\over 3}e^{-t/2}-8e^{-t}+{8\over 3}e^{-2t} \] (Figure&nbsp;<a href="#x1-21r1">8.3.1</a>).
+						<div>
+							<div>
+								Taking Laplace transforms of both sides of the differential equation in <a href="#x1-20r14">(8.3.14)</a> yields
+	
+								\begin {align*}  
+									{\cal L} \big\{ 2\ddot{y}+3\dot{y}+y \big\} \,
+										= & \, {\cal L} \big\{ 8e^{-2t}\big\} \nonumber\\	
+									2 \, {\cal L} \big\{ \ddot{y} \big\}
+										\quad
+										+ \quad 3 \, {\cal L} \big\{ \dot{y} \big\}
+										\quad+\quad \, {\cal L} \big\{ {y} \big\}
+										\, = & \, 8 \, {\cal L} \big\{ e^{-2t}\big\}  \nonumber\\	
+									2 \, \Big[ s^2 \, {\cal L} \big\{ y \big\}-s \, y(0)  -\dot{y}(0)  \Big]
+										+ 3 \, \Big[ s \, {\cal L} \big\{ y \big\}-y(0) \Big]
+										+ \,  {\cal L} \big\{ {y} \big\}
+										= & \,  8 \left(\frac{1}{s+2} \right)			
+								\end {align*}
+	
+								Now simplifying and collecting like terms and factoring out \(Y(s)\) we obtain
+	
+								\begin {align*}  
+									2 \, \Big[ s^2 \, Y(s) +4 s  - 2  \Big]
+										+ 3 \, \Big[ s \, Y(s) +4 \Big]
+										+ \,  Y(s)
+										= & \,  \frac{8}{s+2}  \nonumber\\
+									2s^2 \, Y(s) +8s  - 4
+										+3sY(s) +12 
+										+ Y(s)
+										= & \,  \frac{8}{s+2}  \nonumber\\
+									2 s^2 \, Y(s) +3sY(s) + Y(s) +8s +8
+										= & \,  \frac{8}{s+2}  \nonumber\\
+									\big( 2s^2 +3s + 1 \big) Y(s) +8(s +1)
+										= & \,  \frac{8}{s+2}  	
+								\end {align*}
+	
+								We'll pause to check our calculations at this point to note that the polynomial multiplied by \(Y(s)\) is the characteristic polynomial of the complementary equation. 
+								Solving for \(Y(s)\) and factoring the characteristic polynomial we obtain
+	
+								\begin {align*}  
+									\big( 2s^2 +3s + 1 \big) Y(s) +8(s +1)
+										= & \,  \frac{8}{s+2}   \\
+									\big( 2s^2 +3s + 1 \big) Y(s) 
+										= & \,  \frac{8}{s+2}  - \frac{8(s +1)(s+2)}{s+2} \\	
+									Y(s) 
+										= & \, \frac{8 - 8(s +1)(s+2)}{(s+2) \big( 2s^2 +3s + 1 \big) } \\	
+									Y(s) 
+										= & \, \frac{8 - 8(s +1)(s+2)}{(s+2) \big( s + 1 \big) \big( 2s + 1 \big)  } \\									
+								\end {align*}
+	
+								At this point we have solved for \(Y(s)\) which is the Laplace transform of \(y(t)\) so all we have to do is take the inverse Laplace transform of this expression to find our solution. And hopefully the type of problem is familiar from Section <a href="sec8.2.book.html">8.2</a> so we'll start by splitting up the expression using PFD
+	
+								\begin {align*} 
+										\frac{8 - 8(s +1)(s+2)}{(s+2) \big( 2s + 1 \big) \big( s + 1 \big) }  = & \,  
+										\frac{A}{\big(s+2\big)} + \frac{B}{\big(s+1 \big)} + \frac{C}{\big(2s+1 \big)}		
+								\end {align*}
+	
+	
+							</div>
+							<div class="reading-exercise">
+								Use Heaviside's method to calculate \(A,\) \(B,\) and \(C\)
+							</div>	
+							<div>
+								\begin {align*} 
+										A = & \Bigg. \frac{8 - 8(s +1)(s+2)}{\big( 2s + 1 \big) \big( s + 1 \big) }  \Bigg|_{s=-2}	
+										= \frac{8 - 8(-1)(0)}{\big( -3 \big) \big( -1 \big) } = \frac{8}{3} \\ \\
+										
+										B = & \Bigg.\frac{8 - 8(s +1)(s+2)}{(s+2) \big( 2s + 1 \big)  }  \Bigg|_{s=-1}	
+										= \frac{8 - 8(0)(1)}{(1) \big(-1 \big)  }  = - 8\\
+
+										C = & \Bigg. \frac{8 - 8(s +1)(s+2)}{(s+2)  \big( s + 1 \big) }  \Bigg|_{s=-\frac{1}{2}}	
+										=  \frac{8 - 8 \left(\frac{1}{2}\right)\left(\frac{3}{2}\right)}{ \left(\frac{3}{2}\right)  \left( \frac{1}{2} \right) }  =  \frac{2}{ \left(\frac{3}{4}\right)   }  = \frac{8}{3} \\ \\
+											
+								\end {align*}
+	
+								Substituting back in our coefficients we obtain
+	
+								\[ Y(s)= \frac{8}{3} \left({1\over s+2}\right)
+								-8\left({1\over s+1}\right)
+								+  \frac{8}{3} \left({1\over 2s+1}\right) 
+								\]
+
+								And to take the Laplace transform we want the denominators in the form \(s-a\) so we factor out the \(2\) in the bottom of the last term to obtain 
+
+								\[  \frac{8}{3} \left({1\over 2s+1} \right) \cdot \frac{\left( \frac{1}{2} \right)}{\left(\frac{1}{2}\right)}
+								=\frac{8}{3} \cdot \left( \frac{1}{2} \right) \left({1\over s+\frac{1}{2}}\right)
+								=\frac{4}{3} \left({1\over s+\frac{1}{2} } \right)
+
+								\]
+	
+								Finally to obtain \(y(t)\) we just take the inverse Laplace transform to obtain the solution of <a href="#x1-20r14">(8.3.14)</a>.
+	
+								\begin {align*} 
+									{\cal L}^{-1} \Big[ Y(s) \Big]
+									= & \, \frac{8}{3} \,
+									\underset{e^{-2t}}{\underbrace{{\cal L}^{-1} \left[ {1\over s+2} \right]}}  -8 \, \underset{e^{-t}}{\underbrace{{\cal L}^{-1} \left[ {1\over s+1} \right]}} + \frac{4}{3} \,
+									\underset{e^{-t/2}}{\underbrace{ {\cal L}^{-1} \left[ {1\over s+\frac{1}{2}} \right]}}\\
+									y(t)
+									= & \, \quad \frac{8}{3}
+									e^{-2t} \quad-\quad 8 e^{-t}\quad +\quad \frac{4}{3}
+									e^{-t/2} \\
+								\end {align*}
+	
+	
+							</div>	
+						</div>					
 				</details>
 			</div>
 
 			<figure id="x1-21r1">
 				<img height="264" src="EPS/fig080301.png" width="409" /> 
-				<figcaption><span class="id">Figure&nbsp;8.3.1</span><span class="content"> \(y=\displaystyle {{4\over 3}e^{-t/2}-8e^{-t}+{8\over 3}e^{-2t}}\) </span></figcaption>
+				<figcaption><span class="id">Figure&nbsp;8.3.1</span><span class="content"> \(y=\displaystyle {{8\over 3}e^{-2t} -8e^{-t}} + {4\over 3}e^{-t/2} \) </span></figcaption>
 			</figure>
 
-			<figure id="x1-22r2">
-				<img height="264" src="EPS/fig080302.png" width="409" /> 
-				<figcaption><span class="id">Figure&nbsp;8.3.2</span><span class="content"> \(y=\displaystyle {{1\over 2}-{7\over 2}e^{-t}\cos t-{5\over 2}e^{-t}\sin t}\) </span></figcaption>
-			</figure>
+			<br>
+			<br>
+			<br>
 			
+			
+			<!--Example 4-->
 			<div class="example" id="x1-234" style="--ex-number: 4">
 				<div>
-					Solve the initial value problem 
+					Use the Laplace transform to solve the IVP 
 					<a id="x1-24r15"></a>
-					\begin {equation}
-						\label {eq:8.3.15} \ddot{y}+2\dot{y}+2y=1, \quad y(0)=-3,\; \dot{y}(0)=1 
+					\begin {equation} \label {eq:8.3.15} 
+						\ddot{y}+2\dot{y}+2y=1 
+						\quad y(0)=-3
+						\quad \dot{y}(0)=1 
 					\end {equation}
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-					The characteristic polynomial is \[ p(s)=s^2+2s+2=(s+1)^2+1 \] and \[ F(s)={\cal L}(1)={1\over s}\] so <a href="#x1-18r13">(8.3.13)</a> becomes \[ \left [(s+1)^2+1\right ] Y(s)={1\over s}+1\cdot (1-3s)+2(-3)\] Solving for \(Y(s)\) yields \[ Y(s)={1-s(5+3s)\over s\left [(s+1)^2+1\right ]}\] In Example&nbsp;<span class="ptmb8t-">8.2.8</span> we found the inverse transform of this function to be \[ y={1\over 2}-{7\over 2}e^{-t}\cos t-{5\over 2}e^{-t}\sin t \] (Figure&nbsp;<a href="#x1-22r2">8.3.2</a>), which is therefore the solution of <a href="#x1-24r15">(8.3.15)</a>.
-
 					<div>
-						<strong>Remark</strong> In our examples we applied Theorems&nbsp;<a href="#x1-21">8.3.1</a> and <a href="#x1-72">8.3.2</a> without verifying that the unknown function \(y\) satisfies their hypotheses. This is characteristic of the formal manipulative way in which the Laplace transform is used to solve differential equations. Any doubts about the validity of the method for solving a given equation can be resolved by verifying that the resulting function \(y\) is the solution of the given problem.
-					</div>
+						<div>
+							Taking Laplace transforms of both sides of the differential equation in <a href="#x1-24r15">(8.3.15)</a> yields
+
+							\begin {align*}  
+								{\cal L} \big\{ \ddot{y}+2\dot{y}+2y \big\} \,
+									= & \, {\cal L} \big\{ 1 \big\} \nonumber\\	
+								{\cal L} \big\{ \ddot{y} \big\}
+									\quad
+									+ \quad 2 \, {\cal L} \big\{ \dot{y} \big\}
+									\quad+\quad 2 \, {\cal L} \big\{ {y} \big\}
+									\, = & \,  {\cal L} \big\{ 1 \big\}  \nonumber\\	
+								\Big[ s^2 \, {\cal L} \big\{ y \big\}-s \, y(0)  -\dot{y}(0)  \Big]
+									+ 2 \, \Big[ s \, {\cal L} \big\{ y \big\}-y(0) \Big]
+									+ 2 \,  {\cal L} \big\{ {y} \big\}
+									= & \, \frac{1}{s}			
+							\end {align*}
+
+							Substituting \( {\cal L} \big\{ y \big\} =  Y(s)\) and the initial values we can simplify and collecting like terms and factor out the \(Y(s)\) to obtain
+
+							\begin {align*}  
+								\Big[ s^2 \, Y(s) +3 s  - 1  \Big]
+									+ 2\, \Big[ s \, Y(s) +3 \Big]
+									+ 2 \,  Y(s)
+									= & \,  \frac{1}{s}  \nonumber\\
+								s^2 \, Y(s) +3s  - 1
+									+2sY(s) +6 
+									+ 2Y(s)
+									= & \,  \frac{1}{s}  \nonumber\\
+								s^2 \, Y(s) +2sY(s) + 2Y(s) +3s +5
+									= & \,  \frac{1}{s}  \nonumber\\
+								\big( s^2 +2s + 2 \big) Y(s) +(3s +5)
+									= & \,  \frac{1}{s}  	
+							\end {align*}
+
+							We'll pause to check our calculations at this point to note that the polynomial multiplied by \(Y(s)\) is the characteristic polynomial of the complementary equation. 
+							Solving for \(Y(s)\) we obtain
+
+							\begin {align*}  
+								\big( s^2 +2s + 2 \big) Y(s) +(3s +5)
+									= & \,  \frac{1}{s}   \\
+								\big( 2s^2 +2s + 2 \big) Y(s) 
+									= & \,  \frac{1}{s}  - \frac{s(3s +5)}{s} \\	
+								Y(s) 
+									= & \, \frac{1 - s(3s +5)}{s \big( 2s^2 +2s + 2 \big)  } \\								
+							\end {align*}
+
+							And we find out that we cannot factor the characteristic polynomial since it is an irreducible quadratic. So we split it up using <span class="vocab">PFD</span>
+
+							\begin {equation*} 
+								{1-s(3s+5)\over s\left(s^2+2s+2\right)} 
+								=
+								{A\over s} 
+								+
+								{Bs+C\over s^2+2s+2} 
+							\end {equation*}
+						</div>	 
+						<div class="reading-exercise">
+							Solve for \(A,\) \(B,\) and \(C\)
+						</div>	
+						<div>
+							Solving for \(A,\) \(B,\) and \(C\) (Example&nbsp;<a href="sec8.2.book.html#x1-238" target=_blank>8.2.8</a>) and substituting bacl we obtain
+
+							\begin {equation*} 
+								Y(s) 
+								=
+								\frac{1}{2}
+								\left( {1\over s} \right)
+								-
+								\frac{7}{2}
+								\left( 
+								{s\over s^2+2s+2} \right)
+								-
+								{6\over s^2+2s+2} 
+							\end {equation*} 
+
+							Since \(Y(s)\) is the Laplace transform of \(y(t)\) all we have to do is take the inverse Laplace transform of this expression to find our solution. 
+
+							\begin {equation*} 
+								{\cal L}^{-1} \Big[ Y(s)  \Big]
+								=
+								\frac{1}{2} \, 
+								{\cal L}^{-1} \left[
+								{1\over s} \right]
+								-
+								\frac{7}{2} \,
+								{\cal L}^{-1} \left[
+								{s\over s^2+2s+2} \right]
+								-
+								6 \,
+								{\cal L}^{-1} \left[
+								{1\over s^2+2s+2}  \right]
+							\end {equation*} 
+
+							But we'll have to first write the denominator in the correct form so completing the square on the bottom we obtain <a href="sec8.2.book.html#x1-27r16" target=_blank>(8.2.16)</a>
+
+							\begin {equation*} 
+								y(t)
+								=
+								\frac{1}{2} \, 
+								{\cal L}^{-1} \left[
+								{1\over s} \right]
+								-
+								\frac{7}{2} \,
+								{\cal L}^{-1} \left[
+								{s\over (s+1)^2+1} \right]
+								-
+								6 \,
+								{\cal L}^{-1} \left[
+								{1\over (s+1)^2+1}  \right]
+							\end {equation*} 
+							
+							Adding and subtracting \(1\) from the middle term we obtain
+						
+							\begin {equation*} 
+								-
+								\frac{7}{2} \,
+								{\cal L}^{-1} \left[
+								{(s + 1) - 1\over (s+1)^2+1} \right]
+								=
+								-
+								\frac{7}{2} \,
+								{\cal L}^{-1} \left[
+								{s + 1\over (s+1)^2+1} \right]
+								+
+								\frac{7}{2} \,
+								{\cal L}^{-1} \left[
+								{1\over (s+1)^2+1} \right]
+							\end {equation*} 
+
+							Substituting it back in and combining the like terms
+
+							\begin {align*} 
+							y(t)
+							= &
+							\frac{1}{2} \, 
+							{\cal L}^{-1} \left[
+							{1\over s} \right]
+							-
+							\frac{7}{2} \,
+							{\cal L}^{-1} \left[
+							{s + 1\over (s+1)^2+1} \right]
+							+
+							\underbrace{
+							\left(\frac{7}{2}-6\right) \,
+							{\cal L}^{-1} \left[
+							{1\over (s+1)^2+1} \right]} \\
+							= &
+							\frac{1}{2} \,
+							\underset{1}{ 
+							\underbrace{
+							{\cal L}^{-1} \left[
+							{1\over s} \right]}}
+							-
+							\frac{7}{2} \,
+							\underset{e^{-t}\cos t}{
+							\underbrace{
+							{\cal L}^{-1} \left[
+							{s + 1\over (s+1)^2+1} \right]}}
+							- \frac{5}{2} \,
+							\underset{e^{-t}\sin t}{
+							\underbrace{
+							{\cal L}^{-1} \left[
+							{1\over (s+1)^2+1} \right]}}\\
+							=
+							& \, \quad \frac{1}{2}
+							\quad 
+							- 
+							\quad 
+							\frac{7}{2}
+							e^{-t}\cos t
+							\quad 
+							-
+							\frac{5}{2}
+							e^{-t}\sin t \\
+							=
+							& \, \quad \frac{1}{2}
+							- 
+							\left( 
+							\frac{7}{2}
+							\cos t 
+							+
+							\frac{5}{2}
+							\sin t \right) e^{-t}\\
+						\end {align*} 
+							
+						</div>
+						
+					</div>	
 				</details>
 			</div>
+
+			<figure id="x1-22r2">
+				<img height="264" src="EPS/fig080302.png" width="409" /> 
+				<figcaption><span class="id">Figure&nbsp;8.3.2</span><span class="content"> 
+					\(
+						y=\displaystyle {{1\over 2}- \left( 
+									{7\over 2}
+									\cos t+{5\over 2}\sin t
+									\right)
+									e^{-t} }	
+					\) </span></figcaption>
+			</figure>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			
+			<div>
+				You may have noticed we applied Theorems&nbsp;<a href="#x1-21">8.3.1</a> and <a href="#x1-72">8.3.2</a> without verifying that the unknown function \(y(t)\) satisfies their hypotheses. This is characteristic of the formal manipulative way in which the Laplace transform is used to solve differential equations. Any doubts about the validity of the method for solving a given equation can be resolved by verifying that the resulting function \(y(t)\) is the solution of the given problem by differentiating and substituting.
+			</div>	
 		</details>
+
+		
 
 		<nav class="ex">
 			<a href="sec8.3.ex.html">8.3 Exercises</a>
