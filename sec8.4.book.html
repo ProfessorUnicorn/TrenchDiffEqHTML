@@ -33,53 +33,261 @@
 		<details id="g2">	
 			<summary>The Unit Step Function </summary>
 			<div id="124be07d-5bae-4838-aa82-dd8a4c902bee">
-				In the next section we’ll consider initial value problems \[ a\ddot{y}+b\dot{y}+cy=f(t),\quad y(0)=k_0,\quad \dot{y}(0)=k_1\] where \(a\), \(b\), and \(c\) are constants and \(f\) is piecewise continuous. In this section we’ll develop procedures for using the table of Laplace transforms to find Laplace transforms of piecewise continuous functions, and to find the piecewise continuous inverses of Laplace transforms. 
+				In the next section we’ll consider IVPs where \(a\), \(b\), and \(c\) are constants and \(f(t) \) is piecewise continuous.
+				
+				\[ 
+					a\ddot{y} + b\dot{y} + cy = f(t)
+					\quad y(0)=k_0
+					\quad \dot{y}(0)=k_1
+				\] 
+				
+				In this section we’ll develop procedures for using the table of Laplace transforms to find Laplace transforms of piecewise continuous functions, and to find the piecewise continuous inverses of Laplace transforms. 
 			</div>
 
 			<div class="example" id="x1-21" style="--ex-number: 1">
+				<ol>
+					<li>&nbsp;Calculate \( {\cal L} \big\{ f(t) \big\} \) using the definition as in Section <a href="sec8.1.book.html" target=_blank>8.1</a></li>
+					<li>&nbsp;Calculate \( {\cal L} \big\{ f(t) \big\} \) using tables of Laplace transforms</li>
+				</ol>
 				<div>
-					Use the table of Laplace transforms to find the Laplace transform of
 					<a id="x1-3r1"></a>
 					\begin {equation}
 						\label {eq:8.4.1}
 						f(t)=\left \{ 
 							\begin {array}{cl} 
-								2t+1,&amp;0\le t&lt;2,\\ 3t,&amp;t\ge 2 
+								2t+1 &amp; 0\le t&lt;2 \\
+								3t &amp; t\ge 2 
 							\end {array}
 						\right. 
 					\end {equation}
-					(Figure&nbsp;<a href="#x1-19r4">8.4.1</a>).
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-					Since the formula for \(f\) changes at \(t=2\), we write
-					<a id="x1-4r2"></a>
-					\begin {equation} 
-						\label {eq:8.4.2} 
-						\begin {array}{ccl} 
-							{\cal L}(f)&amp;=&amp;\displaystyle \int _0^\infty e^{-st}f(t)\,dt\\ &amp;=&amp;\displaystyle \int _0^2 e^{-st}(2t+1)\,dt+\int _2^\infty e^{-st}(3t)\,dt 
-						\end {array} 
-					\end {equation}
-					To relate the first term to a Laplace transform, we add and subtract \[ \int _2^\infty e^{-st}(2t+1)\,dt \] in <a href="#x1-4r2">(8.4.2)</a> to obtain 
-					<a id="x1-5r3"></a>
-					\begin {equation} 
-						\label {eq:8.4.3} 
-						\begin {array}{ccl} 
-							{\cal L}(f)&amp;=&amp;\displaystyle \int _0^\infty e^{-st}(2t+1)\,dt+ \int _2^\infty e^{-st}(3t-2t-1)\,dt\\ &amp;=&amp;\displaystyle \int _0^\infty e^{-st}(2t+1)\,dt+ \int _2^\infty e^{-st}(t-1)\,dt\\ &amp;=&amp;\displaystyle {\cal L}(2t+1)+\int _2^\infty e^{-st}(t-1)\,dt 
-						\end {array} 
-					\end {equation}
-					To relate the last integral to a Laplace transform, we make the change of variable \(x=t-2\) and rewrite the integral as
+					<ol>
+						<li>
+							<div>
+								Using the definition of Laplace transform <a href="sec8.1.book.html#x1-5r3" target=_blank>(8.1.2)</a> we will calculate
 
-					<div class="eqnarray" id="b26af313-56af-45d5-943e-4e37e13a6aa2">
-						\begin {eqnarray*} 
-							\int _2^\infty e^{-st}(t-1)\,dt&amp;=&amp;\int _0^\infty e^{-s(x+2)}(x+1)\,dx \\ &amp;=&amp;e^{-2s}\int _0^\infty e^{-sx}(x+1)\,dx 
-						\end {eqnarray*} 
-					</div>
+								<a id="x1-4r2"></a>
+								\begin{align} \label {eq:8.4.2} 
+									{\cal L} \Big\{ f(t) \Big\}
+									= & \int _0^\infty e^{-st} f(t) \, dt
+								\end{align}
 
-					<div id="6e994a4f-def2-46de-8758-c2f468bec1f0">
-						Since the symbol used for the variable of integration has no effect on the value of a definite integral, we can now replace \(x\) by the more standard \(t\) and write \[ \int _2^\infty e^{-st}(t-1)\,dt =e^{-2s}\int _0^\infty e^{-st}(t+1)\,dt=e^{-2s}{\cal L}(t+1)\] This and <a href="#x1-5r3">(8.4.3)</a> imply that \[ {\cal L}(f)={\cal L}(2t+1)+e^{-2s}{\cal L} (t+1)\] Now we can use the table of Laplace transforms to find that \[ {\cal L}(f)={2\over s^2}+{1\over s} +e^{-2s}\left ({1\over s^2}+{1\over s}\right )\] 
-					</div>
+								Now just as in Example <a href="sec8.1.book.html#x1-3610" target=_blank>8.1.10</a> we will split the integral <a href="#x1-4r2">(8.4.2)</a> based on the piece-wise definition of the function at the point of discontinuity \(t=2\) and then using properties of integrals we obtain
+
+								\begin{align*}
+									\int _0^\infty e^{-st} f(t) \, dt
+									= &
+									\int_0^2 e^{-st} \, \big( 2t+1 \big) \, dt 
+									+ \int_2^\infty e^{-st} \, \big( 3t \big) \, dt \\
+									= &
+									2\int_0^2 e^{-st} \, t \, dt
+									+ \int_0^2 e^{-st} \, dt 
+									+ 3\int_2^\infty e^{-st} \, t \, dt
+								\end{align*}
+							</div>	
+							<div class="reading-exercise">
+								Antidifferentiate \(\displaystyle \int e^{-st} \, dt\) using substitution
+							</div>	
+							<div class="reading-exercise">
+								Antidifferentiate \(\displaystyle \int e^{-st} \, t \, dt\) using substitution and IBP
+							</div>	
+							<div>	
+								Simplifying the first integral we obtain
+								\begin{align*}
+									2\int_0^2 e^{-st} \, t \, dt
+									= & \, \frac{2}{s^2} \Bigg. \Big[ \big(st+1 \big) e^{-st} \Big] \Bigg|_{2}^{0} \\
+									= & \, \frac{2}{s^2}  \Big[ \big(s\cdot0 + 1 \big) e^{0}  - \big(2s+1 \big) e^{-2s} \Big]  \\ 
+									= & \, \frac{2}{s^2}  \Big[ 1 - \big(2s+1 \big) e^{-2s} \Big] \\ 
+									= & \, \frac{1}{s^2}  \Big[ 2 -\big( 4s+2 \big) e^{-2s}  \Big] \\ 	
+								\end{align*}
+
+								Simplifying the second integral we obtain
+								\begin{align*}
+									\int_0^2 e^{-st} \, dt 
+									= & \, \frac{1}{s} \Big. \big[  e^{-st} \big] \Big|_{2}^{0} \\
+									= & \, \frac{1}{s} \big[  e^{0} - e^{-2s} \big] \\
+									= & \, \frac{1}{s} \big[  1 - e^{-2s} \big] \\
+									= & \, \frac{1}{s^2} \big[  s - se^{-2s} \big] \\
+								\end{align*}
+
+								Simplifying the third integral we obtain
+								\begin{align*}
+									3\int_2^\infty e^{-st} \, t \, dt
+									= & \, \frac{3}{s^2} \Bigg. \lim_{x \to \infty} \Big[ \big(st+1 \big) e^{-st} \Big] \Bigg|_{x}^{2} \\
+									= & \, \frac{3}{s^2}  \left[ \big(2s+1 \big) e^{-2s} - \lim_{x \to \infty} \frac{\frac{d}{dx}\big(sx+1 \big)}{\frac{d}{dx}\big(e^{sx}\big)} \right] \\
+									= & \, \frac{3}{s^2}  \left[ \big(2s+1 \big) e^{-2s} - e^{-\infty} \right] \\
+									= & \, \frac{1}{s^2}  \Big[ \big(6s+3 \big) e^{-2s} \Big] \\
+								\end{align*}
+
+								Substituting them back in
+
+								\begin{align*}
+									{\cal L}(f) =
+									\, & \quad
+									\underbrace{2\int_0^2 e^{-st} \, t \, dt}
+									\quad+\quad \underbrace{\int_0^2 e^{-st} \, dt} 
+									\quad+\quad \underbrace{3\int_2^\infty e^{-st} \, t \, dt} \\
+									= \, & 
+									\frac{1}{s^2}  \Big[ 2 -\big( 4s+2 \big) e^{-2s}  \Big]
+									+ \frac{1}{s^2} \big[  s - se^{-2s} \big]
+									+ \frac{1}{s^2}  \Big[ \big(6s+3 \big) e^{-2s} \Big] \\
+									= \, & 
+									\frac{1}{s^2}  \Big[ 
+									2 
+									+ s 
+									+ \big( 3 - 2 \big) e^{-2s}
+									+ \big( 6s - 4s - s \big) e^{-2s} 
+									\Big] \\
+									= \, & 
+									\frac{1}{s^2}  \Big[ 
+									2 
+									+ s 
+									+ e^{-2s}
+									+ se^{-2s} 
+									\Big] \\
+									= \, & 
+									\frac{2}{s^2} 
+									+ \frac{1}{s}  
+									+ \left( \frac{1}{s^2}
+									+\frac{1}{s} \right) e^{-2s} \\
+								\end{align*}
+
+
+							</div>
+						</li>
+						<li>
+							<div>
+								Just as before the definition of Laplace transform <a href="sec8.1.book.html#x1-5r3" target=_blank>(8.1.2)</a> means we will calculate
+
+								\begin{align*}  
+									{\cal L} \Big\{ f(t) \Big\}
+									= &
+									\int_0^2 e^{-st} \, \big( 2t+1 \big) \, dt 
+									+ \int_2^\infty e^{-st} \, \big( 3t \big) \, dt \\
+								\end{align*}
+
+								Now instead of integrating each integral separately we will try to write each integral in the form of a Laplace transform. For the first integral, the limits of integration are from \(0\) to \(2\) so we will add and subtract the same integral from \(2\) to infinity
+
+								\begin{align*}  
+									{\cal L} \Big\{ f(t) \Big\}
+									= &
+									\int_0^2 e^{-st} \, \big( 2t+1 \big) \, dt 
+									+ \int_2^\infty e^{-st} \, \big( 3t \big) \, dt \\
+									& \quad 
+									+ \int_2^\infty e^{-st} \, \big( 2t+1 \big) \, dt 
+									- \int_2^\infty e^{-st} \, \big( 2t+1 \big) \, dt 
+								\end{align*}
+
+								Now we can combing the integrals with the same limits of integration to obtain
+
+								\begin{align*}  
+									{\cal L} \Big\{ f(t) \Big\}
+									= &
+									\int_0^2 e^{-st} \, \big( 2t+1 \big) \, dt 
+									+ \int_2^\infty e^{-st} \, \big( 3t \big) \, dt \\
+									& \quad 
+									+ \int_2^\infty e^{-st} \, \big( 2t+1 \big) \, dt 
+									- \int_2^\infty e^{-st} \, \big( 2t+1 \big) \, dt \\
+									= &
+									\int_0^\infty e^{-st} \, \big( 2t+1 \big) \, dt 
+									+ \int_2^\infty \underset{\Big[ 3t  - (2t+1) \Big]e^{-st}}{\underbrace{\Big[ \big( 3t \big) e^{-st}  - \big( 2t+1 \big) e^{-st} \Big]}} \, dt \\
+									= &
+									\underset{{\cal L} \Big\{ (2t+1) \Big\}}{\underbrace{\int_0^\infty e^{-st} \, \big( 2t+1 \big) \, dt} }
+									+ \int_2^\infty \Big( t  -1 \Big) e^{-st} \, dt \\
+								\end{align*}
+
+								Now we can recognize the first integral as the definition of the Laplace transform of \((2t+1)\) which we can evaluate by applying linearity and then using a table of Laplace transforms
+
+								<a id="x1-5r3"></a>
+								\begin{align}  \label {eq:8.4.3} 
+									{\cal L} \Big\{ f(t) \Big\}
+									= &
+									{\cal L} \Big\{ (2t+1) \Big\}
+									+ \int_2^\infty \Big( t  -1 \Big) e^{-st} \, dt \\
+									= &
+									2 \, {\cal L} \Big\{ t \Big\} + {\cal L} \Big\{ 1 \Big\}
+									+ \int_2^\infty \Big( t  -1 \Big) e^{-st} \, dt \nonumber \\
+									= &
+									\frac{2}{s^2} + \frac{1}{s}
+									+ \int_2^\infty \Big( t  -1 \Big) e^{-st} \, dt \nonumber
+								\end{align}
+
+								Now to evaluate the other integral, notice that the limits of integration are from \(2\) to infinity, but to write it in terms of a Laplace transform we need the limits of integration to be from \(0\) to infinity, so we make a substitution to shift the limits of integration
+								
+								\begin{array}{rrrrr} 
+									u &=& t-2
+									&\quad&
+									\dfrac{du}{dt}&=&1 \\
+									\Longrightarrow
+									t &=& u+2
+									&\quad&
+									\Longrightarrow
+									du &=&  dt
+								\end{array}
+
+								Substituting we obtain
+
+
+								\begin{align*}  
+									{\cal L} \Big\{ f(t) \Big\}
+									= &
+									\frac{2}{s^2} + \frac{1}{s}
+									+ \int_{t=2}^\infty \Big( t  -1 \Big) e^{-st} \, dt  \\
+									= &
+									\frac{2}{s^2} + \frac{1}{s}
+									+ \int_{u=0}^\infty \Big( (u+2)  -1 \Big) e^{-s(u+2)} \, du  \\
+									= &
+									\frac{2}{s^2} + \frac{1}{s}
+									+ \int_{u=0}^\infty \Big( u+ 1 \Big) e^{-su} \, e^{-2s} \, du  \\
+								\end{align*}
+
+								And since \(e^{-2s}\) is constant we can factor it out of the integral
+
+								\begin{align*}  
+									{\cal L} \Big\{ f(t) \Big\}
+									= &
+									\frac{2}{s^2} + \frac{1}{s}
+									+ e^{-2s} \int_{u=0}^\infty \Big( u+ 1 \Big) e^{-su} \, du  \\
+								\end{align*}
+
+								And finally since \(u\) is an arbitrary variable we can replace it with \(t\) so we can more readibly recognize it as the Laplacae transform of \((t+1)\)
+
+								\begin{align*}  
+									{\cal L} \Big\{ f(t) \Big\}
+									= &
+									\frac{2}{s^2} + \frac{1}{s}
+									+ e^{-2s} \underset{{\cal L} \Big\{ t+1 \Big\}}{\underbrace{\int_{t=0}^\infty \Big( t+ 1 \Big) e^{-st} \, dt}}  \\
+									= &
+									\frac{2}{s^2} + \frac{1}{s}
+									+ e^{-2s} \, {\cal L} \Big\{ t+1 \Big\}
+
+								\end{align*}
+
+								Which of course we can evaluate by applying linearity and using a table of Laplace transforms
+
+
+								\begin{align*}  
+									{\cal L} \Big\{ f(t) \Big\}
+									= &
+									\frac{2}{s^2} + \frac{1}{s}
+									+ e^{-2s} \, {\cal L} \Big\{ t+1 \Big\} \\
+									= &
+									\frac{2}{s^2} + \frac{1}{s}
+									+ \Big( {\cal L} \big\{ t\big\}
+									+ {\cal L} \big\{ 1 \big\} \Big) \, e^{-2s}  \\
+									= &
+									\frac{2}{s^2} + \frac{1}{s}
+									+ \left( \frac{1}{s^2}
+									+ \frac{1}{s} \right) \, e^{-2s}  \\	
+								\end{align*}
+
+								Which agrees with our result from calculating the Laplace transform using the defintion 
+							</div>	
+						</li>
+					</ol>	
 				</details>
 			</div>
 			<figure id="x1-19r4">
@@ -91,46 +299,210 @@
 				</figcaption>
 			</figure>
 
-			<figure id="x1-7r2">
-				<img height="264" src="EPS/fig080402.png" width="409" /> 
-				
-				<figcaption>
-					<span class="id">Figure&nbsp;8.4.2</span>
-					<span class="content">\(y=u(t-\tau )\)</span>
-				</figcaption>
-			</figure>
+
 		</details>
 		<details id="b8bc398f-b392-4088-9ac3-f064762e0785">
 			<summary> Laplace Transforms of Piecewise Continuous Functions</summary>
 			
 			<div id="4a41be27-6339-41ec-b04b-a012fd781661">				
-				We’ll now develop the method of Example&nbsp;<a href="#x1-21">8.4.1</a> into a systematic way to find the Laplace transform of a piecewise continuous function. It is convenient to introduce the <span class="vocab">unit step function</span>, defined as \begin {equation} \label {eq:8.4.4} u(t)=\left \{ \begin {array}{rl} 0,&amp;t&lt;0\\ 1,&amp;t\ge 0 \end {array}\right. \end {equation} <a id="x1-8r4"></a> Thus, \(u(t)\) “steps” from the constant value \(0\) to the constant value \(1\) at \(t=0\). If we replace \(t\) by \(t-\tau \) in <a href="#x1-8r4">(8.4.4)</a>, then
-				\[ u(t-\tau )=\left \{ 
-					\begin {array}{rl}
-						0,&amp;t&lt;\tau ,\\ 1,&amp;t\ge \tau 
-					\end {array}\right .
+				We’ll now develop the method of Example&nbsp;<a href="#x1-21">8.4.1</a> into a systematic way to find the Laplace transform of a piecewise continuous function. It is convenient to introduce the <span class="vocab">unit step function</span>, defined as 
+				
+				<a id="x1-8r4"></a>
+				\begin {equation} \label {eq:8.4.4} 
+					u(t)= \left\{ 
+						\begin {array}{rl} 
+							0 &amp;	t&lt;0 \\ 
+							1 &amp; t\ge 0 
+						\end {array}
+						\right.
+				\end {equation}  
+				
+				Thus, \(u(t)\) “steps” from the constant value \(0\) to the constant value \(1\) at \(t=0\). If we replace \(t\) by \(t-\tau \) in <a href="#x1-8r4">(8.4.4)</a>, then the step now occurs at \(t=\tau \)
+
+				\[ u(t-\tau )=
+					\left \{ 
+						\begin {array}{rl}
+							0 &amp; t &lt; \tau \\ 
+							1 &amp; t\ge \tau 
+						\end {array}
+					\right .
 				\]
-				that is, the step now occurs at \(t=\tau \) (Figure&nbsp;<a href="#x1-7r2">8.4.2</a>).
+
+				<figure id="x1-7r2">
+					<img height="264" src="EPS/fig080402.png" width="409" /> 
+					
+					<figcaption>
+						<span class="id">Figure&nbsp;8.4.2</span>
+						<span class="content">\(y=u(t-\tau )\)</span>
+					</figcaption>
+				</figure>
 			</div>
+			<br>
 			<div id="bb37f016-2c88-4da1-86f5-692509c0d8f7">
-				The step function enables us to represent piecewise continuous functions conveniently. For example, consider the function \begin {equation} \label {eq:8.4.5} f(t)=\left \{\begin {array}{rl} f_0(t),&amp;0\le t&lt;t_1,\\ f_1(t),&amp;t\ge t_1 \end {array}\right. \end {equation} <a id="x1-9r5"></a> where we assume that \(f_0\) and \(f_1\) are defined on \([0,\infty )\), even though they equal \(f\) only on the indicated intervals. This assumption enables us to rewrite <a href="#x1-9r5">(8.4.5)</a> as 
+				The <span class="vocab">unit step function</span> enables us to represent piecewise continuous functions conveniently. For example, consider the function 
+				
+				<a id="x1-9r5"></a>
+				\begin {equation} \label {eq:8.4.5} 
+					f(t)=\left\{
+						\begin {array}{rl} 
+							f_0(t) &amp;0\le t&lt;t_1\\ 
+							f_1(t) &amp;t\ge t_1 
+						\end {array}\right. 
+				\end {equation}  
+				
+				where we assume that \(f_0(t)\) and \(f_1(t)\) are defined on \([0,\infty )\), even though they equal \(f(t)\) only on the indicated intervals. This assumption enables us to rewrite <a href="#x1-9r5">(8.4.5)</a> as 
+
+
 				<a id="x1-10r6"></a> 
 				\begin {equation} 
-					\label {eq:8.4.6} f(t)=f_0(t)+u(t-t_1)\left (f_1(t)-f_0(t)\right ) 
-				\end {equation} 
-				To verify this, note that if \(t&lt;t_1\) then \(u(t-t_1)=0\) and <a href="#x1-10r6">(8.4.6)</a> becomes \[ f(t)=f_0(t)+(0)\left (f_1(t)-f_0(t)\right )=f_0(t)\] If \(t\ge t_1\) then \(u(t-t_1)=1\) and <a href="#x1-10r6">(8.4.6)</a> becomes \[ f(t)=f_0(t)+(1)\left (f_1(t)-f_0(t)\right )=f_1(t)\] 
+					\label {eq:8.4.6} 
+					f(t)=f_0(t)+u(t-t_1) \Big (f_1(t)-f_0(t)\Big ) 
+				\end {equation}  
+
+				To verify this, note that if \(t&lt;t_1\) then \(u(t-t_1)=0\) and <a href="#x1-10r6">(8.4.6)</a> becomes 
+				
+				\[ f(t)=f_0(t)+(0)\Big (f_1(t)-f_0(t)\Big )=f_0(t)\] 
+				
+				If \(t\ge t_1\) then \(u(t-t_1)=1\) and <a href="#x1-10r6">(8.4.6)</a> becomes 
+				
+				\[ f(t)=f_0(t)+(1)\Big (f_1(t)-f_0(t)\Big )=f_1(t)\] 
 			</div>
+			<br>
+			<div id="fdasa-150c-4f7a-b848-875bd9c64076">
+				<div>
+					Now we'll rewrite the piecewise fuction <a href="#x1-3r1">(8.4.1)</a> from Example&nbsp;<a href="#x1-21">8.4.1</a> in terms of the <span class="vocab">unit step function</span>
+
+					\begin {equation*}
+						f(t)=\left \{ 
+							\begin {array}{cl} 
+								2t+1 &amp; 0\le t&lt;2 \\
+								3t &amp; t\ge 2 
+							\end {array}
+						\right. \tag{1}
+					\end {equation*}
+
+					From the definition <a href="#x1-9r5">(8.4.5)</a> we have \(f_0(t)=2t+1\) and \(f_1(t)=3t\) with the "step" occuring at \(t_1=2.\) Substituting these values into <a href="#x1-10r6">(8.4.6)</a> we can rewrite \(f(t)\) as
+
+					\begin {align*} 
+						f(t) = & (2t+1)+u(t-2) \underset{(t-1)}{\underbrace{\Big ( 3t-(2t+1) \Big ) }} \\
+						= & (2t+1)+ \big(t-1\big) \, u(t-2) \\
+					\end {align*}  
+
+					Now using the definition <a href="sec8.1.book.html#x1-5r3" target=_blank>(8.1.2)</a> the Laplace transform of \(f(t)\) can be represented as
+
+					\begin{align*}
+						{\cal L} \Big\{ f(t) \Big\}
+						= & \int _0^\infty e^{-st} f(t) \, dt \\
+						= & \int _0^\infty  \Big( (2t+1)+ \big(t-1\big) \, u(t-2) \Big) \, e^{-st} \, dt \\
+						= & \int _0^\infty (2t+1)\, e^{-st} \, dt 
+						+ \int _0^\infty \big(t-1\big) \, u(t-2) \, e^{-st} \, dt
+					\end{align*}
+
+					
+					fixme
+				</div>	
+			</div>
+
+
+			<br>
 			<div id="83fb7e2a-150c-4f7a-b848-875bd9c64076">
-				We need the next theorem to show how <a href="#x1-10r6">(8.4.6)</a> can be used to find \({\cal L}(f)\). 
+				FIXME
+				We need the next theorem to show how <a href="#x1-10r6">(8.4.6)</a> can be used to find \({\cal L} \big\{ f(t) \big\} \)
 			</div>
-			<div class="theorem" id="x1-111">
-				<span class="head">Theorem&nbsp;8.4.1</span> 
-				 Let \(g\) be defined on \([0,\infty ).\) Suppose \(\tau \ge 0\) and \({\cal L}\left (g(t+\tau )\right )\) exists for \(s&gt;s_0.\) Then \({\cal L}\left (u(t-\tau )g(t)\right )\) exists for \(s&gt;s_0\), and \[ {\cal L}(u(t-\tau )g(t))=e^{-s\tau }{\cal L}\left (g(t+\tau )\right )\]
-			</div>
+			<br>
+
 			
 			<div id="c94d4645-9cde-4dfd-92f4-4aa376640023">
-				<strong>Proof</strong> By definition, \[ {\cal L}\left (u(t-\tau )g(t)\right )=\int _0^\infty e^{-st} u(t-\tau )g(t)\, dt\] From this and the definition of \(u(t-\tau )\), \[ {\cal L}\left (u(t-\tau )g(t)\right )=\int _0^\tau e^{-st}(0)\,dt+\int _{\tau }^\infty e^{-st}g(t)\,dt\] The first integral on the right equals zero. Introducing the new variable of integration \(x=t-\tau \) in the second integral yields \[ {\cal L}\left (u(t-\tau )g(t)\right )=\int _0^\infty e^{-s(x+\tau )}g(x+\tau )\,dx =e^{-s\tau }\int _0^\infty e^{-sx} g(x+\tau )\,dx\] Changing the name of the variable of integration in the last integral from \(x\) to \(t\) yields \[ {\cal L}\left (u(t-\tau )g(t)\right ) =e^{-s\tau }\int _0^\infty e^{-st} g(t+\tau )\,dt=e^{-s\tau }{\cal L}(g(t+\tau ))\] 
+				<strong>Proof</strong> By definition, 
+				
+				\[ 
+					{\cal L} \big\{ u(t-\tau) \, g(t) \big\}
+					=\int _0^\infty e^{-st} \, u(t-\tau) \, g(t)\, dt
+				\] 
+				
+				Since \(u(t-\tau)\) is piecewise we split up the integral at the point of discontinuity to obtain
+
+				\begin{align*}
+					{\cal L} \big\{ u(t-\tau) \, g(t) \big\}
+					= &
+					\int _0^\tau e^{-st} \, \cdot 0 \cdot \, g(t)\, dt
+					+
+					\int _\tau^\infty e^{-st} \, \cdot 1 \cdot  \, g(t)\, dt \\
+					= &
+					\int _0^\tau  0 \, dt
+					+
+					\int _\tau^\infty e^{-st} \, g(t)\, dt
+				\end{align*}
+
+				The first integral is now just the definite integal of zero, which is just zero, so we have
+
+				\begin{align*}
+					{\cal L} \big\{ u(t-\tau) \, g(t) \big\}
+					= &
+					\int _\tau^\infty e^{-st} \, g(t)\, dt
+				\end{align*}
+
+				Now just as we did in Example&nbsp;<a href="#x1-21">8.4.1</a> we will make a change of variables using substitution to rewrite the integral in terms of a Laplace transform. Notice that the limits of integration are from \(\tau\) to infinity, but to write it in terms of a Laplace transform we need the limits of integration to be from \(0\) to infinity, so we make a substitution to shift the limits of integration
+								
+				\begin{array}{rrrrr} 
+					u &=& t-\tau
+					&\quad&
+					\dfrac{du}{dt}&=&1 \\
+					\Longrightarrow
+					t &=& u+\tau
+					&\quad&
+					\Longrightarrow
+					du &=&  dt
+				\end{array}
+
+				Substituting we obtain
+
+				\begin{align*}
+					{\cal L} \big\{ u(t-\tau) \, g(t) \big\}
+					= &
+					\int _{t=\tau}^\infty e^{-st} \, g(t)\, dt \\
+					= &
+					\int _{u=0}^\infty e^{-s(u+\tau)} \, g(u+\tau)\, du \\
+					= &
+					\int _{u=0}^\infty e^{-su} \, e^{-s\tau} \, g(u+\tau)\, du \\
+				\end{align*}
+
+				And since \(e^{-2s}\) is constant we can factor it out of the integral
+
+				\begin{align*}
+					{\cal L} \big\{ u(t-\tau) \, g(t) \big\}
+					= &
+					e^{-s\tau}  \int _{u=0}^\infty e^{-su} \, g(u+\tau)\, du \\
+				\end{align*}
+
+				And finally since \(u\) is an arbitrary variable we can replace it with \(t\) so we can more readibly recognize it as the Laplacae transform of \(g(t+\tau)\)
+
+				\begin{align*}  
+					{\cal L} \big\{ u(t-\tau) \, g(t) \big\}
+					= &
+					e^{-s\tau}  \underset{ {\cal L} \big\{ g(t+\tau) \big\}}{\underbrace{\int _{t=0}^\infty e^{-st} \, g(t+\tau)\, dt}} \\
+					= &
+					e^{-s\tau} {\cal L} \big\{ g(t+\tau) \big\} \\	
+
+				\end{align*}
 			</div>
+
+			<br>
+			<div class="theorem" id="x1-111">
+				<span class="head">Theorem&nbsp;8.4.1</span> 
+				 Let \(g(t)\) be defined on \([0,\infty ).\) Suppose \(\tau \ge 0\) and \({\cal L} \big\{ g(t+\tau ) \big\} \) exists for \(s&gt;s_0.\) Then 
+				 \({\cal L} \big\{ u(t-\tau )g(t) \big\} \)
+				 exists for \(s&gt;s_0\), and 
+				 
+				 \[ 
+				 	{\cal L} \big\{ u(t-\tau )g(t) \big\} 
+					=
+					e^{-s\tau}
+					{\cal L} \big\{ g(t+\tau ) \big\} 
+				 \]
+			</div>
+
+
 
 			<div class="example" id="x1-122" style="--ex-number: 2">
 				<div>
