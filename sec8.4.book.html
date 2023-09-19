@@ -522,7 +522,7 @@
 				 exists for \(s&gt;s_0\), and 
 				 
 				 \[ 
-				 	{\cal L} \big\{ u(t-\tau )g(t) \big\} 
+				 	{\cal L} \big\{ g(t) \, u(t-\tau ) \big\} 
 					=
 					e^{-s\tau}
 					{\cal L} \big\{ g(t+\tau ) \big\} 
@@ -572,7 +572,7 @@
 										\right.
 								\end {equation*} 
 			
-								From the definition <a href="#x1-9r5">(8.4.5)</a> we have \(f_0(t)=0\) and \(f_1(t)=t^1+1\) with the "step" occuring at \(t_1=1.\) Substituting these values into <a href="#x1-10r6">(8.4.6)</a> we can rewrite \(f(t)\) as
+								From the definition <a href="#x1-9r5">(8.4.5)</a> we have \(f_0(t)=0\) and \(f_1(t)=t^2+1\) with the "step" occuring at \(t_1=1.\) Substituting these values into <a href="#x1-10r6">(8.4.6)</a> we can rewrite \(f(t)\) as
 			
 								\begin {align*} 
 									f(t) = & \, (0)+u(t-1) \underset{(t^2+1)}{\underbrace{\Big ( t^2+1-(0) \Big ) }}
@@ -668,40 +668,47 @@
 									{\cal L} \big\{ \underset{g(t)}{\underbrace{\big(t^2+1\big)}} \, \underset{u(t-\tau)}{\underbrace{u(t-1)}} \big\} 
 								\]
 
-								So for our expression we have \(g(t) = t^2+1\) and \(\tau=1.\) The formula from theorem is
-
-								\[ 
-									{\cal L} \big\{ u(t-\tau )g(t) \big\} 
-										=
-										e^{-s\tau}
-										{\cal L} \big\{ g(t+\tau ) \big\} 
-								\]
-
-								So substituting in our value for \(\tau\) we have
+								So for our expression we have \(g(t) = t^2+1\) and \(\tau=1.\) Substituting in our value for \(\tau\) to 
+								Theorem&nbsp;<a href="#x1-111">8.4.1</a>
+								we have
 								\[ 
 									{\cal L} \big\{ g(t) \, u(t-1 ) \big\} 
 										=
 										e^{-s} \,
 										{\cal L} \big\{ g(t+1 ) \big\} 
 								\]
-								So we need to 
+								So we need to calculate \(g(t+1 )\)
+
+								\begin{align*}  
+									g(t) = t^2+1
+									\Longrightarrow
+									g(t+1) = & (t+1)^2+1 \\
+									= & t^2+2t+2
+								\end{align*}
+
+								Substituting in \(g(t)\) and \(g(t+1)\) we have
+
+								\[ 
+									{\cal L} \big\{ (t^2+1) \, u(t-1 ) \big\} 
+										=
+										e^{-s} \,
+										{\cal L} \big\{ t^2+2t+2 \big\} 
+								\]
+
+								Which of course we can recognize from the last part so we obtain the same answer
+
+								\begin{align*} 
+									{\cal L} \big\{ (t^2+1) \, u(t-1 ) \big\} 
+										= &
+										e^{-s} \,
+										{\cal L} \big\{ t^2+2t+2 \big\} \\
+										= &
+									e^{-s} \, \Big( {\cal L} \big\{ t^2 \big\} + 2 \,  {\cal L}\big\{ t\big\} + 2 \,  {\cal L} \big\{ 1\big\} \Big) \\
+										= & 
+										2e^{-s} \, \left( \frac{1}{s^3} + \frac{1}{s^2} + \frac{1}{s} \right	) \\
+								\end{align*} 
 							</div>
 							<div>
-							</div>
-						</li>
-						<li>
-							<div>
-							</div>
-							<div>
-							</div>
-						</li>
-						<li>
-							<div>
-						
-								\[{\cal L} \big\{ u(t-1)(t^2+1) \big\} \]
-							</div>
-							<div>
-								Here \(\tau =1\) and \(g(t)=t^2+1\), so \[ g(t+1)=(t+1)^2+1=t^2+2t+2\] Since \[ {\cal L}\left (g(t+1)\right )={2\over s^3}+{2\over s^2}+{2\over s}\] Theorem&nbsp;<a href="#x1-111">8.4.1</a> implies that \[{\cal L}\left (u(t-1)(t^2+1)\right ) =e^{-s}\left ({2\over s^3}+{2\over s^2}+{2\over s}\right )\]
 							</div>
 						</li>
 					</ol>
@@ -735,6 +742,161 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
+					<ol>
+						<li>
+							<div>
+								Now we'll rewrite the piecewise fuction in terms of the <span class="vocab-repeat">unit step function</span>
+			
+								\begin {equation*}  
+									f(t)=\left \{ 
+										\begin {array}{cl}
+											2t+1 &amp; 0 \le t &lt; 2 \\
+											3t &amp; t \ge 2 
+										\end {array}\right. 
+								\end {equation*} 
+			
+								From the definition <a href="#x1-9r5">(8.4.5)</a> we have \(f_0(t)=2t+1\) and \(f_1(t)=3t\) with the "step" occuring at \(t_1=2.\) Substituting these values into <a href="#x1-10r6">(8.4.6)</a> we can rewrite \(f(t)\) as
+			
+								\begin {align*} 
+									f(t) = & \, (2t+1)+u(t-2) \underset{(1-t)}{\underbrace{\Big ( (2t+1)-(3t) \Big ) }}
+									= \, (2t+1) + \big(1-t\big) \, u(t-2) \\
+								\end {align*}  
+			
+							</div>
+							<div>
+							</div>
+						</li>
+						<li>
+							<div>
+								Now using the definition <a href="sec8.1.book.html#x1-5r3" target=_blank>(8.1.2)</a> the Laplace transform of \(f(t)\) can be represented as
+			
+								\begin{align*}
+									{\cal L} \Big\{ f(t) \Big\}
+									= & \int _0^\infty e^{-st} f(t) \, dt \\
+									= & \int _0^\infty \Big( (2t+1) + \big(1-t\big) \, u(t-2) \Big) \, e^{-st} \, dt \\
+									= & \int _0^\infty (2t+1) e^{-st} \, dt + \int _0^\infty \big(1-t\big) \, u(t-2) \, e^{-st} \, dt \\
+								\end{align*}
+			
+								Now since \(u(t-2)\) is piecewise we split up the integral at the point of discontinuity to obtain
+			
+								\begin{align*}
+									\int _0^\infty \big(t^2+1\big) \, u(t-2) \, e^{-st} \, dt
+									= & \int _0^2 \underset{0}{\underbrace{\big(1-t\big) \cdot 0 \cdot  e^{-st}}} \, dt
+									+ \int _2^\infty \big(1-t\big) \cdot 1 \cdot e^{-st} \, dt \\
+									= & \quad \int _0^2 0 \, dt
+									\quad+\quad \int _2^\infty \big(1-t\big) e^{-st} \, dt \\
+								\end{align*}
+								
+								The first integral is now just the definite integal of zero, which is just zero, so we have
+			
+								\begin{align*}
+									{\cal L} \Big\{ f(t) \Big\}
+									= & \, \int _1^\infty \big(t^2+1\big) e^{-st} \, dt
+								\end{align*}
+			
+								Now we make a change of variables using substitution to rewrite the integral in terms of a Laplace transform.
+
+								\begin{array}{rrrrr} 
+									u &=& t-1
+									&\quad&
+									\dfrac{du}{dt}&=&1 \\
+									\Longrightarrow
+									t &=& u+1
+									&\quad&
+									\Longrightarrow
+									du &=&  dt
+								\end{array}
+
+								Substituting we obtain
+
+								\begin{align*}
+									{\cal L} \big\{ f(t)  \big\}
+									= &
+									\int _{t=1}^\infty  \big(t^2+1\big) e^{-st} \,  dt \\
+									= &
+									\int _{u=0}^\infty  \big((u+1)^2+1\big) e^{-s(u+1)} \,  du \\
+									= &
+									\int _{u=0}^\infty  \big(u^2+2u+2\big) e^{-su} \, e^{-s} \,  du \\
+								\end{align*}
+
+								And since \(e^{-s}\) is constant we can factor it out of the integral
+
+								\begin{align*}
+									{\cal L} \big\{  f(t) \big\}
+									= &
+									e^{-s} \int _{u=0}^\infty  \big(u^2+2u+2\big) e^{-su} \,  du \\
+								\end{align*}
+
+								And finally since \(u\) is an arbitrary variable we can replace it with \(t\) so we can more readibly recognize it as the Laplace transform of \(\big(t^2+2t+2\big) \)
+
+								\begin{align*}  
+									{\cal L} \big\{  f(t) \big\}
+									= &
+									e^{-s} \underset{{\cal L} \big\{  t^2+2t+2 \big\}}{\underbrace{\int _{t=0}^\infty  \big(t^2+2t+2\big) e^{-st} \,  dt}} \\
+									= &
+									e^{-s} \, {\cal L} \big\{ t^2+2t+2\big\} \\
+									= &
+									e^{-s} \, \Big( {\cal L} \big\{ t^2 \big\} + 2 \,  {\cal L}\big\{ t\big\} + 2 \,  {\cal L} \big\{ 1\big\} \Big) \\
+									= &
+									e^{-s} \, \left( \frac{2}{s^3} + \frac{2}{s^2} + \frac{2}{s} \right	) \\
+									= &
+									2e^{-s} \, \left( \frac{1}{s^3} + \frac{1}{s^2} + \frac{1}{s} \right	) \\
+								\end{align*}
+							</div>	
+						</li>
+						<li>
+							<div>
+								Now we will apply Theorem&nbsp;<a href="#x1-111">8.4.1</a> to calculate
+
+								\[
+									{\cal L} \big\{ \underset{g(t)}{\underbrace{\big(t^2+1\big)}} \, \underset{u(t-\tau)}{\underbrace{u(t-1)}} \big\} 
+								\]
+
+								So for our expression we have \(g(t) = t^2+1\) and \(\tau=1.\) Substituting in our value for \(\tau\) to 
+								Theorem&nbsp;<a href="#x1-111">8.4.1</a>
+								we have
+								\[ 
+									{\cal L} \big\{ g(t) \, u(t-1 ) \big\} 
+										=
+										e^{-s} \,
+										{\cal L} \big\{ g(t+1 ) \big\} 
+								\]
+								So we need to calculate \(g(t+1 )\)
+
+								\begin{align*}  
+									g(t) = t^2+1
+									\Longrightarrow
+									g(t+1) = & (t+1)^2+1 \\
+									= & t^2+2t+2
+								\end{align*}
+
+								Substituting in \(g(t)\) and \(g(t+1)\) we have
+
+								\[ 
+									{\cal L} \big\{ (t^2+1) \, u(t-1 ) \big\} 
+										=
+										e^{-s} \,
+										{\cal L} \big\{ t^2+2t+2 \big\} 
+								\]
+
+								Which of course we can recognize from the last part so we obtain the same answer
+
+								\begin{align*} 
+									{\cal L} \big\{ (t^2+1) \, u(t-1 ) \big\} 
+										= &
+										e^{-s} \,
+										{\cal L} \big\{ t^2+2t+2 \big\} \\
+										= &
+									e^{-s} \, \Big( {\cal L} \big\{ t^2 \big\} + 2 \,  {\cal L}\big\{ t\big\} + 2 \,  {\cal L} \big\{ 1\big\} \Big) \\
+										= & 
+										2e^{-s} \, \left( \frac{1}{s^3} + \frac{1}{s^2} + \frac{1}{s} \right	) \\
+								\end{align*} 
+							</div>
+							<div>
+							</div>
+						</li>
+					</ol>
+					
 
 					<ol>
 						<li>
