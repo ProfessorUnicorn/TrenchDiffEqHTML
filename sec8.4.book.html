@@ -774,10 +774,21 @@
 									{\cal L} \Big\{ f(t) \Big\}
 									= & \int _0^\infty e^{-st} f(t) \, dt \\
 									= & \int _0^\infty \Big( (2t+1) + \big(1-t\big) \, u(t-2) \Big) \, e^{-st} \, dt \\
-									= & \int _0^\infty (2t+1) e^{-st} \, dt + \int _0^\infty \big(1-t\big) \, u(t-2) \, e^{-st} \, dt \\
+									= & \underset{{\cal L} \Big\{ 2t+1 \Big\}}{\underbrace{\int _0^\infty (2t+1) e^{-st} \, dt}} + \int _0^\infty \big(1-t\big) \, u(t-2) \, e^{-st} \, dt \\
 								\end{align*}
-			
-								Now since \(u(t-2)\) is piecewise we split up the integral at the point of discontinuity to obtain
+
+								The first integral we recognize as \({\cal L} \Big\{ 2t+1 \Big\}\) which we can solve quickly using Laplace transform tables.
+
+								\begin{align*}
+									{\cal L} \Big\{ 2t+1 \Big\}
+									= &
+									2 \, {\cal L} \Big\{ t\Big\} + {\cal L} \Big\{ 1 \Big\}
+									= 
+									\frac{2}{s^2} + \frac{1}{s} \\
+								\end{align*}
+
+							
+								As for the second integral, since \(u(t-2)\) is piecewise we split up the integral at the point of discontinuity to obtain
 			
 								\begin{align*}
 									\int _0^\infty \big(t^2+1\big) \, u(t-2) \, e^{-st} \, dt
@@ -787,21 +798,21 @@
 									\quad+\quad \int _2^\infty \big(1-t\big) e^{-st} \, dt \\
 								\end{align*}
 								
-								The first integral is now just the definite integal of zero, which is just zero, so we have
+								The integral from zero to two is now just the definite integal of zero, which is just zero, so we have
 			
 								\begin{align*}
 									{\cal L} \Big\{ f(t) \Big\}
-									= & \, \int _1^\infty \big(t^2+1\big) e^{-st} \, dt
+									= & \, \frac{2}{s^2} + \frac{1}{s} + \int _2^\infty \big(1-t\big) e^{-st} \, dt
 								\end{align*}
 			
 								Now we make a change of variables using substitution to rewrite the integral in terms of a Laplace transform.
 
 								\begin{array}{rrrrr} 
-									u &=& t-1
+									u &=& t-2
 									&\quad&
 									\dfrac{du}{dt}&=&1 \\
 									\Longrightarrow
-									t &=& u+1
+									t &=& u+2
 									&\quad&
 									\Longrightarrow
 									du &=&  dt
@@ -812,11 +823,11 @@
 								\begin{align*}
 									{\cal L} \big\{ f(t)  \big\}
 									= &
-									\int _{t=1}^\infty  \big(t^2+1\big) e^{-st} \,  dt \\
+									\frac{2}{s^2} + \frac{1}{s} + \int _{t=2}^\infty  \big(1-t\big) e^{-st} \,  dt \\
 									= &
-									\int _{u=0}^\infty  \big((u+1)^2+1\big) e^{-s(u+1)} \,  du \\
+									\frac{2}{s^2} + \frac{1}{s} + \int _{u=0}^\infty  \big(1-(u+1)\big) e^{-s(u+1)} \,  du \\
 									= &
-									\int _{u=0}^\infty  \big(u^2+2u+2\big) e^{-su} \, e^{-s} \,  du \\
+									\frac{2}{s^2} + \frac{1}{s} -\int _{u=0}^\infty  \big(u+1\big) e^{-su} \, e^{-s} \,  du \\
 								\end{align*}
 
 								And since \(e^{-s}\) is constant we can factor it out of the integral
@@ -824,109 +835,85 @@
 								\begin{align*}
 									{\cal L} \big\{  f(t) \big\}
 									= &
-									e^{-s} \int _{u=0}^\infty  \big(u^2+2u+2\big) e^{-su} \,  du \\
+									\,\frac{2}{s^2} + \frac{1}{s} -e^{-s} \int _{u=0}^\infty  \big(u+1\big) e^{-su} \,  du \\
 								\end{align*}
 
-								And finally since \(u\) is an arbitrary variable we can replace it with \(t\) so we can more readibly recognize it as the Laplace transform of \(\big(t^2+2t+2\big) \)
+								And finally since \(u\) is an arbitrary variable we can replace it with \(t\) so we can more readibly recognize it as the Laplace transform of \(\big(t+2\big) \)
 
 								\begin{align*}  
 									{\cal L} \big\{  f(t) \big\}
-									= &
-									e^{-s} \underset{{\cal L} \big\{  t^2+2t+2 \big\}}{\underbrace{\int _{t=0}^\infty  \big(t^2+2t+2\big) e^{-st} \,  dt}} \\
-									= &
-									e^{-s} \, {\cal L} \big\{ t^2+2t+2\big\} \\
-									= &
-									e^{-s} \, \Big( {\cal L} \big\{ t^2 \big\} + 2 \,  {\cal L}\big\{ t\big\} + 2 \,  {\cal L} \big\{ 1\big\} \Big) \\
-									= &
-									e^{-s} \, \left( \frac{2}{s^3} + \frac{2}{s^2} + \frac{2}{s} \right	) \\
-									= &
-									2e^{-s} \, \left( \frac{1}{s^3} + \frac{1}{s^2} + \frac{1}{s} \right	) \\
+									= & \,
+									\frac{2}{s^2} + \frac{1}{s} -e^{-s} \underset{{\cal L} \big\{  t+1 \big\}}{\underbrace{\int _{t=0}^\infty  \big(t+2\big) e^{-st} \,  dt}} \\
+									= & \,
+									\frac{2}{s^2} + \frac{1}{s} -e^{-s} \, {\cal L} \big\{ t+1\big\} \\
+									= & \,
+									\frac{2}{s^2} + \frac{1}{s} - \Big( {\cal L} \big\{ t \big\} +  {\cal L}\big\{ 1\big\} \Big)e^{-s} \\
+									= & \,
+									\frac{2}{s^2} + \frac{1}{s} - \, \left( \frac{1}{s^2} + \frac{1}{s} \right	) e^{-s}\\
 								\end{align*}
 							</div>	
 						</li>
 						<li>
 							<div>
-								Now we will apply Theorem&nbsp;<a href="#x1-111">8.4.1</a> to calculate
+								Now we will apply Theorem&nbsp;<a href="#x1-111">8.4.1</a> to calculate 
 
-								\[
-									{\cal L} \big\{ \underset{g(t)}{\underbrace{\big(t^2+1\big)}} \, \underset{u(t-\tau)}{\underbrace{u(t-1)}} \big\} 
-								\]
+								\begin{align*}  
+									& \, {\cal L} \big\{  (2t+1) + \big(1-t\big) \, u(t-2) \big\} \\
+									= & \, {\cal L} \big\{  2t+1 \big\} + {\cal L} \big\{   \underset{g(t)}{\underbrace{\big(1-t\big)}} \, \underset{u(t-\tau)}{\underbrace{u(t-2)}} \big\}
+								\end{align*}
 
-								So for our expression we have \(g(t) = t^2+1\) and \(\tau=1.\) Substituting in our value for \(\tau\) to 
+								
+								So for our expression we have \(g(t) = 1-t\) and \(\tau=2.\) Substituting in our value for \(\tau\) to 
 								Theorem&nbsp;<a href="#x1-111">8.4.1</a>
 								we have
 								\[ 
-									{\cal L} \big\{ g(t) \, u(t-1 ) \big\} 
+									{\cal L} \big\{ g(t) \, u(t-2 ) \big\} 
 										=
 										e^{-s} \,
-										{\cal L} \big\{ g(t+1 ) \big\} 
+										{\cal L} \big\{ g(t+2 ) \big\} 
 								\]
-								So we need to calculate \(g(t+1 )\)
+								So we need to calculate \(g(t+2 )\)
 
 								\begin{align*}  
-									g(t) = t^2+1
+									g(t) = 1-t
 									\Longrightarrow
-									g(t+1) = & (t+1)^2+1 \\
-									= & t^2+2t+2
+									g(t+2) = & 1-(t+2) \\
+									= & -(t+1)
 								\end{align*}
 
-								Substituting in \(g(t)\) and \(g(t+1)\) we have
+								Substituting in \(g(t)\) and \(g(t+2)\) we have
 
 								\[ 
-									{\cal L} \big\{ (t^2+1) \, u(t-1 ) \big\} 
+									{\cal L} \big\{ (1-t) \, u(t-2 ) \big\} 
 										=
 										e^{-s} \,
-										{\cal L} \big\{ t^2+2t+2 \big\} 
+										{\cal L} \big\{ -(t+1) \big\} 
+										=
+										-e^{-s} \,
+										{\cal L} \big\{ t+1 \big\} 
 								\]
 
 								Which of course we can recognize from the last part so we obtain the same answer
 
 								\begin{align*} 
-									{\cal L} \big\{ (t^2+1) \, u(t-1 ) \big\} 
-										= &
+								{\cal L} \big\{  2t+1 \big\} + {\cal L} \big\{ (1-t) \, u(t-2 ) \big\} 
+										= & {\cal L} \big\{  2t+1 \big\} -
 										e^{-s} \,
-										{\cal L} \big\{ t^2+2t+2 \big\} \\
+										{\cal L} \big\{ t+1 \big\} \\
 										= &
-									e^{-s} \, \Big( {\cal L} \big\{ t^2 \big\} + 2 \,  {\cal L}\big\{ t\big\} + 2 \,  {\cal L} \big\{ 1\big\} \Big) \\
-										= & 
-										2e^{-s} \, \left( \frac{1}{s^3} + \frac{1}{s^2} + \frac{1}{s} \right	) \\
+										2 \, {\cal L} \big\{  t \big\} + {\cal L} \big\{  1 \big\}  - 
+									\Big( 
+									{\cal L}\big\{ t\big\} 
+									+ {\cal L} \big\{ 1\big\} \Big) e^{-s} \\
+									= &
+										\frac{2}{s^2}  + \frac{1}{s}   - 
+									\left( 
+										\frac{1}{s^2}  
+									+ \frac{1}{s} \right) e^{-s} \\
+									
 								\end{align*} 
 							</div>
 							<div>
-							</div>
-						</li>
-					</ol>
-					
-
-					<ol>
-						<li>
-							<div>
-							</div>
-							<div>
-							</div>
-						</li>
-						<li>
-							<div>
-							</div>
-							<div>
-							</div>
-						</li>
-						<li>
-							<div>
-							</div>
-							<div>
-							</div>
-						</li>
-						<li>
-							We first write \(f\) in the form <a href="#x1-10r6">(8.4.6)</a> as \[ f(t)=2t+1+u(t-2)(t-1)\] Therefore
-
-							<div class="eqnarray" id="b23377ce-3f8c-49e8-a126-3ea8e2a5a418">
-								\begin {eqnarray*}
-									{\cal L}(f)&amp;=&amp;{\cal L}(2t+1) +{\cal L}\left (u(t-2)(t-1)\right )\\ &amp;=&amp;{\cal L}(2t+1) +e^{-2s}{\cal L}(t+1)\quad \mbox { (from Theorem 8.4.1})\\ &amp;=&amp;{2\over s^2}+{1\over s}+e^{-2s}\left ({1\over s^2}+{1\over s}\right ) 
-								\end {eqnarray*} 
-							</div>
-							<div id="6efc1350-18c6-481e-924d-cc1a8ecad9df">
-								which is the result obtained in Example&nbsp;<a href="#x1-21">8.4.1</a>. 
 							</div>
 						</li>
 					</ol>
@@ -939,75 +926,333 @@
 			<br>
 			<br>
 			<div id="77dbcdb9-f245-40e3-8d38-408e58764355">
-				Formula <a href="#x1-10r6">(8.4.6)</a> can be extended to more general piecewise continuous functions. For example, we can write
+				
+				
+				Recall Equation <a href="#x1-9r5">(8.4.5)</a>
+				which defines a piecewise function with two pieces:
+
+				\begin {equation*}
+					f(t)=\left\{
+						\begin {array}{rl} 
+							f_0(t) &amp;0\le t&lt;t_1\\ 
+							f_1(t) &amp;t\ge t_1 
+						\end {array}\right.  \tag{5}
+				\end {equation*}  
+				
+				Equation <a href="#x1-10r6">(8.4.6)</a> shows us how to write <a href="#x1-9r5">(8.4.5)</a> in terms of the unit step function:
+
+				\begin {equation*} 
+					f(t)=f_0(t)+u(t-t_1) \Big (f_1(t)-f_0(t)\Big ) 
+					\tag{6}
+				\end {equation*}  
+
+				However, it is likely that we will have piecewise continuous functions with more than two pieces, so we need to extend <a href="#x1-10r6">(8.4.6)</a> to a more general form. For example, consider the piecewise function with three pieces
+
 				\[ f(t)=\left \{ 
 					\begin {array}{rl} 
-						f_0(t),&amp;0\le t&lt;t_1,\\ 
-						f_1(t),&amp;t_1\le t&lt;t_2,\\ 
-						f_2(t),&amp;t\ge t_2 
+						f_0(t) &amp; 0\le t&lt; t_1 \\ 
+						f_1(t) &amp; t_1\le t&lt; t_2 \\ 
+						f_2(t) &amp; t\ge t_2 
 					\end {array}\right. 
 				\]
-				as
-				\[ f(t)=f_0(t)+u(t-t_1)\left (f_1(t)-f_0(t)\right )+ u(t-t_2)\left (f_2(t)-f_1(t)\right ) \] 
-				if \(f_0\), \(f_1\), and \(f_2\) are all defined on \([0,\infty )\). 
+
+				Then if \(f_0(t)\), \(f_1(t)\), and \(f_2(t)\) are all defined on \([0,\infty )\) equation <a href="#x1-10r6">(8.4.6)</a> becomes
+
+				\[ 
+					f(t)
+					= f_0(t) + u(t-t_1) \Big (f_1(t)-f_0(t)\Big )
+					+ u(t-t_2)\Big (f_2(t)-f_1(t)\Big ) 
+				\] 
+
+				Or if it is four pieces
+
+				\[ f(t)=\left \{ 
+					\begin {array}{rl} 
+						f_0(t) &amp; 0\le t&lt; t_1 \\ 
+						f_1(t) &amp; t_1\le t&lt; t_2 \\ 
+						f_2(t) &amp; t_3\le t&lt; t_3 \\ 
+						f_3(t) &amp; t\ge t_3 
+					\end {array}\right. 
+				\]
+
+				Then if \(f_0(t)\), \(f_1(t)\), \(f_3(t)\), and \(f_4(t)\) are all defined on \([0,\infty )\) equation <a href="#x1-10r6">(8.4.6)</a> becomes
+
+				\[ 
+					f(t)
+					= f_0(t) + u(t-t_1) \Big (f_1(t)-f_0(t)\Big )
+					+ u(t-t_2)\Big (f_2(t)-f_1(t)\Big )
+					+ u(t-t_3)\Big (f_3(t)-f_2(t)\Big ) 
+				\] 
+
+
+				 
 			</div>
 
+
 			<br>
+			<br>
+			<hr>
+			<br>
+			<br>
+
 			<!--Example 4-->
 			<div class="example" id="x1-144" style="--ex-number: 4">
-				<div>
-					Find the Laplace transform of
-					<a id="x1-15r7"></a> 
-					\begin {equation} 
-						\label {eq:8.4.7}
-						f(t)=\left \{
-							\begin {array}{cl}
-								1,&amp;0\le t&lt;2,\\ 
-								-2t+1,&amp;2\le t&lt;3,\\ 
-								3t,&amp;3\le t&lt;5,\\ 
-								t-1,&amp;t\ge 5 
-							\end {array}
-						\right.
-					\end {equation} 
-					(Figure&nbsp;<a href="#x1-16r3">8.4.3</a>).
-				</div>
-				<figure id="x1-16r3">
-					<img height="264" src="EPS/fig080403.png" width="409" />
-					<figcaption>
-						<span class="id">Figure&nbsp;8.4.3</span>
-						<span class="content">The piecewise continuous function <a href="#x1-15r7">(8.4.7)</a></span>
-					</figcaption>
-				</figure>
+				<ol>
+					<li>
+						Graph the piecewise function \(f(t)\)
+						<a id="x1-15r7"></a> 
+						\begin {equation} 
+							\label {eq:8.4.7}
+							f(t)=\left \{
+								\begin {array}{cl}
+									1 &amp;0\le t&lt;2 \\ 
+									-2t+1 &amp;2\le t&lt;3 \\ 
+									3t &amp;3\le t&lt;5 \\ 
+									t-1 &amp;t\ge 5 
+								\end {array}
+							\right.
+						\end {equation} 
+					</li>
+					<li>
+						Rewrite the piecewise function \(f(t)\) <a href="#x1-15r7">(8.4.7)</a></span> in terms of the unit step function 		
+					</li>
+					<li>
+						Use Theorem&nbsp;<a href="#x1-111">8.4.1</a> to calculate \({\cal L} \big\{ f(t) \big\} \)
+					</li>
+				</ol>	
 
 				<details class="solution">
 					<summary>Solution</summary>
-						In terms of step functions,
+					<ol>
+						<li>
+							<figure id="x1-16r3">
+								<img height="264" src="EPS/fig080403.png" width="409" />
+								<figcaption>
+									<span class="id">Figure&nbsp;8.4.3</span>
+									<span class="content">Graph of \(f(t)\) <a href="#x1-15r7">(8.4.7)</a></span> 
+								</figcaption>
+							</figure>
+						</li>
+						<li>
+							<div>
+								Now we'll rewrite the piecewise fuction in terms of the <span class="vocab-repeat">unit step function</span>
+			
+								\begin {equation*}  
+									f(t)=\left \{
+										\begin {array}{cl}
+											1 &amp;0\le t&lt;2 \\ 
+											-2t+1 &amp;2\le t&lt;3 \\ 
+											3t &amp;3\le t&lt;5 \\ 
+											t-1 &amp;t\ge 5 
+										\end {array}
+									\right. \tag{7}
+								\end {equation*} 
+			
+								From the extension of definition <a href="#x1-9r5">(8.4.5)</a> and <a href="#x1-10r6">(8.4.6)</a> to a general case, we have
+			
+								\begin {align*} 
+									f(t)
+									= \, & 1 + u(t-2) \Big ((-2t+1)-1\Big ) \\
+									& \quad\quad\quad\quad\quad
+									+ u(t-3)\Big (3t-(-2t+1) \Big ) \\
+									& \quad\quad\quad\quad\quad
+									\quad\quad\quad\quad\quad
+									 + u(t-5)\Big ((t-1)-3t\Big )\\
+									= \, & 1 -(2t) u(t-2) 
+									+ (5t-1)u(t-3)
+									-(2t+1) u(t-5)
+								\end {align*}  
+			
+							</div>
+							<div>
+							</div>
+						</li>
+						<li>
+							
+				
+							<div>
+								Now we will apply Theorem&nbsp;<a href="#x1-111">8.4.1</a> to calculate 
 
-						<div class="eqnarray" id="a7461756-83f8-4955-9b3d-55afdd850db2">
-							\begin {eqnarray*} 
-								f(t)&amp;=&amp;1+u(t-2)(-2t+1-1)+u(t-3)(3t+2t-1)\\ 
-								&amp;&amp;+u(t-5)(t-1-3t) 
-							\end {eqnarray*} 
-						</div>
-						<div id="814ef8e2-04f2-4ec4-be2d-c710b4a73cec">
-							or 
-							\[ f(t)=1-2u(t-2)t+u(t-3)(5t-1)-u(t-5)(2t+1)\] Now Theorem&nbsp;<a href="#x1-111">8.4.1</a> implies that
-						</div>
-						<div class="eqnarray" id="689f8e61-ee30-4fc9-b168-b2f2e290529c">
-							\begin {eqnarray*}
-								{\cal L}(f)&amp;=&amp;{\cal L}(1)-2e^{-2s}{\cal L}(t+2)+e^{-3s}{\cal L}\left (5(t+3)-1\right )-e^{-5s}{\cal L}\left (2(t+5)+1\right )\\ 
-								&amp;=&amp;{\cal L}(1)-2e^{-2s}{\cal L}(t+2)+e^{-3s}{\cal L}(5t+14)-e^{-5s}{\cal L}(2t+11)\\ 
-								&amp;=&amp;{1\over s}-2e^{-2s}\left ({1\over s^2}+{2\over s}\right )+ e^{-3s}\left ({5\over s^2}+{14\over s}\right )-e^{-5s}\left ({2\over s^2}+{11\over s}\right ) 
-							\end {eqnarray*} 
-						</div>
+								\begin{align*}
+								 
+									& \, {\cal L} \big\{  f(t) \big\} \\
+									=& \, {\cal L} \Big\{  
+											1 
+											-(2t) u(t-2) 
+											+ (5t-1)u(t-3)
+											-(2t+1) u(t-5) \Big\} \\
+
+									=& \, {\cal L} \big\{ 1 \big\}
+										- 2 \, {\cal L} \Big\{ \underset{g_{_1}(t)}{\underbrace{t}} \, \underset{u(t-\tau_{_1})}{\underbrace{u(t-2)}} \Big\}
+										+ {\cal L} \Big\{ \underset{g_{_2}(t)}{\underbrace{(5t-1)}} \, \underset{u(t-\tau_{_2})}{\underbrace{u(t-3)}} \Big\}
+												- {\cal L} \Big\{ \underset{g_{_3}(t)}{\underbrace{(2t+1)}} \, \underset{u(t-\tau_{_3})}{\underbrace{u(t-5)}} \Big\} \\		
+								\end{align*}
+
+								With our first term it is readily evaluated using Laplace transform tables
+
+								\[
+								{\cal L} \big\{ 1 \big\} = \frac{1}{s}
+								\]
+
+								<br>
+								<br>
+								<br>
+
+								And the next three expressions will all be separately evaluated using Theorem&nbsp;<a href="#x1-111">8.4.1</a> so for the first one we have \(g_{_1}(t) = t\) and \(\tau_{_1}=2.\) Substituting in our value for \(\tau\) to 
+								Theorem&nbsp;<a href="#x1-111">8.4.1</a>
+								we have
+								\[ 
+									{\cal L} \big\{ g_{_1}(t) \, u(t-2 ) \big\} 
+										=
+										e^{-2s} \,
+										{\cal L} \big\{ g_{_1}(t+2 ) \big\} 
+								\]
+								So we need to calculate \(g_{_1}(t+2 )\)
+
+								\begin{align*}  
+									g_{_1}(t) = t
+									\Longrightarrow
+									g_{_1}(t+2) = & \,t+2 \\
+								\end{align*}
+
+								Substituting in \(g_{_1}(t)\) and \(g_{_1}(t+2)\) we have
+
+								\[ 
+									{\cal L} \big\{ t \, u(t-2 ) \big\} 
+										=
+										e^{-2s} \,
+										{\cal L} \big\{ t+2 \big\} 
+								\]
+
+
+								<br>
+								<br>
+								<br>
+
+								For the second one we have \(g_{_2}(t) = 5t-1\) and \(\tau_{_2}=3.\) Substituting in our value for \(\tau\) to 
+								Theorem&nbsp;<a href="#x1-111">8.4.1</a>
+								we have
+								\[ 
+									{\cal L} \big\{ g_{_2}(t) \, u(t-3 ) \big\} 
+										=
+										e^{-3s} \,
+										{\cal L} \big\{ g_{_2}(t+3 ) \big\} 
+								\]
+								So we need to calculate \(g_{_2}(t+3 )\)
+
+								\begin{align*}  
+									g_{_2}(t) = 5t-1
+									\Longrightarrow
+									g_{_2}(t+3) = & \,5(t+3)-1 = 5t+14 \\
+								\end{align*}
+
+								Substituting in \(g_{_2}(t)\) and \(g_{_2}(t+3)\) we have
+
+								\[ 
+									{\cal L} \big\{ ( 5t-1) \, u(t-3 ) \big\} 
+										=
+										e^{-3s} \,
+										{\cal L} \big\{ 5t+14 \big\} 
+								\]
+
+
+								<br>
+								<br>
+								<br>
+
+								For the third one we have \(g_{_3}(t) = 2t+1\) and \(\tau_{_3}=5.\) Substituting in our value for \(\tau\) to 
+								Theorem&nbsp;<a href="#x1-111">8.4.1</a>
+								we have
+								\[ 
+									{\cal L} \big\{ g_{_3}(t) \, u(t-5 ) \big\} 
+										=
+										e^{-5s} \,
+										{\cal L} \big\{ g_{_3}(t+5 ) \big\} 
+								\]
+								So we need to calculate \(g_{_3}(t+5 )\)
+
+								\begin{align*}  
+									g_{_3}(t) = 2t+1
+									\Longrightarrow
+									g_{_3}(t+5) = & \,2(t+5)+1 = 2t+11 \\
+								\end{align*}
+
+								Substituting in \(g_{_3}(t)\) and \(g_{_3}(t+5)\) we have
+
+								\[ 
+									{\cal L} \big\{ ( 2t+1) \, u(t-5 ) \big\} 
+										=
+										e^{-5s} \,
+										{\cal L} \big\{ 2t+11 \big\} 
+								\]
+
+
+								<br>
+								<br>
+								<br>
+
+								Substituting all of the expressions back in we obtain
+
+
+								\begin{align*}
+								 
+									{\cal L} \big\{  f(t) \big\}
+									=& \, {\cal L} \big\{ 1 \big\}
+										- 2 \, {\cal L} \Big\{ \underset{g_{_1}(t)}{\underbrace{t}} \, \underset{u(t-\tau_{_1})}{\underbrace{u(t-2)}} \Big\}
+										+ {\cal L} \Big\{ \underset{g_{_2}(t)}{\underbrace{(5t-1)}} \, \underset{u(t-\tau_{_2})}{\underbrace{u(t-3)}} \Big\}
+												- {\cal L} \Big\{ \underset{g_{_3}(t)}{\underbrace{(2t+1)}} \, \underset{u(t-\tau_{_3})}{\underbrace{u(t-5)}} \Big\} \\	 \\
+												
+									=& \, {\cal L} \big\{ 1 \big\}
+									- 2 \, e^{-2s} \,
+									{\cal L} \big\{ t+2 \big\}
+									+ e^{-3s} \,
+									{\cal L} \big\{ 5t+14 \big\}
+											- e^{-5s} \,
+											{\cal L} \big\{ 2t+11 \big\}  \\ \\
+
+									=& \, {\cal L} \big\{ 1 \big\}
+											- 2 \, e^{-2s} \,
+											\Big(
+											{\cal L} \big\{ t \big\}
+											+
+											2 \, {\cal L} \big\{ 1 \big\}
+											\Big)
+											+ e^{-3s} \,
+											\Big(
+											5\, {\cal L} \big\{ t \big\}
+											+
+											14 \, {\cal L} \big\{ 1 \big\}
+											\Big)
+													- e^{-5s} \,
+													\Big(
+													2 \, {\cal L} \big\{ t \big\}
+													+
+													11 {\cal L} \big\{ 1 \big\}
+													\Big)  \\		 \\		
+											
+									= & 
+									{1\over s}-2e^{-2s}\left ({1\over s^2}+{2\over s}\right )+ e^{-3s}\left ({5\over s^2}+{14\over s}\right )-e^{-5s}\left ({2\over s^2}+{11\over s}\right ) 		
+								\end{align*}
+
+								
+							</div>
+							
+						
+						</li>
+					</ol>
+
+						
 				</details>
 			</div>
 
 
+			<br>
+			<br>
+			<br>
 			<div id="faa4529d-5140-48f7-b53e-6624b1c67b13">
 				The trigonometric identities 
 			</div>
-			<div class="eqnarray" id="3d3159ca-1454-4b25-a0de-3a826d900c0e">
+			<div class="eqnarray" id="x1-17589">
 				\begin {eqnarray} 
 					\sin (A+B)&amp;=&amp;\sin A\cos B+\cos A\sin B\label {eq:8.4.8}\\ 
 					\cos (A+B)&amp;=&amp;\cos A\cos B-\sin A\sin B\label {eq:8.4.9} 
@@ -1020,47 +1265,313 @@
 			<br>
 			<!--Example 5-->
 			<div class="example" id="x1-175" style="--ex-number: 5">
-				<div>
-					Find the Laplace transform of 
-					<a id="x1-18r8"></a> 
-					\begin {equation} 
-						\label {eq:8.4.10} 
-						f(t)=\left \{
-							\begin {array}{cl} 
-								\sin t,&amp;0\le t&lt;\displaystyle {\pi \over 2},\\ 
-								\cos t-3\sin t,&amp;\displaystyle {\pi \over 2}\le t&lt;\pi ,\\ 
-								3\cos t,&amp;t\ge \pi 
-							\end {array}
-						\right. 
-					\end {equation}
-					(Figure&nbsp;<a href="#x1-19r44">8.4.4</a>).
-				</div>
 				
-				<figure id="x1-19r44">
-					<img height="264" src="EPS/fig080404.png" width="409" /> 
-					<figcaption>
-						<span class="id">Figure&nbsp;8.4.4</span>
-						<span class="content">The piecewise continuous function <a href="#x1-18r8">(8.4.10)</a> </span>
-					</figcaption>
-				</figure>
+				<ol>
+					<li>
+						Graph the piecewise function \(f(t)\)
+						<a id="x1-18r8"></a> 
+						\begin {equation} 
+							\label {eq:8.4.10} 
+							f(t)=\left \{
+								\begin {array}{cl} 
+									\sin t &amp; 0\le t&lt;\displaystyle {\pi \over 2} \\ 
+									\cos t-3\sin t &amp;\displaystyle {\pi \over 2}\le t&lt;\pi \\ 
+									3\cos t &amp; t\ge \pi 
+								\end {array}
+							\right. 
+						\end {equation}
+					</li>
+					<li>
+						Rewrite the piecewise function \(f(t)\) <a href="#x1-18r8">(8.4.10)</a> in terms of the unit step function 		
+					</li>
+					<li>
+						Use Theorem&nbsp;<a href="#x1-111">8.4.1</a> to calculate \({\cal L} \big\{ f(t) \big\} \)
+					</li>
+				</ol>	
+			
+				
+				
 				<details class="solution">
 					<summary>Solution</summary>
-					In terms of step functions, \[ f(t)=\sin t+u(t-\pi /2) (\cos t-4\sin t)+u(t-\pi ) (2 \cos t+3\sin t)\] Now Theorem&nbsp;<a href="#x1-111">8.4.1</a> implies that 
-					<a id="x1-20r9"></a>
-					\begin {equation} 
-						\label {eq:8.4.11} 
-						\begin {array}{ccl} 
-							{\cal L}(f)&amp;=&amp;{\cal L}(\sin t)+e^{-{\pi \over 2}s}{\cal L} \left (\cos \left (t+{\pi \over 2}\right )-4\sin \left (t+{\pi \over 2}\right )\right )\\ 
-							&amp;&amp;\qquad +e^{-\pi s}{\cal L}\left (2\cos (t+\pi )+3\sin (t+\pi )\right ) 
-						\end {array}
-					\end {equation}
-					Since \[ \cos \left (t+{\pi \over 2}\right )-4\sin \left (t+{\pi \over 2}\right )=-\sin t-4\cos t \] and \[ 2\cos (t+\pi )+3\sin (t+\pi )=-2\cos t-3\sin t\] we see from <a href="#x1-20r9">(8.4.11)</a> that
 
-					<div class="eqnarray" id="557b654c-0842-4379-b175-85941ae3d608">
-						\begin {eqnarray*} 
-							{\cal L}(f)&amp;=&amp;{\cal L}(\sin t)-e^{-\pi s/2}{\cal L}(\sin t+4\cos t) -e^{-\pi s}{\cal L}(2\cos t+3\sin t)\\ &amp;=&amp;{1\over s^2+1}-e^{-{\pi \over 2}s}\left ({1+4s\over s^2+1}\right ) -e^{-\pi s}\left ({3+2s\over s^2+1}\right ) 
-						\end {eqnarray*} 
-					</div>
+					<ol>
+						<li>
+							<figure id="x1-19r44">
+								<img height="264" src="EPS/fig080404.png" width="409" /> 
+								<figcaption>
+									<span class="id">Figure&nbsp;8.4.4</span>
+									<span class="content">
+										Graph of \(f(t)\) <a href="#x1-18r8">(8.4.10)</a> </span>
+								</figcaption>
+							</figure>
+						</li>
+						<li>
+							<div>
+								Now we'll rewrite the piecewise fuction in terms of the <span class="vocab-repeat">unit step function</span>
+			
+								\begin {equation*}  
+									f(t)=\left \{
+										\begin {array}{cl} 
+											\sin t &amp; 0\le t&lt;\displaystyle {\pi \over 2} \\ 
+											\cos t-3\sin t &amp;\displaystyle {\pi \over 2}\le t&lt;\pi \\ 
+											3\cos t &amp; t\ge \pi 
+										\end {array}
+									\right. \tag{10}
+								\end {equation*} 
+			
+								From the extension of definition <a href="#x1-9r5">(8.4.5)</a> and <a href="#x1-10r6">(8.4.6)</a> to a general case, we have
+			
+								\begin {align*} 
+									f(t)
+
+									= \, & \sin t 
+									+ \Big ((\cos t - 3 \sin t)-\sin t\Big ) u\left(t-\frac{\pi}{2}\right)
+									+ \Big (3\cos t-(\cos t - 3 \sin t) \Big ) u\left(t-{\pi}\right) \\
+
+									= \, & \sin t 
+									+ \Big ( \cos t - 4 \sin t\Big ) u\left(t-\frac{\pi}{2}\right)
+									+ \Big (2\cos t + 3 \sin t \Big ) u\left(t-{\pi}\right) \\
+								\end {align*}  
+			
+							</div>
+							<div>
+							</div>
+						</li>
+						<li>
+							
+				
+							<div>
+								Now we will apply Theorem&nbsp;<a href="#x1-111">8.4.1</a> to calculate 
+
+								\begin{align*}
+								 
+									& \, {\cal L} \big\{  f(t) \big\} \\
+
+									=& \, {\cal L} \Big\{  
+										\sin t 
+										+ \Big ( \cos t - 4 \sin t\Big ) u\left(t-\frac{\pi}{2}\right) 
+										+ \Big (2\cos t + 3 \sin t \Big ) u\left(t-{\pi}\right)
+										 \Big\} \\
+
+									=& \, 
+										{\cal L} \Big\{ \sin t \Big\}
+
+									+ {\cal L} \Bigg\{ \underset{g_{_1}(t)}{\underbrace{\Big ( \cos t - 4 \sin t\Big )}} \, \underset{u(t-\tau_{_1})}{\underbrace{ u\left(t-\frac{\pi}{2}\right) }} \Bigg\}
+
+									+ {\cal L} \Bigg\{ \underset{g_{_2}(t)}{\underbrace{ \Big (2\cos t + 3 \sin t \Big )}} \, \underset{u(t-\tau_{_2})}{\underbrace{ u\left(t-{\pi}\right) }}
+										\Bigg\} \\ 		
+								\end{align*}
+
+								With our first term it is readily evaluated using Laplace transform tables
+
+								\[
+								{\cal L} \big\{ \sin t \big\} = \frac{1}{s^2+1}
+								\]
+
+								<br>
+								<br>
+								<br>
+
+								And the next two expressions will all be separately evaluated using Theorem&nbsp;<a href="#x1-111">8.4.1</a> so for the first one we have \(g_{_1}(t) = \cos t - 4 \sin t\) and \(\tau_{_1}=\pi/{2}.\) Substituting in our value for \(\tau\) to 
+								Theorem&nbsp;<a href="#x1-111">8.4.1</a>
+								we have
+								\[ 
+									{\cal L} \Big\{ g_{_1}(t) \, u \left(t-\frac{\pi}{2} \right) \Big\} 
+										=
+										e^{-\frac{\pi}{2}s} \,
+										{\cal L} \Big\{ g_{_1}\left(t+\frac{\pi}{2} \right) \Big\} 
+								\]
+								So we need to calculate \(g_{_1}\left(t+\frac{\pi}{2} \right)\)
+
+								\begin{align*}  
+									g_{_1}(t) = \cos t - 4 \sin t
+									\Longrightarrow
+									g_{_1}\left(t+\frac{\pi}{2} \right) = & \, \cos \left(t+\frac{\pi}{2} \right) - 4 \sin \left(t+\frac{\pi}{2} \right) \\
+								\end{align*}
+
+								We can simplify each of these terms using <a href="#x1-17589">(8.4.8)</a> and <a href="#x1-17589">(8.4.9)</a>
+
+								\begin{align*}  
+									\cos \left(t+\frac{\pi}{2} \right)
+									= \cos t \, \underset{0}{\underbrace{\cos \frac{\pi}{2} }}
+									- \sin t \, \underset{1}{\underbrace{\sin \frac{\pi}{2} }}
+									= - \sin t \\
+
+								\end{align*}
+
+								\begin{align*}  
+									\sin \left(t+\frac{\pi}{2} \right)
+									=
+									\sin t
+									\,
+									\underset{0}{\underbrace{\cos \frac{\pi}{2}}} 
+									+
+									\cos t
+									\,
+									\underset{1}{\underbrace{\sin \frac{\pi}{2} }}
+									= \cos t
+								\end{align*}
+
+								Substituting these values back in we have
+
+								\begin{align*}  
+									g_{_1}\left(t+\frac{\pi}{2} \right) = & \,-(\sin t + 4 \cos t) \\
+								\end{align*}
+
+
+
+								Substituting in \(g_{_1}(t)\) and \(g_{_1}\left(t+\frac{\pi}{2} \right) \) we have
+
+								\[ 
+									{\cal L} \Big\{ (\cos t - 4 \sin t) \, u\left(t-\frac{\pi}{2} \right) \Big\} 
+										=
+										-e^{-\frac{\pi}{2} s} \,
+										{\cal L} \big\{\sin t + 4 \cos t\big\} 
+								\]
+
+
+								<br>
+								<br>
+								<br>
+
+								
+								For the second one we have \(g_{_2}(t) = 2\cos t - 3 \sin t\) and \(\tau_{_2}=\pi.\) Substituting in our value for \(\tau\) to 
+								Theorem&nbsp;<a href="#x1-111">8.4.1</a>
+								we have
+								\[ 
+									{\cal L} \big\{ g_{_2}(t) \, u(t-\pi ) \big\} 
+										=
+										e^{-\pi s} \,
+										{\cal L} \big\{ g_{_2}(t+\pi ) \big\} 
+								\]
+								So we need to calculate \(g_{_2}(t+\pi )\)
+
+								\begin{align*}  
+									g_{_2}(t) = 2\cos t - 3 \sin t
+									\Longrightarrow
+									g_{_2}(t+\pi) = & \,2\cos (t+\pi) + 3 \sin (t+\pi) \\
+								\end{align*}
+
+								We can simplify each of these terms using <a href="#x1-17589">(8.4.8)</a> and <a href="#x1-17589">(8.4.9)</a>
+
+								\begin{align*}  
+									\cos \left(t+\pi \right)
+									=
+									\cos t \,
+									\underset{-1}{\underbrace{ \cos \pi }}
+									-
+									\sin t \,
+									\underset{0}{\underbrace{ \sin \pi }} = -\cos t\\
+								\end{align*}
+
+								\begin{align*}  
+									\sin \left(t+\pi \right)
+									=
+									\sin t \,
+									\underset{-1}{\underbrace{
+									\cos \pi }}
+									+
+									\cos t \,
+									\underset{0}{\underbrace{
+									\sin \pi }} = -\sin t\\
+								\end{align*}
+
+								Substituting these values back in we have
+
+								\begin{align*}  
+									g_{_2}\left(t+\pi \right) = & \, -(2 \cos t + 3 \sin t ) \\
+								\end{align*}
+
+								
+								Substituting in \(g_{_2}(t)\) and \(g_{_2}(t+\pi)\) we have
+
+								\[ 
+									{\cal L} \Big\{ ( 2\cos t + 3 \sin t) \, u(t-\pi ) \Big\} 
+										=
+										-e^{-\pi s} \,
+										{\cal L} \big\{ 2 \cos t + 3 \sin t  \big\} 
+								\]
+
+
+								<br>
+								<br>
+								<br>
+
+
+								Substituting all of the expressions back in we obtain
+
+								fixme
+
+
+								<a id="x1-20r9"></a>
+								\begin{align} 
+								 
+									{\cal L} \big\{  f(t) \big\} 
+
+									=& \, 
+										{\cal L} \Big\{ \sin t \Big\}
+
+									+ {\cal L} \Bigg\{ \underset{g_{_1}(t)}{\underbrace{\Big ( \cos t - 4 \sin t\Big )}} \, \underset{u(t-\tau_{_1})}{\underbrace{ u\left(t-\frac{\pi}{2}\right) }} \Bigg\}
+
+									+ {\cal L} \Bigg\{ \underset{g_{_2}(t)}{\underbrace{ \Big (2\cos t + 3 \sin t \Big )}} \, \underset{u(t-\tau_{_2})}{\underbrace{ u\left(t-{\pi}\right) }}
+										\Bigg\} \nonumber \\ 	\nonumber\\ \label{eq:8.4.11}
+									
+									=& \, 
+										{\cal L} \Big\{ \sin t \Big\}
+
+									-e^{-\frac{\pi}{2} s} \,
+										{\cal L} \big\{\sin t + 4 \cos t\big\}
+
+									- e^{-\pi s} \,
+									{\cal L} \big\{ 2 \cos t + 3 \sin t  \big\} \\ 	\nonumber\\
+
+									=& \, 
+									{\cal L} \Big\{ \sin t \Big\}
+
+								- 
+									\Bigg(
+									{\cal L} \big\{\sin t \big\}
+										+ 4 {\cal L} \big\{ \cos t\big\}\Bigg)
+										e^{-\frac{\pi}{2} s}
+
+								-  
+								\Bigg(
+								2 \, {\cal L} \big\{ \cos t\big\} + 
+									3 \, {\cal L} \big\{ \sin t  \big\}\Bigg)
+									e^{-\pi s} \nonumber\\ 	\nonumber\\	
+
+									=& \, 
+										\frac{1}{s^2 + 1}
+									- 
+										\Bigg(
+										\frac{1}{s^2 + 1} +
+										\frac{4s}{s^2 + 1}
+											\Bigg)
+											e^{-\frac{\pi}{2} s}
+									-  
+									\Bigg(
+									\frac{2s}{s^2 + 1}
+									+ 
+										\frac{3}{s^2 + 1} 
+										\Bigg)
+										e^{-\pi s} \nonumber\\ 	\nonumber\\
+
+									
+									
+
+									= & \,
+									{1\over s^2+1}-e^{-{\pi \over 2}s}\left ({1+4s\over s^2+1}\right ) -e^{-\pi s}\left ({3+2s\over s^2+1}\right ) \nonumber\\ 
+								\end{align}
+
+									</div>	
+							
+						
+						</li>
+						
+					</ol>
+
+
+					
 				</details>
 			</div>
 		</details>
