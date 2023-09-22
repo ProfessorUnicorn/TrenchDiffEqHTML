@@ -34,12 +34,12 @@
 			<summary>Laplace Derivatives</summary>
 		
 			<div id="d4c8e4f7-d205-4017-836c-88144e33e046">
-				In the rest of this chapter we’ll use the Laplace transform to solve IVPs for constant coefficient second order equations. To do this, we must know how the Laplace transform of a functions derivative \(f^{'}(t)\) is related to the Laplace transform of \(f(t)\). The next theorem answers this question. 
+				In the rest of this chapter we’ll use the Laplace transform to solve IVPs for constant coefficient second order equations. To do this, we must know how the Laplace transform of a functions derivative \(\dot{f}(t)\) is related to the Laplace transform of \(f(t)\). The next theorem answers this question. 
 			</div>
 
 			<div class="theorem" id="x1-21">
 				<span class="head">Theorem&nbsp;8.3.1</span>
-				Suppose \(f(t) \) is continuous on \([0,\infty )\) and of exponential order \(s_0\), and \(\dot{f}(t)\) is piecewise continuous on \([0,\infty ).\) Then \(f\) and \(f'\) have Laplace transforms for \(s &gt; s_0,\) and 
+				Suppose \(f(t) \) is continuous on \([0,\infty )\) and of exponential order \(s_0\), and \(\dot{f}(t)\) is piecewise continuous on \([0,\infty ).\) Then \(f(t)\) and \(\dot{f}(t)\) have Laplace transforms for \(s &gt; s_0,\) and 
 				<a id="x1-3r1"></a>
 				\begin {equation}
 					\label {eq:8.3.1}
@@ -54,7 +54,7 @@
 					 that \({\cal L} \big\{ f(t) \big\}\) is defined for \(s&gt;s_0\)
 					 
 					 <br>
-					 We first consider the case where \(f^{'}(t)\) is continuous on \([0,\infty )\) and by definition <a href="sec8.1.book.html#x1-336" target=_blank>(8.1.2)</a>
+					 We first consider the case where \(\dot{f}(t)\) is continuous on \([0,\infty )\) and by definition <a href="sec8.1.book.html#x1-336" target=_blank>(8.1.2)</a>
 
 					 <a id="x1-4r2"></a>
 					\begin {equation} \label {eq:8.3.2} 
@@ -212,6 +212,10 @@
 								Which agrees with the previous result!
 
 							</div>
+							<div class="reading-exercise">
+								Vereify \(y=y_0 \, 
+								e^{at}\) is a solution of the IVP <a href="#x1-6r3">(8.3.3)</a>
+							</div>
 
 						</li>
 					</ol>
@@ -361,6 +365,10 @@
 
 
 						</div>	
+						<div class="reading-exercise">
+							Vereify \(y=e^{2t} + {5\over 2}
+							e^{t} + {1\over 2} e^{5t}\) is a solution of the IVP <a href="#x1-11r6">(8.3.6)</a>
+						</div>
 					</div>
 				</details>
 			</div>
@@ -472,6 +480,8 @@
 							<div>
 								Taking Laplace transforms of both sides of the differential equation in <a href="#x1-20r14">(8.3.14)</a> yields
 	
+							
+
 								\begin {align*}  
 									{\cal L} \big\{ 2\ddot{y}+3\dot{y}+y \big\} \,
 										= & \, {\cal L} \big\{ 8e^{-2t}\big\} \nonumber\\	
@@ -572,6 +582,11 @@
 	
 	
 							</div>	
+							<div class="reading-exercise">
+								Vereify \(y=\frac{8}{3}
+								e^{-2t} - 8 e^{-t} + \frac{4}{3}
+								e^{-t/2}\) is a solution of the IVP <a href="#x1-20r14">(8.3.14)</a>
+							</div>
 						</div>					
 				</details>
 			</div>
@@ -603,6 +618,8 @@
 					<div>
 						<div>
 							Taking Laplace transforms of both sides of the differential equation in <a href="#x1-24r15">(8.3.15)</a> yields
+
+							
 
 							\begin {align*}  
 								{\cal L} \big\{ \ddot{y}+2\dot{y}+2y \big\} \,
@@ -786,6 +803,16 @@
 							\sin t \right) e^{-t}\\
 						\end {align*} 
 							
+						</div>
+						<div class="reading-exercise">
+							Vereify \(y=\frac{1}{2}
+							- 
+							\left( 
+							\frac{7}{2}
+							\cos t 
+							+
+							\frac{5}{2}
+							\sin t \right) e^{-t}\) is a solution of the IVP <a href="#x1-24r15">(8.3.15)</a>
 						</div>
 						
 					</div>	
