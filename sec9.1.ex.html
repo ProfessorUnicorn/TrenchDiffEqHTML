@@ -31,22 +31,92 @@
 			Part 1: Verify IVPs
 		</div>  
 
+		<div class="grouping">
+			<ol class="instructions">
+				<li>
+					Verify \(y_1,\) \(y_2,\) and \(y_3\) are solutions of the homogeneous equation 
+				</li>
+				<li>
+					Verify that \(y_p\) is a particular solution of the nonhomogeneous equation
+				</li>
+				<li>
+					Show \(\left\{ y_1, y_2, y_3 \right\} \) is linearly indepedent
+				</li>
+				<li>
+					Solve the IVP by applying the initial conditions
+				</li>
+				<li>
+					Verify and graph the solution to the IVP 
+				</li>
+			</ol>
+
+				<div class="exercise">
+					<span class="ex-number">1.</span>
+					<div class="ex-body">
+						\( 
+							x^3 \dfrac{d^3 y}{dx^3} 
+							-3x^2 \dfrac{d^2 y}{dx^2} 
+							+6x \dfrac{d y}{dx} 
+							-6y=-\dfrac{24}{x} 
+							\quad y(-1)=0
+							\quad \left. \dfrac{d y}{dx} \right|_{-1} = 0
+						 	\quad \left. \dfrac{d^2 y}{dx^2} \right|_{-1} = 0
+						\)
+						<br>
+						<div>
+							\(y_1 = x \quad\) 
+							\(y_2=x^2 \quad\) 
+							\(y_3=x^3 \quad\)  
+							\(y_p=1/x \quad\)
+						</div>
+					</div>
+				</div>
+
+				<div class="exercise">
+					<span class="ex-number">2.</span>
+					<div class="ex-body">
+						\( 
+							\dfrac{d^3 y}{dx^3} 
+							-\dfrac{1}{x} \dfrac{d^2 y}{dx^2} 
+							- \dfrac{d y}{dx} 
+							+\dfrac{1}{x}y
+							=\dfrac{x^2-4}{x^4}
+							\quad y(1)= \dfrac{3}{2}
+							\quad \left.\dfrac{d y}{dx} \right|_1 = \dfrac{1}{2}
+							\quad \left.\dfrac{d^2 y}{dx^2}\right|_1 = 1
+						\)
+						<br>
+						<div>
+							\(y_1 = x \quad\) 
+							\(y_2=x^2 \quad\) 
+							\(y_3=x^3 \quad\)  
+							\(y_p=1/x \quad\)
+						</div>
+					</div>
+				</div>
+
+				
+			
+		</div>			
+
 		<div class="exercise" id="x1-21">
-			<span class="ex-number">1.</span>
+			<span class="ex-number">101.</span>
 			<div class="ex-body">
-				Verify that the given function is the solution of the initial value problem. 
 				<ol>
 					<li>
 						<div>
-							\( x^3y'''-3x^2y''+6xy'-6y=-\displaystyle {24\over x}, \quad y(-1)=0\), \( y'(-1)=0, \quad y''(-1)=0\); 
-						</div>
-						<div>
-							\(\displaystyle {y=-6x-8x^2-3x^3+{1\over x}}\) 
-						</div>
-					</li>
-					<li>
-						<div>
-							\(\displaystyle { y'''-{1\over x}y''-y'+{1\over x}y={x^2-4\over x^4}, \quad y(1)={3\over 2},\quad y'(1)={1\over 2}}\), \( y''(1)=1\); 
+							\( 
+								\frac{d^3 y}{dx^3} 
+								-{1\over x} \frac{d^2 y}{dx^2} 
+								- \frac{d y}{dx} 
+								+{1\over x}y
+								={x^2-4\over x^4}
+
+								\quad y(1)={3\over 2}
+								\quad \frac{d y}{dx} (1)={1\over 2}
+								\quad \frac{d^2 y}{dx^2} (1)=1
+							\)
+							
 						</div>
 						<div>
 							&nbsp; \(y=x+\displaystyle {1\over 2x}\) 
@@ -54,10 +124,10 @@
 					</li>
 					<li>
 						<div>
-							\(\displaystyle { y'''-{1\over x}y''-y'+{1\over x}y={x^2-4\over x^4}, \quad y(1)={3\over 2},\quad y'(1)={1\over 2}}\), \( y''(1)=1\); 
+							\(\displaystyle {  \frac{d^3 y}{dx^3} -{1\over x} \frac{d^2 y}{dx^2} - \frac{d y}{dx} +{1\over x}y={x^2-4\over x^4}, \quad y(1)={3\over 2},\quad  \frac{d y}{dx} (1)={1\over 2}}\), \(  \frac{d^2 y}{dx^2} (1)=1\); 
 						</div>
 						<div>
-							\(xy'''-y''-xy'+y=x^2, \quad y(1)=2,\quad y'(1)=5,\quad y''(1)=-1\); 
+							\(x \frac{d^3 y}{dx^3} - \frac{d^2 y}{dx^2} -x \frac{d y}{dx} +y=x^2, \quad y(1)=2,\quad  \frac{d y}{dx} (1)=5,\quad  \frac{d^2 y}{dx^2} (1)=-1\); 
 						</div>
 						<div>
 							\(y=-x^2-2+2e^{(x-1)}-e^{-(x-1)}+4x\) 
@@ -65,24 +135,24 @@
 					</li>
 					<li>
 						<div>
-							\(\displaystyle { y'''-{1\over x}y''-y'+{1\over x}y={x^2-4\over x^4}, \quad y(1)={3\over 2},\quad y'(1)={1\over 2}}\), \( y''(1)=1\); 
+							\(\displaystyle {  \frac{d^3 y}{dx^3} -{1\over x} \frac{d^2 y}{dx^2} - \frac{d y}{dx} +{1\over x}y={x^2-4\over x^4}, \quad y(1)={3\over 2},\quad  \frac{d y}{dx} (1)={1\over 2}}\), \(  \frac{d^2 y}{dx^2} (1)=1\); 
 						</div>
 						<div>
-							\(4x^3y'''+4x^2y''-5xy'+2y=30x^2, \quad y(1)=5,\quad y'(1)=\displaystyle {17\over 2}\); 
+							\(4x^3 \frac{d^3 y}{dx^3} +4x^2 \frac{d^2 y}{dx^2} -5x \frac{d y}{dx} +2y=30x^2, \quad y(1)=5,\quad  \frac{d y}{dx} (1)=\displaystyle {17\over 2}\); 
 						</div>
 						<div>
-							\(y''(1)=\displaystyle {63\over 4};\quad y=2x^2\ln x-x^{1/2}+2x^{-1/2}+4x^2\) 
+							\( \frac{d^2 y}{dx^2} (1)=\displaystyle {63\over 4};\quad y=2x^2\ln x-x^{1/2}+2x^{-1/2}+4x^2\) 
 						</div>
 					</li>
 					<li>
 						<div>
-							\(\displaystyle { y'''-{1\over x}y''-y'+{1\over x}y={x^2-4\over x^4}, \quad y(1)={3\over 2},\quad y'(1)={1\over 2}}\), \( y''(1)=1\); 
+							\(\displaystyle {  \frac{d^3 y}{dx^3} -{1\over x} \frac{d^2 y}{dx^2} - \frac{d y}{dx} +{1\over x}y={x^2-4\over x^4}, \quad y(1)={3\over 2},\quad  \frac{d y}{dx} (1)={1\over 2}}\), \(  \frac{d^2 y}{dx^2} (1)=1\); 
 						</div>
 						<div>
-							\(x^4y^{(4)}-4x^3y'''+12x^2y''-24xy'+24y=6x^4, \quad y(1)=-2\), 
+							\(x^4 \frac{d^4 y}{dx^4} -4x^3 \frac{d^3 y}{dx^3} +12x^2 \frac{d^2 y}{dx^2} -24x \frac{d y}{dx} +24y=6x^4, \quad y(1)=-2\), 
 						</div>
 						<div>
-							\(y'(1)=-9, \quad y''(1)=-27,\quad y'''(1)=-52\); 
+							\( \frac{d y}{dx} (1)=-9, \quad  \frac{d^2 y}{dx^2} (1)=-27,\quad  \frac{d^3 y}{dx^3} (1)=-52\); 
 						</div>
 						<div>
 							\(y=x^4\ln x+x-2x^2+3x^3-4x^4\) 
@@ -90,13 +160,13 @@
 					</li>
 					<li>
 						<div>
-							\(\displaystyle { y'''-{1\over x}y''-y'+{1\over x}y={x^2-4\over x^4}, \quad y(1)={3\over 2},\quad y'(1)={1\over 2}}\), \( y''(1)=1\); 
+							\(\displaystyle {  \frac{d^3 y}{dx^3} -{1\over x} \frac{d^2 y}{dx^2} - \frac{d y}{dx} +{1\over x}y={x^2-4\over x^4}, \quad y(1)={3\over 2},\quad  \frac{d y}{dx} (1)={1\over 2}}\), \(  \frac{d^2 y}{dx^2} (1)=1\); 
 						</div>
 						<div>
-							\(xy^{(4)}-y'''-4xy''+4y'=96x^2, \quad y(1)=-5,\quad y'(1)=-24\) 
+							\(x \frac{d^4 y}{dx^4} - \frac{d^3 y}{dx^3} -4x \frac{d^2 y}{dx^2} +4 \frac{d y}{dx} =96x^2, \quad y(1)=-5,\quad  \frac{d y}{dx} (1)=-24\) 
 						</div>
 						<div>
-							\(y''(1)=-36; \quad y'''(1)=-48;\quad y=9-12x+6x^2-8x^3\) 
+							\( \frac{d^2 y}{dx^2} (1)=-36; \quad  \frac{d^3 y}{dx^3} (1)=-48;\quad y=9-12x+6x^2-8x^3\) 
 						</div>
 					</li>
 				</ol>
@@ -108,46 +178,46 @@
 		</div>  
 
 		<div class="exercise" id="x1-32">
-			<span class="ex-number">2.</span>
+			<span class="ex-number">102.</span>
 			<div class="ex-body">
-				Solve the initial value problem \[ x^3y'''-x^2 y''-2xy'+6y=0, \quad y(-1)=-4, \quad y'(-1)=-14,\quad y''(-1)=-20\]<span class="hint">Hint: See Example&nbsp;9.1.1.</span>
+				Solve the IVP \[ x^3 \frac{d^3 y}{dx^3} -x^2  \frac{d^2 y}{dx^2} -2x \frac{d y}{dx} +6y=0, \quad y(-1)=-4, \quad  \frac{d y}{dx} (-1)=-14,\quad  \frac{d^2 y}{dx^2} (-1)=-20\]<span class="hint">Hint: See Example&nbsp;9.1.1.</span>
 			</div>
 		</div>
 
 		<div class="exercise" id="x1-43">
-			<span class="ex-number">3.</span>
+			<span class="ex-number">103.</span>
 			<div class="ex-body">
-				Solve the initial value problem \[ y^{(4)}+y'''-7y''-y'+6y=0, \quad y(0)=5,\quad y'(0)=-6,\quad y''(0)=10,\quad y'''(0)-36\]<span class="hint">Hint: See Example&nbsp;9.1.2.</span>
+				Solve the IVP \[  \frac{d^4 y}{dx^4} + \frac{d^3 y}{dx^3} -7 \frac{d^2 y}{dx^2} - \frac{d y}{dx} +6y=0, \quad y(0)=5,\quad  \frac{d y}{dx} (0)=-6,\quad  \frac{d^2 y}{dx^2} (0)=10,\quad  \frac{d^3 y}{dx^3} (0)-36\]<span class="hint">Hint: See Example&nbsp;9.1.2.</span>
 			</div>
 		</div>
 
 		
 
 		<div class="exercise" id="x1-106">
-			<span class="ex-number">6.</span>
+			<span class="ex-number">106.</span>
 			<div class="ex-body">
 				Verify that the given functions are solutions of the given equation, and show that they form a fundamental set of solutions of the equation on any interval on which the equation is normal. 
 				<ol>
 					<li>
-						\(y'''+y''-y'-y=0; \quad \{e^x,\,e^{-x},\,xe^{-x}\}\) 
+						\( \frac{d^3 y}{dx^3} + \frac{d^2 y}{dx^2} - \frac{d y}{dx} -y=0; \quad \{e^x,\,e^{-x},\,xe^{-x}\}\) 
 					</li>
 					<li>
-						\(y'''-3y''+7y'-5y=0; \quad \{e^x,\,e^x\cos 2x,\,e^x\sin 2x\}\). 
+						\( \frac{d^3 y}{dx^3} -3 \frac{d^2 y}{dx^2} +7 \frac{d y}{dx} -5y=0; \quad \{e^x,\,e^x\cos 2x,\,e^x\sin 2x\}\). 
 					</li>
 					<li>
-						\(xy'''-y''-xy'+y=0; \quad \{e^x,\,e^{-x},\,x\}\) 
+						\(x \frac{d^3 y}{dx^3} - \frac{d^2 y}{dx^2} -x \frac{d y}{dx} +y=0; \quad \{e^x,\,e^{-x},\,x\}\) 
 					</li>
 					<li>
-						\(x^2y'''+2xy''-(x^2+2)y=0; \quad \displaystyle \{e^x/ x,\,e^{-x}/ x,\,1\}\) 
+						\(x^2 \frac{d^3 y}{dx^3} +2x \frac{d^2 y}{dx^2} -(x^2+2)y=0; \quad \displaystyle \{e^x/ x,\,e^{-x}/ x,\,1\}\) 
 					</li>
 					<li>
-						\((x^2-2x+2)y'''-x^2y''+2xy'-2y=0; \quad \{x,\,x^2,\,e^x\}\) 
+						\((x^2-2x+2) \frac{d^3 y}{dx^3} -x^2 \frac{d^2 y}{dx^2} +2x \frac{d y}{dx} -2y=0; \quad \{x,\,x^2,\,e^x\}\) 
 					</li>
 					<li>
-						\((2x-1)y^{(4)}-4xy'''+(5-2x)y''+4xy'-4y=0; \quad \{x,\,e^x,\,e^{-x},e^{2x}\}\) 
+						\((2x-1) \frac{d^4 y}{dx^4} -4x \frac{d^3 y}{dx^3} +(5-2x) \frac{d^2 y}{dx^2} +4x \frac{d y}{dx} -4y=0; \quad \{x,\,e^x,\,e^{-x},e^{2x}\}\) 
 					</li>
 					<li>
-						\(xy^{(4)}-y'''-4xy'+4y'=0; \quad \{1,x^2,\,e^{2x},\,e^{-2x}\}\) 
+						\(x \frac{d^4 y}{dx^4} - \frac{d^3 y}{dx^3} -4x \frac{d y}{dx} +4 \frac{d y}{dx} =0; \quad \{1,x^2,\,e^{2x},\,e^{-2x}\}\) 
 					</li>
 				</ol>
 			</div>
@@ -158,21 +228,21 @@
 		</div>	
 		
 		<div class="exercise" id="x1-117">
-			<span class="ex-number">7.</span>
+			<span class="ex-number">107.</span>
 			<div class="ex-body">
-				Find the Wronskian \(W\) of a set of three solutions of \[ y'''+2xy''+e^xy'-y=0\] given that \(W(0)=2\). 
+				Find the Wronskian \(W\) of a set of three solutions of \[  \frac{d^3 y}{dx^3} +2x \frac{d^2 y}{dx^2} +e^x \frac{d y}{dx} -y=0\] given that \(W(0)=2\). 
 			</div>
 		</div>
 
 		<div class="exercise" id="x1-128">
-			<span class="ex-number">8.</span>
+			<span class="ex-number">108.</span>
 			<div class="ex-body">
-				Find the Wronskian \(W\) of a set of four solutions of \[ y^{(4)}+(\tan x)y'''+x^2y''+2xy=0\] given that \(W(\pi /4)=K\). 
+				Find the Wronskian \(W\) of a set of four solutions of \[  \frac{d^4 y}{dx^4} +(\tan x) \frac{d^3 y}{dx^3} +x^2 \frac{d^2 y}{dx^2} +2xy=0\] given that \(W(\pi /4)=K\). 
 			</div>
 		</div>
 
 		<div class="exercise" id="x1-139">
-			<span class="ex-number">9.</span>
+			<span class="ex-number">109.</span>
 			<div class="ex-body">
 				<ol>
 					<li>
@@ -182,7 +252,7 @@
 					</li>
 					<li>
 						<div>
-							Verify that \(y_1\), \(y_2\), and \(y_3\) satisfy \[ y'''-3y''+3y'-y=0. {\tag A} \] 
+							Verify that \(y_1\), \(y_2\), and \(y_3\) satisfy \[  \frac{d^3 y}{dx^3} -3 \frac{d^2 y}{dx^2} +3 \frac{d y}{dx} -y=0. {\tag A} \] 
 						</div>
 					</li>
 					<li>
@@ -200,7 +270,7 @@
 		</div>
 
 		<div class="exercise" id="x1-1810">
-			<span class="ex-number">10.</span>
+			<span class="ex-number">110.</span>
 			<div class="ex-body">
 				Compute the Wronskian of the given set of functions. 
 				
@@ -247,7 +317,7 @@
 		</div>  
 
 		<div class="exercise" id="x1-54">
-			<span class="ex-number">4.</span>
+			<span class="ex-number">104.</span>
 			<div class="ex-body">
 				Find solutions \(y_1\), \(y_2\), …, \(y_n\) of the equation \(y^{(n)}=0\) that satisfy the initial conditions
 				\[ y_i^{(j)}(x_0)=\left \{ 
@@ -258,12 +328,12 @@
 		</div>
 
 		<div class="exercise" id="x1-65">
-			<span class="ex-number">5.</span>
+			<span class="ex-number">105.</span>
 			<div class="ex-body">
 				<ol>
 					<li>
 						<div>
-							Verify that the function \[ y=c_1x^3+c_2x^2+{c_3\over x} \] satisfies \[ x^3 y'''-x^2y''-2xy'+6y=0 {\tag A} \] if \(c_1\), \(c_2\), and \(c_3\) are constants. 
+							Verify that the function \[ y=c_1x^3+c_2x^2+{c_3\over x} \] satisfies \[ x^3  \frac{d^3 y}{dx^3} -x^2 \frac{d^2 y}{dx^2} -2x \frac{d y}{dx} +6y=0 {\tag A} \] if \(c_1\), \(c_2\), and \(c_3\) are constants. 
 						</div>
 					</li>
 					<li>
@@ -275,7 +345,7 @@
 					</li>
 					<li>
 						<div>
-							Use <span class="ptmb8t-">(b)</span> to find the solution of (A) such that \[ y(1)=k_0,\quad y'(1)=k_1,\quad y''(1)=k_2\] 
+							Use <span class="ptmb8t-">(b)</span> to find the solution of (A) such that \[ y(1)=k_0,\quad  \frac{d y}{dx} (1)=k_1,\quad  \frac{d^2 y}{dx^2} (1)=k_2\] 
 						</div>
 					</li>
 				</ol>
@@ -283,30 +353,30 @@
 		</div>
 
 		<div class="exercise" id="x1-1911">
-			<span class="ex-number">11.</span>
+			<span class="ex-number">111.</span>
 			<div class="ex-body">
-				Suppose \(Ly=0\) is normal on \((a,b)\) and \(x_0\) is in \((a,b)\). Use Theorem&nbsp;<span class="ptmb8t-">9.1.1</span> to show that \(y\equiv 0\) is the only solution of the initial value problem \[ Ly=0, \quad y(x_0)=0,\quad y'(x_0)=0,\dots , y^{(n-1)}(x_0)=0\] on \((a,b)\). 
+				Suppose \(Ly=0\) is normal on \((a,b)\) and \(x_0\) is in \((a,b)\). Use Theorem&nbsp;<span class="ptmb8t-">9.1.1</span> to show that \(y\equiv 0\) is the only solution of the IVP \[ Ly=0, \quad y(x_0)=0,\quad  \frac{d y}{dx} (x_0)=0,\dots , y^{(n-1)}(x_0)=0\] on \((a,b)\). 
 			</div>
 		</div>
 
 		<div class="exercise" id="x1-2012">
-			<span class="ex-number">12.</span>
+			<span class="ex-number">112.</span>
 			<div class="ex-body">
 				Prove: If \(y_1\), \(y_2\), …, \(y_n\) are solutions of \(Ly=0\) and the functions \[ z_i=\sum ^n_{j=1}a_{ij}y_j,\quad 1\le i\le n\] form a fundamental set of solutions of \(Ly=0\), then so do \(y_1\), \(y_2\), …, \(y_n\). 
 			</div>
 		</div>
 
 		<div class="exercise" id="x1-2113">
-			<span class="ex-number">13.</span>
+			<span class="ex-number">113.</span>
 			<div class="ex-body">
 				Prove: If \[ y=c_1y_1+c_2y_2+\cdots +c_ky_k+y_p \] is a solution of a linear equation \(Ly=F\) for every choice of the constants \(c_1\), \(c_2\) ,…, \(c_k\), then \(Ly_i=0\) for \(1\le i\le k\). 
 			</div>
 		</div>
 
 		<div class="exercise" id="x1-2214">
-			<span class="ex-number">14.</span>
+			<span class="ex-number">114.</span>
 			<div class="ex-body">
-				Suppose \(Ly=0\) is normal on \((a,b)\) and let \(x_0\) be in \((a,b)\). For \(1\le i\le n\), let \(y_i\) be the solution of the initial value problem 
+				Suppose \(Ly=0\) is normal on \((a,b)\) and let \(x_0\) be in \((a,b)\). For \(1\le i\le n\), let \(y_i\) be the solution of the IVP 
 				\[ Ly_i=0, \quad y_i^{(j)} (x_0)= \left \{ 
 					\begin {array}{cl} 0,&amp; j\ne i-1,\\ 1,&amp;j=i-1, 
 					\end {array}\right . 1\le i\le n
@@ -316,7 +386,7 @@
 		</div>
 
 		<div class="exercise" id="x1-2315">
-			<span class="ex-number">15.</span>
+			<span class="ex-number">115.</span>
 			<div class="ex-body">
 				Suppose \(\{y_1, y_2,\dots , y_n\}\) is a fundamental set of solutions of \[ \displaystyle P_0(x)y^{(n)}+P_1(x)y^{(n-1)}+\cdots +P_n(x)y=0 \] on \((a,b)\), and let \[ \begin {array}{rl} z_1&amp;=a_{11}y_1+a_{12}y_2+\cdots +a_{1n}y_n\\ z_2&amp;=a_{21}y_1+a_{22}y_2+\cdots +a_{2n}y_n\\ \phantom {z_1}&amp;\vdots \phantom {_1y_1+a}\vdots \phantom {_2y_2+\cdots +a}\vdots \phantom {_ny_n} \phantom {=b}\vdots \\ z_n&amp;=a_{n1}y_1+a_{n2}y_2+\cdots +a_{nn}y_n \end {array} \] where the \(\{a_{ij}\}\) are constants. Show that \(\{z_1, z_2,\dots , z_n\}\) is a fundamental set of solutions of (A) if and only if the determinant
 				\[ \left | 
@@ -327,7 +397,7 @@
 		</div>
 
 		<div class="exercise" id="x1-2416">
-			<span class="ex-number">16.</span>
+			<span class="ex-number">116.</span>
 			<div class="ex-body">
 				Show that \(\{y_1,y_2,\dots ,y_n\}\) is linearly dependent on \((a,b)\) if and only if at least one of the functions \(y_1\), \(y_2\), …, \(y_n\) can be written as a linear combination of the others on \((a,b)\). 
 				</div>
@@ -345,7 +415,7 @@
 			</div>
 
 			<div class="exercise" id="x1-2517">
-				<span class="ex-number">17.</span>
+				<span class="ex-number">117.</span>
 				<div class="ex-body">
 					Prove: If \[ A(u_1,u_2,\dots ,u_n)= \left | 
 					\begin {array}{cccc} a_{11}&amp;a_{12}&amp;\cdots&amp;a _{1n}\\ a_{21}&amp;a_{22}&amp;\cdots&amp;a _{2n}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ a_{n-1,1}&amp;a_{n-1,2}&amp;\cdots&amp;a _{n-1,n}\\ u_1&amp;u_2&amp;\cdots&amp;u _n 
@@ -354,7 +424,7 @@
 			</div>
 
 			<div class="exercise" id="x1-2618">
-				<span class="ex-number">18.</span>
+				<span class="ex-number">118.</span>
 				<div class="ex-body">
 					Let \[ F=\left | 
 					\begin {array}{cccc} f_{11}&amp;f_{12}&amp;\cdots&amp;f _{1n}\\ f_{21}&amp;f_{22}&amp;\cdots&amp;f _{2n}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ f_{n1}&amp;f_{n2}&amp;\cdots&amp;f _{nn} 
@@ -363,47 +433,47 @@
 			</div>
 
 			<div class="exercise" id="x1-2719">
-				<span class="ex-number">19.</span>
+				<span class="ex-number">119.</span>
 				<div class="ex-body">
 					Use Exercise&nbsp;<a href="#x1-2618">18</a> to show that if \(W\) is the Wronskian of the \(n\)-times differentiable functions \(y_1\), \(y_2\), …, \(y_n\), then \[ W'= \left | 
-					\begin {array}{cccc} y_1&amp;y_2&amp;\cdots&amp;y _n\\ y'_1&amp;y'_2&amp;\cdots&amp;y '_n\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ y_1^{(n-2)}&amp;y_2^{(n-2)}&amp;\cdots&amp;y _n^{(n-2)}\\ y_1^{(n)}&amp;y_2^{(n)}&amp;\cdots&amp;y _n^{(n)} 
+					\begin {array}{cccc} y_1&amp;y_2&amp;\cdots&amp;y _n\\  \frac{d y}{dx} _1&amp; \frac{d y}{dx} _2&amp;\cdots&amp;y '_n\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ y_1^{(n-2)}&amp;y_2^{(n-2)}&amp;\cdots&amp;y _n^{(n-2)}\\ y_1^{(n)}&amp;y_2^{(n)}&amp;\cdots&amp;y _n^{(n)} 
 					\end {array}\right |\]
 				</div>
 			</div>
 		</div>
 
 		<div class="exercise" id="x1-2820">
-			<span class="ex-number">20.</span>
+			<span class="ex-number">120.</span>
 			<div class="ex-body">
-				Use Exercises&nbsp;<a href="#x1-2517">17</a> and <a href="#x1-2719">19</a> to show that if \(W\) is the Wronskian of solutions \(\{y_1,y_2,\dots ,y_n\}\) of the normal equation \[ P_0(x)y^{(n)}+P_1(x)y^{(n-1)}+\cdots +P_n(x)y=0, {\tag A} \] then \(W'=-P_1W/P_0\). Derive Abel’s formula (Eqn.&nbsp;(<span class="ptmb8t-">9.1.15</span>)) from this. <span class="hint"> Hint: Use (A) to write \(y^{(n)}\) in terms of \(y,y',\dots ,y^{(n-1)}\). </span>
+				Use Exercises&nbsp;<a href="#x1-2517">17</a> and <a href="#x1-2719">19</a> to show that if \(W\) is the Wronskian of solutions \(\{y_1,y_2,\dots ,y_n\}\) of the normal equation \[ P_0(x)y^{(n)}+P_1(x)y^{(n-1)}+\cdots +P_n(x)y=0, {\tag A} \] then \(W'=-P_1W/P_0\). Derive Abel’s formula (Eqn.&nbsp;(<span class="ptmb8t-">9.1.15</span>)) from this. <span class="hint"> Hint: Use (A) to write \(y^{(n)}\) in terms of \(y, \frac{d y}{dx} ,\dots ,y^{(n-1)}\). </span>
 			</div>
 		</div>
 
 		<div class="exercise" id="x1-2921">
-			<span class="ex-number">21.</span>
+			<span class="ex-number">121.</span>
 			<div class="ex-body">
 				Prove Theorem&nbsp;<span class="ptmb8t-">9.1.6</span>. 
 			</div>
 		</div>
 
 		<div class="exercise" id="x1-3022">
-			<span class="ex-number">22.</span>
+			<span class="ex-number">122.</span>
 			<div class="ex-body">
 				Prove Theorem&nbsp;<span class="ptmb8t-">9.1.7</span>. 
 			</div>
 		</div>
 
 		<div class="exercise" id="x1-3123">
-			<span class="ex-number">23.</span>
+			<span class="ex-number">123.</span>
 			<div class="ex-body">
 				Show that if the Wronskian of the \(n\)-times continuously differentiable functions \(\{y_1,y_2,\dots ,y_n\}\) has no zeros in \((a,b)\), then the differential equation obtained by expanding the determinant \[ \left | 
-				\begin {array}{ccccc} y&amp;y_1&amp;y_2&amp;\cdots&amp;y _n\\ y'&amp;y'_1&amp;y'_2&amp;\cdots&amp;y '_n\\ \vdots&amp; \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ y^{(n)}&amp;y_{1}^{(n)}&amp;y_2^{(n)}&amp;\cdots&amp;y _n^{(n)} 
+				\begin {array}{ccccc} y&amp;y_1&amp;y_2&amp;\cdots&amp;y _n\\  \frac{d y}{dx} &amp; \frac{d y}{dx} _1&amp; \frac{d y}{dx} _2&amp;\cdots&amp;y '_n\\ \vdots&amp; \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ y^{(n)}&amp;y_{1}^{(n)}&amp;y_2^{(n)}&amp;\cdots&amp;y _n^{(n)} 
 				\end {array}\right |=0\] in cofactors of its first column is normal and has \(\{y_1,y_2,\dots ,y_n\}\) as a fundamental set of solutions on \((a,b)\). 
 			</div>
 		</div>
 
 		<div class="exercise" id="x1-3224">
-			<span class="ex-number">24.</span>
+			<span class="ex-number">124.</span>
 			<div class="ex-body">
 				Use the method suggested by Exercise&nbsp;<a href="#x1-3123">23</a> to find a linear homogeneous equation such that the given set of functions is a fundamental set of solutions on intervals on which the Wronskian of the set has no zeros.
 				
