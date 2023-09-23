@@ -4,14 +4,14 @@
 		<title></title>
 		<meta charset="utf-8" />
 		<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)" />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="viewport" content="width=device-width initial-scale=1" />
 		<link rel="stylesheet" type="text/css" href="combined.css" />
 		<script type="text/javascript" src="niceties.js"></script>
 		<script>
 			window.MathJax = {
 				tex: {
-					tags: "ams",
-				},
+					tags: "ams" 
+				} 
 			};
 		</script>
 
@@ -28,28 +28,40 @@
 			8.4&nbsp;Exercises
 		</div>
 
+		<div class="stepline"> 
+			Part 1: Laplace of Unit Step Functions
+		</div>  
+
 		<div class="grouping">
 			<div class="instructions">
-				Find the Laplace transform by the method of Example&nbsp;<span class="ptmb8t-">8.4.1</span>. Then express the given function \(f\) in terms of unit step functions as in Eqn.&nbsp;(<span class="ptmb8t-">8.4.6</span>), and use Theorem&nbsp;<span class="ptmb8t-">8.4.1</span> to find \({\cal L}(f)\).
-				Graph \(f\).		
+				<ol>
+					<li>
+						Graph the piecewise function \(f(t)\) 
+					</li>
+					<li>
+						Rewrite the piecewise function \(f(t)\) in terms of the unit step function 
+					</li>
+					<li>&nbsp;Calculate \( {\cal L} \big\{ f(t) \big\} \) using the definition as in Section <a href="sec8.1 book.html" target=_blank>8.1</a></li>
+					<li>&nbsp;Calculate \( {\cal L} \big\{ f(t) \big\} \) using tables of Laplace transforms</li>
+				</ol>		
 			</div>
 
 			<div class="exercise">
-				<span class="ex-number">1.</span>
+				<span class="ex-number">1. </span>
 				<div class="ex-body">
 					<a id="x1-21"></a>
 					\(\displaystyle {f(t)=\left \{ 
-					\begin {array}{cl} 1,&amp;0 \le t&lt;4,\\ t,&amp;t\ge 4. 
+					\begin {array}{cl} 1&amp;0 \le t&lt;4\\ t &amp;t\ge 4
 					\end {array}\right .}\) 
 				</div>
 			</div>
 
 			<div class="exercise">
-				<span class="ex-number">2.</span>
+				<span class="ex-number">2. </span>
 				<div class="ex-body">
 					<a id="x1-32"></a>
 					 \(\displaystyle {f(t)=\left \{ 
-					\begin {array}{cl} t,&amp;0 \le t&lt;1,\\ 1,&amp;t\ge 1. 
+					\begin {array}{cl} t &amp;0 \le t&lt;1 \\ 1 &amp;t\ge 1  
 					\end {array}\right .}\) 
 				</div>
 			</div>
@@ -59,7 +71,7 @@
 				<div class="ex-body">
 					<a id="x1-43"></a>
 					\(\displaystyle {f(t)=\left \{ 
-					\begin {array}{cl} 2t-1,&amp; 0\le t&lt;2,\\ t,&amp;t\ge 2. 
+					\begin {array}{cl} 2t-1 &amp; 0\le t&lt;2 \\ t &amp;t\ge 2  
 					\end {array}\right .}\)
 				</div>
 			</div>
@@ -69,7 +81,7 @@
 				<div class="ex-body">
 					<a id="x1-54"></a>
 					\(\displaystyle {f(t)=\left \{ 
-					\begin {array}{cl}1, &amp;0\le t&lt;1,\\ t+2,&amp;t\ge 1. 
+					\begin {array}{cl}1  &amp;0\le t&lt;1 \\ t+2 &amp;t\ge 1  
 					\end {array}\right .}\)
 				</div>
 			</div>
@@ -78,7 +90,7 @@
 				<span class="ex-number">5.</span>
 				<div class="ex-body">
 					<a id="x1-65"></a>
-					 \(\displaystyle {f(t)=\left \{ \begin {array}{cl} t-1,&amp; 0\le t&lt;2,\\ 4,&amp;t\ge 2. \end {array}\right .}\)
+					 \(\displaystyle {f(t)=\left \{ \begin {array}{cl} t-1 &amp; 0\le t&lt;2 \\ 4 &amp;t\ge 2  \end {array}\right .}\)
 				</div>
 			</div>
 	
@@ -87,14 +99,9 @@
 				<div class="ex-body">
 					<a id="x1-76"></a> 
 					\(\displaystyle {f(t)=\left \{ 
-					\begin {array}{cl} t^2,&amp; 0\le t&lt;1,\\ 0,&amp;t\ge 1. 
+					\begin {array}{cl} t^2 &amp; 0\le t&lt;1 \\ 0 &amp;t\ge 1  
 					\end {array}\right .}\) </td>
 				</div>
-			</div>
-		</div>
-		<div class="grouping">
-			<div class="instructions">
-				Express the given function \(f\) in terms of unit step functions and use Theorem&nbsp;<span class="ptmb8t-">8.4.1</span> to find \({\cal L}(f)\). Graph \(f\).
 			</div>
 
 			<div class="exercise">
@@ -102,53 +109,76 @@
 				<div class="ex-body">
 					<a id="x1-87"></a>
 					\(\displaystyle {f(t)=\left \{ 
-					\begin {array}{cl} 0, &amp;0\le t&lt;2,\\ t^2+3t,&amp;t\ge 2. 
+					\begin {array}{cl} 0  &amp;0\le t&lt;2 \\ t^2+3t &amp;t\ge 2  
 					\end {array}\right .}\) 
 				</div>
 			</div>
-
+	
 			<div class="exercise">
 				<span class="ex-number">8.</span>
 				<div class="ex-body">
 					<a id="x1-98"></a>
 					\(\displaystyle {f(t)=\left \{ 
-					\begin {array}{cl} t^2+2, &amp;0\le t&lt;1,\\ t,&amp;t\ge 1. 
+					\begin {array}{cl} t^2+2  &amp;0\le t&lt;1 \\ t &amp;t\ge 1  
 					\end {array}\right .}\) 
 				</div>
 			</div>
-
+	
 			<div class="exercise">
 				<span class="ex-number">9.</span>
 				<div class="ex-body">
 					<a id="x1-109"></a> 
-					\(\displaystyle {f(t)=\left \{ \begin {array}{cl} te^t,&amp; 0\le t &lt;1,\\ e^t,&amp;t\ge 1. \end {array}\right .}\)
+					\(\displaystyle {f(t)=\left \{ \begin {array}{cl} te^t &amp; 0\le t &lt;1 \\ e^t &amp;t\ge 1  \end {array}\right .}\)
 				</div>
 			</div>
-
+	
 			<div class="exercise">
 				<span class="ex-number">10.</span>
 				<div class="ex-body">
 					<a id="x1-1110"></a> 
 					\(\displaystyle {f(t)=\left \{ 
-					\begin {array}{cl} e^{\phantom {2}-t}, &amp;0\le t&lt;1,\\ e^{-2t},&amp;t\ge 1. 
+					\begin {array}{cl} e^{\phantom {2}-t}  &amp;0\le t&lt;1 \\ e^{-2t} &amp;t\ge 1  
 					\end {array}\right .}\)
 				</div>
 			</div>
 
+		</div>
+
+		
+
+		<div class="stepline"> 
+			Part 2: Laplace using Tables
+		</div>  
+
+		<div class="grouping">
+			<div class="instructions">
+				<ol>
+					<li>
+						Graph the piecewise function \(f(t)\) 
+					</li>
+					<li>
+						Rewrite the piecewise function \(f(t)\) in terms of the unit step function 
+					</li>
+					<li>&nbsp;Calculate \( {\cal L} \big\{ f(t) \big\} \) using tables of Laplace transforms</li>
+				</ol>
+			</div>
+
+	
+
 			<div class="exercise">
-				<span class="ex-number">11.</span>
+				<span class="ex-number">11. </span>
 				<div class="ex-body">
 					<a id="x1-1211"></a>
-					\(\displaystyle {f(t)=\left \{ \begin {array}{cl} -t,&amp;0 \le t&lt;2,\\ t-4,&amp;2\le t&lt;3,\\ 1,&amp;t\ge 3 \end {array}\right .}\)
+					\(\displaystyle {f(t)=\left \{ \begin {array}{cl} -t &amp;0 \le t&lt;2 \\ t-4 &amp;2\le t&lt;3 \\ 1 &amp;t\ge 3 \end {array}\right .}\)
 				</div>
 			</div>
 
 			<div class="exercise">
-				<span class="ex-number">12.</span>
+				<span class="ex-number">12. </span>
 				<div class="ex-body">
 					<a id="x1-1312"></a> 
 					\(\displaystyle {f(t)=\left \{ 
-					\begin {array}{cl} 0,&amp;0 \le t&lt;1,\\ t,&amp;1\le t&lt;2,\\ 0,&amp;t\ge 2. 
+					\begin {array}{cl} 0 &amp;0 \le t&lt;1 \\ t &amp;1\le t&lt;2 \\ 0 &amp;t\ge 2  
 					\end {array}\right .}\)
 				</div>
 			</div>
@@ -157,7 +187,7 @@
 				<span class="ex-number">13.</span>
 				<div class="ex-body">
 					<a id="x1-1413"></a> 
-					\(\displaystyle {f(t)=\left \{ \begin {array}{cl} t,&amp;0 \le t&lt;1,\\ t^2,&amp;1\le t&lt;2,\\ 0,&amp;t\ge 2 \end {array}\right .}\) 
+					\(\displaystyle {f(t)=\left \{ \begin {array}{cl} t &amp;0 \le t&lt;1 \\ t^2 &amp;1\le t&lt;2 \\ 0 &amp;t\ge 2 \end {array}\right .}\) 
 				</div>
 			</div>
 
@@ -166,7 +196,7 @@
 				<div class="ex-body">
 					<a id="x1-1514"></a>
 					\(\displaystyle {f(t)=\left \{ 
-					\begin {array}{cl} t,&amp;0\le t&lt;1,\\ 2-t,&amp;1\le t&lt;2,\\ 6,&amp;t &gt; 2 
+					\begin {array}{cl} t &amp;0\le t&lt;1 \\ 2-t &amp;1\le t&lt;2 \\ 6 &amp;t &gt; 2 
 					\end {array}\right .}\) </td>
 				</div>
 			</div>
@@ -176,7 +206,7 @@
 				<div class="ex-body">
 					<a id="x1-1615"></a>
 					\(\displaystyle {f(t)=\left \{ 
-					\begin {array}{cl} \phantom {2} \sin t,&amp;0\le t&lt;\displaystyle {\pi \over 2},\\ 2\sin t,&amp; \displaystyle {\pi \over 2}\le t&lt;\pi ,\\\phantom {2}\cos t, &amp;t\ge \pi . 
+					\begin {array}{cl} \phantom {2} \sin t &amp;0\le t&lt;\displaystyle {\pi \over 2} \\ 2\sin t &amp; \displaystyle {\pi \over 2}\le t&lt;\pi  \\\phantom {2}\cos t  &amp;t\ge \pi 
 					\end {array}\right .}\)
 				</div>
 			</div>
@@ -186,7 +216,7 @@
 				<div class="ex-body">
 					<a id="x1-1716"></a>
 					\(f(t)=\displaystyle {\left \{ 
-					\begin {array}{cl}\phantom {-} 2,&amp;0\le t&lt;1,\\-2t+2,&amp;1\le t&lt;3,\\\phantom {-}3t,&amp;t\ge 3. 
+					\begin {array}{cl}\phantom {-} 2 &amp;0\le t&lt;1 \\-2t+2 &amp;1\le t&lt;3 \\\phantom {-}3t &amp;t\ge 3 
 					\end {array}\right .}\)
 				</div>
 			</div>
@@ -196,7 +226,7 @@
 				<div class="ex-body">
 					<a id="x1-1817"></a>
 					\(f(t)=\displaystyle {\left \{ 
-					\begin {array}{cl}3,&amp;0\le t&lt;2,\\3t+2,&amp;2\le t&lt;4,\\4t,&amp;t\ge 4. 
+					\begin {array}{cl}3 &amp;0\le t&lt;2 \\3t+2 &amp;2\le t&lt;4 \\4t &amp;t\ge 4 
 					\end {array}\right .}\)
 				</div>
 			</div>
@@ -205,23 +235,33 @@
 				<span class="ex-number">18.</span>
 				<div class="ex-body">
 					\(\displaystyle {f(t)=\left \{ 
-					\begin {array}{ll}(t+1)^2,&amp;0\le t&lt;1, \\(t+2)^2,&amp;t\ge 1. 
+					\begin {array}{ll}(t+1)^2 &amp;0\le t&lt;1  \\(t+2)^2 &amp;t\ge 1  
 					\end {array}\right .}\)
 				</div>
 			</div>
 		</div>
 
+		<div class="stepline"> 
+			Part 3: Inverse Laplace
+		</div>  
+
 		<div class="grouping">
 			<div class="instructions">
-				Use Theorem&nbsp;<span class="ptmb8t-">8.4.2</span> to express the inverse transforms in terms of step functions, and then find distinct formulas the for inverse transforms on the appropriate intervals, as in Example&nbsp;<span class="ptmb8t-">8.4.7</span>.
-				Graph the inverse transform.		
+				<ol>
+					<li>
+						Calculate the inverse Laplace Transform of \(F(s)\) 
+					</li>	
+					<li>
+						Write \(f(t)\) in piecewise form and graph
+					</li>	
+				</ol>		
 			</div>
 
 			<div class="exercise">
 				<span class="ex-number">19.</span>
 				<div class="ex-body">
 					<a id="x1-2019"></a>
-					\(\displaystyle {H(s)={e^{-2s}\over s-2}}\) 
+					\(\displaystyle {F(s)={e^{-2s}\over s-2}}\) 
 				</div>
 			</div>
 
@@ -229,23 +269,23 @@
 				<span class="ex-number">20.</span>
 				<div class="ex-body">
 					<a id="x1-2120"></a> 
-					\(\displaystyle {H(s)={e^{-s}\over s(s+1)}}\) 
+					\(\displaystyle {F(s)={e^{-s}\over s(s+1)}}\) 
 				</div>
 			</div>
 
 			<div class="exercise">
-				<span class="ex-number">21.</span>
+				<span class="ex-number">21 </span>
 				<div class="ex-body">
 					<a id="x1-2221"></a>
-					\(\displaystyle {H(s)={e^{-s}\over s^3}+ {e^{-2s}\over s^2}}\)
+					\(\displaystyle {F(s)={e^{-s}\over s^3}+ {e^{-2s}\over s^2}}\)
 				</div>
 			</div>
 
 			<div class="exercise">
-				<span class="ex-number">22.</span>
+				<span class="ex-number">22 </span>
 				<div class="ex-body">
 					<a id="x1-2322"></a>
-					\(\displaystyle {H(s)=\left ({2\over s}+{1\over s^2}\right ) +e^{-s}\left ({3\over s}-{1\over s^2}\right )+e^{-3s}\left ({1\over s}+{1\over s^2}\right )}\)
+					\(\displaystyle {F(s)=\left ({2\over s}+{1\over s^2}\right ) +e^{-s}\left ({3\over s}-{1\over s^2}\right )+e^{-3s}\left ({1\over s}+{1\over s^2}\right )}\)
 				</div>
 			</div>
 
@@ -253,7 +293,7 @@
 				<span class="ex-number">23.</span>
 				<div class="ex-body">
 					<a id="x1-2423"></a>
-					\(\displaystyle {H(s)=\left ({5\over s}-{1\over s^2}\right ) +e^{-3s}\left ({6\over s}+{7\over s^2}\right )+{3e^{-6s}\over s^3}}\)
+					\(\displaystyle {F(s)=\left ({5\over s}-{1\over s^2}\right ) +e^{-3s}\left ({6\over s}+{7\over s^2}\right )+{3e^{-6s}\over s^3}}\)
 				</div>
 			</div>
 
@@ -261,7 +301,7 @@
 				<span class="ex-number">24.</span>
 				<div class="ex-body">
 					<a id="x1-2524"></a>
-					\(\displaystyle {H(s)={e^{-\pi s} (1-2s)\over s^2+4s+5}}\)
+					\(\displaystyle {F(s)={e^{-\pi s} (1-2s)\over s^2+4s+5}}\)
 				</div>
 			</div>
 
@@ -269,7 +309,7 @@
 				<span class="ex-number">25.</span>
 				<div class="ex-body">
 					<a id="x1-2625"></a>
-					\(\displaystyle {H(s)=\left ({1\over s}-{s\over s^2+1}\right )+e^{-{\pi \over 2}s}\left ({3s-1\over s^2+1}\right )}\)
+					\(\displaystyle {F(s)=\left ({1\over s}-{s\over s^2+1}\right )+e^{-{\pi \over 2}s}\left ({3s-1\over s^2+1}\right )}\)
 				</div>
 			</div>
 
@@ -277,7 +317,7 @@
 				<span class="ex-number">26.</span>
 				<div class="ex-body">
 					<a id="x1-2726"></a>
-					\(\displaystyle {H(s)= e^{-2s}\left [{3(s-3)\over (s+1)(s-2)}-{s+1\over (s-1)(s-2)}\right ]}\)
+					\(\displaystyle {F(s)= e^{-2s}\left [{3(s-3)\over (s+1)(s-2)}-{s+1\over (s-1)(s-2)}\right ]}\)
 				</div>
 			</div>
 
@@ -285,7 +325,7 @@
 				<span class="ex-number">27.</span>
 				<div class="ex-body">
 					<a id="x1-2827"></a>
-					\(\displaystyle {H(s)={1\over s}+{1\over s^2}+e^{-s}\left ({3\over s}+{2\over s^2}\right ) +e^{-3s}\left ({4\over s}+{3\over s^2}\right )}\)
+					\(\displaystyle {F(s)={1\over s}+{1\over s^2}+e^{-s}\left ({3\over s}+{2\over s^2}\right ) +e^{-3s}\left ({4\over s}+{3\over s^2}\right )}\)
 				</div>
 			</div>
 
@@ -293,10 +333,15 @@
 				<span class="ex-number">28.</span>
 				<div class="ex-body">
 					<a id="x1-2928"></a>
-					\(\displaystyle {H(s)={1\over s}-{2\over s^3}+e^{-2s}\left ({3\over s}-{1\over s^3}\right ) +{e^{-4s}\over s^2}}\)
+					\(\displaystyle {F(s)={1\over s}-{2\over s^3}+e^{-2s}\left ({3\over s}-{1\over s^3}\right ) +{e^{-4s}\over s^2}}\)
 				</div>
 			</div>
 		</div>
+
+
+		<div class="stepline"> 
+			Part 4: Challenge
+		</div>  
 
 		<div class="exercise">
 			<span class="ex-number">29.</span>
@@ -310,27 +355,27 @@
 			<span class="ex-number">30.</span>
 			<div class="ex-body">
 				<a id="x1-3130"></a>
-				Let \(\{t_m\}_{m=0}^\infty \) be a sequence of points such that \(t_0=0\), \(t_{m+1}&gt;t_m\), and \(\lim _{m\to \infty }t_m=\infty \). For each nonnegative integer \(m\), let \(f_m\) be continuous on \([t_m,\infty )\), and let \(f\) be defined on \([0,\infty )\) by \[ f(t)=f_m(t),\,t_m\le t&lt;t_{m+1}\quad (m=0,1,\dots )\] Show that \(f\) is piecewise continuous on \([0,\infty )\) and that it has the step function representation \[ f(t)=f_0(t)+\sum _{m=1}^\infty u(t-t_m)\left (f_m(t)-f_{m-1}(t)\right ),\, 0\le t&lt;\infty \] How do we know that the series on the right converges for all \(t\) in \([0,\infty )\)?
+				Let \(\{t_m\}_{m=0}^\infty \) be a sequence of points such that \(t_0=0\)  \(t_{m+1}&gt;t_m\)  and \(\lim _{m\to \infty }t_m=\infty \). For each nonnegative integer \(m\)  let \(f_m\) be continuous on \([t_m \infty )\)  and let \(f\) be defined on \([0 \infty )\) by \[ f(t)=f_m(t) \ t_m\le t&lt;t_{m+1}\quad (m=0 1 \dots )\] Show that \(f\) is piecewise continuous on \([0 \infty )\) and that it has the step function representation \[ f(t)=f_0(t)+\sum _{m=1}^\infty u(t-t_m)\left (f_m(t)-f_{m-1}(t)\right ) \  0\le t&lt;\infty \] How do we know that the series on the right converges for all \(t\) in \([0 \infty )\)?
 			</div>
 		</div>
 
 		<div class="exercise">
-			<span class="ex-number">31.</span>
+			<span class="ex-number">31 </span>
 			<div class="ex-body">
 				<a id="x1-3231"></a>
-				In addition to the assumptions of Exercise&nbsp;<a href="#x1-3130">30</a>, assume that \[ |f_m(t)|\le Me^{s_0t},\,t\ge t_m,\,m=0,1,\dots , \, {\tag A} \] and that the series \[ \sum _{m=0}^\infty e^{-\rho t_m} {\tag B} \] converges for some \(\rho &gt;0\). Using the steps listed below, show that \({\cal L}(f)\) is defined for \(s&gt;s_0\) and \[ {\cal L}(f)={\cal L}(f_0)+\sum _{m=1}^\infty e^{-st_m}{\cal L}(g_m) {\tag C} \] for \(s&gt;s_0+\rho \), where \[ g_m(t)=f_m(t+t_m)-f_{m-1}(t+t_m)\]
+				In addition to the assumptions of Exercise&nbsp;<a href="#x1-3130">30</a>  assume that \[ |f_m(t)|\le Me^{s_0t} \ t\ge t_m \ m=0 1 \dots   \  {\tag A} \] and that the series \[ \sum _{m=0}^\infty e^{-\rho t_m} {\tag B} \] converges for some \(\rho &gt;0\). Using the steps listed below  show that \({\cal L}(f)\) is defined for \(s&gt;s_0\) and \[ {\cal L}(f)={\cal L}(f_0)+\sum _{m=1}^\infty e^{-st_m}{\cal L}(g_m) {\tag C} \] for \(s&gt;s_0+\rho \)  where \[ g_m(t)=f_m(t+t_m)-f_{m-1}(t+t_m)\]
 				<ol>
 					<li>
-						Use (A) and Theorem&nbsp;8.1.6 to show that \[ {\cal L}(f)=\sum _{m=0}^\infty \int _{t_m}^{t_{m+1}}e^{-st}f_m(t)\,dt {\tag D} \] is defined for \(s&gt;s_0\). 
+						Use (A) and Theorem&nbsp;8.1 6 to show that \[ {\cal L}(f)=\sum _{m=0}^\infty \int _{t_m}^{t_{m+1}}e^{-st}f_m(t)\ dt {\tag D} \] is defined for \(s&gt;s_0\). 
 					</li>
 					<li>
-						Show that (D) can be rewritten as \[ {\cal L}(f)=\sum _{m=0}^\infty \left (\int _{t_m}^\infty e^{-st}f_m(t)\,dt -\int _{t_{m+1}}^\infty e^{-st}f_m(t)\,dt\right ). {\tag E} \] 
+						Show that (D) can be rewritten as \[ {\cal L}(f)=\sum _{m=0}^\infty \left (\int _{t_m}^\infty e^{-st}f_m(t)\ dt -\int _{t_{m+1}}^\infty e^{-st}f_m(t)\ dt\right ). {\tag E} \] 
 					</li>
 					<li>
-						Use (A), the assumed convergence of (B), and the comparison test to show that the series \[ \sum _{m=0}^\infty \int _{t_m}^\infty e^{-st}f_m(t)\,dt\quad \mbox{ and } \quad \sum _{m=0}^\infty \int _{t_{m+1}}^\infty e^{-st}f_m(t)\,dt \] both converge (absolutely) if \(s&gt;s_0+\rho \). 
+						Use (A)  the assumed convergence of (B)  and the comparison test to show that the series \[ \sum _{m=0}^\infty \int _{t_m}^\infty e^{-st}f_m(t)\ dt\quad \mbox{ and } \quad \sum _{m=0}^\infty \int _{t_{m+1}}^\infty e^{-st}f_m(t)\ dt \] both converge (absolutely) if \(s&gt;s_0+\rho \). 
 					</li>
 					<li>
-						Show that (E) can be rewritten as \[ {\cal L}(f)={\cal L}(f_0)+\sum _{m=1}^\infty \int _{t_m}^\infty e^{-st} \left (f_m(t)-f_{m-1}(t)\right )\,dt \] if \(s&gt;s_0+\rho \). 
+						Show that (E) can be rewritten as \[ {\cal L}(f)={\cal L}(f_0)+\sum _{m=1}^\infty \int _{t_m}^\infty e^{-st} \left (f_m(t)-f_{m-1}(t)\right )\ dt \] if \(s&gt;s_0+\rho \). 
 					</li>
 					<li>
 						Complete the proof of (C). 
@@ -340,10 +385,10 @@
 		</div>
 
 		<div class="exercise">
-			<span class="ex-number">32.</span>
+			<span class="ex-number">32 </span>
 			<div class="ex-body">
 				<a id="x1-3832"></a>
-				Suppose \(\{t_m\}_{m=0}^\infty \) and \(\{f_m\}_{m=0}^\infty \) satisfy the assumptions of Exercises&nbsp;<a href="#x1-3130">30</a> and <a href="#x1-3231">31</a>, and there’s a positive constant \(K\) such that \(t_m\ge Km\) for \(m\) sufficiently large. Show that the series (B) of Exercise&nbsp;<a href="#x1-3231">31</a> converges for any \(\rho &gt;0\), and conclude from this that (C) of Exercise&nbsp;<a href="#x1-3231">31</a> holds for \(s&gt;s_0\).
+				Suppose \(\{t_m\}_{m=0}^\infty \) and \(\{f_m\}_{m=0}^\infty \) satisfy the assumptions of Exercises&nbsp;<a href="#x1-3130">30</a> and <a href="#x1-3231">31</a>  and there’s a positive constant \(K\) such that \(t_m\ge Km\) for \(m\) sufficiently large. Show that the series (B) of Exercise&nbsp;<a href="#x1-3231">31</a> converges for any \(\rho &gt;0\)  and conclude from this that (C) of Exercise&nbsp;<a href="#x1-3231">31</a> holds for \(s&gt;s_0\).
 			</div>
 		</div>
 
@@ -356,7 +401,7 @@
 				<span class="ex-number">33.</span>
 				<div class="ex-body">
 					<a id="x1-3933"></a> 
-					\(f(t)=m+1,\,m\le t&lt;m+1\; (m=0,1,2,\dots )\) 
+					\(f(t)=m+1 \ m\le t&lt;m+1\; (m=0 1 2 \dots )\) 
 				</div>
 			</div>
 
@@ -364,7 +409,7 @@
 				<span class="ex-number">34.</span>
 				<div class="ex-body">
 					<a id="x1-4034"></a> 
-					\(f(t)=(-1)^m,\,m\le t&lt;m+1\; (m=0,1,2,\dots )\) 
+					\(f(t)=(-1)^m \ m\le t&lt;m+1\; (m=0 1 2 \dots )\) 
 				</div>
 			</div>
 
@@ -372,7 +417,7 @@
 				<span class="ex-number">35.</span>
 				<div class="ex-body">
 					<a id="x1-4135"></a> 
-					\(f(t)=(m+1)^2,\,m\le t&lt;m+1\; (m=0,1,2,\dots )\) 
+					\(f(t)=(m+1)^2 \ m\le t&lt;m+1\; (m=0 1 2 \dots )\) 
 				</div>
 			</div>
 
@@ -380,7 +425,7 @@
 				<span class="ex-number">36.</span>
 				<div class="ex-body">
 					<a id="x1-4236"></a> 
-					\(f(t)=(-1)^mm,\,m\le t&lt;m+1\; (m=0,1,2,\dots )\) 
+					\(f(t)=(-1)^mm \ m\le t&lt;m+1\; (m=0 1 2 \dots )\) 
 				</div>
 			</div>
 		</div>
