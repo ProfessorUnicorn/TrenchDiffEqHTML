@@ -28,255 +28,264 @@
 			8.5&nbsp;Exercises
 		</div>
 
+		<div class="stepline"> 
+			Part 1: Discontinuous IVPs
+		</div>  
+
 		<div class="grouping">
 			<div class="instructions">
-				Use the Laplace transform to solve the initial value problem. Graph the solution.
+				Solve the IVP using Laplace transform then write the solution in piecewise form and graph the solution.
 			</div>
 
-			<div class="exercise">
-				<span class="ex-number">1.</span>
-				<div class="ex-body">
-					<a id="x1-21"></a>
-					\(\displaystyle {y''+y=\left \{ 
-					\begin {array}{cl}
-						3 &amp; 0\le t&lt;\pi \\ 
-						0 &amp; t\ge \pi 
-					\end {array}\right .\qquad y(0)=0 \quad y'(0)=0}\) 
+				<div class="exercise">
+					<span class="ex-number">1.</span>
+					<div class="ex-body">
+						<a id="x1-21"></a>
+						\(\displaystyle {\ddot{y}+y=\left \{ 
+						\begin {array}{cl}
+							3 &amp; 0\le t&lt;\pi \\ 
+							0 &amp; t\ge \pi 
+						\end {array}\right .\qquad y(0)=0 \quad \dot{y}(0)=0}\) 
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">2.</span>
-				<div class="ex-body">
-					<a id="x1-32"></a>
-					\(\displaystyle {y''+y=\left \{ 
-					\begin {array}{cl}
-						3 &amp; 0\le t&lt;4 \\
-						2t-5 &amp; t &gt; 4
-					\end {array}\right .\qquad y(0)=1 \quad y'(0)=0}\) 
+				<div class="exercise">
+					<span class="ex-number">2.</span>
+					<div class="ex-body">
+						<a id="x1-32"></a>
+						\(\displaystyle {\ddot{y}+y=\left \{ 
+						\begin {array}{cl}
+							3 &amp; 0\le t&lt;4 \\
+							2t-5 &amp; t &gt; 4
+						\end {array}\right .\qquad y(0)=1 \quad \dot{y}(0)=0}\) 
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">3.</span>
-				<div class="ex-body">
-					<a id="x1-43"></a>
-					\(\displaystyle {y''-2y'= \left \{ 
-					\begin {array}{cl}
-						4 &amp; 0\le t&lt;1 \\ 
-						6 &amp; t\ge 1
-					\end {array}\right .\qquad y(0)=-6 \quad y'(0)=1 }\) 
+				<div class="exercise">
+					<span class="ex-number">3.</span>
+					<div class="ex-body">
+						<a id="x1-43"></a>
+						\(\displaystyle {\ddot{y}-2\dot{y}= \left \{ 
+						\begin {array}{cl}
+							4 &amp; 0\le t&lt;1 \\ 
+							6 &amp; t\ge 1
+						\end {array}\right .\qquad y(0)=-6 \quad \dot{y}(0)=1 }\) 
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">4.</span>
-				<div class="ex-body">
-					<a id="x1-54"></a>
-					\(\displaystyle {y''-y=\left \{ 
-					\begin {array}{cl}
-						e^{2t} &amp; 0\le t&lt; 2 \\ 
-						1 &amp; t\ge 2
-					\end {array}\right .\qquad y(0)=3 \quad y'(0)=-1 }\) 
+				<div class="exercise">
+					<span class="ex-number">4.</span>
+					<div class="ex-body">
+						<a id="x1-54"></a>
+						\(\displaystyle {\ddot{y}-y=\left \{ 
+						\begin {array}{cl}
+							e^{2t} &amp; 0\le t&lt; 2 \\ 
+							1 &amp; t\ge 2
+						\end {array}\right .\qquad y(0)=3 \quad \dot{y}(0)=-1 }\) 
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">5.</span>
-				<div class="ex-body">
-					<a id="x1-65"></a> 
-					\(\displaystyle {y''-3y'+2y= \left \{ 
-					\begin {array}{rl}
-						0 &amp;0\le t&lt;1\\
-						1 &amp;1\le t&lt;2\\
-						-1 &amp;t\ge 2 
-					\end {array}\right .\qquad y(0)=-3 \quad y'(0)=1}\) 
+				<div class="exercise">
+					<span class="ex-number">5.</span>
+					<div class="ex-body">
+						<a id="x1-65"></a> 
+						\(\displaystyle {\ddot{y}-3\dot{y}+2y= \left \{ 
+						\begin {array}{rl}
+							0 &amp;0\le t&lt;1\\
+							1 &amp;1\le t&lt;2\\
+							-1 &amp;t\ge 2 
+						\end {array}\right .\qquad y(0)=-3 \quad \dot{y}(0)=1}\) 
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">6.</span>
-				<div class="ex-body">
-					<a id="x1-76"></a>
-					\(\displaystyle {y''+4y= \left \{ 
-					\begin {array}{cl}
-						|\sin t| &amp;0\le t&lt;2\pi \\
-						0 &amp;t\ge 2\pi 
-					\end {array}\right .\qquad y(0)=-3 \quad y'(0)=1}\)
+				<div class="exercise">
+					<span class="ex-number">6.</span>
+					<div class="ex-body">
+						<a id="x1-76"></a>
+						\(\displaystyle {\ddot{y}+4y= \left \{ 
+						\begin {array}{cl}
+							|\sin t| &amp;0\le t&lt;2\pi \\
+							0 &amp;t\ge 2\pi 
+						\end {array}\right .\qquad y(0)=-3 \quad \dot{y}(0)=1}\)
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">7.</span>
-				<div class="ex-body">
-					<a id="x1-87"></a> 
-					\(\displaystyle {y''-5y'+4y= \left \{ 
-					\begin {array}{rl}
-						1 &amp;0\le t&lt;1\\ -1 &amp;1\le t&lt;2\\
-						0 &amp;t\ge 2
-					\end {array}\right .\qquad y(0)=3 \quad y'(0)=-5}\) 
+				<div class="exercise">
+					<span class="ex-number">7.</span>
+					<div class="ex-body">
+						<a id="x1-87"></a> 
+						\(\displaystyle {\ddot{y}-5\dot{y}+4y= \left \{ 
+						\begin {array}{rl}
+							1 &amp;0\le t&lt;1\\ -1 &amp;1\le t&lt;2\\
+							0 &amp;t\ge 2
+						\end {array}\right .\qquad y(0)=3 \quad \dot{y}(0)=-5}\) 
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">8.</span>
-				<div class="ex-body">
-					<a id="x1-98"></a> 
-					\(\displaystyle {y''+9y= \left \{ 
-					\begin {array}{cl}
-						\cos t &amp;0\le t&lt;\displaystyle {{3\pi \over 2}}\\
-						\sin t &amp;t\ge \displaystyle {{3\pi \over 2}}
-					\end {array}\right .\qquad y(0)=0 \quad y'(0)=0}\) 
+				<div class="exercise">
+					<span class="ex-number">8.</span>
+					<div class="ex-body">
+						<a id="x1-98"></a> 
+						\(\displaystyle {\ddot{y}+9y= \left \{ 
+						\begin {array}{cl}
+							\cos t &amp;0\le t&lt;\displaystyle {{3\pi \over 2}}\\
+							\sin t &amp;t\ge \displaystyle {{3\pi \over 2}}
+						\end {array}\right .\qquad y(0)=0 \quad \dot{y}(0)=0}\) 
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">9.</span>
-				<div class="ex-body">
-					<a id="x1-109"></a>
-					\(\displaystyle {y''+4y= \left \{ 
-					\begin {array}{cl}
-						t &amp;0\le t&lt;\displaystyle {\pi \over 2}\\
-						\pi  &amp;t\ge \displaystyle { {\pi \over 2}} 
-					\end {array}\right .\quad y(0)=0 \quad y'(0)=0}\)
+				<div class="exercise">
+					<span class="ex-number">9.</span>
+					<div class="ex-body">
+						<a id="x1-109"></a>
+						\(\displaystyle {\ddot{y}+4y= \left \{ 
+						\begin {array}{cl}
+							t &amp;0\le t&lt;\displaystyle {\pi \over 2}\\
+							\pi  &amp;t\ge \displaystyle { {\pi \over 2}} 
+						\end {array}\right .\quad y(0)=0 \quad \dot{y}(0)=0}\)
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">10.</span>
-				<div class="ex-body">
-					<a id="x1-1110"></a> 
-					\(\displaystyle {y''+y=\left \{ 
-					\begin {array}{cl}\phantom {-}t &amp;0\le t&lt;\pi \\
-					-t &amp; t\ge \pi 
-					\end {array}\right . \qquad y(0)=0 \quad y'(0)=0}\) 
+				<div class="exercise">
+					<span class="ex-number">10.</span>
+					<div class="ex-body">
+						<a id="x1-1110"></a> 
+						\(\displaystyle {\ddot{y}+y=\left \{ 
+						\begin {array}{cl}\phantom {-}t &amp;0\le t&lt;\pi \\
+						-t &amp; t\ge \pi 
+						\end {array}\right . \qquad y(0)=0 \quad \dot{y}(0)=0}\) 
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">11.</span>
-				<div class="ex-body">
-					<a id="x1-1211"></a> 
-					\(\displaystyle {y''-3y'+2y=\left \{ 
-					\begin {array}{cl}
-						0 &amp;0\le t&lt;2\\
-						2t-4 &amp;t\ge 2 
-					\end {array}\right .  \quad y(0)=0 \quad y'(0)=0}\) 
+				<div class="exercise">
+					<span class="ex-number">11.</span>
+					<div class="ex-body">
+						<a id="x1-1211"></a> 
+						\(\displaystyle {\ddot{y}-3\dot{y}+2y=\left \{ 
+						\begin {array}{cl}
+							0 &amp;0\le t&lt;2\\
+							2t-4 &amp;t\ge 2 
+						\end {array}\right .  \quad y(0)=0 \quad \dot{y}(0)=0}\) 
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">12.</span>
-				<div class="ex-body">
-					<a id="x1-1312"></a> 
-					\(\displaystyle {y''+y=\left \{ 
-					\begin {array}{cl}
-						t &amp;0\le t&lt;2\pi \\
-						-2t &amp;t\ge 2\pi 
-					\end {array}\right .\quad y(0)=1 \quad y'(0)=2}\) 
+				<div class="exercise">
+					<span class="ex-number">12.</span>
+					<div class="ex-body">
+						<a id="x1-1312"></a> 
+						\(\displaystyle {\ddot{y}+y=\left \{ 
+						\begin {array}{cl}
+							t &amp;0\le t&lt;2\pi \\
+							-2t &amp;t\ge 2\pi 
+						\end {array}\right .\quad y(0)=1 \quad \dot{y}(0)=2}\) 
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">13.</span>
-				<div class="ex-body">
-					<a id="x1-1413"></a>
-					\(\displaystyle {y''+3y'+2y=\left \{ 
-					\begin {array}{cl}\phantom {-}1 &amp;0\le t&lt;2\\
-						-1 &amp;t\ge 2 
-					\end {array}\right . \qquad y(0)=0 \quad y'(0)=0}\)
+				<div class="exercise">
+					<span class="ex-number">13.</span>
+					<div class="ex-body">
+						<a id="x1-1413"></a>
+						\(\displaystyle {\ddot{y}+3\dot{y}+2y=\left \{ 
+						\begin {array}{cl}\phantom {-}1 &amp;0\le t&lt;2\\
+							-1 &amp;t\ge 2 
+						\end {array}\right . \qquad y(0)=0 \quad \dot{y}(0)=0}\)
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">14.</span>
-				<div class="ex-body">
-					<a id="x1-1514"></a> 
-					\(\displaystyle {y''-4y'+3y=\left \{ 
-					\begin {array}{cl}-1 &amp;0\le t&lt;1\\
-						\phantom {-}1 &amp;t\ge 1 
-					\end {array}\right . \qquad y(0)=0 \quad y'(0)=0}\) 
+				<div class="exercise">
+					<span class="ex-number">14.</span>
+					<div class="ex-body">
+						<a id="x1-1514"></a> 
+						\(\displaystyle {\ddot{y}-4\dot{y}+3y=\left \{ 
+						\begin {array}{cl}-1 &amp;0\le t&lt;1\\
+							\phantom {-}1 &amp;t\ge 1 
+						\end {array}\right . \qquad y(0)=0 \quad \dot{y}(0)=0}\) 
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">15.</span>
-				<div class="ex-body">
-					<a id="x1-1615"></a> 
-					\(\displaystyle {y''+2y'+y=\left \{ 
-					\begin {array}{cl}
-						e^t &amp;0\le t&lt;1\\
-						e^t-1 &amp;t\ge 1 
-					\end {array}\right . \qquad y(0)=3 \quad y'(0)=-1}\) 
+				<div class="exercise">
+					<span class="ex-number">15.</span>
+					<div class="ex-body">
+						<a id="x1-1615"></a> 
+						\(\displaystyle {\ddot{y}+2\dot{y}+y=\left \{ 
+						\begin {array}{cl}
+							e^t &amp;0\le t&lt;1\\
+							e^t-1 &amp;t\ge 1 
+						\end {array}\right . \qquad y(0)=3 \quad \dot{y}(0)=-1}\) 
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">16.</span>
-				<div class="ex-body">
-					<a id="x1-1716"></a> 
-					\(\displaystyle {y''+2y'+y=\left \{ 
-					\begin {array}{cl}
-						4e^t &amp;0\le t&lt;1\\
-						0 &amp;t\ge 1 
-					\end {array}\right . \qquad y(0)=0 \quad y'(0)=0}\) 
+				<div class="exercise">
+					<span class="ex-number">16.</span>
+					<div class="ex-body">
+						<a id="x1-1716"></a> 
+						\(\displaystyle {\ddot{y}+2\dot{y}+y=\left \{ 
+						\begin {array}{cl}
+							4e^t &amp;0\le t&lt;1\\
+							0 &amp;t\ge 1 
+						\end {array}\right . \qquad y(0)=0 \quad \dot{y}(0)=0}\) 
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">17.</span>
-				<div class="ex-body">
-					<a id="x1-1817"></a> 
-					\(\displaystyle {y''+3y'+2y=\left \{ 
-					\begin {array}{cl}
-						e^{-t} &amp;0\le t&lt;1\\
-						0 &amp;t\ge 1 
-					\end {array}\right . \qquad y(0)=1 \quad y'(0)=-1}\) 
+				<div class="exercise">
+					<span class="ex-number">17.</span>
+					<div class="ex-body">
+						<a id="x1-1817"></a> 
+						\(\displaystyle {\ddot{y}+3\dot{y}+2y=\left \{ 
+						\begin {array}{cl}
+							e^{-t} &amp;0\le t&lt;1\\
+							0 &amp;t\ge 1 
+						\end {array}\right . \qquad y(0)=1 \quad \dot{y}(0)=-1}\) 
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">18.</span>
-				<div class="ex-body">
-					<a id="x1-1918"></a>
-					\(\displaystyle {y''-4y'+4y=\left \{ 
-					\begin {array}{rl}
-						e^{2t} &amp;0\le t&lt;2\\
-						-e^{2t} &amp;t\ge 2 
-					\end {array}\right . \qquad y(0)=0 \quad y'(0)=-1}\) 
+				<div class="exercise">
+					<span class="ex-number">18.</span>
+					<div class="ex-body">
+						<a id="x1-1918"></a>
+						\(\displaystyle {\ddot{y}-4\dot{y}+4y=\left \{ 
+						\begin {array}{rl}
+							e^{2t} &amp;0\le t&lt;2\\
+							-e^{2t} &amp;t\ge 2 
+						\end {array}\right . \qquad y(0)=0 \quad \dot{y}(0)=-1}\) 
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">19.</span>
-				<div class="ex-body">
-					<a id="x1-2019"></a>
-					\(\displaystyle {y''=\left \{ 
-					\begin {array}{cl}t^2 &amp;0\le t&lt;1\\
-						-t &amp;1\le t&lt;2\\
-						t+1 &amp;t\ge 2 
-					\end {array}\right . \qquad y(0)=1 \quad y'(0)=0}\)
+				<div class="exercise">
+					<span class="ex-number">19.</span>
+					<div class="ex-body">
+						<a id="x1-2019"></a>
+						\(\displaystyle {\ddot{y}=\left \{ 
+						\begin {array}{cl}t^2 &amp;0\le t&lt;1\\
+							-t &amp;1\le t&lt;2\\
+							t+1 &amp;t\ge 2 
+						\end {array}\right . \qquad y(0)=1 \quad \dot{y}(0)=0}\)
+					</div>
 				</div>
-			</div>
 
-			<div class="exercise">
-				<span class="ex-number">20.</span>
-				<div class="ex-body">
-					<a id="x1-2120"></a> 
-					\(\displaystyle {y''+2y'+2y=\left \{ 
-					\begin {array}{rl}1 &amp;0\le t&lt;2\pi \\
-						t &amp;2\pi \le t&lt;3\pi \\
-						-1 &amp;t\ge 3\pi  
-					\end {array}\right . \qquad y(0)=2 \quad y'(0)=-1}\) 
+				<div class="exercise">
+					<span class="ex-number">20.</span>
+					<div class="ex-body">
+						<a id="x1-2120"></a> 
+						\(\displaystyle {\ddot{y}+2\dot{y}+2y=\left \{ 
+						\begin {array}{rl}1 &amp;0\le t&lt;2\pi \\
+							t &amp;2\pi \le t&lt;3\pi \\
+							-1 &amp;t\ge 3\pi  
+						\end {array}\right . \qquad y(0)=2 \quad \dot{y}(0)=-1}\) 
+					</div>
 				</div>
 			</div>
-		</div>
+		</div>	
+
+		<div class="stepline"> 
+			Part 2: Challenge
+		</div>  
 
 		<div class="exercise">
 			<span class="ex-number">21.</span>
 			<div class="ex-body">
 					<a id="x1-2221"></a> 
-					Solve the initial value problem \[ y''=f(t) \quad y(0)=0 \quad y'(0)=0\] where \[ f(t)=m+1 \quad m\le t&lt;m+1 \quad m=0,1,2,\dots \] 
+					Solve the initial value problem \[ \ddot{y}=f(t) \quad y(0)=0 \quad \dot{y}(0)=0\] where \[ f(t)=m+1 \quad m\le t&lt;m+1 \quad m=0,1,2,\dots \] 
 				</div>
 			</div>
 
@@ -288,7 +297,7 @@
 					<ol>
 						<li>
 							<div>
-								\(y''+y=f(t) \quad y(0)=0 \quad y'(0)=0\); 
+								\(\ddot{y}+y=f(t) \quad y(0)=0 \quad \dot{y}(0)=0\); 
 							</div>
 							<div>
 								\(f(t)=m+1 \quad m\pi \le t&lt;(m+1)\pi  \quad m=0,1,2,\dots \). 
@@ -296,7 +305,7 @@
 						</li>
 						<li>
 							<div>
-								\(y''+y=f(t) \quad y(0)=0 \quad y'(0)=0\); 
+								\(\ddot{y}+y=f(t) \quad y(0)=0 \quad \dot{y}(0)=0\); 
 							</div>
 							<div>
 								\(f(t)=(m+1)t \quad 2m\pi \le t&lt;2(m+1)\pi  \quad m=0,1,2,\dots \)<span class="hint:">Hint: You’ll need the formula</span>\[ 1+2+\cdots +m={m(m+1)\over 2}\] 
@@ -304,7 +313,7 @@
 						</li>
 						<li>
 							<div>
-								\(y''+y=f(t) \quad y(0)=0 \quad y'(0)=0\); 
+								\(\ddot{y}+y=f(t) \quad y(0)=0 \quad \dot{y}(0)=0\); 
 							</div>
 							<div>
 								\(f(t)=(-1)^m \quad m\pi \le t&lt;(m+1)\pi  \quad m=0,1,2,\dots .\) 
@@ -312,7 +321,7 @@
 						</li>
 						<li>
 							<div>
-								\(y''-y=f(t) \quad y(0)=0 \quad y'(0)=0\); 
+								\(\ddot{y}-y=f(t) \quad y(0)=0 \quad \dot{y}(0)=0\); 
 							</div>
 							<div>
 								\(f(t)=m+1 \quad m\le t&lt;(m+1) \quad m=0,1,2,\dots .\) 
@@ -323,7 +332,7 @@
 						</li>
 						<li>
 							<div>
-								\(y''+2y'+2y=f(t) \quad y(0)=0 \quad y'(0)=0\); 
+								\(\ddot{y}+2\dot{y}+2y=f(t) \quad y(0)=0 \quad \dot{y}(0)=0\); 
 							</div>
 							<div>
 								\(f(t)=(m+1)(\sin t+2\cos t) \quad 2m\pi \le t&lt;2(m+1)\pi  \quad m=0,1,2,\dots .\) 
@@ -334,7 +343,7 @@
 						</li>
 						<li>
 							<div>
-								\(y''-3y'+2y=f(t) \quad y(0)=0 \quad y'(0)=0\); 
+								\(\ddot{y}-3\dot{y}+2y=f(t) \quad y(0)=0 \quad \dot{y}(0)=0\); 
 							</div>
 							<div>
 								\(f(t)=m+1 \quad m\le t&lt;m+1 \quad m=0,1,2,\dots .\) 
@@ -378,7 +387,7 @@
 					<ol>
 						<li>
 							<div>
-								Let \(a\), \(b\), and \(c\) be constants, with \(a\ne 0\). Let \(f\) be piecewise continuous on an interval \((\alpha, \beta )\), with a single jump discontinuity at a point \(t_0\) in \((\alpha, \beta )\). Suppose \(y\) and \(y'\) are continuous on \((\alpha, \beta )\) and \(y''\) on \((\alpha, t_0)\) and \((t_0, \beta )\). Suppose also that \[ ay''+by'+cy=f(t) {\tag A} \] on \((\alpha, t_0)\) and \((t_0, \beta )\). Show that \[ y''(t_0+)-y''(t_0-)={f(t_0+)-f(t_0-)\over a}\ne 0\] 
+								Let \(a\), \(b\), and \(c\) be constants, with \(a\ne 0\). Let \(f\) be piecewise continuous on an interval \((\alpha, \beta )\), with a single jump discontinuity at a point \(t_0\) in \((\alpha, \beta )\). Suppose \(y\) and \(\dot{y}\) are continuous on \((\alpha, \beta )\) and \(\ddot{y}\) on \((\alpha, t_0)\) and \((t_0, \beta )\). Suppose also that \[ a\ddot{y}+b\dot{y}+cy=f(t) {\tag A} \] on \((\alpha, t_0)\) and \((t_0, \beta )\). Show that \[ \ddot{y}(t_0+)-\ddot{y}(t_0-)={f(t_0+)-f(t_0-)\over a}\ne 0\] 
 							</div>
 						</li>
 						<li>
@@ -394,7 +403,7 @@
 				<span class="ex-number">25.</span>
 				<div class="ex-body">
 					<a id="x1-3725"></a> 
-					Suppose \(P_0, P_1\), and \(P_2\) are continuous and \(P_0\) has no zeros on an open interval \((a, b)\), and that \(F\) has a jump discontinuity at a point \(t_0\) in \((a, b)\). Show that the differential equation \[ P_0(t)y''+P_1(t)y'+P_2(t)y=F(t) \] has no solutions on \((a, b)\). <span class="hint"> Hint: Generalize the result of Exercise&nbsp;24 and use Exercise&nbsp;23 part c. </span>
+					Suppose \(P_0, P_1\), and \(P_2\) are continuous and \(P_0\) has no zeros on an open interval \((a, b)\), and that \(F\) has a jump discontinuity at a point \(t_0\) in \((a, b)\). Show that the differential equation \[ P_0(t)\ddot{y}+P_1(t)\dot{y}+P_2(t)y=F(t) \] has no solutions on \((a, b)\). <span class="hint"> Hint: Generalize the result of Exercise&nbsp;24 and use Exercise&nbsp;23 part c. </span>
 				</div>
 			</div>
 
@@ -404,7 +413,7 @@
 					<a id="x1-3826"></a> 
 					Let \(0=t_0&lt;t_1&lt;\cdots &lt;t_n\). Suppose \(f_m\) is continuous on \([t_m, \infty )\) for \(m=1, \dots, n\). Let \[ f(t)= \left \{ \begin {array}{cl}
 						f_m(t) &amp;t_m\le t&lt; t_{m+1} \quad m=1, \dots, n-1\\
-						f_n(t) &amp;t\ge t_n \end {array}\right. \] Show that the solution of \[ ay''+by'+cy=f(t), \quad y(0)=k_0 \quad y'(0)=k_1\] as defined following Theorem&nbsp;8.5.1, is given by \[ y=\left \{ 
+						f_n(t) &amp;t\ge t_n \end {array}\right. \] Show that the solution of \[ a\ddot{y}+b\dot{y}+cy=f(t), \quad y(0)=k_0 \quad \dot{y}(0)=k_1\] as defined following Theorem&nbsp;8.5.1, is given by \[ y=\left \{ 
 					\begin {array}{cl}
 						z_0(t) &amp;0\le t&lt;t_1\\
 						z_0(t)+ z_1(t) &amp;t_1\le t&lt;t_2\\
