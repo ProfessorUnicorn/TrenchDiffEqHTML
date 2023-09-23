@@ -34,31 +34,45 @@
 				
 			<div id="91b12a3c-181f-40b2-9bd7-69b99ac33de3">
 				An \(n\)th order differential equation is said to be <span class="vocab">linear</span> if it can be written in the form 
+
 				<a id="x1-2r1"></a>
 				\begin {equation} 
 					\label {eq:9.1.1} 
-					y^{(n)}+p_1(x)y^{(n-1)}+\cdots +p_n(x)y=f(x) 
+					\frac{d^n y}{dx^n} + p_1(x) \frac{d^{n-1} y}{dx^{n-1}} + \cdots + p_{n-1}(x)\frac{dy}{dx} + p_n(x)y=f(x) 
 				\end {equation} 
+
 				We considered equations of this form with \(n=1\) in Section&nbsp;2.1 and with \(n=2\) in Chapter&nbsp;5. In this chapter \(n\) is an arbitrary positive integer. 
-			</div>
-			<div class="indent" id="78cbf65b-e4f9-4228-bc15-734bd32b2661">
-				In this section we sketch the general theory of linear \(n\)th order equations. Since this theory has already been discussed for \(n=2\) in Sections&nbsp;5.1 and 5.3, we’ll omit proofs. 
+				In this section we sketch the general theory of linear \(n\)th order equations. Since this theory has already been discussed for \(n=2\) in Sections&nbsp;5.1, 5.2 and 5.3
 			</div>
 			<div class="indent" id="a87ec1c9-1fd3-4678-ab28-790a6a125231">
 				For convenience, we consider linear differential equations written as 
 				<a id="x1-3r2"></a> 
-				\begin {equation} 
-					\label {eq:9.1.2} 
-					P_0(x)y^{(n)}+P_1(x)y^{(n-1)}+\cdots +P_n(x)y=F(x) 
+				\begin {equation}  \label {eq:9.1.2} 
+					P_0(x) \frac{d^n y}{dx^n} + P_1(x) \frac{d^{n-1} y}{dx^{n-1}} + \cdots + P_{n-1}(x)\frac{dy}{dx} + P_n(x)y=F(x) 
 				\end {equation} 
-				which can be rewritten as <a href="#x1-2r1">(9.1.1)</a> on any interval on which \(P_0\) has no zeros, with \(p_1=P_1/P_0\), …, \(p_n=P_n/P_0\) and \(f=F/P_0\). For simplicity, throughout this chapter we’ll abbreviate the left side of <a href="#x1-3r2">(9.1.2)</a> by \(Ly\); that is, \[ Ly=P_0y^{(n)}+P_1y^{(n-1)}+\cdots +P_ny\] We say that the equation \(Ly=F\) is <span class="vocab">normal</span> on \((a,b)\) if \(P_0\), \(P_1\), …, \(P_n\) and \(F\) are continuous on \((a,b)\) and \(P_0\) has no zeros on \((a,b)\). If this is so then \(Ly=F\) can be written as <a href="#x1-2r1">(9.1.1)</a> with \(p_1\), …, \(p_n\) and \(f\) continuous on \((a,b)\). 
+
+				which can be rewritten as <a href="#x1-2r1">(9.1.1)</a> on any interval on which \(P_0(x)\) has no zeros, with \(p_1(x)=P_1(x)/P_0(x)\), …, \(p_n(x)=P_n(x)/P_0(x)\) and \(f(x)=F(x)/P_0(x)\). For simplicity, throughout this chapter we’ll abbreviate the left side of <a href="#x1-3r2">(9.1.2)</a> by \(Ly\) 
+				
+				\[ Ly=P_0(x) \frac{d^n y}{dx^n} + P_1(x) \frac{d^{n-1} y}{dx^{n-1}} + \cdots + P_{n-1}(x)\frac{dy}{dx} + P_n(x)y \] 
+				
+				We say that the equation \(Ly=F(x)\) is <span class="vocab">normal</span> on \((a,b)\) if \(P_0(x)\), \(P_1(x)\), …, \(P_n(x)\) and \(F(x)\) are continuous on \((a,b)\) and \(P_0(x)\) has no zeros on \((a,b)\). If this is so then \(Ly=F(x)\) can be written as <a href="#x1-2r1">(9.1.1)</a> with \(p_1(x)\), …, \(p_n(x)\) and \(f(x)\) continuous on \((a,b)\). 
 			</div>
 			<div class="indent" id="3b5a60fc-b7e6-4478-a450-c0fa3f0d8394">
 				The next theorem is analogous to Theorem&nbsp;<span class="ptmb8t-">5.1.3</span>. 
 			</div>
 			<div class="theorem" id="x1-41">
 				<span class="head">Theorem&nbsp;9.1.1</span>
-				Suppose \(Ly=F\) is normal on \((a,b)\), let \(x_0\) be a point in \((a,b),\) and let \(k_0\) , \(k_1\), …, \(k_{n-1}\) be arbitrary real numbers. Then the initial value problem \[ Ly=F, \quad y(x_0)=k_0,\quad y'(x_0)=k_1,\dots ,\quad y^{(n-1)}(x_0)=k_{n-1} \] has a unique solution on \((a,b).\)
+				Suppose \(Ly=F(x)\) is normal on \((a,b)\), let \(x_0\) be a point in \((a,b),\) and let \(k_0\) , \(k_1\), …, \(k_{n-1}\) be arbitrary real numbers. Then the IVP has a unique solution on \((a,b)\)
+				
+				\[ Ly=F 
+				\quad y(x_0)=k_0
+				\quad \left. \frac{dy}{dx} \right|_{x_0}=k_1 
+				\quad
+				\dots 
+				\quad \left. \frac{d^{n-1} y}{dx^{n-1}} \right|_{x_0}=k_{n-1} 
+				 \] 
+				
+				
 			</div>
 		</details>
 
@@ -66,99 +80,259 @@
 			<summary>Homogeneous Equations</summary>
 		
 			<div id="5151ea7a-7948-4595-af96-0766b546b153">
-				Eqn.&nbsp;<a href="#x1-3r2">(9.1.2)</a> is said to be <span class="vocab">homogeneous</span> if \(F\equiv 0\) and <span class="vocab">nonhomogeneous</span> otherwise. Since \(y\equiv 0\) is obviously a solution of \(Ly=0\), we call it the <span class="vocab">trivial</span> solution. Any other solution is <span class="vocab">nontrivial</span>. 
+				Equation&nbsp;<a href="#x1-3r2">(9.1.2)</a> is said to be <span class="vocab">homogeneous</span> if \(F(x) \equiv 0\) and <span class="vocab">nonhomogeneous</span> otherwise. Since \(y\equiv 0\) is obviously a solution of the homogeneous equation, we call it the <span class="vocab">trivial</span> solution. Any other solution is <span class="vocab">nontrivial</span>. 
 			</div>
 			<div class="indent" id="e9b1d181-f3f2-4f08-aea8-de26a22e96f7">
-				If \(y_1\), \(y_2\), …, \(y_n\) are defined on \((a,b)\) and \(c_1\), \(c_2\), …, \(c_n\) are constants, then 
+				If \(y_1\), \(y_2\), …, \(y_n\) are defined on \((a,b)\) and \(c_1\), \(c_2\), …, \(c_n\) are constants, then a <span class="vocab">linear combination</span> of \(\{y_1,y_2\dots ,y_n\}\) is written as
+
 				<a id="x1-5r3"></a> 
 				\begin {equation} 
 					\label {eq:9.1.3} 
 					y=c_1y_1+c_2y_2+\cdots +c_ny_n 
 				\end {equation} 
-				is a <span class="vocab">linear combination</span> of \(\{y_1,y_2\dots ,y_n\}\). It’s easy to show that if \(y_1\), \(y_2\), …, \(y_n\) are solutions of \(Ly=0\) on \((a,b)\), then so is any linear combination of \(\{y_1,y_2,\dots ,y_n\}\). (See the proof of Theorem&nbsp;<span class="ptmb8t-">5.1.2</span>.) We say that \(\{y_1,y_2,\dots ,y_n\}\) is a <span class="vocab">fundamental set of solutions</span> of \(Ly=0\) on \((a,b)\) if every solution of \(Ly=0\) on \((a,b)\) can be written as a linear combination of \(\{y_1,y_2,\dots ,y_n\}\), as in <a href="#x1-5r3">(9.1.3)</a>. In this case we say that <a href="#x1-5r3">(9.1.3)</a> is the <span class="vocab">general solution</span> of \(Ly=0\) on \((a,b)\). 
+
+				 It’s easy to show that if \(y_1\), \(y_2\), …, \(y_n\) are solutions of \(Ly=0\) on \((a,b)\), then so is any linear combination of \(\{y_1,y_2,\dots ,y_n\}\). 
+				 
+				 We say that \(\{y_1,y_2,\dots ,y_n\}\) is a <span class="vocab">fundamental set of solutions</span> of \(Ly=0\) on \((a,b)\) if every solution of \(Ly=0\) on \((a,b)\) can be written as a linear combination of \(\{y_1,y_2,\dots ,y_n\}\), as in <a href="#x1-5r3">(9.1.3)</a>. In this case we say that <a href="#x1-5r3">(9.1.3)</a> is the <span class="vocab">general solution</span> of \(Ly=0\) on \((a,b)\). 
 			</div>
 			<div class="indent" id="1de8e280-0b01-46f7-9495-37d75dbb4e8e">
-				It can be shown (Exercises&nbsp;<span class="ptmb8t-">14</span> and <span class="ptmb8t-">15</span>) that if the equation \(Ly=0\) is normal on \((a,b)\) then it has infinitely many fundamental sets of solutions on \((a,b)\). The next definition will help to identify fundamental sets of solutions of \(Ly=0\). 
+				It can be shown that if the equation \(Ly=0\) is normal on \((a,b)\) then it has infinitely many fundamental sets of solutions on \((a,b)\). The next definition will help to identify fundamental sets of solutions of \(Ly=0\). 
 			</div>
 			<div class="indent" id="7516a340-7fd6-4c01-bf46-fce70aac97f7">
 				We say that \(\{y_1,y_2,\dots ,y_n\}\) is <span class="vocab">linearly independent</span> on \((a,b)\) if the only constants \(c_1\), \(c_2\), …, \(c_n\) such that 
-				\begin {equation} \label {eq:9.1.4} c_1y_1(x)+c_2y_2(x)+\cdots +c_ny_n(x)=0,\quad a&lt;x&lt;b 
-				\end {equation} <a id="x1-6r4"></a> are \(c_1=c_2=\cdots =c_n=0\). If <a href="#x1-6r4">(9.1.4)</a> holds for some set of constants \(c_1\), \(c_2\), …, \(c_n\) that are not all zero, then \(\{y_1,y_2,\dots ,y_n\}\) is <span class="vocab">linearly dependent</span> on \((a,b)\) 
+
+				<a id="x1-6r4"></a> 
+				\begin {equation} \label {eq:9.1.4} 
+					c_1y_1(x)+c_2y_2(x)+\cdots +c_ny_n(x)=0
+					\quad a&lt;x&lt;b 
+				\end {equation} 
+				
+				are \(c_1=c_2=\cdots =c_n=0\). If <a href="#x1-6r4">(9.1.4)</a> holds for some set of constants \(c_1\), \(c_2\), …, \(c_n\) that are not all zero, then \(\{y_1,y_2,\dots ,y_n\}\) is <span class="vocab">linearly dependent</span> on \((a,b)\) 
 			</div>
+
 			<div class="indent" id="810e8e47-2ffe-4c5e-a14a-58db8843e744">
 				The next theorem is analogous to Theorem&nbsp;<span class="ptmb8t-">5.13</span>. 
 			</div>
+
 			<div class="theorem" id="x1-72">
 				<span class="head">Theorem&nbsp;9.1.2</span> 
-				If \(Ly=0\) is normal on \((a,b)\), then a set \(\{y_1,y_2,\dots ,y_n\}\) of \(n\) solutions of \(Ly=0\) on \((a,b)\) is a fundamental set if and only if it’s linearly independent on \((a,b)\).
+				If \(Ly=0\) is normal on \((a,b)\), then a set \(\{y_1,y_2,\dots ,y_n\}\) of \(n\) solutions of \(Ly=0\) on \((a,b)\) is a fundamental set if and only if it’s linearly independent on \((a,b)\)
 			</div>
+
+			<br>
+			<br>
+			<br>
+			<!--Example 1-->
 			<div class="example" id="x1-81" style="--ex-number: 1">
 				<div>
 					The equation 
 					<a id="x1-9r5"></a> 
 					\begin {equation} 
 						\label {eq:9.1.5} 
-						x^3y'''-x^2y''-2xy'+6y=0 
+						x^3 \frac{d^3 y}{dx^3} -x^2 \frac{d^2 y}{dx^2} -2x \frac{d y}{dx} +6y=0 
 					\end {equation} 
-					is normal and has the solutions \(y_1=x^2\), \(y_2=x^3\), and \(y_3=1/x\) on \((-\infty ,0)\) and \((0,\infty )\). Show that \(\{y_1,y_2,y_3\}\) is linearly independent on \((-\infty , 0)\) and \((0,\infty )\). Then find the general solution of <a href="#x1-9r5">(9.1.5)</a> on \((-\infty , 0)\) and \((0,\infty )\).
+					is normal and has the solutions \(y_1=x^2\), \(y_2=x^3\), and \(y_3=1/x\) on \((-\infty ,0)\) and \((0,\infty )\).  on \((-\infty , 0)\) and \((0,\infty )\). Then  on \((-\infty , 0)\) and \((0,\infty )\).
 				</div>
+				<ol>
+					<li>
+						Verify that \(y_1=x^2\), \(y_2=x^3\), and \(y_3=1/x\) are solutions <a href="#x1-9r5">(9.1.5)</a>
+					</li>
+					<li>
+						Show that \(\{y_1,y_2,y_3\}\) is linearly independent
+					</li>
+					<li>
+						Find the general solution of <a href="#x1-9r5">(9.1.5)</a>
+					</li>
+				</ol>	
+
 
 				<details class="solution">
 					<summary>Solution</summary>
-					Suppose 
-					<a id="x1-10r6"></a>
-					\begin {equation} 
-						\label {eq:9.1.6} 
-						c_1x^2+c_2x^3+{c_3\over x}=0 
-					\end {equation}
-					on \((0,\infty )\). We must show that \(c_1=c_2=c_3=0\). Differentiating <a href="#x1-10r6">(9.1.6)</a> twice yields the system 
-					<a id="x1-11r7"></a>
-					\begin {equation} 
-						\label {eq:9.1.7} 
-						\begin {array}{rcl} 
-							c_1x^2+c_2x^3+\displaystyle {c_3\over x}&amp;=&amp;0\\ 
-							2c_1x+3c_2x^2-\displaystyle {c_3\over x^2}&amp;=&amp;0\\ 
-							2c_1+6c_2x+\displaystyle {2c_3\over x^3}&amp;=&amp;0 
-						\end {array} 
-					\end {equation}
+					<ol>
+						<li>
+							<div>
+								<div>
+									To verify \(y_1=x^2\) is a solution we differentiate \(y_1\) and substitute into <a href="#x1-9r5">(9.1.5)</a> 
+								</div>	
+								<div class="reading-exercise">
+									Differentiate \(y_1=x^2\) three times
+								</div>	
+								<div>
+									\[
+										y_1=x^2
+										\quad\quad
+										\frac{d y_1}{dx}=2x
+										\quad\quad
+										\frac{d^2 y_1}{dx^2}=2
+										\quad\quad
+										\frac{d^3 y_1}{dx^3}=0
+									\] 
 
-					If <a href="#x1-11r7">(9.1.7)</a> holds for all \(x\) in \((0,\infty )\), then it certainly holds at \(x=1\); therefore, 
-					<a id="x1-12r8"></a>
-					\begin {equation} 
-						\label {eq:9.1.8} 
-						\begin {array}{rcl} 
-							\phantom {2}c_1+\phantom {3}c_2+\phantom {2}c_3&amp;=&amp;0\\ 
-							2c_1+3c_2-\phantom {2}c_3&amp;=&amp;0\\ 
-							2c_1+6c_2+2c_3&amp;=&amp;0 
-						\end {array} 
-					\end {equation}
+									\begin {align*} 
+										x^3 \underset{0}{\underbrace{\frac{d^3 y_1}{dx^3}}} -x^2 \underset{2}{\underbrace{\frac{d^2 y_1}{dx^2}}} -2x \underset{2x}{\underbrace{\frac{d y_1}{dx}}} +6 \underset{x^2}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
 
-					By solving this system directly, you can verify that it has only the trivial solution \(c_1=c_2=c_3=0\); however, for our purposes it’s more useful to recall from linear algebra that a homogeneous linear system of \(n\) equations in \(n\) unknowns has only the trivial solution if its determinant is nonzero. Since the determinant of <a href="#x1-12r8">(9.1.8)</a> is \[ \left | \begin {array}{rrr}1&amp;1&amp;1\\2&amp;3&amp;-1\\2&amp;6&amp;2 \end {array}\right |= \left | 
-					\begin {array}{rrr}1&amp;0&amp;0\\2&amp;1&amp;-3\\2&amp;4&amp;0 
-					\end {array}\right |=12\] it follows that <a href="#x1-12r8">(9.1.8)</a> has only the trivial solution, so \(\{y_1,y_2,y_3\}\) is linearly independent on \((0,\infty )\). Now Theorem&nbsp;<a href="#x1-72">9.1.2</a> implies that \[ y=c_1x^2+c_2x^3+{c_3\over x} \] is the general solution of <a href="#x1-9r5">(9.1.5)</a> on \((0,\infty )\). To see that this is also true on \((-\infty ,0)\), assume that <a href="#x1-10r6">(9.1.6)</a> holds on \((-\infty ,0)\). Setting \(x=-1\) in <a href="#x1-11r7">(9.1.7)</a> yields
+										-2x^2  \quad - \quad 4x^2  \quad+\quad 6x^2 = & \, 0  \quad\quad \checkmark \\
 
-					<div class="eqnarray" id="646d035a-1cfd-4794-977e-9ed5f94c5210">
-						\begin {eqnarray*} \phantom {-2}c_1-\phantom {3}c_2-\phantom {2}c_3&amp;=&amp;0\\ -2c_1+3c_2-\phantom {2}c_3&amp;=&amp;0\\ \phantom {-}2c_1-6c_2-2c_3&amp;=&amp;0 
-						\end {eqnarray*} 
-					</div>
-					<div class="indent" id="2edc6b23-5c68-462e-8636-cd75b02fc81f">
-						Since the determinant of this system is \[ \left | \begin {array}{rrr}1&amp;-1&amp;-1\\-2&amp;3&amp;-1\\2&amp;-6&amp;-2 \end {array}\right |= \left | 
-						\begin {array}{rrr}1&amp;0&amp;0\\-2&amp;1&amp;-3\\2&amp;-4&amp;0 
-						\end {array}\right |=-12\] it follows that \(c_1=c_2=c_3=0\); that is, \(\{y_1,y_2,y_3\}\) is linearly independent on \((-\infty ,0)\). 
-					</div>
+									\end {align*} 
+
+								</div>	
+								<br>
+								<br>
+								<div>
+									To verify \(y_2=x^3\) is a solution we differentiate \(y_2\) and substitute into <a href="#x1-9r5">(9.1.5)</a> 
+								</div>	
+								<div class="reading-exercise">
+									Differentiate \(y_2=x^3\) three times
+								</div>	
+								<div>
+									\[
+										y_2=x^3
+										\quad\quad
+										\frac{d y_2}{dx}=3x^2
+										\quad\quad
+										\frac{d^2 y_2}{dx^2}=6x
+										\quad\quad
+										\frac{d^3 y_1}{dx^3}=6
+									\] 
+
+									\begin {align*} 
+										x^3 \underset{6}{\underbrace{\frac{d^3 y_1}{dx^3}}} -x^2 \underset{6x}{\underbrace{\frac{d^2 y_1}{dx^2}}} -2x \underset{3x^2}{\underbrace{\frac{d y_1}{dx}}} +6 \underset{x^3}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
+										6x^3  \quad - \quad 6x^3\quad -\quad 6x^3 \quad+\quad 6x^3 = & \, 0  \quad\quad \checkmark \\
+
+									\end {align*} 
+
+								</div>	
+								<br>
+								<br>
+								<div>
+									To verify \(y_3=1/x\) is a solution we differentiate \(y_3\) and substitute into <a href="#x1-9r5">(9.1.5)</a> 
+								</div>	
+								<div class="reading-exercise">
+									Differentiate \(y_3=1/x\) three times
+								</div>	
+								<div>
+									\[
+										y_3=\frac{1}{x}
+										\quad\quad
+										\frac{d y_1}{dx}=-\frac{1}{x^2}
+										\quad\quad
+										\frac{d^2 y_1}{dx^2}=\frac{2}{x^3}
+										\quad\quad
+										\frac{d^3 y_1}{dx^3}=-\frac{6}{x^4}
+									\] 
+
+									\begin {align*} 
+										x^3 \underset{-\frac{6}{x^4}}{\underbrace{\frac{d^3 y_1}{dx^3}}} -x^2 \underset{\frac{2}{x^3}}{\underbrace{\frac{d^2 y_1}{dx^2}}} -2x \underset{-\frac{1}{x^2}}{\underbrace{\frac{d y_1}{dx}}} +6 \underset{-\frac{1}{x^2}}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
+
+										-\frac{6}{x} \quad - \quad \frac{2}{x}  \quad + \quad \frac{2}{x} - \quad \frac{6}{x^2} = & \, 0  \quad\quad \checkmark \\
+
+									\end {align*} 
+
+								</div>	
+
+							</div>	
+						</li>
+						<li>
+							<div>
+								Now we will write \(\{y_1,y_2,y_3\}\) as a linear combination \(y = c_1 y_1 + c_2 y_2 + c_3 y_3\)
+								\begin{align*}
+									y = & \, c_1 x^2 + c_2 x^3 + \frac{c_3}{x} \\
+								\end{align*}
+
+
+							</div>	
+							<div>
+								Just as we did in Chapter 5, We can use the 
+								<span class="vocab">Wronskian determinant</span> to determine whether or not \(\{y_1,y_2,y_3\}\) are linearly indepedent.
+
+								\begin{align*}
+									
+								\end{align*}
+							</div>	
+							<div>
+							</div>	
+							<div>
+							</div>	
+						</li>
+						<li>
+							Find the general solution of <a href="#x1-9r5">(9.1.5)</a>
+						</li>
+					</ol>
+
+					<div>
+						Suppose 
+
+						<a id="x1-10r6"></a>
+						\begin {equation} 
+							\label {eq:9.1.6} 
+							c_1x^2+c_2x^3+{c_3\over x}=0 
+						\end {equation}
+						on \((0,\infty )\). We must show that \(c_1=c_2=c_3=0\). Differentiating <a href="#x1-10r6">(9.1.6)</a> twice yields the system 
+						<a id="x1-11r7"></a>
+						\begin {equation} 
+							\label {eq:9.1.7} 
+							\begin {array}{rcl} 
+								c_1x^2+c_2x^3+\displaystyle {c_3\over x}&amp;=&amp;0\\ 
+								2c_1x+3c_2x^2-\displaystyle {c_3\over x^2}&amp;=&amp;0\\ 
+								2c_1+6c_2x+\displaystyle {2c_3\over x^3}&amp;=&amp;0 
+							\end {array} 
+						\end {equation}
+
+						If <a href="#x1-11r7">(9.1.7)</a> holds for all \(x\) in \((0,\infty )\), then it certainly holds at \(x=1\); therefore, 
+						<a id="x1-12r8"></a>
+						\begin {equation} 
+							\label {eq:9.1.8} 
+							\begin {array}{rcl} 
+								\phantom {2}c_1+\phantom {3}c_2+\phantom {2}c_3&amp;=&amp;0\\ 
+								2c_1+3c_2-\phantom {2}c_3&amp;=&amp;0\\ 
+								2c_1+6c_2+2c_3&amp;=&amp;0 
+							\end {array} 
+						\end {equation}
+
+						By solving this system directly, you can verify that it has only the trivial solution \(c_1=c_2=c_3=0\); however, for our purposes it’s more useful to recall from linear algebra that a homogeneous linear system of \(n\) equations in \(n\) unknowns has only the trivial solution if its determinant is nonzero. Since the determinant of <a href="#x1-12r8">(9.1.8)</a> is \[ \left | \begin {array}{rrr}1&amp;1&amp;1\\2&amp;3&amp;-1\\2&amp;6&amp;2 \end {array}\right |= \left | 
+						\begin {array}{rrr}1&amp;0&amp;0\\2&amp;1&amp;-3\\2&amp;4&amp;0 
+						\end {array}\right |=12\] it follows that <a href="#x1-12r8">(9.1.8)</a> has only the trivial solution, so \(\{y_1,y_2,y_3\}\) is linearly independent on \((0,\infty )\). Now Theorem&nbsp;<a href="#x1-72">9.1.2</a> implies that \[ y=c_1x^2+c_2x^3+{c_3\over x} \] is the general solution of <a href="#x1-9r5">(9.1.5)</a> on \((0,\infty )\). To see that this is also true on \((-\infty ,0)\), assume that <a href="#x1-10r6">(9.1.6)</a> holds on \((-\infty ,0)\). Setting \(x=-1\) in <a href="#x1-11r7">(9.1.7)</a> yields
+
+						<div class="eqnarray" id="646d035a-1cfd-4794-977e-9ed5f94c5210">
+							\begin {eqnarray*} \phantom {-2}c_1-\phantom {3}c_2-\phantom {2}c_3&amp;=&amp;0\\ -2c_1+3c_2-\phantom {2}c_3&amp;=&amp;0\\ \phantom {-}2c_1-6c_2-2c_3&amp;=&amp;0 
+							\end {eqnarray*} 
+						</div>
+						<div class="indent" id="2edc6b23-5c68-462e-8636-cd75b02fc81f">
+							Since the determinant of this system is \[ \left | \begin {array}{rrr}1&amp;-1&amp;-1\\-2&amp;3&amp;-1\\2&amp;-6&amp;-2 \end {array}\right |= \left | 
+							\begin {array}{rrr}1&amp;0&amp;0\\-2&amp;1&amp;-3\\2&amp;-4&amp;0 
+							\end {array}\right |=-12\] it follows that \(c_1=c_2=c_3=0\); that is, \(\{y_1,y_2,y_3\}\) is linearly independent on \((-\infty ,0)\). 
+						</div>
+					</div>	
 				</details>
 			</div>
 
+			<br>
+			<br>
+			<br>
+			<!--Example 2-->
 			<div class="example" id="x1-132" style="--ex-number: 2">
 				<div>
 					The equation 
 					<a id="x1-14r9"></a> 
 					\begin {equation} 
 						\label {eq:9.1.9} 
-						y^{(4)}+y'''-7y''-y'+6y=0 
+						y^{(4)}+ \frac{d^3 y}{dx^3} -7 \frac{d^2 y}{dx^2} - \frac{d y}{dx} +6y=0 
 					\end {equation} 
+
 					is normal and has the solutions \(y_1=e^x\), \(y_2=e^{-x}\), \(y_3=e^{2x}\), and \(y_4=e^{-3x}\) on \((-\infty ,\infty )\). (Verify.) Show that \(\{y_1,y_2,y_3,y_4\}\) is linearly independent on \((-\infty ,\infty )\). Then find the general solution of <a href="#x1-14r9">(9.1.9)</a>.
 				</div>
+				<ol>
+					<li>
+						Verify that \(y_1=e^x\), \(y_2=e^{-x}\), \(y_3=e^{2x}\), and 
+						\(y_4=e^{-3x}\) are solutions <a href="#x1-14r9">(9.1.9)</a>.
+					</li>
+					<li>
+						
+					</li>
+					<li>
+						
+					</li>
+				</ol>	
 			
 				<details class="solution">
 					<summary>Solution</summary>
@@ -227,6 +401,8 @@
 				</details>
 			</div>
 		</details>
+
+
 		<details id="c6eee7a5-efd3-48b9-94b9-7b35c731f54a">
 			<summary>The Wronskian</summary>
 		
@@ -246,16 +422,18 @@
 				\[ W(x)=\left | 
 					\begin {array}{cccc} 
 						y_1(x)&amp;y_2(x)&amp;\cdots&amp;y _n(x)\\ 
-						y'_1(x)&amp;y'_2(x)&amp;\cdots&amp;y _n'(x)\\ 
+						 \frac{d y}{dx} _1(x)&amp; \frac{d y}{dx} _2(x)&amp;\cdots&amp;y _n'(x)\\ 
 						\vdots&amp; \vdots&amp; \ddots&amp; \vdots 
 						\\ y_1^{(n-1)}(x)&amp;y_2^{(n-1)}(x)&amp;\cdots&amp;y _n^{(n-1)}(x) 
 					\end {array}
 				\right |\] 
 				We call this determinant the <span class="vocab">vocab</span> of \(\{y_1,y_2,\dots ,y_n\}\). If \(W(x)\ne 0\) for some \(x\) in \((a,b)\) then the system <a href="#x1-18r13">(9.1.13)</a> has only the trivial solution \(c_1=c_2=\cdots =c_n=0\), and Theorem&nbsp;<a href="#x1-72">9.1.2</a> implies that \[ y=c_1y_1+c_2y_2+\cdots +c_ny_n \] is the general solution of \(Ly=0\) on \((a,b)\).
 			</div>
+
 			<div class="indent" id="c8be882e-b9ae-4e64-941f-85e4f23e19bf">
 				The next theorem generalizes Theorem&nbsp;<span class="ptmb8t-">5.1.14</span>. The proof is sketched in (Exercises&nbsp;<span class="ptmb8t-">17</span>–<span class="ptmb8t-">20</span>). 
 			</div>
+
 			<div class="theorem" id="x1-193">
 				<span class="head">Theorem&nbsp;9.1.3</span>
 				Suppose the homogeneous linear \(n\)th order equation 
@@ -272,12 +450,15 @@
 				\end {equation} 
 				Therefore, either \(W\) has no zeros in \((a,b)\) or \(W\equiv 0\) on \((a,b).\)
 			</div>
+
 			<div class="indent" id="bb31ca2a-c02b-4566-b6dd-5392defc1af9">
 				Formula <a href="#x1-21r15">(9.1.15)</a> is <span class="vocab">Abel’s formula</span>. 
 			</div>
+
 			<div class="indent" id="ec924659-a7bf-4426-a211-1ce58a2c9c2f">
 				The next theorem is analogous to Theorem&nbsp;<span class="ptmb8t-">5.1.6</span>. 
 			</div>
+
 			<div class="theorem" id="x1-224">
 				<span class="head">Theorem&nbsp;9.1.4</span> 
 				Suppose \(Ly=0\) is normal on \((a,b)\) and let \(y_1\), \(y_2\), …, \(y_n\) be \(n\) solutions of \(Ly=0\) on \((a,b)\). Then the following statements are equivalent; that is, they are either all true or all false:
@@ -299,9 +480,14 @@
 					</li>
 				</ol>
 			</div>
+
+			<br>
+			<br>
+			<br>
+			<!--Example 3-->
 			<div class="example" id="x1-283" style="--ex-number: 3">
 				<div>
-					In Example&nbsp;<a href="#x1-81">9.1.1</a>we saw that the solutions \(y_1=x^2\), \(y_2=x^3\), and \(y_3=1/x\) of \[ x^3y'''-x^2y''-2xy'+6y=0 \] are linearly independent on \((-\infty ,0)\) and \((0,\infty )\). Calculate the Wronskian of \(\{y_1,y_2,y_3\}\).
+					In Example&nbsp;<a href="#x1-81">9.1.1</a>we saw that the solutions \(y_1=x^2\), \(y_2=x^3\), and \(y_3=1/x\) of \[ x^3 \frac{d^3 y}{dx^3} -x^2 \frac{d^2 y}{dx^2} -2x \frac{d y}{dx} +6y=0 \] are linearly independent on \((-\infty ,0)\) and \((0,\infty )\). Calculate the Wronskian of \(\{y_1,y_2,y_3\}\).
 				</div>
 
 				<details class="solution">
@@ -311,9 +497,14 @@
 					Therefore \(W(x)\ne 0\) on \((-\infty ,0)\) and \((0,\infty )\).
 				</details>
 			</div>
+
+			<br>
+			<br>
+			<br>
+			<!--Example 4-->
 			<div class="example" id="x1-294" style="--ex-number: 4">
 				<div>
-					In Example&nbsp;<a href="#x1-132">9.1.2</a>we saw that the solutions \(y_1=e^x\), \(y_2=e^{-x}\), \(y_3=e^{2x}\), and \(y_4=e^{-3x}\) of \[ y^{(4)}+y'''-7y''-y'+6y=0 \] are linearly independent on every open interval. Calculate the Wronskian of \(\{y_1,y_2,y_3,y_4\}\).
+					In Example&nbsp;<a href="#x1-132">9.1.2</a>we saw that the solutions \(y_1=e^x\), \(y_2=e^{-x}\), \(y_3=e^{2x}\), and \(y_4=e^{-3x}\) of \[ y^{(4)}+ \frac{d^3 y}{dx^3} -7 \frac{d^2 y}{dx^2} - \frac{d y}{dx} +6y=0 \] are linearly independent on every open interval. Calculate the Wronskian of \(\{y_1,y_2,y_3,y_4\}\).
 				</div>
 
 				<details class="solution">
@@ -327,6 +518,8 @@
 					</div>
 				</details>
 			</div>
+
+
 			<div class="theorem" id="x1-305">
 				<span class="head">Theorem&nbsp;9.1.5</span> 
 				Suppose \(c\) is in \((a,b)\) and \(\alpha _{1},\) \(\alpha _{2},\) …\(,\) are real numbers, not all zero. Under the assumptions of Theorem&nbsp;<span class="ptmb8t-">10.3.3</span>, suppose \(y_{1}\) &gt;and \(y_{2}\) are solutions of (<span class="ptmb8t-">5.1.35</span>) such that 
@@ -337,12 +530,15 @@
 				\end {equation} 
 				Then \(\{y_{1},y_{2},\dots y_{n}\}\) isn’t linearly independent on \((a,b)\).
 			</div>
+
 			<div id="dca861c3-c804-41af-80a0-c30c4747fb1f">
 				<span class="ptmb8t-">Proof</span> Since \(\alpha _{1}\), \(\alpha _{2}\), …, \(\alpha _{n}\) are not all zero, <a href="#x1-20r14">(9.1.14)</a> implies that \[ \left | \begin {array}{ccccccc} y_{1}(c)&amp;y_{1}'(c)&amp;\cdots&amp;y _{1}^{(n-1)}(c)\\ y_{2}(c)&amp;y_{2}'(c)&amp;\cdots&amp;y _{2}^{(n-1)}(c)\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ y_{n}(c)&amp;y_{n}'(c)&amp;\cdots&amp;y _{n}^{(n-1)}(c)\\ \end {array}\right |=0\] so \[ \left | 
 				\begin {array}{cccccc} y_{1}(c)&amp;y_{2}(c)&amp;\cdots&amp; y_{n}(c)\\ y_{1}'(c)&amp;y_{2}'(c)&amp;\cdots&amp; y_{n}'(c)\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ y_{1}^{(n-1)}(c)&amp;y_{2}^{(n-1)}(c)(c)&amp;\cdots&amp; y_{n}^{(n-1)}(c)(c)\\ 
 				\end {array}\right |=0 \] and Theorem&nbsp;<a href="#x1-224">9.1.4</a> implies the stated conclusion.
 			</div>
 		</details>
+
+
 		<details id="53bb2b2a-9159-42f2-bf4f-5b2af9f24d27">
 			<summary>General Solution of a Nonhomogeneous Equation</summary>
 
