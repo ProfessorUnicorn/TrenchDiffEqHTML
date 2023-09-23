@@ -214,8 +214,7 @@
 
 			<!--Linearity Property-->
 			<div class="theorem" id="x1-31">
-				<span class="head">Theorem&nbsp;8.2.1</span>
-				<strong>Linearity Property</strong>
+				<span class="head">Theorem&nbsp;8.2.1 Linearity Property</span>
 				
 				<div>
 					Suppose \( F(s) \) and \( G(s) \) Laplace transforms are defined. Then the following properties are true:
@@ -248,96 +247,104 @@
 				</div>
 				<details class="solution">
 					<summary>Solution</summary>
-					<div>
-						To find
-						\( \displaystyle {\cal L}^{-1}\left[ {8\over s+5}+{7\over s^2+3}\right ] \) 
-						we first apply the <span class="vocab">linearity</span>
+					<ol>
+						<li class="no-part">
+							<div>
+								To find
+								\( \displaystyle {\cal L}^{-1}\left[ {8\over s+5}+{7\over s^2+3}\right ] \) 
+								we first apply the <span class="vocab">linearity</span>
 
-						\begin{align*} 
-							{\cal L}^{-1}\left[ {8\over s+5}+{7\over s^2+3}\right ]
-							= & \, 8 \, {\cal L}^{-1}\left[ {1\over s+5}\right ]
-							+ 7 \, {\cal L}^{-1}\left[ {1\over s^2+3}\right ]
-						\end{align*} 
+								\begin{align*} 
+									{\cal L}^{-1}\left[ {8\over s+5}+{7\over s^2+3}\right ]
+									= & \, 8 \, {\cal L}^{-1}\left[ {1\over s+5}\right ]
+									+ 7 \, {\cal L}^{-1}\left[ {1\over s^2+3}\right ]
+								\end{align*} 
 
-						Now we find the inverse Laplace transforms the same way we did in Example <a href="#x1-21">8.2.1</a> 
-					</div>
-					<br>
-					<hr>
-					<br>
-					<div>
-						First to find
-						\( \displaystyle {\cal L}^{-1}\left[ {1\over s+5}\right] \) 
-						we seek the function \(f(t)\) such that 
-						
-						\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {1\over s+5}\] 
+								Now we find the inverse Laplace transforms the same way we did in Example <a href="#x1-21">8.2.1</a> 
+							</div>
+							<br>
+							<hr>
+							<br>
+							<div>
+								First to find
+								\( \displaystyle {\cal L}^{-1}\left[ {1\over s+5}\right] \) 
+								we seek the function \(f(t)\) such that 
+								
+								\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {1\over s+5}\] 
 
-						From the table we find the transform pair 
-						
-						\[\displaystyle {\cal L} \big\{ e^{at} \big\}  = \frac{1}{s-a} \]
+								From the table we find the transform pair 
+								
+								\[\displaystyle {\cal L} \big\{ e^{at} \big\}  = \frac{1}{s-a} \]
 
-						And setting \(a=-5\) 
-						we obtain our exact equation
+								And setting \(a=-5\) 
+								we obtain our exact equation
 
-						\begin{align*}
-							{\cal L} \big\{ e^{-5t} \big\}  = \frac{1}{s+5}
-						\end{align*}
+								\begin{align*}
+									{\cal L} \big\{ e^{-5t} \big\}  = \frac{1}{s+5}
+								\end{align*}
 
-						Thus we have
+								Thus we have
 
-						\[\displaystyle  {\cal L}^{-1}\left[ {1\over s+5}\right] = e^{-5t}  \]
-					</div>
-					<br>
-					<hr>
-					<br>
-					<div>
-						Now to find
-						\( \displaystyle {\cal L}^{-1}\left[ {1\over s^2+3}\right] \) 
-						we seek the function \(f(t)\) such that 
-						
-						\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {1\over s^2+3}\] 
+								\[\displaystyle  {\cal L}^{-1}\left[ {1\over s+5}\right] = e^{-5t}  \]
+							</div>
+							<br>
+							<hr>
+							<br>
+						</li>
+						<li class="no-part">
+							<div>
+								Now to find
+								\( \displaystyle {\cal L}^{-1}\left[ {1\over s^2+3}\right] \) 
+								we seek the function \(f(t)\) such that 
+								
+								\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {1\over s^2+3}\] 
 
-						This one is a little trickier than the previous ones. 
-						From the table we find the transform pair 
-						
-						\[\displaystyle {\cal L} \big\{ \sin \omega \big\}  = \frac{\omega}{s^2+\omega^2} \]
+								This one is a little trickier than the previous ones. 
+								From the table we find the transform pair 
+								
+								\[\displaystyle {\cal L} \big\{ \sin \omega \big\}  = \frac{\omega}{s^2+\omega^2} \]
 
-						And setting \(\omega=\sqrt{3}\) in the transform pair gets us close to our equation:
+								And setting \(\omega=\sqrt{3}\) in the transform pair gets us close to our equation:
 
-						\begin{align*}
-							{\cal L} \big\{ \sin \sqrt{3} \big\}  = & \frac{\sqrt{3}}{s^2+3} 
-						\end{align*}
-						
-						However, there is just an extra constant multiplier on the right side, so we simply divide both sides by \(\sqrt{3}\) and use the 
-						linearity
-						to obtain our equation
+								\begin{align*}
+									{\cal L} \big\{ \sin \sqrt{3} \big\}  = & \frac{\sqrt{3}}{s^2+3} 
+								\end{align*}
+								
+								However, there is just an extra constant multiplier on the right side, so we simply divide both sides by \(\sqrt{3}\) and use the 
+								linearity
+								to obtain our equation
 
-						\begin{align*}
-							\frac{1}{\sqrt{3}} {\cal L} \big\{ \sin \sqrt{3} \big\}  = & \frac{1}{s^2+3} 
-							\Longrightarrow {\cal L} \left\{  \frac{1}{\sqrt{3}} \sin \sqrt{3} \, \right\}  = \frac{1}{s^2+3}  \\
-						\end{align*}
+								\begin{align*}
+									\frac{1}{\sqrt{3}} {\cal L} \big\{ \sin \sqrt{3} \big\}  = & \frac{1}{s^2+3} 
+									\Longrightarrow {\cal L} \left\{  \frac{1}{\sqrt{3}} \sin \sqrt{3} \, \right\}  = \frac{1}{s^2+3}  \\
+								\end{align*}
 
-						
+								
 
-						Thus we have
+								Thus we have
 
-						\[\displaystyle  {\cal L}^{-1}\left[ {s\over s^2+3}\right] =  \frac{1}{\sqrt{3}} \sin \sqrt{3}  \]
-					</div>
-					<br>
-					<hr>
-					<br>
-					<div>
-						Finally substituting the inverse Laplace transforms back in we obtain our answer
+								\[\displaystyle  {\cal L}^{-1}\left[ {s\over s^2+3}\right] =  \frac{1}{\sqrt{3}} \sin \sqrt{3}  \]
+							</div>
+							<br>
+							<hr>
+							<br>
+						</li>
+						<li class="no-part">
+							<div>
+								Finally substituting the inverse Laplace transforms back in we obtain our answer
 
-						\begin{align*} 
-							{\cal L}^{-1}\left[ {8\over s+5}+{7\over s^2+3}\right ]
-							= & \, 8 \, \underset{e^{-5t}}{\underbrace{{\cal L}^{-1}\left[ {1\over s+5}\right ]}}
-							+ 7 \, \underset{\frac{1}{\sqrt{3}} \sin \sqrt{3}}{\underbrace{{\cal L}^{-1}\left[ {1\over s^2+3}\right ]}} \\
-							= & \, \quad 8 \, e^{-5t}
-							\quad+\quad \, \frac{7}{\sqrt{3}} \sin \sqrt{3}  
-						\end{align*} 
-						
-					</div>
-					<br>
+								\begin{align*} 
+									{\cal L}^{-1}\left[ {8\over s+5}+{7\over s^2+3}\right ]
+									= & \, 8 \, \underset{e^{-5t}}{\underbrace{{\cal L}^{-1}\left[ {1\over s+5}\right ]}}
+									+ 7 \, \underset{\frac{1}{\sqrt{3}} \sin \sqrt{3}}{\underbrace{{\cal L}^{-1}\left[ {1\over s^2+3}\right ]}} \\
+									= & \, \quad 8 \, e^{-5t}
+									\quad+\quad \, \frac{7}{\sqrt{3}} \sin \sqrt{3}  
+								\end{align*} 
+								
+							</div>
+							<br>
+						</li>
+					</ol>
 
 				</details>
 			</div>
@@ -353,146 +360,154 @@
 			
 				<details class="solution">
 					<summary>Solution</summary>
-					<div>
-						To find
-						\( \displaystyle {\cal L}^{-1}\left[ {3s+8\over s^2+2s+5} \right] \) 
-						we seek the function \(f(t)\) such that 
-						
-						\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {3s+8\over s^2+2s+5}\] 
+					<ol>
+						<li class="no-part">
+							<div>
+								To find
+								\( \displaystyle {\cal L}^{-1}\left[ {3s+8\over s^2+2s+5} \right] \) 
+								we seek the function \(f(t)\) such that 
+								
+								\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {3s+8\over s^2+2s+5}\] 
 
-						From the table there are no transform pairs that match the equation in the format it is in. So far in Examples <a href="#x1-21">8.2.1</a> and <a href="#x1-42">8.2.2</a> we have been able to recognize transform pairs directly from the table. Sometimes however, such as in this case, it will be necessary to perform algebraic manipulations first.
-						For the quadratic polynomial in the denominator \(s^2+2s+5\) we'll try to complete the square on it
-
-
-						\begin{align*} 
-							s^2+2s+5 
-							= &  (s^2+2s+ 1) - 1+5  \\
-							= &  (s+ 1)(s+ 1) + 4  \\
-							= &  (s+ 1)^2 +4  \\
-						\end{align*} 
-
-						So we can rewrite our expression as
-
-						\begin{align*} 
-							{3s+8\over s^2+2s+5}
-							=
-							{3s+8\over (s+ 1)^2 +4}
-						\end{align*} 
-					</div>
-					<br>
-					<hr>
-					<br>
-					<div>	
-
-						So now to find
-						\( \displaystyle {\cal L}^{-1}\left[ {3s+8\over (s+ 1)^2 +4} \right] \) 
-						
-						we seek the function \(f(t)\) such that
-						
-						\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {3s+8\over (s+ 1)^2 +4}\] 
-
-						While it still is not a perfect match it is certainly closer as we identify the following transform pair:
-
-						
-						\[\displaystyle {\cal L} \big\{ e^{at} \cos \omega t \big\}  = \frac{s-a}{(s-a)^2+\omega^2} \]
-
-						Substituting \(a=-1\) and \(\omega=2\) we obtain
-
-						
-						\[\displaystyle {\cal L} \big\{ e^{-t} \cos 2 t \big\}  = \frac{s+1}{(s+1)^2+4} \]
-
-						So we are getting closer but we will still need to further manipulate our expression to get it to match. Since the numerator in one of the Laplace transforms is \(s+1\) we'll go ahead and try to write our expression in terms of \(s+1\) in the numerator by splitting up the \(8\) and then factoring out the \(3\) and then splitting it into two separate terms
-
-						\begin{align*} 
-							{3s+8\over (s+ 1)^2 +4}
-							= &
-							{(3s+3)+5\over (s+ 1)^2 +4}
-							=
-							{3(s+1)+5\over (s+ 1)^2 +4} \\
-							= &
-							{3(s+1)\over (s+ 1)^2 +4}
-							+
-							{5\over (s+ 1)^2 +4} \\
-						\end{align*}
-					</div>
-					<br>
-					<hr>
-					<br>
-					<div>	 
+								From the table there are no transform pairs that match the equation in the format it is in. So far in Examples <a href="#x1-21">8.2.1</a> and <a href="#x1-42">8.2.2</a> we have been able to recognize transform pairs directly from the table. Sometimes however, such as in this case, it will be necessary to perform algebraic manipulations first.
+								For the quadratic polynomial in the denominator \(s^2+2s+5\) we'll try to complete the square on it
 
 
-						Now 
-						we can apply the linearity to obtain
-						
-						\begin{align*} 
-							 & \, 3 \, {\cal L}^{-1}\left[  {s+1\over (s+ 1)^2 +4}
-							\right ]
-							+ 5 \, {\cal L}^{-1}\left[ {1\over (s+ 1)^2 +4}\right ]
-						\end{align*} 
+								\begin{align*} 
+									s^2+2s+5 
+									= &  (s^2+2s+ 1) - 1+5  \\
+									= &  (s+ 1)(s+ 1) + 4  \\
+									= &  (s+ 1)^2 +4  \\
+								\end{align*} 
 
-						and in fact we have already found the first transform
+								So we can rewrite our expression as
 
-						\begin{align*} 
-							 {\cal L}^{-1}\left[  {s+1\over (s+ 1)^2 +4}
-							\right ]
-							=
-							e^{-t} \cos 2 t
-						\end{align*} 
+								\begin{align*} 
+									{3s+8\over s^2+2s+5}
+									=
+									{3s+8\over (s+ 1)^2 +4}
+								\end{align*} 
+							</div>
+							<br>
+							<hr>
+							<br>
+						</li>
+						<li class="no-part">
+							<div>	
+										
 
-						Now what is left is the second term so seek the function \(f(t)\) such that
-						
-						\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {1\over (s+ 1)^2 +4}\] 
+								So now to find
+								\( \displaystyle {\cal L}^{-1}\left[ {3s+8\over (s+ 1)^2 +4} \right] \) 
+								
+								we seek the function \(f(t)\) such that
+								
+								\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {3s+8\over (s+ 1)^2 +4}\] 
 
-						From the table we identify the following transform pair:
+								While it still is not a perfect match it is certainly closer as we identify the following transform pair:
 
-						\[\displaystyle {\cal L} \big\{ e^{at} \sin \omega t \big\}  = \frac{\omega}{(s-a)^2+\omega^2} \]
+								
+								\[\displaystyle {\cal L} \big\{ e^{at} \cos \omega t \big\}  = \frac{s-a}{(s-a)^2+\omega^2} \]
 
-						Substituting \(a=-1\) and \(\omega=2\) we obtain
+								Substituting \(a=-1\) and \(\omega=2\) we obtain
 
-						\[\displaystyle {\cal L} \big\{ e^{-t} \sin 2 t \big\}  = \frac{2}{(s+1)^2+4} \]
+								
+								\[\displaystyle {\cal L} \big\{ e^{-t} \cos 2 t \big\}  = \frac{s+1}{(s+1)^2+4} \]
 
-						Which is not our exact equation but pretty close as it is just a constant multiplier just as in Example <a href="#x1-42">8.2.2</a> so we simply divide both sides by \({2}\) and use the 
-						linearity
-						to obtain our exact equation
+								So we are getting closer but we will still need to further manipulate our expression to get it to match. Since the numerator in one of the Laplace transforms is \(s+1\) we'll go ahead and try to write our expression in terms of \(s+1\) in the numerator by splitting up the \(8\) and then factoring out the \(3\) and then splitting it into two separate terms
 
-						\begin{align*}
-							\frac{1}{2} {\cal L} \big\{ e^{-t} \sin 2 t \big\}  = \frac{1}{(s+1)^2+4} 
-							\Longrightarrow {\cal L} \left\{ \, \frac{1}{2} e^{-t} \sin 2 t \right\}  = \frac{1}{(s+1)^2+4}   \\
-						\end{align*}
-						Thus we have
-						
-						\begin{align*} 
-							 {\cal L}^{-1}\left[  {1\over (s+ 1)^2 +4}
-							\right ]
-							=
-							\frac{1}{2} e^{-t} \sin 2 t
-						\end{align*} 
-					</div>	
-					<br>
-					<hr>
-					<br>
-					<div>
-						Finally substituting the inverse Laplace transforms back in we obtain our answer
+								\begin{align*} 
+									{3s+8\over (s+ 1)^2 +4}
+									= &
+									{(3s+3)+5\over (s+ 1)^2 +4}
+									=
+									{3(s+1)+5\over (s+ 1)^2 +4} \\
+									= &
+									{3(s+1)\over (s+ 1)^2 +4}
+									+
+									{5\over (s+ 1)^2 +4} \\
+								\end{align*}
+							</div>
+							<br>
+							<hr>
+							<br>
+						</li>
+						<li class="no-part">
+							<div>
+								Now we can apply the linearity to obtain
+								
+								\begin{align*} 
+									& \, 3 \, {\cal L}^{-1}\left[  {s+1\over (s+ 1)^2 +4}
+									\right ]
+									+ 5 \, {\cal L}^{-1}\left[ {1\over (s+ 1)^2 +4}\right ]
+								\end{align*} 
 
-						\begin{align*} 
-							{\cal L}^{-1}\left[ {3s+8\over s^2+2s+5} \right] 
-							= & \, {\cal L}^{-1}\left[ {3s + 8 \over (s+ 1)^2 +4}  \right] \\
-							= & \, {\cal L}^{-1}\left[ {3(s+1)\over (s+ 1)^2 +4}
-							+
-							{5\over (s+ 1)^2 +4} \right] \\
-							= &
-								\, 3 \, \underset{e^{-t} \cos 2 t}{\underbrace{ {\cal L}^{-1}\left[  {s+1\over (s+ 1)^2 +4}
-								\right ]}}
-								+ 5 \, \underset{\frac{1}{2} e^{-t} \sin 2 t}{\underbrace{ {\cal L}^{-1}\left[ {1\over (s+ 1)^2 +4}\right ] }} \\
-							= &
-								\quad \, 3 \, e^{-t} \cos 2 t
-								\quad+\quad \, \frac{5}{2} e^{-t} \sin 2 t \\	
-							= &
-								\, \left( 3 \, \cos 2 t
-								\, + \, \frac{5}{2} \sin 2 t \right) e^{-t}  \\			
-						\end{align*} 
-						
-					</div>
+								and in fact we have already found the first transform
+
+								\begin{align*} 
+									{\cal L}^{-1}\left[  {s+1\over (s+ 1)^2 +4}
+									\right ]
+									=
+									e^{-t} \cos 2 t
+								\end{align*} 
+
+								Now what is left is the second term so seek the function \(f(t)\) such that
+								
+								\[ \displaystyle {\cal L} \big\{ f(t) \big\} = {1\over (s+ 1)^2 +4}\] 
+
+								From the table we identify the following transform pair:
+
+								\[\displaystyle {\cal L} \big\{ e^{at} \sin \omega t \big\}  = \frac{\omega}{(s-a)^2+\omega^2} \]
+
+								Substituting \(a=-1\) and \(\omega=2\) we obtain
+
+								\[\displaystyle {\cal L} \big\{ e^{-t} \sin 2 t \big\}  = \frac{2}{(s+1)^2+4} \]
+
+								Which is not our exact equation but pretty close as it is just a constant multiplier just as in Example <a href="#x1-42">8.2.2</a> so we simply divide both sides by \({2}\) and use the 
+								linearity
+								to obtain our exact equation
+
+								\begin{align*}
+									\frac{1}{2} {\cal L} \big\{ e^{-t} \sin 2 t \big\}  = \frac{1}{(s+1)^2+4} 
+									\Longrightarrow {\cal L} \left\{ \, \frac{1}{2} e^{-t} \sin 2 t \right\}  = \frac{1}{(s+1)^2+4}   \\
+								\end{align*}
+								Thus we have
+								
+								\begin{align*} 
+									{\cal L}^{-1}\left[  {1\over (s+ 1)^2 +4}
+									\right ]
+									=
+									\frac{1}{2} e^{-t} \sin 2 t
+								\end{align*} 
+							</div>	
+							<br>
+							<hr>
+							<br>
+						</li>
+						<li class="no-part">
+							<div>
+								Finally substituting the inverse Laplace transforms back in we obtain our answer
+
+								\begin{align*} 
+									{\cal L}^{-1}\left[ {3s+8\over s^2+2s+5} \right] 
+									= & \, {\cal L}^{-1}\left[ {3s + 8 \over (s+ 1)^2 +4}  \right] \\
+									= & \, {\cal L}^{-1}\left[ {3(s+1)\over (s+ 1)^2 +4}
+									+
+									{5\over (s+ 1)^2 +4} \right] \\
+									= &
+										\, 3 \, \underset{e^{-t} \cos 2 t}{\underbrace{ {\cal L}^{-1}\left[  {s+1\over (s+ 1)^2 +4}
+										\right ]}}
+										+ 5 \, \underset{\frac{1}{2} e^{-t} \sin 2 t}{\underbrace{ {\cal L}^{-1}\left[ {1\over (s+ 1)^2 +4}\right ] }} \\
+									= &
+										\quad \, 3 \, e^{-t} \cos 2 t
+										\quad+\quad \, \frac{5}{2} e^{-t} \sin 2 t \\	
+									= &
+										\, \left( 3 \, \cos 2 t
+										\, + \, \frac{5}{2} \sin 2 t \right) e^{-t}  \\			
+								\end{align*} 
+								
+							</div>
+						</li>
+					</ol>
 
 				</details>
 			</div>
@@ -579,9 +594,9 @@
 							A-B = 1
 						\end{array}
 					\right.	\) 
-				</div>	
-
-				
+				</div>
+			</div>
+			<div id="dfe95591-91e4-4877-a335-fdas-2">
 
 				<div>
 
@@ -627,149 +642,154 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
+					<ol>
+						<li class="no-part">
+							<div class="reading-exercise">
+								Factor \(s^2-3s+2\)
+							</div>	
 
-					<div class="reading-exercise">
-						Factor \(s^2-3s+2\)
-					</div>	
+							<div>
+								Factoring the denominator yields distinct linear factors
 
-					<div>
-						Factoring the denominator yields distinct linear factors
+								<a id="x1-8r2"></a>
+								\begin {equation} \label {eq:8.2.2} 
+									{3s+2\over s^2-3s+2}={3s+2\over (s-1)(s-2)} 
+								\end {equation}
 
-						<a id="x1-8r2"></a>
-						\begin {equation} \label {eq:8.2.2} 
-							{3s+2\over s^2-3s+2}={3s+2\over (s-1)(s-2)} 
-						\end {equation}
+								Using <span class="vocab">PFD</span> we seek the coefficients \(A\) and \(B\) such that
 
-						Using <span class="vocab">PFD</span> we seek the coefficients \(A\) and \(B\) such that
+								<a id="x1-9r3"></a>
+									\begin {equation}
+										\label {eq:8.2.3} 
+										{3s+2\over (s-1)(s-2)}={A\over s-1}+{B\over s-2} 
+									\end {equation}
 
-						<a id="x1-9r3"></a>
-							\begin {equation}
-								\label {eq:8.2.3} 
-								{3s+2\over (s-1)(s-2)}={A\over s-1}+{B\over s-2} 
-							\end {equation}
+							</div>	
+			
+							<div class="reading-exercise">
+								Add \(\dfrac{A}{s-1} + \dfrac{B}{s-2}\) by finding a common denominator
+							</div>	
+			
+							<div>
+								\begin{align*}
+									{3s+2\over (s-1)(s-2)}={A\over s-1}+{B\over s-2}
+									= &
+									\frac{A(s-2) + B(s-1)}{(s-1)(s-2)}
+								\end{align*}
+			
+								Now since the denominators match, so must the numerators, we we obtain the equation
+			
+								\begin{align*}
+									3s+2
+									= &
+									A(s-2) + B(s-1)
+								\end{align*}
+							</div>	
+			
+							<div class="reading-exercise">
+								Simplify \( A(s-2) + B(s-1) \) and group like terms
+							</div>	
+			
+							<div>
+								\begin{align*}
+									3s+2
+									= &
+									s(A+B) + (-2A-B)
+								\end{align*}
+			
+								So we can finally write it as a system of equations by equating the coefficients on both sides
+			
+								\begin{align*}
+									\left\{
+										\begin{array}{rrr}
+											A + B= 3 \\
+											-2A-B = 2
+										\end{array}
+									\right.	
+								\end{align*}
+							</div>	
+			
+							<div class="reading-exercise">
+								Solve the system \(\left\{
+									\begin{array}{rrr}
+										A + B= 3 \\
+										-2A-B = 2
+									\end{array}
+								\right.	\) 
+							</div>	
+						</li>
+						<li class="no-part">
+							<div>
+								Solving the system we obtain \(A=-5\) and \(B=8\) so we can rewrite our expression as
 
-					</div>	
-	
-					<div class="reading-exercise">
-						Add \(\dfrac{A}{s-1} + \dfrac{B}{s-2}\) by finding a common denominator
-					</div>	
-	
-					<div>
-						\begin{align*}
-							{3s+2\over (s-1)(s-2)}={A\over s-1}+{B\over s-2}
-							= &
-							\frac{A(s-2) + B(s-1)}{(s-1)(s-2)}
-						\end{align*}
-	
-						Now since the denominators match, so must the numerators, we we obtain the equation
-	
-						\begin{align*}
-							3s+2
-							= &
-							A(s-2) + B(s-1)
-						\end{align*}
-					</div>	
-	
-					<div class="reading-exercise">
-						Simplify \( A(s-2) + B(s-1) \) and group like terms
-					</div>	
-	
-					<div>
-						\begin{align*}
-							3s+2
-							= &
-							s(A+B) + (-2A-B)
-						\end{align*}
-	
-						So we can finally write it as a system of equations by equating the coefficients on both sides
-	
-						\begin{align*}
-							\left\{
-								\begin{array}{rrr}
-									A + B= 3 \\
-									-2A-B = 2
-								\end{array}
-							\right.	
-						\end{align*}
-					</div>	
-	
-					<div class="reading-exercise">
-						Solve the system \(\left\{
-							\begin{array}{rrr}
-								A + B= 3 \\
-								-2A-B = 2
-							\end{array}
-						\right.	\) 
-					</div>	
-	
+								\[{3s+2\over (s-1)(s-2)}=-{5\over s-1}+{8\over s-2} \]
 
-					<div>
-						Solving the system we obtain \(A=-5\) and \(B=8\) so we can rewrite our expression as
+								Now applying linearity, we can find the inverse Laplace transform
 
-						\[{3s+2\over (s-1)(s-2)}=-{5\over s-1}+{8\over s-2} \]
+								\begin {align*}
+									{\cal L}^{-1}\left[ {3s+2\over s^2-3s+2}  \right]
+									= &
+									-5 \, \underset{ e^{t} }{\underbrace{ {\cal L}^{-1}\left[ {1\over s-1} \right] }}
+									+
+									8 \, \underset{ e^{2t} }{\underbrace{  {\cal L}^{-1}\left[ {1\over s-2}  \right] }} \\
+									= &
+									\quad \quad
+									-5 \, e^{t}
+									\quad
+									+
+									\quad
+									8 \, e^{2t} \\
+								\end {align*}
+							</div>	
 
-						Now applying linearity, we can find the inverse Laplace transform
+							<br>
+							<hr>
+							<br>
+						</li>
+						<li class="no-part">
+							<div>
+								Since we are going to be doing PFD a lot, it would be nice to have a short cut to find the coefficients, and in fact, we have one called <span class="vocab">Heaviside's method</span>. Start by going back to Equation <a href="#x1-9r3">(8.2.3)</a> 
 
-						\begin {align*}
-							{\cal L}^{-1}\left[ {3s+2\over s^2-3s+2}  \right]
-							= &
-							-5 \, \underset{ e^{t} }{\underbrace{ {\cal L}^{-1}\left[ {1\over s-1} \right] }}
-							+
-							8 \, \underset{ e^{2t} }{\underbrace{  {\cal L}^{-1}\left[ {1\over s-2}  \right] }} \\
-							= &
-							\quad \quad
-							-5 \, e^{t}
-							\quad
-							+
-							\quad
-							8 \, e^{2t} \\
-						\end {align*}
-					</div>	
+								\begin {align*}
+									{3s+2\over (s-1)(s-2)}={A\over s-1}+{B\over s-2} 
+									\tag{3}
+								\end {align*}
 
-					<br>
-					<hr>
-					<br>
-					<div>
-						Since we are going to be doing PFD a lot, it would be nice to have a short cut to find the coefficients, and in fact, we have one called <span class="vocab">Heaviside's method</span>. Start by going back to Equation <a href="#x1-9r3">(8.2.3)</a> 
+								Now multiply both sides by the denominator under \(A\) to obtain
 
-						\begin {align*}
-							{3s+2\over (s-1)(s-2)}={A\over s-1}+{B\over s-2} 
-							\tag{3}
-						\end {align*}
+								\begin {align*}
+									(s-1){3s+2\over (s-1)(s-2)} = & \, {A\over s-1} (s-1)+{B\over s-2}  (s-1) \\
+									{3s+2\over (s-2)} = & \, A +{B\over s-2}  (s-1) \\
+								\end {align*}
 
-						Now multiply both sides by the denominator under \(A\) to obtain
+								Now if we evaluate both sides at \(s=1\) notice that the term with \(B\) zeros out so we obtain \(A\)
 
-						\begin {align*}
-							(s-1){3s+2\over (s-1)(s-2)} = & \, {A\over s-1} (s-1)+{B\over s-2}  (s-1) \\
-							{3s+2\over (s-2)} = & \, A +{B\over s-2}  (s-1) \\
-						\end {align*}
+								<a id="x1-10r4"></a>
+								\begin {align}\label {eq:8.2.4} 
+									{3 \cdot 1 + 2\over (1-2)} = & \, A +{B\over 1-2} \overset{0}{\overbrace{(1-1)}} 
+									\Longrightarrow
+									A = -5
+								\end {align}
 
-						Now if we evaluate both sides at \(s=1\) notice that the term with \(B\) zeros out so we obtain \(A\)
+								Now we can do the same thing to obtain \(B\) this time multiplying both sides by the denominator under \(B\) to obtain
 
-						<a id="x1-10r4"></a>
-						\begin {align}\label {eq:8.2.4} 
-							{3 \cdot 1 + 2\over (1-2)} = & \, A +{B\over 1-2} \overset{0}{\overbrace{(1-1)}} 
-							\Longrightarrow
-							A = -5
-						\end {align}
+								\begin {align*}
+									(s-2){3s+2\over (s-1)(s-2)} = & \, {A\over s-1} (s-2)+{B\over s-2}  (s-2) \\
+									{3s+2\over (s-1)} = & \, {A\over s-1}  (s-2)  + B\\
+								\end {align*}
 
-						Now we can do the same thing to obtain \(B\) this time multiplying both sides by the denominator under \(B\) to obtain
+								Now if we evaluate both sides at \(s=2\) notice that the term with \(A\) zeros out so we obtain \(B\)
 
-						\begin {align*}
-							(s-2){3s+2\over (s-1)(s-2)} = & \, {A\over s-1} (s-2)+{B\over s-2}  (s-2) \\
-							{3s+2\over (s-1)} = & \, {A\over s-1}  (s-2)  + B\\
-						\end {align*}
+								<a id="x1-11r5"></a>
+								\begin {align} \label {eq:8.2.5}
+									{3 \cdot 2 + 2\over (2-1)} = & \, {A\over 2-1} \overset{0}{\overbrace{(2-2)}} + B
+									\Longrightarrow
+									B = 8
+								\end {align}
 
-						Now if we evaluate both sides at \(s=2\) notice that the term with \(A\) zeros out so we obtain \(B\)
-
-						<a id="x1-11r5"></a>
-						\begin {align} \label {eq:8.2.5}
-							{3 \cdot 2 + 2\over (2-1)} = & \, {A\over 2-1} \overset{0}{\overbrace{(2-2)}} + B
-							\Longrightarrow
-							B = 8
-						\end {align}
-
-					</div>
+							</div>
+						</li>
+					</ol>
 				</details>
 			</div>
 
@@ -777,7 +797,7 @@
 
 			<!--Thm-->
 			<div class="theorem" id="x1-122">
-				<span class="head">Theorem&nbsp;8.2.2</span> <span class="vocab">Heaviside's method</span>
+				<span class="head">Theorem&nbsp;8.2.2 <span class="vocab">Heaviside's method</span></span>
 				<br>
 				Suppose 
 				<a id="x1-13r6"></a>
@@ -803,111 +823,119 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-						<div>
-							First split up <a href="#x1-15r7">(8.2.7)</a> using <span class="vocab">PFD</span>
+					<ol>
+						<li class="no-part">
+							<div>
+								First split up <a href="#x1-15r7">(8.2.7)</a> using <span class="vocab">PFD</span>
 
-							<a id="x1-16r8"></a>
-							\begin {equation}
-								\label {eq:8.2.8} 
-								{6+(s+1)(s^2-5s+11)\over s(s-1)(s-2)(s+1)}
-								={A\over s}+{B\over s-1}+{C\over s-2}+{D\over s+1} 
-							\end {equation}
+								<a id="x1-16r8"></a>
+								\begin {equation}
+									\label {eq:8.2.8} 
+									{6+(s+1)(s^2-5s+11)\over s(s-1)(s-2)(s+1)}
+									={A\over s}+{B\over s-1}+{C\over s-2}+{D\over s+1} 
+								\end {equation}
 
-							Now we'll use Heaviside's method calculate the coefficients:
+								Now we'll use Heaviside's method calculate the coefficients:
 
-							\begin {align*}
-								A 
-								= & \,  \Bigg. 
-									{6+(s+1)(s^2-5s+11)\over (s-1)(s-2)(s+1)}
-									\Bigg|_{s=0} \\
-								= & \,   
-									{6+(0+1)(0^2-5\cdot 0+11)\over (0-1)(0-2)(0+1)}
-									  \\
-								= & \,   
-									{6+(1)(11)\over (-1)(-2)(1)}	
-								= \,   
-									{17\over 2}
-									\\									  				
-							\end {align*}
+								\begin {align*}
+									A 
+									= & \,  \Bigg. 
+										{6+(s+1)(s^2-5s+11)\over (s-1)(s-2)(s+1)}
+										\Bigg|_{s=0} \\
+									= & \,   
+										{6+(0+1)(0^2-5\cdot 0+11)\over (0-1)(0-2)(0+1)}
+										\\
+									= & \,   
+										{6+(1)(11)\over (-1)(-2)(1)}	
+									= \,   
+										{17\over 2}
+										\\									  				
+								\end {align*}
+
+								<br>
+
+								\begin {align*}
+									B 
+									= & \,  \Bigg. 
+										{6+(s+1)(s^2-5s+11)\over s(s-2)(s+1)}
+										\Bigg|_{s=1} \\
+									= & \, 
+										{6+(1+1)(1^2- 5\cdot 1 + 11)\over 1(1-2)(1+1)}
+										\\	
+									= & \, 
+										{6+(2)(1- 5 + 11)\over 1(-1)(2)}	
+									= -\frac{20}{2} = -10											  		
+								\end {align*}
+							</div>
+							<br>
+						</li>
+						<li class="no-part">
+							<div>
+								\begin {align*}
+									C 
+									= & \,  \Bigg. 
+										{6+(s+1)(s^2-5s+11)\over s(s-1)(s+1)}
+										\Bigg|_{s=2} \\
+									= & \, 
+										{6+(2+1)(2^2-5\cdot 2 +11)\over 2(2-1)(2+1)}
+										\\	
+									= & \, 
+										{6+(3)(4-10 +11)\over 2(1)(3)}	
+									= \frac{21}{6} = \frac{7}{2}										  		
+								\end {align*}
+
+								<br>
+
+								\begin {align*}
+									D
+									= & \,  \Bigg. 
+										{6+(s+1)(s^2-5s+11)\over s(s-1)(s-2)}
+										\Bigg|_{s=-1} \\
+									= & \, 
+										{6+(-1+1)\big((-2)^2-5\cdot(-1)+11\big)\over -1(-1-1)(-1-2)}
+										\\	
+									= & \, 
+										{6+(0)\big(4 + 5 +11\big)\over -1(-2)(-3)}	
+									= -\frac{6}{6} = -1			
+								\end {align*}
+
+								<br>
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
+
+								Substituting back in the coefficients \(A, B, C,\) and \(D\) into <a href="#x1-16r8">(8.2.8)</a> we can and apply linearity to find the inverse Laplace transform
+
+								\begin {align*} 
+									& {\cal L}^{-1}\left[ {6+(s+1)(s^2-5s+11)\over s(s-1)(s-2)(s+1)}  \right] \\ \\
+									= &
+									\frac{17}{2} \, {\cal L}^{-1} \underset{1}{\underbrace{\left[  {1\over s} \right] }}
+									-10 \, \underset{e^{t}}{\underbrace{ {\cal L}^{-1}\left[ {1\over s-1} \right] }}
+									+ \frac{7}{2} \, \underset{e^{2t}}{\underbrace{ {\cal L}^{-1}\left[ {1\over s-2} \right] }}
+									- \underset{e^{-t}}{\underbrace{ {\cal L}^{-1}\left[  {1\over s+1} \right] }}
+									\\
+									= &
+									\quad
+									\frac{17}{2}
+									\quad -\quad 10 \,e^{t}
+									\quad+\quad \frac{7}{2} \, e^{2t}
+									\quad-\quad e^{-t}
+								\end {align*}
+
+
+							</div>
 
 							<br>
-
-							\begin {align*}
-								B 
-								= & \,  \Bigg. 
-									{6+(s+1)(s^2-5s+11)\over s(s-2)(s+1)}
-									\Bigg|_{s=1} \\
-								= & \, 
-									{6+(1+1)(1^2- 5\cdot 1 + 11)\over 1(1-2)(1+1)}
-									\\	
-								= & \, 
-									{6+(2)(1- 5 + 11)\over 1(-1)(2)}	
-								= -\frac{20}{2} = -10											  		
-							\end {align*}
-
-
+							<hr>
 							<br>
 
-							\begin {align*}
-								C 
-								= & \,  \Bigg. 
-									{6+(s+1)(s^2-5s+11)\over s(s-1)(s+1)}
-									\Bigg|_{s=2} \\
-								= & \, 
-									{6+(2+1)(2^2-5\cdot 2 +11)\over 2(2-1)(2+1)}
-									\\	
-								= & \, 
-									{6+(3)(4-10 +11)\over 2(1)(3)}	
-								= \frac{21}{6} = \frac{7}{2}										  		
-							\end {align*}
-
+							<div>
+								<strong>Remark:</strong> We didn’t “multiply out” the numerator in <a href="#x1-15r7">(8.2.7)</a> before computing the coefficients in <a href="#x1-16r8">(8.2.8)</a>, since it wouldn’t simplify the computations.
+							</div>
 							<br>
-
-							\begin {align*}
-								D
-								= & \,  \Bigg. 
-									{6+(s+1)(s^2-5s+11)\over s(s-1)(s-2)}
-									\Bigg|_{s=-1} \\
-								= & \, 
-									{6+(-1+1)\big((-2)^2-5\cdot(-1)+11\big)\over -1(-1-1)(-1-2)}
-									\\	
-								= & \, 
-									{6+(0)\big(4 + 5 +11\big)\over -1(-2)(-3)}	
-								= -\frac{6}{6} = -1			
-							\end {align*}
-
-							<br>
-
-							Substituting back in the coefficients \(A, B, C,\) and \(D\) into <a href="#x1-16r8">(8.2.8)</a> we can and apply linearity to find the inverse Laplace transform
-
-							\begin {align*} 
-								& {\cal L}^{-1}\left[ {6+(s+1)(s^2-5s+11)\over s(s-1)(s-2)(s+1)}  \right] \\ \\
-								= &
-								\frac{17}{2} \, {\cal L}^{-1} \underset{1}{\underbrace{\left[  {1\over s} \right] }}
-								-10 \, \underset{e^{t}}{\underbrace{ {\cal L}^{-1}\left[ {1\over s-1} \right] }}
-								+ \frac{7}{2} \, \underset{e^{2t}}{\underbrace{ {\cal L}^{-1}\left[ {1\over s-2} \right] }}
-								- \underset{e^{-t}}{\underbrace{ {\cal L}^{-1}\left[  {1\over s+1} \right] }}
-								\\
-								= &
-								\quad
-								\frac{17}{2}
-								\quad -\quad 10 \,e^{t}
-								\quad+\quad \frac{7}{2} \, e^{2t}
-								\quad-\quad e^{-t}
-							\end {align*}
-
-
-						</div>
-
-						<br>
-						<hr>
-						<br>
-
-						<div>
-							<strong>Remark:</strong> We didn’t “multiply out” the numerator in <a href="#x1-15r7">(8.2.7)</a> before computing the coefficients in <a href="#x1-16r8">(8.2.8)</a>, since it wouldn’t simplify the computations.
-						</div>
-						<br>
-						
+						</li>
+					</ol>
 				</details>
 			</div>
 			
@@ -927,162 +955,167 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					<div>
-						<div>
-							First split up <a href="#x1-18r9">(8.2.9)</a> using <span class="vocab">PFD</span>
+					<ol>
+						<li class="no-part">
+							<div>
+								First split up <a href="#x1-18r9">(8.2.9)</a> using <span class="vocab">PFD</span>
 
-							<a id="x1-19r10"></a>
-							\begin {equation} \label {eq:8.2.10}
-								{8-(s+2)(4s+10)\over (s+1)(s+2)^2}
-								={A\over s+1}+{B\over s+2}+{C\over (s+2)^2}  
-							\end {equation}
+								<a id="x1-19r10"></a>
+								\begin {equation} \label {eq:8.2.10}
+									{8-(s+2)(4s+10)\over (s+1)(s+2)^2}
+									={A\over s+1}+{B\over s+2}+{C\over (s+2)^2}  
+								\end {equation}
 
-							Notice that because of the repeated factor \((s+2)(s+2)\) we have to consider the fact that it could originate from separate fractions with denominators \((s+2)\) or \((s+2)^2\) thus we get possible coefficients \(B\) or \(C.\) Now that we know how to use Heaviside's method we'll try to calculate the coefficients:
+								Notice that because of the repeated factor \((s+2)(s+2)\) we have to consider the fact that it could originate from separate fractions with denominators \((s+2)\) or \((s+2)^2\) thus we get possible coefficients \(B\) or \(C.\) Now that we know how to use Heaviside's method we'll try to calculate the coefficients:
 
-							\begin {align*}
-								A 
-								= & \,  \Bigg. 
-									{8-(s+2)(4s+10)\over (s+2)^2}
-									\Bigg|_{s=-1} \\
-								= & \,   
-									{8-(-1+2)(-4+10)\over (-1+2)^2}
-									\\
-								= & \,   
-									{8-(1)(6)\over 1^2}
-								= \, 2								  				
-							\end {align*}
+								\begin {align*}
+									A 
+									= & \,  \Bigg. 
+										{8-(s+2)(4s+10)\over (s+2)^2}
+										\Bigg|_{s=-1} \\
+									= & \,   
+										{8-(-1+2)(-4+10)\over (-1+2)^2}
+										\\
+									= & \,   
+										{8-(1)(6)\over 1^2}
+									= \, 2								  				
+								\end {align*}
 
-							<br>
+								<br>
 
-							Now let's see what happens when we try to apply Heaviside's method to find \(B\) (which has a repeated linear factor). Multiplying <a href="#x1-19r10">(8.2.10)</a> by \((s+2)\)
+								Now let's see what happens when we try to apply Heaviside's method to find \(B\) (which has a repeated linear factor). Multiplying <a href="#x1-19r10">(8.2.10)</a> by \((s+2)\)
 
-							\begin {align*}
-								(s+2){8-(s+2)(4s+10)\over (s+1)(s+2)^2}
-								= & \, {A\over s+1}(s+2)+{B\over s+2}(s+2)+{C\over (s+2)^2}(s+2)  \\
-								{8-(s+2)(4s+10)\over (s+1)(s+2)}
-								= & \, {A\over s+1}(s+2)+B+{C\over (s+2)}  
-							\end {align*}
+								\begin {align*}
+									(s+2){8-(s+2)(4s+10)\over (s+1)(s+2)^2}
+									= & \, {A\over s+1}(s+2)+{B\over s+2}(s+2)+{C\over (s+2)^2}(s+2)  \\
+									{8-(s+2)(4s+10)\over (s+1)(s+2)}
+									= & \, {A\over s+1}(s+2)+B+{C\over (s+2)}  
+								\end {align*}
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
+								While it may appear to isolate the coefficient \(B\) the next step in Heaviside's method requires evaluating the expression at \(s=-2\) but attempting to do so might zero out the \(A\) term but actually results in zeros in the denominator on the \(C\) term as well as on the left side which are undefined.
 
-							While it may appear to isolate the coefficient \(B\) the next step in Heaviside's method requires evaluating the expression at \(s=-2\) but attempting to do so might zero out the \(A\) term but actually results in zeros in the denominator on the \(C\) term as well as on the left side which are undefined.
+								\begin {align*}
+									{8-(-2+2)(-8+10)\over (-2+1)(-2+2)}
+									= & \, {A\over -2+1}(-2+2)+B+{C\over (-2+2)} \\ 
+									\underset{\text{undefined}}{\underbrace{ {8-(0)(2)\over (-1)(0)} }}
+									= & \, \underset{0}{\underbrace{{A\cdot (0)\over -1}}}+B+ \underset{\text{undefined}}{\underbrace{ {C\over 0} }} \\ 	
+								\end {align*}
 
-							\begin {align*}
-								{8-(-2+2)(-8+10)\over (-2+1)(-2+2)}
-								= & \, {A\over -2+1}(-2+2)+B+{C\over (-2+2)} \\ 
-								\underset{\text{undefined}}{\underbrace{ {8-(0)(2)\over (-1)(0)} }}
-								= & \, \underset{0}{\underbrace{{A\cdot (0)\over -1}}}+B+ \underset{\text{undefined}}{\underbrace{ {C\over 0} }} \\ 	
-							\end {align*}
+								So we may not be able to find \(B\) using Heaviside's method but let's try to find \(C\) this time by multiplying <a href="#x1-19r10">(8.2.10)</a> by \((s+2)^2\)
 
-							So we may not be able to find \(B\) using Heaviside's method but let's try to find \(C\) this time by multiplying <a href="#x1-19r10">(8.2.10)</a> by \((s+2)^2\)
+								\begin {align*}
+									(s+2)^2{8-(s+2)(4s+10)\over (s+1)(s+2)^2}
+									= & \, {A\over s+1}(s+2)^2+{B\over s+2}(s+2)^2+{C\over (s+2)^2}(s+2)^2  \\
+									{8-(s+2)(4s+10)\over (s+1)}
+									= & \, {A\over s+1}(s+2)+B(s+2)+C 
+								\end {align*}
 
-							\begin {align*}
-								(s+2)^2{8-(s+2)(4s+10)\over (s+1)(s+2)^2}
-								= & \, {A\over s+1}(s+2)^2+{B\over s+2}(s+2)^2+{C\over (s+2)^2}(s+2)^2  \\
-								{8-(s+2)(4s+10)\over (s+1)}
-								= & \, {A\over s+1}(s+2)+B(s+2)+C 
-							\end {align*}
-
-							Now that we multiplied by both factors of \((s+2)^2\) we can evaluate at \(s=-2\)
-
-
-							\begin {align*}
-								{8-(-2+2)(-8+10)\over (-2+1)}
-								= & \, {A\over -2+1}(-2+2)+B(-2+2)+C \\
-								{8-(0)(2)\over (-1)}
-								= & \, {A \cdot (0) \over -1}+B(0)+C
-								\Longrightarrow C = -8
-							\end {align*}
-
-							Using Heaviside's method we were able to find \(A=2\) and \(C=-8\) but we still need to find \(B\) so have to resort to our classic method of setting up a system of equations by equating coefficients from <a href="#x1-19r10">(8.2.10)</a> 
-
-							\begin{align*} 
-								{8-(s+2)(4s+10)\over (s+1)(s+2)^2}
-								={A\over s+1}+{B\over s+2}+{C\over (s+2)^2} 
-								\tag{10} 
-							\end{align*}
+								Now that we multiplied by both factors of \((s+2)^2\) we can evaluate at \(s=-2\)
 
 
-						</div>	
+								\begin {align*}
+									{8-(-2+2)(-8+10)\over (-2+1)}
+									= & \, {A\over -2+1}(-2+2)+B(-2+2)+C \\
+									{8-(0)(2)\over (-1)}
+									= & \, {A \cdot (0) \over -1}+B(0)+C
+									\Longrightarrow C = -8
+								\end {align*}
 
-				
-						<div class="reading-exercise">
-							Add \(\displaystyle {A\over s+1}+{B\over s+2}+{C\over (s+2)^2}\) by finding a common denominator
-						</div>	
+								Using Heaviside's method we were able to find \(A=2\) and \(C=-8\) but we still need to find \(B\) so have to resort to our classic method of setting up a system of equations by equating coefficients from <a href="#x1-19r10">(8.2.10)</a> 
 
-						<div>
+								\begin{align*} 
+									{8-(s+2)(4s+10)\over (s+1)(s+2)^2}
+									={A\over s+1}+{B\over s+2}+{C\over (s+2)^2} 
+									\tag{10} 
+								\end{align*}
 
-							<a id="x1-20r11"></a>
-							\begin{align} \label {eq:8.2.11}
-								{8-(s+2)(4s+10)\over (s+1)(s+2)^2}
-								={A(s+2)^2 + B(s+1)(s+2) + C(s+1) \over (s+1)(s+2)^2}
-							\end{align}
 
-							Now the numerators must match
+							</div>	
 
-							\begin{align*} 
-								8-(s+2)(4s+10)
-								= A(s+2)^2 + B(s+1)(s+2) + C(s+1)
-							\end{align*}
-
-							And since we already know \(A=2\) and \(C=-8\) we have the equation
-
-							<a id="x1-21r12"></a>
-							\begin{align} \label {eq:8.2.12}
-								8-(s+2)(4s+10)
-								= 2(s+2)^2 + B(s+1)(s+2) - 8(s+1)
-							\end{align}
-
-							Since this equation must be true for all values of \(s\) we can select an easy one, \(s=0\) to find \(B\)
-						</div>
-
-						
-
-						<div class="reading-exercise">
-							Evaluate \(\displaystyle 8-(s+2)(4s+10)
-							= 2(s+2)^2 + B(s+1)(s+2) - 8(s+1)\) at  \(s=0\)
-						</div>	
-
-						<div>
-							\begin{align*} 
-								8-(2)(10)
-								= 2(2)^2 + B(1)(2) - 8(1)
-							\end{align*}
-						</div>
-
-						
-
-						<div class="reading-exercise">
-							Solve \(8-(2)(10)
-							= 2(2)^2 + B(1)(2) - 8(1)\) for \(B\)
-						</div>	
-
-						<div>
-							Solving for \(B\) we obtain \(B=-6\) and substituting this and \(A=2\) and \(C=-8\) back in to <a href="#x1-19r10">(8.2.10)</a> we find
-
-							\begin {equation*}
-								{8-(s+2)(4s+10)\over (s+1)(s+2)^2}
-								={2\over s+1}-{6\over s+2}-{8\over (s+2)^2}  
-							\end {equation*}
-
-						Now we can and apply linearity to find the inverse Laplace transform
-
-						\begin {align*} 
-							& {\cal L}^{-1}\left[ {8-(s+2)(4s+10)\over (s+1)(s+2)^2} \right] \\ \\
-							= &
-							2 \, {\cal L}^{-1} \underset{e^{-t}}{\underbrace{\left[  {1\over s+1} \right] }}
-							-6 \, \underset{e^{-2t}}{\underbrace{ {\cal L}^{-1}\left[ {1\over s+2} \right] }}
-							-8 \, \underset{te^{-2t}}{\underbrace{ {\cal L}^{-1}\left[  {1\over (s+2)^2} \right] }}
-							\\
-							= &
-							\quad
-							2e^{-t}
-							\quad -\quad 6 \,e^{-2t}
-							\quad-\quad 8te^{-2t}
-						\end {align*}
-						</div>
-
-					</div>
 					
-				
+							<div class="reading-exercise">
+								Add \(\displaystyle {A\over s+1}+{B\over s+2}+{C\over (s+2)^2}\) by finding a common denominator
+							</div>	
+						</li>
+						<li class="no-part">
+
+							<div>
+
+								<a id="x1-20r11"></a>
+								\begin{align} \label {eq:8.2.11}
+									{8-(s+2)(4s+10)\over (s+1)(s+2)^2}
+									={A(s+2)^2 + B(s+1)(s+2) + C(s+1) \over (s+1)(s+2)^2}
+								\end{align}
+
+								Now the numerators must match
+
+								\begin{align*} 
+									8-(s+2)(4s+10)
+									= A(s+2)^2 + B(s+1)(s+2) + C(s+1)
+								\end{align*}
+
+								And since we already know \(A=2\) and \(C=-8\) we have the equation
+
+								<a id="x1-21r12"></a>
+								\begin{align} \label {eq:8.2.12}
+									8-(s+2)(4s+10)
+									= 2(s+2)^2 + B(s+1)(s+2) - 8(s+1)
+								\end{align}
+
+								Since this equation must be true for all values of \(s\) we can select an easy one, \(s=0\) to find \(B\)
+							</div>
+
+							
+
+							<div class="reading-exercise">
+								Evaluate \(\displaystyle 8-(s+2)(4s+10)
+								= 2(s+2)^2 + B(s+1)(s+2) - 8(s+1)\) at  \(s=0\)
+							</div>	
+
+							<div>
+								\begin{align*} 
+									8-(2)(10)
+									= 2(2)^2 + B(1)(2) - 8(1)
+								\end{align*}
+							</div>
+
+							
+
+							<div class="reading-exercise">
+								Solve \(8-(2)(10)
+								= 2(2)^2 + B(1)(2) - 8(1)\) for \(B\)
+							</div>	
+
+							<div>
+								Solving for \(B\) we obtain \(B=-6\) and substituting this and \(A=2\) and \(C=-8\) back in to <a href="#x1-19r10">(8.2.10)</a> we find
+
+								\begin {equation*}
+									{8-(s+2)(4s+10)\over (s+1)(s+2)^2}
+									={2\over s+1}-{6\over s+2}-{8\over (s+2)^2}  
+								\end {equation*}
+
+							Now we can and apply linearity to find the inverse Laplace transform
+
+							\begin {align*} 
+								& {\cal L}^{-1}\left[ {8-(s+2)(4s+10)\over (s+1)(s+2)^2} \right] \\ \\
+								= &
+								2 \, {\cal L}^{-1} \underset{e^{-t}}{\underbrace{\left[  {1\over s+1} \right] }}
+								-6 \, \underset{e^{-2t}}{\underbrace{ {\cal L}^{-1}\left[ {1\over s+2} \right] }}
+								-8 \, \underset{te^{-2t}}{\underbrace{ {\cal L}^{-1}\left[  {1\over (s+2)^2} \right] }}
+								\\
+								= &
+								\quad
+								2e^{-t}
+								\quad -\quad 6 \,e^{-2t}
+								\quad-\quad 8te^{-2t}
+							\end {align*}
+							</div>
+
+						</li>
+					</ol>
 					
 				</details>
 			</div>
@@ -1098,172 +1131,179 @@
 				<details class="solution">
 					<summary>Solution</summary>
 
-					<div>
-						<div>
-							First split it up using <span class="vocab">PFD</span> with repeated factors
+					<ol>
+						<li class="no-part">
+							<div>
+								First split it up using <span class="vocab">PFD</span> with repeated factors
 
-							\begin {equation*}
-								{s^2-5s+7\over (s+2)^3} 
-								={A\over s+2}+{B\over (s+2)^2}+{C\over (s+2)^3} 
-							\end {equation*}
+								\begin {equation*}
+									{s^2-5s+7\over (s+2)^3} 
+									={A\over s+2}+{B\over (s+2)^2}+{C\over (s+2)^3} 
+								\end {equation*}
 
-							In Example <a href="#x1-176">8.2.6</a> we found that Heaviside's method would not work for finding the lower powers of the repeated factor, so we can only use it to find \(C\)
+								In Example <a href="#x1-176">8.2.6</a> we found that Heaviside's method would not work for finding the lower powers of the repeated factor, so we can only use it to find \(C\)
 
-							\begin {align*}
-								C 
-								= & \,  \Big. 
-									s^2-5s+7
-									\Big|_{s=-2} \\
-								= & \,   
-									(-2)^2-5(-2)+7
-									\\
-								= & \,   
-									4+10+7= 21
-									\\								  				
-							\end {align*}
+								\begin {align*}
+									C 
+									= & \,  \Big. 
+										s^2-5s+7
+										\Big|_{s=-2} \\
+									= & \,   
+										(-2)^2-5(-2)+7
+										\\
+									= & \,   
+										4+10+7= 21
+										\\								  				
+								\end {align*}
 
-							Now we need to find \(A\) and \(B.\) In <a href="#x1-176">8.2.6</a> it was easier because Heaviside's method got us two of our three coefficients so we were able to find the last one with a shortcut by substituting \(s=0\) but in this case we would need to substitute 2 different values of \(s\) to get 2 more equations to solve for the other two coefficients. Feel free to do it that way or you can always go ahead and go back to our regular techniques of finding a common denominator and equating the coefficients with a system of equations to find \(A\) and \(B\)
-						</div>	
+								Now we need to find \(A\) and \(B.\) In <a href="#x1-176">8.2.6</a> it was easier because Heaviside's method got us two of our three coefficients so we were able to find the last one with a shortcut by substituting \(s=0\) but in this case we would need to substitute 2 different values of \(s\) to get 2 more equations to solve for the other two coefficients. Feel free to do it that way or you can always go ahead and go back to our regular techniques of finding a common denominator and equating the coefficients with a system of equations to find \(A\) and \(B\)
+							</div>	
 
-						<div class="reading-exercise">
-							Add \(\displaystyle {A\over s+2}+{B\over (s+2)^2}+{C\over (s+2)^3}\) by finding a common denominator
-						</div>	
-						<div>
-							\begin {equation*}
-								{s^2-5s+7\over (s+2)^3} 
-								={A(s+2)^2+B(s+2)+C\over(s+2)^3}
-							\end {equation*}
+							<div class="reading-exercise">
+								Add \(\displaystyle {A\over s+2}+{B\over (s+2)^2}+{C\over (s+2)^3}\) by finding a common denominator
+							</div>	
+							<div>
+								\begin {equation*}
+									{s^2-5s+7\over (s+2)^3} 
+									={A(s+2)^2+B(s+2)+C\over(s+2)^3}
+								\end {equation*}
 
-							Now equating the numerators we obtain
-							\begin {equation*}
-								s^2-5s+7 = A(s+2)^2+B(s+2)+C
-							\end {equation*}
+								Now equating the numerators we obtain
+								\begin {equation*}
+									s^2-5s+7 = A(s+2)^2+B(s+2)+C
+								\end {equation*}
 
-						</div>	
-						<div class="reading-exercise">
-							Distribute \(\displaystyle A(s+2)^2+B(s+2)+C\) and group like terms
-						</div>	
-						<div>
-							
+							</div>	
+							<div class="reading-exercise">
+								Distribute \(\displaystyle A(s+2)^2+B(s+2)+C\) and group like terms
+							</div>	
+						</li>
+						<li class="no-part">
+							<div>
 
-							Distributing
-							\begin {equation*}
-								s^2-5s+7 = s^2(A) + s(4A+B) + (4A+2B+C)
-							\end {equation*}
+								Distributing
+								\begin {equation*}
+									s^2-5s+7 = s^2(A) + s(4A+B) + (4A+2B+C)
+								\end {equation*}
 
-							Equating the coefficients we obtain the system of equations
+								Equating the coefficients we obtain the system of equations
 
-							\begin{align*}
-								\left\{
+								\begin{align*}
+									\left\{
+										\begin{array}{rrr}
+											A&=&1 \\
+											4A+B&=&-5 \\
+											4A+2B+C&=&7
+										\end{array}
+									\right.	
+								\end{align*}
+
+							</div>	
+							<div class="reading-exercise">
+								Solve the system \(\left\{
 									\begin{array}{rrr}
 										A&=&1 \\
 										4A+B&=&-5 \\
 										4A+2B+C&=&7
 									\end{array}
-								\right.	
-							\end{align*}
+								\right.	\) 
+							</div>	
 
-						</div>	
-						<div class="reading-exercise">
-							Solve the system \(\left\{
-								\begin{array}{rrr}
-									A&=&1 \\
-									4A+B&=&-5 \\
-									4A+2B+C&=&7
-								\end{array}
-							\right.	\) 
-						</div>	
+							<div>
+								From the system we directly have \(A=1\) and the second equation quickly yields \(B=-9\) and we don't even need to use the third equation since we already have \(C=21\) but you could always solve it to check our answer. Now substituting these back into our expression we find
 
-						<div>
-							From the system we directly have \(A=1\) and the second equation quickly yields \(B=-9\) and we don't even need to use the third equation since we already have \(C=21\) but you could always solve it to check our answer. Now substituting these back into our expression we find
-
-							
-							\begin {equation*}
-								{s^2-5s+7\over (s+2)^3} 
-								={1\over s+2}-{9\over (s+2)^2}+{21\over (s+2)^3}
-							\end {equation*}
-
-							Now we can and apply linearity to find the inverse Laplace transform
-
-							\begin {align*} 
-								& {\cal L}^{-1}\left[ {s^2-5s+7\over (s+2)^3} \right] \\ \\
-								= &
-								\, {\cal L}^{-1} \underset{e^{-2t}}{\underbrace{\left[  {1\over s+2} \right] }}
-								-9 \, \underset{te^{-2t}}{\underbrace{ {\cal L}^{-1}\left[ {1\over (s+2)^2} \right] }}
-								+21 \, \underset{?}{\underbrace{ {\cal L}^{-1}\left[  {1\over (s+2)^3} \right] }}
-								\\
-								= &
-								\quad
-								e^{-2t}
-								\quad -\quad 9 \,te^{-2t}
-								\quad+\quad 21 \,  {\cal L}^{-1}\left[  {1\over (s+2)^3} \right] 
-							\end {align*}
-
-							So all we have left to find is 
-
-							\begin {align*} 
-								{\cal L}^{-1}\left[  {1\over (s+2)^3} \right] 
-							\end {align*}
-
-							So we seek the function \(f(t)\) such that 
-							\begin {align*} 
-								{\cal L} \Big\{  f(t) \Big\} =  {1\over (s+2)^3}
-							\end {align*}
-
-							From the table we find the transform pair 
 								
-							\[\displaystyle {\cal L} \big\{ t^n e^{at} \big\}  = \frac{n!}{(s-a)^{n+1}} \]
+								\begin {equation*}
+									{s^2-5s+7\over (s+2)^3} 
+									={1\over s+2}-{9\over (s+2)^2}+{21\over (s+2)^3}
+								\end {equation*}
 
-							And setting \(a=-2\) and \(n=2\) in the transform pair we obtain our equation
+								Now we can and apply linearity to find the inverse Laplace transform
 
-							\[
-								\displaystyle 
-								{\cal L} 
-									\left\{ 
-										t^2 e^{-2t} 
-									\right\}  = \frac{2}{(s+2)^2} 
-								
-							\]
+								\begin {align*} 
+									& {\cal L}^{-1}\left[ {s^2-5s+7\over (s+2)^3} \right] \\ \\
+									= &
+									\, {\cal L}^{-1} \underset{e^{-2t}}{\underbrace{\left[  {1\over s+2} \right] }}
+									-9 \, \underset{te^{-2t}}{\underbrace{ {\cal L}^{-1}\left[ {1\over (s+2)^2} \right] }}
+									+21 \, \underset{?}{\underbrace{ {\cal L}^{-1}\left[  {1\over (s+2)^3} \right] }}
+									\\
+									= &
+									\quad
+									e^{-2t}
+									\quad -\quad 9 \,te^{-2t}
+									\quad+\quad 21 \,  {\cal L}^{-1}\left[  {1\over (s+2)^3} \right] 
+								\end {align*}
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
+								So all we have left to find is 
 
-							Which is perfect once we divide by two and apply linearity
+								\begin {align*} 
+									{\cal L}^{-1}\left[  {1\over (s+2)^3} \right] 
+								\end {align*}
 
-							\[
-								\displaystyle 
-								{\cal L} 
-									\left\{ 
-										\frac{1}{2}
-										t^2 e^{-2t} 
-									\right\}  = \frac{1}{(s+2)^2} 
-								
-							\]
+								So we seek the function \(f(t)\) such that 
+								\begin {align*} 
+									{\cal L} \Big\{  f(t) \Big\} =  {1\over (s+2)^3}
+								\end {align*}
 
-							Therefore we have
+								From the table we find the transform pair 
+									
+								\[\displaystyle {\cal L} \big\{ t^n e^{at} \big\}  = \frac{n!}{(s-a)^{n+1}} \]
 
-							\[\displaystyle  {\cal L}^{-1}\left[ \frac{1}{(s+2)^2} \right] = \frac{1}{2}
-							t^2 e^{-2t} \]
+								And setting \(a=-2\) and \(n=2\) in the transform pair we obtain our equation
+
+								\[
+									\displaystyle 
+									{\cal L} 
+										\left\{ 
+											t^2 e^{-2t} 
+										\right\}  = \frac{2}{(s+2)^2} 
+									
+								\]
+
+								Which is perfect once we divide by two and apply linearity
+
+								\[
+									\displaystyle 
+									{\cal L} 
+										\left\{ 
+											\frac{1}{2}
+											t^2 e^{-2t} 
+										\right\}  = \frac{1}{(s+2)^2} 
+									
+								\]
+
+								Therefore we have
+
+								\[\displaystyle  {\cal L}^{-1}\left[ \frac{1}{(s+2)^2} \right] = \frac{1}{2}
+								t^2 e^{-2t} \]
 
 
-							And now we substitute it back in to get our final answer
+								And now we substitute it back in to get our final answer
 
-							\begin {align*} 
-							& {\cal L}^{-1}\left[ {s^2-5s+7\over (s+2)^3} \right] \\ \\							
-							= & \,
-							e^{-2t}
-							- 9 \,te^{-2t}
-							+ 21 \,  \underset{\frac{1}{2}
-							t^2 e^{-2t} }{\underbrace{{\cal L}^{-1}\left[  {1\over (s+2)^3} \right]}} \\ 
-							= & \,
-							e^{-2t}
-							- 9 \,te^{-2t}
-							+ \frac{21}{2}
-							t^2 e^{-2t} \\ 
-							= & \,
-							\left(1
-							- 9 \,t
-							+ \frac{21}{2}
-							t^2 \right)e^{-2t} \\ 
-						\end {align*}
-						</div>
+								\begin {align*} 
+									& {\cal L}^{-1}\left[ {s^2-5s+7\over (s+2)^3} \right] \\ \\							
+									= & \,
+									e^{-2t}
+									- 9 \,te^{-2t}
+									+ 21 \,  \underset{\frac{1}{2}
+									t^2 e^{-2t} }{\underbrace{{\cal L}^{-1}\left[  {1\over (s+2)^3} \right]}} \\ 
+									= & \,
+									e^{-2t}
+									- 9 \,te^{-2t}
+									+ \frac{21}{2}
+									t^2 e^{-2t} \\ 
+									= & \,
+									\left(1
+									- 9 \,t
+									+ \frac{21}{2}
+									t^2 \right)e^{-2t} \\ 
+								\end {align*}
+							</div>
+						</li>
+					</ol>
 				</details>
 			</div>
 
@@ -1296,215 +1336,211 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					<div>
-						First split up <a href="#x1-24r13">(8.2.13)</a> using <span class="vocab">PFD</span>
+					<ol>
+						<li class="no-part">
+							<div>
+								First split up <a href="#x1-24r13">(8.2.13)</a> using <span class="vocab">PFD</span>
 
-						<a id="x1-25r14"></a>
-						\begin {equation} \label {eq:8.2.14}
-							 {1-s(3s+5)\over s\left(s^2+2s+2\right)} 
-							 =
-							 {A\over s} 
-							 +
-							 {Bs+C\over s^2+2s+2} 
-						\end {equation} 
+								<a id="x1-25r14"></a>
+								\begin {equation} \label {eq:8.2.14}
+									{1-s(3s+5)\over s\left(s^2+2s+2\right)} 
+									=
+									{A\over s} 
+									+
+									{Bs+C\over s^2+2s+2} 
+								\end {equation} 
 
-						The linear term is \({A}/{s}\) just as linear terms always have been. However, things are a little different this time since \(\left(s^2+2s+2\right)\) is an irreducible quadratic factor so our guess has to account for a linear term in \(s\) as well as a number. Although Heaviside's method won't work here, we can solve using the familiar method of getting a common denominator
-					</div>	
-					<div class="reading-exercise">
-						Add \(\displaystyle {A\over s} 
-						+
-						{Bs+C\over s^2+2s+2}\) by finding a common denominator
-					</div>	
+								The linear term is \({A}/{s}\) just as linear terms always have been. However, things are a little different this time since \(\left(s^2+2s+2\right)\) is an irreducible quadratic factor so our guess has to account for a linear term in \(s\) as well as a number. Although Heaviside's method won't work here, we can solve using the familiar method of getting a common denominator
+							</div>	
+							<div class="reading-exercise">
+								Add \(\displaystyle {A\over s} 
+								+
+								{Bs+C\over s^2+2s+2}\) by finding a common denominator
+							</div>	
 
-					<div>
-						
+							<div>
+								
 
-						\begin {align*} 
-							 {1-s(3s+5)\over s\left(s^2+2s+2\right)} 
-							 = &
-							 {A(s^2+2s+2)+s(Bs+C)\over s(s^2+2s+2)} 
-							 \\
-						\end {align*} 
+								\begin {align*} 
+									{1-s(3s+5)\over s\left(s^2+2s+2\right)} 
+									= &
+									{A(s^2+2s+2)+s(Bs+C)\over s(s^2+2s+2)} 
+									\\
+								\end {align*} 
 
-						Then we can equate the numerators
+								Then we can equate the numerators
 
-						<a id="x1-26r15"></a>
-						\begin {align} \label {eq:8.2.15}
-							 {1-s(3s+5)} 
-							 = &
-							 {A(s^2+2s+2)+s(Bs+C)} 
-							 \\
-						\end {align} 
-
-
-					</div>
-					<div class="reading-exercise">
-						Simplify \(\displaystyle {A(s^2+2s+2)+s(Bs+C)} \) and group like terms
-					</div>	
-					<div>
-						Simplify \(\displaystyle {1-s(3s+5)} \)
-
-						\begin {align*} 
-							 {1-5s-3s^2} 
-							 = &
-							 s^2(A+B) + s(2A+C) + (2A) 
-							 \\
-						\end {align*} 
-
-						To obtain the system of equations
-
-						\begin{align*}
-							\left\{
-								\begin{array}{rrr}
-									A + B&=& -3 \\
-									2A+C &=& -5 \\
-									2A&=&1
-								\end{array}
-							\right.	
-						\end{align*}
+								<a id="x1-26r15"></a>
+								\begin {align} \label {eq:8.2.15}
+									{1-s(3s+5)} 
+									= &
+									{A(s^2+2s+2)+s(Bs+C)} 
+									\\
+								\end {align} 
 
 
-					</div>	
-					<div class="reading-exercise">
-						Solve \(\left\{
-							\begin{array}{rrr}
-								A + B&=& -3 \\
-								2A+C &=& -5 \\
-								2A&=&1
-							\end{array}
-						\right. \) 
-					</div>
+							</div>
+							<div class="reading-exercise">
+								Simplify \(\displaystyle {A(s^2+2s+2)+s(Bs+C)} \) and group like terms
+							</div>	
+							<div>
+								Simplify \(\displaystyle {1-s(3s+5)} \)
 
-					<div>
-						Solving the system we obtain \(A=1/2,\) \(B=-7/2,\) and \(C=-6,\) so we substitute it back in to solve
+								\begin {align*} 
+									{1-5s-3s^2} 
+									= &
+									s^2(A+B) + s(2A+C) + (2A) 
+									\\
+								\end {align*} 
 
-						\begin {align*} 
-							{\cal L}^{-1}\left[ {1-5s-3s^2\over s\left(s^2+2s+2\right)} \right] 
-							= & \,
-							{\cal L}^{-1}\left[  {A\over s} 
-							+
-							{Bs\over s^2+2s+2} + {C\over s^2+2s+2}  \right] \\
-							= & \,
-							\frac{1}{2} \,
-							{\cal L}^{-1}\left[   {1\over s} 
-							\right] 
-							- 
-							\frac{7}{2}  \,
-							{\cal L}^{-1}\left[    
-							{s\over s^2+2s+2}  \right] 
-							- 
-							6  \,
-							{\cal L}^{-1}\left[ {1\over s^2+2s+2}  \right] \\
-							
-						\end {align*} 
+								To obtain the system of equations
 
-						We can find the inverse Laplace of the first one simple enough but the other one's need to be written in the correct format by completing the square in the denominator.
-
-						\begin {align*} 
-							s^2+2s+2 
-							= & (s^2+2s+1)-1+2 \\
-							= & (s+1)^2+1 \\
-						\end {align*} 
-
-						So we can rewrite them as
-
-						<a id="x1-27r16"></a>
-						\begin {align} \label {eq:8.2.16}
-							\frac{1}{2} \,
-							{\cal L}^{-1}\left[   {1\over s} 
-							\right] 
-							- 
-							\frac{7}{2} \,
-							{\cal L}^{-1}\left[    
-							{s\over (s+1)^2+1}  \right] 
-							- 
-							6 \,
-							{\cal L}^{-1}\left[ {1\over (s+1)^2+1}  \right] \\
-							
-						\end {align} 
-
-						Now the last one is also directly on our table but the middle one needs a little work to get the numerator to be \(s+1\) we add and subtract one and simplify
-
-						\begin {align*} 
-							& \, \frac{1}{2}
-							{\cal L}^{-1}\left[   {1\over s} 
-							\right] 
-							- 
-							\frac{7}{2}
-							{\cal L}^{-1}\left[    
-							{(s+1)-1\over (s+1)^2+1}  \right] 
-							- 
-							6
-							{\cal L}^{-1}\left[ {1\over (s+1)^2+1}  \right] \\
-							=
-							& \, \frac{1}{2}
-							\underset{1}{\underbrace{{\cal L}^{-1}\left[   {1\over s} 
-							\right]}}
-							- 
-							\frac{7}{2}
-							\underset{e^{-t}\cos t}{\underbrace{
-							{\cal L}^{-1}\left[    
-							{s+1\over (s+1)^2+1}  \right]}}
-							+ 
-							\underset{e^{-t}\sin t}{\underbrace{
-							\frac{7}{2}
-							{\cal L}^{-1}\left[    
-							{1\over (s+1)^2+1}  \right]}} 
-							- 
-							6
-							\underset{e^{-t}\sin t}{\underbrace{
-							{\cal L}^{-1}\left[ {1\over (s+1)^2+1}  \right]}} \\
-							=
-							& \, \quad \frac{1}{2}
-							\quad 
-							- 
-							\quad 
-							\frac{7}{2}
-							e^{-t}\cos t
-							\quad 
-							+ 
-							\quad 
-							\underbrace{
-							\frac{7}{2}
-							e^{-t}\sin t 
-							\quad 
-							- 
-							\quad 
-							6
-							e^{-t}\sin t} \\
-							=
-							& \, \quad \frac{1}{2}
-							\quad 
-							- 
-							\quad 
-							\frac{7}{2}
-							e^{-t}\cos t
-							\quad 
-							-
-							\frac{5}{2}
-							e^{-t}\sin t \\
-							=
-							& \, \quad \frac{1}{2}
-							- 
-							\left( 
-							\frac{7}{2}
-							\cos t 
-							+
-							\frac{5}{2}
-							\sin t \right) e^{-t}\\
-						\end {align*} 
+								\begin{align*}
+									\left\{
+										\begin{array}{rrr}
+											A + B&=& -3 \\
+											2A+C &=& -5 \\
+											2A&=&1
+										\end{array}
+									\right.	
+								\end{align*}
 
 
-					</div>
-					
+							</div>	
+							<div class="reading-exercise">
+								Solve \(\left\{
+									\begin{array}{rrr}
+										A + B&=& -3 \\
+										2A+C &=& -5 \\
+										2A&=&1
+									\end{array}
+								\right. \) 
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
+								Solving the system we obtain \(A=1/2,\) \(B=-7/2,\) and \(C=-6,\) so we substitute it back in to solve
 
-						
+								\begin {align*} 
+									{\cal L}^{-1}\left[ {1-5s-3s^2\over s\left(s^2+2s+2\right)} \right] 
+									= & \,
+									{\cal L}^{-1}\left[  {A\over s} 
+									+
+									{Bs\over s^2+2s+2} + {C\over s^2+2s+2}  \right] \\
+									= & \,
+									\frac{1}{2} \,
+									{\cal L}^{-1}\left[   {1\over s} 
+									\right] 
+									- 
+									\frac{7}{2}  \,
+									{\cal L}^{-1}\left[    
+									{s\over s^2+2s+2}  \right] 
+									- 
+									6  \,
+									{\cal L}^{-1}\left[ {1\over s^2+2s+2}  \right] \\
+									
+								\end {align*} 
 
-						
+								We can find the inverse Laplace of the first one simple enough but the other one's need to be written in the correct format by completing the square in the denominator.
 
-						
-						
-						
+								\begin {align*} 
+									s^2+2s+2 
+									= & (s^2+2s+1)-1+2 \\
+									= & (s+1)^2+1 \\
+								\end {align*} 
+
+								So we can rewrite them as
+
+								<a id="x1-27r16"></a>
+								\begin {align} \label {eq:8.2.16}
+									\frac{1}{2} \,
+									{\cal L}^{-1}\left[   {1\over s} 
+									\right] 
+									- 
+									\frac{7}{2} \,
+									{\cal L}^{-1}\left[    
+									{s\over (s+1)^2+1}  \right] 
+									- 
+									6 \,
+									{\cal L}^{-1}\left[ {1\over (s+1)^2+1}  \right] \\
+									
+								\end {align} 
+
+								Now the last one is also directly on our table but the middle one needs a little work to get the numerator to be \(s+1\) we add and subtract one and simplify
+
+								\begin {align*} 
+									& \, \frac{1}{2}
+									{\cal L}^{-1}\left[   {1\over s} 
+									\right] 
+									- 
+									\frac{7}{2}
+									{\cal L}^{-1}\left[    
+									{(s+1)-1\over (s+1)^2+1}  \right] 
+									- 
+									6
+									{\cal L}^{-1}\left[ {1\over (s+1)^2+1}  \right] \\
+									=
+									& \, \frac{1}{2}
+									\underset{1}{\underbrace{{\cal L}^{-1}\left[   {1\over s} 
+									\right]}}
+									- 
+									\frac{7}{2}
+									\underset{e^{-t}\cos t}{\underbrace{
+									{\cal L}^{-1}\left[    
+									{s+1\over (s+1)^2+1}  \right]}}
+									+ 
+									\underset{e^{-t}\sin t}{\underbrace{
+									\frac{7}{2}
+									{\cal L}^{-1}\left[    
+									{1\over (s+1)^2+1}  \right]}} 
+									- 
+									6
+									\underset{e^{-t}\sin t}{\underbrace{
+									{\cal L}^{-1}\left[ {1\over (s+1)^2+1}  \right]}} \\
+									=
+									& \, \quad \frac{1}{2}
+									\quad 
+									- 
+									\quad 
+									\frac{7}{2}
+									e^{-t}\cos t
+									\quad 
+									+ 
+									\quad 
+									\underbrace{
+									\frac{7}{2}
+									e^{-t}\sin t 
+									\quad 
+									- 
+									\quad 
+									6
+									e^{-t}\sin t} \\
+									=
+									& \, \quad \frac{1}{2}
+									\quad 
+									- 
+									\quad 
+									\frac{7}{2}
+									e^{-t}\cos t
+									\quad 
+									-
+									\frac{5}{2}
+									e^{-t}\sin t \\
+									=
+									& \, \quad \frac{1}{2}
+									- 
+									\left( 
+									\frac{7}{2}
+									\cos t 
+									+
+									\frac{5}{2}
+									\sin t \right) e^{-t}\\
+								\end {align*} 
+
+
+							</div>
+						</li>
+					</ol>
 				</details>
 			</div>
 
@@ -1517,157 +1553,164 @@
 						{\cal L}^{-1}\left[ {8+3s\over (s^2+1)(s^2+4)}  \right]
 					\end {equation} 
 				</div>
-										
+
 				<details class="solution">
 					<summary>Solution</summary>
-					<div>
-						Noticing we have irreducible quadratic factors, we can proceed to split up <a href="#x1-29r17">(8.2.17)</a> using <span class="vocab">PFD</span> 
-						\begin {equation} 
-							{8+3s\over (s^2+1)(s^2+4)}
-							=
-							{A+Bs\over s^2+1}+{C+Ds\over s^2+4}
-						\end {equation} 
+					<ol>
+						<li class="no-part">
+							<div>
+								Noticing we have irreducible quadratic factors, we can proceed to split up <a href="#x1-29r17">(8.2.17)</a> using <span class="vocab">PFD</span> 
+								\begin {equation} 
+									{8+3s\over (s^2+1)(s^2+4)}
+									=
+									{A+Bs\over s^2+1}+{C+Ds\over s^2+4}
+								\end {equation} 
 
-						However since there are no first power of \(s\) terms in the denominator, we can actually solve a simpler problem first by taking the numerator as \(1\) and treating \(s^2\) as the variable to evaluate
+								However since there are no first power of \(s\) terms in the denominator, we can actually solve a simpler problem first by taking the numerator as \(1\) and treating \(s^2\) as the variable to evaluate
 
-						\begin {equation*} 
-							{1\over (s^2+1)(s^2+4)}
-						\end {equation*} 
+								\begin {equation*} 
+									{1\over (s^2+1)(s^2+4)}
+								\end {equation*} 
 
-						Thinking of \(s^2\) as the variable, we can treat these as "linear" factors in \(s^2\) and use a linear <span class="vocab">PFD</span> 
-						\begin {equation*} 
-							{1\over (s^2+1)(s^2+4)}
-							=
-							{A\over s^2+1}
-							+
-							{B\over s^2+4}
-						\end {equation*} 
+								Thinking of \(s^2\) as the variable, we can treat these as "linear" factors in \(s^2\) and use a linear <span class="vocab">PFD</span> 
+								\begin {equation*} 
+									{1\over (s^2+1)(s^2+4)}
+									=
+									{A\over s^2+1}
+									+
+									{B\over s^2+4}
+								\end {equation*} 
 
-						Now apply Heaviside’s method to find \(A\) and \(B\) 
+								Now apply Heaviside’s method to find \(A\) and \(B\) 
 
-						\begin {equation*} 
-							A = 
-							\left.
-							{1\over s^2+4}
-							\right|_{s^2=-1}
-							=
-							{1\over -1+4}
-							=
-							{1\over 3}
-						\end {equation*} 
+								\begin {equation*} 
+									A = 
+									\left.
+									{1\over s^2+4}
+									\right|_{s^2=-1}
+									=
+									{1\over -1+4}
+									=
+									{1\over 3}
+								\end {equation*} 
 
-						<br>
+								<br>
 
 
-						\begin {equation*} 
-							B = 
-							\left.
-							{1\over s^2+1}
-							\right|_{s^2=-4}
-							=
-							{1\over -4+1}
-							=
-							-{1\over 3}
-						\end {equation*} 
+								\begin {equation*} 
+									B = 
+									\left.
+									{1\over s^2+1}
+									\right|_{s^2=-4}
+									=
+									{1\over -4+1}
+									=
+									-{1\over 3}
+								\end {equation*} 
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
+								Substituting back in we obtain
 
-						Substituting back in we obtain
-
-						\begin {align*} 
-							{1\over (s^2+1)(s^2+4)}
-							= & \,
-								{1\over 3}
+								\begin {align*} 
+									{1\over (s^2+1)(s^2+4)}
+									= & \,
+										{1\over 3}
+											\left(
+												{1\over s^2+1}
+											\right)
+										-
+										{1\over 3}
+											\left(
+												{1\over s^2+4}
+											\right) \\
+									= & \,
+									{1\over 3}
 									\left(
-										{1\over s^2+1}
+									{1\over s^2+1}
+									-
+									{1\over s^2+4}
 									\right)
-								-
-								{1\over 3}
+								\end {align*} 
+
+								Now multiplying both sides by \(8+3s\) we get back to our original expression
+
+								\begin {align*} 
+									{8+3s\over (s^2+1)(s^2+4)}
+									= & \,
+									{1\over 3}
 									\left(
-										{1\over s^2+4}
+									{8+3s\over s^2+1}
+									-
+									{8+3s\over s^2+4}
 									\right) \\
-							= & \,
-							{1\over 3}
-							\left(
-							{1\over s^2+1}
-							-
-							{1\over s^2+4}
-							\right)
-						\end {align*} 
+									= & \,
+									{1\over 3}
+									\left(
+									{8\over s^2+1}
+									+
+									{3s\over s^2+1}
+									-
+									{8\over s^2+4}
+									-
+									{3s\over s^2+4}
+									\right) \\
+									= & \,
+									{8\over 3}
+									\left(
+									{1\over s^2+1}
+									\right) 
+									+
+									\left(
+									{s\over s^2+1}
+									\right) 
+									-
+									{8\over 3}
+									\left(
+									{1\over s^2+4}
+									\right)
+									-
+									\left(
+									{s\over s^2+4}
+									\right) \\
+								\end {align*} 
 
-						Now multiplying both sides by \(8+3s\) we get back to our original expression
+								And applying linearity, we can find the inverse Laplace transform
 
-						\begin {align*} 
-							{8+3s\over (s^2+1)(s^2+4)}
-							= & \,
-							{1\over 3}
-							\left(
-							{8+3s\over s^2+1}
-							-
-							{8+3s\over s^2+4}
-							\right) \\
-							= & \,
-							{1\over 3}
-							\left(
-							{8\over s^2+1}
-							+
-							{3s\over s^2+1}
-							-
-							{8\over s^2+4}
-							-
-							{3s\over s^2+4}
-							\right) \\
-							= & \,
-							{8\over 3}
-							\left(
-							{1\over s^2+1}
-							\right) 
-							+
-							\left(
-							{s\over s^2+1}
-							\right) 
-							-
-							{8\over 3}
-							\left(
-							{1\over s^2+4}
-							\right)
-							-
-							\left(
-							{s\over s^2+4}
-							\right) \\
-						\end {align*} 
-
-						And applying linearity, we can find the inverse Laplace transform
-
-						\begin {align*} 
-							& \, {\cal L}^{-1}\left[ 
-								{8+3s\over (s^2+1)(s^2+4)}
-							\right]	\\
-								= & \,
-								{8\over 3} \,
-								\underset{\sin t}{\underbrace{
-								{\cal L}^{-1}\left[ 
-								{1\over s^2+1}  \right]}}
-								+
-								\underset{\cos t}{\underbrace{
-								{\cal L}^{-1}\left[ 
-								{s\over s^2+1} \right]}}
-								-
-								{8\over 3} \,
-								\underset{\sin 2t}{\underbrace{
-								{\cal L}^{-1}\left[ 
-								{1\over s^2+4} \right]}}
-								-
-								\underset{\cos 2t}{\underbrace{
-								{\cal L}^{-1}\left[ 
-								{s\over s^2+4}\right]}} \\
-								= & \,
-								\quad
-								{8\over 3} \,\sin t
-								\quad+\quad\cos t
-								\quad-\quad
-								{8\over 3} \, \sin 2t
-								\quad-\quad\cos 2t
-						\end {align*} 
-					</div>	
+								\begin {align*} 
+									& \, {\cal L}^{-1}\left[ 
+										{8+3s\over (s^2+1)(s^2+4)}
+									\right]	\\
+										= & \,
+										{8\over 3} \,
+										\underset{\sin t}{\underbrace{
+										{\cal L}^{-1}\left[ 
+										{1\over s^2+1}  \right]}}
+										+
+										\underset{\cos t}{\underbrace{
+										{\cal L}^{-1}\left[ 
+										{s\over s^2+1} \right]}}
+										-
+										{8\over 3} \,
+										\underset{\sin 2t}{\underbrace{
+										{\cal L}^{-1}\left[ 
+										{1\over s^2+4} \right]}}
+										-
+										\underset{\cos 2t}{\underbrace{
+										{\cal L}^{-1}\left[ 
+										{s\over s^2+4}\right]}} \\
+										= & \,
+										\quad
+										{8\over 3} \,\sin t
+										\quad+\quad\cos t
+										\quad-\quad
+										{8\over 3} \, \sin 2t
+										\quad-\quad\cos 2t
+								\end {align*} 
+							</div>	
+						</li>
+					</ol>
 				</details>
 			</div>
 
@@ -1683,216 +1726,222 @@
 										
 				<details class="solution">
 					<summary>Solution</summary>
-					<div>
-						Noticing we have irreducible quadratic factors, we can proceed to split it up using <span class="vocab">PFD</span> 
-						\begin {equation*} 
-							{17 s-15\over (s^2-2s+5)(s^2+2s+10)}
-							=
-							{As+B\over s^2-2s+5}
-							+
-							{Cs+D\over s^2+2s+10}
-						\end {equation*} 
-					</div>	
-					<div class="reading-exercise">
-						Add \(\displaystyle {As+B\over s^2-2s+5}
-						+
-						{Cs+D\over s^2+2s+10}\) by finding a common denominator
-					</div>	
-					<div>
-						\begin {equation*} 
-							{17 s-15\over (s^2-2s+5)(s^2+2s+10)}
-							=
-							{(As+B)(s^2+2s+10)+(Cs+D)(s^2-2s+5)\over (s^2-2s+5)(s^2+2s+10)}
-						\end {equation*}
+					<ol>
+						<li class="no-part">
+							<div>
+								Noticing we have irreducible quadratic factors, we can proceed to split it up using <span class="vocab">PFD</span> 
+								\begin {equation*} 
+									{17 s-15\over (s^2-2s+5)(s^2+2s+10)}
+									=
+									{As+B\over s^2-2s+5}
+									+
+									{Cs+D\over s^2+2s+10}
+								\end {equation*} 
+							</div>	
+							<div class="reading-exercise">
+								Add \(\displaystyle {As+B\over s^2-2s+5}
+								+
+								{Cs+D\over s^2+2s+10}\) by finding a common denominator
+							</div>	
+							<div>
+								\begin {equation*} 
+									{17 s-15\over (s^2-2s+5)(s^2+2s+10)}
+									=
+									{(As+B)(s^2+2s+10)+(Cs+D)(s^2-2s+5)\over (s^2-2s+5)(s^2+2s+10)}
+								\end {equation*}
 
-						Now equating the numerators we obtain
-						\begin {equation*} 
-							17 s-15
-							=
-							(As+B)(s^2+2s+10)+(Cs+D)(s^2-2s+5)
-						\end {equation*}
-					</div>	
-					<div class="reading-exercise">
-						Distribute \(\displaystyle (As+B)(s^2+2s+10)+(Cs+D)(s^2-2s+5)\) and group like terms
-					</div>	
-					<div>
-						\begin {align*} 
-							& \, 17 s-15 \\ 
-							= & \, (As+B)(s^2+2s+10)+(Cs+D)(s^2-2s+5) \\
-							= & \, As(s^2+2s+10)+B(s^2+2s+10)+Cs(s^2-2s+5)+D(s^2-2s+5) \\
-							= & \, A(s^3+2s^2+10s)+B(s^2+2s+10)+C(s^3-2s^2+5s)+D(s^2-2s+5) \\
-							= & \, s^3(A + C)
-								+ s^2 (2A + B - 2C + D)
-								+ s (10A + 2B + 5C - 2D)
-								+ (10B + 5D) \\
-							
-						\end {align*}
+								Now equating the numerators we obtain
+								\begin {equation*} 
+									17 s-15
+									=
+									(As+B)(s^2+2s+10)+(Cs+D)(s^2-2s+5)
+								\end {equation*}
+							</div>	
+							<div class="reading-exercise">
+								Distribute \(\displaystyle (As+B)(s^2+2s+10)+(Cs+D)(s^2-2s+5)\) and group like terms
+							</div>	
+							<div>
+								\begin {align*} 
+									& \, 17 s-15 \\ 
+									= & \, (As+B)(s^2+2s+10)+(Cs+D)(s^2-2s+5) \\
+									= & \, As(s^2+2s+10)+B(s^2+2s+10)+Cs(s^2-2s+5)+D(s^2-2s+5) \\
+									= & \, A(s^3+2s^2+10s)+B(s^2+2s+10)+C(s^3-2s^2+5s)+D(s^2-2s+5) \\
+									= & \, s^3(A + C)
+										+ s^2 (2A + B - 2C + D)
+										+ s (10A + 2B + 5C - 2D)
+										+ (10B + 5D) \\
+									
+								\end {align*}
 
-						Equating the coefficients we obtain
+								Equating the coefficients we obtain
 
 
-						\begin{align*}
-							\left\{
-								\begin{array}{rrr}
-									A + C &=& 0 \\
-									2A + B - 2C + D &=& 0 \\
-									10A + 2B + 5C - 2D &=& 17 \\
-									10B + 5D &=& -15 \\
+								\begin{align*}
+									\left\{
+										\begin{array}{rrr}
+											A + C &=& 0 \\
+											2A + B - 2C + D &=& 0 \\
+											10A + 2B + 5C - 2D &=& 17 \\
+											10B + 5D &=& -15 \\
+										\end{array}
+									\right.	
+								\end{align*}
+
+							</div>	
+							<div class="reading-exercise">
+								Solve the system \(\left\{
+									\begin{array}{rrr}
+										A + C &=& 0 \\
+										2A + B - 2C + D &=& 0 \\
+										10A + 2B + 5C - 2D &=& 17 \\
+										10B + 5D &=& -15 \\
+									\end{array}
+								\right.	\) 
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
+								Solving the system we obtain \(A=1,\) \(B=1,\) \(C=-1,\) and \(D=-5,\) and substituting it back in we obtain
+
+								\begin {equation*} 
+									{17 s-15\over (s^2-2s+5)(s^2+2s+10)}
+									=
+									{s+1\over s^2-2s+5}
+									-
+									{s+5\over s^2+2s+10}
+								\end {equation*} 
+
+								And we need to write the denominators using completing the square
+
+								\begin{array}{cccc}
+									s^2-2s+5	&\quad\quad& 	s^2+2s+10 \\
+									(s^2-2s+1)-1+5	&\quad\quad& 	(s^2+2s+1)-1+10 \\
+									(s-1)^2+4	&\quad\quad& 	(s+1)^2+9 \\
+
 								\end{array}
-							\right.	
-						\end{align*}
 
-					</div>	
-					<div class="reading-exercise">
-						Solve the system \(\left\{
-							\begin{array}{rrr}
-								A + C &=& 0 \\
-								2A + B - 2C + D &=& 0 \\
-								10A + 2B + 5C - 2D &=& 17 \\
-								10B + 5D &=& -15 \\
-							\end{array}
-						\right.	\) 
-					</div>	
-					<div>
-						Solving the system we obtain \(A=1,\) \(B=1,\) \(C=-1,\) and \(D=-5,\) and substituting it back in we obtain
+								Rewriting we obtain
+			
 
-						\begin {equation*} 
-							{17 s-15\over (s^2-2s+5)(s^2+2s+10)}
-							=
-							{s+1\over s^2-2s+5}
-							-
-							{s+5\over s^2+2s+10}
-						\end {equation*} 
+								\begin {equation*} 
+									{17 s-15\over (s^2-2s+5)(s^2+2s+10)}
+									=
+									{s+1\over (s-1)^2+4}
+									-
+									{s+5\over (s+1)^2+9}
+								\end {equation*} 
 
-						And we need to write the denominators using completing the square
+								And to get them in the form to match the table we just add and subtract numbers from the numerators so they match the shift on the bottom
 
-						\begin{array}{cccc}
-							s^2-2s+5	&\quad\quad& 	s^2+2s+10 \\
-							(s^2-2s+1)-1+5	&\quad\quad& 	(s^2+2s+1)-1+10 \\
-							(s-1)^2+4	&\quad\quad& 	(s+1)^2+9 \\
+								\begin {align*} 
+									& \,
+									{s+1\over (s-1)^2+4}
+									-
+									{s+5\over (s+1)^2+9} \\
+									= & \,
+									{(s-1)+1+1\over (s-1)^2+4}
+									-
+									{(s+1)-1+5\over (s+1)^2+9} \\
+									= & \,
+									{(s-1)+2\over (s-1)^2+4}
+									-
+									{(s+1)+4\over (s+1)^2+9} \\
+									= & \,
+									{s-1\over (s-1)^2+4}
+									+
+									{2\over (s-1)^2+4}
+									-
+									{s+1\over (s+1)^2+9}
+									-
+									{4\over (s+1)^2+9} \\
+								\end {align*}
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 
-						\end{array}
+								And finally we can find the inverse Laplace transforms
 
-						Rewriting we obtain
-	
-
-						\begin {equation*} 
-							{17 s-15\over (s^2-2s+5)(s^2+2s+10)}
-							=
-							{s+1\over (s-1)^2+4}
-							-
-							{s+5\over (s+1)^2+9}
-						\end {equation*} 
-
-						And to get them in the form to match the table we just add and subtract numbers from the numerators so they match the shift on the bottom
-
-						\begin {align*} 
-							& \,
-							{s+1\over (s-1)^2+4}
-							-
-							{s+5\over (s+1)^2+9} \\
-							= & \,
-							{(s-1)+1+1\over (s-1)^2+4}
-							-
-							{(s+1)-1+5\over (s+1)^2+9} \\
-							= & \,
-							{(s-1)+2\over (s-1)^2+4}
-							-
-							{(s+1)+4\over (s+1)^2+9} \\
-							= & \,
-							{s-1\over (s-1)^2+4}
-							+
-							{2\over (s-1)^2+4}
-							-
-							{s+1\over (s+1)^2+9}
-							-
-							{4\over (s+1)^2+9} \\
-						\end {align*}
-
-						And finally we can find the inverse Laplace transforms
-
-						\begin {align*} 
-							& \, {\cal L}^{-1}\left[ {17 s-15\over (s^2-2s+5)(s^2+2s+10)} \right] \\ \\
-							= & \,
-							{\cal L}^{-1}\left[
-							{s-1\over (s-1)^2+4}
-							\right]
-							+
-							2 \, 
-							{\cal L}^{-1}\left[
-							{1\over (s-1)^2+4}
-							\right]
-							-
-							{\cal L}^{-1}\left[
-							{s+1\over (s+1)^2+9}
-							\right] 
-							-
-							4\, 
-							{\cal L}^{-1}\left[
-							{1\over (s+1)^2+9} \right]  \\
-							= & \,
-							\underset{e^{t}\cos 2t}{\underbrace{{\cal L}^{-1}\left[
-							{s-1\over (s-1)^2+4}
-							\right]}} 
-							+ 
-							\underset{e^{t}\sin 2t}{\underbrace{
-							{\cal L}^{-1}\left[
-							{2\over (s-1)^2+4}
-							\right]}} 
-							-
-							\underset{e^{-t}\cos 3t}{\underbrace{
-							{\cal L}^{-1}\left[
-							{s+1\over (s+1)^2+9}
-							\right] }}
-							-
-							\frac{4}{3}\, 
-							\underset{e^{-t}\sin 3t}{\underbrace{
-							{\cal L}^{-1}\left[
-							{3\over (s+1)^2+9} \right] }}  \\
-							= & \,
-							\quad
-							e^{t}\cos 2t
-							\quad
-							+
-							\quad
-							\, 
-							e^{t}\sin 2t
-							\quad
-							-
-							\quad
-							e^{-t}\cos 3t
-							\quad
-							-
-							\quad
-							\frac{4}{3}\, 
-							e^{-t}\sin 3t \\
-							= & \,
-							
-							\Big(\cos 2t
-							
-							+
-							 
-							\sin 2t\Big)
-							e^{t}
-							
-							-
-							
-							\Big(\cos 3t
-						
-							-
-							
-							\frac{4}{3}\, 
-							\sin 3t \Big)
-							e^{-t} \\
-						\end {align*}
+								\begin {align*} 
+									& \, {\cal L}^{-1}\left[ {17 s-15\over (s^2-2s+5)(s^2+2s+10)} \right] \\ \\
+									= & \,
+									{\cal L}^{-1}\left[
+									{s-1\over (s-1)^2+4}
+									\right]
+									+
+									2 \, 
+									{\cal L}^{-1}\left[
+									{1\over (s-1)^2+4}
+									\right]
+									-
+									{\cal L}^{-1}\left[
+									{s+1\over (s+1)^2+9}
+									\right] 
+									-
+									4\, 
+									{\cal L}^{-1}\left[
+									{1\over (s+1)^2+9} \right]  \\
+									= & \,
+									\underset{e^{t}\cos 2t}{\underbrace{{\cal L}^{-1}\left[
+									{s-1\over (s-1)^2+4}
+									\right]}} 
+									+ 
+									\underset{e^{t}\sin 2t}{\underbrace{
+									{\cal L}^{-1}\left[
+									{2\over (s-1)^2+4}
+									\right]}} 
+									-
+									\underset{e^{-t}\cos 3t}{\underbrace{
+									{\cal L}^{-1}\left[
+									{s+1\over (s+1)^2+9}
+									\right] }}
+									-
+									\frac{4}{3}\, 
+									\underset{e^{-t}\sin 3t}{\underbrace{
+									{\cal L}^{-1}\left[
+									{3\over (s+1)^2+9} \right] }}  \\
+									= & \,
+									\quad
+									e^{t}\cos 2t
+									\quad
+									+
+									\quad
+									\, 
+									e^{t}\sin 2t
+									\quad
+									-
+									\quad
+									e^{-t}\cos 3t
+									\quad
+									-
+									\quad
+									\frac{4}{3}\, 
+									e^{-t}\sin 3t \\
+									= & \,
+									
+									\Big(\cos 2t
+									
+									+
+									
+									\sin 2t\Big)
+									e^{t}
+									
+									-
+									
+									\Big(\cos 3t
+								
+									-
+									
+									\frac{4}{3}\, 
+									\sin 3t \Big)
+									e^{-t} \\
+								\end {align*}
 
 
 
-					</div>	
-
-					
-
-
+							</div>	
+						</li>
+					</ol>
 				</details>
 			</div>	
 			

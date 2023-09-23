@@ -137,58 +137,65 @@
 				
 				<details class="solution">
 					<summary>Solution</summary>
-					<div>
-						From <a href="#x1-4r2">(8.1.2)</a> with \(f(t)=t\)
+					<ol>
+						<li class="no-part">
+							<div>
+								From <a href="#x1-4r2">(8.1.2)</a> with \(f(t)=t\)
 
-						<a id="x1-9r5"></a> 
-						\begin {align} \label {eq:8.1.5}
-							{\cal L} \big\{ t \big\} 
-								= & \int _0^\infty t \, e^{-st} \, dt \\
+								<a id="x1-9r5"></a> 
+								\begin {align} \label {eq:8.1.5}
+									{\cal L} \big\{ t \big\} 
+										= & \int _0^\infty t \, e^{-st} \, dt \\
 
-								= & \int _0^\infty t \, e^{-st} \, dt \nonumber \\
+										= & \int _0^\infty t \, e^{-st} \, dt \nonumber \\
 
-								= & \frac{1}{s^2} \int _0^\infty \overset{w}{\overbrace{(-s)t}} \, e^{\overset{w}{\overbrace{-st}}} \, \underset{dw}{\underbrace{(-s)dt}} \nonumber \\
+										= & \frac{1}{s^2} \int _0^\infty \overset{w}{\overbrace{(-s)t}} \, e^{\overset{w}{\overbrace{-st}}} \, \underset{dw}{\underbrace{(-s)dt}} \nonumber \\
 
-								= & \frac{1}{s^2} \int _0^\infty w \, e^{w} \, dw \nonumber \\
-						\end {align}
+										= & \frac{1}{s^2} \int _0^\infty w \, e^{w} \, dw \nonumber \\
+								\end {align}
 
-						Then using <span class="vocab">IBP</span> (Example <a href="sec2.4.book.html#x1-41" target=_blank>2.4.1</a>)  
+								Then using <span class="vocab">IBP</span> (Example <a href="sec2.4.book.html#x1-41" target=_blank>2.4.1</a>)  
 
-						\begin {align} 
-							{\cal L} \big\{ t \big\} 
-								= & \frac{1}{s^2} \int _0^\infty \overset{U}{\overbrace{w}} \, \overset{dV}{\overbrace{e^{w}  \, dw }} \nonumber \\
-								= & \frac{1}{s^2} \Bigg[ \, w e^w - \int _0^\infty e^{w} \, dw \, \Bigg] \nonumber \\
-								= & \frac{1}{s^2} \lim_{x \to \infty} \Bigg. \Big[ \, (w - 1) e^w \, \Big] \Bigg|_{s=0}^{s=x} \nonumber \\
-								= & -\frac{1}{s^2} \lim_{x \to \infty} \Bigg. \Big[ \, (st + 1) e^{-st} \, \Big] \Bigg|_{t=0}^{t=x} \nonumber \\
-								= & -\frac{1}{s^2} \lim_{x \to \infty} \Big[ \, (sx + 1) e^{-sx} - 1\, \Big] \nonumber \\
-								= & \frac{1}{s^2}  \Big[ \, 1 -  \lim_{x \to \infty} (sx + 1) e^{-sx} \, \Big] \nonumber \\
-						\end {align}
+								\begin {align} 
+									{\cal L} \big\{ t \big\} 
+										= & \frac{1}{s^2} \int _0^\infty \overset{U}{\overbrace{w}} \, \overset{dV}{\overbrace{e^{w}  \, dw }} \nonumber \\
+										= & \frac{1}{s^2} \Bigg[ \, w e^w - \int _0^\infty e^{w} \, dw \, \Bigg] \nonumber \\
+										= & \frac{1}{s^2} \lim_{x \to \infty} \Bigg. \Big[ \, (w - 1) e^w \, \Big] \Bigg|_{s=0}^{s=x} \nonumber \\
+										= & -\frac{1}{s^2} \lim_{x \to \infty} \Bigg. \Big[ \, (st + 1) e^{-st} \, \Big] \Bigg|_{t=0}^{t=x} \nonumber \\
+										= & -\frac{1}{s^2} \lim_{x \to \infty} \Big[ \, (sx + 1) e^{-sx} - 1\, \Big] \nonumber \\
+										= & \frac{1}{s^2}  \Big[ \, 1 -  \lim_{x \to \infty} (sx + 1) e^{-sx} \, \Big] \nonumber \\
+								\end {align}
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
+								Now to evaluate the limit, we'll apply L'Hôpital's rule
 
-						Now to evaluate the limit, we'll apply L'Hôpital's rule
+								\begin {align} 
+									\lim_{x \to \infty} \, (sx + 1) e^{-sx}
+									= & \lim_{x \to \infty} \left( \frac{sx + 1}{e^{sx}} \right) \nonumber \\
+									= & \lim_{x \to \infty} \left( \dfrac{\dfrac{d}{dx} \Big(sx + 1 \Big)}{\dfrac{d}{dx} \Big( e^{sx} \Big) } \right) = \lim_{x \to \infty}\left( \dfrac{s}{s \, e^{sx} } \right) \nonumber \\
+									= & \lim_{x \to \infty}\left( \dfrac{1}{e^{sx} } \right)
+									= \lim_{x \to \infty} \Big( e^{-sx} \Big)
+									= e^{-\infty} = 0 \nonumber \\
+								\end {align}
 
-						\begin {align} 
-							\lim_{x \to \infty} \, (sx + 1) e^{-sx}
-							= & \lim_{x \to \infty} \left( \frac{sx + 1}{e^{sx}} \right) \nonumber \\
-							= & \lim_{x \to \infty} \left( \dfrac{\dfrac{d}{dx} \Big(sx + 1 \Big)}{\dfrac{d}{dx} \Big( e^{sx} \Big) } \right) = \lim_{x \to \infty}\left( \dfrac{s}{s \, e^{sx} } \right) \nonumber \\
-							= & \lim_{x \to \infty}\left( \dfrac{1}{e^{sx} } \right)
-							= \lim_{x \to \infty} \Big( e^{-sx} \Big)
-							= e^{-\infty} = 0 \nonumber \\
-						\end {align}
+								Substituting the zero for the limit back in
 
-						Substituting the zero for the limit back in
-
-						\begin {align} 
-							{\cal L} \big\{ t \big\} 
-								= & \frac{1}{s^2}  \Big[ \, 1 -  \underset{0}{\underbrace{\lim_{x \to \infty} (sx + 1) e^{-sx}}} \, \Big] = \frac{1}{s^2} 
-								\quad\quad s>0 \nonumber \\
-						\end {align}
-						
-						This result can be written in <span class="vocab">operator notation</span> as 
-						
-						\[ {\cal L} \big\{ t \big\} ={1\over s^2}\quad\quad  s&gt;0\] or as the <span class="vocab">transform pair</span>
-						
-						\[ t \longleftrightarrow {1\over s^2}\quad \quad s&gt;0\]
-					</div>	
+								\begin {align} 
+									{\cal L} \big\{ t \big\} 
+										= & \frac{1}{s^2}  \Big[ \, 1 -  \underset{0}{\underbrace{\lim_{x \to \infty} (sx + 1) e^{-sx}}} \, \Big] = \frac{1}{s^2} 
+										\quad\quad s>0 \nonumber \\
+								\end {align}
+								
+								This result can be written in <span class="vocab">operator notation</span> as 
+								
+								\[ {\cal L} \big\{ t \big\} ={1\over s^2}\quad\quad  s&gt;0\] or as the <span class="vocab">transform pair</span>
+								
+								\[ t \longleftrightarrow {1\over s^2}\quad \quad s&gt;0\]
+							</div>	
+						</li>
+					</ol>
 
 				</details>
 			</div>
@@ -205,58 +212,65 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					<div>
-						From <a href="#x1-4r2">(8.1.2)</a> with \( f(t)=e^{at} \)
+					<ol>
+						<li class="no-part">
+							<div>
+								From <a href="#x1-4r2">(8.1.2)</a> with \( f(t)=e^{at} \)
 
-						\begin {align*} 
-							{\cal L} \big\{ e^{at} \big\} 
-								= & \int _0^\infty e^{at} \, e^{-st} \, dt \\
+								\begin {align*} 
+									{\cal L} \big\{ e^{at} \big\} 
+										= & \int _0^\infty e^{at} \, e^{-st} \, dt \\
 
-								= & \int _0^\infty e^{(a-s)t} \, dt \nonumber \\
+										= & \int _0^\infty e^{(a-s)t} \, dt \nonumber \\
 
-								= & \frac{1}{a-s} \int _0^\infty e^{\overset{w}{\overbrace{(a-s)t}}} \, \underset{dw}{\underbrace{(a-s)dt}} \nonumber \\
+										= & \frac{1}{a-s} \int _0^\infty e^{\overset{w}{\overbrace{(a-s)t}}} \, \underset{dw}{\underbrace{(a-s)dt}} \nonumber \\
 
-								= & \frac{1}{a-s} \int _0^\infty e^{w} \, dw \nonumber \\
-								= & \frac{1}{a-s}  \lim_{x \to \infty} \Bigg. \Big[ \, e^{(a-s)t} \Big] \Bigg|_{t=0}^{t=x} \nonumber \\
-								= & \frac{1}{a-s}  \lim_{x \to \infty} \Big[ \, e^{(a-s)x} - 1 \Big]  \nonumber \\
-								= & \frac{1}{s-a}  \Big[ \, 1 - \lim_{x \to \infty}  e^{(a-s)x} \Big]  \nonumber \\
-						\end {align*}
+										= & \frac{1}{a-s} \int _0^\infty e^{w} \, dw \nonumber \\
+										= & \frac{1}{a-s}  \lim_{x \to \infty} \Bigg. \Big[ \, e^{(a-s)t} \Big] \Bigg|_{t=0}^{t=x} \nonumber \\
+										= & \frac{1}{a-s}  \lim_{x \to \infty} \Big[ \, e^{(a-s)x} - 1 \Big]  \nonumber \\
+										= & \frac{1}{s-a}  \Big[ \, 1 - \lim_{x \to \infty}  e^{(a-s)x} \Big]  \nonumber \\
+								\end {align*}
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 
-						Now to evaluate the limit, we'll consider cases for \(a-s\). First if \(a-s > 0 \) then the limit diverges, so the <span class="vocab-repeat">Laplace transform</span> is not defined for those values, whereas if \(a-s < 0 \) then the limit converges to zero, so we obtain: 
+								Now to evaluate the limit, we'll consider cases for \(a-s\). First if \(a-s > 0 \) then the limit diverges, so the <span class="vocab-repeat">Laplace transform</span> is not defined for those values, whereas if \(a-s < 0 \) then the limit converges to zero, so we obtain: 
 
-						\begin {align*} 
-							{\cal L} \big\{ e^{at} \big\} 
-								= & \frac{1}{s-a} \, \Big[ \, 1 - \lim_{x \to \infty}e^{(a-s)x} \, \Big] \nonumber \\
-								= & \frac{1}{s-a} \, \Big[ \, 1 - 0 \, \Big] \nonumber \\
-								= & \frac{1}{s-a}
-						\end {align*}	
-						
-						This result can be written in <span class="vocab">operator notation</span> as 
-						
-						\[ {\cal L} \big\{ e^{at} \big\} ={1\over s-a}\quad\quad  s&gt;a\] or as the <span class="vocab">transform pair</span>
-						
-						\[ e^{at} \longleftrightarrow {1\over s-a}\quad \quad s&gt;a\]
-
-					</div>	
-					<br>
-					<hr>
-					<br>
-					<div>
-						We'll now summarize the results from the last two examples. 
-						In Example <a href="#x1-51">8.1.1</a> we found 
-						\[	{\cal L} \big\{ 1 \big\} = \frac{1}{s}\]
-
-						And in Example <a href="#x1-82">8.1.2</a> we found
-
-						\[	{\cal L} \big\{ e^{at} \big\} = \frac{1}{s-a}\]
-
-						We will be using these results later on when we discuss the 
-						<span class="vocab">First Shifting Theorem</span> (Theorem&nbsp;<a href="#x1-193">8.1.3</a>)
-
-						
-						 
-					</div>
+								\begin {align*} 
+									{\cal L} \big\{ e^{at} \big\} 
+										= & \frac{1}{s-a} \, \Big[ \, 1 - \lim_{x \to \infty}e^{(a-s)x} \, \Big] \nonumber \\
+										= & \frac{1}{s-a} \, \Big[ \, 1 - 0 \, \Big] \nonumber \\
+										= & \frac{1}{s-a}
+								\end {align*}	
+								
+								This result can be written in <span class="vocab">operator notation</span> as 
+								
+								\[ {\cal L} \big\{ e^{at} \big\} ={1\over s-a}\quad\quad  s&gt;a\] or as the <span class="vocab">transform pair</span>
+								
+								\[ e^{at} \longleftrightarrow {1\over s-a}\quad \quad s&gt;a\]
+							</div>
+						</li>
+					</ol>
 				</details>
+			</div>
+			
+			<br>
+			<hr>
+			<br>
+
+			<div id="summarize-results">
+				We'll now summarize the results from the last two examples. 
+				In Example <a href="#x1-51">8.1.1</a> we found 
+				\[	{\cal L} \big\{ 1 \big\} = \frac{1}{s}\]
+
+				And in Example <a href="#x1-82">8.1.2</a> we found
+
+				\[	{\cal L} \big\{ e^{at} \big\} = \frac{1}{s-a}\]
+
+				We will be using these results later on when we discuss the 
+				<span class="vocab">First Shifting Theorem</span> (Theorem&nbsp;<a href="#x1-193">8.1.3</a>)
+				 
 			</div>
 
 			<br>
@@ -270,179 +284,189 @@
 				</div>	
 				<details class="solution">
 					<summary>Solution</summary>
-					<div>
-						With \(f(t)=\sin \omega t\) and \(g(t)=\cos \omega t\) we'll define the following 
-						
-						\[
-							F(s) = {\cal L} \big\{ f(t) \big\}
-							= {\cal L} \big\{ \sin \omega t \big\}
-						\]
-						\[		
-							G(s) = {\cal L} \big\{ g(t) \big\}
-							= {\cal L} \big\{ \cos \omega t \big\}
+					<ol>
+						<li class="no-part">
+							<div>
+								With \(f(t)=\sin \omega t\) and \(g(t)=\cos \omega t\) we'll define the following 
+								
+								\[
+									F(s) = {\cal L} \big\{ f(t) \big\}
+									= {\cal L} \big\{ \sin \omega t \big\}
+								\]
+								\[		
+									G(s) = {\cal L} \big\{ g(t) \big\}
+									= {\cal L} \big\{ \cos \omega t \big\}
 
-						\]
+								\]
 
-						Then from <a href="#x1-4r2">(8.1.2)</a> we have 
+								Then from <a href="#x1-4r2">(8.1.2)</a> we have 
 
-						<a id="x1-12r6"></a>
-						\begin {equation}
-							\label {eq:8.1.6} 
-							F(s)=\int _0^\infty \, e^{-st}\sin \omega t \, dt 
-						\end {equation}
-
-
-						<a id="x1-13r7"></a>
-						\begin {equation}
-							\label {eq:8.1.7} 
-							G(s)=\int _0^\infty \, e^{-st}\cos \omega t \, dt 
-						\end {equation}
-						
-						Integrating <a href="#x1-12r6">(8.1.6)</a> requires <span class="vocab">IBP</span> (Example <a href="#x1-82">8.1.2</a>)
-					</div>
-					<div>
-						\begin {align*} 
-							F(s)=\int _0^\infty \, \overset{U}{\overbrace{\sin \omega t}}  \,\,  \overset{dV}{\overbrace{e^{-st} \, dt }}
-						\end {align*}
-					</div>	
-					<div class="reading-exercise">
-						Differentiate \(U=\sin \omega t\)
-					</div>	
-					<div class="reading-exercise">
-						Antidifferentiate \(dV= e^{-st} \, dt\)
-					</div>	
-					<div class="reading-exercise">
-						Apply <span class="vocab-repeat">IBP</span> with \(U=\sin \omega t\) and \(dV= e^{-st} \, dt\)
-					</div>	
-					<div>
-						\begin {align*} 
-							F(s)
-								=-\frac{1}{s} \lim_{x \to \infty} \Bigg. \Big[ \, e^{-st}\sin \omega t \, \Big] \Bigg|_{0}^{x} 
-									+ \frac{\omega}{s} \int _0^\infty \, e^{-st}\cos \omega t \, dt 
-						\end {align*}
-
-						When we studied calculus, we learned to apply <span class="vocab-repeat">IBP</span> again and then combine the result with itself and solve for the original integral. However, in this case, after applying <span class="vocab-repeat">IBP</span> once we actually are able to recognize the integral on the right side as <a href="#x1-13r7">(8.1.7)</a> so we obtain the equation
-
-						\begin {align*} 
-							F(s)
-								= & \frac{1}{s} \Big[ \, \underset{0}{\underbrace{e^0 \, \sin 0}} -  \underset{0}{\underbrace{ \lim_{x \to \infty} \Big( e^{-sx}\sin \omega x \Big) }} \, \Big] 
-									+ \frac{\omega}{s} \, \underset{G(s)}{\underbrace{ \int _0^\infty \, e^{-st} \, \cos \omega t \, dt}} \\				
-						\end {align*}
+								<a id="x1-12r6"></a>
+								\begin {equation}
+									\label {eq:8.1.6} 
+									F(s)=\int _0^\infty \, e^{-st}\sin \omega t \, dt 
+								\end {equation}
 
 
-						\begin {align*} 
-							F(s)
-								= & \frac{\omega}{s} \, G(s) \\				
-						\end {align*}
+								<a id="x1-13r7"></a>
+								\begin {equation}
+									\label {eq:8.1.7} 
+									G(s)=\int _0^\infty \, e^{-st}\cos \omega t \, dt 
+								\end {equation}
+								
+								Integrating <a href="#x1-12r6">(8.1.6)</a> requires <span class="vocab">IBP</span> (Example <a href="#x1-82">8.1.2</a>)
+							</div>
+							<div>
+								\begin {align*} 
+									F(s)=\int _0^\infty \, \overset{U}{\overbrace{\sin \omega t}}  \,\,  \overset{dV}{\overbrace{e^{-st} \, dt }}
+								\end {align*}
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(U=\sin \omega t\)
+							</div>	
+							<div class="reading-exercise">
+								Antidifferentiate \(dV= e^{-st} \, dt\)
+							</div>	
+							<div class="reading-exercise">
+								Apply <span class="vocab-repeat">IBP</span> with \(U=\sin \omega t\) and \(dV= e^{-st} \, dt\)
+							</div>	
+						</li>
+						<li class="no-part">
+							<div>
+								\begin {align*} 
+									F(s)
+										=-\frac{1}{s} \lim_{x \to \infty} \Bigg. \Big[ \, e^{-st}\sin \omega t \, \Big] \Bigg|_{0}^{x} 
+											+ \frac{\omega}{s} \int _0^\infty \, e^{-st}\cos \omega t \, dt 
+								\end {align*}
 
-						Now we'll apply IBP to <a href="#x1-13r7">(8.1.7)</a> to obtain a second equation:
+								When we studied calculus, we learned to apply <span class="vocab-repeat">IBP</span> again and then combine the result with itself and solve for the original integral. However, in this case, after applying <span class="vocab-repeat">IBP</span> once we actually are able to recognize the integral on the right side as <a href="#x1-13r7">(8.1.7)</a> so we obtain the equation
 
-						
-					</div>
-
-					<div>
-						\begin {align*} 
-							G(s)=\int _0^\infty \, \overset{U}{\overbrace{\cos \omega t}}  \,\,  \overset{dV}{\overbrace{e^{-st} \, dt }}
-						\end {align*}
-					</div>	
-					<div class="reading-exercise">
-						Differentiate \(U=\cos \omega t\)
-					</div>	
-					<div class="reading-exercise">
-						Antidifferentiate \(dV= e^{-st} \, dt\)
-					</div>	
-					<div class="reading-exercise">
-						Apply <span class="vocab-repeat">IBP</span> with \(U=\cos \omega t\) and \(dV= e^{-st} \, dt\)
-					</div>	
-					<div>
-						\begin {align*} 
-							G(s)
-								=-\frac{1}{s} \lim_{x \to \infty} \Bigg. \Big[ \, e^{-st}\cos \omega t \, \Big] \Bigg|_{0}^{x} 
-									- \frac{\omega}{s} \int _0^\infty \, e^{-st}\sin \omega t \, dt 
-						\end {align*}
-
-						After applying <span class="vocab-repeat">IBP</span> we can again recognize the integral on the right side as <a href="#x1-12r6">(8.1.6)</a>  so we obtain the equation
-
-						\begin {align*} 
-							G(s)
-								= & \frac{1}{s} \Big[ \, \underset{1}{\underbrace{e^0 \, \cos 0}} -  \underset{0}{\underbrace{ \lim_{x \to \infty} \Big( e^{-sx}\cos \omega x \Big) }} \, \Big] 
-									- \frac{\omega}{s} \, \underset{G(s)}{\underbrace{ \int _0^\infty \, e^{-st} \, \cos \omega t \, dt}} \\				
-						\end {align*}
+								\begin {align*} 
+									F(s)
+										= & \frac{1}{s} \Big[ \, \underset{0}{\underbrace{e^0 \, \sin 0}} -  \underset{0}{\underbrace{ \lim_{x \to \infty} \Big( e^{-sx}\sin \omega x \Big) }} \, \Big] 
+											+ \frac{\omega}{s} \, \underset{G(s)}{\underbrace{ \int _0^\infty \, e^{-st} \, \cos \omega t \, dt}} \\				
+								\end {align*}
 
 
-						\begin {align*} 
-							G(s)
-								= & \frac{1}{s} - \frac{\omega}{s} \, F(s) \\				
-						\end {align*}
+								\begin {align*} 
+									F(s)
+										= & \frac{\omega}{s} \, G(s) \\				
+								\end {align*}
 
-						So we have the system of equations
+								Now we'll apply IBP to <a href="#x1-13r7">(8.1.7)</a> to obtain a second equation:
 
-						<a id="x1-14r8"></a>
-						\begin {align}  \label {eq:8.1.8} 
-							\left\{
-								\begin{array}{rrl}
-									F(s) &=& \dfrac{\omega}{s} \, G(s)  \\ \\
-									G(s) &=& \dfrac{1}{s} - \dfrac{\omega}{s} \, F(s) \\
-								\end{array}
-							\right.			
-						\end {align}
+								
+							</div>
 
-					</div>	
-					<div class="reading-exercise">
-						Solve the system <a href="#x1-14r8">(8.1.8)</a>
-					</div>	
-					<div>
-						\begin {align*} 
-							G(s) = & \frac{1}{s} - \frac{\omega}{s} \, F(s) \\	
-							G(s) = & \frac{1}{s} - \frac{\omega^2}{s^2} \, G(s)\\
-							G(s) + \frac{\omega^2}{s^2} \, G(s) = & \frac{1}{s} \\	
-							\left( 1 + \frac{\omega^2}{s^2} \right) \, G(s) = & \frac{1}{s} \\	
-							\left( \frac{s^2 + \omega^2}{s^2} \right) \, G(s) = & \frac{1}{s} \\
-							\Longrightarrow	
-							G(s) = & \frac{s}{s^2 + \omega^2} \quad\quad\quad s>0 \\				
-						\end {align*}
+							<div>
+								\begin {align*} 
+									G(s)=\int _0^\infty \, \overset{U}{\overbrace{\cos \omega t}}  \,\,  \overset{dV}{\overbrace{e^{-st} \, dt }}
+								\end {align*}
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(U=\cos \omega t\)
+							</div>	
+							<div class="reading-exercise">
+								Antidifferentiate \(dV= e^{-st} \, dt\)
+							</div>	
+							<div class="reading-exercise">
+								Apply <span class="vocab-repeat">IBP</span> with \(U=\cos \omega t\) and \(dV= e^{-st} \, dt\)
+							</div>	
+						</li>
+						<li class="no-part">
+							<div>
+								\begin {align*} 
+									G(s)
+										=-\frac{1}{s} \lim_{x \to \infty} \Bigg. \Big[ \, e^{-st}\cos \omega t \, \Big] \Bigg|_{0}^{x} 
+											- \frac{\omega}{s} \int _0^\infty \, e^{-st}\sin \omega t \, dt 
+								\end {align*}
 
-						Substituting back in we obtain
+								After applying <span class="vocab-repeat">IBP</span> we can again recognize the integral on the right side as <a href="#x1-12r6">(8.1.6)</a>  so we obtain the equation
 
-						\begin {align*} 
-							F(s) = & \dfrac{\omega}{s} \, G(s)	\\		
-							F(s) = & \dfrac{\omega}{s} \, \left( \frac{s}{s^2 + \omega^2} \right) \\
-							\Longrightarrow	
-							F(s) = & \, \frac{\omega}{s^2 + \omega^2} \quad\quad\quad s>0	\\		
-						\end {align*}
-					
-					</div>	
-					<div>
-						Our results in <span class="vocab">operator notation</span>  
-						\[
-							F(s)
-							= {\cal L} \big\{ \sin \omega t \big\}
-							=  \frac{\omega}{s^2 + \omega^2} 
-							\quad\quad\quad s>0
-						\]
-						\[		
-							G(s)
-							= {\cal L} \big\{ \cos \omega t \big\}
-							= \frac{s}{s^2 + \omega^2}
-							\quad\quad\quad s>0
-						\]
+								\begin {align*} 
+									G(s)
+										= & \frac{1}{s} \Big[ \, \underset{1}{\underbrace{e^0 \, \cos 0}} -  \underset{0}{\underbrace{ \lim_{x \to \infty} \Big( e^{-sx}\cos \omega x \Big) }} \, \Big] 
+											- \frac{\omega}{s} \, \underset{G(s)}{\underbrace{ \int _0^\infty \, e^{-st} \, \cos \omega t \, dt}} \\				
+								\end {align*}
 
-						Or written as <span class="vocab">transform pairs</span>
 
-						\[		
-							\sin \omega t
-							\longleftrightarrow
-							\frac{\omega}{s^2 + \omega^2}
-							\quad\quad\quad s>0
-						\]
-						\[		
-							\cos \omega t
-							\longleftrightarrow
-							\frac{s}{s^2 + \omega^2}
-							\quad\quad\quad s>0
-						\]
+								\begin {align*} 
+									G(s)
+										= & \frac{1}{s} - \frac{\omega}{s} \, F(s) \\				
+								\end {align*}
 
-					</div>	
+								So we have the system of equations
+
+								<a id="x1-14r8"></a>
+								\begin {align}  \label {eq:8.1.8} 
+									\left\{
+										\begin{array}{rrl}
+											F(s) &=& \dfrac{\omega}{s} \, G(s)  \\ \\
+											G(s) &=& \dfrac{1}{s} - \dfrac{\omega}{s} \, F(s) \\
+										\end{array}
+									\right.			
+								\end {align}
+
+							</div>	
+							<div class="reading-exercise">
+								Solve the system <a href="#x1-14r8">(8.1.8)</a>
+							</div>	
+						</li>
+						<li class="no-part">
+							<div>
+								\begin {align*} 
+									G(s) = & \frac{1}{s} - \frac{\omega}{s} \, F(s) \\	
+									G(s) = & \frac{1}{s} - \frac{\omega^2}{s^2} \, G(s)\\
+									G(s) + \frac{\omega^2}{s^2} \, G(s) = & \frac{1}{s} \\	
+									\left( 1 + \frac{\omega^2}{s^2} \right) \, G(s) = & \frac{1}{s} \\	
+									\left( \frac{s^2 + \omega^2}{s^2} \right) \, G(s) = & \frac{1}{s} \\
+									\Longrightarrow	
+									G(s) = & \frac{s}{s^2 + \omega^2} \quad\quad\quad s>0 \\				
+								\end {align*}
+
+								Substituting back in we obtain
+
+								\begin {align*} 
+									F(s) = & \dfrac{\omega}{s} \, G(s)	\\		
+									F(s) = & \dfrac{\omega}{s} \, \left( \frac{s}{s^2 + \omega^2} \right) \\
+									\Longrightarrow	
+									F(s) = & \, \frac{\omega}{s^2 + \omega^2} \quad\quad\quad s>0	\\		
+								\end {align*}
+							
+							</div>	
+							<div>
+								Our results in <span class="vocab">operator notation</span>  
+								\[
+									F(s)
+									= {\cal L} \big\{ \sin \omega t \big\}
+									=  \frac{\omega}{s^2 + \omega^2} 
+									\quad\quad\quad s>0
+								\]
+								\[		
+									G(s)
+									= {\cal L} \big\{ \cos \omega t \big\}
+									= \frac{s}{s^2 + \omega^2}
+									\quad\quad\quad s>0
+								\]
+
+								Or written as <span class="vocab">transform pairs</span>
+
+								\[		
+									\sin \omega t
+									\longleftrightarrow
+									\frac{\omega}{s^2 + \omega^2}
+									\quad\quad\quad s>0
+								\]
+								\[		
+									\cos \omega t
+									\longleftrightarrow
+									\frac{s}{s^2 + \omega^2}
+									\quad\quad\quad s>0
+								\]
+
+							</div>	
+						</li>
+					</ol>
 				</details>
 			</div>
 			<br>
@@ -627,8 +651,7 @@
 				 
 			</div>
 			<div class="theorem" id="x1-162">
-				<span class="head">Theorem&nbsp;8.1.2</span>
-				<strong>Linearity Property</strong>
+				<span class="head">Theorem&nbsp;8.1.2 Linearity Property</span>
 
 				<div>
 					Suppose \( {\cal L} \big\{ f(t) \big\} \) and \( {\cal L} \big\{ g(t) \big\} \) Laplace transforms are defined. Then the following properties are true:
@@ -750,7 +773,7 @@
 
 			<!--First Shifting Theorem--> 
 			<div class="theorem" id="x1-193">
-				<span class="head">Theorem&nbsp;8.1.3</span> <span class="vocab">First Shifting Theorem</span>
+				<span class="head">Theorem&nbsp;8.1.3 <span class="vocab">First Shifting Theorem</span></span>
 				<div>
 					Recall the Laplace transform definition <a href="#x1-4r2">(8.1.2)</a> where we define the Laplace transform of \(f(t)\)
 
@@ -855,10 +878,11 @@
 
 								This is exactly the result of the <span class="vocab">First Shifting Theorem</span> (Theorem&nbsp;<a href="#x1-193">8.1.3</a>) where we can use the result of \( {\cal L} \big\{ 1  \big\} = 1/s\) to find \( {\cal L} \big\{ 1 \cdot e^{at} \big\} =1/(s-a)\) by shifting the result by \(a\)
 							</div>
+
+							<br>
+							<hr>
+							<br>
 						</li>
-						<br>
-						<hr>
-						<br>
 						<li>
 							<div>
 								In Example <a href="#x1-82">8.1.2</a> we calculated \( {\cal L} \big\{ t \big\} \) using <a href="#x1-82">8.1.2</a> 
@@ -924,11 +948,11 @@
 									= F(s-a) 
 								\end{align*}
 							</div>
+							<br>
+							<hr>
+							<br>
 						</li>
-						<br>
-						<hr>
-						<br>
-						<li>
+						<li class="continued">
 							<div>
 								In Example <a href="#x1-114">8.1.4</a> we found 
 								
@@ -949,10 +973,10 @@
 									= F(s-a) 
 								\end{align*}
 							</div>
+							<br>
+							<hr>
+							<br>
 						</li>
-						<br>
-						<hr>
-						<br>
 						<li>
 							<div>
 								In Example <a href="#x1-114">8.1.4</a> we found 
@@ -974,7 +998,7 @@
 									= F(s-a) 
 								\end{align*}
 							</div>
-						</li>						
+						</li>
 					</ol>
 
 
@@ -1196,107 +1220,115 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					<div>
-						To show the function \(f(t)\) is <span class="vocab-repeat">piecewise continuous</span> we will first examine each piece. The first piece is \(f(t)=1\) defined on the  interval \([0,1)\) and as a constant function is continuous. The second piece \(f(t)=-3e^{-t}\) defined on the  interval \([1,\infty)\) and as an exponential function is continuous.
-						Now we have to evaluate the limit from either side of \(x=1\)
-						
-						\begin{align*}
-							\lim_{t \to 1^-} \, f(t)
-							 = & \lim_{t \to 1^-} \, 1 = 1 \\ 
-							 \lim_{t \to 1^+} \, f(t)
-							 = & \lim_{t \to 1^+} \, -3e^{-t} = -\frac{3}{e}  \\  
-						\end{align*}
-						
-						Since \(\displaystyle \lim_{t \to 1^-} f(t) \ne \displaystyle \lim_{t \to 1^+} f(t) \) and both different finite values, then \(f(t)\) has a <span class="vocab-repeat">jump discontinuity</span> at \(x=1.\) 
-						Now to find the Laplace transform of \(f(t)\) we will split the integral based on the piece-wise definition of the function
+					<ol>
+						<li class="no-part">
+							<div>
+								To show the function \(f(t)\) is <span class="vocab-repeat">piecewise continuous</span> we will first examine each piece. The first piece is \(f(t)=1\) defined on the  interval \([0,1)\) and as a constant function is continuous. The second piece \(f(t)=-3e^{-t}\) defined on the  interval \([1,\infty)\) and as an exponential function is continuous.
+								Now we have to evaluate the limit from either side of \(x=1\)
+								
+								\begin{align*}
+									\lim_{t \to 1^-} \, f(t)
+									= & \lim_{t \to 1^-} \, 1 = 1 \\ 
+									\lim_{t \to 1^+} \, f(t)
+									= & \lim_{t \to 1^+} \, -3e^{-t} = -\frac{3}{e}  \\  
+								\end{align*}
+								
+								Since \(\displaystyle \lim_{t \to 1^-} f(t) \ne \displaystyle \lim_{t \to 1^+} f(t) \) and both different finite values, then \(f(t)\) has a <span class="vocab-repeat">jump discontinuity</span> at \(x=1.\) 
+								Now to find the Laplace transform of \(f(t)\) we will split the integral based on the piece-wise definition of the function
 
-						\begin{align*}
-							{\cal L} \big\{ f(t) \big\} 
-								= & \int _0^\infty e^{-st} \, f(t)\,dt \\
-								= & \int _0^1 e^{-st} \, f(t)\,dt + \int _1^\infty e^{-st} \, f(t)\,dt \\
-								= & \int _0^1 e^{-st} \cdot 1 \,dt + \int _1^\infty e^{-st} \cdot -3e^{-t}\,dt \\
-								= & \int _0^1 e^{-st} \,dt -3 \int _1^\infty e^{-(s+1)t} \,dt \\
-						\end{align*}
+								\begin{align*}
+									{\cal L} \big\{ f(t) \big\} 
+										= & \int _0^\infty e^{-st} \, f(t)\,dt \\
+										= & \int _0^1 e^{-st} \, f(t)\,dt + \int _1^\infty e^{-st} \, f(t)\,dt \\
+										= & \int _0^1 e^{-st} \cdot 1 \,dt + \int _1^\infty e^{-st} \cdot -3e^{-t}\,dt \\
+										= & \int _0^1 e^{-st} \,dt -3 \int _1^\infty e^{-(s+1)t} \,dt \\
+								\end{align*}
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
+								So now we have two integrals to evaluate. The first integrand is the same one we computed in Example <a href="#x1-51">8.1.1</a> but this one is not an improper integral. When it was improper we considered cases and found we had to require \(s>0\) since it diverges otherwise. For this one it always converges, so we can allow \(s\) to be any value. So for cases we will consider \(s=0\) first, and the integral becomes
 
-						So now we have two integrals to evaluate. The first integrand is the same one we computed in Example <a href="#x1-51">8.1.1</a> but this one is not an improper integral. When it was improper we considered cases and found we had to require \(s>0\) since it diverges otherwise. For this one it always converges, so we can allow \(s\) to be any value. So for cases we will consider \(s=0\) first, and the integral becomes
+								\begin{align*}
+									\int _0^1 e^{0} \,dt = \int _0^1 \,dt
+									= t\Big|_0^{1}=1-0=1  \\
+								\end{align*}
 
-						\begin{align*}
-							 \int _0^1 e^{0} \,dt = \int _0^1 \,dt
-							 = t\Big|_0^{1}=1-0=1  \\
-						\end{align*}
+								And the other case is simply \(s \ne 0\) and we already found the antiderivative in Example <a href="#x1-51">8.1.1</a> so we will just evaluate it at these different limits of integration
 
-						And the other case is simply \(s \ne 0\) and we already found the antiderivative in Example <a href="#x1-51">8.1.1</a> so we will just evaluate it at these different limits of integration
+								\begin{align*}
+									\int _0^1 e^{-st} \,dt
+									=  -\frac{1}{s} \big[ e^{-st} \big] \Big|_{0}^{1}
+									=  -\frac{1}{s} \big[ e^{-s} - e^{0} \big]
+									=  \frac{1-e^{-s}}{s} 
+								\end{align*}
 
-						\begin{align*}
-							\int _0^1 e^{-st} \,dt
-							=  -\frac{1}{s} \big[ e^{-st} \big] \Big|_{0}^{1}
-							=  -\frac{1}{s} \big[ e^{-s} - e^{0} \big]
-							=  \frac{1-e^{-s}}{s} 
-						\end{align*}
+								Thus we have
+								\[ \int _0^1e^{-st}\,dt=
+									\left \{ 
+										\begin {array}{cl}
+											\displaystyle {{1-e^{-s}\over s}}&amp;\quad s\ne 0\\ 
+											1&amp;\quad s=0 
+										\end {array}
+									\right. 
+								\] 
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 
-						Thus we have
-						\[ \int _0^1e^{-st}\,dt=
-							\left \{ 
-								\begin {array}{cl}
-									\displaystyle {{1-e^{-s}\over s}}&amp;\quad s\ne 0\\ 
-									1&amp;\quad s=0 
-								\end {array}
-							\right. 
-						\] 
+								And now we have a new improper integral to evaluate
 
-						And now we have a new improper integral to evaluate
+								\begin{align*}
+									-3\int _1^\infty e^{-(s+1)t} \,dt 
+									= & -3 \cdot -\frac{1}{s+1}\int _1^\infty e^{\overset{w}{\overbrace{-(s+1)t}}} \,\, \overset{dw}{\overbrace{\big(-(s+1)dt\big)}} \\
+									= & \frac{3}{s+1} \lim_{x \to \infty} \left[ e^{-(s+1)t} \right] \Bigg|_{t=1}^{t=x} \\
+									= & \frac{3}{s+1} \lim_{x \to \infty} \left[ e^{-(s+1)x} - e^{-(s+1)1}  \right] \\
+									= & \frac{3}{s+1} \left[ e^{-\infty} - e^{-(s+1)}  \right] \\
+									= & -\frac{3e^{-(s+1)}}{s+1} 
+									\quad\quad\quad
+									s>-1
+								\end{align*}
 
-						\begin{align*}
-							-3\int _1^\infty e^{-(s+1)t} \,dt 
-							= & -3 \cdot -\frac{1}{s+1}\int _1^\infty e^{\overset{w}{\overbrace{-(s+1)t}}} \,\, \overset{dw}{\overbrace{\big(-(s+1)dt\big)}} \\
-							= & \frac{3}{s+1} \lim_{x \to \infty} \left[ e^{-(s+1)t} \right] \Bigg|_{t=1}^{t=x} \\
-							= & \frac{3}{s+1} \lim_{x \to \infty} \left[ e^{-(s+1)x} - e^{-(s+1)1}  \right] \\
-							= & \frac{3}{s+1} \left[ e^{-\infty} - e^{-(s+1)}  \right] \\
-							= & -\frac{3e^{-(s+1)}}{s+1} 
-							\quad\quad\quad
-							s>-1
-						\end{align*}
+								Now substituting back in, the Laplace transform \( {\cal L} \big\{ f(t) \big\} \) is the sum of these two integrals
 
-						Now substituting back in, the Laplace transform \( {\cal L} \big\{ f(t) \big\} \) is the sum of these two integrals
+								\begin{align*}
+									F(s) = {\cal L} \big\{ f(t) \big\} 
+										= & \underset{\left \{ 
+											\begin {array}{cl}
+												{{1-e^{-s}\over s}}&amp;\, s\ne 0\\ 
+												1&amp;\, s=0 
+											\end {array}
+										\right. }{\underbrace{\int _0^1 e^{-st} \,dt}} -3 \underset{ 
+										\left \{ 
+											\begin {array}{cl}
+												-\frac{3e^{-(s+1)}}{s+1}&amp;\, s > -1, s\ne 0 \\ 
+												-\frac{3}{e}&amp;\, s=0 
+											\end {array}
+										\right. 
+									}{\underbrace{\int _1^\infty e^{-(s+1)t} \,dt}} \\
+								\end{align*}
 
-						\begin{align*}
-							F(s) = {\cal L} \big\{ f(t) \big\} 
-								= & \underset{\left \{ 
-									\begin {array}{cl}
-										{{1-e^{-s}\over s}}&amp;\, s\ne 0\\ 
-										1&amp;\, s=0 
-									\end {array}
-								\right. }{\underbrace{\int _0^1 e^{-st} \,dt}} -3 \underset{ 
-								\left \{ 
-									\begin {array}{cl}
-										-\frac{3e^{-(s+1)}}{s+1}&amp;\, s > -1, s\ne 0 \\ 
-										-\frac{3}{e}&amp;\, s=0 
-									\end {array}
-								\right. 
-							}{\underbrace{\int _1^\infty e^{-(s+1)t} \,dt}} \\
-						\end{align*}
-
-						Combing them we obtain
+								Combing them we obtain
 
 
-					</div>	
-					<div>			
-						\[ 
-							F(s)=
-							\left \{ 
-								\begin {array}{rl}
-									\displaystyle {{1-e^{-s}\over s}-3{e^{-(s+1)}\over s+1}}&amp;s&gt;-1,\,s\ne 0\\ 
-									\displaystyle {1-{3\over e}} &amp; s=0
-								\end {array}
-							\right. 
-						\] 
-						
-						
-					</div>	
+							</div>	
+							<div>			
+								\[ 
+									F(s)=
+									\left \{ 
+										\begin {array}{rl}
+											\displaystyle {{1-e^{-s}\over s}-3{e^{-(s+1)}\over s+1}}&amp;s&gt;-1,\,s\ne 0\\ 
+											\displaystyle {1-{3\over e}} &amp; s=0
+										\end {array}
+									\right. 
+								\] 
+								
+								
+							</div>	
+						</li>
+					</ol>
 				</details>
-			</div>
-			<div id="2b075114-60e6-48ab-a032-a540aa8f9b8c">
-				
 			</div>
 			<br>
 			<br>

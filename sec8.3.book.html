@@ -49,7 +49,7 @@
 
 			<div id="61064941-e82a-4715-8727-1fd5156f9603">
 
-				<div class="indent" id="9828719d-f618-42b2-b23f-7850481256fc">
+				<div id="9828719d-f618-42b2-b23f-7850481256fc">
 					We know from Theorem&nbsp;<a href="sec8.1.book.html#x1-336" target=_blank>8.1.6</a>
 					 that \({\cal L} \big\{ f(t) \big\}\) is defined for \(s&gt;s_0\)
 					 
@@ -95,9 +95,6 @@
 
 			<!--Example 1-->
 			<div class="example" id="x1-51" style="--ex-number: 1">
-				<div>
-					
-				</div>
 				<ol>
 					<li>&nbsp;
 						Use <a href="#x1-3r1">(8.3.1)</a> to calculate the Laplace transform of the derivative of \(
@@ -115,12 +112,13 @@
 								\dot{y}=ay \quad y(0)=y_0 
 							\end {equation} 
 					</li>
+					<li class="skip"></li>
 				</ol>
 
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
-						<li>&nbsp;
+						<li>
 							<div>
 								First note that we already calculated the Laplace transform of \(f(t) = \cos \omega t\) in Example&nbsp;<a href="sec8.1.book.html#x1-114" target=_blank>8.1.4</a>
 	
@@ -168,7 +166,7 @@
 								
 							</div>
 						</li>
-						<li>&nbsp;
+						<li>
 							<div class="reading-exercise">
 								Solve \(\dot{y}=ay \quad y(0)=y_0\) using separation of variables (Section&nbsp;<a href="sec2.1.book.html" target=_blank>2.1</a>)
 							</div>
@@ -194,6 +192,10 @@
 									\big( s -  a \big) Y(s) = & \, y_0 \\	
 									Y(s) = & \, \frac{y_0}{s -  a} \\		
 								\end {align*}
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 
 								Finally we take the inverse Laplace transform of both sides to find \(y\)
 
@@ -226,7 +228,7 @@
 
 		
 
-			<div class="indent" id="faf12a25-86a0-4169-ad1f-f5433110bf2c">
+			<div id="faf12a25-86a0-4169-ad1f-f5433110bf2c">
 				While <a href="#x1-3r1">(8.3.1)</a> helps us solve first order differential equations using the Laplace transform, in order to solve second order differential equations using the Laplace transform, we will need to know how to find the Laplace transform of the second derivative.
 			</div>
 
@@ -273,103 +275,109 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					<div>
-						<div>
-							Taking Laplace transforms of both sides of the differential equation in <a href="#x1-11r6">(8.3.6)</a> yields
+					<ol>
+						<li class="no-part">
+							<div>
+								Taking Laplace transforms of both sides of the differential equation in <a href="#x1-11r6">(8.3.6)</a> yields
 
-							<a id="x1-12r7"></a>
-							\begin {align}  \label {eq:8.3.7}
-								{\cal L} \big\{ \ddot{y}-6\dot{y}+5y \big\} \,
-									= & \, {\cal L} \big\{ 3e^{2t}\big\} \nonumber\\	
-								{\cal L} \big\{ \ddot{y} \big\}
-									\quad
-									- \quad 6 \, {\cal L} \big\{ \dot{y} \big\}
-									\quad+\quad 5 \, {\cal L} \big\{ {y} \big\}
-									\, = & \, 3 \, {\cal L} \big\{ e^{2t}\big\}  \nonumber\\	
-								\Big[ s^2 \, {\cal L} \big\{ y \big\}-s \, y(0)  -\dot{y}(0)  \Big]
-									- 6 \, \Big[ s \, {\cal L} \big\{ y \big\}-y(0) \Big]
-									+ 5 \,  {\cal L} \big\{ {y} \big\}
-									= & \,  3 \left(\frac{1}{s-2} \right)			
-							\end {align}
+								<a id="x1-12r7"></a>
+								\begin {align}  \label {eq:8.3.7}
+									{\cal L} \big\{ \ddot{y}-6\dot{y}+5y \big\} \,
+										= & \, {\cal L} \big\{ 3e^{2t}\big\} \nonumber\\	
+									{\cal L} \big\{ \ddot{y} \big\}
+										\quad
+										- \quad 6 \, {\cal L} \big\{ \dot{y} \big\}
+										\quad+\quad 5 \, {\cal L} \big\{ {y} \big\}
+										\, = & \, 3 \, {\cal L} \big\{ e^{2t}\big\}  \nonumber\\	
+									\Big[ s^2 \, {\cal L} \big\{ y \big\}-s \, y(0)  -\dot{y}(0)  \Big]
+										- 6 \, \Big[ s \, {\cal L} \big\{ y \big\}-y(0) \Big]
+										+ 5 \,  {\cal L} \big\{ {y} \big\}
+										= & \,  3 \left(\frac{1}{s-2} \right)			
+								\end {align}
 
-							Now simplifying and collecting like terms and factoring out \(Y(s)\) we obtain
+								Now simplifying and collecting like terms and factoring out \(Y(s)\) we obtain
 
-							<a id="x1-13r8"></a>
-							\begin {align}  \label {eq:8.3.8}
-								\Big[ s^2 \, Y(s) -2s  - 3  \Big]
-									- 6 \, \Big[ s \, Y(s) - 2 \Big]
-									+ 5 \,  Y(s)
-									= & \,  \frac{3}{s-2}  \nonumber\\
-								s^2 \, Y(s) -2s  - 3
-									-6sY(s) +12 
-									+ 5 \,  Y(s)
-									= & \,  \frac{3}{s-2}  \nonumber\\
-								s^2 \, Y(s) -6sY(s) + 5 \,  Y(s) -2s +9
-									= & \,  \frac{3}{s-2}  \nonumber\\
-								\underbrace{\big( s^2 -6s + 5 \big)} Y(s) -(2s -9)
-									= & \,  \frac{3}{s-2}  	
-							\end {align}
+								<a id="x1-13r8"></a>
+								\begin {align}  \label {eq:8.3.8}
+									\Big[ s^2 \, Y(s) -2s  - 3  \Big]
+										- 6 \, \Big[ s \, Y(s) - 2 \Big]
+										+ 5 \,  Y(s)
+										= & \,  \frac{3}{s-2}  \nonumber\\
+									s^2 \, Y(s) -2s  - 3
+										-6sY(s) +12 
+										+ 5 \,  Y(s)
+										= & \,  \frac{3}{s-2}  \nonumber\\
+									s^2 \, Y(s) -6sY(s) + 5 \,  Y(s) -2s +9
+										= & \,  \frac{3}{s-2}  \nonumber\\
+									\underbrace{\big( s^2 -6s + 5 \big)} Y(s) -(2s -9)
+										= & \,  \frac{3}{s-2}  	
+								\end {align}
 
-							And a good check on the calculations at this point is to note that the polynomial multiplied by \(Y(s)\) should be the characteristic polynomial of the complementary equation. Now solving for \(Y(s)\) and factoring the characteristic polynomial we obtain
-
-
-							\begin {align*}  
-							\big( s^2 -6s + 5 \big) Y(s)
-									= & \,  \frac{3}{s-2} + \frac{(2s-9)(s-2)}{s-2} \\
-								Y(s)
-									= & \,  \frac{3+ (2s-9)(s-2)}{\big( s^2 -6s + 5 \big)\big(s-5 \big)}  \\
-								Y(s)
-									= & \,  \frac{3+ (2s-9)(s-2)}{\big(s-2\big)\big(s-1 \big)\big(s-5 \big)}  \\		
-							\end {align*}
-
-							At this point we have solved for \(Y(s)\) which is the Laplace transform of \(y(t)\) so all we have to do is take the inverse Laplace transform of this expression to find our solution. And hopefully the type of problem is familiar from Section <a href="sec8.2.book.html">8.2</a> so we'll start by splitting up the expression using PFD
-
-							\begin {align*} 
-									\frac{3+ (2s-9)(s-2)}{\big(s-2\big)\big(s-1 \big)\big(s-5 \big)} = & \,  
-									\frac{A}{\big(s-2\big)} + \frac{B}{\big(s-1 \big)} + \frac{C}{\big(s-5 \big)}		
-							\end {align*}
+								And a good check on the calculations at this point is to note that the polynomial multiplied by \(Y(s)\) should be the characteristic polynomial of the complementary equation. Now solving for \(Y(s)\) and factoring the characteristic polynomial we obtain
 
 
-						</div>
-						<div class="reading-exercise">
-							Use Heaviside's method to calculate \(A,\) \(B,\) and \(C\)
-						</div>	
-						<div>
-							\begin {align*} 
-									A = & \Bigg. \frac{3+ (2s-9)(s-2)}{\big(s-1 \big)\big(s-5 \big)}  \Bigg|_{s=2}	
-									= \frac{3+ (-5)(0)}{\big(1 \big)\big(-3 \big)} = -1\\ \\
-									B = & \Bigg. \frac{3+ (2s-9)(s-2)}{\big(s-2\big)\big(s-5 \big)}  \Bigg|_{s=1}	
-									= \frac{3+ (-7)(-1)}{\big(-1\big)\big(-4 \big)} = \frac{5}{2} \\ \\
-									C = & \Bigg. \frac{3+ (2s-9)(s-2)}{\big(s-2\big)\big(s-1 \big)}  \Bigg|_{s=5}	
-									= \frac{3+ (1)(3)}{\big(3\big)\big(4 \big)} =\frac{1}{2} \\	
-							\end {align*}
+								\begin {align*}  
+								\big( s^2 -6s + 5 \big) Y(s)
+										= & \,  \frac{3}{s-2} + \frac{(2s-9)(s-2)}{s-2} \\
+									Y(s)
+										= & \,  \frac{3+ (2s-9)(s-2)}{\big( s^2 -6s + 5 \big)\big(s-5 \big)}  \\
+									Y(s)
+										= & \,  \frac{3+ (2s-9)(s-2)}{\big(s-2\big)\big(s-1 \big)\big(s-5 \big)}  \\		
+								\end {align*}
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 
-							Substituting back in our coefficients we obtain
+								At this point we have solved for \(Y(s)\) which is the Laplace transform of \(y(t)\) so all we have to do is take the inverse Laplace transform of this expression to find our solution. And hopefully the type of problem is familiar from Section <a href="sec8.2.book.html">8.2</a> so we'll start by splitting up the expression using PFD
 
-							\[ Y(s)=-\left({1\over s-2}\right) + {5\over 2}\left({1\over s-1}\right) 
-							+{1\over 2}\left({1\over s-5}\right)
-							\]
-
-							Finally to obtain \(y(t)\) we just take the inverse Laplace transform to obtain the solution of <a href="#x1-11r6">(8.3.6)</a>.
-
-							\begin {align*} 
-								{\cal L}^{-1} \Big[ Y(s) \Big]
-								= & \, -
-								\underset{e^{2t}}{\underbrace{{\cal L}^{-1} \left[ {1\over s-2} \right]}} + {5\over 2}
-								\underset{e^{t}}{\underbrace{ {\cal L}^{-1} \left[ {1\over s-1} \right]}} +{1\over 2} \underset{e^{5t}}{\underbrace{{\cal L}^{-1} \left[ {1\over s-5} \right]}} \\
-								y(t)
-								= & \, \quad -
-								e^{2t} \quad+\quad {5\over 2}
-								e^{t} \quad+\quad {1\over 2} e^{5t} \\
-							\end {align*}
+								\begin {align*} 
+										\frac{3+ (2s-9)(s-2)}{\big(s-2\big)\big(s-1 \big)\big(s-5 \big)} = & \,  
+										\frac{A}{\big(s-2\big)} + \frac{B}{\big(s-1 \big)} + \frac{C}{\big(s-5 \big)}		
+								\end {align*}
 
 
-						</div>	
-						<div class="reading-exercise">
-							Verify \(y=e^{2t} + {5\over 2}
-							e^{t} + {1\over 2} e^{5t}\) is a solution of the IVP <a href="#x1-11r6">(8.3.6)</a>
-						</div>
-					</div>
+							</div>
+							<div class="reading-exercise">
+								Use Heaviside's method to calculate \(A,\) \(B,\) and \(C\)
+							</div>	
+							<div>
+								\begin {align*} 
+										A = & \Bigg. \frac{3+ (2s-9)(s-2)}{\big(s-1 \big)\big(s-5 \big)}  \Bigg|_{s=2}	
+										= \frac{3+ (-5)(0)}{\big(1 \big)\big(-3 \big)} = -1\\ \\
+										B = & \Bigg. \frac{3+ (2s-9)(s-2)}{\big(s-2\big)\big(s-5 \big)}  \Bigg|_{s=1}	
+										= \frac{3+ (-7)(-1)}{\big(-1\big)\big(-4 \big)} = \frac{5}{2} \\ \\
+										C = & \Bigg. \frac{3+ (2s-9)(s-2)}{\big(s-2\big)\big(s-1 \big)}  \Bigg|_{s=5}	
+										= \frac{3+ (1)(3)}{\big(3\big)\big(4 \big)} =\frac{1}{2} \\	
+								\end {align*}
+
+								Substituting back in our coefficients we obtain
+
+								\[ Y(s)=-\left({1\over s-2}\right) + {5\over 2}\left({1\over s-1}\right) 
+								+{1\over 2}\left({1\over s-5}\right)
+								\]
+
+								Finally to obtain \(y(t)\) we just take the inverse Laplace transform to obtain the solution of <a href="#x1-11r6">(8.3.6)</a>.
+
+								\begin {align*} 
+									{\cal L}^{-1} \Big[ Y(s) \Big]
+									= & \, -
+									\underset{e^{2t}}{\underbrace{{\cal L}^{-1} \left[ {1\over s-2} \right]}} + {5\over 2}
+									\underset{e^{t}}{\underbrace{ {\cal L}^{-1} \left[ {1\over s-1} \right]}} +{1\over 2} \underset{e^{5t}}{\underbrace{{\cal L}^{-1} \left[ {1\over s-5} \right]}} \\
+									y(t)
+									= & \, \quad -
+									e^{2t} \quad+\quad {5\over 2}
+									e^{t} \quad+\quad {1\over 2} e^{5t} \\
+								\end {align*}
+
+
+							</div>	
+							<div class="reading-exercise">
+								Verify \(y=e^{2t} + {5\over 2}
+								e^{t} + {1\over 2} e^{5t}\) is a solution of the IVP <a href="#x1-11r6">(8.3.6)</a>
+							</div>
+						</li>
+					</ol>
 				</details>
 			</div>
 
@@ -379,7 +387,7 @@
 			<br>
 			<br>
 
-			<div class="indent" id="99899b68-7764-4281-a0b0-def469535074">
+			<div id="99899b68-7764-4281-a0b0-def469535074">
 				
 				To obtain a generic form of <a href="#x1-13r8">(8.3.8)</a>, let’s apply the method of Example&nbsp;<a href="#x1-102">8.3.2</a> to the general IVP
 
@@ -452,7 +460,7 @@
 				\end {equation} 
 			</div>
 			
-			<div class="indent" id="16679d13-6093-4765-b9db-3f1644e7d190">
+			<div id="16679d13-6093-4765-b9db-3f1644e7d190">
 			</div>
 
 			<br>
@@ -476,118 +484,128 @@
 			
 				<details class="solution">
 					<summary>Solution</summary>
-						<div>
-							<div>
-								Taking Laplace transforms of both sides of the differential equation in <a href="#x1-20r14">(8.3.14)</a> yields
-	
-							
+						<ol>
+							<li class="no-part">
+								<div>
+									Taking Laplace transforms of both sides of the differential equation in <a href="#x1-20r14">(8.3.14)</a> yields
+		
+								
 
-								\begin {align*}  
-									{\cal L} \big\{ 2\ddot{y}+3\dot{y}+y \big\} \,
-										= & \, {\cal L} \big\{ 8e^{-2t}\big\} \nonumber\\	
-									2 \, {\cal L} \big\{ \ddot{y} \big\}
-										\quad
-										+ \quad 3 \, {\cal L} \big\{ \dot{y} \big\}
-										\quad+\quad \, {\cal L} \big\{ {y} \big\}
-										\, = & \, 8 \, {\cal L} \big\{ e^{-2t}\big\}  \nonumber\\	
-									2 \, \Big[ s^2 \, {\cal L} \big\{ y \big\}-s \, y(0)  -\dot{y}(0)  \Big]
-										+ 3 \, \Big[ s \, {\cal L} \big\{ y \big\}-y(0) \Big]
-										+ \,  {\cal L} \big\{ {y} \big\}
-										= & \,  8 \left(\frac{1}{s+2} \right)			
-								\end {align*}
-	
-								Now simplifying and collecting like terms and factoring out \(Y(s)\) we obtain
-	
-								\begin {align*}  
-									2 \, \Big[ s^2 \, Y(s) +4 s  - 2  \Big]
-										+ 3 \, \Big[ s \, Y(s) +4 \Big]
-										+ \,  Y(s)
-										= & \,  \frac{8}{s+2}  \nonumber\\
-									2s^2 \, Y(s) +8s  - 4
-										+3sY(s) +12 
-										+ Y(s)
-										= & \,  \frac{8}{s+2}  \nonumber\\
-									2 s^2 \, Y(s) +3sY(s) + Y(s) +8s +8
-										= & \,  \frac{8}{s+2}  \nonumber\\
-									\big( 2s^2 +3s + 1 \big) Y(s) +8(s +1)
-										= & \,  \frac{8}{s+2}  	
-								\end {align*}
-	
-								We'll pause to check our calculations at this point to note that the polynomial multiplied by \(Y(s)\) is the characteristic polynomial of the complementary equation. 
-								Solving for \(Y(s)\) and factoring the characteristic polynomial we obtain
-	
-								\begin {align*}  
-									\big( 2s^2 +3s + 1 \big) Y(s) +8(s +1)
-										= & \,  \frac{8}{s+2}   \\
-									\big( 2s^2 +3s + 1 \big) Y(s) 
-										= & \,  \frac{8}{s+2}  - \frac{8(s +1)(s+2)}{s+2} \\	
-									Y(s) 
-										= & \, \frac{8 - 8(s +1)(s+2)}{(s+2) \big( 2s^2 +3s + 1 \big) } \\	
-									Y(s) 
-										= & \, \frac{8 - 8(s +1)(s+2)}{(s+2) \big( s + 1 \big) \big( 2s + 1 \big)  } \\									
-								\end {align*}
-	
-								At this point we have solved for \(Y(s)\) which is the Laplace transform of \(y(t)\) so all we have to do is take the inverse Laplace transform of this expression to find our solution. And hopefully the type of problem is familiar from Section <a href="sec8.2.book.html">8.2</a> so we'll start by splitting up the expression using PFD
-	
-								\begin {align*} 
-										\frac{8 - 8(s +1)(s+2)}{(s+2) \big( 2s + 1 \big) \big( s + 1 \big) }  = & \,  
-										\frac{A}{\big(s+2\big)} + \frac{B}{\big(s+1 \big)} + \frac{C}{\big(2s+1 \big)}		
-								\end {align*}
-	
-	
-							</div>
-							<div class="reading-exercise">
-								Use Heaviside's method to calculate \(A,\) \(B,\) and \(C\)
-							</div>	
-							<div>
-								\begin {align*} 
-										A = & \Bigg. \frac{8 - 8(s +1)(s+2)}{\big( 2s + 1 \big) \big( s + 1 \big) }  \Bigg|_{s=-2}	
-										= \frac{8 - 8(-1)(0)}{\big( -3 \big) \big( -1 \big) } = \frac{8}{3} \\ \\
-										
-										B = & \Bigg.\frac{8 - 8(s +1)(s+2)}{(s+2) \big( 2s + 1 \big)  }  \Bigg|_{s=-1}	
-										= \frac{8 - 8(0)(1)}{(1) \big(-1 \big)  }  = - 8\\
-
-										C = & \Bigg. \frac{8 - 8(s +1)(s+2)}{(s+2)  \big( s + 1 \big) }  \Bigg|_{s=-\frac{1}{2}}	
-										=  \frac{8 - 8 \left(\frac{1}{2}\right)\left(\frac{3}{2}\right)}{ \left(\frac{3}{2}\right)  \left( \frac{1}{2} \right) }  =  \frac{2}{ \left(\frac{3}{4}\right)   }  = \frac{8}{3} \\ \\
+									\begin {align*}  
+										{\cal L} \big\{ 2\ddot{y}+3\dot{y}+y \big\} \,
+											= & \, {\cal L} \big\{ 8e^{-2t}\big\} \nonumber\\	
+										2 \, {\cal L} \big\{ \ddot{y} \big\}
+											\quad
+											+ \quad 3 \, {\cal L} \big\{ \dot{y} \big\}
+											\quad+\quad \, {\cal L} \big\{ {y} \big\}
+											\, = & \, 8 \, {\cal L} \big\{ e^{-2t}\big\}  \nonumber\\	
+										2 \, \Big[ s^2 \, {\cal L} \big\{ y \big\}-s \, y(0)  -\dot{y}(0)  \Big]
+											+ 3 \, \Big[ s \, {\cal L} \big\{ y \big\}-y(0) \Big]
+											+ \,  {\cal L} \big\{ {y} \big\}
+											= & \,  8 \left(\frac{1}{s+2} \right)			
+									\end {align*}
+		
+									Now simplifying and collecting like terms and factoring out \(Y(s)\) we obtain
+		
+									\begin {align*}  
+										2 \, \Big[ s^2 \, Y(s) +4 s  - 2  \Big]
+											+ 3 \, \Big[ s \, Y(s) +4 \Big]
+											+ \,  Y(s)
+											= & \,  \frac{8}{s+2}  \nonumber\\
+										2s^2 \, Y(s) +8s  - 4
+											+3sY(s) +12 
+											+ Y(s)
+											= & \,  \frac{8}{s+2}  \nonumber\\
+										2 s^2 \, Y(s) +3sY(s) + Y(s) +8s +8
+											= & \,  \frac{8}{s+2}  \nonumber\\
+										\big( 2s^2 +3s + 1 \big) Y(s) +8(s +1)
+											= & \,  \frac{8}{s+2}  	
+									\end {align*}
+		
+									We'll pause to check our calculations at this point to note that the polynomial multiplied by \(Y(s)\) is the characteristic polynomial of the complementary equation. 
+									Solving for \(Y(s)\) and factoring the characteristic polynomial we obtain
+		
+									\begin {align*}  
+										\big( 2s^2 +3s + 1 \big) Y(s) +8(s +1)
+											= & \,  \frac{8}{s+2}   \\
+										\big( 2s^2 +3s + 1 \big) Y(s) 
+											= & \,  \frac{8}{s+2}  - \frac{8(s +1)(s+2)}{s+2} \\	
+										Y(s) 
+											= & \, \frac{8 - 8(s +1)(s+2)}{(s+2) \big( 2s^2 +3s + 1 \big) } \\	
+										Y(s) 
+											= & \, \frac{8 - 8(s +1)(s+2)}{(s+2) \big( s + 1 \big) \big( 2s + 1 \big)  } \\									
+									\end {align*}
+								</div>
+							</li>
+							<li class="no-part">
+								<div>
+		
+									At this point we have solved for \(Y(s)\) which is the Laplace transform of \(y(t)\) so all we have to do is take the inverse Laplace transform of this expression to find our solution. And hopefully the type of problem is familiar from Section <a href="sec8.2.book.html">8.2</a> so we'll start by splitting up the expression using PFD
+		
+									\begin {align*} 
+											\frac{8 - 8(s +1)(s+2)}{(s+2) \big( 2s + 1 \big) \big( s + 1 \big) }  = & \,  
+											\frac{A}{\big(s+2\big)} + \frac{B}{\big(s+1 \big)} + \frac{C}{\big(2s+1 \big)}		
+									\end {align*}
+		
+		
+								</div>
+								<div class="reading-exercise">
+									Use Heaviside's method to calculate \(A,\) \(B,\) and \(C\)
+								</div>	
+								<div>
+									\begin {align*} 
+											A = & \Bigg. \frac{8 - 8(s +1)(s+2)}{\big( 2s + 1 \big) \big( s + 1 \big) }  \Bigg|_{s=-2}	
+											= \frac{8 - 8(-1)(0)}{\big( -3 \big) \big( -1 \big) } = \frac{8}{3} \\ \\
 											
-								\end {align*}
-	
-								Substituting back in our coefficients we obtain
-	
-								\[ Y(s)= \frac{8}{3} \left({1\over s+2}\right)
-								-8\left({1\over s+1}\right)
-								+  \frac{8}{3} \left({1\over 2s+1}\right) 
-								\]
+											B = & \Bigg.\frac{8 - 8(s +1)(s+2)}{(s+2) \big( 2s + 1 \big)  }  \Bigg|_{s=-1}	
+											= \frac{8 - 8(0)(1)}{(1) \big(-1 \big)  }  = - 8\\
 
-								And to take the Laplace transform we want the denominators in the form \(s-a\) so we factor out the \(2\) in the bottom of the last term to obtain 
+											C = & \Bigg. \frac{8 - 8(s +1)(s+2)}{(s+2)  \big( s + 1 \big) }  \Bigg|_{s=-\frac{1}{2}}	
+											=  \frac{8 - 8 \left(\frac{1}{2}\right)\left(\frac{3}{2}\right)}{ \left(\frac{3}{2}\right)  \left( \frac{1}{2} \right) }  =  \frac{2}{ \left(\frac{3}{4}\right)   }  = \frac{8}{3} \\ \\
+												
+									\end {align*}
+		
+									Substituting back in our coefficients we obtain
+		
+									\[ Y(s)= \frac{8}{3} \left({1\over s+2}\right)
+									-8\left({1\over s+1}\right)
+									+  \frac{8}{3} \left({1\over 2s+1}\right) 
+									\]
+								</div>
+							</li>
+							<li class="no-part">
+								<div>
 
-								\[  \frac{8}{3} \left({1\over 2s+1} \right) \cdot \frac{\left( \frac{1}{2} \right)}{\left(\frac{1}{2}\right)}
-								=\frac{8}{3} \cdot \left( \frac{1}{2} \right) \left({1\over s+\frac{1}{2}}\right)
-								=\frac{4}{3} \left({1\over s+\frac{1}{2} } \right)
+									And to take the Laplace transform we want the denominators in the form \(s-a\) so we factor out the \(2\) in the bottom of the last term to obtain 
 
-								\]
-	
-								Finally to obtain \(y(t)\) we just take the inverse Laplace transform to obtain the solution of <a href="#x1-20r14">(8.3.14)</a>.
-	
-								\begin {align*} 
-									{\cal L}^{-1} \Big[ Y(s) \Big]
-									= & \, \frac{8}{3} \,
-									\underset{e^{-2t}}{\underbrace{{\cal L}^{-1} \left[ {1\over s+2} \right]}}  -8 \, \underset{e^{-t}}{\underbrace{{\cal L}^{-1} \left[ {1\over s+1} \right]}} + \frac{4}{3} \,
-									\underset{e^{-t/2}}{\underbrace{ {\cal L}^{-1} \left[ {1\over s+\frac{1}{2}} \right]}}\\
-									y(t)
-									= & \, \quad \frac{8}{3}
-									e^{-2t} \quad-\quad 8 e^{-t}\quad +\quad \frac{4}{3}
-									e^{-t/2} \\
-								\end {align*}
-	
-	
-							</div>	
-							<div class="reading-exercise">
-								Verify \(y=\frac{8}{3}
-								e^{-2t} - 8 e^{-t} + \frac{4}{3}
-								e^{-t/2}\) is a solution of the IVP <a href="#x1-20r14">(8.3.14)</a>
-							</div>
-						</div>					
+									\[  \frac{8}{3} \left({1\over 2s+1} \right) \cdot \frac{\left( \frac{1}{2} \right)}{\left(\frac{1}{2}\right)}
+									=\frac{8}{3} \cdot \left( \frac{1}{2} \right) \left({1\over s+\frac{1}{2}}\right)
+									=\frac{4}{3} \left({1\over s+\frac{1}{2} } \right)
+
+									\]
+		
+									Finally to obtain \(y(t)\) we just take the inverse Laplace transform to obtain the solution of <a href="#x1-20r14">(8.3.14)</a>.
+		
+									\begin {align*} 
+										{\cal L}^{-1} \Big[ Y(s) \Big]
+										= & \, \frac{8}{3} \,
+										\underset{e^{-2t}}{\underbrace{{\cal L}^{-1} \left[ {1\over s+2} \right]}}  -8 \, \underset{e^{-t}}{\underbrace{{\cal L}^{-1} \left[ {1\over s+1} \right]}} + \frac{4}{3} \,
+										\underset{e^{-t/2}}{\underbrace{ {\cal L}^{-1} \left[ {1\over s+\frac{1}{2}} \right]}}\\
+										y(t)
+										= & \, \quad \frac{8}{3}
+										e^{-2t} \quad-\quad 8 e^{-t}\quad +\quad \frac{4}{3}
+										e^{-t/2} \\
+									\end {align*}
+		
+		
+								</div>	
+								<div class="reading-exercise">
+									Verify \(y=\frac{8}{3}
+									e^{-2t} - 8 e^{-t} + \frac{4}{3}
+									e^{-t/2}\) is a solution of the IVP <a href="#x1-20r14">(8.3.14)</a>
+								</div>
+							</li>
+						</ol>
 				</details>
 			</div>
 
@@ -615,207 +633,216 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					<div>
-						<div>
-							Taking Laplace transforms of both sides of the differential equation in <a href="#x1-24r15">(8.3.15)</a> yields
+					<ol>
+						<li class="no-part">
+							<div>
+								Taking Laplace transforms of both sides of the differential equation in <a href="#x1-24r15">(8.3.15)</a> yields
 
+								
+
+								\begin {align*}  
+									{\cal L} \big\{ \ddot{y}+2\dot{y}+2y \big\} \,
+										= & \, {\cal L} \big\{ 1 \big\} \nonumber\\	
+									{\cal L} \big\{ \ddot{y} \big\}
+										\quad
+										+ \quad 2 \, {\cal L} \big\{ \dot{y} \big\}
+										\quad+\quad 2 \, {\cal L} \big\{ {y} \big\}
+										\, = & \,  {\cal L} \big\{ 1 \big\}  \nonumber\\	
+									\Big[ s^2 \, {\cal L} \big\{ y \big\}-s \, y(0)  -\dot{y}(0)  \Big]
+										+ 2 \, \Big[ s \, {\cal L} \big\{ y \big\}-y(0) \Big]
+										+ 2 \,  {\cal L} \big\{ {y} \big\}
+										= & \, \frac{1}{s}			
+								\end {align*}
+
+								Substituting \( {\cal L} \big\{ y \big\} =  Y(s)\) and the initial values we can simplify and collecting like terms and factor out the \(Y(s)\) to obtain
+
+								\begin {align*}  
+									\Big[ s^2 \, Y(s) +3 s  - 1  \Big]
+										+ 2\, \Big[ s \, Y(s) +3 \Big]
+										+ 2 \,  Y(s)
+										= & \,  \frac{1}{s}  \nonumber\\
+									s^2 \, Y(s) +3s  - 1
+										+2sY(s) +6 
+										+ 2Y(s)
+										= & \,  \frac{1}{s}  \nonumber\\
+									s^2 \, Y(s) +2sY(s) + 2Y(s) +3s +5
+										= & \,  \frac{1}{s}  \nonumber\\
+									\big( s^2 +2s + 2 \big) Y(s) +(3s +5)
+										= & \,  \frac{1}{s}  	
+								\end {align*}
+
+								We'll pause to check our calculations at this point to note that the polynomial multiplied by \(Y(s)\) is the characteristic polynomial of the complementary equation. 
+								Solving for \(Y(s)\) we obtain
+
+								\begin {align*}  
+									\big( s^2 +2s + 2 \big) Y(s) +(3s +5)
+										= & \,  \frac{1}{s}   \\
+									\big( 2s^2 +2s + 2 \big) Y(s) 
+										= & \,  \frac{1}{s}  - \frac{s(3s +5)}{s} \\	
+									Y(s) 
+										= & \, \frac{1 - s(3s +5)}{s \big( 2s^2 +2s + 2 \big)  } \\								
+								\end {align*}
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
+									
+								And we find out that we cannot factor the characteristic polynomial since it is an irreducible quadratic. So we split it up using <span class="vocab">PFD</span>
+
+								\begin {equation*} 
+									{1-s(3s+5)\over s\left(s^2+2s+2\right)} 
+									=
+									{A\over s} 
+									+
+									{Bs+C\over s^2+2s+2} 
+								\end {equation*}
+							</div>	 
+							<div class="reading-exercise">
+								Solve for \(A,\) \(B,\) and \(C\)
+							</div>	
+							<div>
+								Solving for \(A,\) \(B,\) and \(C\) (Example&nbsp;<a href="sec8.2.book.html#x1-238" target=_blank>8.2.8</a>) and substituting back we obtain
+
+								\begin {equation*} 
+									Y(s) 
+									=
+									\frac{1}{2}
+									\left( {1\over s} \right)
+									-
+									\frac{7}{2}
+									\left( 
+									{s\over s^2+2s+2} \right)
+									-
+									{6\over s^2+2s+2} 
+								\end {equation*} 
+
+								Since \(Y(s)\) is the Laplace transform of \(y(t)\) all we have to do is take the inverse Laplace transform of this expression to find our solution. 
+
+								\begin {equation*} 
+									{\cal L}^{-1} \Big[ Y(s)  \Big]
+									=
+									\frac{1}{2} \, 
+									{\cal L}^{-1} \left[
+									{1\over s} \right]
+									-
+									\frac{7}{2} \,
+									{\cal L}^{-1} \left[
+									{s\over s^2+2s+2} \right]
+									-
+									6 \,
+									{\cal L}^{-1} \left[
+									{1\over s^2+2s+2}  \right]
+								\end {equation*} 
+
+								But we'll have to first write the denominator in the correct form so completing the square on the bottom we obtain <a href="sec8.2.book.html#x1-27r16" target=_blank>(8.2.16)</a>
+
+								\begin {equation*} 
+									y(t)
+									=
+									\frac{1}{2} \, 
+									{\cal L}^{-1} \left[
+									{1\over s} \right]
+									-
+									\frac{7}{2} \,
+									{\cal L}^{-1} \left[
+									{s\over (s+1)^2+1} \right]
+									-
+									6 \,
+									{\cal L}^{-1} \left[
+									{1\over (s+1)^2+1}  \right]
+								\end {equation*} 
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
+								
+								Adding and subtracting \(1\) from the middle term we obtain
 							
+								\begin {equation*} 
+									-
+									\frac{7}{2} \,
+									{\cal L}^{-1} \left[
+									{(s + 1) - 1\over (s+1)^2+1} \right]
+									=
+									-
+									\frac{7}{2} \,
+									{\cal L}^{-1} \left[
+									{s + 1\over (s+1)^2+1} \right]
+									+
+									\frac{7}{2} \,
+									{\cal L}^{-1} \left[
+									{1\over (s+1)^2+1} \right]
+								\end {equation*} 
 
-							\begin {align*}  
-								{\cal L} \big\{ \ddot{y}+2\dot{y}+2y \big\} \,
-									= & \, {\cal L} \big\{ 1 \big\} \nonumber\\	
-								{\cal L} \big\{ \ddot{y} \big\}
-									\quad
-									+ \quad 2 \, {\cal L} \big\{ \dot{y} \big\}
-									\quad+\quad 2 \, {\cal L} \big\{ {y} \big\}
-									\, = & \,  {\cal L} \big\{ 1 \big\}  \nonumber\\	
-								\Big[ s^2 \, {\cal L} \big\{ y \big\}-s \, y(0)  -\dot{y}(0)  \Big]
-									+ 2 \, \Big[ s \, {\cal L} \big\{ y \big\}-y(0) \Big]
-									+ 2 \,  {\cal L} \big\{ {y} \big\}
-									= & \, \frac{1}{s}			
-							\end {align*}
+								Substituting it back in and combining the like terms
 
-							Substituting \( {\cal L} \big\{ y \big\} =  Y(s)\) and the initial values we can simplify and collecting like terms and factor out the \(Y(s)\) to obtain
-
-							\begin {align*}  
-								\Big[ s^2 \, Y(s) +3 s  - 1  \Big]
-									+ 2\, \Big[ s \, Y(s) +3 \Big]
-									+ 2 \,  Y(s)
-									= & \,  \frac{1}{s}  \nonumber\\
-								s^2 \, Y(s) +3s  - 1
-									+2sY(s) +6 
-									+ 2Y(s)
-									= & \,  \frac{1}{s}  \nonumber\\
-								s^2 \, Y(s) +2sY(s) + 2Y(s) +3s +5
-									= & \,  \frac{1}{s}  \nonumber\\
-								\big( s^2 +2s + 2 \big) Y(s) +(3s +5)
-									= & \,  \frac{1}{s}  	
-							\end {align*}
-
-							We'll pause to check our calculations at this point to note that the polynomial multiplied by \(Y(s)\) is the characteristic polynomial of the complementary equation. 
-							Solving for \(Y(s)\) we obtain
-
-							\begin {align*}  
-								\big( s^2 +2s + 2 \big) Y(s) +(3s +5)
-									= & \,  \frac{1}{s}   \\
-								\big( 2s^2 +2s + 2 \big) Y(s) 
-									= & \,  \frac{1}{s}  - \frac{s(3s +5)}{s} \\	
-								Y(s) 
-									= & \, \frac{1 - s(3s +5)}{s \big( 2s^2 +2s + 2 \big)  } \\								
-							\end {align*}
-
-							And we find out that we cannot factor the characteristic polynomial since it is an irreducible quadratic. So we split it up using <span class="vocab">PFD</span>
-
-							\begin {equation*} 
-								{1-s(3s+5)\over s\left(s^2+2s+2\right)} 
-								=
-								{A\over s} 
-								+
-								{Bs+C\over s^2+2s+2} 
-							\end {equation*}
-						</div>	 
-						<div class="reading-exercise">
-							Solve for \(A,\) \(B,\) and \(C\)
-						</div>	
-						<div>
-							Solving for \(A,\) \(B,\) and \(C\) (Example&nbsp;<a href="sec8.2.book.html#x1-238" target=_blank>8.2.8</a>) and substituting back we obtain
-
-							\begin {equation*} 
-								Y(s) 
-								=
-								\frac{1}{2}
-								\left( {1\over s} \right)
-								-
-								\frac{7}{2}
-								\left( 
-								{s\over s^2+2s+2} \right)
-								-
-								{6\over s^2+2s+2} 
-							\end {equation*} 
-
-							Since \(Y(s)\) is the Laplace transform of \(y(t)\) all we have to do is take the inverse Laplace transform of this expression to find our solution. 
-
-							\begin {equation*} 
-								{\cal L}^{-1} \Big[ Y(s)  \Big]
-								=
-								\frac{1}{2} \, 
-								{\cal L}^{-1} \left[
-								{1\over s} \right]
-								-
-								\frac{7}{2} \,
-								{\cal L}^{-1} \left[
-								{s\over s^2+2s+2} \right]
-								-
-								6 \,
-								{\cal L}^{-1} \left[
-								{1\over s^2+2s+2}  \right]
-							\end {equation*} 
-
-							But we'll have to first write the denominator in the correct form so completing the square on the bottom we obtain <a href="sec8.2.book.html#x1-27r16" target=_blank>(8.2.16)</a>
-
-							\begin {equation*} 
+								\begin {align*} 
 								y(t)
-								=
+								= &
 								\frac{1}{2} \, 
 								{\cal L}^{-1} \left[
 								{1\over s} \right]
-								-
-								\frac{7}{2} \,
-								{\cal L}^{-1} \left[
-								{s\over (s+1)^2+1} \right]
-								-
-								6 \,
-								{\cal L}^{-1} \left[
-								{1\over (s+1)^2+1}  \right]
-							\end {equation*} 
-							
-							Adding and subtracting \(1\) from the middle term we obtain
-						
-							\begin {equation*} 
-								-
-								\frac{7}{2} \,
-								{\cal L}^{-1} \left[
-								{(s + 1) - 1\over (s+1)^2+1} \right]
-								=
 								-
 								\frac{7}{2} \,
 								{\cal L}^{-1} \left[
 								{s + 1\over (s+1)^2+1} \right]
 								+
-								\frac{7}{2} \,
+								\underbrace{
+								\left(\frac{7}{2}-6\right) \,
 								{\cal L}^{-1} \left[
-								{1\over (s+1)^2+1} \right]
-							\end {equation*} 
-
-							Substituting it back in and combining the like terms
-
-							\begin {align*} 
-							y(t)
-							= &
-							\frac{1}{2} \, 
-							{\cal L}^{-1} \left[
-							{1\over s} \right]
-							-
-							\frac{7}{2} \,
-							{\cal L}^{-1} \left[
-							{s + 1\over (s+1)^2+1} \right]
-							+
-							\underbrace{
-							\left(\frac{7}{2}-6\right) \,
-							{\cal L}^{-1} \left[
-							{1\over (s+1)^2+1} \right]} \\
-							= &
-							\frac{1}{2} \,
-							\underset{1}{ 
-							\underbrace{
-							{\cal L}^{-1} \left[
-							{1\over s} \right]}}
-							-
-							\frac{7}{2} \,
-							\underset{e^{-t}\cos t}{
-							\underbrace{
-							{\cal L}^{-1} \left[
-							{s + 1\over (s+1)^2+1} \right]}}
-							- \frac{5}{2} \,
-							\underset{e^{-t}\sin t}{
-							\underbrace{
-							{\cal L}^{-1} \left[
-							{1\over (s+1)^2+1} \right]}}\\
-							=
-							& \, \quad \frac{1}{2}
-							\quad 
-							- 
-							\quad 
-							\frac{7}{2}
-							e^{-t}\cos t
-							\quad 
-							-
-							\frac{5}{2}
-							e^{-t}\sin t \\
-							=
-							& \, \quad \frac{1}{2}
-							- 
-							\left( 
-							\frac{7}{2}
-							\cos t 
-							+
-							\frac{5}{2}
-							\sin t \right) e^{-t}\\
-						\end {align*} 
-							
-						</div>
-						<div class="reading-exercise">
-							Verify \(y=\frac{1}{2}
-							- 
-							\left( 
-							\frac{7}{2}
-							\cos t 
-							+
-							\frac{5}{2}
-							\sin t \right) e^{-t}\) is a solution of the IVP <a href="#x1-24r15">(8.3.15)</a>
-						</div>
-						
-					</div>	
+								{1\over (s+1)^2+1} \right]} \\
+								= &
+								\frac{1}{2} \,
+								\underset{1}{ 
+								\underbrace{
+								{\cal L}^{-1} \left[
+								{1\over s} \right]}}
+								-
+								\frac{7}{2} \,
+								\underset{e^{-t}\cos t}{
+								\underbrace{
+								{\cal L}^{-1} \left[
+								{s + 1\over (s+1)^2+1} \right]}}
+								- \frac{5}{2} \,
+								\underset{e^{-t}\sin t}{
+								\underbrace{
+								{\cal L}^{-1} \left[
+								{1\over (s+1)^2+1} \right]}}\\
+								=
+								& \, \quad \frac{1}{2}
+								\quad 
+								- 
+								\quad 
+								\frac{7}{2}
+								e^{-t}\cos t
+								\quad 
+								-
+								\frac{5}{2}
+								e^{-t}\sin t \\
+								=
+								& \, \quad \frac{1}{2}
+								- 
+								\left( 
+								\frac{7}{2}
+								\cos t 
+								+
+								\frac{5}{2}
+								\sin t \right) e^{-t}\\
+							\end {align*} 
+								
+							</div>
+							<div class="reading-exercise">
+								Verify \(y=\frac{1}{2}
+								- 
+								\left( 
+								\frac{7}{2}
+								\cos t 
+								+
+								\frac{5}{2}
+								\sin t \right) e^{-t}\) is a solution of the IVP <a href="#x1-24r15">(8.3.15)</a>
+							</div>
+						</li>
+					</ol>
 				</details>
 			</div>
 
