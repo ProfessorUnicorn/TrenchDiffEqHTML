@@ -27,82 +27,93 @@
 
 	<body>
 		<div id="0b23e245-fecf-4dd2-a702-b7a4ed3f0428" class="section-title">
-			8.5 Constant Coefficient Equations with Piecewise Continuous Forcing Functions 
+			8.5 Discontinuous Forcing Functions 
 		</div>
 
 		<details id="a-1">
-			<summary>Forcing Functions</summary>
+			<summary>Discontinuous Forcing Functions without Laplace</summary>
 
 			<div id="f213fa05-717d-4634-a2e0-8fca538e6231">
-				We’ll now consider initial value problems of the form 
+				We’ll now consider IVPs where \(a\), \(b\), and \(c\) are constants (\(a\ne 0\)) and \(f(t)\) is piecewise continuous on \([0,\infty )\)
+
 				<a id="x1-2r1"></a> 
 				\begin {equation} 
-					\label {eq:8.5.1} a\ddot{y}+b\dot{y}+cy=f(t), \quad y(0)=k_0,\quad \dot{y}(0)=k_1 
+					\label {eq:8.5.1} a\ddot{y}+b\dot{y}+cy=f(t)
+					\quad y(0)=k_0
+					\quad \dot{y}(0)=k_1 
 				\end {equation} 
-				where \(a\), \(b\), and \(c\) are constants (\(a\ne 0\)) and \(f\) is piecewise continuous on \([0,\infty )\). Problems of this kind occur in situations where the input to a physical system undergoes instantaneous changes, as when a switch is turned on or off or the forces acting on the system change abruptly. 
+
+				Problems of this kind occur in situations where the input to a physical system undergoes instantaneous changes, as when a switch is turned on or off or the forces acting on the system change abruptly. 
 			</div>
 			<div id="b5387b21-23fc-4f57-a5ea-134af76f20d7">
-				It can be shown (Exercises&nbsp;<span class="ptmb8t-">23</span> and <span class="ptmb8t-">24</span>) that the differential equation in <a href="#x1-2r1">(8.5.1)</a> has no solutions on an open interval that contains a jump discontinuity of \(f\). Therefore we must define what we mean by a solution of <a href="#x1-2r1">(8.5.1)</a> on \([0,\infty )\) in the case where \(f\) has jump discontinuities. The next theorem motivates our definition. We omit the proof. 
+				It can be shown (Exercises&nbsp;<span class="ptmb8t-">23</span> and <span class="ptmb8t-">24</span>) that the differential equation in <a href="#x1-2r1">(8.5.1)</a> has no solutions on an open interval that contains a jump discontinuity of \(f(t)\). Therefore we must define what we mean by a solution of <a href="#x1-2r1">(8.5.1)</a> on \([0,\infty )\) in the case where \(f(t)\) has jump discontinuities. The next theorem motivates our definition. 
 			</div>
+
 			<div class="theorem" id="x1-31">
 				<span class="head">Theorem&nbsp;8.5.1</span> 
-				Suppose \(a,b\), and \(c\) are constants \((a\ne 0),\) and \(f\) is piecewise continuous on \([0,\infty ).\) with jump discontinuities at \(t_1,\) …, \(t_n,\) where \[ 0&lt;t_1&lt;\cdots &lt;t_n\] Let \(k_0\) and \(k_1\) be arbitrary real numbers. Then there is a unique function \(y\) defined on \([0,\infty )\) with these properties:
+				Suppose \(a,b\), and \(c\) are constants \((a\ne 0),\) and \(f(t)\) is piecewise continuous on \([0,\infty ).\) with jump discontinuities at \(t_1,\) …, \(t_n,\) where \[ 0&lt;t_1&lt;\cdots &lt;t_n\] Let \(k_0\) and \(k_1\) be arbitrary real numbers. Then there is a unique function \(y\) defined on \([0,\infty )\) with these properties:
 
 				<ol>
-					<li>
-						\(y(0)=k_0\) and \(\dot{y}(0)=k_1\). 
+					<li>&nbsp;
+						\(y(0)=k_0\) and \(\dot{y}(0)=k_1\)
 					</li>
-					<li>
-						\(y\) and \(\dot{y}\) are continuous on \([0,\infty )\). 
+					<li>&nbsp;
+						\(y\) and \(\dot{y}\) are continuous on \([0,\infty )\) 
 					</li>
-					<li>
-						\(\ddot{y}\) is defined on every open subinterval of \([0,\infty)\) that does not contain any of the points \(t_1,\) …, \(t_n\), and \[ a\ddot{y}+b\dot{y}+cy=f(t) \] on every such subinterval. 
+					<li>&nbsp;
+						\(\ddot{y}\) is defined on every open subinterval of \([0,\infty)\) that does not contain \(t_1,\) …, \(t_n\)
 					</li>
-					<li>
-						\(\ddot{y}\) has limits from the right and left at \(t_1,\) …\(,\) \(t_n\). 
+					<li>&nbsp;
+						\( a\ddot{y}+b\dot{y}+cy=f(t) \) on every such subinterval
+					</li>
+					<li>&nbsp;
+						\(\ddot{y}\) has limits from the right and left at \(t_1,\) …\(,\) \(t_n\)
 					</li>
 				</ol>
 			</div>
 
 			<div id="d955bc7e-6d40-45c1-ab7c-4bb3fa50bd9b">			
-				We define the function \(y\) of Theorem&nbsp;<a href="#x1-31">8.5.1</a> to be the solution of the initial value problem <a href="#x1-2r1">(8.5.1)</a>.
+				We define the function \(y\) of Theorem&nbsp;<a href="#x1-31">8.5.1</a> to be the solution of the IVP <a href="#x1-2r1">(8.5.1)</a>
 			</div>
+
 			<div id="bebf9278-d315-4c6c-8109-da554753395d">
-				We begin by considering initial value problems of the form
+				We begin by considering IVPs where the forcing function has a single jump discontinuity at \(a_1\). 
+				
+				
 				<a id="x1-8r2"></a>
 				\begin {equation} 
 					\label {eq:8.5.2} 
 					a\ddot{y}+b\dot{y}+cy=\left \{
 						\begin {array}{cl} 
-							f_0(t),&amp;0\le t&lt;t_1,\\
-							f_1(t),&amp;t\ge t_1 
+							f_0(t) &amp;0\le t&lt;a_1\\
+							f_1(t) &amp;t\ge a_1 
 						\end {array}
 					\right .
 					\quad y(0)=k_0
 					\quad \dot{y}(0)=k_1
 				\end {equation} 
-				where the forcing function has a single jump discontinuity at \(t_1\). 
+				
 			</div>
 			<div class="stepbox" id="dd3b57a1-1f7f-4959-9669-395bd63f5e27">
 				We can solve <a href="#x1-8r2">(8.5.2)</a> by these steps: 
 			
 				<ol>
 					<li>
-						Find the solution \(y_0\) of the initial value problem \[ a\ddot{y}+b\dot{y}+cy=f_0(t), \quad y(0)=k_0,\quad \dot{y}(0)=k_1\] 
+						Find the solution \(y_0\) of the IVP \[ a\ddot{y}+b\dot{y}+cy=f_0(t) \quad y(0)=k_0\quad \dot{y}(0)=k_1\] 
 					</li>
 					<li>
-						Compute \(c_0=y_0(t_1)\) and \(c_1=\dot{y_0}(t_1)\). 
+						Compute \(c_0=y_0(t_1)\) and \(c_1=\dot{y_0}(t_1)\) 
 					</li>
 					<li>
-						Find the solution \(y_1\) of the initial value problem \[ a\ddot{y}+b\dot{y}+cy=f_1(t), \quad y(t_1)=c_0,\quad \dot{y}(t_1)=c_1\] 
+						Find the solution \(y_1\) of the IVP \[ a\ddot{y}+b\dot{y}+cy=f_1(t) \quad y(t_1)=c_0 \quad \dot{y}(t_1)=c_1\] 
 					</li>
 					<li>
 						Obtain the solution \(y\) of <a href="#x1-8r2">(8.5.2)</a> as
 						\[
 							y=\left \{ 
 								\begin {array}{cl}
-									y_0(t),&amp;0\le t&lt;t_1\\
-									y_1(t),&amp;t\ge t_1 
+									y_0(t) &amp;0\le t&lt;a_1\\
+									y_1(t) &amp;t\ge a_1 
 								\end {array}
 							\right. 
 						\] 
@@ -110,22 +121,28 @@
 				</ol>
 			</div>
 			<div id="6f6ee566-1ee4-4969-ab5c-5a4d78a0ef49">
-				It is shown in Exercise&nbsp;<span class="ptmb8t-">23</span> that \(\dot{y}\) exists and is continuous at \(t_1\). The next example illustrates this procedure. 
+				It is shown in Exercise&nbsp;<span class="ptmb8t-">23</span> that \(\dot{y}\) exists and is continuous at \(a_1\). The next example illustrates this procedure. 
 			</div>
+			<br>
+			<br>
+			<br>
+			<!--Example 1-->
 			<div class="example" id="x1-91" style="--ex-number: 1">
 				<div>
-					Solve the initial value problem
+					Solve the IVP without using Laplace transform
+					
 					<a id="x1-10r3"></a> 
-					\begin {equation} 
-						\label {eq:8.5.3} 
-						\ddot{y}+y=f(t), \quad y(0)=2,\; \dot{y}(0)=-1 
+					\begin {equation} \label {eq:8.5.3} 
+						\ddot{y}+y=f(t) 
+						\quad y(0)=2 
+						\quad \dot{y}(0)=-1 
 					\end {equation} 
-					where
+				
 					\[
 						f(t)=\left \{ 
 							\begin {array}{rl} 
-								1,&amp;0\le t&lt;\displaystyle {\pi \over 2},\\ 
-								-1,&amp;t\ge \displaystyle {{\pi \over 2}} 
+								1 &amp;0\le t&lt;\displaystyle {\pi \over 2}\\ 
+								-1 &amp;t\ge \displaystyle {{\pi \over 2}} 
 							\end {array}
 						\right. 
 					\]
@@ -133,47 +150,322 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					The initial value problem in Step 1 is \[ \ddot{y}+y=1, \quad y(0)=2,\quad \dot{y}(0)=-1\] We leave it to you to verify that its solution is \[ y_0=1+\cos t-\sin t\] Doing Step 2 yields \(y_0(\pi /2)=0\) and \(\dot{y_0}(\pi /2)=-1\), so the second initial value problem is \[ \ddot{y}+y=-1, \quad y\left ({\pi \over 2}\right )=0,\; \dot{y}\left ({\pi \over 2}\right )=-1\] We leave it to you to verify that the solution of this problem is \[ y_1=-1+\cos t+\sin t\] Hence, the solution of <a href="#x1-10r3">(8.5.3)</a> is
-					<a id="x1-11r4"></a>
-					\begin {equation} 
-						\label {eq:8.5.4} 
-						y=\left \{ 
-							\begin {array}{rl} 
-								1+\cos t-\sin t,&amp;0\le t&lt;\displaystyle {{\pi \over 2}}, \\ 
-								-1+\cos t+\sin t,&amp;t\ge \displaystyle {{\pi \over 2}} 
-							\end {array}
-						\right. 
-					\end {equation}
+					<div>
+						We'll start by solving the complementary homogeneous equation
+						\[
+							\ddot{y}+y=0 
+						\]
+					</div>	
+					<div>
+						Just as in Section <a href="sec5.2.book.html" target=_blank>5.2</a> we seek solutions of the form \(y=e^{rt}\)
+					</div>	
+					<div class="reading-exercise">
+						Solve \(\ddot{y}+y=0 \) to obtain exponential solutions
+					</div>
+					<div>
+						The characteristic equation yields imaginary roots \(r=\pm i\) so we obtain the solutions
+						\[
+						y_1=e^{it}
+						\quad
+						y_2=e^{-it}
+						\]
+					</div>	
+					<div class="reading-exercise">
+						Use <span class="vocab">Euler's formula</span> to write the solutions \(y_1=e^{it}
+						\quad
+						y_2=e^{-it}\) in terms of sine and cosine
+					</div>
+					<div>
+						From <span class="vocab">Euler's formula</span> we have the solutions 
+						\[
+						y_1= \cos t + i \sin t
+						\quad
+						y_2= \cos t - i \sin t
+						\]
+					</div>	
+					<div class="reading-exercise">
+						Use linear combinations to write the solutions \(y_1=e^{it}
+						\quad
+						y_2=e^{-it}\) without \(i\)
+					</div>
+					<div>
+						Finally we use a linear combination of the solutions to eliminate the imaginary number to obtain a fundamental set of solutions
+						\[
+						y_1= \cos t 
+						\quad
+						y_2= \sin t
+						\]
+					</div>
 
-					<figure id="x1-12r1">
-						<img height="264" src="EPS/fig080501.png" width="409" />
-						<figcaption>
-							<span class="id">Figure&nbsp;8.5.1</span>
-							<span class="content">Graph of <a href="#x1-11r4">(8.5.4)</a> </span>
-						</figcaption>
-					</figure>
-				</details>
+					<div>
+						Now we will solve the IVP using only the first piece of the forcing function
+						when \(0 \le t < \frac{\pi}{2} \)
+						
+						\begin {equation*} 
+							\ddot{y}+y=1 
+							\quad y(0)=2 
+							\quad \dot{y}(0)=-1 
+						\end {equation*}
+
+						We already found a fundamental set so now we need to find a particular solution. Using the <span class="vocab">Method of Undetermined Coefficients</span>, we seek a particular solution of the same form as the forcing function, which is just a constant
+						
+						\[
+						y_p = A
+						\]
+
+						Differentiating an arbitrary constant \(A\) twice we obtain
+
+						\[
+						\dot{y}_p = 0
+						\quad
+						\text{and}
+						\quad
+						\ddot{y}_p = 0
+						\]
+
+						Substituting it back in to our IVP we have
+
+						\begin{align*}
+							\ddot{y}_p+y_p =  & \, 1 \\
+							0+A =  & \, 1 \\
+							A =  & \, 1 \\
+						\end{align*}
+
+						So we obtain our particular solution \(y_p=1\) so we can finally write our general solution of the IVP
+
+						\[
+							y = 1 + c_1 \cos t + c_2 \sin t
+						\]
+
+						We'll now apply our initial conditions to find our constants
+						\(\dot{y}(0)=-1 \) yields
+
+
+						\begin{align*}
+							y(0) = & \, 1 + c_1 \cos 0 + c_2 \sin 0 \\
+							2 = & \, 1 + c_1 
+							\Longrightarrow
+							c_1 = 1  \\
+						\end{align*}
+
+						Substituting in \(c_1=1\) we have
+
+						\[
+							y = 1 + \cos t + c_2 \sin t
+						\]
+
+						And differentiating we obtain
+
+						\[
+							\dot{y} = -\sin t + c_2 \cos t
+						\]
+
+						Applying the initial condition 
+						\(\dot{y}(0)=-1 \) yields
+
+
+						\begin{align*}
+							\dot{y}(0) = & \, -\sin 0 + c_2 \cos 0
+							\Longrightarrow
+							c_2 = -1 \\
+						\end{align*}
+
+						So our solution on \(0 \le t < \frac{\pi}{2} \) is given by
+
+
+						\[
+							y =  1 + \cos t - \sin t
+						\]
+
+						But we are not done solving the IVP because we have only solved it on the first interval. To solve it for the second interval, we first need to obtain appropriate initial conditions, so we will evaluate this solution and its derivative at the point where the step occurs, \(t=\frac{\pi}{2}\) to get initial conditions for the second piece of the forcing function
+
+						\begin{align*}
+							y(\textstyle{\frac{\pi}{2}}) = & \,   1 + \cos \textstyle{\frac{\pi}{2}} - \sin \textstyle{\frac{\pi}{2}} \\
+							= & \,   1 + 0 - 1 \\
+							= & \,   0 \\
+						\end{align*}
+
+						And the derivative of our solution is \(\dot{y} = -\sin t - \cos t\) and evaluating it at the step \(t=\frac{\pi}{2}\) we obtain
+
+						\begin{align*}
+						\dot{y}(\textstyle{\frac{\pi}{2}}) = & \,   -\sin \textstyle{\frac{\pi}{2}} - \cos \textstyle{\frac{\pi}{2}} \\
+							= & \,   0 - 1 \\
+							= & \,   -1 \\
+						\end{align*}
+
+						Thus the initial conditions for our second IVP are
+
+						\[
+						y(\textstyle{\frac{\pi}{2}}) = 0
+						\quad
+						\dot{y}(\textstyle{\frac{\pi}{2}}) =-1
+						\]
+
+						And applying the second piece of the forcing function we obtain the second IVP
+
+						\begin {equation*} 
+							\ddot{y}+y=-1 
+							\quad y(\textstyle{\frac{\pi}{2}})=0 
+							\quad \dot{y}(\textstyle{\frac{\pi}{2}})=-1 
+						\end {equation*}
+
+						We alreday solved the complementary solution above and found the fundamental set
+
+						\[
+						\left\{ y_1 , y_2 \right\}
+						=
+						\left\{ \cos t , \sin t \right\}
+						\]
+
+						So now we seek a particular solution again using the <span class="vocab-repeat">Method of Undetermined Coefficients</span>, of the same form as the forcing function, which is just a constant
+						
+						\[
+						y_p = A
+						\]
+
+						Differentiating an arbitrary constant \(A\) twice we obtain
+
+						\[
+						\dot{y}_p = 0
+						\quad
+						\text{and}
+						\quad
+						\ddot{y}_p = 0
+						\]
+
+						Substituting it back in to our IVP we have
+
+						\begin{align*}
+							\ddot{y}_p+y_p =  & \, -1 \\
+							0+A =  & \, -1 \\
+							A =  & \, -1 \\
+						\end{align*}
+
+						So we obtain our particular solution \(y_p=-1\) so we can finally write our general solution of the IVP
+
+						\[
+							y = -1 + c_1 \cos t + c_2 \sin t
+						\]
+
+						We'll now apply our initial conditions to find our constants
+						\(\dot{y}(\textstyle{\frac{\pi}{2}})=0 \) yields
+
+
+						\begin{align*}
+							y(\textstyle{\frac{\pi}{2}}) = & \, -1 + c_1 \cos \textstyle{\frac{\pi}{2}} + c_2 \sin \textstyle{\frac{\pi}{2}} \\
+							0 = & \, -1 + 0 + c_2 
+							\Longrightarrow
+							c_2 = 1  \\
+						\end{align*}
+
+						Substituting in \(c_2=1\) we have
+
+						\[
+							y = -1 + c_1\cos t + \sin t
+						\]
+
+						And differentiating we obtain
+
+						\[
+							\dot{y} = -c_1\sin t + \cos t
+						\]
+
+						Applying the initial condition 
+						\(\dot{y}(\textstyle{\frac{\pi}{2}})=-1 \) yields
+
+
+						\begin{align*}
+							\dot{y}(\textstyle{\frac{\pi}{2}}) = & \, -c_1\sin \textstyle{\frac{\pi}{2}} + \cos \textstyle{\frac{\pi}{2}} \\
+							-1 = & \, -c_1 + 0
+							\Longrightarrow
+							c_1 = 1 \\
+						\end{align*}
+
+						So our solution on \(t \ge \frac{\pi}{2} \) is given by
+
+
+						\[
+							y =  -1 + \cos t + \sin t
+						\]
+
+						Finally putting the pieces together we obtain the piecewise solution of <a href="#x1-10r3">(8.5.3)</a>
+						<a id="x1-11r4"></a>
+						\begin {equation} 
+							\label {eq:8.5.4} 
+							y=\left \{ 
+								\begin {array}{rl} 
+									1+\cos t-\sin t &amp;0\le t&lt;\displaystyle {{\pi \over 2}}  \\ 
+									-1+\cos t+\sin t &amp;t\ge \displaystyle {{\pi \over 2}} 
+								\end {array}
+							\right. 
+						\end {equation}
+
+
+						<figure id="x1-12r1">
+							<img height="264" src="EPS/fig080501.png" width="409" />
+							<figcaption>
+								<span class="id">Figure&nbsp;8.5.1</span>
+								<span class="content">Graph of <a href="#x1-11r4">(8.5.4)</a> </span>
+							</figcaption>
+						</figure>
+					</details>
+				</div>	
 			</div>
+		</details>
 
+		<details>	
+			<summary>Discontinuous Forcing Functions with Laplace</summary>
 			<div id="24d53bec-d7cd-45e3-ae9d-0e6913fbc1f0">
-				If \(f_0\) and \(f_1\) are defined on \([0,\infty )\), we can rewrite <a href="#x1-8r2">(8.5.2)</a> as \[ a\ddot{y}+b\dot{y}+cy=f_0(t)+u(t-t_1)\left (f_1(t)-f_0(t)\right ), \quad y(0)=k_0,\quad \dot{y}(0)=k_1\] and apply the method of Laplace transforms. We’ll now solve the problem considered in Example&nbsp;<a href="#x1-91">8.5.1</a> by this method. 
+				<div>
+					In Example <a href="#x1-91">8.5.1</a> we solved an equation of the form of <a href="#x1-8r2">(8.5.2)</a> without the use of Laplace transforms.
+					
+					\begin {equation*} 
+						a\ddot{y}+b\dot{y}+cy=\left \{
+							\begin {array}{cl} 
+								f_0(t) &amp;0\le t&lt;a_1\\
+								f_1(t) &amp;t\ge a_1 
+							\end {array}
+						\right .
+						\quad y(0)=k_0
+						\quad \dot{y}(0)=k_1
+						\tag{2}
+					\end {equation*} 
+
+					It works out to essentially solving one separate IVP for each separate piece of the forcing function. In this case it was simple enough since the forcing function was pretty simple, just constants. You can imagine how much longer this solution process could get if our forcing function contains more complicated terms like in the later sections where we studied the <span class="vocab">Method of Undetermined Coefficients</span> (Sections <a href="#sec5.4.book.html">5.4</a> and <a href="#sec5.4.book.html">5.5</a>). However, if we apply Laplace transforms instead we can solve equations of this form more directly.
+				</div>	
+				<div>
+					Recall from Section <a href="#sec8.4.book.html" target=_blank>8.4</a> that if \(f_0(t)\) and \(f_1(t)\) are defined on \([0,\infty )\), we can rewrite the forcing function in <a href="#x1-8r2">(8.5.2)</a> in terms of the <span class="vocab">Unit Step Function</span> as
+					
+					\[ a\ddot{y}+b\dot{y}+cy=f_0(t)+\Big (f_1(t)-f_0(t)\Big ) \, u(t-a_1)\]
+
+					Thus rewriting the IVP in <a href="#x1-8r2">(8.5.2)</a> in a form where we can apply the method of Laplace transforms. 
+
+					\[ a\ddot{y}+b\dot{y}+cy=f_0(t)+\Big (f_1(t)-f_0(t)\Big ) \, u(t-a_1) \quad y(0)=k_0\quad \dot{y}(0)=k_1\] 
+					
+					
+					We’ll now solve the same problem considered in Example&nbsp;<a href="#x1-91">8.5.1</a> by this method. 
+				</div>		
 			</div>
 
+			<br>
+			<br>
+			<br>
+			<!--Example 2-->
 			<div class="example" id="x1-132" style="--ex-number: 2">
 				<div>
-					Use the Laplace transform to solve the initial value problem 
+					Solve the IVP using Laplace transform
 					<a id="x1-14r5"></a> 
-					\begin {equation} 
-						\label {eq:8.5.5} 
-						\ddot{y}+y=f(t) \quad y(0)=2 \dot{y}(0)=-1
+					\begin {equation} \label {eq:8.5.5} 
+						\ddot{y}+y=f(t) 
+						\quad y(0)=2 
+						\quad\dot{y}(0)=-1
 					\end {equation} 
 
-					where 
 					\[ 
 						f(t)=\left \{ 
 							\begin {array}{cl} 
-								\phantom {-}1,&amp;0\le t&lt;\displaystyle {{\pi \over 2}},\\ 
-								-1,&amp;t\ge \displaystyle {{\pi \over 2}} 
+								\phantom {-}1 &amp;0\le t&lt;\displaystyle {{\pi \over 2}} \\ 
+								-1 &amp;t\ge \displaystyle {{\pi \over 2}} 
 							\end {array}
 						\right. 
 					\]
@@ -181,146 +473,1075 @@
 			
 				<details class="solution">
 					<summary>Solution</summary>
-					Here \[ f(t)=1-2u\left (t-{\pi \over 2}\right )\] so Theorem&nbsp;<span class="ptmb8t-">8.4.1</span>(with \(g(t)=1\)) implies that \[ {\cal L}(f)={1-2e^{-{\pi s/2}}\over s}\] Therefore, transforming <a href="#x1-14r5">(8.5.5)</a> yields \[ (s^2+1)Y(s)={1-2e^{-{\pi s/ 2}}\over s}-1+2s\] so 
-					<a id="x1-15r6"></a>
-					\begin {equation} 
-						\label {eq:8.5.6} 
-						Y(s)=(1-2e^{-{\pi s/ 2}}) G(s)+{2s-1\over s^2+1} 
-					\end {equation}
-					with
-					\[ 
-						G(s)={1\over s(s^2+1)}
-					\] 
-					The form for the partial fraction expansion of \(G\) is 
-					<a id="x1-16r7"></a>
-					\begin {equation} 
-						\label {eq:8.5.7} 
-						{1\over s(s^2+1)}={A\over s}+{Bs+C\over s^2+1} 
-					\end {equation}
-				
-					Multiplying through by \(s(s^2+1)\) yields \[ A(s^2+1)+(Bs+C)s=1\] or \[ (A+B)s^2+Cs+A=1\] Equating coefficients of like powers of \(s\) on the two sides of this equation shows that \(A=1\), \(B=-A=-1\) and \(C=0\). Hence, from <a href="#x1-16r7">(8.5.7)</a>, \[ G(s)={1\over s}-{s\over s^2+1}\] Therefore \[ g(t)=1-\cos t\] From this, <a href="#x1-15r6">(8.5.6)</a>, and Theorem&nbsp;<span class="ptmb8t-">8.4.2</span>, \[ y=1-\cos t-2u\left (t-{\pi \over 2}\right )\left (1-\cos \left (t-{\pi \over 2}\right )\right )+2\cos t-\sin t\] Simplifying this (recalling that \(\cos (t-\pi /2)=\sin t)\) yields \[ y=1+\cos t-\sin t-2u\left (t-{\pi \over 2}\right )(1-\sin t)\] or 
-					\[ 
-						y=\left \{ 
-							\begin {array}{cl} \phantom {-} 1+\cos t-\sin t,&amp;0\le t&lt;\displaystyle {{\pi \over 2}},\\ -1+\cos t+\sin t,&amp;t\ge \displaystyle {{\pi \over 2}} 
-							\end {array}
-						\right. 
-					\] 
-					which is the result obtained in Example&nbsp;<a href="#x1-91">8.5.1</a>.
+					<div>
+						<div>
+							We'll start by rewriting the forcing function \(f(t)\) in terms of the unit step function
 
-					<div id="33788ffe-1092-4a25-ae41-153df8ecf62a">
-						<strong>Remark</strong> It isn’t obvious that using the Laplace transform to solve <a href="#x1-8r2">(8.5.2)</a> as we did in Example&nbsp;<a href="#x1-132">8.5.2</a> yields a function \(y\) with the properties stated in Theorem&nbsp;<a href="#x1-31">8.5.1</a>; that is, such that \(y\) and \(\dot{y}\) are continuous on \([0,\infty )\) and \(\ddot{y}\) has limits from the right and left at \(t_1\). However, this is true if \(f_0\) and \(f_1\) are continuous and of exponential order on \([0,\infty )\). A proof is sketched in Exercises&nbsp;8.6.&nbsp;<span class="ptmb8t-">11</span>–8.6.<span class="ptmb8t-">13</span>.
+							\begin{align*}
+								f(t) 
+								= & \, 1 
+									+ (-1-1) \cdot u(t-\textstyle{\frac{\pi}{2}}) \\
+								= & \, 1 
+									-2 u(t-\textstyle{\frac{\pi}{2}})
+							\end{align*}
+
+							So we can rewrite our IVP <a href="#x1-14r5">(8.5.5)</a> as
+
+							\begin {equation*} 
+								\ddot{y}+y=1-2 u(t-\textstyle{\frac{\pi}{2}})
+								\quad y(0)=2 
+								\quad\dot{y}(0)=-1
+							\end {equation*}
+							
+							Now we can solve by taking the Laplace transform of both sides of the equation
+
+							<a id="x1-15r6"></a>
+							\begin {align} \label {eq:8.5.6} 
+								\ddot{y}+y= & \,1-2 u(t-\textstyle{\frac{\pi}{2}}) \nonumber\\
+								{\cal L} \Big\{ \ddot{y}+y \Big\}
+								= & \, {\cal L} \Big\{ 1-2 u(t-\textstyle{\frac{\pi}{2}})\Big\}\nonumber\\
+								{\cal L} \big\{ \ddot{y} \big\}
+								+ {\cal L} \big\{ y \big\}
+								= & \, {\cal L} \big\{ 1\big\} - \, {\cal L} \Big\{ 2u(t-\textstyle{\frac{\pi}{2}})\Big\}\nonumber\\
+								\overbrace{s^2{\cal L} \big\{ {y} \big\} - s \, y(0) - \dot{y}(0)}
+								+ {\cal L} \big\{ y \big\}
+								= & \, {\cal L} \big\{ 1\big\} - 2 \, {\cal L} \Big\{ u(t-\textstyle{\frac{\pi}{2}})\Big\}\nonumber\\
+								s^2 Y(s) - 2s +1
+								+ Y(s)
+								= & \, \frac{1}{s} - 2 \cdot \frac{e^{-\frac{\pi}{2}s}}{s}\nonumber\\
+								(s^2  + 1 )Y(s) - (2s -1)
+								= & \, \frac{1-2e^{-\frac{\pi}{2}s}}{s}\nonumber\\
+								(s^2  + 1 )Y(s)
+								= & \, \frac{1-2e^{-\frac{\pi}{2}s}}{s} + (2s -1)\nonumber\\
+								Y(s)
+								= & \, \frac{1-2e^{-\frac{\pi}{2}s}+ s(2s -1)}{s(s^2  + 1 )} 
+							\end {align}
+
+							
+
+							Now to find \(y(t)\) we take the inverse Laplace transform of \(Y(s)\)
+
+							\begin {align*} 
+								{\cal L}^{-1} \Big[ Y(s) \Big]
+								
+								= & \, 
+								{\cal L}^{-1} \Bigg[ \frac{1-2e^{-\frac{\pi}{2}s}+ s(2s -1)}{s(s^2  + 1 )}  \Bigg]
+								\\
+								y(t)
+								= & \, 
+								{\cal L}^{-1} \Bigg[ \underset{G_{_1}(s)}{\underbrace{\frac{1}{s(s^2  + 1 )}}}  \Bigg]
+								-2 \,
+								{\cal L}^{-1} \Bigg[ e^{-\frac{\pi}{2}s} \cdot \underset{G_{_1}(s)}{\underbrace{\frac{1}{s(s^2  + 1 )}}}  \Bigg]
+								+
+								{\cal L}^{-1} \Bigg[ \underset{G_{_2}(s)}{\underbrace{\frac{2s -1}{s^2  + 1 }}}  \Bigg]
+								\\
+							\end {align*}
+
+							Just as in Section <a href="#sec8.4.book.html" target=_blank>8.4</a> we divide this up into three separate problems and we will evaluate the inverse Laplace Transform of each one separately. Starting with \(G_{_1}(s)\) which is a basic one and does not require shifting but does require <span class="vocab">PFD</span>
+
+							<a id="x1-16r7"></a>
+							\begin{align}\label {eq:8.5.7} 
+								g_1(t) = & \,
+								{\cal L}^{-1}\Big [ G_{_1}(s) \Big ] \nonumber\\
+								= & \, 
+								{\cal L}^{-1}\left [ \frac{1}{s(s^2  + 1 )} \right ] \nonumber\\
+								= & \, 
+								{\cal L}^{-1}\left [ \frac{A}{s} \right ]
+								+ {\cal L}^{-1}\left [ \frac{Bs+C}{s^2  + 1} \right ] 
+							\end{align}
+
+						</div>	
+						<div class="reading-exercise">
+							Solve for \(A,\) \(B\) and \(C\) using PFD 
+							\(\, \displaystyle \frac{1}{s(s^2  + 1 )} = \frac{A}{s} + \frac{Bs+C}{s^2  + 1} \)
+						</div>	
+
+						<div>
+							Substituting \(A,\) \(B\) and \(C\) back in we obtain
+							\begin{align*}
+								g_1(t)
+								= & \, 
+								{\cal L}^{-1}\left [ \frac{1}{s} \right ]
+								- {\cal L}^{-1}\left [ \frac{s}{s^2  + 1} \right ] \\
+								= & \, 
+								\quad 1 
+								\quad-\quad \cos t \\
+							\end{align*}
+						</div>	
+
+						<br>
+						<br>
+						<br>
+
+						<div>
+							For the next term \(e^{-\frac{\pi}{2}s} \,G_{_1}(s)\) we will have to apply the <strong>Second Shifting Theorem</strong> (Theorem&nbsp;<a href="#x1-212" target=_blank>8.4.2</a>) and we already found \(g_1(t)\) so we identify \(a=\frac{\pi}{2}\) and substitute to obtain
+							\begin{align*}
+							{\cal L}^{-1}  
+									\Big[  e^{-\frac{\pi}{2}s} \, G_{_1}(s)  \Big]
+								= & g_{_1}(t-\textstyle{\frac{\pi}{2}}) \, u(t-\textstyle{\frac{\pi}{2}}) \\
+								= & \Big( 1-\cos(t-\textstyle{\frac{\pi}{2}}) \Big) \, u(t-\textstyle{\frac{\pi}{2}}) \\
+								= & \Big( 1-\big( \cos t \underset{0}{\underbrace{\cos \textstyle{\frac{\pi}{2}}}} + \sin t \underset{1}{\underbrace{\sin \textstyle{\frac{\pi}{2}}}} \big) \Big) \, u(t-\textstyle{\frac{\pi}{2}}) \\
+								= & \big( 1-\sin t \big) \, u(t-\textstyle{\frac{\pi}{2}}) \\
+							\end{align*}
+						</div>	
+
+						<br>
+						<br>
+						<br>
+
+						<div>
+							The last term \(G_{_2}(s)\) does not require shifting but does require or PFD
+
+								\begin{align*}
+									g_{_2}(t) = & \,
+									{\cal L}^{-1}\Big [ G_{_2}(s) \Big ] \nonumber\\
+									= & \, 
+									{\cal L}^{-1}\left [ \frac{2s-1}{s^2  + 1} \right ] \nonumber\\
+									= & \, 
+									2 \, {\cal L}^{-1}\left [ \frac{s}{s^2  + 1} \right ] 
+									-
+									{\cal L}^{-1}\left [ \frac{1}{s^2  + 1} \right ] \nonumber\\
+									= & \, 
+									\quad 2 \, \cos t \quad-\quad \sin t \nonumber\\
+								\end{align*}
+						</div>	
+						<br>
+						<br>
+						<br>
+
+						<div>
+							Finally substituting it back in
+
+							\begin{array}{cccc}
+								y(t) 
+								&=& \,
+								{\cal L}^{-1}\Big [ G_{_1}(s) \Big ] 
+								&-& 2\, 
+								{\cal L}^{-1}\Big [ e^{-\frac{\pi}{2}s} \, G_{_1}(s) \Big ] 
+								&+&
+								{\cal L}^{-1}\Big [ G_{_2}(s) \Big ] 
+								\\
+								&=& \,
+								g_{_1}(t)
+								&-& 2\,
+								g_{_1}(t-\textstyle{\frac{\pi}{2}}) \, u(t-\textstyle{\frac{\pi}{2}})
+								&+&
+								g_{_2}(t) 
+								\\
+								&=& \,
+								1 - \cos t
+								&-& 2\,
+								\big( 1-\sin t \big) \, u(t-\textstyle{\frac{\pi}{2}})
+								&+&
+								2  \cos t - \sin t
+								\\
+							\end{array}
+
+							Simplifying by combining like terms we obtain
+
+							\begin {equation*} 
+								y(t)
+								= 1 + \cos t - \sin t - 2 \big( 1-\sin t \big) \, u(t-\textstyle{\frac{\pi}{2}})
+							\end {equation*}  
+
+							Then to write it as a piecewise function we have 
+
+							\begin {equation*}
+									\begin {array}{rl} 
+										y_0(t) &amp;=&amp; 1 + \cos t - \sin t \\ 
+										y_1(t) - y_0(t) &amp;=&amp; - 2 \big( 1-\sin t \big) 
+										= -2 + 2\sin t\\
+									\end {array} 
+							\end {equation*}  
+
+							Solving for \(y_1(t)\) we have
+
+							\begin {align*}
+								y_1(t) = &amp; \, -2 + 2\sin t + y_0(t) \\
+								= &amp; \, -2 + 2\sin t + 1 + \cos t - \sin t  \\  
+								= &amp; \, -1 + \cos t + \sin t \\ 
+							\end {align*}  
+
+							Then writing in piecewise form we have
+
+							\[
+								y(t)=\left \{ 
+									\begin {array}{rl} 
+										1 + \cos t - \sin t  &amp;0\le t&lt;\displaystyle {\pi \over 2}\\ 
+										-1 + \cos t + \sin t &amp;t\ge \displaystyle {{\pi \over 2}} 
+									\end {array}
+								\right. 
+							\]
+
+							Which is the same result obtained in Example&nbsp;<a href="#x1-91">8.5.1</a>
+						</div>	
+
+						
 					</div>
 				</details>
-			</div>
+			
 
+			<br>
+			<br>
+			<br>
+			<!--Example 3-->
 			<div class="example" id="x1-173" style="--ex-number: 3">
 				<div>
-					Solve the initial value problem 
+					Solve the IVP using Laplace transform
 					<a id="x1-18r8"></a>
-					\begin {equation} 
-						\label {eq:8.5.8} 
-						\ddot{y}-y=f(t), \quad y(0)=-1 \dot{y}(0)=2 
+					\begin {equation} \label {eq:8.5.8}  
+						\ddot{y}-y=f(t)
+						\quad y(0)=-1 
+						\quad\dot{y}(0)=2 
 					\end {equation} 
-					where 
+
 					\[ 
 						f(t)=\left \{ 
 							\begin {array}{cl} 
-								t,&amp;0\le t&lt;1,\\ 
-								1,&amp;t\ge 1 
+								t &amp;0\le t&lt;1 \\ 
+								1 &amp;t\ge 1 
+							\end {array}
+						\right.
+					\]
+				</div>
+		
+
+				<details class="solution">
+					<summary>Solution</summary>
+					<div>
+						<div>
+							We'll start by rewriting the forcing function \(f(t)\) in terms of the unit step function
+
+							\begin{align*}
+								f(t) 
+								= & \, t 
+									+ \big(1-t\big) u(t-1) \\
+								= & \, t 
+									- \big(t-1\big) u(t-1) \\	
+							\end{align*}
+
+							So we can rewrite our IVP <a href="#x1-14r5">(8.5.5)</a> as
+
+							\begin {equation*} 
+								\ddot{y}-y=t 
+								- \big(t-1\big) u(t-1)
+								\quad y(0)=-1 
+								\quad\dot{y}(0)=2
+							\end {equation*}
+							
+							Now we can solve by taking the Laplace transform of both sides of the equation
+
+							\begin {align} 
+								\ddot{y}-y= & \,t - \big(t-1\big) u(t-1) \nonumber\\
+								{\cal L} \Big\{ \ddot{y}-y \Big\}
+								= & \, {\cal L} \Big\{ t - \big(t-1\big) u(t-1) \Big\}\nonumber\\
+								{\cal L} \big\{ \ddot{y} \big\}
+								- {\cal L} \big\{ y \big\}
+								= & \, {\cal L} \big\{ t \big\} - \, {\cal L} \Big\{ \big(t-1\big) u(t-1)\Big\}\nonumber\\
+								\overbrace{s^2{\cal L} \big\{ {y} \big\} - s \, y(0) - \dot{y}(0)}
+								- {\cal L} \big\{ y \big\}
+								= & \, {\cal L} \big\{ t\big\} - e^{-s} \, {\cal L} \Big\{ (t-1)+1 \Big\}  \nonumber\\
+								s^2 Y(s) + s -2
+								- Y(s)
+								= & \, (1-e^{-s})  \, {\cal L} \big\{ t\big\}  \nonumber\\
+								(s^2 -1 ) Y(s) + (s -2)
+								= & \, \frac{1- e^{-s}}{s^2}  \nonumber\\
+								(s^2 -1 ) Y(s)
+								= & \, \frac{1- e^{-s}}{s^2}  - (s -2) \nonumber\\
+								Y(s)
+								= & \, \frac{1- e^{-s} + s^2(2-2)}{s^2(s^2 -1 )}
+							\end {align}
+
+							
+
+							Now to find \(y(t)\) we take the inverse Laplace transform of \(Y(s)\)
+
+							\begin {align*} 
+								{\cal L}^{-1} \Big[ Y(s) \Big]
+								
+								= & \, 
+								{\cal L}^{-1} \Bigg[ \frac{1- e^{-s} + s^2(s +2)}{s^2(s^2 -1 )} \Bigg]
+								\\
+								y(t)
+								= & \, 
+								{\cal L}^{-1} \Bigg[ \underset{G_{_1}(s)}{\underbrace{\frac{1}{s^2(s^2  - 1 )}}}  \Bigg]
+								- \,
+								{\cal L}^{-1} \Bigg[ e^{-s} \cdot \underset{G_{_1}(s)}{\underbrace{\frac{1}{s^2(s^2  - 1 )}}}  \Bigg]
+								+
+								{\cal L}^{-1} \Bigg[ \underset{G_{_2}(s)}{\underbrace{\frac{2-s}{s^2  - 1 }}}  \Bigg]
+								\\
+							\end {align*}
+
+							Just as before we divide this up into three separate problems and we will evaluate the inverse Laplace Transform of each one separately. Starting with \(G_{_1}(s)\) which is a basic one and does not require shifting but does require <span class="vocab">PFD</span>
+
+							\begin{align}
+								g_1(t) = & \,
+								{\cal L}^{-1}\Big [ G_{_1}(s) \Big ] \nonumber\\
+								= & \, 
+								{\cal L}^{-1}\left [ \frac{1}{s^2(s^2  - 1 )} \right ] \nonumber\\
+								= & \, 
+								{\cal L}^{-1}\left [ \frac{A}{s^2} \right ]
+								+ {\cal L}^{-1}\left [ \frac{B}{s^2  - 1} \right ] 
+							\end{align}
+
+						</div>	
+						<div class="reading-exercise">
+							Solve for \(A\) and \(B\) using Heaviside's method
+							\(\, \displaystyle \frac{1}{s^2(s^2  - 1 )} = \frac{A}{s^2} + \frac{B}{s^2  - 1} \)
+						</div>	
+
+						<div>
+							Substituting \(A\) and \(B\) back in we obtain
+							\begin{align*}
+								g_1(t)
+								= & \, 
+								{\cal L}^{-1}\left [ \frac{1}{s^2-1} \right ]
+								- {\cal L}^{-1}\left [ \frac{1}{s^2 } \right ] \\
+								= & \, 
+								\quad\quad \sinh t 
+								\quad-\quad  t \\
+							\end{align*}
+						</div>	
+
+						<br>
+						<br>
+						<br>
+
+						<div>
+							For the next term \(e^{-s} \,G_{_1}(s)\) we will have to apply the <strong>Second Shifting Theorem</strong> (Theorem&nbsp;<a href="#x1-212" target=_blank>8.4.2</a>) and we already found \(g_1(t)\) so we identify \(a=1\) and substitute to obtain
+							\begin{align*}
+							{\cal L}^{-1}  
+									\Big[  e^{-s} \, G_{_1}(s)  \Big]
+								= & g_{_1}(t-1) \, u(t-1) \\
+								= & \Big(\sinh (t-1) - (t-1)\Big) \, u(t-1) \\
+								= & \Big(1-t + \sinh (t-1) \Big) \, u(t-1) \\
+							\end{align*}
+						</div>	
+
+						<br>
+						<br>
+						<br>
+
+						<div>
+							The last term \(G_{_2}(s)\) does not require shifting but does require or PFD
+
+								\begin{align*}
+									g_{_2}(t) = & \,
+									{\cal L}^{-1}\Big [ G_{_2}(s) \Big ] \nonumber\\
+									= & \, 
+									{\cal L}^{-1}\left [ \frac{2-s}{s^2  - 1} \right ] \nonumber\\
+									= & \, 
+									2 \, {\cal L}^{-1}\left [ \frac{1}{s^2  - 1} \right ] 
+									-
+									{\cal L}^{-1}\left [ \frac{s}{s^2  - 1} \right ] \nonumber\\
+									= & \, 
+									\quad 2 \, \sinh t \quad-\quad \cosh t \nonumber\\
+								\end{align*}
+						</div>	
+						<br>
+						<br>
+						<br>
+
+						<div>
+							Finally substituting it back in
+
+							\begin{array}{cccc}
+								y(t) 
+								&=& \,
+								{\cal L}^{-1}\Big [ G_{_1}(s) \Big ] 
+								&-&  
+								{\cal L}^{-1}\Big [ e^{-s} \, G_{_1}(s) \Big ] 
+								&+&
+								{\cal L}^{-1}\Big [ G_{_2}(s) \Big ] 
+								\\
+								&=& \,
+								g_{_1}(t)
+								&-& 
+								g_{_1}(t-1) \, u(t-1)
+								&+&
+								g_{_2}(t) 
+								\\
+								&=& \,
+								\sinh t - t
+								&-& 
+								\Big(1-t + \sinh (t-1) \Big) \, u(t-1)
+								&+&
+								2 \sinh t - \cosh t
+								\\
+							\end{array}
+
+							Simplifying by combining like terms we obtain								 
+
+							<a id="x1-21r11"></a>
+							\begin {equation} \label {eq:8.5.11}
+								y(t)
+
+								= - t + 3 \sinh t - \cosh t 
+								-
+								\Big(1-t + \sinh (t-1) \Big) \, u(t-1)
+							\end {equation}  
+
+							Then to write it as a piecewise function we have 
+
+							\begin {equation*}
+									\begin {array}{rl} 
+										y_0(t) &amp;=&amp; - t + 3 \sinh t - \cosh t  \\ 
+										y_1(t) - y_0(t) &amp;=&amp; -
+										\Big(1-t + \sinh (t-1) \Big)\\
+										&amp;=&amp;
+										-1+t - \sinh (t-1) \\
+									\end {array} 
+							\end {equation*}  
+
+							Solving for \(y_1(t)\) we have
+
+							\begin {align*}
+								y_1(t) = &amp; \, -1+t - \sinh (t-1) + y_0(t) \\
+								= &amp; \, -1+t - \sinh (t-1) - t + 3 \sinh t - \cosh t   \\  
+								= &amp; \, -1 - \sinh (t-1) + 3 \sinh t - \cosh t   \\ 
+							\end {align*}  
+
+							Then writing in piecewise form we have
+
+							\[
+								y(t)=\left \{ 
+									\begin {array}{cl} 
+										- t + 3 \sinh t - \cosh t  &amp;0\le t&lt 1\\ 
+										-1 - \sinh (t-1) + 3 \sinh t - \cosh t &amp;t\ge 1
+									\end {array}
+								\right. 
+							\]
+
+						</div>	
+
+						
+					</div>	
+					
+				</details>
+			</div>
+			
+			<br>
+			<br>
+			<br>
+
+			<!--Example 4-->
+			<div class="example" id="x1-224" style="--ex-number: 4">
+				<div>
+					Solve the IVP using Laplace transform
+					<a id="x1-23r12"></a> 
+					\begin {equation} \label {eq:8.5.12}   
+						\ddot{y}+y=f(t)
+						\quad y(0)=0
+						\quad\dot{y}(0)=0
+					\end {equation} 
+
+					\[ 
+						f(t)=\left \{ 
+							\begin {array}{cl} 
+								0 &amp;0\le t&lt;\displaystyle {{\pi \over 4}} \\ 
+								\cos 2t &amp;\displaystyle {{\pi \over 4}}\le t&lt;\pi  \\ 
+								0 &amp;t\ge \pi 
 							\end {array}
 						\right.
 					\]
 				</div>
 
-				<details class="solution">
-					<summary>Solution</summary>
-					Here \[ f(t)=t-u(t-1)(t-1)\] so
-					<div class="eqnarray" id="b02e2f86-ced0-4060-9764-5cd3c72fd254">
-						\begin {eqnarray*} 
-							{\cal L}(f)&amp;=&amp;{\cal L}(t)-{\cal L}\left (u(t-1)(t-1)\right )\\ 
-							&amp;=&amp;{\cal L}(t)-e^{-s}{\cal L}(t)\mbox { (from Theorem 8.4.1)}\\ 
-							&amp;=&amp;{1\over s^2}-{e^{-s}\over s^2} 
-						\end {eqnarray*} 
-					</div>
-					<div id="ba5eba95-fa90-4d3c-9774-87cae86e6692">
-						Since transforming <a href="#x1-18r8">(8.5.8)</a> yields \[ (s^2-1) Y(s)={\cal L}(f)+2-s\] we see that \begin {equation} \label {eq:8.5.9} Y(s)=(1-e^{-s})H(s)+{2-s\over s^2-1} \end {equation} <a id="x1-19r9"></a> where \[ H(s)={1\over s^2(s^2-1)}={1\over s^2-1}-{1\over s^2}\] therefore \begin {equation} \label {eq:8.5.10} h(t)=\sinh t-t\end {equation} <a id="x1-20r10"></a> Since \[ {\cal L}^{-1}\left ({2-s\over s^2-1}\right )=2\sinh t-\cosh t\] we conclude from <a href="#x1-19r9">(8.5.9)</a>, <a href="#x1-20r10">(8.5.10)</a>, and Theorem&nbsp;<span class="ptmb8t-">8.4.1</span> that \[ y=\sinh t-t-u(t-1)\left (\sinh (t-1)-t+1\right )+2\sinh t- \cosh t\] or 
-						<a id="x1-21r11"></a>
-						\begin {equation} 
-							\label {eq:8.5.11} 
-							y=3\sinh t-\cosh t-t-u(t-1)\left (\sinh (t-1)-t+1\right ) 
-						\end {equation} 
-						We leave it to you to verify that \(y\) and \(\dot{y}\) are continuous and \(\ddot{y}\) has limits from the right and left at \(t_1=1\). 
-					</div>
-				</details>
-			</div>
-			
-			<div class="example" id="x1-224" style="--ex-number: 4">
-				<div>
-					Solve the initial value problem
-					<a id="x1-23r12"></a> 
-					\begin {equation} 
-						\label {eq:8.5.12} 
-						\ddot{y}+y=f(t) \quad y(0)=0 \dot{y}(0)=0 
-					\end {equation} 
-					where 
-					\[ 
-						f(t)=\left \{ 
-							\begin {array}{cl} 
-								0,&amp;0\le t&lt;\displaystyle {{\pi \over 4}},\\ 
-								\cos 2t,&amp;\displaystyle {{\pi \over 4}}\le t&lt;\pi ,\\ 
-								0,&amp;t\ge \pi 
-							\end {array}
-						\right. 
-					\]
-				</div>
+
 
 				<details class="solution">
 					<summary>Solution</summary>
-					Here \[ f(t)=u(t-\pi /4)\cos 2t-u(t-\pi )\cos 2t\] so
+					<div>
+						<div>
+							We'll start by rewriting the forcing function \(f(t)\) in terms of the unit step function
 
-					<div class="eqnarray" id="8941e937-70f2-4881-8604-e6a00b86babe">
-						\begin {eqnarray*}
-							{\cal L}(f)&amp;=&amp;{\cal L}\left (u(t-\pi /4)\cos 2t\right )-{\cal L}\left ( u(t-\pi )\cos 2t\right )\\ 
-							&amp;=&amp;e^{-{\pi s/4}}{\cal L}\left (\cos 2(t+\pi /4)\right )-e^{-\pi s} {\cal L}\left (\cos 2(t+\pi )\right )\\ 
-							&amp;=&amp;-e^{-{\pi s/4}}{\cal L}(\sin 2t)-e^{-\pi s} {\cal L}(\cos 2t)\\ 
-							&amp;=&amp;-{2e^{-{\pi s/ 4}}\over s^2+4}-{se^{-\pi s}\over s^2+4} 
-						\end {eqnarray*} 
-					</div>
-					<div id="1d25cc7a-9157-4a3d-b13d-6c5fce4e776a">
-						Since transforming <a href="#x1-23r12">(8.5.12)</a> yields \[ (s^2+1)Y(s)={\cal L}(f)\] we see that \begin {equation} \label {eq:8.5.13} Y(s)=e^{-{\pi s/ 4}} H_1(s)+e^{-\pi s} H_2(s) \end {equation} <a id="x1-24r13"></a> where \begin {equation} \label {eq:8.5.14} H_1(s)=-{2\over (s^2+1)(s^2+4)}\quad \mbox { and }\quad H_2(s)=-{s \over (s^2+1)(s^2+4)} \end {equation} <a id="x1-25r14"></a> To simplify the required partial fraction expansions, we first write \[ {1\over (x+1)(x+4)}={1\over 3}\left [{1\over x+1}-{1\over x+4}\right ]\] Setting \(x=s^2\) and substituting the result in <a href="#x1-25r14">(8.5.14)</a> yields \[ H_1(s)=-{2\over 3}\left [{1\over s^2+1}-{1\over s^2+4}\right ] \quad \mbox { and }\quad H_2(s)=-{1\over 3}\left [{s\over s^2+1}-{s\over s^2+4}\right ]\] The inverse transforms are \[ h_1(t)=-{2\over 3}\sin t+{1\over 3}\sin 2t \quad \mbox { and }\; h_2(t)=-{1\over 3}\cos t+{1\over 3}\cos 2t\] From <a href="#x1-24r13">(8.5.13)</a> and Theorem&nbsp;8.4.2, 
-						\begin {equation} \label {eq:8.5.15} y=u\left (t-{\pi \over 4}\right ) h_1\left (t-{\pi \over 4}\right )+ u(t-\pi ) h_2(t-\pi ) 
-						\end {equation} <a id="x1-26r15"></a> Since 
-					</div>
-					<div class="eqnarray" id="84d81df8-ae78-477a-87a7-81c891600ea2">
-						\begin {eqnarray*} 
-							h_1\left (t-{\pi \over 4}\right )&amp;=&amp;-{2\over 3}\sin \left (t-{\pi \over 4}\right )+{1\over 3}\sin 2\left (t-{\pi \over 4}\right )\\ 
-							&amp;=&amp;-{\sqrt {2}\over 3} (\sin t-\cos t)-{1\over 3}\cos 2t 
-						\end {eqnarray*} 
-					</div>
-					<div id="13c2ba19-f620-498b-9618-551bc7e0e2c0">
-						and 
-					</div>
-					<div class="eqnarray" id="8518c731-f48b-4d5b-b1e7-1eb137a10a19">
-						\begin {eqnarray*} 
-							h_2(t-\pi )&amp;=&amp;-{1\over 3}\cos (t-\pi )+{1\over 3}\cos 2(t-\pi )\\ 
-							&amp;=&amp;{1\over 3}\cos t+{1\over 3}\cos 2t 
-						\end {eqnarray*} 
-					</div>
-					<div id="b84a06f4-e672-44c1-9425-482a732ed1e7">
-						<a href="#x1-26r15">(8.5.15)</a> can be rewritten as \[ y=-{1\over 3}u\left (t-{\pi \over 4}\right )\left (\sqrt {2}(\sin t-\cos t)+\cos 2t\right ) + {1\over 3} u(t-\pi ) (\cos t+\cos 2t) \] or 
-						<a id="x1-27r16"></a> 
-						\begin {equation} 
-							\label {eq:8.5.16} 
-							y=\left \{ 
-								\begin {array}{cl} 
-									0,&amp;0\le t&lt;\displaystyle {{\pi \over 4}},\\ 
-									-\displaystyle {{\sqrt {2}\over 3}}(\sin t-\cos t)-\displaystyle {{1\over 3}}\cos 2t,&amp;\displaystyle {\pi \over 4}\le t&lt;\pi ,\\ 
-									-\displaystyle { {\sqrt {2}\over 3}}\sin t+ \displaystyle {{1+\sqrt {2}\over 3}}\cos t ,&amp;t\ge \pi 
-								\end {array}
-							\right. 
-						\end {equation} 
-						We leave it to you to verify that \(y\) and \(\dot{y}\) are continuous and \(\ddot{y}\) has limits from the right and left at \(t_1=\pi /4\) and \(t_2=\pi \) (Figure&nbsp;<a href="#x1-28r2">8.5.2</a>).
-					</div>
+							\begin{align*}
+								f(t) 
+								= & \, 0 
+									+ \big(\cos 2t-0\big) u(t-\textstyle{\frac{\pi}{4}})
+									+ \big(0-\cos 2t\big) u(t-\pi)
+									\\
+								= & \,
+									\cos (2t) \, u(t-\textstyle{\frac{\pi}{4}})
+									-\cos (2t) \, u(t-\pi)
+									\\	
+							\end{align*}
+
+							So we can rewrite our IVP <a href="#x1-14r5">(8.5.5)</a> as
+
+							\begin {equation*} 
+								\ddot{y}+y=\cos (2t) \, u(t-\textstyle{\frac{\pi}{4}})
+								-\cos (2t) \, u(t-\pi)
+								\quad y(0)=0
+								\quad\dot{y}(0)=0
+							\end {equation*}
+							
+							Now we can solve by taking the Laplace transform of both sides of the equation
+
+							
+
+							<a id="x1-24r13"></a>
+							\begin {align} \label {eq:8.5.13}
+								\ddot{y}+y= & \,\cos (2t) \, u(t-\textstyle{\frac{\pi}{4}})
+								-\cos (2t) \, u(t-\pi) \nonumber\\
+								{\cal L} \Big\{ \ddot{y}+y \Big\}
+								= & \, {\cal L} \Big\{ \cos (2t) \, u(t-\textstyle{\frac{\pi}{4}})
+								-\cos (2t) \, u(t-\pi) \Big\}\nonumber\\
+
+						
+
+								{\cal L} \big\{ \ddot{y} \big\}
+								+ {\cal L} \big\{ y \big\}
+								= & \, {\cal L} \big\{ \cos (2t) \, u(t-\textstyle{\frac{\pi}{4}}) \big\} - \, {\cal L} \Big\{ \cos (2t) \, u(t-\pi) \Big\}\nonumber\\
+
+								\overbrace{s^2{\cal L} \big\{ {y} \big\} - s \, y(0) - \dot{y}(0)}
+								+ {\cal L} \big\{ y \big\}
+								= & \, 
+								e^{-\frac{\pi}{4}s} \, {\cal L} \Big\{ \cos \big(2(t+\textstyle{\frac{\pi}{4}})\big)  \Big\} - 
+								e^{-\pi s} \, {\cal L} \Big\{ \cos \big(2(t+\pi)\big)\Big\}\nonumber\\
+
+
+
+								s^2 Y(s) + 0 +0 + Y(s)
+								= & \, 
+								e^{-\frac{\pi}{4}s} \, {\cal L} \Big\{ \cos (2t+\textstyle{\frac{\pi}{2}})  \Big\} - 
+								e^{-\pi s} \, {\cal L} \Big\{ \cos (2t+2\pi)\Big\}\nonumber\\
+
+
+								s^2 Y(s) + Y(s)
+								= & \, 
+								e^{-\frac{\pi}{4}s} \, {\cal L} \Big\{ 
+
+									\cos (2t)
+									\overset{0}{\overbrace{\cos (\textstyle{\frac{\pi}{2}})}}
+									-
+									\sin (2t)
+									\overset{1}{\overbrace{\sin (\textstyle{\frac{\pi}{2}})}} 
+								
+									\Big\} \nonumber\\
+								& \quad\quad - 
+								e^{-\pi s} \, {\cal L} \Big\{ 
+									\cos (2t)
+									\underset{1}{\underbrace{\cos (2\pi)}}
+									-
+									\sin (2t)
+									\underset{0}{\underbrace{\sin (2\pi)}}
+									
+									\Big\}\nonumber\\
+
+								\big( s^2  + 1 \big) \, Y(s)
+									= & \, 
+									-e^{-\frac{\pi}{4}s} \, {\cal L} \Big\{ 
+										\sin (2t) \Big\} 
+									 - 
+									e^{-\pi s} \, {\cal L} \Big\{ 
+										\cos (2t) 
+										\Big\}\nonumber\\	
+										
+										
+								\big( s^2  + 1 \big) \, Y(s)
+									= & \, 
+									-e^{-\frac{\pi}{4}s} \, 
+									
+									\left(
+									\frac{2}{s^2 + 4}
+									\right)
+
+										- 
+									e^{-\pi s} 
+									\left(
+									\frac{s}{s^2 + 4} 
+									\right)\nonumber\\	
+									
+									
+								Y(s)
+									= & \, 
+									-\frac{2e^{-\frac{\pi}{4}s}}{\big( s^2  + 1 \big) (s^2 + 4)}
+									- \frac{se^{-\pi s} }{\big( s^2  + 1 \big) (s^2 + 4)} 	
+							\end {align}
+
+							
+
+							Now to find \(y(t)\) we take the inverse Laplace transform of <a href="#x1-24r13">(8.5.13)</a>
+
+							\begin {align*} 
+								{\cal L}^{-1} \Big[ Y(s) \Big]
+								
+								= & \, 
+								{\cal L}^{-1} \Bigg[ -\frac{2e^{-\frac{\pi}{4}s}}{\big( s^2  - 1 \big) (s^2 + 4)}
+								- \frac{se^{-\pi s} }{\big( s^2  + 1 \big) (s^2 + 4)}  \Bigg]
+								\\
+
+								=
+								y(t)
+								= &
+								- 2 \,
+								{\cal L}^{-1} \Bigg[ e^{-\frac{\pi}{4}s} \cdot \underset{G_{_1}(s)}{\underbrace{\frac{1}{\big( s^2  + 1 \big) (s^2 + 4)}}}  \Bigg]
+								- \,
+								{\cal L}^{-1} \Bigg[ e^{-\pi s} \cdot \underset{G_{_2}(s) }{\underbrace{\frac{s}{\big( s^2  + 1 \big) (s^2 + 4)}}}  \Bigg]
+								
+								\\
+
+							\end {align*}
+
+							Just as before we divide this up into separate problems and we will evaluate the inverse Laplace Transform of each one separately. 	
+							We'll start by finding \(g_{_1}(t)\) using <span class="vocab">PFD</span>
+
+							<a id="x1-25r14"></a>
+							\begin{align} \label {eq:8.5.14}
+								g_1(t) = & \,
+								{\cal L}^{-1}\Big [ G_{_1}(s) \Big ] \nonumber\\
+								= & \, 
+								{\cal L}^{-1}\left [ \frac{1}{\big( s^2  + 1 \big) (s^2 + 4)} \right ] \nonumber\\
+								= & \, 
+								{\cal L}^{-1}\left [ \frac{A}{s^2  + 1 } \right ]
+								+ {\cal L}^{-1}\left [ \frac{B}{s^2 + 4} \right ] 
+							\end{align}
+
+						</div>
+
+						<div class="reading-exercise">
+							Solve for \(A\) and \(B\) using Heaviside's method
+							\(\, \displaystyle \frac{1}{\big( s^2  - 1 \big) (s^2 + 4)} = \frac{A}{s^2  - 1 } + \frac{B}{s^2 + 4} \)
+						</div>	
+
+						<div>
+							Substituting \(A\) and \(B\) back in to <a href="#x1-25r14">(8.5.14)</a> we obtain
+							\begin{align*}
+								g_1(t)
+								= & \, 
+								\frac{1}{3} \,
+								\Bigg( \,
+								{\cal L}^{-1}\left [ \frac{1}{s^2+1} \right ]
+								- {\cal L}^{-1}\left [ \frac{1}{s^2+4 } \right ] 
+								\, \Bigg)\\
+								= & \, 
+								\frac{1}{3} \,
+								\Bigg( \,
+								{\cal L}^{-1}\left [ \frac{1}{s^2+1} \right ]
+								- \frac{1}{2} \, {\cal L}^{-1}\left [ \frac{2}{s^2+4 } \right ] 
+								\, \Bigg)\\
+								= & \, 
+								\frac{1}{3} \,
+								\Bigg( \,
+								\sin t
+								- \frac{1}{2} \sin 2t
+								\, \Bigg)\\
+								= & \, 
+								\frac{1}{6} \,
+								\Big( \,
+								2\sin t
+								- \sin 2t
+								\, \Big)\\
+							\end{align*}
+						</div>	
+
+
+
+						<div>	
+							Now to calculate the inverse Laplace transform of the
+							first term \(e^{-\frac{\pi}{4}s} \,G_{_1}(s)\) we will apply the <strong>Second Shifting Theorem</strong> (Theorem&nbsp;<a href="#x1-212" target=_blank>8.4.2</a>) and we already found \(g_1(t)\) so we identify \(a=\frac{\pi}{4}\) and substitute to obtain
+							\begin{align*}
+							{\cal L}^{-1}  
+									\Big[  e^{-\frac{\pi}{4}s} \, G_{_1}(s)  \Big]
+								= & \, g_{_1}(t-\textstyle{\frac{\pi}{4}}) 
+									\, u(t-\frac	{\pi}{4}) \\
+								= & \, 
+									\frac{1}{6} \, 
+									\Big( \, 2\sin (t-\textstyle{\frac{\pi}{4}}) - \sin \big(2(t-\textstyle{\frac{\pi}{4}})\big) \, \Big) 
+									\, u(t-\frac{\pi}{4}) \\
+								= & \, 
+									\frac{1}{6} \, 
+									\Big( \, 
+										2\sin (t-\textstyle{\frac{\pi}{4}}) - \sin (2t-\textstyle{\frac{\pi}{2}}) 
+									\, \Big) 
+									\, u(t-\frac{\pi}{4}) \\
+								= & \, 
+									\frac{1}{6} \, 
+									\Big( \, 
+										2\big(
+											\sin t \,
+											\overset{\frac{\sqrt{2}}{2}}{\overbrace{\cos \textstyle{\frac{\pi}{4}}}}
+											-
+											\cos t \,
+											\overset{\frac{\sqrt{2}}{2}}{\overbrace{\sin \textstyle{\frac{\pi}{4}}}} 
+										\big) \\	
+									& \quad\quad
+										- \big(
+											\sin 2t \,
+											\underset{0}{\underbrace{\cos \textstyle{\frac{\pi}{2}}}}
+											-
+											\cos 2t \,
+											\underset{1}{\underbrace{\sin \textstyle{\frac{\pi}{2}}}}
+										\big) 
+									\, \Big) 
+									\, u(t-\textstyle{\frac{\pi}{4}}) \\
+								= & \, 
+									\frac{1}{6} \, 
+									\Big( \, 
+										2\big(
+											{\textstyle \frac{\sqrt{2}}{2}}
+											\sin t
+											-
+											{\textstyle  \frac{\sqrt{2}}{2} }
+											\cos t 
+										\big)
+										- \big(
+											-
+											\cos 2t
+										\big) 
+									\, \Big) 
+									\, u(t-\textstyle{\frac{\pi}{4}}) \\
+								= & \, 
+									\frac{1}{6} \, 
+									\Big( \, 
+										
+											\sqrt{2}
+											\sin t
+											-
+											\sqrt{2}
+											\cos t 
+										
+											+
+											\cos 2t
+										
+									\, \Big) 
+									\, u(t-\textstyle{\frac{\pi}{4}}) \\									
+							\end{align*}
+						</div>	
+
+
+
+						<div>	
+							Now we'll calculate the inverse Laplace transform of the
+							second term \(e^{-\pi s} \,G_{_2}(s)\) finding \(g_{_2}(t)\)
+							but notice that \(G_{_2}(s) = s \cdot G_{_1}(s) \) so we can apply the same PFD from before.
+
+							\begin{align}
+								g_2(t) = & \,
+								{\cal L}^{-1}\Big [ G_{_2}(s) \Big ] \nonumber\\
+								= & \,
+								{\cal L}^{-1}\Big [ s \cdot G_{_1}(s) \Big ] \nonumber\\
+								= & \, 
+								{\cal L}^{-1}\left [ s \cdot \frac{1}{\big( s^2  + 1 \big) (s^2 + 4)} \right ] \nonumber\\
+
+
+								= & \, 
+								\frac{1}{3} \,
+								{\cal L}^{-1}\left [ s \Big( \frac{1}{ s^2  + 1 }  - \frac{1}{s^2 + 4} \Big) \right ] \nonumber\\
+								= & \, 
+								\frac{1}{3} \,
+								{\cal L}^{-1}\left [  \frac{s}{ s^2  + 1 }  - \frac{s}{s^2 + 4}  \right ] \nonumber\\
+
+
+								= & \, 
+								\frac{1}{3} \,
+								\Bigg(
+								{\cal L}^{-1}\left [  \frac{s}{ s^2  + 1 }  \right ] 
+								-
+								{\cal L}^{-1}\left [   \frac{s}{s^2 + 4}  \right ] 
+								\Bigg)
+								\nonumber\\
+
+								= & \, 
+								\frac{1}{3} \,
+								\Big(
+								\cos t 
+								-
+								\cos 2t 
+								\Big)
+								\nonumber\\
+
+ 
+							\end{align}
+
+						</div>
+
+						
+						
+
+
+						<div>	
+							Now to calculate the inverse Laplace transform of the
+							second term \(e^{-\pi s} \,G_{_2}(s)\) we will apply the <strong>Second Shifting Theorem</strong> (Theorem&nbsp;<a href="#x1-212" target=_blank>8.4.2</a>) and we already found \(g_2(t)\) so we identify \(a=\pi\) and substitute to obtain
+							\begin{align*}
+							{\cal L}^{-1}  
+									\Big[  e^{-\pi s} \, G_{_2}(s)  \Big]
+								= & \, g_{_2}(t-\pi) 
+									\, u(t-\pi) \\
+								= & \, 
+									\frac{1}{3} \,
+									\Big(
+									\cos (t-\pi)  
+									-
+									\cos \big(2(t-\pi)\big)  
+									\Big) 
+									\, u(t-\pi) \\
+								= & \, 
+									\frac{1}{3} \,
+									\Big(
+									\cos (t-\pi)  
+									-
+									\cos (2t-2\pi)\Big)  
+									\, u(t-\pi) \\	
+
+								= & \, 
+									\frac{1}{3} \,
+									\Big(
+										\big(
+										\cos t \,
+										\overset{-1}{\overbrace{\cos \pi}} 
+										+
+										\sin t \,
+										\overset{0}{\overbrace{\sin \pi}}
+										\big)  \\
+										& \quad\quad
+										-
+										\big(
+										\cos 2t \, 
+										\underset{1}{\underbrace{\cos 2\pi}}
+										+
+										\sin 2t \,
+										\underset{0}{\underbrace{\sin 2\pi}}
+										\big) 
+									\Big)  
+									\, u(t-\pi) \\	
+
+									= & \, 
+									\frac{1}{3} \,
+									\Big(-\cos t- \cos 2t  \Big)  
+									\, u(t-\pi) \\	
+									
+									
+									= & \, 
+									-\frac{1}{3} \,
+									\Big(\cos t+ \cos 2t  \Big)  
+									\, u(t-\pi) \\	
+												
+							\end{align*}
+						</div>	
+						<br>
+						<br>
+						<br>
+
+						<div>
+							Finally substituting it back in
+
+							\begin{array}{cccc}
+								y(t) 
+								&=& \,
+								-2 \,
+								{\cal L}^{-1}\Big [ e^{-\frac{\pi}{4}s} G_{_1}(s) \Big ] 
+								&-&  
+								{\cal L}^{-1}\Big [ e^{-\pi s} \, G_{_2}(s) \Big ] 
+								\\
+								&=& \,
+								-2g_{_1}(t-{\textstyle \frac{\pi}{4}}) \, u(t-{\textstyle \frac{\pi}{4}})
+								&-& 
+								g_{_2}(t-\pi) \, u(t-\pi)
+								\\
+								&=& \,
+								-\frac{1}{3} \, 
+									\Big( \, 
+										
+											\sqrt{2}
+											\sin t
+											-
+											\sqrt{2}
+											\cos t 
+										
+											+
+											\cos 2t
+										
+									\, \Big) 
+									\, u(t-\textstyle{\frac{\pi}{4}})
+								&+& 
+								\frac{1}{3} \,
+									\Big(\cos t+ \cos 2t  \Big)  
+									\, u(t-\pi)
+								\\
+							\end{array}
+
+							So we have our solution
+							<a id="x1-26r15"></a>
+							\begin {equation}  \label {eq:8.5.15}
+								y(t) = -\frac{1}{3} \, 
+								\Big( \, 
+									
+										\sqrt{2}
+										\sin t
+										-
+										\sqrt{2}
+										\cos t 
+									
+										+
+										\cos 2t
+									
+								\, \Big) 
+								\, u(t-\textstyle{\frac{\pi}{4}})
+							+
+							\frac{1}{3} \,
+								\Big(\cos t+ \cos 2t  \Big)  
+								\, u(t-\pi)
+							\end {equation} 
+
+							Then to write <a href="#x1-26r15">(8.5.15)</a> as a piecewise function we have 
+							
+							\begin {equation*}
+									\begin {array}{rl} 
+										y_0(t) &amp;=&amp; 0  \\ 
+										y_1(t) - y_0(t) &amp;=&amp; -\frac{1}{3} \, 
+										\Big( \, 
+											
+												\sqrt{2}
+												\sin t
+												-
+												\sqrt{2}
+												\cos t 
+											
+												+
+												\cos 2t
+											
+										\, \Big) \\
+										y_2(t) - y_1(t) &amp;=&amp; \frac{1}{3} \,
+										\Big(\cos t+ \cos 2t  \Big)
+									\end {array} 
+							\end {equation*}  
+
+							Solving for \(y_1(t)\) we have
+
+							\begin {align*}
+								y_1(t) = &amp; \,  -\frac{1}{3} \, 
+								\Big( \, 
+									
+										\sqrt{2}
+										\sin t
+										-
+										\sqrt{2}
+										\cos t 
+									
+										+
+										\cos 2t
+									
+								\, \Big) + y_0(t) \\
+								= &amp;  -\frac{1}{3} \, 
+								\Big( \, 
+									
+										\sqrt{2}
+										\sin t
+										-
+										\sqrt{2}
+										\cos t 
+									
+										+
+										\cos 2t
+									
+								\, \Big) \\ 
+								= &amp;  \frac{1}{3} \, 
+								\Big( \, 
+									
+										
+										
+										\sqrt{2}
+										(
+										\cos t 
+										-
+										\sin t
+										)
+									
+										-
+										\cos 2t
+									
+								\, \Big) \\
+								= &amp;  
+										\frac{\sqrt{2}}{3}
+										(
+										\cos t 
+										-
+										\sin t
+										)
+										-
+										\frac{1}{3} 
+										\cos 2t \\				 
+							\end {align*}  
+
+							Solving for \(y_2(t)\) we have
+
+							\begin {align*}
+								y_2(t) = &amp; \,  \frac{1}{3} \,
+								\Big(\cos t+ \cos 2t  \Big) + y_1(t) \\
+								= &amp;  \frac{1}{3} \,
+								\Big(\cos t+ \cos 2t  \Big) -\frac{1}{3} \, 
+								\Big( \, 
+									
+										\sqrt{2}
+										\sin t
+										-
+										\sqrt{2}
+										\cos t 
+									
+										+
+										\cos 2t
+									
+								\, \Big) \\
+								= &amp;  \frac{1}{3} \,
+								\Big(\cos t+ \cos 2t -
+									
+										\sqrt{2}
+										\sin t
+										+
+										\sqrt{2}
+										\cos t 
+									
+										-
+										\cos 2t
+									
+								\, \Big) \\
+								= &amp;  \frac{1}{3} \,
+								\Big(
+									(1+\sqrt{2})\cos t
+										-
+										\sqrt{2}
+										\sin t
+										 
+									
+								\, \Big) \\	
+								
+								= &amp; 
+								\frac{1+\sqrt{2}}{3}\cos t
+										-
+										\frac{\sqrt{2}}{3} 
+										\sin t \\				
+							\end {align*}  
+
+							Then writing in piecewise form we have
+
+							<a id="x1-27r16"></a> 
+							\begin {equation}  \label {eq:8.5.16} 
+								y(t)=\left \{ 
+									\begin {array}{cl} 
+										0 &amp;0\le t&lt \frac{\pi}{4}\\ 
+										\frac{\sqrt{2}}{3}
+										(
+										\cos t 
+										-
+										\sin t
+										)
+										-
+										\frac{1}{3} 
+										\cos 2t &amp;\frac{\pi}{4} \le t &lt \pi\\ 
+
+										\frac{1+\sqrt{2}}{3}\cos t
+										-
+										\frac{\sqrt{2}}{3} 
+										\sin t &amp;t\ge \pi
+									\end {array}
+								\right. 
+							\end {equation} 
+
+						</div>	
+						
+					</div>	
+					
 				</details>
 			</div>
 			<figure id="x1-28r2">
