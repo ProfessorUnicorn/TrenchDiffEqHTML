@@ -560,7 +560,7 @@
 			<div class="ex-body">
 				Suppose \(p\), \(q\), and \(f\) are continuous on \((a,b)\) and let \(x_0\) be in \((a,b)\). Let \(y_1\) and \(y_2\) be the solutions of \[ \frac{d^2y}{dx^2}+p(x) \frac{dy}{dx} +q(x)y=0 \] such that \[ y_1(x_0)=1, \quad \left. \frac{dy_1}{dx} \right|_{x_0}=0, \quad y_2(x_0)=0, \quad \left. \frac{dy_2}{dx} \right|_{x_0}=1\] Use variation of parameters to show that the solution of the IVP \[ \frac{d^2y}{dx^2}+p(x) \frac{dy}{dx} +q(x)y=f(x), \quad y(x_0)=k_0,\; \left. \frac{dy}{dx} \right|_{x_0}=k_1\] is \[ \begin {array}{rcl} y(x) &amp;=&amp; k_0y_1(x)+k_1y_2(x) \\ &amp; &amp; \displaystyle \qquad +\int ^x_{x_0}\left (y_1(t)y_2(x)- y_1(x)y_2(t)\right ) f(t)\exp \left (\int ^t_{x_0}p(s)\,ds\right )\,dt \end {array} \]<span class="hint"> Hint: Use Abel’s formula for the Wronskian of \(\{y_1,y_2\}\), and integrate \( \frac{du_1}{dx} \) and \( \frac{du_2}{dx} \) from \(x_0\) to \(x\). Show also that \[ 
 				\begin {array}{rcl} \frac{dy}{dx} &amp;=&amp; k_0 \frac{dy_1}{dx} +k_1 \frac{dy_2}{dx} \\ &amp; &amp; \displaystyle \qquad +\int ^x_{x_0}\left (y_1(t) \frac{dy_2}{dx} - \frac{dy_1}{dx} y_2(t) \right )f(t)\exp \left (\int ^t_{x_0}p(s)\,ds\right )\,dt 
-				\end {array} \] </span>
+				\end {array} \]
 			</div>
 		</div>
 
@@ -577,14 +577,14 @@
 				 Suppose \(f\) is continuous on \((a,\infty )\), where \(a&lt;0\), so \(x_0=0\) is in \((a,\infty )\). For parts b and c, assume that the improper integral \(\int _{0}^\infty f(t)\,dt\) is absolutely convergent.
 				<ol>
 					<li>
-						Use variation of parameters to find a formula for the solution of the IVP \[ \frac{d^2y}{dx^2}+y=f(x), \quad y(0)=k_0,\quad \left. \frac{dy}{dx} \right|_{0}=k_1\]<span class="hint"> Hint: You will need the addition formulas for the sine and cosine: </span>
+						Use variation of parameters to find a formula for the solution of the IVP \[ \frac{d^2y}{dx^2}+y=f(x), \quad y(0)=k_0,\quad \left. \frac{dy}{dx} \right|_{0}=k_1\] <span class="hint"> Hint: You will need the addition formulas for the sine and cosine:</span>
 						<div class="eqnarray"> 
 							\begin {eqnarray*} \sin (A+B)&amp;=&amp;\sin A\cos B+\cos A\sin B\\ \cos (A+B)&amp;=&amp;\cos A\cos B-\sin A\sin B 
 							\end {eqnarray*} 
 						</div>
 					</li>
 					<li>
-						Show that if \(y\) is a solution of \[ \frac{d^2y}{dx^2}+y=f(x) {\tag A} \] on \((a,\infty )\), then \[ \lim _{x \to \infty }\left (y(x)-A_0\cos x-A_1\sin x\right )=0 {\tag B} \] and \[ \lim _{x\to \infty }\left ( \frac{dy}{dx} +A_0\sin x-A_1\cos x\right )=0, \, {\tag C} \] where \[ A_0=k_0-\int _0^\infty f(t)\sin t\,dt\mbox {\quad and \quad } A_1=k_1+\int _0^\infty f(t)\cos t\,dt\]<span class="hint"> Hint: Recall from calculus that if \(\int _0^\infty f(t)\,dt\) converges absolutely, then \(\lim _{x\to \infty }\int _x^\infty |f(t)|\,dt~=~0\). </span>
+						Show that if \(y\) is a solution of \[ \frac{d^2y}{dx^2}+y=f(x) {\tag A} \] on \((a,\infty )\), then \[ \lim _{x \to \infty }\left (y(x)-A_0\cos x-A_1\sin x\right )=0 {\tag B} \] and \[ \lim _{x\to \infty }\left ( \frac{dy}{dx} +A_0\sin x-A_1\cos x\right )=0, \, {\tag C} \] where \[ A_0=k_0-\int _0^\infty f(t)\sin t\,dt\mbox {\quad and \quad } A_1=k_1+\int _0^\infty f(t)\cos t\,dt\]<span class="hint"> Hint: Recall from calculus that if \(\int _0^\infty f(t)\,dt\) converges absolutely, then \(\lim _{x\to \infty }\int _x^\infty |f(t)|\,dt~=~0\).
 					</li>
 					<li>
 						Show that if \(A_0\) and \(A_1\) are arbitrary constants, then there’s a unique solution of \(\frac{d^2y}{dx^2}+y=f(x)\) on \((a,\infty )\) that satisfies (B) and (C).
