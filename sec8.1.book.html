@@ -77,7 +77,7 @@
 			<br>
 			<br>
 			<br>
-			<hr>
+			<br>
 			<br>
 			<br>
 			<br>
@@ -256,7 +256,7 @@
 			</div>
 			
 			<br>
-			<hr>
+			<br>
 			<br>
 
 			<div id="summarize-results">
@@ -713,55 +713,61 @@
 				</div>
 				<details class="solution">
 					<summary>Solution</summary>
-					<div>
-						We'll start by rewriting the cosh function in terms of exponentials (by definition):
+					<ol>
+						<li class="no-part">
+							<div>
+								We'll start by rewriting the cosh function in terms of exponentials (by definition):
 
-						\[ 
-						\cosh \omega t
-						={{e^{\omega t}+e^{-\omega t}\over 2}
-						=\frac{1}{2}e^{\omega t} + \frac{1}{2}e^{-\omega t} 
-						}\]
+								\[ 
+								\cosh \omega t
+								={{e^{\omega t}+e^{-\omega t}\over 2}
+								=\frac{1}{2}e^{\omega t} + \frac{1}{2}e^{-\omega t} 
+								}\]
 
-						Now we apply the linearity property of the Laplace transform
+								Now we apply the linearity property of the Laplace transform
 
-						<a id="x1-18r9"></a>
-						\begin {align} \label {eq:8.1.9} 
-							{\cal L} \big\{ \cosh \omega t \big\} 
-								= & \, {\cal L} \left\{ \frac{1}{2}e^{\omega t} + \frac{1}{2}e^{-\omega t} \right\} \nonumber \\
-								= & \, {\cal L} \left\{ \frac{1}{2}e^{\omega t}  \right\}  + {\cal L} \left\{ \frac{1}{2}e^{-\omega t} \right\} \nonumber \\
-								= & \, \frac{1}{2} {\cal L} \left\{ e^{\omega t}  \right\}  + \frac{1}{2} {\cal L} \left\{ e^{-\omega t} \right\}
-						\end {align}
+								<a id="x1-18r9"></a>
+								\begin {align} \label {eq:8.1.9} 
+									{\cal L} \big\{ \cosh \omega t \big\} 
+										= & \, {\cal L} \left\{ \frac{1}{2}e^{\omega t} + \frac{1}{2}e^{-\omega t} \right\} \nonumber \\
+										= & \, {\cal L} \left\{ \frac{1}{2}e^{\omega t}  \right\}  + {\cal L} \left\{ \frac{1}{2}e^{-\omega t} \right\} \nonumber \\
+										= & \, \frac{1}{2} {\cal L} \left\{ e^{\omega t}  \right\}  + \frac{1}{2} {\cal L} \left\{ e^{-\omega t} \right\}
+								\end {align}
 
-						Now we apply the given Laplace transform 
-						\( {\cal L}   \big\{ e^{at} \big\} =1 / (s-a) \) to each:
+								Now we apply the given Laplace transform 
+								\( {\cal L}   \big\{ e^{at} \big\} =1 / (s-a) \) to each:
 
-						\[
-						{\cal L} \left\{ e^{\omega t} \right\} ={1\over s-\omega}
-						\quad\quad\quad
-						s>\omega
-						\]
+								\[
+								{\cal L} \left\{ e^{\omega t} \right\} ={1\over s-\omega}
+								\quad\quad\quad
+								s>\omega
+								\]
 
-						\[
-						{\cal L} \left\{ e^{-\omega t} \right\}
-						= {1\over s+\omega}
-						\quad\quad\quad
-						s > -\omega
-						\]
+								\[
+								{\cal L} \left\{ e^{-\omega t} \right\}
+								= {1\over s+\omega}
+								\quad\quad\quad
+								s > -\omega
+								\]
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
+								Now substituting them back in we can get an expression for \({\cal L} \big\{ \cosh \omega t \big\} \)
 
-						Now substituting them back in we can get an expression for \({\cal L} \big\{ \cosh \omega t \big\} \)
-
-						\begin {align*} 
-							{\cal L} \big\{ \cosh \omega t \big\} 
-								= & \, \frac{1}{2} {\cal L} \left\{ e^{\omega t}  \right\}  + \frac{1}{2} {\cal L} \left\{ e^{-\omega t} \right\} \nonumber \\
-								= & \, \frac{1}{2} \left( \frac{1}{s-\omega} \right) + \frac{1}{2} \left( \frac{1}{s+\omega} \right) \nonumber \\
-								= & \,  \frac{s+b}{2(s-b)(s+\omega)} + \frac{s-\omega}{2(s+\omega)(s-b)} \nonumber \\
-								= & \,  \frac{2s}{2(s-\omega)(s+b)} \nonumber \\
-								= & \,  \frac{s}{(s-\omega)(s+b)} \nonumber \\
-								= & \,  \frac{s}{s^2-\omega^2} \quad\quad\quad
-								s > \big| \omega \big| \nonumber \\
-						\end {align*}
-
-					</div>	
+								\begin {align*} 
+									{\cal L} \big\{ \cosh \omega t \big\} 
+										= & \, \frac{1}{2} {\cal L} \left\{ e^{\omega t}  \right\}  + \frac{1}{2} {\cal L} \left\{ e^{-\omega t} \right\} \nonumber \\
+										= & \, \frac{1}{2} \left( \frac{1}{s-\omega} \right) + \frac{1}{2} \left( \frac{1}{s+\omega} \right) \nonumber \\
+										= & \,  \frac{s+b}{2(s-b)(s+\omega)} + \frac{s-\omega}{2(s+\omega)(s-b)} \nonumber \\
+										= & \,  \frac{2s}{2(s-\omega)(s+b)} \nonumber \\
+										= & \,  \frac{s}{(s-\omega)(s+b)} \nonumber \\
+										= & \,  \frac{s}{s^2-\omega^2} \quad\quad\quad
+										s > \big| \omega \big| \nonumber \\
+								\end {align*}
+							</div>	
+						</li>
+					</ol>
 
 				</details>
 			</div>
@@ -840,6 +846,7 @@
 					<li>
 						\( \quad  {\cal L} \left\{ e^{a t}\cos \omega t \right\} \)
 					</li>
+					<li class="skip"></li>
 					<li>
 						\( \quad  {\cal L} \left\{ e^{a t}\sin \omega t \right\} \)
 					</li>
@@ -880,7 +887,7 @@
 							</div>
 
 							<br>
-							<hr>
+							<br>
 							<br>
 						</li>
 						<li>
@@ -949,7 +956,7 @@
 								\end{align*}
 							</div>
 							<br>
-							<hr>
+							<br>
 							<br>
 						</li>
 						<li class="continued">
@@ -974,7 +981,7 @@
 								\end{align*}
 							</div>
 							<br>
-							<hr>
+							<br>
 							<br>
 						</li>
 						<li>
