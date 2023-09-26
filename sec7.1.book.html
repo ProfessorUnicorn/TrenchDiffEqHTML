@@ -753,18 +753,25 @@
 				
 				However, these series can all be rewritten so that their \(n\)-th terms are constant multiples of \((x-x_0)^n\). For example, letting \(n=k+1\) in the series in <a href='#eq7-1-6'>(7.1.6)</a> yields 
 				
+				<!-- eTA cannot handle a tag and a label in the same equation, so tag 7.1.10 too -->
 				<a id="x1-18r3"></a> 
-				\begin {align} \label {eq:7.1.10} 
-					f'(x) = & {\sum _{n=1}^\infty n \, a_n(x-x_0)^{n-1}} \nonumber \tag{6} \\
-					= & {\sum _{k+1=1}^\infty \overbrace{(k+1)} \, a_{\underbrace{k+1}}(x-x_0)^{\overbrace{k+1}-1}} \nonumber \\
-					= & \sum _{k=0}^\infty (k+1) \, a_{k+1}(x-x_0)^k 
+				\begin {align*}
+					f'(x) = & {\sum _{n=1}^\infty n \, a_n(x-x_0)^{n-1}} \tag{6} \\
+					= & {\sum _{k+1=1}^\infty \overbrace{(k+1)} \, a_{\underbrace{k+1}}(x-x_0)^{\overbrace{k+1}-1}} \\
+					= & \sum _{k=0}^\infty (k+1) \, a_{k+1}(x-x_0)^k \tag{10}
 				\end {align} 
+
+				<!-- MathJax does not provide a way to skip equation numbers, so we hide this box to skip them for us -->
+				<div style="display: none">
+					\begin{align}
+						\text{skip 7.1.10} \\
+					\end{align}
+				</div>
 				
 				where we start the new summation index \(k\) from zero so that the first term in <a href="#x1-18r3">(7.1.10)</a> (obtained by setting \(k=0\)) is the same as the first term in <a href='#eq7-1-6'>(7.1.6)</a> (obtained by setting \(n=1\) ). However, the sum of a series is independent of the symbol used to denote the summation index, just as the value of a definite integral is independent of the symbol used to denote the variable of integration. Therefore we can replace \(k\) by \(n\) in <a href="#x1-18r3">(7.1.10)</a> to obtain an expression for (7.1.6) where the general term is a constant multiple of \((x-x_0)^n\)
 
-
 				<a id="x1-19r4"></a>
-				\begin{align} \label {eq:7.1.11} 
+				\begin{align} \label {eq:7.1.11}
 					f'(x)= & \sum _{n=0}^\infty (n+1) \, a_{n+1}(x-x_0)^n
 				\end{align}
 
@@ -1016,12 +1023,12 @@
 								Substituting in the Maclaurin series form for \(e^{x}\) and \(e^{-x}\): 
 
 								<a id="x1-23r5"></a>
-								\begin{align} \label {eq:7.1.12}
+								\begin{align}
 									\cosh x 
 									= & \frac{1}{2} \overset{e^x}{\overbrace{\sum_{n=0}^{\infty} \frac{x^n}{n!}}} + \frac{1}{2} \overset{e^{-x}}{\overbrace{\sum_{n=0}^{\infty} (-1)^n \frac{x^n}{n!}}} \nonumber \\
 									= & \sum_{n=0}^{\infty} \frac{1}{2} \cdot \frac{x^n}{n!} + \sum_{n=0}^{\infty} \frac{1}{2} \cdot (-1)^n \frac{x^n}{n!} \nonumber \\
 									= & \sum_{n=0}^{\infty} \Bigg[ \frac{1}{2} \cdot \frac{x^n}{n!} +  \frac{1}{2} \cdot (-1)^n \frac{x^n}{n!} \Bigg] \nonumber \\
-									= & \sum_{n=0}^{\infty} \frac{1}{2} \Big[  1 +  (-1)^n \Big]\frac{x^n}{n!} 
+									= & \sum_{n=0}^{\infty} \frac{1}{2} \Big[  1 +  (-1)^n \Big]\frac{x^n}{n!}  \label {eq:7.1.12}
 								\end{align}
 
 								Now writing out the first few terms, we look for a pattern
@@ -1131,7 +1138,6 @@
 
 			<!--Example 6-->
 			<div class="example" id="x1-246" style="--ex-number: 6">
-				
 			
 				<ol>
 					<li>
@@ -1273,7 +1279,7 @@
 										2(n+1)(n+2) a_{n+2} 
 										- n(n+1) a_{n+1}
 										+ 2 a_n}
-										\Big] x^{n} = & 0 \\
+										\Big] x^{n} = & 0 \label{eq:7.1.17} \\
 									2(n+1)(n+2) a_{n+2} 
 										- n(n+1) a_{n+1}
 										+ 2 a_n = & 0	\nonumber
