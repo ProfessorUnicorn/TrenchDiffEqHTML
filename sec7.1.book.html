@@ -41,10 +41,10 @@
 
 				<a id="x1-3r1"></a>
 				\begin {equation} \label {eq:7.1.1} 
-					\sum _{n=0}^\infty a_n(x-x_0)^n 
+					\sum _{n=0}^\infty  c_{n} (x-x_0)^n 
 				\end {equation} 
 
-				where \(x_0\) and \(a_0\), \(a_1,\) …, \(a_n,\) …are constants\(,\) is called a <span class="vocab">power series in</span> \(x-x_0.\) We say that the power series <a href="#x1-3r1">(7.1.1)</a> <span class="vocab">converges</span> for a given \(x\) if the limit \[ \lim _{N\to \infty } \sum _{n=0}^Na_n(x-x_0)^n \] exists\(; \) otherwise, we say that the power series <span class="vocab">diverges</span> for the given \(x.\) 
+				where \(x_0\) and \( c_{0} \), \( c_{1} ,\) …, \( c_{n} ,\) …are constants\(,\) is called a <span class="vocab">power series in</span> \(x-x_0.\) We say that the power series <a href="#x1-3r1">(7.1.1)</a> <span class="vocab">converges</span> for a given \(x\) if the limit \[ \lim _{N\to \infty } \sum _{n=0}^N c_{n} (x-x_0)^n \] exists\(; \) otherwise, we say that the power series <span class="vocab">diverges</span> for the given \(x.\) 
 			</div>
 
 			<div id="05ec5f20-ea6e-4f9d-a503-c1e81ed53fbe">
@@ -53,7 +53,7 @@
 
 			<div class="theorem roman" id="x1-42">
 				<span class="head">Theorem&nbsp;7.1.2</span>
-				\[ \sum _{n=0}^\infty a_n(x-x_0)^n\] 
+				\[ \sum _{n=0}^\infty  c_{n} (x-x_0)^n\] 
 				For any power series exactly one of these statements is true:
 
 				<ol>
@@ -91,14 +91,16 @@
 				
 			</div>
 			<div id="016bdab8-988d-4a69-aab0-a211baadab43">
-				Recall from calculus that a series of constants \(\sum _{n=0}^\infty \alpha _n\) is said to <span class="vocab">converge absolutely</span> if the series of absolute values \(\sum _{n=0}^\infty |\alpha _n|\) converges. It can be shown that a power series \(\sum _{n=0}^\infty a_n(x-x_0)^n\) with a positive radius of convergence \(R\) converges absolutely in its open interval of convergence; that is, the series \[ \sum _{n=0}^\infty |a_n||x-x_0|^n \] of absolute values converges if \(|x-x_0|&lt;R\). However, if \(R&lt;\infty \), the series may fail to converge absolutely at an endpoint \(x_0\pm R\), even if it converges there. 
+				Recall from calculus that a series of constants \(\sum _{n=0}^\infty \alpha _n\) is said to <span class="vocab">converge absolutely</span> if the series of absolute values \(\sum _{n=0}^\infty |\alpha _n|\) converges. It can be shown that a power series \(\sum _{n=0}^\infty  c_{n} (x-x_0)^n\) with a positive radius of convergence \(R\) converges absolutely in its open interval of convergence; that is, the series \[ \sum _{n=0}^\infty | c_{n} ||x-x_0|^n \] of absolute values converges if \(|x-x_0|&lt;R\). However, if \(R&lt;\infty \), the series may fail to converge absolutely at an endpoint \(x_0\pm R\), even if it converges there. 
 			</div>
 			<div id="3ad6834e-53b8-4485-ae1c-00bc8f731358">
 				The next theorem provides a useful method for determining the radius of convergence of a power series. It’s derived in calculus by applying the ratio test to the corresponding series of absolute values.
 			</div>
 			<div class="theorem" id="x1-83">
 				<span class="head">Theorem&nbsp;7.1.3 Ratio Test</span>
-				Suppose there’s an integer \(N\) such that \(a_n\ne 0\) if \(n\ge N\) and \[ \lim _{n\to \infty }\left |a_{n+1}\over a_n\right |=L\] where \(0\le L\le \infty\). Then the radius of convergence of \(\sum _{n=0}^\infty a_n(x-x_0)^n\) is \(R=1/ L,\) which should be interpreted to mean that \(R=0\) if \(L=\infty\), or \(R=\infty \) if \(L=0\).
+				Suppose there’s an integer \(N\) such that \( c_{n} \ne 0\) if \(n\ge N\) and 
+				
+				\[ \lim _{n\to \infty }\left |c_{n+1}\over  c_{n} \right |=L\] where \(0\le L\le \infty\). Then the radius of convergence of \(\sum _{n=0}^\infty  c_{n} (x-x_0)^n\) is \(R=1/ L,\) which should be interpreted to mean that \(R=0\) if \(L=\infty\), or \(R=\infty \) if \(L=0\).
 			</div>
 
 			<br>
@@ -124,15 +126,15 @@
 							<div>
 								Comparing our series with the definition <a href="#x1-3r1">(7.1.1)</a>
 								\begin{align*}
-									\sum _{n=0}^\infty a_n(x-x_0)^n 
-									= \sum _{n=0}^\infty\underset{a_n}{\underbrace{n!}} \underset{x-x_0}{\underbrace{(x-0)}}^n
+									\sum _{n=0}^\infty  c_{n} (x-x_0)^n 
+									= \sum _{n=0}^\infty\underset{ c_{n} }{\underbrace{n!}} \underset{x-x_0}{\underbrace{(x-0)}}^n
 									= \sum _{n=0}^\infty {n!}x^n
 								\end{align*}
-								We can identify \(a_n=n!\) and \( x_0 = 0 \)
+								We can identify \( c_{n} =n!\) and \( x_0 = 0 \)
 
 								\begin{align*}
 									L
-									= & \lim _{n\to \infty }\left |a_{n+1}\over a_n\right | \\
+									= & \lim _{n\to \infty }\left |a_{n+1}\over  c_{n} \right | \\
 									= & \lim _{n\to \infty }\left |(n+1)!\over n!\right | \\
 									= & \lim _{n\to \infty }  { (n+1)!\over n! } \\
 									= & \lim _{n\to \infty } {(n+1) \cdot n!\over n!} \\
@@ -151,15 +153,15 @@
 							<div>
 								Comparing our series with the definition <a href="#x1-3r1">(7.1.1)</a>
 								\begin{align*}
-									\sum _{n=0}^\infty a_n(x-x_0)^n 
-									= \sum _{n=0}^\infty\underset{a_n}{\underbrace{\frac{(-1)^n}{n!}}} \underset{x-x_0}{\underbrace{(x-0)}}^n
+									\sum _{n=0}^\infty  c_{n} (x-x_0)^n 
+									= \sum _{n=0}^\infty\underset{ c_{n} }{\underbrace{\frac{(-1)^n}{n!}}} \underset{x-x_0}{\underbrace{(x-0)}}^n
 									= \sum _{n=10}^\infty \frac{(-1)^n}{n!} {x^n}
 								\end{align*}
-								We can identify \(\displaystyle a_n=\frac{(-1)^n}{n!}\) and \( x_0 = 0 \)
+								We can identify \(\displaystyle  c_{n} =\frac{(-1)^n}{n!}\) and \( x_0 = 0 \)
 
 								\begin{align*}
 									L
-									= & \lim _{n\to \infty }\left |a_{n+1}\over a_n\right | \\
+									= & \lim _{n\to \infty }\left |a_{n+1}\over  c_{n} \right | \\
 									= & \lim _{n\to \infty }\left | \frac{(-1)^{n+1}}{(n+1)!} \div \frac{(-1)^n}{n!}  \right| \\
 									= & \lim _{n\to \infty }\left | \frac{(-1)^{n}(-1)^{1}}{(n+1)\cdot n!} \cdot \frac{n!}{(-1)^n} \right| \\
 									= & \lim _{n\to \infty }\left | \frac{-1}{(n+1)} \right| \\
@@ -180,15 +182,15 @@
 							<div>
 								Comparing our series with the definition <a href="#x1-3r1">(7.1.1)</a>
 								\begin{align*}
-									\sum _{n=0}^\infty a_n(x-x_0)^n 
-									= \sum _{n=0}^\infty\underset{a_n}{\underbrace{2^n n^2}} \underset{x-x_0}{\underbrace{(x-1)}}^n
+									\sum _{n=0}^\infty  c_{n} (x-x_0)^n 
+									= \sum _{n=0}^\infty\underset{ c_{n} }{\underbrace{2^n n^2}} \underset{x-x_0}{\underbrace{(x-1)}}^n
 									= \sum _{n=0}^\infty 2^n n^2 (x-1)^n
 								\end{align*}
-								We can identify \(a_n=2^n n^2\) and \( x_0 = 1 \)
+								We can identify \( c_{n} =2^n n^2\) and \( x_0 = 1 \)
 
 								\begin{align*}
 									L
-									= & \lim _{n\to \infty }\left |a_{n+1}\over a_n\right | \\
+									= & \lim _{n\to \infty }\left |a_{n+1}\over  c_{n} \right | \\
 									= & \lim _{n\to \infty }\left | 2^{n+1} (n+1)^2\over 2^n \, n^2 \right | \\
 									= & \lim _{n\to \infty }{ 2^{n+1} (n+1)^2\over 2^n \, n^2 } \\
 									= & \lim _{n\to \infty }{ 2^{n} \, 2^{1} (n+1)^2\over 2^n \, n^2 } \\
@@ -226,7 +228,7 @@
 					<a id="eq-7-1-2"></a>
 					\begin{align}
 						\label{eq:7.1.2}
-						\sum _{n=0}^\infty {f^{(n)}(x_0)\over n!}(x-x_0)^n
+						\sum _{n=0}^\infty {f^{^{(n)}}(x_0)\over n!}(x-x_0)^n
 						= {f(x_0)} 
 						+ {f'(x_0)}(x-x_0)
 						+ {f''(x_0)\over 2!}(x-x_0)^2
@@ -246,7 +248,7 @@
 
 					\begin{align}
 						\label{eq:7.1.3}
-						\sum _{n=0}^\infty {f^{(n)}(0)\over n!} x^n
+						\sum _{n=0}^\infty {f^{^{(n)}}(0)\over n!} x^n
 						= {f(0)} 
 						+ {f'(0)}x
 						+ {f''(0)\over 2!}x^2
@@ -387,10 +389,10 @@
 				
 				\begin{equation}
 					\label{eq:7.1.5}
-					f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n
+					y=\sum _{n=0}^\infty  c_{n} (x-x_0)^n
 				\end{equation}
 				
-				on its open interval of convergence. We say that the series <span class="vocab">represents</span> \(f\) on the open interval of convergence. A function \(f\) represented by a power series may be a familiar elementary function, however, it often happens that \(f\) isn’t a familiar function, so the series actually <span class="vocab">defines</span> \(f\). 
+				on its open interval of convergence. We say that the series <span class="vocab">represents</span> \(y\) on the open interval of convergence. A function \(y\) represented by a power series may be a familiar elementary function, however, it often happens that \(y\) isn’t a familiar function, so the series actually <span class="vocab">defines</span> \(y\). 
 			</div>
 			<div id="12afc254-51f2-4866-a9e4-837416eb41a4">
 				The next theorem shows that a function represented by a power series has derivatives of all orders on the open interval of convergence of the power series, and provides power series representations of the derivatives. 
@@ -399,7 +401,7 @@
 			<!--Theorem-->
 			<div class="theorem" id="x1-104">
 				<span class="head">Theorem&nbsp;7.1.4</span>
-				A power series \[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \] with positive radius of convergence \(R\) has derivatives of all orders in its open interval of convergence\(,\) and successive derivatives can be obtained by repeatedly differentiating term by term and simplifying out the zero terms by changing the starting index
+				A power series \[ y=\sum _{n=0}^\infty  c_{n} (x-x_0)^n \] with positive radius of convergence \(R\) has derivatives of all orders in its open interval of convergence\(,\) and successive derivatives can be obtained by repeatedly differentiating term by term and simplifying out the zero terms by changing the starting index
 
 				<!--
 					Content Builder needs to know the equation number, and we can only have one label
@@ -409,26 +411,33 @@
 				<a id='eq7-1-6'></a>
 				\begin{align}
 				
-					f^{'}(x) 
-					= & \sum _{n=0}^\infty a_n \frac{d}{dx} \Big( (x-x_0)^n \Big) \nonumber \\ 
-					= & \sum _{n=0}^\infty a_n \Big( n (x-x_0)^{n-1} \Big) \nonumber \\
-					= & {\sum _{n=0}^\infty n \, a_n(x-x_0)^{n-1}} \nonumber \\
+					\frac{dy}{dx}
+					= & \frac{d}{dx} \left(  \sum _{n=0}^\infty  c_{n} (x-x_0)^n \right) \nonumber \\ 
+					= & \sum _{n=0}^\infty  c_{n}  \frac{d}{dx} \Big( (x-x_0)^n \Big) \nonumber \\ 
+					= & \sum _{n=0}^\infty  c_{n}  \Big( n (x-x_0)^{n-1} \Big) \nonumber \\
+					= & {\sum _{n=0}^\infty n \,  c_{n} (x-x_0)^{n-1}} \nonumber \\
 					\tag{6}
-					= & {\sum _{n=1}^\infty n \, a_n(x-x_0)^{n-1}} \\
+					= & {\sum _{n=1}^\infty n \,  c_{n} (x-x_0)^{n-1}} \\
 					\nonumber \\
-					f^{''}(x) = & {\sum _{n=1}^\infty n \, a_n \frac{d}{dx} \Big( (x-x_0)^{n-1} \Big) } \nonumber \\
-					= & {\sum _{n=1}^\infty n \, a_n \Big( (n-1) (x-x_0)^{n-2} \Big) } \nonumber \\
-					= & {\sum _{n=1}^\infty n (n-1) a_n (x-x_0)^{n-2} } \nonumber \\
+
+					\frac{d^2y}{dx^2}
+					= & \frac{d}{dx} \left( {\sum _{n=1}^\infty n \,  c_{n}  (x-x_0)^{n-1}  } \right)  \nonumber \\
+					= & {\sum _{n=1}^\infty n \,  c_{n}  (x-x_0)^{n-1}  } \nonumber \\
+					= & {\sum _{n=1}^\infty n \,  c_{n}  \Big( (n-1) (x-x_0)^{n-2} \Big) } \nonumber \\
+					= & {\sum _{n=1}^\infty n (n-1)  c_{n}  (x-x_0)^{n-2} } \nonumber \\
 					\tag{7}
-					= & {\sum _{n=2}^\infty n (n-1) a_n (x-x_0)^{n-2} } \\
+					= & {\sum _{n=2}^\infty n (n-1)  c_{n}  (x-x_0)^{n-2} } \\
 					\nonumber \\
-					f^{'''}(x) = & {\sum _{n=2}^\infty n (n-1) a_n \frac{d}{dx} \Big( (x-x_0)^{n-2} \Big)}\nonumber \\
-					= & {\sum _{n=2}^\infty n (n-1) a_n \Big( (n-2)(x-x_0)^{n-3} \Big)} \nonumber \\
-					= & {\sum _{n=2}^\infty n (n-1) (n-2) a_n (x-x_0)^{n-3} } \nonumber \\
-					= & {\sum _{n=3}^\infty n (n-1) (n-2) a_n (x-x_0)^{n-3} } \nonumber \\ \nonumber \\
+
+					\frac{d^3y}{dx^3}
+					= & \frac{d}{dx} \left( {\sum _{n=2}^\infty n (n-1)  c_{n}  (x-x_0)^{n-2} } \right)  \nonumber \\
+					= & {\sum _{n=2}^\infty n (n-1)  c_{n}  \frac{d}{dx} \Big( (x-x_0)^{n-2} \Big)}\nonumber \\
+					= & {\sum _{n=2}^\infty n (n-1)  c_{n}  \Big( (n-2)(x-x_0)^{n-3} \Big)} \nonumber \\
+					= & {\sum _{n=2}^\infty n (n-1) (n-2)  c_{n}  (x-x_0)^{n-3} } \nonumber \\
+					= & {\sum _{n=3}^\infty n (n-1) (n-2)  c_{n}  (x-x_0)^{n-3} } \nonumber \\ \nonumber \\
 					\vdots \, & \nonumber \nonumber \\ \nonumber \\
 					\tag{8}
-					f^{^{(k)}}(x) = & \sum _{n=k}^\infty n(n-1)\cdots (n-k+1)a_n(x-x_0)^{n-k}
+					\frac{d^n y}{dx^n} = & \sum _{n=k}^\infty n(n-1)\cdots (n-k+1) c_{n} (x-x_0)^{n-k}
 
 				\end{align}
 
@@ -487,7 +496,7 @@
 								And substituting them into the formula (7.1.3) 
 
 								\begin{align*} 
-									 & \sum _{n=0}^\infty {f^{(n)}(0)\over n!} x^n \\
+									 & \sum _{n=0}^\infty {f^{^{(n)}}(0)\over n!} x^n \\
 									= & \underset{0}{\underbrace{{f(0)}}} 
 									+ {f^{'}(0)}x
 									+ \underset{0}{\underbrace{ {f^{''}(0)\over 2!}}} x^2
@@ -560,7 +569,7 @@
 								And substituting them into the formula (7.1.3) 
 
 								\begin{align*} 
-									 & \sum _{n=0}^\infty {f^{(n)}(0)\over n!} x^n \\
+									 & \sum _{n=0}^\infty {f^{^{(n)}}(0)\over n!} x^n \\
 									= & {f(0)}
 									+ \underset{0}{\underbrace{ {f^{'}(0)} }} x
 									+ {f^{''}(0)\over 2!} x^2
@@ -624,16 +633,16 @@
 				<span class="head">Theorem&nbsp;7.1.5</span>
 				If the power series 
 				
-				\[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n \] 
+				\[ f(x)=\sum _{n=0}^\infty  c_{n} (x-x_0)^n \] 
 				
 				has a positive radius of convergence, then 
 
 				<a id="x1-13r2"></a>
 				\begin {equation} \label {eq:7.1.9} 
-					a_n={f^{(n)}(x_0)\over n!} 
+					 c_{n} ={f^{^{(n)}}(x_0)\over n!} 
 				\end {equation} 
 				
-				that is, \(\sum _{n=0}^\infty a_n(x-x_0)^n\) is the Taylor series of \(f\) about \(x_0\)
+				that is, \(\sum _{n=0}^\infty  c_{n} (x-x_0)^n\) is the Taylor series of \(f\) about \(x_0\)
 			</div>
 
 			<div id="56a84d92-57f7-4881-8eb0-3ab52bfe2461">
@@ -641,8 +650,8 @@
 				This result can be obtained by setting \(x=x_0\) in <a href='#eq7-1-6'>(7.1.8)</a>, which yields 
 				
 				\begin{align*}
-					f^{(k)}(x) = & \sum _{n=k}^\infty n(n-1)\cdots (n-k+1) \, a_n(x-x_0)^{n-k} \\
-					f^{(k)}(x_0) = & \sum _{n=k}^\infty n(n-1)\cdots (n-k+1) \, a_n\underset{0}{\underbrace{(x_0-x_0)}}^{n-k} \\
+					f^{(k)}(x) = & \sum _{n=k}^\infty n(n-1)\cdots (n-k+1) \,  c_{n} (x-x_0)^{n-k} \\
+					f^{(k)}(x_0) = & \sum _{n=k}^\infty n(n-1)\cdots (n-k+1) \,  c_{n} \underset{0}{\underbrace{(x_0-x_0)}}^{n-k} \\
 					= & k(k-1)\cdots (k-k+1) \,  a_k \\
 					= & k(k-1)\cdots 1 \,  a_k \\
 					= & k! \, a_k 
@@ -667,26 +676,26 @@
 						<div>
 						If two series are equal for all \(x\) in an open interval that contains \(x_0,\) 
 						
-						\[ \sum _{n=0}^\infty a_n(x-x_0)^n=\sum _{n=0}^\infty b_n(x-x_0)^n \] 
+						\[ \sum _{n=0}^\infty  c_{n} (x-x_0)^n=\sum _{n=0}^\infty  b_{n} (x-x_0)^n \] 
 						
-						Then \(a_n=b_n\) for \(n=0\), \(1\), \(2\), \(\dots\)
+						Then \( c_{n} = b_{n} \) for \(n=0\), \(1\), \(2\), \(\dots\)
 						</div>
 					</li>
 					<li>
 						<div>
 						If a series is equal to zero for all \(x\) in an open interval that contains \(x_0,\)
 						
-						\[ \sum _{n=0}^\infty a_n(x-x_0)^n=0 \] 
+						\[ \sum _{n=0}^\infty  c_{n} (x-x_0)^n=0 \] 
 						
-						Then \(a_n=0\) for \(n=0\), \(1\), \(2\), \(\dots\)
+						Then \( c_{n} =0\) for \(n=0\), \(1\), \(2\), \(\dots\)
 						</div>
 					</li>
 				</ol>
 			</div>
 			<div id="86e7f0a5-1e3a-434b-8851-de6d07468790">
 				To obtain <strong>(a)</strong> we observe that the two series represent the same function \(f\) on the open interval; hence, Theorem&nbsp;<a href="#x1-125">7.1.5</a> implies that
-				\[ a_n=b_n={f^{(n)}(x_0)\over n!},\quad n=0,1,2, \dots \]
-				<strong>(b)</strong> can be obtained from <strong>(a)</strong> by taking \(b_n=0\) for \(n=0\), \(1\), \(2\), ….
+				\[  c_{n} = b_{n} ={f^{^{(n)}}(x_0)\over n!},\quad n=0,1,2, \dots \]
+				<strong>(b)</strong> can be obtained from <strong>(a)</strong> by taking \( b_{n} =0\) for \(n=0\), \(1\), \(2\), ….
 			</div>
 
 
@@ -702,15 +711,15 @@
 			<div id="2c3a3619-101f-47a2-a4cc-3f17f87f1b67">			
 				If \(f\) has \(N\) derivatives at a point \(x_0\), we say that 
 				
-				\[ T_N(x)=\sum _{n=0}^N{f^{(n)}(x_0)\over n!}(x-x_0)^n \] 
+				\[ T_N(x)=\sum _{n=0}^N{f^{^{(n)}}(x_0)\over n!}(x-x_0)^n \] 
 				
 				is the \(N\)-th <span class="vocab">Taylor polynomial</span> of \(f\) about \(x_0\). This definition and Theorem&nbsp;<a href="#x1-125">7.1.5</a> imply that if 
 				
-				\[ f(x)=\sum _{n=0}^\infty a_n(x-x_0)^n\] 
+				\[ f(x)=\sum _{n=0}^\infty  c_{n} (x-x_0)^n\] 
 				
 				where the power series has a positive radius of convergence\(,\) then the Taylor polynomials of \(f\) about \(x_0\) are given by 
 				
-				\[ T_N(x)=\sum _{n=0}^N a_n(x-x_0)^n\] 
+				\[ T_N(x)=\sum _{n=0}^N  c_{n} (x-x_0)^n\] 
 				
 				In numerical applications, we use the Taylor polynomials to approximate \(f\) on subintervals of the open interval of convergence of the power series. For example, the Taylor series formula <a href="#eq-7-1-2">(7.1.2)</a> implies that the Taylor polynomial \(T_N (x) \) of \(f(x)=e^x\) is 
 				
@@ -741,38 +750,40 @@
 				
 
 				\begin{align*} 
-					f^{'}(x) 
-						= & {\sum _{n=1}^\infty n \, a_n(x-x_0)^{n-1}} \tag{6} \\ \\
-					f^{''}(x) 
-						= & {\sum _{n=2}^\infty n \, (n-1) \, a_n (x-x_0)^{n-2} } \tag{7} \\ \\
-					f^{^{(k)}}(x) 
-						= & \sum _{n=k}^\infty n \, (n-1) \, \cdots (n-k+1)a_n(x-x_0)^{n-k} \tag{8} \\ \\	
+					\frac{dy}{dx}
+						= & {\sum _{n=1}^\infty n \,  c_{n} (x-x_0)^{n-1}} \tag{6} \\ \\
+					\frac{d^2y}{dx^2}
+						= & {\sum _{n=2}^\infty n \, (n-1) \,  c_{n}  (x-x_0)^{n-2} } \tag{7} \\ \\
+					\frac{d^k y}{dx^k}
+						= & \sum _{n=k}^\infty n \, (n-1) \, \cdots (n-k+1) \, c_{n} (x-x_0)^{n-k} \tag{8} \\ \\	
 				\end{align*}
 				
 				
 				
 				However, these series can all be rewritten so that their \(n\)-th terms are constant multiples of \((x-x_0)^n\). For example, letting \(n=k+1\) in the series in <a href='#eq7-1-6'>(7.1.6)</a> yields 
 				
-				<!-- eTA cannot handle a tag and a label in the same equation, so tag 7.1.10 too -->
-				<a id="x1-18r3"></a> 
-				\begin {align*}
-					f'(x) = & {\sum _{n=1}^\infty n \, a_n(x-x_0)^{n-1}} \tag{6} \\
-					= & {\sum _{k+1=1}^\infty \overbrace{(k+1)} \, a_{\underbrace{k+1}}(x-x_0)^{\overbrace{k+1}-1}} \\
-					= & \sum _{k=0}^\infty (k+1) \, a_{k+1}(x-x_0)^k \tag{10}
-				\end {align} 
-
 				<!-- MathJax does not provide a way to skip equation numbers, so we hide this box to skip them for us -->
 				<div style="display: none">
 					\begin{align}
 						\text{skip 7.1.10} \\
 					\end{align}
 				</div>
+
+				<!-- eTA cannot handle a tag and a label in the same equation, so tag 7.1.10 too -->
+				<a id="x1-18r3"></a> 
+				\begin {align*}
+					\frac{dy}{dx} = & {\sum _{n=1}^\infty n \,  c_{n} (x-x_0)^{n-1}} \tag{6} \\
+					= & {\sum _{k+1=1}^\infty \overbrace{(k+1)} \, a_{\underbrace{k+1}}(x-x_0)^{\overbrace{k+1}-1}} \\
+					= & \sum _{k=0}^\infty (k+1) \, a_{k+1}(x-x_0)^k \tag{10}
+				\end {align*} 
+
+				
 				
 				where we start the new summation index \(k\) from zero so that the first term in <a href="#x1-18r3">(7.1.10)</a> (obtained by setting \(k=0\)) is the same as the first term in <a href='#eq7-1-6'>(7.1.6)</a> (obtained by setting \(n=1\) ). However, the sum of a series is independent of the symbol used to denote the summation index, just as the value of a definite integral is independent of the symbol used to denote the variable of integration. Therefore we can replace \(k\) by \(n\) in <a href="#x1-18r3">(7.1.10)</a> to obtain an expression for (7.1.6) where the general term is a constant multiple of \((x-x_0)^n\)
 
 				<a id="x1-19r4"></a>
 				\begin{align} \label {eq:7.1.11}
-					f'(x)= & \sum _{n=0}^\infty (n+1) \, a_{n+1}(x-x_0)^n
+					\frac{dy}{dx}= & \sum _{n=0}^\infty (n+1) \, a_{n+1}(x-x_0)^n
 				\end{align}
 
 
@@ -797,7 +808,7 @@
 					For any integer \(k\), a power series can be rewritten by replacing \(n\) by \(n+k\) in the general term and subtracting \(k\) from the lower limit of summation leaves the series unchanged. 
 
 					\begin{align*} 
-						& \sum _{n=n_0}^\infty b_n \, (x-x_0)^{n-k} \\
+						& \sum _{n=n_0}^\infty  b_{n}  \, (x-x_0)^{n-k} \\
 						= & \sum _{n+k=n_0}^\infty b_\underbrace{{n+k}} \, (x-x_0)^{\overbrace{n+k}-k} \\
 						= & \sum _{n=n_0-k}^\infty b_{n+k} \, (x-x_0)^{n} \\
 					\end{align*}
@@ -818,11 +829,11 @@
 				<ol>
 					<li>
 						
-						\[ f^{''}(x) 
-						= \sum _{n=2}^\infty n \, (n-1) \, a_n(x-x_0)^{n-2} \tag{7} \]
+						\[ \frac{d^2y}{dx^2}
+						= \sum _{n=2}^\infty n \, (n-1) \,  c_{n} (x-x_0)^{n-2} \tag{7} \]
 					</li>
 					<li>
-						\[ f^{^{(k)}}(x) = \sum _{n=k}^\infty n \, (n-1) \cdots (n-k+1) \, a_n(x-x_0)^{n-k} \tag{8}\]
+						\[ \frac{d^ky}{dx^k} = \sum _{n=k}^\infty n \, (n-1) \cdots (n-k+1) \,  c_{n} (x-x_0)^{n-k} \tag{8}\]
 					</li>
 				</ol>
 
@@ -835,8 +846,8 @@
 								Now we'll rewrite <a href='#eq7-1-6'>(7.1.7)</a> so that the \(n\)-th term is a constant multiple of \((x-x_0)^n\) by replacing the index variable \(n\) with \(n+2\) in the general term and subtracting \(2\) from the lower limit of summation yields
 			
 								\begin{align*} 
-									f^{''}(x) 
-										= & {\sum _{n=2}^\infty n \, (n-1) \,  a_n (x-x_0)^{n-2} } \tag{7} \\ \\
+									\frac{d^2y}{dx^2}
+										= & {\sum _{n=2}^\infty n \, (n-1) \,   c_{n}  (x-x_0)^{n-2} } \tag{7} \\ \\
 										= & {\sum _{n+2=2}^\infty \overbrace{(n+2)} \, (\overbrace{n+2}-1) a_\underbrace{{n+2}} (x-x_0)^{\overbrace{n+2}-2} } \\ \\	
 										= & {\sum _{n=0}^\infty (n+2) \, (n+1) \, a_{n+2} (x-x_0)^{n} } \\ \\
 								\end{align*}
@@ -849,8 +860,8 @@
 								Now we'll rewrite <a href='#eq7-1-6'>(7.1.8)</a> so that the \(n\)-th term is a constant multiple of \((x-x_0)^n\) by replacing the index variable \(n\) with \(n+k\) in the general term and subtracting \(k\) from the lower limit of summation yields
 			
 								\begin{align*} 
-								f^{^{(k)}}(x) 
-									= & \sum _{n=k}^\infty n \, (n-1) \cdots (n-k+1) \, a_n(x-x_0)^{n-k} \tag{8} \\ \\
+								\frac{d^ky}{dx^k}
+									= & \sum _{n=k}^\infty n \, (n-1) \cdots (n-k+1) \,  c_{n} (x-x_0)^{n-k} \tag{8} \\ \\
 									= & \sum _{n+k=k}^\infty \overbrace{(n+k)} \, (\overbrace{n+k}-1) \cdots (n+k-k+1) \, a_\underbrace{{n+k}} (x-x_0)^{\overbrace{n+k}-k} \\ \\
 									= & \sum _{n=0}^\infty (n+k) \, (n+k-1) \cdots (n+1) \, a_{n+k} (x-x_0)^{n} \\ \\
 								\end{align*}
@@ -868,9 +879,9 @@
 			<!--Example 4-->
 			<div class="example" id="x1-214" style="--ex-number: 4">
 				<div>
-					Write the function \(x \cdot f^{''}(x)\) as a power series in which the general term is a constant multiple of&nbsp;\(x^n\) with index starting at \(n=1\) 
+					Write the function \(x \cdot \frac{d^2y}{dx^2} \) as a power series in which the general term is a constant multiple of&nbsp;\(x^n\) with index starting at \(n=1\) 
 					
-					\[ f(x)=\sum _{n=0}^\infty a_nx^n\] 
+					\[ y =\sum _{n=0}^\infty  c_{n} x^n\] 
 				</div>
 
 				<details class="solution">
@@ -879,33 +890,33 @@
 					<ol>
 						<li class="no-part">
 							<div class="reading-exercise">
-								Differentiate \( \displaystyle f(x)=\sum _{n=0}^\infty a_nx^n\) twice and show all the steps as in the examples above
+								Differentiate \( \displaystyle y=\sum _{n=0}^\infty  c_{n} x^n\) twice and show all the steps as in the examples above
 							</div>
-							Differentiating \( \displaystyle f(x)=\sum _{n=0}^\infty a_nx^n\) twice:
+							Differentiating \( \displaystyle f(x)=\sum _{n=0}^\infty  c_{n} x^n\) twice:
 
 							\begin {align*} 
-								f(x) = & \sum _{n=0}^\infty a_nx^n \\
-								f^{'}(x) = & \sum _{n=0}^\infty a_n \frac{d}{dx}\Big( x^n \Big)	
-								= \sum _{n=1}^\infty n \, a_nx^{n-1}   \\
-								f^{''}(x) = & \sum _{n=1}^\infty n a_n \frac{d}{dx}\Big( x^{n-1} \Big)
-								= \sum _{n=2}^\infty n \, (n-1) \, a_nx^{n-2} \\
+								y = & \sum _{n=0}^\infty  c_{n} x^n \\
+								\frac{dy}{dx} = & \sum _{n=0}^\infty  c_{n}  \frac{d}{dx}\Big( x^n \Big)	
+								= \sum _{n=1}^\infty n \,  c_{n} x^{n-1}   \\
+								\frac{d^2y}{dx^2} = & \sum _{n=1}^\infty n  \, c_{n}  \frac{d}{dx}\Big( x^{n-1} \Big)
+								= \sum _{n=2}^\infty n \, (n-1) \,  c_{n} x^{n-2} \\
 							\end {align*} 
 
-							Now multiplying \(x \cdot f^{''}(x)\)
+							Now multiplying \(x \cdot \frac{d^2y}{dx^2}\)
 
 							\begin {align*} 
-								f^{''}(x) = & \sum _{n=2}^\infty n \, (n-1) \, a_nx^{n-2} \\
-								x \cdot f^{''}(x) = & x \cdot \sum _{n=2}^\infty n \, (n-1) \, a_n \, x^{n-2} \\
-								= & \sum _{n=2}^\infty n (n-1) a_n \, x^{n-2} \cdot x^1 \\
-								= & \sum _{n=2}^\infty n (n-1) a_n \, x^{n-2 + 1} \\
-								= & \sum _{n=2}^\infty n (n-1) a_n \, x^{n-1} \\
+								\frac{d^2y}{dx^2}= & \sum _{n=2}^\infty n \, (n-1) \,  c_{n} x^{n-2} \\
+								x \cdot \frac{d^2y}{dx^2} = & x \cdot \sum _{n=2}^\infty n \, (n-1) \,  c_{n}  \, x^{n-2} \\
+								= & \sum _{n=2}^\infty n (n-1)  c_{n}  \, x^{n-2} \cdot x^1 \\
+								= & \sum _{n=2}^\infty n (n-1)  c_{n}  \, x^{n-2 + 1} \\
+								= & \sum _{n=2}^\infty n (n-1)  c_{n}  \, x^{n-1} \\
 							\end {align*} 
 						</li>
 						<li class="no-part">
 							Now notice that the power on \(x\) is \(n-1\) so we simply replace the index \(n\) with \(n+1\)
 
 							\begin {align*} 
-								x \cdot f^{''}(x) = & \sum _{n=2}^\infty n \, (n-1) \, a_n \, x^{n-1} \\
+								x \cdot \frac{d^2y}{dx^2} = & \sum _{n=2}^\infty n \, (n-1) \,  c_{n}  \, x^{n-1} \\
 								= & \sum _{n+1=2}^\infty \overbrace{(n+1)}\, (\overbrace{n+1}-1) \, a_\underbrace{{n+1}} \, x^{\overbrace{n+1}-1} \\
 								= & \sum _{n=1}^\infty (n+1) \, (n) \, a_{n+1} \, x^{n} \\
 								= & \sum _{n=1}^\infty n \, (n+1) \, a_{n+1} x^{n} \\
@@ -914,7 +925,7 @@
 							Starting this sum at \(n=0\) would yield the same result since the \(n=0\) term is zero
 
 							\begin {align*} 
-								x \cdot f^{''}(x) = & \sum _{n=1}^\infty n \, (n+1) \, a_{n+1} \, x^{n} 
+								x \cdot \frac{d^2y}{dx^2} = & \sum _{n=1}^\infty n \, (n+1) \, a_{n+1} \, x^{n} 
 								= \sum _{n=0}^\infty n \, (n+1) \, a_{n+1} \, x^{n} \\
 							\end {align*} 
 						
@@ -933,29 +944,29 @@
 
 			<!--Linear Combination-->
 			<div id="4a8f3988-4a7a-4de2-be31-4165421bc12d">
-				If a power series is multiplied by a constant, then the constant can be moved inside the summation. That is, 
+				If a power series is multiplied by a constant, \(k\), then the constant can be moved inside the summation. That is, 
 				
-				\[ c\sum _{n=0}^\infty a_n(x-x_0)^n=\sum _{n=0}^\infty c \, a_n(x-x_0)^n\] 
+				\[ k\sum _{n=0}^\infty  c_{n} (x-x_0)^n=\sum _{n=0}^\infty k \,  c_{n} (x-x_0)^n\] 
 				
 				Two power series with positive radii of convergence can be added term by term at points common to their open intervals of convergence.
 				
-				\[ f(x)=\sum _{n=0}^\infty a_n \, (x-x_0)^n\quad \mbox { and }\quad g(x)=\sum _{n=0}^\infty b_n \, (x-x_0)^n \] 
+				\[ y_1 =\sum _{n=0}^\infty  a_{n}  \, (x-x_0)^n\quad \mbox { and }\quad y_2=\sum _{n=0}^\infty  b_{n}  \, (x-x_0)^n \] 
 				
-				Suppose the first series \(f(x)\) converges for \(|x-x_0|&lt;R_1\) and the second series \(g(x)\) converges for \(|x-x_0|&lt;R_2\), then adding them together
+				Suppose the first series \(y\) converges for \(|x-x_0|&lt;R_1\) and the second series \(g(x)\) converges for \(|x-x_0|&lt;R_2\), then adding them together
 				
 				\begin{align*}
-				f(x) + g(x) = & \overset{f(x)}{\overbrace{\sum _{n=0}^\infty a_n \, (x-x_0)^n}} + \overset{g(x)}{\overbrace{\sum _{n=0}^\infty b_n \, (x-x_0)^n }} \\
-				= & \sum _{n=0}^\infty \Big( a_n \, (x-x_0)^n + b_n \, (x-x_0)^n \Big) \\
-				= & \sum _{n=0}^\infty \big( a_n  + b_n  \big) \, (x-x_0)^n \\
+				y_1 + y_2 = & \overset{y_1}{\overbrace{\sum _{n=0}^\infty  a_{n}  \, (x-x_0)^n}} + \overset{y_2}{\overbrace{\sum _{n=0}^\infty  b_{n}  \, (x-x_0)^n }} \\
+				= & \sum _{n=0}^\infty \Big(  a_{n}  \, (x-x_0)^n +  b_{n}  \, (x-x_0)^n \Big) \\
+				= & \sum _{n=0}^\infty \big(  a_{n}   +  b_{n}   \big) \, (x-x_0)^n \\
 				\end{align*}
 				
 				The new series converges for \(|x-x_0|&lt;R\), where \(R\) is the smaller of \(R_1\) and \(R_2\). More generally, linear combinations of power series can be formed term by term: 
 
 				\begin{align*}
-				c_1 \, f(x) + c_2 \, g(x) = & c_1 \, \overset{f(x)}{\overbrace{\sum _{n=0}^\infty a_n \, (x-x_0)^n}} + c_2 \, \overset{g(x)}{\overbrace{\sum _{n=0}^\infty b_n \, (x-x_0)^n }} \\
-				= & \sum _{n=0}^\infty c_1 \, a_n \, (x-x_0)^n + \sum _{n=0}^\infty c_2 \, b_n \, (x-x_0)^n \\
-				= & \sum _{n=0}^\infty \Big( c_1 \, a_n \, (x-x_0)^n + c_2 \, b_n \, (x-x_0)^n \Big) \\
-				= & \sum _{n=0}^\infty \big( c_1 \, a_n  + c_2 \, b_n  \big) \, (x-x_0)^n \\
+					c_1 \, y_1 + c_2 \, y_2 = & c_1 \, \overset{y_2}{\overbrace{\sum _{n=0}^\infty  a_{n}  \, (x-x_0)^n}} + c_2 \, \overset{y_2}{\overbrace{\sum _{n=0}^\infty  b_{n}  \, (x-x_0)^n }} \\
+					= & \sum _{n=0}^\infty c_1 \,  a_{n}  \, (x-x_0)^n + \sum _{n=0}^\infty c_2 \,  b_{n}  \, (x-x_0)^n \\
+					= & \sum _{n=0}^\infty \Big( c_1 \,  a_{n}  \, (x-x_0)^n + c_2 \,  b_{n}  \, (x-x_0)^n \Big) \\
+					= & \sum _{n=0}^\infty \big( c_1 \,  a_{n}   + c_2 \,  b_{n}   \big) \, (x-x_0)^n \\
 				\end{align*}
 			</div>
 
@@ -1143,7 +1154,7 @@
 					<li>
 						Differentiate the power series twice 
 						\begin{align*}
-							y=\sum _{n=0}^\infty a_n x^n
+							y=\sum _{n=0}^\infty  c_{n}  x^n
 						\end{align*}
 					</li>
 					<li>
@@ -1152,7 +1163,7 @@
 					</li>
 					<li class="skip"></li>
 					<li>
-						Find conditions on the coefficients \( \{a_n\} \) so that the power series \(y\) is a solution of the homogeneous equation 
+						Find conditions on the coefficients \( \{ c_{n} \} \) so that the power series \(y\) is a solution of the homogeneous equation 
 
 						<a id="x1-27r6"></a>
 						\begin {equation}
@@ -1167,17 +1178,17 @@
 					<ol>
 						<li>
 							<div class="reading-exercise">
-								Differentiate \( \displaystyle f(x)=\sum _{n=0}^\infty a_nx^n\) twice and show all the steps as in the examples above
+								Differentiate \( \displaystyle f(x)=\sum _{n=0}^\infty  c_{n} x^n\) twice and show all the steps as in the examples above
 							</div>
 							<div>
-								Differentiating \( \displaystyle y=\sum _{n=0}^\infty a_nx^n\) twice:
+								Differentiating \( \displaystyle y=\sum _{n=0}^\infty  c_{n} x^n\) twice:
 			
 								\begin {align*} 
-									y = & \sum _{n=0}^\infty a_n \, x^n \\
-									\frac{dy}{dx} = & \sum _{n=0}^\infty a_n \frac{d}{dx}\Big( x^n \Big)	
-									= \sum _{n=1}^\infty n \, a_n \, x^{n-1}   \\
-									\frac{d^2y}{dx^2} = & \sum _{n=1}^\infty n \, a_n \frac{d}{dx}\Big( x^{n-1} \Big)
-									= \sum _{n=2}^\infty n \, (n-1) \, a_n \, x^{n-2} \\
+									y = & \sum _{n=0}^\infty  c_{n}  \, x^n \\
+									\frac{dy}{dx} = & \sum _{n=0}^\infty  c_{n}  \frac{d}{dx}\Big( x^n \Big)	
+									= \sum _{n=1}^\infty n \,  c_{n}  \, x^{n-1}   \\
+									\frac{d^2y}{dx^2} = & \sum _{n=1}^\infty n \,  c_{n}  \frac{d}{dx}\Big( x^{n-1} \Big)
+									= \sum _{n=2}^\infty n \, (n-1) \,  c_{n}  \, x^{n-2} \\
 								\end {align*} 
 							</div>	
 						</li>
@@ -1186,10 +1197,10 @@
 								Substituting them in to \( \displaystyle (2-x)\frac{d^2y}{dx^2}+2y\) we obtain
 
 								\begin {align*} 
-									(2-x) \overset{\frac{d^2y}{dx^2}}{\overbrace{\sum _{n=2}^\infty n (n-1) a_nx^{n-2}}} + 2\overset{y}{\overbrace{\sum _{n=0}^\infty a_nx^n}} \\
-									2\sum _{n=2}^\infty n (n-1) a_nx^{n-2} - x\sum _{n=2}^\infty n (n-1) a_nx^{n-2} + 2\sum _{n=0}^\infty a_nx^n \\
-									\sum _{n=2}^\infty 2n (n-1) a_nx^{n-2} - \sum _{n=2}^\infty n (n-1) a_nx^{n-2}\cdot x^1 + \sum _{n=0}^\infty 2 a_nx^n \\
-									\sum _{n=2}^\infty 2n (n-1) a_n \underbrace{x^{n-2}} - \sum _{n=2}^\infty n (n-1) a_n\underbrace{x^{n-1}} + \sum _{n=0}^\infty 2 a_nx^n \\
+									(2-x) \overset{\frac{d^2y}{dx^2}}{\overbrace{\sum _{n=2}^\infty n (n-1)  c_{n} x^{n-2}}} + 2\overset{y}{\overbrace{\sum _{n=0}^\infty  c_{n} x^n}} \\
+									2\sum _{n=2}^\infty n (n-1)  c_{n} x^{n-2} - x\sum _{n=2}^\infty n (n-1)  c_{n} x^{n-2} + 2\sum _{n=0}^\infty  c_{n} x^n \\
+									\sum _{n=2}^\infty 2n (n-1)  c_{n} x^{n-2} - \sum _{n=2}^\infty n (n-1)  c_{n} x^{n-2}\cdot x^1 + \sum _{n=0}^\infty 2  c_{n} x^n \\
+									\sum _{n=2}^\infty 2n (n-1)  c_{n}  \underbrace{x^{n-2}} - \sum _{n=2}^\infty n (n-1)  c_{n} \underbrace{x^{n-1}} + \sum _{n=0}^\infty 2  c_{n} x^n \\
 								\end {align*} 
 							</div>
 							<div>
@@ -1197,19 +1208,19 @@
 
 								<a id="x1-28r7"></a> 
 								\begin {align} 
-									\sum _{n=2}^\infty 2n (n-1) a_nx^{n-2} 
-									& - \sum _{n=2}^\infty n (n-1) a_nx^{n-1} 
-									+ \sum _{n=0}^\infty 2 a_nx^n \nonumber \\
+									\sum _{n=2}^\infty 2n (n-1)  c_{n} x^{n-2} 
+									& - \sum _{n=2}^\infty n (n-1)  c_{n} x^{n-1} 
+									+ \sum _{n=0}^\infty 2  c_{n} x^n \nonumber \\
 									\sum _{n+2=2}^\infty 2(n+2) (n+2-1) a_{n+2} x^{n+2-2} 
 									& - \sum _{n+1=2}^\infty (n+1) (n+1-1) a_{n+1}x^{n+1-1} 
-									+ \sum _{n=0}^\infty 2 a_nx^n \nonumber \\
+									+ \sum _{n=0}^\infty 2  c_{n} x^n \nonumber \\
 									\sum _{n=0}^\infty 2(n+2) (n+1) a_{n+2} x^{n} 
 									& - \sum _{n=1}^\infty (n+1) (n) a_{n+1}x^{n} 
-									+ \sum _{n=0}^\infty 2 a_nx^n \nonumber \\
+									+ \sum _{n=0}^\infty 2  c_{n} x^n \nonumber \\
 									\label{eq:7.1.14}
 									\sum _{n=0}^\infty 2(n+1)(n+2) a_{n+2} x^{n} 
 									& - \sum _{n=1}^\infty n(n+1) a_{n+1}x^{n} 
-									+ \sum _{n=0}^\infty 2 a_nx^n 
+									+ \sum _{n=0}^\infty 2  c_{n} x^n 
 								\end {align} 
 							</div>
 						</li>
@@ -1222,22 +1233,22 @@
 								\begin {align} 
 									& \sum _{n=0}^\infty 2(n+1)(n+2) a_{n+2} x^{n} 
 									- \sum _{n=1}^\infty n(n+1) a_{n+1}x^{n} 
-									+ \sum _{n=0}^\infty 2 a_nx^n \nonumber \\
+									+ \sum _{n=0}^\infty 2  c_{n} x^n \nonumber \\
 									& \sum _{n=0}^\infty 2(n+1)(n+2) a_{n+2} x^{n} 
 									- \sum _{n=0}^\infty n(n+1) a_{n+1}x^{n} 
-									+ \sum _{n=0}^\infty 2 a_nx^n \nonumber \\
+									+ \sum _{n=0}^\infty 2  c_{n} x^n \nonumber \\
 									& \sum _{n=0}^\infty 
 										\Big[ 
 										2(n+1)(n+2) a_{n+2} x^{n} 
 										- n(n+1) a_{n+1}x^{n} 
-										+ 2 a_nx^n
+										+ 2  c_{n} x^n
 										\Big]  \nonumber \\
 									\label{eq:7.1.15}
 									& \sum _{n=0}^\infty 
 										\Big[ 
 										2(n+1)(n+2) a_{n+2} 
 										- n(n+1) a_{n+1}
-										+ 2 a_n
+										+ 2  c_{n} 
 										\Big] x^{n} \\	
 								\end {align} 
 							</div>
@@ -1253,7 +1264,7 @@
 											\Big[ 
 											2(n+1)(n+2) a_{n+2} 
 											- n(n+1) a_{n+1}
-											+ 2 a_n
+											+ 2  c_{n} 
 											\Big] x^{n}
 								\end{equation}
 
@@ -1262,7 +1273,7 @@
 						</li>	
 						<li>
 							<div>
-								We would like to find conditions on the coefficients \( \{a_n\} \) so that the power series \( y=\sum _{n=0}^\infty a_n x^n\) is a solution to the homogeneous equation <a href="#x1-27r6">(7.1.3)</a>
+								We would like to find conditions on the coefficients \( \{ c_{n} \} \) so that the power series \( y=\sum _{n=0}^\infty  c_{n}  x^n\) is a solution to the homogeneous equation <a href="#x1-27r6">(7.1.3)</a>
 
 								\begin {equation*}
 									(2-x)\frac{d^2y}{dx^2}+2y=0 
@@ -1278,19 +1289,19 @@
 										\underbrace{
 										2(n+1)(n+2) a_{n+2} 
 										- n(n+1) a_{n+1}
-										+ 2 a_n}
+										+ 2  c_{n} }
 										\Big] x^{n} = & 0 \label{eq:7.1.17} \\
 									2(n+1)(n+2) a_{n+2} 
 										- n(n+1) a_{n+1}
-										+ 2 a_n = & 0	\nonumber
+										+ 2  c_{n}  = & 0	\nonumber
 								\end {align} 
 
-								Which is the conditions on the coefficients \( \{a_n\} \)
+								Which is the conditions on the coefficients \( \{ c_{n} \} \)
 								\begin{equation}
 									\label{eq:7.1.18}
 									2(n+1)(n+2) a_{n+2} 
 										- n(n+1) a_{n+1}
-										+ 2 a_n = 0
+										+ 2  c_{n}  = 0
 								\end{equation}
 							</div>
 						</li>
@@ -1310,7 +1321,7 @@
 
 					as a power series in \(x-1\) where 
 
-					\[ y=\sum _{n=0}^\infty a_n (x-1)^n \] 
+					\[ y=\sum _{n=0}^\infty  c_{n}  (x-1)^n \] 
 				</div>
 
 				<details class="solution">
@@ -1332,17 +1343,17 @@
 								\[ 2\frac{d^2y}{dx^2}+(x-1)\frac{d^2y}{dx^2}+2(x-1)^2\frac{dy}{dx}+3y \tag{19}\] 
 							</div>
 							<div class="reading-exercise">
-								Differentiate \( \displaystyle y=\sum _{n=0}^\infty a_n (x-1)^n\) twice and show all the steps as in the examples above
+								Differentiate \( \displaystyle y=\sum _{n=0}^\infty  c_{n}  (x-1)^n\) twice and show all the steps as in the examples above
 							</div>
 							<div>
-								Differentiating \( \displaystyle y=\sum _{n=0}^\infty a_n (x-1)^n\) twice:
+								Differentiating \( \displaystyle y=\sum _{n=0}^\infty  c_{n}  (x-1)^n\) twice:
 
 								\begin {align*} 
-									y = & \sum _{n=0}^\infty a_n \, (x-1)^n \\
-									\frac{dy}{dx} = & \sum _{n=0}^\infty a_n \frac{d}{dx}\Big((x-1)^n  \Big)	
-									= \sum _{n=1}^\infty n \, a_n \, (x-1)^{n-1}   \\
-									\frac{d^2y}{dx^2}  = & \sum _{n=1}^\infty n \, a_n \frac{d}{dx}\Big( (x-1)^{n-1} \Big)
-									= \sum _{n=2}^\infty n \, (n-1) \, a_n \, (x-1)^{n-2} \\
+									y = & \sum _{n=0}^\infty  c_{n}  \, (x-1)^n \\
+									\frac{dy}{dx} = & \sum _{n=0}^\infty  c_{n}  \frac{d}{dx}\Big((x-1)^n  \Big)	
+									= \sum _{n=1}^\infty n \,  c_{n}  \, (x-1)^{n-1}   \\
+									\frac{d^2y}{dx^2}  = & \sum _{n=1}^\infty n \,  c_{n}  \frac{d}{dx}\Big( (x-1)^{n-1} \Big)
+									= \sum _{n=2}^\infty n \, (n-1) \,  c_{n}  \, (x-1)^{n-2} \\
 								\end {align*} 
 							</div>
 						</li>
@@ -1351,7 +1362,7 @@
 								Now we want to substitute in to (7.1.9) but in order to add up the series on the right we will first rewrite each one so that the general term is a constant multiple of \((x-1)\) and adding in zero terms as needed to get the series to start at the same initial index. So to start replacing \(n\) with \(n+2\) on the first term
 
 								\begin{align} 
-									2\dfrac{d^2y}{dx^2} = & \sum _{n=2}^\infty 2n \, (n-1) \, a_n \, (x-1)^{n-2} \nonumber \\
+									2\dfrac{d^2y}{dx^2} = & \sum _{n=2}^\infty 2n \, (n-1) \,  c_{n}  \, (x-1)^{n-2} \nonumber \\
 									= & \sum _{n+2=2}^\infty 2(n+2) (n+2-1) \, a_{n+2} \, (x-1)^{n+2-2} \nonumber \\
 									= & \sum _{n=0}^\infty 2(n+2) (n+1) \, a_{n+2} \, (x-1)^{n} \nonumber \\
 									\label{eq:7.1.20}
@@ -1362,7 +1373,7 @@
 								Now replacing \(n\) with \(n+1\) on the second term and adding in a zero term
 
 								\begin{align} 
-									(x-1)\dfrac{d^2y}{dx^2} = & \displaystyle\sum _{n=2}^\infty n \, (n-1) \, a_n \, (x-1)^{n-1} \nonumber \\
+									(x-1)\dfrac{d^2y}{dx^2} = & \displaystyle\sum _{n=2}^\infty n \, (n-1) \,  c_{n}  \, (x-1)^{n-1} \nonumber \\
 									= & \displaystyle\sum _{n+1=2}^\infty (n+1) (n+1-1) \, a_{n+1} \, (x-1)^{n+1-1} \nonumber \\
 									= & \displaystyle\sum _{n=1}^\infty (n+1) (n) \, a_{n+1} \, (x-1)^{n} \nonumber \\
 									\label{eq:7.1.21}
@@ -1375,7 +1386,7 @@
 								Now replacing \(n\) with \(n-1\) on the third term and adding in a zero term
 
 								\begin{align} 
-									2(x-1)^2\dfrac{dy}{dx} = & \displaystyle\sum _{n=1}^\infty 2n \,  a_n \, (x-1)^{n+1} \nonumber \\
+									2(x-1)^2\dfrac{dy}{dx} = & \displaystyle\sum _{n=1}^\infty 2n \,   c_{n}  \, (x-1)^{n+1} \nonumber \\
 									= & \displaystyle\sum _{n-1=1}^\infty 2(n-1) \,  a_{n-1} \, (x-1)^{n-1+1} \nonumber \\
 									= & \displaystyle\sum _{n=2}^\infty 2(n-1) \,  a_{n-1} \, (x-1)^{n} \nonumber \\
 									\label{eq:7.1.22}
@@ -1385,7 +1396,7 @@
 								And the fourth term is already in terms of \((x-1)^{n}\)
 								\begin{align} 
 									\label{eq:7.1.23}
-									3y = & \displaystyle\sum _{n=0}^\infty 3 a_n \, (x-1)^{n} 
+									3y = & \displaystyle\sum _{n=0}^\infty 3  c_{n}  \, (x-1)^{n} 
 								\end{align}
 
 								Substituting in to (7.1.9) above we obtain
@@ -1394,12 +1405,12 @@
 									2\dfrac{d^2y}{dx^2} &=& \displaystyle \sum _{n=0}^\infty 2 (n+1) (n+2) \, a_{n+2} \, (x-1)^{n}  \\
 									(x-1)\dfrac{d^2y}{dx^2} &=& \displaystyle \sum _{n=0}^\infty n(n+1) \, a_{n+1} \, (x-1)^{n} \\
 									2(x-1)^2\dfrac{dy}{dx} &=&  \displaystyle \sum _{n=1}^\infty 2(n-1) \,  a_{n-1} \, (x-1)^{n} \\
-									+ \quad\quad\quad\quad  3y &=& \displaystyle \sum _{n=0}^\infty 3 a_n \, (x-1)^{n} \\
+									+ \quad\quad\quad\quad  3y &=& \displaystyle \sum _{n=0}^\infty 3  c_{n}  \, (x-1)^{n} \\
 									\hline
 									{\small 2\dfrac{d^2y}{dx^2} + (x-1)\dfrac{d^2y}{dx^2} + 2(x-1)^2\dfrac{dy}{dx} 3y}  &=& \displaystyle \sum _{n=0}^\infty 2 (n+1) (n+2) \, a_{n+2} \, (x-1)^{n} \\
 									& & \quad + \displaystyle \sum _{n=0}^\infty n(n+1) \, a_{n+1} \, (x-1)^{n} \\
 									& & \quad + \displaystyle \sum _{n=1}^\infty 2(n-1) \,  a_{n-1} \, (x-1)^{n} \\
-									& & \quad + \displaystyle \sum _{n=0}^\infty 3 a_n \, (x-1)^{n} \\
+									& & \quad + \displaystyle \sum _{n=0}^\infty 3  c_{n}  \, (x-1)^{n} \\
 								\end{array}
 							</div>
 						</li>
@@ -1414,12 +1425,12 @@
 									&=& { 2 (1) (2) a_{2} (x-1)^{0}} &+& \displaystyle \sum _{n=1}^\infty & 2 (n+1) (n+2) \, a_{n+2} \, (x-1)^{n} \\
 									& & \quad + \, { 0(1) a_{1} (x-1)^{0}} &+& \displaystyle \sum _{n=1}^\infty & n(n+1) \, a_{n+1} \, (x-1)^{n} \\
 									& & \quad &+& \, \displaystyle \sum _{n=1}^\infty & 2(n-1) \,  a_{n-1} \, (x-1)^{n} \\
-									& & \quad + \, { 3 a_0 (x-1)^{0}} &+& \displaystyle \sum _{n=1}^\infty & 3 a_n \, (x-1)^{n} \\ \\ 
+									& & \quad + \, { 3  c_{0}  (x-1)^{0}} &+& \displaystyle \sum _{n=1}^\infty & 3  c_{n}  \, (x-1)^{n} \\ \\ 
 
-									&=& { 4 a_{2}  + 3 a_0} &+& \displaystyle \sum _{n=1}^\infty  & \Bigg\{ 2 (n+1) (n+2) \, a_{n+2} \, (x-1)^{n} \\
+									&=& { 4 a_{2}  + 3  c_{0} } &+& \displaystyle \sum _{n=1}^\infty  & \Bigg\{ 2 (n+1) (n+2) \, a_{n+2} \, (x-1)^{n} \\
 									& & \quad & & & \quad + \, n(n+1) \, a_{n+1} \, (x-1)^{n} \\ \\
 									& & \quad & & & \quad + \, 2(n-1) \,  a_{n-1} \, (x-1)^{n} \\
-									& & \quad & & & \quad + \, 3 a_n \, (x-1)^{n} \Bigg\} \\ \\
+									& & \quad & & & \quad + \, 3  c_{n}  \, (x-1)^{n} \Bigg\} \\ \\
 								\end{array}
 							</div>
 							<br>
@@ -1434,11 +1445,11 @@
 
 								\[
 								=
-								{4 a_{2}  + 3 a_0} + \displaystyle \sum _{n=1}^\infty  
+								{4 a_{2}  + 3  c_{0} } + \displaystyle \sum _{n=1}^\infty  
 									\Bigg\{ 2 (n+1) (n+2) \, a_{n+2} 
 									+ n(n+1) \, a_{n+1}\, 
 									+ 2(n-1) \,  a_{n-1}
-									+ 3 a_n 
+									+ 3  c_{n}  
 									\Bigg\} (x-1)^{n} \\
 								\]
 									
