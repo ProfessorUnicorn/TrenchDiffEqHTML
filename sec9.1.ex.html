@@ -41,7 +41,7 @@
 						Verify \(y_1,\) \(y_2,\) \(y_3,\) \(\cdots\) are solutions of the complementary equation and find their domain
 					</li>
 					<li>
-						Solve the IVP, determine the IOV, and graph the solution
+						Write the general solution, then solve the IVP, determine the IOV, and graph the solution
 					</li>
 				</ol>
 			</div>
@@ -272,25 +272,74 @@
 			
 		</div>
 
+		<div class="stepline"> 
+			Part 2: Determinants
+		</div>  
+
+		<div class="grouping">
+			<div class="instructions">
+				<ol>
+					<li>
+						Verify \(\{y_1,y_2,y_3,\dots\}\) are solutions of the homogeneous equation and find their domain
+					</li>
+					<li>
+						Write the general solution, then use determinants to show that \(\{y_1,y_2,y_3,\dots\}\) is linearly independent
+					</li>
+					<li>
+						Solve the IVP and graph the solution
+					</li>
+				</ol>
+			</div>
+
+			<!--Problem #10-->
+			<div class="exercise">
+				<span class="ex-number">10.</span>
+				<div class="ex-body">
+					\( \dfrac{d^3 y}{dx^3} + \dfrac{d^2 y}{dx^2} - \dfrac{d y}{dx} -y=0 \)
+					<ol>
+						<li>
+							\( 
+								\{e^x,\,e^{-x},\,xe^{-x}\}
+							\) 
+							<br>
+							\(y_p= \dfrac{1}{x} \)
+						</li>
+						<li>
+							\( 
+								x^3 \dfrac{d^3 y}{dx^3} 
+								-3x^2 \dfrac{d^2 y}{dx^2} 
+								+6x \dfrac{d y}{dx} 
+								-6y=0 
+							\)
+							<br>
+							\(y_1 = x \quad\) 
+							\(y_2=x^2 \quad\) 
+							\(y_3=x^3 \quad\)
+						</li>
+						<li>
+							\( 
+								x^3 \dfrac{d^3 y}{dx^3} 
+								-3x^2 \dfrac{d^2 y}{dx^2} 
+								+6x \dfrac{d y}{dx} 
+								-6y=-\dfrac{24}{x} 
+								\quad y(-1)=0
+								\quad \left. \dfrac{d y}{dx} \right|_{-1} = 0
+								\quad \left. \dfrac{d^2 y}{dx^2} \right|_{-1} = 0
+							\)
+						</li>
+					</ol>
+				</div>	
+			</div>
+
+		</div>	
+
+
 
 
 		<div class="stepline"> 
 			Part 2: Solve IVPs
 		</div>  
 
-		<div class="exercise" id="x1-32">
-			<span class="ex-number">102.</span>
-			<div class="ex-body">
-				Solve the IVP \[ x^3 \dfrac{d^3 y}{dx^3} -x^2  \dfrac{d^2 y}{dx^2} -2x \dfrac{d y}{dx} +6y=0, \quad y(-1)=-4, \quad  \dfrac{d y}{dx} (-1)=-14,\quad  \dfrac{d^2 y}{dx^2} (-1)=-20\]<span class="hint">Hint: See Example&nbsp;9.1.1.</span>
-			</div>
-		</div>
-
-		<div class="exercise" id="x1-43">
-			<span class="ex-number">103.</span>
-			<div class="ex-body">
-				Solve the IVP \[  \dfrac{d^4 y}{dx^4} + \dfrac{d^3 y}{dx^3} -7 \dfrac{d^2 y}{dx^2} - \dfrac{d y}{dx} +6y=0, \quad y(0)=5,\quad  \dfrac{d y}{dx} (0)=-6,\quad  \dfrac{d^2 y}{dx^2} (0)=10,\quad  \dfrac{d^3 y}{dx^3} (0)-36\]<span class="hint">Hint: See Example&nbsp;9.1.2.</span>
-			</div>
-		</div>
 
 		
 
@@ -298,11 +347,8 @@
 			<span class="ex-number">106.</span>
 			<div class="ex-body">
 				Verify that the given functions are solutions of the given equation, and show that they form a fundamental set of solutions of the equation on any interval on which the equation is normal. 
-				Show \(\left\{ y_1, y_2, y_3,\cdot \right\} \) is linearly independent
+				Show \(\left\{ y_1, y_2, y_3,\cdots \right\} \) is linearly independent
 				<ol>
-					<li>
-						\( \dfrac{d^3 y}{dx^3} + \dfrac{d^2 y}{dx^2} - \dfrac{d y}{dx} -y=0; \quad \{e^x,\,e^{-x},\,xe^{-x}\}\) 
-					</li>
 					<li>
 						\( \dfrac{d^3 y}{dx^3} -3 \dfrac{d^2 y}{dx^2} +7 \dfrac{d y}{dx} -5y=0; \quad \{e^x,\,e^x\cos 2x,\,e^x\sin 2x\}\). 
 					</li>
@@ -417,6 +463,21 @@
 		<div class="stepline"> 
 			Part 4: Challenge
 		</div>  
+
+
+		<div class="exercise" id="x1-32">
+			<span class="ex-number">102.</span>
+			<div class="ex-body">
+				Solve the IVP \[ x^3 \dfrac{d^3 y}{dx^3} -x^2  \dfrac{d^2 y}{dx^2} -2x \dfrac{d y}{dx} +6y=0, \quad y(-1)=-4, \quad  \dfrac{d y}{dx} (-1)=-14,\quad  \dfrac{d^2 y}{dx^2} (-1)=-20\]<span class="hint">Hint: See Example&nbsp;9.1.1.</span>
+			</div>
+		</div>
+
+		<div class="exercise" id="x1-43">
+			<span class="ex-number">103.</span>
+			<div class="ex-body">
+				Solve the IVP \[  \dfrac{d^4 y}{dx^4} + \dfrac{d^3 y}{dx^3} -7 \dfrac{d^2 y}{dx^2} - \dfrac{d y}{dx} +6y=0, \quad y(0)=5,\quad  \dfrac{d y}{dx} (0)=-6,\quad  \dfrac{d^2 y}{dx^2} (0)=10,\quad  \dfrac{d^3 y}{dx^3} (0)-36\]<span class="hint">Hint: See Example&nbsp;9.1.2.</span>
+			</div>
+		</div>
 
 		<div class="exercise" id="x1-54">
 			<span class="ex-number">104.</span>
