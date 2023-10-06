@@ -29,8 +29,8 @@
 		</div>
 
 		<div class="stepline"> 
-			Part 1: Laplace of Unit Step Functions
-		</div>  
+			Part 1: Discontinuous Laplace Transforms
+		</div>
 
 		<div class="grouping">
 			<div class="instructions">
@@ -39,11 +39,12 @@
 						Graph the piecewise function \(f(t)\) 
 					</li>
 					<li>
-						Rewrite the piecewise function \(f(t)\) in terms of the unit step function 
+						Calculate \( {\cal L} \big\{ f(t) \big\} \) by evaluating the improper integral \( \int _0^\infty e^{-st} f(t)\,dt \) as in Section <a href="sec8.1.book.html" target=_blank>8.1</a>
 					</li>
-					<li>&nbsp;Calculate \( {\cal L} \big\{ f(t) \big\} \) using the definition as in Section <a href="sec8.1 book.html" target=_blank>8.1</a></li>
-					<li>&nbsp;Calculate \( {\cal L} \big\{ f(t) \big\} \) using tables of Laplace transforms</li>
-				</ol>		
+					<li>
+						Calculate \( {\cal L} \big\{ f(t) \big\} \) by rewriting each piece as a Laplace transform and using the tables in Sections <a href="sec8.1.book.html" target=_blank>8.1</a> and <a href="sec8.2.book.html" target=_blank>8.2</a>
+					</li>
+				</ol>
 			</div>
 
 			<div class="exercise">
@@ -144,11 +145,10 @@
 
 		</div>
 
-		
 
 		<div class="stepline"> 
-			Part 2: Laplace using Tables
-		</div>  
+			Part 2: Unit Step Functions
+		</div>
 
 		<div class="grouping">
 			<div class="instructions">
@@ -159,7 +159,129 @@
 					<li>
 						Rewrite the piecewise function \(f(t)\) in terms of the unit step function 
 					</li>
-					<li>&nbsp;Calculate \( {\cal L} \big\{ f(t) \big\} \) using tables of Laplace transforms</li>
+					<li>
+						Calculate \( {\cal L} \big\{ f(t) \big\} \) by evaluating the improper integral \( \int _0^\infty e^{-st} f(t)\,dt \) using the definition of the unit step function
+					</li>
+					<li>
+						Use Theorem&nbsp;<a href="#x1-111">8.4.1</a> to calculate \({\cal L} \big\{ f(t) \big\} \)
+					</li>
+				</ol>
+			</div>
+
+			<div class="exercise">
+				<span class="ex-number">101.</span>
+				<div class="ex-body">
+					<a id="x1-21"></a>
+					\(\displaystyle {f(t)=\left \{ 
+					\begin {array}{cl} 1&amp;0 \le t&lt;4\\ t &amp;t\ge 4
+					\end {array}\right .}\) 
+				</div>
+			</div>
+
+			<div class="exercise">
+				<span class="ex-number">102.</span>
+				<div class="ex-body">
+					<a id="x1-32"></a>
+					 \(\displaystyle {f(t)=\left \{ 
+					\begin {array}{cl} t &amp;0 \le t&lt;1 \\ 1 &amp;t\ge 1  
+					\end {array}\right .}\) 
+				</div>
+			</div>
+
+			<div class="exercise">
+				<span class="ex-number">103.</span>
+				<div class="ex-body">
+					<a id="x1-43"></a>
+					\(\displaystyle {f(t)=\left \{ 
+					\begin {array}{cl} 2t-1 &amp; 0\le t&lt;2 \\ t &amp;t\ge 2  
+					\end {array}\right .}\)
+				</div>
+			</div>
+
+			<div class="exercise">
+				<span class="ex-number">104.</span>
+				<div class="ex-body">
+					<a id="x1-54"></a>
+					\(\displaystyle {f(t)=\left \{ 
+					\begin {array}{cl}1  &amp;0\le t&lt;1 \\ t+2 &amp;t\ge 1  
+					\end {array}\right .}\)
+				</div>
+			</div>
+
+			<div class="exercise">
+				<span class="ex-number">105.</span>
+				<div class="ex-body">
+					<a id="x1-65"></a>
+					 \(\displaystyle {f(t)=\left \{ \begin {array}{cl} t-1 &amp; 0\le t&lt;2 \\ 4 &amp;t\ge 2  \end {array}\right .}\)
+				</div>
+			</div>
+	
+			<div class="exercise">
+				<span class="ex-number">106.</span>
+				<div class="ex-body">
+					<a id="x1-76"></a> 
+					\(\displaystyle {f(t)=\left \{ 
+					\begin {array}{cl} t^2 &amp; 0\le t&lt;1 \\ 0 &amp;t\ge 1  
+					\end {array}\right .}\) </td>
+				</div>
+			</div>
+
+			<div class="exercise">
+				<span class="ex-number">107.</span>
+				<div class="ex-body">
+					<a id="x1-87"></a>
+					\(\displaystyle {f(t)=\left \{ 
+					\begin {array}{cl} 0  &amp;0\le t&lt;2 \\ t^2+3t &amp;t\ge 2  
+					\end {array}\right .}\) 
+				</div>
+			</div>
+	
+			<div class="exercise">
+				<span class="ex-number">108.</span>
+				<div class="ex-body">
+					<a id="x1-98"></a>
+					\(\displaystyle {f(t)=\left \{ 
+					\begin {array}{cl} t^2+2  &amp;0\le t&lt;1 \\ t &amp;t\ge 1  
+					\end {array}\right .}\) 
+				</div>
+			</div>
+	
+			<div class="exercise">
+				<span class="ex-number">109.</span>
+				<div class="ex-body">
+					<a id="x1-109"></a> 
+					\(\displaystyle {f(t)=\left \{ \begin {array}{cl} te^t &amp; 0\le t &lt;1 \\ e^t &amp;t\ge 1  \end {array}\right .}\)
+				</div>
+			</div>
+	
+			<div class="exercise">
+				<span class="ex-number">110.</span>
+				<div class="ex-body">
+					<a id="x1-1110"></a> 
+					\(\displaystyle {f(t)=\left \{ 
+					\begin {array}{cl} e^{\phantom {2}-t}  &amp;0\le t&lt;1 \\ e^{-2t} &amp;t\ge 1  
+					\end {array}\right .}\)
+				</div>
+			</div>
+
+		</div>
+		
+		<div class="stepline"> 
+			Part 3: More Pieces
+		</div>  
+
+		<div class="grouping">
+			<div class="instructions">
+				<ol>
+					<li>
+						Graph the piecewise function \(f(t)\) 
+					</li>
+					<li>
+						Rewrite the piecewise function \(f(t)\) in terms of the unit step function 		
+					</li>
+					<li>
+						Use Theorem&nbsp;<a href="#x1-111">8.4.1</a> to calculate \({\cal L} \big\{ f(t) \big\} \)
+					</li>
 				</ol>
 			</div>
 
@@ -242,7 +364,7 @@
 		</div>
 
 		<div class="stepline"> 
-			Part 3: Inverse Laplace
+			Part 4: Inverse Laplace
 		</div>  
 
 		<div class="grouping">
@@ -338,9 +460,8 @@
 			</div>
 		</div>
 
-
 		<div class="stepline"> 
-			Part 4: Challenge
+			Part 5: Challenge
 		</div>  
 
 		<div class="exercise">

@@ -31,7 +31,7 @@
 		</div>
 
 		<details id="g2">	
-			<summary>Unit Step Function</summary>
+			<summary>Discontinuous Laplace Transforms</summary>
 			<div id="124be07d-5bae-4838-aa82-dd8a4c902bee">
 				In the next section we’ll consider IVPs where \(a\), \(b\), and \(c\) are constants and \(f(t) \) is piecewise continuous.
 				
@@ -47,9 +47,16 @@
 			<!--Example 1-->
 			<div class="example" id="x1-21" style="--ex-number: 1">
 				<ol>
-					<li>&nbsp;Calculate \( {\cal L} \big\{ f(t) \big\} \) using the definition as in Section <a href="sec8.1.book.html" target=_blank>8.1</a></li>
+					<li>
+						Graph the piecewise function \(f(t)\) 
+					</li>
+					<li>
+						Calculate \( {\cal L} \big\{ f(t) \big\} \) by evaluating the improper integral \( \int _0^\infty e^{-st} f(t)\,dt \) as in Section <a href="sec8.1.book.html" target=_blank>8.1</a>
+					</li>
 					<li class="skip"></li>
-					<li>&nbsp;Calculate \( {\cal L} \big\{ f(t) \big\} \) using tables of Laplace transforms</li>
+					<li>
+						Calculate \( {\cal L} \big\{ f(t) \big\} \) by rewriting each piece as a Laplace transform and using the tables in Sections <a href="sec8.1.book.html" target=_blank>8.1</a> and <a href="sec8.2.book.html" target=_blank>8.2</a>
+					</li>
 					<li class="skip"></li>
 					<li class="skip"></li>
 				</ol>
@@ -69,6 +76,16 @@
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
+						<li>
+							<figure>
+								<iframe src="https://www.desmos.com/calculator/5bsnrghrud?embed" width="400" height="400" frameborder=0></iframe>
+								
+								<figcaption>
+									<span class="id">Figure&nbsp;8.4.1</span>
+									<span class="content">\(y=f(t)\)</span>
+								</figcaption>
+							</figure>
+						</li>
 						<li>
 							<div>
 								Using the definition of Laplace transform <a href="sec8.1.book.html#x1-5r3" target=_blank>(8.1.2)</a> we will calculate
@@ -304,17 +321,11 @@
 					</ol>	
 				</details>
 			</div>
-			<figure id="x1-19r4">
-				<img height="264" src="EPS/fig080401.png" width="409" />
-				
-				<figcaption>
-					<span class="id">Figure&nbsp;8.4.1</span>
-					<span class="content">The piecewise continuous function <a href="#x1-3r1">(8.4.1)</a></span>
-				</figcaption>
-			</figure>
 
+		</details>
 
-
+		<details id="unit-step">
+			<summary>Unit Step Function</summary>
 			
 			<div id="4a41be27-6339-41ec-b04b-a012fd781661">				
 				We’ll now develop the method of Example&nbsp;<a href="#x1-21">8.4.1</a> into a systematic way to find the Laplace transform of a piecewise continuous function. It is convenient to introduce the <span class="vocab">unit step function</span>, defined as 
@@ -327,7 +338,17 @@
 							1 &amp; t\ge 0 
 						\end {array}
 						\right.
-				\end {equation}  
+				\end {equation}
+
+				<figure id="x1-7r1">
+					<iframe src="https://www.desmos.com/calculator/vmwm6kmqpa?embed" width="400" height="400" frameborder=0></iframe>
+					
+					<figcaption>
+						<span class="id">Figure&nbsp;8.4.2 (a)</span>
+						<span class="content">\(y=u(t)\)</span>
+					</figcaption>
+				</figure>
+
 				
 				Thus, \(u(t)\) “steps” from the constant value \(0\) to the constant value \(1\) at \(t=0\). If we replace \(t\) by \(t-a \) in <a href="#x1-8r4">(8.4.4)</a>, then the step now occurs at \(t=a \)
 
@@ -341,10 +362,10 @@
 				\]
 
 				<figure id="x1-7r2">
-					<img height="264" src="EPS/fig080402.png" width="409" /> 
+					<iframe src="https://www.desmos.com/calculator/9uzsciwu9k?embed" width="400" height="400" frameborder=0></iframe>
 					
 					<figcaption>
-						<span class="id">Figure&nbsp;8.4.2</span>
+						<span class="id">Figure&nbsp;8.4.2 (b)</span>
 						<span class="content">\(y=u(t-a )\)</span>
 					</figcaption>
 				</figure>
@@ -524,10 +545,6 @@
 
 			</div>
 
-		</details>
-		<details id="b8bc398f-b392-4088-9ac3-f064762e0785">
-			<summary> Laplace Transforms</summary>
-
 			<div class="theorem" id="x1-111">
 				<span class="head">Theorem&nbsp;8.4.1</span> 
 				 Let \(g(t)\) be defined on \([0,\infty ).\) Suppose \({a} \ge 0\) and \({\cal L} \big\{ g(t+{a} ) \big\} \) exists for \(s&gt;s_0.\) Then 
@@ -543,36 +560,48 @@
 			</div>
 
 
-
 			<br>
 			<!--Example 2-->
 			<div class="example" id="x1-122" style="--ex-number: 2">
 				<ol>
 					<li>
-						Rewrite the piecewise function \(f(t)\) in terms of the unit step function 
-
-						\begin {equation*}  
-							f(t)= \left\{ 
-								\begin {array}{rl} 
-									0 &amp;	t&lt;1 \\ 
-									t^2+1 &amp; t\ge 1 
-								\end {array}
-								\right.
-						\end {equation*} 
+						Graph the piecewise function \(f(t)\) 
 					</li>
 					<li>
-						Use the definition of Laplace transform 
-						<a href="sec8.1.book.html#x1-5r3" target=_blank>(8.1.2)</a>
-						to calculate \({\cal L} \big\{ f(t) \big\} \)
+						Rewrite the piecewise function \(f(t)\) in terms of the unit step function 
+					</li>
+					<li>
+						Calculate \( {\cal L} \big\{ f(t) \big\} \) by evaluating the improper integral \( \int _0^\infty e^{-st} f(t)\,dt \) using the definition of the unit step function
 					</li>
 					<li class="skip"></li>
 					<li>
 						Use Theorem&nbsp;<a href="#x1-111">8.4.1</a> to calculate \({\cal L} \big\{ f(t) \big\} \)
 					</li>
-				</ol>		
+				</ol>
+
+				<div>
+					\begin {equation*}  
+						f(t)= \left\{ 
+							\begin {array}{rl} 
+								0 &amp;	t&lt;1 \\ 
+								t^2+1 &amp; t\ge 1 
+							\end {array}
+							\right.
+					\end {equation*} 
+				</div>
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
+						<li>
+							<figure>
+								<iframe src="https://www.desmos.com/calculator/c9wgqf23kg?embed" width="400" height="400" frameborder=0></iframe>
+								
+								<figcaption>
+									<span class="content">\(y=f(t)\)</span>
+								</figcaption>
+							</figure>
+						</li>
+
 						<li>
 							<div>
 								Now we'll rewrite the piecewise function in terms of the <span class="vocab-repeat">unit step function</span>
@@ -738,29 +767,41 @@
 			<div class="example" id="x1-133" style="--ex-number: 3">
 				<ol>
 					<li>
-						Rewrite the piecewise function \(f(t)\) in terms of the unit step function 
-
-						\[ f(t)=\left \{ 
-							\begin {array}{cl}
-								2t+1 &amp; 0 \le t &lt; 2 \\
-								3t &amp; t \ge 2 
-							\end {array}\right. 
-						\]
+						Graph the piecewise function \(f(t)\) 
 					</li>
 					<li>
-						Use the definition of Laplace transform 
-						<a href="sec8.1.book.html#x1-5r3" target=_blank>(8.1.2)</a>
-						to calculate \({\cal L} \big\{ f(t) \big\} \)
+						Rewrite the piecewise function \(f(t)\) in terms of the unit step function 
+					</li>
+					<li>
+						Calculate \( {\cal L} \big\{ f(t) \big\} \) by evaluating the improper integral \( \int _0^\infty e^{-st} f(t)\,dt \) using the definition of the unit step function
 					</li>
 					<li class="skip"></li>
 					<li>
 						Use Theorem&nbsp;<a href="#x1-111">8.4.1</a> to calculate \({\cal L} \big\{ f(t) \big\} \)
 					</li>
-				</ol>		
+				</ol>
+
+				<div>
+					\[ f(t)=\left \{ 
+						\begin {array}{cl}
+							2t+1 &amp; 0 \le t &lt; 2 \\
+							3t &amp; t \ge 2 
+						\end {array}\right. 
+					\]
+				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
+						<li>
+							<figure>
+								<iframe src="https://www.desmos.com/calculator/xrqa3gxlhh?embed" width="400" height="400" frameborder=0></iframe>
+								
+								<figcaption>
+									<span class="content">\(y=f(t)\)</span>
+								</figcaption>
+							</figure>
+						</li>
 						<li>
 							<div>
 								Now we'll rewrite the piecewise function in terms of the <span class="vocab-repeat">unit step function</span>
@@ -941,14 +982,12 @@
 					
 				</details>
 			</div>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
+		</details>
+
+		<details id="part3">
+			<summary>More Pieces</summary>
+
 			<div id="77dbcdb9-f245-40e3-8d38-408e58764355">
-				
-				
 				Recall Equation <a href="#x1-9r5">(8.4.5)</a>
 				which defines a piecewise function with two pieces:
 
@@ -1020,36 +1059,40 @@
 			<div class="example" id="x1-144" style="--ex-number: 4">
 				<ol>
 					<li>
-						Graph the piecewise function \(f(t)\)
-						<a id="x1-15r7"></a> 
-						\begin {equation} 
-							\label {eq:8.4.7}
-							f(t)=\left \{
-								\begin {array}{cl}
-									1 &amp;0\le t&lt;2 \\ 
-									-2t+1 &amp;2\le t&lt;3 \\ 
-									3t &amp;3\le t&lt;5 \\ 
-									t-1 &amp;t\ge 5 
-								\end {array}
-							\right.
-						\end {equation} 
+						Graph the piecewise function \(f(t)\) 
 					</li>
 					<li>
-						Rewrite the piecewise function \(f(t)\) <a href="#x1-15r7">(8.4.7)</a></span> in terms of the unit step function 		
+						Rewrite the piecewise function \(f(t)\) in terms of the unit step function 		
 					</li>
 					<li>
 						Use Theorem&nbsp;<a href="#x1-111">8.4.1</a> to calculate \({\cal L} \big\{ f(t) \big\} \)
 					</li>
 					<li class="skip"></li>
 					<li class="skip"></li>
-				</ol>	
+				</ol>
+
+				<div>
+					<a id="x1-15r7"></a> 
+					\begin {equation} 
+						\label {eq:8.4.7}
+						f(t)=\left \{
+							\begin {array}{cl}
+								1 &amp;0\le t&lt;2 \\ 
+								-2t+1 &amp;2\le t&lt;3 \\ 
+								3t &amp;3\le t&lt;5 \\ 
+								t-1 &amp;t\ge 5 
+							\end {array}
+						\right.
+					\end {equation} 
+				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
 						<li>
 							<figure id="x1-16r3">
-								<img height="264" src="EPS/fig080403.png" width="409" />
+								<iframe src="https://www.desmos.com/calculator/gkraaahovv?embed" width="400" height="400" frameborder=0></iframe>
+
 								<figcaption>
 									<span class="id">Figure&nbsp;8.4.3</span>
 									<span class="content">Graph of \(f(t)\) <a href="#x1-15r7">(8.4.7)</a></span> 
@@ -1293,25 +1336,12 @@
 			<br>
 			<!--Example 5-->
 			<div class="example" id="x1-175" style="--ex-number: 5">
-				
 				<ol>
 					<li>
 						Graph the piecewise function \(f(t)\)
-						<a id="x1-18r8"></a> 
-						\begin {equation} 
-							
-							f(t)=\left \{
-								\begin {array}{cl} 
-									\sin t &amp; 0\le t&lt;\displaystyle {\pi \over 2} \\ 
-									\cos t-3\sin t &amp;\displaystyle {\pi \over 2}\le t&lt;\pi \\ 
-									3\cos t &amp; t\ge \pi 
-								\end {array}
-							\right. 
-							\label {eq:8.4.10} 
-						\end {equation}
 					</li>
 					<li>
-						Rewrite the piecewise function \(f(t)\) <a href="#x1-18r8">(8.4.10)</a> in terms of the unit step function 		
+						Rewrite the piecewise function \(f(t)\) in terms of the unit step function
 					</li>
 					<li>
 						Use Theorem&nbsp;<a href="#x1-111">8.4.1</a> to calculate \({\cal L} \big\{ f(t) \big\} \)
@@ -1320,6 +1350,21 @@
 					<li class="skip"></li>
 					<li class="skip"></li>
 				</ol>	
+
+				<div>
+					<a id="x1-18r8"></a> 
+					\begin {equation} 
+						
+						f(t)=\left \{
+							\begin {array}{cl} 
+								\sin t &amp; 0\le t&lt;\displaystyle {\pi \over 2} \\ 
+								\cos t-3\sin t &amp;\displaystyle {\pi \over 2}\le t&lt;\pi \\ 
+								3\cos t &amp; t\ge \pi 
+							\end {array}
+						\right. 
+						\label {eq:8.4.10} 
+					\end {equation}
+				</div>
 			
 				
 				
@@ -1329,7 +1374,8 @@
 					<ol>
 						<li>
 							<figure id="x1-19r44">
-								<img height="264" src="EPS/fig080404.png" width="409" /> 
+								<iframe src="https://www.desmos.com/calculator/lga8ebyb0s?embed" width="400" height="400" frameborder=0></iframe>
+
 								<figcaption>
 									<span class="id">Figure&nbsp;8.4.4</span>
 									<span class="content">Graph of \(f(t)\) <a href="#x1-18r8">(8.4.10)</a></span>
@@ -1972,7 +2018,7 @@
 						<li class="continued">
 							<div>
 								<figure id="x1-fig847">
-									<iframe src="https://www.desmos.com/calculator/bjwmybxhgh?embed" width="400" height="250" frameborder="0"></iframe>
+									<iframe src="https://www.desmos.com/calculator/cjo81w3ro0?embed" width="400" height="250" frameborder="0"></iframe>
 									<figcaption>
 										<span class="id">Figure&nbsp;8.4.7</span>
 										<span class="content">The piecewise continuous function <a href="#x1-eq-8415">(8.4.15)</a></span>
@@ -2272,14 +2318,14 @@
 								For our answer 
 								
 								<a id="x1-26r11"></a> 
-								\begin {equation} \label {eq:8.4.13}
-									f(t) = 2\cos 2t + \left( 3\sin 3t-\frac{1}{3} \cos 3t \right)
-										\, u\left(t-\frac{\pi}{2}\right)
-										+
+								\begin {align} \label {eq:8.4.13}
+									f(t) = & 2\cos 2t + \left( 3\sin 3t-\frac{1}{3} \cos 3t \right)
+										\, u\left(t-\frac{\pi}{2}\right) \\
+										& +
 										\Big( \left( 2 \sin t  -\cos t
 										\right)
-										e^{-3(t-{\pi})} \Big)
-								\end {equation} 
+										e^{-3(t-{\pi})} \Big) \, u\left(t-\pi\right) \nonumber
+								\end {align} 
 							
 								we have the equations
 
@@ -2332,7 +2378,8 @@
 						<li class="continued">
 					
 							<figure id="x1-27r5">
-								<img height="264" src="EPS/fig080405.png" width="409" /> 
+								<iframe src="https://www.desmos.com/calculator/x7p8wj5czd?embed" width="400" height="400" frameborder=0></iframe>
+
 								<figcaption>
 									<span class="id">Figure&nbsp;8.4.5</span>
 									<span class="content">The piecewise continuous function <a href="#x1-26r11">(8.4.13)</a></span>
