@@ -134,7 +134,7 @@
 				</div>
 				<ol>
 					<li>
-						Verify that \(y_1=x^2\), \(y_2=x^3\), and \(y_3=1/x\) are solutions <a href="#x1-9r5">(9.1.5)</a> and find their domain
+						Verify that \(y_1=x^2\), \(y_2=x^3\), and \(y_3=1/x\) are solutions of <a href="#x1-9r5">(9.1.5)</a> and find their domain
 					</li>
 					<li>
 						Show that \(\{y_1,y_2,y_3\}\) is linearly independent
@@ -233,6 +233,8 @@
 
 									Note that \(y_3=1/x\) is undefined when 
 									\(x=0\) so the domain is \(\left(-\infty,0\right)\) and \(\left(0,\infty\right)\)
+									
+
 
 								</div>	
 
@@ -240,7 +242,7 @@
 						</li>
 						<li>
 							<div>
-								Now we will show \(\{y_1,y_2,y_3\}\) is linearly indepdent. Start by writing a
+								Now we will show \(\{y_1,y_2,y_3\}\) is linearly independent. Start by writing a
 								linear combination \(c_1 y_1 + c_2 y_2 + c_3 y_3\) equal to zero 
 
 								<a id="x1-10r6"></a>
@@ -248,10 +250,10 @@
 									c_1 x^2 + c_2 x^3 + \frac{c_3}{x} & = 0
 								\end{align}
 
-								Note the domain is \(\left(-\infty,0\right)\) and \(\left(0,\infty\right)\). Now to show \(\{x^2,x^3,1/x\}\) is linearly indepdent we will show that the constants \(c_1, c_2\) and \(c_3\) are all zero. 
+								Note the domain is \(\left(-\infty,0\right)\) and \(\left(0,\infty\right)\). Now to show \(\{x^2,x^3,1/x\}\) is linearly independent we will show that the constants \(c_1, c_2\) and \(c_3\) are all zero. 
 							</div>
 							<div>	
-								However we can't solve only one equation with three unknowns uniquely becaus we need two more equations. We can create additional equations by 
+								However we can't solve only one equation with three unknowns uniquely because we need two more equations. We can create additional equations by 
 								differentiating this equation.
 							</div>	
 							<div class="reading-exercise">
@@ -387,47 +389,266 @@
 									\right) \\ \\
 								\end {align*}
 								
-								Therefore we have \(c_1=c_2=c_3=0\)
+								Therefore we have \(c_1=c_2=c_3=0\).
+								Using row reduction worked but still it was a but tedious, so we will use another method. Instead we can show that a system of equations has only the trivial solution by showing that the determinant of coefficients <a href="#x1-12r8">(9.1.8)</a> is nonzero using expansion by cofactors along any row or column
+
+								\begin {align*} 
+									\left(
+									\begin {array}{rrr} 
+										+ & - & + \\ 
+										- & + & - \\ 
+										+ & - & + \\ 
+									\end {array} 
+									\right)
+								\end {align*}
 								
+								
+								We will expand the coefficient matrix by cofactors along the first column as an example			
+
+								\begin {align*} 
+									\det
+									\left(
+									\begin {array}{rrr} 
+										1 & 1 & 1 \\ 
+										2 & 3 & -1 \\ 
+										2 & 6 & 2 \\ 
+									\end {array} 
+									\right)
+									& =
+									\det
+									\left(
+									\begin {array}{rrr} 
+										3 & -1 \\ 
+										6 & 2 \\ 
+									\end {array} 
+									\right)
+									-2 \cdot
+									\det
+									\left(
+									\begin {array}{rrr} 
+										1 & 1 \\ 
+										6 & 2 \\ 
+									\end {array} 
+									\right)
+									+2 \cdot
+									\det
+									\left(
+									\begin {array}{rrr}
+										1 & 1 \\ 
+										3 & -1 \\ 
+									\end {array} 
+									\right) \\
+									& =
+									\left(
+									6+6 
+									\right)
+									-2
+									\left(
+									2-6 
+									\right)
+									+2
+									\left(
+									-1-3
+									\right) \\
+									& =
+									12 
+									-2
+									\left(
+									-4 
+									\right)
+									+2
+									\left(
+									-4
+									\right) \\
+									& =
+									12
+									+
+									8
+									-
+									8 \\
+									& =
+									12
+									\ne 0
+									\\
+								\end {align*}
+
+								And since the determinant of the coefficients is nonzero then we know the system <a href="#x1-12r8">(9.1.8)</a> has only the trivial solution.
+								Expanding along the cofactors was simple enough but we can make it even simpler by using row reduction in combination with determinants. We can we can add and subtract any two rows the same way with determinants as we did with the augmented matrix: 
+							
+								\begin {align*} 
+									\det
+									\left(
+									\begin {array}{rrr} 
+										1 & 1 & 1 \\ 
+										2 & 3 & -1 \\ 
+										2 & 6 & 2 \\ 
+									\end {array} 
+									\right)
+									&
+									\overset{
+										\small{R_2-2R_1}
+									}{\longrightarrow}
+									\det
+									\left(
+									\begin {array}{rrr} 
+										1 & 1 & 1 \\ 
+										0 & 1 & -3 \\ 
+										2 & 6 & 2 \\ 
+									\end {array} 
+									\right)
+									\overset{
+										\small{R_3-2R_1}
+									}{\longrightarrow}
+									\det
+									\left(
+									\begin {array}{rrr} 
+										1 & 1 & 1 \\ 
+										0 & 1 & -3 \\ 
+										0 & 4 & 0 \\ 
+									\end {array} 
+									\right)
+								\end {align*}
+
+								But now that the first column has two zeros, it is even easier to expand by cofactors along it			
+
+								\begin {align*} 
+									\det
+									\left(
+									\begin {array}{rrr} 
+										1 & 1 & 1 \\ 
+										0 & 1 & -3 \\ 
+										0 & 4 & 0 \\ 
+									\end {array} 
+									\right)
+									& =
+									\det
+									\left(
+									\begin {array}{rrr} 
+										1 & -3 \\ 
+										4 & 0 \\ 
+									\end {array} 
+									\right)
+									- \underset{0}{\underbrace{
+									0 \cdot
+									\det
+									\left(
+									\begin {array}{rrr} 
+										1 & 1 \\ 
+										4 & 0 \\ 
+									\end {array} 
+									\right)}}
+									+\underset{0}{\underbrace{ 0  \cdot
+									\det
+									\left(
+									\begin {array}{rrr}
+										1 & 1 \\ 
+										1 & -3 \\ 
+									\end {array} 
+									\right)}} \\
+									& =
+									\det
+									\left(
+									\begin {array}{rrr} 
+										1 & -3 \\ 
+										4 & 0 \\ 
+									\end {array} 
+									\right) \\
+									& =
+									0-(-12) \\
+									& = 12 \ne 0 \\
+								\end {align*}
+
+								Which yields the result, for the third time, that 
+
+								\(\{x^2,x^3,1/x\}\) is linearly independent on \(\left(0,\infty\right)\)
+
 							</div>	
 							<div>
-								Therefore we will use another method that requires a result from linear algebra instead. We can show that the system of equations has only the trivial solution by showing that the determinant of coefficients is nonzero. 
-							</div>	
-							<div>
+								We'll now use the combination of row reduction and expansion by cofactors to show that \(\{x^2,x^3,1/x\}\) is linearly independent on \(\left(-\infty,0\right)\) this time evaluating the system <a href="#x1-11r7">(9.1.7)</a> at \(x=-1\)
+
+							
+								\begin {align*}  
+									\left\{
+									\begin {array}{rrr} 
+										c_1 &-& c_2 &-& c_3 &=& 0 \\ 
+										-2c_1 &+& 3c_2 &-& c_3 &=& 0 \\ 
+										2c_1 &-& 6c_2 &-& 2c_3 &=& 0 \\ 
+									\end {array} 
+									\right.
+								\end {align*}
+
+								First using row reduction on the coefficient matrix
+
+								\begin {align*} 
+									\det
+									\left(
+									\begin {array}{rrr} 
+										1 & -1 & -1 \\ 
+										-2 & 3 & -1 \\ 
+										2 & -6 & -2 \\ 
+									\end {array} 
+									\right)
+									&
+									\overset{
+										\small{R_2+2R_1}
+									}{\longrightarrow}
+									\det
+									\left(
+									\begin {array}{rrr} 
+										1 & -1 & -1 \\ 
+										0 & 1 & -3 \\ 
+										2 & -6 & -2 \\
+									\end {array} 
+									\right)
+									\overset{
+										\small{R_3-2R_1}
+									}{\longrightarrow}
+									\det
+									\left(
+									\begin {array}{rrr} 
+										1 & 1 & 1 \\ 
+										0 & 1 & -3 \\ 
+										0 & -8 & -4 \\
+									\end {array} 
+									\right)
+								\end {align*}
+
+								Expanding by cofactors along the first column:
+
+								\begin {align*} 
+									\det
+									\left(
+									\begin {array}{rrr} 
+										1 & 1 & 1 \\ 
+										0 & 1 & -3 \\ 
+										0 & -4 & 0 \\
+									\end {array} 
+									\right)
+									=
+									\det
+									\left(
+									\begin {array}{rrr} 
+										1 & -3 \\ 
+										-4 & 0 \\ 
+									\end {array} 
+									\right)
+									& = -12 \ne 0 \\
+								\end {align*}
+
+								Since the determinant is nonzero we know the system has only the trivial solution therefore \(\{x^2,x^3,1/x\}\) is linearly independent on \(\left(-\infty,0\right)\)
 							</div>	
 						</li>
 						<li>
-							Find the general solution of <a href="#x1-9r5">(9.1.5)</a>
+							Since we have shown that \(x^2,x^3\) and \(1/x\) are solutions of <a href="#x1-9r5">(9.1.5)</a> and that they are  linearly independent therefore we know \(\{x^2,x^3,1/x\}\) is a fundamental set, therefore the general solution is
+
+							\[
+							y=c_1 x^2 c_2 x^3 + \frac{c_3}{x}
+							\]
+
+								
+							
 						</li>
-					</ol>
-
-					<div>
-						Suppose 
-
-						
-
-
-						on \((0,\infty )\). We must show that \(c_1=c_2=c_3=0\). Differentiating <a href="#x1-10r6">(9.1.6)</a> twice yields the system 
-						
-
-						If <a href="#x1-11r7">(9.1.7)</a> holds for all \(x\) in \((0,\infty )\), then it certainly holds at \(x=1\); therefore, 
-
-						
-
-						By solving this system directly, you can verify that it has only the trivial solution \(c_1=c_2=c_3=0\); however, for our purposes it’s more useful to recall from linear algebra that a homogeneous linear system of \(n\) equations in \(n\) unknowns has only the trivial solution if its determinant is nonzero. Since the determinant of <a href="#x1-12r8">(9.1.8)</a> is \[ \left | \begin {array}{rrr}1&amp;1&amp;1\\2&amp;3&amp;-1\\2&amp;6&amp;2 \end {array}\right |= \left | 
-						\begin {array}{rrr}1&amp;0&amp;0\\2&amp;1&amp;-3\\2&amp;4&amp;0 
-						\end {array}\right |=12\] it follows that <a href="#x1-12r8">(9.1.8)</a> has only the trivial solution, so \(\{y_1,y_2,y_3\}\) is linearly independent on \((0,\infty )\). Now Theorem&nbsp;<a href="#x1-72">9.1.2</a> implies that \[ y=c_1x^2+c_2x^3+{c_3\over x} \] is the general solution of <a href="#x1-9r5">(9.1.5)</a> on \((0,\infty )\). To see that this is also true on \((-\infty ,0)\), assume that <a href="#x1-10r6">(9.1.6)</a> holds on \((-\infty ,0)\). Setting \(x=-1\) in <a href="#x1-11r7">(9.1.7)</a> yields
-
-						<div class="eqnarray" id="646d035a-1cfd-4794-977e-9ed5f94c5210">
-							\begin {eqnarray*} \phantom {-2}c_1-\phantom {3}c_2-\phantom {2}c_3&amp;=&amp;0\\ -2c_1+3c_2-\phantom {2}c_3&amp;=&amp;0\\ \phantom {-}2c_1-6c_2-2c_3&amp;=&amp;0 
-							\end {eqnarray*} 
-						</div>
-						<div class="indent" id="2edc6b23-5c68-462e-8636-cd75b02fc81f">
-							Since the determinant of this system is \[ \left | \begin {array}{rrr}1&amp;-1&amp;-1\\-2&amp;3&amp;-1\\2&amp;-6&amp;-2 \end {array}\right |= \left | 
-							\begin {array}{rrr}1&amp;0&amp;0\\-2&amp;1&amp;-3\\2&amp;-4&amp;0 
-							\end {array}\right |=-12\] it follows that \(c_1=c_2=c_3=0\); that is, \(\{y_1,y_2,y_3\}\) is linearly independent on \((-\infty ,0)\). 
-						</div>
-					</div>	
+					</ol>	
 				</details>
 			</div>
 
@@ -437,92 +658,534 @@
 			<!--Example 2-->
 			<div class="example" id="x1-132" style="--ex-number: 2">
 				<div>
-					The equation 
-					<a id="x1-14r9"></a> 
-					\begin {equation} 
-						\label {eq:9.1.9} 
-						y^{(4)}+ \frac{d^3 y}{dx^3} -7 \frac{d^2 y}{dx^2} - \frac{d y}{dx} +6y=0 
-					\end {equation} 
+					Consider the equation 
 
-					is normal and has the solutions \(y_1=e^x\), \(y_2=e^{-x}\), \(y_3=e^{2x}\), and \(y_4=e^{-3x}\) on \((-\infty ,\infty )\). (Verify.) Show that \(\{y_1,y_2,y_3,y_4\}\) is linearly independent on \((-\infty ,\infty )\). Then find the general solution of <a href="#x1-14r9">(9.1.9)</a>.
+					<a id="x1-14r9"></a> 
+					\begin {equation} \label {eq:9.1.9} 
+						\frac{d^4 y}{dx^4} + \frac{d^3 y}{dx^3} -7 \frac{d^2 y}{dx^2} - \frac{d y}{dx} +6y=0 
+					\end {equation} 
 				</div>
 				<ol>
 					<li>
 						Verify that \(y_1=e^x\), \(y_2=e^{-x}\), \(y_3=e^{2x}\), and 
-						\(y_4=e^{-3x}\) are solutions <a href="#x1-14r9">(9.1.9)</a>.
+						\(y_4=e^{-3x}\) are solutions of <a href="#x1-14r9">(9.1.9)</a> and find their domain
 					</li>
 					<li>
-						
+						Show that \(\{y_1,y_2,y_3,y_4\}\) is linearly independent
 					</li>
 					<li>
-						
+						Find the general solution of <a href="#x1-14r9">(9.1.9)</a>
 					</li>
 				</ol>	
 			
 				<details class="solution">
 					<summary>Solution</summary>
-					Suppose \(c_1\), \(c_2\), \(c_3\), and \(c_4\) are constants such that 
-					<a id="x1-15r10"></a>
-					\begin {equation} 
-						\label {eq:9.1.10} 
-						c_1e^x+c_2e^{-x}+c_3e^{2x}+c_4e^{-3x}=0 
-					\end {equation}
-					for all \(x\). We must show that \(c_1=c_2=c_3=c_4=0\). Differentiating <a href="#x1-15r10">(9.1.10)</a> three times yields the system 
-					<a id="x1-16r11"></a>
-					\begin {equation} 
-						\label {eq:9.1.11} 
-						\begin {array}{rcl} 
-							c_1e^x+c_2e^{-x}+\phantom {2}c_3e^{2x}+\phantom {27}c_4e^{-3x}&amp;=&amp;0\\ 
-							c_1e^x-c_2e^{-x}+2c_3e^{2x}-\phantom {2}3c_4e^{-3x}&amp;=&amp;0\\
-							c_1e^x+c_2e^{-x}+4c_3e^{2x}+\phantom {2}9c_4e^{-3x}&amp;=&amp;0\\ 
-							c_1e^x-c_2e^{-x}+8c_3e^{2x}-27c_4e^{-3x}&amp;=&amp;0 
-						\end {array} 
-					\end {equation}
-					If <a href="#x1-16r11">(9.1.11)</a> holds for all \(x\), then it certainly holds for \(x=0\). Therefore \[ \begin {array}{rcl} c_1+c_2+\phantom {2}c_3+\phantom {27}c_4&amp;=&amp;0\\ c_1-c_2+2c_3-\phantom {2}3c_4&amp;=&amp;0\\ c_1+c_2+4c_3+\phantom {2}9c_4&amp;=&amp;0\\ c_1-c_2+8c_3-27c_4&amp;=&amp;0 \end {array} \] The determinant of this system is 
-					<a id="x1-17r12"></a>
-					\begin {equation} 
-						\label {eq:9.1.12} 
-						\begin {array}{rcl} 
-							\left |
-								\begin {array}{rrrr}
-									1&amp;1&amp;1&amp;1\\
-									1&amp;-1&amp;2&amp;-3\\
-									1&amp;1&amp;4&amp;9\\ 
-									1&amp;-1&amp;8&amp;-27 
-								\end {array}
-							\right | &amp;=&amp; 
-							\left | 
-								\begin {array}{rrrr}
-									1&amp;1&amp;1&amp;1\\
-									0&amp;-2&amp;1&amp;-4\\
-									0&amp;0&amp;3&amp;8\\ 
-									0&amp;-2&amp;7&amp;-28 
-								\end {array}
-							\right | =
-							\left | 
-								\begin {array}{rrr}
-									-2&amp;1&amp;-4\\
-									0&amp;3&amp;8\\ 
-									-2&amp;7&amp;-28 
-								\end {array}
-							\right |\\
-							&amp;=&amp; 
-							\left | 
-								\begin {array}{rrr}
-									-2&amp;1&amp;-4\\
-									0&amp;3&amp;8 \\
-									0&amp;6&amp;-24 
-								\end {array}
-							\right |= 
-							-2\left | 
-								\begin {array}{rr}
-									3&amp;8\\
-									6&amp;-24 
-								\end {array}
-							\right |=240
-						\end {array} 
-					\end {equation}
-					so the system has only the trivial solution \(c_1=c_2=c_3=c_4=0\). Now Theorem&nbsp;<a href="#x1-72">9.1.2</a> implies that \[ y=c_1e^x+c_2e^{-x}+c_3e^{2x}+c_4e^{-3x} \] is the general solution of <a href="#x1-14r9">(9.1.9)</a>.
+					<ol>
+						<li>
+							<div>
+								<!--y_1=e^x-->
+								<div>
+									To verify \(y_1=e^x\) is a solution we differentiate \(y_1\) and substitute into <a href="#x1-14r9">(9.1.9)</a> 
+								</div>	
+								<div class="reading-exercise">
+									Differentiate \(y_1=e^x\) four times
+								</div>	
+								<div>
+									\[
+										y_1=e^x
+										\quad\quad
+										\frac{d y_1}{dx}=e^x
+										\quad\quad
+										\frac{d^2 y_1}{dx^2}=e^x
+										\quad\quad
+										\frac{d^3 y_1}{dx^3}=e^x
+										\quad\quad
+										\frac{d^4 y_1}{dx^4}=e^x
+									\] 
+
+									\begin {align*} 
+										\underset{e^x}{\underbrace{\frac{d^4 y_1}{dx^4}}}
+										+ 
+										\underset{e^x}{\underbrace{\frac{d^3 y_1}{dx^3}}} 
+										-7 
+										\underset{e^x}{\underbrace{\frac{d^2 y_1}{dx^2}}} 
+										- 
+										\underset{e^x}{\underbrace{\frac{d y_1}{dx}}} 
+										+6 \underset{x^2}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
+										\underset{2e^x }{
+										\underbrace{
+										e^x  + e^x }} -
+										\underset{-8e^x }{
+											\underbrace{
+										7 e^x -
+										e^x }} +
+										6  e^x 
+										\overset{?}{=} & \, 0  \\
+										2e^x - 8 e^x + 6 e^x
+										\overset{?}{=} & \, 0  \\
+										- 6 e^x + 6 e^x
+										\overset{}{=} & \, 0 
+										\quad\quad \checkmark \\
+									\end {align*} 
+
+									Note that \(y_1=e^x\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
+								</div>	
+								<br>
+								<br>
+								<!--y_2=e^-x-->
+								<div>
+									To verify \(y_2=e^{-x}\) is a solution we differentiate \(y_2\) and substitute into <a href="#x1-14r9">(9.1.9)</a> 
+								</div>	
+								<div class="reading-exercise">
+									Differentiate \(y_2=e^{-x}\) four times
+								</div>	
+								<div>
+									\[
+										y_2=e^{-x}
+										\quad\quad
+										\frac{d y_2}{dx}=-e^{-x}
+										\quad\quad
+										\frac{d^2 y_2}{dx^2}=e^{-x}
+										\quad\quad
+										\frac{d^3 y_2}{dx^3}=-e^{-x}
+										\quad\quad
+										\frac{d^4 y_2}{dx^4}=e^{-x}
+									\] 
+
+									\begin {align*} 
+										\underset{e^{-x}}{\underbrace{\frac{d^4 y_2}{dx^4}}}
+										+ 
+										\underset{-e^{-x}}{\underbrace{\frac{d^3 y_2}{dx^3}}} 
+										-7 
+										\underset{e^{-x}}{\underbrace{\frac{d^2 y_2}{dx^2}}} 
+										- 
+										\underset{-e^{-x}}{\underbrace{\frac{d y_2}{dx}}} 
+										+6 \underset{e^{-x}}{\underbrace{y_2}} \overset{?}{=} & \, 0  \\
+
+										
+										e^{-x}
+										-
+										\underset{-8e^{-x} }{
+										\underbrace{
+										e^{-x}  -7 e^{-x} }} 
+										+
+										\underset{7e^x }{
+											\underbrace{
+										e^x +
+										6e^x }} 
+										\overset{?}{=} & \, 0  \\
+
+
+										e^{-x} - 8 e^{-x} + 7 e^{-x}
+										\overset{?}{=} & \, 0  \\
+
+										- 7 e^x + 7 e^x
+										\overset{}{=} & \, 0 
+										\quad\quad \checkmark \\
+									\end {align*} 
+
+									Note that \(y_2=e^{-x}\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
+								</div>
+								<br>
+								<br>
+								<div>
+									To verify \(y_3=e^{2x}\) is a solution we differentiate \(y_3\) and substitute into <a href="#x1-14r9">(9.1.9)</a> 
+								</div>	
+								<div class="reading-exercise">
+									Differentiate \(y_3=e^{2x}\) four times
+								</div>	
+								<div>
+									\[
+										y_3=e^{2x}
+										\quad\quad
+										\frac{d y_3}{dx}=2e^{2x}
+										\quad\quad
+										\frac{d^2 y_3}{dx^2}=4e^{2x}
+										\quad\quad
+										\frac{d^3 y_3}{dx^3}=8e^{2x}
+										\quad\quad
+										\frac{d^4 y_3}{dx^4}=16e^{2x}
+									\] 
+
+									\begin {align*} 
+										\underset{16e^{2x}}{\underbrace{\frac{d^4 y_3}{dx^4}}}
+										+ 
+										\underset{8e^{2x}}{\underbrace{\frac{d^3 y_3}{dx^3}}} 
+										-7 
+										\underset{4e^{2x}}{\underbrace{\frac{d^2 y_3}{dx^2}}} 
+										- 
+										\underset{2e^{2x}}{\underbrace{\frac{d y_3}{dx}}} 
+										+6 \underset{e^{2x}}{\underbrace{y_3}} \overset{?}{=} & \, 0  \\
+
+										\underset{24e^{2x}}{\underbrace{
+											16e^{2x} + 8 e^{2x}
+										}} 
+											- 
+										\underset{-30e^{2x}}{\underbrace{
+											28 e^{2x} - 2 e^{2x}
+										}} 
+											+ 6e^{2x}
+										\overset{?}{=} & \, 0  \\
+
+										\underset{-6e^{2x}}{\underbrace{24e^{2x} - 30 e^{2x}}} + 6 e^{2x}
+										\overset{?}{=} & \, 0  \\
+
+										-6 e^{2x} + 6 e^{2x}
+										\overset{}{=} & \, 0
+										\quad\quad \checkmark \\
+									\end {align*} 
+
+									Note that \(y_3=e^{2x}\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
+								</div>
+								<br>
+								<br>
+								<div>
+									To verify \(y_4=e^{-3x}\) is a solution we differentiate \(y_1\) and substitute into <a href="#x1-14r9">(9.1.9)</a> 
+								</div>	
+								<div class="reading-exercise">
+									Differentiate \(y_4=e^{-3x}\) four times
+								</div>	
+								<div>
+									\[
+										y_4=e^{-3x}
+										\quad\quad
+										\frac{d y_4}{dx}=-3e^{-3x}
+										\quad\quad
+										\frac{d^2 y_4}{dx^2}=9e^{-3x}
+										\quad\quad
+										\frac{d^3 y_4}{dx^3}=-27e^{-3x}
+										\quad\quad
+										\frac{d^4 y_4}{dx^4}=81e^{-3x}
+									\] 
+
+									\begin {align*} 
+										\underset{81e^{-3x}}{\underbrace{\frac{d^4 y_4}{dx^4}}}
+										+ 
+										\underset{-27e^{-3x}}{\underbrace{\frac{d^3 y_4}{dx^3}}} 
+										-7 
+										\underset{9e^{-3x}}{\underbrace{\frac{d^2 y_4}{dx^2}}} 
+										- 
+										\underset{-3e^{-3x}}{\underbrace{\frac{d y_4}{dx}}} 
+										+6 \underset{e^{-3x}}{\underbrace{y_4}} \overset{?}{=} & \, 0  \\
+
+										81e^{-3x} 
+										- 27e^{-3x}
+										- 63e^{-3x} 
+										+ 3e^{-3x}
+										+ 6e^{-3x}
+										\overset{?}{=} & \, 0  \\
+
+										81e^{-3x} 
+										- 
+										\underset{-90e^{-3x}}{\underbrace{27e^{-3x} - 63e^{-3x}}} 
+										+ 
+										\underset{9e^{-3x}}{\underbrace{3e^{-3x} + 6e^{-3x}}}
+										\overset{?}{=} & \, 0  \\
+
+
+										\underbrace{81e^{-3x}
+										-
+										90e^{-3x}}
+										+
+										9e^{-3x}
+										\overset{?}{=} & \, 0  \\
+
+										-9e^{-3x}
+										+
+										9e^{-3x}
+										\overset{?}{=} & \, 0 \quad\quad \checkmark \\
+
+									\end {align*} 
+
+									Note that \(y_4=e^{-3x}\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
+								</div>
+
+							</div>	
+						</li>
+						<li>
+							<div>
+								Now we will show \(\{y_1,y_2,y_3,y_4\}\) is linearly independent. Start by writing a
+								linear combination \(c_1 y_1 + c_2 y_2 + c_3 y_3 + c_4 y_4\) equal to zero 
+
+								<a id="x1-15r10"></a>
+								\begin{align} \label {eq:9.1.10} 
+									c_1 e^x
+									+ c_2 e^{-x}
+									+ c_3 e^{2x}
+									+ c_4 e^{-3x} & = 0
+								\end{align}
+
+								Note the domain is \(\left(-\infty,\infty\right)\). Now to show \(\{e^x, e^{-x}, e^{2x}, e^{-3x} \}\) is linearly independent we will show that the constants \(c_1, c_2, c_3\) and \(c_4\) are all zero. Just as in Example <a href="#x1-81">9.1.1</a> we can't solve a single equation with multiple unknowns because we need  more equations so again we can create additional equations by 
+								differentiating.
+							</div>
+
+							
+							<div class="reading-exercise">
+								Differentiate three times 
+								\(
+									c_1 e^x
+									+ c_2 e^{-x}
+									+ c_3 e^{2x}
+									+ c_4 e^{-3x} = 0
+								\)
+							</div>
+
+							
+
+
+							<div>
+								Differentiating our equation we obtain another equation
+								\begin{align*} 
+									\frac{d}{dx}\left( c_1 e^x
+									+ c_2 e^{-x}
+									+ c_3 e^{2x}
+									+ c_4 e^{-3x} \right) & = \frac{d}{dx}\left( 0 \right) \\
+									\Longrightarrow
+									c_1 e^x
+									- c_2 e^{-x}
+									+ 2c_3 e^{2x}
+									- 3c_4 e^{-3x}  & = 0 
+								\end{align*}
+
+								Differentiating again we obtain a third equation
+								\begin{align*} 
+									\frac{d}{dx}\left(  c_1 e^x
+									- c_2 e^{-x}
+									+ 2c_3 e^{2x}
+									- 3c_4 e^{-3x}\right)  & = \frac{d}{dx}\left( 0 \right) \\
+									\Longrightarrow
+									c_1 e^x
+									+ c_2 e^{-x}
+									+ 4c_3 e^{2x}
+									+ 9c_4 e^{-3x} & = 0 \\
+								\end{align*}
+
+								Differentiating again we obtain a fourth equation
+								\begin{align*} 
+									\frac{d}{dx}\left(  c_1 e^x
+									+ c_2 e^{-x}
+									+ 4c_3 e^{2x}
+									+ 9c_4 e^{-3x}\right)  & = \frac{d}{dx}\left( 0 \right) \\
+									\Longrightarrow
+									c_1 e^x
+									- c_2 e^{-x}
+									+ 8c_3 e^{2x}
+									- 27c_4 e^{-3x} & = 0 \\
+								\end{align*}
+
+								Now that we have four equations we have a system we can solve to find \(c_1,c_2,c_3\) and \(c_4\)
+
+								<div>		
+									fixme
+								</div>	
+
+								<a id="x1-16r11"></a>
+								\begin{align} \label {eq:9.1.11}  
+									\left\{
+									\begin{array} {rrrrrr}
+										c_1 e^x
+											&+& c_2 e^{-x}
+											&+& c_3 e^{2x}
+											&+& c_4 e^{-3x} &=& 0 \\
+										c_1 e^x
+											&-& c_2 e^{-x}
+											&+& 2c_3 e^{2x}
+											&-& 3c_4 e^{-3x} &=& 0 \\
+										c_1 e^x
+											&+& c_2 e^{-x}
+											&+& 4c_3 e^{2x}
+											&+& 9c_4 e^{-3x} &=& 0 \\
+										c_1 e^x
+											&-& c_2 e^{-x}
+											&+& 8c_3 e^{2x}
+											&-& 27c_4 e^{-3x} &=& 0 \\
+									\end{array}
+									\right.
+								\end{align}
+
+								We want to show that \(c_1=c_2=c_3=c_4=0\) on \(\left(-\infty,\infty\right)\). The system of equations must be true for all values of \(x\) so we'll choose a simple value \(x=0\) and substitute to obtain a simple system of equations.
+
+								\begin {align*} 
+									\left\{
+									\begin {array}{rrrrrr} 
+									c_1
+										&+& c_2
+										&+& c_3
+										&+& c_4 &=& 0 \\
+									c_1
+										&-& c_2
+										&+& 2c_3
+										&-& 3c_4 &=& 0 \\
+									c_1
+										&+& c_2
+										&+& 4c_3
+										&+& 9c_4 &=& 0 \\
+									c_1
+										&-& c_2
+										&+& 8c_3
+										&-& 27c_4 &=& 0 \\
+									\end {array} 
+									\right.
+								\end {align*}
+
+
+								Again our goal is to show that \(c_1=c_2=c_3=c_4=0\). 
+								Rather than solving the system of equations we will show the determinant of the coefficients is nonzero. In Example <a href="#x1-81">9.1.1</a> we useds row reduction and then expansion along the cofactors. This time we'll apply the row reduction to columns, which also works for determinants.	
+							
+								\begin {align*} 
+									\det
+									\left(
+									\begin {array}{rrrr} 
+										1 & 1 & 1 & 1 \\ 
+										1 & -1 & 2 & -3 \\ 
+										1 & 1 & 4 & 9 \\ 
+										1 & -1 & 8 & -27 \\ 
+									\end {array} 
+									\right)
+									&
+									\overset{
+										\small{C_2-C_1}
+									}{\longrightarrow}
+									\det
+									\left(
+										\begin {array}{rrrr} 
+										1 & 0 & 1 & 1 \\ 
+										1 & -2 & 2 & -3 \\ 
+										1 & 0 & 4 & 9 \\ 
+										1 & -2 & 8 & -27 \\ 
+									\end {array} 
+									\right) \\ \\
+									& 
+									\overset{
+										\small{C_3-C_1}
+									}{\longrightarrow}
+									\det
+									\left(
+										\begin {array}{rrrr} 
+										1 & 0 & 0 & 1 \\ 
+										1 & -2 & 1 & -3 \\ 
+										1 & 0 & 3 & 9 \\ 
+										1 & -2 & 7 & -27 \\ 
+									\end {array} 
+									\right) \\ \\
+									& \overset{
+										\small{C_4-C_1}
+									}{\longrightarrow}
+									\det
+									\left(
+										\begin {array}{rrrr} 
+											1 & 0 & 0 & 0 \\ 
+											1 & -2 & 1 & -4 \\ 
+											1 & 0 & 3 & 8 \\ 
+											1 & -2 & 7 & -28 \\ 
+										\end {array} 
+									\right)
+									\\
+								\end {align*}
+
+								Now that the first row has three zeros, we will expand by cofactors along it			
+
+								\begin {align*} 
+									\det
+									\left(
+										\begin {array}{rrrr} 
+											1 & 0 & 0 & 0 \\ 
+											1 & -2 & 1 & -4 \\ 
+											1 & 0 & 3 & 8 \\ 
+											1 & -2 & 7 & -28 \\ 
+										\end {array} 
+									\right)
+									& =
+									\det
+									\left(
+										\begin {array}{rrrr} 
+										-2 & 1 & -4 \\ 
+										0 & 3 & 8 \\ 
+										-2 & 7 & -28 \\ 
+									\end {array} 
+									\right)
+									
+								\end {align*}
+
+								Subtracting row 1 from row 3 yields
+
+								\begin {align*} 
+									\det
+									\left(
+										\begin {array}{rrrr} 
+										-2 & 1 & -4 \\ 
+										0 & 3 & 8 \\ 
+										-2 & 7 & -28 \\ 
+									\end {array}  
+									\right)
+									&
+									\overset{
+										\small{R_3-R_1}
+									}{\longrightarrow}
+									\det
+									\left(
+										\begin {array}{rrrr} 
+										-2 & 1 & -4 \\ 
+										0 & 3 & 8 \\ 
+										0 & 6 & -24 \\ 
+									\end {array} 
+									\right) 
+								\end {align*}
+
+								Expanding by cofactors along the first column we obtain the determinant
+
+
+
+									\begin {align*} 
+									\det
+									\left(
+									\begin {array}{rrr} 
+										-2 & 1 & -4 \\ 
+										0 & 3 & 8 \\ 
+										0 & 6 & -24 \\ 
+									\end {array} 
+									\right)
+									=
+									-2
+									\det
+									\left(
+									\begin {array}{rrr} 
+										3 & 8 \\ 
+										6 & -24 \\ 
+									\end {array} 
+									\right)
+									& = 
+									-2\big(
+										-3\cdot24-6\cdot8
+										\big) \\
+									& = 
+									6\big(
+										24+16
+										\big) \\
+										
+									& = 6 (40) = 240 \ne 0 \\	
+
+								\end {align*}
+
+								Since the determinant of the coefficient matrix is nonzero we have shown that 
+								\(\{e^x, e^{-x}, e^{2x}, e^{-3x}\}\) is linearly independent on \(\left(-\infty,\infty\right)\)
+
+							</div>	
+								
+						</li>
+						<li>
+							<div>
+								Since we have shown that \(e^x, e^{-x}, e^{2x}\) and \(e^{-3x}\) are solutions of <a href="#x1-14r9">(9.1.9)</a> and that they are  linearly independent therefore we know \(\{e^x, e^{-x}, e^{2x}, e^{-3x}\}\) is a fundamental set, therefore the general solution is
+
+								\[
+								y=c_1 e^x + c_2 e^{-x} + c_3 e^{2x} + c_4 e^{-3x}
+								\]
+
+							</div>
+								
+						</li>
+					</ol>	
+			
 				</details>
 			</div>
 		</details>
@@ -532,27 +1195,45 @@
 			<summary>Wronskian</summary>
 		
 			<div id="956ce517-6164-4c8d-9a4b-5b955d0c19b8">
-				We can use the method used in Examples&nbsp;<a href="#x1-81">9.1.1</a> and <a href="#x1-132">9.1.2</a> to test \(n\) solutions \(\{y_1,y_2,\dots ,y_n\}\) of any \(n\)th order equation \(Ly=0\) for linear independence on an interval \((a,b)\) on which the equation is normal. Thus, if \(c_1\), \(c_2\) ,…, \(c_n\) are constants such that \[ c_1y_1+c_2y_2+\cdots +c_ny_n=0,\quad a&lt;x&lt;b\] then differentiating \(n-1\) times leads to the \(n\times n\) system of equations
-				<a id="x1-18r13"></a> 
-				\begin {equation} 
-					\label {eq:9.1.13} 
-					\begin {array}{rcl} 
-						c_1y_1(x)+c_2y_2(x)+&amp;\cdots &amp;+c_ny_n(x)=0\\ 
-						c_1y_1'(x)+c_2y_2'(x)+&amp;\cdots &amp;+c_ny_n'(x)=0\\ 
-						\phantom {c_1y_1^{(n)}(x)+c_2y_2^{(n-1)}(x)}&amp;\vdots &amp; \phantom {\cdots +c_ny_n^{(n-1)(x)}=q}\\ 
-						c_1y_1^{(n-1)}(x)+c_2y_2^{(n-1)}(x)+&amp;\cdots &amp;+c_ny_n^{(n-1)}(x) =0 
-					\end {array} 
-				\end {equation} 
-				for \(c_1\), \(c_2\), …, \(c_n\). For a fixed \(x\), the determinant of this system is 
-				\[ W(x)=\left | 
-					\begin {array}{cccc} 
-						y_1(x)&amp;y_2(x)&amp;\cdots&amp;y _n(x)\\ 
-						 \frac{d y}{dx} _1(x)&amp; \frac{d y}{dx} _2(x)&amp;\cdots&amp;y _n'(x)\\ 
-						\vdots&amp; \vdots&amp; \ddots&amp; \vdots 
-						\\ y_1^{(n-1)}(x)&amp;y_2^{(n-1)}(x)&amp;\cdots&amp;y _n^{(n-1)}(x) 
-					\end {array}
-				\right |\] 
-				We call this determinant the <span class="vocab">vocab</span> of \(\{y_1,y_2,\dots ,y_n\}\). If \(W(x)\ne 0\) for some \(x\) in \((a,b)\) then the system <a href="#x1-18r13">(9.1.13)</a> has only the trivial solution \(c_1=c_2=\cdots =c_n=0\), and Theorem&nbsp;<a href="#x1-72">9.1.2</a> implies that \[ y=c_1y_1+c_2y_2+\cdots +c_ny_n \] is the general solution of \(Ly=0\) on \((a,b)\).
+				<div>
+					We can use the method used in Examples&nbsp;<a href="#x1-81">9.1.1</a> and <a href="#x1-132">9.1.2</a> to test \(n\) solutions \(\{y_1,y_2,\dots ,y_n\}\) of any \(n\)th order equation \(Ly=0\) for linear independence on an interval on which the equation is normal. Thus 
+					we can show the solutions are linearly indepdent if
+					a linear combination of the solutions equals zero
+					
+					\[ c_1y_1+c_2y_2+\cdots +c_ny_n=0\] 
+					
+					implies that the constants  \(c_1\), \(c_2\) ,…, \(c_n\) are zero. Differentiating the linear combination equation \(n-1\) times leads to the system of equations
+				</div>
+				<div>	
+					
+					<a id="x1-18r13"></a> 
+					\begin {align*} \label {eq:9.1.13} 
+						\left\{
+						\begin {array}{rrrr} 
+							c_1 y_1 &+& c_2 y_2 &+& \cdots &+& c_n y_n &=& 0 \\
+							c_1 \dfrac{dy_1}{dx} &+& c_2 \dfrac{dy_2}{dx} &+& \cdots &+& c_n \dfrac{dy_n}{dx} &=& 0 \\
+							c_1 \dfrac{d^2y_1}{dx^2} &+& c_2 \dfrac{d^2y_2}{dx^2} &+& \cdots &+& c_n \dfrac{d^2y_n}{dx^2} &=& 0 \\
+							& & & & & &  &\vdots& \\
+							c_1 \dfrac{d^{n-1}y_1}{dx^{n-1}} &+& c_2 \dfrac{d^{n-1}y_2}{dx^{n-1}} &+& \cdots &+& c_n \dfrac{d^{n-1}y_n}{dx^{n-1}} &=& 0 \\
+						\end {array} 
+						\right.
+					\end {align*} 
+
+					fixme
+
+				
+
+					for \(c_1\), \(c_2\), …, \(c_n\). For a fixed \(x\), the determinant of this system is 
+					\[ W(x)=\left | 
+						\begin {array}{cccc} 
+							y_1(x)&amp;y_2(x)&amp;\cdots&amp;y _n(x)\\ 
+							\frac{d y}{dx} _1(x)&amp; \frac{d y}{dx} _2(x)&amp;\cdots&amp;y _n'(x)\\ 
+							\vdots&amp; \vdots&amp; \ddots&amp; \vdots 
+							\\ y_1^{(n-1)}(x)&amp;y_2^{(n-1)}(x)&amp;\cdots&amp;y _n^{(n-1)}(x) 
+						\end {array}
+					\right |\] 
+					We call this determinant the <span class="vocab">vocab</span> of \(\{y_1,y_2,\dots ,y_n\}\). If \(W(x)\ne 0\) for some \(x\) in \((a,b)\) then the system <a href="#x1-18r13">(9.1.13)</a> has only the trivial solution \(c_1=c_2=\cdots =c_n=0\), and Theorem&nbsp;<a href="#x1-72">9.1.2</a> implies that \[ y=c_1y_1+c_2y_2+\cdots +c_ny_n \] is the general solution of \(Ly=0\) on \((a,b)\).
+				</div>	
 			</div>
 
 			<div class="indent" id="c8be882e-b9ae-4e64-941f-85e4f23e19bf">
