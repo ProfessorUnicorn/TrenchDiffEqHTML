@@ -174,6 +174,8 @@
 
 									\end {align*} 
 
+									Note that \(y_1=x^2\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
+
 								</div>	
 								<br>
 								<br>
@@ -199,6 +201,8 @@
 										6x^3  \quad - \quad 6x^3\quad -\quad 6x^3 \quad+\quad 6x^3 = & \, 0  \quad\quad \checkmark \\
 
 									\end {align*} 
+
+									Note that \(y_2=x^3\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
 
 								</div>	
 								<br>
@@ -227,6 +231,9 @@
 
 									\end {align*} 
 
+									Note that \(y_3=1/x\) is undefined when 
+									\(x=0\) so the domain is \(\left(-\infty,0\right)\) and \(\left(0,\infty\right)\)
+
 								</div>	
 
 							</div>	
@@ -241,7 +248,11 @@
 									c_1 x^2 + c_2 x^3 + \frac{c_3}{x} & = 0
 								\end{align}
 
-								From the definition, we need to show that the constants \(c_1, c_2\) and \(c_3\) are all zero. To do this we need two more equations so we start by differentiating this equation twice to obtain a system of three equations.
+								Note the domain is \(\left(-\infty,0\right)\) and \(\left(0,\infty\right)\). Now to show \(\{x^2,x^3,1/x\}\) is linearly indepdent we will show that the constants \(c_1, c_2\) and \(c_3\) are all zero. 
+							</div>
+							<div>	
+								However we can't solve only one equation with three unknowns uniquely becaus we need two more equations. We can create additional equations by 
+								differentiating this equation.
 							</div>	
 							<div class="reading-exercise">
 								Differentiate twice \(c_1 x^2 + c_2 x^3 + {c_3}/{x} = 0\)
@@ -265,7 +276,7 @@
 
 
 								<a id="x1-11r7"></a>
-								\begin{align*} \label {eq:9.1.7} 
+								\begin{align} \label {eq:9.1.7} 
 									\left\{
 									\begin{array} {lllll}
 										c_1 x^2 &+& c_2 x^3 &+& \dfrac{c_3}{x} &=& 0 \\
@@ -273,11 +284,114 @@
 										2 c_1 &+& 6x c_2 &+& \dfrac{2c_3}{x^3} &=& 0 \\
 									\end{array}
 									\right.
-								\end{align*}
+								\end{align}
 
-								Our goal is to show that \(c_1=c_2=c_3=0\). To so this, we could solve this system of equations using substitution and elimination, just as we have many times in the past when dealing with second order equations. However, we only ever had to solve two equations. With higher order equations, we get into situations like this where we have to solve three or four or really any number of equations. As this quickly gets too tedious with more equations, we'll use a result from linear algebra instead. We will show that this system of equations has only the trivial solution \(c_1=c_2=c_3=0\) by showing that the determinant of coefficients is nonzero. 
+								We want to show that \(c_1=c_2=c_3=0\) on each interval \(\left(-\infty,0\right)\) and \(\left(0,\infty\right)\) so first we'll consider the interval \(\left(0,\infty\right)\). The system of equations must be true for all values of \(x\) so we'll choose a simple value \(x=1\) and substitute to obtain a simple system of equations.
+
+								<a id="x1-12r8"></a>
+								\begin {align}  \label {eq:9.1.8} 
+									\left\{
+									\begin {array}{rcl} 
+										c_1 &+& c_2 &+& c_3 &=& 0 \\ 
+										2c_1 &+& 3c_2 &-& c_3 &=& 0 \\ 
+										2c_1 &+& 6c_2 &+& 2c_3 &=& 0 \\ 
+									\end {array} 
+									\right.
+								\end {align}
+
+
+								Now our goal is to show that \(c_1=c_2=c_3=0\). To so this, we could solve this system of equations using substitution and elimination, just as we have in the past when dealing with second order equations. However, we only ever had to solve two equations. While this is simple enough with 2 equations, it gets a lot more tedious with 3 or more equations. So instead we'll use <span class="vocab">row reduction</span>  (<span class="vocab">Gaussian elimination</span>) on the augmented matrix. As a reminder, we can multiply a row by a constant, add and subtract rows, and rearrange rows:
+
+
+								\begin {align*} 
+									\left(
+									\begin {array}{rrr|c} 
+										1 & 1 & 1 & 0 \\ 
+										2 & 3 & -1 & 0 \\ 
+										2 & 6 & 2 & 0 \\ 
+									\end {array} 
+									\right)
+									&
+									\overset{
+										\small{R_2-2R_1}
+									}{\longrightarrow}
+									\left(
+									\begin {array}{rrr|c} 
+										1 & 1 & 1 & 0 \\ 
+										0 & 1 & -3 & 0 \\ 
+										2 & 6 & 2 & 0 \\ 
+									\end {array} 
+									\right) 
+									\overset{
+										\small{R_3-2R_1}
+									}{\longrightarrow}
+									\left(
+									\begin {array}{rrr|c} 
+										1 & 1 & 1 & 0 \\ 
+										0 & 1 & -3 & 0 \\ 
+										0 & 4 & 0 & 0 \\ 
+									\end {array} 
+									\right) \\ \\
+									&
+									\overset{
+										\small{\frac{1}{4}R_3}
+									}{\longrightarrow}
+									\left(
+									\begin {array}{rrr|c} 
+										1 & 1 & 1 & 0 \\ 
+										0 & 1 & -3 & 0 \\ 
+										0 & 1 & 0 & 0 \\ 
+									\end {array} 
+									\right) 
+									\overset{
+										\small{R_2 \leftrightarrow R_3}
+									}{\longrightarrow}
+									\left(
+									\begin {array}{rrr|c} 
+										1 & 1 & 1 & 0 \\ 
+										0 & 1 & 0 & 0 \\ 
+										0 & 1 & -3 & 0 \\ 
+									\end {array} 
+									\right) \\ \\
+									&
+									\overset{
+										\small{R_3 - R_2}
+									}{\longrightarrow}
+									\left(
+									\begin {array}{rrr|c} 
+										1 & 1 & 1 & 0 \\ 
+										0 & 1 & 0 & 0 \\ 
+										0 & 0 & -3 & 0 \\ 
+									\end {array} 
+									\right) 
+									\overset{
+										\small{-\frac{1}{3}R_3}
+									}{\longrightarrow}
+									\left(
+									\begin {array}{rrr|c} 
+										1 & 1 & 1 & 0 \\ 
+										0 & 1 & 0 & 0 \\ 
+										0 & 0 & 1 & 0 \\ 
+									\end {array} 
+									\right) \\ \\
+									&
+									\overset{
+										\small{R_1-R_2-R_3}
+									}{\longrightarrow}
+									\left(
+									\begin {array}{rrr|c} 
+										1 & 0 & 0 & 0 \\ 
+										0 & 1 & 0 & 0 \\ 
+										0 & 0 & 1 & 0 \\ 
+									\end {array} 
+									\right) \\ \\
+								\end {align*}
+								
+								Therefore we have \(c_1=c_2=c_3=0\)
+								
 							</div>	
 							<div>
+								Therefore we will use another method that requires a result from linear algebra instead. We can show that the system of equations has only the trivial solution by showing that the determinant of coefficients is nonzero. 
 							</div>	
 							<div>
 							</div>	
@@ -295,25 +409,10 @@
 
 						on \((0,\infty )\). We must show that \(c_1=c_2=c_3=0\). Differentiating <a href="#x1-10r6">(9.1.6)</a> twice yields the system 
 						
-						\begin {equation*} 
-							
-							\begin {array}{rcl} 
-								c_1x^2+c_2x^3+\displaystyle {c_3\over x}&amp;=&amp;0\\ 
-								2c_1x+3c_2x^2-\displaystyle {c_3\over x^2}&amp;=&amp;0\\ 
-								2c_1+6c_2x+\displaystyle {2c_3\over x^3}&amp;=&amp;0 
-							\end {array} 
-						\end {equation*}
 
 						If <a href="#x1-11r7">(9.1.7)</a> holds for all \(x\) in \((0,\infty )\), then it certainly holds at \(x=1\); therefore, 
-						<a id="x1-12r8"></a>
-						\begin {equation} 
-							\label {eq:9.1.8} 
-							\begin {array}{rcl} 
-								\phantom {2}c_1+\phantom {3}c_2+\phantom {2}c_3&amp;=&amp;0\\ 
-								2c_1+3c_2-\phantom {2}c_3&amp;=&amp;0\\ 
-								2c_1+6c_2+2c_3&amp;=&amp;0 
-							\end {array} 
-						\end {equation}
+
+						
 
 						By solving this system directly, you can verify that it has only the trivial solution \(c_1=c_2=c_3=0\); however, for our purposes it’s more useful to recall from linear algebra that a homogeneous linear system of \(n\) equations in \(n\) unknowns has only the trivial solution if its determinant is nonzero. Since the determinant of <a href="#x1-12r8">(9.1.8)</a> is \[ \left | \begin {array}{rrr}1&amp;1&amp;1\\2&amp;3&amp;-1\\2&amp;6&amp;2 \end {array}\right |= \left | 
 						\begin {array}{rrr}1&amp;0&amp;0\\2&amp;1&amp;-3\\2&amp;4&amp;0 
