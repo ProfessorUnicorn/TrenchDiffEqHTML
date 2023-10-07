@@ -99,24 +99,24 @@
 				It can be shown that if the equation \(Ly=0\) is normal on \((a,b)\) then it has infinitely many fundamental sets of solutions on \((a,b)\). The next definition will help to identify fundamental sets of solutions of \(Ly=0\). 
 			</div>
 			<div class="indent" id="7516a340-7fd6-4c01-bf46-fce70aac97f7">
-				We say that \(\{y_1,y_2,\dots ,y_n\}\) is <span class="vocab">linearly independent</span> on \((a,b)\) if the only constants \(c_1\), \(c_2\), …, \(c_n\) such that 
+				We say that \(\{y_1,y_2,\dots ,y_n\}\) is <span class="vocab">linearly independent</span> on \((a,b)\) if a linear combination equal to zero
 
 				<a id="x1-6r4"></a> 
 				\begin {equation} \label {eq:9.1.4} 
 					c_1y_1(x)+c_2y_2(x)+\cdots +c_ny_n(x)=0
 					\quad a&lt;x&lt;b 
 				\end {equation} 
-				
-				are \(c_1=c_2=\cdots =c_n=0\). If <a href="#x1-6r4">(9.1.4)</a> holds for some set of constants \(c_1\), \(c_2\), …, \(c_n\) that are not all zero, then \(\{y_1,y_2,\dots ,y_n\}\) is <span class="vocab">linearly dependent</span> on \((a,b)\) 
+
+				means that the constants \(c_1\), \(c_2\), …, \(c_n\) are all equal to zero. If <a href="#x1-6r4">(9.1.4)</a> holds for some set of constants that are not all zero, then we say \(\{y_1,y_2,\dots ,y_n\}\) is <span class="vocab">linearly dependent</span>.
 			</div>
 
 			<div class="indent" id="810e8e47-2ffe-4c5e-a14a-58db8843e744">
-				The next theorem is analogous to Theorem&nbsp;<span class="ptmb8t-">5.13</span>. 
+				The next theorem is analogous to Theorem&nbsp;<a href="sec5.1.book.html#x1-363" target=_blank>5.1.3</a> 
 			</div>
 
 			<div class="theorem" id="x1-72">
 				<span class="head">Theorem&nbsp;9.1.2</span> 
-				If \(Ly=0\) is normal on \((a,b)\), then a set \(\{y_1,y_2,\dots ,y_n\}\) of \(n\) solutions of \(Ly=0\) on \((a,b)\) is a fundamental set if and only if it’s linearly independent on \((a,b)\)
+				If \(Ly=0\) is <span class="vocab">normal</span>, then a set \(\{y_1,y_2,\dots ,y_n\}\) of \(n\) solutions of \(Ly=0\) is a <span class="vocab">fundamental set</span> if and only if it’s <span class="vocab">linearly independent</span>
 			</div>
 
 			<br>
@@ -125,17 +125,16 @@
 			<!--Example 1-->
 			<div class="example" id="x1-81" style="--ex-number: 1">
 				<div>
-					The equation 
+					Consider the equation 
 					<a id="x1-9r5"></a> 
 					\begin {equation} 
 						\label {eq:9.1.5} 
 						x^3 \frac{d^3 y}{dx^3} -x^2 \frac{d^2 y}{dx^2} -2x \frac{d y}{dx} +6y=0 
 					\end {equation} 
-					is normal and has the solutions \(y_1=x^2\), \(y_2=x^3\), and \(y_3=1/x\) on \((-\infty ,0)\) and \((0,\infty )\).  on \((-\infty , 0)\) and \((0,\infty )\). Then  on \((-\infty , 0)\) and \((0,\infty )\).
 				</div>
 				<ol>
 					<li>
-						Verify that \(y_1=x^2\), \(y_2=x^3\), and \(y_3=1/x\) are solutions <a href="#x1-9r5">(9.1.5)</a>
+						Verify that \(y_1=x^2\), \(y_2=x^3\), and \(y_3=1/x\) are solutions <a href="#x1-9r5">(9.1.5)</a> and find their domain
 					</li>
 					<li>
 						Show that \(\{y_1,y_2,y_3\}\) is linearly independent
@@ -234,20 +233,49 @@
 						</li>
 						<li>
 							<div>
-								Now we will write \(\{y_1,y_2,y_3\}\) as a linear combination \(y = c_1 y_1 + c_2 y_2 + c_3 y_3\)
-								\begin{align*}
-									y = & \, c_1 x^2 + c_2 x^3 + \frac{c_3}{x} \\
-								\end{align*}
+								Now we will show \(\{y_1,y_2,y_3\}\) is linearly indepdent. Start by writing a
+								linear combination \(c_1 y_1 + c_2 y_2 + c_3 y_3\) equal to zero 
 
+								<a id="x1-10r6"></a>
+								\begin{align} \label {eq:9.1.6} 
+									c_1 x^2 + c_2 x^3 + \frac{c_3}{x} & = 0
+								\end{align}
 
+								From the definition, we need to show that the constants \(c_1, c_2\) and \(c_3\) are all zero. To do this we need two more equations so we start by differentiating this equation twice to obtain a system of three equations.
 							</div>	
+							<div class="reading-exercise">
+								Differentiate twice \(c_1 x^2 + c_2 x^3 + {c_3}/{x} = 0\)
+							</div>
 							<div>
-								Just as we did in Chapter 5, We can use the 
-								<span class="vocab">Wronskian determinant</span> to determine whether or not \(\{y_1,y_2,y_3\}\) are linearly indepedent.
-
-								\begin{align*}
-									
+								Differentiating our equation we obtain another equation
+								\begin{align*} 
+									\frac{d}{dx}\left( c_1 x^2 + c_2 x^3 + \frac{c_3}{x} \right) & = \frac{d}{dx}\left( 0 \right) \\
+									\Longrightarrow
+									2x c_1 + 3x^2 c_2 - \frac{c_3}{x^2}  & = 0 
 								\end{align*}
+
+								Differentiating again we obtain a third equation
+								\begin{align*} 
+									\frac{d}{dx}\left(  2x c_1 + 3x^2 c_2 - \frac{c_3}{x^2} \right)  & = \frac{d}{dx}\left( 0 \right) \\
+									\Longrightarrow
+									2 c_1 + 6x c_2 + \frac{2c_3}{x^3}  & = 0 \\
+								\end{align*}
+
+								Now that we have three equations we have a system we can solve to find \(c_1,c_2\) and \(c_3\)
+
+
+								<a id="x1-11r7"></a>
+								\begin{align*} \label {eq:9.1.7} 
+									\left\{
+									\begin{array} {lllll}
+										c_1 x^2 &+& c_2 x^3 &+& \dfrac{c_3}{x} &=& 0 \\
+										2x c_1 &+& 3x^2 c_2 &-& \dfrac{c_3}{x^2}  &=& 0 \\
+										2 c_1 &+& 6x c_2 &+& \dfrac{2c_3}{x^3} &=& 0 \\
+									\end{array}
+									\right.
+								\end{align*}
+
+								Our goal is to show that \(c_1=c_2=c_3=0\). To so this, we could solve this system of equations using substitution and elimination, just as we have many times in the past when dealing with second order equations. However, we only ever had to solve two equations. With higher order equations, we get into situations like this where we have to solve three or four or really any number of equations. As this quickly gets too tedious with more equations, we'll use a result from linear algebra instead. We will show that this system of equations has only the trivial solution \(c_1=c_2=c_3=0\) by showing that the determinant of coefficients is nonzero. 
 							</div>	
 							<div>
 							</div>	
@@ -262,21 +290,19 @@
 					<div>
 						Suppose 
 
-						<a id="x1-10r6"></a>
-						\begin {equation} 
-							\label {eq:9.1.6} 
-							c_1x^2+c_2x^3+{c_3\over x}=0 
-						\end {equation}
+						
+
+
 						on \((0,\infty )\). We must show that \(c_1=c_2=c_3=0\). Differentiating <a href="#x1-10r6">(9.1.6)</a> twice yields the system 
-						<a id="x1-11r7"></a>
-						\begin {equation} 
-							\label {eq:9.1.7} 
+						
+						\begin {equation*} 
+							
 							\begin {array}{rcl} 
 								c_1x^2+c_2x^3+\displaystyle {c_3\over x}&amp;=&amp;0\\ 
 								2c_1x+3c_2x^2-\displaystyle {c_3\over x^2}&amp;=&amp;0\\ 
 								2c_1+6c_2x+\displaystyle {2c_3\over x^3}&amp;=&amp;0 
 							\end {array} 
-						\end {equation}
+						\end {equation*}
 
 						If <a href="#x1-11r7">(9.1.7)</a> holds for all \(x\) in \((0,\infty )\), then it certainly holds at \(x=1\); therefore, 
 						<a id="x1-12r8"></a>
