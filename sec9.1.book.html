@@ -1222,71 +1222,104 @@
 					Then we can use the determinant of the coefficient matrix to show linear indepdendence. 
 				</div>
 				<div>	
-					As we discussed in Chapter 5, the 
-					fixme
-
-				
-
-					for \(c_1\), \(c_2\), …, \(c_n\). For a fixed \(x\), the determinant of this system is 
-					\[ W(x)=\left | 
+					From the definition in Chapter 5, the <span class="vocab">Wronskian determinant</span> of \(\{y_1,y_2,\dots ,y_n\}\) can be computed for \(n\) solutions using \(n-1\) derivatives
+			
+					\[ W \big[y_1,y_2,\dots,y_n \big](x)=\det\left( 
 						\begin {array}{cccc} 
-							y_1(x)&amp;y_2(x)&amp;\cdots&amp;y _n(x)\\ 
-							\frac{d y}{dx} _1(x)&amp; \frac{d y}{dx} _2(x)&amp;\cdots&amp;y _n'(x)\\ 
+							y_1 & y_2 & \cdots & y _n \\ 
+							\dfrac{dy_1}{dx} & \dfrac{dy_2}{dx} & \cdots & \dfrac{dy_n}{dx} \\ 
 							\vdots&amp; \vdots&amp; \ddots&amp; \vdots 
-							\\ y_1^{(n-1)}(x)&amp;y_2^{(n-1)}(x)&amp;\cdots&amp;y _n^{(n-1)}(x) 
+							\\ 
+							
+							\dfrac{d^{n-1}y_1}{dx^{n-1}} & \dfrac{d^{n-1}y_2}{dx^{n-1}} & \cdots & \dfrac{d^{n-1}y_n}{dx^{n-1}} \\ 
 						\end {array}
-					\right |\] 
-					We call this determinant the <span class="vocab">vocab</span> of \(\{y_1,y_2,\dots ,y_n\}\). If \(W(x)\ne 0\) for some \(x\) in \((a,b)\) then the system <a href="#x1-18r13">(9.1.13)</a> has only the trivial solution \(c_1=c_2=\cdots =c_n=0\), and Theorem&nbsp;<a href="#x1-72">9.1.2</a> implies that \[ y=c_1y_1+c_2y_2+\cdots +c_ny_n \] is the general solution of \(Ly=0\) on \((a,b)\).
+					\right)\] 
+
+					If \(W(x)\ne 0\) for some \(x\) then the system <a href="#x1-18r13">(9.1.13)</a> has only the trivial solution \(c_1=c_2=\cdots =c_n=0\), and Theorem&nbsp;<a href="#x1-72">9.1.2</a> implies that the general solution of \(Ly=0\) is given by their linear combination
+					
+					\[ y=c_1y_1+c_2y_2+\cdots +c_ny_n \]
 				</div>	
 			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			
 
 			<div class="indent" id="c8be882e-b9ae-4e64-941f-85e4f23e19bf">
-				The next theorem generalizes Theorem&nbsp;<span class="ptmb8t-">5.1.14</span>. The proof is sketched in (Exercises&nbsp;<span class="ptmb8t-">17</span>–<span class="ptmb8t-">20</span>). 
+				The next theorem generalizes Theorem&nbsp;<a href="sec5.1.book.html#x1-484">5.1.4</a> and <span class="vocab">Abel’s formula</span> <a href="#x1-21r15">(9.1.15)</a> 
+				
 			</div>
 
 			<div class="theorem" id="x1-193">
 				<span class="head">Theorem&nbsp;9.1.3</span>
-				Suppose the homogeneous linear \(n\)th order equation 
+				Suppose the homogeneous linear \(n\)th order equation is normal on \((a,b),\) let \(y_1,\) \(y_2,\)…, \(y_n\) be solutions of <a href="#x1-20r14">(9.1.14)</a> on \((a,b)\)
+
+
 				<a id="x1-20r14"></a>
 				\begin {equation} 
 					\label {eq:9.1.14} 
-					P_0(x)y^{(n)}+P_1(x)y^{n-1}+\cdots +P_n(x)y=0 
+					P_0(x)\dfrac{d^{n}y}{dx}
+					+P_1(x)\dfrac{d^{n-1}y}{dx^{n-1}}
+					+\cdots 
+					+P_{n-1}(x)\dfrac{d^{2}y}{dx^{2}}
+					+P_n(x)y=0 
 				\end {equation} 
-				 is normal on \((a,b),\) let \(y_1,\) \(y_2,\)…, \(y_n\) be solutions of <a href="#x1-20r14">(9.1.14)</a> on \((a,b),\) and let \(x_0\) be in \((a,b)\). Then the Wronskian of \(\{y_1,y_2,\dots ,y_n\}\) is given by 
+
+				Define the <span class="vocab">Wronskian determinant</span> of \( \{y_1,y_2,\dots,y_n\} \) as 
+					
+				\begin {equation*}
+					W(x) = 
+					\det\left( 
+						\begin {array}{cccc} 
+							y_1 & y_2 & \cdots & y _n \\ 
+							\dfrac{dy_1}{dx} & \dfrac{dy_2}{dx} & \cdots & \dfrac{dy_n}{dx} \\ 
+							\vdots&amp; \vdots&amp; \ddots&amp; \vdots 
+							\\ 
+							
+							\dfrac{d^{n-1}y_1}{dx^{n-1}} & \dfrac{d^{n-1}y_2}{dx^{n-1}} & \cdots & \dfrac{d^{n-1}y_n}{dx^{n-1}} \\ 
+						\end {array}
+					\right)
+				\end {equation*}
+
+				 
+				Let \(x_0\) be any point in \((a,b).\) Then <span class="vocab">Abel's formula</span> is 
+				
 				 <a id="x1-21r15"></a> 
-				\begin {equation} 
-					\label {eq:9.1.15}
-					W(x)=W(x_0)\exp \left \{-\int ^x_{x_0}{P_1(t)\over P_0(t)}\, dt\right \},\quad a&lt;x&lt;b 
+				\begin {equation} \label {eq:9.1.15}
+					W(x)=W(x_0)  \cdot  e^{-\displaystyle \int ^x_{x_0}{P_1(t)\over P_0(t)}\, dt}
 				\end {equation} 
-				Therefore, either \(W\) has no zeros in \((a,b)\) or \(W\equiv 0\) on \((a,b).\)
+
+				And therefore either \(W(x)\) has no zeros in \((a,b)\) or \(W(x) \equiv 0\) on \((a,b)\)
+
 			</div>
 
-			<div class="indent" id="bb31ca2a-c02b-4566-b6dd-5392defc1af9">
-				Formula <a href="#x1-21r15">(9.1.15)</a> is <span class="vocab">Abel’s formula</span>. 
-			</div>
-
+			<br>
+			<br>
+			<br>
 			<div class="indent" id="ec924659-a7bf-4426-a211-1ce58a2c9c2f">
-				The next theorem is analogous to Theorem&nbsp;<span class="ptmb8t-">5.1.6</span>. 
+				The next theorem is analogous to Theorem&nbsp;
+				<a href="sec5.1.book.html#x1-616" target=_blank>5.1.6</a>
 			</div>
 
 			<div class="theorem" id="x1-224">
 				<span class="head">Theorem&nbsp;9.1.4</span> 
-				Suppose \(Ly=0\) is normal on \((a,b)\) and let \(y_1\), \(y_2\), …, \(y_n\) be \(n\) solutions of \(Ly=0\) on \((a,b)\). Then the following statements are equivalent; that is, they are either all true or all false:
+				Suppose \(Ly=0\) is normal on \((a,b)\) and let \(y_1\), \(y_2\), …, \(y_n\) be \(n\) solutions of \(Ly=0\) on \((a,b)\). Then the following statements are equivalent and they are either all true or all false:
 				<ol>
 					<li>
-						The general solution of \(Ly=0\) on \((a,b)\) is \(y=c_1y_1+c_2y_2+\cdots +c_ny_n.\) 
+						The general solution of \(Ly=0\) on \((a,b)\) is \(y=c_1y_1+c_2y_2+\cdots +c_ny_n\) 
 					</li>
 					<li>
-						\(\{y_1,y_2,\dots ,y_n\}\) is a fundamental set of solutions of \(Ly=0\) on \((a,b).\) 
+						\(\{y_1,y_2,\dots ,y_n\}\) is a fundamental set of solutions of \(Ly=0\) on \((a,b)\) 
 					</li>
 					<li>
-						\(\{y_1,y_2,\dots ,y_n\}\) is linearly independent on \((a,b).\) 
+						\(\{y_1,y_2,\dots ,y_n\}\) is linearly independent on \((a,b)\) 
 					</li>
 					<li>
-						The <span class="vocab">Wronskian</span> of \(\{y_1,y_2,\dots ,y_n\}\) is nonzero at some point in \((a,b)\). 
+						The <span class="vocab">Wronskian</span> of \(\{y_1,y_2,\dots ,y_n\}\) is nonzero at some point in \((a,b)\)
 					</li>
 					<li>
-						The <span class="vocab">Wronskian</span> of \(\{y_1,y_2,\dots ,y_n\}\) is nonzero at all points in \((a,b)\). 
+						The <span class="vocab">Wronskian</span> of \(\{y_1,y_2,\dots ,y_n\}\) is nonzero at all points in \((a,b)\)
 					</li>
 				</ol>
 			</div>
@@ -1297,14 +1330,281 @@
 			<!--Example 3-->
 			<div class="example" id="x1-283" style="--ex-number: 3">
 				<div>
-					In Example&nbsp;<a href="#x1-81">9.1.1</a>we saw that the solutions \(y_1=x^2\), \(y_2=x^3\), and \(y_3=1/x\) of \[ x^3 \frac{d^3 y}{dx^3} -x^2 \frac{d^2 y}{dx^2} -2x \frac{d y}{dx} +6y=0 \] are linearly independent on \((-\infty ,0)\) and \((0,\infty )\). Calculate the Wronskian of \(\{y_1,y_2,y_3\}\).
+					In Example&nbsp;<a href="#x1-81">9.1.1</a> we already verified that \(y_1=x^2\), \(y_2=x^3\), and \(y_3=1/x\) are linearly indepdent and  solutions of the differential equation on \((-\infty ,0)\) and \((0,\infty )\)
+					
+					\[ x^3 \frac{d^3 y}{dx^3} -x^2 \frac{d^2 y}{dx^2} -2x \frac{d y}{dx} +6y=0 \] 
+					
+					Calculate the Wronskian determinant of \(\{y_1,y_2,y_3\}\)
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-					If \(x\ne 0\), then
-					\[ W(x)=\left | \begin {array}{ccc} x^2&amp;\phantom {2}x^3&amp;\phantom {-}\displaystyle {1\over x}\\ 2x&amp;3x^2\phantom {^2}&amp;\displaystyle -\displaystyle {1\over x^2}\\ 2&amp;6x\phantom {x^2}&amp;\phantom {-}\displaystyle {2\over x^3} \end {array} \right | =2x^3\left | \begin {array}{ccc} 1&amp;\phantom {3}x&amp;\phantom {-}\displaystyle {1\over x^3}\\2&amp;3x&amp;-\displaystyle {1\over x^3} \\1&amp;3x&amp;\phantom {-}\displaystyle {1\over x^3} \end {array}\right |\] where we factored \(x^2\), \(x\), and \(2\) out of the first, second, and third rows of \(W(x)\), respectively. Adding the second row of the last determinant to the first and third rows yields \[ W(x)=2x^3\left | \begin {array}{ccc} 3&amp;4x&amp;\phantom {-}0\\2&amp;3x&amp;-\displaystyle {1\over x^3} \\3&amp;6x&amp;\phantom {-}0 \end {array}\right | =2x^3\left (1\over x^3\right )\left | \begin {array}{cc}3&amp;4x\\3&amp;6x  \end {array}\right |=12x \] 
-					Therefore \(W(x)\ne 0\) on \((-\infty ,0)\) and \((0,\infty )\).
+					<div>
+						We'll start with the definition of the <span class="vocab">Wronskian determinant</span> 
+						\begin {equation*}
+							W\big[y_1, y_2, y_3\big](x) = 
+							\det\left( 
+								\begin {array}{cccc} 
+									y_1 & y_2 & y_3 \\ 
+									\dfrac{dy_1}{dx} & \dfrac{dy_2}{dx} & \dfrac{dy_3}{dx} \\ 
+									\dfrac{d^2y_1}{dx^2} & \dfrac{d^2y_2}{dx^2} & \dfrac{d^2y_3}{dx^2} \\ 
+								\end {array}
+							\right)
+						\end {equation*}
+
+						Compute
+					</div>
+					<div class="reading-exercise">
+						Differentiate twice
+						\(
+							y_1 = x^2
+						\)
+					</div>
+					<div class="reading-exercise">
+						Differentiate twice
+						\(
+							y_2 = x^3
+						\)
+					</div>
+					<div class="reading-exercise">
+						Differentiate twice
+						\(
+							y_3 = \dfrac{1}{x}
+						\)
+					</div>
+					<div>
+						Differentiating \(y_1=x^2,\) \(y_2=x^3,\) and \(y_3 = \dfrac{1}{x}\) twice
+
+						\begin{align*}
+							\begin{array}{ccccc}
+								y_1=x^2
+								&\Longrightarrow&
+									\dfrac{d y_1}{dx}=2x
+									&\Longrightarrow&
+									\dfrac{d^2 y_1}{dx^2}=2 \\
+								y_2=x^3
+								&\Longrightarrow&
+									\dfrac{d y_2}{dx}=3x^2
+									&\Longrightarrow&
+									\dfrac{d^2 y_2}{dx^2}=6x \\
+								y_3=\frac{1}{x}
+								&\Longrightarrow&
+									\dfrac{d y_3}{dx}=-\dfrac{1}{x^2}
+									&\Longrightarrow&
+									\dfrac{d^2 y_3}{dx^2}=\dfrac{2}{x^3} \\
+									\end{array}	
+						\end{align*}
+
+						Setting up the Wronskian determinant we have
+
+						\begin {equation*}
+							W\left[ x^2, x^3, \frac{1}{x} \right](x) = 
+							\det\left( 
+								\begin {array}{rrrrr} 
+									x^2 & x^3 & \dfrac{1}{x} \\ 
+									2x & 3x^2 & -\dfrac{1}{x^2}  \\ 
+									2 & 6x & \dfrac{2}{x^3} \\ 
+								\end {array}
+							\right)
+						\end {equation*}
+
+						Which we can simply expand the cofactors along any row or column to calculate. We'll expand the cofactors along the third column as an example
+
+						\begin {align*}
+							\det\left( 
+								\begin {array}{rrrrr} 
+									x^2 & x^3 & \dfrac{1}{x} \\ 
+									2x & 3x^2 & -\dfrac{1}{x^2}  \\ 
+									2 & 6x & \dfrac{2}{x^3} \\ 
+								\end {array}
+							\right)
+							& = 
+							\dfrac{1}{x}
+							\det\left( 
+								\begin {array}{rrrrr} 
+									2x & 3x^2 \\ 
+									2 & 6x \\ 
+								\end {array}
+							\right)
+							+
+							\dfrac{1}{x^2}
+							\det\left( 
+								\begin {array}{rrrrr} 
+									x^2 & x^3 \\ 
+									2 & 6x \\ 
+								\end {array}
+							\right)
+							+
+							\dfrac{2}{x^3}
+							\det\left( 
+								\begin {array}{rrrrr} 
+									x^2 & x^3 \\ 
+									2x & 3x^2 \\ 
+								\end {array}
+							\right)
+							\\
+							& = 
+							\dfrac{1}{x}
+							\Big( 
+								12x^2-6x^2
+							\Big)
+							+
+							\dfrac{1}{x^2}
+							\Big( 
+								6x^3-2x^3
+							\Big)
+							+
+							\dfrac{2}{x^3}
+							\Big( 
+								3x^4-2x^4
+							\Big) \\
+							& = 
+							\dfrac{1}{x}
+							\Big( 
+								6x^2
+							\Big)
+							+
+							\dfrac{1}{x^2}
+							\Big( 
+								4x^3
+							\Big)
+							+
+							\dfrac{2}{x^3}
+							\Big( 
+								x^4
+							\Big) \\
+							& = 
+							\quad
+							\underbrace{6x
+							\quad
+							+
+							\quad
+							4x
+							\quad
+							+
+							\quad
+							2x}
+							\\
+							& = 
+							\quad\quad\quad\quad\quad
+							12x 
+							\\
+						\end {align*}
+
+						While we were able to calculate the Wronskian determinant fairly simply using cofactor expansion, we can also use row reduction techniques to simplify the determinant calculation. For instance we can factor each row to remove the fractions. For instance we'll multiply the first row by \(x\), the second row by \(x^2\), and the third row by \(x^3\) which results in a factor of \({1}/{\big( x\cdot x^2\cdot x^3 \big)}={1}/{x^6}\) in front of the determinant
+
+						\begin {align*}
+							\det\left( 
+								\begin {array}{rrrrr} 
+									x^2 & x^3 & \dfrac{1}{x} \\ 
+									2x & 3x^2 & -\dfrac{1}{x^2}  \\ 
+									2 & 6x & \dfrac{2}{x^3} \\ 
+								\end {array}
+							\right)
+							& =
+							\dfrac{1}{x^6} 
+							\det\left( 
+								\begin {array}{ccccc} 
+									x^3 & x^4 & 1 \\ 
+									2x^3 & 3x^4 & -1  \\ 
+									2x^3 & 6x^4 & 2 \\
+								\end {array}
+							\right)
+						\end {align*}
+
+						Aside from factoring common factors out of a rows, we can actually factor common factors out of a columns as well. We'll factor \(x^3\) out of the first column and \(x^4\) out of the second column which results in a factor of \(x^3 \cdot x^4 = x^7\) in front of the determinant
+
+						
+						\begin {align*}
+							\dfrac{1}{x^6} 
+							\det\left( 
+								\begin {array}{rrrrrr} 
+									x^3 & x^4 & 1 \\ 
+									2x^3 & 3x^4 & -1  \\ 
+									2x^3 & 6x^4 & 2 \\
+								\end {array}
+							\right)
+							& =
+							\dfrac{x^7}{x^6} 
+							\det\left( 
+								\begin {array}{rrrrrr} 
+									1 & 1 & 1 \\ 
+									2 & 3 & -1  \\ 
+									2 & 6 & 2 \\
+								\end {array}
+							\right)
+							=
+							x
+							\det\left( 
+								\begin {array}{rrrrrr} 
+									1 & 1 & 1 \\ 
+									2 & 3 & -1  \\ 
+									2 & 6 & 2 \\
+								\end {array}
+							\right)
+						\end {align*}
+
+						Now we'll go ahead and subtract column 1 from columns 2 and 3
+
+						\begin {align*}
+						x
+						\det\left( 
+							\begin {array}{rrrrrr} 
+								1 & 1 & 1 \\ 
+								2 & 3 & -1  \\ 
+								2 & 6 & 2 \\
+							\end {array}
+						\right)
+						\overset{C_2-C_1}{\longrightarrow}
+						x
+						\det\left( 
+							\begin {array}{rrrrrr} 
+								1 & 0 & 1 \\ 
+								2 & 1 & -1  \\ 
+								2 & 4 & 2 \\
+							\end {array}
+						\right)
+						\overset{C_3-C_1}{\longrightarrow}
+						x
+						\det\left( 
+							\begin {array}{rrrrrr} 
+								1 & 0 & 0 \\ 
+								2 & 1 & -3  \\ 
+								2 & 4 & 0 \\
+							\end {array}
+						\right)
+					\end {align*}
+
+					And expand along the first row
+
+					\begin {align*}
+						x
+						\det\left( 
+							\begin {array}{rrrrrr} 
+								1 & 0 & 0 \\ 
+								2 & 1 & -3  \\ 
+								2 & 4 & 0 \\
+							\end {array}
+						\right)
+						& =
+						x
+						\det\left( 
+							\begin {array}{rrrrrr} 
+								1 & -3  \\ 
+								4 & 0 \\
+							\end {array}
+						\right) \\
+						& =
+						x \cdot
+						\left( 
+							0+12
+						\right) \\
+						& =
+						12x \\
+					\end {align*}
+
+					Which yields the same result.
+					</div>	
 				</details>
 			</div>
 
@@ -1314,38 +1614,278 @@
 			<!--Example 4-->
 			<div class="example" id="x1-294" style="--ex-number: 4">
 				<div>
-					In Example&nbsp;<a href="#x1-132">9.1.2</a>we saw that the solutions \(y_1=e^x\), \(y_2=e^{-x}\), \(y_3=e^{2x}\), and \(y_4=e^{-3x}\) of \[ y^{(4)}+ \frac{d^3 y}{dx^3} -7 \frac{d^2 y}{dx^2} - \frac{d y}{dx} +6y=0 \] are linearly independent on every open interval. Calculate the Wronskian of \(\{y_1,y_2,y_3,y_4\}\).
+					In Example&nbsp;<a href="#x1-132">9.1.2</a> we already verified that \(y_1=e^x\), \(y_2=e^{-x}\), \(y_3=e^{2x}\), and \(y_4=e^{-3x}\) are linearly indepdent and  solutions of the differential equation on \((-\infty,\infty )\)
+					
+					\[ y^{(4)}+ \frac{d^3 y}{dx^3} -7 \frac{d^2 y}{dx^2} - \frac{d y}{dx} +6y=0 \]
+					
+					Calculate the Wronskian determinant of \(\{y_1,y_2,y_3,y_4\}\)
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-					For all \(x\), \[ W(x)=\left | \begin {array}{rrrr} e^x&amp;e^{-x}&amp;e^{2x}&amp;e^{-3x}\\ e^x&amp;-e^{-x}&amp;2e^{2x}&amp;-3e^{-3x}\\ e^x&amp;e^{-x}&amp;4e^{2x}&amp;9e^{-3x}\\ e^x&amp;-e^{-x}&amp;8e^{2x}&amp;-27e^{-3x} \end {array}\right |\] 
-					Factoring the exponential common factor from each row yields \[ W(x)=e^{-x}\left | \begin {array}{rrrr}1&amp;1&amp;1&amp;1\\1&amp;-1&amp;2&amp;-3\\1&amp;1&amp;4&amp;9\\ 1&amp;-1&amp;8&amp;-27 \end {array}\right |=240e^{-x}\] 
-					from <a href="#x1-17r12">(9.1.12)</a>.
-
 					<div>
-						<strong>Remark</strong> Under the assumptions of Theorem&nbsp;<a href="#x1-224">9.1.4</a>, it isn’t necessary to obtain a formula for \(W(x)\). Just evaluate \(W(x)\) at a convenient point in \((a,b)\), as we did in Examples&nbsp;<a href="#x1-81">9.1.1</a> and<a href="#x1-132">9.1.2</a>.
+						We'll start with the definition of the <span class="vocab">Wronskian determinant</span> 
+						\begin {equation*}
+							W\big[y_1, y_2, y_3, y_4\big](x) = 
+							\det\left( 
+								\begin {array}{cccc} 
+									y_1 & y_2 & y_3 & y_4 \\ 
+									\dfrac{dy_1}{dx} & \dfrac{dy_2}{dx} & \dfrac{dy_3}{dx} & \dfrac{dy_4}{dx} \\ 
+									\dfrac{d^2y_1}{dx^2} & \dfrac{d^2y_2}{dx^2} & \dfrac{d^2y_3}{dx^2} & \dfrac{d^2y_4}{dx^2} \\
+									\dfrac{d^3y_1}{dx^3} & \dfrac{d^3y_2}{dx^3} & \dfrac{d^3y_3}{dx^3} & \dfrac{d^3y_4}{dx^3} \\ 
+								\end {array}
+							\right)
+						\end {equation*}
+
+						Compute
 					</div>
+					<div class="reading-exercise">
+						Differentiate three times
+						\(
+							y_1 = e^x
+						\)
+					</div>
+					<div class="reading-exercise">
+						Differentiate three times
+						\(
+							y_2 = e^{-x}
+						\)
+					</div>
+					<div class="reading-exercise">
+						Differentiate three times
+						\(
+							y_3 = e^{2x}
+						\)
+					</div>
+					<div class="reading-exercise">
+						Differentiate three times
+						\(
+							y_4 = e^{-3x}
+						\)
+					</div>
+					<div>
+						Differentiating \(y_1=e^x,\) \(y_2=e^{-x},\) \(y_3=e^{2x},\) and \(y_3 = \dfrac{1}{x}\) three times
+
+						\begin{align*}
+							\begin{array}{ccccc}
+								y_1=e^x
+								&\Longrightarrow&
+									\dfrac{d y_1}{dx}=e^x
+									&\Longrightarrow&
+									\dfrac{d^2 y_1}{dx^2}=e^x
+									&\Longrightarrow&
+									\dfrac{d^3 y_1}{dx^3}=e^x \\
+								y_2=e^{-x}
+								&\Longrightarrow&
+									\dfrac{d y_2}{dx}=-e^{-x}
+									&\Longrightarrow&
+									\dfrac{d^2 y_2}{dx^2}=e^{-x}
+									&\Longrightarrow&
+									\dfrac{d^3 y_2}{dx^3}=-e^{-x} \\
+								y_3=e^{2x}
+								&\Longrightarrow&
+									\dfrac{d y_3}{dx}=2e^{2x}
+									&\Longrightarrow&
+									\dfrac{d^2 y_3}{dx^2}=4e^{2x}
+									&\Longrightarrow&
+									\dfrac{d^3 y_3}{dx^3}=8e^{2x} \\
+								y_4=e^{-3x}
+								&\Longrightarrow&
+									\dfrac{d y_4}{dx}=-3e^{-3x}
+									&\Longrightarrow&
+									\dfrac{d^2 y_4}{dx^2}=9e^{-3x}
+									&\Longrightarrow&
+									\dfrac{d^3 y_4}{dx^3}=-27e^{-3x} \\	
+								\end{array}	
+						\end{align*}
+
+						Setting up the Wronskian determinant we have
+
+						\begin {equation*}
+							W\left[ e^x, e^{-x}, e^{2x}, e^{-3x} \right](x) = 
+							\det\left( 
+								\begin {array}{rrrrr} 
+								e^x & e^{-x} & e^{2x} & e^{-3x} \\ 
+								e^x & -e^{-x} & 2e^{2x} & -3e^{-3x} \\
+								e^x & e^{-x} & 4e^{2x} & 9e^{-3x} \\ 
+								e^x & -e^{-x} & 8e^{2x} & -27e^{-3x} \\ 
+								\end {array}
+							\right)
+						\end {equation*}
+						
+						Rather than simply expanding the cofactors, we'll start with factoring common factors. Factoring out \(e^x\) from the first column, \(e^{-x}\) from the second column, \(e^{2x}\) from the third column, and \(e^{-3x}\) from the fourth column we have
+
+						\begin {align*}
+							e^x e^{-x} e^{2x} e^{-3x}
+							\det\left( 
+								\begin {array}{rrrrrrr} 
+									1 & 1 & 1 & 1 \\ 
+									1 & -1 & 2 & -3 \\
+									1 & 1 & 4 & 9 \\ 
+									1 & -1 & 8 & -27 \\ 
+								\end {array}
+							\right)
+							=
+							e^{-x}
+							\det\left( 
+								\begin {array}{rrrrrrr} 
+									1 & 1 & 1 & 1 \\ 
+									1 & -1 & 2 & -3 \\
+									1 & 1 & 4 & 9 \\ 
+									1 & -1 & 8 & -27 \\ 
+								\end {array}
+							\right)
+						\end {align*}
+
+
+						Now we'll use reduction techniques. Subtracting the first column from the rest of the columns
+
+						\begin {align*}
+							&
+							e^{-x}
+							\det\left( 
+								\begin {array}{rrrrrrr} 
+									1 & 1 & 1 & 1 \\ 
+									1 & -1 & 2 & -3 \\
+									1 & 1 & 4 & 9 \\ 
+									1 & -1 & 8 & -27 \\ 
+								\end {array}
+							\right)
+							\overset{\small C_2-C_1}{\longrightarrow}
+							e^{-x}
+							\det\left( 
+								\begin {array}{rrrrrrr} 
+									1 & 0 & 1 & 1 \\ 
+									1 & -2 & 2 & -3 \\
+									1 & 0 & 4 & 9 \\ 
+									1 & -2 & 8 & -27 \\ 
+								\end {array}
+							\right) \\
+							
+							\overset{\small C_3-C_1}{\longrightarrow}
+							&
+							e^{-x}
+							\det\left( 
+								\begin {array}{rrrrrrr} 
+									1 & 0 & 0 & 1 \\ 
+									1 & -2 & 1 & -3 \\
+									1 & 0 & 3 & 9 \\ 
+									1 & -2 & 7 & -27 \\ 
+								\end {array}
+							\right)
+							\overset{\small C_4-C_1}{\longrightarrow}
+							e^{-x}
+							\det\left( 
+								\begin {array}{rrrrrrr} 
+									1 & 0 & 0 & 0 \\ 
+									1 & -2 & 1 & -4 \\
+									1 & 0 & 3 & 8 \\ 
+									1 & -2 & 7 & -28 \\ 
+								\end {array}
+							\right) \\
+						\end {align*}
+
+						Now expanding the cofactors along the first row
+
+						\begin {align*}
+							e^{-x}
+							\det\left( 
+								\begin {array}{rrrrrrr} 
+									1 & 0 & 0 & 0 \\ 
+									1 & -2 & 1 & -4 \\
+									1 & 0 & 3 & 8 \\ 
+									1 & -2 & 7 & -28 \\ 
+								\end {array}
+							\right)
+							=
+							e^{-x}
+							\det\left( 
+								\begin {array}{rrrrrrr} 
+									-2 & 1 & -4 \\
+									0 & 3 & 8 \\ 
+									-2 & 7 & -28 \\ 
+								\end {array}
+							\right)
+						\end {align*}
+
+
+						Subtracting row 1 from from 3
+
+						\begin {align*}
+							e^{-x}
+							\det\left( 
+								\begin {array}{rrrrrrr} 
+									-2 & 1 & -4 \\
+									0 & 3 & 8 \\ 
+									-2 & 7 & -28 \\ 
+								\end {array}
+							\right)
+							\overset{\small R_3-R_1}{\longrightarrow}
+							e^{-x}
+							\det\left( 
+								\begin {array}{rrrrrrr} 
+									-2 & 1 & -4 \\
+									0 & 3 & 8 \\ 
+									0 & 6 & -24 \\ 
+								\end {array}
+							\right)
+						\end {align*}
+
+						Expanding by cofactors along the first column
+
+						\begin {align*}
+							e^{-x}
+							\det\left( 
+								\begin {array}{rrrrrrr} 
+									-2 & 1 & -4 \\
+									0 & 3 & 8 \\ 
+									0 & 6 & -24 \\ 
+								\end {array}
+							\right)
+							& =
+							-2e^{-x}
+							\det\left( 
+								\begin {array}{rrrrrrr} 
+									3 & 8 \\ 
+									6 & -24 \\ 
+								\end {array}
+							\right) \\
+							& =
+							-2e^{-x}
+							\cdot
+							\Big( 
+								-3\cdot 24 - 6\cdot8
+							\Big) \\
+							& =
+							240e^{-x}
+							\\
+						\end {align*}
+
+
+					
+					</div>	
+				
 				</details>
 			</div>
 
 
 			<div class="theorem" id="x1-305">
 				<span class="head">Theorem&nbsp;9.1.5</span> 
-				Suppose \(c\) is in \((a,b)\) and \(\alpha _{1},\) \(\alpha _{2},\) …\(,\) are real numbers, not all zero. Under the assumptions of Theorem&nbsp;<span class="ptmb8t-">10.3.3</span>, suppose \(y_{1}\) &gt;and \(y_{2}\) are solutions of (<span class="ptmb8t-">5.1.35</span>) such that 
+				Suppose \(c\) is in \((a,b)\) and \(\alpha _{1},\) \(\alpha _{2},\) …\(,\alpha_n\) are real numbers, not all zero. 
+				
+				Under the assumptions of Theorem <a href="#x1-224">9.1.4</a>, suppose \(y_{1},y_2,\dots,y_n\) are solutions of \(Ly=0\) such that 
+				
 				<a id="x1-31r16"></a> 
-				\begin {equation} 
-					\label {eq:9.1.16} 
-					\alpha y_{i}(c)+ y_{i}'(c)+\cdots +y_{i}^{(n-1)}(c)=0,\quad 1\le i\le n 
+				\begin {equation}  \label {eq:9.1.16} 
+					\alpha_1 y_{i}(c) 
+					+  \alpha_2 \left.\frac{dy_i}{dx}\right|_c 
+					+  \alpha_3 \left.\frac{d^2 y_i}{dx^2}\right|_c 
+					+ \cdots +  \alpha_n \left.\frac{d^{n-1}y_i}{dx^{n-1}}\right|_c = 0
 				\end {equation} 
-				Then \(\{y_{1},y_{2},\dots y_{n}\}\) isn’t linearly independent on \((a,b)\).
+
+				Then \(\{y_{1},y_{2},\dots y_{n}\}\) isn’t linearly independent on \((a,b)\)
 			</div>
 
-			<div id="dca861c3-c804-41af-80a0-c30c4747fb1f">
-				<span class="ptmb8t-">Proof</span> Since \(\alpha _{1}\), \(\alpha _{2}\), …, \(\alpha _{n}\) are not all zero, <a href="#x1-20r14">(9.1.14)</a> implies that \[ \left | \begin {array}{ccccccc} y_{1}(c)&amp;y_{1}'(c)&amp;\cdots&amp;y _{1}^{(n-1)}(c)\\ y_{2}(c)&amp;y_{2}'(c)&amp;\cdots&amp;y _{2}^{(n-1)}(c)\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ y_{n}(c)&amp;y_{n}'(c)&amp;\cdots&amp;y _{n}^{(n-1)}(c)\\ \end {array}\right |=0\] so \[ \left | 
-				\begin {array}{cccccc} y_{1}(c)&amp;y_{2}(c)&amp;\cdots&amp; y_{n}(c)\\ y_{1}'(c)&amp;y_{2}'(c)&amp;\cdots&amp; y_{n}'(c)\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ y_{1}^{(n-1)}(c)&amp;y_{2}^{(n-1)}(c)(c)&amp;\cdots&amp; y_{n}^{(n-1)}(c)(c)\\ 
-				\end {array}\right |=0 \] and Theorem&nbsp;<a href="#x1-224">9.1.4</a> implies the stated conclusion.
-			</div>
 		</details>
 
 
@@ -1353,18 +1893,30 @@
 			<summary>Verifying Solutions</summary>
 
 			<div id="8a5e5383-4c89-44ab-b301-7b1462fe9f99">
-				The next theorem is analogous to Theorem&nbsp;<span class="ptmb8t-">5.3.2</span>. It shows how to find the general solution of \(Ly=F\) if we know a particular solution of \(Ly=F\) and a fundamental set of solutions of the <span class="vocab">complementary equation</span>\(Ly=0\). 
+				The next theorem is analogous to Theorem&nbsp;<a href="sec5.3.book.html#x1-52" target=_blank>5.3.2</a>. It shows how to find the general solution of \(Ly=F(x)\) if we know a particular solution of \(Ly=F(x)\) and a fundamental set of solutions of the <span class="vocab">complementary equation</span> \(Ly=0\)
 			</div>
 			<div class="theorem" id="x1-326">
 				<span class="head">Theorem&nbsp;9.1.6</span>
-				Suppose \(Ly=F\) is normal on \((a,b).\) Let \(y_p\) be a particular solution of \(Ly=F\) on \((a,b),\) and let \(\{y_1,y_2,\dots ,y_n\}\) be a fundamental set of solutions of the complementary equation \(Ly=0\) on \((a,b)\). Then \(y\) is a solution of \(Ly=F\) on \((a,b)\) if and only if \[ y=y_p+c_1y_1+c_2y_2+\cdots +c_ny_n\] where \(c_1,c_2,\dots ,c_n\) are constants.
+				Suppose \(Ly=F(x)\) is normal on \((a,b).\) Let \(y_p\) be a particular solution of \(Ly=F(x)\) on \((a,b),\) and let \(\{y_1,y_2,\dots ,y_n\}\) be a fundamental set of solutions of the complementary equation \(Ly=0\) on \((a,b)\). Then \(y\) is a solution of \(Ly=F(x)\) on \((a,b)\) if and only if 
+				
+				\[ y=y_p+c_1y_1+c_2y_2+\cdots +c_ny_n\] 
+				
 			</div>
+			<br>
+			<br>
+			<br>
 			<div class="indent" id="1a5a53d5-1b48-4222-b46a-77f620bccbf0">
-				The next theorem is analogous to Theorem&nbsp;<span class="ptmb8t-">5.3.2</span>. 
+				The next theorem is analogous to Theorem&nbsp;<a href="sec5.3.book.html#x1-263" target=_blank>5.3.3</a>.
 			</div>
-			<div class="theorem" id="x1-337">
-				<span class="head">Theorem&nbsp;9.1.7</span> \([\)The Principle of Superposition\(]\) 
-				Suppose for each \(i=1,\) \(2,\) …, \(r\), the function \(y_{p_i}\) is a particular solution of \(Ly=F_i\) on \((a,b).\) Then \[ y_p=y_{p_1}+y_{p_2}+\cdots +y_{p_r} \] is a particular solution of \[ Ly=F_1(x)+F_2(x)+\cdots +F_r(x) \] on \((a,b)\).
+			<div class="theorem" id="x1-337" target=_blank>
+				<span class="head">Theorem&nbsp;9.1.7</span> <strong>The Principle of Superposition</strong>
+				Suppose for each \(i=1,\) \(2,\) …, \(k\), the function \(y_{p_i}\) is a particular solution of \(Ly=F_i\) on \((a,b).\) Then 
+				
+				\[ y_p=y_{p_1}+y_{p_2}+\cdots +y_{p_k} \] 
+				
+				is a particular solution on \((a,b)\) of 
+				
+				\[ Ly=F_1(x)+F_2(x)+\cdots +F_k(x) \] 
 			</div>
 			<div class="indent" id="f6be20cd-b46c-441e-af56-d090f566e656">
 				We’ll apply Theorems&nbsp;<a href="#x1-326">9.1.6</a> and <a href="#x1-337">9.1.7</a> throughout the rest of this chapter.
