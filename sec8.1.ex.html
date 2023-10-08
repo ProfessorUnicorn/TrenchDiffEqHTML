@@ -36,16 +36,16 @@
 			<div class="instructions">
 				<ol>
 					<li>
-						Calculate \({\cal L} \big\{ f(t) \big\} \) by applying a formula from the Laplace transform table
+						Calculate \({\cal L} \big\{ f(t) \big\} \) by applying linearity and the given Laplace transform formula(s)
 					</li>
 					<li>
 						Calculate \({\cal L} \big\{ f(t) \big\} \) by evaluating the improper integral \(\int _0^\infty e^{-st} f(t)\,dt\)
 					</li>
 					<li>
-						Calculate \({\cal L} \big\{ g(t) \big\} \) by applying the First Shifting Theorem
+						Calculate \({\cal L} \big\{ g(t) \big\} \) by applying the First Shifting Theorem \( {\cal L} \big\{ f(t) e^{at} \big\} = F(s-a) \)
 					</li>
 					<li>
-						Calculate \({\cal L} \big\{ h(t) \big\} \) by applying the First Shifting Theorem
+						Calculate \({\cal L} \big\{ h(t) \big\} \) by applying the First Shifting Theorem \( {\cal L} \big\{ f(t) e^{at} \big\} = F(s-a) \)
 					</li>
 				</ol>
 			</div>
@@ -57,7 +57,7 @@
 					<ol>
 						<li>
 							\(
-								f(t) = 2t
+								f(t) = 2t \qquad {\cal L} \big\{ t \big\} = \dfrac{1}{s^2}
 							\) 
 						</li>
 						<li>
@@ -67,12 +67,12 @@
 						</li>
 						<li>
 							\(
-								g(t) = 3te^{\pi t}
+								g(t) = 2te^{\pi t}
 							\)
 						</li> 
 						<li>
 							\(
-								h(t) = 4te^{-4 t}
+								h(t) = 2te^{-4 t}
 							\) 
 						</li>
 					</ol>
@@ -86,22 +86,22 @@
 					<ol>
 						<li>
 							\(
-								f(t) = 3te^{-t}
+								f(t) = 3t^{3} \qquad {\cal L} \big\{ t^{n} \big\} = \dfrac{n!}{s^{n+1}}
 							\) 
 						</li>
 						<li>
 							\(
-								f(t) = 3te^{-t}
+								f(t) = 3t^{3}
 							\) 
 						</li>
 						<li>
 							\(
-								g(t) = 4te^{-t}e^{-2t}
+								g(t) = 3t^{3}e^{-2t}
 							\) 
 						</li>
 						<li>
 							\(
-								h(t) = 5te^{-t} e^{{\pi}{2}t}
+								h(t) = 3te^{3} e^{2{\pi}t}
 							\) 
 						</li>
 					</ol>
@@ -115,25 +115,26 @@
 					<ol>
 						<li>
 							\(
-								f(t) = 4\sinh t \quad {\small \text{Hint:} \,  \sinh t=\frac{e^t - e^{-t}}{2} }
+								f(t) = 4\sinh t \qquad {\cal L} \big\{ e^{at} \big\} = \dfrac{1}{s-a}
 							\)
 						</li>
 						<li>
 							\(
-								f(t) = 4\sinh t \quad {\small \text{Hint:} \,  \sinh t=\frac{e^t - e^{-t}}{2} }
+								f(t) = 4\sinh t
 							\)
 						</li>
 						<li>
 							\(
-								g(t) = 5e^{t}\sinh t
+							g(t) = 4e^{t}\sinh t
 							\) 
 						</li>
 						<li>
 							\(
-								h(t) = 6e^{-5t}\sinh t
-							\) 
-						</li>
-					</ol>
+								h(t) = 4e^{-5t}\sinh t
+								\) 
+							</li>
+						</ol>
+						\( {\small \text{Hint:} \,  \sinh t=\frac{e^t - e^{-t}}{2} } \)
 				</div>
 			</div>
 
@@ -144,7 +145,7 @@
 					<ol>
 						<li>
 							\(
-								f(t) = e^{2t}-3e^t
+								f(t) = e^{2t}-3e^t \qquad {\cal L} \big\{ e^{at} \big\} = \dfrac{1}{s-a}
 							\)
 						</li>
 						<li>
@@ -173,7 +174,7 @@
 					<ol>
 						<li>
 							\(
-								f(t) = 5t^2
+								f(t) = 5t^2 \qquad {\cal L} \big\{ t^{n} \big\} = \dfrac{n!}{s^{n+1}}
 							\) 
 						</li>
 						<li>
@@ -183,12 +184,12 @@
 						</li>
 						<li>
 							\(
-								g(t) = 6t^2 e^{\frac{1}{2}t}
+								g(t) = 5t^2 e^{\frac{1}{2}t}
 							\) 
 						</li>
 						<li>
 							\(
-								h(t) = 7t^2 e^{-9t}
+								h(t) = 5t^2 e^{-9t}
 							\) 
 						</li>
 					</ol>
@@ -202,22 +203,22 @@
 					<ol>
 						<li>
 							\(
-								f(t) = 6\sin t + \cos t
+								f(t) = 6\sin t - \cos t \qquad {\cal L} \big\{ \cos \omega t \big\} = \dfrac{s}{s^2 + \omega^2}\qquad {\cal L} \big\{ \sin \omega t \big\} = \dfrac{\omega}{s^2 + \omega^2}
 							\) 
 						</li>
 						<li>
 							\(
-								f(t) = 6\sin t + \cos t
+								f(t) = 6\sin t - \cos t
 							\) 
 						</li>
 						<li>
 							\(
-								g(t) = e^{3t} \sin t + e^{t} \cos t
+								g(t) = 6e^{t} \sin t + e^{t} \cos t
 							\) 
 						</li>
 						<li>
 							\(
-								h(t) = 8 e^{-\frac{\pi}{2}t} \sin t - \cos t
+								h(t) = 6 e^{-3t} \sin t + e^{-3t} \cos t
 							\) 
 						</li>
 					</ol>
@@ -231,7 +232,7 @@
 					<ol>
 						<li>
 							\(
-								f(t) = 7e^{-t/7} 
+								f(t) = 7e^{-t/7} \qquad {\cal L} \big\{ e^{at} \big\} = \dfrac{1}{s-a}
 							\) 
 						</li>
 						<li>
@@ -241,12 +242,12 @@
 						</li>
 						<li>
 							\(
-								g(t) = 8e^{t} e^{-t/7} 
+								g(t) = 7e^{t} e^{-t/7} 
 							\) 
 						</li>
 						<li>
 							\(
-								h(t) = 9e^{-t} e^{-t/7} 
+								h(t) = 7e^{-t} e^{-t/7} 
 							\) 
 						</li>
 					</ol>
@@ -260,7 +261,7 @@
 					<ol>
 						<li>
 							\(
-								f(t) = 8t - \cos t 
+								f(t) = 8t - \cos t \qquad {\cal L} \big\{ t \big\} = \dfrac{1}{s^2} \qquad {\cal L} \big\{ \cos \omega t \big\} = \dfrac{s}{s^2 + \omega^2}
 							\) 
 						</li>
 						<li>
@@ -270,12 +271,12 @@
 						</li>
 						<li>
 							\(
-								g(t) = \left(  9t - 10\cos t  \right) e^{3t} 
+								g(t) = \left(  8t - \cos t  \right) e^{3t} 
 							\) 
 						</li>
 						<li>
 							\(
-								h(t) = \left(  11t - \cos t  \right) e^{-\frac{\pi}{3}t} 
+								h(t) = \left(  8t - \cos t  \right) e^{-3 \pi t} 
 							\) 
 						</li>
 					</ol>

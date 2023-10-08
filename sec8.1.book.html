@@ -46,14 +46,17 @@
 
 			<div class="theorem" id="x1-3r1">
 				<strong>Definition 8.1.1</strong>
-				Let \(f(t)\) be defined for \(t\ge 0\) and let \(s\) be a real number\(.\) Then the <span class="vocab">Laplace transform</span> of \(f(t)\) is the function \(F(s)\) defined by 
+				Let \(f(t)\) be defined for \(t\ge 0\) and let \(s\) be a real number\(.\) Then the <span class="vocab">Laplace transform</span> of \(f(t)\) is a function defined by the improper integral
 
 				<a id="x1-4r2"></a>
 				\begin {equation}
 					\label {eq:8.1.2} 
-					F(s)=\int _0^\infty e^{-st} \, f(t)\,dt 
+					{\cal L} \big\{ f(t) \big\} = \int _0^\infty e^{-st} \, f(t)\,dt 
 				\end {equation}
-				for those values of \(s\) for which the improper integral converges 
+				for those values of \(s\) for which the improper integral converges. The Laplace transform is a function of the parameter \(s\) and is often written as
+				\[
+					F(s) = {\cal L} \big\{ f(t) \big\} 
+				\]
 			</div>
 
 			<br>
@@ -505,21 +508,6 @@
 						<td> \((s &gt; 0)\)</td>
 					</tr>
 					<tr>
-						<td> \(e^{at}\) </td>
-						<td> \(\displaystyle {{1 \over s-a}}\) </td>
-						<td> \((s &gt; a)\)</td>
-					</tr>
-					<tr>
-						<td> \(te^{at}\) </td>
-						<td> \(\displaystyle {{1 \over (s-a)^2}}\) </td>
-						<td> \((s &gt; a)\)</td>
-					</tr>
-					<tr>
-						<td> \(t^ne^{at}  \) </td>
-						<td> \(\displaystyle {{n! \over (s-a)^{n+1}}}\) </td>
-						<td> \((s &gt; 0)\) </td>
-					</tr>
-					<tr>
 						<td> \(\cos \omega t\)
 						</td>
 						<td> \(\displaystyle {{s \over s^2+\omega ^2}}\) </td>
@@ -532,15 +520,31 @@
 						<td> \((s &gt; 0)\) </td>
 					</tr>
 					<tr>
-						<td> \(\cosh \omega t\) </td>
-						<td> \(\displaystyle {{s \over s^2-\omega^2}}\) </td>
-						<td> \((s &gt; |\omega|)\) </td>
+						<td> \(e^{at}\) </td>
+						<td> \(\displaystyle {{1 \over s-a}}\) </td>
+						<td> \((s &gt; a)\)</td>
 					</tr>
 					<tr>
-						<td> \(\sinh \omega t\) </td>
-						<td> \(\displaystyle {{b \over s^2-\omega^2}}\) </td>
-						<td> \((s &gt; |\omega|)\)
+						<td> \(te^{at}\) </td>
+						<td> \(\displaystyle {{1 \over (s-a)^2}}\) </td>
+						<td> \((s &gt; a)\)</td>
+					</tr>
+					<tr>
+						<td> \(t^ne^{at}  \) </td>
+						<td> \(\displaystyle {{n! \over (s-a)^{n+1}}}\) </td>
+						<td> \((s &gt; a)\) </td>
+					</tr>
+					<tr>
+						<td> \(e^{at} \cos \omega t\)
 						</td>
+						<td> \(\displaystyle {\frac{s - a}{\left(s - a\right)^2+\omega ^2}}\) </td>
+						<td> \((s &gt; a)\) </td>
+					</tr>
+					<tr>
+						<td> \(e^{at} \sin \omega t\)
+						</td>
+						<td> \(\displaystyle {\frac{\omega}{\left(s-a\right)^2+\omega ^2}}\) </td>
+						<td> \((s &gt; a)\) </td>
 					</tr>
 				</tbody>
 			</table>
