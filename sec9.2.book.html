@@ -122,12 +122,12 @@
 						\end {equation} 
 					</li>
 					<li>
-						Solve the initial value problem 
+						Solve the IVP 
 						<a id="x1-8r4"></a> 
-						\begin {equation} 
-							\label {eq:9.2.4} 
-							\frac{d^3 y}{dx^3}-6\frac{d^2 y}{dx^2}+11\frac{d y}{dx}-6y=0 \quad y(0)=4 \quad \frac{d y}{dx}(0)=5 \quad \frac{d^2 y}{dx^2}(0)=9 
-						\end {equation} 
+						\begin {align} \label {eq:9.2.4} 
+							\frac{d^3 y}{dx^3}-6\frac{d^2 y}{dx^2}+11\frac{d y}{dx}-6y &= 0 \\ 
+							y(0)=4 \quad \frac{d y}{dx}(0) = 5 \quad \frac{d^2 y}{dx^2}(0) & = 9 \nonumber
+						\end {align} 
 					</li>
 				</ol>
 
@@ -135,12 +135,54 @@
 					<summary>Solution</summary>
 					<ol>
 						<li>
-							The characteristic polynomial of <a href="#x1-6r3">(9.2.3)</a> is \[ p(r)=r^3-6r^2+11r-6=(r-1)(r-2)(r-3)\] Therefore \(\{e^x,e^{2x},e^{3x}\}\) is a set of solutions of <a href="#x1-6r3">(9.2.3)</a>. It is a fundamental set, since its Wronskian is \[ W(x)=\left | \begin {array}{rrr}e^x&amp;e^{2x}&amp;e^{3x}\\e^x&amp;2e^{2x}&amp; 3e^{3x}\\e^x&amp;4e^{2x}&amp;9e^{3x} \end {array}\right |= e^{6x}\left | \begin {array}{rrr}1&amp;1&amp;1\\1&amp;2&amp; 3\\1&amp;4&amp;9 \end {array}\right |=2e^{6x}\ne 0\] Therefore the general solution of <a href="#x1-6r3">(9.2.3)</a> is 
-							<a id="x1-9r5"></a>
-							\begin {equation} 
-								\label {eq:9.2.5} 
-								y=c_1e^{x}+c_2e^{2x}+c_3e^{3x} 
-							\end {equation}
+							<div>
+								Seeking solutions of the form
+
+								\[
+									y=e^{rx}
+								\]
+
+								Differentiating \(y=e^{rx}\) three times yields
+
+								\[
+									\frac{dy}{dx}=re^{rx}
+									\Longrightarrow
+									\frac{d^2y}{dx^2}=r^2e^{rx}
+									\Longrightarrow
+									\frac{d^3y}{dx^3}=r^3e^{rx}
+								\]
+
+								Substituting in to <a href="#x1-6r3">(9.2.3)</a> we obtain the equation
+
+								\begin {equation*} 
+									r^3e^{rx}-6r^2e^{rx}+11re^{rx}-6e^{rx}=0 
+								\end {equation*} 								
+
+								Factoring out the exponential
+
+								\begin {equation*} 
+									\Big( r^3-6r^2+11r-6 \Big) e^{rx}=0 
+								\end {equation*}
+
+								We now need to solve the <span class="vocab">characteristic equation</span>
+
+								\begin {equation*} 
+									r^3-6r^2+11r-6 =0 
+								\end {equation*}
+
+								In Section&nbsp;<a href="sec5.2.book.html" target=_blank>5.2</a> we simply factored and applied the quadratic formula to find the roots. However, with third or higher order, there isn't always a simple formula that works and sometimes factoring techniques won't work either, so we may have to apply the rational roots theorem from precalculus.
+
+								fixme
+
+							</div>	
+							<div>
+								The characteristic polynomial of <a href="#x1-6r3">(9.2.3)</a> is \[ p(r)=r^3-6r^2+11r-6=(r-1)(r-2)(r-3)\] Therefore \(\{e^x,e^{2x},e^{3x}\}\) is a set of solutions of <a href="#x1-6r3">(9.2.3)</a>. It is a fundamental set, since its Wronskian is \[ W(x)=\left | \begin {array}{rrr}e^x&amp;e^{2x}&amp;e^{3x}\\e^x&amp;2e^{2x}&amp; 3e^{3x}\\e^x&amp;4e^{2x}&amp;9e^{3x} \end {array}\right |= e^{6x}\left | \begin {array}{rrr}1&amp;1&amp;1\\1&amp;2&amp; 3\\1&amp;4&amp;9 \end {array}\right |=2e^{6x}\ne 0\] Therefore the general solution of <a href="#x1-6r3">(9.2.3)</a> is 
+								<a id="x1-9r5"></a>
+								\begin {equation} 
+									\label {eq:9.2.5} 
+									y=c_1e^{x}+c_2e^{2x}+c_3e^{3x} 
+								\end {equation}
+							</div>	
 						</li>
 						<li>
 							We must determine \(c_1\), \(c_2\) and \(c_3\) in <a href="#x1-9r5">(9.2.5)</a> so that \(y\) satisfies the initial conditions in <a href="#x1-8r4">(9.2.4)</a>. Differentiating <a href="#x1-9r5">(9.2.5)</a> twice yields \begin {equation} \label {eq:9.2.6} \begin {array}{rcl} \frac{d y}{dx}&amp;=&amp;c_1e^{x}+2c_2e^{2x}+3c_3e^{3x}\\ \frac{d^2 y}{dx^2}&amp;=&amp;c_1e^{x}+4c_2e^{2x}+9c_3e^{3x} \end {array} \end {equation} <a id="x1-10r6"></a> Setting \(x=0\) in <a href="#x1-9r5">(9.2.5)</a> and <a href="#x1-10r6">(9.2.6)</a> and imposing the initial conditions yields \[ 
