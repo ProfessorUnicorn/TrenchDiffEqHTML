@@ -946,6 +946,174 @@
 			<details class="solution">
 				<summary>Solution</summary>
 				<div>
+					Seeking solutions of the form
+
+					\[
+					y=e^{rx}
+					\]
+
+					Differentiating \(y=e^{rx}\) four times yields
+
+					\begin{align*}
+					\frac{dy}{dx}=re^{rx}
+					\Longrightarrow
+					\frac{d^2y}{dx^2}=r^2e^{rx} 
+					\Longrightarrow
+					\frac{d^3y}{dx^3}=r^3e^{rx} \\
+					\Longrightarrow
+					\frac{d^4y}{dx^4}=r^4e^{rx}
+					\end{align*}
+
+					
+					Substituting in to <a href="#x1-21r11">(9.2.11)</a> we obtain the equation
+
+					\begin {equation*}
+					r^4e^{rx}-16e^{rx}=0
+					\end {equation*}
+
+					Factoring out the exponential
+
+					\begin {equation*}
+					\Big( r^4 - 16 \Big) e^{rx}=0
+					\end {equation*}
+
+					We now need to solve the <span class="vocab">characteristic equation</span> of the <span class="vocab">characteristic polynomial</span> equal to zero, which we already factored
+
+					\begin {align*}
+					\overset{p(r)}{\overbrace{r^4 - 16}} &= 0 \\
+					\big( r^2-4 \big)\big( r^2+4 \big)  &= 0 \\
+					\big( r-2 \big)\big( r+2 \big)\big( r^2+4 \big)  &= 0 \\
+					r-2 = 0 \quad r+2 = 0 \quad r^2+4 &= 0 \\
+					r = 2 \quad r = -2  \quad r = \pm & 2i   \\
+					\end {align*}
+
+					Substituting \(r=2,\) \(r=-2,\) \(r =  2i \) and \(r =  -2i \) into \( y = e^{rx} \) we obtain solutions of <a href="#x1-21r11">(9.2.11)</a>
+
+					\[ 
+					y_1=e^{2x}
+					\quad
+					y_2 = e^{-2x} 
+					\quad  
+					y_3 = e^{2ix} 
+					\quad  
+					y_4 = e^{-2ix} 
+					\]
+
+					Agsin we'll use Euler's formula to rewrite the solutions in terms of real numbers to obtain the solution set
+
+					\[ 
+						\{ e^{2x}
+						, e^{-2x}
+						, \cos 2x 
+						, \sin 2x 
+						\}
+					\]
+
+
+				
+				</div>
+				<div>
+					
+					
+					We can verify it is a fundamental set by showing the Wronskian determinant is nonzero
+
+					\begin {align*}
+					& W \big[e^{2x},e^{-2x},\cos 2x,\sin 2x \big](x) \\ 
+					&
+					=\det\left( 
+						\begin {array}{rrrr} 
+							e^{2x} & e^{-2x} & \cos 2x & \sin 2x \\ 
+							2e^{2x} & -2e^{-2x} & -2\sin 2x & 2\cos 2x \\ 		
+							4e^{2x} & 4e^{-2x} & -4\cos 2x & -4\sin 2x \\ 
+							8e^{2x} & -8e^{-2x} & 8\sin 2x & -8\cos 2x \\ 
+						\end {array}
+						\right) \\
+					&
+					=e^{2x}e^{-2x}\det\left( 
+						\begin {array}{rrrr} 
+							1 & 1 & \cos 2x & \sin 2x \\ 
+							2 & -2 & -2\sin 2x & 2\cos 2x \\ 		
+							4 & 4 & -2\cos 4x & -4\sin 2x \\ 
+							8 & -8 & 2\sin 8x & -8\cos 2x \\ 
+							\end {array}
+						\right) \\	
+						&
+					=2\cdot 4 \cdot 8 \det\left( 
+						\begin {array}{rrrr} 
+							1 & 1 & \cos 2x & \sin 2x \\ 
+							1 & -1 & -\sin 2x & \cos 2x \\ 		
+							1 & 1 & -\cos 2x & -\sin 2x \\ 
+							1 & -1 &  \sin 2x & -\cos 2x \\ 
+							\end {array}
+						\right) \\	
+					&
+					=64 \det\left( 
+						\begin {array}{rrrr} 
+							1 & 1 & \cos 2x & \sin 2x \\ 
+							1 & -1 & -\sin 2x & \cos 2x \\ 		
+							0 & 0 & -2\cos 2x & -2\sin 2x \\ 
+							0 & 0 &  2\sin 2x & -2\cos 2x \\ 
+							\end {array}
+						\right) \\		
+					&
+					=64 \det\left( 
+						\begin {array}{ccccc} 
+							1 & 1 & \cos 2x & \sin 2x \\ 
+							0 & -2 & -\cos 2x -\sin 2x & \cos 2x - \sin 2x \\ 		
+							0 & 0 & -2\cos 2x & -2\sin 2x \\ 
+							0 & 0 &  2\sin 2x & -2\cos 2x \\ 
+							\end {array}
+						\right) \\
+						&
+					=64 \det\left( 
+						\begin {array}{ccccc} 
+							-2 & -\cos 2x -\sin 2x & \cos 2x - \sin 2x \\ 		
+							0 & -2\cos 2x & -2\sin 2x \\ 
+							0 &  2\sin 2x & -2\cos 2x \\ 
+							\end {array}
+						\right) \\	
+					&
+					=-2 \cdot 64 \det\left( 
+						\begin {array}{ccccc} 		
+							-2\cos 2x & -2\sin 2x \\ 
+							2\sin 2x & -2\cos 2x \\ 
+							\end {array}
+						\right) \\	
+						&
+					=-128\cdot -2 \cdot 2 \det\left( 
+						\begin {array}{ccccc} 		
+							\cos 2x & \sin 2x \\ 
+							\sin 2x & -\cos 2x \\ 
+							\end {array}
+					\right) \\																		&
+					=512 \det\left( 
+						\begin {array}{ccccc} 		
+							\cos 2x & \sin 2x \\ 
+							\sin 2x & -\cos 2x \\ 
+							\end {array}
+						\right) \\	
+						&
+					=512 \left( 
+						-\cos^2 2x - \sin^2 2x
+						\right) \\
+						&	
+					=-512 \left( 
+							\cos^2 2x + \sin^2 2x
+							\right) \\
+							&
+							=-512 \ne 0 \\														
+					\end {align*}
+
+					Therefore \(\{e^{2x},e^{-2x},\cos 2x,\sin 2x\}\)  is linearly independent and
+					the general solution of <a
+					href="#x1-21r11">(9.2.11)</a> is
+
+					\[
+					y=c_1e^{2x}+c_2e^{-2x}+c_3\cos 2x+c_4\sin 2x \]
+
+
+				</div>	
+				<div>
 					The characteristic polynomial of <a href="#x1-30r18">(9.2.18)</a> is \[ p(r)=r^3+3r^2+3r+1=(r+1)^3\]
 					Therefore <a href="#x1-30r18">(9.2.18)</a> can be written as \[ (D+1)^3y=0\] so Theorem&nbsp;<a
 						href="#x1-251">9.2.1</a> implies that the general solution of <a href="#x1-30r18">(9.2.18)</a> is \[
