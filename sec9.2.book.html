@@ -558,123 +558,84 @@
 						r = 1 \quad r = \pm & i   \\
 						\end {align*}
 
-						In Section&nbsp;<a href="sec5.2.book.html" target=_blank>5.2</a> we simply factored and
-						applied the quadratic formula to find the roots. However, with third or higher order, there
-						isn't always a simple formula that works and sometimes factoring techniques won't work
-						either, as in this case, so we will apply the rational roots theorem from precalculus.
+						Substituting \(r=1,\) \(r =  i \) and \(r =  -i \) into \( y = e^{rx} \) we obtain solutions of <a
+						href="#x1-19r10">(9.2.10)</a>
+
+						\[ 
+						y_1=e^x
+						\quad
+						y_2 = e^{ix} 
+						\quad  
+						y_3 = e^{-ix} 
+						\]
+
+						However, as discussed in Section&nbsp;<a href="sec5.2.book.html" target=_blank>5.2</a> we'll use Euler's formula to rewrite the solutions in terms of real numbers to obtain the solution set
+
+						\[ 
+							\{ e^x
+							, \cos x 
+							, \sin x 
+							\}
+						\]
+
+
+					
 					</div>
 					<div>
-						The possible rational roots come from the ratio of the factors of the constant and the
-						factors of the leading coefficient. The constant term is \(-6\) with possible factors of \(\pm 1,2,3,6\) and the leading term is \(r^3\) with coefficient \(1\) with possible factors of \(\pm 1\) which has no impact on the ratio thus the possible rational roots to consider are
-							
-						\[\pm 1,2,3,6\]
-
-						Then we can use synthetic division to test roots quickly.
-
-						\begin{array}{rrrrr}
-							& {\small r^3} & {\small r^2} & {\small r} & {\small \#} \\
-							 1 \rfloor & 1 & -6 & 11 	& -6 \\
-								& 	& 1  & -5  	& 6 \\ 
-							\hline
-								& 1 & -5 & 6 	& \lfloor 0 \\
-								& {\small r^2} & {\small r} & {\small \#} \\
-						\end{array}
-
-						So we have found \(r=1\) is a root so that means \((r-1)\) is a factor so the characteristic polynomial factors into 
-
-						\begin {align*}
-						p(r) & = r^3-6r^2+11r-6 \\
-						& = (r-1)(r^2-5r+6)
-						\end {align*}
-
-						Now that we factored out one of the factors using the rational roots theorem, we can go back to our familiar factoring techniques or quadratic formula.
-
-						\begin {align*}
-						p(r) & = (r-1)\underbrace{(r^2-5r+6)} \\
-						& = (r-1)(r-2)(r-3) \\
-						\end {align*}
-
-						Thus we have the characteristic equation for <a href="#x1-6r3">(9.2.3)</a> which we can solve to find the solutions
-
-						\begin {align*}
-						(r-1)(r-2)(r-3) & = 0 \\
-						r=1 \quad r=2 \quad r = 3 & \\
-						y_1=e^{x} \quad y_2=e^{2x} \quad y_3 & =e^{3x} \\
-						\end {align*}
-
-						So we have a set of solutions of <a href="#x1-6r3">(9.2.3)</a>
 						
-						\[
-							\{y_1,y_2,y_3\} = \{e^x,e^{2x},e^{3x}\}
-						\] 
 						
 						We can verify it is a fundamental set by showing the Wronskian determinant is nonzero
 
 						\begin {align*}
-						W \big[e^x,e^{2x},e^{3x} \big](x) & =\det\left( 
-							\begin {array}{cccc} 
-								e^x & e^{2x} & e^{3x} \\ 
-								e^x & 2e^{2x} & 3e^{3x}\\ 		
-								e^x & 4e^{2x} & 9e^{3x} \\ 
+						W \big[e^x,\cos x,\sin x \big](x) & =\det\left( 
+							\begin {array}{rrrr} 
+								e^x & \cos x & \sin x \\ 
+								e^x & -\sin x & \cos x \\ 		
+								e^x & - \cos x & -\sin x \\ 
 							\end {array}
 							\right) \\
-							& =e^x e^{2x} e^{3x}\det\left( 
-								\begin {array}{cccc} 
-									1 & 1 & 1 \\ 
-									1 & 2 & 3 \\ 		
-									1 & 4 & 9 \\ 
+							& =e^x \det\left( 
+								\begin {array}{rrrrr} 
+									1 & \cos x & \sin x \\ 
+									1 & -\sin x & \cos x \\ 		
+									1 & - \cos x & -\sin x \\ 
 								\end {array}
 								\right) \\
-							& = e^{6x}\det\left( 
-							\begin {array}{cccc} 
-								1 & 1 & 1 \\ 
-								0 & 1 & 2 \\ 		
-								0 & 3 & 8 \\ 
-							\end {array}
-							\right) \\
-							& = e^{6x}\det\left( 
-							\begin {array}{cccc} 
-								1 & 2 \\ 		
-								3 & 8 \\ 
-							\end {array}
-							\right) \\
-							& = e^{6x}\left( 
-							8-6
-							\right) \\
-							& = 2e^{6x} \ne 0 \\
+								& =e^x \det\left( 
+									\begin {array}{ccccc} 
+										1 & \cos x & \sin x \\ 
+										0 & -\sin x-\cos x & \cos x -\sin x \\ 		
+										0 & - 2\cos x & -2\sin x \\ 
+									\end {array}
+									\right) \\
+								& =2e^x \det\left( 
+									\begin {array}{ccccc} 
+										\sin x+\cos x &  \sin x - \cos x \\ 		
+										\cos x & \sin x \\ 
+									\end {array}
+									\right) \\	
+								& =2e^x \left( 
+									\sin^2 x + \cos x \sin x
+									- \cos x \sin x + \cos^2
+									\right) 
+									\\
+								& =2e^x \left( 
+									\sin^2 x + \cos^2
+									\right) 
+									\\	
+								& =2e^x \ne 0 			
 						\end {align*}
 
+						Therefore \(\{e^x,\cos x,\sin x\}\) is linearly independent and
+						the general solution of <a href="#x1-19r10">(9.2.10)</a> is
+
+						\[ y=c_1 e^x + c_2 \cos x + c_3\sin x \]
 
 
 					</div>
-					<div>
-						Therefore the general solution of <a href="#x1-6r3">(9.2.3)</a> is
-						<a id="x1-9r5"></a>
-						\begin {equation} \label {eq:9.2.5}
-							y=c_1e^{x}+c_2e^{2x}+c_3e^{3x}
-						\end {equation}
-					</div>
+				
 				</div>
-				<div>
-					From <a href="#x1-16r8">(9.2.8)</a>, we can rewrite <a href="#x1-19r10">(9.2.10)</a> as \[
-					(D-1)(D^2+1)y=0\] which implies that any solution of \((D^2+1)y=0\) is a solution of <a
-						href="#x1-19r10">(9.2.10)</a>. Therefore \(y_1=\cos x\) and \(y_2=\sin x\) are solutions of .
-
-					<div class="indent" id="fb855b7a-34e0-4458-821e-603d83991c3b">
-						From <a href="#x1-17r9">(9.2.9)</a>, we can rewrite <a href="#x1-19r10">(9.2.10)</a> as \[
-						(D^2+1)(D-1)y=0\] which implies that any solution of \((D-1)y=0\) is a solution of <a
-							href="#x1-19r10">(9.2.10)</a>. Therefore \(y_3=e^x\) is solution of <a
-							href="#x1-19r10">(9.2.10)</a>.
-					</div>
-					<div class="indent" id="03ef28b9-7191-4dec-8d7e-ba41f1e8c656">
-						The Wronskian of \(\{e^x,\cos x,\sin x\}\) is \[ W(x)=\left | \begin {array}{rrr}\cos x&amp;\sin
-						x&amp;e^x\\-\sin x&amp;\cos x&amp;e^x\\ -\cos x&amp;-\sin x&amp;e^x \end {array}\right |\] Since \[
-						W(0)=\left |
-						\begin {array}{rrr}1&amp;0&amp;1\\0&amp;1&amp;1\\ -1&amp;0&amp;1
-						\end {array}\right |=2\] \(\{\cos x,\sin x,e^x\}\) is linearly independent and \[ y=c_1\cos
-						x+c_2\sin x+c_3e^x \] is the general solution of <a href="#x1-19r10">(9.2.10)</a>.
-					</div>
-				</div>			
+				
 			</details>
 		</div>
 
@@ -695,23 +656,174 @@
 			<details class="solution">
 				<summary>Solution</summary>
 				<div>
-					The characteristic polynomial of <a href="#x1-21r11">(9.2.11)</a> is \[
-					p(r)=r^4-16=(r^2-4)(r^2+4)=(r-2)(r+2)(r^2+4)\] By arguments similar to those used in Examples&nbsp;<a
-						href="#x1-122">9.2.2</a> and <a href="#x1-183">9.2.3</a>, it can be shown that <a
-						href="#x1-21r11">(9.2.11)</a> can be written as \[ (D^2+4)(D+2)(D-2)y=0 \] or \[
-					(D^2+4)(D-2)(D+2)y=0 \] or \[ (D-2)(D+2)(D^2+4)y=0\] Therefore \(y\) is a solution of <a
-						href="#x1-21r11">(9.2.11)</a> if it’s a solution of any of the three equations \[ (D-2)y=0,\quad
-					(D+2)y=0, \quad (D^2+4)y=0\] Hence, \(\{e^{2x},e^{-2x},\cos 2x,\sin 2x\}\) is a set of solutions of <a
-						href="#x1-21r11">(9.2.11)</a>. The Wronskian of this set is \[ W(x)=\left | \begin {array}{rrrr}
-					e^{2x}&amp;e^{-2x}&amp;\cos 2x&amp;\sin 2x\\ 2e^{2x}&amp;-2e^{-2x}&amp;-2\sin 2x&amp;2\cos 2x\\
-					4e^{2x}&amp;4e^{-2x}&amp;-4\cos 2x&amp;-4\sin 2x\\ 8e^{2x}&amp;-8e^{-2x}&amp;8\sin 2x&amp;-8\cos 2x\\
-					\end {array}\right |\] Since \[ W(0)=\left |
-					\begin {array}{rrrr} 1&amp;1&amp;1&amp;0\\ 2&amp;-2&amp;0&amp;2\\ 4&amp;4&amp;-4&amp;0\\
-					8&amp;-8&amp;0&amp;-8\\
-					\end {array}\right |=-512\] \(\{e^{2x},e^{-2x},\cos 2x,\sin 2x\}\) is linearly independent, and \[
-					y_1=c_1e^{2x}+c_2e^{-2x}+c_3\cos 2x+c_4\sin 2x \] is the general solution of <a
-						href="#x1-21r11">(9.2.11)</a>.
-				</div>		
+					Seeking solutions of the form
+
+					\[
+					y=e^{rx}
+					\]
+
+					Differentiating \(y=e^{rx}\) four times yields
+
+					\begin{align*}
+					\frac{dy}{dx}=re^{rx}
+					\Longrightarrow
+					\frac{d^2y}{dx^2}=r^2e^{rx} 
+					\Longrightarrow
+					\frac{d^3y}{dx^3}=r^3e^{rx} \\
+					\Longrightarrow
+					\frac{d^4y}{dx^4}=r^4e^{rx}
+					\end{align*}
+
+					
+					Substituting in to <a href="#x1-21r11">(9.2.11)</a> we obtain the equation
+
+					\begin {equation*}
+					r^4e^{rx}-16e^{rx}=0
+					\end {equation*}
+
+					Factoring out the exponential
+
+					\begin {equation*}
+					\Big( r^4 - 16 \Big) e^{rx}=0
+					\end {equation*}
+
+					We now need to solve the <span class="vocab">characteristic equation</span> of the <span class="vocab">characteristic polynomial</span> equal to zero, which we already factored
+
+					\begin {align*}
+					\overset{p(r)}{\overbrace{r^4 - 16}} &= 0 \\
+					\big( r^2-4 \big)\big( r^2+4 \big)  &= 0 \\
+					\big( r-2 \big)\big( r+2 \big)\big( r^2+4 \big)  &= 0 \\
+					r-2 = 0 \quad r+2 = 0 \quad r^2+4 &= 0 \\
+					r = 2 \quad r = -2  \quad r = \pm & 2i   \\
+					\end {align*}
+
+					Substituting \(r=2,\) \(r=-2,\) \(r =  2i \) and \(r =  -2i \) into \( y = e^{rx} \) we obtain solutions of <a href="#x1-21r11">(9.2.11)</a>
+
+					\[ 
+					y_1=e^{2x}
+					\quad
+					y_2 = e^{-2x} 
+					\quad  
+					y_3 = e^{2ix} 
+					\quad  
+					y_4 = e^{-2ix} 
+					\]
+
+					Agsin we'll use Euler's formula to rewrite the solutions in terms of real numbers to obtain the solution set
+
+					\[ 
+						\{ e^{2x}
+						, e^{-2x}
+						, \cos 2x 
+						, \sin 2x 
+						\}
+					\]
+
+
+				
+				</div>
+				<div>
+					
+					
+					We can verify it is a fundamental set by showing the Wronskian determinant is nonzero
+
+					\begin {align*}
+					& W \big[e^{2x},e^{-2x},\cos 2x,\sin 2x \big](x) \\ 
+					&
+					=\det\left( 
+						\begin {array}{rrrr} 
+							e^{2x} & e^{-2x} & \cos 2x & \sin 2x \\ 
+							2e^{2x} & -2e^{-2x} & -2\sin 2x & 2\cos 2x \\ 		
+							4e^{2x} & 4e^{-2x} & -4\cos 2x & -4\sin 2x \\ 
+							8e^{2x} & -8e^{-2x} & 8\sin 2x & -8\cos 2x \\ 
+						\end {array}
+						\right) \\
+					&
+					=e^{2x}e^{-2x}\det\left( 
+						\begin {array}{rrrr} 
+							1 & 1 & \cos 2x & \sin 2x \\ 
+							2 & -2 & -2\sin 2x & 2\cos 2x \\ 		
+							4 & 4 & -2\cos 4x & -4\sin 2x \\ 
+							8 & -8 & 2\sin 8x & -8\cos 2x \\ 
+							\end {array}
+						\right) \\	
+						&
+					=2\cdot 4 \cdot 8 \det\left( 
+						\begin {array}{rrrr} 
+							1 & 1 & \cos 2x & \sin 2x \\ 
+							1 & -1 & -\sin 2x & \cos 2x \\ 		
+							1 & 1 & -\cos 2x & -\sin 2x \\ 
+							1 & -1 &  \sin 2x & -\cos 2x \\ 
+							\end {array}
+						\right) \\	
+					&
+					=64 \det\left( 
+						\begin {array}{rrrr} 
+							1 & 1 & \cos 2x & \sin 2x \\ 
+							1 & -1 & -\sin 2x & \cos 2x \\ 		
+							0 & 0 & -2\cos 2x & -2\sin 2x \\ 
+							0 & 0 &  2\sin 2x & -2\cos 2x \\ 
+							\end {array}
+						\right) \\		
+					&
+					=64 \det\left( 
+						\begin {array}{ccccc} 
+							1 & 1 & \cos 2x & \sin 2x \\ 
+							0 & -2 & -\cos 2x -\sin 2x & \cos 2x - \sin 2x \\ 		
+							0 & 0 & -2\cos 2x & -2\sin 2x \\ 
+							0 & 0 &  2\sin 2x & -2\cos 2x \\ 
+							\end {array}
+						\right) \\
+						&
+					=64 \det\left( 
+						\begin {array}{ccccc} 
+							-2 & -\cos 2x -\sin 2x & \cos 2x - \sin 2x \\ 		
+							0 & -2\cos 2x & -2\sin 2x \\ 
+							0 &  2\sin 2x & -2\cos 2x \\ 
+							\end {array}
+						\right) \\	
+					&
+					=-2 \cdot 64 \det\left( 
+						\begin {array}{ccccc} 		
+							-2\cos 2x & -2\sin 2x \\ 
+							2\sin 2x & -2\cos 2x \\ 
+							\end {array}
+						\right) \\	
+						&
+					=-128\cdot -2 \cdot 2 \det\left( 
+						\begin {array}{ccccc} 		
+							\cos 2x & \sin 2x \\ 
+							\sin 2x & -\cos 2x \\ 
+							\end {array}
+					\right) \\																		&
+					=512 \det\left( 
+						\begin {array}{ccccc} 		
+							\cos 2x & \sin 2x \\ 
+							\sin 2x & -\cos 2x \\ 
+							\end {array}
+						\right) \\	
+						&
+					=512 \left( 
+						-\cos^2 2x - \sin^2 2x
+						\right) \\
+						&	
+					=-512 \left( 
+							\cos^2 2x + \sin^2 2x
+							\right) \\
+							&
+							=-512 \ne 0 \\														
+					\end {align*}
+
+					Therefore \(\{e^{2x},e^{-2x},\cos 2x,\sin 2x\}\)  is linearly independent and
+					the general solution of <a
+					href="#x1-21r11">(9.2.11)</a> is
+
+					\[
+					y=c_1e^{2x}+c_2e^{-2x}+c_3\cos 2x+c_4\sin 2x \]
+
+
+				</div>				
+					
 			</details>
 		</div>
 
@@ -748,7 +860,7 @@
 			where \(\lambda _j\) and \(\omega _j\) are real, \(\omega _j\ne 0\), and \(m_j\) is a positive integer. If <a href="#x1-22r12">(9.2.12)</a> holds then \(r_j\) is a real zero of \(p\), while if <a href="#x1-23r13">(9.2.13)</a> holds then \(\lambda +i\omega \) and \(\lambda -i\omega \) are complex conjugate zeros of \(p\). In either case, \(m_j\) is the <span  class="vocab">multiplicity</span>
 			of the zero(s).
 		</div>
-		<div class="indent" id="7f1b7bba-89cb-429f-a6fc-fe7aafcf0e6e">
+		<div class="removed" id="7f1b7bba-89cb-429f-a6fc-fe7aafcf0e6e">
 			By arguments similar to those used in our examples, it can be shown that
 
 			<a id="x1-24r14"></a> 
@@ -774,11 +886,11 @@
 			To apply this procedure to general homogeneous constant coefficient equations, we must be able to find
 			fundamental sets of solutions of equations of the form 
 			
-			\[ (D-a)^my=0 \] 
+			\begin{align} (r-a)^my=0 \end{align} 
 			
 			and 
 			
-			\[ \left [(D-\lambda )^2+\omega ^2\right ]^my=0\] 
+			\[ \left [(r-\lambda )^2+\omega ^2\right ]^my=0\] 
 			
 			where \(m\) is an arbitrary positive integer. The next two theorems show how to do this.
 		</div>
