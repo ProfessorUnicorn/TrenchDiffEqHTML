@@ -32,41 +32,93 @@
 		<details id="details1">
 			<summary>Higher Order Constant Coefficient Homogeneous Equations </summary>
 			<div id="a371f3a0-0194-4bd7-929d-b9659fb36bd4">
-				If \(a_0\), \(a_1\), …, \(a_n\) are constants and \(a_0\ne 0\), then \[ a_0y^{(n)}+a_1y^{(n-1)}+\cdots +a_ny=F(x) \] is said to be a <span class="vocab">constant coefficient equation</span>. In this section we consider the homogeneous constant coefficient equation 
-				\begin {equation} \label {eq:9.2.1} a_0y^{(n)}+a_1y^{(n-1)}+\cdots +a_ny=0 
-				\end {equation} <a id="x1-2r1"></a> Since <a href="#x1-2r1">(9.2.1)</a> is normal on \((-\infty ,\infty )\), the theorems in Section&nbsp;9.1 all apply with \((a,b)=(-\infty ,\infty )\). 
+				If \(a_0\), \(a_1\), …, \(a_n\) are constants and \(a_0\ne 0\), then
+				
+				\[ a_0 \frac{d^n y}{dx^n} + a_1 \frac{d^{n-1} y}{dx^{n-1}} + \cdots  + a_{n-1} \frac{d y}{dx} + a_n y = F(x) \] 
+				
+				is said to be a <span class="vocab">constant coefficient equation</span>. In this section we consider the <span class="vocab">homogeneous</span> constant coefficient equation 
+
+				<a id="x1-2r1"></a> 
+				\begin {equation} \label {eq:9.2.1} 
+					a_0 \frac{d^n y}{dx^n} + a_1 \frac{d^{n-1} y}{dx^{n-1}} + \cdots  + a_{n-1} \frac{d y}{dx} + a_n y =0 
+				\end {equation} 
+				
+				Since <a href="#x1-2r1">(9.2.1)</a> is normal on \((-\infty ,\infty )\), then the theorems in Section&nbsp;<a href="sec9.1.book.html" target=_blank>9.1</a>  all apply with \((a,b)=(-\infty ,\infty )\)
 			</div>
 			<div class="indent" id="463859ac-3d09-44a3-bbdf-90a723b965b8">
-				As in Section&nbsp;5.2, we call 
+				We solve homogeneous constant coefficient equations the same way we did in Section&nbsp;<a href="sec5.2.book.html" target=_blank>5.2</a>, by seeking solutions of the form
+
+				\[
+					y=e^{rx}
+				\]
+
+				Differentiating \(y=e^{rx}\) yields
+
+				\[
+					\frac{dy}{dx}=re^{rx}
+					\Longrightarrow
+					\frac{d^2y}{dx^2}=r^2e^{rx}
+					\dots
+					\Longrightarrow
+					\frac{d^ny}{dx^n}=r^ne^{rx}
+				\]
+
+				Substituting in to <a href="#x1-2r1">(9.2.1)</a> we obtain the equation
+				
+				\begin {align*} 
+					a_0 r^ne^{rx} + a_1 r^{n-1}e^{rx} + \cdots  + a_{n-1} re^{rx} + a_n e^{rx} & = 0 \\ 
+				\end {align*} 
+
+				Factoring out the exponential
+
+				\begin {align*} 
+					\underset{p(r)}{\underbrace{\Big( a_0 r^n + a_1 r^{n-1} + \cdots  + a_{n-1} r + a_n \Big)}} e^{rx} & = 0 \\ 
+				\end {align*} 
+				
+				we obtain the <span class="vocab">characteristic polynomial</span>
+
 				<a id="x1-3r2"></a> 
 				\begin {equation} 
 					\label {eq:9.2.2} 
 					p(r)=a_0r^n+a_1r^{n-1}+\cdots +a_n 
 				\end {equation} 
-				the <span class="vocab">characteristic polynomial</span> of <a href="#x1-2r1">(9.2.1)</a>. We saw in Section&nbsp;5.2 that when \(n=2\) the solutions of <a href="#x1-2r1">(9.2.1)</a> are determined by the zeros of the characteristic polynomial. This is also true when \(n&gt;2\), but the situation is more complicated in this case. Consequently, we take a different approach here than in Section&nbsp;5.2. 
+				
+				We found in Section&nbsp;<a href="sec5.2.book.html" target=_blank>5.2</a> that when \(n=2\) the solutions of the homogeneous constant coefficient equation <a href="#x1-2r1">(9.2.1)</a> are determined by the zeros of the characteristic polynomial. This is also true when \(n&gt;2\), but the situation is more complicated in this case. 
 			</div>
 			<div class="indent" id="12a626fc-f496-4170-9c5d-e7390e0f494b">
-				If \(k\) is a positive integer, let \(D^k\) stand for the \(k\)-th derivative operator; that is \[ D^ky=y^{(k)}\] If \[ q(r)=b_0r^m+b_1r^{m-1}+\cdots +b_m \] is an arbitrary polynomial, define the operator \[ q(D)=b_0D^m+b_1D^{m-1}+\cdots +b_m \] such that \[ q(D)y=(b_0D^m+b_1D^{m-1}+\cdots +b_m)y=b_0y^{(m)}+b_1y^{(m-1)}+\cdots + b_my \] whenever \(y\) is a function with \(m\) derivatives. We call \(q(D)\) a <span class="vocab">polynomial</span> operator. 
 			</div>
 			<div class="indent" id="916cd28a-fb1d-420e-9326-7502c2830a46">
-				With \(p\) as in <a href="#x1-3r2">(9.2.2)</a>, \[ p(D)=a_0D^n+a_1D^{n-1}+\cdots +a_n\] so <a href="#x1-2r1">(9.2.1)</a> can be written as \(p(D)y=0\). If \(r\) is a constant then 
-			</div>
-			<div class="eqnarray" id="45231ccb-d257-4a28-bcc0-91363da9b470">
-				\begin {eqnarray*} 
-					p(D)e^{rx}&amp;=&amp;\left (a_0D^ne^{rx}+a_1D^{n-1}e^{rx}+\cdots +a_ne^{rx}\right )\\ &amp;=&amp;(a_0r^n+a_1r^{n-1}+\cdots +a_n)e^{rx}; 
-				\end {eqnarray*} 
 			</div>
 			<div class="indent" id="76ebfcc5-9eab-4386-89ac-721db6229f7a">
-				that is \[ p(D)(e^{rx})=p(r)e^{rx}\] This shows that \(y=e^{rx}\) is a solution of <a href="#x1-2r1">(9.2.1)</a> if \(p(r)=0\). In the simplest case, where \(p\) has \(n\) distinct real zeros \(r_1\), \(r_2\),…, \(r_n\), this argument yields \(n\) solutions \[ y_1=e^{r_1x},\quad y_2=e^{r_2x},\dots ,\quad y_n=e^{r_nx}\] It can be shown (Exercise&nbsp;<span class="ptmb8t-">39</span>) that the Wronskian of \(\{e^{r_1x},e^{r_2x},\dots ,e^{r_nx}\}\) is nonzero if \(r_1\), \(r_2\), …, \(r_n\) are distinct; hence, \(\{e^{r_1x},e^{r_2x},\dots ,e^{r_nx}\}\) is a fundamental set of solutions of \(p(D)y=0\) in this case. 
+				In the simplest case where the characteristic polynomial \(p(r)\) factors into \(n\) distinct linear factors
+				
+				\[
+				p(r)=(r-r_1)(r-r_2)\dots(r-r_n)
+				\]
+				
+				Then the characteristic equation has \(n\) distinct real zeros
+
+				\begin {align*} 
+					\overset{p(r)}{\overbrace{(r-r_1)(r-r_2)\dots(r-r_n)}} & = 0 \\
+					r=r_1 \quad r=r_2 \quad \dots \quad r=r_n & \\
+				\end {align*} 
+
+				So we obtain \(n\) distinct solutions 
+				
+				\[ y_1=e^{r_1x}
+				\quad y_2=e^{r_2x}
+				\dots 
+				\quad y_n=e^{r_nx}\] 
+				
+				It can be shown that the Wronskian of \(\{e^{r_1x},e^{r_2x},\dots ,e^{r_nx}\}\) is nonzero if \(r_1\), \(r_2\), …, \(r_n\) are distinct; hence, \(\{e^{r_1x},e^{r_2x},\dots ,e^{r_nx}\}\) is a fundamental set of solutions of in this case. 
 			</div>
 			<div class="example" id="x1-41" style="--ex-number: 1">
 				<ol>
 					<li>
 						Find the general solution of 
 						<a id="x1-6r3"></a> 
-						\begin {equation} 
-							\label {eq:9.2.3} 
-							y'''-6y''+11y'-6y=0 
+						\begin {equation} \label {eq:9.2.3} 
+							\frac{d^3 y}{dx^3}-6\frac{d^2 y}{dx^2}+11\frac{d y}{dx}-6y=0 
 						\end {equation} 
 					</li>
 					<li>
@@ -74,7 +126,7 @@
 						<a id="x1-8r4"></a> 
 						\begin {equation} 
 							\label {eq:9.2.4} 
-							y'''-6y''+11y'-6y=0 \quad y(0)=4 \quad y'(0)=5 \quad y''(0)=9 
+							\frac{d^3 y}{dx^3}-6\frac{d^2 y}{dx^2}+11\frac{d y}{dx}-6y=0 \quad y(0)=4 \quad \frac{d y}{dx}(0)=5 \quad \frac{d^2 y}{dx^2}(0)=9 
 						\end {equation} 
 					</li>
 				</ol>
@@ -91,7 +143,7 @@
 							\end {equation}
 						</li>
 						<li>
-							We must determine \(c_1\), \(c_2\) and \(c_3\) in <a href="#x1-9r5">(9.2.5)</a> so that \(y\) satisfies the initial conditions in <a href="#x1-8r4">(9.2.4)</a>. Differentiating <a href="#x1-9r5">(9.2.5)</a> twice yields \begin {equation} \label {eq:9.2.6} \begin {array}{rcl} y'&amp;=&amp;c_1e^{x}+2c_2e^{2x}+3c_3e^{3x}\\ y''&amp;=&amp;c_1e^{x}+4c_2e^{2x}+9c_3e^{3x} \end {array} \end {equation} <a id="x1-10r6"></a> Setting \(x=0\) in <a href="#x1-9r5">(9.2.5)</a> and <a href="#x1-10r6">(9.2.6)</a> and imposing the initial conditions yields \[ 
+							We must determine \(c_1\), \(c_2\) and \(c_3\) in <a href="#x1-9r5">(9.2.5)</a> so that \(y\) satisfies the initial conditions in <a href="#x1-8r4">(9.2.4)</a>. Differentiating <a href="#x1-9r5">(9.2.5)</a> twice yields \begin {equation} \label {eq:9.2.6} \begin {array}{rcl} \frac{d y}{dx}&amp;=&amp;c_1e^{x}+2c_2e^{2x}+3c_3e^{3x}\\ \frac{d^2 y}{dx^2}&amp;=&amp;c_1e^{x}+4c_2e^{2x}+9c_3e^{3x} \end {array} \end {equation} <a id="x1-10r6"></a> Setting \(x=0\) in <a href="#x1-9r5">(9.2.5)</a> and <a href="#x1-10r6">(9.2.6)</a> and imposing the initial conditions yields \[ 
 							\begin {array}{rcl} c_1+\phantom {2}c_2+\phantom {3}c_3&amp;=&amp;4\\ c_1+2c_2+3c_3&amp;=&amp;5\\ c_1+4c_2+9c_3&amp;=&amp;9 
 							\end {array}\] The solution of this system is \(c_1=4\), \(c_2=-1\), \(c_3=1\). Therefore the solution of <a href="#x1-8r4">(9.2.4)</a> is \[ y=4e^x-e^{2x}+e^{3x} \] (Figure&nbsp;<a href="#x1-11r1">9.2.1</a>).
 						</li>
@@ -130,8 +182,8 @@
 					</ol>
 				
 					<div>
-						From <span class="ptmb8t-">(a)</span>, \begin {equation} \label {eq:9.2.8} \begin {array}{rcl} (D-1)(D^2+1)y&amp;=&amp;(D-1)[(D^2+1)y]\\ &amp;=&amp;(D-1)(y''+y)=D(y''+y)-(y''+y)\\&amp;=&amp;(y'''+y')-(y''+y)\\ &amp;=&amp;y'''-y''+y'-y=(D^3-D^2+D-1)y \end {array} \end {equation} <a id="x1-16r8"></a> This implies that \[ (D-1)(D^2+1)=(D^3-D^2+D-1)\] From <span class="ptmb8t-">(b)</span>, \begin {equation} \label {eq:9.2.9} 
-						\begin {array}{rcl} (D^2+1)(D-1)y&amp;=&amp;(D^2+1)[(D-1)y]\\ &amp;=&amp;(D^2+1)(y'-y)=D^2(y'-y)+(y'-y)\\&amp;=&amp;(y'''-y'')+(y'-y)\\ &amp;=&amp;y'''-y''+y'-y=(D^3-D^2+D-1)y 
+						From <span class="ptmb8t-">(a)</span>, \begin {equation} \label {eq:9.2.8} \begin {array}{rcl} (D-1)(D^2+1)y&amp;=&amp;(D-1)[(D^2+1)y]\\ &amp;=&amp;(D-1)(\frac{d^2 y}{dx^2}+y)=D(\frac{d^2 y}{dx^2}+y)-(\frac{d^2 y}{dx^2}+y)\\&amp;=&amp;(\frac{d^3 y}{dx^3}+\frac{d y}{dx})-(\frac{d^2 y}{dx^2}+y)\\ &amp;=&amp;\frac{d^3 y}{dx^3}-\frac{d^2 y}{dx^2}+\frac{d y}{dx}-y=(D^3-D^2+D-1)y \end {array} \end {equation} <a id="x1-16r8"></a> This implies that \[ (D-1)(D^2+1)=(D^3-D^2+D-1)\] From <span class="ptmb8t-">(b)</span>, \begin {equation} \label {eq:9.2.9} 
+						\begin {array}{rcl} (D^2+1)(D-1)y&amp;=&amp;(D^2+1)[(D-1)y]\\ &amp;=&amp;(D^2+1)(\frac{d y}{dx}-y)=D^2(\frac{d y}{dx}-y)+(\frac{d y}{dx}-y)\\&amp;=&amp;(\frac{d^3 y}{dx^3}-\frac{d^2 y}{dx^2})+(\frac{d y}{dx}-y)\\ &amp;=&amp;\frac{d^3 y}{dx^3}-\frac{d^2 y}{dx^2}+\frac{d y}{dx}-y=(D^3-D^2+D-1)y 
 						\end {array} \end {equation} <a id="x1-17r9"></a> \[ (D^2+1)(D-1)=(D^3-D^2+D-1)\] which completes the justification of <a href="#x1-13r7">(9.2.7)</a>. 
 					</div>
 				</div>
@@ -143,7 +195,7 @@
 					<a id="x1-19r10"></a>
 					\begin {equation} 
 						\label {eq:9.2.10} 
-						y'''-y''+y'-y=0 
+						\frac{d^3 y}{dx^3}-\frac{d^2 y}{dx^2}+\frac{d y}{dx}-y=0 
 					\end {equation} 
 				</div>
 			
@@ -167,7 +219,7 @@
 					<a id="x1-21r11"></a>
 					\begin {equation} 
 						\label {eq:9.2.11} 
-						y^{(4)}-16y=0 
+						\frac{d^4 y}{dx^4}-16y=0 
 					\end {equation} 
 				</div>
 
@@ -212,7 +264,7 @@
 					<a id="x1-30r18"></a>
 					\begin {equation} 
 						\label {eq:9.2.18} 
-						y'''+3y''+3y'+y=0 
+						\frac{d^3 y}{dx^3}+3\frac{d^2 y}{dx^2}+3\frac{d y}{dx}+y=0 
 					\end {equation} 
 				</div>
 
@@ -256,7 +308,7 @@
 					<a id="x1-35r20"></a>
 					\begin {equation} 
 						\label {eq:9.2.20} 
-						y^{(4)}+4y'''+6y''+4y'=0 
+						\frac{d^4 y}{dx^4}+4\frac{d^3 y}{dx^3}+6\frac{d^2 y}{dx^2}+4\frac{d y}{dx}=0 
 					\end {equation} 
 				</div>
 				
