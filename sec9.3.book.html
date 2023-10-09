@@ -94,7 +94,7 @@
 					</div>
 					<div class="eqnarray">
 						\begin {eqnarray*} 
-							u_p'&amp;=&amp;B+2Cx+3Dx^2\\ u_p''&amp;=&amp;2C+6Dx\\ u_p'''&amp;=&amp;6D.
+							\dfrac{d u_p}{dx }&amp;=&amp;B+2Cx+3Dx^2\\ \dfrac{d^2 u_p}{dx^2 }&amp;=&amp;2C+6Dx\\ \dfrac{d^3 u_p}{dx^3 }&amp;=&amp;6D.
 						\end {eqnarray*}
 					</div>
 					<div>
@@ -102,7 +102,7 @@
 					</div>
 					<div class="eqnarray">
 						\begin {eqnarray*} 
-							u_p'''+6u_p''+11u_p'+5u_p&amp;=&amp;6D+6\left(2C+6Dx\right)+11\left(B+2Cx+3Dx^2\right)\\
+							\dfrac{d^3 u_p}{dx^3 }+6\dfrac{d^2 u_p}{dx^2 }+11\dfrac{d u_p}{dx }+5u_p&amp;=&amp;6D+6\left(2C+6Dx\right)+11\left(B+2Cx+3Dx^2\right)\\
 							&amp;&amp;+5\left(A+Bx+Cx^2+Dx^3\right)\\ 
 							&amp;=&amp;\left(5A+11B+12C+6D\right)+\left(5B+22C+36D\right)x\\
 							&amp;&amp;+\left(5C+33D\right)x^2+5Dx^3. 
@@ -120,7 +120,7 @@
 						\[ u_p=1+2x-x^2+x^3 \]
 						is a particular solution of <a href="#x1-5r3">(9.3.3)</a>, so
 						\[ y_p=e^xu_p=e^x\left(1+2x-x^2+x^3\right) \]
-						is a particular solution of <a href="#x1-4r2">(9.3.2)</a> \left(Figure&nbsp;<a href="#fig1">9.3.1</a>\right).
+						is a particular solution of <a href="#x1-4r2">(9.3.2)</a> (Figure&nbsp;<a href="#fig1">9.3.1</a>).
 					</div>
 				</details>
 			</div>
@@ -179,18 +179,18 @@
 					</div>
 					<div class="eqnarray">
 						\begin {eqnarray*} 
-							u_p'&amp;=&amp;2Ax+3Bx^2+4Cx^3\\ 
-							u_p''&amp;=&amp;2A+6Bx+12Cx^2\\
-							u_p'''&amp;=&amp;6B+24Cx\\ 
-							u_p^{\left(4\right)}&amp;=&amp;24C. 
+							\dfrac{d u_p}{dx }&amp;=&amp;2Ax+3Bx^2+4Cx^3\\ 
+							\dfrac{d^2 u_p}{dx^2 }&amp;=&amp;2A+6Bx+12Cx^2\\
+							\dfrac{d^3 u_p}{dx^3 }&amp;=&amp;6B+24Cx\\ 
+							\dfrac{d^4 u_p}{dx^4 }&amp;=&amp;24C. 
 						\end {eqnarray*}
 					</div>
 					<div> 
-						Substituting \(u_p''\), \(u_p'''\), and \(u_p^{\left(4\right)}\) into the left side of <a href="#x1-9r5">(9.3.5)</a> yields 
+						Substituting \(\dfrac{d^2 u_p}{dx^2 }\), \(\dfrac{d^3 u_p}{dx^3 }\), and \(\dfrac{d^4 u_p}{dx^4 }\) into the left side of <a href="#x1-9r5">(9.3.5)</a> yields 
 					</div>
 					<div class="eqnarray">
 						\begin {eqnarray*}
-							u_p^{\left(4\right)}+7u_p'''+12u_p''&amp;=&amp;24C+7\left(6B+24Cx\right)+12\left(2A+6Bx+12Cx^2\right)\\
+							\dfrac{d^4 u_p}{dx^4 }+7\dfrac{d^3 u_p}{dx^3 }+12\dfrac{d^2 u_p}{dx^2 }&amp;=&amp;24C+7\left(6B+24Cx\right)+12\left(2A+6Bx+12Cx^2\right)\\
 							&amp;=&amp;\left(24A+42B+24C\right)+\left(72B+168C\right)x+144Cx^2. 
 						\end {eqnarray*}
 					</div>
@@ -205,7 +205,7 @@
 						\[ u_p={x^2\over 24}\left(-4+4x+x^2\right) \]
 						is a particular solution of <a href="#x1-9r5">(9.3.5)</a>, so
 						\[ y_p=e^{2x}u_p={x^2e^{2x}\over 24}\left(-4+4x+x^2\right) \]
-						is a particular solution of <a href="#x1-8r4">(9.3.4)</a>. \left(Figure&nbsp;<a href="#fig2">9.3.2</a>\right).
+						is a particular solution of <a href="#x1-8r4">(9.3.4)</a>. (Figure&nbsp;<a href="#fig2">9.3.2</a>).
 					</div>
 				</details>
 			</div>
@@ -267,15 +267,15 @@
 					</div>
 					<div class="eqnarray">
 						\begin {eqnarray*} 
-							u_p'=\left(A_1+B_0+B_1x\right)\cos x+\left(B_1-A_0-A_1x\right)\sin x,\\ 
-							u_p''=\left(2B_1-A_0-A_1x\right)\cos x-\left(2A_1+B_0+B_1x\right)\sin x,\\ 
-							u_p'''=-\left(3A_1+B_0+B_1x\right)\cos x-\left(3B_1-A_0-A_1x\right)\sin x,\\ 
+							\dfrac{d u_p}{dx }=\left(A_1+B_0+B_1x\right)\cos x+\left(B_1-A_0-A_1x\right)\sin x,\\ 
+							\dfrac{d^2 u_p}{dx^2 }=\left(2B_1-A_0-A_1x\right)\cos x-\left(2A_1+B_0+B_1x\right)\sin x,\\ 
+							\dfrac{d^3 u_p}{dx^3 }=-\left(3A_1+B_0+B_1x\right)\cos x-\left(3B_1-A_0-A_1x\right)\sin x,\\ 
 						\end {eqnarray*}
 					</div>
 					<div> 
 						so
 						\[ \begin {array}{rcl} 
-							u_p'''+4u_p''+u_p'-6u_p&amp;=&amp;-\left [10A_0+2A_1-8B_1+10A_1x\right ]\cos x\\
+							\dfrac{d^3 u_p}{dx^3 }+4\dfrac{d^2 u_p}{dx^2 }+\dfrac{d u_p}{dx }-6u_p&amp;=&amp;-\left [10A_0+2A_1-8B_1+10A_1x\right ]\cos x\\
 							&amp;&amp;- \left [10B_0+2B_1+8A_1+10B_1x\right ]\sin x. 
 						\end {array} \]
 						Comparing the coefficients of \(x\cos x\), \(x\sin x\), \(\cos x\), and \(\sin x\) here with the corresponding coefficients in <a href="#x1-14r8">(9.3.8)</a> shows that \(u_p\) is a solution of <a href="#x1-14r8">(9.3.8)</a> if
@@ -351,17 +351,17 @@
 					</div>
 					<div class="eqnarray">
 						\begin {eqnarray*} 
-							u_p'&amp;=&amp;[A_0+\left(2A_1+B_0\right)x+B_1x^2]\cos x+[B_0+\left(2B_1-A_0\right)x-A_1x^2]\sin x,\\ 
-							u_p''&amp;=&amp;[2A_1+2B_0-\left(A_0-4B_1\right)x-A_1x^2]\cos x\\
+							\dfrac{d u_p}{dx }&amp;=&amp;[A_0+\left(2A_1+B_0\right)x+B_1x^2]\cos x+[B_0+\left(2B_1-A_0\right)x-A_1x^2]\sin x,\\ 
+							\dfrac{d^2 u_p}{dx^2 }&amp;=&amp;[2A_1+2B_0-\left(A_0-4B_1\right)x-A_1x^2]\cos x\\
 							&amp;&amp;+ [2B_1-2A_0-\left(B_0+4A_1\right)x-B_1x^2]\sin x,\\
-							u_p'''&amp;=&amp;-[3A_0-6B_1+\left(6A_1+B_0\right)x+B_1x^2]\cos x \\
+							\dfrac{d^3 u_p}{dx^3 }&amp;=&amp;-[3A_0-6B_1+\left(6A_1+B_0\right)x+B_1x^2]\cos x \\
 							&amp;&amp;-[3B_0+6A_1+\left(6B_1-A_0\right)x-A_1x^2]\sin x
 						\end {eqnarray*}
 					</div>
 					<div>
 						so
 						\[ \begin {array}{rcl}
-							u_p'''+u_p''+u_p'+u_p&amp;=&amp; -[2A_0-2B_0-2A_1-6B_1+\left(4A_1-4B_1\right)x]\cos x\\
+							\dfrac{d^3 u_p}{dx^3 }+\dfrac{d^2 u_p}{dx^2 }+\dfrac{d u_p}{dx }+u_p&amp;=&amp; -[2A_0-2B_0-2A_1-6B_1+\left(4A_1-4B_1\right)x]\cos x\\
 							&amp;&amp;-[2B_0+2A_0-2B_1+6A_1+\left(4B_1+4A_1\right)x]\sin x. 
 						\end {array} \]
 						Comparing the coefficients of \(x\cos x\), \(x\sin x\), \(\cos x\), and \(\sin x\) here with the corresponding coefficients in <a href="#x1-19r11">(9.3.11)</a> shows that \(u_p\) is a solution of <a href="#x1-19r11">(9.3.11)</a> if
@@ -384,7 +384,7 @@
 						\[ u_p=-\displaystyle {x\over 2}\left [\left(3-2x\right)\cos x+\left(1+x\right)\sin x\right ] \]
 						is a particular solution of <a href="#x1-19r11">(9.3.11)</a>, so
 						\[ y_p=e^{-x}u_p=-{xe^{-x}\over 2}\left [\left(3-2x\right)\cos x+\left(1+x\right)\sin x\right ] \]
-						\left(Figure&nbsp;<a href="#fig4">9.3.4</a>\right) is a particular solution of <a href="#x1-18r10">(9.3.10)</a>.
+						(Figure&nbsp;<a href="#fig4">9.3.4</a>) is a particular solution of <a href="#x1-18r10">(9.3.10)</a>.
 					</div>
 				</details>
 			</div>
@@ -407,7 +407,7 @@
 
 			<a href="sec9.0.html">Chapter 9</a>
 
-			<a href="sec10.0.book.html">Next \left(Chapter 10)</a>
+			<a href="sec10.0.book.html">Next (Chapter 10)</a>
 		</nav>
 	</body>
 
