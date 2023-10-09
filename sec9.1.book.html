@@ -1983,6 +1983,7 @@
 					<li>
 						Verify that \(y_1=e^x\), \(y_2=e^{-x}\), and \(y_3=x\) are solutions of the complementary equation and find their domain
 					</li>
+					<li class="skip"></li>
 					<li>
 						Apply the initial conditions to set up a system of equations to solve the IVP <a href="#x1-31r17">(9.1.17)</a>
 					</li>
@@ -1995,134 +1996,130 @@
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
+						<!-- Part 1 -->
 						<li>
 							<div>
-								<div>
-									To verify \(y_p=-x^2-2\) is a solution we differentiate \(y_p\) and substitute into <a href="#x1-31r17">(9.1.17)</a> 
-								</div>	
-								<div class="reading-exercise">
-									Differentiate \(y_p=-x^2-2\) three times
-								</div>	
-								<div>
-									\[
-										y_p=-x^2-2
-										\quad\quad
-										\frac{d y_p}{dx}=-2x
-										\quad\quad
-										\frac{d^2 y_p}{dx^2}=-2
-										\quad\quad
-										\frac{d^3 y_p}{dx^3}=0
-									\] 
+								To verify \(y_p=-x^2-2\) is a solution we differentiate \(y_p\) and substitute into <a href="#x1-31r17">(9.1.17)</a> 
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y_p=-x^2-2\) three times
+							</div>	
+							<div>
+								\[
+									y_p=-x^2-2
+									\quad\quad
+									\frac{d y_p}{dx}=-2x
+									\quad\quad
+									\frac{d^2 y_p}{dx^2}=-2
+									\quad\quad
+									\frac{d^3 y_p}{dx^3}=0
+								\] 
 
 
-									\begin {align*} 
-										x \underset{0}{\underbrace{\frac{d^3 y_p}{dx^3}}} - \underset{-2}{\underbrace{\frac{d^2 y_p}{dx^2}}} -x \underset{-2x}{\underbrace{\frac{d y_p}{dx}}} + \underset{-x^2-2}{\underbrace{y_p}} \overset{?}{=} & \, x^2  \\
-										0  \quad +2  \quad + \quad \underbrace{2x^2 - x^2} -2 \overset{?}{=} & \, x^2 \\
-										2  \quad + \quad x^2  \quad -2 = & \, x^2  \quad\quad \checkmark \\
+								\begin {align*} 
+									x \underset{0}{\underbrace{\frac{d^3 y_p}{dx^3}}} - \underset{-2}{\underbrace{\frac{d^2 y_p}{dx^2}}} -x \underset{-2x}{\underbrace{\frac{d y_p}{dx}}} + \underset{-x^2-2}{\underbrace{y_p}} \overset{?}{=} & \, x^2  \\
+									0  \quad +2  \quad + \quad \underbrace{2x^2 - x^2} -2 \overset{?}{=} & \, x^2 \\
+									2  \quad + \quad x^2  \quad -2 = & \, x^2  \quad\quad \checkmark \\
 
-									\end {align*} 
+								\end {align*} 
 
-									Note that \(y_p=-x^2-2\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
-
-								</div>	
-									
+								Note that \(y_p=-x^2-2\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
 
 							</div>	
 						</li>
+						<!-- Part 2 -->
 						<li>
+							<div> 
+								To verify \(y_1=e^x\) is a solution we differentiate \(y_1\) and substitute into <a href="#x1-31r17">(9.1.17)</a> 
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y_1=e^x\) three times
+							</div>	
 							<div>
-								<div> 
-									To verify \(y_1=e^x\) is a solution we differentiate \(y_1\) and substitute into <a href="#x1-31r17">(9.1.17)</a> 
-								</div>	
-								<div class="reading-exercise">
-									Differentiate \(y_1=e^x\) three times
-								</div>	
-								<div>
-									\[
-										y_1=e^x
-										\quad\quad
-										\frac{d y_1}{dx}=e^x
-										\quad\quad
-										\frac{d^2 y_1}{dx^2}=e^x
-										\quad\quad
-										\frac{d^3 y_1}{dx^3}=e^x
-									\] 
+								\[
+									y_1=e^x
+									\quad\quad
+									\frac{d y_1}{dx}=e^x
+									\quad\quad
+									\frac{d^2 y_1}{dx^2}=e^x
+									\quad\quad
+									\frac{d^3 y_1}{dx^3}=e^x
+								\] 
 
 
-									\begin {align*} 
-										x \underset{e^x}{\underbrace{\frac{d^3 y_1}{dx^3}}} - \underset{e^x}{\underbrace{\frac{d^2 y_1}{dx^2}}} -x \underset{e^x}{\underbrace{\frac{d y_1}{dx}}} + \underset{e^x}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
-										xe^x   -e^x    - xe^x    +  e^x \overset{?}{=} & \, 0 \\
-										\underset{0}{\underbrace{xe^x - xe^x}} -\underset{0}{\underbrace{e^x +  e^x}} = & \, 0 \quad\quad  \checkmark \\
+								\begin {align*} 
+									x \underset{e^x}{\underbrace{\frac{d^3 y_1}{dx^3}}} - \underset{e^x}{\underbrace{\frac{d^2 y_1}{dx^2}}} -x \underset{e^x}{\underbrace{\frac{d y_1}{dx}}} + \underset{e^x}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
+									xe^x   -e^x    - xe^x    +  e^x \overset{?}{=} & \, 0 \\
+									\underset{0}{\underbrace{xe^x - xe^x}} -\underset{0}{\underbrace{e^x +  e^x}} = & \, 0 \quad\quad  \checkmark \\
 
-									\end {align*}
+								\end {align*}
 
-								
+							
 
-									Note that \(y_1=e^x\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
-
-								</div>	
-								<br>
-								<br>
-								<div>
-									To verify \(y_2=e^{-x}\) is a solution we differentiate \(y_2\) and substitute into <a href="#x1-31r17">(9.1.17)</a> 
-								</div>	
-								<div class="reading-exercise">
-									Differentiate \(y_2=e^{-x}\) three times
-								</div>	
-								<div>
-									\[
-										y_2=e^{-x}
-										\quad\quad
-										\frac{d y_2}{dx}=-e^{-x}
-										\quad\quad
-										\frac{d^2 y_2}{dx^2}=e^{-x}
-										\quad\quad
-										\frac{d^3 y_1}{dx^3}=-e^{-x}
-									\] 
-
-									\begin {align*} 
-										x \underset{-e^{-x}}{\underbrace{\frac{d^3 y_1}{dx^3}}} - \underset{e^{-x}}{\underbrace{\frac{d^2 y_1}{dx^2}}} -x \underset{-e^{-x}}{\underbrace{\frac{d y_1}{dx}}} + \underset{e^{-x}}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
-										-xe^{-x}   -e^x    + xe^x    +  e^x \overset{?}{=} & \, 0 \\
-										\underset{0}{\underbrace{-xe^x + xe^x}} -\underset{0}{\underbrace{e^x +  e^x}} = & \, 0 \quad\quad  \checkmark \\
-
-									\end {align*}
-
-									Note that \(y_2=e^{-x}\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
-
-								</div>	
-								<br>
-								<br>
-								<div>
-									To verify \(y_3=x\) is a solution we differentiate \(y_3\) and substitute into <a href="#x1-31r17">(9.1.17)</a> 
-								</div>	
-								<div class="reading-exercise">
-									Differentiate \(y_3=x\) three times
-								</div>	
-								<div>
-									\[
-										y_3=x
-										\quad\quad
-										\frac{d y_1}{dx}=1
-										\quad\quad
-										\frac{d^2 y_1}{dx^2}=0
-										\quad\quad
-										\frac{d^3 y_1}{dx^3}=0
-									\] 
-
-									\begin {align*} 
-										x \underset{0}{\underbrace{\frac{d^3 y_1}{dx^3}}} - \underset{0}{\underbrace{\frac{d^2 y_1}{dx^2}}} -x \underset{1}{\underbrace{\frac{d y_1}{dx}}} + \underset{x}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
-										-\underset{0}{\underbrace{x \quad+\quad x}} = & \, 0 \quad\quad  \checkmark \\
-
-									\end {align*}
-
-									Note that \(y_3=x\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
-									
-
-
-								</div>	
+								Note that \(y_1=e^x\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
 
 							</div>	
+							<br>
+							<br>
+							<div>
+								To verify \(y_2=e^{-x}\) is a solution we differentiate \(y_2\) and substitute into <a href="#x1-31r17">(9.1.17)</a> 
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y_2=e^{-x}\) three times
+							</div>	
+							<div>
+								\[
+									y_2=e^{-x}
+									\quad\quad
+									\frac{d y_2}{dx}=-e^{-x}
+									\quad\quad
+									\frac{d^2 y_2}{dx^2}=e^{-x}
+									\quad\quad
+									\frac{d^3 y_1}{dx^3}=-e^{-x}
+								\] 
+
+								\begin {align*} 
+									x \underset{-e^{-x}}{\underbrace{\frac{d^3 y_1}{dx^3}}} - \underset{e^{-x}}{\underbrace{\frac{d^2 y_1}{dx^2}}} -x \underset{-e^{-x}}{\underbrace{\frac{d y_1}{dx}}} + \underset{e^{-x}}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
+									-xe^{-x}   -e^x    + xe^x    +  e^x \overset{?}{=} & \, 0 \\
+									\underset{0}{\underbrace{-xe^x + xe^x}} -\underset{0}{\underbrace{e^x +  e^x}} = & \, 0 \quad\quad  \checkmark \\
+
+								\end {align*}
+
+								Note that \(y_2=e^{-x}\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
+
+							</div>	
+							<br>
+							<br>
 						</li>
+						<li class="continued">
+							<div>
+								To verify \(y_3=x\) is a solution we differentiate \(y_3\) and substitute into <a href="#x1-31r17">(9.1.17)</a> 
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y_3=x\) three times
+							</div>	
+							<div>
+								\[
+									y_3=x
+									\quad\quad
+									\frac{d y_1}{dx}=1
+									\quad\quad
+									\frac{d^2 y_1}{dx^2}=0
+									\quad\quad
+									\frac{d^3 y_1}{dx^3}=0
+								\] 
+
+								\begin {align*} 
+									x \underset{0}{\underbrace{\frac{d^3 y_1}{dx^3}}} - \underset{0}{\underbrace{\frac{d^2 y_1}{dx^2}}} -x \underset{1}{\underbrace{\frac{d y_1}{dx}}} + \underset{x}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
+									-\underset{0}{\underbrace{x \quad+\quad x}} = & \, 0 \quad\quad  \checkmark \\
+
+								\end {align*}
+
+								Note that \(y_3=x\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
+
+							</div>
+						</li>
+						<!-- Part 3 -->
 						<li>
 							<div>
 								Since we have verified the particular solution \(y_p=-x^2-2\) and the complementary solutions \(y_1=e^x,\) \(y_2=e^{-x} \) and \(y_3=x\), the from Theorem <a href="#x1-326">9.1.6</a> we can represent the general solution as
@@ -2187,7 +2184,9 @@
 
 								
 							</div>
-							
+						</li>
+						<!-- Part 4 -->
+						<li>
 							<div>
 
 								Now we need to solve for \(c_1,c_2,\) and \(c_3\) to do so we'll use <span class="vocab">row reduction</span>  (<span class="vocab">Gaussian elimination</span>) on the augmented matrix:
