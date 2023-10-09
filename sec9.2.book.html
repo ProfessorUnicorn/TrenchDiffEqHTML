@@ -133,6 +133,7 @@
 					\frac{d^3 y}{dx^3}-6\frac{d^2 y}{dx^2}+11\frac{d y}{dx}-6y=0
 					\end {equation}
 				</li>
+				<li class="skip"></li>
 				<li>
 					Solve the IVP
 					<a id="x1-8r4"></a>
@@ -141,11 +142,13 @@
 					y(0)=4 \quad \left. \frac{d y}{dx}\right|_0 = 5 \quad \left. \frac{d^2 y}{dx^2}\right|_0 & = 9 \nonumber
 					\end {align}
 				</li>
+				<li class="skip"></li>
 			</ol>
 
 			<details class="solution">
 				<summary>Solution</summary>
 				<ol>
+					<!-- Part 1 -->
 					<li>
 						<div>
 							Seeking solutions of the form
@@ -203,6 +206,10 @@
 									& 1 & -5 & 6 	& \lfloor 0 \\
 									& {\small r^2} & {\small r} & {\small \#} \\
 							\end{array}
+						</div>
+					</li>
+					<li class="continued">
+						<div>
 
 							So we have found \(r=1\) is a root so that means \((r-1)\) is a factor so the characteristic polynomial factors into 
 
@@ -279,6 +286,7 @@
 							\end {equation}
 						</div>
 					</li>
+					<!-- Part 2 -->
 					<li>
 						<div>
 							To solve the IVP <a href="#x1-8r4">(9.2.4)</a> we must apply the initial conditions
@@ -288,15 +296,12 @@
 
 						</div>
 						<div class="reading-exercise">
-							Differentiate 
-							<a href="#x1-9r5">(9.2.5)</a> twice
+							Differentiate <a href="#x1-9r5">(9.2.5)</a> twice
 						</div>
 						<div>
-							Differentiating 
-							<a href="#x1-9r5">(9.2.5)</a> twice we obtain
+							Differentiating <a href="#x1-9r5">(9.2.5)</a> twice we obtain
 
-							<a
-								id="x1-10r6"></a> 
+							<a id="x1-10r6"></a> 
 							\begin{align} \label {eq:9.2.6}
 								\left\{
 									\begin{array}{rrrr}
@@ -325,6 +330,10 @@
 									\end{array}
 								\right. \\
 							\end{align*}
+						</div>
+					</li>
+					<li class="continued">
+						<div>
 
 							To solve the system we will use row reduction with the augmented matrix
 
@@ -458,13 +467,23 @@
 			<details class="solution">
 				<summary>Solution</summary>
 			
+				<!-- MathJax does not provide a way to skip equation numbers, so we hide this box to skip them for us -->
+				<div style="display: none">
+					\begin{align}
+						\text{skip 9.2.7} \\
+						\text{skip 9.2.8} \\
+						\text{skip 9.2.9} \\
+					\end{align}
+				</div>
+
 				<div>
 					In Example&nbsp;<a href="#x1-41">9.2.1</a> we had to use the rational roots theorem to factor the characteristic polynomial but in this case we can factor by grouping
 
+					<!-- eTA cannot handle a tag and a label in the same equation, so tag 7.1.10 too -->
 					\begin {align} 
-						p(r) & = \big( r^3-r^2 \big) + \big( r-1 \big)\\
-						& = r^2\big( r-1 \big) + 1\big( r-1 \big)   \\
-						& = \big( r-1 \big) \big( r^2+1 \big) 
+						p(r) & = \big( r^3-r^2 \big) + \big( r-1 \big) \tag{7}\\
+						& = r^2\big( r-1 \big) + 1\big( r-1 \big) \tag{8} \\
+						& = \big( r-1 \big) \big( r^2+1 \big) \tag{9}
 					\end {align}
 
 				</div>
@@ -517,125 +536,126 @@
 
 			<details class="solution">
 				<summary>Solution</summary>
-				<div>
-					<div>
-						Seeking solutions of the form
+				<ol>
+					<li class="no-part">
+						<div>
+							Seeking solutions of the form
 
-						\[
-						y=e^{rx}
-						\]
+							\[
+							y=e^{rx}
+							\]
 
-						Differentiating \(y=e^{rx}\) three times yields
+							Differentiating \(y=e^{rx}\) three times yields
 
-						\[
-						\frac{dy}{dx}=re^{rx}
-						\Longrightarrow
-						\frac{d^2y}{dx^2}=r^2e^{rx}
-						\Longrightarrow
-						\frac{d^3y}{dx^3}=r^3e^{rx}
-						\]
+							\[
+							\frac{dy}{dx}=re^{rx}
+							\Longrightarrow
+							\frac{d^2y}{dx^2}=r^2e^{rx}
+							\Longrightarrow
+							\frac{d^3y}{dx^3}=r^3e^{rx}
+							\]
+
+							
+							
+							Substituting in to <a
+							href="#x1-19r10">(9.2.10)</a> we obtain the equation
+
+							\begin {equation*}
+							r^3e^{rx}-r^2e^{rx}+re^{rx}-e^{rx}=0
+							\end {equation*}
+
+							Factoring out the exponential
+
+							\begin {equation*}
+							\Big( r^3-r^2+r-1 \Big) e^{rx}=0
+							\end {equation*}
+
+							We now need to solve the <span class="vocab">characteristic equation</span> of the <span class="vocab">characteristic polynomial</span> equal to zero, which we already factored
+
+							\begin {align*}
+							\overset{p(r)}{\overbrace{r^3-r^2+r-1}} &= 0 \\
+							\big( r-1 \big)\big( r^2+1 \big)  &= 0 \\
+							r-1 = 0 \quad r^2+1 &= 0 \\
+							r = 1 \quad r = \pm & i   \\
+							\end {align*}
+
+							Substituting \(r=1,\) \(r =  i \) and \(r =  -i \) into \( y = e^{rx} \) we obtain solutions of <a
+							href="#x1-19r10">(9.2.10)</a>
+
+							\[ 
+							y_1=e^x
+							\quad
+							y_2 = e^{ix} 
+							\quad  
+							y_3 = e^{-ix} 
+							\]
+
+							However, as discussed in Section&nbsp;<a href="sec5.2.book.html" target=_blank>5.2</a> we'll use Euler's formula to rewrite the solutions in terms of real numbers to obtain the solution set
+
+							\[ 
+								\{ e^x
+								, \cos x 
+								, \sin x 
+								\}
+							\]
+
 
 						
-						
-						Substituting in to <a
-						href="#x1-19r10">(9.2.10)</a> we obtain the equation
+						</div>
+					</li>
+					<li class="no-part">
+						<div>
+							We can verify it is a fundamental set by showing the Wronskian determinant is nonzero
 
-						\begin {equation*}
-						r^3e^{rx}-r^2e^{rx}+re^{rx}-e^{rx}=0
-						\end {equation*}
-
-						Factoring out the exponential
-
-						\begin {equation*}
-						\Big( r^3-r^2+r-1 \Big) e^{rx}=0
-						\end {equation*}
-
-						We now need to solve the <span class="vocab">characteristic equation</span> of the <span class="vocab">characteristic polynomial</span> equal to zero, which we already factored
-
-						\begin {align*}
-						\overset{p(r)}{\overbrace{r^3-r^2+r-1}} &= 0 \\
-						\big( r-1 \big)\big( r^2+1 \big)  &= 0 \\
-						r-1 = 0 \quad r^2+1 &= 0 \\
-						r = 1 \quad r = \pm & i   \\
-						\end {align*}
-
-						Substituting \(r=1,\) \(r =  i \) and \(r =  -i \) into \( y = e^{rx} \) we obtain solutions of <a
-						href="#x1-19r10">(9.2.10)</a>
-
-						\[ 
-						y_1=e^x
-						\quad
-						y_2 = e^{ix} 
-						\quad  
-						y_3 = e^{-ix} 
-						\]
-
-						However, as discussed in Section&nbsp;<a href="sec5.2.book.html" target=_blank>5.2</a> we'll use Euler's formula to rewrite the solutions in terms of real numbers to obtain the solution set
-
-						\[ 
-							\{ e^x
-							, \cos x 
-							, \sin x 
-							\}
-						\]
-
-
-					
-					</div>
-					<div>
-						
-						
-						We can verify it is a fundamental set by showing the Wronskian determinant is nonzero
-
-						\begin {align*}
-						W \big[e^x,\cos x,\sin x \big](x) & =\det\left( 
-							\begin {array}{rrrr} 
-								e^x & \cos x & \sin x \\ 
-								e^x & -\sin x & \cos x \\ 		
-								e^x & - \cos x & -\sin x \\ 
-							\end {array}
-							\right) \\
-							& =e^x \det\left( 
-								\begin {array}{rrrrr} 
-									1 & \cos x & \sin x \\ 
-									1 & -\sin x & \cos x \\ 		
-									1 & - \cos x & -\sin x \\ 
+							\begin {align*}
+							W \big[e^x,\cos x,\sin x \big](x) & =\det\left( 
+								\begin {array}{rrrr} 
+									e^x & \cos x & \sin x \\ 
+									e^x & -\sin x & \cos x \\ 		
+									e^x & - \cos x & -\sin x \\ 
 								\end {array}
 								\right) \\
 								& =e^x \det\left( 
-									\begin {array}{ccccc} 
+									\begin {array}{rrrrr} 
 										1 & \cos x & \sin x \\ 
-										0 & -\sin x-\cos x & \cos x -\sin x \\ 		
-										0 & - 2\cos x & -2\sin x \\ 
+										1 & -\sin x & \cos x \\ 		
+										1 & - \cos x & -\sin x \\ 
 									\end {array}
 									\right) \\
-								& =2e^x \det\left( 
-									\begin {array}{ccccc} 
-										\sin x+\cos x &  \sin x - \cos x \\ 		
-										\cos x & \sin x \\ 
-									\end {array}
-									\right) \\	
-								& =2e^x \left( 
-									\sin^2 x + \cos x \sin x
-									- \cos x \sin x + \cos^2
-									\right) 
-									\\
-								& =2e^x \left( 
-									\sin^2 x + \cos^2
-									\right) 
-									\\	
-								& =2e^x \ne 0 			
-						\end {align*}
+									& =e^x \det\left( 
+										\begin {array}{ccccc} 
+											1 & \cos x & \sin x \\ 
+											0 & -\sin x-\cos x & \cos x -\sin x \\ 		
+											0 & - 2\cos x & -2\sin x \\ 
+										\end {array}
+										\right) \\
+									& =2e^x \det\left( 
+										\begin {array}{ccccc} 
+											\sin x+\cos x &  \sin x - \cos x \\ 		
+											\cos x & \sin x \\ 
+										\end {array}
+										\right) \\	
+									& =2e^x \left( 
+										\sin^2 x + \cos x \sin x
+										- \cos x \sin x + \cos^2
+										\right) 
+										\\
+									& =2e^x \left( 
+										\sin^2 x + \cos^2
+										\right) 
+										\\	
+									& =2e^x \ne 0 			
+							\end {align*}
 
-						Therefore \(\{e^x,\cos x,\sin x\}\) is linearly independent and
-						the general solution of <a href="#x1-19r10">(9.2.10)</a> is
+							Therefore \(\{e^x,\cos x,\sin x\}\) is linearly independent and
+							the general solution of <a href="#x1-19r10">(9.2.10)</a> is
 
-						\[ y=c_1 e^x + c_2 \cos x + c_3\sin x \]
+							\[ y=c_1 e^x + c_2 \cos x + c_3\sin x \]
 
 
-					</div>
-				
-				</div>
+						</div>
+					</li>
+				</ol>
 				
 			</details>
 		</div>
@@ -656,175 +676,180 @@
 
 			<details class="solution">
 				<summary>Solution</summary>
-				<div>
-					Seeking solutions of the form
+				<ol>
+					<li class="no-part">
+						<div>
+							Seeking solutions of the form
 
-					\[
-					y=e^{rx}
-					\]
+							\[
+							y=e^{rx}
+							\]
 
-					Differentiating \(y=e^{rx}\) four times yields
+							Differentiating \(y=e^{rx}\) four times yields
 
-					\begin{align*}
-					\frac{dy}{dx}=re^{rx}
-					\Longrightarrow
-					\frac{d^2y}{dx^2}=r^2e^{rx} 
-					\Longrightarrow
-					\frac{d^3y}{dx^3}=r^3e^{rx} \\
-					\Longrightarrow
-					\frac{d^4y}{dx^4}=r^4e^{rx}
-					\end{align*}
+							\begin{align*}
+							\frac{dy}{dx}=re^{rx}
+							\Longrightarrow
+							\frac{d^2y}{dx^2}=r^2e^{rx} 
+							\Longrightarrow
+							\frac{d^3y}{dx^3}=r^3e^{rx} \\
+							\Longrightarrow
+							\frac{d^4y}{dx^4}=r^4e^{rx}
+							\end{align*}
 
-					
-					Substituting in to <a href="#x1-21r11">(9.2.11)</a> we obtain the equation
+							
+							Substituting in to <a href="#x1-21r11">(9.2.11)</a> we obtain the equation
 
-					\begin {equation*}
-					r^4e^{rx}-16e^{rx}=0
-					\end {equation*}
+							\begin {equation*}
+							r^4e^{rx}-16e^{rx}=0
+							\end {equation*}
 
-					Factoring out the exponential
+							Factoring out the exponential
 
-					\begin {equation*}
-					\Big( r^4 - 16 \Big) e^{rx}=0
-					\end {equation*}
+							\begin {equation*}
+							\Big( r^4 - 16 \Big) e^{rx}=0
+							\end {equation*}
 
-					We now need to solve the <span class="vocab">characteristic equation</span> of the <span class="vocab">characteristic polynomial</span> equal to zero, which we already factored
+							We now need to solve the <span class="vocab">characteristic equation</span> of the <span class="vocab">characteristic polynomial</span> equal to zero, which we already factored
 
-					\begin {align*}
-					\overset{p(r)}{\overbrace{r^4 - 16}} &= 0 \\
-					\big( r^2-4 \big)\big( r^2+4 \big)  &= 0 \\
-					\big( r-2 \big)\big( r+2 \big)\big( r^2+4 \big)  &= 0 \\
-					r-2 = 0 \quad r+2 = 0 \quad r^2+4 &= 0 \\
-					r = 2 \quad r = -2  \quad r = \pm & 2i   \\
-					\end {align*}
+							\begin {align*}
+							\overset{p(r)}{\overbrace{r^4 - 16}} &= 0 \\
+							\big( r^2-4 \big)\big( r^2+4 \big)  &= 0 \\
+							\big( r-2 \big)\big( r+2 \big)\big( r^2+4 \big)  &= 0 \\
+							r-2 = 0 \quad r+2 = 0 \quad r^2+4 &= 0 \\
+							r = 2 \quad r = -2  \quad r = \pm & 2i   \\
+							\end {align*}
 
-					Substituting \(r=2,\) \(r=-2,\) \(r =  2i \) and \(r =  -2i \) into \( y = e^{rx} \) we obtain solutions of <a href="#x1-21r11">(9.2.11)</a>
+							Substituting \(r=2,\) \(r=-2,\) \(r =  2i \) and \(r =  -2i \) into \( y = e^{rx} \) we obtain solutions of <a href="#x1-21r11">(9.2.11)</a>
 
-					\[ 
-					y_1=e^{2x}
-					\quad
-					y_2 = e^{-2x} 
-					\quad  
-					y_3 = e^{2ix} 
-					\quad  
-					y_4 = e^{-2ix} 
-					\]
+							\[ 
+							y_1=e^{2x}
+							\quad
+							y_2 = e^{-2x} 
+							\quad  
+							y_3 = e^{2ix} 
+							\quad  
+							y_4 = e^{-2ix} 
+							\]
 
-					Again we'll use Euler's formula to rewrite the solutions in terms of real numbers to obtain the solution set
+							Again we'll use Euler's formula to rewrite the solutions in terms of real numbers to obtain the solution set
 
-					\[ 
-						\{ e^{2x}
-						, e^{-2x}
-						, \cos 2x 
-						, \sin 2x 
-						\}
-					\]
+							\[ 
+								\{ e^{2x}
+								, e^{-2x}
+								, \cos 2x 
+								, \sin 2x 
+								\}
+							\]
 
 
-				
-				</div>
-				<div>
-					
-					
-					We can verify it is a fundamental set by showing the Wronskian determinant is nonzero
+						
+						</div>
+					</li>
+					<li class="no-part">
+						<div>
+							
+							
+							We can verify it is a fundamental set by showing the Wronskian determinant is nonzero
 
-					\begin {align*}
-					& W \big[e^{2x},e^{-2x},\cos 2x,\sin 2x \big](x) \\ 
-					&
-					=\det\left( 
-						\begin {array}{rrrr} 
-							e^{2x} & e^{-2x} & \cos 2x & \sin 2x \\ 
-							2e^{2x} & -2e^{-2x} & -2\sin 2x & 2\cos 2x \\ 		
-							4e^{2x} & 4e^{-2x} & -4\cos 2x & -4\sin 2x \\ 
-							8e^{2x} & -8e^{-2x} & 8\sin 2x & -8\cos 2x \\ 
-						\end {array}
-						\right) \\
-					&
-					=e^{2x}e^{-2x}\det\left( 
-						\begin {array}{rrrr} 
-							1 & 1 & \cos 2x & \sin 2x \\ 
-							2 & -2 & -2\sin 2x & 2\cos 2x \\ 		
-							4 & 4 & -2\cos 4x & -4\sin 2x \\ 
-							8 & -8 & 2\sin 8x & -8\cos 2x \\ 
-							\end {array}
-						\right) \\	
-						&
-					=2\cdot 4 \cdot 8 \det\left( 
-						\begin {array}{rrrr} 
-							1 & 1 & \cos 2x & \sin 2x \\ 
-							1 & -1 & -\sin 2x & \cos 2x \\ 		
-							1 & 1 & -\cos 2x & -\sin 2x \\ 
-							1 & -1 &  \sin 2x & -\cos 2x \\ 
-							\end {array}
-						\right) \\	
-					&
-					=64 \det\left( 
-						\begin {array}{rrrr} 
-							1 & 1 & \cos 2x & \sin 2x \\ 
-							1 & -1 & -\sin 2x & \cos 2x \\ 		
-							0 & 0 & -2\cos 2x & -2\sin 2x \\ 
-							0 & 0 &  2\sin 2x & -2\cos 2x \\ 
-							\end {array}
-						\right) \\		
-					&
-					=64 \det\left( 
-						\begin {array}{ccccc} 
-							1 & 1 & \cos 2x & \sin 2x \\ 
-							0 & -2 & -\cos 2x -\sin 2x & \cos 2x - \sin 2x \\ 		
-							0 & 0 & -2\cos 2x & -2\sin 2x \\ 
-							0 & 0 &  2\sin 2x & -2\cos 2x \\ 
-							\end {array}
-						\right) \\
-						&
-					=64 \det\left( 
-						\begin {array}{ccccc} 
-							-2 & -\cos 2x -\sin 2x & \cos 2x - \sin 2x \\ 		
-							0 & -2\cos 2x & -2\sin 2x \\ 
-							0 &  2\sin 2x & -2\cos 2x \\ 
-							\end {array}
-						\right) \\	
-					&
-					=-2 \cdot 64 \det\left( 
-						\begin {array}{ccccc} 		
-							-2\cos 2x & -2\sin 2x \\ 
-							2\sin 2x & -2\cos 2x \\ 
-							\end {array}
-						\right) \\	
-						&
-					=-128\cdot -2 \cdot 2 \det\left( 
-						\begin {array}{ccccc} 		
-							\cos 2x & \sin 2x \\ 
-							\sin 2x & -\cos 2x \\ 
-							\end {array}
-					\right) \\																		&
-					=512 \det\left( 
-						\begin {array}{ccccc} 		
-							\cos 2x & \sin 2x \\ 
-							\sin 2x & -\cos 2x \\ 
-							\end {array}
-						\right) \\	
-						&
-					=512 \left( 
-						-\cos^2 2x - \sin^2 2x
-						\right) \\
-						&	
-					=-512 \left( 
-							\cos^2 2x + \sin^2 2x
-							\right) \\
+							\begin {align*}
+							& W \big[e^{2x},e^{-2x},\cos 2x,\sin 2x \big](x) \\ 
 							&
-							=-512 \ne 0 \\														
-					\end {align*}
+							=\det\left( 
+								\begin {array}{rrrr} 
+									e^{2x} & e^{-2x} & \cos 2x & \sin 2x \\ 
+									2e^{2x} & -2e^{-2x} & -2\sin 2x & 2\cos 2x \\ 		
+									4e^{2x} & 4e^{-2x} & -4\cos 2x & -4\sin 2x \\ 
+									8e^{2x} & -8e^{-2x} & 8\sin 2x & -8\cos 2x \\ 
+								\end {array}
+								\right) \\
+							&
+							=e^{2x}e^{-2x}\det\left( 
+								\begin {array}{rrrr} 
+									1 & 1 & \cos 2x & \sin 2x \\ 
+									2 & -2 & -2\sin 2x & 2\cos 2x \\ 		
+									4 & 4 & -2\cos 4x & -4\sin 2x \\ 
+									8 & -8 & 2\sin 8x & -8\cos 2x \\ 
+									\end {array}
+								\right) \\	
+								&
+							=2\cdot 4 \cdot 8 \det\left( 
+								\begin {array}{rrrr} 
+									1 & 1 & \cos 2x & \sin 2x \\ 
+									1 & -1 & -\sin 2x & \cos 2x \\ 		
+									1 & 1 & -\cos 2x & -\sin 2x \\ 
+									1 & -1 &  \sin 2x & -\cos 2x \\ 
+									\end {array}
+								\right) \\	
+							&
+							=64 \det\left( 
+								\begin {array}{rrrr} 
+									1 & 1 & \cos 2x & \sin 2x \\ 
+									1 & -1 & -\sin 2x & \cos 2x \\ 		
+									0 & 0 & -2\cos 2x & -2\sin 2x \\ 
+									0 & 0 &  2\sin 2x & -2\cos 2x \\ 
+									\end {array}
+								\right) \\		
+							&
+							=64 \det\left( 
+								\begin {array}{ccccc} 
+									1 & 1 & \cos 2x & \sin 2x \\ 
+									0 & -2 & -\cos 2x -\sin 2x & \cos 2x - \sin 2x \\ 		
+									0 & 0 & -2\cos 2x & -2\sin 2x \\ 
+									0 & 0 &  2\sin 2x & -2\cos 2x \\ 
+									\end {array}
+								\right) \\
+								&
+							=64 \det\left( 
+								\begin {array}{ccccc} 
+									-2 & -\cos 2x -\sin 2x & \cos 2x - \sin 2x \\ 		
+									0 & -2\cos 2x & -2\sin 2x \\ 
+									0 &  2\sin 2x & -2\cos 2x \\ 
+									\end {array}
+								\right) \\	
+							&
+							=-2 \cdot 64 \det\left( 
+								\begin {array}{ccccc} 		
+									-2\cos 2x & -2\sin 2x \\ 
+									2\sin 2x & -2\cos 2x \\ 
+									\end {array}
+								\right) \\	
+								&
+							=-128\cdot -2 \cdot 2 \det\left( 
+								\begin {array}{ccccc} 		
+									\cos 2x & \sin 2x \\ 
+									\sin 2x & -\cos 2x \\ 
+									\end {array}
+							\right) \\																		&
+							=512 \det\left( 
+								\begin {array}{ccccc} 		
+									\cos 2x & \sin 2x \\ 
+									\sin 2x & -\cos 2x \\ 
+									\end {array}
+								\right) \\	
+								&
+							=512 \left( 
+								-\cos^2 2x - \sin^2 2x
+								\right) \\
+								&	
+							=-512 \left( 
+									\cos^2 2x + \sin^2 2x
+									\right) \\
+									&
+									=-512 \ne 0 \\														
+							\end {align*}
 
-					Therefore \(\{e^{2x},e^{-2x},\cos 2x,\sin 2x\}\)  is linearly independent and
-					the general solution of <a
-					href="#x1-21r11">(9.2.11)</a> is
+							Therefore \(\{e^{2x},e^{-2x},\cos 2x,\sin 2x\}\)  is linearly independent and
+							the general solution of <a
+							href="#x1-21r11">(9.2.11)</a> is
 
-					\[
-					y=c_1e^{2x}+c_2e^{-2x}+c_3\cos 2x+c_4\sin 2x \]
+							\[
+							y=c_1e^{2x}+c_2e^{-2x}+c_3\cos 2x+c_4\sin 2x \]
 
 
-				</div>				
-					
+						</div>
+					</li>
+				</ol>
 			</details>
 		</div>
 
@@ -946,105 +971,106 @@
 
 			<details class="solution">
 				<summary>Solution</summary>
-				<div>
-					Seeking solutions of the form
+				<ol>
+					<li class="no-part">
+						<div>
+							Seeking solutions of the form
 
-					\[
-					y=e^{rx}
-					\]
+							\[
+							y=e^{rx}
+							\]
 
-					Differentiating \(y=e^{rx}\) three times yields
+							Differentiating \(y=e^{rx}\) three times yields
 
-					\begin{align*}
-					\frac{dy}{dx}=re^{rx}
-					\Longrightarrow
-					\frac{d^2y}{dx^2}=r^2e^{rx} 
-					\Longrightarrow
-					\frac{d^3y}{dx^3}=r^3e^{rx}
-					\end{align*}
+							\begin{align*}
+							\frac{dy}{dx}=re^{rx}
+							\Longrightarrow
+							\frac{d^2y}{dx^2}=r^2e^{rx} 
+							\Longrightarrow
+							\frac{d^3y}{dx^3}=r^3e^{rx}
+							\end{align*}
 
-					
-					Substituting in to <a href="#x1-30r18">(9.2.18)</a> we obtain the equation
+							
+							Substituting in to <a href="#x1-30r18">(9.2.18)</a> we obtain the equation
 
-					\begin {equation*}
-					r^3e^{rx}+3r^2e^{rx}+3re^{rx}+e^{rx}=0
-					\end {equation*}
+							\begin {equation*}
+							r^3e^{rx}+3r^2e^{rx}+3re^{rx}+e^{rx}=0
+							\end {equation*}
 
-					Factoring out the exponential
+							Factoring out the exponential
 
-					\begin {equation*}
-					\Big( r^3 + 3r^2 + 3r + 1 \Big) e^{rx}=0
-					\end {equation*}
+							\begin {equation*}
+							\Big( r^3 + 3r^2 + 3r + 1 \Big) e^{rx}=0
+							\end {equation*}
 
-					We now need to solve the <span class="vocab">characteristic equation</span> of the <span class="vocab">characteristic polynomial</span> equal to zero, which we can't factor so we apply the rational roots theorem. Since the constant term and leading coefficient are both \(1\) then the only possible rational roots to consider are
-					\(\pm 1\).
-
-
-					\begin{array}{rrrrr}
-						& {\small r^3} & {\small r^2} & {\small r} & {\small \#} \\
-						 1 \rfloor 	& 1 & 3 & 3 	& 1 \\
-									& 	& 1  & 4  	& 7 \\ 
-						\hline
-									& 1 & 4 & 7 	& \lfloor 8 \\
-									& {\small r^2} & {\small r} & {\small \#} \\
-					\end{array}
-
-					Since the remainder is \(8\) in this case then \(r=1\) is not a root
+							We now need to solve the <span class="vocab">characteristic equation</span> of the <span class="vocab">characteristic polynomial</span> equal to zero, which we can't factor so we apply the rational roots theorem. Since the constant term and leading coefficient are both \(1\) then the only possible rational roots to consider are
+							\(\pm 1\).
 
 
-					\begin{array}{rrrrr}
-						& {\small r^3} & {\small r^2} & {\small r} & {\small \#} \\
-						 -1 \rfloor & 1 & 3 & 3 	& 1 \\
-									& 	& -1& -2  	& -1 \\ 
-						\hline
-									& 1 & 2 & 1 	& \lfloor 0 \\
-									& {\small r^2} & {\small r} & {\small \#} \\
-					\end{array}
+							\begin{array}{rrrrr}
+								& {\small r^3} & {\small r^2} & {\small r} & {\small \#} \\
+								1 \rfloor 	& 1 & 3 & 3 	& 1 \\
+											& 	& 1  & 4  	& 7 \\ 
+								\hline
+											& 1 & 4 & 7 	& \lfloor 8 \\
+											& {\small r^2} & {\small r} & {\small \#} \\
+							\end{array}
 
-					But \(r=-1\) is a root so that means \((r+1)\) is a factor so the characteristic polynomial factors into 
-
-					\begin {align*}
-					p(r) & = r^3+3r^2+3r+1 \\
-					& = (r+1)\underbrace{(r^2+2r+1)} \\
-					& = (r+1)(r+1)(r+1) \\
-					& = (r+1)^3
-					\end {align*}
-
-					
-
-					Thus we have the characteristic equation for <a href="#x1-30r18">(9.2.18)</a> which we can solve to find the solutions
-
-					\begin {align*}
-					(r+1)^3 & = 0 \\
-					r=-1 \\
-					y_1=e^{-x}  \\
-					\end {align*}
+							Since the remainder is \(8\) in this case then \(r=1\) is not a root
 
 
-					As discussed in Section&nbsp;<a href="sec5.2.book.html" target=_blank>5.2</a> when we have a repeated root we can find additional solutions by multiplying times \(x\) so we have a set of solutions of <a href="#x1-30r18">(9.2.18)</a>
-					
-					\[
-						\{y_1,y_2,y_3\} = \{e^{-x},xe^{-x},x^2e^{-x}\}
-					\] 
-					
-				
+							\begin{array}{rrrrr}
+								& {\small r^3} & {\small r^2} & {\small r} & {\small \#} \\
+								-1 \rfloor & 1 & 3 & 3 	& 1 \\
+											& 	& -1& -2  	& -1 \\ 
+								\hline
+											& 1 & 2 & 1 	& \lfloor 0 \\
+											& {\small r^2} & {\small r} & {\small \#} \\
+							\end{array}
+						</div>
+					</li>
+					<li class="no-part">
+						<div>
+							But \(r=-1\) is a root so that means \((r+1)\) is a factor so the characteristic polynomial factors into 
 
-				</div>
+							\begin {align*}
+							p(r) & = r^3+3r^2+3r+1 \\
+							& = (r+1)\underbrace{(r^2+2r+1)} \\
+							& = (r+1)(r+1)(r+1) \\
+							& = (r+1)^3
+							\end {align*}
 
-				<div>
-					
-					
-				
+							
 
-					Therefore
-					the general solution of <a href="#x1-30r18">(9.2.18)</a>is
+							Thus we have the characteristic equation for <a href="#x1-30r18">(9.2.18)</a> which we can solve to find the solutions
 
-					\[
-					y=(c_1+c_2x+c_3x^2) e^{-x} \]
+							\begin {align*}
+							(r+1)^3 & = 0 \\
+							r=-1 \\
+							y_1=e^{-x}  \\
+							\end {align*}
 
 
-				</div>	
-				
+							As discussed in Section&nbsp;<a href="sec5.2.book.html" target=_blank>5.2</a> when we have a repeated root we can find additional solutions by multiplying times \(x\) so we have a set of solutions of <a href="#x1-30r18">(9.2.18)</a>
+							
+							\[
+								\{y_1,y_2,y_3\} = \{e^{-x},xe^{-x},x^2e^{-x}\}
+							\] 
+							
+						</div>
+
+						<div>
+	
+							Therefore
+							the general solution of <a href="#x1-30r18">(9.2.18)</a>is
+
+							\[
+							y=(c_1+c_2x+c_3x^2) e^{-x} \]
+
+
+						</div>
+					</li>
+				</ol>
 			</details>
 		</div>
 		<div class="removed" id="cf1926e6-bea3-4760-a9b2-1f4bbf5f0b82">
@@ -1107,123 +1133,123 @@
 
 			<details class="solution">
 				<summary>Solution</summary>
-				<div>
-					Seeking solutions of the form
+				<ol>
+					<li class="no-part">
+						<div>
+							Seeking solutions of the form
 
-					\[
-					y=e^{rx}
-					\]
+							\[
+							y=e^{rx}
+							\]
 
-					Differentiating \(y=e^{rx}\) four times yields
+							Differentiating \(y=e^{rx}\) four times yields
 
-					\begin{align*}
-					\frac{dy}{dx}=re^{rx}
-					\Longrightarrow
-					\frac{d^2y}{dx^2}=r^2e^{rx} 
-					\Longrightarrow
-					\frac{d^3y}{dx^3}=r^3e^{rx}
-					\Longrightarrow
-					\frac{d^4y}{dx^4}=r^4e^{rx}
-					\end{align*}
+							\begin{align*}
+							\frac{dy}{dx}=re^{rx}
+							\Longrightarrow
+							\frac{d^2y}{dx^2}=r^2e^{rx} 
+							\Longrightarrow
+							\frac{d^3y}{dx^3}=r^3e^{rx}
+							\Longrightarrow
+							\frac{d^4y}{dx^4}=r^4e^{rx}
+							\end{align*}
 
-					
-					Substituting in to <a href="#x1-30r18">(9.2.18)</a> we obtain the equation
+							
+							Substituting in to <a href="#x1-30r18">(9.2.18)</a> we obtain the equation
 
-					\begin {equation*}
-					r^4e^{rx} + 4r^3e^{rx} + 6r^2e^{rx} + 4re^{rx} =0 
-					\end {equation*}
+							\begin {equation*}
+							r^4e^{rx} + 4r^3e^{rx} + 6r^2e^{rx} + 4re^{rx} =0 
+							\end {equation*}
 
-					Factoring out the exponential
+							Factoring out the exponential
 
-					\begin {equation*}
-					\Big( r^4+4r^3+6r^2+4r \Big) e^{rx}=0
-					\end {equation*}
+							\begin {equation*}
+							\Big( r^4+4r^3+6r^2+4r \Big) e^{rx}=0
+							\end {equation*}
 
-					We now need to solve the <span class="vocab">characteristic equation</span> of the <span class="vocab">characteristic polynomial</span> equal to zero
-					
-					\begin {align*}
-					r^4+4r^3+6r^2+4r  & = 0 \\
-					r\Big( r^3+4r^2+6r+4 \Big) & = 0 \\
-					\end {align*}
-					
-					After factoring the common factor of \(r\) the remaining polynomial is unfactorable so we apply the rational roots theorem. Since the constant term is \(4\) and leading coefficient is \(1\) then the only possible rational roots to consider are
-					\(\pm \big(1,2,4\big)\).
+							We now need to solve the <span class="vocab">characteristic equation</span> of the <span class="vocab">characteristic polynomial</span> equal to zero
+							
+							\begin {align*}
+							r^4+4r^3+6r^2+4r  & = 0 \\
+							r\Big( r^3+4r^2+6r+4 \Big) & = 0 \\
+							\end {align*}
+							
+							After factoring the common factor of \(r\) the remaining polynomial is unfactorable so we apply the rational roots theorem. Since the constant term is \(4\) and leading coefficient is \(1\) then the only possible rational roots to consider are
+							\(\pm \big(1,2,4\big)\).
 
-					fixme
-
-
-					\begin{array}{rrrrr}
-						& {\small r^3} & {\small r^2} & {\small r} & {\small \#} \\
-						 -1 \rfloor & 1 & 4 & 6 	& 4 \\
-									& 	& -1& 4  	& -10 \\ 
-						\hline
-									& 1 & -4 & 10 	& \lfloor -6 \\
-									& {\small r^2} & {\small r} & {\small \#} \\
-					\end{array}
-
-					Since the remainder is \(-6\) in this case then \(r=-1\) is not a root
+							fixme
 
 
-					\begin{array}{rrrrr}
-						& {\small r^3} & {\small r^2} & {\small r} & {\small \#} \\
-						 -2 \rfloor & 1 & 4 & 6 	& 4 \\
-									& 	& -2& -4  	& -4 \\ 
-						\hline
-									& 1 & 2 & 2 	& \lfloor 0 \\
-									& {\small r^2} & {\small r} & {\small \#} \\
-					\end{array}
-
-					But \(r=-2\) is a root so that means \((r+2)\) is a factor so we can solve the characteristic equation 
-
-					\begin {align*}
-					r(r+2)(r^2+2r+2) & = 0 \\
-					r=0 \quad r=-2 \quad r^2+2r+2 & = 0 \\
-					\end {align*}
-
-					And we can use the quadratic formula to solve the last equation
-
-					\begin {align*}
-					r = \frac{-2\pm \sqrt{2^2-4\cdot2}}{2}
-					=-1 \pm i
-					\end {align*}
-
-					So we have all four roots and can write four exponential solutions
-
-					\begin {align*}
-					r=0 \quad r=-2 \quad r=-1+i \quad r & =-1-i \\
-					y=e^{0x} \quad y=e^{-2x} \quad y=e^{(-1+i)x} \quad y & =e^{(-1-i)x} \\
-					y=1 \quad y=e^{-2x} \quad y=e^{-x}e^{ix} \quad y & =e^{-x}e^{ix} \\
-
-					\end {align*}
-
-					Again we'll use Euler's formula to rewrite the imaginary solutions in terms of real numbers to obtain the solution set
-
-					\[ 
-						\{ 1
-						, e^{-2x}
-						, e^{-x}\cos x
-						, e^{-x}\sin x 
-						\}
-					\]
+							\begin{array}{rrrrr}
+								& {\small r^3} & {\small r^2} & {\small r} & {\small \#} \\
+								-1 \rfloor & 1 & 4 & 6 	& 4 \\
+											& 	& -1& 4  	& -10 \\ 
+								\hline
+											& 1 & -4 & 10 	& \lfloor -6 \\
+											& {\small r^2} & {\small r} & {\small \#} \\
+							\end{array}
+						</div>
+					</li>
+					<li class="no-part">
+						<div>
+							Since the remainder is \(-6\) in this case then \(r=-1\) is not a root
 
 
+							\begin{array}{rrrrr}
+								& {\small r^3} & {\small r^2} & {\small r} & {\small \#} \\
+								-2 \rfloor & 1 & 4 & 6 	& 4 \\
+											& 	& -2& -4  	& -4 \\ 
+								\hline
+											& 1 & 2 & 2 	& \lfloor 0 \\
+											& {\small r^2} & {\small r} & {\small \#} \\
+							\end{array}
 
+							But \(r=-2\) is a root so that means \((r+2)\) is a factor so we can solve the characteristic equation 
 
-				</div>
+							\begin {align*}
+							r(r+2)(r^2+2r+2) & = 0 \\
+							r=0 \quad r=-2 \quad r^2+2r+2 & = 0 \\
+							\end {align*}
 
-				<div>
-					
-					
-				
+							And we can use the quadratic formula to solve the last equation
 
-					Therefore
-					the general solution of is
+							\begin {align*}
+							r = \frac{-2\pm \sqrt{2^2-4\cdot2}}{2}
+							=-1 \pm i
+							\end {align*}
 
-					\[
-					y=c_1 + c_2 e^{-2x} + \big( c_3 \cos x + c_4 \sin x\big) e^{-x} \]
+							So we have all four roots and can write four exponential solutions
 
+							\begin {align*}
+							r=0 \quad r=-2 \quad r=-1+i \quad r & =-1-i \\
+							y=e^{0x} \quad y=e^{-2x} \quad y=e^{(-1+i)x} \quad y & =e^{(-1-i)x} \\
+							y=1 \quad y=e^{-2x} \quad y=e^{-x}e^{ix} \quad y & =e^{-x}e^{ix} \\
 
-				</div>	
+							\end {align*}
+
+							Again we'll use Euler's formula to rewrite the imaginary solutions in terms of real numbers to obtain the solution set
+
+							\[ 
+								\{ 1
+								, e^{-2x}
+								, e^{-x}\cos x
+								, e^{-x}\sin x 
+								\}
+							\]
+
+						</div>
+
+						<div>
+						
+							Therefore
+							the general solution of is
+
+							\[
+							y=c_1 + c_2 e^{-2x} + \big( c_3 \cos x + c_4 \sin x\big) e^{-x} \]
+
+						</div>	
+					</li>
+				</ol>
 			
 			</details>
 		</div>

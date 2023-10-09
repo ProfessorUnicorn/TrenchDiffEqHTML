@@ -95,7 +95,7 @@
 				The next theorem is analogous to Theorem&nbsp;<a href="sec5.3.book.html#x1-263" target=_blank>5.3.3</a>.
 			</div>
 			<div class="theorem" id="x1-337" target=_blank>
-				<span class="head">Theorem&nbsp;9.1.7</span> <strong>The Principle of Superposition</strong>
+				<span class="head">Theorem&nbsp;9.1.7 The Principle of Superposition</span>
 				Suppose for each \(i=1,\) \(2,\) …, \(k\), the function \(y_{p_i}\) is a particular solution of \(Ly=F_i\) on \((a,b).\) Then 
 				
 				\[ y_p=y_{p_1}+y_{p_2}+\cdots +y_{p_k} \] 
@@ -169,9 +169,12 @@
 					<li>
 						Verify that \(y_1=x^2\), \(y_2=x^3\), and \(y_3=1/x\) are solutions of <a href="#x1-9r5">(9.1.5)</a> and find their domain
 					</li>
+					<li class="skip"></li>
 					<li>
 						Show that \(\{y_1,y_2,y_3\}\) is linearly independent
 					</li>
+					<li class="skip"></li>
+					<li class="skip"></li>
 					<li>
 						Find the general solution of <a href="#x1-9r5">(9.1.5)</a>
 					</li>
@@ -181,98 +184,97 @@
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
+						<!-- Part 1 -->
 						<li>
 							<div>
-								<div>
-									To verify \(y_1=x^2\) is a solution we differentiate \(y_1\) and substitute into <a href="#x1-9r5">(9.1.5)</a> 
-								</div>	
-								<div class="reading-exercise">
-									Differentiate \(y_1=x^2\) three times
-								</div>	
-								<div>
-									\[
-										y_1=x^2
-										\quad\quad
-										\frac{d y_1}{dx}=2x
-										\quad\quad
-										\frac{d^2 y_1}{dx^2}=2
-										\quad\quad
-										\frac{d^3 y_1}{dx^3}=0
-									\] 
+								To verify \(y_1=x^2\) is a solution we differentiate \(y_1\) and substitute into <a href="#x1-9r5">(9.1.5)</a> 
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y_1=x^2\) three times
+							</div>	
+							<div>
+								\[
+									y_1=x^2
+									\quad\quad
+									\frac{d y_1}{dx}=2x
+									\quad\quad
+									\frac{d^2 y_1}{dx^2}=2
+									\quad\quad
+									\frac{d^3 y_1}{dx^3}=0
+								\] 
 
-									\begin {align*} 
-										x^3 \underset{0}{\underbrace{\frac{d^3 y_1}{dx^3}}} -x^2 \underset{2}{\underbrace{\frac{d^2 y_1}{dx^2}}} -2x \underset{2x}{\underbrace{\frac{d y_1}{dx}}} +6 \underset{x^2}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
+								\begin {align*} 
+									x^3 \underset{0}{\underbrace{\frac{d^3 y_1}{dx^3}}} -x^2 \underset{2}{\underbrace{\frac{d^2 y_1}{dx^2}}} -2x \underset{2x}{\underbrace{\frac{d y_1}{dx}}} +6 \underset{x^2}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
 
-										-2x^2  \quad - \quad 4x^2  \quad+\quad 6x^2 = & \, 0  \quad\quad \checkmark \\
+									-2x^2  \quad - \quad 4x^2  \quad+\quad 6x^2 = & \, 0  \quad\quad \checkmark \\
 
-									\end {align*} 
+								\end {align*} 
 
-									Note that \(y_1=x^2\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
+								Note that \(y_1=x^2\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
 
-								</div>	
-								<br>
-								<br>
-								<div>
-									To verify \(y_2=x^3\) is a solution we differentiate \(y_2\) and substitute into <a href="#x1-9r5">(9.1.5)</a> 
-								</div>	
-								<div class="reading-exercise">
-									Differentiate \(y_2=x^3\) three times
-								</div>	
-								<div>
-									\[
-										y_2=x^3
-										\quad\quad
-										\frac{d y_2}{dx}=3x^2
-										\quad\quad
-										\frac{d^2 y_2}{dx^2}=6x
-										\quad\quad
-										\frac{d^3 y_1}{dx^3}=6
-									\] 
+							</div>	
+							<br>
+							<br>
+							<div>
+								To verify \(y_2=x^3\) is a solution we differentiate \(y_2\) and substitute into <a href="#x1-9r5">(9.1.5)</a> 
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y_2=x^3\) three times
+							</div>	
+							<div>
+								\[
+									y_2=x^3
+									\quad\quad
+									\frac{d y_2}{dx}=3x^2
+									\quad\quad
+									\frac{d^2 y_2}{dx^2}=6x
+									\quad\quad
+									\frac{d^3 y_1}{dx^3}=6
+								\] 
 
-									\begin {align*} 
-										x^3 \underset{6}{\underbrace{\frac{d^3 y_1}{dx^3}}} -x^2 \underset{6x}{\underbrace{\frac{d^2 y_1}{dx^2}}} -2x \underset{3x^2}{\underbrace{\frac{d y_1}{dx}}} +6 \underset{x^3}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
-										6x^3  \quad - \quad 6x^3\quad -\quad 6x^3 \quad+\quad 6x^3 = & \, 0  \quad\quad \checkmark \\
+								\begin {align*} 
+									x^3 \underset{6}{\underbrace{\frac{d^3 y_1}{dx^3}}} -x^2 \underset{6x}{\underbrace{\frac{d^2 y_1}{dx^2}}} -2x \underset{3x^2}{\underbrace{\frac{d y_1}{dx}}} +6 \underset{x^3}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
+									6x^3  \quad - \quad 6x^3\quad -\quad 6x^3 \quad+\quad 6x^3 = & \, 0  \quad\quad \checkmark \\
 
-									\end {align*} 
+								\end {align*} 
 
-									Note that \(y_2=x^3\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
+								Note that \(y_2=x^3\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
 
-								</div>	
-								<br>
-								<br>
-								<div>
-									To verify \(y_3=1/x\) is a solution we differentiate \(y_3\) and substitute into <a href="#x1-9r5">(9.1.5)</a> 
-								</div>	
-								<div class="reading-exercise">
-									Differentiate \(y_3=1/x\) three times
-								</div>	
-								<div>
-									\[
-										y_3=\frac{1}{x}
-										\quad\quad
-										\frac{d y_1}{dx}=-\frac{1}{x^2}
-										\quad\quad
-										\frac{d^2 y_1}{dx^2}=\frac{2}{x^3}
-										\quad\quad
-										\frac{d^3 y_1}{dx^3}=-\frac{6}{x^4}
-									\] 
+							</div>	
+							<br>
+							<br>
+						</li>
+						<li class="continued">
+							<div>
+								To verify \(y_3=1/x\) is a solution we differentiate \(y_3\) and substitute into <a href="#x1-9r5">(9.1.5)</a> 
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y_3=1/x\) three times
+							</div>	
+							<div>
+								\[
+									y_3=\frac{1}{x}
+									\quad\quad
+									\frac{d y_1}{dx}=-\frac{1}{x^2}
+									\quad\quad
+									\frac{d^2 y_1}{dx^2}=\frac{2}{x^3}
+									\quad\quad
+									\frac{d^3 y_1}{dx^3}=-\frac{6}{x^4}
+								\] 
 
-									\begin {align*} 
-										x^3 \underset{-\frac{6}{x^4}}{\underbrace{\frac{d^3 y_1}{dx^3}}} -x^2 \underset{\frac{2}{x^3}}{\underbrace{\frac{d^2 y_1}{dx^2}}} -2x \underset{-\frac{1}{x^2}}{\underbrace{\frac{d y_1}{dx}}} +6 \underset{-\frac{1}{x^2}}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
+								\begin {align*} 
+									x^3 \underset{-\frac{6}{x^4}}{\underbrace{\frac{d^3 y_1}{dx^3}}} -x^2 \underset{\frac{2}{x^3}}{\underbrace{\frac{d^2 y_1}{dx^2}}} -2x \underset{-\frac{1}{x^2}}{\underbrace{\frac{d y_1}{dx}}} +6 \underset{-\frac{1}{x^2}}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
 
-										-\frac{6}{x} \quad - \quad \frac{2}{x}  \quad + \quad \frac{2}{x} - \quad \frac{6}{x^2} = & \, 0  \quad\quad \checkmark \\
+									-\frac{6}{x} \quad - \quad \frac{2}{x}  \quad + \quad \frac{2}{x} - \quad \frac{6}{x^2} = & \, 0  \quad\quad \checkmark \\
 
-									\end {align*} 
+								\end {align*} 
 
-									Note that \(y_3=1/x\) is undefined when 
-									\(x=0\) so the domain is \(\left(-\infty,0\right)\) and \(\left(0,\infty\right)\)
-									
-
-
-								</div>	
+								Note that \(y_3=1/x\) is undefined when 
+								\(x=0\) so the domain is \(\left(-\infty,0\right)\) and \(\left(0,\infty\right)\)
 
 							</div>	
 						</li>
+						<!-- Part 2 -->
 						<li>
 							<div>
 								Now we will show \(\{y_1,y_2,y_3\}\) is linearly independent. Start by writing a
@@ -320,6 +322,10 @@
 									\end{array}
 									\right.
 								\end{align}
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 
 								We want to show that \(c_1=c_2=c_3=0\) on each interval \(\left(-\infty,0\right)\) and \(\left(0,\infty\right)\) so first we'll consider the interval \(\left(0,\infty\right)\). The system of equations must be true for all values of \(x\) so we'll choose a simple value \(x=1\) and substitute to obtain a simple system of equations.
 
@@ -504,7 +510,10 @@
 									\ne 0
 									\\
 								\end {align*}
-
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 								And since the determinant of the coefficients is nonzero then we know the system <a href="#x1-12r8">(9.1.8)</a> has only the trivial solution.
 								Expanding along the cofactors was simple enough but we can make it even simpler by using row reduction in combination with determinants. We can we can add and subtract any two rows the same way with determinants as we did with the augmented matrix: 
 							
@@ -671,6 +680,7 @@
 								Since the determinant is nonzero we know the system has only the trivial solution therefore \(\{x^2,x^3,1/x\}\) is linearly independent on \(\left(-\infty,0\right)\)
 							</div>	
 						</li>
+						<!-- Part 3 -->
 						<li>
 							Since we have shown that \(x^2,x^3\) and \(1/x\) are solutions of <a href="#x1-9r5">(9.1.5)</a> and that they are  linearly independent therefore we know \(\{x^2,x^3,1/x\}\) is a fundamental set, therefore the general solution is
 
@@ -703,9 +713,12 @@
 						Verify that \(y_1=e^x\), \(y_2=e^{-x}\), \(y_3=e^{2x}\), and 
 						\(y_4=e^{-3x}\) are solutions of <a href="#x1-14r9">(9.1.9)</a> and find their domain
 					</li>
+					<li class="skip"></li>
 					<li>
 						Show that \(\{y_1,y_2,y_3,y_4\}\) is linearly independent
 					</li>
+					<li class="skip"></li>
+					<li class="skip"></li>
 					<li>
 						Find the general solution of <a href="#x1-14r9">(9.1.9)</a>
 					</li>
@@ -714,227 +727,228 @@
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
+						<!-- Part 1 -->
 						<li>
+							<!--y_1=e^x-->
 							<div>
-								<!--y_1=e^x-->
-								<div>
-									To verify \(y_1=e^x\) is a solution we differentiate \(y_1\) and substitute into <a href="#x1-14r9">(9.1.9)</a> 
-								</div>	
-								<div class="reading-exercise">
-									Differentiate \(y_1=e^x\) four times
-								</div>	
-								<div>
-									\[
-										y_1=e^x
-										\quad\quad
-										\frac{d y_1}{dx}=e^x
-										\quad\quad
-										\frac{d^2 y_1}{dx^2}=e^x
-										\quad\quad
-										\frac{d^3 y_1}{dx^3}=e^x
-										\quad\quad
-										\frac{d^4 y_1}{dx^4}=e^x
-									\] 
-
-									\begin {align*} 
-										\underset{e^x}{\underbrace{\frac{d^4 y_1}{dx^4}}}
-										+ 
-										\underset{e^x}{\underbrace{\frac{d^3 y_1}{dx^3}}} 
-										-7 
-										\underset{e^x}{\underbrace{\frac{d^2 y_1}{dx^2}}} 
-										- 
-										\underset{e^x}{\underbrace{\frac{d y_1}{dx}}} 
-										+6 \underset{x^2}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
-										\underset{2e^x }{
-										\underbrace{
-										e^x  + e^x }} -
-										\underset{-8e^x }{
-											\underbrace{
-										7 e^x -
-										e^x }} +
-										6  e^x 
-										\overset{?}{=} & \, 0  \\
-										2e^x - 8 e^x + 6 e^x
-										\overset{?}{=} & \, 0  \\
-										- 6 e^x + 6 e^x
-										\overset{}{=} & \, 0 
-										\quad\quad \checkmark \\
-									\end {align*} 
-
-									Note that \(y_1=e^x\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
-								</div>	
-								<br>
-								<br>
-								<!--y_2=e^-x-->
-								<div>
-									To verify \(y_2=e^{-x}\) is a solution we differentiate \(y_2\) and substitute into <a href="#x1-14r9">(9.1.9)</a> 
-								</div>	
-								<div class="reading-exercise">
-									Differentiate \(y_2=e^{-x}\) four times
-								</div>	
-								<div>
-									\[
-										y_2=e^{-x}
-										\quad\quad
-										\frac{d y_2}{dx}=-e^{-x}
-										\quad\quad
-										\frac{d^2 y_2}{dx^2}=e^{-x}
-										\quad\quad
-										\frac{d^3 y_2}{dx^3}=-e^{-x}
-										\quad\quad
-										\frac{d^4 y_2}{dx^4}=e^{-x}
-									\] 
-
-									\begin {align*} 
-										\underset{e^{-x}}{\underbrace{\frac{d^4 y_2}{dx^4}}}
-										+ 
-										\underset{-e^{-x}}{\underbrace{\frac{d^3 y_2}{dx^3}}} 
-										-7 
-										\underset{e^{-x}}{\underbrace{\frac{d^2 y_2}{dx^2}}} 
-										- 
-										\underset{-e^{-x}}{\underbrace{\frac{d y_2}{dx}}} 
-										+6 \underset{e^{-x}}{\underbrace{y_2}} \overset{?}{=} & \, 0  \\
-
-										
-										e^{-x}
-										-
-										\underset{-8e^{-x} }{
-										\underbrace{
-										e^{-x}  -7 e^{-x} }} 
-										+
-										\underset{7e^x }{
-											\underbrace{
-										e^x +
-										6e^x }} 
-										\overset{?}{=} & \, 0  \\
-
-
-										e^{-x} - 8 e^{-x} + 7 e^{-x}
-										\overset{?}{=} & \, 0  \\
-
-										- 7 e^x + 7 e^x
-										\overset{}{=} & \, 0 
-										\quad\quad \checkmark \\
-									\end {align*} 
-
-									Note that \(y_2=e^{-x}\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
-								</div>
-								<br>
-								<br>
-								<div>
-									To verify \(y_3=e^{2x}\) is a solution we differentiate \(y_3\) and substitute into <a href="#x1-14r9">(9.1.9)</a> 
-								</div>	
-								<div class="reading-exercise">
-									Differentiate \(y_3=e^{2x}\) four times
-								</div>	
-								<div>
-									\[
-										y_3=e^{2x}
-										\quad\quad
-										\frac{d y_3}{dx}=2e^{2x}
-										\quad\quad
-										\frac{d^2 y_3}{dx^2}=4e^{2x}
-										\quad\quad
-										\frac{d^3 y_3}{dx^3}=8e^{2x}
-										\quad\quad
-										\frac{d^4 y_3}{dx^4}=16e^{2x}
-									\] 
-
-									\begin {align*} 
-										\underset{16e^{2x}}{\underbrace{\frac{d^4 y_3}{dx^4}}}
-										+ 
-										\underset{8e^{2x}}{\underbrace{\frac{d^3 y_3}{dx^3}}} 
-										-7 
-										\underset{4e^{2x}}{\underbrace{\frac{d^2 y_3}{dx^2}}} 
-										- 
-										\underset{2e^{2x}}{\underbrace{\frac{d y_3}{dx}}} 
-										+6 \underset{e^{2x}}{\underbrace{y_3}} \overset{?}{=} & \, 0  \\
-
-										\underset{24e^{2x}}{\underbrace{
-											16e^{2x} + 8 e^{2x}
-										}} 
-											- 
-										\underset{-30e^{2x}}{\underbrace{
-											28 e^{2x} - 2 e^{2x}
-										}} 
-											+ 6e^{2x}
-										\overset{?}{=} & \, 0  \\
-
-										\underset{-6e^{2x}}{\underbrace{24e^{2x} - 30 e^{2x}}} + 6 e^{2x}
-										\overset{?}{=} & \, 0  \\
-
-										-6 e^{2x} + 6 e^{2x}
-										\overset{}{=} & \, 0
-										\quad\quad \checkmark \\
-									\end {align*} 
-
-									Note that \(y_3=e^{2x}\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
-								</div>
-								<br>
-								<br>
-								<div>
-									To verify \(y_4=e^{-3x}\) is a solution we differentiate \(y_1\) and substitute into <a href="#x1-14r9">(9.1.9)</a> 
-								</div>	
-								<div class="reading-exercise">
-									Differentiate \(y_4=e^{-3x}\) four times
-								</div>	
-								<div>
-									\[
-										y_4=e^{-3x}
-										\quad\quad
-										\frac{d y_4}{dx}=-3e^{-3x}
-										\quad\quad
-										\frac{d^2 y_4}{dx^2}=9e^{-3x}
-										\quad\quad
-										\frac{d^3 y_4}{dx^3}=-27e^{-3x}
-										\quad\quad
-										\frac{d^4 y_4}{dx^4}=81e^{-3x}
-									\] 
-
-									\begin {align*} 
-										\underset{81e^{-3x}}{\underbrace{\frac{d^4 y_4}{dx^4}}}
-										+ 
-										\underset{-27e^{-3x}}{\underbrace{\frac{d^3 y_4}{dx^3}}} 
-										-7 
-										\underset{9e^{-3x}}{\underbrace{\frac{d^2 y_4}{dx^2}}} 
-										- 
-										\underset{-3e^{-3x}}{\underbrace{\frac{d y_4}{dx}}} 
-										+6 \underset{e^{-3x}}{\underbrace{y_4}} \overset{?}{=} & \, 0  \\
-
-										81e^{-3x} 
-										- 27e^{-3x}
-										- 63e^{-3x} 
-										+ 3e^{-3x}
-										+ 6e^{-3x}
-										\overset{?}{=} & \, 0  \\
-
-										81e^{-3x} 
-										- 
-										\underset{-90e^{-3x}}{\underbrace{27e^{-3x} - 63e^{-3x}}} 
-										+ 
-										\underset{9e^{-3x}}{\underbrace{3e^{-3x} + 6e^{-3x}}}
-										\overset{?}{=} & \, 0  \\
-
-
-										\underbrace{81e^{-3x}
-										-
-										90e^{-3x}}
-										+
-										9e^{-3x}
-										\overset{?}{=} & \, 0  \\
-
-										-9e^{-3x}
-										+
-										9e^{-3x}
-										\overset{?}{=} & \, 0 \quad\quad \checkmark \\
-
-									\end {align*} 
-
-									Note that \(y_4=e^{-3x}\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
-								</div>
-
+								To verify \(y_1=e^x\) is a solution we differentiate \(y_1\) and substitute into <a href="#x1-14r9">(9.1.9)</a> 
 							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y_1=e^x\) four times
+							</div>	
+							<div>
+								\[
+									y_1=e^x
+									\quad\quad
+									\frac{d y_1}{dx}=e^x
+									\quad\quad
+									\frac{d^2 y_1}{dx^2}=e^x
+									\quad\quad
+									\frac{d^3 y_1}{dx^3}=e^x
+									\quad\quad
+									\frac{d^4 y_1}{dx^4}=e^x
+								\] 
+
+								\begin {align*} 
+									\underset{e^x}{\underbrace{\frac{d^4 y_1}{dx^4}}}
+									+ 
+									\underset{e^x}{\underbrace{\frac{d^3 y_1}{dx^3}}} 
+									-7 
+									\underset{e^x}{\underbrace{\frac{d^2 y_1}{dx^2}}} 
+									- 
+									\underset{e^x}{\underbrace{\frac{d y_1}{dx}}} 
+									+6 \underset{x^2}{\underbrace{y_1}} \overset{?}{=} & \, 0  \\
+									\underset{2e^x }{
+									\underbrace{
+									e^x  + e^x }} -
+									\underset{-8e^x }{
+										\underbrace{
+									7 e^x -
+									e^x }} +
+									6  e^x 
+									\overset{?}{=} & \, 0  \\
+									2e^x - 8 e^x + 6 e^x
+									\overset{?}{=} & \, 0  \\
+									- 6 e^x + 6 e^x
+									\overset{}{=} & \, 0 
+									\quad\quad \checkmark \\
+								\end {align*} 
+
+								Note that \(y_1=e^x\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
+							</div>	
+							<br>
+							<br>
+							<!--y_2=e^-x-->
+							<div>
+								To verify \(y_2=e^{-x}\) is a solution we differentiate \(y_2\) and substitute into <a href="#x1-14r9">(9.1.9)</a> 
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y_2=e^{-x}\) four times
+							</div>	
+							<div>
+								\[
+									y_2=e^{-x}
+									\quad\quad
+									\frac{d y_2}{dx}=-e^{-x}
+									\quad\quad
+									\frac{d^2 y_2}{dx^2}=e^{-x}
+									\quad\quad
+									\frac{d^3 y_2}{dx^3}=-e^{-x}
+									\quad\quad
+									\frac{d^4 y_2}{dx^4}=e^{-x}
+								\] 
+
+								\begin {align*} 
+									\underset{e^{-x}}{\underbrace{\frac{d^4 y_2}{dx^4}}}
+									+ 
+									\underset{-e^{-x}}{\underbrace{\frac{d^3 y_2}{dx^3}}} 
+									-7 
+									\underset{e^{-x}}{\underbrace{\frac{d^2 y_2}{dx^2}}} 
+									- 
+									\underset{-e^{-x}}{\underbrace{\frac{d y_2}{dx}}} 
+									+6 \underset{e^{-x}}{\underbrace{y_2}} \overset{?}{=} & \, 0  \\
+
+									
+									e^{-x}
+									-
+									\underset{-8e^{-x} }{
+									\underbrace{
+									e^{-x}  -7 e^{-x} }} 
+									+
+									\underset{7e^x }{
+										\underbrace{
+									e^x +
+									6e^x }} 
+									\overset{?}{=} & \, 0  \\
+
+
+									e^{-x} - 8 e^{-x} + 7 e^{-x}
+									\overset{?}{=} & \, 0  \\
+
+									- 7 e^x + 7 e^x
+									\overset{}{=} & \, 0 
+									\quad\quad \checkmark \\
+								\end {align*} 
+
+								Note that \(y_2=e^{-x}\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
+							</div>
+							<br>
+							<br>
 						</li>
+						<li class="continued">
+							<div>
+								To verify \(y_3=e^{2x}\) is a solution we differentiate \(y_3\) and substitute into <a href="#x1-14r9">(9.1.9)</a> 
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y_3=e^{2x}\) four times
+							</div>	
+							<div>
+								\[
+									y_3=e^{2x}
+									\quad\quad
+									\frac{d y_3}{dx}=2e^{2x}
+									\quad\quad
+									\frac{d^2 y_3}{dx^2}=4e^{2x}
+									\quad\quad
+									\frac{d^3 y_3}{dx^3}=8e^{2x}
+									\quad\quad
+									\frac{d^4 y_3}{dx^4}=16e^{2x}
+								\] 
+
+								\begin {align*} 
+									\underset{16e^{2x}}{\underbrace{\frac{d^4 y_3}{dx^4}}}
+									+ 
+									\underset{8e^{2x}}{\underbrace{\frac{d^3 y_3}{dx^3}}} 
+									-7 
+									\underset{4e^{2x}}{\underbrace{\frac{d^2 y_3}{dx^2}}} 
+									- 
+									\underset{2e^{2x}}{\underbrace{\frac{d y_3}{dx}}} 
+									+6 \underset{e^{2x}}{\underbrace{y_3}} \overset{?}{=} & \, 0  \\
+
+									\underset{24e^{2x}}{\underbrace{
+										16e^{2x} + 8 e^{2x}
+									}} 
+										- 
+									\underset{-30e^{2x}}{\underbrace{
+										28 e^{2x} - 2 e^{2x}
+									}} 
+										+ 6e^{2x}
+									\overset{?}{=} & \, 0  \\
+
+									\underset{-6e^{2x}}{\underbrace{24e^{2x} - 30 e^{2x}}} + 6 e^{2x}
+									\overset{?}{=} & \, 0  \\
+
+									-6 e^{2x} + 6 e^{2x}
+									\overset{}{=} & \, 0
+									\quad\quad \checkmark \\
+								\end {align*} 
+
+								Note that \(y_3=e^{2x}\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
+							</div>
+							<br>
+							<br>
+							<div>
+								To verify \(y_4=e^{-3x}\) is a solution we differentiate \(y_1\) and substitute into <a href="#x1-14r9">(9.1.9)</a> 
+							</div>	
+							<div class="reading-exercise">
+								Differentiate \(y_4=e^{-3x}\) four times
+							</div>	
+							<div>
+								\[
+									y_4=e^{-3x}
+									\quad\quad
+									\frac{d y_4}{dx}=-3e^{-3x}
+									\quad\quad
+									\frac{d^2 y_4}{dx^2}=9e^{-3x}
+									\quad\quad
+									\frac{d^3 y_4}{dx^3}=-27e^{-3x}
+									\quad\quad
+									\frac{d^4 y_4}{dx^4}=81e^{-3x}
+								\] 
+
+								\begin {align*} 
+									\underset{81e^{-3x}}{\underbrace{\frac{d^4 y_4}{dx^4}}}
+									+ 
+									\underset{-27e^{-3x}}{\underbrace{\frac{d^3 y_4}{dx^3}}} 
+									-7 
+									\underset{9e^{-3x}}{\underbrace{\frac{d^2 y_4}{dx^2}}} 
+									- 
+									\underset{-3e^{-3x}}{\underbrace{\frac{d y_4}{dx}}} 
+									+6 \underset{e^{-3x}}{\underbrace{y_4}} \overset{?}{=} & \, 0  \\
+
+									81e^{-3x} 
+									- 27e^{-3x}
+									- 63e^{-3x} 
+									+ 3e^{-3x}
+									+ 6e^{-3x}
+									\overset{?}{=} & \, 0  \\
+
+									81e^{-3x} 
+									- 
+									\underset{-90e^{-3x}}{\underbrace{27e^{-3x} - 63e^{-3x}}} 
+									+ 
+									\underset{9e^{-3x}}{\underbrace{3e^{-3x} + 6e^{-3x}}}
+									\overset{?}{=} & \, 0  \\
+
+
+									\underbrace{81e^{-3x}
+									-
+									90e^{-3x}}
+									+
+									9e^{-3x}
+									\overset{?}{=} & \, 0  \\
+
+									-9e^{-3x}
+									+
+									9e^{-3x}
+									\overset{?}{=} & \, 0 \quad\quad \checkmark \\
+
+								\end {align*} 
+
+								Note that \(y_4=e^{-3x}\) is defined everywhere so the domain is \(\left(-\infty,\infty\right)\)
+							</div>
+						</li>
+						<!-- Part 2 -->
 						<li>
 							<div>
 								Now we will show \(\{y_1,y_2,y_3,y_4\}\) is linearly independent. Start by writing a
@@ -1005,12 +1019,12 @@
 									+ 8c_3 e^{2x}
 									- 27c_4 e^{-3x} & = 0 \\
 								\end{align*}
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 
 								Now that we have four equations we have a system we can solve to find \(c_1,c_2,c_3\) and \(c_4\)
-
-								<div>		
-									fixme
-								</div>	
 
 								<a id="x1-16r11"></a>
 								\begin{align} \label {eq:9.1.11}  
@@ -1115,6 +1129,10 @@
 									\right)
 									\\
 								\end {align*}
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 
 								Now that the first row has three zeros, we will expand by cofactors along it			
 
@@ -1372,272 +1390,280 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					<div>
-						We'll start with the definition of the <span class="vocab">Wronskian determinant</span> 
-						\begin {equation*}
-							W\big[y_1, y_2, y_3\big](x) = 
-							\det\left( 
-								\begin {array}{cccc} 
-									y_1 & y_2 & y_3 \\ 
-									\dfrac{dy_1}{dx} & \dfrac{dy_2}{dx} & \dfrac{dy_3}{dx} \\ 
-									\dfrac{d^2y_1}{dx^2} & \dfrac{d^2y_2}{dx^2} & \dfrac{d^2y_3}{dx^2} \\ 
-								\end {array}
-							\right)
-						\end {equation*}
+					<ol>
+						<li class="no-part">
+							<div>
+								We'll start with the definition of the <span class="vocab">Wronskian determinant</span> 
+								\begin {equation*}
+									W\big[y_1, y_2, y_3\big](x) = 
+									\det\left( 
+										\begin {array}{cccc} 
+											y_1 & y_2 & y_3 \\ 
+											\dfrac{dy_1}{dx} & \dfrac{dy_2}{dx} & \dfrac{dy_3}{dx} \\ 
+											\dfrac{d^2y_1}{dx^2} & \dfrac{d^2y_2}{dx^2} & \dfrac{d^2y_3}{dx^2} \\ 
+										\end {array}
+									\right)
+								\end {equation*}
 
-						Compute
-					</div>
-					<div class="reading-exercise">
-						Differentiate twice
-						\(
-							y_1 = x^2
-						\)
-					</div>
-					<div class="reading-exercise">
-						Differentiate twice
-						\(
-							y_2 = x^3
-						\)
-					</div>
-					<div class="reading-exercise">
-						Differentiate twice
-						\(
-							y_3 = \dfrac{1}{x}
-						\)
-					</div>
-					<div>
-						Differentiating \(y_1=x^2,\) \(y_2=x^3,\) and \(y_3 = \dfrac{1}{x}\) twice
+								Compute
+							</div>
+							<div class="reading-exercise">
+								Differentiate twice
+								\(
+									y_1 = x^2
+								\)
+							</div>
+							<div class="reading-exercise">
+								Differentiate twice
+								\(
+									y_2 = x^3
+								\)
+							</div>
+							<div class="reading-exercise">
+								Differentiate twice
+								\(
+									y_3 = \dfrac{1}{x}
+								\)
+							</div>
+							<div>
+								Differentiating \(y_1=x^2,\) \(y_2=x^3,\) and \(y_3 = \dfrac{1}{x}\) twice
 
-						\begin{align*}
-							\begin{array}{ccccc}
-								y_1=x^2
-								&\Longrightarrow&
-									\dfrac{d y_1}{dx}=2x
-									&\Longrightarrow&
-									\dfrac{d^2 y_1}{dx^2}=2 \\
-								y_2=x^3
-								&\Longrightarrow&
-									\dfrac{d y_2}{dx}=3x^2
-									&\Longrightarrow&
-									\dfrac{d^2 y_2}{dx^2}=6x \\
-								y_3=\frac{1}{x}
-								&\Longrightarrow&
-									\dfrac{d y_3}{dx}=-\dfrac{1}{x^2}
-									&\Longrightarrow&
-									\dfrac{d^2 y_3}{dx^2}=\dfrac{2}{x^3} \\
-									\end{array}	
-						\end{align*}
+								\begin{align*}
+									\begin{array}{ccccc}
+										y_1=x^2
+										&\Longrightarrow&
+											\dfrac{d y_1}{dx}=2x
+											&\Longrightarrow&
+											\dfrac{d^2 y_1}{dx^2}=2 \\
+										y_2=x^3
+										&\Longrightarrow&
+											\dfrac{d y_2}{dx}=3x^2
+											&\Longrightarrow&
+											\dfrac{d^2 y_2}{dx^2}=6x \\
+										y_3=\frac{1}{x}
+										&\Longrightarrow&
+											\dfrac{d y_3}{dx}=-\dfrac{1}{x^2}
+											&\Longrightarrow&
+											\dfrac{d^2 y_3}{dx^2}=\dfrac{2}{x^3} \\
+											\end{array}	
+								\end{align*}
 
-						Setting up the Wronskian determinant we have
+								Setting up the Wronskian determinant we have
 
-						\begin {equation*}
-							W\left[ x^2, x^3, \frac{1}{x} \right](x) = 
-							\det\left( 
-								\begin {array}{rrrrr} 
-									x^2 & x^3 & \dfrac{1}{x} \\ 
-									2x & 3x^2 & -\dfrac{1}{x^2}  \\ 
-									2 & 6x & \dfrac{2}{x^3} \\ 
-								\end {array}
-							\right)
-						\end {equation*}
+								\begin {equation*}
+									W\left[ x^2, x^3, \frac{1}{x} \right](x) = 
+									\det\left( 
+										\begin {array}{rrrrr} 
+											x^2 & x^3 & \dfrac{1}{x} \\ 
+											2x & 3x^2 & -\dfrac{1}{x^2}  \\ 
+											2 & 6x & \dfrac{2}{x^3} \\ 
+										\end {array}
+									\right)
+								\end {equation*}
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 
-						Which we can simply expand the cofactors along any row or column to calculate. We'll expand the cofactors along the third column as an example
+								Which we can simply expand the cofactors along any row or column to calculate. We'll expand the cofactors along the third column as an example
 
-						\begin {align*}
-							\det\left( 
-								\begin {array}{rrrrr} 
-									x^2 & x^3 & \dfrac{1}{x} \\ 
-									2x & 3x^2 & -\dfrac{1}{x^2}  \\ 
-									2 & 6x & \dfrac{2}{x^3} \\ 
-								\end {array}
-							\right)
-							& = 
-							\dfrac{1}{x}
-							\det\left( 
-								\begin {array}{rrrrr} 
-									2x & 3x^2 \\ 
-									2 & 6x \\ 
-								\end {array}
-							\right)
-							+
-							\dfrac{1}{x^2}
-							\det\left( 
-								\begin {array}{rrrrr} 
-									x^2 & x^3 \\ 
-									2 & 6x \\ 
-								\end {array}
-							\right)
-							+
-							\dfrac{2}{x^3}
-							\det\left( 
-								\begin {array}{rrrrr} 
-									x^2 & x^3 \\ 
-									2x & 3x^2 \\ 
-								\end {array}
-							\right)
-							\\
-							& = 
-							\dfrac{1}{x}
-							\Big( 
-								12x^2-6x^2
-							\Big)
-							+
-							\dfrac{1}{x^2}
-							\Big( 
-								6x^3-2x^3
-							\Big)
-							+
-							\dfrac{2}{x^3}
-							\Big( 
-								3x^4-2x^4
-							\Big) \\
-							& = 
-							\dfrac{1}{x}
-							\Big( 
-								6x^2
-							\Big)
-							+
-							\dfrac{1}{x^2}
-							\Big( 
-								4x^3
-							\Big)
-							+
-							\dfrac{2}{x^3}
-							\Big( 
-								x^4
-							\Big) \\
-							& = 
-							\quad
-							\underbrace{6x
-							\quad
-							+
-							\quad
-							4x
-							\quad
-							+
-							\quad
-							2x}
-							\\
-							& = 
-							\quad\quad\quad\quad\quad
-							12x 
-							\\
-						\end {align*}
+								\begin {align*}
+									\det\left( 
+										\begin {array}{rrrrr} 
+											x^2 & x^3 & \dfrac{1}{x} \\ 
+											2x & 3x^2 & -\dfrac{1}{x^2}  \\ 
+											2 & 6x & \dfrac{2}{x^3} \\ 
+										\end {array}
+									\right)
+									& = 
+									\dfrac{1}{x}
+									\det\left( 
+										\begin {array}{rrrrr} 
+											2x & 3x^2 \\ 
+											2 & 6x \\ 
+										\end {array}
+									\right)
+									+
+									\dfrac{1}{x^2}
+									\det\left( 
+										\begin {array}{rrrrr} 
+											x^2 & x^3 \\ 
+											2 & 6x \\ 
+										\end {array}
+									\right)
+									+
+									\dfrac{2}{x^3}
+									\det\left( 
+										\begin {array}{rrrrr} 
+											x^2 & x^3 \\ 
+											2x & 3x^2 \\ 
+										\end {array}
+									\right)
+									\\
+									& = 
+									\dfrac{1}{x}
+									\Big( 
+										12x^2-6x^2
+									\Big)
+									+
+									\dfrac{1}{x^2}
+									\Big( 
+										6x^3-2x^3
+									\Big)
+									+
+									\dfrac{2}{x^3}
+									\Big( 
+										3x^4-2x^4
+									\Big) \\
+									& = 
+									\dfrac{1}{x}
+									\Big( 
+										6x^2
+									\Big)
+									+
+									\dfrac{1}{x^2}
+									\Big( 
+										4x^3
+									\Big)
+									+
+									\dfrac{2}{x^3}
+									\Big( 
+										x^4
+									\Big) \\
+									& = 
+									\quad
+									\underbrace{6x
+									\quad
+									+
+									\quad
+									4x
+									\quad
+									+
+									\quad
+									2x}
+									\\
+									& = 
+									\quad\quad\quad\quad\quad
+									12x 
+									\\
+								\end {align*}
 
-						While we were able to calculate the Wronskian determinant fairly simply using cofactor expansion, we can also use row reduction techniques to simplify the determinant calculation. For instance we can factor each row to remove the fractions. For instance we'll multiply the first row by \(x\), the second row by \(x^2\), and the third row by \(x^3\) which results in a factor of \({1}/{\big( x\cdot x^2\cdot x^3 \big)}={1}/{x^6}\) in front of the determinant
+								While we were able to calculate the Wronskian determinant fairly simply using cofactor expansion, we can also use row reduction techniques to simplify the determinant calculation. For instance we can factor each row to remove the fractions. For instance we'll multiply the first row by \(x\), the second row by \(x^2\), and the third row by \(x^3\) which results in a factor of \({1}/{\big( x\cdot x^2\cdot x^3 \big)}={1}/{x^6}\) in front of the determinant
 
-						\begin {align*}
-							\det\left( 
-								\begin {array}{rrrrr} 
-									x^2 & x^3 & \dfrac{1}{x} \\ 
-									2x & 3x^2 & -\dfrac{1}{x^2}  \\ 
-									2 & 6x & \dfrac{2}{x^3} \\ 
-								\end {array}
-							\right)
-							& =
-							\dfrac{1}{x^6} 
-							\det\left( 
-								\begin {array}{ccccc} 
-									x^3 & x^4 & 1 \\ 
-									2x^3 & 3x^4 & -1  \\ 
-									2x^3 & 6x^4 & 2 \\
-								\end {array}
-							\right)
-						\end {align*}
+								\begin {align*}
+									\det\left( 
+										\begin {array}{rrrrr} 
+											x^2 & x^3 & \dfrac{1}{x} \\ 
+											2x & 3x^2 & -\dfrac{1}{x^2}  \\ 
+											2 & 6x & \dfrac{2}{x^3} \\ 
+										\end {array}
+									\right)
+									& =
+									\dfrac{1}{x^6} 
+									\det\left( 
+										\begin {array}{ccccc} 
+											x^3 & x^4 & 1 \\ 
+											2x^3 & 3x^4 & -1  \\ 
+											2x^3 & 6x^4 & 2 \\
+										\end {array}
+									\right)
+								\end {align*}
 
-						Aside from factoring common factors out of a rows, we can actually factor common factors out of a columns as well. We'll factor \(x^3\) out of the first column and \(x^4\) out of the second column which results in a factor of \(x^3 \cdot x^4 = x^7\) in front of the determinant
+								Aside from factoring common factors out of a rows, we can actually factor common factors out of a columns as well. We'll factor \(x^3\) out of the first column and \(x^4\) out of the second column which results in a factor of \(x^3 \cdot x^4 = x^7\) in front of the determinant
 
-						
-						\begin {align*}
-							\dfrac{1}{x^6} 
-							\det\left( 
-								\begin {array}{rrrrrr} 
-									x^3 & x^4 & 1 \\ 
-									2x^3 & 3x^4 & -1  \\ 
-									2x^3 & 6x^4 & 2 \\
-								\end {array}
-							\right)
-							& =
-							\dfrac{x^7}{x^6} 
-							\det\left( 
-								\begin {array}{rrrrrr} 
-									1 & 1 & 1 \\ 
-									2 & 3 & -1  \\ 
-									2 & 6 & 2 \\
-								\end {array}
-							\right)
-							=
-							x
-							\det\left( 
-								\begin {array}{rrrrrr} 
-									1 & 1 & 1 \\ 
-									2 & 3 & -1  \\ 
-									2 & 6 & 2 \\
-								\end {array}
-							\right)
-						\end {align*}
+								
+								\begin {align*}
+									\dfrac{1}{x^6} 
+									\det\left( 
+										\begin {array}{rrrrrr} 
+											x^3 & x^4 & 1 \\ 
+											2x^3 & 3x^4 & -1  \\ 
+											2x^3 & 6x^4 & 2 \\
+										\end {array}
+									\right)
+									& =
+									\dfrac{x^7}{x^6} 
+									\det\left( 
+										\begin {array}{rrrrrr} 
+											1 & 1 & 1 \\ 
+											2 & 3 & -1  \\ 
+											2 & 6 & 2 \\
+										\end {array}
+									\right)
+									=
+									x
+									\det\left( 
+										\begin {array}{rrrrrr} 
+											1 & 1 & 1 \\ 
+											2 & 3 & -1  \\ 
+											2 & 6 & 2 \\
+										\end {array}
+									\right)
+								\end {align*}
 
-						Now we'll go ahead and subtract column 1 from columns 2 and 3
+								Now we'll go ahead and subtract column 1 from columns 2 and 3
 
-						\begin {align*}
-						x
-						\det\left( 
-							\begin {array}{rrrrrr} 
-								1 & 1 & 1 \\ 
-								2 & 3 & -1  \\ 
-								2 & 6 & 2 \\
-							\end {array}
-						\right)
-						\overset{C_2-C_1}{\longrightarrow}
-						x
-						\det\left( 
-							\begin {array}{rrrrrr} 
-								1 & 0 & 1 \\ 
-								2 & 1 & -1  \\ 
-								2 & 4 & 2 \\
-							\end {array}
-						\right)
-						\overset{C_3-C_1}{\longrightarrow}
-						x
-						\det\left( 
-							\begin {array}{rrrrrr} 
-								1 & 0 & 0 \\ 
-								2 & 1 & -3  \\ 
-								2 & 4 & 0 \\
-							\end {array}
-						\right)
-					\end {align*}
+								\begin {align*}
+									x
+									\det\left( 
+										\begin {array}{rrrrrr} 
+											1 & 1 & 1 \\ 
+											2 & 3 & -1  \\ 
+											2 & 6 & 2 \\
+										\end {array}
+									\right)
+									\overset{C_2-C_1}{\longrightarrow}
+									x
+									\det\left( 
+										\begin {array}{rrrrrr} 
+											1 & 0 & 1 \\ 
+											2 & 1 & -1  \\ 
+											2 & 4 & 2 \\
+										\end {array}
+									\right)
+									\overset{C_3-C_1}{\longrightarrow}
+									x
+									\det\left( 
+										\begin {array}{rrrrrr} 
+											1 & 0 & 0 \\ 
+											2 & 1 & -3  \\ 
+											2 & 4 & 0 \\
+										\end {array}
+									\right)
+								\end {align*}
 
-					And expand along the first row
+								And expand along the first row
 
-					\begin {align*}
-						x
-						\det\left( 
-							\begin {array}{rrrrrr} 
-								1 & 0 & 0 \\ 
-								2 & 1 & -3  \\ 
-								2 & 4 & 0 \\
-							\end {array}
-						\right)
-						& =
-						x
-						\det\left( 
-							\begin {array}{rrrrrr} 
-								1 & -3  \\ 
-								4 & 0 \\
-							\end {array}
-						\right) \\
-						& =
-						x \cdot
-						\left( 
-							0+12
-						\right) \\
-						& =
-						12x \\
-					\end {align*}
+								\begin {align*}
+									x
+									\det\left( 
+										\begin {array}{rrrrrr} 
+											1 & 0 & 0 \\ 
+											2 & 1 & -3  \\ 
+											2 & 4 & 0 \\
+										\end {array}
+									\right)
+									& =
+									x
+									\det\left( 
+										\begin {array}{rrrrrr} 
+											1 & -3  \\ 
+											4 & 0 \\
+										\end {array}
+									\right) \\
+									& =
+									x \cdot
+									\left( 
+										0+12
+									\right) \\
+									& =
+									12x \\
+								\end {align*}
 
-					Which yields the same result.
-					</div>	
+								Which yields the same result.
+							</div>	
+						</li>
+					</ol>
 				</details>
 			</div>
 
@@ -1656,248 +1682,257 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					<div>
-						We'll start with the definition of the <span class="vocab">Wronskian determinant</span> 
-						\begin {equation*}
-							W\big[y_1, y_2, y_3, y_4\big](x) = 
-							\det\left( 
-								\begin {array}{cccc} 
-									y_1 & y_2 & y_3 & y_4 \\ 
-									\dfrac{dy_1}{dx} & \dfrac{dy_2}{dx} & \dfrac{dy_3}{dx} & \dfrac{dy_4}{dx} \\ 
-									\dfrac{d^2y_1}{dx^2} & \dfrac{d^2y_2}{dx^2} & \dfrac{d^2y_3}{dx^2} & \dfrac{d^2y_4}{dx^2} \\
-									\dfrac{d^3y_1}{dx^3} & \dfrac{d^3y_2}{dx^3} & \dfrac{d^3y_3}{dx^3} & \dfrac{d^3y_4}{dx^3} \\ 
-								\end {array}
-							\right)
-						\end {equation*}
+					<ol>
+						<li class="no-part">
+							<div>
+								We'll start with the definition of the <span class="vocab">Wronskian determinant</span> 
+								\begin {equation*}
+									W\big[y_1, y_2, y_3, y_4\big](x) = 
+									\det\left( 
+										\begin {array}{cccc} 
+											y_1 & y_2 & y_3 & y_4 \\ 
+											\dfrac{dy_1}{dx} & \dfrac{dy_2}{dx} & \dfrac{dy_3}{dx} & \dfrac{dy_4}{dx} \\ 
+											\dfrac{d^2y_1}{dx^2} & \dfrac{d^2y_2}{dx^2} & \dfrac{d^2y_3}{dx^2} & \dfrac{d^2y_4}{dx^2} \\
+											\dfrac{d^3y_1}{dx^3} & \dfrac{d^3y_2}{dx^3} & \dfrac{d^3y_3}{dx^3} & \dfrac{d^3y_4}{dx^3} \\ 
+										\end {array}
+									\right)
+								\end {equation*}
 
-						Compute
-					</div>
-					<div class="reading-exercise">
-						Differentiate three times
-						\(
-							y_1 = e^x
-						\)
-					</div>
-					<div class="reading-exercise">
-						Differentiate three times
-						\(
-							y_2 = e^{-x}
-						\)
-					</div>
-					<div class="reading-exercise">
-						Differentiate three times
-						\(
-							y_3 = e^{2x}
-						\)
-					</div>
-					<div class="reading-exercise">
-						Differentiate three times
-						\(
-							y_4 = e^{-3x}
-						\)
-					</div>
-					<div>
-						Differentiating \(y_1=e^x,\) \(y_2=e^{-x},\) \(y_3=e^{2x},\) and \(y_3 = \dfrac{1}{x}\) three times
+								Compute
+							</div>
+							<div class="reading-exercise">
+								Differentiate three times
+								\(
+									y_1 = e^x
+								\)
+							</div>
+							<div class="reading-exercise">
+								Differentiate three times
+								\(
+									y_2 = e^{-x}
+								\)
+							</div>
+							<div class="reading-exercise">
+								Differentiate three times
+								\(
+									y_3 = e^{2x}
+								\)
+							</div>
+							<div class="reading-exercise">
+								Differentiate three times
+								\(
+									y_4 = e^{-3x}
+								\)
+							</div>
+							<div>
+								Differentiating \(y_1=e^x,\) \(y_2=e^{-x},\) \(y_3=e^{2x},\) and \(y_3 = \dfrac{1}{x}\) three times
 
-						\begin{align*}
-							\begin{array}{ccccc}
-								y_1=e^x
-								&\Longrightarrow&
-									\dfrac{d y_1}{dx}=e^x
-									&\Longrightarrow&
-									\dfrac{d^2 y_1}{dx^2}=e^x
-									&\Longrightarrow&
-									\dfrac{d^3 y_1}{dx^3}=e^x \\
-								y_2=e^{-x}
-								&\Longrightarrow&
-									\dfrac{d y_2}{dx}=-e^{-x}
-									&\Longrightarrow&
-									\dfrac{d^2 y_2}{dx^2}=e^{-x}
-									&\Longrightarrow&
-									\dfrac{d^3 y_2}{dx^3}=-e^{-x} \\
-								y_3=e^{2x}
-								&\Longrightarrow&
-									\dfrac{d y_3}{dx}=2e^{2x}
-									&\Longrightarrow&
-									\dfrac{d^2 y_3}{dx^2}=4e^{2x}
-									&\Longrightarrow&
-									\dfrac{d^3 y_3}{dx^3}=8e^{2x} \\
-								y_4=e^{-3x}
-								&\Longrightarrow&
-									\dfrac{d y_4}{dx}=-3e^{-3x}
-									&\Longrightarrow&
-									\dfrac{d^2 y_4}{dx^2}=9e^{-3x}
-									&\Longrightarrow&
-									\dfrac{d^3 y_4}{dx^3}=-27e^{-3x} \\	
-								\end{array}	
-						\end{align*}
+								\begin{align*}
+									\begin{array}{ccccc}
+										y_1=e^x
+										&\Longrightarrow&
+											\dfrac{d y_1}{dx}=e^x
+											&\Longrightarrow&
+											\dfrac{d^2 y_1}{dx^2}=e^x
+											&\Longrightarrow&
+											\dfrac{d^3 y_1}{dx^3}=e^x \\
+										y_2=e^{-x}
+										&\Longrightarrow&
+											\dfrac{d y_2}{dx}=-e^{-x}
+											&\Longrightarrow&
+											\dfrac{d^2 y_2}{dx^2}=e^{-x}
+											&\Longrightarrow&
+											\dfrac{d^3 y_2}{dx^3}=-e^{-x} \\
+										y_3=e^{2x}
+										&\Longrightarrow&
+											\dfrac{d y_3}{dx}=2e^{2x}
+											&\Longrightarrow&
+											\dfrac{d^2 y_3}{dx^2}=4e^{2x}
+											&\Longrightarrow&
+											\dfrac{d^3 y_3}{dx^3}=8e^{2x} \\
+										y_4=e^{-3x}
+										&\Longrightarrow&
+											\dfrac{d y_4}{dx}=-3e^{-3x}
+											&\Longrightarrow&
+											\dfrac{d^2 y_4}{dx^2}=9e^{-3x}
+											&\Longrightarrow&
+											\dfrac{d^3 y_4}{dx^3}=-27e^{-3x} \\	
+										\end{array}	
+								\end{align*}
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
+								Setting up the Wronskian determinant we have
 
-						Setting up the Wronskian determinant we have
+								\begin {equation*}
+									W\left[ e^x, e^{-x}, e^{2x}, e^{-3x} \right](x) = 
+									\det\left( 
+										\begin {array}{rrrrr} 
+										e^x & e^{-x} & e^{2x} & e^{-3x} \\ 
+										e^x & -e^{-x} & 2e^{2x} & -3e^{-3x} \\
+										e^x & e^{-x} & 4e^{2x} & 9e^{-3x} \\ 
+										e^x & -e^{-x} & 8e^{2x} & -27e^{-3x} \\ 
+										\end {array}
+									\right)
+								\end {equation*}
+								
+								Rather than simply expanding the cofactors, we'll start with factoring common factors. Factoring out \(e^x\) from the first column, \(e^{-x}\) from the second column, \(e^{2x}\) from the third column, and \(e^{-3x}\) from the fourth column we have
 
-						\begin {equation*}
-							W\left[ e^x, e^{-x}, e^{2x}, e^{-3x} \right](x) = 
-							\det\left( 
-								\begin {array}{rrrrr} 
-								e^x & e^{-x} & e^{2x} & e^{-3x} \\ 
-								e^x & -e^{-x} & 2e^{2x} & -3e^{-3x} \\
-								e^x & e^{-x} & 4e^{2x} & 9e^{-3x} \\ 
-								e^x & -e^{-x} & 8e^{2x} & -27e^{-3x} \\ 
-								\end {array}
-							\right)
-						\end {equation*}
-						
-						Rather than simply expanding the cofactors, we'll start with factoring common factors. Factoring out \(e^x\) from the first column, \(e^{-x}\) from the second column, \(e^{2x}\) from the third column, and \(e^{-3x}\) from the fourth column we have
-
-						\begin {align*}
-							e^x e^{-x} e^{2x} e^{-3x}
-							\det\left( 
-								\begin {array}{rrrrrrr} 
-									1 & 1 & 1 & 1 \\ 
-									1 & -1 & 2 & -3 \\
-									1 & 1 & 4 & 9 \\ 
-									1 & -1 & 8 & -27 \\ 
-								\end {array}
-							\right)
-							=
-							e^{-x}
-							\det\left( 
-								\begin {array}{rrrrrrr} 
-									1 & 1 & 1 & 1 \\ 
-									1 & -1 & 2 & -3 \\
-									1 & 1 & 4 & 9 \\ 
-									1 & -1 & 8 & -27 \\ 
-								\end {array}
-							\right)
-						\end {align*}
+								\begin {align*}
+									e^x e^{-x} e^{2x} e^{-3x}
+									\det\left( 
+										\begin {array}{rrrrrrr} 
+											1 & 1 & 1 & 1 \\ 
+											1 & -1 & 2 & -3 \\
+											1 & 1 & 4 & 9 \\ 
+											1 & -1 & 8 & -27 \\ 
+										\end {array}
+									\right)
+									=
+									e^{-x}
+									\det\left( 
+										\begin {array}{rrrrrrr} 
+											1 & 1 & 1 & 1 \\ 
+											1 & -1 & 2 & -3 \\
+											1 & 1 & 4 & 9 \\ 
+											1 & -1 & 8 & -27 \\ 
+										\end {array}
+									\right)
+								\end {align*}
 
 
-						Now we'll use reduction techniques. Subtracting the first column from the rest of the columns
+								Now we'll use reduction techniques. Subtracting the first column from the rest of the columns
 
-						\begin {align*}
-							&
-							e^{-x}
-							\det\left( 
-								\begin {array}{rrrrrrr} 
-									1 & 1 & 1 & 1 \\ 
-									1 & -1 & 2 & -3 \\
-									1 & 1 & 4 & 9 \\ 
-									1 & -1 & 8 & -27 \\ 
-								\end {array}
-							\right)
-							\overset{\small C_2-C_1}{\longrightarrow}
-							e^{-x}
-							\det\left( 
-								\begin {array}{rrrrrrr} 
-									1 & 0 & 1 & 1 \\ 
-									1 & -2 & 2 & -3 \\
-									1 & 0 & 4 & 9 \\ 
-									1 & -2 & 8 & -27 \\ 
-								\end {array}
-							\right) \\
+								\begin {align*}
+									&
+									e^{-x}
+									\det\left( 
+										\begin {array}{rrrrrrr} 
+											1 & 1 & 1 & 1 \\ 
+											1 & -1 & 2 & -3 \\
+											1 & 1 & 4 & 9 \\ 
+											1 & -1 & 8 & -27 \\ 
+										\end {array}
+									\right)
+									\overset{\small C_2-C_1}{\longrightarrow}
+									e^{-x}
+									\det\left( 
+										\begin {array}{rrrrrrr} 
+											1 & 0 & 1 & 1 \\ 
+											1 & -2 & 2 & -3 \\
+											1 & 0 & 4 & 9 \\ 
+											1 & -2 & 8 & -27 \\ 
+										\end {array}
+									\right) \\
+									
+									\overset{\small C_3-C_1}{\longrightarrow}
+									&
+									e^{-x}
+									\det\left( 
+										\begin {array}{rrrrrrr} 
+											1 & 0 & 0 & 1 \\ 
+											1 & -2 & 1 & -3 \\
+											1 & 0 & 3 & 9 \\ 
+											1 & -2 & 7 & -27 \\ 
+										\end {array}
+									\right)
+									\overset{\small C_4-C_1}{\longrightarrow}
+									e^{-x}
+									\det\left( 
+										\begin {array}{rrrrrrr} 
+											1 & 0 & 0 & 0 \\ 
+											1 & -2 & 1 & -4 \\
+											1 & 0 & 3 & 8 \\ 
+											1 & -2 & 7 & -28 \\ 
+										\end {array}
+									\right) \\
+								\end {align*}
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
+								Now expanding the cofactors along the first row
+
+								\begin {align*}
+									e^{-x}
+									\det\left( 
+										\begin {array}{rrrrrrr} 
+											1 & 0 & 0 & 0 \\ 
+											1 & -2 & 1 & -4 \\
+											1 & 0 & 3 & 8 \\ 
+											1 & -2 & 7 & -28 \\ 
+										\end {array}
+									\right)
+									=
+									e^{-x}
+									\det\left( 
+										\begin {array}{rrrrrrr} 
+											-2 & 1 & -4 \\
+											0 & 3 & 8 \\ 
+											-2 & 7 & -28 \\ 
+										\end {array}
+									\right)
+								\end {align*}
+
+
+								Subtracting row 1 from from 3
+
+								\begin {align*}
+									e^{-x}
+									\det\left( 
+										\begin {array}{rrrrrrr} 
+											-2 & 1 & -4 \\
+											0 & 3 & 8 \\ 
+											-2 & 7 & -28 \\ 
+										\end {array}
+									\right)
+									\overset{\small R_3-R_1}{\longrightarrow}
+									e^{-x}
+									\det\left( 
+										\begin {array}{rrrrrrr} 
+											-2 & 1 & -4 \\
+											0 & 3 & 8 \\ 
+											0 & 6 & -24 \\ 
+										\end {array}
+									\right)
+								\end {align*}
+
+								Expanding by cofactors along the first column
+
+								\begin {align*}
+									e^{-x}
+									\det\left( 
+										\begin {array}{rrrrrrr} 
+											-2 & 1 & -4 \\
+											0 & 3 & 8 \\ 
+											0 & 6 & -24 \\ 
+										\end {array}
+									\right)
+									& =
+									-2e^{-x}
+									\det\left( 
+										\begin {array}{rrrrrrr} 
+											3 & 8 \\ 
+											6 & -24 \\ 
+										\end {array}
+									\right) \\
+									& =
+									-2e^{-x}
+									\cdot
+									\Big( 
+										-3\cdot 24 - 6\cdot8
+									\Big) \\
+									& =
+									240e^{-x}
+									\\
+								\end {align*}
+
+
 							
-							\overset{\small C_3-C_1}{\longrightarrow}
-							&
-							e^{-x}
-							\det\left( 
-								\begin {array}{rrrrrrr} 
-									1 & 0 & 0 & 1 \\ 
-									1 & -2 & 1 & -3 \\
-									1 & 0 & 3 & 9 \\ 
-									1 & -2 & 7 & -27 \\ 
-								\end {array}
-							\right)
-							\overset{\small C_4-C_1}{\longrightarrow}
-							e^{-x}
-							\det\left( 
-								\begin {array}{rrrrrrr} 
-									1 & 0 & 0 & 0 \\ 
-									1 & -2 & 1 & -4 \\
-									1 & 0 & 3 & 8 \\ 
-									1 & -2 & 7 & -28 \\ 
-								\end {array}
-							\right) \\
-						\end {align*}
-
-						Now expanding the cofactors along the first row
-
-						\begin {align*}
-							e^{-x}
-							\det\left( 
-								\begin {array}{rrrrrrr} 
-									1 & 0 & 0 & 0 \\ 
-									1 & -2 & 1 & -4 \\
-									1 & 0 & 3 & 8 \\ 
-									1 & -2 & 7 & -28 \\ 
-								\end {array}
-							\right)
-							=
-							e^{-x}
-							\det\left( 
-								\begin {array}{rrrrrrr} 
-									-2 & 1 & -4 \\
-									0 & 3 & 8 \\ 
-									-2 & 7 & -28 \\ 
-								\end {array}
-							\right)
-						\end {align*}
-
-
-						Subtracting row 1 from from 3
-
-						\begin {align*}
-							e^{-x}
-							\det\left( 
-								\begin {array}{rrrrrrr} 
-									-2 & 1 & -4 \\
-									0 & 3 & 8 \\ 
-									-2 & 7 & -28 \\ 
-								\end {array}
-							\right)
-							\overset{\small R_3-R_1}{\longrightarrow}
-							e^{-x}
-							\det\left( 
-								\begin {array}{rrrrrrr} 
-									-2 & 1 & -4 \\
-									0 & 3 & 8 \\ 
-									0 & 6 & -24 \\ 
-								\end {array}
-							\right)
-						\end {align*}
-
-						Expanding by cofactors along the first column
-
-						\begin {align*}
-							e^{-x}
-							\det\left( 
-								\begin {array}{rrrrrrr} 
-									-2 & 1 & -4 \\
-									0 & 3 & 8 \\ 
-									0 & 6 & -24 \\ 
-								\end {array}
-							\right)
-							& =
-							-2e^{-x}
-							\det\left( 
-								\begin {array}{rrrrrrr} 
-									3 & 8 \\ 
-									6 & -24 \\ 
-								\end {array}
-							\right) \\
-							& =
-							-2e^{-x}
-							\cdot
-							\Big( 
-								-3\cdot 24 - 6\cdot8
-							\Big) \\
-							& =
-							240e^{-x}
-							\\
-						\end {align*}
-
-
-					
-					</div>	
-				
+							</div>	
+						</li>
+					</ol>
 				</details>
 			</div>
 
