@@ -66,9 +66,7 @@
 				It is important to keep in mind that the variable of integration in the <span class="vocab-repeat">Laplace transform</span> <a href="#x1-4r2">(8.1.2)</a> is \(t\), while \(s\) is a parameter independent of \(t\). We use \(t\) as the independent variable for the function \(f\) because in applications the Laplace transform is frequently applied to functions of time. 
 			</div>
 			<div class="indent" id="8414c5ac-135f-4485-89b1-f7dd3372a9ec">
-				The Laplace transform can be viewed as an <span class="vocab">operator</span> \(\cal L\) that transforms the function \(f=f(t)\) into the function \(F=F(s)\). Thus, <a href="#x1-4r2">(8.1.2)</a> can be expressed as 
-				
-				\[ F(s)= {\cal L} \big\{ f(t) \big\} \] 
+				The Laplace transform can be viewed as an <span class="vocab">operator</span> \(\cal L\) that transforms the function \(f=f(t)\) into the function \(F=F(s)\). 
 				
 				The functions \(f(t)\) and \(F(s)\) form a <span class="vocab">transform pair</span>, which we’ll sometimes denote by 
 				
@@ -98,7 +96,7 @@
 						From <a href="#x1-4r2">(8.1.2)</a> with \(f(t)=1\)
 						
 						<a id="x1-6r3"></a>
-						\begin {align} \label {eq:8.1.3}
+						\begin {align} 
 							{\cal L} \big\{ 1 \big\} 
 								= & \int _0^\infty e^{-st} \cdot 1 \, dt \nonumber \\
 								= & \int _0^\infty e^{-st} \, dt \nonumber \\
@@ -106,17 +104,17 @@
 								= & -\frac{1}{s}  \lim_{x \to \infty} \Bigg. \Big[ \, e^{-st} \Big] \Bigg|_{t=0}^{t=x} \nonumber \\
 								= & -\frac{1}{s} \, \lim_{x \to \infty} \, \Big[ e^{-sx} - e^{0} \Big] \nonumber \\
 								= & \frac{1}{s} \, \lim_{x \to \infty} \, \Big[ 1 - e^{-sx} \Big] \nonumber \\
-								= & \frac{1}{s} \, \Big[ \, 1 - \lim_{x \to \infty}e^{-sx} \, \Big]
+								= & \frac{1}{s} \, \Big[ \, 1 - \lim_{x \to \infty}e^{-sx} \, \Big] \label {eq:8.1.3}
 						\end {align}
 
 						Now to evaluate the limit, we'll consider cases for \(s\). First if \(s < 0 \) then the limit diverges, so the <span class="vocab-repeat">Laplace transform</span> is not defined for those values, whereas if \(s < 0 \) then the limit converges to zero, so we obtain: 
 
 						<a id="x1-7r4"></a>
-						\begin {align} \label {eq:8.1.4} 
+						\begin {align} 
 							{\cal L} \big\{ 1 \big\} 
 								= & \frac{1}{s} \, \Big[ \, 1 - \lim_{x \to \infty}e^{-sx} \, \Big] \nonumber \\
 								= & \frac{1}{s} \, \Big[ \, 1 - 0 \, \Big] \nonumber \\
-								= & \frac{1}{s}
+								= & \frac{1}{s} \label {eq:8.1.4} 
 						\end {align}	
 						
 						This result can be written in <span class="vocab">operator notation</span> as 
@@ -731,11 +729,11 @@
 								Now we apply the linearity property of the Laplace transform
 
 								<a id="x1-18r9"></a>
-								\begin {align} \label {eq:8.1.9} 
+								\begin {align} 
 									{\cal L} \big\{ \cosh \omega t \big\} 
 										= & \, {\cal L} \left\{ \frac{1}{2}e^{\omega t} + \frac{1}{2}e^{-\omega t} \right\} \nonumber \\
 										= & \, {\cal L} \left\{ \frac{1}{2}e^{\omega t}  \right\}  + {\cal L} \left\{ \frac{1}{2}e^{-\omega t} \right\} \nonumber \\
-										= & \, \frac{1}{2} {\cal L} \left\{ e^{\omega t}  \right\}  + \frac{1}{2} {\cal L} \left\{ e^{-\omega t} \right\}
+										= & \, \frac{1}{2} {\cal L} \left\{ e^{\omega t}  \right\}  + \frac{1}{2} {\cal L} \left\{ e^{-\omega t} \right\} \label {eq:8.1.9} 
 								\end {align}
 
 								Now we apply the given Laplace transform 
@@ -794,11 +792,11 @@
 					If we know the Laplace transform of \(f(t)=F(s)\) then we can determine the Laplace transform of \(e^{at} \, f(t)\)
 
 					<a id="x1-20r10"></a> 
-					\begin {align} \label {eq:8.1.10}
+					\begin {align}
 						{\cal L} \big\{ e^{at} \, f(t) \big\} 
 						= & \int _0^\infty \, e^{-st} e^{at} \, f(t) \, dt \nonumber \\ 
 						= & \int _0^\infty \, e^{-(s-a)t} \, f(t) \, dt 
-						= F(s-a) 
+						= F(s-a) \label {eq:8.1.10}
 					\end {align} 
 
 					In other words if
@@ -1098,27 +1096,30 @@
 					
 					\[ \lim _{t\to a^+} f(t) - \lim _{t\to a^-} f(t) \] 
 					
-					is called the <span class="vocab">jump</span> in \(f(t)\) at \(a\) (Figure&nbsp;<a href="#-a-jump-discontinuity-">8.1.1</a>)
+					is called the <span class="vocab">jump</span> in \(f(t)\) at \(a\) (Figure&nbsp;<a href="#f463e61f-9c78-4827-a3a0-96643f5733da">8.1.1</a>)
 				</div>
 
 			</div>
 			<figure id="f463e61f-9c78-4827-a3a0-96643f5733da">
-				<div id="-a-jump-discontinuity-">
-					<img height="264" src="EPS/fig080101.png" width="409" /> <a id="x1-24r1"></a> 
-				</div>
-				<figcaption><span class="id">Figure&nbsp;8.1.1</span><span class="content">A jump discontinuity</span></figcaption>
+				<iframe src="https://www.desmos.com/calculator/7bmx7lttdp?embed" width="400" height="400" frameborder=0></iframe>
+
+				<figcaption>
+					<span class="id">Figure&nbsp;8.1.1</span>
+					<span class="content">A jump discontinuity</span>
+				</figcaption>
 			</figure>
 			<div class="indent" id="1155e5d5-8cf5-4fdc-8e3f-4276575cde1f">
 				If \(\displaystyle\lim _{t\to a^+} f(t)\) and \(\displaystyle\lim _{t\to a^-}f(t)\) are finite and equal, but either \(f(t)\) isn’t defined at \(a\) or it’s defined but 
 				
 				\[ f(a) \ne \lim _{t\to a^+} f(t) = \lim _{t\to a^-} f(t) \] 
 				
-				we say that \(f(t)\) has a <span class="vocab">removable discontinuity</span> at \(a\) (Figure&nbsp;<a href="#x1-25r2">8.1.2</a>). This terminology is appropriate since a function \(f(t)\) with a removable discontinuity at \(a\) can be made continuous at \(a\) by defining (or redefining) 
+				we say that \(f(t)\) has a <span class="vocab">removable discontinuity</span> or <span class="vocab">point discontinuity</span> at \(a\) (Figure&nbsp;<a href="#x1-25r2">8.1.2</a>). This terminology is appropriate since a function \(f(t)\) with a removable discontinuity at \(a\) can be made continuous at \(a\) by defining (or redefining) 
 				
 				\[ f(a) = \lim _{t\to a^+} f(t) = \lim _{t\to a^-} f(t) \]
 			</div>
 			<figure id="x1-25r2">
-				<img height="264" src="EPS/fig080102.png" /> 
+				<iframe src="https://www.desmos.com/calculator/1okcfza93q?embed" width="400" height="400" frameborder=0></iframe>
+
 				<figcaption>
 					<span class="id">Figure&nbsp;8.1.2</span>
 					<span class="content">A removable discontinuity at \(a\)</span>
@@ -1148,7 +1149,8 @@
 			</div>
 	
 			<figure id="x1-26r3">
-				<img height="264" src="EPS/fig080103.png" />
+				<iframe src="https://www.desmos.com/calculator/z0khisbqd3?embed" width="400" height="400" frameborder=0></iframe>
+
 				<figcaption>
 					<span class="id">Figure&nbsp;8.1.3</span>
 					<span class="content">A piecewise continuous function on \([a,b]\)</span>
