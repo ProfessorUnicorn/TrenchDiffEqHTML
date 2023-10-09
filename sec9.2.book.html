@@ -189,9 +189,9 @@
 						</div>
 						<div>
 							The possible rational roots come from the ratio of the factors of the constant and the
-							factors of the leading coefficient. The constant term is \(-6\) with possible factors of \(\pm 1,2,3,6\) and the leading term is \(r^3\) with coefficient \(1\) with possible factors of \(\pm 1\) which has no impact on the ratio thus the possible rational roots to consider are
+							factors of the leading coefficient. The constant term is \(-6\) with possible factors of \(\pm \big(1,2,3,6\big)\) and the leading term is \(r^3\) with coefficient \(1\) with possible factors of \(\pm 1\) which has no impact on the ratio thus the possible rational roots to consider are
 								
-							\[\pm 1,2,3,6\]
+							\[\pm \big(1,2,3,6\big)\]
 
 							Then we can use synthetic division to test roots quickly.
 
@@ -1069,7 +1069,7 @@
 		<br>
 
 		<!--Example 6-->
-		<div class="example" id="x1-326" style="--ex-number: 6">
+		<div class="removed" id="x1-326" style="--ex-number: 6">
 			<div>
 				Find the general solution of
 				<a id="x1-33r19"></a>
@@ -1108,21 +1108,123 @@
 			<details class="solution">
 				<summary>Solution</summary>
 				<div>
-					The characteristic polynomial of <a href="#x1-35r20">(9.2.20)</a> is
-					<div class="eqnarray" id="8fe5e0e7-93e8-4577-94b7-c7df83a236c8">
-						\begin {eqnarray*}
-						p(r)&amp;=&amp;r^4+4r^3+6r^2+4r\\ &amp;=&amp;r(r^3+4r^2+6r+4)\\ &amp;=&amp;r(r+2)(r^2+2r+2)\\
-						&amp;=&amp;r(r+2)[(r+1)^2+1]
-						\end {eqnarray*}
-					</div>
-					<div class="indent" id="2659662a-1e2c-4ddf-a393-8b4083615e7e">
-						Therefore <a href="#x1-35r20">(9.2.20)</a> can be written as \[ [(D+1)^2+1](D+2)Dy=0\] Fundamental
-						sets of solutions of \[ \left [(D+1)^2+1\right ] y=0,\quad (D+2) y=0,\mbox {\quad and \quad } Dy=0\]
-						are given by \[ \{e^{-x}\cos x,e^{-x}\sin x\},\quad \{e^{-2x}\},\quad \mbox{ and } \quad \{1\}\]
-						respectively. Therefore the general solution of <a href="#x1-35r20">(9.2.20)</a> is \[
-						y=e^{-x}(c_1\cos x+c_2\sin x)+c_3e^{-2x}+c_4\]
-					</div>
+					Seeking solutions of the form
+
+					\[
+					y=e^{rx}
+					\]
+
+					Differentiating \(y=e^{rx}\) four times yields
+
+					\begin{align*}
+					\frac{dy}{dx}=re^{rx}
+					\Longrightarrow
+					\frac{d^2y}{dx^2}=r^2e^{rx} 
+					\Longrightarrow
+					\frac{d^3y}{dx^3}=r^3e^{rx}
+					\Longrightarrow
+					\frac{d^4y}{dx^4}=r^4e^{rx}
+					\end{align*}
+
+					
+					Substituting in to <a href="#x1-30r18">(9.2.18)</a> we obtain the equation
+
+					\begin {equation*}
+					r^4e^{rx} + 4r^3e^{rx} + 6r^2e^{rx} + 4re^{rx} =0 
+					\end {equation*}
+
+					Factoring out the exponential
+
+					\begin {equation*}
+					\Big( r^4+4r^3+6r^2+4r \Big) e^{rx}=0
+					\end {equation*}
+
+					We now need to solve the <span class="vocab">characteristic equation</span> of the <span class="vocab">characteristic polynomial</span> equal to zero
+					
+					\begin {align*}
+					r^4+4r^3+6r^2+4r  & = 0 \\
+					r\Big( r^3+4r^2+6r+4 \Big) & = 0 \\
+					\end {align*}
+					
+					After factoring the common factor of \(r\) the remaining polynomial is unfactorable so we apply the rational roots theorem. Since the constant term is \(4\) and leading coefficient is \(1\) then the only possible rational roots to consider are
+					\(\pm \big(1,2,4\big)\).
+
+					fixme
+
+
+					\begin{array}{rrrrr}
+						& {\small r^3} & {\small r^2} & {\small r} & {\small \#} \\
+						 -1 \rfloor & 1 & 4 & 6 	& 4 \\
+									& 	& -1& 4  	& -10 \\ 
+						\hline
+									& 1 & -4 & 10 	& \lfloor -6 \\
+									& {\small r^2} & {\small r} & {\small \#} \\
+					\end{array}
+
+					Since the remainder is \(-6\) in this case then \(r=-1\) is not a root
+
+
+					\begin{array}{rrrrr}
+						& {\small r^3} & {\small r^2} & {\small r} & {\small \#} \\
+						 -2 \rfloor & 1 & 4 & 6 	& 4 \\
+									& 	& -2& -4  	& -4 \\ 
+						\hline
+									& 1 & 2 & 2 	& \lfloor 0 \\
+									& {\small r^2} & {\small r} & {\small \#} \\
+					\end{array}
+
+					But \(r=-2\) is a root so that means \((r+2)\) is a factor so we can solve the characteristic equation 
+
+					\begin {align*}
+					r(r+2)(r^2+2r+2) & = 0 \\
+					r=0 \quad r=-2 \quad r^2+2r+2 & = 0 \\
+					\end {align*}
+
+					And we can use the quadratic formula to solve the last equation
+
+					\begin {align*}
+					r = \frac{-2\pm \sqrt{2^2-4\cdot2}}{2}
+					=-1 \pm i
+					\end {align*}
+
+					So we have all four roots and can write four exponential solutions
+
+					\begin {align*}
+					r=0 \quad r=-2 \quad r=-1+i \quad r & =-1-i \\
+					y=e^{0x} \quad y=e^{-2x} \quad y=e^{(-1+i)x} \quad y & =e^{(-1-i)x} \\
+					y=1 \quad y=e^{-2x} \quad y=e^{-x}e^{ix} \quad y & =e^{-x}e^{ix} \\
+
+					\end {align*}
+
+					Again we'll use Euler's formula to rewrite the imaginary solutions in terms of real numbers to obtain the solution set
+
+					\[ 
+						\{ 1
+						, e^{-2x}
+						, e^{-x}\cos x
+						, e^{-x}\sin x 
+						\}
+					\]
+
+
+
+
+				</div>
+
+				<div>
+					
+					
+				
+
+					Therefore
+					the general solution of is
+
+					\[
+					y=c_1 + c_2 e^{-2x} + \big( c_3 \cos x + c_4 \sin x\big) e^{-x} \]
+
+
 				</div>	
+			
 			</details>
 		</div>
 
@@ -1130,7 +1232,7 @@
 		<br>
 
 		<!--Example 8-->
-		<div class="example" id="x1-368" style="--ex-number: 8">
+		<div class="removed" id="x1-368" style="--ex-number: 8">
 			<div>
 				Find a fundamental set of solutions of
 				<a id="x1-37r21"></a>
