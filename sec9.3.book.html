@@ -45,28 +45,35 @@
 				\[ e^{\alpha x}\left(p_0+p_1x+\cdots +p_kx^k \right) \]
 				or
 				\[ 
-					e^{\lambda x}\left [\left(p_0+p_1x+\cdots +p_kx^k \right) \cos \omega x+  \left(q_0+q_1x+\cdots
-					+q_kx^k\right) \sin \omega x\right ]. 
+					\big [\left(p_0+p_1x+\cdots +p_kx^k \right) \cos \omega x+  \left(q_0+q_1x+\cdots
+					+q_kx^k\right) \sin \omega x\big ] e^{\lambda x} 
 				\]
 			</div>
 			<div id="div2">
 				From Theorem&nbsp;9.1.5, the general solution of <a href="#x1-2r1">(9.3.1)</a> is \(y=y_p+y_c\), where \(y_p\) is a particular solution of <a href="#x1-2r1">(9.3.1)</a> and \(y_c\) is the general solution of the complementary equation
-				\[ a_0 \dfrac{d^n y}{dx^n }+a_1 \dfrac{d^{n-1} y}{dx^{n-1} }+\cdots +a_ny=0. \]
+				\[ a_0 \dfrac{d^n y}{dx^n }+a_1 \dfrac{d^{n-1} y}{dx^{n-1} }+\cdots +a_ny=0 \]
+
+
 				In Section&nbsp;9.2 we learned how to find \(y_c\). Here we will learn how to find \(y_p\) when the forcing function has the form stated above. The procedure that we use is a generalization of the method that we used in Sections&nbsp;5.4 and 5.5, and is again called <span class="vocab">method of undetermined coefficients</span>. Since the underlying ideas are the same as those in Sections&nbsp;5.4 and 5.5, we’ll give an informal presentation based on examples.
 			</div>
 
 
 			<div id="div3">
 				We first consider equations of the form
-				\[ a_0 \dfrac{d^n y}{dx^n }+a_1 \dfrac{d^{n-1} y}{dx^{n-1} }+\cdots +a_ny=e^{\alpha x} \left(p_0+p_1x+\cdots +p_kx^k \right). \]
+				\[ a_0 \dfrac{d^n y}{dx^n }+a_1 \dfrac{d^{n-1} y}{dx^{n-1} }+\cdots +a_ny=e^{\alpha x} \left(p_0+p_1x+\cdots +p_kx^k \right) \]
 			</div>
+
+			<br>
+			<br>
+			<br>
+			<!--Example 1-->
 			<div class="example" id="x1-31" style="--ex-number: 1">
 				<div>
 					<a id="x1-4r2"></a>
 					Find a particular solution of
 					\begin {equation} 
 						\label {eq:9.3.2} 
-						 \dfrac{d^3 y}{dx^3 }+3 \dfrac{d^2 y}{dx^2 }+2 \dfrac{d y}{dx }-y=e^x\left(21+24x+28x^2+5x^3\right). 
+						 \dfrac{d^3 y}{dx^3 }+3 \dfrac{d^2 y}{dx^2 }+2 \dfrac{d y}{dx }-y=e^x\left(21+24x+28x^2+5x^3\right) 
 					\end {equation}
 				</div>
 
@@ -77,26 +84,28 @@
 							Substituting
 							<div class="eqnarray">
 								\begin {eqnarray*} 
-									y&amp;=&amp;ue^x,\\  \dfrac{d y}{dx }&amp;=&amp;e^x\left( \dfrac{d u}{dx }+u\right),\\
-									\dfrac{d^2 y}{dx^2 }&amp;=&amp;e^x\left( \dfrac{d^2 u}{dx^2 }+2 \dfrac{d u}{dx }+u\right),\\  \dfrac{d^3 y}{dx^3 }&amp;=&amp;e^x\left( \dfrac{d^3 u}{dx^3 }+3 \dfrac{d^2 u}{dx^2 }+3 \dfrac{d u}{dx }+u\right) 
+									y&amp;=&amp;ue^x,\\  \dfrac{d y}{dx }&amp;=&amp;e^x\left( \dfrac{d u}{dx }+u\right)
+									\\
+									\dfrac{d^2 y}{dx^2 }&amp;=&amp;e^x\left( \dfrac{d^2 u}{dx^2 }+2 \dfrac{d u}{dx }+u\right)
+									\\  \dfrac{d^3 y}{dx^3 }&amp;=&amp;e^x\left( \dfrac{d^3 u}{dx^3 }+3 \dfrac{d^2 u}{dx^2 }+3 \dfrac{d u}{dx }+u\right) 
 								\end {eqnarray*}
 							</div>
 							<div>
 								into <a href="#x1-4r2">(9.3.2)</a> and canceling \(e^x\) yields
-								\[ \left( \dfrac{d^3 u}{dx^3 }+3 \dfrac{d^2 u}{dx^2 }+3 \dfrac{d u}{dx }+u\right)+3\left( \dfrac{d^2 u}{dx^2 }+2 \dfrac{d u}{dx }+u\right)+2\left( \dfrac{d u}{dx }+u\right)-u =21+24x+28x^2+5x^3, \]
+								\[ \left( \dfrac{d^3 u}{dx^3 }+3 \dfrac{d^2 u}{dx^2 }+3 \dfrac{d u}{dx }+u\right)+3\left( \dfrac{d^2 u}{dx^2 }+2 \dfrac{d u}{dx }+u\right)+2\left( \dfrac{d u}{dx }+u\right)-u =21+24x+28x^2+5x^3 \]
 								or
 								<a id="x1-5r3"></a>
 								\begin {equation} 
 									\label {eq:9.3.3} 
-									\dfrac{d^3 u}{dx^3 }+6 \dfrac{d^2 u}{dx^2 }+11 \dfrac{d u}{dx }+5u=21+24x+28x^2+5x^3. 
+									\dfrac{d^3 u}{dx^3 }+6 \dfrac{d^2 u}{dx^2 }+11 \dfrac{d u}{dx }+5u=21+24x+28x^2+5x^3 
 								\end {equation}
 								Since the unknown \(u\) appears on the left, we can see that <a href="#x1-5r3">(9.3.3)</a> has a particular solution of the form
-								\[ u_p=A+Bx+Cx^2+Dx^3. \]
+								\[ u_p=A+Bx+Cx^2+Dx^3 \]
 								Then
 							</div>
 							<div class="eqnarray">
 								\begin {eqnarray*} 
-									\dfrac{d u_p}{dx }&amp;=&amp;B+2Cx+3Dx^2\\ \dfrac{d^2 u_p}{dx^2 }&amp;=&amp;2C+6Dx\\ \dfrac{d^3 u_p}{dx^3 }&amp;=&amp;6D.
+									\dfrac{d u_p}{dx }&amp;=&amp;B+2Cx+3Dx^2\\ \dfrac{d^2 u_p}{dx^2 }&amp;=&amp;2C+6Dx\\ \dfrac{d^3 u_p}{dx^3 }&amp;=&amp;6D
 								\end {eqnarray*}
 							</div>
 						</li>
@@ -109,7 +118,7 @@
 									\dfrac{d^3 u_p}{dx^3 }+6\dfrac{d^2 u_p}{dx^2 }+11\dfrac{d u_p}{dx }+5u_p&amp;=&amp;6D+6\left(2C+6Dx\right)+11\left(B+2Cx+3Dx^2\right)\\
 									&amp;&amp;+5\left(A+Bx+Cx^2+Dx^3\right)\\ 
 									&amp;=&amp;\left(5A+11B+12C+6D\right)+\left(5B+22C+36D\right)x\\
-									&amp;&amp;+\left(5C+33D\right)x^2+5Dx^3. 
+									&amp;&amp;+\left(5C+33D\right)x^2+5Dx^3 
 								\end {eqnarray*}
 							</div>
 							<div>
@@ -118,13 +127,13 @@
 									5D&amp;=&amp;5\phantom {.}\\ 
 									5C+33D&amp;=&amp;28\phantom {.}\\
 									5B+22C+36D&amp;=&amp;24\phantom {.}\\ 
-									5A+11B+12C+\phantom {3}6D&amp;=&amp;21. 
+									5A+11B+12C+\phantom {3}6D&amp;=&amp;21 
 								\end {array} \]
 								Solving these equations successively yields \(D=1\), \(C=-1\), \(B=2\), \(A=1\). Therefore
 								\[ u_p=1+2x-x^2+x^3 \]
 								is a particular solution of <a href="#x1-5r3">(9.3.3)</a>, so
 								\[ y_p=e^xu_p=e^x\left(1+2x-x^2+x^3\right) \]
-								is a particular solution of <a href="#x1-4r2">(9.3.2)</a> (Figure&nbsp;<a href="#fig1">9.3.1</a>).
+								is a particular solution of <a href="#x1-4r2">(9.3.2)</a> (Figure&nbsp;<a href="#fig1">9.3.1</a>)
 							</div>
 						</li>
 					</ol>
@@ -137,6 +146,12 @@
 					<span class="content">\(y_p=e^x\left(1+2x-x^2+x^3\right)\)</span>
 				</figcaption>
 			</figure>
+
+			<br>
+			<br>
+			<br>
+			
+			<!--Example 2-->
 			<div class="example" id="x1-72" style="--ex-number: 2">
 				<div>
 					Find a particular solution of
@@ -154,10 +169,10 @@
 							Substituting
 							<div class="eqnarray">
 								\begin {eqnarray*} 
-									y&amp;=&amp;ue^{2x},\\ 
-									\dfrac{d y}{dx }&amp;=&amp;e^{2x}\left( \dfrac{d u}{dx }+2u\right),\\
-									\dfrac{d^2 y}{dx^2 }&amp;=&amp;e^{2x}\left( \dfrac{d^2 u}{dx^2 }+4 \dfrac{d u}{dx }+4u\right),\\ 
-									\dfrac{d^3 y}{dx^3 }&amp;=&amp;e^{2x}\left( \dfrac{d^3 u}{dx^3 }+6 \dfrac{d^2 u}{dx^2 }+12 \dfrac{d u}{dx }+8u\right),\\
+									y&amp;=&amp;ue^{2x}\\ 
+									\dfrac{d y}{dx }&amp;=&amp;e^{2x}\left( \dfrac{d u}{dx }+2u\right)\\
+									\dfrac{d^2 y}{dx^2 }&amp;=&amp;e^{2x}\left( \dfrac{d^2 u}{dx^2 }+4 \dfrac{d u}{dx }+4u\right)\\ 
+									\dfrac{d^3 y}{dx^3 }&amp;=&amp;e^{2x}\left( \dfrac{d^3 u}{dx^3 }+6 \dfrac{d^2 u}{dx^2 }+12 \dfrac{d u}{dx }+8u\right)\\
 									\dfrac{d^4 y}{dx^4 }&amp;=&amp;e^{2x}\left( \dfrac{d^4 u}{dx^4 }+8 \dfrac{d^3 u}{dx^3 }+24 \dfrac{d^2 u}{dx^2 }+32 \dfrac{d u}{dx }+16u\right) 
 								\end {eqnarray*}
 							</div>
@@ -175,13 +190,13 @@
 								<a id="x1-9r5"></a> 
 								\begin {equation} 
 									\label {eq:9.3.5} 
-									\dfrac{d^4 u}{dx^4 }+7 \dfrac{d^3 u}{dx^3 }+12 \dfrac{d^2 u}{dx^2 }=4+19x+6x^2. 
+									\dfrac{d^4 u}{dx^4 }+7 \dfrac{d^3 u}{dx^3 }+12 \dfrac{d^2 u}{dx^2 }=4+19x+6x^2 
 								\end {equation}
 								Since neither \(u\) nor \( \dfrac{d u}{dx }\) appear on the left, we can see that <a href="#x1-9r5">(9.3.5)</a> has a particular solution of the form 
 								<a id="x1-10r6"></a>
 								\begin {equation} 
 									\label {eq:9.3.6} 
-									u_p=Ax^2+Bx^3+Cx^4. 
+									u_p=Ax^2+Bx^3+Cx^4 
 								\end {equation}
 							</div>
 						</li>
@@ -194,7 +209,7 @@
 									\dfrac{d u_p}{dx }&amp;=&amp;2Ax+3Bx^2+4Cx^3\\ 
 									\dfrac{d^2 u_p}{dx^2 }&amp;=&amp;2A+6Bx+12Cx^2\\
 									\dfrac{d^3 u_p}{dx^3 }&amp;=&amp;6B+24Cx\\ 
-									\dfrac{d^4 u_p}{dx^4 }&amp;=&amp;24C. 
+									\dfrac{d^4 u_p}{dx^4 }&amp;=&amp;24C 
 								\end {eqnarray*}
 							</div>
 							<div> 
@@ -203,7 +218,7 @@
 							<div class="eqnarray">
 								\begin {eqnarray*}
 									\dfrac{d^4 u_p}{dx^4 }+7\dfrac{d^3 u_p}{dx^3 }+12\dfrac{d^2 u_p}{dx^2 }&amp;=&amp;24C+7\left(6B+24Cx\right)+12\left(2A+6Bx+12Cx^2\right)\\
-									&amp;=&amp;\left(24A+42B+24C\right)+\left(72B+168C\right)x+144Cx^2. 
+									&amp;=&amp;\left(24A+42B+24C\right)+\left(72B+168C\right)x+144Cx^2
 								\end {eqnarray*}
 							</div>
 							<div>
@@ -211,7 +226,7 @@
 								\[ \begin {array}{rcr} 
 									144C&amp;=&amp;6\phantom {.}\\ 
 									72B+168C&amp;=&amp;19\phantom {.}\\ 
-									24A+42B+\phantom{1}24C&amp;=&amp;4. 
+									24A+42B+\phantom{1}24C&amp;=&amp;4
 								\end {array} \]
 								Solving these equations successively yields \(C=1/24\), \(B=1/6\), \(A=-1/6\). Substituting these into <a href="#x1-10r6">(9.3.6)</a> shows that
 								\[ u_p={x^2\over 24}\left(-4+4x+x^2\right) \]
@@ -236,16 +251,22 @@
 		
 			<div id="div4">
 				We now consider equations of the form
-				\[ a_0 \dfrac{d^n y}{dx^n }+a_1 \dfrac{d^{n-1} y}{dx^{n-1} }+\cdots +a_ny= e^{\lambda x} \left(P\left(x\right)\cos \omega x+Q\left(x\right)\sin \omega x \right), \]
+				\[ a_0 \dfrac{d^n y}{dx^n }+a_1 \dfrac{d^{n-1} y}{dx^{n-1} }+\cdots +a_ny= e^{\lambda x} \left(P\left(x\right)\cos \omega x+Q\left(x\right)\sin \omega x \right) \]
 				where \(P\) and \(Q\) are polynomials.
 			</div>
+
+			<br>
+			<br>
+			<br>
+			
+			<!--Example 3-->
 			<div id="x1-123" class="example" style="--ex-number: 3">
 				<div>
 					Find a particular solution of
 					<a id="x1-13r7"></a>
 					\begin {equation} 
 						\label {eq:9.3.7} 
-						 \dfrac{d^3 y}{dx^3 }+ \dfrac{d^2 y}{dx^2 }-4 \dfrac{d y}{dx }-4y=e^x[\left(5-5x\right)\cos x+\left(2+5x\right)\sin x]. 
+						 \dfrac{d^3 y}{dx^3 }+ \dfrac{d^2 y}{dx^2 }-4 \dfrac{d y}{dx }-4y=e^x[\left(5-5x\right)\cos x+\left(2+5x\right)\sin x] 
 					\end {equation}
 				</div>
 
@@ -257,27 +278,27 @@
 							<div class="eqnarray">
 								\begin {eqnarray*}
 									y&amp;=&amp;ue^x,\\ 
-									\dfrac{d y}{dx }&amp;=&amp;e^x\left( \dfrac{d u}{dx }+u\right),\\
-									\dfrac{d^2 y}{dx^2 }&amp;=&amp;e^x\left( \dfrac{d^2 u}{dx^2 }+2 \dfrac{d u}{dx }+u\right),\\ 
+									\dfrac{d y}{dx }&amp;=&amp;e^x\left( \dfrac{d u}{dx }+u\right)\\
+									\dfrac{d^2 y}{dx^2 }&amp;=&amp;e^x\left( \dfrac{d^2 u}{dx^2 }+2 \dfrac{d u}{dx }+u\right)\\ 
 									\dfrac{d^3 y}{dx^3 }&amp;=&amp;e^x\left( \dfrac{d^3 u}{dx^3 }+3 \dfrac{d^2 u}{dx^2 }+3 \dfrac{d u}{dx }+u\right) 
 								\end {eqnarray*}
 							</div>
 							<div>
 								into <a href="#x1-13r7">(9.3.7)</a> and canceling \(e^x\) yields
-								\[ \left( \dfrac{d^3 u}{dx^3 }+3 \dfrac{d^2 u}{dx^2 }+3 \dfrac{d u}{dx }+u\right)+\left( \dfrac{d^2 u}{dx^2 }+2 \dfrac{d u}{dx }+u\right)-4\left( \dfrac{d u}{dx }+u\right)-4u =\left(5-5x\right)\cos x+\left(2+5x\right)\sin x, \]
+								\[ \left( \dfrac{d^3 u}{dx^3 }+3 \dfrac{d^2 u}{dx^2 }+3 \dfrac{d u}{dx }+u\right)+\left( \dfrac{d^2 u}{dx^2 }+2 \dfrac{d u}{dx }+u\right)-4\left( \dfrac{d u}{dx }+u\right)-4u =\left(5-5x\right)\cos x+\left(2+5x\right)\sin x \]
 								or 
 								<a id="x1-14r8"></a> 
 								\begin {equation} 
 									\label {eq:9.3.8} 
-									\dfrac{d^3 u}{dx^3 }+4 \dfrac{d^2 u}{dx^2 }+ \dfrac{d u}{dx }-6u=\left(5-5x\right)\cos x+\left(2+5x\right)\sin x. 
+									\dfrac{d^3 u}{dx^3 }+4 \dfrac{d^2 u}{dx^2 }+ \dfrac{d u}{dx }-6u=\left(5-5x\right)\cos x+\left(2+5x\right)\sin x
 								\end {equation}
 								Since \(\cos x\) and \(\sin x\) are not solutions of the complementary equation
-								\[  \dfrac{d^3 u}{dx^3 }+4 \dfrac{d^2 u}{dx^2 }+ \dfrac{d u}{dx }-6u=0, \]
+								\[  \dfrac{d^3 u}{dx^3 }+4 \dfrac{d^2 u}{dx^2 }+ \dfrac{d u}{dx }-6u=0 \]
 								a theorem analogous to Theorem&nbsp;<a href="sec5.5.book.html#x1-41">5.5.1</a> implies that <a href="#x1-14r8">(9.3.8)</a> has a particular solution of the form
 								<a id="x1-15r9"></a> 
 								\begin {equation} 
 									\label {eq:9.3.9} 
-									u_p=\left(A_0+A_1x\right)\cos x+\left(B_0+B_1x\right)\sin x. 
+									u_p=\left(A_0+A_1x\right)\cos x+\left(B_0+B_1x\right)\sin x
 								\end {equation}
 							</div>
 						</li>
@@ -287,23 +308,23 @@
 							</div>
 							<div class="eqnarray">
 								\begin {eqnarray*} 
-									\dfrac{d u_p}{dx }=\left(A_1+B_0+B_1x\right)\cos x+\left(B_1-A_0-A_1x\right)\sin x,\\ 
-									\dfrac{d^2 u_p}{dx^2 }=\left(2B_1-A_0-A_1x\right)\cos x-\left(2A_1+B_0+B_1x\right)\sin x,\\ 
-									\dfrac{d^3 u_p}{dx^3 }=-\left(3A_1+B_0+B_1x\right)\cos x-\left(3B_1-A_0-A_1x\right)\sin x,\\ 
+									\dfrac{d u_p}{dx }=\left(A_1+B_0+B_1x\right)\cos x+\left(B_1-A_0-A_1x\right)\sin x\\ 
+									\dfrac{d^2 u_p}{dx^2 }=\left(2B_1-A_0-A_1x\right)\cos x-\left(2A_1+B_0+B_1x\right)\sin x\\ 
+									\dfrac{d^3 u_p}{dx^3 }=-\left(3A_1+B_0+B_1x\right)\cos x-\left(3B_1-A_0-A_1x\right)\sin x\\ 
 								\end {eqnarray*}
 							</div>
 							<div> 
 								so
 								\[ \begin {array}{rcl} 
 									\dfrac{d^3 u_p}{dx^3 }+4\dfrac{d^2 u_p}{dx^2 }+\dfrac{d u_p}{dx }-6u_p&amp;=&amp;-\left [10A_0+2A_1-8B_1+10A_1x\right ]\cos x\\
-									&amp;&amp;- \left [10B_0+2B_1+8A_1+10B_1x\right ]\sin x. 
+									&amp;&amp;- \left [10B_0+2B_1+8A_1+10B_1x\right ]\sin x
 								\end {array} \]
 								Comparing the coefficients of \(x\cos x\), \(x\sin x\), \(\cos x\), and \(\sin x\) here with the corresponding coefficients in <a href="#x1-14r8">(9.3.8)</a> shows that \(u_p\) is a solution of <a href="#x1-14r8">(9.3.8)</a> if
 								\[ \begin {array}{rcr} 
 									-10A_1&amp;=&amp;-5\phantom {.}\\ 
 									-10B_1&amp;=&amp;\phantom {-}5\phantom {.}\\
 									-10A_0-2A_1+8B_1&amp;=&amp;5\phantom {.}\\ 
-									-10B_0-2B_1-8A_1&amp;=&amp;2. 
+									-10B_0-2B_1-8A_1&amp;=&amp;2
 								\end {array} \]
 								Solving the first two equations yields \(A_1=1/2\), \(B_1=-1/2\). Substituting these into the last two equations yields
 							</div>
@@ -318,7 +339,7 @@
 								\[ u_p=-\displaystyle {1\over 2}\left [\left(2-x\right)\cos x+\left(1+x\right)\sin x\right ] \]
 								is a particular solution of <a href="#x1-14r8">(9.3.8)</a>, so
 								\[ y_p=e^xu_p=-{e^x\over 2}\left [\left(2-x\right)\cos x+\left(1+x\right)\sin x\right ] \]
-								is a particular solution of <a href="#x1-13r7">(9.3.7)</a> \left(Figure&nbsp;<a href="#fig3">9.3.3</a>\right).
+								is a particular solution of <a href="#x1-13r7">(9.3.7)</a> (Figure&nbsp;<a href="#fig3">9.3.3</a>).
 							</div>
 						</li>
 					</ol>
@@ -331,13 +352,19 @@
 					<span class="content">\(y_p=\displaystyle {e^xu_p=-{e^x\over 2}\left [\left(2-x\right)\cos x+\left(1+x\right)\sin x\right ]}\)</span>
 				</figcaption>
 			</figure>
+
+			<br>
+			<br>
+			<br>
+			
+			<!--Example 4-->
 			<div id="x1-174" class="example" style="--ex-number: 4">
 				<div>
 					Find a particular solution of
 					<a id="x1-18r10"></a>
 					\begin {equation}
 						\label {eq:9.3.10} 
-						 \dfrac{d^3 y}{dx^3 }+4 \dfrac{d^2 y}{dx^2 }+6 \dfrac{d y}{dx }+4y= e^{-x}\left [\left(1-6x\right)\cos x-\left(3+2x\right)\sin x\right ].
+						 \dfrac{d^3 y}{dx^3 }+4 \dfrac{d^2 y}{dx^2 }+6 \dfrac{d y}{dx }+4y= e^{-x}\left [\left(1-6x\right)\cos x-\left(3+2x\right)\sin x\right ]
 					\end {equation}
 				</div>
 
@@ -348,28 +375,28 @@
 							Substituting
 							<div class="eqnarray">
 								\begin {eqnarray*} 
-									y&amp;=&amp;ue^{-x},\\ 
-									\dfrac{d y}{dx }&amp;=&amp;e^{-x}\left( \dfrac{d u}{dx }-u\right),\\
-									\dfrac{d^2 y}{dx^2 }&amp;=&amp;e^{-x}\left( \dfrac{d^2 u}{dx^2 }-2 \dfrac{d u}{dx }+u\right),\\ 
+									y&amp;=&amp;ue^{-x}\\ 
+									\dfrac{d y}{dx }&amp;=&amp;e^{-x}\left( \dfrac{d u}{dx }-u\right)\\
+									\dfrac{d^2 y}{dx^2 }&amp;=&amp;e^{-x}\left( \dfrac{d^2 u}{dx^2 }-2 \dfrac{d u}{dx }+u\right)\\ 
 									\dfrac{d^3 y}{dx^3 }&amp;=&amp;e^{-x}\left( \dfrac{d^3 u}{dx^3 }-3 \dfrac{d^2 u}{dx^2 }+3 \dfrac{d u}{dx }-u\right) 
 								\end {eqnarray*}
 							</div>
 							<div> 
 								into <a href="#x1-18r10">(9.3.10)</a> and canceling \(e^{-x}\) yields
-								\[ \left( \dfrac{d^3 u}{dx^3 }-3 \dfrac{d^2 u}{dx^2 }+3 \dfrac{d u}{dx }-u\right)+4\left( \dfrac{d^2 u}{dx^2 }-2 \dfrac{d u}{dx }+u\right)+6\left( \dfrac{d u}{dx }-u\right)+4u =\left(1-6x\right)\cos x-\left(3+2x\right)\sin x, \]
+								\[ \left( \dfrac{d^3 u}{dx^3 }-3 \dfrac{d^2 u}{dx^2 }+3 \dfrac{d u}{dx }-u\right)+4\left( \dfrac{d^2 u}{dx^2 }-2 \dfrac{d u}{dx }+u\right)+6\left( \dfrac{d u}{dx }-u\right)+4u =\left(1-6x\right)\cos x-\left(3+2x\right)\sin x \]
 								or 
 								<a id="x1-19r11"></a> 
 								\begin {equation} 
 									\label {eq:9.3.11} 
-									\dfrac{d^3 u}{dx^3 }+ \dfrac{d^2 u}{dx^2 }+ \dfrac{d u}{dx }+u=\left(1-6x\right)\cos x-\left(3+2x\right)\sin x. 
+									\dfrac{d^3 u}{dx^3 }+ \dfrac{d^2 u}{dx^2 }+ \dfrac{d u}{dx }+u=\left(1-6x\right)\cos x-\left(3+2x\right)\sin x 
 								\end {equation}
 								Since \(\cos x\) and \(\sin x\) are solutions of the complementary equation
-								\[  \dfrac{d^3 u}{dx^3 }+ \dfrac{d^2 u}{dx^2 }+ \dfrac{d u}{dx }+u=0, \]
+								\[  \dfrac{d^3 u}{dx^3 }+ \dfrac{d^2 u}{dx^2 }+ \dfrac{d u}{dx }+u=0 \]
 								a theorem analogous to Theorem&nbsp;<a href="sec5.5.book.html#x1-41">5.5.1</a> implies that <a href="#x1-19r11">(9.3.11)</a> has a particular solution of the form
 								<a id="x1-20r12"></a>
 								\begin {equation} 
 									\label {eq:9.3.12} 
-									u_p=\left(A_0x+A_1x^2\right)\cos x+\left(B_0x+B_1x^2\right)\sin x. 
+									u_p=\left(A_0x+A_1x^2\right)\cos x+\left(B_0x+B_1x^2\right)\sin x 
 								\end {equation}
 							</div>
 						</li>
