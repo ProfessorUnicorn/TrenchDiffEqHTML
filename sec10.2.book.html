@@ -44,38 +44,38 @@
 			 \begin {equation}
 			 	\label {eq:10.2.1} 
 				\begin {array}{ccl} 
-					y'_1&amp;=&amp;a_{11}(t)y_1+a_{12}(t)y_2+\cdots +a_{1n}(t)y_n+f_1(t)\\ 
-					y'_2&amp;=&amp;a_{21}(t)y_1+a_{22}(t)y_2+\cdots +a_{2n}(t)y_n+f_2(t)\\ 
+					\dfrac{dy_1}{dt} &amp;=&amp;a_{11}(t)y_1+a_{12}(t)y_2+\cdots +a_{1n}(t)y_n+f_1(t)\\ 
+					\dfrac{dy_2}{dt} &amp;=&amp;a_{21}(t)y_1+a_{22}(t)y_2+\cdots +a_{2n}(t)y_n+f_2(t)\\ 
 					&amp;\vdots \\ 
-					y'_n&amp; =&amp;a_{n1}(t)y_1+a_{n2}(t)y_2+\cdots +a_{nn}(t)y_n+f_n(t) 
+					\dfrac{dy_n}{dt} &amp; =&amp;a_{n1}(t)y_1+a_{n2}(t)y_2+\cdots +a_{nn}(t)y_n+f_n(t) 
 				\end {array} 
 			\end {equation}
 			is called a <span class="vocab">linear system</span>.
 		</div>
 		<div class="indent" id="02fed7d8-7e4a-42d7-8bb3-c41761cffc65">
 			The linear system <a href="#x1-2r1">(10.2.1)</a> can be written in matrix form as
-			\[ \col {y'}n=\matfunc ann\col yn+\colfunc fn\]
+			\[ \col { \dfrac{dy}{dt} }n=\matfunc ann\col yn+\colfunc fn\]
 			
 			or more briefly as
 
 			<a id="x1-3r2"></a> 
 			\begin {equation} 
 				\label {eq:10.2.2} 
-				{\bf y}'=A(t){\bf y}+{\bf f}(t) 
+				\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}+{\bf \vec{f}}(t) 
 			\end {equation}
 
 			where 
 			
-			\[ {\bf y}=\col yn,\quad A(t)=\matfunc ann,\quad \mbox{ and } \quad {\bf f}(t)=\colfunc fn\] 
+			\[ {\bf \vec{y}}=\col yn,\quad A(t)=\matfunc ann,\quad \mbox{ and } \quad {\bf \vec{f}}(t)=\colfunc fn\] 
 			
-			We call \(A\) the <span class="vocab">coefficient matrix</span> of <a href="#x1-3r2">(10.2.2)</a> and \(\bf f\) the <span class="vocab">forcing function</span>. We’ll say that \(A\) and \(\bf f\) are <span class="vocab">continuous</span> if their entries are continuous. If \({\bf f}={\bf 0}\), then <a href="#x1-3r2">(10.2.2)</a> is <span class="vocab">homogeneous</span>; otherwise, <a href="#x1-3r2">(10.2.2)</a> is <span class="vocab">nonhomogeneous</span>.
+			We call \(A\) the <span class="vocab">coefficient matrix</span> of <a href="#x1-3r2">(10.2.2)</a> and \(\bf f\) the <span class="vocab">forcing function</span>. We’ll say that \(A\) and \(\bf f\) are <span class="vocab">continuous</span> if their entries are continuous. If \({\bf \vec{f}}={\bf 0}\), then <a href="#x1-3r2">(10.2.2)</a> is <span class="vocab">homogeneous</span>; otherwise, <a href="#x1-3r2">(10.2.2)</a> is <span class="vocab">nonhomogeneous</span>.
 		</div>
 		<div class="indent" id="4c1b072e-bf36-4186-ae1a-8983938c04d1">
 			An initial value problem for <a href="#x1-3r2">(10.2.2)</a> consists of finding a solution of <a href="#x1-3r2">(10.2.2)</a> that equals a given constant vector 
-			\[ {\bf k} =\col kn\] 
+			\[ {\bf \vec{k}} =\col kn\] 
 			
 			at some initial point \(t_0\). We write this initial value problem as 
-			\[ {\bf y}'=A(t){\bf y}+{\bf f}(t), \quad {\bf y}(t_0)={\bf k}\]
+			\[ \dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}+{\bf \vec{f}}(t), \quad {\bf \vec{y}}(t_0)={\bf \vec{k}}\]
 		</div>
 		<div class="indent" id="2b31e1b5-7ade-471d-b77f-f38c717749d6">
 			The next theorem gives sufficient conditions for the existence of solutions of initial value problems for <a href="#x1-3r2">(10.2.2)</a>. We omit the proof.
@@ -83,7 +83,7 @@
 		<div class="theorem" id="x1-41">
 			<span class="head">Theorem&nbsp;10.2.1</span>
 			Suppose the coefficient matrix \(A\) and the forcing function \(\bf f\) are continuous on \((a,b)\), let \(t_0\) be in \((a,b)\), and let \(\bf k\) be an arbitrary constant \(n\)-vector. Then the initial value problem 
-			\[ {\bf y}'=A(t){\bf y}+{\bf f}(t), \quad {\bf y}(t_0)={\bf k} \] 
+			\[ \dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}+{\bf \vec{f}}(t), \quad {\bf \vec{y}}(t_0)={\bf \vec{k}} \] 
 			has a unique solution on \((a,b)\).
 		</div>
 
@@ -95,8 +95,8 @@
 					\begin {equation} 
 						\label {eq:10.2.3} 
 						\begin {array}{rcl} 
-							y_1'&amp;=&amp;\phantom {2}y_1+2y_2+2e^{4t} \\ 
-							y_2'&amp;=&amp;2y_1+\phantom {2}y_2+\phantom {2}e^{4t} 
+							\dfrac{dy_1}{dt}&amp;=&amp;\phantom {2}y_1+2y_2+2e^{4t} \\ 
+							\dfrac{dy_2}{dt}&amp;=&amp;2y_1+\phantom {2}y_2+\phantom {2}e^{4t} 
 						\end {array}
 					\end {equation}
 
@@ -107,7 +107,7 @@
 					<a id="x1-9r4"></a> 
 					\begin {equation} 
 						\label {eq:10.2.4} 
-						{\bf y}= {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} 
+						{\bf \vec{y}}= {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} 
 					\end {equation}
 					is a solution of <a href="#x1-7r3">(10.2.3)</a> for all values of the constants \(c_1\) and \(c_2\).
 				</li>
@@ -116,7 +116,7 @@
 						<a id="x1-11r5"></a> 
 						\begin {equation} 
 						\label {eq:10.2.5} 
-						{\bf y}'=\twobytwo 1221{\bf y}+\twocol 21e^{4t},\quad {\bf y}(0)={1\over 5}\twocol 3{22} 
+						\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t},\quad {\bf \vec{y}}(0)={1\over 5}\twocol 3{22} 
 						\end {equation}
 				</li>
 			</ol>
@@ -126,10 +126,10 @@
 				<ol>
 					<li>
 						The system <a href="#x1-7r3">(10.2.3)</a> can be written in matrix form as 
-						\[ {\bf y}'=\twobytwo 1221{\bf y}+\twocol 21e^{4t}\] 
+						\[ \dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t}\] 
 						
 						An initial value problem for <a href="#x1-7r3">(10.2.3)</a> can be written as 
-						\[ {\bf y}'=\twobytwo 1221{\bf y}+\twocol 21e^{4t}, \quad y(t_0)=\twocol {k_1}{k_2}\] 
+						\[ \dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t}, \quad y(t_0)=\twocol {k_1}{k_2}\] 
 						
 						Since the coefficient matrix and the forcing function are both continuous on \((-\infty ,\infty )\), Theorem&nbsp;<a href="#x1-41">10.2.1</a> implies that this problem has a unique solution on \((-\infty ,\infty )\).
 					</li>
@@ -137,10 +137,10 @@
 						If \(\bf y\) is given by <a href="#x1-9r4">(10.2.4)</a>, then
 						<div class="eqnarray">
 							\begin {eqnarray*} 
-								A{\bf y}+{\bf f}&amp;=&amp; {1\over 5}\twobytwo 1221\twocol 87e^{4t}+ c_1\twobytwo 1221\twocol 11e^{3t}\\ 
+								A{\bf \vec{y}}+{\bf \vec{f}}&amp;=&amp; {1\over 5}\twobytwo 1221\twocol 87e^{4t}+ c_1\twobytwo 1221\twocol 11e^{3t}\\ 
 								&amp;&amp;+c_2\twobytwo 1221\twocol 1{-1}e^{-t} +\twocol 21e^{4t}\\ 
 								&amp;=&amp;{1\over 5}\twocol {22}{23}e^{4t}+c_1\twocol 33e^{3t}+c_2\twocol {-1}1e^{-t} +\twocol 21e^{4t}\\ 
-								&amp;=&amp;{1\over 5}\twocol {32}{28}e^{4t}+3c_1\twocol 11e^{3t}-c_2\twocol 1{-1}e^{-t} ={\bf y}' 
+								&amp;=&amp;{1\over 5}\twocol {32}{28}e^{4t}+3c_1\twocol 11e^{3t}-c_2\twocol 1{-1}e^{-t} =\dfrac{d{\bf \vec{y}}}{dt} 
 							\end {eqnarray*} 
 						</div>
 					</li>
@@ -152,7 +152,7 @@
 						\[ \twobytwo 111{-1}\twocol {c_1}{c_2}=\twocol {-1}3\] 
 						
 						Solving this system yields \(c_1=1\), \(c_2=-2\), so 
-						\[ {\bf y}={1\over 5}\twocol 87e^{4t}+\twocol 11e^{3t}-2\twocol 1{-1}e^{-t} \] 
+						\[ {\bf \vec{y}}={1\over 5}\twocol 87e^{4t}+\twocol 11e^{3t}-2\twocol 1{-1}e^{-t} \] 
 						
 						is the solution of <a href="#x1-11r5">(10.2.5)</a>.
 					</li>

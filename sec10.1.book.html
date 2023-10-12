@@ -61,8 +61,8 @@
 
 					<div class="eqnarray">
 						\begin {eqnarray*}
-							Q_1'&amp;=&amp;(\mbox {rate in})_1-(\mbox {rate out})_1,\\
-							Q_2'&amp;=&amp;(\mbox {rate in})_2-(\mbox {rate out})_2 
+							\dfrac{dQ_1}{dt}&amp;=&amp;(\mbox {rate in})_1-(\mbox {rate out})_1,\\
+							\dfrac{dQ_2}{dt}&amp;=&amp;(\mbox {rate in})_2-(\mbox {rate out})_2 
 						\end {eqnarray*} 
 					</div>
 					<div>
@@ -92,7 +92,7 @@
 						<a id="x1-6r3"></a>
 						\begin {equation}
 							\label {eq:10.1.3}
-							Q_1'=5+{1\over 100}Q_2-{2\over 25}Q_1 
+							\dfrac{dQ_1}{dt}=5+{1\over 100}Q_2-{2\over 25}Q_1 
 						\end {equation}
 					</div>
 					<div>
@@ -119,7 +119,7 @@
 						<a id="x1-9r6"></a>
 						\begin {equation} 
 							\label {eq:10.1.6} 
-							Q_2'=8+{1\over 50}Q_1-{1\over 50}Q_2 
+							\dfrac{dQ_2}{dt}=8+{1\over 50}Q_1-{1\over 50}Q_2 
 						\end {equation}
 					</div>
 					<div>
@@ -127,8 +127,8 @@
 					</div>
 					<div class="eqnarray">
 						\begin {eqnarray*} 
-							Q_1'&amp;=&amp;\displaystyle {5-{2\over 25}Q_1+{1\over 100}Q_2}\\ 
-							Q_2'&amp;=&amp;\displaystyle {8+{1\over 50}Q_1-{1\over 50}Q_2}
+							\dfrac{dQ_1}{dt}&amp;=&amp;\displaystyle {5-{2\over 25}Q_1+{1\over 100}Q_2}\\ 
+							\dfrac{dQ_2}{dt}&amp;=&amp;\displaystyle {8+{1\over 50}Q_1-{1\over 50}Q_2}
 						\end {eqnarray*} 
 					</div>
 				</details>
@@ -160,8 +160,8 @@
 					\begin {equation}
 						\label {eq:10.1.8} 
 						\begin {array}{ccl}
-							m_1y_1''=-m_1g+H_1+D_1+F_1\\
-							m_2y_2''=-m_2g+H_2+D_2+F_2 
+							m_1\dfrac{d^2y_1}{dt^2}=-m_1g+H_1+D_1+F_1\\
+							m_2\dfrac{d^2y_2}{dt^2}=-m_2g+H_2+D_2+F_2 
 						\end {array} 
 					\end {equation}
 
@@ -172,11 +172,11 @@
 						H_1=k_1(-y_1+\Delta \ell _1)-k_2(-y_2+y_1+\Delta \ell _2)\quad \mbox { and }\quad H_2=k_2(-y_2+y_1+\Delta \ell _2) 
 					\end {equation}
 
-					When the velocities are \(y_1'\) and \(y_2'\), \(S_1\) and \(S_2\) are changing length at the rates \(-y_1'\) and \(-y_2'+y_1'\), respectively. Both springs exert damping forces on \(m_1\), while only \(S_2\) exerts a damping force on \(m_2\). Since the force due to damping exerted by a spring is proportional to the rate of change of length of the spring and in a direction that opposes the change, it follows that 
+					When the velocities are \(\dfrac{dy_1}{dt}\) and \(\dfrac{dy_2}{dt}\), \(S_1\) and \(S_2\) are changing length at the rates \(-\dfrac{dy_1}{dt}\) and \(-\dfrac{dy_2}{dt}+\dfrac{dy_1}{dt}\), respectively. Both springs exert damping forces on \(m_1\), while only \(S_2\) exerts a damping force on \(m_2\). Since the force due to damping exerted by a spring is proportional to the rate of change of length of the spring and in a direction that opposes the change, it follows that 
 					<a id="x1-15r10"></a> 
 					\begin {equation} 
 						\label {eq:10.1.10} 
-						D_1=-c_1y_1'+c_2(y_2'-y_1')\quad \mbox { and }\quad D_2=-c_2(y_2'-y_1') 
+						D_1=-c_1\dfrac{dy_1}{dt}+c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt})\quad \mbox { and }\quad D_2=-c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt}) 
 					\end {equation}
 			
 					From <a href="#x1-13r8">(10.1.8)</a>, <a href="#x1-14r9">(10.1.9)</a>, and <a href="#x1-15r10">(10.1.10)</a>,
@@ -184,10 +184,10 @@
 					\begin {equation} 
 						\label {eq:10.1.11} 
 						\begin {array}{ccl} 
-							m_1y_1''&amp;=&amp;-m_1g+k_1(-y_1+\Delta \ell _1)-k_2(-y_2+y_1+\Delta \ell _2)\\ 
-							&amp;\mbox {}&amp;-c_1y_1'+c_2(y_2'-y_1')+F_1\\ 
+							m_1\dfrac{d^2y_1}{dt^2}&amp;=&amp;-m_1g+k_1(-y_1+\Delta \ell _1)-k_2(-y_2+y_1+\Delta \ell _2)\\ 
+							&amp;\mbox {}&amp;-c_1\dfrac{dy_1}{dt}+c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt})+F_1\\ 
 							&amp;=&amp;-(m_1g-k_1\Delta \ell _1+k_2\Delta \ell _2)-k_1y_1+k_2(y_2-y_1)\\ 
-							&amp;\mbox {}&amp;-c_1y_1'+c_2(y_2'-y_1')+F_1 
+							&amp;\mbox {}&amp;-c_1\dfrac{dy_1}{dt}+c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt})+F_1 
 						\end {array}
 					\end {equation}
 					
@@ -197,8 +197,8 @@
 					\begin {equation} 
 						\label {eq:10.1.12} 
 						\begin {array}{ccl} 
-							m_2y_2''&amp;=&amp;-m_2g+k_2(-y_2+y_1+\Delta \ell _2)-c_2(y_2'-y_1')+F_2\\ 
-							&amp;=&amp;-(m_2g-k_2\Delta \ell _2)-k_2(y_2-y_1)-c_2(y_2'-y_1')+F_2 
+							m_2\dfrac{d^2y_2}{dt^2}&amp;=&amp;-m_2g+k_2(-y_2+y_1+\Delta \ell _2)-c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt})+F_2\\ 
+							&amp;=&amp;-(m_2g-k_2\Delta \ell _2)-k_2(y_2-y_1)-c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt})+F_2 
 						\end {array} 
 					\end {equation}
 
@@ -210,8 +210,8 @@
 
 					<div class="eqnarray" id="2e132313-2010-4cef-a824-00f8eff9fc14">
 						\begin {eqnarray*} 
-							m_1y_1''&amp;=&amp;-(c_1+c_2)y_1'+c_2y_2'-(k_1+k_2)y_1+k_2y_2+F_1\\ 
-							m_2y_2''&amp;=&amp;c_2y_1'-c_2y_2'+k_2y_1-k_2y_2+F_2
+							m_1\dfrac{d^2y_1}{dt^2}&amp;=&amp;-(c_1+c_2)\dfrac{dy_1}{dt}+c_2\dfrac{dy_2}{dt}-(k_1+k_2)y_1+k_2y_2+F_1\\ 
+							m_2\dfrac{d^2y_2}{dt^2}&amp;=&amp;c_2\dfrac{dy_1}{dt}-c_2\dfrac{dy_2}{dt}+k_2y_1-k_2y_2+F_2
 						\end {eqnarray*} 
 					</div>
 				</details>
@@ -219,17 +219,17 @@
 
 			<div class="removed" id="x1-183" style="--ex-number: 3">
 				<div>
-					Let \({\bf X}={\bf X}(t)=x(t)\,{\bf i}+y(t)\,{\bf j}+z(t)\,{\bf k}\) be the position vector at time \(t\) of an object with mass \(m\), relative to a rectangular coordinate system with origin at Earth’s center (Figure&nbsp;<a href="#x1-21r3">10.1.3</a>). According to Newton’s law of gravitation, Earth’s gravitational force \({\bf F}={\bf F}(x,y,z)\) on the object is inversely proportional to the square of the distance of the object from Earth’s center, and directed toward the center; thus, 
+					Let \({\bf \vec{X}}={\bf \vec{X}}(t)=x(t)\,{\bf i}+y(t)\,{\bf j}+z(t)\,{\bf k}\) be the position vector at time \(t\) of an object with mass \(m\), relative to a rectangular coordinate system with origin at Earth’s center (Figure&nbsp;<a href="#x1-21r3">10.1.3</a>). According to Newton’s law of gravitation, Earth’s gravitational force \({\bf \vec{F}}={\bf \vec{F}}(x,y,z)\) on the object is inversely proportional to the square of the distance of the object from Earth’s center, and directed toward the center; thus, 
 					
 					<a id="x1-19r13"></a> 
 					\begin {equation} 
 						\label {eq:10.1.13} 
-						{\bf F}={K\over \|{\bf X}\|^2}\left (-{{\bf X} \over \|{\bf X}\|}\right )=-K{x\,{\bf i}+y\,{\bf j}+z\,{\bf k}\over \mbox {}\left (x^2+y^2+z^2\right )^{3/2}} 
+						{\bf \vec{F}}={K\over \|{\bf \vec{X}}\|^2}\left (-{{\bf \vec{X}} \over \|{\bf \vec{X}}\|}\right )=-K{x\,{\bf i}+y\,{\bf j}+z\,{\bf k}\over \mbox {}\left (x^2+y^2+z^2\right )^{3/2}} 
 					\end {equation}
 
-					where \(K\) is a constant. To determine \(K\), we observe that the magnitude of \(\bf F\) is \[ \|{\bf F}\|=K{\|{\bf X}\|\over \|{\bf X}\|^3}={K\over \|{\bf X}\|^2} ={K\over (x^2+y^2+z^2)}\] Let \(R\) be Earth’s radius. Since \(\|{\bf F}\|=mg\) when the object is at Earth’s surface, \[ mg = {K\over R^2},\quad \mbox { so }\quad K=mgR^2\] Therefore we can rewrite <a href="#x1-19r13">(10.1.13)</a> as \[ {\bf F}=-mgR^2{x\,{\bf i}+y\,{\bf j}+z\,{\bf k}\over \mbox {}\left (x^2+y^2+z^2\right )^{3/2}}\] Now suppose \(\bf F\) is the only force acting on the object. According to Newton’s second law of motion, \({\bf F}=m{\bf X}''\); that is, 
+					where \(K\) is a constant. To determine \(K\), we observe that the magnitude of \(\bf F\) is \[ \|{\bf \vec{F}}\|=K{\|{\bf \vec{X}}\|\over \|{\bf \vec{X}}\|^3}={K\over \|{\bf \vec{X}}\|^2} ={K\over (x^2+y^2+z^2)}\] Let \(R\) be Earth’s radius. Since \(\|{\bf \vec{F}}\|=mg\) when the object is at Earth’s surface, \[ mg = {K\over R^2},\quad \mbox { so }\quad K=mgR^2\] Therefore we can rewrite <a href="#x1-19r13">(10.1.13)</a> as \[ {\bf \vec{F}}=-mgR^2{x\,{\bf i}+y\,{\bf j}+z\,{\bf k}\over \mbox {}\left (x^2+y^2+z^2\right )^{3/2}}\] Now suppose \(\bf F\) is the only force acting on the object. According to Newton’s second law of motion, \({\bf \vec{F}}=m \dfrac{d{\bf \vec{X}}^2}{dt^2}\); that is, 
 					
-					\[ m(x''\,{\bf i}+y''\,{\bf j}+z''\,{\bf k})= -mgR^2{x\,{\bf i}+y\,{\bf j}+z\,{\bf k}\over \left (x^2+y^2+z^2\right )^{3/2}}\] 
+					\[ m(\dfrac{d^2x}{dx^2}\,{\bf i}+\dfrac{d^2y}{dt^2}\,{\bf j}+\dfrac{d^2z}{dt^2}\,{\bf k})= -mgR^2{x\,{\bf i}+y\,{\bf j}+z\,{\bf k}\over \left (x^2+y^2+z^2\right )^{3/2}}\] 
 					
 					Cancelling the common factor \(m\) and equating components on the two sides of this equation yields the system 
 					
@@ -237,9 +237,9 @@
 					\begin {equation} 
 						\label {eq:10.1.14} 
 						\begin {array}{rcl} 
-							x''&amp;=&amp;-\displaystyle {gR^2x\over (x^2+y^2+z^2)^{3/2}}\\ 
-							y''&amp;=&amp;-\displaystyle {gR^2y\over (x^2+y^2+z^2)^{3/2}}\\ 
-							z''&amp;=&amp;-\displaystyle {gR^2z\over (x^2+y^2+z^2)^{3/2}} 
+							\dfrac{d^2x}{dx^2}&amp;=&amp;-\displaystyle {gR^2x\over (x^2+y^2+z^2)^{3/2}}\\ 
+							\dfrac{d^2y}{dt^2}&amp;=&amp;-\displaystyle {gR^2y\over (x^2+y^2+z^2)^{3/2}}\\ 
+							\dfrac{d^2z}{dt^2}&amp;=&amp;-\displaystyle {gR^2z\over (x^2+y^2+z^2)^{3/2}} 
 						\end {array} 
 					\end {equation}
 				</div>
@@ -266,10 +266,10 @@
 				\begin {equation}
 					\label {eq:10.1.15} 
 					\begin {array}{ccl} 
-						y_1'&amp;=&amp;g_1(t,y_1,y_2,\dots ,y_n)\\ 
-						y_2'&amp;=&amp;g_2(t,y_1,y_2,\dots ,y_n)\\ 
+						\dfrac{dy_1}{dt}&amp;=&amp;g_1(t,y_1,y_2,\dots ,y_n)\\ 
+						\dfrac{dy_2}{dt}&amp;=&amp;g_2(t,y_1,y_2,\dots ,y_n)\\ 
 						&amp;\vdots &amp;\\ 
-						y_n'&amp;=&amp;g_n(t,y_1,y_2,\dots ,y_n) 
+						\dfrac{dy_n}{dt}&amp;=&amp;g_n(t,y_1,y_2,\dots ,y_n) 
 					\end {array} 
 				\end {equation}
 
@@ -279,15 +279,15 @@
 				Systems involving higher order derivatives can often be reformulated as first order systems by introducing additional unknowns. The next two examples illustrate this. 
 			</div>
 
-			<div class="example" id="x1-234" style="--ex-number: 4">
+			<div class="removed" id="x1-234" style="--ex-number: 4">
 				<div>
 					Rewrite the system 
 					<a id="x1-24r16"></a> 
 					\begin {equation} 
 						\label {eq:10.1.16} 
 						\begin {array}{rcl} 
-							m_1y_1''&amp;=&amp;-(c_1+c_2)y_1'+c_2y_2'-(k_1+k_2)y_1+k_2y_2+F_1\\ 
-							m_2y_2''&amp;=&amp;c_2y_1'-c_2y_2'+k_2y_1-k_2y_2+F_2 
+							m_1\dfrac{d^2y_1}{dt^2}&amp;=&amp;-(c_1+c_2)\dfrac{dy_1}{dt}+c_2\dfrac{dy_2}{dt}-(k_1+k_2)y_1+k_2y_2+F_1\\ 
+							m_2\dfrac{d^2y_2}{dt^2}&amp;=&amp;c_2\dfrac{dy_1}{dt}-c_2\dfrac{dy_2}{dt}+k_2y_1-k_2y_2+F_2 
 						\end {array} 
 					\end {equation}
 					derived in Example&nbsp;<a href="#x1-102">10.1.2</a> as a system of first order equations.
@@ -296,11 +296,11 @@
 				<details class="solution">
 					<summary>Solution</summary>
 					
-					If we define \(v_1=y_1'\) and \(v_2=y_2'\), then \(v_1'=y_1''\) and \(v_2'=y_2''\), so <a href="#x1-24r16">(10.1.16)</a> becomes 
+					If we define \(v_1=\dfrac{dy_1}{dt}\) and \(v_2=\dfrac{dy_2}{dt}\), then \(\dfrac{dv_1}{dt}=\dfrac{d^2y_1}{dt^2}\) and \(\dfrac{dv_2}{dt}=\dfrac{d^2y_2}{dt^2}\), so <a href="#x1-24r16">(10.1.16)</a> becomes 
 					\[ 
 						\begin {array}{rcl} 
-							m_1v_1'&amp;=&amp;-(c_1+c_2)v_1+c_2v_2-(k_1+k_2)y_1+k_2y_2+F_1\\ 
-							m_2v_2'&amp;=&amp;c_2v_1-c_2v_2+k_2y_1-k_2y_2+F_2 
+							m_1 \dfrac{dv_1}{dt} &amp;=&amp;-(c_1+c_2)v_1+c_2v_2-(k_1+k_2)y_1+k_2y_2+F_1\\ 
+							m_2 \dfrac{dv_2}{dt} &amp;=&amp;c_2v_1-c_2v_2+k_2y_1-k_2y_2+F_2 
 						\end {array} 
 					\]
 						
@@ -310,10 +310,10 @@
 					\begin {equation} 
 						\label {eq:10.1.17} 
 						\begin {array}{rcl} 
-							y_1'&amp;=&amp;v_1\\ 
-							y_2'&amp;=&amp;v_2\\ 
-							v_1'&amp;=&amp;\displaystyle {1\over m_1}\left [-(c_1+c_2)v_1+c_2v_2-(k_1+k_2)y_1+k_2y_2+F_1\right ]\\ 
-							v_2'&amp;=&amp;\displaystyle {1\over m_2}\left [c_2v_1-c_2v_2+k_2y_1-k_2y_2+F_2\right ] 
+							\dfrac{dy_1}{dt}&amp;=&amp;v_1\\ 
+							\dfrac{dy_2}{dt}&amp;=&amp;v_2\\ 
+							\dfrac{dv_1}{dt} &amp;=&amp;\displaystyle {1\over m_1}\left [-(c_1+c_2)v_1+c_2v_2-(k_1+k_2)y_1+k_2y_2+F_1\right ]\\ 
+							\dfrac{dv_2}{dt} &amp;=&amp;\displaystyle {1\over m_2}\left [c_2v_1-c_2v_2+k_2y_1-k_2y_2+F_2\right ] 
 						\end {array} 
 					\end {equation}
 
@@ -323,13 +323,13 @@
 				</details>
 			</div>
 
-			<div class="example" id="x1-265" style="--ex-number: 5">
+			<div class="removed" id="x1-265" style="--ex-number: 5">
 				<div>
 					 Rewrite the system
 					 \[ 
 						\begin {array}{ccc} 
-							x''&amp;=&amp;f(t,x,x',y,y',y'')\\
-							y'''&amp;=&amp;g(t,x,x',y,y'y'') 
+							\dfrac{d^2x}{dx^2}&amp;=&amp;f(t,x,\dfrac{dx}{dx},y,\dfrac{dy}{dt},\dfrac{d^2y}{dt^2})\\
+							\dfrac{d^3y}{dt^3}&amp;=&amp;g(t,x,\dfrac{dx}{dx},y,\dfrac{dy}{dt}\dfrac{d^2y}{dt^2}) 
 						\end {array} 
 					\] 
 					as a first order system.
@@ -337,17 +337,17 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					We regard \(x\), \(x'\), \(y\), \(y'\), and \(y''\) as unknown functions, and rename them 
-					\[ x=x_1,\; x'=x_2,\quad y=y_1,\quad y'=y_2,\quad y''=y_3\] 
+					We regard \(x\), \(\dfrac{dx}{dx}\), \(y\), \(\dfrac{dy}{dt}\), and \(\dfrac{d^2y}{dt^2}\) as unknown functions, and rename them 
+					\[ x=x_1,\; \dfrac{dx}{dx}=x_2,\quad y=y_1,\quad \dfrac{dy}{dt}=y_2,\quad \dfrac{d^2y}{dt^2}=y_3\] 
 					
 					These unknowns satisfy the system 
 					\[ 
 						\begin {array}{ccl} 
-							x_1'&amp;=&amp;x_2\\
-							x_2'&amp;=&amp;f(t,x_1,x_2,y_1,y_2,y_3) \\
-							y_1'&amp;=&amp;y_2\\
-							y_2'&amp;=&amp;y_3\\ 
-							y_3'&amp;=&amp;g(t,x_1,x_2,y_1,y_2,y_3). 
+							\dfrac{dx_1}{dt}&amp;=&amp;x_2\\
+							\dfrac{dx_2}{dt}&amp;=&amp;f(t,x_1,x_2,y_1,y_2,y_3) \\
+							\dfrac{dy_1}{dt}&amp;=&amp;y_2\\
+							\dfrac{dy_2}{dt}&amp;=&amp;y_3\\ 
+							\dfrac{dy_3}{dt}&amp;=&amp;g(t,x_1,x_2,y_1,y_2,y_3). 
 						\end {array} 
 					\]
 				</details>
@@ -367,52 +367,52 @@
 					<a id="x1-28r18"></a> 
 					\begin {equation} 
 						\label {eq:10.1.18} 
-						y^{(4)}+4y'''+6y''+4y'+y=0 
+						\dfrac{d^4y}{dt^4}+4\dfrac{d^3y}{dt^3}+6\dfrac{d^2y}{dt^2}+4\dfrac{dy}{dt}+y=0 
 					\end {equation}
 					as a \(4\times 4\) first order system.
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-					We regard \(y\), \(y'\), \(y''\), and \(y'''\) as unknowns and rename them 
+					We regard \(y\), \(\dfrac{dy}{dt}\), \(\dfrac{d^2y}{dt^2}\), and \(\dfrac{d^3y}{dt^3}\) as unknowns and rename them 
 					
-					\[ y=y_1,\quad y'=y_2,\quad y''=y_3,\quad \mbox{ and } \quad y'''=y_4\] 
+					\[ y=y_1,\quad \dfrac{dy}{dt}=y_2,\quad \dfrac{d^2y}{dt^2}=y_3,\quad \mbox{ and } \quad \dfrac{d^3y}{dt^3}=y_4\] 
 					
-					Then \(y^{(4)}=y_4'\), so <a href="#x1-28r18">(10.1.18)</a> can be written as 
-					\[ y_4'+4y_4+6y_3+4y_2+y_1=0 \] 
+					Then \( \dfrac{d^4y}{dt^4} =\dfrac{dy_4}{dt}\), so <a href="#x1-28r18">(10.1.18)</a> can be written as 
+					\[ \dfrac{dy_4}{dt}+4y_4+6y_3+4y_2+y_1=0 \] 
 					
 					Therefore \(\{y_1,y_2,y_3,y_4\}\) satisfies the system
 		
 					<div class="eqnarray">
 						\begin {eqnarray*} 
-							y_1'&amp;=&amp;y_2\\ 
-							y_2'&amp;=&amp;y_3 \\ 
-							y_3'&amp;=&amp;y_4\\ 
-							y_4'&amp;=&amp;-4y_4-6y_3-4y_2-y_1 
+							\dfrac{dy_1}{dt}&amp;=&amp;y_2\\ 
+							\dfrac{dy_2}{dt}&amp;=&amp;y_3 \\ 
+							\dfrac{dy_3}{dt}&amp;=&amp;y_4\\ 
+							\dfrac{dy_4}{dt}&amp;=&amp;-4y_4-6y_3-4y_2-y_1 
 						\end {eqnarray*} 
 					</div>
 				</details>
 			</div>
 
-			<div class="example" id="x1-297" style="--ex-number: 7">
+			<div class="removed" id="x1-297" style="--ex-number: 7">
 				<div>
-					Rewrite \[ x'''=f(t,x,x',x'') \] as a system of first order equations.
+					Rewrite \[ \dfrac{d^3x}{dx^3}=f(t,x,\dfrac{dx}{dx},\dfrac{d^2x}{dx^2}) \] as a system of first order equations.
 				</div>
 
 				<details class="solution">
 					<summary>Solution</summary>
-					We regard \(x\), \(x'\), and \(x''\) as unknowns and rename them 
-					\[ x=y_1, \quad x'=y_2,\quad \mbox{ and } \quad x''=y_3\] 
+					We regard \(x\), \(\dfrac{dx}{dx}\), and \(\dfrac{d^2x}{dx^2}\) as unknowns and rename them 
+					\[ x=y_1, \quad \dfrac{dx}{dx}=y_2,\quad \mbox{ and } \quad \dfrac{d^2x}{dx^2}=y_3\] 
 					
 					Then 
-					\[ y_1'=x'=y_2,\quad y_2'=x''=y_3,\quad \mbox{ and } \quad y_3'=x'''\] 
+					\[ \dfrac{dy_1}{dt}=\dfrac{dx}{dx}=y_2,\quad \dfrac{dy_2}{dt}=\dfrac{d^2x}{dx^2}=y_3,\quad \mbox{ and } \quad \dfrac{dy_3}{dt}=\dfrac{d^3x}{dx^3}\] 
 					
 					Therefore \(\{y_1,y_2,y_3\}\) satisfies the first order system 
 					\[ 
 						\begin {array}{ccl} 
-							y_1'&amp;=&amp;y_2\\
-							y_2'&amp;=&amp;y_3\\
-							y_3'&amp;=&amp;f(t,y_1,y_2,y_3) 
+							\dfrac{dy_1}{dt}&amp;=&amp;y_2\\
+							\dfrac{dy_2}{dt}&amp;=&amp;y_3\\
+							\dfrac{dy_3}{dt}&amp;=&amp;f(t,y_1,y_2,y_3) 
 						\end {array} 
 					\] 
 				</details>
@@ -423,7 +423,7 @@
 			</div>
 		</details>
 
-		<details id="bc8da3c0-e96d-4145-b955-fa84599bea9a">
+		<details class="removed" id="bc8da3c0-e96d-4145-b955-fa84599bea9a">
 			<summary>Numerical Solution of Systems</summary>
 		
 			<div id="072ca7da-a4cc-4abb-9a54-f39481b3919b">
@@ -431,8 +431,8 @@
 			</div>
 			<div class="eqnarray" id="cf09245c-cede-44d1-8665-283b407a739a">
 				\begin {eqnarray*} 
-					y_1'&amp;=&amp;g_1(t,y_1,y_2),\quad y_1(t_0)=y_{10},\\ 
-					y_2'&amp;=&amp;g_2(t,y_1,y_2),\quad y_2(t_0)=y_{20} 
+					\dfrac{dy_1}{dt}&amp;=&amp;g_1(t,y_1,y_2),\quad y_1(t_0)=y_{10},\\ 
+					\dfrac{dy_2}{dt}&amp;=&amp;g_2(t,y_1,y_2),\quad y_2(t_0)=y_{20} 
 				\end {eqnarray*} 
 			</div>
 			<div id="f5137959-5f83-4e0e-8b13-94ab87e57c3a">

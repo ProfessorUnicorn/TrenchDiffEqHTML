@@ -48,10 +48,10 @@
 				<a id="x1-2r1"></a> 
 				\begin {equation} 
 					\label {eq:10.4.1} 
-					{\bf y}'=A{\bf y} 
+					\dfrac{d{\bf \vec{y}}}{dt}=A{\bf \vec{y}} 
 				\end {equation}
 				
-				where \(A\) is an \(n\times n\) constant matrix. Since \(A\) is continuous on \((-\infty ,\infty )\), Theorem&nbsp;<span class="ptmb8t-">10.2.1</span> implies that all solutions of <a href="#x1-2r1">(10.4.1)</a> are defined on \((-\infty ,\infty )\). Therefore, when we speak of solutions of \({\bf y}'=A{\bf y}\), we’ll mean solutions on \((-\infty ,\infty )\).
+				where \(A\) is an \(n\times n\) constant matrix. Since \(A\) is continuous on \((-\infty ,\infty )\), Theorem&nbsp;<span class="ptmb8t-">10.2.1</span> implies that all solutions of <a href="#x1-2r1">(10.4.1)</a> are defined on \((-\infty ,\infty )\). Therefore, when we speak of solutions of \(\dfrac{d{\bf \vec{y}}}{dt}=A{\bf \vec{y}}\), we’ll mean solutions on \((-\infty ,\infty )\).
 			</div>
 
 			<div id="becf279b-6108-4cc6-a259-82b5ad7c9e70">
@@ -60,23 +60,23 @@
 
 			<div id="84a6dad9-edd9-4134-b1d6-fcd7d0483431">
 				In Example&nbsp;<span class="ptmb8t-">10.3.2</span> we showed that the vector functions 
-				\[ {\bf y}_1=\twocol {-e^{2t}}{2e^{2t}}\quad \mbox{ and } \quad {\bf y}_2=\twocol {-e^{-t}}{e^{-t}} \] 
+				\[ {\bf \vec{y}}_1=\twocol {-e^{2t}}{2e^{2t}}\quad \mbox{ and } \quad {\bf \vec{y}}_2=\twocol {-e^{-t}}{e^{-t}} \] 
 				
 				form a fundamental set of solutions of the system 
 				<a id="x1-3r2"></a> 
 				\begin {equation} 
 					\label {eq:10.4.2} 
-					{\bf y}'=\twobytwo {-4}{-3}65 {\bf y} 
+					\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo {-4}{-3}65 {\bf \vec{y}} 
 				\end {equation}
 
-				but we did not show how we obtained \({\bf y}_1\) and \({\bf y}_2\) in the first place. To see how these solutions can be obtained we write <a href="#x1-3r2">(10.4.2)</a> as
+				but we did not show how we obtained \({\bf \vec{y}}_1\) and \({\bf \vec{y}}_2\) in the first place. To see how these solutions can be obtained we write <a href="#x1-3r2">(10.4.2)</a> as
 				
 				<a id="x1-4r3"></a>
 				\begin {equation}
 					\label {eq:10.4.3} 
 					\begin {array}{ccc} 
-						y_1'&amp;=&amp;-4y_1-3y_2\\
-						y_2'&amp;=&amp;\phantom {-}6y_1+5y_2 
+						\dfrac{dy_1}{dt}&amp;=&amp;-4y_1-3y_2\\
+						\dfrac{dy_2}{dt}&amp;=&amp;\phantom {-}6y_1+5y_2 
 					\end {array} 
 				\end {equation}
 				
@@ -90,7 +90,7 @@
 				
 				where \(x_1\), \(x_2\), and \(\lambda \) are constants to be determined. Differentiating <a href="#x1-5r4">(10.4.4)</a> yields 
 				\[
-					y_1'=\lambda x_1e^{\lambda t}\quad \mbox { and }\quad y_2'=\lambda x_2e^{\lambda t}
+					\dfrac{dy_1}{dt}=\lambda x_1e^{\lambda t}\quad \mbox { and }\quad \dfrac{dy_2}{dt}=\lambda x_2e^{\lambda t}
 				\]
 				
 				Substituting this and <a href="#x1-5r4">(10.4.4)</a> into <a href="#x1-4r3">(10.4.3)</a> and canceling the common factor \(e^{\lambda t}\) yields
@@ -144,7 +144,7 @@
 				<a id="x1-7r6"></a>
 				\begin {equation} 
 					\label {eq:10.4.6} 
-					{\bf y}_1=\twocol {-1}{\phantom {-}2} e^{2t} 
+					{\bf \vec{y}}_1=\twocol {-1}{\phantom {-}2} e^{2t} 
 				\end {equation}
 			</div>
 			<div id="0d7e10ee-8928-4033-a35a-57f81429788b">
@@ -161,7 +161,7 @@
 				<a id="x1-8r7"></a>
 				\begin {equation} 
 					\label {eq:10.4.7} 
-					{\bf y}_2=\twocol {-1}{\phantom {-}1}e^{-t} 
+					{\bf \vec{y}}_2=\twocol {-1}{\phantom {-}1}e^{-t} 
 				\end {equation}
 			</div>
 			<div id="3ae2f526-1fdb-4e79-a28f-2787a5c85787">
@@ -169,21 +169,21 @@
 			</div>
 			<div class="theorem" id="x1-91">
 				<span class="head">Theorem&nbsp;10.4.1</span>
-				Suppose the \(n\times n\) constant matrix \(A\) has \(n\) real eigenvalues \(\lambda _1,\lambda _2,\ldots ,\lambda _n\) (which need not be distinct) with associated linearly independent eigenvectors \({\bf x}_1,{\bf x}_2,\ldots ,{\bf x}_n\). Then the functions 
-				\[ {\bf y}_1={\bf x}_1e^{\lambda _1 t},\, {\bf y}_2={\bf x}_2e^{\lambda _2 t},\, \dots ,\, {\bf y}_n={\bf x}_ne^{\lambda _n t} \]
-				form a fundamental set of solutions of \({\bf y}'=A{\bf y};\) that is, the general solution of this system is 
-				\[ {\bf y}=c_1{\bf x}_1e^{\lambda _1 t}+c_2{\bf x}_2e^{\lambda _2 t} +\cdots +c_n{\bf x}_ne^{\lambda _n t}\]
+				Suppose the \(n\times n\) constant matrix \(A\) has \(n\) real eigenvalues \(\lambda _1,\lambda _2,\ldots ,\lambda _n\) (which need not be distinct) with associated linearly independent eigenvectors \({\bf \vec{x}}_1,{\bf \vec{x}}_2,\ldots ,{\bf \vec{x}}_n\). Then the functions 
+				\[ {\bf \vec{y}}_1={\bf \vec{x}}_1e^{\lambda _1 t},\, {\bf \vec{y}}_2={\bf \vec{x}}_2e^{\lambda _2 t},\, \dots ,\, {\bf \vec{y}}_n={\bf \vec{x}}_ne^{\lambda _n t} \]
+				form a fundamental set of solutions of \(\dfrac{d{\bf \vec{y}}}{dt}=A{\bf \vec{y}};\) that is, the general solution of this system is 
+				\[ {\bf \vec{y}}=c_1{\bf \vec{x}}_1e^{\lambda _1 t}+c_2{\bf \vec{x}}_2e^{\lambda _2 t} +\cdots +c_n{\bf \vec{x}}_ne^{\lambda _n t}\]
 			</div>
 
 			<div id="7c06e859-dab3-4e0f-88d4-20b1ef540dcc">
 				<strong>Proof</strong>
-				Differentiating \({\bf y}_i={\bf x}_ie^{\lambda _it}\) and recalling that \(A{\bf x}_i=\lambda _i{\bf x}_i\) yields
-				\[ {\bf y}_i'=\lambda _i{\bf x}_ie^{\lambda _it}=A{\bf x}_ie^{\lambda _it} =A{\bf y}_i\]
+				Differentiating \({\bf \vec{y}}_i={\bf \vec{x}}_ie^{\lambda _it}\) and recalling that \(A{\bf \vec{x}}_i=\lambda _i{\bf \vec{x}}_i\) yields
+				\[ \dfrac{d{\bf \vec{y}}_i}{dt}=\lambda _i{\bf \vec{x}}_ie^{\lambda _it}=A{\bf \vec{x}}_ie^{\lambda _it} =A{\bf \vec{y}}_i\]
 				
-				This shows that \({\bf y}_i\) is a solution of \({\bf y}'=A{\bf y}\). 
+				This shows that \({\bf \vec{y}}_i\) is a solution of \(\dfrac{d{\bf \vec{y}}}{dt}=A{\bf \vec{y}}\). 
 			</div>
 			<div id="9de2ecb8-840a-4cd6-906d-066f1ab793ca">
-				The Wronskian of \(\{{\bf y}_1,{\bf y}_2,\ldots ,{\bf y}_n\}\) is
+				The Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\ldots ,{\bf \vec{y}}_n\}\) is
 				\[
 					\left | 
 						\begin {array}{cccc} 
@@ -199,7 +199,7 @@
 					\right |
 				\]
 				
-				Since the columns of the determinant on the right are \({\bf x}_1\), \({\bf x}_2\), …, \({\bf x}_n\), which are assumed to be linearly independent, the determinant is nonzero. Therefore Theorem&nbsp;<span class="ptmb8t-">10.3.3</span> implies that \(\{{\bf y}_1,{\bf y}_2,\ldots ,{\bf y}_n\}\) is a fundamental set of solutions of \({\bf y}'=A{\bf y}\). 
+				Since the columns of the determinant on the right are \({\bf \vec{x}}_1\), \({\bf \vec{x}}_2\), …, \({\bf \vec{x}}_n\), which are assumed to be linearly independent, the determinant is nonzero. Therefore Theorem&nbsp;<span class="ptmb8t-">10.3.3</span> implies that \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\ldots ,{\bf \vec{y}}_n\}\) is a fundamental set of solutions of \(\dfrac{d{\bf \vec{y}}}{dt}=A{\bf \vec{y}}\). 
 			</div>
 
 			<div class="example" id="x1-101" style="--ex-number: 1">
@@ -209,7 +209,7 @@
 						<a id="x1-12r8"></a> 
 						\begin {equation} 
 							\label {eq:10.4.8} 
-							{\bf y}'=\twobytwo 2442 {\bf y} 
+							\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 2442 {\bf \vec{y}} 
 						\end {equation}
 					</li>
 					<li>
@@ -218,7 +218,7 @@
 						<a id="x1-14r9"></a> 
 						\begin {equation} 
 							\label {eq:10.4.9} 
-							{\bf y}'=\twobytwo 2442 {\bf y},\quad {\bf y}(0)=\left [
+							\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 2442 {\bf \vec{y}},\quad {\bf \vec{y}}(0)=\left [
 								\begin {array}{r}
 									5 \\
 									-1 
@@ -292,7 +292,7 @@
 							
 							which implies that \(x_1=x_2\). Taking \(x_2=1\) yields the eigenvector
 							\[
-								{\bf x}_1=\left [
+								{\bf \vec{x}}_1=\left [
 									\begin {array}{c}
 										1\\
 										1
@@ -302,7 +302,7 @@
 							
 							so
 							\[
-								{\bf y}_1=\left [
+								{\bf \vec{y}}_1=\left [
 									\begin {array}{c}
 										1\\
 										1
@@ -331,7 +331,7 @@
 							
 							which implies that \(x_1=-x_2\). Taking \(x_2=1\) yields the eigenvector
 							\[
-								{\bf x}_2=\left [
+								{\bf \vec{x}}_2=\left [
 									\begin {array}{r}
 										-1\\
 										1
@@ -341,7 +341,7 @@
 							
 							so
 							\[
-								{\bf y}_2=\left [
+								{\bf \vec{y}}_2=\left [
 									\begin {array}{r}
 										-1\\
 										1
@@ -354,7 +354,7 @@
 							<a id="x1-16r11"></a>
 							\begin {equation}
 								\label {eq:10.4.11}
-								{\bf y}=c_1{\bf y}_1+c_2{\bf y}_2=c_1\left [
+								{\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2=c_1\left [
 									\begin {array}{r}
 										1\\
 										1
@@ -398,7 +398,7 @@
 
 							so \(c_1=2, c_2=-3\). Therefore the solution of <a href="#x1-14r9">(10.4.9)</a> is
 							\[
-								{\bf y}=2\left [
+								{\bf \vec{y}}=2\left [
 									\begin {array}{r}
 										1\\
 										1
@@ -426,13 +426,13 @@
 						<a id="x1-19r12"></a> 
 						\begin {equation} 
 							\label {eq:10.4.12} 
-							{\bf y}'=\left [ 
+							\dfrac{d{\bf \vec{y}}}{dt}=\left [ 
 								\begin {array}{rrr}
 									3&amp;-1&amp;-1\\
 									-2&amp; 3&amp; 2\\
 									4&amp;-1&amp;-2 
 								\end {array}
-							\right ]{\bf y}
+							\right ]{\bf \vec{y}}
 						\end {equation}
 					</li>
 					<li>
@@ -441,13 +441,13 @@
 						<a id="x1-21r13"></a> 
 						\begin {equation} 
 							\label {eq:10.4.13}
-							{\bf y}'=\left [
+							\dfrac{d{\bf \vec{y}}}{dt}=\left [
 								\begin {array}{rrr}
 									3&amp;-1&amp;-1\\
 									-2&amp;3&amp; 2\\
 									4&amp;-1&amp;-2
 								\end {array}
-							\right ]{\bf y},\quad {\bf y}(0)=\left [ 
+							\right ]{\bf \vec{y}},\quad {\bf \vec{y}}(0)=\left [ 
 								\begin {array}{r}
 									2\\ 
 									-1\\
@@ -524,7 +524,7 @@
 							
 							Hence, \(x_1=x_3\) and \(x_2=0\). Taking \(x_3=1\) yields 
 							\[ 
-								{\bf y}_1=\left [
+								{\bf \vec{y}}_1=\left [
 									\begin {array}{rrr}
 										1\\
 										0\\
@@ -558,7 +558,7 @@
 							
 							Hence, \(x_1=x_3\) and \(x_2=-x_3\). Taking \(x_3=1\) yields 
 							\[ 
-								{\bf y}_2=\left [
+								{\bf \vec{y}}_2=\left [
 									\begin {array}{r}
 										1\\
 										-1\\
@@ -591,7 +591,7 @@
 							
 							Hence, \(x_1=x_3/7\) and \(x_2=-3x_3/7\). Taking \(x_3=7\) yields 
 							\[ 
-								{\bf y}_3=\left [
+								{\bf \vec{y}}_3=\left [
 									\begin {array}{r}
 										1\\
 										-3\\
@@ -603,7 +603,7 @@
 							as a solution of <a href="#x1-19r12">(10.4.12)</a>. By Theorem&nbsp;<a href="#x1-91">10.4.1</a>, the general solution of <a href="#x1-19r12">(10.4.12)</a> is 
 							
 							\[
-								{\bf y}=c_1\left [
+								{\bf \vec{y}}=c_1\left [
 									\begin {array}{r}
 										1\\
 										0\\
@@ -629,7 +629,7 @@
 							<a id="x1-23r15"></a>
 							\begin {equation} 
 								\label {eq:10.4.15} 
-								{\bf y}=\left [ 
+								{\bf \vec{y}}=\left [ 
 									\begin {array}{crc}
 										e^{2t}&amp;e^{3t}&amp;e^{-t} \\
 										0&amp;-e^{3t}&amp; -3e^{-t}\\
@@ -671,7 +671,7 @@
 							Solving this system yields \(c_1=3\), \(c_2=-2\), \(c_3=1\). Hence, the solution of <a href="#x1-21r13">(10.4.13)</a> is
 							<div class="eqnarray">
 								\begin {eqnarray*}
-									{\bf y}&amp;=&amp;\left [ 
+									{\bf \vec{y}}&amp;=&amp;\left [ 
 										\begin {array}{ccc}
 											e^{2t}&amp;e^{3t}&amp; e^{-t}\\
 											0&amp;-e^{3t} &amp;-3e^{-t}\\
@@ -716,13 +716,13 @@
 					<a id="x1-25r16"></a>
 					\begin {equation} 
 						\label {eq:10.4.16} 
-						{\bf y}'=\left [
+						\dfrac{d{\bf \vec{y}}}{dt}=\left [
 							\begin {array}{rrr}
 								-3&amp;2&amp;2\\ 
 								2&amp;-3&amp;2\\
 								2&amp;2&amp;-3 
 							\end {array}
-						\right ]{\bf y}
+						\right ]{\bf \vec{y}}
 					\end {equation}
 				</div>
 
@@ -766,7 +766,7 @@
 					<a id="x1-26r17"></a>
 					\begin {equation} 
 						\label {eq:10.4.17} 
-						{\bf y}_1=\left [
+						{\bf \vec{y}}_1=\left [
 							\begin {array}{r}
 								1\\
 								1\\
@@ -809,13 +809,13 @@
 					are linearly independent eigenvectors associated with \(\lambda _2= -5\), and the corresponding solutions of <a href="#x1-25r16">(10.4.16)</a> are 
 					
 					\[ 
-						{\bf y}_2=\left [
+						{\bf \vec{y}}_2=\left [
 							\begin {array}{r}
 								-1\\
 								0\\
 								1
 							\end {array} 
-						\right ]e^{-5t} \quad \mbox { and }\quad {\bf y}_3=\left [
+						\right ]e^{-5t} \quad \mbox { and }\quad {\bf \vec{y}}_3=\left [
 							\begin {array}{r}
 								-1\\
 								1\\ 
@@ -826,7 +826,7 @@
 					
 					Because of this and <a href="#x1-26r17">(10.4.17)</a>, Theorem&nbsp;<a href="#x1-91">10.4.1</a> implies that the general solution of <a href="#x1-25r16">(10.4.16)</a> is 
 					\[ 
-						{\bf y}=c_1\left [
+						{\bf \vec{y}}=c_1\left [
 							\begin {array}{r}
 								1\\
 								1\\ 
@@ -850,7 +850,7 @@
 			</div>
 		</details>
 
-		<details id="8d8640c3-6029-4a33-a9be-0cc5200480b4">
+		<details class="removed" id="8d8640c3-6029-4a33-a9be-0cc5200480b4">
 			<summary>Geometric Properties of Solutions when \(n=2\)</summary>
 		
 			<div id="7d6736ec-bdad-49e1-b729-3200a85f92ac">
@@ -858,7 +858,7 @@
 				
 				<a id="x1-27r18"></a> 
 				\begin {equation} 
-					\label {eq:10.4.18} \twocol {y_1'}{y_2'}=\left [ 
+					\label {eq:10.4.18} \twocol {\dfrac{dy_1}{dt}}{\dfrac{dy_2}{dt}}=\left [ 
 						\begin {array}{cc}
 							a_{11}&amp;a_{12}\\
 							a_{21}&amp;a_{22} 
@@ -866,10 +866,10 @@
 					\right ]\twocol {y_1}{y_2}
 				\end {equation}
 				
-				It is convenient to think of a “\(y_1\)-\(y_2\) plane," where a point is identified by rectangular coordinates \((y_1,y_2)\). If \({\bf y}=\displaystyle {\twocol {y_1}{y_2}}\) is a non-constant solution of <a href="#x1-27r18">(10.4.18)</a>, then the point \((y_1(t),y_2(t))\) moves along a curve \(C\) in the \(y_1\)-\(y_2\) plane as \(t\) varies from \(-\infty \) to \(\infty \). We call \(C\) the <span class="vocab">trajectory</span> of \(\bf y\). (We also say that \(C\) is a trajectory of the system <a href="#x1-27r18">(10.4.18)</a>.) I’s important to note that \(C\) is the trajectory of infinitely many solutions of <a href="#x1-27r18">(10.4.18)</a>, since if \(\tau \) is any real number, then \({\bf y}(t-\tau )\) is a solution of <a href="#x1-27r18">(10.4.18)</a> (Exercise&nbsp;<span class="ptmb8t-">28</span> (b)), and \((y_1(t-\tau ),y_2(t-\tau ))\) also moves along \(C\) as \(t\) varies from \(-\infty \) to \(\infty \). Moreover, Exercise&nbsp;<span class="ptmb8t-">28</span> (c) implies that distinct trajectories of <a href="#x1-27r18">(10.4.18)</a> can’t intersect, and that two solutions \({\bf y}_1\) and \({\bf y}_2\) of <a href="#x1-27r18">(10.4.18)</a> have the same trajectory if and only if \({\bf y}_2(t)={\bf y}_1(t-\tau )\) for some \(\tau \).
+				It is convenient to think of a “\(y_1\)-\(y_2\) plane," where a point is identified by rectangular coordinates \((y_1,y_2)\). If \({\bf \vec{y}}=\displaystyle {\twocol {y_1}{y_2}}\) is a non-constant solution of <a href="#x1-27r18">(10.4.18)</a>, then the point \((y_1(t),y_2(t))\) moves along a curve \(C\) in the \(y_1\)-\(y_2\) plane as \(t\) varies from \(-\infty \) to \(\infty \). We call \(C\) the <span class="vocab">trajectory</span> of \(\bf y\). (We also say that \(C\) is a trajectory of the system <a href="#x1-27r18">(10.4.18)</a>.) I’s important to note that \(C\) is the trajectory of infinitely many solutions of <a href="#x1-27r18">(10.4.18)</a>, since if \(\tau \) is any real number, then \({\bf \vec{y}}(t-\tau )\) is a solution of <a href="#x1-27r18">(10.4.18)</a> (Exercise&nbsp;<span class="ptmb8t-">28</span> (b)), and \((y_1(t-\tau ),y_2(t-\tau ))\) also moves along \(C\) as \(t\) varies from \(-\infty \) to \(\infty \). Moreover, Exercise&nbsp;<span class="ptmb8t-">28</span> (c) implies that distinct trajectories of <a href="#x1-27r18">(10.4.18)</a> can’t intersect, and that two solutions \({\bf \vec{y}}_1\) and \({\bf \vec{y}}_2\) of <a href="#x1-27r18">(10.4.18)</a> have the same trajectory if and only if \({\bf \vec{y}}_2(t)={\bf \vec{y}}_1(t-\tau )\) for some \(\tau \).
 			</div>
 			<div id="7e7e00ba-03da-4491-8043-c2c1e4b5a79e">
-				From Exercise&nbsp;<span class="ptmb8t-">28</span> (a), a trajectory of a nontrivial solution of <a href="#x1-27r18">(10.4.18)</a> can’t contain \((0,0)\), which we define to be the trajectory of the trivial solution \({\bf y}\equiv 0\). More generally, if \({\bf y}=\displaystyle {\twocol {k_1}{k_2}}\ne {\bf 0}\) is a constant solution of <a href="#x1-27r18">(10.4.18)</a> (which could occur if zero is an eigenvalue of the matrix of <a href="#x1-27r18">(10.4.18)</a>), we define the trajectory of \(\bf y\) to be the single point \((k_1,k_2)\).
+				From Exercise&nbsp;<span class="ptmb8t-">28</span> (a), a trajectory of a nontrivial solution of <a href="#x1-27r18">(10.4.18)</a> can’t contain \((0,0)\), which we define to be the trajectory of the trivial solution \({\bf \vec{y}}\equiv 0\). More generally, if \({\bf \vec{y}}=\displaystyle {\twocol {k_1}{k_2}}\ne {\bf 0}\) is a constant solution of <a href="#x1-27r18">(10.4.18)</a> (which could occur if zero is an eigenvalue of the matrix of <a href="#x1-27r18">(10.4.18)</a>), we define the trajectory of \(\bf y\) to be the single point \((k_1,k_2)\).
 			</div>
 			<div id="d3f2b061-cbb1-4440-8d1b-feddefe8ea26">
 				To be specific, this is the question: What do the trajectories look like, and how are they traversed? In this section we’ll answer this question, assuming that the matrix 
@@ -882,21 +882,21 @@
 					\right ] 
 				\] 
 				
-				of <a href="#x1-27r18">(10.4.18)</a> has real eigenvalues \(\lambda _1\) and \(\lambda _2\) with associated linearly independent eigenvectors \({\bf x}_1\) and \({\bf x}_2\). Then the general solution of <a href="#x1-27r18">(10.4.18)</a> is 
+				of <a href="#x1-27r18">(10.4.18)</a> has real eigenvalues \(\lambda _1\) and \(\lambda _2\) with associated linearly independent eigenvectors \({\bf \vec{x}}_1\) and \({\bf \vec{x}}_2\). Then the general solution of <a href="#x1-27r18">(10.4.18)</a> is 
 
 				<a id="x1-28r19"></a> 
 				\begin {equation} 
 					\label {eq:10.4.19} 
-					{\bf y}= c_1{\bf x}_1 e^{\lambda _1 t}+c_2{\bf x}_2e^{\lambda _2 t} 
+					{\bf \vec{y}}= c_1{\bf \vec{x}}_1 e^{\lambda _1 t}+c_2{\bf \vec{x}}_2e^{\lambda _2 t} 
 				\end {equation}
 				
 				We’ll consider other situations in the next two sections.
 			</div>
 			<div id="f9bf5c07-96fc-428e-8076-e8583417339d">
 				We leave it to you (Exercise&nbsp;<span class="ptmb8t-">35</span>) to classify the trajectories of <a href="#x1-27r18">(10.4.18)</a> if zero is an eigenvalue of \(A\). We’ll confine our attention here to the case where both eigenvalues are nonzero. In this case the simplest situation is where \(\lambda _1=\lambda _2\ne 0\), so <a href="#x1-28r19">(10.4.19)</a> becomes 
-				\[ {\bf y}=(c_1{\bf x}_1+c_2{\bf x}_2)e^{\lambda _1 t}\] 
+				\[ {\bf \vec{y}}=(c_1{\bf \vec{x}}_1+c_2{\bf \vec{x}}_2)e^{\lambda _1 t}\] 
 				
-				Since \({\bf x}_1\) and \({\bf x}_2\) are linearly independent, an arbitrary vector \(\bf x\) can be written as \({\bf x}=c_1{\bf x}_1+c_2{\bf x}_2\). Therefore the general solution of <a href="#x1-27r18">(10.4.18)</a> can be written as \({\bf y}={\bf x}e^{\lambda _1 t}\) where \(\bf x\) is an arbitrary \(2\)-vector, and the trajectories of nontrivial solutions of <a href="#x1-27r18">(10.4.18)</a> are half-lines through (but not including) the origin. The direction of motion is away from the origin if \(\lambda _1&gt;0\) (Figure&nbsp;<a href="#x1-29r1">10.4.1</a>), toward it if \(\lambda _1&lt;0\) (Figure&nbsp;<a href="#x1-30r2">10.4.2</a>). (In these and the next figures an arrow through a point indicates the direction of motion along the trajectory through the point.)
+				Since \({\bf \vec{x}}_1\) and \({\bf \vec{x}}_2\) are linearly independent, an arbitrary vector \(\bf x\) can be written as \({\bf \vec{x}}=c_1{\bf \vec{x}}_1+c_2{\bf \vec{x}}_2\). Therefore the general solution of <a href="#x1-27r18">(10.4.18)</a> can be written as \({\bf \vec{y}}={\bf \vec{x}}e^{\lambda _1 t}\) where \(\bf x\) is an arbitrary \(2\)-vector, and the trajectories of nontrivial solutions of <a href="#x1-27r18">(10.4.18)</a> are half-lines through (but not including) the origin. The direction of motion is away from the origin if \(\lambda _1&gt;0\) (Figure&nbsp;<a href="#x1-29r1">10.4.1</a>), toward it if \(\lambda _1&lt;0\) (Figure&nbsp;<a href="#x1-30r2">10.4.2</a>). (In these and the next figures an arrow through a point indicates the direction of motion along the trajectory through the point.)
 			</div>
 
 			<figure id="x1-29r1">
@@ -916,40 +916,40 @@
 			</figure>
 
 			<div id="55c65e2d-f5bd-45c4-afa6-466378d02f00">
-				Now suppose \(\lambda _2&gt;\lambda _1\), and let \(L_1\) and \(L_2\) denote lines through the origin parallel to \({\bf x}_1\) and \({\bf x}_2\), respectively. By a half-line of \(L_1\) (or \(L_2\)), we mean either of the rays obtained by removing the origin from \(L_1\) (or \(L_2\)). 
+				Now suppose \(\lambda _2&gt;\lambda _1\), and let \(L_1\) and \(L_2\) denote lines through the origin parallel to \({\bf \vec{x}}_1\) and \({\bf \vec{x}}_2\), respectively. By a half-line of \(L_1\) (or \(L_2\)), we mean either of the rays obtained by removing the origin from \(L_1\) (or \(L_2\)). 
 			</div>
 			<div id="07b34302-244d-4724-a60d-6784cf103937">
-				Letting \(c_2=0\) in <a href="#x1-28r19">(10.4.19)</a> yields \({\bf y}=c_1{\bf x}_1e^{\lambda _1 t}\). If \(c_1\ne 0\), the trajectory defined by this solution is a half-line of \(L_1\). The direction of motion is away from the origin if \(\lambda _1&gt;0\), toward the origin if \(\lambda _1&lt;0\). Similarly, the trajectory of \({\bf y}=c_2{\bf x}_2e^{\lambda _2 t}\) with \(c_2\ne 0\) is a half-line of \(L_2\).
+				Letting \(c_2=0\) in <a href="#x1-28r19">(10.4.19)</a> yields \({\bf \vec{y}}=c_1{\bf \vec{x}}_1e^{\lambda _1 t}\). If \(c_1\ne 0\), the trajectory defined by this solution is a half-line of \(L_1\). The direction of motion is away from the origin if \(\lambda _1&gt;0\), toward the origin if \(\lambda _1&lt;0\). Similarly, the trajectory of \({\bf \vec{y}}=c_2{\bf \vec{x}}_2e^{\lambda _2 t}\) with \(c_2\ne 0\) is a half-line of \(L_2\).
 			</div>
 			<div id="bbd15c26-34c2-400a-a82a-0dc8754e3319">
 				Henceforth, we assume that \(c_1\) and \(c_2\) in <a href="#x1-28r19">(10.4.19)</a> are both nonzero. In this case, the trajectory of <a href="#x1-28r19">(10.4.19)</a> can’t intersect \(L_1\) or \(L_2\), since every point on these lines is on the trajectory of a solution for which either \(c_1=0\) or \(c_2=0\). (Remember: distinct trajectories can’t intersect!). Therefore the trajectory of <a href="#x1-28r19">(10.4.19)</a> must lie entirely in one of the four open sectors bounded by \(L_1\) and \(L_2\), but do not any point on \(L_1\) or \(L_2\). Since the initial point \((y_1(0),y_2(0))\) defined by 
-				\[ {\bf y}(0)=c_1{\bf x}_1+c_2{\bf x}_2 \] 
+				\[ {\bf \vec{y}}(0)=c_1{\bf \vec{x}}_1+c_2{\bf \vec{x}}_2 \] 
 				
 				is on the trajectory, we can determine which sector contains the trajectory from the signs of \(c_1\) and \(c_2\), as shown in Figure&nbsp;<a href="#x1-33r3">10.4.3</a>.
 			</div>
 			<div id="31455ff4-aa03-4b1d-806d-7bcca01801e2">
-				The direction of \({\bf y}(t)\) in <a href="#x1-28r19">(10.4.19)</a> is the same as that of 
+				The direction of \({\bf \vec{y}}(t)\) in <a href="#x1-28r19">(10.4.19)</a> is the same as that of 
 				
 				<a id="x1-31r20"></a> 
 				\begin {equation} 
 					\label {eq:10.4.20} 
-					e^{-\lambda _2 t}{\bf y}(t)= c_1{\bf x}_1e^{-(\lambda _2-\lambda _1)t}+c_2{\bf x}_2 
+					e^{-\lambda _2 t}{\bf \vec{y}}(t)= c_1{\bf \vec{x}}_1e^{-(\lambda _2-\lambda _1)t}+c_2{\bf \vec{x}}_2 
 				\end {equation}
 				
 				and of 
 				<a id="x1-32r21"></a>
 				\begin {equation} 
 					\label {eq:10.4.21} 
-					e^{-\lambda _1 t}{\bf y}(t)=c_1{\bf x}_1+c_2{\bf x}_2e^{(\lambda _2-\lambda _1)t} 
+					e^{-\lambda _1 t}{\bf \vec{y}}(t)=c_1{\bf \vec{x}}_1+c_2{\bf \vec{x}}_2e^{(\lambda _2-\lambda _1)t} 
 				\end {equation}
 				
-				Since the right side of <a href="#x1-31r20">(10.4.20)</a> approaches \(c_2{\bf x}_2\) as \(t\to \infty \), the trajectory is asymptotically parallel to \(L_2\) as \(t\to \infty \). Since the right side of <a href="#x1-32r21">(10.4.21)</a> approaches \(c_1{\bf x}_1\) as \(t\to -\infty \), the trajectory is asymptotically parallel to \(L_1\) as \(t\to -\infty \).
+				Since the right side of <a href="#x1-31r20">(10.4.20)</a> approaches \(c_2{\bf \vec{x}}_2\) as \(t\to \infty \), the trajectory is asymptotically parallel to \(L_2\) as \(t\to \infty \). Since the right side of <a href="#x1-32r21">(10.4.21)</a> approaches \(c_1{\bf \vec{x}}_1\) as \(t\to -\infty \), the trajectory is asymptotically parallel to \(L_1\) as \(t\to -\infty \).
 			</div>
 			<div id="43d70605-d3e2-4329-80f9-85c0e5bfed68">
 				The shape and direction of traversal of the trajectory of <a href="#x1-28r19">(10.4.19)</a> depend upon whether \(\lambda _1\) and \(\lambda _2\) are both positive, both negative, or of opposite signs. We’ll now analyze these three cases.
 			</div>
 			<div id="95ee1955-579e-4094-a043-108eb3dd1d7c">
-				Henceforth \(\|{\bf u}\|\) denote the length of the vector \(\bf u\). 
+				Henceforth \(\|{\bf \vec{u}}\|\) denote the length of the vector \(\bf u\). 
 			</div>
 			<figure id="x1-33r3">
 				<img height="264" src="EPS/fig100403.png" />
@@ -961,8 +961,8 @@
 
 			<div id="ddf24625-20d0-4963-8993-e43016f83273" class="stepbox">
 				<strong>Case 1: \(\lambda _2&gt;\lambda _1&gt;0\)</strong>
-				Figure&nbsp;<a href="#x1-34r4">10.4.4</a> shows some typical trajectories. In this case, \(\lim _{t\to -\infty }\|{\bf y}(t)\|=0\), so the trajectory is not only asymptotically parallel to \(L_1\) as \(t\to -\infty \), but is actually asymptotically tangent to \(L_1\) at the origin. On the other hand, \(\lim _{t\to \infty }\|{\bf y}(t)\|=\infty \) and
-				\[ \lim _{t\to \infty }\left \|{\bf y}(t)-c_2{\bf x}_2e^{\lambda _2 t}\right \|=\lim _{t\to \infty }\|c_1{\bf x_1}e^{\lambda _1t}\|=\infty \] 
+				Figure&nbsp;<a href="#x1-34r4">10.4.4</a> shows some typical trajectories. In this case, \(\lim _{t\to -\infty }\|{\bf \vec{y}}(t)\|=0\), so the trajectory is not only asymptotically parallel to \(L_1\) as \(t\to -\infty \), but is actually asymptotically tangent to \(L_1\) at the origin. On the other hand, \(\lim _{t\to \infty }\|{\bf \vec{y}}(t)\|=\infty \) and
+				\[ \lim _{t\to \infty }\left \|{\bf \vec{y}}(t)-c_2{\bf \vec{x}}_2e^{\lambda _2 t}\right \|=\lim _{t\to \infty }\|c_1{\bf x_1}e^{\lambda _1t}\|=\infty \] 
 				
 				so, although the trajectory is asymptotically parallel to \(L_2\) as \(t\to \infty \), it’s not asymptotically tangent to \(L_2\). The direction of motion along each trajectory is away from the origin.
 
@@ -977,8 +977,8 @@
 
 			<div id="b01e7500-f1a0-4f41-99b0-480563a9a6dc" class="stepbox">
 				<strong>Case 2: \(0&gt;\lambda _2&gt;\lambda _1\)</strong>
-				Figure&nbsp;<a href="#x1-35r5">10.4.5</a> shows some typical trajectories. In this case, \(\lim _{t\to \infty }\|{\bf y}(t)\|=0\), so the trajectory is asymptotically tangent to \(L_2\) at the origin as \(t\to \infty \). On the other hand, \(\lim _{t\to -\infty }\|{\bf y}(t)\|=\infty \) and
-				\[ \lim _{t\to -\infty }\left \|{\bf y}(t)-c_1{\bf x}_1e^{\lambda _1 t}\right \|=\lim _{t\to -\infty }\|c_2{\bf x}_2e^{\lambda _2t}\|=\infty \] 
+				Figure&nbsp;<a href="#x1-35r5">10.4.5</a> shows some typical trajectories. In this case, \(\lim _{t\to \infty }\|{\bf \vec{y}}(t)\|=0\), so the trajectory is asymptotically tangent to \(L_2\) at the origin as \(t\to \infty \). On the other hand, \(\lim _{t\to -\infty }\|{\bf \vec{y}}(t)\|=\infty \) and
+				\[ \lim _{t\to -\infty }\left \|{\bf \vec{y}}(t)-c_1{\bf \vec{x}}_1e^{\lambda _1 t}\right \|=\lim _{t\to -\infty }\|c_2{\bf \vec{x}}_2e^{\lambda _2t}\|=\infty \] 
 				
 				so, although the trajectory is asymptotically parallel to \(L_1\) as \(t\to -\infty \), it’s not asymptotically tangent to it. The direction of motion along each trajectory is toward the origin.
 
@@ -994,10 +994,10 @@
 			<div id="57000f88-1ec2-417e-a2fb-f404eea70114" class="stepbox">
 				<strong>Case 3: \(\lambda _2&gt;0&gt;\lambda _1\)</strong>
 				Figure&nbsp;<a href="#x1-36r6">10.4.6</a> shows some typical trajectories. In this case,
-				\[ \lim _{t\to \infty }\|{\bf y}(t)\|=\infty \quad \mbox{ and } \quad \lim _{t\to \infty }\left \|{\bf y}(t)-c_2{\bf x}_2e^{\lambda _2 t}\right \|=\lim _{t\to \infty }\|c_1{\bf x}_1e^{\lambda _1t}\|=0\] 
+				\[ \lim _{t\to \infty }\|{\bf \vec{y}}(t)\|=\infty \quad \mbox{ and } \quad \lim _{t\to \infty }\left \|{\bf \vec{y}}(t)-c_2{\bf \vec{x}}_2e^{\lambda _2 t}\right \|=\lim _{t\to \infty }\|c_1{\bf \vec{x}}_1e^{\lambda _1t}\|=0\] 
 				
 				so the trajectory is asymptotically tangent to \(L_2\) as \(t\to \infty \). Similarly,
-				\[ \lim _{t\to -\infty }\|{\bf y}(t)\|=\infty \quad \mbox{ and } \quad \lim _{t\to -\infty }\left \|{\bf y}(t)-c_1{\bf x}_1e^{\lambda _1 t}\right \|=\lim _{t\to -\infty }\|c_2{\bf x}_2e^{\lambda _2t}\|=0\] 
+				\[ \lim _{t\to -\infty }\|{\bf \vec{y}}(t)\|=\infty \quad \mbox{ and } \quad \lim _{t\to -\infty }\left \|{\bf \vec{y}}(t)-c_1{\bf \vec{x}}_1e^{\lambda _1 t}\right \|=\lim _{t\to -\infty }\|c_2{\bf \vec{x}}_2e^{\lambda _2t}\|=0\] 
 				
 				so the trajectory is asymptotically tangent to \(L_1\) as \(t\to -\infty \). The direction of motion is toward the origin on \(L_1\) and away from the origin on \(L_2\). The direction of motion along any other trajectory is away from \(L_1\), toward \(L_2\).
 	
@@ -1011,6 +1011,20 @@
 				</figure>
 			</div>
 		</details>
+
+
+		<div class="example" id="x1-101" style="--ex-number: 4">
+				<a id="x1-1615"></a>
+				 \(
+					\displaystyle \dfrac{d{\bf \vec{y}}}{dt}= \left [ 
+						\begin {array}{rrr}
+							3&amp;1&amp;-1\\
+							3&amp;5&amp;1\\
+							-6&amp;2&amp;4 
+						\end {array} 
+					\right ]{\bf \vec{y}}
+				\)
+		</div>
 
 		<nav class="ex">
 			<a href="sec10.4.ex.html">10.4 Exercises</a>

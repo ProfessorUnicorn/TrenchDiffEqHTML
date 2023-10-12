@@ -36,62 +36,62 @@
 			\) 
 		</div>
 		<div id="d7e175d1-d5da-41b0-8f2c-11e5c9338e44" class="section-title">
-			 10.3 Basic Theory of Homogeneous Linear System 
+			10.3 Basic Theory of Homogeneous Linear System 
 		</div>
 		<div id="b44c62f0-ac1d-4acc-9012-c16fa7463ad3">
-			 In this section we consider homogeneous linear systems \({\bf y}'= A(t){\bf y}\), where \(A=A(t)\) is a continuous \(n\times n\) matrix function on an interval \((a,b)\). The theory of linear homogeneous systems has much in common with the theory of linear homogeneous scalar equations, which we considered in Sections&nbsp;2.1, 5.1, and 9.1. 
+			In this section we consider homogeneous linear systems \(\dfrac{d{\bf \vec{y}}}{dt}= A(t){\bf \vec{y}}\), where \(A=A(t)\) is a continuous \(n\times n\) matrix function on an interval \((a,b)\). The theory of linear homogeneous systems has much in common with the theory of linear homogeneous scalar equations, which we considered in Sections&nbsp;2.1, 5.1, and 9.1. 
 		</div>
 		<div id="7a09ee8d-634d-4892-a295-215b653c8a0e">
-			 Whenever we refer to solutions of \({\bf y}'=A(t){\bf y}\) we’ll mean solutions on \((a,b)\). Since \({\bf y}\equiv {\bf 0}\) is obviously a solution of \({\bf y}'=A(t){\bf y}\), we call it the <span class="vocab">trivial</span> solution. Any other solution is <span class="vocab">nontrivial</span>. 
+			Whenever we refer to solutions of \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) we’ll mean solutions on \((a,b)\). Since \({\bf \vec{y}}\equiv {\bf 0}\) is obviously a solution of \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\), we call it the <span class="vocab">trivial</span> solution. Any other solution is <span class="vocab">nontrivial</span>. 
 		</div>
 		<div id="d2f6ea5f-dae4-4ae3-b616-e8fa224791d5">
-			If \({\bf y}_1\), \({\bf y}_2\), …, \({\bf y}_n\) are vector functions defined on an interval \((a,b)\) and \(c_1\), \(c_2\), …, \(c_n\) are constants, then 
+			If \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\) are vector functions defined on an interval \((a,b)\) and \(c_1\), \(c_2\), …, \(c_n\) are constants, then 
 			<a id="x1-2r1"></a> 
 			\begin {equation} 
 				\label {eq:10.3.1} 
-				{\bf y}=c_1{\bf y}_1+c_2{\bf y}_2+\cdots +c_n{\bf y}_n 
+				{\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2+\cdots +c_n{\bf \vec{y}}_n 
 			\end {equation}
 
-			is a <span class="vocab">linear combination</span> of \({\bf y}_1\), \({\bf y}_2\), …,\({\bf y}_n\). It’s easy show that if \({\bf y}_1\), \({\bf y}_2\), …,\({\bf y}_n\) are solutions of \({\bf y}'=A(t){\bf y}\) on \((a,b)\), then so is any linear combination of \({\bf y}_1\), \({\bf y}_2\), …, \({\bf y}_n\) (Exercise&nbsp;<span class="ptmb8t-">1</span>). We say that \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) is a <span class="vocab">fundamental set of solutions of</span> \({\bf y}'=A(t){\bf y}\) on \((a,b)\) on if every solution of \({\bf y}'=A(t){\bf y}\) on \((a,b)\) can be written as a linear combination of \({\bf y}_1\), \({\bf y}_2\), …, \({\bf y}_n\), as in <a href="#x1-2r1">(10.3.1)</a>. In this case we say that <a href="#x1-2r1">(10.3.1)</a> is the <span class="vocab">general solution of</span> \({\bf y}'=A(t){\bf y}\) on \((a,b)\).
+			is a <span class="vocab">linear combination</span> of \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …,\({\bf \vec{y}}_n\). It’s easy show that if \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …,\({\bf \vec{y}}_n\) are solutions of \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) on \((a,b)\), then so is any linear combination of \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\) (Exercise&nbsp;<span class="ptmb8t-">1</span>). We say that \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is a <span class="vocab">fundamental set of solutions of</span> \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) on \((a,b)\) on if every solution of \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) on \((a,b)\) can be written as a linear combination of \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\), as in <a href="#x1-2r1">(10.3.1)</a>. In this case we say that <a href="#x1-2r1">(10.3.1)</a> is the <span class="vocab">general solution of</span> \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) on \((a,b)\).
 		</div>
 		<div id="9d1428e7-8e0b-4f8e-84d0-3f3bb263ad1a">
-			 It can be shown that if \(A\) is continuous on \((a,b)\) then \({\bf y}'=A(t){\bf y}\) has infinitely many fundamental sets of solutions on \((a,b)\) (Exercises&nbsp;<span class="ptmb8t-">15</span> and <span class="ptmb8t-">16</span>). The next definition will help to characterize fundamental sets of solutions of \({\bf y}'=A(t){\bf y}\). 
+			 It can be shown that if \(A\) is continuous on \((a,b)\) then \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) has infinitely many fundamental sets of solutions on \((a,b)\) (Exercises&nbsp;<span class="ptmb8t-">15</span> and <span class="ptmb8t-">16</span>). The next definition will help to characterize fundamental sets of solutions of \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\). 
 		</div>
 		<div id="1711ca8b-ca35-4647-977d-9346170a31cb">
-			We say that a set \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) of \(n\)-vector functions is <span class="vocab">linearly independent</span> on \((a,b)\) if the only constants \(c_1\), \(c_2\), …, \(c_n\) such that 
+			We say that a set \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) of \(n\)-vector functions is <span class="vocab">linearly independent</span> on \((a,b)\) if the only constants \(c_1\), \(c_2\), …, \(c_n\) such that 
 			<a id="x1-3r2"></a> 
 			\begin {equation} 
 				\label {eq:10.3.2} 
-				c_1{\bf y}_1(t)+c_2{\bf y}_2(t)+\cdots +c_n{\bf y}_n(t)=0,\quad a&lt;t&lt;b 
+				c_1{\bf \vec{y}}_1(t)+c_2{\bf \vec{y}}_2(t)+\cdots +c_n{\bf \vec{y}}_n(t)=0,\quad a&lt;t&lt;b 
 			\end {equation}
 
-			are \(c_1=c_2=\cdots =c_n=0\). If <a href="#x1-3r2">(10.3.2)</a> holds for some set of constants \(c_1\), \(c_2\), …, \(c_n\) that are not all zero, then \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) is <span class="vocab">linearly dependent</span> on \((a,b)\)
+			are \(c_1=c_2=\cdots =c_n=0\). If <a href="#x1-3r2">(10.3.2)</a> holds for some set of constants \(c_1\), \(c_2\), …, \(c_n\) that are not all zero, then \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is <span class="vocab">linearly dependent</span> on \((a,b)\)
 		</div>
 		<div id="87af3578-341a-4997-86c1-8711c6194ca4">
 			 The next theorem is analogous to Theorems&nbsp;<span class="ptmb8t-">5.1.3</span>and<span class="ptmb8t-">9.1.2</span>. 
 		</div>
 		<div class="theorem" id="x1-41">
 			<span class="head">Theorem&nbsp;10.3.1</span>
-			Suppose the \(n\times n\) matrix \(A=A(t)\) is continuous on \((a,b)\). Then a set \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) of \(n\) solutions of \({\bf y}'=A(t){\bf y}\) on \((a,b)\) is a fundamental set if and only if it’s linearly independent on \((a,b)\).
+			Suppose the \(n\times n\) matrix \(A=A(t)\) is continuous on \((a,b)\). Then a set \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) of \(n\) solutions of \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) on \((a,b)\) is a fundamental set if and only if it’s linearly independent on \((a,b)\).
 		</div>
 
 		<div class="example" id="x1-51" style="--ex-number: 1">
 			<div>
 				Show that the vector functions 
 				\[
-					{\bf y}_1=\left [
+					{\bf \vec{y}}_1=\left [
 						\begin {array}{c}
 							e^t\\
 							0\\
 							e^{-t}
 						\end {array}
-					\right ],\quad {\bf y}_2=\left [
+					\right ],\quad {\bf \vec{y}}_2=\left [
 						\begin {array}{c}
 							0\\
 							e^{3t}\\
 							1
 						\end {array}
-					\right ], \quad \mbox{ and } \quad {\bf y}_3=\left [ 
+					\right ], \quad \mbox{ and } \quad {\bf \vec{y}}_3=\left [ 
 						\begin {array}{c}
 							e^{2t}\\
 							e^{3t}\\
@@ -193,23 +193,23 @@
 		</div>
 
 		<div id="8ec64e0e-475d-4205-95ec-c64606ca7ef4">
-			We can use the method in Example&nbsp;<a href="#x1-51">10.3.1</a> to test \(n\) solutions \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) of any \(n\times n\) system \({\bf y}'=A(t){\bf y}\) for linear independence on an interval \((a,b)\) on which \(A\) is continuous. To explain this (and for other purposes later), it’s useful to write a linear combination of \({\bf y}_1\), \({\bf y}_2\), …, \({\bf y}_n\) in a different way. We first write the vector functions in terms of their components as 
+			We can use the method in Example&nbsp;<a href="#x1-51">10.3.1</a> to test \(n\) solutions \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) of any \(n\times n\) system \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) for linear independence on an interval \((a,b)\) on which \(A\) is continuous. To explain this (and for other purposes later), it’s useful to write a linear combination of \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\) in a different way. We first write the vector functions in terms of their components as 
 			\[ 
-				{\bf y}_1=\left [
+				{\bf \vec{y}}_1=\left [
 					\begin {array}{c} 
 						y_{11}\\
 						y_{21}\\ 
 						\vdots \\ 
 						y_{n1}
 					\end {array}
-				\right ],\quad {\bf y}_2=\left [
+				\right ],\quad {\bf \vec{y}}_2=\left [
 					\begin {array}{c} 
 						y_{12}\\
 						y_{22}\\ 
 						\vdots \\ 
 						y_{n2}
 					\end {array}
-				\right ],\dots ,\quad {\bf y}_n=\left [ 
+				\right ],\dots ,\quad {\bf \vec{y}}_n=\left [ 
 					\begin {array}{c} 
 						y_{1n}\\
 						y_{2n}\\ 
@@ -220,13 +220,13 @@
 			\]
 			
 			If
-			\[ {\bf y}=c_1{\bf y}_1+c_2{\bf y}_2+\cdots +c_n{\bf y}_n \]
+			\[ {\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2+\cdots +c_n{\bf \vec{y}}_n \]
 
 			then
 		</div>
 		<div class="eqnarray" id="e0f51a8d-bba4-47c6-9985-c2e4ffbfa2f7">
 			 \begin {eqnarray*} 
-			 	{\bf y}&amp;=&amp; c_1\left [ 
+			 	{\bf \vec{y}}&amp;=&amp; c_1\left [ 
 					\begin {array}{c} 
 						y_{11}\\
 						y_{21}\\ 
@@ -263,17 +263,17 @@
 			 <a id="x1-6r3"></a> 
 			 \begin {equation} 
 			 	\label {eq:10.3.3} 
-				c_1{\bf y}_1+c_2{\bf y}_2+\cdots +c_n{\bf y}_n=Y{\bf c} 
+				c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2+\cdots +c_n{\bf \vec{y}}_n=Y{\bf \vec{c}} 
 			\end {equation}
 			where 
-			\[ {\bf c}=\col cn \] 
+			\[ {\bf \vec{c}}=\col cn \] 
 
 			and 
 
 			<a id="x1-7r4"></a> 
 			\begin {equation} 
 				\label {eq:10.3.4} 
-				Y=[{\bf y}_1\; {\bf y}_2\; \cdots \; {\bf y}_n]= \left [ 
+				Y=[{\bf \vec{y}}_1\; {\bf \vec{y}}_2\; \cdots \; {\bf \vec{y}}_n]= \left [ 
 					\begin {array}{cccc} 
 						y_{11}&amp;y_{12}&amp;\cdots &amp;y_{1n} \\ 
 						y_{21}&amp;y_{22}&amp;\cdots &amp;y_{2n}\\ 
@@ -283,23 +283,23 @@
 				\right ]; 
 			\end {equation}
 			
-			that is, the columns of \(Y\) are the vector functions \({\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\). 
+			that is, the columns of \(Y\) are the vector functions \({\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\). 
 		</div>
 		<div id="e16e058b-f325-4dd3-8eda-062b0f6c530a">
 			 For reference below, note that 
 		</div>
 		<div class="eqnarray" id="7bf71037-7646-4a40-bdaf-6fe0bc7fbef9">
 			 \begin {eqnarray*} 
-			 	Y'&amp;=&amp;[{\bf y}_1'\; {\bf y}_2'\; \cdots \; {\bf y}_n']\\ 
-				&amp;=&amp;[A{\bf y}_1\; A{\bf y}_2\; \cdots \; A{\bf y}_n]\\ 
-				&amp;=&amp;A[{\bf y}_1\; {\bf y}_2\; \cdots \; {\bf y}_n]=AY; 
+			 	\dfrac{dY}{dt} &amp;=&amp;[\dfrac{d {\bf \vec{y}}_1 }{dt}\; \dfrac{d {\bf \vec{y}}_2 }{dt}\; \cdots \; \dfrac{d {\bf \vec{y}}_n}{dt}]\\ 
+				&amp;=&amp;[A{\bf \vec{y}}_1\; A{\bf \vec{y}}_2\; \cdots \; A{\bf \vec{y}}_n]\\ 
+				&amp;=&amp;A[{\bf \vec{y}}_1\; {\bf \vec{y}}_2\; \cdots \; {\bf \vec{y}}_n]=AY; 
 			 \end {eqnarray*} 
 		</div>
 		<div id="6c9aeaf6-ff2e-4c67-ab99-4794fc86c5fd">
 			 that is, \(Y\) satisfies the matrix differential equation 
 		</div>
 		<div id="784f86f8-1079-4bb8-955e-88ed129d8396">
-			 \[ Y'=AY \] 
+			 \[ \dfrac{dY}{dt} =AY \] 
 		</div>
 		<div id="b0271f70-8ca6-47bc-8ea2-2e5149ac98bc">
 			 The determinant of \(Y\), 
@@ -316,11 +316,11 @@
 				\right | 
 			\end {equation}
 			
-			is called the <span class="vocab">Wronskian</span> of \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\). It can be shown (Exercises&nbsp;<span class="ptmb8t-">2</span> and <span class="ptmb8t-">3</span>) that this definition is analogous to definitions of the Wronskian of scalar functions given in Sections&nbsp;5.1 and 9.1. The next theorem is analogous to Theorems&nbsp;<span class="ptmb8t-">5.1.4</span> and <span class="ptmb8t-">9.1.3</span>. The proof is sketched in Exercise&nbsp;<span class="ptmb8t-">4</span> for \(n=2\) and in Exercise&nbsp;<span class="ptmb8t-">5</span> for general&nbsp;\(n\). 
+			is called the <span class="vocab">Wronskian</span> of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\). It can be shown (Exercises&nbsp;<span class="ptmb8t-">2</span> and <span class="ptmb8t-">3</span>) that this definition is analogous to definitions of the Wronskian of scalar functions given in Sections&nbsp;5.1 and 9.1. The next theorem is analogous to Theorems&nbsp;<span class="ptmb8t-">5.1.4</span> and <span class="ptmb8t-">9.1.3</span>. The proof is sketched in Exercise&nbsp;<span class="ptmb8t-">4</span> for \(n=2\) and in Exercise&nbsp;<span class="ptmb8t-">5</span> for general&nbsp;\(n\). 
 		</div>
 		<div class="theorem" id="x1-92">
 			<span class="head">Theorem&nbsp;10.3.2 Abel’s Formula</span>
-			Suppose the \(n\times n\) matrix \(A=A(t)\) is continuous on \((a,b),\) let \({\bf y}_1\), \({\bf y}_2\), …, \({\bf y}_n\) be solutions of \({\bf y}'=A(t){\bf y}\) on \((a,b),\) and let \(t_0\) be in \((a,b)\). Then the Wronskian of \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) is given by 
+			Suppose the \(n\times n\) matrix \(A=A(t)\) is continuous on \((a,b),\) let \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\) be solutions of \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) on \((a,b),\) and let \(t_0\) be in \((a,b)\). Then the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is given by 
 			<a id="x1-10r6"></a> 
 			\begin {equation} 
 				\label {eq:10.3.6} 
@@ -339,40 +339,40 @@
 		</div>
 		<div class="theorem" id="x1-113">
 			<span class="head">Theorem&nbsp;10.3.3</span>
-			Suppose the \(n\times n\) matrix \(A=A(t)\) is continuous on \((a,b)\) and let \({\bf y}_1\), \({\bf y}_2\), …\(,\)\({\bf y}_n\) be solutions of \({\bf y}'=A(t){\bf y}\) on \((a,b)\). Then the following statements are equivalent; that is, they are either all true or all false:
+			Suppose the \(n\times n\) matrix \(A=A(t)\) is continuous on \((a,b)\) and let \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …\(,\)\({\bf \vec{y}}_n\) be solutions of \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) on \((a,b)\). Then the following statements are equivalent; that is, they are either all true or all false:
 			<ol>
 				<li>
-					The general solution of \({\bf y}'=A(t){\bf y}\) on \((a,b)\) is \({\bf y}=c_1{\bf y}_1+c_2{\bf y}_2+\cdots +c_n{\bf y}_n\), where \(c_1\), \(c_2\), …, \(c_n\) are arbitrary constants. 
+					The general solution of \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) on \((a,b)\) is \({\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2+\cdots +c_n{\bf \vec{y}}_n\), where \(c_1\), \(c_2\), …, \(c_n\) are arbitrary constants. 
 				</li>
 				<li>
-					\(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) is a <span class="vocab">fundamental set of solutions</span> of \({\bf y}'=A(t){\bf y}\) once \((a,b)\). 
+					\(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is a <span class="vocab">fundamental set of solutions</span> of \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) once \((a,b)\). 
 				</li>
 				<li>
-					\(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) is <span class="vocab">linearly independent</span> on \((a,b)\). 
+					\(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is <span class="vocab">linearly independent</span> on \((a,b)\). 
 				</li>
 				<li>
-					The <span class="vocab">Wronskian</span> of \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) is nonzero at some point in \((a,b)\). 
+					The <span class="vocab">Wronskian</span> of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is nonzero at some point in \((a,b)\). 
 				</li>
 				<li>
-					The <span class="vocab">Wronskian</span> of \(\{{\bf y}_1,{\bf y}_2,\dots ,{\bf y}_n\}\) is nonzero at all points in \((a,b)\). 
+					The <span class="vocab">Wronskian</span> of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is nonzero at all points in \((a,b)\). 
 				</li>
 			</ol>
 		</div>
 
 		<div id="a2ba07d1-8263-4b3a-a7ad-d949bd71a593">
-			We say that \(Y\) in <a href="#x1-7r4">(10.3.4)</a> is a <span class="vocab">fundamental matrix</span> for \({\bf y}'=A(t){\bf y}\) if any (and therefore all) of the statements <span class="ptmb8t-">(a)</span>-<span class="ptmb8t-">(e)</span> of Theorem&nbsp;<a href="#x1-92">10.3.2</a> are true for the columns of \(Y\). In this case, <a href="#x1-6r3">(10.3.3)</a> implies that the general solution of \({\bf y}'=A(t){\bf y}\) can be written as \({\bf y}=Y{\bf c}\), where \(\bf c\) is an arbitrary constant \(n\)-vector.
+			We say that \(Y\) in <a href="#x1-7r4">(10.3.4)</a> is a <span class="vocab">fundamental matrix</span> for \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) if any (and therefore all) of the statements <span class="ptmb8t-">(a)</span>-<span class="ptmb8t-">(e)</span> of Theorem&nbsp;<a href="#x1-92">10.3.2</a> are true for the columns of \(Y\). In this case, <a href="#x1-6r3">(10.3.3)</a> implies that the general solution of \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) can be written as \({\bf \vec{y}}=Y{\bf \vec{c}}\), where \(\bf c\) is an arbitrary constant \(n\)-vector.
 		</div>
 
 		<div class="example" id="x1-172" style="--ex-number: 2">
 			<div>
 				The vector functions 
-				\[ {\bf y}_1=\twocol {-e^{2t}}{2e^{2t}}\quad \mbox{ and } \quad {\bf y}_2=\twocol {-e^{-t}}{\phantom {-}e^{-t}} \] 
+				\[ {\bf \vec{y}}_1=\twocol {-e^{2t}}{2e^{2t}}\quad \mbox{ and } \quad {\bf \vec{y}}_2=\twocol {-e^{-t}}{\phantom {-}e^{-t}} \] 
 				
 				are solutions of the constant coefficient system 
 				<a id="x1-18r7"></a> 
 				\begin {equation} 
 					\label {eq:10.3.7} 
-					{\bf y}'=\twobytwo {-4}{-3} 65 {\bf y} 
+					\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo {-4}{-3} 65 {\bf \vec{y}} 
 				\end {equation}
 				
 				on \((-\infty ,\infty )\). (Verify.)
@@ -380,10 +380,10 @@
 
 			<ol>
 				<li>
-					Compute the Wronskian of \(\{{\bf y}_1,{\bf y}_2\}\) directly from the definition <a href="#x1-8r5">(10.3.5)</a>
+					Compute the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2\}\) directly from the definition <a href="#x1-8r5">(10.3.5)</a>
 				</li>
 				<li>
-					Verify Abel’s formula <a href="#x1-10r6">(10.3.6)</a> for the Wronskian of \(\{{\bf y}_1,{\bf y}_2\}\).
+					Verify Abel’s formula <a href="#x1-10r6">(10.3.6)</a> for the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2\}\).
 				</li>
 				<li>
 					Find the general solution of <a href="#x1-18r7">(10.3.7)</a>.
@@ -393,7 +393,7 @@
 					<a id="x1-23r8"></a> 
 					\begin {equation} 
 						\label {eq:10.3.8} 
-						{\bf y}'=\twobytwo {-4}{-3}65 {\bf y}, \quad {\bf y}(0)= \left [
+						\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo {-4}{-3}65 {\bf \vec{y}}, \quad {\bf \vec{y}}(0)= \left [
 							\begin {array}{r} 
 								4 \\
 								-5 
@@ -435,7 +435,7 @@
 						which is consistent with <a href="#x1-24r9">(10.3.9)</a>.
 					</li>
 					<li>
-						Since \(W(t)\ne 0\), Theorem&nbsp;<a href="#x1-113">10.3.3</a> implies that \(\{{\bf y}_1,{\bf y}_2\}\) is a fundamental set of solutions of <a href="#x1-18r7">(10.3.7)</a> and
+						Since \(W(t)\ne 0\), Theorem&nbsp;<a href="#x1-113">10.3.3</a> implies that \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2\}\) is a fundamental set of solutions of <a href="#x1-18r7">(10.3.7)</a> and
 						\[
 							Y=\left [
 								\begin {array}{cc}
@@ -450,7 +450,7 @@
 						<a id="x1-25r10"></a>
 						\begin {equation} 
 							\label {eq:10.3.10} 
-							{\bf y}=c_1{\bf y}_1+c_2{\bf y}_2= c_1\twocol {-e^{2t}}{2e^{2t}}+c_2\twocol {-e^{-t}}{e^{-t}} =\left [
+							{\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2= c_1\twocol {-e^{2t}}{2e^{2t}}+c_2\twocol {-e^{-t}}{e^{-t}} =\left [
 								\begin {array}{cc}
 									-e^{2t}&amp;-e^{-t}\\
 									2e^{2t}&amp; e^{-t}
@@ -493,7 +493,7 @@
 
 						The solution of this system is \(c_1=-1\), \(c_2=-3\). Substituting these values into <a href="#x1-25r10">(10.3.10)</a> yields
 						\[ 
-							{\bf y}=-\left [
+							{\bf \vec{y}}=-\left [
 								\begin {array}{c}
 									-e^{2t} \\ 
 									2e^{2t}
