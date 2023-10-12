@@ -24,15 +24,15 @@
 	<body>
 		<div style="display: none" id="b894547c-f3b6-489f-a1d9-56febe1bb072">
 			\( 
-				\newcommand{\threecol}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]}
-				\newcommand{\twocol}[2]{\left[\begin{array}{l}#1\\#2\end{array}\right]}
+				\newcommand{\threecol}[3]{\left(\begin{array}{r}#1\\#2\\#3\end{array}\right)}
+				\newcommand{\twocol}[2]{\left(\begin{array}{c}#1\\#2\end{array}\right)}
 				\newcommand{\twochar}[4]{\left| \begin {array}{cc} #1-\lambda&amp; #2\\#3&amp; #4-\lambda \end{array}\right|}
-				\newcommand{\twobytwo}[4]{\left[ \begin {array}{rr} #1&amp; #2\\#3&amp; #4 \end{array}\right]}
-				\newcommand{\threebythree}[9]{\left[ \begin {array}{rrr} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9 \end{array}\right]}
-				\newcommand{\matfunc}[3]{\left[ \begin {array}{cccc}#1_{11}(t)&amp; #1_{12}(t)&amp;\cdots &amp; #1_{1#3}(t)\\#1_{21}(t)&amp; #1_{22}(t)&amp;\cdots&amp; #1_{2#3}(t)\\\vdots&amp; \vdots&amp;\ddots&amp;\vdots\\#1_{#21}(t)&amp; #1_{#22}(t)&amp;\cdots&amp; #1_{#2#3}(t) \end{array}\right]}
-				\newcommand{\col}[2]{\left[\begin{array}{c}#1_1\\#1_2\\\vdots\\#1_#2\end{array}\right]}
-				\newcommand{\colfunc}[2]{\left[ \begin {array}{c}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t) \end{array}\right] }
-				\newcommand{\cthreebythree}[9]{\left[ \begin {array}{ccc} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9  \end{array}\right]} 
+				\newcommand{\twobytwo}[4]{\left( \begin {array}{rr} #1&amp; #2\\#3&amp; #4 \end{array}\right)}
+				\newcommand{\threebythree}[9]{\left( \begin {array}{rrr} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9 \end{array}\right)}
+				\newcommand{\matfunc}[3]{\left( \begin {array}{cccc}#1_{11}(t)&amp; #1_{12}(t)&amp;\cdots &amp; #1_{1#3}(t)\\#1_{21}(t)&amp; #1_{22}(t)&amp;\cdots&amp; #1_{2#3}(t)\\\vdots&amp; \vdots&amp;\ddots&amp;\vdots\\#1_{#21}(t)&amp; #1_{#22}(t)&amp;\cdots&amp; #1_{#2#3}(t) \end{array}\right)}
+				\newcommand{\col}[2]{\left(\begin{array}{c}#1_1\\#1_2\\\vdots\\#1_#2\end{array}\right)}
+				\newcommand{\colfunc}[2]{\left( \begin {array}{c}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t) \end{array}\right) }
+				\newcommand{\cthreebythree}[9]{\left( \begin {array}{ccc} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9  \end{array}\right)} 
 			\) 
 		</div>
 		<div id="eac6e669-9e47-49c9-94e7-a271306e66de" class="section-title">
@@ -61,36 +61,37 @@
 			<a id="x1-3r2"></a> 
 			\begin {equation} 
 				\label {eq:10.2.2} 
-				\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}+{\bf \vec{f}}(t) 
+				\dfrac{d{\bf \vec{y}}}{dt}={\bf{A}}{\bf \vec{y}}+{\bf \vec{f}}(t) 
 			\end {equation}
 
 			where 
 			
-			\[ {\bf \vec{y}}=\col yn,\quad A(t)=\matfunc ann,\quad \mbox{ and } \quad {\bf \vec{f}}(t)=\colfunc fn\] 
+			\[ {\bf \vec{y}}=\col yn,\quad \bf{A}(t)=\matfunc ann,\quad \mbox{ and } \quad {\bf \vec{f}}(t)=\colfunc fn\] 
 			
-			We call \(A\) the <span class="vocab">coefficient matrix</span> of <a href="#x1-3r2">(10.2.2)</a> and \(\bf f\) the <span class="vocab">forcing function</span>. We’ll say that \(A\) and \(\bf f\) are <span class="vocab">continuous</span> if their entries are continuous. If \({\bf \vec{f}}={\bf 0}\), then <a href="#x1-3r2">(10.2.2)</a> is <span class="vocab">homogeneous</span>; otherwise, <a href="#x1-3r2">(10.2.2)</a> is <span class="vocab">nonhomogeneous</span>.
+			We call \(\bf{A}\) the <span class="vocab">coefficient matrix</span> of <a href="#x1-3r2">(10.2.2)</a> and \({\bf \vec{f}}(t)\) the <span class="vocab">forcing function</span>. We’ll say that \(\bf{A}\) and \({\bf \vec{f}}(t)\) are <span class="vocab">continuous</span> if their entries are continuous. If \({{\bf \vec{f}}(t)}\equiv{\bf \vec{0}}\), then the equation <a href="#x1-3r2">(10.2.2)</a> is <span class="vocab">homogeneous</span> otherwise it's <span class="vocab">nonhomogeneous</span>.
 		</div>
 		<div class="indent" id="4c1b072e-bf36-4186-ae1a-8983938c04d1">
-			An initial value problem for <a href="#x1-3r2">(10.2.2)</a> consists of finding a solution of <a href="#x1-3r2">(10.2.2)</a> that equals a given constant vector 
+			An IVP for <a href="#x1-3r2">(10.2.2)</a> consists of finding a solution of <a href="#x1-3r2">(10.2.2)</a> that equals a given constant vector at some initial point \(t_0\)
 			\[ {\bf \vec{k}} =\col kn\] 
 			
-			at some initial point \(t_0\). We write this initial value problem as 
-			\[ \dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}+{\bf \vec{f}}(t), \quad {\bf \vec{y}}(t_0)={\bf \vec{k}}\]
+			 We write this IVP as 
+			\[ \dfrac{d{\bf \vec{y}}}{dt}={\bf{A}}{\bf \vec{y}}+{\bf \vec{f}}(t) \quad {\bf \vec{y}}(t_0)={\bf \vec{k}}\]
 		</div>
 		<div class="indent" id="2b31e1b5-7ade-471d-b77f-f38c717749d6">
-			The next theorem gives sufficient conditions for the existence of solutions of initial value problems for <a href="#x1-3r2">(10.2.2)</a>. We omit the proof.
+			The next theorem gives sufficient conditions for the existence of solutions of IVPs for <a href="#x1-3r2">(10.2.2)</a>.
 		</div>
 		<div class="theorem" id="x1-41">
 			<span class="head">Theorem&nbsp;10.2.1</span>
-			Suppose the coefficient matrix \(A\) and the forcing function \(\bf f\) are continuous on \((a,b)\), let \(t_0\) be in \((a,b)\), and let \(\bf k\) be an arbitrary constant \(n\)-vector. Then the initial value problem 
-			\[ \dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}+{\bf \vec{f}}(t), \quad {\bf \vec{y}}(t_0)={\bf \vec{k}} \] 
-			has a unique solution on \((a,b)\).
+			Suppose the coefficient matrix \({\bf A}\) and the forcing function \({\bf \vec{f}}(t)\) are continuous on \((a,b)\), let \(t_0\) be in \((a,b)\), and let \(\bf \vec{k}\) be an arbitrary constant \(n\)-vector. Then the following IVP has a unique solution on \((a,b)\)
+			\[ \dfrac{d{\bf \vec{y}}}{dt}={\bf A}{\bf \vec{y}}+{\bf \vec{f}}(t) \quad {\bf \vec{y}}(t_0)={\bf \vec{k}} \] 
+			
 		</div>
 
 		<div class="example" id="x1-51" style="--ex-number: 1">
 			<ol>
 				<li>
-					Write the system 
+					Write the system in matrix form and conclude from Theorem&nbsp;<a href="#x1-41">10.2.1</a> that every IVP for <a href="#x1-7r3">(10.2.3)</a> has a unique solution on \((-\infty ,\infty )\)
+
 					<a id="x1-7r3"></a>
 					\begin {equation} 
 						\label {eq:10.2.3} 
@@ -100,19 +101,19 @@
 						\end {array}
 					\end {equation}
 
-					in matrix form and conclude from Theorem&nbsp;<a href="#x1-41">10.2.1</a> that every initial value problem for <a href="#x1-7r3">(10.2.3)</a> has a unique solution on \((-\infty ,\infty )\).
+					
 				</li>
 				<li>
-					Verify that 
+					Verify that <a href="#x1-9r4">(10.2.4)</a> is a solution of <a href="#x1-7r3">(10.2.3)</a> for all values of the constants \(c_1\) and \(c_2\)
 					<a id="x1-9r4"></a> 
 					\begin {equation} 
 						\label {eq:10.2.4} 
 						{\bf \vec{y}}= {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} 
 					\end {equation}
-					is a solution of <a href="#x1-7r3">(10.2.3)</a> for all values of the constants \(c_1\) and \(c_2\).
+					
 				</li>
 				<li>
-						Find the solution of the initial value problem 
+						Find the solution of the IVP 
 						<a id="x1-11r5"></a> 
 						\begin {equation} 
 						\label {eq:10.2.5} 
@@ -126,15 +127,43 @@
 				<ol>
 					<li>
 						The system <a href="#x1-7r3">(10.2.3)</a> can be written in matrix form as 
-						\[ \dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t}\] 
+						\begin {align*}  
+							&	
+							\left\{
+							\begin {array}{rcl} 
+								\dfrac{dy_1}{dt}&amp;=&amp;\phantom {2}y_1+2y_2+2e^{4t} \\ 
+								\dfrac{dy_2}{dt}&amp;=&amp;2y_1+\phantom {2}y_2+\phantom {2}e^{4t} 
+							\end {array}
+							\right.
+							\\ \\
+							&
+							\dfrac{d}{dt}\twocol {y_1}{y_2}
+							=\twobytwo 1221\twocol {y_1}{y_2}+\twocol {2e^{4t}}{e^{4t}}
+							\\ \\
+							\quad & \quad\quad 
+							\dfrac{d{\bf \vec{y}}}{dt}
+							=\twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t}
+							
+						\end {align*}
+
+						 
 						
-						An initial value problem for <a href="#x1-7r3">(10.2.3)</a> can be written as 
-						\[ \dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t}, \quad y(t_0)=\twocol {k_1}{k_2}\] 
+						An IVP for <a href="#x1-7r3">(10.2.3)</a> can be written as 
+						\[ \dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t} \quad y(t_0)=\twocol {k_1}{k_2}\] 
 						
 						Since the coefficient matrix and the forcing function are both continuous on \((-\infty ,\infty )\), Theorem&nbsp;<a href="#x1-41">10.2.1</a> implies that this problem has a unique solution on \((-\infty ,\infty )\).
 					</li>
+					<br>
 					<li>
-						If \(\bf y\) is given by <a href="#x1-9r4">(10.2.4)</a>, then
+						We can verify <a href="#x1-9r4">(10.2.4)</a> is a solution to the system of differential equations <a href="#x1-7r3">(10.2.3)</a> differentiating and substituting
+
+						\begin {align*} 
+							{\bf \vec{y}}= {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} 
+						\end {align*}
+					</li>
+					<br>
+					<li>
+						If , then
 						<div class="eqnarray">
 							\begin {eqnarray*} 
 								A{\bf \vec{y}}+{\bf \vec{f}}&amp;=&amp; {1\over 5}\twobytwo 1221\twocol 87e^{4t}+ c_1\twobytwo 1221\twocol 11e^{3t}\\ 
