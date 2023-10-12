@@ -57,80 +57,88 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					As in Section&nbsp;4.2, let rate in and rate out denote the rates (lb/min) at which salt enters and leaves a tank; thus, 
+					<ol>
+						<li class="no-part">
+							As in Section&nbsp;4.2, let rate in and rate out denote the rates (lb/min) at which salt enters and leaves a tank; thus, 
 
-					<div class="eqnarray">
-						\begin {eqnarray*}
-							\dfrac{dQ_1}{dt}&amp;=&amp;(\mbox {rate in})_1-(\mbox {rate out})_1,\\
-							\dfrac{dQ_2}{dt}&amp;=&amp;(\mbox {rate in})_2-(\mbox {rate out})_2 
-						\end {eqnarray*} 
-					</div>
-					<div>
-						Note that the volumes of the solutions in \(T_1\) and \(T_2\) remain constant at 100&nbsp;gallons and 300&nbsp;gallons, respectively. 
-					</div>
-					<div>
-						\(T_1\) receives salt from the external source at the rate of
-						\[ \mbox {(1 lb/gal) }\times \mbox { (5~gal/min)}=\mbox { 5 lb/min}\]
-						and from \(T_2\) at the rate of
-						\[ \mbox {(lb/gal in }T_2)\times \mbox { (3~gal/min) }={1\over 300}Q_2\times 3\\={1\over 100}Q_2 \mbox { lb/min}\]
-						Therefore
-						
-						<a id="x1-4r1"></a> 
-						\begin {equation}
-							\label {eq:10.1.1}
-							\mbox {(rate in)}_1= 5+{1\over 100}Q_2
-						\end {equation}
+							<div class="eqnarray">
+								\begin {eqnarray*}
+									\dfrac{dQ_1}{dt}&amp;=&amp;(\mbox {rate in})_1-(\mbox {rate out})_1,\\
+									\dfrac{dQ_2}{dt}&amp;=&amp;(\mbox {rate in})_2-(\mbox {rate out})_2 
+								\end {eqnarray*} 
+							</div>
+							<div>
+								Note that the volumes of the solutions in \(T_1\) and \(T_2\) remain constant at 100&nbsp;gallons and 300&nbsp;gallons, respectively. 
+							</div>
+							<div>
+								\(T_1\) receives salt from the external source at the rate of
+								\[ \mbox {(1 lb/gal) }\times \mbox { (5~gal/min)}=\mbox { 5 lb/min}\]
+								and from \(T_2\) at the rate of
+								\[ \mbox {(lb/gal in }T_2)\times \mbox { (3~gal/min) }={1\over 300}Q_2\times 3\\={1\over 100}Q_2 \mbox { lb/min}\]
+								Therefore
+								
+								<a id="x1-4r1"></a> 
+								\begin {equation}
+									\label {eq:10.1.1}
+									\mbox {(rate in)}_1= 5+{1\over 100}Q_2
+								\end {equation}
 
-						Solution leaves \(T_1\) at the rate of 8&nbsp;gal/min, since 6&nbsp;gal/min are drained and 2&nbsp;gal/min are pumped to \(T_2\); hence,
-						<a id="x1-5r2"></a>
-						\begin {equation}
-							\label {eq:10.1.2}
-							(\mbox {rate out})_1=(\mbox { lb/gal in T}_1)\times \mbox {(8~gal/min) } ={1\over 100}Q_1\times 8={2\over 25}Q_1
-						\end {equation}
-						Equations&nbsp;<a href="#x1-4r1">(10.1.1)</a> and <a href="#x1-5r2">(10.1.2)</a> imply that 
+								Solution leaves \(T_1\) at the rate of 8&nbsp;gal/min, since 6&nbsp;gal/min are drained and 2&nbsp;gal/min are pumped to \(T_2\); hence,
+								<a id="x1-5r2"></a>
+								\begin {equation}
+									\label {eq:10.1.2}
+									(\mbox {rate out})_1=(\mbox { lb/gal in T}_1)\times \mbox {(8~gal/min) } ={1\over 100}Q_1\times 8={2\over 25}Q_1
+								\end {equation}
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
+								Equations&nbsp;<a href="#x1-4r1">(10.1.1)</a> and <a href="#x1-5r2">(10.1.2)</a> imply that 
 
-						<a id="x1-6r3"></a>
-						\begin {equation}
-							\label {eq:10.1.3}
-							\dfrac{dQ_1}{dt}=5+{1\over 100}Q_2-{2\over 25}Q_1 
-						\end {equation}
-					</div>
-					<div>
-						\(T_2\) receives salt from the external source at the rate of
-						\[ \mbox {(2 lb/gal) }\times \mbox { (4~gal/min)}=\mbox { 8 lb/min}\]
-						and from \(T_1\) at the rate of
-						\[
-							\mbox {(lb/gal in }T_1)\times \mbox { (2~gal/min) }={1\over 100}Q_1\times 2\\
-							={1\over 50}Q_1 \mbox { lb/min}
-						\]
-						Therefore
-						<a id="x1-7r4"></a> 
-						\begin {equation} 
-							\label {eq:10.1.4} 
-							\mbox {(rate in)}_2= 8+{1\over 50}Q_1
-						\end {equation}
-						Solution leaves \(T_2\) at the rate of \(6\)&nbsp;gal/min, since \(3\)&nbsp;gal/min are drained and \(3\)&nbsp;gal/min are pumped to \(T_1\); hence, 
-						<a id="x1-8r5"></a>
-						\begin {equation} 
-							\label {eq:10.1.5} 
-							(\mbox {rate out})_2=(\mbox { lb/gal in T}_2)\times \mbox {(6~gal/min) } ={1\over 300}Q_2\times 6={1\over 50}Q_2 
-						\end {equation}
-						Equations&nbsp;<a href="#x1-7r4">(10.1.4)</a> and <a href="#x1-8r5">(10.1.5)</a> imply that 
-						<a id="x1-9r6"></a>
-						\begin {equation} 
-							\label {eq:10.1.6} 
-							\dfrac{dQ_2}{dt}=8+{1\over 50}Q_1-{1\over 50}Q_2 
-						\end {equation}
-					</div>
-					<div>
-						We say that <a href="#x1-6r3">(10.1.3)</a> and <a href="#x1-9r6">(10.1.6)</a> form a <span class="vocab">system of two first order equations in two unknowns</span>, and write them together as
-					</div>
-					<div class="eqnarray">
-						\begin {eqnarray*} 
-							\dfrac{dQ_1}{dt}&amp;=&amp;\displaystyle {5-{2\over 25}Q_1+{1\over 100}Q_2}\\ 
-							\dfrac{dQ_2}{dt}&amp;=&amp;\displaystyle {8+{1\over 50}Q_1-{1\over 50}Q_2}
-						\end {eqnarray*} 
-					</div>
+								<a id="x1-6r3"></a>
+								\begin {equation}
+									\label {eq:10.1.3}
+									\dfrac{dQ_1}{dt}=5+{1\over 100}Q_2-{2\over 25}Q_1 
+								\end {equation}
+							</div>
+							<div>
+								\(T_2\) receives salt from the external source at the rate of
+								\[ \mbox {(2 lb/gal) }\times \mbox { (4~gal/min)}=\mbox { 8 lb/min}\]
+								and from \(T_1\) at the rate of
+								\[
+									\mbox {(lb/gal in }T_1)\times \mbox { (2~gal/min) }={1\over 100}Q_1\times 2\\
+									={1\over 50}Q_1 \mbox { lb/min}
+								\]
+								Therefore
+								<a id="x1-7r4"></a> 
+								\begin {equation} 
+									\label {eq:10.1.4} 
+									\mbox {(rate in)}_2= 8+{1\over 50}Q_1
+								\end {equation}
+								Solution leaves \(T_2\) at the rate of \(6\)&nbsp;gal/min, since \(3\)&nbsp;gal/min are drained and \(3\)&nbsp;gal/min are pumped to \(T_1\); hence, 
+								<a id="x1-8r5"></a>
+								\begin {equation} 
+									\label {eq:10.1.5} 
+									(\mbox {rate out})_2=(\mbox { lb/gal in T}_2)\times \mbox {(6~gal/min) } ={1\over 300}Q_2\times 6={1\over 50}Q_2 
+								\end {equation}
+								Equations&nbsp;<a href="#x1-7r4">(10.1.4)</a> and <a href="#x1-8r5">(10.1.5)</a> imply that 
+								<a id="x1-9r6"></a>
+								\begin {equation} 
+									\label {eq:10.1.6} 
+									\dfrac{dQ_2}{dt}=8+{1\over 50}Q_1-{1\over 50}Q_2 
+								\end {equation}
+							</div>
+							<div>
+								We say that <a href="#x1-6r3">(10.1.3)</a> and <a href="#x1-9r6">(10.1.6)</a> form a <span class="vocab">system of two first order equations in two unknowns</span>, and write them together as
+							</div>
+							<div class="eqnarray">
+								\begin {eqnarray*} 
+									\dfrac{dQ_1}{dt}&amp;=&amp;\displaystyle {5-{2\over 25}Q_1+{1\over 100}Q_2}\\ 
+									\dfrac{dQ_2}{dt}&amp;=&amp;\displaystyle {8+{1\over 50}Q_1-{1\over 50}Q_2}
+								\end {eqnarray*} 
+							</div>
+						</li>
+					</ol>
 				</details>
 			</div>
 
@@ -148,72 +156,77 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					In equilibrium, \(S_1\) supports both \(m_1\) and \(m_2\) and \(S_2\) supports only \(m_2\). Therefore, if \(\Delta \ell _1\) and \(\Delta \ell _2\) are the elongations of the springs in equilibrium then 
-					<a id="x1-11r7"></a> 
-					\begin {equation}
-						\label {eq:10.1.7}
-						(m_1+m_2)g=k_1\Delta \ell _1\quad \mbox { and }\quad m_2g=k_2\Delta \ell _2 
-					\end {equation}
-			
-					Let \(H_1\) be the Hooke’s law force acting on \(m_1\), and let \(D_1\) be the damping force on \(m_1\). Similarly, let \(H_2\) and \(D_2\) be the Hooke’s law and damping forces acting on \(m_2\). According to Newton’s second law of motion,
-					<a id="x1-13r8"></a> 
-					\begin {equation}
-						\label {eq:10.1.8} 
-						\begin {array}{ccl}
-							m_1\dfrac{d^2y_1}{dt^2}=-m_1g+H_1+D_1+F_1\\
-							m_2\dfrac{d^2y_2}{dt^2}=-m_2g+H_2+D_2+F_2 
-						\end {array} 
-					\end {equation}
-
-					When the displacements are \(y_1\) and \(y_2\), the change in length of \(S_1\) is \(-y_1+\Delta \ell _1\) and the change in length of \(S_2\) is \(-y_2+y_1+\Delta \ell _2\). Both springs exert Hooke’s law forces on \(m_1\), while only \(S_2\) exerts a Hooke’s law force on \(m_2\). These forces are in directions that tend to restore the springs to their natural lengths. Therefore 
-					<a id="x1-14r9"></a> 
-					\begin {equation} 
-						\label {eq:10.1.9} 
-						H_1=k_1(-y_1+\Delta \ell _1)-k_2(-y_2+y_1+\Delta \ell _2)\quad \mbox { and }\quad H_2=k_2(-y_2+y_1+\Delta \ell _2) 
-					\end {equation}
-
-					When the velocities are \(\dfrac{dy_1}{dt}\) and \(\dfrac{dy_2}{dt}\), \(S_1\) and \(S_2\) are changing length at the rates \(-\dfrac{dy_1}{dt}\) and \(-\dfrac{dy_2}{dt}+\dfrac{dy_1}{dt}\), respectively. Both springs exert damping forces on \(m_1\), while only \(S_2\) exerts a damping force on \(m_2\). Since the force due to damping exerted by a spring is proportional to the rate of change of length of the spring and in a direction that opposes the change, it follows that 
-					<a id="x1-15r10"></a> 
-					\begin {equation} 
-						\label {eq:10.1.10} 
-						D_1=-c_1\dfrac{dy_1}{dt}+c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt})\quad \mbox { and }\quad D_2=-c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt}) 
-					\end {equation}
-			
-					From <a href="#x1-13r8">(10.1.8)</a>, <a href="#x1-14r9">(10.1.9)</a>, and <a href="#x1-15r10">(10.1.10)</a>,
-					<a id="x1-16r11"></a> 
-					\begin {equation} 
-						\label {eq:10.1.11} 
-						\begin {array}{ccl} 
-							m_1\dfrac{d^2y_1}{dt^2}&amp;=&amp;-m_1g+k_1(-y_1+\Delta \ell _1)-k_2(-y_2+y_1+\Delta \ell _2)\\ 
-							&amp;\mbox {}&amp;-c_1\dfrac{dy_1}{dt}+c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt})+F_1\\ 
-							&amp;=&amp;-(m_1g-k_1\Delta \ell _1+k_2\Delta \ell _2)-k_1y_1+k_2(y_2-y_1)\\ 
-							&amp;\mbox {}&amp;-c_1\dfrac{dy_1}{dt}+c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt})+F_1 
-						\end {array}
-					\end {equation}
+					<ol>
+						<li class="no-part">
+							In equilibrium, \(S_1\) supports both \(m_1\) and \(m_2\) and \(S_2\) supports only \(m_2\). Therefore, if \(\Delta \ell _1\) and \(\Delta \ell _2\) are the elongations of the springs in equilibrium then 
+							<a id="x1-11r7"></a> 
+							\begin {equation}
+								\label {eq:10.1.7}
+								(m_1+m_2)g=k_1\Delta \ell _1\quad \mbox { and }\quad m_2g=k_2\Delta \ell _2 
+							\end {equation}
 					
-					and 
-					
-					<a id="x1-17r12"></a>
-					\begin {equation} 
-						\label {eq:10.1.12} 
-						\begin {array}{ccl} 
-							m_2\dfrac{d^2y_2}{dt^2}&amp;=&amp;-m_2g+k_2(-y_2+y_1+\Delta \ell _2)-c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt})+F_2\\ 
-							&amp;=&amp;-(m_2g-k_2\Delta \ell _2)-k_2(y_2-y_1)-c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt})+F_2 
-						\end {array} 
-					\end {equation}
+							Let \(H_1\) be the Hooke’s law force acting on \(m_1\), and let \(D_1\) be the damping force on \(m_1\). Similarly, let \(H_2\) and \(D_2\) be the Hooke’s law and damping forces acting on \(m_2\). According to Newton’s second law of motion,
+							<a id="x1-13r8"></a> 
+							\begin {equation}
+								\label {eq:10.1.8} 
+								\begin {array}{ccl}
+									m_1\dfrac{d^2y_1}{dt^2}=-m_1g+H_1+D_1+F_1\\
+									m_2\dfrac{d^2y_2}{dt^2}=-m_2g+H_2+D_2+F_2 
+								\end {array} 
+							\end {equation}
 
-					From <a href="#x1-11r7">(10.1.7)</a>, 
-					
-					\[ m_1g-k_1\Delta \ell _1+k_2\Delta \ell _2=-m_2g+k_2\Delta \ell _2=0\] 
-					
-					Therefore we can rewrite <a href="#x1-16r11">(10.1.11)</a> and <a href="#x1-17r12">(10.1.12)</a> as
+							When the displacements are \(y_1\) and \(y_2\), the change in length of \(S_1\) is \(-y_1+\Delta \ell _1\) and the change in length of \(S_2\) is \(-y_2+y_1+\Delta \ell _2\). Both springs exert Hooke’s law forces on \(m_1\), while only \(S_2\) exerts a Hooke’s law force on \(m_2\). These forces are in directions that tend to restore the springs to their natural lengths. Therefore 
+							<a id="x1-14r9"></a> 
+							\begin {equation} 
+								\label {eq:10.1.9} 
+								H_1=k_1(-y_1+\Delta \ell _1)-k_2(-y_2+y_1+\Delta \ell _2)\quad \mbox { and }\quad H_2=k_2(-y_2+y_1+\Delta \ell _2) 
+							\end {equation}
 
-					<div class="eqnarray" id="2e132313-2010-4cef-a824-00f8eff9fc14">
-						\begin {eqnarray*} 
-							m_1\dfrac{d^2y_1}{dt^2}&amp;=&amp;-(c_1+c_2)\dfrac{dy_1}{dt}+c_2\dfrac{dy_2}{dt}-(k_1+k_2)y_1+k_2y_2+F_1\\ 
-							m_2\dfrac{d^2y_2}{dt^2}&amp;=&amp;c_2\dfrac{dy_1}{dt}-c_2\dfrac{dy_2}{dt}+k_2y_1-k_2y_2+F_2
-						\end {eqnarray*} 
-					</div>
+							When the velocities are \(\dfrac{dy_1}{dt}\) and \(\dfrac{dy_2}{dt}\), \(S_1\) and \(S_2\) are changing length at the rates \(-\dfrac{dy_1}{dt}\) and \(-\dfrac{dy_2}{dt}+\dfrac{dy_1}{dt}\), respectively. Both springs exert damping forces on \(m_1\), while only \(S_2\) exerts a damping force on \(m_2\). Since the force due to damping exerted by a spring is proportional to the rate of change of length of the spring and in a direction that opposes the change, it follows that 
+							<a id="x1-15r10"></a> 
+							\begin {equation} 
+								\label {eq:10.1.10} 
+								D_1=-c_1\dfrac{dy_1}{dt}+c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt})\quad \mbox { and }\quad D_2=-c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt}) 
+							\end {equation}
+						</li>
+						<li class="no-part">
+							From <a href="#x1-13r8">(10.1.8)</a>, <a href="#x1-14r9">(10.1.9)</a>, and <a href="#x1-15r10">(10.1.10)</a>,
+							<a id="x1-16r11"></a> 
+							\begin {equation} 
+								\label {eq:10.1.11} 
+								\begin {array}{ccl} 
+									m_1\dfrac{d^2y_1}{dt^2}&amp;=&amp;-m_1g+k_1(-y_1+\Delta \ell _1)-k_2(-y_2+y_1+\Delta \ell _2)\\ 
+									&amp;\mbox {}&amp;-c_1\dfrac{dy_1}{dt}+c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt})+F_1\\ 
+									&amp;=&amp;-(m_1g-k_1\Delta \ell _1+k_2\Delta \ell _2)-k_1y_1+k_2(y_2-y_1)\\ 
+									&amp;\mbox {}&amp;-c_1\dfrac{dy_1}{dt}+c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt})+F_1 
+								\end {array}
+							\end {equation}
+							
+							and 
+							
+							<a id="x1-17r12"></a>
+							\begin {equation} 
+								\label {eq:10.1.12} 
+								\begin {array}{ccl} 
+									m_2\dfrac{d^2y_2}{dt^2}&amp;=&amp;-m_2g+k_2(-y_2+y_1+\Delta \ell _2)-c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt})+F_2\\ 
+									&amp;=&amp;-(m_2g-k_2\Delta \ell _2)-k_2(y_2-y_1)-c_2(\dfrac{dy_2}{dt}-\dfrac{dy_1}{dt})+F_2 
+								\end {array} 
+							\end {equation}
+
+							From <a href="#x1-11r7">(10.1.7)</a>, 
+							
+							\[ m_1g-k_1\Delta \ell _1+k_2\Delta \ell _2=-m_2g+k_2\Delta \ell _2=0\] 
+							
+							Therefore we can rewrite <a href="#x1-16r11">(10.1.11)</a> and <a href="#x1-17r12">(10.1.12)</a> as
+
+							<div class="eqnarray" id="2e132313-2010-4cef-a824-00f8eff9fc14">
+								\begin {eqnarray*} 
+									m_1\dfrac{d^2y_1}{dt^2}&amp;=&amp;-(c_1+c_2)\dfrac{dy_1}{dt}+c_2\dfrac{dy_2}{dt}-(k_1+k_2)y_1+k_2y_2+F_1\\ 
+									m_2\dfrac{d^2y_2}{dt^2}&amp;=&amp;c_2\dfrac{dy_1}{dt}-c_2\dfrac{dy_2}{dt}+k_2y_1-k_2y_2+F_2
+								\end {eqnarray*} 
+							</div>
+						</li>
+					</ol>
 				</details>
 			</div>
 

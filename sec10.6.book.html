@@ -340,116 +340,123 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-13r8">(10.6.8)</a> is 
-					\[ \left | 
-						\begin {array}{ccc}
-							-5-\lambda&amp; 5&amp;4\\
-							-8&amp;7-\lambda&amp; 6\\ 
-							\phantom {-}1 &amp;0&amp;-\lambda 
-						\end {array}
-					\right |=-(\lambda -2)(\lambda ^2+1)\] 
-					
-					Hence, the eigenvalues of \(A\) are \(\lambda _1=2\), \(\lambda _2=i\), and \(\lambda _3=-i\). The augmented matrix of \((A-2I){\bf x=0}\) is 
-					\[ \left [ 
-						\begin {array}{rrrcr}
-							-7&amp;5&amp;4&amp;\vdots&amp; 0\\
-							-8&amp; 5&amp;6&amp;\vdots&amp; 0\\ 
-							1&amp;0&amp;-2&amp;\vdots&amp; 0 
-						\end {array}
-					\right ]\] 
-					
-					which is row equivalent to 
-					\[ \left [ 
-						\begin {array}{rrrcr} 
-							1&amp;0&amp;-2&amp;\vdots&amp; 0\\ 
-							0&amp;1&amp;-2&amp; \vdots&amp; 0\\ 
-							0&amp;0&amp;0&amp;\vdots&amp; 0 
-						\end {array}
-					\right ]\] 
-					
-					Therefore \(x_1=x_2=2x_3\). Taking \(x_3=1\) yields 
-					\[ {\bf \vec{x}}_1=\threecol 221\] 
-					
-					so 
-					\[ {\bf \vec{y}}_1=\threecol 221e^{2t} \] 
-					
-					is a solution of <a href="#x1-13r8">(10.6.8)</a>.
-
-					<br> 
-					The augmented matrix of \((A-iI){\bf x=0}\) is 
-					\[ \left [ 
-						\begin {array}{ccrccc}
-							-5-i&amp;5&amp;4&amp;\vdots&amp; 0\\
-							-8&amp; 7-i&amp;6&amp;\vdots&amp; 0\\ 
-							\phantom {-}1&amp;0&amp;-i&amp;\vdots&amp; 0 
-						\end {array}
-					\right ]\] 
-					
-					which is row equivalent to 
-					\[ \left [ 
-						\begin {array}{ccccc} 
-							1&amp;0&amp;-i&amp;\vdots&amp; 0\\ 
-							0&amp;1&amp;1-i&amp; \vdots&amp; 0\\ 
-							0&amp;0&amp;0&amp;\vdots&amp; 0 
-						\end {array}
-					\right ]\] 
-					
-					Therefore \(x_1=ix_3\) and \(x_2=-(1-i)x_3\). Taking \(x_3=1\) yields the eigenvector 
-					\[ {\bf \vec{x}}_2=\left [
-						\begin {array}{c} 
-							i\\
-							-1+i\\ 
-							1
-						\end {array}
-					\right ]\] 
-					
-					The real and imaginary parts of 
-					\[ (\cos t+i\sin t)\left [
-						\begin {array}{c}
-							i\\
-							-1+i\\
-							1
-						\end {array}
-					\right ] \] 
-					
-					are 
-					\[ {\bf \vec{y}}_2= \left [
-						\begin {array}{c}
-							-\sin t\\
-							-\cos t-\sin t\\
-							\cos t
-						\end {array}
-					\right ] \quad \mbox { and }\quad {\bf \vec{y}}_3=\left [
-						\begin {array}{c}
-							\cos t\\
-							\cos t-\sin t\\
-							\sin t
-						\end {array}
-					\right ]\] 
-					
-					which are solutions of <a href="#x1-13r8">(10.6.8)</a>. Since the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,{\bf \vec{y}}_3\}\) at \(t=0\) is 
-					\[ \left |
-						\begin {array}{rrr} 
-							2&amp;0&amp;1\\
-							2&amp;-1&amp;1\\
-							1&amp;1&amp;0
-						\end {array}
-					\right |=1\] 
-					
-					\(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,{\bf \vec{y}}_3\}\) is a fundamental set of solutions of <a href="#x1-13r8">(10.6.8)</a>. The general solution of <a href="#x1-13r8">(10.6.8)</a> is 
-					\[ {\bf \vec{y}}=c_1 \threecol 221e^{2t} +c_2\left [
-						\begin {array}{c}
-							-\sin t\\
-							-\cos t-\sin t\\
-							\cos t
-						\end {array}
-					\right ] +c_3\left [ 
-						\begin {array}{c}
-							\cos t\\
-							\cos t-\sin t\\
-							\sin t 
-						\end {array}
-					\right ]\]
+					<ol>
+						<li class="no-part">
+							The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-13r8">(10.6.8)</a> is 
+							\[ \left | 
+								\begin {array}{ccc}
+									-5-\lambda&amp; 5&amp;4\\
+									-8&amp;7-\lambda&amp; 6\\ 
+									\phantom {-}1 &amp;0&amp;-\lambda 
+								\end {array}
+							\right |=-(\lambda -2)(\lambda ^2+1)\] 
+							
+							Hence, the eigenvalues of \(A\) are \(\lambda _1=2\), \(\lambda _2=i\), and \(\lambda _3=-i\).
+							
+							The augmented matrix of \((A-2I){\bf x=0}\) is 
+							\[ \left [ 
+								\begin {array}{rrrcr}
+									-7&amp;5&amp;4&amp;\vdots&amp; 0\\
+									-8&amp; 5&amp;6&amp;\vdots&amp; 0\\ 
+									1&amp;0&amp;-2&amp;\vdots&amp; 0 
+								\end {array}
+							\right ]\] 
+							
+							which is row equivalent to 
+							\[ \left [ 
+								\begin {array}{rrrcr} 
+									1&amp;0&amp;-2&amp;\vdots&amp; 0\\ 
+									0&amp;1&amp;-2&amp; \vdots&amp; 0\\ 
+									0&amp;0&amp;0&amp;\vdots&amp; 0 
+								\end {array}
+							\right ]\] 
+							
+							Therefore \(x_1=x_2=2x_3\). Taking \(x_3=1\) yields 
+							\[ {\bf \vec{x}}_1=\threecol 221\] 
+							
+							so 
+							\[ {\bf \vec{y}}_1=\threecol 221e^{2t} \] 
+							
+							is a solution of <a href="#x1-13r8">(10.6.8)</a>.
+							<br> 
+						</li>
+						<li class="no-part">
+							The augmented matrix of \((A-iI){\bf x=0}\) is 
+							\[ \left [ 
+								\begin {array}{ccrccc}
+									-5-i&amp;5&amp;4&amp;\vdots&amp; 0\\
+									-8&amp; 7-i&amp;6&amp;\vdots&amp; 0\\ 
+									\phantom {-}1&amp;0&amp;-i&amp;\vdots&amp; 0 
+								\end {array}
+							\right ]\] 
+							
+							which is row equivalent to 
+							\[ \left [ 
+								\begin {array}{ccccc} 
+									1&amp;0&amp;-i&amp;\vdots&amp; 0\\ 
+									0&amp;1&amp;1-i&amp; \vdots&amp; 0\\ 
+									0&amp;0&amp;0&amp;\vdots&amp; 0 
+								\end {array}
+							\right ]\] 
+							
+							Therefore \(x_1=ix_3\) and \(x_2=-(1-i)x_3\). Taking \(x_3=1\) yields the eigenvector 
+							\[ {\bf \vec{x}}_2=\left [
+								\begin {array}{c} 
+									i\\
+									-1+i\\ 
+									1
+								\end {array}
+							\right ]\] 
+							
+							The real and imaginary parts of 
+							\[ (\cos t+i\sin t)\left [
+								\begin {array}{c}
+									i\\
+									-1+i\\
+									1
+								\end {array}
+							\right ] \] 
+							
+							are 
+							\[ {\bf \vec{y}}_2= \left [
+								\begin {array}{c}
+									-\sin t\\
+									-\cos t-\sin t\\
+									\cos t
+								\end {array}
+							\right ] \quad \mbox { and }\quad {\bf \vec{y}}_3=\left [
+								\begin {array}{c}
+									\cos t\\
+									\cos t-\sin t\\
+									\sin t
+								\end {array}
+							\right ]\] 
+							
+							which are solutions of <a href="#x1-13r8">(10.6.8)</a>. Since the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,{\bf \vec{y}}_3\}\) at \(t=0\) is 
+							\[ \left |
+								\begin {array}{rrr} 
+									2&amp;0&amp;1\\
+									2&amp;-1&amp;1\\
+									1&amp;1&amp;0
+								\end {array}
+							\right |=1\] 
+							
+							\(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,{\bf \vec{y}}_3\}\) is a fundamental set of solutions of <a href="#x1-13r8">(10.6.8)</a>. The general solution of <a href="#x1-13r8">(10.6.8)</a> is 
+							\[ {\bf \vec{y}}=c_1 \threecol 221e^{2t} +c_2\left [
+								\begin {array}{c}
+									-\sin t\\
+									-\cos t-\sin t\\
+									\cos t
+								\end {array}
+							\right ] +c_3\left [ 
+								\begin {array}{c}
+									\cos t\\
+									\cos t-\sin t\\
+									\sin t 
+								\end {array}
+							\right ]\]
+						</li>
+					</ol>
 				</details>
 			</div>
 
@@ -465,105 +472,110 @@
 				
 				<details class="solution">
 					<summary>Solution</summary>
-					The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-15r9">(10.6.9)</a> is 
-					\[ \left | 
-						\begin {array}{ccc} 
-							1-\lambda&amp; -1&amp;-2\\ 
-							1&amp;3-\lambda&amp; \phantom {-}2\\ 
-							1 &amp;-1&amp;2-\lambda 
-						\end {array}
-					\right |= -(\lambda -2)\left ((\lambda -2)^2+4\right )\] 
+					<ol>
+						<li class="no-part">
+							The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-15r9">(10.6.9)</a> is 
+							\[ \left | 
+								\begin {array}{ccc} 
+									1-\lambda&amp; -1&amp;-2\\ 
+									1&amp;3-\lambda&amp; \phantom {-}2\\ 
+									1 &amp;-1&amp;2-\lambda 
+								\end {array}
+							\right |= -(\lambda -2)\left ((\lambda -2)^2+4\right )\] 
+							
+							Hence, the eigenvalues of \(A\) are \(\lambda _1=2\), \(\lambda _2=2+2i\), and \(\lambda _3=2-2i\). The augmented matrix of \((A-2I){\bf x=0}\) is 
+							\[ \left [ 
+								\begin {array}{rrrcr}
+									-1&amp;-1&amp;-2&amp;\vdots&amp; 0\\
+									1&amp; 1&amp;2&amp;\vdots&amp; 0\\ 
+									1&amp;-1&amp;0&amp;\vdots&amp; 0 
+								\end {array}
+							\right ]\] 
+							
+							which is row equivalent to 
+							\[ \left [ 
+								\begin {array}{rrrcr} 
+									1&amp;0&amp;1&amp;\vdots&amp; 0\\ 
+									0&amp;1&amp;1&amp; \vdots&amp; 0\\ 
+									0&amp;0&amp;0&amp;\vdots&amp; 0 
+								\end {array}
+							\right ]\] 
+							
+							Therefore \(x_1=x_2=-x_3\). Taking \(x_3=1\) yields 
+							\[ {\bf \vec{x}}_1=\threecol {-1}{-1}1\] 
+							
+							so 
+							\[ {\bf \vec{y}}_1=\threecol {-1}{-1}1e^{2t} \] 
+							
+							is a solution of <a href="#x1-15r9">(10.6.9)</a>.
 					
-					Hence, the eigenvalues of \(A\) are \(\lambda _1=2\), \(\lambda _2=2+2i\), and \(\lambda _3=2-2i\). The augmented matrix of \((A-2I){\bf x=0}\) is 
-					\[ \left [ 
-						\begin {array}{rrrcr}
-							-1&amp;-1&amp;-2&amp;\vdots&amp; 0\\
-							1&amp; 1&amp;2&amp;\vdots&amp; 0\\ 
-							1&amp;-1&amp;0&amp;\vdots&amp; 0 
-						\end {array}
-					\right ]\] 
-					
-					which is row equivalent to 
-					\[ \left [ 
-						\begin {array}{rrrcr} 
-							1&amp;0&amp;1&amp;\vdots&amp; 0\\ 
-							0&amp;1&amp;1&amp; \vdots&amp; 0\\ 
-							0&amp;0&amp;0&amp;\vdots&amp; 0 
-						\end {array}
-					\right ]\] 
-					
-					Therefore \(x_1=x_2=-x_3\). Taking \(x_3=1\) yields 
-					\[ {\bf \vec{x}}_1=\threecol {-1}{-1}1\] 
-					
-					so 
-					\[ {\bf \vec{y}}_1=\threecol {-1}{-1}1e^{2t} \] 
-					
-					is a solution of <a href="#x1-15r9">(10.6.9)</a>.
-			
-					<br>
-					
-					The augmented matrix of \(\left (A-(2+2i)I\right ){\bf x=0}\) is 
-					\[ \left [ 
-						\begin {array}{ccrcc}
-							-1-2i&amp;-1&amp;-2&amp;\vdots&amp; 0\\ 
-							1&amp; 1-2i&amp;\phantom {-}2&amp;\vdots&amp; 0\\ 
-							1&amp;-1&amp;-2i&amp;\vdots&amp; 0 
-						\end {array}
-					\right ]\] 
-					
-					which is row equivalent to 
-					\[ \left [ 
-						\begin {array}{rrrcr} 
-							1&amp;0&amp;-i&amp;\vdots&amp; 0\\ 
-							0&amp;1&amp;i&amp; \vdots&amp; 0\\ 
-							0&amp;0&amp;0&amp;\vdots&amp; 0 
-						\end {array}
-					\right ]\] 
-					
-					Therefore \(x_1=ix_3\) and \(x_2=-ix_3\). Taking \(x_3=1\) yields the eigenvector 
-					\[ {\bf \vec{x}}_2=\threecol i{-i}1 \] 
-					
-					The real and imaginary parts of 
-					\[ e^{2t}(\cos 2t+i\sin 2t)\threecol i{-i}1 \] 
-					
-					are 
-					\[ {\bf \vec{y}}_2=e^{2t}\left [
-						\begin {array}{r}
-							-\sin 2t\\
-							\sin 2t\\
-							\cos 2t
-						\end {array}
-					\right ]\quad \mbox { and }\quad {\bf \vec{y}}_2=e^{2t}\left [
-						\begin {array}{r}
-							\cos 2t\\
-							-\cos 2t\\
-							\sin 2t
-						\end {array}
-					\right ]\] 
-					
-					which are solutions of <a href="#x1-15r9">(10.6.9)</a>. Since the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,{\bf \vec{y}}_3\}\) at \(t=0\) is 
-					\[ \left |
-						\begin {array}{rrr} 
-							-1&amp;0&amp;1\\
-							-1&amp;0&amp;-1\\
-							1&amp;1&amp;0
-						\end {array}
-					\right |=-2\] 
-					
-					\(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,{\bf \vec{y}}_3\}\) is a fundamental set of solutions of <a href="#x1-15r9">(10.6.9)</a>. The general solution of <a href="#x1-15r9">(10.6.9)</a> is 
-					\[ {\bf \vec{y}}=c_1\threecol {-1}{-1}1e^{2t}+ c_2e^{2t}\left [
-						\begin {array}{r}
-							-\sin 2t\\
-							\sin 2t\\
-							\cos 2t
-						\end {array}
-					\right ]+ c_3e^{2t}\left [ 
-						\begin {array}{r}
-							\cos 2t\\
-							-\cos 2t\\
-							\sin 2t 
-						\end {array}
-					\right ]\]
+							<br>
+						</li>
+						<li class="no-part">
+							The augmented matrix of \(\left (A-(2+2i)I\right ){\bf x=0}\) is 
+							\[ \left [ 
+								\begin {array}{ccrcc}
+									-1-2i&amp;-1&amp;-2&amp;\vdots&amp; 0\\ 
+									1&amp; 1-2i&amp;\phantom {-}2&amp;\vdots&amp; 0\\ 
+									1&amp;-1&amp;-2i&amp;\vdots&amp; 0 
+								\end {array}
+							\right ]\] 
+							
+							which is row equivalent to 
+							\[ \left [ 
+								\begin {array}{rrrcr} 
+									1&amp;0&amp;-i&amp;\vdots&amp; 0\\ 
+									0&amp;1&amp;i&amp; \vdots&amp; 0\\ 
+									0&amp;0&amp;0&amp;\vdots&amp; 0 
+								\end {array}
+							\right ]\] 
+							
+							Therefore \(x_1=ix_3\) and \(x_2=-ix_3\). Taking \(x_3=1\) yields the eigenvector 
+							\[ {\bf \vec{x}}_2=\threecol i{-i}1 \] 
+							
+							The real and imaginary parts of 
+							\[ e^{2t}(\cos 2t+i\sin 2t)\threecol i{-i}1 \] 
+							
+							are 
+							\[ {\bf \vec{y}}_2=e^{2t}\left [
+								\begin {array}{r}
+									-\sin 2t\\
+									\sin 2t\\
+									\cos 2t
+								\end {array}
+							\right ]\quad \mbox { and }\quad {\bf \vec{y}}_2=e^{2t}\left [
+								\begin {array}{r}
+									\cos 2t\\
+									-\cos 2t\\
+									\sin 2t
+								\end {array}
+							\right ]\] 
+							
+							which are solutions of <a href="#x1-15r9">(10.6.9)</a>. Since the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,{\bf \vec{y}}_3\}\) at \(t=0\) is 
+							\[ \left |
+								\begin {array}{rrr} 
+									-1&amp;0&amp;1\\
+									-1&amp;0&amp;-1\\
+									1&amp;1&amp;0
+								\end {array}
+							\right |=-2\] 
+							
+							\(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,{\bf \vec{y}}_3\}\) is a fundamental set of solutions of <a href="#x1-15r9">(10.6.9)</a>. The general solution of <a href="#x1-15r9">(10.6.9)</a> is 
+							\[ {\bf \vec{y}}=c_1\threecol {-1}{-1}1e^{2t}+ c_2e^{2t}\left [
+								\begin {array}{r}
+									-\sin 2t\\
+									\sin 2t\\
+									\cos 2t
+								\end {array}
+							\right ]+ c_3e^{2t}\left [ 
+								\begin {array}{r}
+									\cos 2t\\
+									-\cos 2t\\
+									\sin 2t 
+								\end {array}
+							\right ]\]
+						</li>
+					</ol>
 				</details>
 			</div>
 		</details>
