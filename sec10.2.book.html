@@ -61,29 +61,29 @@
 			<a id="x1-3r2"></a> 
 			\begin {equation} 
 				\label {eq:10.2.2} 
-				\dfrac{d{\bf \vec{y}}}{dt}={\bf{A}}{\bf \vec{y}}+{\bf \vec{f}}(t) 
+				\dfrac{d{\bf \vec{y}}}{dt}={\bf{A}}(t)\, {\bf \vec{y}}+{\bf \vec{f}}(t) 
 			\end {equation}
 
 			where 
 			
-			\[ {\bf \vec{y}}=\col yn,\quad \bf{A}(t)=\matfunc ann,\quad \mbox{ and } \quad {\bf \vec{f}}(t)=\colfunc fn\] 
+			\[ {\bf \vec{y}}=\col yn,\quad {\bf{A}}(t)=\matfunc ann,\quad \mbox{ and } \quad {\bf \vec{f}}(t)=\colfunc fn\] 
 			
-			We call \(\bf{A}\) the <span class="vocab">coefficient matrix</span> of <a href="#x1-3r2">(10.2.2)</a> and \({\bf \vec{f}}(t)\) the <span class="vocab">forcing function</span>. We’ll say that \(\bf{A}\) and \({\bf \vec{f}}(t)\) are <span class="vocab">continuous</span> if their entries are continuous. If \({{\bf \vec{f}}(t)}\equiv{\bf \vec{0}}\), then the equation <a href="#x1-3r2">(10.2.2)</a> is <span class="vocab">homogeneous</span> otherwise it's <span class="vocab">nonhomogeneous</span>.
+			We call \({\bf{A}}(t)\) the <span class="vocab">coefficient matrix</span> of <a href="#x1-3r2">(10.2.2)</a> and \({\bf \vec{f}}(t)\) the <span class="vocab">forcing function</span>. We’ll say that \({\bf{A}}(t)\) and \({\bf \vec{f}}(t)\) are <span class="vocab">continuous</span> if their entries are continuous. If \({{\bf \vec{f}}(t)}\equiv{\bf \vec{0}}\), then the equation <a href="#x1-3r2">(10.2.2)</a> is <span class="vocab">homogeneous</span> otherwise it's <span class="vocab">nonhomogeneous</span>.
 		</div>
 		<div class="indent" id="4c1b072e-bf36-4186-ae1a-8983938c04d1">
 			An IVP for <a href="#x1-3r2">(10.2.2)</a> consists of finding a solution of <a href="#x1-3r2">(10.2.2)</a> that equals a given constant vector at some initial point \(t_0\)
 			\[ {\bf \vec{k}} =\col kn\] 
 			
 			 We write this IVP as 
-			\[ \dfrac{d{\bf \vec{y}}}{dt}={\bf{A}}{\bf \vec{y}}+{\bf \vec{f}}(t) \quad {\bf \vec{y}}(t_0)={\bf \vec{k}}\]
+			\[ \dfrac{d{\bf \vec{y}}}{dt}={\bf{A}}(t) \,{\bf \vec{y}}+{\bf \vec{f}}(t) \quad {\bf \vec{y}}(t_0)={\bf \vec{k}}\]
 		</div>
 		<div class="indent" id="2b31e1b5-7ade-471d-b77f-f38c717749d6">
 			The next theorem gives sufficient conditions for the existence of solutions of IVPs for <a href="#x1-3r2">(10.2.2)</a>.
 		</div>
 		<div class="theorem" id="x1-41">
 			<span class="head">Theorem&nbsp;10.2.1</span>
-			Suppose the coefficient matrix \({\bf A}\) and the forcing function \({\bf \vec{f}}(t)\) are continuous on \((a,b)\), let \(t_0\) be in \((a,b)\), and let \(\bf \vec{k}\) be an arbitrary constant \(n\)-vector. Then the following IVP has a unique solution on \((a,b)\)
-			\[ \dfrac{d{\bf \vec{y}}}{dt}={\bf A}{\bf \vec{y}}+{\bf \vec{f}}(t) \quad {\bf \vec{y}}(t_0)={\bf \vec{k}} \] 
+			Suppose the coefficient matrix \({\bf{A}}(t)\) and the forcing function \({\bf \vec{f}}(t)\) are continuous on \((a,b)\), let \(t_0\) be in \((a,b)\), and let \(\bf \vec{k}\) be an arbitrary constant \(n\)-vector. Then the following IVP has a unique solution on \((a,b)\)
+			\[ \dfrac{d{\bf \vec{y}}}{dt}={\bf{A}}(t)\,{\bf \vec{y}}+{\bf \vec{f}}(t) \quad {\bf \vec{y}}(t_0)={\bf \vec{k}} \] 
 			
 		</div>
 
@@ -117,7 +117,7 @@
 						<a id="x1-11r5"></a> 
 						\begin {equation} 
 						\label {eq:10.2.5} 
-						\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t},\quad {\bf \vec{y}}(0)={1\over 5}\twocol 3{22} 
+						\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t}\quad {\bf \vec{y}}(0)={1\over 5}\twocol 3{22} 
 						\end {equation}
 				</li>
 			</ol>
@@ -155,24 +155,67 @@
 					</li>
 					<br>
 					<li>
-						We can verify <a href="#x1-9r4">(10.2.4)</a> is a solution to the system of differential equations <a href="#x1-7r3">(10.2.3)</a> differentiating and substituting
+						We can verify <a href="#x1-9r4">(10.2.4)</a> is a solution to the system of differential equations <a href="#x1-7r3">(10.2.3)</a> differentiating and substituting. The left side of the equation is just the derivative so we differentiate:
 
 						\begin {align*} 
-							{\bf \vec{y}}= {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} 
+							{\bf \vec{y}} & = {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} \\
+							\frac{d{\bf \vec{y}}}{dt} & = \frac{d}{dt} \Bigg[ {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} \Bigg] \\
+							& =  {1\over 5}\twocol 87 \frac{d}{dt} \big(e^{4t}\big) +c_1\twocol 11\frac{d}{dt} \big(e^{3t}\big)+c_2\twocol 1{-1}\frac{d}{dt} \big(e^{-t}\big)  \\
+							& =  {4\over 5}\twocol 87 e^{4t} + 3c_1\twocol 11 e^{3t} -c_2\twocol 1{-1} e^{-t}  \\
+							& =  {4\over 5}\twocol 87 e^{4t} + 3c_1\twocol 11 e^{3t} +c_2\twocol {-1}{1} e^{-t}  \\
+						\end {align*}
+
+						Now we'll substitute <a href="#x1-9r4">(10.2.4)</a> into the right side of the equation <a href="#x1-7r3">(10.2.3)</a> to confirm it matches.
+
+						\begin {align*} 
+							& \twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t} \\
+							= & \twobytwo 1221\Bigg[ {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} \Bigg]+\twocol 21e^{4t} \\
+							= & \Bigg[ {1\over 5}\twobytwo 1221\twocol 87e^{4t}+c_1\twobytwo 1221\twocol 11e^{3t}+c_2\twobytwo 1221\twocol 1{-1}e^{-t} \Bigg]+\twocol 21e^{4t} \\
+							
+							= & \Bigg[ {1\over 5}\twocol {8 + 14}{16 + 7}e^{4t}+c_1\twocol {1 + 2 }{2 + 1 }e^{3t}+c_2\twocol {1 - 2 }{2  - 1 }e^{-t} \Bigg]+\twocol 21e^{4t} \\
+							= & \Bigg[ {1\over 5}\twocol {22}{23}e^{4t}+c_1\twocol {3}{3}e^{3t}+c_2\twocol {-1}{1}e^{-t} \Bigg]+\twocol 21e^{4t} \\
+							= & \Bigg[ {1\over 5}\twocol {22}{23}e^{4t}
+							+{1\over 5}\twocol {10}{5}e^{4t}\Bigg] 					+c_1\twocol {3}{3}e^{3t}+c_2\twocol {-1}{1}e^{-t}\\
+							= & {1\over 5}\twocol {32}{28}e^{4t}
+								+c_1\twocol {3}{3}e^{3t}+c_2\twocol {-1}{1}e^{-t}\\
+							= & \underset{{\dfrac{d{\bf \vec{y}}}{dt}}}{\underbrace{{4\over 5}\twocol {8}{7}e^{4t}
+							+c_1\twocol {3}{3}e^{3t}+c_2\twocol {-1}{1}e^{-t}}}\\
 						\end {align*}
 					</li>
 					<br>
+
 					<li>
-						If , then
-						<div class="eqnarray">
-							\begin {eqnarray*} 
-								A{\bf \vec{y}}+{\bf \vec{f}}&amp;=&amp; {1\over 5}\twobytwo 1221\twocol 87e^{4t}+ c_1\twobytwo 1221\twocol 11e^{3t}\\ 
-								&amp;&amp;+c_2\twobytwo 1221\twocol 1{-1}e^{-t} +\twocol 21e^{4t}\\ 
-								&amp;=&amp;{1\over 5}\twocol {22}{23}e^{4t}+c_1\twocol 33e^{3t}+c_2\twocol {-1}1e^{-t} +\twocol 21e^{4t}\\ 
-								&amp;=&amp;{1\over 5}\twocol {32}{28}e^{4t}+3c_1\twocol 11e^{3t}-c_2\twocol 1{-1}e^{-t} =\dfrac{d{\bf \vec{y}}}{dt} 
-							\end {eqnarray*} 
-						</div>
+						We already verified the solution
+						\begin {align*}  
+							
+						{\bf \vec{y}} & = {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} 
+							
+						\end {align*}
+
+						No we'll apply the initial condition
+						\[
+						{\bf \vec{y}}(0)={1\over 5}\twocol 3{22} 
+						\]
+
+						\begin {align*}  
+							
+						{\bf \vec{y}}(0) 
+						& = {1\over 5}\twocol 87e^{0}+c_1\twocol 11e^{0}+c_2\twocol 1{-1}e^{0} \\
+						{1\over 5}\twocol 3{22}  & = {1\over 5}\twocol 87+ \twobytwo 111{-1} \twocol {c_1}{c_2} \\
+						\twocol 3{22}  & = \twocol 87+ 5\twobytwo 111{-1} \twocol {c_1}{c_2} \\
+						\twocol {-5}{15}  & =  5\twobytwo 111{-1} \twocol {c_1}{c_2} \\
+						\twocol {-1}{3}  & = \twobytwo 111{-1} \twocol {c_1}{c_2} \\
+						\left\{
+							\begin{array}{ccc}
+							c_1+c_2 = -1 \\
+							c_1+c_2 = -1 \\
+							\end{array}
+						\right.
+							
+						\end {align*}
 					</li>
+					<br>
+
 					<li>
 						We must choose \(c_1\) and \(c_2\) in <a href="#x1-9r4">(10.2.4)</a> so that 
 						\[ {1\over 5}\twocol 87+c_1\twocol 11+c_2\twocol 1{-1}={1\over 5}\twocol 3{22}\] 
