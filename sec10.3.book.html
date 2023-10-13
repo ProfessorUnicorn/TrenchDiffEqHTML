@@ -422,7 +422,7 @@
 
 				\begin{align*}
 				{\bf \vec{y}} = &
-				\underset{{\bf Y}}{\underbrace{\left ( 
+				\underset{{\bf Y}(t)}{\underbrace{\left ( 
 					\begin {array}{ccc}
 						y_{11} & y_{12} & \dots & y_{1n} \\ 
 						y_{21} & y_{22} & \dots & y_{2n} \\ 
@@ -448,16 +448,16 @@
 			 \begin {equation} 
 			 	\label {eq:10.3.3} 
 				 {\bf \vec{y}} =
-				c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2+\cdots +c_n{\bf \vec{y}}_n={\bf Y}\,{\bf \vec{c}} 
+				c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2+\cdots +c_n{\bf \vec{y}}_n={\bf Y}(t)\,{\bf \vec{c}} 
 			\end {equation}
 			
-			where the columns of the matrix \({\bf Y}\) are the vector functions \({\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\)
+			where the columns of the matrix \({\bf Y}(t)\) are the vector functions \({\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\)
 			
 
 			<a id="x1-7r4"></a> 
 			\begin {equation} 
 				\label {eq:10.3.4} 
-				{\bf Y}= \Big( {\bf \vec{y}}_1\; {\bf \vec{y}}_2\; \cdots \; {\bf \vec{y}}_n \Big)= \left ( 
+				{\bf Y}(t)= \Big( {\bf \vec{y}}_1\; {\bf \vec{y}}_2\; \cdots \; {\bf \vec{y}}_n \Big)= \left ( 
 					\begin {array}{cccc} 
 						y_{11}&amp;y_{12}&amp;\cdots &amp;y_{1n} \\ 
 						y_{21}&amp;y_{22}&amp;\cdots &amp;y_{2n}\\ 
@@ -467,86 +467,96 @@
 				\right )
 			\end {equation}
 			
-			that is,  
+			
 		</div>
 		<div id="e16e058b-f325-4dd3-8eda-062b0f6c530a">
-			 For reference below, note that 
+			Now we can differentiate the matrix \({\bf Y}(t)\) by differentiating each element and using \({d{\bf \vec{y}}}/{dt}= {\bf A}(t)\,  {\bf \vec{y}}\) 
+
+			\begin{align*}
+			\dfrac{d{\bf Y}}{dt} 
+			& =
+			\frac{d}{dt}
+			\Bigg( {\bf \vec{y}}_1\; {\bf \vec{y}}_2\; \cdots \; {\bf \vec{y}}_n \Bigg) \\
+			& = \Bigg(\dfrac{d {\bf \vec{y}}_1 }{dt}\; \dfrac{d {\bf \vec{y}}_2 }{dt}\; \cdots \; \dfrac{d {\bf \vec{y}}_n}{dt}\Bigg)\\ 
+			& = \Bigg({\bf A}(t)\,{\bf \vec{y}}_1\;\; {\bf A}(t)\,{\bf \vec{y}}_2\; \cdots \; {\bf A}(t)\,{\bf \vec{y}}_n\Bigg)\\
+			& = {\bf A}(t)\,\Big({\bf \vec{y}}_1\; {\bf \vec{y}}_2\; \cdots \; {\bf \vec{y}}_n\Big)\\ 
+			& = {\bf A}(t)\,{\bf Y}(t)
+			\end{align*}
 		</div>
-		<div class="eqnarray" id="7bf71037-7646-4a40-bdaf-6fe0bc7fbef9">
-			 \begin {eqnarray*} 
-			 	\dfrac{dY}{dt} &amp;=&amp;[\dfrac{d {\bf \vec{y}}_1 }{dt}\; \dfrac{d {\bf \vec{y}}_2 }{dt}\; \cdots \; \dfrac{d {\bf \vec{y}}_n}{dt}]\\ 
-				&amp;=&amp;[A{\bf \vec{y}}_1\; A{\bf \vec{y}}_2\; \cdots \; A{\bf \vec{y}}_n]\\ 
-				&amp;=&amp;A[{\bf \vec{y}}_1\; {\bf \vec{y}}_2\; \cdots \; {\bf \vec{y}}_n]=AY; 
-			 \end {eqnarray*} 
-		</div>
+	
 		<div id="6c9aeaf6-ff2e-4c67-ab99-4794fc86c5fd">
-			 that is, \(Y\) satisfies the matrix differential equation 
+			 This means that the matrix \({\bf Y}(t)\) satisfies the matrix differential equation 
 		</div>
 		<div id="784f86f8-1079-4bb8-955e-88ed129d8396">
-			 \[ \dfrac{dY}{dt} =AY \] 
+			 \[ \dfrac{d{\bf Y}}{dt} ={\bf A}{\bf Y} \] 
 		</div>
 		<div id="b0271f70-8ca6-47bc-8ea2-2e5149ac98bc">
-			 The determinant of \(Y\), 
+			 The determinant of \({\bf Y}\)	is called the <span class="vocab">Wronskian determinant</span> of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\)
+
 			<a id="x1-8r5"></a> 
 			\begin {equation} 
 			 	\label {eq:10.3.5}
-				W=\left | 
+				W\big[{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\big]=\det\left ( 
 					\begin {array}{cccc} 
 						y_{11}&amp;y_{12}&amp;\cdots &amp;y_{1n} \\ 
 						y_{21}&amp;y_{22}&amp;\cdots &amp;y_{2n}\\ 
 						\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ 
 						y_{n1}&amp;y_{n2}&amp;\cdots &amp;y_{nn} \\ 
 					\end {array}
-				\right | 
+				\right )
 			\end {equation}
 			
-			is called the <span class="vocab">Wronskian</span> of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\). It can be shown (Exercises&nbsp;<span class="ptmb8t-">2</span> and <span class="ptmb8t-">3</span>) that this definition is analogous to definitions of the Wronskian of scalar functions given in Sections&nbsp;5.1 and 9.1. The next theorem is analogous to Theorems&nbsp;<span class="ptmb8t-">5.1.4</span> and <span class="ptmb8t-">9.1.3</span>. The proof is sketched in Exercise&nbsp;<span class="ptmb8t-">4</span> for \(n=2\) and in Exercise&nbsp;<span class="ptmb8t-">5</span> for general&nbsp;\(n\). 
+		 This definition is analogous to definitions of the Wronskian of scalar functions given in Sections&nbsp;<a href="sec5.1.book.html" target=_blank>5.1</a> and <a href="sec9.1.book.html" target=_blank>9.1</a>. The next theorem is analogous to Theorems&nbsp;<a href="#sec5.1.book.html#x1-484" target=_blank>5.1.4</a>
+		 and <a href="#sec9.1.book.html#x1-193" target=_blank>9.1.3</a>
 		</div>
-		<div class="theorem" id="x1-92">
+		<div class="theorem" id="x1-193">
 			<span class="head">Theorem&nbsp;10.3.2 Abel’s Formula</span>
-			Suppose the \(n\times n\) matrix \(A=A(t)\) is continuous on \((a,b),\) let \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\) be solutions of \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) on \((a,b),\) and let \(t_0\) be in \((a,b)\). Then the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is given by 
+			Suppose the \(n\times n\) matrix \({\bf A}={\bf A}(t)\) is continuous on \((a,b),\) let \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\) be solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf Y}(t)\,{\bf \vec{y}}\) on \((a,b),\) and let \(t_0\) be in \((a,b)\). Then the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is given by 
 			<a id="x1-10r6"></a> 
 			\begin {equation} 
 				\label {eq:10.3.6} 
-				W(t)=W(t_0)\exp \left ( \int ^t_{t_0}\big [a_{11}(s)+a_{22}(s)+\cdots +a_{nn}(s)]\, ds\right ), \quad a &lt; t &lt; b 
+				W(t)=W(t_0) e^{\displaystyle \int ^t_{t_0}\Big [a_{11}(s)+a_{22}(s)+\cdots +a_{nn}(s) \Big]\, ds} 
 			\end {equation}
 			
-			Therefore\(,\) either \(W\) has no zeros in \((a,b)\) or \(W\equiv 0\) on \((a,b).\)
+			Therefore\(,\) either \(W(t)\) has no zeros in \((a,b)\) or \(W(t)\equiv 0\) on \((a,b)\)
 		</div>
 
 		<div id="455fcf9b-881c-4544-b7af-e3efe3d5ef5d">
-			<strong>Remark</strong>:&nbsp; The sum of the diagonal entries of a square matrix \(A\) is called the <span class="vocab">trace</span> of \(A\), denoted by tr\((A)\). Thus, for an \(n\times n\) matrix \(A\), \[ \mbox {tr}(A)=a_{11}+a_{22}+\cdots +a_{nn}\] and <a href="#x1-10r6">(10.3.6)</a> can be written as 
-			\[ W(t)=W(t_0)\exp \left ( \int ^t_{t_0}\mbox {tr}(A(s))\, ds\right ), \quad a &lt; t &lt; b\]
+			<strong>Remark</strong>:&nbsp; The sum of the diagonal entries of a square matrix \({\bf A}\) is called the <span class="vocab">trace</span> of \({\bf A}\), denoted by tr\((A)\). Thus, for an \(n\times n\) matrix \({\bf A}\), \[ \mbox {tr}({\bf A})=a_{11}+a_{22}+\cdots +a_{nn}\] and <a href="#x1-10r6">(10.3.6)</a> can be written as 
+			\[ W(t)=W(t_0) e^{\displaystyle \int ^t_{t_0}\mbox {tr}\Big({\bf A}(s)\Big)\, ds} \]
 		</div>
 		<div id="a921f315-e5b7-4cb7-b6e8-c55cddd3b537">
-			 The next theorem is analogous to Theorems&nbsp;<span class="ptmb8t-">5.1.6</span> and <span class="ptmb8t-">9.1.4</span>. 
+			 The next theorem is analogous to 
+			 The next theorem is analogous to Theorems&nbsp;<a href="#sec5.1.book.html#x1-616" target=_blank>5.1.6</a> and <a href="#sec9.1.book.html#x1-224" target=_blank>9.1.4</a>
 		</div>
 		<div class="theorem" id="x1-113">
 			<span class="head">Theorem&nbsp;10.3.3</span>
-			Suppose the \(n\times n\) matrix \(A=A(t)\) is continuous on \((a,b)\) and let \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …\(,\)\({\bf \vec{y}}_n\) be solutions of \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) on \((a,b)\). Then the following statements are equivalent; that is, they are either all true or all false:
+			Suppose the \(n\times n\) matrix \({\bf A}={\bf A}(t)\) is continuous on \((a,b)\) and let \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …\(,\)\({\bf \vec{y}}_n\) be solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) on \((a,b)\). Then the following statements are equivalent; that is, they are either all true or all false:
 			<ol>
 				<li>
-					The general solution of \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) on \((a,b)\) is \({\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2+\cdots +c_n{\bf \vec{y}}_n\), where \(c_1\), \(c_2\), …, \(c_n\) are arbitrary constants. 
+					The general solution of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t) \,{\bf \vec{y}}\) on \((a,b)\) is \({\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2+\cdots +c_n{\bf \vec{y}}_n\), where \(c_1\), \(c_2\), …, \(c_n\) are arbitrary constants
 				</li>
 				<li>
-					\(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is a <span class="vocab">fundamental set of solutions</span> of \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) once \((a,b)\). 
+					\(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is a <span class="vocab">fundamental set of solutions</span> of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) once \((a,b)\)
 				</li>
 				<li>
-					\(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is <span class="vocab">linearly independent</span> on \((a,b)\). 
+					\(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is <span class="vocab">linearly independent</span> on \((a,b)\)
 				</li>
 				<li>
-					The <span class="vocab">Wronskian</span> of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is nonzero at some point in \((a,b)\). 
+					The <span class="vocab">Wronskian</span> of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is nonzero at some point in \((a,b)\)
 				</li>
 				<li>
-					The <span class="vocab">Wronskian</span> of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is nonzero at all points in \((a,b)\). 
+					The <span class="vocab">Wronskian</span> of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is nonzero at all points in \((a,b)\)
 				</li>
 			</ol>
 		</div>
 
 		<div id="a2ba07d1-8263-4b3a-a7ad-d949bd71a593">
-			We say that \(Y\) in <a href="#x1-7r4">(10.3.4)</a> is a <span class="vocab">fundamental matrix</span> for \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) if any (and therefore all) of the statements <span class="ptmb8t-">(a)</span>-<span class="ptmb8t-">(e)</span> of Theorem&nbsp;<a href="#x1-92">10.3.2</a> are true for the columns of \(Y\). In this case, <a href="#x1-6r3">(10.3.3)</a> implies that the general solution of \(\dfrac{d{\bf \vec{y}}}{dt}=A(t){\bf \vec{y}}\) can be written as \({\bf \vec{y}}=Y{\bf \vec{c}}\), where \(\bf c\) is an arbitrary constant \(n\)-vector.
+			We say that \({\bf Y}\) in <a href="#x1-7r4">(10.3.4)</a> is a <span class="vocab">fundamental matrix</span> for \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) if any (and therefore all) of the statements <span class="ptmb8t-">(a)</span>-<span class="ptmb8t-">(e)</span> of Theorem&nbsp;<a href="#x1-92">10.3.2</a> are true for the columns of \(Y\). In this case, <a href="#x1-6r3">(10.3.3)</a> implies that the general solution of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) can be written as \({\bf \vec{y}}={\bf Y}\,{\bf \vec{c}}\), where \(\bf \vec{c}\) is an arbitrary constant \(n\)-vector.
 		</div>
 
+		<br>
+		<br>
 		<div class="example" id="x1-172" style="--ex-number: 2">
 			<div>
 				The vector functions 
@@ -559,7 +569,6 @@
 					\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo {-4}{-3} 65 {\bf \vec{y}} 
 				\end {equation}
 				
-				on \((-\infty ,\infty )\). (Verify.)
 			</div>
 
 			<ol>
@@ -591,111 +600,183 @@
 				<summary>Solution</summary>
 				<ol>
 					<li>
-						From <a href="#x1-8r5">(10.3.5)</a>
-						
-						<a id="x1-24r9"></a>
-						\begin {equation} 
-							\label {eq:10.3.9} 
-							W(t)=\left |
-								\begin {array}{cc}
+						<div>
+							<a id="x1-24r9"></a>
+							\begin {align} \label {eq:10.3.9} 
+								W\big[{\bf \vec{y}}_1,{\bf \vec{y}}_2\big]
+								& =\det\Big ( 
+									{\bf \vec{y}}_1 \,\, {\bf \vec{y}}_2
+								\Big ) \nonumber\\
+								& = \det \left(
+									\begin {array}{cc}
 									-e^{2t}&amp;-e^{-t}\\2e^{2t}&amp; e^{-t} 
 								\end {array}
-							\right |= e^{2t}e^{-t} \twobytwo {-1}{-1}21=e^t
-						\end {equation}
+									\right) \nonumber\\
+								& = e^{2t}e^{-t}\det \left(
+									\begin {array}{cc}
+									-1&amp;-1\\
+									2&amp; 1 
+									\end {array}
+									\right) \nonumber\\
+								& = e^{t}\det \left(
+									-1+2
+									\right) \nonumber\\
+								& = e^{t} 			
+							\end {align}
+
+						</div>	
+						<div>
+							
+						</div>	
+						
 					</li>
 					<li>
-						Here \[ A=\twobytwo {-4}{-3} 65\] 
-						so tr\((A)=-4+5=1\). If \(t_0\) is an arbitrary real number then <a href="#x1-10r6">(10.3.6)</a> implies that 
+
+						\begin {align*} 
+							{\text tr}\big({\bf A}\big)={\text tr}\twobytwo {-4}{-3} 65	
+							=-4+5=1
+						\end {align*}
+
+
+						 If \(t_0\) is an arbitrary real number then <a href="#x1-10r6">(10.3.6)</a> implies that 
+
+						 \begin {align*} 
+							 W(t) 
+							 & = W(t_0) \, e^{\displaystyle \int ^t_{t_0}\mbox {tr}\Big({\bf A}(s)\Big)\, ds} \\
+							 & = W(t_0) \, e^{\displaystyle \int ^t_{t_0}\mbox  ds} \\
+							 & = e^{t_0} \, e^{t - t_0} \\
+							 & = e^{t}\\
+						\end {align*}
 						
-						\[
-							W(t)=W(t_0)\exp {\left (\int _{t_0}^t1\,ds\right )}= \left | 
-								\begin {array}{cc} 
-									-e^{2t_0}&amp;-e^{-t_0}\\
-									2e^{2t_0}&amp;e^{-t_0} 
-								\end {array}
-							\right |e^{(t-t_0)} =e^{t_0}e^{t-t_0}=e^t
-						\]
-						
-						which is consistent with <a href="#x1-24r9">(10.3.9)</a>.
+						which is consistent with <a href="#x1-24r9">(10.3.9)</a>
 					</li>
 					<li>
-						Since \(W(t)\ne 0\), Theorem&nbsp;<a href="#x1-113">10.3.3</a> implies that \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2\}\) is a fundamental set of solutions of <a href="#x1-18r7">(10.3.7)</a> and
+						Since \(W(t)\ne 0\), Theorem&nbsp;<a href="#x1-113">10.3.3</a> implies that \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2\}\) is a fundamental set of solutions of <a href="#x1-18r7">(10.3.7)</a> and \({\bf Y} = \Big({\bf \vec{y}}_1 \, {\bf \vec{y}}_2\Big)\) is a fundamental matrix for <a href="#x1-18r7">(10.3.7)</a>
 						\[
-							Y=\left [
+							{\bf Y}=\left (
 								\begin {array}{cc}
 									-e^{2t}&amp;-e^{-t}\\
 									2e^{2t}&amp; e^{-t}
 								\end {array}
-							\right ] 
+							\right )
 						\]
 						
-						is a fundamental matrix for <a href="#x1-18r7">(10.3.7)</a>. Therefore the general solution of <a href="#x1-18r7">(10.3.7)</a> is
+						 Therefore the general solution of <a href="#x1-18r7">(10.3.7)</a> is
 						
 						<a id="x1-25r10"></a>
 						\begin {equation} 
 							\label {eq:10.3.10} 
-							{\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2= c_1\twocol {-e^{2t}}{2e^{2t}}+c_2\twocol {-e^{-t}}{e^{-t}} =\left [
+							{\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2= c_1\twocol {-e^{2t}}{2e^{2t}}+c_2\twocol {-e^{-t}}{e^{-t}} =\left (
 								\begin {array}{cc}
 									-e^{2t}&amp;-e^{-t}\\
 									2e^{2t}&amp; e^{-t}
 								\end {array}
-							\right ] \left [ 
+							\right ) \left (
 								\begin {array}{c}
 									c_1\\
 									c_2 
 								\end {array}
-							\right ]
+							\right )
 						\end {equation}
 					</li>
 					<li>
 						Setting \(t=0\) in <a href="#x1-25r10">(10.3.10)</a> and imposing the initial condition in <a href="#x1-23r8">(10.3.8)</a> yields
-						\[ 
-							c_1\left [
-								\begin {array}{r}
-									-1 \\
-									2
-								\end {array}
-							\right ]+c_2 \left [
-								\begin {array}{r}
-									-1 \\
-									1
-								\end {array}
-							\right ]= \left [ 
-								\begin {array}{r} 
+						\begin{align*}
+						\left (
+							\begin {array}{cc}
+								-e^{0}&amp;-e^{0}\\
+								2e^{0}&amp; e^{0}
+							\end {array}
+						\right ) \left (
+							\begin {array}{c}
+								c_1\\
+								c_2 
+							\end {array}
+						\right ) & = \left ( 
+								\begin {array}{c} 
 									4 \\
 									-5 
 								\end {array}
-							\right ]
-						\] Thus,
+							\right ) \\
 
-						<div class="eqnarray">
-							\begin {eqnarray*} 
-								-c_1-c_2&amp;=&amp;\phantom {-}4 \\ 
-								2c_1+c_2&amp;=&amp;-5 
-							\end {eqnarray*} 
-						</div>
+							\left (
+							\begin {array}{cc}
+								-1&amp;-1\\
+								2&amp; 1
+							\end {array}
+						\right ) \left (
+							\begin {array}{c}
+								c_1\\
+								c_2 
+							\end {array}
+						\right ) & = \left ( 
+								\begin {array}{c} 
+									4 \\
+									-5 
+								\end {array}
+							\right ) \\
+						\end{align*}
 
-						The solution of this system is \(c_1=-1\), \(c_2=-3\). Substituting these values into <a href="#x1-25r10">(10.3.10)</a> yields
+						Writing as an augmented matrix we can perform row operations
+
+						\begin{align*}
+							\left (
+								\begin {array}{cc|c}
+									-1&amp;-1 & 4\\
+									2 &amp; 1 & -5
+								\end {array}
+							\right ) 
+							\overset{R_2+2R_1}{\longrightarrow}
+							\left (
+								\begin {array}{cc|c}
+									-1&amp;-1 & 4\\
+									0 &amp; -1 & 3
+								\end {array}
+							\right ) 
+							\overset{-R_2}{\longrightarrow}
+							\left (
+								\begin {array}{cc|c}
+									-1&amp;-1 & 4\\
+									0 &amp; 1 & -3
+								\end {array}
+							\right ) \\ \\
+							\overset{R_1+R_2}{\longrightarrow}
+							\left (
+								\begin {array}{cc|c}
+									-1&amp;0 & 1\\
+									0 &amp; 1 & -3
+								\end {array}
+							\right ) 
+							\overset{-R_1}{\longrightarrow}
+							\left (
+								\begin {array}{cc|c}
+									1&amp;0 & -1\\
+									0 &amp; 1 & -3
+								\end {array}
+							\right ) \\
+						\end{align*}
+
+						The solution of this system is \(c_1=-1\), \(c_2=-3\). Substituting these values into <a href="#x1-25r10">(10.3.10)</a> yields the solution of <a href="#x1-23r8">(10.3.8)</a>
 						\[ 
-							{\bf \vec{y}}=-\left [
+							{\bf \vec{y}}=-\left (
 								\begin {array}{c}
 									-e^{2t} \\ 
 									2e^{2t}
 								\end {array} 
-							\right ]-3 \left [ 
+							\right )-3 \left (
 								\begin {array}{c}
 									-e^{-t} \\ 
 									e^{-t} 
 								\end {array}
-							\right ]= \left [ 
+							\right )= \left ( 
 								\begin {array}{c} 
 									e^{2t}+3e^{-t} \\
 									-2e^{2t}-3e^{-t} 
 								\end {array}
-							\right ] 
+							\right )
 						\]
 						
-						as the solution of <a href="#x1-23r8">(10.3.8)</a>.
+						
 					</li>
 				</ol>
 			</details>
