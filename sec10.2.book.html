@@ -205,29 +205,57 @@
 						\twocol 3{22}  & = \twocol 87+ 5\twobytwo 111{-1} \twocol {c_1}{c_2} \\
 						\twocol {-5}{15}  & =  5\twobytwo 111{-1} \twocol {c_1}{c_2} \\
 						\twocol {-1}{3}  & = \twobytwo 111{-1} \twocol {c_1}{c_2} \\
-						\left\{
-							\begin{array}{ccc}
-							c_1+c_2 = -1 \\
-							c_1+c_2 = -1 \\
-							\end{array}
-						\right.
 							
 						\end {align*}
-					</li>
-					<br>
 
-					<li>
-						We must choose \(c_1\) and \(c_2\) in <a href="#x1-9r4">(10.2.4)</a> so that 
-						\[ {1\over 5}\twocol 87+c_1\twocol 11+c_2\twocol 1{-1}={1\over 5}\twocol 3{22}\] 
-						
-						which is equivalent to 
-						\[ \twobytwo 111{-1}\twocol {c_1}{c_2}=\twocol {-1}3\] 
-						
-						Solving this system yields \(c_1=1\), \(c_2=-2\), so 
+						The system of equations can be written in the form of an augmented matrix and we can solve using row operations
+
+						\begin {align*}  
+							\left(
+								\begin{array}{rr|r}
+									1 & 1 & -1 \\ 
+									1 & -1 & 3 \\ 
+								\end{array}
+							\right)
+							&
+							\overset{R_2-R_1}{
+							\longrightarrow}
+							\left(
+								\begin{array}{rr|r}
+									1 & 1 & -1 \\ 
+									0 & -2 & 4 \\ 
+								\end{array}
+							\right) \\
+
+							&
+							\overset{-\frac{1}{2}R_2}{
+							\longrightarrow}
+							\left(
+								\begin{array}{rr|r}
+									1 & 1 & -1 \\ 
+									0 & 1 & -2 \\ 
+								\end{array}
+							\right) \\	
+							&
+							\overset{R_1-R_2}{
+							\longrightarrow}
+							\left(
+								\begin{array}{rr|r}
+									1 & 0 & 1 \\ 
+									0 & 1 & -2 \\ 
+								\end{array}
+							\right) \\							
+						\end {align*}
+
+						Solving this system yields \(c_1=1\), \(c_2=-2\), and substituting in we obtain the solution of the IVP <a href="#x1-11r5">(10.2.5)</a>
+
 						\[ {\bf \vec{y}}={1\over 5}\twocol 87e^{4t}+\twocol 11e^{3t}-2\twocol 1{-1}e^{-t} \] 
 						
-						is the solution of <a href="#x1-11r5">(10.2.5)</a>.
+						
+
+
 					</li>
+				
 				</ol>
 			</details>
 		</div>
@@ -239,7 +267,7 @@
 				P_0(t)y^{(n)}+P_1(t)y^{(n-1)}+\cdots +P_n(t)y=F(t) 
 			\end {equation}
 
-			as developed in Sections&nbsp;9.1. For example, by rewriting <a href="#x1-12r6">(10.2.6)</a> as an equivalent linear system it can be shown that Theorem&nbsp;<a href="#x1-41">10.2.1</a> implies Theorem&nbsp;<span class="ptmb8t-">9.1.1</span> (Exercise&nbsp;<span class="ptmb8t-">12</span>).
+			as developed in Sections&nbsp;9.1. For example, by rewriting <a href="#x1-12r6">(10.2.6)</a> as an equivalent linear system it can be shown that Theorem&nbsp;<a href="#x1-41">10.2.1</a> implies Theorem&nbsp;<a href="sec9.1.book.html#x1-41" tager=_blank>9.1.1</a>
 		</div>
 
 		<nav class="ex">
