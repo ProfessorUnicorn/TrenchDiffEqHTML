@@ -385,8 +385,8 @@
 			fixme
 
 			\begin {align*} 
-					\begin{array}{cccc}
-						{\bf \vec{y}} &=&c_1{\bf \vec{y}}_1(t) &+& c_2{\bf \vec{y}}_2(t) &+& c_3{\bf \vec{y}}_3(t) \\ \\
+					\begin{array}{ccccc}
+						{\bf \vec{y}} &=&c_1{\bf \vec{y}}_1(t) &+& c_2{\bf \vec{y}}_2(t) &+& \dots &+& c_n{\bf \vec{y}}_n(t) \\ \\
 						{\bf \vec{y}} &=&
 						c_1
 							\left (
@@ -405,7 +405,8 @@
 									y_{n2}\\
 								\end {array}
 							\right ) &+& 
-						c_3\left ( 
+							\dots &+&
+						c_n\left ( 
 								\begin {array}{c}
 									y_{1n}\\
 									y_{2n}\\
@@ -420,64 +421,27 @@
 				Which we can write in matrix form as
 
 				\begin{align*}
-				\left ( 
+				{\bf \vec{y}} = &
+				\underset{{\bf Y}}{\underbrace{\left ( 
 					\begin {array}{ccc}
-						e^t & 0 & e^{2t} \\ 
-						0 & e^{3t} & e^{3t} \\ 
-						e^{-t} & 1 & 0 \\ 
+						y_{11} & y_{12} & \dots & y_{1n} \\ 
+						y_{21} & y_{22} & \dots & y_{2n} \\ 
+						\vdots & \vdots & \ddots & \vdots \\ 
+						
+						y_{n1} & y_{n2} & \dots & y_{nn} \\ 
 					\end {array}
-				\right )
-					\left ( 
+				\right )}}
+				\underset{{\bf \vec{c}}}{\underbrace{\left ( 
 						\begin {array}{c}
 							c_1\\
 							c_2\\
-							c_3 
+							\vdots \\
+							c_n
 						\end {array}
-					\right )
-				=
-					\left ( 
-						\begin {array}{c}
-							0\\
-							0\\
-							0 
-						\end {array}
-					\right )
+					\right )}}
 			\end{align*}
 		</div>
-		<div class="eqnarray" id="e0f51a8d-bba4-47c6-9985-c2e4ffbfa2f7">
-			 \begin {eqnarray*} 
-			 	{\bf \vec{y}}&amp;=&amp; c_1\left [ 
-					\begin {array}{c} 
-						y_{11}\\
-						y_{21}\\ 
-						\vdots \\ 
-						y_{n1} 
-					\end {array}
-				\right ]+ c_2\left [
-					\begin {array}{c} 
-						y_{12}\\
-						y_{22}\\ 
-						\vdots \\ 
-						y_{n2}
-					\end {array}
-				\right ]+\cdots +c_n\left [
-					\begin {array}{c} 
-						y_{1n}\\
-						y_{2n}\\ 
-						\vdots \\ 
-						y_{nn}
-					\end {array}
-				\right ]\\ 
-				&amp;=&amp;\left [ 
-					\begin {array}{cccc} 
-						y_{11}&amp;y_{12}&amp;\cdots &amp;y_{1n} \\ 
-						y_{21}&amp;y_{22}&amp;\cdots &amp;y_{2n}\\ 
-						\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ 
-						y_{n1}&amp;y_{n2}&amp;\cdots &amp;y_{nn} \\ 
-					\end {array}
-				\right ]\col cn
-			\end {eqnarray*} 
-		</div>
+
 		<div id="a5a62285-527d-4afd-92f0-331d2009fc78">
 			 This shows that 
 			 <a id="x1-6r3"></a> 
