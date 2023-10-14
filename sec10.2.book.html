@@ -35,242 +35,248 @@
 				\newcommand{\cthreebythree}[9]{\left( \begin {array}{ccc} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9  \end{array}\right)} 
 			\) 
 		</div>
+
 		<div id="eac6e669-9e47-49c9-94e7-a271306e66de" class="section-title">
 			 10.2 Linear Systems of Differential Equations 
 		</div>
-		<div id="4d51b0ec-0b89-4f66-b00d-a6408832a81d">
-			 A first order system of differential equations that can be written in the form
-			 <a id="x1-2r1"></a> 
-			 \begin {equation}
-			 	\label {eq:10.2.1} 
-				\begin {array}{ccl} 
-					\dfrac{dy_1}{dt} &amp;=&amp;a_{11}(t)y_1+a_{12}(t)y_2+\cdots +a_{1n}(t)y_n+f_1(t)\\ 
-					\dfrac{dy_2}{dt} &amp;=&amp;a_{21}(t)y_1+a_{22}(t)y_2+\cdots +a_{2n}(t)y_n+f_2(t)\\ 
-					&amp;\vdots \\ 
-					\dfrac{dy_n}{dt} &amp; =&amp;a_{n1}(t)y_1+a_{n2}(t)y_2+\cdots +a_{nn}(t)y_n+f_n(t) 
-				\end {array} 
-			\end {equation}
-			is called a <span class="vocab">linear system</span>.
-		</div>
-		<div class="indent" id="02fed7d8-7e4a-42d7-8bb3-c41761cffc65">
-			The linear system <a href="#x1-2r1">(10.2.1)</a> can be written in matrix form as
-			\[ \col { \dfrac{dy}{dt} }n=\matfunc ann\col yn+\colfunc fn\]
-			
-			or more briefly as
 
-			<a id="x1-3r2"></a> 
-			\begin {equation} 
-				\label {eq:10.2.2} 
-				\dfrac{d{\bf \vec{y}}}{dt}={\bf{A}}(t)\, {\bf \vec{y}}+{\bf \vec{f}}(t) 
-			\end {equation}
+		<details id="d1">
+			<summary>Rewrite in Matrix Form</summary>
 
-			where 
-			
-			\[ {\bf \vec{y}}=\col yn,\quad {\bf{A}}(t)=\matfunc ann,\quad \mbox{ and } \quad {\bf \vec{f}}(t)=\colfunc fn\] 
-			
-			We call \({\bf{A}}(t)\) the <span class="vocab">coefficient matrix</span> of <a href="#x1-3r2">(10.2.2)</a> and \({\bf \vec{f}}(t)\) the <span class="vocab">forcing function</span>. We’ll say that \({\bf{A}}(t)\) and \({\bf \vec{f}}(t)\) are <span class="vocab">continuous</span> if their entries are continuous. If \({{\bf \vec{f}}(t)}\equiv{\bf \vec{0}}\), then the equation <a href="#x1-3r2">(10.2.2)</a> is <span class="vocab">homogeneous</span> otherwise it's <span class="vocab">nonhomogeneous</span>.
-		</div>
-		<div class="indent" id="4c1b072e-bf36-4186-ae1a-8983938c04d1">
-			An IVP for <a href="#x1-3r2">(10.2.2)</a> consists of finding a solution of <a href="#x1-3r2">(10.2.2)</a> that equals a given constant vector at some initial point \(t_0\)
-			\[ {\bf \vec{k}} =\col kn\] 
-			
-			 We write this IVP as 
-			\[ \dfrac{d{\bf \vec{y}}}{dt}={\bf{A}}(t) \,{\bf \vec{y}}+{\bf \vec{f}}(t) \quad {\bf \vec{y}}(t_0)={\bf \vec{k}}\]
-		</div>
-		<div class="indent" id="2b31e1b5-7ade-471d-b77f-f38c717749d6">
-			The next theorem gives sufficient conditions for the existence of solutions of IVPs for <a href="#x1-3r2">(10.2.2)</a>.
-		</div>
-		<div class="theorem" id="x1-41">
-			<span class="head">Theorem&nbsp;10.2.1</span>
-			Suppose the coefficient matrix \({\bf{A}}(t)\) and the forcing function \({\bf \vec{f}}(t)\) are continuous on \((a,b)\), let \(t_0\) be in \((a,b)\), and let \(\bf \vec{k}\) be an arbitrary constant \(n\)-vector. Then the following IVP has a unique solution on \((a,b)\)
-			\[ \dfrac{d{\bf \vec{y}}}{dt}={\bf{A}}(t)\,{\bf \vec{y}}+{\bf \vec{f}}(t) \quad {\bf \vec{y}}(t_0)={\bf \vec{k}} \] 
-			
-		</div>
+			<div id="4d51b0ec-0b89-4f66-b00d-a6408832a81d">
+				A first order system of differential equations that can be written in the form
+				<a id="x1-2r1"></a> 
+				\begin {equation}
+					\label {eq:10.2.1} 
+					\begin {array}{ccl} 
+						\dfrac{dy_1}{dt} &amp;=&amp;a_{11}(t)y_1+a_{12}(t)y_2+\cdots +a_{1n}(t)y_n+f_1(t)\\ 
+						\dfrac{dy_2}{dt} &amp;=&amp;a_{21}(t)y_1+a_{22}(t)y_2+\cdots +a_{2n}(t)y_n+f_2(t)\\ 
+						&amp;\vdots \\ 
+						\dfrac{dy_n}{dt} &amp; =&amp;a_{n1}(t)y_1+a_{n2}(t)y_2+\cdots +a_{nn}(t)y_n+f_n(t) 
+					\end {array} 
+				\end {equation}
+				is called a <span class="vocab">linear system</span>.
+			</div>
+			<div class="indent" id="02fed7d8-7e4a-42d7-8bb3-c41761cffc65">
+				The linear system <a href="#x1-2r1">(10.2.1)</a> can be written in matrix form as
+				\[ \col { \dfrac{dy}{dt} }n=\matfunc ann\col yn+\colfunc fn\]
+				
+				or more briefly as
 
-		<div class="example" id="x1-51" style="--ex-number: 1">
-			<ol>
-				<li>
-					Write the system in matrix form and conclude from Theorem&nbsp;<a href="#x1-41">10.2.1</a> that every IVP for <a href="#x1-7r3">(10.2.3)</a> has a unique solution on \((-\infty ,\infty )\)
+				<a id="x1-3r2"></a> 
+				\begin {equation} 
+					\label {eq:10.2.2} 
+					\dfrac{d{\bf \vec{y}}}{dt}={\bf{A}}(t)\, {\bf \vec{y}}+{\bf \vec{f}}(t) 
+				\end {equation}
 
-					<a id="x1-7r3"></a>
-					\begin {equation} 
-						\label {eq:10.2.3} 
-						\begin {array}{rcl} 
-							\dfrac{dy_1}{dt}&amp;=&amp;\phantom {2}y_1+2y_2+2e^{4t} \\ 
-							\dfrac{dy_2}{dt}&amp;=&amp;2y_1+\phantom {2}y_2+\phantom {2}e^{4t} 
-						\end {array}
-					\end {equation}
+				where 
+				
+				\[ {\bf \vec{y}}=\col yn,\quad {\bf{A}}(t)=\matfunc ann,\quad \mbox{ and } \quad {\bf \vec{f}}(t)=\colfunc fn\] 
+				
+				We call \({\bf{A}}(t)\) the <span class="vocab">coefficient matrix</span> of <a href="#x1-3r2">(10.2.2)</a> and \({\bf \vec{f}}(t)\) the <span class="vocab">forcing function</span>. We’ll say that \({\bf{A}}(t)\) and \({\bf \vec{f}}(t)\) are <span class="vocab">continuous</span> if their entries are continuous. If \({{\bf \vec{f}}(t)}\equiv{\bf \vec{0}}\), then the equation <a href="#x1-3r2">(10.2.2)</a> is <span class="vocab">homogeneous</span> otherwise it's <span class="vocab">nonhomogeneous</span>.
+			</div>
+			<div class="indent" id="4c1b072e-bf36-4186-ae1a-8983938c04d1">
+				An IVP for <a href="#x1-3r2">(10.2.2)</a> consists of finding a solution of <a href="#x1-3r2">(10.2.2)</a> that equals a given constant vector at some initial point \(t_0\)
+				\[ {\bf \vec{k}} =\col kn\] 
+				
+				We write this IVP as 
+				\[ \dfrac{d{\bf \vec{y}}}{dt}={\bf{A}}(t) \,{\bf \vec{y}}+{\bf \vec{f}}(t) \quad {\bf \vec{y}}(t_0)={\bf \vec{k}}\]
+			</div>
+			<div class="indent" id="2b31e1b5-7ade-471d-b77f-f38c717749d6">
+				The next theorem gives sufficient conditions for the existence of solutions of IVPs for <a href="#x1-3r2">(10.2.2)</a>.
+			</div>
+			<div class="theorem" id="x1-41">
+				<span class="head">Theorem&nbsp;10.2.1</span>
+				Suppose the coefficient matrix \({\bf{A}}(t)\) and the forcing function \({\bf \vec{f}}(t)\) are continuous on \((a,b)\), let \(t_0\) be in \((a,b)\), and let \(\bf \vec{k}\) be an arbitrary constant \(n\)-vector. Then the following IVP has a unique solution on \((a,b)\)
+				\[ \dfrac{d{\bf \vec{y}}}{dt}={\bf{A}}(t)\,{\bf \vec{y}}+{\bf \vec{f}}(t) \quad {\bf \vec{y}}(t_0)={\bf \vec{k}} \] 
+				
+			</div>
 
-					
-				</li>
-				<li>
-					Verify that <a href="#x1-9r4">(10.2.4)</a> is a solution of <a href="#x1-7r3">(10.2.3)</a> for all values of the constants \(c_1\) and \(c_2\)
-					<a id="x1-9r4"></a> 
-					\begin {equation} 
-						\label {eq:10.2.4} 
-						{\bf \vec{y}}= {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} 
-					\end {equation}
-					
-				</li>
-				<li>
-						Find the solution of the IVP 
-						<a id="x1-11r5"></a> 
-						\begin {equation} 
-						\label {eq:10.2.5} 
-						\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t}\quad {\bf \vec{y}}(0)={1\over 5}\twocol 3{22} 
-						\end {equation}
-				</li>
-			</ol>
-
-			<details class="solution">
-				<summary>Solution</summary>
+			<div class="example" id="x1-51" style="--ex-number: 1">
 				<ol>
 					<li>
-						The system <a href="#x1-7r3">(10.2.3)</a> can be written in matrix form as 
-						\begin {align*}  
-							&	
-							\left\{
+						Write the system in matrix form and conclude from Theorem&nbsp;<a href="#x1-41">10.2.1</a> that every IVP for <a href="#x1-7r3">(10.2.3)</a> has a unique solution on \((-\infty ,\infty )\)
+
+						<a id="x1-7r3"></a>
+						\begin {equation} 
+							\label {eq:10.2.3} 
 							\begin {array}{rcl} 
 								\dfrac{dy_1}{dt}&amp;=&amp;\phantom {2}y_1+2y_2+2e^{4t} \\ 
 								\dfrac{dy_2}{dt}&amp;=&amp;2y_1+\phantom {2}y_2+\phantom {2}e^{4t} 
 							\end {array}
-							\right.
-							\\ \\
-							&
-							\dfrac{d}{dt}\twocol {y_1}{y_2}
-							=\twobytwo 1221\twocol {y_1}{y_2}+\twocol {2e^{4t}}{e^{4t}}
-							\\ \\
-							\quad & \quad\quad 
-							\dfrac{d{\bf \vec{y}}}{dt}
-							=\twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t}
-							
-						\end {align*}
+						\end {equation}
 
-						 
 						
-						An IVP for <a href="#x1-7r3">(10.2.3)</a> can be written as 
-						\[ \dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t} \quad y(t_0)=\twocol {k_1}{k_2}\] 
-						
-						Since the coefficient matrix and the forcing function are both continuous on \((-\infty ,\infty )\), Theorem&nbsp;<a href="#x1-41">10.2.1</a> implies that this problem has a unique solution on \((-\infty ,\infty )\).
 					</li>
-					<br>
 					<li>
-						We can verify <a href="#x1-9r4">(10.2.4)</a> is a solution to the system of differential equations <a href="#x1-7r3">(10.2.3)</a> differentiating and substituting. The left side of the equation is just the derivative so we differentiate:
-
-						\begin {align*} 
-							{\bf \vec{y}} & = {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} \\
-							\frac{d{\bf \vec{y}}}{dt} & = \frac{d}{dt} \Bigg[ {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} \Bigg] \\
-							& =  {1\over 5}\twocol 87 \frac{d}{dt} \big(e^{4t}\big) +c_1\twocol 11\frac{d}{dt} \big(e^{3t}\big)+c_2\twocol 1{-1}\frac{d}{dt} \big(e^{-t}\big)  \\
-							& =  {4\over 5}\twocol 87 e^{4t} + 3c_1\twocol 11 e^{3t} -c_2\twocol 1{-1} e^{-t}  \\
-							& =  {4\over 5}\twocol 87 e^{4t} + 3c_1\twocol 11 e^{3t} +c_2\twocol {-1}{1} e^{-t}  \\
-						\end {align*}
-
-						Now we'll substitute <a href="#x1-9r4">(10.2.4)</a> into the right side of the equation <a href="#x1-7r3">(10.2.3)</a> to confirm it matches.
-
-						\begin {align*} 
-							& \twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t} \\
-							= & \twobytwo 1221\Bigg[ {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} \Bigg]+\twocol 21e^{4t} \\
-							= & \Bigg[ {1\over 5}\twobytwo 1221\twocol 87e^{4t}+c_1\twobytwo 1221\twocol 11e^{3t}+c_2\twobytwo 1221\twocol 1{-1}e^{-t} \Bigg]+\twocol 21e^{4t} \\
-							
-							= & \Bigg[ {1\over 5}\twocol {8 + 14}{16 + 7}e^{4t}+c_1\twocol {1 + 2 }{2 + 1 }e^{3t}+c_2\twocol {1 - 2 }{2  - 1 }e^{-t} \Bigg]+\twocol 21e^{4t} \\
-							= & \Bigg[ {1\over 5}\twocol {22}{23}e^{4t}+c_1\twocol {3}{3}e^{3t}+c_2\twocol {-1}{1}e^{-t} \Bigg]+\twocol 21e^{4t} \\
-							= & \Bigg[ {1\over 5}\twocol {22}{23}e^{4t}
-							+{1\over 5}\twocol {10}{5}e^{4t}\Bigg] 					+c_1\twocol {3}{3}e^{3t}+c_2\twocol {-1}{1}e^{-t}\\
-							= & {1\over 5}\twocol {32}{28}e^{4t}
-								+c_1\twocol {3}{3}e^{3t}+c_2\twocol {-1}{1}e^{-t}\\
-							= & \underset{{\dfrac{d{\bf \vec{y}}}{dt}}}{\underbrace{{4\over 5}\twocol {8}{7}e^{4t}
-							+c_1\twocol {3}{3}e^{3t}+c_2\twocol {-1}{1}e^{-t}}}\\
-						\end {align*}
+						Verify that <a href="#x1-9r4">(10.2.4)</a> is a solution of <a href="#x1-7r3">(10.2.3)</a> for all values of the constants \(c_1\) and \(c_2\)
+						<a id="x1-9r4"></a> 
+						\begin {equation} 
+							\label {eq:10.2.4} 
+							{\bf \vec{y}}= {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} 
+						\end {equation}
+						
 					</li>
-					<br>
-
 					<li>
-						We already verified the solution
-						\begin {align*}  
-							
-						{\bf \vec{y}} & = {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} 
-							
-						\end {align*}
-
-						No we'll apply the initial condition
-						\[
-						{\bf \vec{y}}(0)={1\over 5}\twocol 3{22} 
-						\]
-
-						\begin {align*}  
-							
-						{\bf \vec{y}}(0) 
-						& = {1\over 5}\twocol 87e^{0}+c_1\twocol 11e^{0}+c_2\twocol 1{-1}e^{0} \\
-						{1\over 5}\twocol 3{22}  & = {1\over 5}\twocol 87+ \twobytwo 111{-1} \twocol {c_1}{c_2} \\
-						\twocol 3{22}  & = \twocol 87+ 5\twobytwo 111{-1} \twocol {c_1}{c_2} \\
-						\twocol {-5}{15}  & =  5\twobytwo 111{-1} \twocol {c_1}{c_2} \\
-						\twocol {-1}{3}  & = \twobytwo 111{-1} \twocol {c_1}{c_2} \\
-							
-						\end {align*}
-
-						The system of equations can be written in the form of an augmented matrix and we can solve using row operations
-
-						\begin {align*}  
-							\left(
-								\begin{array}{rr|r}
-									1 & 1 & -1 \\ 
-									1 & -1 & 3 \\ 
-								\end{array}
-							\right)
-							&
-							\overset{R_2-R_1}{
-							\longrightarrow}
-							\left(
-								\begin{array}{rr|r}
-									1 & 1 & -1 \\ 
-									0 & -2 & 4 \\ 
-								\end{array}
-							\right) \\
-
-							&
-							\overset{-\frac{1}{2}R_2}{
-							\longrightarrow}
-							\left(
-								\begin{array}{rr|r}
-									1 & 1 & -1 \\ 
-									0 & 1 & -2 \\ 
-								\end{array}
-							\right) \\	
-							&
-							\overset{R_1-R_2}{
-							\longrightarrow}
-							\left(
-								\begin{array}{rr|r}
-									1 & 0 & 1 \\ 
-									0 & 1 & -2 \\ 
-								\end{array}
-							\right) \\							
-						\end {align*}
-
-						Solving this system yields \(c_1=1\), \(c_2=-2\), and substituting in we obtain the solution of the IVP <a href="#x1-11r5">(10.2.5)</a>
-
-						\[ {\bf \vec{y}}={1\over 5}\twocol 87e^{4t}+\twocol 11e^{3t}-2\twocol 1{-1}e^{-t} \] 
-						
-						
-
-
+							Find the solution of the IVP 
+							<a id="x1-11r5"></a> 
+							\begin {equation} 
+							\label {eq:10.2.5} 
+							\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t}\quad {\bf \vec{y}}(0)={1\over 5}\twocol 3{22} 
+							\end {equation}
 					</li>
-				
 				</ol>
-			</details>
-		</div>
-		<div id="c458d589-6a16-4f49-ad0d-f7224f0d8319">
-			<strong>Remark:</strong> The theory of \(n\times n\) linear systems of differential equations is analogous to the theory of the scalar \(n\)-th order equation 
-			<a id="x1-12r6"></a> 
-			\begin {equation} 
-				\label {eq:10.2.6} 
-				P_0(t)\frac{d^n y}{dt^n} + P_1(t) \frac{d^{n-1} y}{dt^{n-1}} + \cdots + P_{n-1}(t)\frac{dy}{dt} + P_n(t)y=F(t)  
-			\end {equation}
 
-		
+				<details class="solution">
+					<summary>Solution</summary>
+					<ol>
+						<li>
+							The system <a href="#x1-7r3">(10.2.3)</a> can be written in matrix form as 
+							\begin {align*}  
+								&	
+								\left\{
+								\begin {array}{rcl} 
+									\dfrac{dy_1}{dt}&amp;=&amp;\phantom {2}y_1+2y_2+2e^{4t} \\ 
+									\dfrac{dy_2}{dt}&amp;=&amp;2y_1+\phantom {2}y_2+\phantom {2}e^{4t} 
+								\end {array}
+								\right.
+								\\ \\
+								&
+								\dfrac{d}{dt}\twocol {y_1}{y_2}
+								=\twobytwo 1221\twocol {y_1}{y_2}+\twocol {2e^{4t}}{e^{4t}}
+								\\ \\
+								\quad & \quad\quad 
+								\dfrac{d{\bf \vec{y}}}{dt}
+								=\twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t}
+								
+							\end {align*}
 
-			as developed in Sections&nbsp;<a href="sec9.1.book.html" target=_blank>9.1</a>. For example, by rewriting <a href="#x1-12r6">(10.2.6)</a> as an equivalent linear system it can be shown that Theorem&nbsp;<a href="#x1-41">10.2.1</a> implies Theorem&nbsp;<a href="sec9.1.book.html#x1-41" target=_blank>9.1.1</a>
-		</div>
+							
+							
+							An IVP for <a href="#x1-7r3">(10.2.3)</a> can be written as 
+							\[ \dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t} \quad y(t_0)=\twocol {k_1}{k_2}\] 
+							
+							Since the coefficient matrix and the forcing function are both continuous on \((-\infty ,\infty )\), Theorem&nbsp;<a href="#x1-41">10.2.1</a> implies that this problem has a unique solution on \((-\infty ,\infty )\).
+						</li>
+						<br>
+						<li>
+							We can verify <a href="#x1-9r4">(10.2.4)</a> is a solution to the system of differential equations <a href="#x1-7r3">(10.2.3)</a> differentiating and substituting. The left side of the equation is just the derivative so we differentiate:
+
+							\begin {align*} 
+								{\bf \vec{y}} & = {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} \\
+								\frac{d{\bf \vec{y}}}{dt} & = \frac{d}{dt} \Bigg[ {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} \Bigg] \\
+								& =  {1\over 5}\twocol 87 \frac{d}{dt} \big(e^{4t}\big) +c_1\twocol 11\frac{d}{dt} \big(e^{3t}\big)+c_2\twocol 1{-1}\frac{d}{dt} \big(e^{-t}\big)  \\
+								& =  {4\over 5}\twocol 87 e^{4t} + 3c_1\twocol 11 e^{3t} -c_2\twocol 1{-1} e^{-t}  \\
+								& =  {4\over 5}\twocol 87 e^{4t} + 3c_1\twocol 11 e^{3t} +c_2\twocol {-1}{1} e^{-t}  \\
+							\end {align*}
+
+							Now we'll substitute <a href="#x1-9r4">(10.2.4)</a> into the right side of the equation <a href="#x1-7r3">(10.2.3)</a> to confirm it matches.
+
+							\begin {align*} 
+								& \twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t} \\
+								= & \twobytwo 1221\Bigg[ {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} \Bigg]+\twocol 21e^{4t} \\
+								= & \Bigg[ {1\over 5}\twobytwo 1221\twocol 87e^{4t}+c_1\twobytwo 1221\twocol 11e^{3t}+c_2\twobytwo 1221\twocol 1{-1}e^{-t} \Bigg]+\twocol 21e^{4t} \\
+								
+								= & \Bigg[ {1\over 5}\twocol {8 + 14}{16 + 7}e^{4t}+c_1\twocol {1 + 2 }{2 + 1 }e^{3t}+c_2\twocol {1 - 2 }{2  - 1 }e^{-t} \Bigg]+\twocol 21e^{4t} \\
+								= & \Bigg[ {1\over 5}\twocol {22}{23}e^{4t}+c_1\twocol {3}{3}e^{3t}+c_2\twocol {-1}{1}e^{-t} \Bigg]+\twocol 21e^{4t} \\
+								= & \Bigg[ {1\over 5}\twocol {22}{23}e^{4t}
+								+{1\over 5}\twocol {10}{5}e^{4t}\Bigg] 					+c_1\twocol {3}{3}e^{3t}+c_2\twocol {-1}{1}e^{-t}\\
+								= & {1\over 5}\twocol {32}{28}e^{4t}
+									+c_1\twocol {3}{3}e^{3t}+c_2\twocol {-1}{1}e^{-t}\\
+								= & \underset{{\dfrac{d{\bf \vec{y}}}{dt}}}{\underbrace{{4\over 5}\twocol {8}{7}e^{4t}
+								+c_1\twocol {3}{3}e^{3t}+c_2\twocol {-1}{1}e^{-t}}}\\
+							\end {align*}
+						</li>
+						<br>
+
+						<li>
+							We already verified the solution
+							\begin {align*}  
+								
+							{\bf \vec{y}} & = {1\over 5}\twocol 87e^{4t}+c_1\twocol 11e^{3t}+c_2\twocol 1{-1}e^{-t} 
+								
+							\end {align*}
+
+							No we'll apply the initial condition
+							\[
+							{\bf \vec{y}}(0)={1\over 5}\twocol 3{22} 
+							\]
+
+							\begin {align*}  
+								
+							{\bf \vec{y}}(0) 
+							& = {1\over 5}\twocol 87e^{0}+c_1\twocol 11e^{0}+c_2\twocol 1{-1}e^{0} \\
+							{1\over 5}\twocol 3{22}  & = {1\over 5}\twocol 87+ \twobytwo 111{-1} \twocol {c_1}{c_2} \\
+							\twocol 3{22}  & = \twocol 87+ 5\twobytwo 111{-1} \twocol {c_1}{c_2} \\
+							\twocol {-5}{15}  & =  5\twobytwo 111{-1} \twocol {c_1}{c_2} \\
+							\twocol {-1}{3}  & = \twobytwo 111{-1} \twocol {c_1}{c_2} \\
+								
+							\end {align*}
+
+							The system of equations can be written in the form of an augmented matrix and we can solve using row operations
+
+							\begin {align*}  
+								\left(
+									\begin{array}{rr|r}
+										1 & 1 & -1 \\ 
+										1 & -1 & 3 \\ 
+									\end{array}
+								\right)
+								&
+								\overset{R_2-R_1}{
+								\longrightarrow}
+								\left(
+									\begin{array}{rr|r}
+										1 & 1 & -1 \\ 
+										0 & -2 & 4 \\ 
+									\end{array}
+								\right) \\
+
+								&
+								\overset{-\frac{1}{2}R_2}{
+								\longrightarrow}
+								\left(
+									\begin{array}{rr|r}
+										1 & 1 & -1 \\ 
+										0 & 1 & -2 \\ 
+									\end{array}
+								\right) \\	
+								&
+								\overset{R_1-R_2}{
+								\longrightarrow}
+								\left(
+									\begin{array}{rr|r}
+										1 & 0 & 1 \\ 
+										0 & 1 & -2 \\ 
+									\end{array}
+								\right) \\							
+							\end {align*}
+
+							Solving this system yields \(c_1=1\), \(c_2=-2\), and substituting in we obtain the solution of the IVP <a href="#x1-11r5">(10.2.5)</a>
+
+							\[ {\bf \vec{y}}={1\over 5}\twocol 87e^{4t}+\twocol 11e^{3t}-2\twocol 1{-1}e^{-t} \] 
+							
+							
+
+
+						</li>
+					
+					</ol>
+				</details>
+			</div>
+			<div id="c458d589-6a16-4f49-ad0d-f7224f0d8319">
+				<strong>Remark:</strong> The theory of \(n\times n\) linear systems of differential equations is analogous to the theory of the scalar \(n\)-th order equation 
+				<a id="x1-12r6"></a> 
+				\begin {equation} 
+					\label {eq:10.2.6} 
+					P_0(t)\frac{d^n y}{dt^n} + P_1(t) \frac{d^{n-1} y}{dt^{n-1}} + \cdots + P_{n-1}(t)\frac{dy}{dt} + P_n(t)y=F(t)  
+				\end {equation}
+
+			
+
+				as developed in Sections&nbsp;<a href="sec9.1.book.html" target=_blank>9.1</a>. For example, by rewriting <a href="#x1-12r6">(10.2.6)</a> as an equivalent linear system it can be shown that Theorem&nbsp;<a href="#x1-41">10.2.1</a> implies Theorem&nbsp;<a href="sec9.1.book.html#x1-41" target=_blank>9.1.1</a>
+			</div>
+		</details>
 
 		<nav class="ex">
 			<a href="sec10.2.ex.html">10.2 Exercises</a>
