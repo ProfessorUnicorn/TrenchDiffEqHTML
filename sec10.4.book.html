@@ -95,7 +95,7 @@
 						
 					\end{align*}
 
-					Now to factor out the vector expression \({\bf \vec{u}} e^{rt}\) we have to write a factor of the indentity matrix \({\bf I} \)
+					Now to factor out the vector expression \({\bf \vec{u}} e^{rt}\) we have to write a factor of the identity matrix \({\bf I} \)
 
 
 					\begin{align*}
@@ -103,25 +103,233 @@
 					
 						{\bf \vec{0}} & =\left[\twobytwo {-4}{-3}65  - r{\bf \vec{I}} \right] {\bf \vec{u}} e^{rt} \\ \\
 
-						{\bf \vec{0}} & =\left[\twobytwo {-4}{-3}65  - r \twobytwo 1001 \right] {\bf \vec{u}} \\ \\
-
-						{\bf \vec{0}} & =\twobytwo {-4-r}{-3}6{5-r}   {\bf \vec{u}} \\ \\
-
-						fixme
+					
 					\end{align*}
 
+					Substituting in \({\bf \vec{I}} = \twobytwo 1001\) the definition of the identity matrix we obtain
 
 					\begin{align*}
-						{\bf \vec{0}} & =\twobytwo {-4}{-3}65 {\bf \vec{u}} e^{rt} - r{\bf I} \cdot {\bf \vec{u}} e^{rt} \\ \\
 					
-						{\bf \vec{0}} & =\left[\twobytwo {-4}{-3}65  - r{\bf \vec{I}} \right] {\bf \vec{u}} e^{rt} \\ \\
 
 						{\bf \vec{0}} & =\left[\twobytwo {-4}{-3}65  - r \twobytwo 1001 \right] {\bf \vec{u}} \\ \\
 
 						{\bf \vec{0}} & =\twobytwo {-4-r}{-3}6{5-r}   {\bf \vec{u}} \\ \\
 
-						fixme
+						\twocol 00 & =\twobytwo {-4-r}{-3}6{5-r}   \twocol {u_1}{u_2} \\ \\
+
+				
 					\end{align*}
+
+					Which can be written as a system of equations
+
+					<a id="x1-4r3"></a>
+					\begin{align} \label {eq:10.4.3} 
+						\left\{
+							\begin{array}{ccc}
+								(-4-r)u_1 &-& 3u_2 &=& 0 \\
+								6u_1 &+& (5-r)u_2 &=& 0 \\
+							\end{array}
+						\right.
+					
+					\end{align}
+
+					Recall that if the determinant of the coefficient matrix of a system is nonzero then the system has only the trivial solution.
+					Similarly if the determinant is zero then the system has a nontrivial solution. Therefore to seek nontrivial solutions we must guarantee that the determinant of the coefficient matrix is zero
+
+					\begin{align*}
+						\det
+						\left(
+							\begin{array}{ccc}
+								-4-r & -3  \\
+								6 & 5-r \\
+							\end{array}
+						\right) & =0 \\ \\
+						(-4-r)(5-r)+3\cdot 6 & =0 \\
+						(r^2-r-20)+18 & =0 \\
+						\underset{p(r)}{\underbrace{r^2-r-2}} & =0 \\
+					
+					\end{align*}
+
+					So we have our characteristic polynomial \(p(r)=r^2-r-2\) and characteristic equation \(p(r)=0\) which we can solve by factoring in this case
+
+					\begin{align*}
+						r^2-r-2 & =0 \\
+						(r+1)(r-2) & =0 \\
+						r+1= 0 \quad r-2 & =0 \\
+						r= -1 \quad r =& \,2  \\
+						r_1= -1 \quad r_2 =& \,2  \\
+					
+					\end{align*}
+
+					We'll call the roots of the characteristic polynomial <span class="vocab">eigenvalues</span> and the solutions to the system are
+
+					\begin{align*}
+					{\bf \vec{y}_1} & = {\bf \vec{u}_1} e^{r_1t}= {\bf \vec{u}_1} e^{-t}
+					\quad\text{and}\quad
+					{\bf \vec{y}_2} = {\bf \vec{u}_2} e^{r_2t} ={\bf \vec{u}_2} e^{2t} \\
+					\end{align*}
+
+					But we are not done solving since we still need to determine \({\bf \vec{u}_1}\) and \({\bf \vec{u}_2}\) the unknown vectors. For each eigenvalue, the associated vector is called an  <span class="vocab">eigenvector</span>, so \({\bf \vec{u}_1}\) is the eigenvector for \(r_1=-1\) and  \({\bf \vec{u}_2}\) is the eigenvector for \(r_2=2\) and we'll determine them using the system of equations <a href="#x1-4r3">(10.4.3)</a> 
+
+					\begin{align*} 
+						\left\{
+							\begin{array}{ccc}
+								(-4-r)u_1 &-& 3u_2 &=& 0 \\
+								6u_1 &+& (5-r)u_2 &=& 0 \\
+							\end{array}
+						\right. \tag{3}
+					
+					\end{align*}
+
+					Substituting \(r_1=-1\) we have 
+
+					\begin{align*} 
+						\left\{
+							\begin{array}{ccc}
+								(-4-r_1)u_1 &-& 3u_2 &=& 0 \\
+								6u_1 &+& (5-r_1)u_2 &=& 0 \\
+							\end{array}
+						\right. \\ \\
+						\left\{
+							\begin{array}{ccc}
+								(-4+1)u_1 &-& 3u_2 &=& 0 \\
+								6u_1 &+& (5+1)u_2 &=& 0 \\
+							\end{array}
+						\right.  \\ \\
+						\left\{
+							\begin{array}{ccc}
+								-3u_1 &-& 3u_2 &=& 0 \\
+								6u_1 &+& 6u_2 &=& 0 \\
+							\end{array}
+						\right.  \\ \\
+
+						\left\{
+							\begin{array}{ccc}
+								u_1 &+& u_2 &=& 0 \\
+								u_1 &+& u_2 &=& 0 \\
+							\end{array}
+						\right.  \\ \\
+					
+					\end{align*}
+
+					The system simplies down to the single equation 
+
+					\[u_1 + u_2 = 0 \]
+
+					Since we have only 1 equation with 2 unknowns then we have a 
+					<span class="vocab">free variable</span>, so we'll let \(u_1=c\) where \(c\) is any number. Then we can solve for \(u_2\) in terms of \(c\) 
+
+					\begin{align*} 
+						u_1 + u_2 & = 0 \\
+						c + u_2 & = 0 \\
+						u_2 & = -c \\
+					\end{align*}
+
+					Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}_1}\)
+
+					\[
+					{\bf \vec{u}_1}
+					=\twocol {u_1}{u_2}
+					=\twocol {c}{-c}
+					=c\twocol {1}{-1}
+					\]
+
+					Since \(c\) can be any number we'll select \(c=1\) for a simple eigenvector 
+					
+					\begin{align}
+					{\bf \vec{u}_1}=\twocol {1}{-1}
+					\end{align}
+
+					With the eigenvalue-eigenvector pair \(r_1\) and \({\bf \vec{u}_1}\) we have one of the solutions to our original equation
+
+					\begin{align}
+					{\bf \vec{y}_1} = {\bf \vec{u}_1}e^{r_1 t} = \twocol {1}{-1}e^{-t}
+					\end{align}
+
+
+					Now we'll substitute \(r_2=2\) into the system <a href="#x1-4r3">(10.4.3)</a> to find \({\bf \vec{u}_2}\)
+
+					\begin{align*} 
+						\left\{
+							\begin{array}{ccc}
+								(-4-r_2)u_1 &-& 3u_2 &=& 0 \\
+								6u_1 &+& (5-r_2)u_2 &=& 0 \\
+							\end{array}
+						\right. \\ \\
+						\left\{
+							\begin{array}{ccc}
+								(-4-2)u_1 &-& 3u_2 &=& 0 \\
+								6u_1 &+& (5-2)u_2 &=& 0 \\
+							\end{array}
+						\right.  \\ \\
+						\left\{
+							\begin{array}{ccc}
+								-6u_1 &-& 3u_2 &=& 0 \\
+								6u_1 &+& 3u_2 &=& 0 \\
+							\end{array}
+						\right.  \\ \\
+
+						\left\{
+							\begin{array}{ccc}
+								2u_1 &+& u_2 &=& 0 \\
+								2u_1 &+& u_2 &=& 0 \\
+							\end{array}
+						\right.  \\ \\
+					
+					\end{align*}
+
+					The system simplies down to the single equation 
+
+					\[2u_1 + u_2 = 0 \]
+
+					So again we have a 
+					<span class="vocab">free variable</span>, so we'll let \(u_1=c\) where \(c\) is any number. Then we can solve for \(u_2\) in terms of \(c\) 
+
+					\begin{align*} 
+						2u_1 + u_2 & = 0 \\
+						2c + u_2 & = 0 \\
+						u_2 & = -2c \\
+					\end{align*}
+
+					Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}_2}\)
+
+					\[
+					{\bf \vec{u}_2}
+					=\twocol {u_1}{u_2}
+					=\twocol {c}{-2c}
+					=c\twocol {1}{-2}
+					\]
+
+					Since \(c\) can be any number we'll select \(c=1\) for a simple eigenvector 
+					
+					\begin{align}
+					{\bf \vec{u}_2}=\twocol {1}{-2}
+					\end{align}
+
+					With the eigenvalue-eigenvector pair \(r_2\) and \({\bf \vec{u}_2}\) we have the second solution to our original equation
+
+					\begin{align}
+					{\bf \vec{y}_2} = {\bf \vec{u}_2}e^{r_2 t} = \twocol {1}{-2}e^{2t}
+					\end{align}
+
+					So we have a <span class="vocab">fundamental set</span> of solutions
+
+					\[\{{\bf \vec{y}_1},{\bf \vec{y}_2}\}
+					=\left\{
+						\twocol {1}{-1}e^{-t}, \twocol {1}{-2}e^{2t}
+						\right\}
+					\]
+					
+					We can finally write the general solution
+
+					\begin{align*}
+						{\bf \vec{y}}
+						& = c_1 {\bf \vec{y}_1} + c_2 {\bf \vec{y}_2}
+						= c_1 \twocol {1}{-1}e^{-t} + c_2 \twocol {1}{-2}e^{2t} \\
+					\end{align*}
+
+					fixme
+					
 				</div>
 				
 				<br>
@@ -130,9 +338,9 @@
 				<div>
 					To see how these solutions can be obtained we write <a href="#x1-3r2">(10.4.2)</a> as
 					
-					<a id="x1-4r3"></a>
+					
 					\begin {equation}
-						\label {eq:10.4.3} 
+						
 						\begin {array}{ccc} 
 							\dfrac{dy_1}{dt}&amp;=&amp;-4y_1-3y_2\\
 							\dfrac{dy_2}{dt}&amp;=&amp;\phantom {-}6y_1+5y_2 
