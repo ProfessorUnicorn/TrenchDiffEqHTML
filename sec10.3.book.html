@@ -38,749 +38,754 @@
 		<div id="d7e175d1-d5da-41b0-8f2c-11e5c9338e44" class="section-title">
 			10.3 Basic Theory of Homogeneous Linear System 
 		</div>
-		<div id="b44c62f0-ac1d-4acc-9012-c16fa7463ad3">
-			In this section we consider homogeneous linear systems 
-			\(\dfrac{d{\bf \vec{y}}}{dt}= {\bf A}(t)\,{\bf \vec{y}}\), where \({\bf A}={\bf A}(t)\) is a continuous \(n\times n\) matrix function on an interval \((a,b)\). The theory of linear homogeneous systems has much in common with the theory of linear homogeneous scalar equations, which we considered in Sections&nbsp;<a href="sec2.1.book.html" target=_blank>2.1</a>, <a href="sec5.1.book.html" target=_blank>5.1</a>, and <a href="sec9.1.book.html" target=_blank>9.1</a>
-		</div>
-		<div id="7a09ee8d-634d-4892-a295-215b653c8a0e">
-			Whenever we refer to solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) we’ll mean solutions on \((a,b)\). Since \({\bf \vec{y}}\equiv {\bf 0}\) is obviously a solution of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\), we call it the <span class="vocab">trivial</span> solution. Any other solution is <span class="vocab">nontrivial</span>. 
-		</div>
-		<div id="d2f6ea5f-dae4-4ae3-b616-e8fa224791d5">
-			If \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\) are vector functions defined on an interval \((a,b)\) and \(c_1\), \(c_2\), …, \(c_n\) are constants, then we can represent a <span class="vocab">linear combination</span> of \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …,\({\bf \vec{y}}_n\) as 
+
+		<details id="d1">
+			<summary>Verify</summary>
+
+			<div id="b44c62f0-ac1d-4acc-9012-c16fa7463ad3">
+				In this section we consider homogeneous linear systems 
+				\(\dfrac{d{\bf \vec{y}}}{dt}= {\bf A}(t)\,{\bf \vec{y}}\), where \({\bf A}={\bf A}(t)\) is a continuous \(n\times n\) matrix function on an interval \((a,b)\). The theory of linear homogeneous systems has much in common with the theory of linear homogeneous scalar equations, which we considered in Sections&nbsp;<a href="sec2.1.book.html" target=_blank>2.1</a>, <a href="sec5.1.book.html" target=_blank>5.1</a>, and <a href="sec9.1.book.html" target=_blank>9.1</a>
+			</div>
+			<div id="7a09ee8d-634d-4892-a295-215b653c8a0e">
+				Whenever we refer to solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) we’ll mean solutions on \((a,b)\). Since \({\bf \vec{y}}\equiv {\bf 0}\) is obviously a solution of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\), we call it the <span class="vocab">trivial</span> solution. Any other solution is <span class="vocab">nontrivial</span>. 
+			</div>
+			<div id="d2f6ea5f-dae4-4ae3-b616-e8fa224791d5">
+				If \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\) are vector functions defined on an interval \((a,b)\) and \(c_1\), \(c_2\), …, \(c_n\) are constants, then we can represent a <span class="vocab">linear combination</span> of \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …,\({\bf \vec{y}}_n\) as 
 
 
-			<a id="x1-2r1"></a> 
-			\begin {equation} 
-				\label {eq:10.3.1} 
-				{\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2+\cdots +c_n{\bf \vec{y}}_n 
-			\end {equation}
+				<a id="x1-2r1"></a> 
+				\begin {equation} 
+					\label {eq:10.3.1} 
+					{\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2+\cdots +c_n{\bf \vec{y}}_n 
+				\end {equation}
 
-			It’s easy show that if \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …,\({\bf \vec{y}}_n\) are solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) on \((a,b)\), then so is any linear combination of \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\). We say that \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is a <span class="vocab">fundamental set</span> of solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) on \((a,b)\) on if every solution of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) on \((a,b)\) can be written as a linear combination of \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\), as in <a href="#x1-2r1">(10.3.1)</a>. In this case we say that <a href="#x1-2r1">(10.3.1)</a> is the <span class="vocab">general solution</span> of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) on \((a,b)\).
-		</div>
-		<div id="9d1428e7-8e0b-4f8e-84d0-3f3bb263ad1a">
-			 It can be shown that if \(A\) is continuous on \((a,b)\) then \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) has infinitely many fundamental sets of solutions on \((a,b)\). The next definition will help to characterize fundamental sets of solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\). 
-		</div>
-		<div id="1711ca8b-ca35-4647-977d-9346170a31cb">
-			We say that a set \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) of \(n\)-vector functions is <span class="vocab">linearly independent</span> on \((a,b)\) if the only constants \(c_1\), \(c_2\), …, \(c_n\) in a linear combination equal 
+				It’s easy show that if \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …,\({\bf \vec{y}}_n\) are solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) on \((a,b)\), then so is any linear combination of \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\). We say that \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is a <span class="vocab">fundamental set</span> of solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) on \((a,b)\) on if every solution of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) on \((a,b)\) can be written as a linear combination of \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\), as in <a href="#x1-2r1">(10.3.1)</a>. In this case we say that <a href="#x1-2r1">(10.3.1)</a> is the <span class="vocab">general solution</span> of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) on \((a,b)\).
+			</div>
+			<div id="9d1428e7-8e0b-4f8e-84d0-3f3bb263ad1a">
+				It can be shown that if \(A\) is continuous on \((a,b)\) then \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) has infinitely many fundamental sets of solutions on \((a,b)\). The next definition will help to characterize fundamental sets of solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\). 
+			</div>
+			<div id="1711ca8b-ca35-4647-977d-9346170a31cb">
+				We say that a set \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) of \(n\)-vector functions is <span class="vocab">linearly independent</span> on \((a,b)\) if the only constants \(c_1\), \(c_2\), …, \(c_n\) in a linear combination equal 
 
-			<a id="x1-3r2"></a> 
-			\begin {equation} 
-				\label {eq:10.3.2} 
-				c_1{\bf \vec{y}}_1(t)+c_2{\bf \vec{y}}_2(t)+\cdots +c_n{\bf \vec{y}}_n(t)={\bf \vec{0}}
-			\end {equation}
+				<a id="x1-3r2"></a> 
+				\begin {equation} 
+					\label {eq:10.3.2} 
+					c_1{\bf \vec{y}}_1(t)+c_2{\bf \vec{y}}_2(t)+\cdots +c_n{\bf \vec{y}}_n(t)={\bf \vec{0}}
+				\end {equation}
 
-			are \(c_1=c_2=\cdots =c_n=0\).
+				are \(c_1=c_2=\cdots =c_n=0\).
 
-			 If <a href="#x1-3r2">(10.3.2)</a> holds for some set of constants \(c_1\), \(c_2\), …, \(c_n\) that are not all zero, then \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is <span class="vocab">linearly dependent</span> on \((a,b)\)
-		</div>
-		<div id="87af3578-341a-4997-86c1-8711c6194ca4">
-			 The next theorem is analogous to Theorems&nbsp;<a href="sec5.1.book.html#x1-363" target=_blank>5.1.3</a> and <a href="sec9.1.book.html#x1-72" target=_blank>9.1.2</a>
+				If <a href="#x1-3r2">(10.3.2)</a> holds for some set of constants \(c_1\), \(c_2\), …, \(c_n\) that are not all zero, then \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is <span class="vocab">linearly dependent</span> on \((a,b)\)
+			</div>
+			<div id="87af3578-341a-4997-86c1-8711c6194ca4">
+				The next theorem is analogous to Theorems&nbsp;<a href="sec5.1.book.html#x1-363" target=_blank>5.1.3</a> and <a href="sec9.1.book.html#x1-72" target=_blank>9.1.2</a>
 
-		</div>
-		<div class="theorem" id="x1-41">
-			<span class="head">Theorem&nbsp;10.3.1</span>
-			Suppose the \(n\times n\) matrix \({\bf A}={\bf A}(t)\) is continuous on \((a,b)\). Then a set \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) of \(n\) solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) on \((a,b)\) is a fundamental set if and only if it’s linearly independent on \((a,b)\)
-		</div>
-
-		<br>
-
-		<div class="example" id="x1-51" style="--ex-number: 1">
-			<div>
-				
-
-				Show that the vector functions are linearly independent on every interval 
-				\[
-					{\bf \vec{y}}_1=\left (
-						\begin {array}{c}
-							e^t\\
-							0\\
-							e^{-t}
-						\end {array}
-					\right )\quad {\bf \vec{y}}_2=\left (
-						\begin {array}{c}
-							0\\
-							e^{3t}\\
-							1
-						\end {array}
-					\right ) \quad {\bf \vec{y}}_3=\left ( 
-						\begin {array}{c}
-							e^{2t}\\
-							e^{3t}\\
-							0 
-						\end {array}
-					\right ) 
-				\] 
-				
+			</div>
+			<div class="theorem" id="x1-41">
+				<span class="head">Theorem&nbsp;10.3.1</span>
+				Suppose the \(n\times n\) matrix \({\bf A}={\bf A}(t)\) is continuous on \((a,b)\). Then a set \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) of \(n\) solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) on \((a,b)\) is a fundamental set if and only if it’s linearly independent on \((a,b)\)
 			</div>
 
-			<details class="solution">
-				<summary>Solution</summary>
-				<div>
-					We'll start by writing a linear combination <a href="#x1-3r2">(10.3.2)</a> of the vectors equal to zero
+			<br>
 
-				\begin {align*} 
-					\begin{array}{cccc}
-						c_1{\bf \vec{y}}_1(t) &+& c_2{\bf \vec{y}}_2(t) &+& c_3{\bf \vec{y}}_3(t) &=&{\bf \vec{0}} \\ \\
-						c_1
-							\left (
+			<div class="example" id="x1-51" style="--ex-number: 1">
+				<div>
+					
+
+					Show that the vector functions are linearly independent on every interval 
+					\[
+						{\bf \vec{y}}_1=\left (
+							\begin {array}{c}
+								e^t\\
+								0\\
+								e^{-t}
+							\end {array}
+						\right )\quad {\bf \vec{y}}_2=\left (
+							\begin {array}{c}
+								0\\
+								e^{3t}\\
+								1
+							\end {array}
+						\right ) \quad {\bf \vec{y}}_3=\left ( 
+							\begin {array}{c}
+								e^{2t}\\
+								e^{3t}\\
+								0 
+							\end {array}
+						\right ) 
+					\] 
+					
+				</div>
+
+				<details class="solution">
+					<summary>Solution</summary>
+					<div>
+						We'll start by writing a linear combination <a href="#x1-3r2">(10.3.2)</a> of the vectors equal to zero
+
+					\begin {align*} 
+						\begin{array}{cccc}
+							c_1{\bf \vec{y}}_1(t) &+& c_2{\bf \vec{y}}_2(t) &+& c_3{\bf \vec{y}}_3(t) &=&{\bf \vec{0}} \\ \\
+							c_1
+								\left (
+									\begin {array}{c}
+										e^t\\
+										0\\
+										e^{-t}
+									\end {array}
+								\right ) &+& 
+							c_2\left (
+									\begin {array}{c}
+										0\\
+										e^{3t}\\
+										1
+									\end {array}
+								\right ) &+& 
+							c_3\left ( 
+									\begin {array}{c}
+										e^{2t}\\
+										e^{3t}\\
+										0 
+									\end {array}
+								\right ) &=& 
+								\left ( 
+									\begin {array}{c}
+										0\\
+										0\\
+										0 
+									\end {array}
+								\right ) \\ \\
+						\end{array} 
+					\end {align*}
+
+					We can rewrite the system in matrix form as 
+
+					\begin{align*}
+						\left ( 
+							\begin {array}{ccc}
+								e^t & 0 & e^{2t} \\ 
+								0 & e^{3t} & e^{3t} \\ 
+								e^{-t} & 1 & 0 \\ 
+							\end {array}
+						\right )
+							\left ( 
 								\begin {array}{c}
-									e^t\\
-									0\\
-									e^{-t}
+									c_1\\
+									c_2\\
+									c_3 
 								\end {array}
-							\right ) &+& 
-						c_2\left (
-								\begin {array}{c}
-									0\\
-									e^{3t}\\
-									1
-								\end {array}
-							\right ) &+& 
-						c_3\left ( 
-								\begin {array}{c}
-									e^{2t}\\
-									e^{3t}\\
-									0 
-								\end {array}
-							\right ) &=& 
+							\right )
+						=
 							\left ( 
 								\begin {array}{c}
 									0\\
 									0\\
 									0 
 								\end {array}
+							\right )
+					\end{align*}
+					
+					We want to show that \(c_1=c_2=c_3=0\) so we will write the augmented matrix and use row reduction
+
+						\begin{align*}
+							\left ( 
+								\begin {array}{ccc|c}
+									e^t & 0 & e^{2t} & 0 \\ 
+									0 & e^{3t} & e^{3t} & 0 \\ 
+									e^{-t} & 1 & 0 & 0 \\ 
+								\end {array}
+							\right )
+							\overset{e^{-t}R_1}{\longrightarrow}
+							\left ( 
+								\begin {array}{ccc|c}
+									1 & 0 & e^{t} & 0 \\ 
+									0 & e^{3t} & e^{3t} & 0 \\ 
+									e^{-t} & 1 & 0 & 0 \\ 
+								\end {array}
+							\right )
+							\overset{e^{t}R_3}{\longrightarrow}
+							\left ( 
+								\begin {array}{ccc|c}
+									1 & 0 & e^{t} & 0 \\ 
+									0 & e^{3t} & e^{3t} & 0 \\ 
+									1 & e^t & 0 & 0 \\ 
+								\end {array}
 							\right ) \\ \\
-					\end{array} 
-				\end {align*}
+							\overset{R_3-R_1}{\longrightarrow}
+							\left ( 
+								\begin {array}{ccc|c}
+									1 & 0 & e^{t} & 0 \\ 
+									0 & e^{3t} & e^{3t} & 0 \\ 
+									0 & e^t & -e^{t} & 0 \\ 
+								\end {array}
+							\right )
+							\overset{e^{-t}R_3}{\longrightarrow}
+							\left ( 
+								\begin {array}{ccc|c}
+									1 & 0 & e^{t} & 0 \\ 
+									0 & e^{3t} & e^{3t} & 0 \\ 
+									0 & 1 & -1 & 0 \\
+								\end {array}
+							\right ) \\ \\
+							\overset{e^{-3t}R_3}{\longrightarrow}
+							\left ( 
+								\begin {array}{ccc|c}
+									1 & 0 & e^{t} & 0 \\ 
+									0 & 1 & 1 & 0 \\ 
+									0 & 1 & -1 & 0 \\
+								\end {array}
+							\right )
+							\overset{R_3-R_2}{\longrightarrow}
+							\left ( 
+								\begin {array}{ccc|c}
+									1 & 0 & e^{t} & 0 \\ 
+									0 & 1 & 1 & 0 \\ 
+									0 & 0 & -2 & 0 \\
+								\end {array}
+							\right ) \\ \\
+							\overset{-\frac{1}{2}R_3}{\longrightarrow}
+							\left ( 
+								\begin {array}{ccc|c}
+									1 & 0 & e^{t} & 0 \\ 
+									0 & 1 & 1 & 0 \\ 
+									0 & 0 & 1 & 0 \\
+								\end {array}
+							\right )
+							\overset{R_2-R_3}{\longrightarrow}
+							\left ( 
+								\begin {array}{ccc|c}
+									1 & 0 & e^{t} & 0 \\ 
+									0 & 1 & 0 & 0 \\ 
+									0 & 0 & 1 & 0 \\
+								\end {array} 
+							\right ) \\ \\
+							\overset{R_1-e^tR_3}{\longrightarrow}
+							\left ( 
+								\begin {array}{ccc|c}
+									1 & 0 & 0 & 0 \\ 
+									0 & 1 & 0 & 0 \\ 
+									0 & 0 & 1 & 0 \\
+								\end {array}
+							\right )
+						\end{align*}
 
-				We can rewrite the system in matrix form as 
+						Thus we have shown
+						\(c_1=c_2=c_3=0\)
+					</div>	
+					<div>
+						Alternatively instead of solving for the constants explicitly we can instead show that the determinant of the coefficient matrix is nonzero, which indicates that the system has only the trivial solution. Using factoring and row reduction and then expanding the determinant of this system in cofactors of the entries of the first column yields
 
-				\begin{align*}
-					\left ( 
-						\begin {array}{ccc}
-							e^t & 0 & e^{2t} \\ 
-							0 & e^{3t} & e^{3t} \\ 
-							e^{-t} & 1 & 0 \\ 
+						\begin{align*}
+							\det
+							\left ( 
+								\begin {array}{ccc|c}
+									e^t & 0 & e^{2t} \\ 
+									0 & e^{3t} & e^{3t} \\ 
+									e^{-t} & 1 & 0 \\ 
+								\end {array}
+							\right )
+							=
+							e^{3t}
+							\det
+							\left ( 
+								\begin {array}{ccc|c}
+									e^t & 0 & e^{2t} \\ 
+									0 & 1 & 1 \\ 
+									e^{-t} & 1 & 0 \\ 
+								\end {array}
+							\right )
+							=
+							e^{3t}e^{-t}
+							\det
+							\left ( 
+								\begin {array}{ccc|c}
+									e^{2t} & 0 & e^{2t} \\ 
+									0 & 1 & 1 \\ 
+									1 & 1 & 0 \\ 
+								\end {array}
+							\right ) \\ \\
+							=
+							e^{3t}e^{-t}e^{2t}
+							\det
+							\left ( 
+								\begin {array}{ccc|c}
+									1 & 0 & 1 \\ 
+									0 & 1 & 1 \\ 
+									1 & 1 & 0 \\ 
+								\end {array}
+							\right ) 
+							=
+							e^{4t}
+							\det
+							\left ( 
+								\begin {array}{ccc|c}
+									1 & 0 & 1 \\ 
+									0 & 1 & 1 \\ 
+									0 & 1 & -1 \\ 
+								\end {array}
+							\right ) \\ \\
+							=
+							e^{4t}
+							\det
+							\left ( 
+								\begin {array}{ccc|c}
+									1 & 1 \\ 
+									1 & -1 \\ 
+								\end {array}
+							\right ) 
+							=
+							e^{4t}
+							\left (
+								-1-1 
+							\right ) 
+							=
+							-2e^{4t} \ne 0 \quad
+						\end{align*}
+
+						Since this determinant is never zero, \(c_1=c_2=c_3=0\).
+					</div>	
+					<div>
+					
+						
+						
+						
+					</div>
+
+				</details>
+			</div>
+
+			<br>
+			<div id="8ec64e0e-475d-4205-95ec-c64606ca7ef4">
+				We can use the method in Example&nbsp;<a href="#x1-51">10.3.1</a> to test \(n\) solutions \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) of any \(n\times n\) system \(\dfrac{d{\bf \vec{y}}}{dt}= {\bf A}(t)\,  {\bf \vec{y}}\) for linear independence on an interval \((a,b)\) on which \({\bf A}(t) \) is continuous. To explain this (and for other purposes later), it’s useful to write a linear combination of \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\) in a different way by writing the vector functions in terms of their components
+				\[ 
+					{\bf \vec{y}}_1=\left (
+						\begin {array}{c} 
+							y_{11}\\
+							y_{21}\\ 
+							\vdots \\ 
+							y_{n1}
+						\end {array}
+					\right )\quad {\bf \vec{y}}_2=\left (
+						\begin {array}{c} 
+							y_{12}\\
+							y_{22}\\ 
+							\vdots \\ 
+							y_{n2}
+						\end {array}
+					\right ) \quad \dots \quad {\bf \vec{y}}_n=\left ( 
+						\begin {array}{c} 
+							y_{1n}\\
+							y_{2n}\\ 
+							\vdots \\ 
+							y_{nn} 
 						\end {array}
 					\right )
-						\left ( 
+				\]
+				
+				Since any solution \({\bf \vec{y}}\) can be written as a linear combination
+				\[ {\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2+\cdots +c_n{\bf \vec{y}}_n \]
+
+				then
+
+				fixme
+
+				\begin {align*} 
+						\begin{array}{ccccc}
+							{\bf \vec{y}} &=&c_1{\bf \vec{y}}_1(t) &+& c_2{\bf \vec{y}}_2(t) &+& \dots &+& c_n{\bf \vec{y}}_n(t) \\ \\
+							{\bf \vec{y}} &=&
+							c_1
+								\left (
+									\begin {array}{c}
+										y_{11}\\
+										y_{21}\\
+										\vdots \\
+										y_{n1}\\
+									\end {array}
+								\right ) &+& 
+							c_2\left (
+									\begin {array}{c}
+										y_{12}\\
+										y_{22}\\
+										\vdots \\
+										y_{n2}\\
+									\end {array}
+								\right ) &+& 
+								\dots &+&
+							c_n\left ( 
+									\begin {array}{c}
+										y_{1n}\\
+										y_{2n}\\
+										\vdots \\
+										y_{nn}\\
+									\end {array}
+								\right )  
+								\\ \\
+						\end{array} 
+					\end {align*}
+
+					Which we can write in matrix form as
+
+					\begin{align*}
+					{\bf \vec{y}} = &
+					\underset{{\bf Y}(t)}{\underbrace{\left ( 
+						\begin {array}{ccc}
+							y_{11} & y_{12} & \dots & y_{1n} \\ 
+							y_{21} & y_{22} & \dots & y_{2n} \\ 
+							\vdots & \vdots & \ddots & \vdots \\ 
+							
+							y_{n1} & y_{n2} & \dots & y_{nn} \\ 
+						\end {array}
+					\right )}}
+					\underset{{\bf \vec{c}}}{\underbrace{\left ( 
 							\begin {array}{c}
 								c_1\\
 								c_2\\
-								c_3 
+								\vdots \\
+								c_n
 							\end {array}
-						\right )
-					=
-						\left ( 
-							\begin {array}{c}
-								0\\
-								0\\
-								0 
-							\end {array}
-						\right )
+						\right )}}
 				\end{align*}
-				
-				We want to show that \(c_1=c_2=c_3=0\) so we will write the augmented matrix and use row reduction
-
-					\begin{align*}
-						\left ( 
-							\begin {array}{ccc|c}
-								e^t & 0 & e^{2t} & 0 \\ 
-								0 & e^{3t} & e^{3t} & 0 \\ 
-								e^{-t} & 1 & 0 & 0 \\ 
-							\end {array}
-						\right )
-						\overset{e^{-t}R_1}{\longrightarrow}
-						\left ( 
-							\begin {array}{ccc|c}
-								1 & 0 & e^{t} & 0 \\ 
-								0 & e^{3t} & e^{3t} & 0 \\ 
-								e^{-t} & 1 & 0 & 0 \\ 
-							\end {array}
-						\right )
-						\overset{e^{t}R_3}{\longrightarrow}
-						\left ( 
-							\begin {array}{ccc|c}
-								1 & 0 & e^{t} & 0 \\ 
-								0 & e^{3t} & e^{3t} & 0 \\ 
-								1 & e^t & 0 & 0 \\ 
-							\end {array}
-						\right ) \\ \\
-						\overset{R_3-R_1}{\longrightarrow}
-						\left ( 
-							\begin {array}{ccc|c}
-								1 & 0 & e^{t} & 0 \\ 
-								0 & e^{3t} & e^{3t} & 0 \\ 
-								0 & e^t & -e^{t} & 0 \\ 
-							\end {array}
-						\right )
-						\overset{e^{-t}R_3}{\longrightarrow}
-						\left ( 
-							\begin {array}{ccc|c}
-								1 & 0 & e^{t} & 0 \\ 
-								0 & e^{3t} & e^{3t} & 0 \\ 
-								0 & 1 & -1 & 0 \\
-							\end {array}
-						\right ) \\ \\
-						\overset{e^{-3t}R_3}{\longrightarrow}
-						\left ( 
-							\begin {array}{ccc|c}
-								1 & 0 & e^{t} & 0 \\ 
-								0 & 1 & 1 & 0 \\ 
-								0 & 1 & -1 & 0 \\
-							\end {array}
-						\right )
-						\overset{R_3-R_2}{\longrightarrow}
-						\left ( 
-							\begin {array}{ccc|c}
-								1 & 0 & e^{t} & 0 \\ 
-								0 & 1 & 1 & 0 \\ 
-								0 & 0 & -2 & 0 \\
-							\end {array}
-						\right ) \\ \\
-						\overset{-\frac{1}{2}R_3}{\longrightarrow}
-						\left ( 
-							\begin {array}{ccc|c}
-								1 & 0 & e^{t} & 0 \\ 
-								0 & 1 & 1 & 0 \\ 
-								0 & 0 & 1 & 0 \\
-							\end {array}
-						\right )
-						\overset{R_2-R_3}{\longrightarrow}
-						\left ( 
-							\begin {array}{ccc|c}
-								1 & 0 & e^{t} & 0 \\ 
-								0 & 1 & 0 & 0 \\ 
-								0 & 0 & 1 & 0 \\
-							\end {array} 
-						\right ) \\ \\
-						\overset{R_1-e^tR_3}{\longrightarrow}
-						\left ( 
-							\begin {array}{ccc|c}
-								1 & 0 & 0 & 0 \\ 
-								0 & 1 & 0 & 0 \\ 
-								0 & 0 & 1 & 0 \\
-							\end {array}
-						\right )
-					\end{align*}
-
-					Thus we have shown
-					\(c_1=c_2=c_3=0\)
-				</div>	
-				<div>
-					Alternatively instead of solving for the constants explicitly we can instead show that the determinant of the coefficient matrix is nonzero, which indicates that the system has only the trivial solution. Using factoring and row reduction and then expanding the determinant of this system in cofactors of the entries of the first column yields
-
-					\begin{align*}
-						\det
-						\left ( 
-							\begin {array}{ccc|c}
-								e^t & 0 & e^{2t} \\ 
-								0 & e^{3t} & e^{3t} \\ 
-								e^{-t} & 1 & 0 \\ 
-							\end {array}
-						\right )
-						=
-						e^{3t}
-						\det
-						\left ( 
-							\begin {array}{ccc|c}
-								e^t & 0 & e^{2t} \\ 
-								0 & 1 & 1 \\ 
-								e^{-t} & 1 & 0 \\ 
-							\end {array}
-						\right )
-						=
-						e^{3t}e^{-t}
-						\det
-						\left ( 
-							\begin {array}{ccc|c}
-								e^{2t} & 0 & e^{2t} \\ 
-								0 & 1 & 1 \\ 
-								1 & 1 & 0 \\ 
-							\end {array}
-						\right ) \\ \\
-						=
-						e^{3t}e^{-t}e^{2t}
-						\det
-						\left ( 
-							\begin {array}{ccc|c}
-								1 & 0 & 1 \\ 
-								0 & 1 & 1 \\ 
-								1 & 1 & 0 \\ 
-							\end {array}
-						\right ) 
-						=
-						e^{4t}
-						\det
-						\left ( 
-							\begin {array}{ccc|c}
-								1 & 0 & 1 \\ 
-								0 & 1 & 1 \\ 
-								0 & 1 & -1 \\ 
-							\end {array}
-						\right ) \\ \\
-						=
-						e^{4t}
-						\det
-						\left ( 
-							\begin {array}{ccc|c}
-								1 & 1 \\ 
-								1 & -1 \\ 
-							\end {array}
-						\right ) 
-						=
-						e^{4t}
-						\left (
-							-1-1 
-						\right ) 
-						=
-						-2e^{4t} \ne 0 \quad
-					\end{align*}
-
-					Since this determinant is never zero, \(c_1=c_2=c_3=0\).
-				</div>	
-				<div>
-				
-					
-					
-					 
-				</div>
-
-			</details>
-		</div>
-
-		<br>
-		<div id="8ec64e0e-475d-4205-95ec-c64606ca7ef4">
-			We can use the method in Example&nbsp;<a href="#x1-51">10.3.1</a> to test \(n\) solutions \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) of any \(n\times n\) system \(\dfrac{d{\bf \vec{y}}}{dt}= {\bf A}(t)\,  {\bf \vec{y}}\) for linear independence on an interval \((a,b)\) on which \({\bf A}(t) \) is continuous. To explain this (and for other purposes later), it’s useful to write a linear combination of \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\) in a different way by writing the vector functions in terms of their components
-			\[ 
-				{\bf \vec{y}}_1=\left (
-					\begin {array}{c} 
-						y_{11}\\
-						y_{21}\\ 
-						\vdots \\ 
-						y_{n1}
-					\end {array}
-				\right )\quad {\bf \vec{y}}_2=\left (
-					\begin {array}{c} 
-						y_{12}\\
-						y_{22}\\ 
-						\vdots \\ 
-						y_{n2}
-					\end {array}
-				\right ) \quad \dots \quad {\bf \vec{y}}_n=\left ( 
-					\begin {array}{c} 
-						y_{1n}\\
-						y_{2n}\\ 
-						\vdots \\ 
-						y_{nn} 
-					\end {array}
-				\right )
-			\]
-			
-			Since any solution \({\bf \vec{y}}\) can be written as a linear combination
-			\[ {\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2+\cdots +c_n{\bf \vec{y}}_n \]
-
-			then
-
-			fixme
-
-			\begin {align*} 
-					\begin{array}{ccccc}
-						{\bf \vec{y}} &=&c_1{\bf \vec{y}}_1(t) &+& c_2{\bf \vec{y}}_2(t) &+& \dots &+& c_n{\bf \vec{y}}_n(t) \\ \\
-						{\bf \vec{y}} &=&
-						c_1
-							\left (
-								\begin {array}{c}
-									y_{11}\\
-									y_{21}\\
-									\vdots \\
-									y_{n1}\\
-								\end {array}
-							\right ) &+& 
-						c_2\left (
-								\begin {array}{c}
-									y_{12}\\
-									y_{22}\\
-									\vdots \\
-									y_{n2}\\
-								\end {array}
-							\right ) &+& 
-							\dots &+&
-						c_n\left ( 
-								\begin {array}{c}
-									y_{1n}\\
-									y_{2n}\\
-									\vdots \\
-									y_{nn}\\
-								\end {array}
-							\right )  
-							\\ \\
-					\end{array} 
-				\end {align*}
-
-				Which we can write in matrix form as
-
-				\begin{align*}
-				{\bf \vec{y}} = &
-				\underset{{\bf Y}(t)}{\underbrace{\left ( 
-					\begin {array}{ccc}
-						y_{11} & y_{12} & \dots & y_{1n} \\ 
-						y_{21} & y_{22} & \dots & y_{2n} \\ 
-						\vdots & \vdots & \ddots & \vdots \\ 
-						
-						y_{n1} & y_{n2} & \dots & y_{nn} \\ 
-					\end {array}
-				\right )}}
-				\underset{{\bf \vec{c}}}{\underbrace{\left ( 
-						\begin {array}{c}
-							c_1\\
-							c_2\\
-							\vdots \\
-							c_n
-						\end {array}
-					\right )}}
-			\end{align*}
-		</div>
-
-		<div id="a5a62285-527d-4afd-92f0-331d2009fc78">
-			 This shows that 
-			 <a id="x1-6r3"></a> 
-			 \begin {equation} 
-			 	\label {eq:10.3.3} 
-				 {\bf \vec{y}} =
-				c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2+\cdots +c_n{\bf \vec{y}}_n={\bf Y}(t)\,{\bf \vec{c}} 
-			\end {equation}
-			
-			where the columns of the matrix \({\bf Y}(t)\) are the vector functions \({\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\)
-			
-
-			<a id="x1-7r4"></a> 
-			\begin {equation} 
-				\label {eq:10.3.4} 
-				{\bf Y}(t)= \Big( {\bf \vec{y}}_1\; {\bf \vec{y}}_2\; \cdots \; {\bf \vec{y}}_n \Big)= \left ( 
-					\begin {array}{cccc} 
-						y_{11}&amp;y_{12}&amp;\cdots &amp;y_{1n} \\ 
-						y_{21}&amp;y_{22}&amp;\cdots &amp;y_{2n}\\ 
-						\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ 
-						y_{n1}&amp;y_{n2}&amp;\cdots &amp;y_{nn} \\ 
-					\end {array}
-				\right )
-			\end {equation}
-			
-			
-		</div>
-		<div id="e16e058b-f325-4dd3-8eda-062b0f6c530a">
-			Now we can differentiate the matrix \({\bf Y}(t)\) by differentiating each element and using \({d{\bf \vec{y}}}/{dt}= {\bf A}(t)\,  {\bf \vec{y}}\) 
-
-			\begin{align*}
-			\dfrac{d{\bf Y}}{dt} 
-			& =
-			\frac{d}{dt}
-			\Bigg( {\bf \vec{y}}_1\; {\bf \vec{y}}_2\; \cdots \; {\bf \vec{y}}_n \Bigg) \\
-			& = \Bigg(\dfrac{d {\bf \vec{y}}_1 }{dt}\; \dfrac{d {\bf \vec{y}}_2 }{dt}\; \cdots \; \dfrac{d {\bf \vec{y}}_n}{dt}\Bigg)\\ 
-			& = \Bigg({\bf A}(t)\,{\bf \vec{y}}_1\;\; {\bf A}(t)\,{\bf \vec{y}}_2\; \cdots \; {\bf A}(t)\,{\bf \vec{y}}_n\Bigg)\\
-			& = {\bf A}(t)\,\Big({\bf \vec{y}}_1\; {\bf \vec{y}}_2\; \cdots \; {\bf \vec{y}}_n\Big)\\ 
-			& = {\bf A}(t)\,{\bf Y}(t)
-			\end{align*}
-		</div>
-	
-		<div id="6c9aeaf6-ff2e-4c67-ab99-4794fc86c5fd">
-			 This means that the matrix \({\bf Y}(t)\) satisfies the matrix differential equation 
-		</div>
-		<div id="784f86f8-1079-4bb8-955e-88ed129d8396">
-			 \[ \dfrac{d{\bf Y}}{dt} ={\bf A}{\bf Y} \] 
-		</div>
-		<div id="b0271f70-8ca6-47bc-8ea2-2e5149ac98bc">
-			 The determinant of \({\bf Y}\)	is called the <span class="vocab">Wronskian determinant</span> of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\)
-
-			<a id="x1-8r5"></a> 
-			\begin {equation} 
-			 	\label {eq:10.3.5}
-				W\big[{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\big]=\det\left ( 
-					\begin {array}{cccc} 
-						y_{11}&amp;y_{12}&amp;\cdots &amp;y_{1n} \\ 
-						y_{21}&amp;y_{22}&amp;\cdots &amp;y_{2n}\\ 
-						\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ 
-						y_{n1}&amp;y_{n2}&amp;\cdots &amp;y_{nn} \\ 
-					\end {array}
-				\right )
-			\end {equation}
-			
-		 This definition is analogous to definitions of the Wronskian of scalar functions given in Sections&nbsp;<a href="sec5.1.book.html" target=_blank>5.1</a> and <a href="sec9.1.book.html" target=_blank>9.1</a>. The next theorem is analogous to Theorems&nbsp;<a href="#sec5.1.book.html#x1-484" target=_blank>5.1.4</a>
-		 and <a href="#sec9.1.book.html#x1-193" target=_blank>9.1.3</a>
-		</div>
-		<div class="theorem" id="x1-193">
-			<span class="head">Theorem&nbsp;10.3.2 Abel’s Formula</span>
-			Suppose the \(n\times n\) matrix \({\bf A}={\bf A}(t)\) is continuous on \((a,b),\) let \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\) be solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf Y}(t)\,{\bf \vec{y}}\) on \((a,b),\) and let \(t_0\) be in \((a,b)\). Then the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is given by 
-			<a id="x1-10r6"></a> 
-			\begin {equation} 
-				\label {eq:10.3.6} 
-				W(t)=W(t_0) e^{\displaystyle \int ^t_{t_0}\Big [a_{11}(s)+a_{22}(s)+\cdots +a_{nn}(s) \Big]\, ds} 
-			\end {equation}
-			
-			Therefore\(,\) either \(W(t)\) has no zeros in \((a,b)\) or \(W(t)\equiv 0\) on \((a,b)\)
-		</div>
-
-		<div id="455fcf9b-881c-4544-b7af-e3efe3d5ef5d">
-			<strong>Remark</strong>:&nbsp; The sum of the diagonal entries of a square matrix \({\bf A}\) is called the <span class="vocab">trace</span> of \({\bf A}\), denoted by tr\((A)\). Thus, for an \(n\times n\) matrix \({\bf A}\), \[ \mbox {tr}({\bf A})=a_{11}+a_{22}+\cdots +a_{nn}\] and <a href="#x1-10r6">(10.3.6)</a> can be written as 
-			\[ W(t)=W(t_0) e^{\displaystyle \int ^t_{t_0}\mbox {tr}\Big({\bf A}(s)\Big)\, ds} \]
-		</div>
-		<div id="a921f315-e5b7-4cb7-b6e8-c55cddd3b537">
-			 The next theorem is analogous to 
-			 The next theorem is analogous to Theorems&nbsp;<a href="#sec5.1.book.html#x1-616" target=_blank>5.1.6</a> and <a href="#sec9.1.book.html#x1-224" target=_blank>9.1.4</a>
-		</div>
-		<div class="theorem" id="x1-113">
-			<span class="head">Theorem&nbsp;10.3.3</span>
-			Suppose the \(n\times n\) matrix \({\bf A}={\bf A}(t)\) is continuous on \((a,b)\) and let \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …\(,\)\({\bf \vec{y}}_n\) be solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) on \((a,b)\). Then the following statements are equivalent; that is, they are either all true or all false:
-			<ol>
-				<li>
-					The general solution of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t) \,{\bf \vec{y}}\) on \((a,b)\) is \({\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2+\cdots +c_n{\bf \vec{y}}_n\), where \(c_1\), \(c_2\), …, \(c_n\) are arbitrary constants
-				</li>
-				<li>
-					\(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is a <span class="vocab">fundamental set of solutions</span> of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) once \((a,b)\)
-				</li>
-				<li>
-					\(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is <span class="vocab">linearly independent</span> on \((a,b)\)
-				</li>
-				<li>
-					The <span class="vocab">Wronskian</span> of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is nonzero at some point in \((a,b)\)
-				</li>
-				<li>
-					The <span class="vocab">Wronskian</span> of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is nonzero at all points in \((a,b)\)
-				</li>
-			</ol>
-		</div>
-
-		<div id="a2ba07d1-8263-4b3a-a7ad-d949bd71a593">
-			We say that \({\bf Y}\) in <a href="#x1-7r4">(10.3.4)</a> is a <span class="vocab">fundamental matrix</span> for \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) if any (and therefore all) of the statements <span class="ptmb8t-">(a)</span>-<span class="ptmb8t-">(e)</span> of Theorem&nbsp;<a href="#x1-92">10.3.2</a> are true for the columns of \(Y\). In this case, <a href="#x1-6r3">(10.3.3)</a> implies that the general solution of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) can be written as \({\bf \vec{y}}={\bf Y}\,{\bf \vec{c}}\), where \(\bf \vec{c}\) is an arbitrary constant \(n\)-vector.
-		</div>
-
-		<br>
-		<br>
-		<div class="example" id="x1-172" style="--ex-number: 2">
-			<div>
-				The vector functions 
-				\[ {\bf \vec{y}}_1=\twocol {-e^{2t}}{2e^{2t}}\quad \mbox{ and } \quad {\bf \vec{y}}_2=\twocol {-e^{-t}}{\phantom {-}e^{-t}} \] 
-				
-				are solutions of the constant coefficient system 
-				<a id="x1-18r7"></a> 
-				\begin {equation} 
-					\label {eq:10.3.7} 
-					\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo {-4}{-3} 65 {\bf \vec{y}} 
-				\end {equation}
-				
 			</div>
 
-			<ol>
-				<li>
-					Compute the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2\}\) directly from the definition <a href="#x1-8r5">(10.3.5)</a>
-				</li>
-				<li>
-					Verify Abel’s formula <a href="#x1-10r6">(10.3.6)</a> for the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2\}\).
-				</li>
-				<li>
-					Find the general solution of <a href="#x1-18r7">(10.3.7)</a>.
-				</li>
-				<li>
-					Solve the initial value problem 
-					<a id="x1-23r8"></a> 
-					\begin {equation} 
-						\label {eq:10.3.8} 
-						\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo {-4}{-3}65 {\bf \vec{y}}, \quad {\bf \vec{y}}(0)= \left [
-							\begin {array}{r} 
-								4 \\
-								-5 
-							\end {array}
-						\right ]
-					\end {equation}
-				</li>
-			</ol>
+			<div id="a5a62285-527d-4afd-92f0-331d2009fc78">
+				This shows that 
+				<a id="x1-6r3"></a> 
+				\begin {equation} 
+					\label {eq:10.3.3} 
+					{\bf \vec{y}} =
+					c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2+\cdots +c_n{\bf \vec{y}}_n={\bf Y}(t)\,{\bf \vec{c}} 
+				\end {equation}
+				
+				where the columns of the matrix \({\bf Y}(t)\) are the vector functions \({\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\)
+				
 
-			<details class="solution">
-				<summary>Solution</summary>
+				<a id="x1-7r4"></a> 
+				\begin {equation} 
+					\label {eq:10.3.4} 
+					{\bf Y}(t)= \Big( {\bf \vec{y}}_1\; {\bf \vec{y}}_2\; \cdots \; {\bf \vec{y}}_n \Big)= \left ( 
+						\begin {array}{cccc} 
+							y_{11}&amp;y_{12}&amp;\cdots &amp;y_{1n} \\ 
+							y_{21}&amp;y_{22}&amp;\cdots &amp;y_{2n}\\ 
+							\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ 
+							y_{n1}&amp;y_{n2}&amp;\cdots &amp;y_{nn} \\ 
+						\end {array}
+					\right )
+				\end {equation}
+				
+				
+			</div>
+			<div id="e16e058b-f325-4dd3-8eda-062b0f6c530a">
+				Now we can differentiate the matrix \({\bf Y}(t)\) by differentiating each element and using \({d{\bf \vec{y}}}/{dt}= {\bf A}(t)\,  {\bf \vec{y}}\) 
+
+				\begin{align*}
+				\dfrac{d{\bf Y}}{dt} 
+				& =
+				\frac{d}{dt}
+				\Bigg( {\bf \vec{y}}_1\; {\bf \vec{y}}_2\; \cdots \; {\bf \vec{y}}_n \Bigg) \\
+				& = \Bigg(\dfrac{d {\bf \vec{y}}_1 }{dt}\; \dfrac{d {\bf \vec{y}}_2 }{dt}\; \cdots \; \dfrac{d {\bf \vec{y}}_n}{dt}\Bigg)\\ 
+				& = \Bigg({\bf A}(t)\,{\bf \vec{y}}_1\;\; {\bf A}(t)\,{\bf \vec{y}}_2\; \cdots \; {\bf A}(t)\,{\bf \vec{y}}_n\Bigg)\\
+				& = {\bf A}(t)\,\Big({\bf \vec{y}}_1\; {\bf \vec{y}}_2\; \cdots \; {\bf \vec{y}}_n\Big)\\ 
+				& = {\bf A}(t)\,{\bf Y}(t)
+				\end{align*}
+			</div>
+		
+			<div id="6c9aeaf6-ff2e-4c67-ab99-4794fc86c5fd">
+				This means that the matrix \({\bf Y}(t)\) satisfies the matrix differential equation 
+			</div>
+			<div id="784f86f8-1079-4bb8-955e-88ed129d8396">
+				\[ \dfrac{d{\bf Y}}{dt} ={\bf A}{\bf Y} \] 
+			</div>
+			<div id="b0271f70-8ca6-47bc-8ea2-2e5149ac98bc">
+				The determinant of \({\bf Y}\)	is called the <span class="vocab">Wronskian determinant</span> of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\)
+
+				<a id="x1-8r5"></a> 
+				\begin {equation} 
+					\label {eq:10.3.5}
+					W\big[{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\big]=\det\left ( 
+						\begin {array}{cccc} 
+							y_{11}&amp;y_{12}&amp;\cdots &amp;y_{1n} \\ 
+							y_{21}&amp;y_{22}&amp;\cdots &amp;y_{2n}\\ 
+							\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\ 
+							y_{n1}&amp;y_{n2}&amp;\cdots &amp;y_{nn} \\ 
+						\end {array}
+					\right )
+				\end {equation}
+				
+			This definition is analogous to definitions of the Wronskian of scalar functions given in Sections&nbsp;<a href="sec5.1.book.html" target=_blank>5.1</a> and <a href="sec9.1.book.html" target=_blank>9.1</a>. The next theorem is analogous to Theorems&nbsp;<a href="#sec5.1.book.html#x1-484" target=_blank>5.1.4</a>
+			and <a href="#sec9.1.book.html#x1-193" target=_blank>9.1.3</a>
+			</div>
+			<div class="theorem" id="x1-193">
+				<span class="head">Theorem&nbsp;10.3.2 Abel’s Formula</span>
+				Suppose the \(n\times n\) matrix \({\bf A}={\bf A}(t)\) is continuous on \((a,b),\) let \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …, \({\bf \vec{y}}_n\) be solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf Y}(t)\,{\bf \vec{y}}\) on \((a,b),\) and let \(t_0\) be in \((a,b)\). Then the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is given by 
+				<a id="x1-10r6"></a> 
+				\begin {equation} 
+					\label {eq:10.3.6} 
+					W(t)=W(t_0) e^{\displaystyle \int ^t_{t_0}\Big [a_{11}(s)+a_{22}(s)+\cdots +a_{nn}(s) \Big]\, ds} 
+				\end {equation}
+				
+				Therefore\(,\) either \(W(t)\) has no zeros in \((a,b)\) or \(W(t)\equiv 0\) on \((a,b)\)
+			</div>
+
+			<div id="455fcf9b-881c-4544-b7af-e3efe3d5ef5d">
+				<strong>Remark</strong>:&nbsp; The sum of the diagonal entries of a square matrix \({\bf A}\) is called the <span class="vocab">trace</span> of \({\bf A}\), denoted by tr\((A)\). Thus, for an \(n\times n\) matrix \({\bf A}\), \[ \mbox {tr}({\bf A})=a_{11}+a_{22}+\cdots +a_{nn}\] and <a href="#x1-10r6">(10.3.6)</a> can be written as 
+				\[ W(t)=W(t_0) e^{\displaystyle \int ^t_{t_0}\mbox {tr}\Big({\bf A}(s)\Big)\, ds} \]
+			</div>
+			<div id="a921f315-e5b7-4cb7-b6e8-c55cddd3b537">
+				The next theorem is analogous to 
+				The next theorem is analogous to Theorems&nbsp;<a href="#sec5.1.book.html#x1-616" target=_blank>5.1.6</a> and <a href="#sec9.1.book.html#x1-224" target=_blank>9.1.4</a>
+			</div>
+			<div class="theorem" id="x1-113">
+				<span class="head">Theorem&nbsp;10.3.3</span>
+				Suppose the \(n\times n\) matrix \({\bf A}={\bf A}(t)\) is continuous on \((a,b)\) and let \({\bf \vec{y}}_1\), \({\bf \vec{y}}_2\), …\(,\)\({\bf \vec{y}}_n\) be solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) on \((a,b)\). Then the following statements are equivalent; that is, they are either all true or all false:
 				<ol>
 					<li>
-						<div>
-							<a id="x1-24r9"></a>
-							\begin {align} \label {eq:10.3.9} 
-								W\big[{\bf \vec{y}}_1,{\bf \vec{y}}_2\big]
-								& =\det\Big ( 
-									{\bf \vec{y}}_1 \,\, {\bf \vec{y}}_2
-								\Big ) \nonumber\\
-								& = \det \left(
-									\begin {array}{cc}
-									-e^{2t}&amp;-e^{-t}\\2e^{2t}&amp; e^{-t} 
-								\end {array}
-									\right) \nonumber\\
-								& = e^{2t}e^{-t}\det \left(
-									\begin {array}{cc}
-									-1&amp;-1\\
-									2&amp; 1 
-									\end {array}
-									\right) \nonumber\\
-								& = e^{t}\det \left(
-									-1+2
-									\right) \nonumber\\
-								& = e^{t} 			
-							\end {align}
-
-						</div>	
-						<div>
-							
-						</div>	
-						
+						The general solution of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t) \,{\bf \vec{y}}\) on \((a,b)\) is \({\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2+\cdots +c_n{\bf \vec{y}}_n\), where \(c_1\), \(c_2\), …, \(c_n\) are arbitrary constants
 					</li>
 					<li>
-
-						\begin {align*} 
-							{\text tr}\big({\bf A}\big)={\text tr}\twobytwo {-4}{-3} 65	
-							=-4+5=1
-						\end {align*}
-
-
-						 If \(t_0\) is an arbitrary real number then <a href="#x1-10r6">(10.3.6)</a> implies that 
-
-						 \begin {align*} 
-							 W(t) 
-							 & = W(t_0) \, e^{\displaystyle \int ^t_{t_0}\mbox {tr}\Big({\bf A}(s)\Big)\, ds} \\
-							 & = W(t_0) \, e^{\displaystyle \int ^t_{t_0}\mbox  ds} \\
-							 & = e^{t_0} \, e^{t - t_0} \\
-							 & = e^{t}\\
-						\end {align*}
-						
-						which is consistent with <a href="#x1-24r9">(10.3.9)</a>
+						\(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is a <span class="vocab">fundamental set of solutions</span> of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) once \((a,b)\)
 					</li>
 					<li>
-						Since \(W(t)\ne 0\), Theorem&nbsp;<a href="#x1-113">10.3.3</a> implies that \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2\}\) is a fundamental set of solutions of <a href="#x1-18r7">(10.3.7)</a> and \({\bf Y} = \Big({\bf \vec{y}}_1 \, {\bf \vec{y}}_2\Big)\) is a fundamental matrix for <a href="#x1-18r7">(10.3.7)</a>
-						\[
-							{\bf Y}=\left (
-								\begin {array}{cc}
-									-e^{2t}&amp;-e^{-t}\\
-									2e^{2t}&amp; e^{-t}
-								\end {array}
-							\right )
-						\]
-						
-						 Therefore the general solution of <a href="#x1-18r7">(10.3.7)</a> is
-						
-						<a id="x1-25r10"></a>
+						\(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is <span class="vocab">linearly independent</span> on \((a,b)\)
+					</li>
+					<li>
+						The <span class="vocab">Wronskian</span> of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is nonzero at some point in \((a,b)\)
+					</li>
+					<li>
+						The <span class="vocab">Wronskian</span> of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\dots ,{\bf \vec{y}}_n\}\) is nonzero at all points in \((a,b)\)
+					</li>
+				</ol>
+			</div>
+
+			<div id="a2ba07d1-8263-4b3a-a7ad-d949bd71a593">
+				We say that \({\bf Y}\) in <a href="#x1-7r4">(10.3.4)</a> is a <span class="vocab">fundamental matrix</span> for \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) if any (and therefore all) of the statements <span class="ptmb8t-">(a)</span>-<span class="ptmb8t-">(e)</span> of Theorem&nbsp;<a href="#x1-92">10.3.2</a> are true for the columns of \(Y\). In this case, <a href="#x1-6r3">(10.3.3)</a> implies that the general solution of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}(t)\,{\bf \vec{y}}\) can be written as \({\bf \vec{y}}={\bf Y}\,{\bf \vec{c}}\), where \(\bf \vec{c}\) is an arbitrary constant \(n\)-vector.
+			</div>
+
+			<br>
+			<br>
+			<div class="example" id="x1-172" style="--ex-number: 2">
+				<div>
+					The vector functions 
+					\[ {\bf \vec{y}}_1=\twocol {-e^{2t}}{2e^{2t}}\quad \mbox{ and } \quad {\bf \vec{y}}_2=\twocol {-e^{-t}}{\phantom {-}e^{-t}} \] 
+					
+					are solutions of the constant coefficient system 
+					<a id="x1-18r7"></a> 
+					\begin {equation} 
+						\label {eq:10.3.7} 
+						\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo {-4}{-3} 65 {\bf \vec{y}} 
+					\end {equation}
+					
+				</div>
+
+				<ol>
+					<li>
+						Compute the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2\}\) directly from the definition <a href="#x1-8r5">(10.3.5)</a>
+					</li>
+					<li>
+						Verify Abel’s formula <a href="#x1-10r6">(10.3.6)</a> for the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2\}\)
+					</li>
+					<li>
+						Find the general solution of <a href="#x1-18r7">(10.3.7)</a>
+					</li>
+					<li>
+						Solve the IVP
+						<a id="x1-23r8"></a> 
 						\begin {equation} 
-							\label {eq:10.3.10} 
-							{\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2= c_1\twocol {-e^{2t}}{2e^{2t}}+c_2\twocol {-e^{-t}}{e^{-t}} =\left (
+							\label {eq:10.3.8} 
+							\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo {-4}{-3}65 {\bf \vec{y}}, \quad {\bf \vec{y}}(0)= \left [
+								\begin {array}{r} 
+									4 \\
+									-5 
+								\end {array}
+							\right ]
+						\end {equation}
+					</li>
+				</ol>
+
+				<details class="solution">
+					<summary>Solution</summary>
+					<ol>
+						<li>
+							<div>
+								<a id="x1-24r9"></a>
+								\begin {align} \label {eq:10.3.9} 
+									W\big[{\bf \vec{y}}_1,{\bf \vec{y}}_2\big]
+									& =\det\Big ( 
+										{\bf \vec{y}}_1 \,\, {\bf \vec{y}}_2
+									\Big ) \nonumber\\
+									& = \det \left(
+										\begin {array}{cc}
+										-e^{2t}&amp;-e^{-t}\\2e^{2t}&amp; e^{-t} 
+									\end {array}
+										\right) \nonumber\\
+									& = e^{2t}e^{-t}\det \left(
+										\begin {array}{cc}
+										-1&amp;-1\\
+										2&amp; 1 
+										\end {array}
+										\right) \nonumber\\
+									& = e^{t}\det \left(
+										-1+2
+										\right) \nonumber\\
+									& = e^{t} 			
+								\end {align}
+
+							</div>	
+							<div>
+								
+							</div>	
+							
+						</li>
+						<li>
+
+							\begin {align*} 
+								{\text tr}\big({\bf A}\big)={\text tr}\twobytwo {-4}{-3} 65	
+								=-4+5=1
+							\end {align*}
+
+
+							If \(t_0\) is an arbitrary real number then <a href="#x1-10r6">(10.3.6)</a> implies that 
+
+							\begin {align*} 
+								W\big[{\bf \vec{y}}_1,{\bf \vec{y}}_2\big]
+								& = W(t_0) \, e^{\displaystyle \int ^t_{t_0}\mbox {tr}\Big({\bf A}(s)\Big)\, ds} \\
+								& = W(t_0) \, e^{\displaystyle \int ^t_{t_0}\mbox  ds} \\
+								& = e^{t_0} \, e^{t - t_0} \\
+								& = e^{t}\\
+							\end {align*}
+							
+							which is the same as <a href="#x1-24r9">(10.3.9)</a>
+						</li>
+						<li>
+							Since \(W(t)\ne 0\), Theorem&nbsp;<a href="#x1-113">10.3.3</a> implies that \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2\}\) is a fundamental set of solutions of <a href="#x1-18r7">(10.3.7)</a> and \({\bf Y} = \Big({\bf \vec{y}}_1 \, {\bf \vec{y}}_2\Big)\) is a fundamental matrix for <a href="#x1-18r7">(10.3.7)</a>
+							\[
+								{\bf Y}=\left (
+									\begin {array}{cc}
+										-e^{2t}&amp;-e^{-t}\\
+										2e^{2t}&amp; e^{-t}
+									\end {array}
+								\right )
+							\]
+							
+							Therefore the general solution of <a href="#x1-18r7">(10.3.7)</a> is
+							
+							<a id="x1-25r10"></a>
+							\begin {equation} 
+								\label {eq:10.3.10} 
+								{\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2= c_1\twocol {-e^{2t}}{2e^{2t}}+c_2\twocol {-e^{-t}}{e^{-t}} =\left (
+									\begin {array}{cc}
+										-e^{2t}&amp;-e^{-t}\\
+										2e^{2t}&amp; e^{-t}
+									\end {array}
+								\right ) \left (
+									\begin {array}{c}
+										c_1\\
+										c_2 
+									\end {array}
+								\right )
+							\end {equation}
+						</li>
+						<li>
+							Setting \(t=0\) in <a href="#x1-25r10">(10.3.10)</a> and imposing the initial condition in <a href="#x1-23r8">(10.3.8)</a> yields
+							\begin{align*}
+							\left (
 								\begin {array}{cc}
-									-e^{2t}&amp;-e^{-t}\\
-									2e^{2t}&amp; e^{-t}
+									-e^{0}&amp;-e^{0}\\
+									2e^{0}&amp; e^{0}
 								\end {array}
 							\right ) \left (
 								\begin {array}{c}
 									c_1\\
 									c_2 
 								\end {array}
-							\right )
-						\end {equation}
-					</li>
-					<li>
-						Setting \(t=0\) in <a href="#x1-25r10">(10.3.10)</a> and imposing the initial condition in <a href="#x1-23r8">(10.3.8)</a> yields
-						\begin{align*}
-						\left (
-							\begin {array}{cc}
-								-e^{0}&amp;-e^{0}\\
-								2e^{0}&amp; e^{0}
-							\end {array}
-						\right ) \left (
-							\begin {array}{c}
-								c_1\\
-								c_2 
-							\end {array}
-						\right ) & = \left ( 
-								\begin {array}{c} 
-									4 \\
-									-5 
-								\end {array}
-							\right ) \\
+							\right ) & = \left ( 
+									\begin {array}{c} 
+										4 \\
+										-5 
+									\end {array}
+								\right ) \\
 
-							\left (
-							\begin {array}{cc}
-								-1&amp;-1\\
-								2&amp; 1
-							\end {array}
-						\right ) \left (
-							\begin {array}{c}
-								c_1\\
-								c_2 
-							\end {array}
-						\right ) & = \left ( 
-								\begin {array}{c} 
-									4 \\
-									-5 
+								\left (
+								\begin {array}{cc}
+									-1&amp;-1\\
+									2&amp; 1
 								\end {array}
-							\right ) \\
-						\end{align*}
-
-						Writing as an augmented matrix we can perform row operations
-
-						\begin{align*}
-							\left (
-								\begin {array}{cc|c}
-									-1&amp;-1 & 4\\
-									2 &amp; 1 & -5
-								\end {array}
-							\right ) 
-							\overset{R_2+2R_1}{\longrightarrow}
-							\left (
-								\begin {array}{cc|c}
-									-1&amp;-1 & 4\\
-									0 &amp; -1 & 3
-								\end {array}
-							\right ) 
-							\overset{-R_2}{\longrightarrow}
-							\left (
-								\begin {array}{cc|c}
-									-1&amp;-1 & 4\\
-									0 &amp; 1 & -3
-								\end {array}
-							\right ) \\ \\
-							\overset{R_1+R_2}{\longrightarrow}
-							\left (
-								\begin {array}{cc|c}
-									-1&amp;0 & 1\\
-									0 &amp; 1 & -3
-								\end {array}
-							\right ) 
-							\overset{-R_1}{\longrightarrow}
-							\left (
-								\begin {array}{cc|c}
-									1&amp;0 & -1\\
-									0 &amp; 1 & -3
-								\end {array}
-							\right ) \\
-						\end{align*}
-
-						The solution of this system is \(c_1=-1\), \(c_2=-3\). Substituting these values into <a href="#x1-25r10">(10.3.10)</a> yields the solution of <a href="#x1-23r8">(10.3.8)</a>
-						\[ 
-							{\bf \vec{y}}=-\left (
+							\right ) \left (
 								\begin {array}{c}
-									-e^{2t} \\ 
-									2e^{2t}
-								\end {array} 
-							\right )-3 \left (
-								\begin {array}{c}
-									-e^{-t} \\ 
-									e^{-t} 
+									c_1\\
+									c_2 
 								\end {array}
-							\right )= \left ( 
-								\begin {array}{c} 
-									e^{2t}+3e^{-t} \\
-									-2e^{2t}-3e^{-t} 
-								\end {array}
-							\right )
-						\]
-						
-						
-					</li>
-				</ol>
-			</details>
-		</div>
+							\right ) & = \left ( 
+									\begin {array}{c} 
+										4 \\
+										-5 
+									\end {array}
+								\right ) \\
+							\end{align*}
+
+							Writing as an augmented matrix we can perform row operations
+
+							\begin{align*}
+								\left (
+									\begin {array}{cc|c}
+										-1&amp;-1 & 4\\
+										2 &amp; 1 & -5
+									\end {array}
+								\right ) 
+								\overset{R_2+2R_1}{\longrightarrow}
+								\left (
+									\begin {array}{cc|c}
+										-1&amp;-1 & 4\\
+										0 &amp; -1 & 3
+									\end {array}
+								\right ) 
+								\overset{-R_2}{\longrightarrow}
+								\left (
+									\begin {array}{cc|c}
+										-1&amp;-1 & 4\\
+										0 &amp; 1 & -3
+									\end {array}
+								\right ) \\ \\
+								\overset{R_1+R_2}{\longrightarrow}
+								\left (
+									\begin {array}{cc|c}
+										-1&amp;0 & 1\\
+										0 &amp; 1 & -3
+									\end {array}
+								\right ) 
+								\overset{-R_1}{\longrightarrow}
+								\left (
+									\begin {array}{cc|c}
+										1&amp;0 & -1\\
+										0 &amp; 1 & -3
+									\end {array}
+								\right ) \\
+							\end{align*}
+
+							The solution of this system is \(c_1=-1\), \(c_2=-3\). Substituting these values into <a href="#x1-25r10">(10.3.10)</a> yields the solution of <a href="#x1-23r8">(10.3.8)</a>
+							\[ 
+								{\bf \vec{y}}=-\left (
+									\begin {array}{c}
+										-e^{2t} \\ 
+										2e^{2t}
+									\end {array} 
+								\right )-3 \left (
+									\begin {array}{c}
+										-e^{-t} \\ 
+										e^{-t} 
+									\end {array}
+								\right )= \left ( 
+									\begin {array}{c} 
+										e^{2t}+3e^{-t} \\
+										-2e^{2t}-3e^{-t} 
+									\end {array}
+								\right )
+							\]
+							
+							
+						</li>
+					</ol>
+				</details>
+			</div>
+		</details>
 
 		<nav class="ex">
 			<a href="sec10.3.ex.html">10.3 Exercises</a>
