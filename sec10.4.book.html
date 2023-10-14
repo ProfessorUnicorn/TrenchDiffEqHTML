@@ -336,20 +336,20 @@
 			</div>
 			<div class="theorem" id="x1-91">
 				<span class="head">Theorem&nbsp;10.4.1</span>
-				Suppose the \(n\times n\) constant matrix \(A\) has \(n\) real eigenvalues \( {r}  _1, {r}  _2,\ldots , {r}  _n\) (which need not be distinct) with associated linearly independent eigenvectors \({\bf \vec{x}}_1,{\bf \vec{x}}_2,\ldots ,{\bf \vec{x}}_n\). Then the functions 
-				\[ {\bf \vec{y}}_1={\bf \vec{x}}_1e^{ {r}  _1 t},\, {\bf \vec{y}}_2={\bf \vec{x}}_2e^{ {r}  _2 t},\, \dots ,\, {\bf \vec{y}}_n={\bf \vec{x}}_ne^{ {r}  _n t} \]
-				form a fundamental set of solutions of \(\dfrac{d{\bf \vec{y}}}{dt}=A{\bf \vec{y}};\) that is, the general solution of this system is 
-				\[ {\bf \vec{y}}=c_1{\bf \vec{x}}_1e^{ {r}  _1 t}+c_2{\bf \vec{x}}_2e^{ {r}  _2 t} +\cdots +c_n{\bf \vec{x}}_ne^{ {r}  _n t}\]
+				Suppose the \(n\times n\) constant matrix \({\bf A}\) has \(n\) real eigenvalues \( {r}  _1, {r}  _2,\ldots , {r}  _n\) with associated linearly independent eigenvectors \({\bf \vec{u}}_1,{\bf \vec{u}}_2,\ldots ,{\bf \vec{u}}_n\). Then the functions 
+				\[ {\bf \vec{y}}_1={\bf \vec{u}}_1e^{ {r}  _1 t},\, {\bf \vec{y}}_2={\bf \vec{u}}_2e^{ {r}  _2 t},\, \dots ,\, {\bf \vec{y}}_n={\bf \vec{u}}_ne^{ {r}  _n t} \]
+				form a fundamental set of solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}{\bf \vec{y}}\) and the general solution of this system is 
+				\[ {\bf \vec{y}}=c_1{\bf \vec{u}}_1e^{ {r}  _1 t}+c_2{\bf \vec{u}}_2e^{ {r}  _2 t} +\cdots +c_n{\bf \vec{u}}_ne^{ {r}  _n t}\]
 			</div>
 
-			<div id="7c06e859-dab3-4e0f-88d4-20b1ef540dcc">
+			<div class="removed" id="7c06e859-dab3-4e0f-88d4-20b1ef540dcc">
 				<strong>Proof</strong>
 				Differentiating \({\bf \vec{y}}_i={\bf \vec{x}}_ie^{ {r}  _it}\) and recalling that \(A{\bf \vec{x}}_i= {r}  _i{\bf \vec{x}}_i\) yields
 				\[ \dfrac{d{\bf \vec{y}}_i}{dt}= {r}  _i{\bf \vec{x}}_ie^{ {r}  _it}=A{\bf \vec{x}}_ie^{ {r}  _it} =A{\bf \vec{y}}_i\]
 				
 				This shows that \({\bf \vec{y}}_i\) is a solution of \(\dfrac{d{\bf \vec{y}}}{dt}=A{\bf \vec{y}}\). 
 			</div>
-			<div id="9de2ecb8-840a-4cd6-906d-066f1ab793ca">
+			<div class="removed" id="9de2ecb8-840a-4cd6-906d-066f1ab793ca">
 				The Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\ldots ,{\bf \vec{y}}_n\}\) is
 				\[
 					\left | 
@@ -369,6 +369,9 @@
 				Since the columns of the determinant on the right are \({\bf \vec{x}}_1\), \({\bf \vec{x}}_2\), …, \({\bf \vec{x}}_n\), which are assumed to be linearly independent, the determinant is nonzero. Therefore Theorem&nbsp;<span class="ptmb8t-">10.3.3</span> implies that \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,\ldots ,{\bf \vec{y}}_n\}\) is a fundamental set of solutions of \(\dfrac{d{\bf \vec{y}}}{dt}=A{\bf \vec{y}}\). 
 			</div>
 
+			<br>
+			<br>
+			<!--Example 1-->
 			<div class="example" id="x1-101" style="--ex-number: 1">
 				<ol>
 					<li>
@@ -385,12 +388,13 @@
 						<a id="x1-14r9"></a> 
 						\begin {equation} 
 							\label {eq:10.4.9} 
-							\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 2442 {\bf \vec{y}},\quad {\bf \vec{y}}(0)=\left [
+							\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 2442 {\bf \vec{y}}
+							\quad\quad {\bf \vec{y}}(0)=\left (
 								\begin {array}{r}
 									5 \\
 									-1 
 								\end {array}
-							\right ]
+							\right )
 						\end {equation}
 					</li>
 				</ol>
@@ -585,6 +589,9 @@
 				</details>
 			</div>
 
+			<br>
+			<br>
+			<!--Example 2-->
 			<div class="example" id="x1-172" style="--ex-number: 2">
 				<ol>
 					<li>
@@ -593,13 +600,13 @@
 						<a id="x1-19r12"></a> 
 						\begin {equation} 
 							\label {eq:10.4.12} 
-							\dfrac{d{\bf \vec{y}}}{dt}=\left [ 
+							\dfrac{d{\bf \vec{y}}}{dt}=\left (
 								\begin {array}{rrr}
 									3&amp;-1&amp;-1\\
 									-2&amp; 3&amp; 2\\
 									4&amp;-1&amp;-2 
 								\end {array}
-							\right ]{\bf \vec{y}}
+							\right ){\bf \vec{y}}
 						\end {equation}
 					</li>
 					<li>
@@ -608,19 +615,19 @@
 						<a id="x1-21r13"></a> 
 						\begin {equation} 
 							\label {eq:10.4.13}
-							\dfrac{d{\bf \vec{y}}}{dt}=\left [
+							\dfrac{d{\bf \vec{y}}}{dt}=\left (
 								\begin {array}{rrr}
 									3&amp;-1&amp;-1\\
 									-2&amp;3&amp; 2\\
 									4&amp;-1&amp;-2
 								\end {array}
-							\right ]{\bf \vec{y}},\quad {\bf \vec{y}}(0)=\left [ 
+							\right ){\bf \vec{y}}\quad \quad {\bf \vec{y}}(0)=\left ( 
 								\begin {array}{r}
 									2\\ 
 									-1\\
 									8 
 								\end {array}
-							\right ]
+							\right )
 						\end {equation}
 					</li>
 				</ol>
@@ -876,6 +883,10 @@
 					</ol>
 				</details>
 			</div>
+
+			<br>
+			<br>
+			<!--Example 3-->
 			<div class="example" id="x1-243" style="--ex-number: 3">
 				<div>
 					Find the general solution of 
@@ -883,13 +894,13 @@
 					<a id="x1-25r16"></a>
 					\begin {equation} 
 						\label {eq:10.4.16} 
-						\dfrac{d{\bf \vec{y}}}{dt}=\left [
+						\dfrac{d{\bf \vec{y}}}{dt}=\left (
 							\begin {array}{rrr}
 								-3&amp;2&amp;2\\ 
 								2&amp;-3&amp;2\\
 								2&amp;2&amp;-3 
 							\end {array}
-						\right ]{\bf \vec{y}}
+						\right ){\bf \vec{y}}
 					\end {equation}
 				</div>
 
