@@ -73,7 +73,8 @@
 					\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo {-4}{-3}65 {\bf \vec{y}} 
 				\end {equation}
 
-				But we did not show how we obtained \({\bf \vec{y}}_1\) and \({\bf \vec{y}}_2\) in the first place. To solve we will seek solutions of the form
+				But we did not show how we obtained \({\bf \vec{y}}_1\) and \({\bf \vec{y}}_2\) in the first place. 
+				To solve we will seek solutions of the form
 				\[
 				{\bf \vec{y}} = {\bf \vec{u}} e^{rt}
 				\]
@@ -404,186 +405,329 @@
 
 					<ol>
 						<li>
-							The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-12r8">(10.4.8)</a> is
-							<div class="eqnarray">
-								\begin {eqnarray*}
-									\left | 
-										\begin {array}{cc}
-											2- {r}  &amp;4\\
-											4&amp;2- {r}  
-										\end {array}
-									\right | &amp;=&amp; ( {r}  -2)^2-16\\
-									&amp;=&amp; ( {r}  -2-4)( {r}  -2+4)\\
-									&amp;=&amp; ( {r}  -6)( {r}  +2)
-								\end {eqnarray*} 
+			
+							<div>
+								To solve <a href="#x1-12r8">(10.4.8)</a> we will seek solutions of the form
+								\[
+								{\bf \vec{y}} = {\bf \vec{u}} e^{rt}
+								\]
+								Where \({\bf \vec{u}} \) is some constant vector to be determined and \(r\) will be determined by the characteristic equation. Now differentiating \({\bf \vec{y}}\) we obtain
+
+								\[
+								\frac{d{\bf \vec{y}}}{dt} = r{\bf \vec{u}} e^{rt}
+								\]
+
+								Substituting into <a href="#x1-12r8">(10.4.8)</a>
+
+								\begin{align*}
+									\dfrac{d{\bf \vec{y}}}{dt} & =\twobytwo {2}{4}{4}{2} {\bf \vec{y}} \\ \\
+									r{\bf \vec{u}} e^{rt} & =\twobytwo {2}{4}{4}{2} {\bf \vec{u}} e^{rt} \\ \\
+
+									{\bf \vec{0}} & =\twobytwo {2}{4}{4}{2} {\bf \vec{u}} e^{rt} - r{\bf \vec{u}} e^{rt} \\ \\
+
+									
+								\end{align*}
+
+								Now to factor out the vector expression \({\bf \vec{u}} e^{rt}\) we have to write a factor of the identity matrix \({\bf I} \)
+
+
+								\begin{align*}
+									{\bf \vec{0}} & =\twobytwo {2}{4}{4}{2} {\bf \vec{u}} e^{rt} - r{\bf I} \cdot {\bf \vec{u}} e^{rt} \\ \\
+								
+									{\bf \vec{0}} & =\left[\twobytwo {2}{4}{4}{2}  - r{\bf \vec{I}} \right] {\bf \vec{u}} e^{rt} \\ \\
+
+								
+								\end{align*}
+
+								Substituting in \({\bf \vec{I}} = \twobytwo 1001\) the definition of the identity matrix we obtain
+
+								\begin{align*}
+								
+
+									{\bf \vec{0}} & =\left[\twobytwo {2}{4}{4}{2} - r \twobytwo 1001 \right] {\bf \vec{u}} \\ \\
+
+									{\bf \vec{0}} & =\twobytwo {2-r}{4}{4}{2-r}  {\bf \vec{u}} \\ \\
+
+									\twocol 00 & =\twobytwo {2-r}{4}{4}{2-r}   \twocol {u_1}{u_2} \\ \\
+
+							
+								\end{align*}
+
+								Which can be written as a system of equations
+
+								<a id="x1-15r10"></a>
+								\begin{align}  \label {eq:10.4.10}
+									\left\{
+										\begin{array}{ccc}
+											(2-r)u_1 &+& 4u_2 &=& 0 \\
+											4u_1 &+& (2-r)u_2 &=& 0 \\
+										\end{array}
+									\right.
+								
+								\end{align}
+
+								Recall that if the determinant of the coefficient matrix of a system is nonzero then the system has only the trivial solution.
+								Similarly if the determinant is zero then the system has a nontrivial solution. Therefore to seek nontrivial solutions we must guarantee that the determinant of the coefficient matrix is zero
+
+								\begin{align*}
+									\det
+									\left(
+										\begin{array}{ccc}
+											2-r & 4  \\
+											4 & 2-r \\
+										\end{array}
+									\right) & =0 \\ \\
+									(2-r)(2-r)-16 & =0 \\
+									(r^2-4r+4)-16 & =0 \\
+									\underset{p(r)}{\underbrace{r^2-4r-12}} & =0 \\
+								
+								\end{align*}
+
+								So we have our characteristic polynomial \(p(r)=r^2-4r-12\) and characteristic equation \(p(r)=0\) which we can solve by factoring in this case
+
+								\begin{align*}
+									r^2-4r-12 & =0 \\
+									(r+2)(r-6) & =0 \\
+									r+2= 0 \quad r-6 & =0 \\
+									r= -2 \quad r =& \,6  \\
+									r_1= -2 \quad r_2 =& \,6  \\
+								
+								\end{align*}
+
+								We have the <span class="vocab">eigenvalues</span> \(r_1= -2\) and \(r_2 = \,6\) and thus the solutions to the system are
+
+								\begin{align*}
+								{\bf \vec{y}_1} & = {\bf \vec{u}_1} e^{r_1t}= {\bf \vec{u}_1} e^{-2t}
+								\quad\text{and}\quad
+								{\bf \vec{y}_2} = {\bf \vec{u}_2} e^{r_2t} ={\bf \vec{u}_2} e^{6t} \\
+								\end{align*}
+
+								Now we need to determine \({\bf \vec{u}_1}\) and \({\bf \vec{u}_2}\) the <span class="vocab">eigenvectors</span> and we'll determine them using the system <a href="#x1-15r10">(10.4.10)</a> 
+								
+								
+								
+
+								\begin{align*} 
+									\left\{
+										\begin{array}{ccc}
+											(2-r)u_1 &+& 4u_2 &=& 0 \\
+											4u_1 &+& (2-r)u_2 &=& 0 \\
+										\end{array}
+									\right. \tag{10}
+								
+								\end{align*}
+
+								Substituting \(r_1=-2\) we have 
+
+								\begin{align*} 
+									\left\{
+										\begin{array}{ccc}
+											(2-r_1)u_1 &+& 4u_2 &=& 0 \\
+											4u_1 &+& (2-r_1)u_2 &=& 0 \\
+										\end{array}
+									\right. \\ \\
+									\left\{
+										\begin{array}{ccc}
+											(2+2)u_1 &+& 4u_2 &=& 0 \\
+											4u_1 &+& (2+2)u_2 &=& 0 \\
+										\end{array}
+									\right.  \\ \\
+									\left\{
+										\begin{array}{ccc}
+											4u_1 &+& 4u_2 &=& 0 \\
+											4u_1 &+& 4u_2 &=& 0 \\
+										\end{array}
+									\right.  \\ \\
+
+									\left\{
+										\begin{array}{ccc}
+											u_1 &+& u_2 &=& 0 \\
+											u_1 &+& u_2 &=& 0 \\
+										\end{array}
+									\right.  \\ \\
+								
+								\end{align*}
+
+								The system simplifies down to the single equation 
+
+								\[u_1 + u_2 = 0 \]
+
+								So we have a 
+								<span class="vocab">free variable</span>, and we'll let \(u_1=c\) where \(c\) is any number. Then we can solve for \(u_2\)
+
+								\begin{align*} 
+									u_1 + u_2 & = 0 \\
+									c + u_2 & = 0 \\
+									u_2 & = -c \\
+								\end{align*}
+
+								Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}_1}\)
+
+								\[
+								{\bf \vec{u}_1}
+								=\twocol {u_1}{u_2}
+								=\twocol {c}{-c}
+								=c\twocol {1}{-1}
+								\]
+
+								Since \(c\) can be any number we'll select \(c=1\) for a simple eigenvector 
+								
+								\begin{align*} 
+								{\bf \vec{u}_1}=\twocol {1}{-1}
+								\end{align*}
+
+								With the eigenvalue-eigenvector pair \(r_1\) and \({\bf \vec{u}_1}\) we have one of the solutions to our original equation
+
+								
+								\begin{align*} 
+								{\bf \vec{y}_1} = {\bf \vec{u}_1}e^{r_1 t} = \twocol {1}{-1}e^{-2t}
+								\end{align*}
+
+
+								Now we'll substitute \(r_2=6\) into the system <a href="#x1-15r10">(10.4.10)</a> to find \({\bf \vec{u}_2}\)
+
+								\begin{align*} 
+									\left\{
+										\begin{array}{ccc}
+											(2-r_2)u_1 &+& 4u_2 &=& 0 \\
+											4u_1 &+& (2-r_2)u_2 &=& 0 \\
+										\end{array}
+									\right. \\ \\
+									\left\{
+										\begin{array}{ccc}
+											(2-6)u_1 &+& 4u_2 &=& 0 \\
+											4u_1 &+& (2-6)u_2 &=& 0 \\
+										\end{array}
+									\right.  \\ \\
+									\left\{
+										\begin{array}{ccc}
+											-4u_1 &+& 4u_2 &=& 0 \\
+											4u_1 &+& -4u_2 &=& 0 \\
+										\end{array}
+									\right.  \\ \\
+
+									\left\{
+										\begin{array}{ccc}
+											u_1 &-& u_2 &=& 0 \\
+											u_1 &-& u_2 &=& 0 \\
+										\end{array}
+									\right.  \\ \\
+								
+								\end{align*}
+
+								The system simplifies down to the single equation 
+
+								\[u_1 - u_2 = 0 \]
+
+								So again we have a 
+								<span class="vocab">free variable</span>, so we'll let \(u_2=c\) where \(c\) is any number. Then we can solve for \(u_1\) in terms of \(c\) 
+
+								\begin{align*} 
+									u_1 - u_2 & = 0 \\
+									u_1 - c & = 0 \\
+									u_1 & = c \\
+								\end{align*}
+
+								Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}_2}\)
+
+								\[
+								{\bf \vec{u}_2}
+								=\twocol {u_1}{u_2}
+								=\twocol {c}{c}
+								=c\twocol {1}{1}
+								\]
+
+								Since \(c\) can be any number we'll select \(c=1\) for a simple eigenvector 
+								
+								\begin{align*} 
+								{\bf \vec{u}_2}=\twocol {1}{1}
+								\end{align*}
+
+								With the eigenvalue-eigenvector pair \(r_2\) and \({\bf \vec{u}_2}\) we have the second solution to our original equation
+
+								\begin{align*} 
+								{\bf \vec{y}_2} = {\bf \vec{u}_2}e^{r_2 t} = \twocol {1}{1}e^{6t}
+								\end{align*}
+
+								So we have a <span class="vocab">fundamental set</span> of solutions
+
+								\[\{{\bf \vec{y}_1},{\bf \vec{y}_2}\}
+								=\left\{
+									\twocol {1}{-1}e^{-2t}, \twocol {1}{1}e^{6t}
+									\right\}
+								\]
+								
+								We can finally write the general solution
+
+								<a id="x1-16r11"></a>
+								\begin{align}\label {eq:10.4.11}
+									{\bf \vec{y}}
+									& = c_1 {\bf \vec{y}_1} + c_2 {\bf \vec{y}_2}
+									= c_1 \twocol {1}{-1}e^{-2t} + c_2 \twocol {1}{1}e^{6t} \\
+								\end{align}
+								
 							</div>
-
-							Hence, \( {r}  _1=6\) and \( {r}  _2 =-2\) are eigenvalues of \(A\). To obtain the eigenvectors, we must solve the system
-							
-							<a id="x1-15r10"></a> 
-							\begin {equation}
-								\label {eq:10.4.10}
-								\left [
-									\begin {array}{cc}
-										2- {r}  &amp;4\\
-										4&amp;2- {r} 
-									\end {array}
-								\right ] \left [
-									\begin {array}{c} 
-										x_1\\
-										x_2
-									\end {array}
-								\right ]= \left [
-									\begin {array}{c}
-										0\\
-										0
-									\end {array}
-								\right ]
-							\end {equation}
-
-							with \( {r}  =6\) and \( {r}  =-2\). Setting \( {r}  =6\) in <a href="#x1-15r10">(10.4.10)</a> yields
-							\[
-								\left [
-									\begin {array}{rr}
-										-4&amp;4\\
-										4&amp;-4
-									\end {array}
-								\right ]\left [
-									\begin {array}{c}
-										x_1\\
-										x_2
-									\end {array}
-								\right ]=\left [
-									\begin {array}{c}
-										0\\
-										0
-									\end {array}
-								\right ]
-							\]
-							
-							which implies that \(x_1=x_2\). Taking \(x_2=1\) yields the eigenvector
-							\[
-								{\bf \vec{x}}_1=\left [
-									\begin {array}{c}
-										1\\
-										1
-									\end {array}
-								\right ]
-							\]
-							
-							so
-							\[
-								{\bf \vec{y}}_1=\left [
-									\begin {array}{c}
-										1\\
-										1
-									\end {array}
-								\right ]e^{6t}
-							\] is a solution of <a href="#x1-12r8">(10.4.8)</a>. Setting \( {r}  =-2\) in <a href="#x1-15r10">(10.4.10)</a> yields
-							
-							\[
-								\left [
-									\begin {array}{rr}
-										4&amp;4\\
-										4&amp;4
-									\end {array}
-								\right ] \left [
-									\begin {array}{c}
-										x_1\\
-										x_2
-									\end {array}
-								\right ]=\left [
-									\begin {array}{c}
-										0\\
-										0
-									\end {array}
-								\right ]
-							\]
-							
-							which implies that \(x_1=-x_2\). Taking \(x_2=1\) yields the eigenvector
-							\[
-								{\bf \vec{x}}_2=\left [
-									\begin {array}{r}
-										-1\\
-										1
-									\end {array}
-								\right ]
-							\]
-							
-							so
-							\[
-								{\bf \vec{y}}_2=\left [
-									\begin {array}{r}
-										-1\\
-										1
-									\end {array}
-								\right ]e^{-2t}
-							\]
-							
-							is a solution of <a href="#x1-12r8">(10.4.8)</a>. From Theorem&nbsp;<a href="#x1-91">10.4.1</a>, the general solution of <a href="#x1-12r8">(10.4.8)</a> is
-							
-							<a id="x1-16r11"></a>
-							\begin {equation}
-								\label {eq:10.4.11}
-								{\bf \vec{y}}=c_1{\bf \vec{y}}_1+c_2{\bf \vec{y}}_2=c_1\left [
-									\begin {array}{r}
-										1\\
-										1
-									\end {array}
-								\right ]e^{6t}+c_2\left [ 
-									\begin {array}{r}
-										-1\\
-										1 
-									\end {array}
-								\right ]e^{-2t}
-							\end {equation}
 						</li>
 						<li>
-							To satisfy the initial condition in <a href="#x1-14r9">(10.4.9)</a>, we must choose \(c_1\) and \(c_2\) in <a href="#x1-16r11">(10.4.11)</a> so that
-							\[
-								c_1\left [
-									\begin {array}{r}
-										1\\
-										1
-									\end {array}
-								\right ]+c_2\left [
-									\begin {array}{r}
-										-1\\ 
-										1
-									\end {array}
-								\right ]=\left [ 
-									\begin {array}{r}
-										5\\
-										-1 
-									\end {array}
-								\right ]
-							\]
-							
-							This is equivalent to the system
-							<div class="eqnarray">
-								\begin {eqnarray*}
-									c_1-c_2&amp;=&amp;\phantom {-}5\\ 
-									c_1+c_2&amp;=&amp;-1 
-								\end {eqnarray*} 
-							</div>
+						
+							<div>
+								To solve the IVP <a href="#x1-14r9">(10.4.9)</a>, we apply the initial condition 
+								
+								\begin{align*}
+									{\bf \vec{y}}(0)
+									&
+									= c_1 \twocol {1}{-1}e^{0} + c_2 \twocol {1}{1}e^{0} \\
+									\twocol {5}{-1}
+									&
+									= c_1 \twocol {1}{-1} + c_2 \twocol {1}{1} \\
+									\twocol {5}{-1}
+									&
+									= \twobytwo {1}{1}{-1}{1} \twocol {c_1}{c_2} \\
+								\end{align*}
 
-							so \(c_1=2, c_2=-3\). Therefore the solution of <a href="#x1-14r9">(10.4.9)</a> is
-							\[
-								{\bf \vec{y}}=2\left [
-									\begin {array}{r}
-										1\\
-										1
-									\end {array}
-								\right ]e^{6t}-3 \left [ 
-									\begin {array}{r}
-										-1\\
-										1 
-									\end {array}
-								\right ]e^{-2t}
-							\]
+								We can solve the system using row reduction on the augmented matrix
+
+								\begin{align*}
+									\left(
+										\begin{array}{cc|c}
+											1 & 1 & 5 \\
+											-1 & 1 & -1 \\
+										\end{array}
+									\right)
+									\longrightarrow
+									\left(
+										\begin{array}{cc|c}
+											1 & 1 & 5 \\
+											0 & 2 & 4 \\
+										\end{array}
+									\right)
+									\longrightarrow
+									\left(
+										\begin{array}{cc|c}
+											1 & 1 & 5 \\
+											0 & 1 & 2 \\
+										\end{array}
+									\right) 
+									\longrightarrow
+									\left(
+										\begin{array}{cc|c}
+											1 & 0 & 3 \\
+											0 & 1 & 2 \\
+										\end{array}
+									\right)
+								\end{align*}
+
+								Thus we have \(c_1=3\) and \(c_2=2\) and substituting in we have the solution to the IVP
+
+								\begin{align*}
+									{\bf \vec{y}}
+									&
+									= 3 \twocol {1}{-1}e^{-2t} + 2 \twocol {1}{1}e^{6t} \\
+								\end{align*}
+								
+								
 							
-							or, in terms of components,
-							\[ y_1=2e^{6t}+3e^{-2t},\quad y_2=2e^{6t}-3e^{-2t} \]
+							</div>
 						</li>
 					</ol>
 				</details>
@@ -595,6 +739,7 @@
 			<div class="example" id="x1-172" style="--ex-number: 2">
 				<ol>
 					<li>
+						
 						Find the general solution of 
 						
 						<a id="x1-19r12"></a> 
@@ -637,249 +782,1032 @@
 
 					<ol>
 						<li>
-							The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-19r12">(10.4.12)</a> is
-							\[
-								\left |
-									\begin {array}{ccc}
-										3- {r} &amp; -1&amp;-1\\
-										-2&amp;3- {r} &amp; 2\\
-										4 &amp;-1&amp;-2- {r} 
-									\end {array}
-								\right |=-( {r}  -2)( {r}  -3)( {r}  +1)
-							\]
-							
-							Hence, the eigenvalues of \(A\) are \( {r}  _1=2\), \( {r}  _2=3\), and \( {r}  _3=-1\). To find the eigenvectors, we must solve the system 
-							
-							<a id="x1-22r14"></a> 
-							\begin {equation} 
-								\label {eq:10.4.14} 
-								\left [ 
-									\begin {array}{ccc}
-										3- {r}  &amp;-1&amp;-1\\
-										-2&amp;3- {r}  &amp; 2\\
-										4&amp;-1&amp; -2- {r}  
-									\end {array}
-								\right ]\left [ 
-									\begin {array}{c} 
-										x_1\\
-										x_2\\
-										x_3 
-									\end {array} 
-								\right ]=\left [
-									\begin {array}{r}
-										0\\
-										0\\
-										0
-									\end {array}
-								\right ] 
-							\end {equation}
-							
-							with \( {r}  =2\), \(3\), \(-1\). With \( {r}  =2\), the augmented matrix of <a href="#x1-22r14">(10.4.14)</a> is 
-							\[
-								\left [ 
-									\begin {array}{rrrcr} 
-										1&amp;-1&amp;-1&amp;\vdots&amp; 0\\
-										-2&amp; 1&amp;2&amp;\vdots&amp; 0\\
-										4&amp;-1&amp;-4&amp;\vdots&amp; 0 
-									\end {array}
-								\right ]
-							\]
-							
-							which is row equivalent to 
-							\[ 
-								\left [ 
-									\begin {array}{rrrcr} 
-										1&amp;0&amp;-1&amp;\vdots&amp; 0\\
-										0&amp;1&amp;0&amp; \vdots&amp; 0\\
-										0&amp;0&amp;0&amp;\vdots&amp; 0 
-									\end {array}
-								\right ]
-							\] 
-							
-							Hence, \(x_1=x_3\) and \(x_2=0\). Taking \(x_3=1\) yields 
-							\[ 
-								{\bf \vec{y}}_1=\left [
-									\begin {array}{rrr}
-										1\\
-										0\\
-										1
-									\end {array}
-								\right ]e^{2t} 
-							\] 
-							
-							as a solution of <a href="#x1-19r12">(10.4.12)</a>. With \( {r}  =3\), the augmented matrix of <a href="#x1-22r14">(10.4.14)</a> is 
-							
-							\[ 
-								\left [ 
-									\begin {array}{rrrcr}
-										0&amp;-1&amp;-1&amp;\vdots&amp; 0\\
-										-2&amp; 0&amp; 2&amp;\vdots&amp; 0\\
-										4&amp;-1&amp;-5&amp;\vdots&amp; 0 
-									\end {array}
-								\right ]
-							\] 
-							
-							which is row equivalent to 
-							\[
-								\left [ 
-									\begin {array}{rrrcr} 
-										1&amp;0&amp;-1&amp;\vdots&amp; 0\\
-										0&amp;1&amp;1&amp; \vdots&amp; 0\\
-										0&amp;0&amp;0&amp;\vdots&amp; 0 
-									\end {array}
-								\right ]
-							\] 
-							
-							Hence, \(x_1=x_3\) and \(x_2=-x_3\). Taking \(x_3=1\) yields 
-							\[ 
-								{\bf \vec{y}}_2=\left [
-									\begin {array}{r}
-										1\\
-										-1\\
-										1
-									\end {array} 
-								\right ]e^{3t} 
-							\] 
-							
-							as a solution of <a href="#x1-19r12">(10.4.12)</a>. With \( {r}  =-1\), the augmented matrix of <a href="#x1-22r14">(10.4.14)</a> is 
-							\[ 
-								\left [ 
-									\begin {array}{rrrcr} 
-										4&amp;-1&amp;-1&amp;\vdots&amp; 0\\
-										-2&amp;4&amp; 2&amp;\vdots&amp; 0\\
-										4&amp;-1&amp;-1&amp;\vdots&amp; 0 
-									\end {array}
-								\right ]
-							\] 
-							
-							which is row equivalent to 
-							\[ 
-								\left [ 
-									\begin {array}{rrrcr} 
-										1&amp;0&amp;-{1\over 7}&amp;\vdots&amp; 0\\
-										0&amp;1&amp; {3\over 7}&amp;\vdots&amp; 0\\
-										0&amp;0&amp;0&amp;\vdots&amp; 0 
-									\end {array}
-								\right ]
-							\] 
-							
-							Hence, \(x_1=x_3/7\) and \(x_2=-3x_3/7\). Taking \(x_3=7\) yields 
-							\[ 
-								{\bf \vec{y}}_3=\left [
-									\begin {array}{r}
-										1\\
-										-3\\
-										7
-									\end {array} 
-								\right ]e^{-t} 
-							\] 
-							
-							as a solution of <a href="#x1-19r12">(10.4.12)</a>. By Theorem&nbsp;<a href="#x1-91">10.4.1</a>, the general solution of <a href="#x1-19r12">(10.4.12)</a> is 
-							
-							\[
-								{\bf \vec{y}}=c_1\left [
-									\begin {array}{r}
-										1\\
-										0\\
-										1
-									\end {array}
-								\right ]e^{2t} +c_2\left [
-									\begin {array}{r}
-										1\\
-										-1\\
-										1
-									\end {array}
-								\right ] e^{3t}+c_3 \left [
-									\begin {array}{r}
-										1\\
-										-3\\
-										7
-									\end {array}
-								\right ]e^{-t}
-							\] 
-							
-							which can also be written as 
-							
-							<a id="x1-23r15"></a>
-							\begin {equation} 
-								\label {eq:10.4.15} 
-								{\bf \vec{y}}=\left [ 
-									\begin {array}{crc}
-										e^{2t}&amp;e^{3t}&amp;e^{-t} \\
-										0&amp;-e^{3t}&amp; -3e^{-t}\\
-										e^{2t}&amp;e^{3t}&amp;\phantom {-}7e^{-t} 
-									\end {array} 
-								\right ]\left [ 
-									\begin {array}{c} 
-										c_1\\
-										c_2\\
-										c_3 
-									\end {array}
-								\right ]
-							\end {equation}
-						</li>
-						<li>
-							To satisfy the initial condition in <a href="#x1-21r13">(10.4.13)</a> we must choose \(c_1\), \(c_2\), \(c_3\) in <a href="#x1-23r15">(10.4.15)</a> so that 
-							\[ 
-								\left [
-									\begin {array}{rrr}
-										1&amp;1&amp;1\\
-										0&amp;-1&amp;-3\\ 
-										1&amp;1&amp;7
-									\end {array}
-								\right ] \left [ 
-									\begin {array}{c} 
-										c_1\\
-										c_2\\
-										c_3 
-									\end {array}
-								\right ]= \left [ 
-									\begin {array}{r}
-										2\\
-										-1\\
-										8 
-									\end {array}
-								\right ]
-							\]
-							
-							Solving this system yields \(c_1=3\), \(c_2=-2\), \(c_3=1\). Hence, the solution of <a href="#x1-21r13">(10.4.13)</a> is
-							<div class="eqnarray">
-								\begin {eqnarray*}
-									{\bf \vec{y}}&amp;=&amp;\left [ 
+							<div>
+								To solve <a href="#x1-19r12">(10.4.12)</a> we will seek solutions of the form
+								\[
+								{\bf \vec{y}} = {\bf \vec{u}} e^{rt}
+								\]
+								Where \({\bf \vec{u}} \) is some constant vector to be determined and \(r\) will be determined by the characteristic equation. Now differentiating \({\bf \vec{y}}\) we obtain
+
+								\[
+								\frac{d{\bf \vec{y}}}{dt} = r{\bf \vec{u}} e^{rt}
+								\]
+
+								Substituting into <a href="#x1-19r12">(10.4.12)</a>
+
+								\begin{align*}
+									\dfrac{d{\bf \vec{y}}}{dt} & =
+									\left (
+										\begin {array}{rrr}
+											3&amp;-1&amp;-1\\
+											-2&amp; 3&amp; 2\\
+											4&amp;-1&amp;-2 
+										\end {array}
+									\right )
+									{\bf \vec{y}} \\ \\
+									r{\bf \vec{u}} e^{rt} & =
+									\left (
+										\begin {array}{rrr}
+											3&amp;-1&amp;-1\\
+											-2&amp; 3&amp; 2\\
+											4&amp;-1&amp;-2 
+										\end {array}
+									\right )
+									{\bf \vec{u}} e^{rt} \\ \\
+
+									{\bf \vec{0}} & =
+									
+									\left (
+										\begin {array}{rrr}
+											3&amp;-1&amp;-1\\
+											-2&amp; 3&amp; 2\\
+											4&amp;-1&amp;-2 
+										\end {array}
+									\right )
+									{\bf \vec{u}} e^{rt} - r{\bf \vec{u}} e^{rt} \\ \\
+
+									
+								\end{align*}
+
+								Now to factor out the vector expression \({\bf \vec{u}} e^{rt}\) we have to write a factor of the identity matrix \({\bf I} \)
+
+
+								\begin{align*}
+									{\bf \vec{0}} & =
+									\left (
+										\begin {array}{rrr}
+											3&amp;-1&amp;-1\\
+											-2&amp; 3&amp; 2\\
+											4&amp;-1&amp;-2 
+										\end {array}
+									\right )
+											
+									{\bf \vec{u}} e^{rt} - r{\bf I} \cdot {\bf \vec{u}} e^{rt} \\ \\
+								
+									{\bf \vec{0}} & =\left[
+									\left (
+										\begin {array}{rrr}
+											3&amp;-1&amp;-1\\
+											-2&amp; 3&amp; 2\\
+											4&amp;-1&amp;-2 
+										\end {array}
+									\right )
+									- r{\bf \vec{I}} \right] {\bf \vec{u}} e^{rt} \\ \\
+
+								
+								\end{align*}
+
+								Substituting in \({\bf \vec{I}} = 
+								
+								\left (
+								\begin {array}{ccc}
+									1&amp; 0&amp; 0\\
+									0&amp; 1&amp; 0\\
+									0&amp; 0&amp; 1 
+								\end {array}
+							\right )
+							\) the definition of the identity matrix we obtain
+
+								\begin{align*}
+								
+
+									{\bf \vec{0}} & =\left[
+									\left (
+										\begin {array}{rrr}
+											3&amp;-1&amp;-1\\
+											-2&amp; 3&amp; 2\\
+											4&amp;-1&amp;-2 
+										\end {array}
+									\right )
+									
+									- r 
+									\left (
 										\begin {array}{ccc}
-											e^{2t}&amp;e^{3t}&amp; e^{-t}\\
-											0&amp;-e^{3t} &amp;-3e^{-t}\\
-											e^{2t}&amp;e^{3t}&amp;7e^{-t} 
-										\end {array} 
-									\right ] \left [ 
-										\begin {array}{r}
-											3\\
-											-2\\
-											1 
+											1&amp; 0&amp; 0\\
+											0&amp; 1&amp; 0\\
+											0&amp; 0&amp; 1 
 										\end {array}
-									\right ]\\ 
-									&amp;=&amp;3\left [
-										\begin {array}{r}
-											1\\
-											0\\
-											1
+									\right )
+									
+									\right] {\bf \vec{u}} \\ \\
+
+									{\bf \vec{0}} & =
+									
+									\left (
+										\begin {array}{ccc}
+											3-r&amp;-1&amp;-1\\
+											-2&amp; 3-r&amp; 2\\
+											4&amp;-1&amp;-2-r 
 										\end {array}
-									\right ]e^{2t}-2 \left [
-										\begin {array}{r}
-											1\\
-											-1\\
-											1
+									\right )
+									
+									{\bf \vec{u}} \\ \\
+
+									\left (
+										\begin {array}{ccc}
+											0 \\
+											0 \\
+											0
 										\end {array}
-									\right ] e^{3t}+\left [ 
-										\begin {array}{r}
-											1\\
-											-3\\
-											7 
-										\end {array} 
-									\right ]e^{-t}
-								\end {eqnarray*} 
+									\right )
+									 & =
+									
+									\left (
+										\begin {array}{ccc}
+											3-r&amp;-1&amp;-1\\
+											-2&amp; 3-r&amp; 2\\
+											4&amp;-1&amp;-2-r 
+										\end {array}
+									\right )
+									
+									\left (
+										\begin {array}{ccc}
+											u_1 \\
+											u_2 \\
+											u_3
+										\end {array}
+									\right ) \\ \\
+
+							
+								\end{align*}
+
+								Which can be written as a system of equations
+
+								<a id="x1-22r14"></a>  
+								\begin{align} \label {eq:10.4.14}
+									\left\{
+										\begin{array}{ccc}
+											(3-r)u_1 &-& u_2 &-& u_3 &=& 0 \\
+											-2u_1 &+& (3-r)u_2 &+& 2u_3 &=& 0 \\
+											4u_1 &-& u_2 &+& (-2-r)u_3 &=& 0 \\
+										\end{array}
+									\right.
+								\nonumber \\ \nonumber \\
+								\left\{
+									\begin{array}{ccc}
+										(r-3)u_1 &+& u_2 &+& u_3 &=& 0 \\
+										2u_1 &+& (r-3)u_2 &-& 2u_3 &=& 0 \\
+										-4u_1 &+& u_2 &+& (r+2)u_3 &=& 0 \\
+									\end{array}
+								\right.
+								\end{align}
+
+								Recall that if the determinant of the coefficient matrix of a system is nonzero then the system has only the trivial solution.
+								Similarly if the determinant is zero then the system has a nontrivial solution. Therefore to seek nontrivial solutions we must guarantee that the determinant of the coefficient matrix is zero
+
+								\begin{align*}
+									\det
+									\left(
+										\begin{array}{ccc}
+											r-3 & 1 & 1 \\
+											2 & r-3 & -2  \\
+											-4 & 1 & r+2 \\
+										\end{array}
+									\right) & =0 \\ \\
+
+								\end{align*}
+								
+								Using factoring and row reduction we'll simplify the determinant
+
+								\begin{align*}
+									-\det
+									\left(
+										\begin{array}{ccc}
+											r-3 & 1 & -1 \\
+											2 & r-3 & 2  \\
+											-4 & 1 & -r-2 \\
+										\end{array}
+									\right) & =0 \\ \\
+									\det
+									\left(
+										\begin{array}{ccc}
+											r-3 & 1 & 0 \\
+											2 & r-3 & r-1  \\
+											-4 & 1 & -r-1 \\
+										\end{array}
+									\right) & =0 \\ \\
+									\frac{1}{2}\det
+									\left(
+										\begin{array}{ccc}
+											r-3 & 1 & 0 \\
+											4 & 2r-6 & 2r-2  \\
+											-4 & 1 & -r-1 \\
+										\end{array}
+									\right) & =0 \\ \\
+									\det
+									\left(
+										\begin{array}{ccc}
+											r-3 & 1 & 0 \\
+											4 & 2r-6 & 2r-2  \\
+											0 & 2r-5 & r-3 \\
+										\end{array}
+									\right) & =0 \\ \\
+
+									(r-3)
+									\det
+									\left(
+										\begin{array}{ccc}
+											2r-6 & 2r-2  \\
+											2r-5 & r-3 \\
+										\end{array}
+									\right) 
+									-
+									\det
+									\left(
+										\begin{array}{ccc}
+											4 & 2r-2  \\
+											0 & r-3  \\
+										\end{array}
+									\right)
+									
+									& =0 \\ \\
+
+									2(r-3)
+									\det
+									\left(
+										\begin{array}{ccc}
+											r-3 & r-1  \\
+											2r-5 & r-3 \\
+										\end{array}
+									\right) 
+									-
+									2\det
+									\left(
+										\begin{array}{ccc}
+											2 & r-1  \\
+											0 & r-3  \\
+										\end{array}
+									\right)
+									
+									& =0 \\ \\
+
+									(r-3)
+									\Big[
+										\underset{r^2-6r+9}{\underbrace{(r-3)(r-3)}}
+										-
+										\underset{-2r^2+7r-5}{\underbrace{(r-1)(2r-5)}}
+									\Big] 
+									-
+									\Big[
+										2(r-3)-0(r-1)
+									\Big]
+									
+									& =0 \\ \\
+
+									(r-3)
+									\Big(
+										-r^2 + r  + 4
+									\Big)
+									-
+										2(r-3)
+									
+									& =0 \\ \\
+									\Big(
+										-r^2 + r  + \underset{2}{\underbrace{4 - 2}}
+									\Big)(r-3)
+									& =0 \\ \\
+									-(r-3)
+									\Big(
+										r^2 - r  - 2
+									\Big)
+									& =0 \\ \\
+									(r+1)
+									(r-2)
+									(r-3)
+									& =0 \\ \\
+								\end{align*}
+
+								So we have our characteristic polynomial \(p(r)=(r+1)
+								(r-2)
+								(r-3)\) and can solve the characteristic equation
+
+								\begin{align*}
+									(r+1)
+									(r-2)
+									(r-3)
+									& =0 \\
+									r+1 = 0 \quad
+									r-2 = 0 \quad
+									r-3 & = 0 \\
+									r = -1 \quad
+									r = 2 \quad
+									r = 3 & \\
+									r_1 = -1 \quad
+									r_2 = 2 \quad
+									r_3 = 3 & \\
+								\end{align*}
+
+								We have the <span class="vocab">eigenvalues</span> \(r_1= -1\) \(r_2= 2\) and \(r_3 = 3\) and thus the solutions to the system are
+
+								\begin{align*}
+								{\bf \vec{y}_1} & = {\bf \vec{u}_1} e^{r_1t}= {\bf \vec{u}_1} e^{-t}
+								\quad\quad
+								{\bf \vec{y}_2} = {\bf \vec{u}_2} e^{r_2t} ={\bf \vec{u}_2} e^{2t} 
+								\quad\quad
+								{\bf \vec{y}_3} = {\bf \vec{u}_3} e^{r_3t} ={\bf \vec{u}_3} e^{3t} \\
+								\end{align*}
+
+								Now we need to determine \({\bf \vec{u}_1}\) \({\bf \vec{u}_2}\) and \({\bf \vec{u}_3}\) the <span class="vocab">eigenvectors</span> and we'll determine them using the system <a href="#x1-22r14">(10.4.14)</a> 
+
+								\begin{align*} 
+									\left\{
+										\begin{array}{ccc}
+											(3-r)u_1 &-& u_2 &-& u_3 &=& 0 \\
+											-2u_1 &+& (3-r)u_2 &+& 2u_3 &=& 0 \\
+											4u_1 &-& u_2 &+& (-2-r)u_3 &=& 0 \\
+										\end{array}
+									\right. \tag{14}
+								
+								\end{align*}
+
+								Substituting \(r_1=-1\) into <a href="#x1-22r14">(10.4.14)</a> we have 
+
+								\begin{align*} 
+									\left\{
+										\begin{array}{ccc}
+											(3-r_1)u_1 &-& u_2 &-& u_3 &=& 0 \\
+											-2u_1 &+& (3-r_1)u_2 &+& 2u_3 &=& 0 \\
+											4u_1 &-& u_2 &+& (-2-r_1)u_3 &=& 0 \\
+										\end{array}
+									\right. \\ \\
+									\left\{
+										\begin{array}{ccc}
+											(3+1)u_1 &-& u_2 &-& u_3 &=& 0 \\
+											-2u_1 &+& (3+1)u_2 &+& 2u_3 &=& 0 \\
+											4u_1 &-& u_2 &+& (-2+1)u_3 &=& 0 \\
+										\end{array}
+									\right.  \\ \\
+									\left\{
+										\begin{array}{ccc}
+											4u_1 &-& u_2 &-& u_3 &=& 0 \\
+											-2u_1 &+& 4u_2 &+& 2u_3 &=& 0 \\
+											4u_1 &-& u_2 &-& u_3 &=& 0 \\
+										\end{array}
+									\right.  \\ \\
+
+									\left\{
+										\begin{array}{ccc}
+											4u_1 &-& u_2 &-& u_3 &=& 0 \\
+											u_1 &-& 2u_2 &-& u_3 &=& 0 \\
+											4u_1 &-& u_2 &-& u_3 &=& 0 \\
+										\end{array}
+									\right.  \\ \\
+								
+								\end{align*}
+
+								The system simplifies down to the two equations 
+
+								\[
+								\left\{
+									\begin{array}{ccc}
+										4u_1 &-& u_2 &-& u_3 &=& 0 \\
+										u_1 &-& 2u_2 &-& u_3 &=& 0 \\
+									\end{array}
+								\right. 
+								
+								\]
+
+								With only 2 equations and 3 unknowns we have a <span class="vocab">free variable</span>, so we'll let \(u_1=c\) where \(c\) is any number. Then we can solve for \(u_2\) and \(u_3\) in terms of \(c\)
+
+								\begin{align*} 
+									&
+									\left\{
+										\begin{array}{ccc}
+											4c &-& u_2 &-& u_3 &=& 0 \\
+											c &-& 2u_2 &-& u_3 &=& 0 \\
+										\end{array}
+									\right. \\ \\
+									&
+									\left\{
+										\begin{array}{ccc}
+											4c &=& u_2 &+& u_3  \\
+											c &=& 2u_2 &+& u_3  \\
+										\end{array}
+									\right. 
+
+								\end{align*}
+
+								Multiplying the second equation by negative one and adding with the first equation we obtain \(u_2\)
+
+								\begin{align*} 
+										\begin{array}{rrr}
+											4c &=& u_2 &+& u_3  \\
+											+ \quad -c &=& -2u_2 &-& u_3  \\
+											\hline
+											 3c &=& -u_2 & &  \\
+											 -3c &=& u_2 & &  \\
+										\end{array}
+								\end{align*}
+
+								Substituting in \(u_2=-3c\) we can solve for \(u_3\)
+
+								\begin{align*} 
+									c & = 2u_2 + u_3 \\
+									c & = 2(-3c) + u_3 \\
+									c & = -6c + u_3 \\
+									7c & = u_3 \\
+								\end{align*}
+
+
+								Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}_1}\)
+
+								\[
+								{\bf \vec{u}_1}
+								=
+								\left(
+									\begin{array}{c}
+										u_1 \\
+										u_2 \\
+										u_3 \\
+									\end{array}
+								\right)
+								=
+								\left(
+									\begin{array}{c}
+										c \\
+										-3c \\
+										7c \\
+									\end{array}
+								\right)
+								=
+								c\left(
+									\begin{array}{c}
+										1 \\
+										-3 \\
+										7 \\
+									\end{array}
+								\right)
+								\]
+
+								Since \(c\) can be any number we'll select \(c=1\) for a simple eigenvector 
+								
+								\begin{align*} 
+								{\bf \vec{u}_1}=\left(
+									\begin{array}{c}
+										1 \\
+										-3 \\
+										7 \\
+									\end{array}
+								\right)
+								\end{align*}
+
+								With the eigenvalue-eigenvector pair \(r_1\) and \({\bf \vec{u}_1}\) we have one of the solutions to our original equation
+
+								
+								\begin{align*} 
+								{\bf \vec{y}_1} = {\bf \vec{u}_1}e^{r_1 t} = \left(
+									\begin{array}{c}
+										1 \\
+										-3 \\
+										7 \\
+									\end{array}
+								\right)e^{-t}
+								\end{align*}
+
+
+
+
+								Substituting \(r_2=2\) into <a href="#x1-22r14">(10.4.14)</a> we have 
+
+								\begin{align*} 
+									\left\{
+										\begin{array}{ccc}
+											(3-r_2)u_1 &-& u_2 &-& u_3 &=& 0 \\
+											-2u_1 &+& (3-r_2)u_2 &+& 2u_3 &=& 0 \\
+											4u_1 &-& u_2 &+& (-2-r_2)u_3 &=& 0 \\
+										\end{array}
+									\right. \\ \\
+									\left\{
+										\begin{array}{ccc}
+											(3-2)u_1 &-& u_2 &-& u_3 &=& 0 \\
+											-2u_1 &+& (3-2)u_2 &+& 2u_3 &=& 0 \\
+											4u_1 &-& u_2 &+& (-2-2)u_3 &=& 0 \\
+										\end{array}
+									\right.  \\ \\
+									\left\{
+										\begin{array}{ccc}
+											u_1 &-& u_2 &-& u_3 &=& 0 \\
+											-2u_1 &+& u_2 &+& 2u_3 &=& 0 \\
+											4u_1 &-& u_2 &-& 4u_3 &=& 0 \\
+										\end{array}
+									\right.  \\ \\
+								
+								\end{align*}
+
+								Which we can solve using row reduction on the augmented matrix
+
+
+								\begin{align*} 
+									\left(
+										\begin{array}{rrr|c}
+											1  & -1 & -1 & 0 \\
+											-2 & 1  & 2  & 0 \\
+											4  & -1 & -4 & 0 \\
+										\end{array}
+									\right) 
+									\underset{R_3-4R_1}{\overset{R_2+2R_1}{\longrightarrow}}
+									\left(
+										\begin{array}{rrr|c}
+											1  & -1 & -1 & 0 \\
+											0 & -1  & 0  & 0 \\
+											0  & 3 & 0 & 0 \\
+										\end{array}
+									\right) 	\\ \\
+
+									\underset{\frac{1}{3}R_3}{\overset{-R_2}{\longrightarrow}}
+									\left(
+										\begin{array}{rrr|c}
+											1  & -1 & -1 & 0 \\
+											0 & 1  & 0  & 0 \\
+											0  & 1 & 0 & 0 \\
+										\end{array}
+									\right) 	\\ \\
+
+									\underset{R_2-R_3}{\overset{R_1+R_3}{\longrightarrow}}
+									\left(
+										\begin{array}{rrr|c}
+											1  & 0 & -1 & 0 \\
+											0 & 1  & 0  & 0 \\
+											0  & 0 & 0 & 0 \\
+										\end{array}
+									\right) 	\\ \\
+								
+								\end{align*}
+
+
+								The system simplifies down to two equations 
+
+								\[
+								\left\{
+									\begin{array}{ccc}
+										u_1 &-& u_3 &=& 0 \\
+										& & u_2 &=& 0 \\
+									\end{array}
+								\right. 
+								
+								\]
+
+								With only 2 equations and 3 unknowns we have a <span class="vocab">free variable</span>. One component \(u_2=0\) is set and now we'll let \(u_3=c\) to obtain
+
+								\[
+								u_1 = u_3 = c
+								\]
+
+								Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}_2}\)
+
+								\[
+								{\bf \vec{u}_2}
+								=
+								\left(
+									\begin{array}{c}
+										u_1 \\
+										u_2 \\
+										u_3 \\
+									\end{array}
+								\right)
+								=
+								\left(
+									\begin{array}{c}
+										c \\
+										0 \\
+										c \\
+									\end{array}
+								\right)
+								=
+								c\left(
+									\begin{array}{c}
+										1 \\
+										0 \\
+										1 \\
+									\end{array}
+								\right)
+								\]
+
+								Since \(c\) can be any number we'll select \(c=1\) for a simple eigenvector 
+								
+								\begin{align*} 
+								{\bf \vec{u}_2}=\left(
+									\begin{array}{c}
+										1 \\
+										0 \\
+										1 \\
+									\end{array}
+								\right)
+								\end{align*}
+
+								With the eigenvalue-eigenvector pair \(r_2\) and \({\bf \vec{u}_2}\) we have the second solution to our original equation
+
+								
+								\begin{align*} 
+								{\bf \vec{y}_2} = {\bf \vec{u}_2}e^{r_2 t} = \left(
+									\begin{array}{c}
+										1 \\
+										0 \\
+										1 \\
+									\end{array}
+								\right)e^{2t}
+								\end{align*}
+
+								
+								
+								Substituting \(r_3=3\) into <a href="#x1-22r14">(10.4.14)</a> we have 
+
+								\begin{align*} 
+									\left\{
+										\begin{array}{ccc}
+											(3-r_3)u_1 &-& u_2 &-& u_3 &=& 0 \\
+											-2u_1 &+& (3-r_3)u_2 &+& 2u_3 &=& 0 \\
+											4u_1 &-& u_2 &+& (-2-r_3)u_3 &=& 0 \\
+										\end{array}
+									\right. \\ \\
+									\left\{
+										\begin{array}{ccc}
+											(3-3)u_1 &-& u_2 &-& u_3 &=& 0 \\
+											-2u_1 &+& (3-3)u_2 &+& 2u_3 &=& 0 \\
+											4u_1 &-& u_2 &+& (-2-3)u_3 &=& 0 \\
+										\end{array}
+									\right.  \\ \\
+									\left\{
+										\begin{array}{ccc}
+											 &-& u_2 &-& u_3 &=& 0 \\
+											-2u_1 &&  &+& 2u_3 &=& 0 \\
+											4u_1 &-& u_2 &-& 5u_3 &=& 0 \\
+										\end{array}
+									\right.  \\ \\
+								
+								\end{align*}
+
+								Which we can solve using row reduction on the augmented matrix
+
+
+								\begin{align*} 
+									\left(
+										\begin{array}{rrr|c}
+											0  & -1 & -1 & 0 \\
+											-2 & 0  & 2  & 0 \\
+											4  & -1 & -5 & 0 \\
+										\end{array}
+									\right) 
+									\underset{-\frac{1}{2}R_2}{\overset{R_3+2R_1}{\longrightarrow}}
+									\left(
+										\begin{array}{rrr|c}
+											0  & -1 & -1 & 0 \\
+											1 & 0  & -1  & 0 \\
+											0  & -1 & -1 & 0 \\
+										\end{array}
+									\right) 	\\ \\
+
+									\underset{R_3-R_2}{\overset{R_1 \leftrightarrow R_2}{\longrightarrow}}
+									\left(
+										\begin{array}{rrr|c}
+											1 & 0  & -1  & 0 \\
+											0  & -1 & -1 & 0 \\
+											0  & 0 & 0 & 0 \\
+										\end{array}
+									\right) 	\\ \\
+
+									\underset{}{\overset{-R_2}{\longrightarrow}}
+									\left(
+										\begin{array}{rrr|c}
+											1 & 0  & -1  & 0 \\
+											0  & 1 & 1 & 0 \\
+											0  & 0 & 0 & 0 \\
+										\end{array}
+									\right) 	\\ \\
+								
+								\end{align*}
+
+
+								The system simplifies down to two equations 
+
+								\[
+								\left\{
+									\begin{array}{ccc}
+										u_1 &-& u_3 &=& 0 \\
+										u_2 &+& u_3 &=& 0 \\
+									\end{array}
+								\right. 
+								
+								\]
+
+								With only 2 equations and 3 unknowns we have a <span class="vocab">free variable</span>.We'll let \(u_3=c\) to obtain
+
+								\[
+								u_1 = u_3 = c
+								\quad \text{and} \quad
+								u_2 = -u_3 = -c
+								\]
+
+								Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}_3}\)
+
+								\[
+								{\bf \vec{u}_3}
+								=
+								\left(
+									\begin{array}{c}
+										u_1 \\
+										u_2 \\
+										u_3 \\
+									\end{array}
+								\right)
+								=
+								\left(
+									\begin{array}{c}
+										c \\
+										-c \\
+										c \\
+									\end{array}
+								\right)
+								=
+								c\left(
+									\begin{array}{c}
+										1 \\
+										-1 \\
+										1 \\
+									\end{array}
+								\right)
+								\]
+
+								Since \(c\) can be any number we'll select \(c=1\) for a simple eigenvector 
+								
+								\begin{align*} 
+								{\bf \vec{u}_2}=\left(
+									\begin{array}{c}
+										1 \\
+										-1 \\
+										1 \\
+									\end{array}
+								\right)
+								\end{align*}
+
+								With the eigenvalue-eigenvector pair \(r_3\) and \({\bf \vec{u}_3}\) we have the third solution to our original equation
+
+								
+								\begin{align*} 
+								{\bf \vec{y}_3} = {\bf \vec{u}_3}e^{r_3 t} = \left(
+									\begin{array}{c}
+										1 \\
+										-1 \\
+										1 \\
+									\end{array}
+								\right)e^{3t}
+								\end{align*}
+
+								So we have a <span class="vocab">fundamental set</span> of solutions
+
+								\[\{{\bf \vec{y}_1},{\bf \vec{y}_2},{\bf \vec{y}_3}\}
+								=\left\{
+									\left(
+										\begin{array}{c}
+											1 \\
+											-3 \\
+											7 \\
+										\end{array}
+									\right)e^{-t}
+									,
+									\left(
+									\begin{array}{c}
+										1 \\
+										0 \\
+										1 \\
+									\end{array}
+								\right)e^{2t}
+								,
+								\left(
+									\begin{array}{c}
+										1 \\
+										-1 \\
+										1 \\
+									\end{array}
+								\right)e^{3t}
+
+									\right\}
+								\]
+								
+								We can finally write the general solution
+
+								\begin{align}
+									{\bf \vec{y}}
+									& = c_1 {\bf \vec{y}_1} + c_2 {\bf \vec{y}_2}
+									= c_1 
+									\left(
+									\begin{array}{c}
+										1 \\
+										-3 \\
+										7 \\
+									\end{array}
+								\right)e^{-t} + c_2 
+								\left(
+									\begin{array}{c}
+										1 \\
+										0 \\
+										1 \\
+									\end{array}
+								\right)e^{2t}
+								+ c_3 
+								\left(
+									\begin{array}{c}
+										1 \\
+										-1 \\
+										1 \\
+									\end{array}
+								\right)e^{3t} \\
+								\end{align}
+								
 							</div>
 						</li>
+						<li>
+						
+							<div>
+								To solve the IVP <a href="#x1-21r13">(10.4.13)</a>, we apply the initial condition 
+								
+								\begin{align*}
+									{\bf \vec{y}}(0)
+										& 
+										= c_1 
+										\left(
+										\begin{array}{c}
+											1 \\
+											-3 \\
+											7 \\
+										\end{array}
+									\right)e^{0} + c_2 
+									\left(
+										\begin{array}{c}
+											1 \\
+											0 \\
+											1 \\
+										\end{array}
+									\right)e^{0}
+									+ c_3 
+									\left(
+										\begin{array}{c}
+											1 \\
+											-1 \\
+											1 \\
+										\end{array}
+									\right)e^{0} \\
+									\left ( 
+										\begin {array}{r}
+											2\\ 
+											-1\\
+											8 
+										\end {array}
+									\right )
+										& 
+										= c_1 
+										\left(
+										\begin{array}{c}
+											1 \\
+											-3 \\
+											7 \\
+										\end{array}
+									\right)+ c_2 
+									\left(
+										\begin{array}{c}
+											1 \\
+											0 \\
+											1 \\
+										\end{array}
+									\right)
+									+ c_3 
+									\left(
+										\begin{array}{c}
+											1 \\
+											-1 \\
+											1 \\
+										\end{array}
+									\right) \\
+									\left ( 
+										\begin {array}{r}
+											2\\ 
+											-1\\
+											8 
+										\end {array}
+									\right )
+										& 
+										= 
+										\left(
+										\begin{array}{rrr}
+											1 & 1 & 1\\
+											-3 & 0 & -1 \\
+											7  & 1 & 1\\
+										\end{array}
+									\right)
+									\left(
+										\begin{array}{c}
+											c_1 \\
+											c_2 \\
+											c_3 \\
+										\end{array}
+									\right) \\
+								\end{align*}
+
+								We can solve the system using row reduction on the augmented matrix
+
+								\begin{align*}
+									\left(
+										\begin{array}{rrr|r}
+											1  & 1 & 1  & 2 \\
+											-3 & 0 & -1 & -1 \\
+											7  & 1 & 1  & 8\\
+										\end{array}
+									\right)
+									\underset{R_3-7R_1}{\overset{R_2+3R_1}{\longrightarrow}}
+									\left(
+										\begin{array}{rrr|r}
+											1  & 1 & 1  & 2 \\
+											0 & 3 & 2 & 5 \\
+											0  & -6 & -6  & -6\\
+										\end{array}
+									\right) \\ \\
+									\underset{}{\overset{-\frac{1}{6}R_3}{\longrightarrow}}
+									\left(
+										\begin{array}{rrr|r}
+											1  & 1 & 1  & 2 \\
+											0 & 3 & 2 & 5 \\
+											0  & 1 & 1  & 1\\
+										\end{array}
+									\right) 
+									\underset{}{\overset{R_2-3R_3}{\longrightarrow}}
+									\left(
+										\begin{array}{rrr|r}
+											1  & 1 & 1  & 2 \\
+											0 & 3 & 2 & 5 \\
+											0  & 0 & -1  & 2\\
+										\end{array}
+									\right) \\ \\
+									\underset{}{\overset{R_2+2R_3}{\longrightarrow}}
+									\left(
+										\begin{array}{rrr|r}
+											1  & 1 & 1  & 2 \\
+											0 & 3 & 2 & 5 \\
+											0  & 3 & 0  & 9\\
+										\end{array}
+									\right)
+									\underset{\frac{1}{3}R_3}{\overset{R_2-R_3}{\longrightarrow}}
+									\left(
+										\begin{array}{rrr|r}
+											1  & 1 & 1  & 2 \\
+											0 & 0 & 2 & -4 \\
+											0  & 1 & 0  & 3\\
+										\end{array}
+									\right)  \\ \\
+									\underset{\frac{1}{2}R_3}{\overset{R_2\leftrightarrow R_3}{\longrightarrow}}
+									\left(
+										\begin{array}{rrr|r}
+											1  & 1 & 1  & 2 \\
+											0  & 1 & 0  & 3 \\
+											0 & 0 & 1 & -2 \\
+										\end{array}
+									\right)  
+
+									\underset{}{\overset{R_1-R_2-R_3}{\longrightarrow}}
+									\left(
+										\begin{array}{rrr|r}
+											1  & 0 & 0  & 1 \\
+											0  & 1 & 0  & 3 \\
+											0 & 0 & 1 & -2 \\
+										\end{array}
+									\right)  
+									
+								\end{align*}
+
+								Thus we have \(c_1=1\), \(c_2=3\)  and \(c_3=-2\) and substituting in we have the solution to the IVP
+
+								\begin{align*}
+									{\bf \vec{y}}
+										& 
+										=  
+										\left(
+										\begin{array}{c}
+											1 \\
+											-3 \\
+											7 \\
+										\end{array}
+									\right)e^{-t} +3 
+									\left(
+										\begin{array}{c}
+											1 \\
+											0 \\
+											1 \\
+										\end{array}
+									\right)e^{2t}
+									- 2
+									\left(
+										\begin{array}{c}
+											1 \\
+											-1 \\
+											1 \\
+										\end{array}
+									\right)e^{3t} \\
+								\end{align*}
+								
+								
+							
+							</div>
+						</li>
+				
 					</ol>
 				</details>
 			</div>
@@ -906,125 +1834,743 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-25r16">(10.4.16)</a> is 
-					\[ 
-						\left |
-							\begin {array}{ccc}
-								-3- {r} &amp; 2&amp;2\\
-								2&amp;-3- {r} &amp; 2\\
-								2&amp;2 &amp;-3- {r}  
-							\end {array}
-						\right |=-( {r}  -1)( {r}  +5)^2
-					\] 
+
+					<div>
+						
+						To solve <a href="#x1-25r16">(10.4.16)</a> we will seek solutions of the form
+						\[
+						{\bf \vec{y}} = {\bf \vec{u}} e^{rt}
+						\]
+						Where \({\bf \vec{u}} \) is some constant vector to be determined and \(r\) will be determined by the characteristic equation. Now differentiating \({\bf \vec{y}}\) we obtain
+
+						\[
+						\frac{d{\bf \vec{y}}}{dt} = r{\bf \vec{u}} e^{rt}
+						\]
+
+						Substituting into <a href="#x1-25r16">(10.4.16)</a>
+
+						\begin{align*}
+							\dfrac{d{\bf \vec{y}}}{dt} & =
+							\left (
+								\begin {array}{rrr}
+									-3&amp;2&amp;2\\ 
+									2&amp;-3&amp;2\\
+									2&amp;2&amp;-3 
+								\end {array}
+							\right )
+							{\bf \vec{y}} \\ \\
+							r{\bf \vec{u}} e^{rt} & =
+							\left (
+								\begin {array}{rrr}
+									-3&amp;2&amp;2\\ 
+									2&amp;-3&amp;2\\
+									2&amp;2&amp;-3 
+								\end {array}
+							\right )
+							{\bf \vec{u}} e^{rt} \\ \\
+
+							{\bf \vec{0}} & =
+							
+							\left (
+								\begin {array}{rrr}
+									-3&amp;2&amp;2\\ 
+									2&amp;-3&amp;2\\
+									2&amp;2&amp;-3 
+								\end {array}
+							\right )
+							{\bf \vec{u}} e^{rt} - r{\bf \vec{u}} e^{rt} \\ \\
+
+							
+						\end{align*}
+
+						Now to factor out the vector expression \({\bf \vec{u}} e^{rt}\) we have to write a factor of the identity matrix \({\bf I} \)
+
+
+						\begin{align*}
+							{\bf \vec{0}} & =
+							\left (
+								\begin {array}{rrr}
+									-3&amp;2&amp;2\\ 
+									2&amp;-3&amp;2\\
+									2&amp;2&amp;-3 
+								\end {array}
+							\right )
+									
+							{\bf \vec{u}} e^{rt} - r{\bf I} \cdot {\bf \vec{u}} e^{rt} \\ \\
+						
+							{\bf \vec{0}} & =\left[
+							\left (
+								\begin {array}{rrr}
+									-3&amp;2&amp;2\\ 
+									2&amp;-3&amp;2\\
+									2&amp;2&amp;-3 
+								\end {array}
+							\right )
+							- r{\bf \vec{I}} \right] {\bf \vec{u}} e^{rt} \\ \\
+
+						
+						\end{align*}
+
+						Substituting in \({\bf \vec{I}} = 
+						
+						\left (
+						\begin {array}{ccc}
+							1&amp; 0&amp; 0\\
+							0&amp; 1&amp; 0\\
+							0&amp; 0&amp; 1 
+						\end {array}
+					\right )
+					\) the definition of the identity matrix we obtain
+
+						\begin{align*}
+						
+
+							{\bf \vec{0}} & =\left[
+							\left (
+								\begin {array}{rrr}
+									-3&amp;2&amp;2\\ 
+									2&amp;-3&amp;2\\
+									2&amp;2&amp;-3 
+								\end {array}
+							\right )
+							
+							- r 
+							\left (
+								\begin {array}{ccc}
+									1&amp; 0&amp; 0\\
+									0&amp; 1&amp; 0\\
+									0&amp; 0&amp; 1 
+								\end {array}
+							\right )
+							
+							\right] {\bf \vec{u}} \\ \\
+
+							{\bf \vec{0}} & =
+							
+							\left (
+								\begin {array}{ccc}
+									-3-r&amp;2&amp;2\\ 
+									2&amp;-3-r&amp;2\\
+									2&amp;2&amp;-3-r 
+								\end {array}
+							\right )
+							
+							{\bf \vec{u}} \\ \\
+
+							\left (
+								\begin {array}{ccc}
+									0 \\
+									0 \\
+									0
+								\end {array}
+							\right )
+							 & =
+							
+							\left (
+								\begin {array}{ccc}
+									-3-r&amp;2&amp;2\\ 
+									2&amp;-3-r&amp;2\\
+									2&amp;2&amp;-3-r 
+								\end {array}
+							\right )
+							
+							\left (
+								\begin {array}{ccc}
+									u_1 \\
+									u_2 \\
+									u_3
+								\end {array}
+							\right ) \\ \\
+
 					
-					Hence, \( {r}  _1=1\) is an eigenvalue of multiplicity \(1\), while \( {r}  _2=-5\) is an eigenvalue of multiplicity \(2\). Eigenvectors associated with \( {r}  _1=1\) are solutions of the system with augmented matrix
-					\[
-						\left [
-							\begin {array}{rrrcr}
-								-4&amp;2&amp;2&amp;\vdots&amp; 0\\ 
-								2 &amp;-4&amp;2&amp;\vdots&amp; 0\\
-								2&amp;2&amp;-4&amp; \vdots&amp; 0 
-							\end {array}
-						\right ]
-					\] 
-					
-					which is row equivalent to 
-					\[ 
-						\left [ 
-							\begin {array}{rrrcr} 
-								1&amp;0&amp;-1&amp;\vdots&amp; 0\\
-								0&amp;1&amp;-1 &amp;\vdots&amp; 0 \\
-								0&amp;0&amp;0&amp;\vdots&amp; 0 
-							\end {array}
-						\right ]
-					\] 
-					
-					Hence, \(x_1=x_2=x_3\), and we choose \(x_3=1\) to obtain the solution 
-					
-					<a id="x1-26r17"></a>
-					\begin {equation} 
-						\label {eq:10.4.17} 
-						{\bf \vec{y}}_1=\left [
-							\begin {array}{r}
-								1\\
-								1\\
-								1 
-							\end {array}
-						\right ]e^t 
-					\end {equation}
-					
-					of <a href="#x1-25r16">(10.4.16)</a>. Eigenvectors associated with \( {r}  _2=-5\) are solutions of the system with augmented matrix 
-					\[ 
-						\left [ 
-							\begin {array}{rrrcr} 
-								2&amp;2&amp;2&amp;\vdots&amp; 0\\
-								2&amp;2&amp;2&amp;\vdots&amp; 0 \\
-								2&amp;2&amp;2&amp;\vdots&amp; 0 
-							\end {array}
-						\right ]
-					\] 
-					
-					Hence, the components of these eigenvectors need only satisfy the single condition 
-					\[ x_1+x_2+x_3=0\] 
-					
-					Since there’s only one equation here, we can choose \(x_2\) and \(x_3\) arbitrarily. We obtain one eigenvector by choosing \(x_2=0\) and \(x_3=1\), and another by choosing \(x_2=1\) and \(x_3=0\). In both cases \(x_1=-1\). Therefore 
-					\[ 
-						\left [
-							\begin {array}{r}
-								-1\\
-								0\\
-								1
-							\end {array}
-						\right ]\quad \mbox { and }\quad \left [ 
-							\begin {array}{r}
-								-1\\
-								1\\
-								0 
-							\end {array}
-						\right ] 
-					\] 
-					
-					are linearly independent eigenvectors associated with \( {r}  _2= -5\), and the corresponding solutions of <a href="#x1-25r16">(10.4.16)</a> are 
-					
-					\[ 
-						{\bf \vec{y}}_2=\left [
-							\begin {array}{r}
-								-1\\
-								0\\
-								1
-							\end {array} 
-						\right ]e^{-5t} \quad \mbox { and }\quad {\bf \vec{y}}_3=\left [
-							\begin {array}{r}
-								-1\\
-								1\\ 
-								0
-							\end {array}
-						\right ]e^{-5t}
-					\] 
-					
-					Because of this and <a href="#x1-26r17">(10.4.17)</a>, Theorem&nbsp;<a href="#x1-91">10.4.1</a> implies that the general solution of <a href="#x1-25r16">(10.4.16)</a> is 
-					\[ 
-						{\bf \vec{y}}=c_1\left [
-							\begin {array}{r}
-								1\\
-								1\\ 
-								1
-							\end {array}
-						\right ]e^t+c_2 \left [
-							\begin {array}{r}
-								-1\\
-								0\\
-								1
-							\end {array}
-						\right ] e^{-5t}+c_3\left [ 
-							\begin {array}{r}
-								-1\\
-								1\\
-								0 
-							\end {array} 
-						\right ]e^{-5t}
-					\]
-			
+						\end{align*}
+
+						Which can be written as a system of equations
+
+						<a id="x1-26r17"></a>  
+						\begin{align} \label {eq:10.4.17}
+							\left\{
+								\begin{array}{ccc}
+									(-3-r)u_1 &+& 2u_2 &+& 2u_3 &=& 0 \\
+									2u_1 &+& (-3-r)u_2 &+& 2u_3 &=& 0 \\
+									2u_1 &+& 2u_2 &+& (-3-r)u_3 &=& 0 \\
+								\end{array}
+							\right.
+						\end{align}
+
+						Recall that if the determinant of the coefficient matrix of a system is nonzero then the system has only the trivial solution.
+						Similarly if the determinant is zero then the system has a nontrivial solution. Therefore to seek nontrivial solutions we must guarantee that the determinant of the coefficient matrix is zero
+
+						\begin{align*}
+							\det
+							\left(
+								\begin{array}{ccc}
+									-r-3 & 2 & 2 \\
+									2 & -r-3 & 2  \\
+									2 & 2 & -r-3 \\
+								\end{array}
+							\right) & =0 \\ \\
+
+						\end{align*}
+						
+						Using factoring and row reduction we'll simplify the determinant
+
+						\begin{align*}
+							-\det
+							\left(
+								\begin{array}{ccc}
+									-r-3 & 2 & -2 \\
+									2 & -r-3 & -2  \\
+									2 & 2 & r+3 \\
+								\end{array}
+							\right) & =0 \\ \\
+							\det
+							\left(
+								\begin{array}{ccc}
+									-r-3 & 2 & 0 \\
+									2 & -r-3 & -r-5  \\
+									2 & 2 & r+5 \\
+								\end{array}
+							\right) & =0 \\ \\
+							-\det
+							\left(
+								\begin{array}{ccc}
+									-r-3 & 2 & 0 \\
+									2 & -r-3 & -r-5  \\
+									-2 & -2 & -r-5 \\
+								\end{array}
+							\right) & =0 \\ \\
+							\det
+							\left(
+								\begin{array}{ccc}
+									-r-3 & 2 & 0 \\
+									2 & -r-3 & -r-5  \\
+									0 & -r-5 & -2r-10 \\
+								\end{array}
+							\right) & =0 \\ \\
+
+							(-1)^{3}\det
+							\left(
+								\begin{array}{ccc}
+									r+3 & -2 & 0 \\
+									-2 & r+3 & r+5  \\
+									0 & r+5 & 2r+10 \\
+								\end{array}
+							\right) & =0 \\ \\
+
+
+							(r+3)
+							\det
+							\left(
+								\begin{array}{ccc}
+									r+3 & r+5  \\
+									r+5 & 2(r+5) \\
+								\end{array}
+							\right) 
+							-(-2)
+							\det
+							\left(
+								\begin{array}{ccc}
+									-2 & r+5  \\
+									0  & 2(r+5) \\
+								\end{array}
+							\right)
+							
+							& =0 \\ \\
+
+
+							(r+3)(r+5)
+							\det
+							\left(
+								\begin{array}{ccc}
+									r+3 & 1  \\
+									r+5 & 2 \\
+								\end{array}
+							\right) 
+							+2(r+5)
+							\det
+							\left(
+								\begin{array}{ccc}
+									-2 & 1  \\
+									0  & 2 \\
+								\end{array}
+							\right)
+							
+							& =0 \\ \\
+
+
+							(r+3)(r+5)
+							\Bigg(
+								\underset{2r+6}{\underbrace{2(r+3)}}-\underset{-r-5}{\underbrace{(r+5)}}
+							\Bigg)
+							+2(r+5)
+							\Bigg(
+								\underset{-4}{\underbrace{-2(2)-0}}
+							\Bigg)
+							& =0 \\ \\
+
+
+							(r+3)(r+5)
+							\big(
+								r+1
+							\big)
+							-2(r+5)
+							\big(
+								-4
+							\big)
+							& =0 \\ \\
+
+							(r+3)(r+5)
+							\big(
+								r+1
+							\big)
+							-8(r+5)
+							& =0 \\ \\
+
+							
+							\Bigg(
+								\underset{r^2+4r+3}{\underbrace{(r+3)(r+1)}}
+								-8
+							\Bigg)
+							(r+5)
+							& =0 \\ \\
+
+							
+							\Big(
+								r^2+4r-5
+							\Big)
+							(r+5)
+							& =0 \\ \\
+
+							
+							(r-1)
+							(r+5)
+							(r+5)
+
+							& =0 \\ \\
+
+							(r-1)
+							(r+5)^2
+
+							& =0 \\ \\
+
+						\end{align*}
+
+						So we have our characteristic polynomial \(p(r)=
+						(r-1)
+							(r+5)^2\) and can solve the characteristic equation
+
+						\begin{align*}
+							(r-1)
+							(r+5)^2
+							& =0 \\
+							r-1 = 0 \quad
+							r+5 & = 0 \\
+							r = 1 \quad
+							r = -5 & \\
+							r_1 = 1 \quad
+							r_2 = -5 &\quad
+							r_3 = -5  \\
+						\end{align*}
+
+						We have the <span class="vocab">eigenvalues</span> \(r_1= 1\), \(r_2= -5\) and \(r_3 = -5\) and thus the solutions to the system are
+
+						\begin{align*}
+						{\bf \vec{y}_1} & = {\bf \vec{u}_1} e^{r_1t}= {\bf \vec{u}_1} e^{t}
+						\quad\quad
+						{\bf \vec{y}_2} = {\bf \vec{u}_2} e^{r_2t} ={\bf \vec{u}_2} e^{-5t} 
+						\quad\quad
+						{\bf \vec{y}_3} = {\bf \vec{u}_3} e^{r_3t} ={\bf \vec{u}_3} e^{-5t} \\
+						\end{align*}
+
+						Now we need to determine \({\bf \vec{u}_1}\) \({\bf \vec{u}_2}\) and \({\bf \vec{u}_3}\) the <span class="vocab">eigenvectors</span> and we'll determine them using the system <a href="#x1-26r17">(10.4.17)</a>
+
+						\begin{align*} 
+							\left\{
+								\begin{array}{ccc}
+									(-3-r)u_1 &+& 2u_2 &+& 2u_3 &=& 0 \\
+									2u_1 &+& (-3-r)u_2 &+& 2u_3 &=& 0 \\
+									2u_1 &+& 2u_2 &+& (-3-r)u_3 &=& 0 \\
+								\end{array}
+							\right. \tag{17}
+						
+						\end{align*}
+
+						Substituting \(r_1=1\) into <a href="#x1-26r17">(10.4.17)</a> we have 
+
+						\begin{align*} 
+							\left\{
+								\begin{array}{ccc}
+									(-3-r_1)u_1 &+& 2u_2 &+& 2u_3 &=& 0 \\
+									2u_1 &+& (-3-r_1)u_2 &+& 2u_3 &=& 0 \\
+									2u_1 &+& 2u_2 &+& (-3-r_1)u_3 &=& 0 \\
+								\end{array}
+							\right. \\ \\
+							\left\{
+								\begin{array}{ccc}
+									(-3-1)u_1 &+& 2u_2 &+& 2u_3 &=& 0 \\
+									2u_1 &+& (-3-1)u_2 &+& 2u_3 &=& 0 \\
+									2u_1 &+& 2u_2 &+& (-3-1)u_3 &=& 0 \\
+								\end{array}
+							\right.  \\ \\
+							\left\{
+								\begin{array}{ccc}
+									-4u_1 &+& 2u_2 &+& 2u_3 &=& 0 \\
+									2u_1 &-& 4u_2 &+& 2u_3 &=& 0 \\
+									2u_1 &+& 2u_2 &-& 4u_3 &=& 0 \\
+								\end{array}
+							\right.  \\ \\
+
+							\left\{
+								\begin{array}{ccc}
+									2u_1 &-& u_2 &-& u_3 &=& 0 \\
+									u_1 &-& 2u_2 &+& u_3 &=& 0 \\
+									u_1 &+& u_2 &-& 2u_3 &=& 0 \\
+								\end{array}
+							\right.  \\ \\
+						
+						\end{align*}
+
+						Which we can solve using the augmented matrix
+
+						\begin{align*} 
+							
+
+							\left(
+								\begin{array}{rrr|c}
+									2 & -1 & -1 & 0 \\
+									1 & -2 & 1 & 0 \\
+									1 & 1 & -2 & 0 \\
+								\end{array}
+							\right) 
+							\underset{R_3-R_2}{\overset{R_1-2R_2}{\longrightarrow}}
+							\left(
+								\begin{array}{rrr|c}
+									0 & 3 & -3 & 0 \\
+									1 & -2 & 1 & 0 \\
+									0 & 3 & -3 & 0 \\
+								\end{array}
+							\right)   \\ \\
+
+							\underset{}{\overset{R_1\leftrightarrow R_2}{\longrightarrow}}
+							\left(
+								\begin{array}{rrr|c}
+									1 & -2 & 1 & 0 \\
+									0 & 3 & -3 & 0 \\
+									0 & 3 & -3 & 0 \\
+								\end{array}
+							\right)   \\ \\
+
+							\underset{\frac{1}{3} R_3}{\overset{\frac{1}{3} R_2}{\longrightarrow}}
+							\left(
+								\begin{array}{rrr|c}
+									1 & -2 & 1 & 0 \\
+									0 & 1 & -1 & 0 \\
+									0 & 1 & -1 & 0 \\
+								\end{array}
+							\right)   \\ \\
+
+
+							\underset{R_1+2R_2}{\overset{R_3-R_2}{\longrightarrow}}
+							\left(
+								\begin{array}{rrr|c}
+									1 & 0 & -1 & 0 \\
+									0 & 1 & -1 & 0 \\
+									0 & 0 & 0 & 0 \\
+								\end{array}
+							\right)   \\ \\
+						
+						\end{align*}
+
+						The system simplifies down to the two equations 
+
+						\[
+						\left\{
+							\begin{array}{ccc}
+								u_1 &-& u_3 &=& 0 \\
+								u_2 &-& u_3 &=& 0 \\
+							\end{array}
+						\right. 
+						
+						\]
+
+						With only 2 equations and 3 unknowns we have a <span class="vocab">free variable</span>, so we'll let \(u_3=c\) where \(c\) is any number. Then we can solve for \(u_2\) and \(u_3\) 
+
+						\[
+						u_1 = u_3 = c
+						\quad
+						\text{and}
+						\quad
+						u_2 = u_3 = c
+						\]
+
+						Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}_1}\)
+
+						\[
+						{\bf \vec{u}_1}
+						=
+						\left(
+							\begin{array}{c}
+								u_1 \\
+								u_2 \\
+								u_3 \\
+							\end{array}
+						\right)
+						=
+						\left(
+							\begin{array}{c}
+								c \\
+								c \\
+								c \\
+							\end{array}
+						\right)
+						=
+						c\left(
+							\begin{array}{c}
+								1 \\
+								1 \\
+								1 \\
+							\end{array}
+						\right)
+						\]
+
+						Since \(c\) can be any number we'll select \(c=1\) for a simple eigenvector 
+						
+						\begin{align*} 
+						{\bf \vec{u}_1}=\left(
+							\begin{array}{c}
+								1 \\
+								1 \\
+								1 \\
+							\end{array}
+						\right)
+						\end{align*}
+
+						With the eigenvalue-eigenvector pair \(r_1\) and \({\bf \vec{u}_1}\) we have one of the solutions to our original equation
+
+						
+						\begin{align*} 
+						{\bf \vec{y}_1} = {\bf \vec{u}_1}e^{r_1 t} = \left(
+							\begin{array}{c}
+								1 \\
+								1 \\
+								1 \\
+							\end{array}
+						\right)e^{t}
+						\end{align*}
+
+
+
+
+						Substituting \(r_2=-5\) into <a href="#x1-26r17">(10.4.17)</a> we have 
+
+						\begin{align*} 
+							\left\{
+								\begin{array}{ccc}
+									(-3-r_2)u_1 &+& 2u_2 &+& 2u_3 &=& 0 \\
+									2u_1 &+& (-3-r_2)u_2 &+& 2u_3 &=& 0 \\
+									2u_1 &+& 2u_2 &+& (-3-r_2)u_3 &=& 0 \\
+								\end{array}
+							\right. \\ \\
+							\left\{
+								\begin{array}{ccc}
+									(-3+5)u_1 &+& 2u_2 &+& 2u_3 &=& 0 \\
+									2u_1 &+& (-3+5)u_2 &+& 2u_3 &=& 0 \\
+									2u_1 &+& 2u_2 &+& (-3+5)u_3 &=& 0 \\
+								\end{array}
+							\right.  \\ \\
+							\left\{
+								\begin{array}{ccc}
+									2u_1 &+& 2u_2 &+& 2u_3 &=& 0 \\
+									2u_1 &+& 2u_2 &+& 2u_3 &=& 0 \\
+									2u_1 &+& 2u_2 &+& 2u_3 &=& 0 \\
+								\end{array}
+							\right.  \\ \\
+
+							\left\{
+								\begin{array}{ccc}
+									u_1 &+& u_2 &+& u_3 &=& 0 \\
+									u_1 &+& u_2 &+& u_3 &=& 0 \\
+									u_1 &+& u_2 &+& u_3 &=& 0 \\
+								\end{array}
+							\right.  \\ \\
+						
+						\end{align*}
+
+						The system simplifies down to one equation 
+
+						\[
+						\left\{
+							\begin{array}{ccc}
+								u_1 &+& u_2 &+& u_3 &=& 0 \\
+							\end{array}
+						\right. 
+						
+						\]
+
+						With only 1 equations and 3 unknowns we have 2 <span class="vocab">free variables</span>. We'll let \(u_2=c\) and \(u_3=k\) to obtain
+
+						\[
+						u_1 = -u_2-u_3 = -c-k
+						\]
+
+						Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}_2}\)
+
+						\[
+						{\bf \vec{u}_2}
+						=
+						\left(
+							\begin{array}{c}
+								u_1 \\
+								u_2 \\
+								u_3 \\
+							\end{array}
+						\right)
+						=
+						\left(
+							\begin{array}{c}
+								-c-k \\
+								c \\
+								k \\
+							\end{array}
+						\right)
+						=
+						\left(
+							\begin{array}{c}
+								-c \\
+								c \\
+								0 \\
+							\end{array}
+						\right)
+						+
+						\left(
+							\begin{array}{c}
+								-k \\
+								0 \\
+								k \\
+							\end{array}
+						\right)
+						=
+						c\left(
+							\begin{array}{c}
+								-1 \\
+								1 \\
+								0 \\
+							\end{array}
+						\right)
+						+
+						k\left(
+							\begin{array}{c}
+								-1 \\
+								0 \\
+								1 \\
+							\end{array}
+						\right)
+						\]
+
+						Since \(c\) and \(k\) can be any numbers we'll select \(c=1\) and \(k=0\) for a simple eigenvector 
+						
+						\begin{align*} 
+						{\bf \vec{u}_2}=\left(
+							\begin{array}{c}
+								-1 \\
+								1 \\
+								0 \\
+							\end{array}
+						\right)
+						\end{align*}
+
+						With the eigenvalue-eigenvector pair \(r_2\) and \({\bf \vec{u}_2}\) we have the second solution to our original equation
+
+						
+						\begin{align*} 
+						{\bf \vec{y}_2} = {\bf \vec{u}_2}e^{r_2 t} = \left(
+							\begin{array}{c}
+								-1 \\
+								1 \\
+								0 \\
+							\end{array}
+						\right)e^{-5t}
+						\end{align*}
+
+						Recall that \(r_2=-5\) was a repeated root, so since \(r_3=-5\) is the same value, substituting \(r_3=-5\) into the system <a href="#x1-26r17">(10.4.17)</a> yields the same result.
+						To get a unique eigenevector we'll choose \(c\) and \(k\) differently this time. We'll select \(c=0\) and \(k=1\) for another simple eigenvector. With the eigenvalue-eigenvector pair \(r_3\) and \({\bf \vec{u}_3}\) we have the third solution to our original equation
+
+						
+						\begin{align*} 
+						{\bf \vec{y}_3} = {\bf \vec{u}_3}e^{r_3 t} = \left(
+							\begin{array}{c}
+								-1 \\
+								0 \\
+								1 \\
+							\end{array}
+						\right)e^{-5t}
+						\end{align*}
+
+						So we have a <span class="vocab">fundamental set</span> of solutions
+
+						\[\{{\bf \vec{y}_1},{\bf \vec{y}_2},{\bf \vec{y}_3}\}
+						=\left\{
+							\left(
+								\begin{array}{c}
+									1 \\
+									1 \\
+									1 \\
+								\end{array}
+							\right)e^{t}
+							,
+							\left(
+								\begin{array}{c}
+									-1 \\
+									1 \\
+									0 \\
+								\end{array}
+							\right)e^{-5t}
+						,
+						\left(
+							\begin{array}{c}
+								-1 \\
+								0 \\
+								1 \\
+							\end{array}
+						\right)e^{-5t}
+
+							\right\}
+						\]
+						
+						We can finally write the general solution
+
+						\begin{align}
+							{\bf \vec{y}}
+							& = c_1 {\bf \vec{y}_1} + c_2 {\bf \vec{y}_2}
+							= c_1 
+							\left(
+							\begin{array}{c}
+								1 \\
+								1 \\
+								1 \\
+							\end{array}
+						\right)e^{t} + c_2 
+						\left(
+							\begin{array}{c}
+								1 \\
+								0 \\
+								1 \\
+							\end{array}
+						\right)e^{2t}
+						+ c_3 
+						\left(
+							\begin{array}{c}
+								1 \\
+								-1 \\
+								1 \\
+							\end{array}
+						\right)e^{3t} \\
+						\end{align}
+						
+					</div>
+
+				
 			</div>
 		</details>
 
