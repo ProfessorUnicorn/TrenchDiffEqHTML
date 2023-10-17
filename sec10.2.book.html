@@ -48,18 +48,31 @@
 				<a id="x1-2r1"></a> 
 				\begin {equation}
 					\label {eq:10.2.1} 
+					\left\{
 					\begin {array}{ccl} 
 						\dfrac{dy_1}{dt} &amp;=&amp;a_{11}(t)y_1+a_{12}(t)y_2+\cdots +a_{1n}(t)y_n+f_1(t)\\ 
 						\dfrac{dy_2}{dt} &amp;=&amp;a_{21}(t)y_1+a_{22}(t)y_2+\cdots +a_{2n}(t)y_n+f_2(t)\\ 
 						&amp;\vdots \\ 
 						\dfrac{dy_n}{dt} &amp; =&amp;a_{n1}(t)y_1+a_{n2}(t)y_2+\cdots +a_{nn}(t)y_n+f_n(t) 
 					\end {array} 
+					\right.
 				\end {equation}
 				is called a <span class="vocab">linear system</span>.
 			</div>
 			<div class="indent" id="02fed7d8-7e4a-42d7-8bb3-c41761cffc65">
 				The linear system <a href="#x1-2r1">(10.2.1)</a> can be written in matrix form as
-				\[ \col { \dfrac{dy}{dt} }n=\matfunc ann\col yn+\colfunc fn\]
+				\[
+					\left(
+					\begin {array}{c} 
+						\dfrac{dy_1}{dt} \\
+						\dfrac{dy_2}{dt} \\
+						\vdots \\
+						\dfrac{dy_n}{dt}
+					\end{array}
+					\right)
+					=
+					\matfunc ann\col yn+\colfunc fn
+				\]
 				
 				or more briefly as
 
@@ -69,21 +82,17 @@
 					\dfrac{d{\bf \vec{y}}}{dt}={\bf{A}}(t)\, {\bf \vec{y}}+{\bf \vec{f}}(t) 
 				\end {equation}
 
-				where 
-				
-				\[ {\bf \vec{y}}=\col yn,\quad {\bf{A}}(t)=\matfunc ann,\quad \mbox{ and } \quad {\bf \vec{f}}(t)=\colfunc fn\] 
-				
 				We call \({\bf{A}}(t)\) the <span class="vocab">coefficient matrix</span> of <a href="#x1-3r2">(10.2.2)</a> and \({\bf \vec{f}}(t)\) the <span class="vocab">forcing function</span>. We’ll say that \({\bf{A}}(t)\) and \({\bf \vec{f}}(t)\) are <span class="vocab">continuous</span> if their entries are continuous. If \({{\bf \vec{f}}(t)}\equiv{\bf \vec{0}}\), then the equation <a href="#x1-3r2">(10.2.2)</a> is <span class="vocab">homogeneous</span> otherwise it's <span class="vocab">nonhomogeneous</span>.
 			</div>
 			<div class="indent" id="4c1b072e-bf36-4186-ae1a-8983938c04d1">
-				An IVP for <a href="#x1-3r2">(10.2.2)</a> consists of finding a solution of <a href="#x1-3r2">(10.2.2)</a> that equals a given constant vector at some initial point \(t_0\)
+				An IVP for <a href="#x1-3r2">(10.2.2)</a> consists of finding a solution that equals a given constant vector at some initial point \(t_0\)
 				\[ {\bf \vec{k}} =\col kn\] 
 				
 				We write this IVP as 
 				\[ \dfrac{d{\bf \vec{y}}}{dt}={\bf{A}}(t) \,{\bf \vec{y}}+{\bf \vec{f}}(t) \quad {\bf \vec{y}}(t_0)={\bf \vec{k}}\]
 			</div>
 			<div class="indent" id="2b31e1b5-7ade-471d-b77f-f38c717749d6">
-				The next theorem gives sufficient conditions for the existence of solutions of IVPs for <a href="#x1-3r2">(10.2.2)</a>.
+				The next theorem gives sufficient conditions for the existence of solutions of IVPs for <a href="#x1-3r2">(10.2.2)</a>
 			</div>
 			<div class="theorem" id="x1-41">
 				<span class="head">Theorem&nbsp;10.2.1</span>
@@ -117,13 +126,14 @@
 						\end {equation}
 						
 					</li>
+					<li class="skip"></li>
 					<li>
-							Find the solution of the IVP 
-							<a id="x1-11r5"></a> 
-							\begin {equation} 
-							\label {eq:10.2.5} 
+						Find the solution of the IVP 
+						<a id="x1-11r5"></a> 
+						\begin {equation} 
+						\label {eq:10.2.5} 
 							\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 1221{\bf \vec{y}}+\twocol 21e^{4t}\quad {\bf \vec{y}}(0)={1\over 5}\twocol 3{22} 
-							\end {equation}
+						\end {equation}
 					</li>
 				</ol>
 
@@ -142,8 +152,12 @@
 								\right.
 								\\ \\
 								&
+								\twocol {\dfrac{dy_1}{dt}}{\dfrac{dy_2}{dt}}
+								= \twocol {y_1 + 2y_2}{2y_1 + y_2} + \twocol {2e^{4t}}{e^{4t}}
+								\\ \\
+								&
 								\dfrac{d}{dt}\twocol {y_1}{y_2}
-								=\twobytwo 1221\twocol {y_1}{y_2}+\twocol {2e^{4t}}{e^{4t}}
+								=\twobytwo 1221\twocol {y_1}{y_2}+\twocol 21e^{4t}
 								\\ \\
 								\quad & \quad\quad 
 								\dfrac{d{\bf \vec{y}}}{dt}
@@ -158,7 +172,6 @@
 							
 							Since the coefficient matrix and the forcing function are both continuous on \((-\infty ,\infty )\), Theorem&nbsp;<a href="#x1-41">10.2.1</a> implies that this problem has a unique solution on \((-\infty ,\infty )\).
 						</li>
-						<br>
 						<li>
 							We can verify <a href="#x1-9r4">(10.2.4)</a> is a solution to the system of differential equations <a href="#x1-7r3">(10.2.3)</a> differentiating and substituting. The left side of the equation is just the derivative so we differentiate:
 
@@ -169,6 +182,9 @@
 								& =  {4\over 5}\twocol 87 e^{4t} + 3c_1\twocol 11 e^{3t} -c_2\twocol 1{-1} e^{-t}  \\
 								& =  {4\over 5}\twocol 87 e^{4t} + 3c_1\twocol 11 e^{3t} +c_2\twocol {-1}{1} e^{-t}  \\
 							\end {align*}
+
+						</li>
+						<li class="continued">
 
 							Now we'll substitute <a href="#x1-9r4">(10.2.4)</a> into the right side of the equation <a href="#x1-7r3">(10.2.3)</a> to confirm it matches.
 
@@ -187,7 +203,6 @@
 								+c_1\twocol {3}{3}e^{3t}+c_2\twocol {-1}{1}e^{-t}}}\\
 							\end {align*}
 						</li>
-						<br>
 
 						<li>
 							We already verified the solution
