@@ -26,7 +26,7 @@
 			\( 
 				\newcommand{\threecol}[3]{\left(\begin{array}{r}#1\\#2\\#3\end{array}\right)}
 				\newcommand{\twocol}[2]{\left(\begin{array}{c}#1\\#2\end{array}\right)}
-				\newcommand{\twochar}[4]{\left| \begin {array}{cc} #1-\lambda&amp; #2\\#3&amp; #4-\lambda \end{array}\right|}
+				\newcommand{\twochar}[4]{\left| \begin {array}{cc} #1-{r}&amp; #2\\#3&amp; #4-{r} \end{array}\right|}
 				\newcommand{\twobytwo}[4]{\left( \begin {array}{rr} #1&amp; #2\\#3&amp; #4 \end{array}\right)}
 				\newcommand{\threebythree}[9]{\left( \begin {array}{rrr} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9 \end{array}\right)}
 				\newcommand{\matfunc}[3]{\left( \begin {array}{cccc}#1_{11}(t)&amp; #1_{12}(t)&amp;\cdots &amp; #1_{1#3}(t)\\#1_{21}(t)&amp; #1_{22}(t)&amp;\cdots&amp; #1_{2#3}(t)\\\vdots&amp; \vdots&amp;\ddots&amp;\vdots\\#1_{#21}(t)&amp; #1_{#22}(t)&amp;\cdots&amp; #1_{#2#3}(t) \end{array}\right)}
@@ -44,72 +44,76 @@
 			<summary>Complex Eigenvalues</summary>
 
 			<div id="2ab6ef56-d4f8-457e-b845-914b970c2b5e">
-				We now consider the system \(\dfrac{d{\bf \vec{y}}}{dt}=A{\bf \vec{y}}\), where \(A\) has a complex eigenvalue \(\lambda =\alpha +i\beta \) with \(\beta \ne 0\). We continue to assume that \(A\) has real entries, so the characteristic polynomial of \(A\) has real coefficients. This implies that \(\overline \lambda =\alpha -i\beta \) is also an eigenvalue of \(A\). 
+				We now consider the system \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}{\bf \vec{y}}\), where \({\bf A}\) has complex eigenvalues \({r}_1 =\alpha +i\beta \) and \({r}_2 =\alpha -i\beta \). We continue to assume that \({\bf A}\) has real entries, so the characteristic polynomial of \({\bf A}\) has real coefficients. 
 			</div>
 			<div id="dda2dc8c-322d-41ae-8aa8-26cce81466e7">
-				An eigenvector \(\bf x\) of \(A\) associated with \(\lambda =\alpha +i\beta \) will have complex entries, so we’ll write 
-				\[ {\bf \vec{x}}={\bf \vec{u}}+i{\bf \vec{v}} \] 
+				An eigenvector \({\bf \vec{a}}\) of \({\bf A}\) associated with \({r}_1 =\alpha +i\beta \) will have complex entries, so we’ll write the eigenvector in real and imaginary components
+				\[ {\bf \vec{u}}={\bf \vec{a}}+i{\bf \vec{b}} \] 
 				
-				where \(\bf u\) and \(\bf v\) have real entries; that is, \(\bf u\) and \(\bf v\) are the real and imaginary parts of \(\bf x\). Since \(A{\bf \vec{x}}=\lambda {\bf \vec{x}}\),
+				where \({\bf \vec{a}}\) and \({\bf \vec{b}}\) have real entries; that is, \({\bf \vec{a}}\) and \({\bf \vec{b}}\) are the real and imaginary parts of \({\bf \vec{u}}\). Since \({\bf A}{\bf \vec{u}}={r} {\bf \vec{u}}\),
 				
 				<a id="x1-2r1"></a>
 				\begin {equation} 
 					\label {eq:10.6.1} 
-					A({\bf \vec{u}}+i{\bf \vec{v}})=(\alpha +i\beta )({\bf \vec{u}}+i{\bf \vec{v}}) 
+					{\bf A}({\bf \vec{a}}+i{\bf \vec{b}})=(\alpha +i\beta )({\bf \vec{a}}+i{\bf \vec{b}}) 
 				\end {equation}
 				
 				Taking complex conjugates here and recalling that \(A\) has real entries yields 
-				\[ A({\bf \vec{u}}-i{\bf \vec{v}})=(\alpha -i\beta )({\bf \vec{u}}-i{\bf \vec{v}})\] 
+				\[ {\bf A}({\bf \vec{a}}-i{\bf \vec{b}})=(\alpha -i\beta )({\bf \vec{a}}-i{\bf \vec{b}})\] 
 				
-				which shows that \({\bf \vec{x}}={\bf \vec{u}}-i{\bf \vec{v}}\) is an eigenvector associated with \(\overline \lambda =\alpha -i\beta \). The complex conjugate eigenvalues \(\lambda \) and \(\overline \lambda \) can be separately associated with linearly independent solutions \(\dfrac{d{\bf \vec{y}}}{dt}=A{\bf \vec{y}}\); however, we won’t pursue this approach, since solutions obtained in this way turn out to be complex–valued. Instead, we’ll obtain solutions of \(\dfrac{d{\bf \vec{y}}}{dt}=A{\bf \vec{y}}\) in the form 
+				which shows that \({\bf \vec{u}}={\bf \vec{a}}-i{\bf \vec{b}}\) is an eigenvector associated with \({r}_2 =\alpha -i\beta \). The complex conjugate eigenvalues \({r}_1\) and \({r}_2\) can be separately associated with linearly independent solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}{\bf \vec{y}}\); however, we won’t pursue this approach, since solutions obtained in this way turn out to be complex–valued. Instead, we’ll obtain solutions of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}{\bf \vec{y}}\) in the form 
 				<a id="x1-3r2"></a>
 				\begin {equation} 
 					\label {eq:10.6.2} 
-					{\bf \vec{y}}=f_1{\bf \vec{u}}+f_2{\bf \vec{v}} 
+					{\bf \vec{y}}=y_1{\bf \vec{a}}+y_2{\bf \vec{b}} 
 				\end {equation}
 				
-				where \(f_1\) and \(f_2\) are real–valued scalar functions. The next theorem shows how to do this. 
+				where \(y_1\) and \(y_2\) are real–valued scalar functions. The next theorem shows how to do this. 
 			</div>
+
+
+			<!--Theorem-->
 			<div class="theorem" id="x1-41">
 				<span class="head">Theorem&nbsp;10.6.1</span>
-				 Let \(A\) be an \(n\times n\) matrix with real entries. Let \(\lambda =\alpha +i\beta \) (\(\beta \ne 0\)) be a complex eigenvalue of \(A\) and let \({\bf \vec{x}}={\bf \vec{u}}+i{\bf \vec{v}}\) be an associated eigenvector, where \(\bf u\) and \(\bf v\) have real components. Then \(\bf u\) and \(\bf v\) are both nonzero and 
-				\[ {\bf \vec{y}}_1=e^{\alpha t}({\bf \vec{u}}\cos \beta t-{\bf \vec{v}}\sin \beta t) \quad \mbox{ and} \quad {\bf \vec{y}}_2=e^{\alpha t}({\bf \vec{u}}\sin \beta t+{\bf \vec{v}}\cos \beta t) \]
+				 Let \({\bf A}\) be an \(n\times n\) matrix with real entries. Let \({r}_1 =\alpha +i\beta \) be a complex eigenvalue of \({\bf A}\) and let \({\bf \vec{u}}={\bf \vec{a}}+i{\bf \vec{b}}\) be an associated eigenvector, where \({\bf \vec{a}}\) and \({\bf \vec{b}}\) have real components. Then \({\bf \vec{a}}\) and \({\bf \vec{b}}\) are both nonzero and 
+				\[ {\bf \vec{y}}_1=e^{\alpha t}({\bf \vec{a}}\cos \beta t-{\bf \vec{b}}\sin \beta t) \quad \mbox{ and} \quad {\bf \vec{y}}_2=e^{\alpha t}({\bf \vec{a}}\sin \beta t+{\bf \vec{b}}\cos \beta t) \]
 					
 				which are the real and imaginary parts of 
 				<a id="x1-5r3"></a>
 				\begin {equation} 
 					\label {eq:10.6.3}
-					e^{\alpha t}(\cos \beta t+i\sin \beta t)({\bf \vec{u}}+i{\bf \vec{v}}) 
+					e^{\alpha t}(\cos \beta t+i\sin \beta t)({\bf \vec{a}}+i{\bf \vec{b}}) 
 				\end {equation}
 				
 				are linearly independent solutions of \(\dfrac{d{\bf \vec{y}}}{dt}=A{\bf \vec{y}}\).
 			</div>
 
-			<div id="80d20c26-2623-45a8-9a1e-2745fb28c5ea">
+			<!--Proof-->
+			<div class = removed id="80d20c26-2623-45a8-9a1e-2745fb28c5ea">
 				<strong>Proof</strong>
 				A function of the form <a href="#x1-3r2">(10.6.2)</a> is a solution of \(\dfrac{d{\bf \vec{y}}}{dt}=A{\bf \vec{y}}\) if and only if 
 				<a id="x1-6r4"></a>
 				\begin {equation} 
 					\label {eq:10.6.4} 
-					\dfrac{df_1}{dt}{\bf \vec{u}}+\dfrac{df_2}{dt}{\bf \vec{v}}=f_1A{\bf \vec{u}}+f_2A{\bf \vec{v}}
+					\dfrac{df_1}{dt}{\bf \vec{a}}+\dfrac{df_2}{dt}{\bf \vec{b}}=f_1A{\bf \vec{a}}+f_2A{\bf \vec{b}}
 				\end {equation}
 				
 				Carrying out the multiplication indicated on the right side of <a href="#x1-2r1">(10.6.1)</a> and collecting the real and imaginary parts of the result yields 
-				\[ A({\bf \vec{u}}+i{\bf \vec{v}})=(\alpha {\bf \vec{u}}-\beta {\bf \vec{v}})+i(\alpha {\bf \vec{v}}+\beta {\bf \vec{u}})\] 
+				\[ A({\bf \vec{a}}+i{\bf \vec{b}})=(\alpha {\bf \vec{a}}-\beta {\bf \vec{b}})+i(\alpha {\bf \vec{b}}+\beta {\bf \vec{a}})\] 
 				
 				Equating real and imaginary parts on the two sides of this equation yields 
 				\[ 
 					\begin {array}{rcl} 
-						A{\bf \vec{u}}&amp;=&amp;\alpha {\bf \vec{u}}-\beta {\bf \vec{v}}\\ 
-						A{\bf \vec{v}}&amp;=&amp;\alpha {\bf \vec{v}}+\beta {\bf \vec{u}} 
+						A{\bf \vec{a}}&amp;=&amp;\alpha {\bf \vec{a}}-\beta {\bf \vec{b}}\\ 
+						A{\bf \vec{b}}&amp;=&amp;\alpha {\bf \vec{b}}+\beta {\bf \vec{a}} 
 					\end {array}
 				\] 
 				
-				We leave it to you (Exercise&nbsp;<span class="ptmb8t-">25</span>) to show from this that \(\bf u\) and \(\bf v\) are both nonzero. Substituting from these equations into <a href="#x1-6r4">(10.6.4)</a> yields
+				We leave it to you (Exercise&nbsp;<span class="ptmb8t-">25</span>) to show from this that \({\bf \vec{a}}\) and \({\bf \vec{b}}\) are both nonzero. Substituting from these equations into <a href="#x1-6r4">(10.6.4)</a> yields
 				<div class="eqnarray">
 					\begin {eqnarray*} 
-						\dfrac{df_1}{dt}{\bf \vec{u}}+\dfrac{df_2}{dt}{\bf \vec{v}} &amp;=&amp;f_1(\alpha {\bf \vec{u}}-\beta {\bf \vec{v}})+f_2(\alpha {\bf \vec{v}}+\beta {\bf \vec{u}})\\ 
-						&amp;=&amp;(\alpha f_1+\beta f_2){\bf \vec{u}}+(-\beta f_1+\alpha f_2){\bf \vec{v}} 
+						\dfrac{df_1}{dt}{\bf \vec{a}}+\dfrac{df_2}{dt}{\bf \vec{b}} &amp;=&amp;f_1(\alpha {\bf \vec{a}}-\beta {\bf \vec{b}})+f_2(\alpha {\bf \vec{b}}+\beta {\bf \vec{a}})\\ 
+						&amp;=&amp;(\alpha f_1+\beta f_2){\bf \vec{a}}+(-\beta f_1+\alpha f_2){\bf \vec{b}} 
 					\end {eqnarray*} 
 				</div>
 
@@ -159,14 +163,17 @@
 				\begin {equation} 
 					\label {eq:10.6.5} 
 					\begin {array}{rcl} 
-						{\bf \vec{y}}&amp;=&amp;e^{\alpha t}\left [(c_1\cos \beta t+c_2\sin \beta t){\bf \vec{u}} +(-c_1\sin \beta t+c_2\cos \beta t){\bf \vec{v}}\right ]\\ 
-						&amp;=&amp;c_1e^{\alpha t}({\bf \vec{u}}\cos \beta t-{\bf \vec{v}}\sin \beta t) +c_2e^{\alpha t}({\bf \vec{u}}\sin \beta t+{\bf \vec{v}}\cos \beta t) 
+						{\bf \vec{y}}&amp;=&amp;e^{\alpha t}\left [(c_1\cos \beta t+c_2\sin \beta t){\bf \vec{a}} +(-c_1\sin \beta t+c_2\cos \beta t){\bf \vec{b}}\right ]\\ 
+						&amp;=&amp;c_1e^{\alpha t}({\bf \vec{a}}\cos \beta t-{\bf \vec{b}}\sin \beta t) +c_2e^{\alpha t}({\bf \vec{a}}\sin \beta t+{\bf \vec{b}}\cos \beta t) 
 					\end {array} 
 				\end {equation}
 				
 				is a solution of \(\dfrac{d{\bf \vec{y}}}{dt}=A{\bf \vec{y}}\) for any choice of the constants \(c_1\) and \(c_2\). In particular, by first taking \(c_1=1\) and \(c_2=0\) and then taking \(c_1=0\) and \(c_2=1\), we see that \({\bf \vec{y}}_1\) and \({\bf \vec{y}}_2\) are solutions of \( \dfrac{d{\bf \vec{y}}}{dt}=A{\bf \vec{y}}\). We leave it to you to verify that they are, respectively, the real and imaginary parts of <a href="#x1-5r3">(10.6.3)</a> (Exercise&nbsp;<span class="ptmb8t-">26</span>), and that they are linearly independent (Exercise&nbsp;<span class="ptmb8t-">27</span>).
 			</div>
 
+			<br>
+			<br>
+			<!--Example 1-->
 			<div class="example" id="x1-81" style="--ex-number: 1">
 				<div>
 					Find the general solution of 
@@ -182,12 +189,12 @@
 					The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-9r6">(10.6.6)</a> is 
 					\[ \left |
 						\begin {array}{cc} 
-							4-\lambda&amp; -5\\ 
-							5&amp;-2-\lambda 
+							4-{r}&amp; -5\\ 
+							5&amp;-2-{r} 
 						\end {array}
-					\right |=(\lambda -1)^2+16\] 
+					\right |=({r} -1)^2+16\] 
 					
-					Hence, \(\lambda =1+4i\) is an eigenvalue of \(A\). The associated eigenvectors satisfy \(\left (A-\left (1+4i\right )I\right ){\bf \vec{x}}={\bf 0}\). The augmented matrix of this system is 
+					Hence, \({r} =1+4i\) is an eigenvalue of \(A\). The associated eigenvectors satisfy \(\left (A-\left (1+4i\right )I\right ){\bf \vec{u}}={\bf 0}\). The augmented matrix of this system is 
 					\[ \left [
 						\begin {array}{cccr} 
 							3-4i&amp;-5&amp;\vdots&amp; 0\\ 
@@ -204,7 +211,7 @@
 					\right ]\] 
 					
 					Therefore \(x_1=(3+4i)x_2/5\). Taking \(x_2=5\) yields \(x_1=3+4i\), so 
-					\[ {\bf \vec{x}}=\left [
+					\[ {\bf \vec{u}}=\left [
 						\begin {array}{c}
 							3+4i\\
 							5
@@ -262,12 +269,12 @@
 					The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-11r7">(10.6.7)</a> is 
 					\[ \left |
 						\begin {array}{cc}
-							-14-\lambda&amp; 39\\
-							-6&amp;16-\lambda 
+							-14-{r}&amp; 39\\
+							-6&amp;16-{r} 
 						\end {array}
-					\right |=(\lambda -1)^2+9\] 
+					\right |=({r} -1)^2+9\] 
 					
-					Hence, \(\lambda =1+3i\) is an eigenvalue of \(A\). The associated eigenvectors satisfy \(\left (A-(1+3i)I\right ){\bf \vec{x}}={\bf 0}\). The augmented augmented matrix of this system is 
+					Hence, \({r} =1+3i\) is an eigenvalue of \(A\). The associated eigenvectors satisfy \(\left (A-(1+3i)I\right ){\bf \vec{u}}={\bf 0}\). The augmented augmented matrix of this system is 
 					\[ \left [
 						\begin {array}{cccr}
 							-15-3i&amp;39&amp;\vdots&amp; 0\\ 
@@ -284,7 +291,7 @@
 					\right ]\] 
 					
 					Therefore \(x_1=(5-i)/2\). Taking \(x_2=2\) yields \(x_1=5-i\), so 
-					\[ {\bf \vec{x}}=\left [
+					\[ {\bf \vec{u}}=\left [
 						\begin {array}{c}
 							5-i\\
 							2
@@ -344,13 +351,13 @@
 							The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-13r8">(10.6.8)</a> is 
 							\[ \left | 
 								\begin {array}{ccc}
-									-5-\lambda&amp; 5&amp;4\\
-									-8&amp;7-\lambda&amp; 6\\ 
-									\phantom {-}1 &amp;0&amp;-\lambda 
+									-5-{r}&amp; 5&amp;4\\
+									-8&amp;7-{r}&amp; 6\\ 
+									\phantom {-}1 &amp;0&amp;-{r} 
 								\end {array}
-							\right |=-(\lambda -2)(\lambda ^2+1)\] 
+							\right |=-({r} -2)({r} ^2+1)\] 
 							
-							Hence, the eigenvalues of \(A\) are \(\lambda _1=2\), \(\lambda _2=i\), and \(\lambda _3=-i\).
+							Hence, the eigenvalues of \(A\) are \({r} _1=2\), \({r} _2=i\), and \({r} _3=-i\).
 							
 							The augmented matrix of \((A-2I){\bf x=0}\) is 
 							\[ \left [ 
@@ -371,7 +378,7 @@
 							\right ]\] 
 							
 							Therefore \(x_1=x_2=2x_3\). Taking \(x_3=1\) yields 
-							\[ {\bf \vec{x}}_1=\threecol 221\] 
+							\[ {\bf \vec{u}}_1=\threecol 221\] 
 							
 							so 
 							\[ {\bf \vec{y}}_1=\threecol 221e^{2t} \] 
@@ -399,7 +406,7 @@
 							\right ]\] 
 							
 							Therefore \(x_1=ix_3\) and \(x_2=-(1-i)x_3\). Taking \(x_3=1\) yields the eigenvector 
-							\[ {\bf \vec{x}}_2=\left [
+							\[ {\bf \vec{u}}_2=\left [
 								\begin {array}{c} 
 									i\\
 									-1+i\\ 
@@ -476,13 +483,13 @@
 							The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-15r9">(10.6.9)</a> is 
 							\[ \left | 
 								\begin {array}{ccc} 
-									1-\lambda&amp; -1&amp;-2\\ 
-									1&amp;3-\lambda&amp; \phantom {-}2\\ 
-									1 &amp;-1&amp;2-\lambda 
+									1-{r}&amp; -1&amp;-2\\ 
+									1&amp;3-{r}&amp; \phantom {-}2\\ 
+									1 &amp;-1&amp;2-{r} 
 								\end {array}
-							\right |= -(\lambda -2)\left ((\lambda -2)^2+4\right )\] 
+							\right |= -({r} -2)\left (({r} -2)^2+4\right )\] 
 							
-							Hence, the eigenvalues of \(A\) are \(\lambda _1=2\), \(\lambda _2=2+2i\), and \(\lambda _3=2-2i\). The augmented matrix of \((A-2I){\bf x=0}\) is 
+							Hence, the eigenvalues of \(A\) are \({r} _1=2\), \({r} _2=2+2i\), and \({r} _3=2-2i\). The augmented matrix of \((A-2I){\bf x=0}\) is 
 							\[ \left [ 
 								\begin {array}{rrrcr}
 									-1&amp;-1&amp;-2&amp;\vdots&amp; 0\\
@@ -501,7 +508,7 @@
 							\right ]\] 
 							
 							Therefore \(x_1=x_2=-x_3\). Taking \(x_3=1\) yields 
-							\[ {\bf \vec{x}}_1=\threecol {-1}{-1}1\] 
+							\[ {\bf \vec{u}}_1=\threecol {-1}{-1}1\] 
 							
 							so 
 							\[ {\bf \vec{y}}_1=\threecol {-1}{-1}1e^{2t} \] 
@@ -530,7 +537,7 @@
 							\right ]\] 
 							
 							Therefore \(x_1=ix_3\) and \(x_2=-ix_3\). Taking \(x_3=1\) yields the eigenvector 
-							\[ {\bf \vec{x}}_2=\threecol i{-i}1 \] 
+							\[ {\bf \vec{u}}_2=\threecol i{-i}1 \] 
 							
 							The real and imaginary parts of 
 							\[ e^{2t}(\cos 2t+i\sin 2t)\threecol i{-i}1 \] 
@@ -603,47 +610,47 @@
 					\end {array}
 				\right ] \] 
 				
-				has a complex eigenvalue \(\lambda =\alpha +i\beta \) (\(\beta \ne 0\)) and \({\bf \vec{x}}={\bf \vec{u}}+i{\bf \vec{v}}\) is an associated eigenvector, where \(\bf u\) and \(\bf v\) have real components. To describe the trajectories accurately it’s necessary to introduce a new rectangular coordinate system in the \(y_1\)-\(y_2\) plane. This raises a point that hasn’t come up before: It is always possible to choose \(\bf x\) so that \(({\bf \vec{u}},{\bf \vec{v}})=0\). A special effort is required to do this, since not every eigenvector has this property. However, if we know an eigenvector that doesn’t, we can multiply it by a suitable complex constant to obtain one that does. To see this, note that if \(\bf x\) is a \(\lambda \)-eigenvector of \(A\) and \(k\) is an arbitrary real number, then 
-				\[ {\bf \vec{x}}_1=(1+ik){\bf \vec{x}}=(1+ik)({\bf \vec{u}}+i{\bf \vec{v}}) =({\bf \vec{u}}-k{\bf \vec{v}})+i({\bf \vec{v}}+k{\bf \vec{u}}) \] 
+				has a complex eigenvalue \({r} =\alpha +i\beta \) (\(\beta \ne 0\)) and \({\bf \vec{u}}={\bf \vec{a}}+i{\bf \vec{b}}\) is an associated eigenvector, where \({\bf \vec{a}}\) and \({\bf \vec{b}}\) have real components. To describe the trajectories accurately it’s necessary to introduce a new rectangular coordinate system in the \(y_1\)-\(y_2\) plane. This raises a point that hasn’t come up before: It is always possible to choose \(\bf x\) so that \(({\bf \vec{a}},{\bf \vec{b}})=0\). A special effort is required to do this, since not every eigenvector has this property. However, if we know an eigenvector that doesn’t, we can multiply it by a suitable complex constant to obtain one that does. To see this, note that if \(\bf x\) is a \({r} \)-eigenvector of \(A\) and \(k\) is an arbitrary real number, then 
+				\[ {\bf \vec{u}}_1=(1+ik){\bf \vec{u}}=(1+ik)({\bf \vec{a}}+i{\bf \vec{b}}) =({\bf \vec{a}}-k{\bf \vec{b}})+i({\bf \vec{b}}+k{\bf \vec{a}}) \] 
 				
-				is also a \(\lambda \)-eigenvector of \(A\), since 
-				\[ A{\bf \vec{x}}_1= A((1+ik){\bf \vec{x}})=(1+ik)A{\bf \vec{x}}=(1+ik)\lambda {\bf \vec{x}}= \lambda ((1+ik){\bf \vec{x}})=\lambda {\bf \vec{x}}_1\] 
+				is also a \({r} \)-eigenvector of \(A\), since 
+				\[ A{\bf \vec{u}}_1= A((1+ik){\bf \vec{u}})=(1+ik)A{\bf \vec{u}}=(1+ik){r} {\bf \vec{u}}= {r} ((1+ik){\bf \vec{u}})={r} {\bf \vec{u}}_1\] 
 				
-				The real and imaginary parts of \({\bf \vec{x}}_1\) are 
+				The real and imaginary parts of \({\bf \vec{u}}_1\) are 
 				<a id="x1-17r11"></a>
 				\begin {equation} 
 					\label {eq:10.6.11} 
-					{\bf \vec{u}}_1={\bf \vec{u}}-k{\bf \vec{v}} \quad \mbox{ and } \quad {\bf \vec{v}}_1={\bf \vec{v}}+k{\bf \vec{u}} 
+					{\bf \vec{a}}_1={\bf \vec{a}}-k{\bf \vec{b}} \quad \mbox{ and } \quad {\bf \vec{b}}_1={\bf \vec{b}}+k{\bf \vec{a}} 
 				\end {equation}
 				
 				so 
-				\[ ({\bf \vec{u}}_1,{\bf \vec{v}}_1)=({\bf \vec{u}}-k{\bf \vec{v}},{\bf \vec{v}}+k{\bf \vec{u}}) =-\left [({\bf \vec{u}},{\bf \vec{v}})k^2+(\|{\bf \vec{v}}\|^2-\|{\bf \vec{u}}\|^2)k -({\bf \vec{u}},{\bf \vec{v}})\right ]\] 
+				\[ ({\bf \vec{a}}_1,{\bf \vec{b}}_1)=({\bf \vec{a}}-k{\bf \vec{b}},{\bf \vec{b}}+k{\bf \vec{a}}) =-\left [({\bf \vec{a}},{\bf \vec{b}})k^2+(\|{\bf \vec{b}}\|^2-\|{\bf \vec{a}}\|^2)k -({\bf \vec{a}},{\bf \vec{b}})\right ]\] 
 				
-				Therefore \(({\bf \vec{u}}_1,{\bf \vec{v}}_1)=0\) if 
+				Therefore \(({\bf \vec{a}}_1,{\bf \vec{b}}_1)=0\) if 
 				<a id="x1-18r12"></a>
 				\begin {equation} 
 					\label {eq:10.6.12} 
-					({\bf \vec{u}},{\bf \vec{v}})k^2+(\|{\bf \vec{v}}\|^2-\|{\bf \vec{u}}\|^2)k-({\bf \vec{u}},{\bf \vec{v}})=0 
+					({\bf \vec{a}},{\bf \vec{b}})k^2+(\|{\bf \vec{b}}\|^2-\|{\bf \vec{a}}\|^2)k-({\bf \vec{a}},{\bf \vec{b}})=0 
 				\end {equation}
 				
-				If \(({\bf \vec{u}},{\bf \vec{v}})\ne 0\) we can use the quadratic formula to find two real values of \(k\) such that \(({\bf \vec{u}}_1,{\bf \vec{v}}_1)=0\) (Exercise&nbsp;<span class="ptmb8t-">28</span>). 
+				If \(({\bf \vec{a}},{\bf \vec{b}})\ne 0\) we can use the quadratic formula to find two real values of \(k\) such that \(({\bf \vec{a}}_1,{\bf \vec{b}}_1)=0\) (Exercise&nbsp;<span class="ptmb8t-">28</span>). 
 			</div>
 
 			<div class="example" id="x1-195" style="--ex-number: 5">
 				<div>
 					In Example&nbsp;<a href="#x1-81">10.6.1</a> we found the eigenvector 
-					\[ {\bf \vec{x}}=\ctwocol {3+4i}5=\twocol 35+i\twocol 40 \] 
+					\[ {\bf \vec{u}}=\ctwocol {3+4i}5=\twocol 35+i\twocol 40 \] 
 					
-					for the matrix of the system <a href="#x1-9r6">(10.6.6)</a>. Here \({\bf \vec{u}}=\displaystyle {\twocol 35}\) and \({\bf \vec{v}}=\twocol 40\) are not orthogonal, since \(({\bf \vec{u}},{\bf \vec{v}})=12\). Since \(\|{\bf \vec{v}}\|^2-\|{\bf \vec{u}}\|^2=-18\), <a href="#x1-18r12">(10.6.12)</a> is equivalent to 
+					for the matrix of the system <a href="#x1-9r6">(10.6.6)</a>. Here \({\bf \vec{a}}=\displaystyle {\twocol 35}\) and \({\bf \vec{b}}=\twocol 40\) are not orthogonal, since \(({\bf \vec{a}},{\bf \vec{b}})=12\). Since \(\|{\bf \vec{b}}\|^2-\|{\bf \vec{a}}\|^2=-18\), <a href="#x1-18r12">(10.6.12)</a> is equivalent to 
 					\[ 2k^2-3k-2=0\] 
 					
 					The zeros of this equation are \(k_1=2\) and \(k_2=-1/2\). Letting \(k=2\) in <a href="#x1-17r11">(10.6.11)</a> yields 
-					\[ {\bf \vec{u}}_1={\bf \vec{u}}-2{\bf \vec{v}}=\twocol {-5}{\phantom {-}5}\quad \mbox{ and } \quad {\bf \vec{v}}_1={\bf \vec{v}}+2{\bf \vec{u}}=\twocol {10}{10}\] 
+					\[ {\bf \vec{a}}_1={\bf \vec{a}}-2{\bf \vec{b}}=\twocol {-5}{\phantom {-}5}\quad \mbox{ and } \quad {\bf \vec{b}}_1={\bf \vec{b}}+2{\bf \vec{a}}=\twocol {10}{10}\] 
 					
-					and \(({\bf \vec{u}}_1,{\bf \vec{v}}_1)=0\). Letting \(k=-1/2\) in <a href="#x1-17r11">(10.6.11)</a> yields 
-					\[ {\bf \vec{u}}_1={\bf \vec{u}}+{{\bf \vec{v}}\over 2}=\twocol {5}5\quad \mbox{ and } \quad {\bf \vec{v}}_1={\bf \vec{v}}-{{\bf \vec{u}}\over 2}={1\over 2}\twocol {-5}{\phantom {-}5}\] 
+					and \(({\bf \vec{a}}_1,{\bf \vec{b}}_1)=0\). Letting \(k=-1/2\) in <a href="#x1-17r11">(10.6.11)</a> yields 
+					\[ {\bf \vec{a}}_1={\bf \vec{a}}+{{\bf \vec{b}}\over 2}=\twocol {5}5\quad \mbox{ and } \quad {\bf \vec{b}}_1={\bf \vec{b}}-{{\bf \vec{a}}\over 2}={1\over 2}\twocol {-5}{\phantom {-}5}\] 
 					
-					and again \(({\bf \vec{u}}_1,{\bf \vec{v}}_1)=0\).
+					and again \(({\bf \vec{a}}_1,{\bf \vec{b}}_1)=0\).
 				</div>
 			</div>
 
@@ -651,30 +658,30 @@
 				(The numbers don’t always work out as nicely as in this example. You’ll need a calculator or computer to do Exercises&nbsp;<span class="ptmb8t-">29</span>-<span class="ptmb8t-">40</span>.) 
 			</div>
 			<div id="32701541-efa3-4ee2-aad7-3c6da4df864a">
-				Henceforth, we’ll assume that \(({\bf \vec{u}},{\bf \vec{v}})=0\). Let \(\bf U\) and \(\bf V\) be unit vectors in the directions of \(\bf u\) and \(\bf v\), respectively; that is, \({\bf \vec{u}}={\bf \vec{u}}/\|{\bf \vec{u}}\|\) and \({\bf \vec{v}}={\bf \vec{v}}/\|{\bf \vec{v}}\|\). The new rectangular coordinate system will have the same origin as the \(y_1\)-\(y_2\) system. The coordinates of a point in this system will be denoted by \((z_1,z_2)\), where \(z_1\) and \(z_2\) are the displacements in the directions of \(\bf U\) and \(\bf V\), respectively. 
+				Henceforth, we’ll assume that \(({\bf \vec{a}},{\bf \vec{b}})=0\). Let \({\bf \vec{a}}\) and \({\bf \vec{b}}\) be unit vectors in the directions of \({\bf \vec{a}}\) and \({\bf \vec{b}}\), respectively; that is, \({\bf \vec{a}}={\bf \vec{a}}/\|{\bf \vec{a}}\|\) and \({\bf \vec{b}}={\bf \vec{b}}/\|{\bf \vec{b}}\|\). The new rectangular coordinate system will have the same origin as the \(y_1\)-\(y_2\) system. The coordinates of a point in this system will be denoted by \((z_1,z_2)\), where \(z_1\) and \(z_2\) are the displacements in the directions of \({\bf \vec{a}}\) and \({\bf \vec{b}}\), respectively. 
 			</div>
 			<div id="f6b1c654-d827-4f21-9817-c1dcf291636a">
 				From <a href="#x1-7r5">(10.6.5)</a>, the solutions of <a href="#x1-16r10">(10.6.10)</a> are given by 
 				<a id="x1-20r13"></a>
 				\begin {equation} 
 					\label {eq:10.6.13} 
-					{\bf \vec{y}}=e^{\alpha t}\left [(c_1\cos \beta t+c_2\sin \beta t){\bf \vec{u}} +(-c_1\sin \beta t+c_2\cos \beta t){\bf \vec{v}}\right ] 
+					{\bf \vec{y}}=e^{\alpha t}\left [(c_1\cos \beta t+c_2\sin \beta t){\bf \vec{a}} +(-c_1\sin \beta t+c_2\cos \beta t){\bf \vec{b}}\right ] 
 				\end {equation}
 				
 				For convenience, let’s call the curve traversed by \(e^{-\alpha t}{\bf \vec{y}}(t)\) a<span class="vocab">shadow trajectory</span>of <a href="#x1-16r10">(10.6.10)</a>. Multiplying <a href="#x1-20r13">(10.6.13)</a> by \(e^{-\alpha t}\) yields 
-				\[ e^{-\alpha t}{\bf \vec{y}}(t)=z_1(t){\bf \vec{u}}+z_2(t){\bf \vec{v}}\] 
+				\[ e^{-\alpha t}{\bf \vec{y}}(t)=z_1(t){\bf \vec{a}}+z_2(t){\bf \vec{b}}\] 
 				
 				where
 				<div class="eqnarray">
-					\begin {eqnarray*} z_1(t)&amp;=&amp;\|{\bf \vec{u}}\|(c_1\cos \beta t+c_2\sin \beta t)\\ 
-					z_2(t)&amp;=&amp;\|{\bf \vec{v}}\|(-c_1\sin \beta t+c_2\cos \beta t) 
+					\begin {eqnarray*} z_1(t)&amp;=&amp;\|{\bf \vec{a}}\|(c_1\cos \beta t+c_2\sin \beta t)\\ 
+					z_2(t)&amp;=&amp;\|{\bf \vec{b}}\|(-c_1\sin \beta t+c_2\cos \beta t) 
 					\end {eqnarray*} 
 				</div>
 				Therefore 
-				\[ {(z_1(t))^2\over \|{\bf \vec{u}}\|^2}+{(z_2(t))^2\over \|{\bf \vec{v}}\|^2} =c_1^2+c_2^2 \] 
+				\[ {(z_1(t))^2\over \|{\bf \vec{a}}\|^2}+{(z_2(t))^2\over \|{\bf \vec{b}}\|^2} =c_1^2+c_2^2 \] 
 				
-				(verify!), which means that the shadow trajectories of <a href="#x1-16r10">(10.6.10)</a> are ellipses centered at the origin, with axes of symmetry parallel to \(\bf U\) and \(\bf V\). Since 
-				\[ \dfrac{dz_1}{dt}={\beta \|{\bf \vec{u}}\|\over \|{\bf \vec{v}}\|} z_2\quad \mbox{ and } \quad \dfrac{dz_2}{dt}=-{\beta \|{\bf \vec{v}}\|\over \|{\bf \vec{u}}\|} z_1\] 
+				(verify!), which means that the shadow trajectories of <a href="#x1-16r10">(10.6.10)</a> are ellipses centered at the origin, with axes of symmetry parallel to \({\bf \vec{a}}\) and \({\bf \vec{b}}\). Since 
+				\[ \dfrac{dz_1}{dt}={\beta \|{\bf \vec{a}}\|\over \|{\bf \vec{b}}\|} z_2\quad \mbox{ and } \quad \dfrac{dz_2}{dt}=-{\beta \|{\bf \vec{b}}\|\over \|{\bf \vec{a}}\|} z_1\] 
 				
 				the vector from the origin to a point on the shadow ellipse rotates in the same direction that \(\bf V\) would have to be rotated by \(\pi /2\) radians to bring it into coincidence with \(\bf U\) (Figures&nbsp;<a href="#x1-21r1">10.6.1</a> and <a href="#x1-22r2">10.6.2</a>).
 			</div>
@@ -695,19 +702,19 @@
 			</figure>
 
 			<div id="64655a1a-59c2-425b-8ed8-6176a63e3e97">
-				If \(\alpha =0\), then any trajectory of <a href="#x1-16r10">(10.6.10)</a> is a shadow trajectory of <a href="#x1-16r10">(10.6.10)</a>; therefore, if \(\lambda \) is purely imaginary, then the trajectories of <a href="#x1-16r10">(10.6.10)</a> are ellipses traversed periodically as indicated in Figures&nbsp;<a href="#x1-21r1">10.6.1</a> and <a href="#x1-22r2">10.6.2</a>.
+				If \(\alpha =0\), then any trajectory of <a href="#x1-16r10">(10.6.10)</a> is a shadow trajectory of <a href="#x1-16r10">(10.6.10)</a>; therefore, if \({r} \) is purely imaginary, then the trajectories of <a href="#x1-16r10">(10.6.10)</a> are ellipses traversed periodically as indicated in Figures&nbsp;<a href="#x1-21r1">10.6.1</a> and <a href="#x1-22r2">10.6.2</a>.
 			</div>
 			<div id="b37055e2-8420-4b0a-945a-143085709d30">
 				If \(\alpha &gt;0\), then 
 				\[ \lim _{t\to \infty }\|{\bf \vec{y}}(t)\|=\infty \quad \mbox{ and } \quad \lim _{t\to -\infty }{\bf \vec{y}}(t)=0\] 
 				
-				so the trajectory spirals away from the origin as \(t\) varies from \(-\infty \) to \(\infty \). The direction of the spiral depends upon the relative orientation of \(\bf U\) and \(\bf V\), as shown in Figures&nbsp;<a href="#x1-23r3">10.6.3</a> and <a href="#x1-24r4">10.6.4</a>.
+				so the trajectory spirals away from the origin as \(t\) varies from \(-\infty \) to \(\infty \). The direction of the spiral depends upon the relative orientation of \({\bf \vec{a}}\) and \({\bf \vec{b}}\), as shown in Figures&nbsp;<a href="#x1-23r3">10.6.3</a> and <a href="#x1-24r4">10.6.4</a>.
 			</div>
 			<div id="1d0939e7-635c-4dbc-ba80-cde438fa69b4">
 				If \(\alpha &lt;0\), then 
 				\[ \lim _{t\to -\infty }\|{\bf \vec{y}}(t)\|=\infty \quad \mbox{ and } \quad \lim _{t\to \infty }{\bf \vec{y}}(t)=0\] 
 				
-				so the trajectory spirals toward the origin as \(t\) varies from \(-\infty \) to \(\infty \). Again, the direction of the spiral depends upon the relative orientation of \(\bf U\) and \(\bf V\), as shown in Figures&nbsp;<a href="#x1-25r5">10.6.5</a> and <a href="#x1-26r6">10.6.6</a>.
+				so the trajectory spirals toward the origin as \(t\) varies from \(-\infty \) to \(\infty \). Again, the direction of the spiral depends upon the relative orientation of \({\bf \vec{a}}\) and \({\bf \vec{b}}\), as shown in Figures&nbsp;<a href="#x1-25r5">10.6.5</a> and <a href="#x1-26r6">10.6.6</a>.
 			</div>
 
 			<figure id="x1-23r3">
