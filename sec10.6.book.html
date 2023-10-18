@@ -27,8 +27,8 @@
 				\newcommand{\threecol}[3]{\left(\begin{array}{r}#1\\#2\\#3\end{array}\right)}
 				\newcommand{\twocol}[2]{\left(\begin{array}{c}#1\\#2\end{array}\right)}
 				\newcommand{\twochar}[4]{\left| \begin {array}{cc} #1-{r}&amp; #2\\#3&amp; #4-{r} \end{array}\right|}
-				\newcommand{\twobytwo}[4]{\left( \begin {array}{rr} #1&amp; #2\\#3&amp; #4 \end{array}\right)}
-				\newcommand{\threebythree}[9]{\left( \begin {array}{rrr} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9 \end{array}\right)}
+				\newcommand{\twobytwo}[4]{\left( \begin {array}{cc} #1&amp; #2\\#3&amp; #4 \end{array}\right)}
+				\newcommand{\threebythree}[9]{\left( \begin {array}{ccc} #1&amp; #2&amp; #3\\#4&amp; #5&amp; #6\\#7&amp; #8&amp; #9 \end{array}\right)}
 				\newcommand{\matfunc}[3]{\left( \begin {array}{cccc}#1_{11}(t)&amp; #1_{12}(t)&amp;\cdots &amp; #1_{1#3}(t)\\#1_{21}(t)&amp; #1_{22}(t)&amp;\cdots&amp; #1_{2#3}(t)\\\vdots&amp; \vdots&amp;\ddots&amp;\vdots\\#1_{#21}(t)&amp; #1_{#22}(t)&amp;\cdots&amp; #1_{#2#3}(t) \end{array}\right)}
 				\newcommand{\col}[2]{\left(\begin{array}{c}#1_1\\#1_2\\\vdots\\#1_#2\end{array}\right)}
 				\newcommand{\colfunc}[2]{\left( \begin {array}{c}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t) \end{array}\right) }
@@ -47,10 +47,14 @@
 				We now consider the system \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}{\bf \vec{y}}\), where \({\bf A}\) has complex eigenvalues \({r}_1 =\alpha +i\beta \) and \({r}_2 =\alpha -i\beta \). We continue to assume that \({\bf A}\) has real entries, so the characteristic polynomial of \({\bf A}\) has real coefficients. 
 			</div>
 			<div id="dda2dc8c-322d-41ae-8aa8-26cce81466e7">
-				An eigenvector \({\bf \vec{a}}\) of \({\bf A}\) associated with \({r}_1 =\alpha +i\beta \) will have complex entries, so we’ll write the eigenvector in real and imaginary components
+				An eigenvector \({\bf \vec{u}}\) of \({\bf A}\) associated with \({r}_1 =\alpha +i\beta \) will have complex entries, so we’ll write the eigenvector in real and imaginary components as the following
+				
+				
 				\[ {\bf \vec{u}}={\bf \vec{a}}+i{\bf \vec{b}} \] 
 				
-				where \({\bf \vec{a}}\) and \({\bf \vec{b}}\) have real entries; that is, \({\bf \vec{a}}\) and \({\bf \vec{b}}\) are the real and imaginary parts of \({\bf \vec{u}}\). Since \({\bf A}{\bf \vec{u}}={r} {\bf \vec{u}}\),
+				where \({\bf \vec{a}}\) and \({\bf \vec{b}}\) have real entries; that is, \({\bf \vec{a}}\) is the real part 
+				
+				and \({\bf \vec{b}}\) is the imaginary part of \({\bf \vec{u}}\). Since \({\bf A}{\bf \vec{u}}={r} {\bf \vec{u}}\),
 				
 				<a id="x1-2r1"></a>
 				\begin {equation} 
@@ -186,71 +190,678 @@
 			
 				<details class="solution">
 					<summary>Solution</summary>
-					The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-9r6">(10.6.6)</a> is 
-					\[ \left |
-						\begin {array}{cc} 
-							4-{r}&amp; -5\\ 
-							5&amp;-2-{r} 
-						\end {array}
-					\right |=({r} -1)^2+16\] 
-					
-					Hence, \({r} =1+4i\) is an eigenvalue of \(A\). The associated eigenvectors satisfy \(\left (A-\left (1+4i\right )I\right ){\bf \vec{u}}={\bf 0}\). The augmented matrix of this system is 
-					\[ \left [
-						\begin {array}{cccr} 
-							3-4i&amp;-5&amp;\vdots&amp; 0\\ 
-							5&amp;-3-4i&amp;\vdots&amp; 0 
-						\end {array}
-					\right ]\] 
-					
-					which is row equivalent to 
-					\[ \left [
-						\begin {array}{cccr} 
-							1&amp;-{3+4i\over 5}&amp;\vdots&amp; 0\\ 
-							0&amp;0&amp;\vdots&amp; 0 
-						\end {array}
-					\right ]\] 
-					
-					Therefore \(x_1=(3+4i)x_2/5\). Taking \(x_2=5\) yields \(x_1=3+4i\), so 
-					\[ {\bf \vec{u}}=\left [
-						\begin {array}{c}
-							3+4i\\
-							5
-						\end {array}
-					\right ] \] 
-					
-					is an eigenvector. The real and imaginary parts of 
-					\[ e^t(\cos 4t+i\sin 4t)\left [
-						\begin {array}{c}
-							3+4i\\
-							5
-						\end {array}
-					\right ] \] 
-					
-					are 
-					\[ {\bf \vec{y}}_1=e^t\left [
-						\begin {array}{c}
-							3\cos 4t-4\sin 4t\\
-							5\cos 4t
-						\end {array}
-					\right ]\quad \mbox { and }\quad {\bf \vec{y}}_2=e^t\left [
-						\begin {array}{c}
-							3\sin 4t+4\cos 4t\\
-							5\sin 4t
-						\end {array}
-					\right ]\] 
-					
-					which are linearly independent solutions of <a href="#x1-9r6">(10.6.6)</a>. The general solution of <a href="#x1-9r6">(10.6.6)</a> is 
-					\[ {\bf \vec{y}}= c_1e^t\left [
-						\begin {array}{c}
-							3\cos 4t-4\sin 4t\\
-							5\cos 4t
-						\end {array}
-					\right ]+ c_2e^t\left [ 
-						\begin {array}{c}
-							3\sin 4t+4\cos 4t\\
-							5\sin 4t 
-						\end {array}
-					\right ]\]
+					<ol>
+						<li>
+			
+							<div>
+								To solve <a href="#x1-9r6">(10.6.6)</a> we will seek solutions of the form
+								\[
+								{\bf \vec{y}} = {\bf \vec{u}} e^{rt}
+								\]
+								Where \({\bf \vec{u}} \) is some constant vector to be determined
+								
+								\[
+								{\bf \vec{u}} 
+								=\twocol {u_1}{u_2}
+								\]
+								
+								Now differentiating \({\bf \vec{y}} = {\bf \vec{u}} e^{rt}\) we obtain
+
+								\[
+								\frac{d{\bf \vec{y}}}{dt} = r{\bf \vec{u}} e^{rt}
+								\]
+
+								Now substituting \({\bf \vec{y}}\) and \(d{\bf \vec{y}}/dt\) 
+								
+								into <a href="#x1-9r6">(10.6.6)</a>
+
+								\begin{align*}
+									\dfrac{d{\bf \vec{y}}}{dt} & =\twobytwo {4}{-5}{5}{-2} {\bf \vec{y}} \\ \\
+
+									r{\bf \vec{u}} e^{rt} & =\twobytwo {4}{-5}{5}{-2}{\bf \vec{u}} e^{rt} \\ \\
+
+									r{\bf \vec{u}}  & =\twobytwo {4}{-5}{5}{-2}{\bf \vec{u}}  \\ \\
+
+									{\bf \vec{0}} & =\twobytwo {4}{-5}{5}{-2}{\bf \vec{u}}  - r{\bf \vec{u}} \\ \\
+
+									{\bf \vec{0}} & =\left[ \twobytwo {4}{-5}{5}{-2} - r \right]{\bf \vec{u}} \\ \\
+
+									
+								\end{align*}
+
+								Rewriting \(r\) in matrix form 
+								\(r{\bf \vec{I}}\)
+								multiplied by the identity matrix:
+
+								\begin{align}
+									{\bf \vec{0}} & =\left[ \twobytwo {4}{-5}{5}{-2} - r {\bf \vec{I}} \right]{\bf \vec{u}}\nonumber \\ \nonumber\\
+
+
+									{\bf \vec{0}} & =\left[\twobytwo {4}{-5}{5}{-2} - r \twobytwo 1001 \right] {\bf \vec{u}} \nonumber \\ \nonumber\\
+
+									{\bf \vec{0}} & =\left[\twobytwo {4}{-5}{5}{-2} - \twobytwo r00r \right] {\bf \vec{u}} \nonumber\\ \nonumber\\
+
+									{\bf \vec{0}} & =\twobytwo {4-r}{-5}{5}{-2-r}  {\bf \vec{u}}  \\ \nonumber\\
+
+							
+
+							
+								\end{align}
+
+								The <span class="vocab">eigenvalue equation</span> (10.6.7) shows the relationship between the eigenvalue \(r\) and associated eigenvector \({\bf \vec{u}} \) for the system of differential equations <a href="#x1-9r6">(10.6.6)</a> and since we'll be using it to solve for the eigenvector components \(u_1\) and \(u_2\), we'll write it in <span class="vocab">augmented matrix</span> form as the following
+
+								
+
+								\begin{align}
+								\twobytwo {4-r}{-5}{5}{-2-r} {\bf \vec{u}}   & = {\bf \vec{0}} \nonumber \\ \nonumber \\
+
+								\twobytwo {4-r}{-5}{5}{-2-r} \twocol{u_1}{u_2}    & = \twocol{0}{0}  \nonumber \\ \nonumber \\
+
+								\left(\begin{array}{cc|c}
+									4-r & -5	& 0 \\
+									5 	& -2-r	& 0
+								\end{array}\right)
+
+							
+								\end{align}
+
+								
+
+								
+							</div>
+						</li>
+						<li class="continued">
+							<div>
+								We can show that a system of equations has only the <span class="vocab">trivial solution</span> by showing that the <em>determinant of the coefficient matrix is nonzero</em>. As we are only interested in <span class="vocab">nontrivial solutions</span> we will require that the <em>determinant of the coefficient matrix equals zero</em>:
+
+								\begin{align*}
+									\det
+									\left(
+										\begin{array}{ccc}
+											4-r & -5  \\
+											5 & -2-r \\
+										\end{array}
+									\right) & =0 \\ \\
+									(4-r)(-2-r)+5\cdot5 & =0 \\
+									\big( r^2-2r-8 \big) +25 & =0 \\
+									\underset{p(r)}{\underbrace{r^2-2r+17}} & =0 \\
+								
+								\end{align*}
+
+								We have found the <span class="vocab">characteristic polynomial</span> \(p(r)=r^2-2r+17\) and we will now solve the <span class="vocab">characteristic equation</span> \(r^2-2r+17 =0 \) using the quadratic formula:
+
+								\begin{align*}
+									r = & \frac{-(-2) \pm \sqrt{(-2)^2-4(1)(17)}}{2(1)} \\
+									r = & \frac{2 \pm \sqrt{4(1-17)}}{2} \\
+									r = & \frac{2 \pm \sqrt{4(-16)}}{2} \\
+									r = & \frac{2 \pm 2\cdot4i}{2} \\
+									r = & 1 \pm 4i \\
+									r_1 = 1 + 4i & \quad r_2 = 1 - 4i \\								
+								\end{align*}
+
+								Thus we have complex conjugate <span class="vocab">eigenvalues</span> \(r_1= 1 + 4i\) and \(r_2 = 1 - 4i\) and thus two solutions of the system are
+
+								\begin{align*}
+								{\bf \vec{y}_1} & = {\bf \vec{u}_1} e^{r_1t}= {\bf \vec{u}_1} e^{(1+4i)t}
+								\quad\text{and}\quad
+								{\bf \vec{y}_2} = {\bf \vec{u}_2} e^{r_2t} ={\bf \vec{u}_2} e^{(1-4i)t} \\
+								\end{align*}
+
+								We already have the eigenvalues and now we need to find the associated eigenvectors \({\bf \vec{u}_1}\) and \({\bf \vec{u}_2}\) using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> (10.6.7) 
+
+								\begin{align*}
+									{\bf \vec{0}} & =\twobytwo {4-r_1}{-5}{5}{-2-r_1}  {\bf \vec{u}}_1  \\ \nonumber\\
+
+									&
+									\left(\begin{array}{cc|c}
+										4-(1+4i) & -5	& 0 \\
+										5 	& -2-(1+4i)	& 0
+									\end{array}\right) \\ \\
+
+									&
+									\left(\begin{array}{cc|c}
+										3-4i & -5	& 0 \\
+										5 	& -3-4i	& 0
+									\end{array}\right) \\ \\
+
+									\overset{\frac{1}{3-4i}R_1}{\longrightarrow}
+									&
+									\left(\begin{array}{cc|c}
+										\frac{3-4i}{3-4i} & \frac{-5}{3-4i}\cdot\frac{3+4i}{3+4i}  	& 0 \\
+										5 	& -3-4i	& 0
+									\end{array}\right) \\ \\
+
+									&
+									\left(\begin{array}{cc|c}
+										1 & \frac{-5(3+4i)}{25}	& 0 \\
+										5 	& -3-4i	& 0
+									\end{array}\right) \\ \\
+
+									\overset{5R_1}{\longrightarrow}
+									&
+									\left(\begin{array}{cc|c}
+										5 	& -3-4i & 0 \\
+										5 	& -3-4i	& 0
+									\end{array}\right) \\ \\
+
+									\overset{R_2-R_1}{\longrightarrow}
+									&
+									\left(\begin{array}{cc|c}
+										5 	& -3-4i & 0 \\
+										0 	& 0	& 0
+									\end{array}\right) \\ \\
+
+
+								\end{align*}
+
+							</div>
+						</li>
+						<li class="continued">
+							<div>
+								The system simplifies down to a single equation for the components of the eigenvector \(u_1\) and \(u_2\)
+
+								\[5u_1 - (3+4i)u_2 = 0 \]
+
+								Since we have only 1 equation with 2 unknowns, we have 1 <span class="vocab">free variable</span>, so we'll let \(u_2=c\) where \(c\) is any number. Then we can solve for \(u_1\)
+
+								\begin{align*} 
+									5u_1 - (3+4i)u_2 & = 0 \\
+									5u_1 - (3+4i)c & = 0 \\
+									5u_1 & = (3+4i)c  \\
+									u_1 & = \frac{1}{5}(3+4i)c  \\
+								\end{align*}
+
+								Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}_1}\)
+
+								\[
+								{\bf \vec{u}_1}
+								=\twocol {u_1}{u_2}
+								=\twocol {\frac{1}{5}(3+4i)c}{c}
+								=c\twocol {\frac{1}{5}(3+4i)}{1}
+								\]
+
+								Since \(c\) can be any number we'll select \(c=5\) for a simple eigenvector 
+								
+								\begin{align*} 
+								{\bf \vec{u}_1}=\twocol {3+4i}{5}
+								=\twocol {3}{5} + i\twocol {4}{0}
+
+								\end{align*}
+
+								With the eigenvalue-eigenvector pair \(r_1\) and \({\bf \vec{u}_1}\) we have one solution of our original equation
+
+								
+								\begin{align*} 
+								{\bf \vec{y}_1} = {\bf \vec{u}_1}e^{r_1 t} = \left[\twocol {3}{5} + i\twocol {4}{0}\right]e^{(1+4i)t}
+								\end{align*}
+
+
+								
+							</div>
+						</li>
+						<li class="continued">
+							<div>
+
+								Our characteristic equation yielded complex conjugate <span class="vocab">eigenvalues</span> \(r_1= 1 + 4i\) and \(r_2 = 1 - 4i\) and we already found an eigenvector associated with \(r_1= 1 + 4i\) so now we'll find an eigenvector for \(r_2 = 1 - 4i\) again using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> (10.6.7) 
+
+								\begin{align*}
+									{\bf \vec{0}} & =\twobytwo {4-r_2}{-5}{5}{-2-r_2}  {\bf \vec{u}}_1  \\ \nonumber\\
+
+									&
+									\left(\begin{array}{cc|c}
+										4-(1-4i) & -5	& 0 \\
+										5 	& -2-(1-4i)	& 0
+									\end{array}\right) \\ \\
+
+									&
+									\left(\begin{array}{cc|c}
+										3+4i & -5	& 0 \\
+										5 	& -3+4i	& 0
+									\end{array}\right) \\ \\
+
+									\overset{\frac{1}{3+4i}R_1}{\longrightarrow}
+									&
+									\left(\begin{array}{cc|c}
+										\frac{3+4i}{3+4i} & \frac{-5}{3+4i}\cdot\frac{3-4i}{3-4i}  	& 0 \\
+										5 	& -3+4i	& 0
+									\end{array}\right) \\ \\
+
+									&
+									\left(\begin{array}{cc|c}
+										1 & \frac{-5(3-4i)}{25}	& 0 \\
+										5 	& -3+4i	& 0
+									\end{array}\right) \\ \\
+
+									\overset{5R_1}{\longrightarrow}
+									&
+									\left(\begin{array}{cc|c}
+										5 	& -3+4i & 0 \\
+										5 	& -3+4i	& 0
+									\end{array}\right) \\ \\
+
+									\overset{R_2-R_1}{\longrightarrow}
+									&
+									\left(\begin{array}{cc|c}
+										5 	& -3+4i & 0 \\
+										0 	& 0	& 0
+									\end{array}\right) \\ \\
+
+
+								\end{align*}
+
+							</div>
+							
+							<div>
+								The system simplifies down to a single equation for the components of the eigenvector \(u_1\) and \(u_2\)
+
+								\[5u_1 - (3-4i)u_2 = 0 \]
+
+								Since we have only 1 equation with 2 unknowns, we have 1 <span class="vocab">free variable</span>, so we'll let \(u_2=c\) where \(c\) is any number. Then we can solve for \(u_1\)
+
+								\begin{align*} 
+									5u_1 - (3-4i)u_2 & = 0 \\
+									5u_1 - (3-4i)c & = 0 \\
+									5u_1 & = (3-4i)c  \\
+									u_1 & = \frac{1}{5}(3-4i)c  \\
+								\end{align*}
+
+								Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}}_2\)
+
+								\[
+								{\bf \vec{u}}_2
+								=\twocol {u_1}{u_2}
+								=\twocol {\frac{1}{5}(3-4i)c}{c}
+								=c\twocol {\frac{1}{5}(3-4i)}{1}
+								\]
+
+								Since \(c\) can be any number we'll select \(c=5\) for a simple eigenvector 
+								
+								\begin{align*} 
+								{\bf \vec{u}}_2=\twocol {3-4i}{5}
+								=\twocol {3}{5} - i\twocol {4}{0}
+
+								\end{align*}
+
+								With the eigenvalue-eigenvector pair \(r_2\) and \({\bf \vec{u}_2}\) we have a second solution of our original equation
+
+								
+								\begin{align*} 
+								{\bf \vec{y}_2} = {\bf \vec{u}_2}e^{r_2 t} = \left[\twocol {3}{5} - i\twocol {4}{0}\right]e^{(1-4i)t}
+								\end{align*}
+
+							</div>	
+
+							<div>
+
+
+								So we have a <span class="vocab">fundamental set</span> of solutions in exponential form
+
+								\[\{{\bf \vec{y}_1},{\bf \vec{y}_2}\}
+								=\left\{
+									\left[\twocol {3}{5} + i\twocol {4}{0}\right]e^{(1+4i)t}
+									,
+									\left[\twocol {3}{5} - i\twocol {4}{0}\right]e^{(1-4i)t}
+									\right\}
+								\]
+
+								The only issue with this solution set is that it includes complex valued functions, just as we encountered in Ch 5.2, so we will again use <span class="vocab">Euler's formula</span> to rewrite them in terms of real-valued functions, starting with \({\bf \vec{y}_1}\)
+
+								\begin{align*}
+									{\bf \vec{y}_1} 
+									= \, &
+									\left[\twocol {3}{5} + i\twocol {4}{0}\right]\underset{e^{t} \, e^{4it} }{\underbrace{e^{(1+4i)t}}} \\
+									= \, &
+									e^{t}\left[\twocol {3}{5} + i\twocol {4}{0}\right] e^{4it}  \\
+									= \, &
+									e^{t}\left[\twocol {3}{5} + i\twocol {4}{0}\right] \Big( \cos 4t + i \sin 4t\Big) \\
+
+									= \, &
+									e^{t}
+									\Bigg[
+
+									
+									\left\{
+									\twocol {3}{5} \cos 4t - \twocol {4}{0} \sin 4t
+									\right\}
+								
+									+
+									i
+									
+									\left\{ 
+										\twocol {4}{0} \cos 4t + \twocol {3}{5} \sin 4t
+									\right\} 
+									
+									\Bigg] \\
+
+									= \, &
+									
+
+									
+										\left[
+									\twocol {3}{5} \cos 4t - \twocol {4}{0} \sin 4t
+									\right] e^{t}
+								
+									+
+									i
+									
+											\left[ 
+										\twocol {4}{0} \cos 4t + \twocol {3}{5} \sin 4t
+									\right] e^{t} 
+									
+									 \\
+
+									 = \, &
+									
+
+									\underset{{\bf \vec{a}}_1}{
+									\underbrace{
+										
+									\twocol {3\cos 4t - 4 \sin 4t}{5\cos 4t }  e^{t}
+									}}
+								
+									+
+									i
+									\underset{{\bf \vec{b}}_1}{
+										\underbrace{
+											
+										\twocol {4 \cos 4t + 3 \sin 4t}{5 \sin 4t}  e^{t} }}
+									
+									 \\
+
+								\end{align*}
+
+								We have rewritten our solution in real and imaginary components as 
+
+								\[
+								{\bf \vec{y}}_1 
+								= 
+								{\bf \vec{a}}_1 
+								+
+								i{\bf \vec{b}}_1 
+								\]
+
+								Since \(	{\bf \vec{y}}_1 \) is a solution of our original system, then it turns out that its component parts are also solutions
+
+								\begin{align*}
+
+								\frac{d	{\bf \vec{y}}_1 }{dt}
+								= &
+								{\bf A} 	{\bf \vec{y}}_1 \\
+
+								\frac{d	 }{dt} \Big( {\bf \vec{a}}_1 
+								+
+								i{\bf \vec{b}}_1  \Big)
+								= &
+								{\bf A} 	\Big( {\bf \vec{a}}_1 
+								+
+								i{\bf \vec{b}}_1  \Big) \\
+
+								\frac{d	{\bf \vec{a}}_1 }{dt}
+								+
+								i\frac{d	{\bf \vec{b}}_1 }{dt}
+								= &
+								{\bf A} 	{\bf \vec{a}}_1
+								+
+								i{\bf A} 	{\bf \vec{b}}_1 \\
+
+
+
+
+								\end{align*}
+
+								Equating the real parts and the imaginary parts, we obtain
+
+								\[
+
+								\frac{d	{\bf \vec{a}}_1 }{dt}
+								=
+								{\bf A} 	{\bf \vec{a}}_1
+
+								\quad \quad
+
+								
+								\frac{d	{\bf \vec{b}}_1 }{dt}
+								= 
+								{\bf A} 	{\bf \vec{b}}_1 
+
+								\]
+
+								Which indicates that \(	{\bf \vec{a}}_1 \) and \(	{\bf \vec{b}}_1 \) are both real-valued solutions of the equation.
+
+								Applying this to our solution:
+
+
+								\begin{align*}
+									{\bf \vec{y}_1} 
+									
+									= \, &
+									\underset{{\bf \vec{a}}_1}{
+										\underbrace{
+											
+										\twocol {3\cos 4t - 4 \sin 4t}{5\cos 4t }  e^{t}
+										}}
+									
+										+
+										i
+										\underset{{\bf \vec{b}}_1}{
+											\underbrace{
+												
+											\twocol {4 \cos 4t + 3 \sin 4t}{5 \sin 4t}  e^{t} }}
+
+								\end{align*}
+
+								We have the following two solutions 
+
+								\begin{align*}
+									
+
+								{\bf \vec{a}}_1
+								=
+
+								
+								\twocol {3\cos 4t - 4 \sin 4t}{5\cos 4t }  e^{t}
+								
+
+									\quad\quad
+
+
+									{\bf \vec{b}}_1=
+									\twocol {4 \cos 4t + 3 \sin 4t}{5 \sin 4t}  e^{t}
+
+								\end{align*}
+
+								We can also show that the two solutions \({\bf \vec{a}}_1\) and \({\bf \vec{b}}_1\) are linearly independent using the Wronskian determinant:
+
+								\begin{align*}
+								W\big[{\bf \vec{a}}_1, {\bf \vec{b}}_1\big]
+								=
+								\det
+								\left(
+									\begin{array}{ccc}
+										{\bf \vec{a}}_1 & {\bf \vec{b}}_1 \\
+										\dfrac{d{\bf \vec{a}}_1}{dt} & \dfrac{d{\bf \vec{b}}_1}{dt} \\
+									\end{array}
+								\right)
+								\end{align*}
+							</div>
+
+								<div class="reading-exercise">
+									Calculate 
+									\(
+									W\big[{\bf \vec{a}}_1, {\bf \vec{b}}_1\big]
+									=
+									\det
+									\left(
+										\begin{array}{ccc}
+											{\bf \vec{a}}_1 & {\bf \vec{b}}_1 \\
+											\dfrac{d{\bf \vec{a}}_1}{dt} & \dfrac{d{\bf \vec{b}}_1}{dt} \\
+										\end{array}
+									\right)
+									\)
+								</div>
+								<div>
+
+								Therefore \(\left\{ {\bf \vec{a}}_1, {\bf \vec{b}}_1 \right\}\) form a fundamental set
+
+								\[
+								\left\{
+
+									{\bf \vec{a}}_1, {\bf \vec{b}}_1
+									\right\}
+
+									=
+
+									\Bigg\{
+
+										\twocol {3\cos 4t - 4 \sin 4t}{5\cos 4t }  e^{t}
+								,
+								\twocol {4 \cos 4t + 3 \sin 4t}{5 \sin 4t}  e^{t}
+										\Bigg\}
+								\]
+
+								Therefore we can represent the general solution as \({\bf \vec{y}}_1
+								= 
+								
+								c_1
+								{\bf \vec{a}}_1
+								+
+								c_2
+								{\bf \vec{b}}_1\)
+
+								\begin{align*}
+
+
+								{\bf \vec{y}}_1
+								= \, &
+								
+								\left[
+								c_1
+								\twocol {3\cos 4t - 4 \sin 4t}{5\cos 4t }
+								+
+								c_2
+								\twocol {4 \cos 4t + 3 \sin 4t}{5 \sin 4t}
+								\right]e^t
+							
+								\end{align*}
+								</div>
+								<div>
+
+									Just as we used <span class="vocab">Euler's formula</span> to rewrite \({\bf \vec{y}_1}\) in terms of real-valued functions
+									\({\bf \vec{y}_1} = {\bf \vec{a}_1} + i{\bf \vec{b}_1}\), we can do the same thing with \({\bf \vec{y}_2}
+									=
+									{\bf \vec{a}_2} + i{\bf \vec{b}_2}
+									\)
+
+									\begin{align*}
+									{\bf \vec{y}_2} 
+									= \, &
+									\left[\twocol {3}{5} - i\twocol {4}{0}\right]\underset{e^{t} \, e^{-4it} }{\underbrace{e^{(1-4i)t}}} \\
+									= \, &
+									e^{t}\left[\twocol {3}{5} - i\twocol {4}{0}\right] e^{-4it}  \\
+									= \, &
+									e^{t}\left[\twocol {3}{5} - i\twocol {4}{0}\right] \Big( \cos 4t - i \sin 4t\Big) \\
+
+									= \, &
+									e^{t}
+									\left[
+
+									\left\{
+									\twocol {3}{5} \cos 4t + \twocol {4}{0} \sin 4t
+									\right\}
+								
+									-
+									i
+									\left\{ 
+										\twocol {4}{0} \cos 4t + \twocol {3}{5} \sin 4t
+									\right\} 
+									
+									\right] \\
+
+									
+
+									= \, &
+									
+								
+
+									\underset{{\bf \vec{a}}_2}{\underbrace{\left[
+									\twocol {3}{5} \cos 4t + \twocol {4}{0} \sin 4t
+									\right] e^{t}}}
+								
+									-
+									i
+									\underset{{\bf \vec{b}}_2}{\underbrace{\left[ 
+										\twocol {4}{0} \cos 4t + \twocol {3}{5} \sin 4t
+									\right]e^{t}}}
+									
+								 \\
+
+								 = \, &
+									
+								
+
+									\underset{{\bf \vec{a}}_2}{\underbrace{
+									\twocol {3 \cos 4t + 4 \sin 4t}{5 \cos 4t} 
+									 e^{t}}}
+								
+									-
+									i
+									\underset{{\bf \vec{b}}_2}{\underbrace{ 
+										\twocol {4\cos 4t  + 3 \sin 4t }{5 \sin 4t} 
+									e^{t}}} \\ 
+
+
+
+								\end{align*}
+
+								We have the following two solutions
+
+
+								\begin{align*}
+									
+
+								{\bf \vec{a}}_2
+								=
+
+								
+								\twocol {3 \cos 4t + 4 \sin 4t}{5 \cos 4t} 
+								e^{t}
+								
+
+									\quad\quad
+
+
+									{\bf \vec{b}}_2=
+									\twocol {4\cos 4t  + 3 \sin 4t }{5 \sin 4t} 
+									e^{t}
+
+								\end{align*}
+
+								Therefore \(\left\{ {\bf \vec{a}}_2, {\bf \vec{b}}_2 \right\}\) form a fundamental set
+
+								\[
+								\left\{
+
+									{\bf \vec{a}}_2, {\bf \vec{b}}_2
+									\right\}
+
+									=
+
+									\Bigg\{
+									\twocol {3 \cos 4t + 4 \sin 4t}{5 \cos 4t} 
+								e^{t}
+								,
+								\twocol {4\cos 4t  + 3 \sin 4t }{5 \sin 4t} 
+									e^{t}
+										\Bigg\}
+								\]
+
+								We are able to represent the general solution in multiple ways with different fundamental sets. Therefore to keep our answers consistent we will stick with the findamental set formed from the positive eigenvalue.
+
+								</div>
+
+						</li>
+					</ol>	
+			
 				</details>
 			</div>
 
@@ -269,71 +880,752 @@
 
 				<details class="solution">
 					<summary>Solution</summary>
-					The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-11r7">(10.6.7)</a> is 
-					\[ \left |
-						\begin {array}{cc}
-							-14-{r}&amp; 39\\
-							-6&amp;16-{r} 
-						\end {array}
-					\right |=({r} -1)^2+9\] 
-					
-					Hence, \({r} =1+3i\) is an eigenvalue of \(A\). The associated eigenvectors satisfy \(\left (A-(1+3i)I\right ){\bf \vec{u}}={\bf 0}\). The augmented augmented matrix of this system is 
-					\[ \left [
-						\begin {array}{cccr}
-							-15-3i&amp;39&amp;\vdots&amp; 0\\ 
-							-6&amp;15-3i&amp;\vdots&amp; 0 
-						\end {array}
-					\right ]\] 
-					
-					which is row equivalent to 
-					\[ \left [
-						\begin {array}{cccr} 
-							1&amp;{-5+i\over 2}&amp;\vdots&amp; 0\\ 
-							0&amp;0&amp;\vdots&amp; 0 
-						\end {array}
-					\right ]\] 
-					
-					Therefore \(x_1=(5-i)/2\). Taking \(x_2=2\) yields \(x_1=5-i\), so 
-					\[ {\bf \vec{u}}=\left [
-						\begin {array}{c}
-							5-i\\
-							2
-						\end {array}
-					\right ] \] 
-					
-					is an eigenvector. The real and imaginary parts of 
-					\[ e^t(\cos 3t+i\sin 3t)\left [
-						\begin {array}{c}
-							5-i\\
-							2
-						\end {array}
-					\right ] \] 
-					
-					are 
-					\[ {\bf \vec{y}}_1=e^t\left [
-						\begin {array}{c}
-							\sin 3t+5\cos 3t\\
-							2\cos 3t
-						\end {array}
-					\right ]\quad \mbox { and }\quad {\bf \vec{y}}_2=e^t\left [
-						\begin {array}{c}
-							-\cos 3t+5\sin 3t\\
-							2\sin 3t
-						\end {array}
-					\right ]\] 
+					<ol>
+						<li>
+			
+							<div>
+								To solve <a href="#">(10.6.9)</a> we will seek solutions of the form
+								\[
+								{\bf \vec{y}} = {\bf \vec{u}} e^{rt}
+								\]
+								Where \({\bf \vec{u}} \) is some constant vector to be determined
+								
+								\[
+								{\bf \vec{u}} 
+								=\twocol {u_1}{u_2}
+								\]
+								
+								Now differentiating \({\bf \vec{y}} = {\bf \vec{u}} e^{rt}\) we obtain
 
-					which are linearly independent solutions of <a href="#x1-11r7">(10.6.7)</a>. The general solution of <a href="#x1-11r7">(10.6.7)</a> is 
-					\[ {\bf \vec{y}}=c_1e^t\left [
-						\begin {array}{c}
-							\sin 3t+5\cos 3t\\
-							2\cos 3t
-						\end {array}
-					\right ]+ c_2e^t\left [ 
-						\begin {array}{c}
-							-\cos 3t+5\sin 3t\\
-							2\sin 3t 
-						\end {array}
-					\right ]\]
+								\[
+								\frac{d{\bf \vec{y}}}{dt} = r{\bf \vec{u}} e^{rt}
+								\]
+
+								Now substituting \({\bf \vec{y}}\) and \(d{\bf \vec{y}}/dt\) 
+								
+								into <a href="#">(10.6.9)</a>
+
+								\begin{align*}
+									\dfrac{d{\bf \vec{y}}}{dt} & =\twobytwo {-14}{39}{-6}{16} {\bf \vec{y}} \\ \\
+
+									r{\bf \vec{u}} e^{rt} & =\twobytwo {-14}{39}{-6}{16} {\bf \vec{u}} e^{rt} \\ \\
+
+									r{\bf \vec{u}}  & =\twobytwo{-14}{39}{-6}{16} {\bf \vec{u}}  \\ \\
+
+									{\bf \vec{0}} & =\twobytwo{-14}{39}{-6}{16} {\bf \vec{u}}  - r{\bf \vec{u}} \\ \\
+
+									{\bf \vec{0}} & =\left[ \twobytwo{-14}{39}{-6}{16} - r \right]{\bf \vec{u}} \\ \\
+
+									
+								\end{align*}
+
+								Rewriting \(r\) in matrix form 
+								\(r{\bf \vec{I}}\)
+								multiplied by the identity matrix:
+
+								\begin{align}
+									{\bf \vec{0}} & =\left[ \twobytwo {-14}{39}{-6}{16} - r {\bf \vec{I}} \right]{\bf \vec{u}}\nonumber \\ \nonumber\\
+
+
+									{\bf \vec{0}} & =\left[\twobytwo {-14}{39}{-6}{16}- r \twobytwo 1001 \right] {\bf \vec{u}} \nonumber \\ \nonumber\\
+
+									{\bf \vec{0}} & =\left[\twobytwo {-14}{39}{-6}{16} - \twobytwo r00r \right] {\bf \vec{u}} \nonumber\\ \nonumber\\
+
+									{\bf \vec{0}} & =\twobytwo{-14-r}{39}{-6}{16-r} {\bf \vec{u}}  \\ \nonumber\\
+
+							
+
+							
+								\end{align}
+
+								The <span class="vocab">eigenvalue equation</span> (10.6.10) shows the relationship between the eigenvalue \(r\) and associated eigenvector \({\bf \vec{u}} \) for the system of differential equations <a href="#">(10.6.9)</a> and since we'll be using it to solve for the eigenvector components \(u_1\) and \(u_2\), we'll write it in <span class="vocab">augmented matrix</span> form as the following
+
+								
+
+								\begin{align}
+								\twobytwo {-14-r}{39}{-6}{16-r} {\bf \vec{u}}   & = {\bf \vec{0}} \nonumber \\ \nonumber \\
+
+								\twobytwo {-14-r}{39}{-6}{16-r} \twocol{u_1}{u_2}    & = \twocol{0}{0}  \nonumber \\ \nonumber \\
+
+
+								\left(\begin{array}{cc|c}
+									-14-r & -39	& 0 \\
+									-6 	& 16-r	& 0
+								\end{array}\right)
+
+							
+								\end{align}
+
+								
+
+								
+							</div>
+						</li>
+						<li class="continued">
+							<div>
+								We can show that a system of equations has only the <span class="vocab">trivial solution</span> by showing that the <em>determinant of the coefficient matrix is nonzero</em>. As we are only interested in <span class="vocab">nontrivial solutions</span> we will require that the <em>determinant of the coefficient matrix equals zero</em>:
+
+								\begin{align*}
+									\det
+									\left(
+										\begin{array}{ccc}
+											-14-r & -39  \\
+											-6 & 16-r \\
+										\end{array}
+									\right) & =0 \\ \\
+									\det
+									\left(
+										\begin{array}{ccc}
+											r+14 & 39  \\
+											6    & r-16 \\
+										\end{array}
+									\right) & =0 \\ \\
+									(r+14)(r-16) - 39 \cdot 6 & =0 \\
+									\big( r^2-2r-8 \big) +25 & =0 \\
+									\underset{p(r)}{\underbrace{r^2-2r+17}} & =0 \\
+								
+								\end{align*}
+
+								We have found the <span class="vocab">characteristic polynomial</span> \(p(r)=r^2-2r+17\) and we will now solve the <span class="vocab">characteristic equation</span> \(r^2-2r+17 =0 \) using the quadratic formula:
+
+								\begin{align*}
+									r = & \frac{-(-2) \pm \sqrt{(-2)^2-4(1)(17)}}{2(1)} \\
+									r = & \frac{2 \pm \sqrt{4(1-17)}}{2} \\
+									r = & \frac{2 \pm \sqrt{4(-16)}}{2} \\
+									r = & \frac{2 \pm 2\cdot4i}{2} \\
+									r = & 1 \pm 4i \\
+									r_1 = 1 + 4i & \quad r_2 = 1 - 4i \\								
+								\end{align*}
+
+								Thus we have complex conjugate <span class="vocab">eigenvalues</span> \(r_1= 1 + 4i\) and \(r_2 = 1 - 4i\) and thus two solutions of the system are
+
+								\begin{align*}
+								{\bf \vec{y}_1} & = {\bf \vec{u}_1} e^{r_1t}= {\bf \vec{u}_1} e^{(1+4i)t}
+								\quad\text{and}\quad
+								{\bf \vec{y}_2} = {\bf \vec{u}_2} e^{r_2t} ={\bf \vec{u}_2} e^{(1-4i)t} \\
+								\end{align*}
+
+								We already have the eigenvalues and now we need to find the associated eigenvectors \({\bf \vec{u}_1}\) and \({\bf \vec{u}_2}\) using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> (10.6.7) 
+
+								\begin{align*}
+									{\bf \vec{0}} & =\twobytwo {4-r_1}{-5}{5}{-2-r_1}  {\bf \vec{u}}_1  \\ \nonumber\\
+
+									&
+									\left(\begin{array}{cc|c}
+										4-(1+4i) & -5	& 0 \\
+										5 	& -2-(1+4i)	& 0
+									\end{array}\right) \\ \\
+
+									&
+									\left(\begin{array}{cc|c}
+										3-4i & -5	& 0 \\
+										5 	& -3-4i	& 0
+									\end{array}\right) \\ \\
+
+									\overset{\frac{1}{3-4i}R_1}{\longrightarrow}
+									&
+									\left(\begin{array}{cc|c}
+										\frac{3-4i}{3-4i} & \frac{-5}{3-4i}\cdot\frac{3+4i}{3+4i}  	& 0 \\
+										5 	& -3-4i	& 0
+									\end{array}\right) \\ \\
+
+									&
+									\left(\begin{array}{cc|c}
+										1 & \frac{-5(3+4i)}{25}	& 0 \\
+										5 	& -3-4i	& 0
+									\end{array}\right) \\ \\
+
+									\overset{5R_1}{\longrightarrow}
+									&
+									\left(\begin{array}{cc|c}
+										5 	& -3-4i & 0 \\
+										5 	& -3-4i	& 0
+									\end{array}\right) \\ \\
+
+									\overset{R_2-R_1}{\longrightarrow}
+									&
+									\left(\begin{array}{cc|c}
+										5 	& -3-4i & 0 \\
+										0 	& 0	& 0
+									\end{array}\right) \\ \\
+
+
+								\end{align*}
+
+							</div>
+						</li>
+						<li class="continued">
+							<div>
+								The system simplifies down to a single equation for the components of the eigenvector \(u_1\) and \(u_2\)
+
+								\[5u_1 - (3+4i)u_2 = 0 \]
+
+								Since we have only 1 equation with 2 unknowns, we have 1 <span class="vocab">free variable</span>, so we'll let \(u_2=c\) where \(c\) is any number. Then we can solve for \(u_1\)
+
+								\begin{align*} 
+									5u_1 - (3+4i)u_2 & = 0 \\
+									5u_1 - (3+4i)c & = 0 \\
+									5u_1 & = (3+4i)c  \\
+									u_1 & = \frac{1}{5}(3+4i)c  \\
+								\end{align*}
+
+								Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}_1}\)
+
+								\[
+								{\bf \vec{u}_1}
+								=\twocol {u_1}{u_2}
+								=\twocol {\frac{1}{5}(3+4i)c}{c}
+								=c\twocol {\frac{1}{5}(3+4i)}{1}
+								\]
+
+								Since \(c\) can be any number we'll select \(c=5\) for a simple eigenvector 
+								
+								\begin{align*} 
+								{\bf \vec{u}_1}=\twocol {3+4i}{5}
+								=\twocol {3}{5} + i\twocol {4}{0}
+
+								\end{align*}
+
+								With the eigenvalue-eigenvector pair \(r_1\) and \({\bf \vec{u}_1}\) we have one solution of our original equation
+
+								
+								\begin{align*} 
+								{\bf \vec{y}_1} = {\bf \vec{u}_1}e^{r_1 t} = \left[\twocol {3}{5} + i\twocol {4}{0}\right]e^{(1+4i)t}
+								\end{align*}
+
+
+								
+							</div>
+						</li>
+						<li class="continued">
+							<div>
+
+								Our characteristic equation yielded complex conjugate <span class="vocab">eigenvalues</span> \(r_1= 1 + 4i\) and \(r_2 = 1 - 4i\) and we already found an eigenvector associated with \(r_1= 1 + 4i\) so now we'll find an eigenvector for \(r_2 = 1 - 4i\) again using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> (10.6.7) 
+
+								\begin{align*}
+									{\bf \vec{0}} & =\twobytwo {4-r_2}{-5}{5}{-2-r_2}  {\bf \vec{u}}_1  \\ \nonumber\\
+
+									&
+									\left(\begin{array}{cc|c}
+										4-(1-4i) & -5	& 0 \\
+										5 	& -2-(1-4i)	& 0
+									\end{array}\right) \\ \\
+
+									&
+									\left(\begin{array}{cc|c}
+										3+4i & -5	& 0 \\
+										5 	& -3+4i	& 0
+									\end{array}\right) \\ \\
+
+									\overset{\frac{1}{3+4i}R_1}{\longrightarrow}
+									&
+									\left(\begin{array}{cc|c}
+										\frac{3+4i}{3+4i} & \frac{-5}{3+4i}\cdot\frac{3-4i}{3-4i}  	& 0 \\
+										5 	& -3+4i	& 0
+									\end{array}\right) \\ \\
+
+									&
+									\left(\begin{array}{cc|c}
+										1 & \frac{-5(3-4i)}{25}	& 0 \\
+										5 	& -3+4i	& 0
+									\end{array}\right) \\ \\
+
+									\overset{5R_1}{\longrightarrow}
+									&
+									\left(\begin{array}{cc|c}
+										5 	& -3+4i & 0 \\
+										5 	& -3+4i	& 0
+									\end{array}\right) \\ \\
+
+									\overset{R_2-R_1}{\longrightarrow}
+									&
+									\left(\begin{array}{cc|c}
+										5 	& -3+4i & 0 \\
+										0 	& 0	& 0
+									\end{array}\right) \\ \\
+
+
+								\end{align*}
+
+							</div>
+							
+							<div>
+								The system simplifies down to a single equation for the components of the eigenvector \(u_1\) and \(u_2\)
+
+								\[5u_1 - (3-4i)u_2 = 0 \]
+
+								Since we have only 1 equation with 2 unknowns, we have 1 <span class="vocab">free variable</span>, so we'll let \(u_2=c\) where \(c\) is any number. Then we can solve for \(u_1\)
+
+								\begin{align*} 
+									5u_1 - (3-4i)u_2 & = 0 \\
+									5u_1 - (3-4i)c & = 0 \\
+									5u_1 & = (3-4i)c  \\
+									u_1 & = \frac{1}{5}(3-4i)c  \\
+								\end{align*}
+
+								Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}}_2\)
+
+								\[
+								{\bf \vec{u}}_2
+								=\twocol {u_1}{u_2}
+								=\twocol {\frac{1}{5}(3-4i)c}{c}
+								=c\twocol {\frac{1}{5}(3-4i)}{1}
+								\]
+
+								Since \(c\) can be any number we'll select \(c=5\) for a simple eigenvector 
+								
+								\begin{align*} 
+								{\bf \vec{u}}_2=\twocol {3-4i}{5}
+								=\twocol {3}{5} - i\twocol {4}{0}
+
+								\end{align*}
+
+								With the eigenvalue-eigenvector pair \(r_2\) and \({\bf \vec{u}_2}\) we have a second solution of our original equation
+
+								
+								\begin{align*} 
+								{\bf \vec{y}_2} = {\bf \vec{u}_2}e^{r_2 t} = \left[\twocol {3}{5} - i\twocol {4}{0}\right]e^{(1-4i)t}
+								\end{align*}
+
+							</div>	
+
+							<div>
+
+
+								So we have a <span class="vocab">fundamental set</span> of solutions in exponential form
+
+								\[\{{\bf \vec{y}_1},{\bf \vec{y}_2}\}
+								=\left\{
+									\left[\twocol {3}{5} + i\twocol {4}{0}\right]e^{(1+4i)t}
+									,
+									\left[\twocol {3}{5} - i\twocol {4}{0}\right]e^{(1-4i)t}
+									\right\}
+								\]
+
+								The only issue with this solution set is that it includes complex valued functions, just as we encountered in Ch 5.2, so we will again use <span class="vocab">Euler's formula</span> to rewrite them in terms of real-valued functions, starting with \({\bf \vec{y}_1}\)
+
+								\begin{align*}
+									{\bf \vec{y}_1} 
+									= \, &
+									\left[\twocol {3}{5} + i\twocol {4}{0}\right]\underset{e^{t} \, e^{4it} }{\underbrace{e^{(1+4i)t}}} \\
+									= \, &
+									e^{t}\left[\twocol {3}{5} + i\twocol {4}{0}\right] e^{4it}  \\
+									= \, &
+									e^{t}\left[\twocol {3}{5} + i\twocol {4}{0}\right] \Big( \cos 4t + i \sin 4t\Big) \\
+
+									= \, &
+									e^{t}
+									\Bigg[
+
+									
+									\left\{
+									\twocol {3}{5} \cos 4t - \twocol {4}{0} \sin 4t
+									\right\}
+								
+									+
+									i
+									
+									\left\{ 
+										\twocol {4}{0} \cos 4t + \twocol {3}{5} \sin 4t
+									\right\} 
+									
+									\Bigg] \\
+
+									= \, &
+									
+
+									
+										\left[
+									\twocol {3}{5} \cos 4t - \twocol {4}{0} \sin 4t
+									\right] e^{t}
+								
+									+
+									i
+									
+											\left[ 
+										\twocol {4}{0} \cos 4t + \twocol {3}{5} \sin 4t
+									\right] e^{t} 
+									
+									 \\
+
+									 = \, &
+									
+
+									\underset{{\bf \vec{a}}_1}{
+									\underbrace{
+										
+									\twocol {3\cos 4t - 4 \sin 4t}{5\cos 4t }  e^{t}
+									}}
+								
+									+
+									i
+									\underset{{\bf \vec{b}}_1}{
+										\underbrace{
+											
+										\twocol {4 \cos 4t + 3 \sin 4t}{5 \sin 4t}  e^{t} }}
+									
+									 \\
+
+								\end{align*}
+
+								We have rewritten our solution in real and imaginary components as 
+
+								\[
+								{\bf \vec{y}}_1 
+								= 
+								{\bf \vec{a}}_1 
+								+
+								i{\bf \vec{b}}_1 
+								\]
+
+								Since \(	{\bf \vec{y}}_1 \) is a solution of our original system, then it turns out that its component parts are also solutions
+
+								\begin{align*}
+
+								\frac{d	{\bf \vec{y}}_1 }{dt}
+								= &
+								{\bf A} 	{\bf \vec{y}}_1 \\
+
+								\frac{d	 }{dt} \Big( {\bf \vec{a}}_1 
+								+
+								i{\bf \vec{b}}_1  \Big)
+								= &
+								{\bf A} 	\Big( {\bf \vec{a}}_1 
+								+
+								i{\bf \vec{b}}_1  \Big) \\
+
+								\frac{d	{\bf \vec{a}}_1 }{dt}
+								+
+								i\frac{d	{\bf \vec{b}}_1 }{dt}
+								= &
+								{\bf A} 	{\bf \vec{a}}_1
+								+
+								i{\bf A} 	{\bf \vec{b}}_1 \\
+
+
+
+
+								\end{align*}
+
+								Equating the real parts and the imaginary parts, we obtain
+
+								\[
+
+								\frac{d	{\bf \vec{a}}_1 }{dt}
+								=
+								{\bf A} 	{\bf \vec{a}}_1
+
+								\quad \quad
+
+								
+								\frac{d	{\bf \vec{b}}_1 }{dt}
+								= 
+								{\bf A} 	{\bf \vec{b}}_1 
+
+								\]
+
+								Which indicates that \(	{\bf \vec{a}}_1 \) and \(	{\bf \vec{b}}_1 \) are both real-valued solutions of the equation.
+
+								Applying this to our solution:
+
+
+								\begin{align*}
+									{\bf \vec{y}_1} 
+									
+									= \, &
+									\underset{{\bf \vec{a}}_1}{
+										\underbrace{
+											
+										\twocol {3\cos 4t - 4 \sin 4t}{5\cos 4t }  e^{t}
+										}}
+									
+										+
+										i
+										\underset{{\bf \vec{b}}_1}{
+											\underbrace{
+												
+											\twocol {4 \cos 4t + 3 \sin 4t}{5 \sin 4t}  e^{t} }}
+
+								\end{align*}
+
+								We have the following two solutions 
+
+								\begin{align*}
+									
+
+								{\bf \vec{a}}_1
+								=
+
+								
+								\twocol {3\cos 4t - 4 \sin 4t}{5\cos 4t }  e^{t}
+								
+
+									\quad\quad
+
+
+									{\bf \vec{b}}_1=
+									\twocol {4 \cos 4t + 3 \sin 4t}{5 \sin 4t}  e^{t}
+
+								\end{align*}
+
+								We can also show that the two solutions \({\bf \vec{a}}_1\) and \({\bf \vec{b}}_1\) are linearly independent using the Wronskian determinant:
+
+								\begin{align*}
+								W\big[{\bf \vec{a}}_1, {\bf \vec{b}}_1\big]
+								=
+								\det
+								\left(
+									\begin{array}{ccc}
+										{\bf \vec{a}}_1 & {\bf \vec{b}}_1 \\
+										\dfrac{d{\bf \vec{a}}_1}{dt} & \dfrac{d{\bf \vec{b}}_1}{dt} \\
+									\end{array}
+								\right)
+								\end{align*}
+							</div>
+
+								<div class="reading-exercise">
+									Calculate 
+									\(
+									W\big[{\bf \vec{a}}_1, {\bf \vec{b}}_1\big]
+									=
+									\det
+									\left(
+										\begin{array}{ccc}
+											{\bf \vec{a}}_1 & {\bf \vec{b}}_1 \\
+											\dfrac{d{\bf \vec{a}}_1}{dt} & \dfrac{d{\bf \vec{b}}_1}{dt} \\
+										\end{array}
+									\right)
+									\)
+								</div>
+								<div>
+
+								Therefore \(\left\{ {\bf \vec{a}}_1, {\bf \vec{b}}_1 \right\}\) form a fundamental set
+
+								\[
+								\left\{
+
+									{\bf \vec{a}}_1, {\bf \vec{b}}_1
+									\right\}
+
+									=
+
+									\Bigg\{
+
+										\twocol {3\cos 4t - 4 \sin 4t}{5\cos 4t }  e^{t}
+								,
+								\twocol {4 \cos 4t + 3 \sin 4t}{5 \sin 4t}  e^{t}
+										\Bigg\}
+								\]
+
+								Therefore we can represent the general solution as \({\bf \vec{y}}_1
+								= 
+								
+								c_1
+								{\bf \vec{a}}_1
+								+
+								c_2
+								{\bf \vec{b}}_1\)
+
+								\begin{align*}
+
+
+								{\bf \vec{y}}_1
+								= \, &
+								
+								\left[
+								c_1
+								\twocol {3\cos 4t - 4 \sin 4t}{5\cos 4t }
+								+
+								c_2
+								\twocol {4 \cos 4t + 3 \sin 4t}{5 \sin 4t}
+								\right]e^t
+							
+								\end{align*}
+								</div>
+								<div>
+
+									Just as we used <span class="vocab">Euler's formula</span> to rewrite \({\bf \vec{y}_1}\) in terms of real-valued functions
+									\({\bf \vec{y}_1} = {\bf \vec{a}_1} + i{\bf \vec{b}_1}\), we can do the same thing with \({\bf \vec{y}_2}
+									=
+									{\bf \vec{a}_2} + i{\bf \vec{b}_2}
+									\)
+
+									\begin{align*}
+									{\bf \vec{y}_2} 
+									= \, &
+									\left[\twocol {3}{5} - i\twocol {4}{0}\right]\underset{e^{t} \, e^{-4it} }{\underbrace{e^{(1-4i)t}}} \\
+									= \, &
+									e^{t}\left[\twocol {3}{5} - i\twocol {4}{0}\right] e^{-4it}  \\
+									= \, &
+									e^{t}\left[\twocol {3}{5} - i\twocol {4}{0}\right] \Big( \cos 4t - i \sin 4t\Big) \\
+
+									= \, &
+									e^{t}
+									\left[
+
+									\left\{
+									\twocol {3}{5} \cos 4t + \twocol {4}{0} \sin 4t
+									\right\}
+								
+									-
+									i
+									\left\{ 
+										\twocol {4}{0} \cos 4t + \twocol {3}{5} \sin 4t
+									\right\} 
+									
+									\right] \\
+
+									
+
+									= \, &
+									
+								
+
+									\underset{{\bf \vec{a}}_2}{\underbrace{\left[
+									\twocol {3}{5} \cos 4t + \twocol {4}{0} \sin 4t
+									\right] e^{t}}}
+								
+									-
+									i
+									\underset{{\bf \vec{b}}_2}{\underbrace{\left[ 
+										\twocol {4}{0} \cos 4t + \twocol {3}{5} \sin 4t
+									\right]e^{t}}}
+									
+								 \\
+
+								 = \, &
+									
+								
+
+									\underset{{\bf \vec{a}}_2}{\underbrace{
+									\twocol {3 \cos 4t + 4 \sin 4t}{5 \cos 4t} 
+									 e^{t}}}
+								
+									-
+									i
+									\underset{{\bf \vec{b}}_2}{\underbrace{ 
+										\twocol {4\cos 4t  + 3 \sin 4t }{5 \sin 4t} 
+									e^{t}}} \\ 
+
+
+
+								\end{align*}
+
+								We have the following two solutions
+
+
+								\begin{align*}
+									
+
+								{\bf \vec{a}}_2
+								=
+
+								
+								\twocol {3 \cos 4t + 4 \sin 4t}{5 \cos 4t} 
+								e^{t}
+								
+
+									\quad\quad
+
+
+									{\bf \vec{b}}_2=
+									\twocol {4\cos 4t  + 3 \sin 4t }{5 \sin 4t} 
+									e^{t}
+
+								\end{align*}
+
+								Therefore \(\left\{ {\bf \vec{a}}_2, {\bf \vec{b}}_2 \right\}\) form a fundamental set
+
+								\[
+								\left\{
+
+									{\bf \vec{a}}_2, {\bf \vec{b}}_2
+									\right\}
+
+									=
+
+									\Bigg\{
+									\twocol {3 \cos 4t + 4 \sin 4t}{5 \cos 4t} 
+								e^{t}
+								,
+								\twocol {4\cos 4t  + 3 \sin 4t }{5 \sin 4t} 
+									e^{t}
+										\Bigg\}
+								\]
+
+								We are able to represent the general solution in multiple ways with different fundamental sets. Therefore to keep our answers consistent we will stick with the findamental set formed from the positive eigenvalue.
+
+								</div>
+
+						</li>
+					</ol>	
+					<div>
+						The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-11r7">(10.6.7)</a> is 
+						\[ \left |
+							\begin {array}{cc}
+								-14-{r}&amp; 39\\
+								-6&amp;16-{r} 
+							\end {array}
+						\right |=({r} -1)^2+9\] 
+						
+						Hence, \({r} =1+3i\) is an eigenvalue of \(A\). The associated eigenvectors satisfy \(\left (A-(1+3i)I\right ){\bf \vec{u}}={\bf 0}\). The augmented augmented matrix of this system is 
+						\[ \left [
+							\begin {array}{cccr}
+								-15-3i&amp;39&amp;\vdots&amp; 0\\ 
+								-6&amp;15-3i&amp;\vdots&amp; 0 
+							\end {array}
+						\right ]\] 
+						
+						which is row equivalent to 
+						\[ \left [
+							\begin {array}{cccr} 
+								1&amp;{-5+i\over 2}&amp;\vdots&amp; 0\\ 
+								0&amp;0&amp;\vdots&amp; 0 
+							\end {array}
+						\right ]\] 
+						
+						Therefore \(x_1=(5-i)/2\). Taking \(x_2=2\) yields \(x_1=5-i\), so 
+						\[ {\bf \vec{u}}=\left [
+							\begin {array}{c}
+								5-i\\
+								2
+							\end {array}
+						\right ] \] 
+						
+						is an eigenvector. The real and imaginary parts of 
+						\[ e^t(\cos 3t+i\sin 3t)\left [
+							\begin {array}{c}
+								5-i\\
+								2
+							\end {array}
+						\right ] \] 
+						
+						are 
+						\[ {\bf \vec{y}}_1=e^t\left [
+							\begin {array}{c}
+								\sin 3t+5\cos 3t\\
+								2\cos 3t
+							\end {array}
+						\right ]\quad \mbox { and }\quad {\bf \vec{y}}_2=e^t\left [
+							\begin {array}{c}
+								-\cos 3t+5\sin 3t\\
+								2\sin 3t
+							\end {array}
+						\right ]\] 
+
+						which are linearly independent solutions of <a href="#x1-11r7">(10.6.7)</a>. The general solution of <a href="#x1-11r7">(10.6.7)</a> is 
+						\[ {\bf \vec{y}}=c_1e^t\left [
+							\begin {array}{c}
+								\sin 3t+5\cos 3t\\
+								2\cos 3t
+							\end {array}
+						\right ]+ c_2e^t\left [ 
+							\begin {array}{c}
+								-\cos 3t+5\sin 3t\\
+								2\sin 3t 
+							\end {array}
+						\right ]\]
+					</div>	
 				</details>
 			</div>
 
@@ -678,7 +1970,7 @@
 					{\bf \vec{y}}=e^{\alpha t}\left [(c_1\cos \beta t+c_2\sin \beta t){\bf \vec{a}} +(-c_1\sin \beta t+c_2\cos \beta t){\bf \vec{b}}\right ] 
 				\end {equation}
 				
-				For convenience, let’s call the curve traversed by \(e^{-\alpha t}{\bf \vec{y}}(t)\) a<span class="vocab">shadow trajectory</span>of <a href="#x1-16r10">(10.6.10)</a>. Multiplying <a href="#x1-20r13">(10.6.13)</a> by \(e^{-\alpha t}\) yields 
+				For convenience, let’s call the curve traversed by \(e^{-\alpha t}{\bf \vec{y}}(t)\) a <span class="vocab">shadow trajectory</span> of <a href="#x1-16r10">(10.6.10)</a>. Multiplying <a href="#x1-20r13">(10.6.13)</a> by \(e^{-\alpha t}\) yields 
 				\[ e^{-\alpha t}{\bf \vec{y}}(t)=z_1(t){\bf \vec{a}}+z_2(t){\bf \vec{b}}\] 
 				
 				where
