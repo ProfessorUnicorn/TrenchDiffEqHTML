@@ -949,7 +949,7 @@
 
 
 								\left(\begin{array}{cc|c}
-									-14-r & -39	& 0 \\
+									-14-r & 39	& 0 \\
 									-6 	& 16-r	& 0
 								\end{array}\right)
 
@@ -969,58 +969,89 @@
 									\det
 									\left(
 										\begin{array}{ccc}
-											-14-r & -39  \\
+											-14-r & 39  \\
 											-6 & 16-r \\
 										\end{array}
 									\right) & =0 \\ \\
 									\det
 									\left(
 										\begin{array}{ccc}
-											r+14 & 39  \\
+											r+14 & -39  \\
 											6    & r-16 \\
 										\end{array}
 									\right) & =0 \\ \\
-									(r+14)(r-16) - 39 \cdot 6 & =0 \\
-									\big( r^2-2r-8 \big) +25 & =0 \\
-									\underset{p(r)}{\underbrace{r^2-2r+17}} & =0 \\
+									(r+14)(r-16) + 39 \cdot 6 & =0 \\
+									\big( r^2-2r-224 \big) + 234 & =0 \\
+									\underset{p(r)}{\underbrace{r^2-2r+10}} & =0 \\
 								
 								\end{align*}
 
-								We have found the <span class="vocab">characteristic polynomial</span> \(p(r)=r^2-2r+17\) and we will now solve the <span class="vocab">characteristic equation</span> \(r^2-2r+17 =0 \) using the quadratic formula:
+								We have found the <span class="vocab">characteristic polynomial</span> \(p(r)=r^2-2r+10\) and we will now solve the <span class="vocab">characteristic equation</span> \(r^2-2r+10 =0 \) using the quadratic formula:
 
 								\begin{align*}
-									r = & \frac{-(-2) \pm \sqrt{(-2)^2-4(1)(17)}}{2(1)} \\
-									r = & \frac{2 \pm \sqrt{4(1-17)}}{2} \\
-									r = & \frac{2 \pm \sqrt{4(-16)}}{2} \\
-									r = & \frac{2 \pm 2\cdot4i}{2} \\
-									r = & 1 \pm 4i \\
-									r_1 = 1 + 4i & \quad r_2 = 1 - 4i \\								
+									r = & \frac{-(-2) \pm \sqrt{(-2)^2-4(1)(10)}}{2(1)} \\
+									r = & \frac{2 \pm \sqrt{4(1-10)}}{2} \\
+									r = & \frac{2 \pm \sqrt{4(-9)}}{2} \\
+									r = & \frac{2 \pm 2\cdot3i}{2} \\
+									r = & 1 \pm 3i \\
+									r_1 = 1 + 3i & \quad r_2 = 1 - 3i \\								
 								\end{align*}
 
-								Thus we have complex conjugate <span class="vocab">eigenvalues</span> \(r_1= 1 + 4i\) and \(r_2 = 1 - 4i\) and thus two solutions of the system are
+								Thus we have complex conjugate <span class="vocab">eigenvalues</span> \(r_1= 1 + 3i\) and \(r_2 = 1 - 3i\) and thus two solutions of the system are
 
 								\begin{align*}
-								{\bf \vec{y}_1} & = {\bf \vec{u}_1} e^{r_1t}= {\bf \vec{u}_1} e^{(1+4i)t}
+								{\bf \vec{y}_1} & = {\bf \vec{u}_1} e^{r_1t}= {\bf \vec{u}_1} e^{(1+3i)t}
 								\quad\text{and}\quad
-								{\bf \vec{y}_2} = {\bf \vec{u}_2} e^{r_2t} ={\bf \vec{u}_2} e^{(1-4i)t} \\
+								{\bf \vec{y}_2} = {\bf \vec{u}_2} e^{r_2t} ={\bf \vec{u}_2} e^{(1-3i)t} \\
 								\end{align*}
 
-								We already have the eigenvalues and now we need to find the associated eigenvectors \({\bf \vec{u}_1}\) and \({\bf \vec{u}_2}\) using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> (10.6.7) 
+								We already have the eigenvalues and now we need to find the associated eigenvectors \({\bf \vec{u}_1}\) and \({\bf \vec{u}_2}\) using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> (10.6.10) 
 
+								 
 								\begin{align*}
-									{\bf \vec{0}} & =\twobytwo {4-r_1}{-5}{5}{-2-r_1}  {\bf \vec{u}}_1  \\ \nonumber\\
+
+									{\bf \vec{0}} & =\twobytwo {-14-r_1}{39}{-6}{16-r_1}  {\bf \vec{u}}_1  \\ \nonumber\\
 
 									&
 									\left(\begin{array}{cc|c}
-										4-(1+4i) & -5	& 0 \\
-										5 	& -2-(1+4i)	& 0
+										-14-(1+3i) & 39	& 0 \\
+										-6 	& 16-(1+3i)	& 0
 									\end{array}\right) \\ \\
 
 									&
 									\left(\begin{array}{cc|c}
-										3-4i & -5	& 0 \\
-										5 	& -3-4i	& 0
+										-15-3i & 39	& 0 \\
+										-6 	& 15-3i	& 0
 									\end{array}\right) \\ \\
+
+									\underset{\frac{1}{3}R_2}{\overset{-\frac{1}{3}R_1}{\longrightarrow}}
+									&
+									\left(\begin{array}{cc|c}
+										5+i & -13	& 0 \\
+										-2 	& 5-i	& 0
+									\end{array}\right) \\ \\
+
+
+									\underset{}{\overset{\frac{1}{5+i}R_1}{\longrightarrow}}
+									&
+									\left(\begin{array}{cc|c}
+										\frac{5+i}{5+i} & -\frac{13}{5+i} \cdot \frac{5-i}{5-i} 	& 0 \\
+										-2 	& 5-i	& 0
+									\end{array}\right) \\ \\
+
+
+									\underset{}{\overset{}{\longrightarrow}}
+									&
+									\left(\begin{array}{cc|c}
+										1 & -\frac{13(5-i)}{24} 	& 0 \\
+										-2 	& 5-i	& 0
+									\end{array}\right) \\ \\
+
+
+
+
+
+
 
 									\overset{\frac{1}{3-4i}R_1}{\longrightarrow}
 									&
