@@ -24,7 +24,7 @@
 	<body>
 		<div style="display: none" id="b894547c-f3b6-489f-a1d9-56febe1bb072">
 			\( 
-				\newcommand{\threecol}[3]{\left(\begin{array}{r}#1\\#2\\#3\end{array}\right)}
+				\newcommand{\threecol}[3]{\left(\begin{array}{c}#1\\#2\\#3\end{array}\right)}
 				\newcommand{\twocol}[2]{\left(\begin{array}{c}#1\\#2\end{array}\right)}
 				\newcommand{\twochar}[4]{\left| \begin {array}{cc} #1-{r}&amp; #2\\#3&amp; #4-{r} \end{array}\right|}
 				\newcommand{\twobytwo}[4]{\left( \begin {array}{cc} #1&amp; #2\\#3&amp; #4 \end{array}\right)}
@@ -482,6 +482,7 @@
 
 								\end{align*}
 
+
 								With the eigenvalue-eigenvector pair \(r_2\) and \({\bf \vec{u}_2}\) we have a second solution of our original equation
 
 								
@@ -494,17 +495,34 @@
 							<div>
 
 
-								So we have a <span class="vocab">fundamental set</span> of solutions in exponential form
+								You may notice that the eigenvector and eigenvalues obtained this way are complex conjugates of each other, meaning in the future we can calculate just one of them and then have both to obtain a <span class="vocab">fundamental set</span> of solutions in exponential form
 
-								\[\{{\bf \vec{y}_1},{\bf \vec{y}_2}\}
-								=\left\{
+								\begin{align*}
+
+								\{{\bf \vec{y}_1},{\bf \vec{y}_2}\}
+								= & \left\{
+									\left[{\bf \vec{a}} + i{\bf \vec{b}}\right]e^{(\alpha + i\beta)t}
+									,
+									\left[{\bf \vec{a}} - i{\bf \vec{b}}\right]e^{(\alpha - i\beta)t}
+									\right\} \\ \\
+
+
+								
+								
+								\{{\bf \vec{y}_1},{\bf \vec{y}_2}\}
+								= & \left\{
 									\left[\twocol {3}{5} + i\twocol {4}{0}\right]e^{(1+4i)t}
 									,
 									\left[\twocol {3}{5} - i\twocol {4}{0}\right]e^{(1-4i)t}
-									\right\}
-								\]
+									\right\} \\ \\
 
-								The only issue with this solution set is that it includes complex valued functions, just as we encountered in Ch 5.2, so we will again use <span class="vocab">Euler's formula</span> to rewrite them in terms of real-valued functions, starting with \({\bf \vec{y}_1}\)
+									
+
+								\end{align*}
+
+								
+
+								As we encountered in Ch 5.2, there is a small issue with this solution set: that it includes complex valued functions! So we will again use <span class="vocab">Euler's formula</span> to rewrite them in terms of real-valued functions, starting with \({\bf \vec{y}_1}\)
 
 								\begin{align*}
 									{\bf \vec{y}_1} 
@@ -701,7 +719,7 @@
 								</div>
 								<div>
 
-								Therefore \(\left\{ {\bf \vec{a}}_1, {\bf \vec{b}}_1 \right\}\) form a fundamental set
+								Therefore \(\left\{ {\bf \vec{a}}_1, {\bf \vec{b}}_1 \right\}\) form a fundamental set of <em>real-valued</em> functions:
 
 								\[
 								\left\{
@@ -745,13 +763,9 @@
 								\end{align*}
 								</div>
 								<div>
-
-									Just as we used <span class="vocab">Euler's formula</span> to rewrite \({\bf \vec{y}_1}\) in terms of real-valued functions
-									\({\bf \vec{y}_1} = {\bf \vec{a}_1} + i{\bf \vec{b}_1}\), we can do the same thing with \({\bf \vec{y}_2}
-									=
-									{\bf \vec{a}_2} + i{\bf \vec{b}_2}
-									\)
-
+									Since we already obtained a fundamental set, we don't even need to use \({\bf \vec{y}_2}\) however, just as we were able to use <span class="vocab">Euler's formula</span> to generate a full fundamental set from only \({\bf \vec{y}_1}\), we could also do the same for \({\bf \vec{y}_2}\):
+									
+								
 									\begin{align*}
 									{\bf \vec{y}_2} 
 									= \, &
@@ -813,7 +827,7 @@
 
 								\end{align*}
 
-								We have the following two solutions
+								We obtain the following two solutions
 
 
 								\begin{align*}
@@ -836,7 +850,7 @@
 
 								\end{align*}
 
-								Therefore \(\left\{ {\bf \vec{a}}_2, {\bf \vec{b}}_2 \right\}\) form a fundamental set
+								which again form another fundamental set
 
 								\[
 								\left\{
@@ -855,7 +869,7 @@
 										\Bigg\}
 								\]
 
-								We are able to represent the general solution in multiple ways with different fundamental sets. Therefore to keep our answers consistent we will stick with the findamental set formed from the positive eigenvalue.
+								Although we are able to represent the general solution in multiple ways with different fundamental sets, to keep our answers consistent with each other we will stick with the fundamental set formed from the positive eigenvalue \(\alpha + i \beta \)
 
 								</div>
 
@@ -1005,7 +1019,7 @@
 								{\bf \vec{y}_2} = {\bf \vec{u}_2} e^{r_2t} ={\bf \vec{u}_2} e^{(1-3i)t} \\
 								\end{align*}
 
-								We already have the eigenvalues and now we need to find the associated eigenvectors \({\bf \vec{u}_1}\) and \({\bf \vec{u}_2}\) using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> (10.6.10) 
+								We'll now find the associated eigenvectors \({\bf \vec{u}_1}\) and \({\bf \vec{u}_2}\) using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> (10.6.10) 
 
 								 
 								\begin{align*}
@@ -1022,7 +1036,7 @@
 									\left(\begin{array}{cc|c}
 										-15-3i & 39	& 0 \\
 										-6 	& 15-3i	& 0
-									\end{array}\right) \\ \\
+									\end{array}\right) \\ \\ 
 
 									\underset{\frac{1}{3}R_2}{\overset{-\frac{1}{3}R_1}{\longrightarrow}}
 									&
@@ -1031,7 +1045,6 @@
 										-2 	& 5-i	& 0
 									\end{array}\right) \\ \\
 
-
 									\underset{}{\overset{\frac{1}{5+i}R_1}{\longrightarrow}}
 									&
 									\left(\begin{array}{cc|c}
@@ -1039,47 +1052,37 @@
 										-2 	& 5-i	& 0
 									\end{array}\right) \\ \\
 
+									\underset{}{\overset{}{\longrightarrow}}
+									&
+									\left(\begin{array}{cc|c}
+										1 & -\frac{13(5-i)}{26} 	& 0 \\
+										-2 	& 5-i	& 0
+									\end{array}\right) \\ \\
 
 									\underset{}{\overset{}{\longrightarrow}}
 									&
 									\left(\begin{array}{cc|c}
-										1 & -\frac{13(5-i)}{24} 	& 0 \\
+										1 & -\frac{1}{2}(5-i) 	& 0 \\
 										-2 	& 5-i	& 0
 									\end{array}\right) \\ \\
 
 
 
-
-
-
-
-									\overset{\frac{1}{3-4i}R_1}{\longrightarrow}
+									\underset{}{\overset{2R_1}{\longrightarrow}}
 									&
 									\left(\begin{array}{cc|c}
-										\frac{3-4i}{3-4i} & \frac{-5}{3-4i}\cdot\frac{3+4i}{3+4i}  	& 0 \\
-										5 	& -3-4i	& 0
+										2 & -5+i 	& 0 \\
+										-2 	& 5-i	& 0
 									\end{array}\right) \\ \\
 
+									\underset{}{\overset{R_2+R_1}{\longrightarrow}}
 									&
 									\left(\begin{array}{cc|c}
-										1 & \frac{-5(3+4i)}{25}	& 0 \\
-										5 	& -3-4i	& 0
-									\end{array}\right) \\ \\
-
-									\overset{5R_1}{\longrightarrow}
-									&
-									\left(\begin{array}{cc|c}
-										5 	& -3-4i & 0 \\
-										5 	& -3-4i	& 0
-									\end{array}\right) \\ \\
-
-									\overset{R_2-R_1}{\longrightarrow}
-									&
-									\left(\begin{array}{cc|c}
-										5 	& -3-4i & 0 \\
+										2 & -5+i 	& 0 \\
 										0 	& 0	& 0
 									\end{array}\right) \\ \\
 
+								
 
 								\end{align*}
 
@@ -1089,15 +1092,15 @@
 							<div>
 								The system simplifies down to a single equation for the components of the eigenvector \(u_1\) and \(u_2\)
 
-								\[5u_1 - (3+4i)u_2 = 0 \]
+								\[2u_1 - (5-i)u_2 = 0 \]
 
 								Since we have only 1 equation with 2 unknowns, we have 1 <span class="vocab">free variable</span>, so we'll let \(u_2=c\) where \(c\) is any number. Then we can solve for \(u_1\)
 
 								\begin{align*} 
-									5u_1 - (3+4i)u_2 & = 0 \\
-									5u_1 - (3+4i)c & = 0 \\
-									5u_1 & = (3+4i)c  \\
-									u_1 & = \frac{1}{5}(3+4i)c  \\
+									2u_1 - (5-i)u_2 & = 0 \\
+									2u_1 - (5-i)c & = 0 \\
+									2u_1 & = (5-i)c \\
+									u_1 & = \frac{1}{2}(5-i)c \\
 								\end{align*}
 
 								Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}_1}\)
@@ -1105,23 +1108,23 @@
 								\[
 								{\bf \vec{u}_1}
 								=\twocol {u_1}{u_2}
-								=\twocol {\frac{1}{5}(3+4i)c}{c}
-								=c\twocol {\frac{1}{5}(3+4i)}{1}
+								=\twocol {\frac{1}{2}(5-i)c}{c}
+								=\frac{c}{2}\twocol {5-i}{2}
 								\]
 
-								Since \(c\) can be any number we'll select \(c=5\) for a simple eigenvector 
+								Since \(c\) can be any number we'll select \(c=2\) for a simple eigenvector 
 								
 								\begin{align*} 
-								{\bf \vec{u}_1}=\twocol {3+4i}{5}
-								=\twocol {3}{5} + i\twocol {4}{0}
+								{\bf \vec{u}_1}=\twocol {5-i}{2}
+								=\twocol {5}{2} + i \twocol {-1}{0}
 
 								\end{align*}
 
-								With the eigenvalue-eigenvector pair \(r_1\) and \({\bf \vec{u}_1}\) we have one solution of our original equation
+								With the eigenvalue-eigenvector pair \(r_1\) and \({\bf \vec{u}_1}\) we have a solution of our original equation
 
 								
 								\begin{align*} 
-								{\bf \vec{y}_1} = {\bf \vec{u}_1}e^{r_1 t} = \left[\twocol {3}{5} + i\twocol {4}{0}\right]e^{(1+4i)t}
+								{\bf \vec{y}_1} = {\bf \vec{u}_1}e^{r_1 t} = \left[\twocol {5}{2} + i\twocol {-1}{0}\right]e^{(1+3i)t}
 								\end{align*}
 
 
@@ -1131,118 +1134,50 @@
 						<li class="continued">
 							<div>
 
-								Our characteristic equation yielded complex conjugate <span class="vocab">eigenvalues</span> \(r_1= 1 + 4i\) and \(r_2 = 1 - 4i\) and we already found an eigenvector associated with \(r_1= 1 + 4i\) so now we'll find an eigenvector for \(r_2 = 1 - 4i\) again using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> (10.6.7) 
+								Now recall when the characteristic equation yields complex conjugate <span class="vocab">eigenvalues</span> as in this case \(r_1= 1 + 3i\) and \(r_2 = 1 - 3i\) then the associated <span class="vocab">eigenvectors</span> are also complex conjugates. This means that once we find \({\bf \vec{u}_1} = {\bf \vec{a}} + i {\bf \vec{b}}\) then we immediately also have \({\bf \vec{u}_2}= {\bf \vec{a}} - i {\bf \vec{b}}\):
 
-								\begin{align*}
-									{\bf \vec{0}} & =\twobytwo {4-r_2}{-5}{5}{-2-r_2}  {\bf \vec{u}}_1  \\ \nonumber\\
-
-									&
-									\left(\begin{array}{cc|c}
-										4-(1-4i) & -5	& 0 \\
-										5 	& -2-(1-4i)	& 0
-									\end{array}\right) \\ \\
-
-									&
-									\left(\begin{array}{cc|c}
-										3+4i & -5	& 0 \\
-										5 	& -3+4i	& 0
-									\end{array}\right) \\ \\
-
-									\overset{\frac{1}{3+4i}R_1}{\longrightarrow}
-									&
-									\left(\begin{array}{cc|c}
-										\frac{3+4i}{3+4i} & \frac{-5}{3+4i}\cdot\frac{3-4i}{3-4i}  	& 0 \\
-										5 	& -3+4i	& 0
-									\end{array}\right) \\ \\
-
-									&
-									\left(\begin{array}{cc|c}
-										1 & \frac{-5(3-4i)}{25}	& 0 \\
-										5 	& -3+4i	& 0
-									\end{array}\right) \\ \\
-
-									\overset{5R_1}{\longrightarrow}
-									&
-									\left(\begin{array}{cc|c}
-										5 	& -3+4i & 0 \\
-										5 	& -3+4i	& 0
-									\end{array}\right) \\ \\
-
-									\overset{R_2-R_1}{\longrightarrow}
-									&
-									\left(\begin{array}{cc|c}
-										5 	& -3+4i & 0 \\
-										0 	& 0	& 0
-									\end{array}\right) \\ \\
-
+								\begin{align*} 
+								{\bf \vec{u}_2}=\twocol {5-i}{2}
+								=\twocol {5}{2} - i \twocol {-1}{0}
 
 								\end{align*}
+
+								Thus we have another solution of our original equation
+
+								
+								\begin{align*} 
+								{\bf \vec{y}_2} = {\bf \vec{u}_2}e^{r_2 t} = \left[\twocol {5}{2} - i\twocol {-1}{0}\right]e^{(1-3i)t}
+								\end{align*}
+
+								
+							
 
 							</div>
 							
-							<div>
-								The system simplifies down to a single equation for the components of the eigenvector \(u_1\) and \(u_2\)
-
-								\[5u_1 - (3-4i)u_2 = 0 \]
-
-								Since we have only 1 equation with 2 unknowns, we have 1 <span class="vocab">free variable</span>, so we'll let \(u_2=c\) where \(c\) is any number. Then we can solve for \(u_1\)
-
-								\begin{align*} 
-									5u_1 - (3-4i)u_2 & = 0 \\
-									5u_1 - (3-4i)c & = 0 \\
-									5u_1 & = (3-4i)c  \\
-									u_1 & = \frac{1}{5}(3-4i)c  \\
-								\end{align*}
-
-								Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}}_2\)
-
-								\[
-								{\bf \vec{u}}_2
-								=\twocol {u_1}{u_2}
-								=\twocol {\frac{1}{5}(3-4i)c}{c}
-								=c\twocol {\frac{1}{5}(3-4i)}{1}
-								\]
-
-								Since \(c\) can be any number we'll select \(c=5\) for a simple eigenvector 
-								
-								\begin{align*} 
-								{\bf \vec{u}}_2=\twocol {3-4i}{5}
-								=\twocol {3}{5} - i\twocol {4}{0}
-
-								\end{align*}
-
-								With the eigenvalue-eigenvector pair \(r_2\) and \({\bf \vec{u}_2}\) we have a second solution of our original equation
-
-								
-								\begin{align*} 
-								{\bf \vec{y}_2} = {\bf \vec{u}_2}e^{r_2 t} = \left[\twocol {3}{5} - i\twocol {4}{0}\right]e^{(1-4i)t}
-								\end{align*}
-
-							</div>	
-
+					
 							<div>
 
 
-								So we have a <span class="vocab">fundamental set</span> of solutions in exponential form
+								Therefore we have a <span class="vocab">fundamental set</span> of solutions in exponential form
 
 								\[\{{\bf \vec{y}_1},{\bf \vec{y}_2}\}
 								=\left\{
-									\left[\twocol {3}{5} + i\twocol {4}{0}\right]e^{(1+4i)t}
+									\left[\twocol {5}{2} + i\twocol {-1}{0}\right]e^{(1+3i)t}
 									,
-									\left[\twocol {3}{5} - i\twocol {4}{0}\right]e^{(1-4i)t}
+									\left[\twocol {5}{2} - i\twocol {-1}{0}\right]e^{(1-3i)t}
 									\right\}
 								\]
 
-								The only issue with this solution set is that it includes complex valued functions, just as we encountered in Ch 5.2, so we will again use <span class="vocab">Euler's formula</span> to rewrite them in terms of real-valued functions, starting with \({\bf \vec{y}_1}\)
+								Now we will use <span class="vocab">Euler's formula</span> to rewrite them in terms of real-valued functions. Remember both solutions will yield different fundamental sets so for consistency we will use the fundamental set formed from the positive eigenvalue \(1+3i\)
 
 								\begin{align*}
 									{\bf \vec{y}_1} 
 									= \, &
-									\left[\twocol {3}{5} + i\twocol {4}{0}\right]\underset{e^{t} \, e^{4it} }{\underbrace{e^{(1+4i)t}}} \\
+									\left[\twocol {5}{2} + i\twocol {-1}{0}\right]\underset{e^{t} \, e^{3it} }{\underbrace{e^{(1+3i)t}}} \\
 									= \, &
-									e^{t}\left[\twocol {3}{5} + i\twocol {4}{0}\right] e^{4it}  \\
+									e^{t}\left[\twocol {5}{2} + i\twocol {-1}{0}\right] e^{3it}  \\
 									= \, &
-									e^{t}\left[\twocol {3}{5} + i\twocol {4}{0}\right] \Big( \cos 4t + i \sin 4t\Big) \\
+									e^{t}\left[\twocol {5}{2} + i\twocol {-1}{0}\right] \Big( \cos 3t + i \sin 3t\Big) \\
 
 									= \, &
 									e^{t}
@@ -1250,14 +1185,14 @@
 
 									
 									\left\{
-									\twocol {3}{5} \cos 4t - \twocol {4}{0} \sin 4t
+									\twocol {5}{2} \cos 3t - \twocol {-1}{0} \sin 3t
 									\right\}
 								
 									+
 									i
 									
 									\left\{ 
-										\twocol {4}{0} \cos 4t + \twocol {3}{5} \sin 4t
+										\twocol {-1}{0} \cos 3t + \twocol {5}{2} \sin 3t
 									\right\} 
 									
 									\Bigg] \\
@@ -1267,14 +1202,14 @@
 
 									
 										\left[
-									\twocol {3}{5} \cos 4t - \twocol {4}{0} \sin 4t
+									\twocol {5}{2} \cos 3t + \twocol {1}{0} \sin 3t
 									\right] e^{t}
 								
 									+
 									i
 									
 											\left[ 
-										\twocol {4}{0} \cos 4t + \twocol {3}{5} \sin 4t
+										\twocol {-1}{0} \cos 3t + \twocol {5}{2} \sin 3t
 									\right] e^{t} 
 									
 									 \\
@@ -1285,7 +1220,7 @@
 									\underset{{\bf \vec{a}}_1}{
 									\underbrace{
 										
-									\twocol {3\cos 4t - 4 \sin 4t}{5\cos 4t }  e^{t}
+									\twocol {5\cos 3t +  \sin 3t}{2\cos 3t }  e^{t}
 									}}
 								
 									+
@@ -1293,144 +1228,17 @@
 									\underset{{\bf \vec{b}}_1}{
 										\underbrace{
 											
-										\twocol {4 \cos 4t + 3 \sin 4t}{5 \sin 4t}  e^{t} }}
+										\twocol {- \cos 3t + 5 \sin 3t}{2 \sin 3t}  e^{t} }}
 									
 									 \\
 
 								\end{align*}
 
-								We have rewritten our solution in real and imaginary components as 
-
-								\[
-								{\bf \vec{y}}_1 
-								= 
-								{\bf \vec{a}}_1 
-								+
-								i{\bf \vec{b}}_1 
-								\]
-
-								Since \(	{\bf \vec{y}}_1 \) is a solution of our original system, then it turns out that its component parts are also solutions
-
-								\begin{align*}
-
-								\frac{d	{\bf \vec{y}}_1 }{dt}
-								= &
-								{\bf A} 	{\bf \vec{y}}_1 \\
-
-								\frac{d	 }{dt} \Big( {\bf \vec{a}}_1 
-								+
-								i{\bf \vec{b}}_1  \Big)
-								= &
-								{\bf A} 	\Big( {\bf \vec{a}}_1 
-								+
-								i{\bf \vec{b}}_1  \Big) \\
-
-								\frac{d	{\bf \vec{a}}_1 }{dt}
-								+
-								i\frac{d	{\bf \vec{b}}_1 }{dt}
-								= &
-								{\bf A} 	{\bf \vec{a}}_1
-								+
-								i{\bf A} 	{\bf \vec{b}}_1 \\
-
-
-
-
-								\end{align*}
-
-								Equating the real parts and the imaginary parts, we obtain
-
-								\[
-
-								\frac{d	{\bf \vec{a}}_1 }{dt}
-								=
-								{\bf A} 	{\bf \vec{a}}_1
-
-								\quad \quad
-
-								
-								\frac{d	{\bf \vec{b}}_1 }{dt}
-								= 
-								{\bf A} 	{\bf \vec{b}}_1 
-
-								\]
-
-								Which indicates that \(	{\bf \vec{a}}_1 \) and \(	{\bf \vec{b}}_1 \) are both real-valued solutions of the equation.
-
-								Applying this to our solution:
-
-
-								\begin{align*}
-									{\bf \vec{y}_1} 
-									
-									= \, &
-									\underset{{\bf \vec{a}}_1}{
-										\underbrace{
-											
-										\twocol {3\cos 4t - 4 \sin 4t}{5\cos 4t }  e^{t}
-										}}
-									
-										+
-										i
-										\underset{{\bf \vec{b}}_1}{
-											\underbrace{
-												
-											\twocol {4 \cos 4t + 3 \sin 4t}{5 \sin 4t}  e^{t} }}
-
-								\end{align*}
-
-								We have the following two solutions 
-
-								\begin{align*}
-									
-
-								{\bf \vec{a}}_1
-								=
-
-								
-								\twocol {3\cos 4t - 4 \sin 4t}{5\cos 4t }  e^{t}
-								
-
-									\quad\quad
-
-
-									{\bf \vec{b}}_1=
-									\twocol {4 \cos 4t + 3 \sin 4t}{5 \sin 4t}  e^{t}
-
-								\end{align*}
-
-								We can also show that the two solutions \({\bf \vec{a}}_1\) and \({\bf \vec{b}}_1\) are linearly independent using the Wronskian determinant:
-
-								\begin{align*}
-								W\big[{\bf \vec{a}}_1, {\bf \vec{b}}_1\big]
-								=
-								\det
-								\left(
-									\begin{array}{ccc}
-										{\bf \vec{a}}_1 & {\bf \vec{b}}_1 \\
-										\dfrac{d{\bf \vec{a}}_1}{dt} & \dfrac{d{\bf \vec{b}}_1}{dt} \\
-									\end{array}
-								\right)
-								\end{align*}
+								Now we have rewritten our solution in real and imaginary components and we know that the components of \(	{\bf \vec{y}}_1 = {\bf \vec{a}}_1 + i {\bf \vec{b}}_1\) form a fundamental set of solutions
 							</div>
 
-								<div class="reading-exercise">
-									Calculate 
-									\(
-									W\big[{\bf \vec{a}}_1, {\bf \vec{b}}_1\big]
-									=
-									\det
-									\left(
-										\begin{array}{ccc}
-											{\bf \vec{a}}_1 & {\bf \vec{b}}_1 \\
-											\dfrac{d{\bf \vec{a}}_1}{dt} & \dfrac{d{\bf \vec{b}}_1}{dt} \\
-										\end{array}
-									\right)
-									\)
-								</div>
+							
 								<div>
-
-								Therefore \(\left\{ {\bf \vec{a}}_1, {\bf \vec{b}}_1 \right\}\) form a fundamental set
 
 								\[
 								\left\{
@@ -1442,9 +1250,9 @@
 
 									\Bigg\{
 
-										\twocol {3\cos 4t - 4 \sin 4t}{5\cos 4t }  e^{t}
+										\twocol {5\cos 3t + \sin 3t}{2\cos 3t }  e^{t}
 								,
-								\twocol {4 \cos 4t + 3 \sin 4t}{5 \sin 4t}  e^{t}
+								\twocol {- \cos 3t + 5 \sin 3t}{2 \sin 3t}  e^{t}
 										\Bigg\}
 								\]
 
@@ -1465,198 +1273,19 @@
 								
 								\left[
 								c_1
-								\twocol {3\cos 4t - 4 \sin 4t}{5\cos 4t }
+								\twocol {5\cos 3t + \sin 3t}{2\cos 3t }
 								+
 								c_2
-								\twocol {4 \cos 4t + 3 \sin 4t}{5 \sin 4t}
+								\twocol {- \cos 3t + 5 \sin 3t}{2 \sin 3t}
 								\right]e^t
 							
 								\end{align*}
 								</div>
-								<div>
-
-									Just as we used <span class="vocab">Euler's formula</span> to rewrite \({\bf \vec{y}_1}\) in terms of real-valued functions
-									\({\bf \vec{y}_1} = {\bf \vec{a}_1} + i{\bf \vec{b}_1}\), we can do the same thing with \({\bf \vec{y}_2}
-									=
-									{\bf \vec{a}_2} + i{\bf \vec{b}_2}
-									\)
-
-									\begin{align*}
-									{\bf \vec{y}_2} 
-									= \, &
-									\left[\twocol {3}{5} - i\twocol {4}{0}\right]\underset{e^{t} \, e^{-4it} }{\underbrace{e^{(1-4i)t}}} \\
-									= \, &
-									e^{t}\left[\twocol {3}{5} - i\twocol {4}{0}\right] e^{-4it}  \\
-									= \, &
-									e^{t}\left[\twocol {3}{5} - i\twocol {4}{0}\right] \Big( \cos 4t - i \sin 4t\Big) \\
-
-									= \, &
-									e^{t}
-									\left[
-
-									\left\{
-									\twocol {3}{5} \cos 4t + \twocol {4}{0} \sin 4t
-									\right\}
-								
-									-
-									i
-									\left\{ 
-										\twocol {4}{0} \cos 4t + \twocol {3}{5} \sin 4t
-									\right\} 
-									
-									\right] \\
-
-									
-
-									= \, &
-									
-								
-
-									\underset{{\bf \vec{a}}_2}{\underbrace{\left[
-									\twocol {3}{5} \cos 4t + \twocol {4}{0} \sin 4t
-									\right] e^{t}}}
-								
-									-
-									i
-									\underset{{\bf \vec{b}}_2}{\underbrace{\left[ 
-										\twocol {4}{0} \cos 4t + \twocol {3}{5} \sin 4t
-									\right]e^{t}}}
-									
-								 \\
-
-								 = \, &
-									
-								
-
-									\underset{{\bf \vec{a}}_2}{\underbrace{
-									\twocol {3 \cos 4t + 4 \sin 4t}{5 \cos 4t} 
-									 e^{t}}}
-								
-									-
-									i
-									\underset{{\bf \vec{b}}_2}{\underbrace{ 
-										\twocol {4\cos 4t  + 3 \sin 4t }{5 \sin 4t} 
-									e^{t}}} \\ 
-
-
-
-								\end{align*}
-
-								We have the following two solutions
-
-
-								\begin{align*}
-									
-
-								{\bf \vec{a}}_2
-								=
-
-								
-								\twocol {3 \cos 4t + 4 \sin 4t}{5 \cos 4t} 
-								e^{t}
-								
-
-									\quad\quad
-
-
-									{\bf \vec{b}}_2=
-									\twocol {4\cos 4t  + 3 \sin 4t }{5 \sin 4t} 
-									e^{t}
-
-								\end{align*}
-
-								Therefore \(\left\{ {\bf \vec{a}}_2, {\bf \vec{b}}_2 \right\}\) form a fundamental set
-
-								\[
-								\left\{
-
-									{\bf \vec{a}}_2, {\bf \vec{b}}_2
-									\right\}
-
-									=
-
-									\Bigg\{
-									\twocol {3 \cos 4t + 4 \sin 4t}{5 \cos 4t} 
-								e^{t}
-								,
-								\twocol {4\cos 4t  + 3 \sin 4t }{5 \sin 4t} 
-									e^{t}
-										\Bigg\}
-								\]
-
-								We are able to represent the general solution in multiple ways with different fundamental sets. Therefore to keep our answers consistent we will stick with the findamental set formed from the positive eigenvalue.
-
-								</div>
+						
 
 						</li>
 					</ol>	
-					<div>
-						The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-11r7">(10.6.7)</a> is 
-						\[ \left |
-							\begin {array}{cc}
-								-14-{r}&amp; 39\\
-								-6&amp;16-{r} 
-							\end {array}
-						\right |=({r} -1)^2+9\] 
-						
-						Hence, \({r} =1+3i\) is an eigenvalue of \(A\). The associated eigenvectors satisfy \(\left (A-(1+3i)I\right ){\bf \vec{u}}={\bf 0}\). The augmented augmented matrix of this system is 
-						\[ \left [
-							\begin {array}{cccr}
-								-15-3i&amp;39&amp;\vdots&amp; 0\\ 
-								-6&amp;15-3i&amp;\vdots&amp; 0 
-							\end {array}
-						\right ]\] 
-						
-						which is row equivalent to 
-						\[ \left [
-							\begin {array}{cccr} 
-								1&amp;{-5+i\over 2}&amp;\vdots&amp; 0\\ 
-								0&amp;0&amp;\vdots&amp; 0 
-							\end {array}
-						\right ]\] 
-						
-						Therefore \(x_1=(5-i)/2\). Taking \(x_2=2\) yields \(x_1=5-i\), so 
-						\[ {\bf \vec{u}}=\left [
-							\begin {array}{c}
-								5-i\\
-								2
-							\end {array}
-						\right ] \] 
-						
-						is an eigenvector. The real and imaginary parts of 
-						\[ e^t(\cos 3t+i\sin 3t)\left [
-							\begin {array}{c}
-								5-i\\
-								2
-							\end {array}
-						\right ] \] 
-						
-						are 
-						\[ {\bf \vec{y}}_1=e^t\left [
-							\begin {array}{c}
-								\sin 3t+5\cos 3t\\
-								2\cos 3t
-							\end {array}
-						\right ]\quad \mbox { and }\quad {\bf \vec{y}}_2=e^t\left [
-							\begin {array}{c}
-								-\cos 3t+5\sin 3t\\
-								2\sin 3t
-							\end {array}
-						\right ]\] 
-
-						which are linearly independent solutions of <a href="#x1-11r7">(10.6.7)</a>. The general solution of <a href="#x1-11r7">(10.6.7)</a> is 
-						\[ {\bf \vec{y}}=c_1e^t\left [
-							\begin {array}{c}
-								\sin 3t+5\cos 3t\\
-								2\cos 3t
-							\end {array}
-						\right ]+ c_2e^t\left [ 
-							\begin {array}{c}
-								-\cos 3t+5\sin 3t\\
-								2\sin 3t 
-							\end {array}
-						\right ]\]
-					</div>	
+				
 				</details>
 			</div>
 
@@ -1676,121 +1305,715 @@
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
-						<li class="no-part">
-							The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-13r8">(10.6.8)</a> is 
-							\[ \left | 
-								\begin {array}{ccc}
-									-5-{r}&amp; 5&amp;4\\
-									-8&amp;7-{r}&amp; 6\\ 
-									\phantom {-}1 &amp;0&amp;-{r} 
-								\end {array}
-							\right |=-({r} -2)({r} ^2+1)\] 
+						<li>
+			
+							<div>
+								To solve <a href="#">(10.6.12)</a> we will seek solutions of the form
+								\[
+								{\bf \vec{y}} = {\bf \vec{u}} e^{rt}
+								\]
+								Where \({\bf \vec{u}} \) is some constant vector to be determined
+								
+								\[
+								{\bf \vec{u}} 
+								=\threecol {u_1}{u_2}{u_3}
+								\]
+								
+								Now differentiating \({\bf \vec{y}} = {\bf \vec{u}} e^{rt}\) we obtain
+
+								\[
+								\frac{d{\bf \vec{y}}}{dt} = r{\bf \vec{u}} e^{rt}
+								\]
+
+								Now substituting \({\bf \vec{y}}\) and \(d{\bf \vec{y}}/dt\) 
+								
+								into <a href="#">(10.6.12)</a>
+
+								\begin{align*}
+									\dfrac{d{\bf \vec{y}}}{dt} & =\threebythree {-5}{5}{4}{-8}{7}{6}{1}{0}{0} {\bf \vec{y}} \\ \\
+
+									r{\bf \vec{u}} e^{rt} & =\threebythree {-5}{5}{4}{-8}{7}{6}{1}{0}{0} {\bf \vec{u}} e^{rt} \\ \\
+
+									r{\bf \vec{u}}  & =\threebythree {-5}{5}{4}{-8}{7}{6}{1}{0}{0} \\ \\
+
+									{\bf \vec{0}} & =\threebythree {-5}{5}{4}{-8}{7}{6}{1}{0}{0}  - r{\bf \vec{u}} \\ \\
+
+									{\bf \vec{0}} & =\left[ \threebythree {-5}{5}{4}{-8}{7}{6}{1}{0}{0} - r \right]{\bf \vec{u}} \\ \\
+
+									
+								\end{align*}
+
+								Rewriting \(r\) in matrix form 
+								\(r{\bf \vec{I}}\)
+								multiplied by the identity matrix:
+
+								\begin{align}
+									{\bf \vec{0}} & =\left[ 
+									\threebythree {-5}{5}{4}{-8}{7}{6}{1}{0}{0}
+									 - r {\bf \vec{I}} \right]{\bf \vec{u}}\nonumber \\ \nonumber\\
+
+
+									{\bf \vec{0}} & =\left[
+									\threebythree {-5}{5}{4}{-8}{7}{6}{1}{0}{0}
+									- r 
+									\threebythree 100010001
+									\right] {\bf \vec{u}} \nonumber \\ \nonumber\\
+
+									{\bf \vec{0}} & =\left[
+									\threebythree {-5}{5}{4}{-8}{7}{6}{1}{0}{0}
+									- 
+									\threebythree r000r000r
+									\right] {\bf \vec{u}} \nonumber\\ \nonumber\\
+
+									{\bf \vec{0}} & =
+									\threebythree {-5-r}{5}{4}{-8}{7-r}{6}{1}{0}{-r}
+									{\bf \vec{u}}  \\ \nonumber\\
+
 							
-							Hence, the eigenvalues of \(A\) are \({r} _1=2\), \({r} _2=i\), and \({r} _3=-i\).
+
 							
-							The augmented matrix of \((A-2I){\bf x=0}\) is 
-							\[ \left [ 
-								\begin {array}{rrrcr}
-									-7&amp;5&amp;4&amp;\vdots&amp; 0\\
-									-8&amp; 5&amp;6&amp;\vdots&amp; 0\\ 
-									1&amp;0&amp;-2&amp;\vdots&amp; 0 
-								\end {array}
-							\right ]\] 
+								\end{align}
+
+								The <span class="vocab">eigenvalue equation</span> (10.6.13) shows the relationship between the eigenvalue \(r\) and associated eigenvector \({\bf \vec{u}} \) for the system of differential equations <a href="#">(10.6.12)</a> and since we'll be using it to solve for the eigenvector components \(u_1,\) \(u_2\) and \(u_3\), we'll write it in <span class="vocab">augmented matrix</span> form as the following
+
+								
+
+								\begin{align}
+								\threebythree {-5-r}{5}{4}{-8}{7-r}{6}{1}{0}{-r}
+								
+								{\bf \vec{u}}   & = {\bf \vec{0}} \nonumber \\ \nonumber \\
+
+								\threebythree {-5-r}{5}{4}{-8}{7-r}{6}{1}{0}{-r}
+								
+								\threecol{u_1}{u_2}{u_3}    & = \threecol{0}{0}{0}  \nonumber \\ \nonumber \\
+
+
+								\left(\begin{array}{ccc|c}
+									-5-r & 5	& 4 & 0 \\
+									-8 	& 7-r	& 6 & 0 \\
+									1 & 0 & -r & 0
+								\end{array}\right)
+
 							
-							which is row equivalent to 
-							\[ \left [ 
-								\begin {array}{rrrcr} 
-									1&amp;0&amp;-2&amp;\vdots&amp; 0\\ 
-									0&amp;1&amp;-2&amp; \vdots&amp; 0\\ 
-									0&amp;0&amp;0&amp;\vdots&amp; 0 
-								\end {array}
-							\right ]\] 
-							
-							Therefore \(x_1=x_2=2x_3\). Taking \(x_3=1\) yields 
-							\[ {\bf \vec{u}}_1=\threecol 221\] 
-							
-							so 
-							\[ {\bf \vec{y}}_1=\threecol 221e^{2t} \] 
-							
-							is a solution of <a href="#x1-13r8">(10.6.8)</a>.
-							<br> 
+								\end{align}
+
+								
+
+								
+							</div>
 						</li>
-						<li class="no-part">
-							The augmented matrix of \((A-iI){\bf x=0}\) is 
-							\[ \left [ 
-								\begin {array}{ccrccc}
-									-5-i&amp;5&amp;4&amp;\vdots&amp; 0\\
-									-8&amp; 7-i&amp;6&amp;\vdots&amp; 0\\ 
-									\phantom {-}1&amp;0&amp;-i&amp;\vdots&amp; 0 
-								\end {array}
-							\right ]\] 
+						<li class="continued">
+							<div>
+								We can show that a system of equations has only the <span class="vocab">trivial solution</span> by showing that the <em>determinant of the coefficient matrix is nonzero</em>. As we are only interested in <span class="vocab">nontrivial solutions</span> we will require that the <em>determinant of the coefficient matrix equals zero</em>:
+
+								\begin{align*}
+									\det
+									\left(
+										\begin{array}{ccc}
+											-5-r & 5	& 4 \\
+											-8 	& 7-r	& 6  \\
+											1 & 0 & -r 
+										\end{array}
+									\right) & =0 \\ \\
+									-\frac{1}{8}
+									\det
+									\left(
+										\begin{array}{ccc}
+											r+5 & 5	& 4 \\
+											8 	& 7-r	& 6  \\
+											-8 & 0 & -8r 
+										\end{array}
+									\right) & =0 \\ \\
+									\det
+									\left(
+										\begin{array}{ccc}
+											r+5 & 5	& 4 \\
+											8 	& 7-r	& 6  \\
+											0 & 7-r & -8r+6 
+										\end{array}
+									\right) & =0 \\ \\
+
+								\end{align*}
+
+								Now expanding cofactors along the first column
+								\begin{align*}
+									(r+5)
+									\det
+									\left(
+										\begin{array}{cc}
+											7-r	& 6  \\
+											7-r & -8r+6 
+										\end{array}
+									\right)
+									-8
+									\det
+									\left(
+										\begin{array}{ccc}
+											5	& 4 \\
+											7-r & -8r+6 
+										\end{array}
+									\right) & =0 \\ \\
+
+
+									2(r+5)(r-7)
+									\det
+									\left(
+										\begin{array}{cc}
+											1	& 3  \\
+											1 & -4r+3 
+										\end{array}
+									\right)
+									+8\cdot2
+									\det
+									\left(
+										\begin{array}{ccc}
+											5	& 2 \\
+											7-r & -4r+3 
+										\end{array}
+									\right) & =0 \\ \\
+
+									(r+5)(r-7)
+									\det
+									\left(
+										\begin{array}{cc}
+											1	& 3  \\
+											1 & -4r+3 
+										\end{array}
+									\right)
+									+8
+									\det
+									\left(
+										\begin{array}{ccc}
+											5	& 2 \\
+											7-r & -4r+3 
+										\end{array}
+									\right) & =0 \\ \\
+
+									(r+5)(r-7)
+									\Big(
+										\underset{-4r}{\underbrace{-4r+3 - 3}}
+									\Big)
+									+8
+									\Big(
+										\underset{-20r+15-14+2r}{\underbrace{5(-4r+3 )-2 (7-r)}}	
+									\Big)
+									 & =0 \\ \\
+
+									-4r
+									(r+5)(r-7)
+									-8
+									\big(
+										18r-1
+									\big)
+
+									 & =0 \\ \\
+
+									 r
+									 \underset{r^2-7r+5r-35}{\underbrace{ (r+5)(r-7)}}
+									 +2
+									 \big(
+										 18r-1
+									 \big)
+									  & =0 \\ \\
+
+									  \underset{r^3-2r^2-35r}{\underbrace{r
+									 (r-2r-35)}}
+									 
+									 +  \underset{+36r-2}{\underbrace{2
+									 \big(
+										 18r-1
+									 \big)}}
+									  & =0 \\ \\
+
+									   r^3-2r^2+r-2
+									   & =0 \\ \\
+								\end{align*}
+
+
+
+
+
+								We have found the <span class="vocab">characteristic polynomial</span> \(p(r)=r^3-2r^2+r-2\) and we will now solve the <span class="vocab">characteristic equation</span> \(r^3-2r^2+r-2 =0 \) using factoring 
+
+								
+								\begin{align*}
+									r^3-2r^2+r-2 = & 0 \\
+									\big( r^3-2r^2 \big) + \big(r-2\big) = & 0 \\	
+									r^2\big( r-2 \big) + 1\big(r-2\big) = & 0 \\	
+									\big( r-2 \big) \big(r^2 + 1\big) = & 0 \\	
+									r-2 = 0 \quad  r^2 + 1 = & 0 \\		
+									r = 2 \quad  r^2 = & -1 \\		
+									r = 2 \quad  r = & \pm i \\		
+									r_1 = 2 \quad  r_2 = i \quad r_3 & = -i \\ \\							
+								\end{align*}
+
+								Thus we have one real <span class="vocab">eigenvalue</span> \(r_1= 2\) and two complex conjugate <span class="vocab">eigenvalues</span> \(r_2= i\) and \(r_3 = -i\) and thus three solutions of the system are
+
+								\begin{align*}
+								{\bf \vec{y}_1} & = {\bf \vec{u}_1} e^{r_1t}= {\bf \vec{u}_1} e^{2t} \\
+								{\bf \vec{y}_2} & = {\bf \vec{u}_2} e^{r_2t} ={\bf \vec{u}_2} e^{it} \\
+								{\bf \vec{y}_3} & = {\bf \vec{u}_3} e^{r_3t} ={\bf \vec{u}_3} e^{-it} \\
+								\end{align*}
+
+								We'll now find the associated eigenvectors \({\bf \vec{u}_1},\) \({\bf \vec{u}_2}\) and \({\bf \vec{u}_3}\) using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> (10.6.13) starting with \(r_1=2\)
+
+								 
+								\begin{align*}
+									\threebythree {-5-r_1}{5}{4}{-8}{7-r_1}{6}{1}{0}{-r_1}
+									
+									{\bf \vec{u}}_1   & = {\bf \vec{0}} \\ \\
+
+									\left(\begin{array}{ccc|c}
+										-5-2 & 5	& 4 & 0 \\
+										-8 	& 7-2	& 6 & 0 \\
+										1 & 0 & -2 & 0
+									\end{array}\right)\\ \\
+
+									\left(\begin{array}{rrr|c}
+										-7 & 5	& 4 & 0 \\
+										-8 	& 5	& 6 & 0 \\
+										1 & 0 & -2 & 0
+									\end{array}\right)\\ \\
+
+									\underset{R_2+8R_3}{\overset{R_1+7R_3}{\longrightarrow}}
+									\left(\begin{array}{rrr|c}
+										0 & 5	& -10 & 0 \\
+										0 	& 5	& -10 & 0 \\
+										1 & 0 & -2 & 0
+									\end{array}\right) \\ \\
+
+									\underset{}{\overset{R_1\leftrightarrow R_3}{\longrightarrow}}
+									\left(\begin{array}{rrr|c}
+										1 	& 0 & -2 & 0 \\
+										0 	& 5	& -10 & 0 \\
+										0 	& 5	& -10 & 0 
+									\end{array}\right) \\ \\
+
+									\underset{\frac{1}{5}R_2}{\overset{R_3-R_2}{\longrightarrow}}
+									\left(\begin{array}{rrr|c}
+										1 	& 0 & -2 & 0 \\
+										0 	& 1	& -2 & 0 \\
+										0 	& 0	& 0 & 0 
+									\end{array}\right)
+
 							
-							which is row equivalent to 
-							\[ \left [ 
-								\begin {array}{ccccc} 
-									1&amp;0&amp;-i&amp;\vdots&amp; 0\\ 
-									0&amp;1&amp;1-i&amp; \vdots&amp; 0\\ 
-									0&amp;0&amp;0&amp;\vdots&amp; 0 
-								\end {array}
-							\right ]\] 
+								\end{align*}
+
 							
-							Therefore \(x_1=ix_3\) and \(x_2=-(1-i)x_3\). Taking \(x_3=1\) yields the eigenvector 
-							\[ {\bf \vec{u}}_2=\left [
-								\begin {array}{c} 
-									i\\
-									-1+i\\ 
-									1
-								\end {array}
-							\right ]\] 
-							
-							The real and imaginary parts of 
-							\[ (\cos t+i\sin t)\left [
-								\begin {array}{c}
-									i\\
-									-1+i\\
-									1
-								\end {array}
-							\right ] \] 
-							
-							are 
-							\[ {\bf \vec{y}}_2= \left [
-								\begin {array}{c}
-									-\sin t\\
-									-\cos t-\sin t\\
-									\cos t
-								\end {array}
-							\right ] \quad \mbox { and }\quad {\bf \vec{y}}_3=\left [
-								\begin {array}{c}
-									\cos t\\
-									\cos t-\sin t\\
-									\sin t
-								\end {array}
-							\right ]\] 
-							
-							which are solutions of <a href="#x1-13r8">(10.6.8)</a>. Since the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,{\bf \vec{y}}_3\}\) at \(t=0\) is 
-							\[ \left |
-								\begin {array}{rrr} 
-									2&amp;0&amp;1\\
-									2&amp;-1&amp;1\\
-									1&amp;1&amp;0
-								\end {array}
-							\right |=1\] 
-							
-							\(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,{\bf \vec{y}}_3\}\) is a fundamental set of solutions of <a href="#x1-13r8">(10.6.8)</a>. The general solution of <a href="#x1-13r8">(10.6.8)</a> is 
-							\[ {\bf \vec{y}}=c_1 \threecol 221e^{2t} +c_2\left [
-								\begin {array}{c}
-									-\sin t\\
-									-\cos t-\sin t\\
-									\cos t
-								\end {array}
-							\right ] +c_3\left [ 
-								\begin {array}{c}
-									\cos t\\
-									\cos t-\sin t\\
-									\sin t 
-								\end {array}
-							\right ]\]
+
+							</div>
 						</li>
+						<li class="continued">
+							<div>
+								The system simplifies down to two equations for the components of the eigenvector \(u_1,\) \(u_2\) and \(u_3\)
+
+								\[
+								\left\{
+									\begin{array}{ccc}
+										u_1 - 2u_3 & = 0 \\
+										u_2 - 2u_3 & = 0 \\
+									\end{array}
+								\right. 
+								\]
+
+								Since we have 2 equations with 3 unknowns, we have 1 <span class="vocab">free variable</span>, so we'll let \(u_3=c\) where \(c\) is any number. Then we can solve for \(u_1\) and \(u_2\)
+
+								\begin{align*} 
+									\begin{array}{rlrlr}
+										u_1 - 2u_3 & = 0  & \quad u_2 - 2u_3 & = 0 \\
+										u_1 - 2c & = 0 & \quad u_2 - 2c & = 0\\
+										u_1 & =  2c & \quad  u_2 & = 2c \\
+									\end{array}
+								\end{align*}
+
+
+								Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}_1}\)
+
+								\[
+								{\bf \vec{u}_1}
+								=\threecol {u_1}{u_2}{u_3}
+								=\threecol {2c}{2c}{c}
+								=c\threecol {2}{2}{1}
+								\]
+
+								Since \(c\) can be any number we'll select \(c=1\) for a simple eigenvector 
+								
+								\begin{align*} 
+								{\bf \vec{u}_1}=\threecol {2}{2}{1}
+
+								\end{align*}
+
+								With the eigenvalue-eigenvector pair \(r_1\) and \({\bf \vec{u}_1}\) we have a solution of our original equation
+
+								
+								\begin{align*} 
+								{\bf \vec{y}_1} = {\bf \vec{u}_1}e^{r_1 t} = \threecol {2}{2}{1} e^{2t}
+								\end{align*}
+
+
+								
+							</div>
+						</li>
+						<li class="continued">
+							<div>
+
+								The other two solutions are associated with 
+								complex conjugate <span class="vocab">eigenvalues</span> \(r_2=i\) and  \(r_3=-i\) 
+								so we'll use the positive eigenvalue \(r_2=i\) 
+								and again use row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> (10.6.13) 
+
+								\begin{align*}
+									\threebythree {-5-r_2}{5}{4}{-8}{7-r_2}{6}{1}{0}{-r_2}
+									
+									{\bf \vec{u}}_2   & = {\bf \vec{0}} \\ \\
+
+									\left(\begin{array}{ccc|c}
+										-5-i & 5	& 4 & 0 \\
+										-8 	& 7-i	& 6 & 0 \\
+										1 & 0 & -i & 0
+									\end{array}\right)\\ \\
+
+									\underset{-R_1}{\overset{R_2+8R_3}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										5+i & -5	& -4 & 0 \\
+										0 	& 7-i	& 6-8i & 0 \\
+										1 & 0 & -i & 0
+									\end{array}\right)\\ \\
+
+									\underset{}{\overset{(5+i)R_3}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										5+i & -5	& -4 & 0 \\
+										0 	& 7-i	& 6-8i & 0 \\
+										5+i & 0 & 1-5i & 0
+									\end{array}\right)\\ \\
+
+									\underset{}{\overset{R_1-R_3}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										0 	& -5	& -5+5i & 0 \\
+										0 	& 7-i	& 6-8i & 0 \\
+										5+i & 0 & 1-5i & 0
+									\end{array}\right)\\ \\
+
+									\underset{}{\overset{\frac{1}{5}R_1}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										0 	& -1	& -1+i & 0 \\
+										0 	& 7-i	& 6-8i & 0 \\
+										5+i & 0 & 1-5i & 0
+									\end{array}\right)\\ \\
+
+
+
+									\underset{}{\overset{(7-i)R_1}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										0 	& -1(7-i)	& (-1+i)(7-i) & 0 \\
+										0 	& 7-i	& 6-8i & 0 \\
+										5+i & 0 & 1-5i & 0
+									\end{array}\right)\\ \\
+
+
+									\underset{}{\overset{}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										0 	& -7+i	& -6+8i & 0 \\
+										0 	& 7-i	& 6-8i & 0 \\
+										5+i & 0 & 1-5i & 0
+									\end{array}\right)\\ \\
+
+									\underset{R_1 \leftrightarrow R_3}{\overset{R_1+R_2}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										5+i & 0 & 1-5i & 0 \\
+										0 	& 7-i	& 6-8i & 0 \\
+										0 	& 0	& 0  & 0 \\
+									\end{array}\right)\\ \\
+
+
+									\underset{\frac{1}{7-i}R_2}{\overset{\frac{1}{5+i}R_1}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										\frac{5+i}{5+i} & 0 & \frac{1-5i}{5+i} \cdot \frac{5-i}{5-i}& 0 \\
+										0 	& \frac{7-i}{7-i}	& \frac{6-8i}{7-i}	\cdot \frac{7+i}{7+i} 	 & 0 \\
+										0 	& 0	& 0  & 0 \\
+									\end{array}\right)\\ \\
+
+
+									\underset{}{\overset{}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										1 & 0 & \frac{(1-5i)(5-i)}{26}  & 0 \\
+										0 	& 1	& \frac{(6-8i)(7+i)}{50} 	 & 0 \\
+										0 	& 0	& 0  & 0 \\
+									\end{array}\right)\\ \\
+
+
+									\underset{}{\overset{}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										1 & 0 & \frac{-26i}{26}  & 0 \\
+										0 	& 1	& \frac{50-50i}{50} 	 & 0 \\
+										0 	& 0	& 0  & 0 \\
+									\end{array}\right)\\ \\
+
+
+									\underset{}{\overset{}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										1 & 0 & -i & 0 \\
+										0 	& 1	& 1-i 	 & 0 \\
+										0 	& 0	& 0  & 0 \\
+									\end{array}\right)\\ \\
+
+									
+							
+								\end{align*}
+
+							</div>
+							
+					
+						
+
+						</li>
+						<li class="continued">
+							<div>
+								The system simplifies down to two equations for the components of the eigenvector \(u_1,\) \(u_2\) and \(u_3\)
+
+								\[
+								\left\{
+									\begin{array}{ccc}
+										u_1 -iu_3 & = 0 \\
+										u_2 + (1-i)u_3 & = 0 \\
+									\end{array}
+								\right. 
+								\]
+
+								Since we have 2 equations with 3 unknowns, we have 1 <span class="vocab">free variable</span>, so we'll let \(u_3=c\) where \(c\) is any number. Then we can solve for \(u_1\) and \(u_2\)
+
+								
+								\begin{align*} 
+									\begin{array}{rlrlr}
+									u_1 -iu_3 & = 0 & \quad u_2 + (1-i)u_3 & = 0 \\
+									u_1 -ic & = 0 & \quad u_2 + (1-i)c & = 0 \\
+									u_1 & = ic & \quad u_2  & = (-1+i)c \\
+										
+									\end{array}
+								\end{align*}
+
+
+								Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}_2}\)
+
+								\[
+								{\bf \vec{u}_2}
+								=\threecol {u_1}{u_2}{u_3}
+								=\threecol {ic}{(-1+i)c}{c}
+								
+								\]
+
+								Since \(c\) can be any number we'll select \(c=1\) for a simple eigenvector 
+								
+								\begin{align*} 
+								{\bf \vec{u}_2}=\threecol {i}{-1+i}{1}
+								=\threecol {0}{-1}{1}
+								+
+								i\threecol {1}{1}{0}
+
+								\end{align*}
+
+								With the eigenvalue-eigenvector pair \(r_2\) and \({\bf \vec{u}_2}\) we have a solution of our original equation
+
+								
+								\begin{align*} 
+								{\bf \vec{y}_2} = {\bf \vec{u}_2}e^{r_2 t} = 
+								
+								\left[
+								\threecol {0}{-1}{1}
+								+
+								i\threecol {1}{1}{0}
+								\right]
+								e^{it}
+
+								\end{align*}
+
+
+								
+							</div>
+						</li>
+						<li class="continued">
+							<div>
+
+								Now recall when the characteristic equation yields complex conjugate <span class="vocab">eigenvalues</span> as in this case \(r_2= i\) and \(r_3 = -i\) then the associated <span class="vocab">eigenvectors</span> are also complex conjugates. This means that once we find \({\bf \vec{u}_2} = {\bf \vec{a}} + i {\bf \vec{b}}\) then we immediately also have \({\bf \vec{u}_3}= {\bf \vec{a}} - i {\bf \vec{b}}\):
+
+
+
+								\begin{align*} 
+								{\bf \vec{u}_3}
+								=\threecol {0}{-1}{1}
+								-
+								i\threecol {1}{1}{0}
+
+								\end{align*}
+
+								With the eigenvalue-eigenvector pair \(r_3\) and \({\bf \vec{u}_3}\) we have a solution of our original equation
+
+								
+								\begin{align*} 
+								{\bf \vec{y}_3} = {\bf \vec{u}_3}e^{r_3 t} = 
+								
+								\left[
+								\threecol {0}{-1}{1}
+								-
+								i\threecol {1}{1}{0}
+								\right]
+								e^{-it}
+
+								\end{align*}
+
+
+
+
+							
+
+							</div>
+							
+					
+							<div>
+
+
+								Therefore we have a <span class="vocab">fundamental set</span> of solutions in exponential form
+
+								\[\{{\bf \vec{y}_1},{\bf \vec{y}_2},{\bf \vec{y}_3}\}
+								=\left\{
+									\threecol {2}{2}{1} e^{2t}
+									,
+									\left[
+								\threecol {0}{-1}{1}
+								+
+								i\threecol {1}{1}{0}
+								\right]
+								e^{it}
+								,
+								\left[
+								\threecol {0}{-1}{1}
+								-
+								i\threecol {1}{1}{0}
+								\right]
+								e^{-it}
+
+
+									\right\}
+								\]
+
+								Now we will use <span class="vocab">Euler's formula</span> to rewrite them in terms of real-valued functions. Remember both complex conjugate solutions will yield different fundamental sets so for consistency we will use the fundamental set formed from the positive eigenvalue \(i\)
+
+								\begin{align*}
+									{\bf \vec{y}_2} 
+									= \, &
+									\left[\threecol {0}{-1}{1}
+									+
+									i\threecol {1}{1}{0}\right]e^{it} \\
+									
+									= \, &
+									\left[\threecol {0}{-1}{1}
+									+
+									i\threecol {1}{1}{0}\right] \Big( \cos t + i \sin t\Big) \\
+
+
+
+									= \, &
+									
+									
+
+									
+									\left\{
+									\threecol {0}{-1}{1} \cos t 
+									- \threecol {1}{1}{0} \sin t
+									\right\}
+								
+									+
+									i
+									
+									\left\{ 
+										\threecol {1}{1}{0} \cos t + \threecol {0}{-1}{1} \sin t
+									\right\} 
+									
+									 \\
+
+								
+									 = \, &
+									
+
+									\underset{{\bf \vec{a}}_2}{
+									\underbrace{
+										
+									\threecol {-\sin t}{-\cos t -\sin t }{\cos t}  
+									}}
+								
+									+
+									i
+									\underset{{\bf \vec{b}}_2}{
+										\underbrace{
+											
+										\threecol {\cos t}{\cos t - \sin t}{\sin t}  }}
+									
+									 \\
+
+								\end{align*}
+
+								Now we have rewritten our solution in real and imaginary components and we know that the components of \(	{\bf \vec{y}}_2 = {\bf \vec{a}}_2 + i {\bf \vec{b}}_2\) form two of the solutions in our fundamental set 
+
+								\[
+								\left\{
+
+									{\bf \vec{y}}_1,{\bf \vec{a}}_2, {\bf \vec{b}}_2
+									\right\}
+
+									=
+									\left\{
+
+										\threecol {2}{2}{1} e^{2t}
+										,
+										\threecol {-\sin t}{-\cos t -\sin t }{\cos t} ,
+
+										\threecol {\cos t}{\cos t - \sin t}{\sin t} 
+										\right\}
+
+								\]
+							</div>
+
+							
+								<div>
+
+							
+
+								Therefore we can represent the general solution as \({\bf \vec{y}}
+								= 
+								
+								c_1
+								{\bf \vec{y}}_1
+								+
+								c_2
+								{\bf \vec{a}}_2
+								+
+								c_3
+								{\bf \vec{b}}_2\)
+
+
+
+
+
+								\begin{align*}
+
+
+								{\bf \vec{y}}
+								=
+								c_1
+								\threecol {2}{2}{1} e^{2t}
+								+
+								c_2
+								\threecol {-\sin t}{-\cos t -\sin t }{\cos t}
+								+
+								c_3
+								\threecol {\cos t}{\cos t - \sin t}{\sin t} 
+							
+								\end{align*}
+								</div>
+						
+
+						</li>
+
 					</ol>
 				</details>
 			</div>
@@ -1812,109 +2035,851 @@
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
-						<li class="no-part">
-							The characteristic polynomial of the coefficient matrix \(A\) in <a href="#x1-15r9">(10.6.9)</a> is 
-							\[ \left | 
-								\begin {array}{ccc} 
-									1-{r}&amp; -1&amp;-2\\ 
-									1&amp;3-{r}&amp; \phantom {-}2\\ 
-									1 &amp;-1&amp;2-{r} 
-								\end {array}
-							\right |= -({r} -2)\left (({r} -2)^2+4\right )\] 
+						<li>
+			
+							<div>
+								To solve <a href="#">(10.6.15)</a> we will seek solutions of the form
+								\[
+								{\bf \vec{y}} = {\bf \vec{u}} e^{rt}
+								\]
+								Where \({\bf \vec{u}} \) is some constant vector to be determined
+								
+								\[
+								{\bf \vec{u}} 
+								=\threecol {u_1}{u_2}{u_3}
+								\]
+								
+								Now differentiating \({\bf \vec{y}} = {\bf \vec{u}} e^{rt}\) we obtain
+
+								\[
+								\frac{d{\bf \vec{y}}}{dt} = r{\bf \vec{u}} e^{rt}
+								\]
+
+								Now substituting \({\bf \vec{y}}\) and \(d{\bf \vec{y}}/dt\) 
+								
+								into <a href="#">(10.6.15)</a>
+
+								\begin{align*}
+									\dfrac{d{\bf \vec{y}}}{dt} & =\threebythree {1}{-1}{-2}{1}{3}{2}{1}{-1}{2} {\bf \vec{y}} \\ \\
+
+									r{\bf \vec{u}} e^{rt} & =\threebythree {1}{-1}{-2}{1}{3}{2}{1}{-1}{2} {\bf \vec{u}} e^{rt} \\ \\
+
+									r{\bf \vec{u}}  & =\threebythree {1}{-1}{-2}{1}{3}{2}{1}{-1}{2} \\ \\
+
+									{\bf \vec{0}} & =\threebythree {1}{-1}{-2}{1}{3}{2}{1}{-1}{2}  - r{\bf \vec{u}} \\ \\
+
+									{\bf \vec{0}} & =\left[ \threebythree {1}{-1}{-2}{1}{3}{2}{1}{-1}{2} - r \right]{\bf \vec{u}} \\ \\
+
+									
+								\end{align*}
+
+								Rewriting \(r\) in matrix form 
+								\(r{\bf \vec{I}}\)
+								multiplied by the identity matrix:
+
+								\begin{align}
+									{\bf \vec{0}} & =\left[ 
+									\threebythree{1}{-1}{-2}{1}{3}{2}{1}{-1}{2}
+									 - r {\bf \vec{I}} \right]{\bf \vec{u}}\nonumber \\ \nonumber\\
+
+
+									{\bf \vec{0}} & =\left[
+									\threebythree {1}{-1}{-2}{1}{3}{2}{1}{-1}{2}
+									- r 
+									\threebythree 100010001
+									\right] {\bf \vec{u}} \nonumber \\ \nonumber\\
+
+									{\bf \vec{0}} & =\left[
+									\threebythree {1}{-1}{-2}{1}{3}{2}{1}{-1}{2}
+									- 
+									\threebythree r000r000r
+									\right] {\bf \vec{u}} \nonumber\\ \nonumber\\
+
+									{\bf \vec{0}} & =
+									\threebythree {1-r}{-1}{-2}{1}{3-r}{2}{1}{-1}{2-r}
+									{\bf \vec{u}}  \\ \nonumber\\
+
 							
-							Hence, the eigenvalues of \(A\) are \({r} _1=2\), \({r} _2=2+2i\), and \({r} _3=2-2i\). The augmented matrix of \((A-2I){\bf x=0}\) is 
-							\[ \left [ 
-								\begin {array}{rrrcr}
-									-1&amp;-1&amp;-2&amp;\vdots&amp; 0\\
-									1&amp; 1&amp;2&amp;\vdots&amp; 0\\ 
-									1&amp;-1&amp;0&amp;\vdots&amp; 0 
-								\end {array}
-							\right ]\] 
+
 							
-							which is row equivalent to 
-							\[ \left [ 
-								\begin {array}{rrrcr} 
-									1&amp;0&amp;1&amp;\vdots&amp; 0\\ 
-									0&amp;1&amp;1&amp; \vdots&amp; 0\\ 
-									0&amp;0&amp;0&amp;\vdots&amp; 0 
-								\end {array}
-							\right ]\] 
+								\end{align}
+
+								The <span class="vocab">eigenvalue equation</span> (10.6.16) shows the relationship between the eigenvalue \(r\) and associated eigenvector \({\bf \vec{u}} \) for the system of differential equations <a href="#">(10.6.15)</a> and since we'll be using it to solve for the eigenvector components \(u_1,\) \(u_2\) and \(u_3\), we'll write it in <span class="vocab">augmented matrix</span> form as the following
+
+								
+
+								\begin{align}
+								\threebythree {1-r}{-1}{-2}{1}{3-r}{2}{1}{-1}{2-r}
+								
+								{\bf \vec{u}}   & = {\bf \vec{0}} \nonumber \\ \nonumber \\
+
+								\threebythree {1-r}{-1}{-2}{1}{3-r}{2}{1}{-1}{2-r}
+								
+								\threecol{u_1}{u_2}{u_3}    & = \threecol{0}{0}{0}  \nonumber \\ \nonumber \\
+
+
+								\left(\begin{array}{ccc|c}
+									1-r 	& -1	& -2 	& 0 \\
+									1 		& 3-r	& 2 	& 0 \\
+									1  		& -1 	& 2-r 	& 0
+								\end{array}\right)
+
 							
-							Therefore \(x_1=x_2=-x_3\). Taking \(x_3=1\) yields 
-							\[ {\bf \vec{u}}_1=\threecol {-1}{-1}1\] 
+								\end{align}
+
+								
+
+								
+							</div>
+						</li>
+						<li class="continued">
+							<div>
+								We can show that a system of equations has only the <span class="vocab">trivial solution</span> by showing that the <em>determinant of the coefficient matrix is nonzero</em>. As we are only interested in <span class="vocab">nontrivial solutions</span> we will require that the <em>determinant of the coefficient matrix equals zero</em>:
+
+								\begin{align*}
+									\det
+									\left(
+										\begin{array}{ccc}
+											1-r 	& -1	& -2  \\
+											1 		& 3-r	& 2 \\
+											1  		& -1 	& 2-r 	
+										\end{array}
+									\right) & =0 \\ \\
+
+
+									\det
+									\left(
+										\begin{array}{ccc}
+											1-r 	& -1	& -2 	\\
+											1 		& 3-r	& 2 \\
+											0  		& r-4 	& -r
+										\end{array}
+									\right) & =0 \\ \\
+
+
+									\frac{1}{2}
+									\det
+									\left(
+										\begin{array}{ccc}
+											1-r 	& -1	& -2 \\
+											1 		& 3-r	& 2 \\
+											0  		& r-4 	& -r 	
+										\end{array}
+									\right) & =0 \\ \\
+
+
+
+									\det
+									\left(
+										\begin{array}{ccc}
+											1-r 	& -2	& -2 	\\
+											1 		& 6-2r	& 2 	\\
+											0  		& 2r-8 	& -r 
+										\end{array}
+									\right) & =0 \\ \\
+
+
+									\det
+									\left(
+										\begin{array}{ccc}
+											1-r 	& 0	& -2 \\
+											1 		& 4-2r	& 2 \\
+											0  		& 3r-8 	& -r
+										\end{array}
+									\right) & =0 \\ \\
+
+
+									\det
+									\left(
+										\begin{array}{ccc}
+											1-r 	& 0	& -2 \\
+											1 		& 4-2r	& 2 \\
+											0  		& 3r-8 	& -r
+										\end{array}
+									\right) & =0 \\ \\
+
+
+
+								
+
+								\end{align*}
+
+								Now expanding cofactors along the first column
+
+								\begin{align*}
+									(1-r)
+									\det
+										\left(
+											\begin{array}{ccc}
+												4-2r	& 2 \\
+												3r-8 	& -r
+											\end{array}
+										\right)
+									-
+									\det
+										\left(
+											\begin{array}{ccc}
+												0	& -2 \\
+												3r-8 	& -r
+											\end{array}
+										\right) & =0 \\ \\	
+										
+										
+
+										2(1-r)
+									\det
+										\left(
+											\begin{array}{ccc}
+												2-r	& 1 \\
+												3r-8 	& -r
+											\end{array}
+										\right)
+									+
+									\det
+										\left(
+											\begin{array}{ccc}
+												0	& 2 \\
+												3r-8 	& r
+											\end{array}
+										\right) & =0 \\ \\	
+
+
+
+										-2(r-1)
+										\det
+											\left(
+												\begin{array}{ccc}
+													r-2	& 1 \\
+													3r-8 	& r
+												\end{array}
+											\right)
+										+
+										2
+										\det
+											\left(
+												\begin{array}{ccc}
+													0	& 1 \\
+													3r-8 	& r
+												\end{array}
+											\right) & =0 \\ \\
+											
+											-(r-1)
+											\Big(
+												\underset{r^2-2r}{\underbrace{r(r-2)}}-\underset{-3r+8}{\underbrace{1(3r-8)}}
+											\Big)
+
+											+
+											\Big(
+												0-\underset{-3r+8}{\underbrace{1(3r-8)}}
+											\Big) & =0 \\ \\
+											
+											
+											-(r-1)
+											\Big(
+												r^2-5r+8
+											\Big)
+
+											-
+											
+											\Big(
+												3r-8
+											\Big) & =0 \\ \\
+
+											(r-1)
+											\Big(
+												r^2-5r+8
+											\Big)
+
+											+
+											\Big(
+												3r-8
+											\Big) & =0 \\ \\
+
+									
+											\Big(
+												r^3-5r^2+8r
+											\Big)
+											+
+											\Big(
+											-r^2+5r-8
+											\Big)
+											+
+											\Big(
+												3r-8
+											\Big) & =0 \\ \\
+
+
+
+											r^3 -6r^2 +16r - 16 & =0 \\ \\
+								\end{align*}
+
+
+
+
+
+								We have found the <span class="vocab">characteristic polynomial</span> \(p(r)=r^3 -6r^2 +16r - 16\) and we will now solve the <span class="vocab">characteristic equation</span> \(r^3 -6r^2 +16r - 16 =0 \) by testing possible rational roots \(\pm \left\{1,2,4,16\right\}\)
+
+
+								\begin{array}{rrrrr}
+									& {\small r^3} & {\small r^2} & {\small r} & {\small \#} \\
+									1 \rfloor 	& 1 & -6 & 16 	& -16 \\
+												& 	& 1  & -5  	&  11 \\ 
+									\hline
+												& 1 & -5 & 11 	& \lfloor -5 \\
+												
+								\end{array}
+
+
+								<br>
+
+								\begin{array}{rrrrr}
+									-1 \rfloor 	& 1 & -6  & 16 	& -16 \\
+												& 	& -1  & 7  	&  -23 \\ 
+									\hline
+												& 1 & -7  & 23 	& \lfloor -39 \\
+								\end{array}
+
+
+								<br>
+
+								\begin{array}{rrrrr}
+									2 \rfloor 	& 1 & -6  & 16 	& -16 \\
+												& 	& 2  & -8  	&  16 \\ 
+									\hline
+												& 1 & -4  & 8 	& \lfloor 0 \\
+												& {\small r^2} & {\small r} & {\small \#} \\
+								\end{array}
+									
+									
+								
+								Since \(r_1=2\) is a root so that means \((r-2)\) is a factor so the characteristic polynomial factors into 
+
+								\begin {align*}
+									r^3 -6r^2 +16r - 16 = & \, 0\\
+									(r-2)(r^2-4r+8) =  & \, 0 \\
+									r-2= 0 \quad r^2-4r+8 =  & \, 0 \\
+								\end {align*}
+
+								We have \(r=2\) from the first factor and now we'll use the quadratic formula for the second factor
+
+								\begin {align*}
+									r & = \frac{-(-4)\pm\sqrt{(-4)^2-4(1)(8)}}{2(1)} \\
+									r & = \frac{4 \pm\sqrt{16-2\cdot 16}}{2} \\
+									r & = \frac{4 \pm   \sqrt{16(-1)}}{2} \\
+									r & = \frac{4 \pm   4i}{2} \\
+									r & = 2\pm2i \\
+									r_2 & = 2+ 2i \quad r_3 = 2- 2i \\
+								\end {align*} 
+
 							
-							so 
-							\[ {\bf \vec{y}}_1=\threecol {-1}{-1}1e^{2t} \] 
+								Thus we have one real <span class="vocab">eigenvalue</span> \(r_1= 2\) and two complex conjugate <span class="vocab">eigenvalues</span> \(r_2= 2+2i\) and \(r_3 = 2-2i\) and thus three solutions of the system are
+
+								\begin{align*}
+								{\bf \vec{y}_1} & = {\bf \vec{u}_1} e^{r_1t}= {\bf \vec{u}_1} e^{2t} \\
+								{\bf \vec{y}_2} & = {\bf \vec{u}_2} e^{r_2t} ={\bf \vec{u}_2} e^{(2+2i)t} \\
+								{\bf \vec{y}_3} & = {\bf \vec{u}_3} e^{r_3t} ={\bf \vec{u}_3} e^{(2-2i)t} \\
+								\end{align*}
+
+								We'll now find the associated eigenvectors \({\bf \vec{u}_1},\) \({\bf \vec{u}_2}\) and \({\bf \vec{u}_3}\) using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> (10.6.16) starting with \(r_1=2\)
+
+								 
+								\begin{align*}
+									\threebythree {1-r_1}{-1}{-2}{1}{3-r_1}{2}{1}{-1}{2-r_1}
+									
+									{\bf \vec{u}}_1   & = {\bf \vec{0}} \\ \\
+
+									\left(\begin{array}{ccc|c}
+										1-2 & -1 & -2 & 0 \\
+										1 	& 3-2	& 2 & 0 \\
+										1 & -1 & 2-2 & 0
+									\end{array}\right)\\ \\
+
+									\left(\begin{array}{rrr|c}
+										-1 	& -1 & -2 & 0 \\
+										1 	& 1	& 2 & 0 \\
+										1 	& -1 & 0 & 0
+									\end{array}\right)\\ \\
+
+
+									\underset{R_3+R_1}{\overset{R_2+R_1}{\longrightarrow}}
+									\left(\begin{array}{rrr|c}
+										-1 	& -1 & -2 & 0 \\
+										0 	& 0	& 0 & 0 \\
+										0 	& -2 & -2 & 0
+									\end{array}\right)\\ \\
+
+
+									\underset{-\frac{1}{2}R_3}{\overset{-R_1}{\longrightarrow}}
+									\left(\begin{array}{rrr|c}
+										1 	& 1 & 2 & 0 \\
+										0 	& 0	& 0 & 0 \\
+										0 	& 1 & 1 & 0
+									\end{array}\right)\\ \\
+
+									\underset{R_2 \leftrightarrow R_3}{\overset{R_1-R_3}{\longrightarrow}}
+									\left(\begin{array}{rrr|c}
+										1 	& 0 & 1 & 0 \\
+										0 	& 1 & 1 & 0 \\
+										0 	& 0	& 0 & 0 
+									\end{array}\right)\\ \\
+
+
 							
-							is a solution of <a href="#x1-15r9">(10.6.9)</a>.
+								\end{align*}
+
+							
+
+							</div>
+						</li>
+						<li class="continued">
+							<div>
+								The system simplifies down to two equations for the components of the eigenvector \(u_1,\) \(u_2\) and \(u_3\)
+
+								\[
+								\left\{
+									\begin{array}{ccc}
+										u_1 + u_3 & = 0 \\
+										u_2 + u_3 & = 0 \\
+									\end{array}
+								\right. 
+								\]
+
+								Since we have 2 equations with 3 unknowns, we have 1 <span class="vocab">free variable</span>, so we'll let \(u_3=c\) where \(c\) is any number. Then we can solve for \(u_1\) and \(u_2\)
+
+								\begin{align*} 
+									\begin{array}{rlrlr}
+										u_1 + u_3 & = 0  & \quad u_2 + u_3 & = 0 \\
+										u_1 + c & = 0  & \quad u_2 + c & = 0 \\
+										u_1 & = -c  & \quad u_2 & = -c \\
+									\end{array}
+								\end{align*}
+
+
+								Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}_1}\)
+
+								\[
+								{\bf \vec{u}_1}
+								=\threecol {u_1}{u_2}{u_3}
+								=\threecol {-c}{-c}{c}
+								=c\threecol {-1}{-1}{1}
+								\]
+
+								Since \(c\) can be any number we'll select \(c=-1\) for a simple eigenvector 
+								
+								\begin{align*} 
+								{\bf \vec{u}_1}=\threecol {1}{1}{-1}
+
+								\end{align*}
+
+								With the eigenvalue-eigenvector pair \(r_1\) and \({\bf \vec{u}_1}\) we have a solution of our original equation
+
+								
+								\begin{align*} 
+								{\bf \vec{y}_1} = {\bf \vec{u}_1}e^{r_1 t} = \threecol {1}{1}{-1} e^{2t}
+								\end{align*}
+
+
+								
+							</div>
+						</li>
+						<li class="continued">
+							<div>
+
+								The other two solutions are associated with 
+								complex conjugate <span class="vocab">eigenvalues</span> \(r_2=2+2i\) and  \(r_3=2-2i\) 
+								so we'll use the positive eigenvalue \(r_2=2+2i\) 
+								and again use row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> (10.6.16) 
+
+								\begin{align*}
+									\threebythree {1-r_2}{-1}{-2}{1}{3-r_2}{2}{1}{-1}{2-r_2}
+									
+									{\bf \vec{u}}_2   & = {\bf \vec{0}} \\ \\
+
+								
+									\left(\begin{array}{ccc|c}
+										1-(2+2i) & -1 & -2 & 0 \\
+										1 	& 3-(2+2i)	& 2 & 0 \\
+										1 & -1 & 2-(2+2i) & 0
+									\end{array}\right)\\ \\
+
+
+									\left(\begin{array}{ccc|c}
+										-1-2i & -1 & -2 & 0 \\
+										1 	& 1-2i	& 2 & 0 \\
+										1 & -1 & -2i & 0
+									\end{array}\right)\\ \\
+
+
+									\underset{R_1-R_3}{\overset{R_2-R_3}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										-2-2i & 0 & 2i-2 & 0 \\
+										0 	& 2-2i	& 2+2i & 0 \\
+										1 & -1 & -2i & 0
+									\end{array}\right)\\ \\
+
+
+									\underset{\frac{1}{2}R_2}{\overset{\frac{1}{2}R_1}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										-1-i & 0 & i-1 & 0 \\
+										0 	& 1-i	& 1+i & 0 \\
+										1 & -1 & -2i & 0
+									\end{array}\right)\\ \\
+
+
+									\underset{}{\overset{(1+i)R_3}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										-1-i & 0 & i-1 & 0 \\
+										0 	& 1-i	& 1+i & 0 \\
+										1+i & -1-i & 2-2i & 0
+									\end{array}\right)\\ \\
+
+
+									\underset{}{\overset{R_3+R_1}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										-1-i & 0 & i-1 & 0 \\
+										0 	& 1-i	& 1+i & 0 \\
+										0 & -1-i & 1-i & 0
+									\end{array}\right)\\ \\
+
+
+									\underset{}{\overset{iR_3}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										-1-i & 0 & i-1 & 0 \\
+										0 	& 1-i	& 1+i & 0 \\
+										0 & 1-i & 1+i & 0
+									\end{array}\right)\\ \\
+
+
+									\underset{-R_1}{\overset{R_3-R_2}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										1+i & 0 & 1-i & 0 \\
+										0 	& 1-i	& 1+i & 0 \\
+										0 & 0 & 0 & 0
+									\end{array}\right)\\ \\
+
+
+									\underset{\frac{1}{1-i}R_1}{\overset{\frac{1}{1+i}R_1}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										\frac{1+i}{1+i} & 0 & \frac{1-i}{1+i} \cdot \frac{1-i}{1-i} & 0 \\
+										0 	& \frac{1-i}{1-i}	& \frac{1+i}{1-i} \cdot \frac{1+i}{1+i} & 0 \\
+										0 & 0 & 0 & 0
+									\end{array}\right)\\ \\
+
+
+									\underset{}{\overset{}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										1 & 0 & \frac{(1-i)(1-i)}{2}  & 0 \\
+										0 	& 1	& \frac{(1+i)(1+i)}{2}  & 0 \\
+										0 & 0 & 0 & 0
+									\end{array}\right)\\ \\
+
+									\underset{}{\overset{}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										1 & 0 & \frac{-2i}{2}  & 0 \\
+										0 	& 1	& \frac{2i}{2}  & 0 \\
+										0 & 0 & 0 & 0
+									\end{array}\right)\\ \\
+
+									\underset{}{\overset{}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										1 & 0 & -i  & 0 \\
+										0 	& 1	& i  & 0 \\
+										0 & 0 & 0 & 0
+									\end{array}\right)\\ \\
+
+
+
+
+
+
+							
+								\end{align*}
+
+							</div>
+							
 					
-							<br>
+						
+
 						</li>
-						<li class="no-part">
-							The augmented matrix of \(\left (A-(2+2i)I\right ){\bf x=0}\) is 
-							\[ \left [ 
-								\begin {array}{ccrcc}
-									-1-2i&amp;-1&amp;-2&amp;\vdots&amp; 0\\ 
-									1&amp; 1-2i&amp;\phantom {-}2&amp;\vdots&amp; 0\\ 
-									1&amp;-1&amp;-2i&amp;\vdots&amp; 0 
-								\end {array}
-							\right ]\] 
-							
-							which is row equivalent to 
-							\[ \left [ 
-								\begin {array}{rrrcr} 
-									1&amp;0&amp;-i&amp;\vdots&amp; 0\\ 
-									0&amp;1&amp;i&amp; \vdots&amp; 0\\ 
-									0&amp;0&amp;0&amp;\vdots&amp; 0 
-								\end {array}
-							\right ]\] 
-							
-							Therefore \(x_1=ix_3\) and \(x_2=-ix_3\). Taking \(x_3=1\) yields the eigenvector 
-							\[ {\bf \vec{u}}_2=\threecol i{-i}1 \] 
-							
-							The real and imaginary parts of 
-							\[ e^{2t}(\cos 2t+i\sin 2t)\threecol i{-i}1 \] 
-							
-							are 
-							\[ {\bf \vec{y}}_2=e^{2t}\left [
-								\begin {array}{r}
-									-\sin 2t\\
-									\sin 2t\\
-									\cos 2t
-								\end {array}
-							\right ]\quad \mbox { and }\quad {\bf \vec{y}}_2=e^{2t}\left [
-								\begin {array}{r}
-									\cos 2t\\
-									-\cos 2t\\
-									\sin 2t
-								\end {array}
-							\right ]\] 
-							
-							which are solutions of <a href="#x1-15r9">(10.6.9)</a>. Since the Wronskian of \(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,{\bf \vec{y}}_3\}\) at \(t=0\) is 
-							\[ \left |
-								\begin {array}{rrr} 
-									-1&amp;0&amp;1\\
-									-1&amp;0&amp;-1\\
-									1&amp;1&amp;0
-								\end {array}
-							\right |=-2\] 
-							
-							\(\{{\bf \vec{y}}_1,{\bf \vec{y}}_2,{\bf \vec{y}}_3\}\) is a fundamental set of solutions of <a href="#x1-15r9">(10.6.9)</a>. The general solution of <a href="#x1-15r9">(10.6.9)</a> is 
-							\[ {\bf \vec{y}}=c_1\threecol {-1}{-1}1e^{2t}+ c_2e^{2t}\left [
-								\begin {array}{r}
-									-\sin 2t\\
-									\sin 2t\\
-									\cos 2t
-								\end {array}
-							\right ]+ c_3e^{2t}\left [ 
-								\begin {array}{r}
-									\cos 2t\\
-									-\cos 2t\\
-									\sin 2t 
-								\end {array}
-							\right ]\]
+						<li class="continued">
+							<div>
+								The system simplifies down to two equations for the components of the eigenvector \(u_1,\) \(u_2\) and \(u_3\)
+
+								\[
+								\left\{
+									\begin{array}{ccc}
+										u_1 - iu_3 & = 0 \\
+										u_2 + iu_3 & = 0 \\
+									\end{array}
+								\right. 
+								\]
+
+								Since we have 2 equations with 3 unknowns, we have 1 <span class="vocab">free variable</span>, so we'll let \(u_3=c\) where \(c\) is any number. Then we can solve for \(u_1\) and \(u_2\)
+
+								
+								\begin{align*} 
+									\begin{array}{rlrlr}
+									u_1 - iu_3 & = 0 & \quad u_2 + iu_3 & = 0 \\
+									u_1 - ic & = 0 & \quad u_2 + ic & = 0 \\
+									u_1  & = ic & \quad u_2  & = -ic \\
+
+									\end{array}
+								\end{align*}
+
+
+								Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}_2}\)
+
+								\[
+								{\bf \vec{u}_2}
+								=\threecol {u_1}{u_2}{u_3}
+								=\threecol {ic}{-ic}{c}
+								
+								\]
+
+								Since \(c\) can be any number we'll select \(c=1\) for a simple eigenvector 
+								
+								\begin{align*} 
+								{\bf \vec{u}_2}=\threecol {i}{-i}{1}
+
+								=\threecol {0}{0}{1}
+								+
+								i\threecol {1}{-1}{0}
+
+								\end{align*}
+
+								With the eigenvalue-eigenvector pair \(r_2\) and \({\bf \vec{u}_2}\) we have a solution of our original equation
+
+								
+								\begin{align*} 
+								{\bf \vec{y}_2} = {\bf \vec{u}_2}e^{r_2 t} = 
+								
+								\left[
+								\threecol {0}{0}{1}
+								+
+								i\threecol {1}{-1}{0}
+								\right]
+								e^{(2+2i)t}
+
+								\end{align*}
+
+
+								
+							</div>
 						</li>
+						<li class="continued">
+							<div>
+
+								Now recall when the characteristic equation yields complex conjugate <span class="vocab">eigenvalues</span> as in this case \(r_2= 2+2i\) and \(r_3 = 2-2i\) then the associated <span class="vocab">eigenvectors</span> are also complex conjugates. This means that once we find \({\bf \vec{u}_2} = {\bf \vec{a}} + i {\bf \vec{b}}\) then we immediately also have \({\bf \vec{u}_3}= {\bf \vec{a}} - i {\bf \vec{b}}\):
+
+
+
+								\begin{align*} 
+								{\bf \vec{u}_3}
+								=\threecol {0}{0}{1}
+								-
+								i\threecol {1}{-1}{0}
+
+								\end{align*}
+
+								With the eigenvalue-eigenvector pair \(r_3\) and \({\bf \vec{u}_3}\) we have a solution of our original equation
+
+								
+								\begin{align*} 
+								{\bf \vec{y}_3} = {\bf \vec{u}_3}e^{r_3 t} = 
+								
+								\left[
+								\threecol {0}{0}{1}
+								-
+								i\threecol {1}{-1}{0}
+								\right]
+								e^{(2-2i)t}
+
+								\end{align*}
+
+
+
+
+							
+
+							</div>
+							
+					
+							<div>
+
+
+								Therefore we have a <span class="vocab">fundamental set</span> of solutions in exponential form
+
+								\[\{{\bf \vec{y}_1},{\bf \vec{y}_2},{\bf \vec{y}_3}\}
+								=\left\{
+									\threecol {1}{1}{-1} e^{2t}
+									,
+									\left[
+								\threecol {0}{0}{1}
+								+
+								i\threecol {1}{-1}{0}
+								\right]
+								e^{(2+2i)t}
+								,
+								\left[
+								\threecol {0}{0}{1}
+								-
+								i\threecol {1}{-1}{0}
+								\right]
+								e^{(2-2i)t}
+
+
+									\right\}
+								\]
+
+								Now we will use <span class="vocab">Euler's formula</span> to rewrite them in terms of real-valued functions. Remember both complex conjugate solutions will yield different fundamental sets so for consistency we will use the fundamental set formed from the positive eigenvalue \(i\)
+
+								\begin{align*}
+									{\bf \vec{y}_2} 
+									= \, &
+									\left[\threecol {0}{0}{1}
+									+
+									i\threecol {1}{-1}{0}\right]\underset{e^{2t} \, e^{2it}}{\underbrace{e^{(2+2i)t}}} \\
+									
+									= \, & e^{2t}
+									\left[\threecol {0}{0}{1}
+									+
+									i\threecol {1}{-1}{0}\right] \Big( \cos 2t + i \sin 2t\Big) \\
+
+
+
+									= \, & e^{2t} \left[
+									
+									
+
+									
+									\left\{
+									\threecol {0}{0}{1} \cos 2t 
+									- \threecol {1}{-1}{0} \sin 2t
+									\right\}
+								
+									+
+									i
+									
+									\left\{ 
+										\threecol {1}{-1}{0} \cos 2t + \threecol {0}{0}{1} \sin 2t
+									\right\} 
+									\right]
+									
+									 \\
+
+
+									 = \, & 
+									
+									
+
+									
+									\left[
+									\threecol {0}{0}{1} \cos 2t 
+									- \threecol {1}{-1}{0} \sin 2t
+									\right]  e^{2t}
+								
+									+
+									i
+									
+									\left[
+										\threecol {1}{-1}{0} \cos 2t + \threecol {0}{0}{1} \sin 2t
+									\right] e^{2t}
+								
+									
+									 \\
+
+
+								
+									 = \, &
+									
+
+									\underset{{\bf \vec{a}}_2}{
+									\underbrace{
+										
+									\threecol { -\sin 2t}{\sin 2t }{\cos 2t}  
+									}} e^{2t}
+								
+									+
+									i
+									\underset{{\bf \vec{b}}_2}{
+										\underbrace{
+											
+										\threecol {\cos 2t }{-\cos 2t}{\sin 2t}  }} e^{2t}
+									
+									 \\
+
+								\end{align*}
+
+								Now we have rewritten our solution in real and imaginary components and we know that the components of \(	{\bf \vec{y}}_2 = {\bf \vec{a}}_2 + i {\bf \vec{b}}_2\) form two of the solutions in our fundamental set 
+
+								\[
+								\left\{
+
+									{\bf \vec{y}}_1,{\bf \vec{a}}_2, {\bf \vec{b}}_2
+									\right\}
+
+									=
+									\left\{
+
+										\threecol {1}{1}{-1} e^{2t}
+										,
+										\threecol {- \sin 2t}{\sin 2t }{\cos 2t}  
+									 e^{2t} ,
+
+									\threecol {\cos 2t}{-\cos 2t}{\sin 2t}   e^{2t}
+
+										\right\}
+
+								\]
+							</div>
+
+							
+								<div>
+
+							
+
+								Therefore we can represent the general solution as \({\bf \vec{y}}
+								= 
+								
+								c_1
+								{\bf \vec{y}}_1
+								+
+								c_2
+								{\bf \vec{a}}_2
+								+
+								c_3
+								{\bf \vec{b}}_2\)
+
+
+
+
+
+								\begin{align*}
+
+
+								{\bf \vec{y}}
+								=
+								\left[
+								c_1
+								\threecol {1}{1}{-1}
+								+
+								c_2
+								\threecol {- \sin 2t}{\sin 2t }{\cos 2t}
+								+
+								c_3
+								\threecol {\cos 2t}{-\cos 2t}{\sin 2t}
+								\right]
+								e^{2t}
+
+							
+								\end{align*}
+								</div>
+						
+
+						</li>
+
 					</ol>
+	
 				</details>
 			</div>
 		</details>
