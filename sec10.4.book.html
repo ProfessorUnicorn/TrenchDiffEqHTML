@@ -108,12 +108,11 @@
 			
 					{\bf \vec{0}} & =\left[\twobytwo {-4}{-3}65  - r \twobytwo 1001 \right] {\bf \vec{u}} \nonumber \\ \nonumber \\
 
-					{\bf \vec{0}} & =\twobytwo {-4-r}{-3}6{5-r}   {\bf \vec{u}} \\ \nonumber \\
+					{\bf \vec{0}} & =\twobytwo {-4-r}{-3}6{5-r}   {\bf \vec{u}} \label{eq:10.4.3} \\ \nonumber \\
 
-
-			
 				\end{align}
-
+			</div>
+			<div id="84a6dad9-edd9-4134-b1d6-fcd7d0483431-2">
 				The <span class="vocab">eigenvalue equation</span> (10.4.3) shows the relationship between the eigenvalue \(r\) and associated eigenvector \({\bf \vec{u}} \) for the system of differential equations <a href="#x1-3r2">(10.4.2)</a> and since we'll be using it to solve for the eigenvector components \(u_1\) and \(u_2\), we'll write it in <span class="vocab">augmented matrix</span> form as the following
 
 								
@@ -126,7 +125,7 @@
 					\left(\begin{array}{cc|c}
 						-4-r & -3	& 0 \\
 						6 	& 5-r	& 0
-					\end{array}\right)
+					\end{array}\right) \label{eq:10.4.4}
 
 			
 				\end{align}
@@ -158,6 +157,8 @@
 					r_1= -1 \quad r_2 =& \,2  \\
 				
 				\end{align*}
+			</div>
+			<div id="84a6dad9-edd9-4134-b1d6-fcd7d0483431-3">
 
 				We'll call the roots of the characteristic polynomial <span class="vocab">eigenvalues</span> and the solutions to the system are
 
@@ -197,7 +198,7 @@
 			
 				\end{align*}
 			</div>
-			<div id="84a6dad9-edd9-4134-b1d6-fcd7d0483431-3">
+			<div id="84a6dad9-edd9-4134-b1d6-fcd7d0483431-4">
 				The system simplifies down to a single equation for the components of the eigenvector \(u_1\) and \(u_2\)
 
 				\[u_1 + u_2 = 0 \]
@@ -222,18 +223,18 @@
 
 				Since \(c\) can be any number we'll select \(c=1\) for a simple eigenvector 
 				
-				\begin{align} \label {eq:10.4.4} 
+				\begin{align} \label {eq:10.4.5} 
 				{\bf \vec{u}_1}=\twocol {-1}{1}
 				\end{align}
 
 				With the eigenvalue-eigenvector pair \(r_1\) and \({\bf \vec{u}_1}\) we have one of the solutions to our original equation
 
 				<a id="x1-7r6"></a>
-				\begin{align} \label {eq:10.4.5} 
+				\begin{align} \label {eq:10.4.6} 
 				{\bf \vec{y}_1} = {\bf \vec{u}_1}e^{r_1 t} = \twocol {-1}{1}e^{-t}
 				\end{align}
 			</div>
-			<div id="84a6dad9-edd9-4134-b1d6-fcd7d0483431-4">
+			<div id="84a6dad9-edd9-4134-b1d6-fcd7d0483431-5">
 
 				Our characteristic equation yielded distinct real <span class="vocab">eigenvalues</span> \(r_1= -1 \) and \(r_2 = 2\), so now we'll find an eigenvector for \(r_2 = 2\) and again using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> <a href="#x1-4r3">(10.4.3)</a>
 
@@ -286,17 +287,19 @@
 				=\twocol {c}{-2c}
 				=c\twocol {1}{-2}
 				\]
+			</div>
+			<div id="84a6dad9-edd9-4134-b1d6-fcd7d0483431-6">
 
 				Since \(c\) can be any number we'll select \(c=1\) for a simple eigenvector 
 				
-				\begin{align} \label {eq:10.4.6} 
+				\begin{align} \label {eq:10.4.7} 
 				{\bf \vec{u}_2}=\twocol {1}{-2}
 				\end{align}
 
 				With the eigenvalue-eigenvector pair \(r_2\) and \({\bf \vec{u}_2}\) we have the second solution to our original equation
 
 				<a id="x1-8r7"></a>
-				\begin{align} \label {eq:10.4.7} 
+				\begin{align} \label {eq:10.4.8} 
 				{\bf \vec{y}_2} = {\bf \vec{u}_2}e^{r_2 t} = \twocol {1}{-2}e^{2t}
 				\end{align}
 
@@ -367,10 +370,13 @@
 						Find the general solution of 
 						<a id="x1-12r8"></a> 
 						\begin {equation} 
-							\label {eq:10.4.8} 
+							\label {eq:10.4.9} 
 							\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 2442 {\bf \vec{y}} 
 						\end {equation}
 					</li>
+					<li class="skip"></li>
+					<li class="skip"></li>
+					<li class="skip"></li>
 					<li class="skip"></li>
 					<li class="skip"></li>
 					<li class="skip"></li>
@@ -379,7 +385,7 @@
 						
 						<a id="x1-14r9"></a> 
 						\begin {equation} 
-							\label {eq:10.4.9} 
+							\label {eq:10.4.10} 
 							\dfrac{d{\bf \vec{y}}}{dt}=\twobytwo 2442 {\bf \vec{y}}
 							\quad\quad {\bf \vec{y}}(0)=\left (
 								\begin {array}{r}
@@ -434,10 +440,14 @@
 								
 									{\bf \vec{0}} & =\left[\twobytwo {2}{4}{4}{2} - r \twobytwo 1001 \right] {\bf \vec{u}} \nonumber \\ \nonumber \\
 
-									{\bf \vec{0}} & =\twobytwo {2-r}{4}{4}{2-r}  {\bf \vec{u}} \\ \nonumber \\
+									{\bf \vec{0}} & =\twobytwo {2-r}{4}{4}{2-r}  {\bf \vec{u}}  \label{eq:10.4.11} \\ \nonumber \\
 
 							
 								\end{align}
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 
 								The <span class="vocab">eigenvalue equation</span> (10.4.11) shows the relationship between the eigenvalue \(r\) and associated eigenvector \({\bf \vec{u}} \) for the system of differential equations <a href="#x1-15r10">(10.4.10)</a> and since we'll be using it to solve for the eigenvector components \(u_1\) and \(u_2\), we'll write it in <span class="vocab">augmented matrix</span> form as the following
 
@@ -450,13 +460,9 @@
 									\left(\begin{array}{cc|c}
 										2-r & 4	& 0 \\
 										4 	& 2-r	& 0
-									\end{array}\right)
+									\end{array}\right)  \label{eq:10.4.12}
 							
 								\end{align}
-							</div>
-						</li>
-						<li class="continued">
-							<div>
 
 								We can show that a system of equations has only the <span class="vocab">trivial solution</span> by showing that the <em>determinant of the coefficient matrix is nonzero</em>. As we are only interested in <span class="vocab">nontrivial solutions</span> we will require that the <em>determinant of the coefficient matrix equals zero</em>:
 
@@ -473,6 +479,10 @@
 									\underset{p(r)}{\underbrace{r^2-4r-12}} & =0 \\
 								
 								\end{align*}
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 
 								We have found the <span class="vocab">characteristic polynomial</span> \(p(r)=r^2-4r-12\) and we will now solve the <span class="vocab">characteristic equation</span> \(r^2-4r-12=0 \) using factoring:
 
@@ -562,8 +572,10 @@
 								\begin{align*} 
 								{\bf \vec{y}_1} = {\bf \vec{u}_1}e^{r_1 t} = \twocol {-1}{1}e^{-2t}
 								\end{align*}
-
-
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 								Our characteristic equation yielded distinct real <span class="vocab">eigenvalues</span> \(r_1= -2 \) and \(r_2 = 6\), so now we'll find an eigenvector for \(r_2 = 6\) and again using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> <a href="#x1-19r12">(10.4.12)</a>
 
 								\begin{align*}
@@ -594,14 +606,14 @@
 							
 								\end{align*}
 
-								The system simplifies down to a single equation for the components of the eigenvector \(u_1\) and \(u_2\)
-
-								\[u_1 - u_2 = 0 \]
-
 							</div>
 						</li>
 						<li class="continued">
 							<div>
+								The system simplifies down to a single equation for the components of the eigenvector \(u_1\) and \(u_2\)
+
+								\[u_1 - u_2 = 0 \]
+
 								So again we have a 
 								<span class="vocab">free variable</span>, so we'll let \(u_2=c\) where \(c\) is any number. Then we can solve for \(u_1\) in terms of \(c\) 
 
@@ -632,6 +644,10 @@
 								{\bf \vec{y}_2} = {\bf \vec{u}_2}e^{r_2 t} = \twocol {1}{1}e^{6t}
 								\end{align*}
 
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 								So we have a <span class="vocab">fundamental set</span> of solutions
 
 								\[\{{\bf \vec{y}_1},{\bf \vec{y}_2}\}
@@ -643,7 +659,7 @@
 								We can finally write the general solution
 
 								<a id="x1-16r11"></a>
-								\begin{align}\label {eq:10.4.11}
+								\begin{align}\label {eq:10.4.13}
 									{\bf \vec{y}}
 									& = c_1 {\bf \vec{y}_1} + c_2 {\bf \vec{y}_2}
 									= c_1 \twocol {1}{-1}e^{-2t} + c_2 \twocol {1}{1}e^{6t} \\
@@ -727,7 +743,7 @@
 						
 						<a id="x1-19r12"></a> 
 						\begin {equation} 
-							\label {eq:10.4.12} 
+							\label {eq:10.4.14} 
 							\dfrac{d{\bf \vec{y}}}{dt}=\left (
 								\begin {array}{rrr}
 									3&amp;-1&amp;-1\\
@@ -744,12 +760,15 @@
 					<li class="skip"></li>
 					<li class="skip"></li>
 					<li class="skip"></li>
+					<li class="skip"></li>
+					<li class="skip"></li>
+					<li class="skip"></li>
 					<li>
 						Solve the IVP
 						
 						<a id="x1-21r13"></a> 
 						\begin {equation} 
-							\label {eq:10.4.13}
+							\label {eq:10.4.15}
 							\dfrac{d{\bf \vec{y}}}{dt}=\left (
 								\begin {array}{rrr}
 									3&amp;-1&amp;-1\\
@@ -838,6 +857,10 @@
 									
 								\end{align*}
 
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 								Rewriting \(r\) in matrix form 
 								\(r{\bf \vec{I}}\)
 								multiplied by the identity matrix:
@@ -883,7 +906,7 @@
 											-2&amp; 3-r&amp; 2\\
 											4&amp;-1&amp;-2-r 
 										\end {array}
-									\right ) {\bf \vec{u}} 
+									\right ) {\bf \vec{u}}   \label{eq:10.4.16}
 								\end{align}
 									
 								The <span class="vocab">eigenvalue equation</span> (10.4.16) shows the relationship between the eigenvalue \(r\) and associated eigenvector \({\bf \vec{u}} \) for the system of differential equations <a href="#x1-22r14">(10.4.14)</a> and since we'll be using it to solve for the eigenvector components \(u_1\) and \(u_2\), we'll write it in <span class="vocab">augmented matrix</span> form as the following
@@ -929,9 +952,7 @@
 											-2&amp; 3-r&amp; 2 &amp; 0\\
 											4&amp;-1&amp;-2-r &amp; 0
 										\end {array}
-									\right )
-
-							
+									\right )  \label{eq:10.4.17}
 								\end{align}
 
 								We can show that a system of equations has only the <span class="vocab">trivial solution</span> by showing that the <em>determinant of the coefficient matrix is nonzero</em>. As we are only interested in <span class="vocab">nontrivial solutions</span> we will require that the <em>determinant of the coefficient matrix equals zero</em>:
@@ -1062,6 +1083,10 @@
 									& =0 \\ \\
 								\end{align*}
 
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 								We have found the <span class="vocab">characteristic polynomial</span>  \(p(r)=(r+1)
 								(r-2)
 								(r-3)\) and we will now solve the <span class="vocab">characteristic equation</span> \((r+1)
@@ -1083,10 +1108,6 @@
 									r_2 = 2 \quad
 									r_3 = 3 & \\
 								\end{align*}
-							</div>
-						</li>
-						<li class="continued">
-							<div>
 
 								We have the <span class="vocab">eigenvalues</span> \(r_1= -1\), \(r_2= 2\) and \(r_3 = 3\) and thus the solutions to the system are
 
@@ -1098,6 +1119,10 @@
 								{\bf \vec{y}_3} = {\bf \vec{u}_3} e^{r_3t} ={\bf \vec{u}_3} e^{3t} \\
 								\end{align*}
 
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 								Now we need to determine \({\bf \vec{u}_1}\), \({\bf \vec{u}_2}\), and \({\bf \vec{u}_3}\) the <span class="vocab">eigenvectors</span> and we'll determine them using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span>
 
 								\begin{align*} 
@@ -1205,11 +1230,6 @@
 
 								\end{align*}
 
-							</div>
-						</li>
-						<li class="continued">
-							<div>
-
 								With the eigenvalue-eigenvector pair \(r_1\) and \({\bf \vec{u}_1}\) we have one of the solutions to our original equation
 
 								
@@ -1222,6 +1242,11 @@
 									\end{array}
 								\right)e^{-t}
 								\end{align*}
+
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 								
 								Our characteristic equation yielded distinct real <span class="vocab">eigenvalues</span> \(r_1= -1 \), \(r_2 = 2\), and \(r_3 = 3\), so now we'll find an eigenvector for \(r_2 = 2\) and again using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> <a href="#x1-26r17">(10.4.17)</a>
 
@@ -1349,6 +1374,12 @@
 
 								With the eigenvalue-eigenvector pair \(r_2\) and \({\bf \vec{u}_2}\) we have the second solution to our original equation
 
+
+							</div>
+						</li>
+						<li class="continued">
+							<div>
+
 								
 								\begin{align*} 
 								{\bf \vec{y}_2} = {\bf \vec{u}_2}e^{r_2 t} = \left(
@@ -1418,10 +1449,6 @@
 									\right) 	\\ \\
 								
 								\end{align*}
-							</div>
-						</li>
-						<li class="continued">
-							<div>
 								
 								The system simplifies down to two equations for the components of the eigenvector \(u_1,\) \(u_2\) and \(u_3\)
  
@@ -1435,6 +1462,10 @@
 								
 								\]
 
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 								Since we have 2 equations with 3 unknowns, we have 1 <span class="vocab">free variable</span>, so we'll let \(u_3=c\) where \(c\) is any number. Then we can solve for \(u_1\) and \(u_2\)
 
 								\[
@@ -1498,6 +1529,10 @@
 								\right)e^{3t}
 								\end{align*}
 
+							</div>
+						</li>
+						<li class="continued">
+							<div>
 								So we have a <span class="vocab">fundamental set</span> of solutions
 
 								\[\{{\bf \vec{y}_1},{\bf \vec{y}_2},{\bf \vec{y}_3}\}
@@ -1556,7 +1591,7 @@
 										-1 \\
 										1 \\
 									\end{array}
-								\right)e^{3t} \\
+								\right)e^{3t}  \label{eq:10.4.18} \\
 								\end{align}
 								
 							</div>
@@ -1766,7 +1801,7 @@
 
 					<a id="x1-25r16"></a>
 					\begin {equation} 
-						\label {eq:10.4.16} 
+						\label {eq:10.4.19} 
 						\dfrac{d{\bf \vec{y}}}{dt}=\left (
 							\begin {array}{rrr}
 								-3&amp;2&amp;2\\ 
@@ -1897,10 +1932,14 @@
 										\end {array}
 									\right )
 									
-									{\bf \vec{u}} \\ \nonumber  \\
+									{\bf \vec{u}}  \label{eq:10.4.20} \\ \nonumber  \\
 
 								\end{align}
 
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 								The <span class="vocab">eigenvalue equation</span> (10.4.20) shows the relationship between the eigenvalue \(r\) and associated eigenvector \({\bf \vec{u}} \) for the system of differential equations <a href="#x1-28r19">(10.4.19)</a> and since we'll be using it to solve for the eigenvector components \(u_1\), \(u_2\), and \(u_3\), we'll write it in <span class="vocab">augmented matrix</span> form as the following
 
 								<a id="x1-26r17"></a>  
@@ -1933,7 +1972,7 @@
 											2&amp;-3-r&amp;2 &amp; 0\\
 											2&amp;2&amp;-3-r &amp; 0
 										\end {array}
-									\right )
+									\right )  \label{eq:10.4.21}
 								\end{align}
 
 								We can show that a system of equations has only the <span class="vocab">trivial solution</span> by showing that the <em>determinant of the coefficient matrix is nonzero</em>. As we are only interested in <span class="vocab">nontrivial solutions</span> we will require that the <em>determinant of the coefficient matrix equals zero</em>:
@@ -2127,6 +2166,10 @@
 								{\bf \vec{y}_3} = {\bf \vec{u}_3} e^{r_3t} ={\bf \vec{u}_3} e^{-5t} \\
 								\end{align*}
 
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 								Now we need to determine \({\bf \vec{u}_1}\), \({\bf \vec{u}_2}\), and \({\bf \vec{u}_3}\) the <span class="vocab">eigenvectors</span> and we'll determine them using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span>
 
 								\begin{align*} 
@@ -2227,6 +2270,10 @@
 								
 								\]
 
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 								Since we have 2 equations with 3 unknowns, we have 1 <span class="vocab">free variable</span>, so we'll let \(u_3=c\) where \(c\) is any number. Then we can solve for \(u_1\) and \(u_2\)
 
 								\[
@@ -2357,6 +2404,10 @@
 								
 								\]
 
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 								With only 1 equation and 3 unknowns we have 2 <span class="vocab">free variables</span>. We'll let \(u_2=c\) and \(u_3=k\) to obtain
 
 								\[
@@ -2518,7 +2569,7 @@
 										-1 \\
 										1 \\
 									\end{array}
-								\right)e^{3t} \\
+								\right)e^{3t}  \label{eq:10.4.22} \\
 								\end{align}
 								
 							</div>
@@ -2536,7 +2587,7 @@
 				
 				<a id="x1-27r18"></a> 
 				\begin {equation} 
-					\label {eq:10.4.18} \twocol {\dfrac{dy_1}{dt}}{\dfrac{dy_2}{dt}}=\left [ 
+					\label {eq:10.4.23} \twocol {\dfrac{dy_1}{dt}}{\dfrac{dy_2}{dt}}=\left [ 
 						\begin {array}{cc}
 							a_{11}&amp;a_{12}\\
 							a_{21}&amp;a_{22} 
@@ -2564,7 +2615,7 @@
 
 				<a id="x1-28r19"></a> 
 				\begin {equation} 
-					\label {eq:10.4.19} 
+					\label {eq:10.4.24} 
 					{\bf \vec{y}}= c_1{\bf \vec{x}}_1 e^{ {r}  _1 t}+c_2{\bf \vec{x}}_2e^{ {r}  _2 t} 
 				\end {equation}
 				
@@ -2610,14 +2661,14 @@
 				
 				<a id="x1-31r20"></a> 
 				\begin {equation} 
-					\label {eq:10.4.20} 
+					\label {eq:10.4.25} 
 					e^{- {r}  _2 t}{\bf \vec{y}}(t)= c_1{\bf \vec{x}}_1e^{-( {r}  _2- {r}  _1)t}+c_2{\bf \vec{x}}_2 
 				\end {equation}
 				
 				and of 
 				<a id="x1-32r21"></a>
 				\begin {equation} 
-					\label {eq:10.4.21} 
+					\label {eq:10.4.26} 
 					e^{- {r}  _1 t}{\bf \vec{y}}(t)=c_1{\bf \vec{x}}_1+c_2{\bf \vec{x}}_2e^{( {r}  _2- {r}  _1)t} 
 				\end {equation}
 				
