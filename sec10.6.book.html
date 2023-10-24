@@ -1718,8 +1718,17 @@
 									\end{array}\right)\\ \\
 
 								\end{align*}
-								Now
+
+								Now just as we performed row reduction operations using real numbers, we can do the same using complex numbers. So we'll multiply the third row by \(5+i\) then use that to simplify the first row. 
+								
 								\begin{align*}	
+
+								
+									\left(\begin{array}{ccc|c}
+										5+i & -5	& -4 & 0 \\
+										0 	& 7-i	& 6-8i & 0 \\
+										1 & 0 & -i & 0
+									\end{array}\right)\\ \\
 
 									\underset{}{\overset{(5+i)R_3}{\longrightarrow}}
 									\left(\begin{array}{ccc|c}
@@ -1743,6 +1752,17 @@
 									\end{array}\right)\\ \\
 
 
+									\end{align*}
+
+								Again we'll multiply by complex numbers to simplify, this time by multiplying the first row by \(7-i\) then use that to simplify the first row by combining it with the second row. 
+								
+								\begin{align*}	
+
+								\left(\begin{array}{ccc|c}
+									0 	& -1	& -1+i & 0 \\
+									0 	& 7-i	& 6-8i & 0 \\
+									5+i & 0 & 1-5i & 0
+								\end{array}\right)\\ \\
 
 									\underset{}{\overset{(7-i)R_1}{\longrightarrow}}
 									\left(\begin{array}{ccc|c}
@@ -1760,6 +1780,20 @@
 									\end{array}\right)\\ \\
 
 									\underset{R_1 \leftrightarrow R_3}{\overset{R_1+R_2}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										5+i & 0 & 1-5i & 0 \\
+										0 	& 7-i	& 6-8i & 0 \\
+										0 	& 0	& 0  & 0 \\
+									\end{array}\right)\\ \\
+
+									
+
+									\end{align*}
+
+									Now we'll get ones in the first two columns by dividing by a complex number, which requires multiplying by the conjugate on top and bottom in the third column. 
+									
+									\begin{align*}	
+
 									\left(\begin{array}{ccc|c}
 										5+i & 0 & 1-5i & 0 \\
 										0 	& 7-i	& 6-8i & 0 \\
