@@ -191,7 +191,7 @@
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
-						<li>
+						<li class="no-part">
 			
 							<div>
 								To solve <a href="#x1-9r6">(10.6.6)</a> we will seek solutions of the form
@@ -229,6 +229,10 @@
 									
 								\end{align*}
 
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 								Rewriting \(r\) in matrix form 
 								\(r{\bf \vec{I}}\)
 								multiplied by the identity matrix:
@@ -264,13 +268,10 @@
 
 							
 								\end{align}
-
-								
-
 								
 							</div>
 						</li>
-						<li class="continued">
+						<li class="no-part">
 							<div>
 								We can show that a system of equations has only the <span class="vocab">trivial solution</span> by showing that the <em>determinant of the coefficient matrix is nonzero</em>. As we are only interested in <span class="vocab">nontrivial solutions</span> we will require that the <em>determinant of the coefficient matrix equals zero</em>:
 
@@ -296,9 +297,13 @@
 									r = & \frac{2 \pm \sqrt{4(-16)}}{2} \\
 									r = & \frac{2 \pm 2\cdot4i}{2} \\
 									r = & 1 \pm 4i \\
-									r_1 = 1 + 4i & \quad r_2 = 1 - 4i \\								
+									r_1 = 1 + 4i & \quad r_2 = 1 - 4i \\
 								\end{align*}
 
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 								Thus we have complex conjugate <span class="vocab">eigenvalues</span> \(r_1= 1 + 4i\) and \(r_2 = 1 - 4i\) and thus two solutions of the system are
 
 								\begin{align*}
@@ -356,7 +361,7 @@
 
 							</div>
 						</li>
-						<li class="continued">
+						<li class="no-part">
 							<div>
 								The system simplifies down to a single equation for the components of the eigenvector \(u_1\) and \(u_2\)
 
@@ -399,7 +404,7 @@
 								
 							</div>
 						</li>
-						<li class="continued">
+						<li class="no-part">
 							<div>
 
 								Our characteristic equation yielded complex conjugate <span class="vocab">eigenvalues</span> \(r_1= 1 + 4i\) and \(r_2 = 1 - 4i\) and we already found an eigenvector associated with \(r_1= 1 + 4i\) so now we'll find an eigenvector for \(r_2 = 1 - 4i\) again using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> (10.6.7) 
@@ -465,6 +470,10 @@
 									u_1 & = \frac{1}{5}(3-4i)c  \\
 								\end{align*}
 
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 								Therefore we have determined the <span class="vocab">eigenvector</span> \({\bf \vec{u}}_2\)
 
 								\[
@@ -598,6 +607,10 @@
 								i{\bf \vec{b}}_1 
 								\]
 
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 								Since \(	{\bf \vec{y}}_1 \) is a solution of our original system, then it turns out that its component parts are also solutions
 
 								\begin{align*}
@@ -703,22 +716,24 @@
 								\end{align*}
 							</div>
 
-								<div class="reading-exercise">
-									Calculate 
-									\(
-									W\big[{\bf \vec{a}}_1, {\bf \vec{b}}_1\big]
-									=
-									\det
-									\left(
-										\begin{array}{ccc}
-											{\bf \vec{a}}_1 & {\bf \vec{b}}_1 \\
-											\dfrac{d{\bf \vec{a}}_1}{dt} & \dfrac{d{\bf \vec{b}}_1}{dt} \\
-										\end{array}
-									\right)
-									\)
-								</div>
-								<div>
+							<div class="reading-exercise">
+								Calculate 
+								\(
+								W\big[{\bf \vec{a}}_1, {\bf \vec{b}}_1\big]
+								=
+								\det
+								\left(
+									\begin{array}{ccc}
+										{\bf \vec{a}}_1 & {\bf \vec{b}}_1 \\
+										\dfrac{d{\bf \vec{a}}_1}{dt} & \dfrac{d{\bf \vec{b}}_1}{dt} \\
+									\end{array}
+								\right)
+								\)
+							</div>
 
+						</li>
+						<li class="no-part">
+							<div>
 								Therefore \(\left\{ {\bf \vec{a}}_1, {\bf \vec{b}}_1 \right\}\) form a fundamental set of <em>real-valued</em> functions:
 
 								\[
@@ -761,117 +776,117 @@
 								\right]e^t
 							
 								\end{align*}
-								</div>
-								<div>
-									Since we already obtained a fundamental set, we don't even need to use \({\bf \vec{y}_2}\) however, just as we were able to use <span class="vocab">Euler's formula</span> to generate a full fundamental set from only \({\bf \vec{y}_1}\), we could also do the same for \({\bf \vec{y}_2}\):
-									
+							</div>
+							<div>
+								Since we already obtained a fundamental set, we don't even need to use \({\bf \vec{y}_2}\) however, just as we were able to use <span class="vocab">Euler's formula</span> to generate a full fundamental set from only \({\bf \vec{y}_1}\), we could also do the same for \({\bf \vec{y}_2}\):
 								
-									\begin{align*}
-									{\bf \vec{y}_2} 
-									= \, &
-									\left[\twocol {3}{5} - i\twocol {4}{0}\right]\underset{e^{t} \, e^{-4it} }{\underbrace{e^{(1-4i)t}}} \\
-									= \, &
-									e^{t}\left[\twocol {3}{5} - i\twocol {4}{0}\right] e^{-4it}  \\
-									= \, &
-									e^{t}\left[\twocol {3}{5} - i\twocol {4}{0}\right] \Big( \cos 4t - i \sin 4t\Big) \\
-
-									= \, &
-									e^{t}
-									\left[
-
-									\left\{
-									\twocol {3}{5} \cos 4t + \twocol {4}{0} \sin 4t
-									\right\}
-								
-									-
-									i
-									\left\{ 
-										\twocol {4}{0} \cos 4t + \twocol {3}{5} \sin 4t
-									\right\} 
-									
-									\right] \\
-
-									
-
-									= \, &
-									
-								
-
-									\underset{{\bf \vec{a}}_2}{\underbrace{\left[
-									\twocol {3}{5} \cos 4t + \twocol {4}{0} \sin 4t
-									\right] e^{t}}}
-								
-									-
-									i
-									\underset{{\bf \vec{b}}_2}{\underbrace{\left[ 
-										\twocol {4}{0} \cos 4t + \twocol {3}{5} \sin 4t
-									\right]e^{t}}}
-									
-								 \\
-
-								 = \, &
-									
-								
-
-									\underset{{\bf \vec{a}}_2}{\underbrace{
-									\twocol {3 \cos 4t + 4 \sin 4t}{5 \cos 4t} 
-									 e^{t}}}
-								
-									-
-									i
-									\underset{{\bf \vec{b}}_2}{\underbrace{ 
-										\twocol {4\cos 4t  + 3 \sin 4t }{5 \sin 4t} 
-									e^{t}}} \\ 
-
-
-
-								\end{align*}
-
-								We obtain the following two solutions
-
-
+							
 								\begin{align*}
-									
+								{\bf \vec{y}_2} 
+								= \, &
+								\left[\twocol {3}{5} - i\twocol {4}{0}\right]\underset{e^{t} \, e^{-4it} }{\underbrace{e^{(1-4i)t}}} \\
+								= \, &
+								e^{t}\left[\twocol {3}{5} - i\twocol {4}{0}\right] e^{-4it}  \\
+								= \, &
+								e^{t}\left[\twocol {3}{5} - i\twocol {4}{0}\right] \Big( \cos 4t - i \sin 4t\Big) \\
 
-								{\bf \vec{a}}_2
+								= \, &
+								e^{t}
+								\left[
+
+								\left\{
+								\twocol {3}{5} \cos 4t + \twocol {4}{0} \sin 4t
+								\right\}
+							
+								-
+								i
+								\left\{ 
+									\twocol {4}{0} \cos 4t + \twocol {3}{5} \sin 4t
+								\right\} 
+								
+								\right] \\
+
+								
+
+								= \, &
+								
+							
+
+								\underset{{\bf \vec{a}}_2}{\underbrace{\left[
+								\twocol {3}{5} \cos 4t + \twocol {4}{0} \sin 4t
+								\right] e^{t}}}
+							
+								-
+								i
+								\underset{{\bf \vec{b}}_2}{\underbrace{\left[ 
+									\twocol {4}{0} \cos 4t + \twocol {3}{5} \sin 4t
+								\right]e^{t}}}
+								
+								\\
+
+								= \, &
+								
+							
+
+								\underset{{\bf \vec{a}}_2}{\underbrace{
+								\twocol {3 \cos 4t + 4 \sin 4t}{5 \cos 4t} 
+									e^{t}}}
+							
+								-
+								i
+								\underset{{\bf \vec{b}}_2}{\underbrace{ 
+									\twocol {4\cos 4t  + 3 \sin 4t }{5 \sin 4t} 
+								e^{t}}} \\ 
+
+
+
+							\end{align*}
+
+							We obtain the following two solutions
+
+
+							\begin{align*}
+								
+
+							{\bf \vec{a}}_2
+							=
+
+							
+							\twocol {3 \cos 4t + 4 \sin 4t}{5 \cos 4t} 
+							e^{t}
+							
+
+								\quad\quad
+
+
+								{\bf \vec{b}}_2=
+								\twocol {4\cos 4t  + 3 \sin 4t }{5 \sin 4t} 
+								e^{t}
+
+							\end{align*}
+
+							which again form another fundamental set
+
+							\[
+							\left\{
+
+								{\bf \vec{a}}_2, {\bf \vec{b}}_2
+								\right\}
+
 								=
 
-								
+								\Bigg\{
 								\twocol {3 \cos 4t + 4 \sin 4t}{5 \cos 4t} 
+							e^{t}
+							,
+							\twocol {4\cos 4t  + 3 \sin 4t }{5 \sin 4t} 
 								e^{t}
-								
+									\Bigg\}
+							\]
 
-									\quad\quad
+							Although we are able to represent the general solution in multiple ways with different fundamental sets, to keep our answers consistent with each other we will stick with the fundamental set formed from the positive eigenvalue \(\alpha + i \beta \)
 
-
-									{\bf \vec{b}}_2=
-									\twocol {4\cos 4t  + 3 \sin 4t }{5 \sin 4t} 
-									e^{t}
-
-								\end{align*}
-
-								which again form another fundamental set
-
-								\[
-								\left\{
-
-									{\bf \vec{a}}_2, {\bf \vec{b}}_2
-									\right\}
-
-									=
-
-									\Bigg\{
-									\twocol {3 \cos 4t + 4 \sin 4t}{5 \cos 4t} 
-								e^{t}
-								,
-								\twocol {4\cos 4t  + 3 \sin 4t }{5 \sin 4t} 
-									e^{t}
-										\Bigg\}
-								\]
-
-								Although we are able to represent the general solution in multiple ways with different fundamental sets, to keep our answers consistent with each other we will stick with the fundamental set formed from the positive eigenvalue \(\alpha + i \beta \)
-
-								</div>
+							</div>
 
 						</li>
 					</ol>	
@@ -895,7 +910,7 @@
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
-						<li>
+						<li class="no-part">
 			
 							<div>
 								To solve <a href="#">(10.6.9)</a> we will seek solutions of the form
@@ -933,6 +948,11 @@
 									
 								\end{align*}
 
+								
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 								Rewriting \(r\) in matrix form 
 								\(r{\bf {I}}\)
 								multiplied by the identity matrix:
@@ -971,11 +991,9 @@
 								\end{align}
 
 								
-
-								
 							</div>
 						</li>
-						<li class="continued">
+						<li class="no-part">
 							<div>
 								We can show that a system of equations has only the <span class="vocab">trivial solution</span> by showing that the <em>determinant of the coefficient matrix is nonzero</em>. As we are only interested in <span class="vocab">nontrivial solutions</span> we will require that the <em>determinant of the coefficient matrix equals zero</em>:
 
@@ -1019,6 +1037,11 @@
 								{\bf \vec{y}_2} = {\bf \vec{u}_2} e^{r_2t} ={\bf \vec{u}_2} e^{(1-3i)t} \\
 								\end{align*}
 
+								
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 								We'll now find the associated eigenvectors \({\bf \vec{u}_1}\) and \({\bf \vec{u}_2}\) using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> (10.6.10) 
 
 								 
@@ -1088,7 +1111,7 @@
 
 							</div>
 						</li>
-						<li class="continued">
+						<li class="no-part">
 							<div>
 								The system simplifies down to a single equation for the components of the eigenvector \(u_1\) and \(u_2\)
 
@@ -1131,7 +1154,7 @@
 								
 							</div>
 						</li>
-						<li class="continued">
+						<li class="no-part">
 							<div>
 
 								Now recall when the characteristic equation yields complex conjugate <span class="vocab">eigenvalues</span> as in this case \(r_1= 1 + 3i\) and \(r_2 = 1 - 3i\) then the associated <span class="vocab">eigenvectors</span> are also complex conjugates. This means that once we find \({\bf \vec{u}_1} = {\bf \vec{a}} + i {\bf \vec{b}}\) then we immediately also have \({\bf \vec{u}_2}= {\bf \vec{a}} - i {\bf \vec{b}}\):
@@ -1168,6 +1191,11 @@
 									\right\}
 								\]
 
+								
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 								Now we will use <span class="vocab">Euler's formula</span> to rewrite them in terms of real-valued functions. Remember both solutions will yield different fundamental sets so for consistency we will use the fundamental set formed from the positive eigenvalue \(1+3i\)
 
 								\begin{align*}
@@ -1237,8 +1265,7 @@
 								Now we have rewritten our solution in real and imaginary components and we know that the components of \(	{\bf \vec{y}}_1 = {\bf \vec{a}}_1 + i {\bf \vec{b}}_1\) form a fundamental set of solutions
 							</div>
 
-							
-								<div>
+							<div>
 
 								\[
 								\left\{
@@ -1280,7 +1307,7 @@
 								\right]e^t
 							
 								\end{align*}
-								</div>
+							</div>
 						
 
 						</li>
@@ -1305,7 +1332,7 @@
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
-						<li>
+						<li class="no-part">
 			
 							<div>
 								To solve <a href="#">(10.6.12)</a> we will seek solutions of the form
@@ -1343,6 +1370,11 @@
 									
 								\end{align*}
 
+								
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 								Rewriting \(r\) in matrix form 
 								\(r{\bf {I}}\)
 								multiplied by the identity matrix:
@@ -1402,7 +1434,7 @@
 								
 							</div>
 						</li>
-						<li class="continued">
+						<li class="no-part">
 							<div>
 								We can show that a system of equations has only the <span class="vocab">trivial solution</span> by showing that the <em>determinant of the coefficient matrix is nonzero</em>. As we are only interested in <span class="vocab">nontrivial solutions</span> we will require that the <em>determinant of the coefficient matrix equals zero</em>:
 
@@ -1531,6 +1563,11 @@
 
 
 
+								
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 
 
 								We have found the <span class="vocab">characteristic polynomial</span> \(p(r)=r^3-2r^2+r-2\) and we will now solve the <span class="vocab">characteristic equation</span> \(r^3-2r^2+r-2 =0 \) using factoring 
@@ -1603,7 +1640,7 @@
 
 							</div>
 						</li>
-						<li class="continued">
+						<li class="no-part">
 							<div>
 								The system simplifies down to two equations for the components of the eigenvector \(u_1,\) \(u_2\) and \(u_3\)
 
@@ -1654,7 +1691,7 @@
 								
 							</div>
 						</li>
-						<li class="continued">
+						<li class="no-part">
 							<div>
 
 								The other two solutions are associated with 
@@ -1771,7 +1808,7 @@
 						
 
 						</li>
-						<li class="continued">
+						<li class="no-part">
 							<div>
 								The system simplifies down to two equations for the components of the eigenvector \(u_1,\) \(u_2\) and \(u_3\)
 
@@ -1835,7 +1872,7 @@
 								
 							</div>
 						</li>
-						<li class="continued">
+						<li class="no-part">
 							<div>
 
 								Now recall when the characteristic equation yields complex conjugate <span class="vocab">eigenvalues</span> as in this case \(r_2= i\) and \(r_3 = -i\) then the associated <span class="vocab">eigenvectors</span> are also complex conjugates. This means that once we find \({\bf \vec{u}_2} = {\bf \vec{a}} + i {\bf \vec{b}}\) then we immediately also have \({\bf \vec{u}_3}= {\bf \vec{a}} - i {\bf \vec{b}}\):
@@ -1900,6 +1937,11 @@
 									\right\}
 								\]
 
+								
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 								Now we will use <span class="vocab">Euler's formula</span> to rewrite them in terms of real-valued functions. Remember both complex conjugate solutions will yield different fundamental sets so for consistency we will use the fundamental set formed from the positive eigenvalue \(i\)
 
 								\begin{align*}
@@ -1977,11 +2019,7 @@
 								\]
 							</div>
 
-							
-								<div>
-
-							
-
+							<div>
 								Therefore we can represent the general solution as \({\bf \vec{y}}
 								= 
 								
@@ -1993,8 +2031,6 @@
 								+
 								c_3
 								{\bf \vec{b}}_2\)
-
-
 
 
 
@@ -2013,7 +2049,7 @@
 								\threecol {\cos t}{\cos t - \sin t}{\sin t} 
 							
 								\end{align*}
-								</div>
+							</div>
 						
 
 						</li>
@@ -2039,7 +2075,7 @@
 				<details class="solution">
 					<summary>Solution</summary>
 					<ol>
-						<li>
+						<li class="no-part">
 			
 							<div>
 								To solve <a href="#">(10.6.15)</a> we will seek solutions of the form
@@ -2077,6 +2113,11 @@
 									
 								\end{align*}
 
+								
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 								Rewriting \(r\) in matrix form 
 								\(r{\bf {I}}\)
 								multiplied by the identity matrix:
@@ -2136,7 +2177,7 @@
 								
 							</div>
 						</li>
-						<li class="continued">
+						<li class="no-part">
 							<div>
 								We can show that a system of equations has only the <span class="vocab">trivial solution</span> by showing that the <em>determinant of the coefficient matrix is nonzero</em>. As we are only interested in <span class="vocab">nontrivial solutions</span> we will require that the <em>determinant of the coefficient matrix equals zero</em>:
 
@@ -2320,6 +2361,11 @@
 
 
 
+								
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 
 								We have found the <span class="vocab">characteristic polynomial</span> \(p(r)=r^3 -6r^2 +16r - 16\) and we will now solve the <span class="vocab">characteristic equation</span> \(r^3 -6r^2 +16r - 16 =0 \) by testing possible rational roots \(\pm \left\{1,2,4,16\right\}\)
 
@@ -2375,6 +2421,10 @@
 									r_2 & = 2+ 2i \quad r_3 = 2- 2i \\
 								\end {align*} 
 
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 							
 								Thus we have one real <span class="vocab">eigenvalue</span> \(r_1= 2\) and two complex conjugate <span class="vocab">eigenvalues</span> \(r_2= 2+2i\) and \(r_3 = 2-2i\) and thus three solutions of the system are
 
@@ -2384,6 +2434,7 @@
 								{\bf \vec{y}_3} & = {\bf \vec{u}_3} e^{r_3t} ={\bf \vec{u}_3} e^{(2-2i)t} \\
 								\end{align*}
 
+								
 								We'll now find the associated eigenvectors \({\bf \vec{u}_1},\) \({\bf \vec{u}_2}\) and \({\bf \vec{u}_3}\) using row reduction on the <span class="vocab">augmented matrix</span> form of the <span class="vocab">eigenvalue equation</span> (10.6.16) starting with \(r_1=2\)
 
 								 
@@ -2435,7 +2486,7 @@
 
 							</div>
 						</li>
-						<li class="continued">
+						<li class="no-part">
 							<div>
 								The system simplifies down to two equations for the components of the eigenvector \(u_1,\) \(u_2\) and \(u_3\)
 
@@ -2486,7 +2537,7 @@
 								
 							</div>
 						</li>
-						<li class="continued">
+						<li class="no-part">
 							<div>
 
 								The other two solutions are associated with complex conjugate <span class="vocab">eigenvalues</span> \(r_2=2+2i\) and  \(r_3=2-2i\) 
@@ -2604,7 +2655,7 @@
 						
 
 						</li>
-						<li class="continued">
+						<li class="no-part">
 							<div>
 								The system simplifies down to two equations for the components of the eigenvector \(u_1,\) \(u_2\) and \(u_3\)
 
@@ -2669,7 +2720,7 @@
 								
 							</div>
 						</li>
-						<li class="continued">
+						<li class="no-part">
 							<div>
 
 								Now recall when the characteristic equation yields complex conjugate <span class="vocab">eigenvalues</span> as in this case \(r_2= 2+2i\) and \(r_3 = 2-2i\) then the associated <span class="vocab">eigenvectors</span> are also complex conjugates. This means that once we find \({\bf \vec{u}_2} = {\bf \vec{a}} + i {\bf \vec{b}}\) then we immediately also have \({\bf \vec{u}_3}= {\bf \vec{a}} - i {\bf \vec{b}}\):
@@ -2734,6 +2785,10 @@
 									\right\}
 								\]
 
+							</div>
+						</li>
+						<li class="no-part">
+							<div>
 								Now we will use <span class="vocab">Euler's formula</span> to rewrite them in terms of real-valued functions. Remember both complex conjugate solutions will yield different fundamental sets so for consistency we will use the fundamental set formed from the positive eigenvalue \(i\)
 
 								\begin{align*}
@@ -2836,10 +2891,7 @@
 								\]
 							</div>
 
-							
-								<div>
-
-							
+							<div>
 
 								Therefore we can represent the general solution as \({\bf \vec{y}}
 								= 
@@ -2876,9 +2928,8 @@
 
 							
 								\end{align*}
-								</div>
+							</div>
 						
-
 						</li>
 
 					</ol>
