@@ -329,6 +329,20 @@
 										5 	& -3-4i	& 0
 									\end{array}\right) \\ \\
 
+									\end{align*}
+
+									Now we'll get one in the first row and column by dividing the first row by a complex number, which requires multiplying by the conjugate in the numerator and denominator of the second entry.
+
+									
+									\begin{align*}	
+
+									&
+									\left(\begin{array}{cc|c}
+										3-4i & -5	& 0 \\
+										5 	& -3-4i	& 0
+									\end{array}\right) \\ \\
+
+
 									\overset{\frac{1}{3-4i}R_1}{\longrightarrow}
 									&
 									\left(\begin{array}{cc|c}
@@ -423,6 +437,20 @@
 										3+4i & -5	& 0 \\
 										5 	& -3+4i	& 0
 									\end{array}\right) \\ \\
+
+
+									\end{align*}
+
+									Again we'll get one in the first row and column by dividing the first row by a complex number, which requires multiplying by the conjugate in the numerator and denominator of the second entry. 
+									
+									\begin{align*}	
+
+									&
+									\left(\begin{array}{cc|c}
+										3+4i & -5	& 0 \\
+										5 	& -3+4i	& 0
+									\end{array}\right) \\ \\
+
 
 									\overset{\frac{1}{3+4i}R_1}{\longrightarrow}
 									&
@@ -1067,6 +1095,20 @@
 										5+i & -13	& 0 \\
 										-2 	& 5-i	& 0
 									\end{array}\right) \\ \\
+
+									\end{align*}
+
+									Again we'll get one in the first row and column by dividing the first row by a complex number, which requires multiplying by the conjugate in the numerator and denominator of the second entry.
+
+									
+									\begin{align*}	
+
+									&
+
+									\left(\begin{array}{cc|c}
+										5+i & -13	& 0 \\
+										-2 	& 5-i	& 0
+									\end{array}\right)  \\ \\
 
 									\underset{}{\overset{\frac{1}{5+i}R_1}{\longrightarrow}}
 									&
@@ -1718,8 +1760,17 @@
 									\end{array}\right)\\ \\
 
 								\end{align*}
-								Now
+
+								Now just as we performed row reduction operations using real numbers, we can do the same using complex numbers. So we'll multiply the third row by \(5+i\) then use that to simplify the first row. 
+								
 								\begin{align*}	
+
+								
+									\left(\begin{array}{ccc|c}
+										5+i & -5	& -4 & 0 \\
+										0 	& 7-i	& 6-8i & 0 \\
+										1 & 0 & -i & 0
+									\end{array}\right)\\ \\
 
 									\underset{}{\overset{(5+i)R_3}{\longrightarrow}}
 									\left(\begin{array}{ccc|c}
@@ -1743,6 +1794,17 @@
 									\end{array}\right)\\ \\
 
 
+									\end{align*}
+
+								Again we'll multiply by complex numbers to simplify, this time by multiplying the first row by \(7-i\) then use that to simplify the first row by combining it with the second row. 
+								
+								\begin{align*}	
+
+								\left(\begin{array}{ccc|c}
+									0 	& -1	& -1+i & 0 \\
+									0 	& 7-i	& 6-8i & 0 \\
+									5+i & 0 & 1-5i & 0
+								\end{array}\right)\\ \\
 
 									\underset{}{\overset{(7-i)R_1}{\longrightarrow}}
 									\left(\begin{array}{ccc|c}
@@ -1760,6 +1822,22 @@
 									\end{array}\right)\\ \\
 
 									\underset{R_1 \leftrightarrow R_3}{\overset{R_1+R_2}{\longrightarrow}}
+									\left(\begin{array}{ccc|c}
+										5+i & 0 & 1-5i & 0 \\
+										0 	& 7-i	& 6-8i & 0 \\
+										0 	& 0	& 0  & 0 \\
+									\end{array}\right)\\ \\
+
+									
+
+									\end{align*}
+
+									Now to get ones in the first two columns we'll divide by complex numbers, which requires multiplying by the conjugate
+									in the numerators and denominators in the third colum entries. 
+									
+
+									\begin{align*}	
+
 									\left(\begin{array}{ccc|c}
 										5+i & 0 & 1-5i & 0 \\
 										0 	& 7-i	& 6-8i & 0 \\
@@ -2580,6 +2658,18 @@
 									\end{array}\right)\\ \\
 
 
+									\end{align*}
+
+								Now just as we performed row reduction operations using real numbers, we can do the same using complex numbers. So we'll multiply the third row by \(1+i\) then use that to simplify the first row. 
+								
+								\begin{align*}	
+
+								\left(\begin{array}{ccc|c}
+									-1-i & 0 & i-1 & 0 \\
+									0 	& 1-i	& 1+i & 0 \\
+									1 & -1 & -2i & 0
+								\end{array}\right)\\ \\
+
 									\underset{}{\overset{(1+i)R_3}{\longrightarrow}}
 									\left(\begin{array}{ccc|c}
 										-1-i & 0 & i-1 & 0 \\
@@ -2595,13 +2685,36 @@
 										0 & -1-i & 1-i & 0
 									\end{array}\right)\\ \\
 
+									\end{align*}
+
+								We may notice the second and third rows appear pretty similar. We'll multiplying the third row by \(i\) to get like terms:
+								
+								\begin{align*}	
+
+								\left(\begin{array}{ccc|c}
+										-1-i & 0 & i-1 & 0 \\
+										0 	& 1-i	& 1+i & 0 \\
+										0 & -1-i & 1-i & 0
+									\end{array}\right)\\ \\
+
 
 									\underset{}{\overset{iR_3}{\longrightarrow}}
 									\left(\begin{array}{ccc|c}
 										-1-i & 0 & i-1 & 0 \\
 										0 	& 1-i	& 1+i & 0 \\
+										0 & -i-i^2 & i-i^2 & 0
+									\end{array}\right)\\ \\
+
+									
+
+									\longrightarrow
+									\left(\begin{array}{ccc|c}
+										-1-i & 0 & i-1 & 0 \\
+										0 	& 1-i	& 1+i & 0 \\
 										0 & 1-i & 1+i & 0
 									\end{array}\right)\\ \\
+
+								
 
 
 									\underset{-R_1}{\overset{R_3-R_2}{\longrightarrow}}
@@ -2611,6 +2724,20 @@
 										0 & 0 & 0 & 0
 									\end{array}\right)\\ \\
 
+
+									\end{align*}
+
+									Again we'll get ones in the first two columns by dividing by complex numbers, which requires multiplying by the conjugate in the numerators and denominators in the third colum entries.
+									
+								
+									
+									\begin{align*}	
+
+									\left(\begin{array}{ccc|c}
+										1+i & 0 & 1-i & 0 \\
+										0 	& 1-i	& 1+i & 0 \\
+										0 & 0 & 0 & 0
+									\end{array}\right)\\ \\
 
 									\underset{\frac{1}{1-i}R_1}{\overset{\frac{1}{1+i}R_1}{\longrightarrow}}
 									\left(\begin{array}{ccc|c}
@@ -2641,12 +2768,6 @@
 										0 & 0 & 0 & 0
 									\end{array}\right)\\ \\
 
-
-
-
-
-
-							
 								\end{align*}
 
 							</div>
