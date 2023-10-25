@@ -40,7 +40,7 @@
 		</div>
 
 		<details id="details-1">
-			<summary>Repeated Eigenvalues</summary>
+			<summary>2 Repeated Eigenvalues</summary>
 
 			<div id="34d411f8-5671-4023-9222-26a5412ae85b">
 				We found in Section&nbsp;10.4 that if an \(n\times n\) constant matrix \({\bf A }\) has \(n\) real eigenvalues \( {r}  _1\), \( {r}  _2\), …, \( {r}  _n\) (which need not be distinct) with associated linearly independent eigenvectors \({\bf \vec{u}}_1\), \({\bf \vec{u}}_2\), …, \({\bf \vec{u}}_n\), then the general solution of \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A } \,{\bf \vec{y}}\) is given by
@@ -311,7 +311,7 @@
 
 		
 
-			<!--Theorem-->
+			<!--Theorem 10.5.1-->
 			<div class="theorem" id="x1-41">
 				<span class="head">Theorem&nbsp;10.5.1</span>
 				Consider the homogeneous system <a href="sec10.4.book.html#x1-2r1" target=_blank>(10.4.1)</a> where \({\bf A}\) is an \(n\times n\) constant matrix
@@ -601,7 +601,57 @@
 						</li>
 					</ol>
 				</details>
+			</div>			
+
+		</details>
+
+		<details id="details-1">
+			<summary>3 Repeated Eigenvalues</summary>
+
+			<!--Repeat of Theorem 10.5.1-->
+			<div class="theorem" id="x1-41">
+				<span class="head">Theorem&nbsp;10.5.1</span>
+				Consider the homogeneous system <a href="sec10.4.book.html#x1-2r1" target=_blank>(10.4.1)</a> where \({\bf A}\) is an \(n\times n\) constant matrix
+
+				\begin {equation*} 
+					\dfrac{d{\bf \vec{y}}}{dt}={\bf A}{\bf \vec{y}} 
+				\end {equation*}
+
+				Suppose the matrix \({\bf A }\) has a repeated eigenvalue and the associated eigenspace is one-dimensional so that all \( {r}_1\)-eigenvectors of \({\bf A }\) are scalar multiples of a single eigenvector \({\bf \vec{u}}_1\) 
+
+				\[
+				({\bf A}-{r}_1{\bf I}){\bf \vec{u}}_1= {\bf \vec{0}}	
+				\]
+
+				Then the characteristic equation only provides one solution for the system
+
+				\[
+				{\bf \vec{y}}_1 = {\bf \vec{u}}_1e^{{r}_1 t}
+				\]
+
+				We can find a second linearly independent solution given by 
+
+					
+				\begin {equation*}  
+					{\bf \vec{y}}_2={\bf \vec{u}}_2e^{ {r}_1t}+{\bf \vec{u}}_1 te^{ {r}_1t} 
+					\tag{4}
+				\end {equation*}
+
+				Where \({\bf \vec{u}}_2\) is a constant vector given by 
+
+				
+				
+				\begin {equation*}
+					({\bf A}- {r}_1{\bf I}){\bf \vec{u}}_2={\bf \vec{u}}_1 
+					\tag{5}
+				\end {equation*}
+			
+				Thus \(\left\{{\bf \vec{y}}_1 , {\bf \vec{y}}_2 \right\} = 
+				\left\{ {\bf \vec{u}}_1e^{{r}_1 t}, {\bf \vec{u}}_2e^{ {r}_1t}+{\bf \vec{u}}_1 te^{ {r}_1t}  \right\}
+				\) form a fundamental set for the system \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}{\bf \vec{y}}\)
 			</div>
+
+
 
 			<br>
 			<br>
@@ -1727,7 +1777,55 @@
 				</details>
 			</div>
 
-			<!--Theorem-->
+		</details>
+
+		<details id="details-1">
+			<summary>1D Eigenspace </summary>
+			
+			<!--Repeat of Theorem 10.5.1-->
+			<div class="theorem" id="x1-41">
+				<span class="head">Theorem&nbsp;10.5.1</span>
+				Consider the homogeneous system <a href="sec10.4.book.html#x1-2r1" target=_blank>(10.4.1)</a> where \({\bf A}\) is an \(n\times n\) constant matrix
+
+				\begin {equation*} 
+					\dfrac{d{\bf \vec{y}}}{dt}={\bf A}{\bf \vec{y}} 
+				\end {equation*}
+
+				Suppose the matrix \({\bf A }\) has a repeated eigenvalue and the associated eigenspace is one-dimensional so that all \( {r}_1\)-eigenvectors of \({\bf A }\) are scalar multiples of a single eigenvector \({\bf \vec{u}}_1\) 
+
+				\[
+				({\bf A}-{r}_1{\bf I}){\bf \vec{u}}_1= {\bf \vec{0}}	
+				\]
+
+				Then the characteristic equation only provides one solution for the system
+
+				\[
+				{\bf \vec{y}}_1 = {\bf \vec{u}}_1e^{{r}_1 t}
+				\]
+
+				We can find a second linearly independent solution given by 
+
+					
+				\begin {equation*}  
+					{\bf \vec{y}}_2={\bf \vec{u}}_2e^{ {r}_1t}+{\bf \vec{u}}_1 te^{ {r}_1t} 
+					\tag{4}
+				\end {equation*}
+
+				Where \({\bf \vec{u}}_2\) is a constant vector given by 
+
+				
+				
+				\begin {equation*}
+					({\bf A}- {r}_1{\bf I}){\bf \vec{u}}_2={\bf \vec{u}}_1 
+					\tag{5}
+				\end {equation*}
+			
+				Thus \(\left\{{\bf \vec{y}}_1 , {\bf \vec{y}}_2 \right\} = 
+				\left\{ {\bf \vec{u}}_1e^{{r}_1 t}, {\bf \vec{u}}_2e^{ {r}_1t}+{\bf \vec{u}}_1 te^{ {r}_1t}  \right\}
+				\) form a fundamental set for the system \(\dfrac{d{\bf \vec{y}}}{dt}={\bf A}{\bf \vec{y}}\)
+			</div>
+
+			<!--Theorem 10.5.2-->
 			<div class="theorem" id="x1-142">
 				<span class="head">Theorem&nbsp;10.5.2</span>
 				Suppose the \(n\times n\) matrix \({\bf A }\) has an eigenvalue \( {r}_1\) of multiplicity \(\ge 3\) and the associated eigenspace is one–dimensional meaning that all eigenvectors associated with \( {r}_1\) are scalar multiples of the eigenvector \({\bf \vec{u}_1}.\) Theorem <a href="#x1-41">10.5.1</a>10.5.1 gives us a second linearly independent solution <a href="#x1-6r3">(10.5.3)</a>
@@ -1752,10 +1850,10 @@
 
 				Where \({\bf \vec{u}}_3\) is a constant vector given by 
 
-				<a id="x1-16r10"></a>
-				\begin {equation}\label {eq:10.5.10} 
-					({\bf A}-{r}_1{\bf I}){\bf \vec{u}}_3={\bf \vec{u}}_2 
-				\end {equation}
+				
+				\begin {equation*}
+					({\bf A}-{r}_1{\bf I}){\bf \vec{u}}_3={\bf \vec{u}}_2 \tag{10}
+				\end {equation*}
 
 
 				
@@ -3028,7 +3126,12 @@
 				</details>
 			</div>
 
-			<!--Theorem-->
+		</details>
+
+		<details id="details-1">
+			<summary>2D Eigenspace </summary>				
+
+			<!--Theorem 10.5.3-->
 			<div class="theorem" id="x1-193">
 				<span class="head">Theorem&nbsp;10.5.3</span>
 				Suppose the \(n\times n\) matrix \({\bf A }\) has an eigenvalue \( {r}  _1\) of multiplicity \(\ge 3\) and the associated eigenspace is two–dimensional; that is, all eigenvectors of \({\bf A }\) associated with \( {r}  _1\) are linear combinations of two linearly independent eigenvectors \({\bf \vec{u}}_1\) and \({\bf \vec{u}}_2\)\(.\) Then there are constants \(c \) and \(k \) \((\)not both zero\()\) such that if 
